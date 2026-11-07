@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Floating Header Bar (`AcedexFloatingHeaderBar`)**: iOS-style suspended pill header with 20px frosted backdrop filter, screen title, subtitle, leading icon badge, and action buttons matching the floating navigation bar.
 
 ### Improved
+- **Apple Capsule Toast HUD (`AcedexToast`)**: Re-engineered toast notifications into an authentic Apple capsule HUD with rounded stadium borders (`100px` radius), 25px frosted blur backdrop, soft diffused drop shadow, centered dynamic layout (`MainAxisSize.min`), and support for dual-line ("Done / Confirmed") and single-line presets with spring bounce entry and recoil exit animations.
 - **Toast Notifications (`AcedexToast`)**: Added Apple-style spring physics with tactile bounce on entry (`Curves.easeOutBack` on offset and scale: 0.88 ➔ 1.0) and recoil slide-up exit animation (`Curves.easeInBack`).
 - **Toast Notifications (`AcedexToast`)**: Eliminated toast overlap by managing a single active toast instance that cleanly dismisses prior toasts, implemented Apple-style fluid slide-up exit animations (`Offset(0, -1.2)`) into the top notch/bezel, and added vertical drag-to-dismiss gesture support.
 - **Button Styling (`AcedexButton`)**: Upgraded primary and secondary buttons with solid surface blending, distinct borders, colored elevation shadows, and responsive press states.

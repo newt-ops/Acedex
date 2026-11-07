@@ -22,6 +22,7 @@ class AcedexToast {
     String? message,
     AcedexToastStatus status = AcedexToastStatus.info,
     Duration duration = const Duration(seconds: 3),
+    bool isBottom = false,
   }) {
     // If a toast is currently active, slide it out immediately
     if (_activeToastState != null && _activeToastState!.mounted) {
@@ -40,6 +41,7 @@ class AcedexToast {
         message: message,
         status: status,
         duration: duration,
+        isBottom: isBottom,
         onRemoved: () {
           if (overlayEntry.mounted) {
             overlayEntry.remove();
@@ -63,6 +65,7 @@ class _AcedexToastWidget extends StatefulWidget {
     this.message,
     required this.status,
     required this.duration,
+    required this.isBottom,
     required this.onRemoved,
   });
 
@@ -70,6 +73,7 @@ class _AcedexToastWidget extends StatefulWidget {
   final String? message;
   final AcedexToastStatus status;
   final Duration duration;
+  final bool isBottom;
   final VoidCallback onRemoved;
 
   @override
@@ -96,8 +100,10 @@ class _AcedexToastWidgetState extends State<_AcedexToastWidget>
       reverseDuration: const Duration(milliseconds: 280),
     );
 
+    final startOffset = widget.isBottom ? const Offset(0, 1.4) : const Offset(0, -1.4);
+
     _offsetAnimation = Tween<Offset>(
-      begin: const Offset(0, -1.25),
+      begin: startOffset,
       end: Offset.zero,
     ).animate(CurvedAnimation(
       parent: _controller,
@@ -106,7 +112,7 @@ class _AcedexToastWidgetState extends State<_AcedexToastWidget>
     ));
 
     _scaleAnimation = Tween<double>(
-      begin: 0.88,
+      begin: 0.85,
       end: 1.0,
     ).animate(CurvedAnimation(
       parent: _controller,
@@ -159,6 +165,7 @@ class _AcedexToastWidgetState extends State<_AcedexToastWidget>
   @override
   Widget build(BuildContext context) {
     final colors = context.appColors;
+    final isDark = Theme.of(context).brightness == Brightness.dark;
 
     Color statusColor;
     List<List<dynamic>> iconData;
@@ -182,104 +189,123 @@ class _AcedexToastWidgetState extends State<_AcedexToastWidget>
         break;
     }
 
-    final topPadding = MediaQuery.of(context).padding.top + AppTheme.space12;
+    final topPadding = MediaQuery.of(context).padding.top + AppTheme.space8;
+    final bottomPadding = MediaQuery.of(context).padding.bottom + 80.0;
+    final hasMessage = widget.message != null && widget.message!.trim().isNotEmpty;
 
     return Positioned(
-      top: topPadding,
-      left: AppTheme.space16,
-      right: AppTheme.space16,
-      child: SlideTransition(
-        position: _offsetAnimation,
-        child: ScaleTransition(
-          scale: _scaleAnimation,
-          child: FadeTransition(
-            opacity: _fadeAnimation,
-            child: Material(
-            color: Colors.transparent,
-            child: GestureDetector(
-              onTap: dismiss,
-              onVerticalDragUpdate: (details) {
-                if (details.primaryDelta != null && details.primaryDelta! < -4) {
-                  dismiss();
-                }
-              },
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(AppTheme.radiusCard),
-                child: BackdropFilter(
-                  filter: ImageFilter.blur(sigmaX: 20.0, sigmaY: 20.0),
-                  child: Container(
-                    padding: const EdgeInsets.symmetric(
-                      horizontal: AppTheme.space16,
-                      vertical: AppTheme.space12,
-                    ),
-                    decoration: BoxDecoration(
-                      color: Color.alphaBlend(
-                        colors.statusTint(statusColor).withValues(alpha: 0.25),
-                        colors.surface,
-                      ),
-                      borderRadius: BorderRadius.circular(AppTheme.radiusCard),
-                      border: Border.all(
-                        color: colors.statusBorder(statusColor),
-                        width: 1.2,
-                      ),
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.black.withValues(alpha: 0.12),
-                          blurRadius: 18.0,
-                          offset: const Offset(0, 8),
+      top: widget.isBottom ? null : topPadding,
+      bottom: widget.isBottom ? bottomPadding : null,
+      left: 0,
+      right: 0,
+      child: Align(
+        alignment: widget.isBottom ? Alignment.bottomCenter : Alignment.topCenter,
+        child: SlideTransition(
+          position: _offsetAnimation,
+          child: ScaleTransition(
+            scale: _scaleAnimation,
+            child: FadeTransition(
+              opacity: _fadeAnimation,
+              child: Material(
+                color: Colors.transparent,
+                child: GestureDetector(
+                  onTap: dismiss,
+                  onVerticalDragUpdate: (details) {
+                    if (widget.isBottom) {
+                      if (details.primaryDelta != null && details.primaryDelta! > 4) {
+                        dismiss();
+                      }
+                    } else {
+                      if (details.primaryDelta != null && details.primaryDelta! < -4) {
+                        dismiss();
+                      }
+                    }
+                  },
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(100.0),
+                    child: BackdropFilter(
+                      filter: ImageFilter.blur(sigmaX: 25.0, sigmaY: 25.0),
+                      child: Container(
+                        constraints: const BoxConstraints(
+                          minWidth: 140.0,
+                          maxWidth: 320.0,
+                          minHeight: 46.0,
                         ),
-                      ],
-                    ),
-                    child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Container(
-                          width: 38,
-                          height: 38,
-                          decoration: BoxDecoration(
-                            color: colors.statusTint(statusColor),
-                            shape: BoxShape.circle,
-                            border: Border.all(
-                              color: colors.statusBorder(statusColor),
-                              width: 1.0,
-                            ),
+                        padding: const EdgeInsets.symmetric(
+                          horizontal: 18.0,
+                          vertical: 10.0,
+                        ),
+                        decoration: BoxDecoration(
+                          color: colors.surface.withValues(alpha: isDark ? 0.92 : 0.96),
+                          borderRadius: BorderRadius.circular(100.0),
+                          border: Border.all(
+                            color: colors.border.withValues(alpha: isDark ? 0.7 : 0.5),
+                            width: 1.0,
                           ),
-                          child: Center(
-                            child: HugeIcon(
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black.withValues(alpha: isDark ? 0.40 : 0.12),
+                              blurRadius: 24.0,
+                              offset: const Offset(0, 8),
+                              spreadRadius: 0,
+                            ),
+                          ],
+                        ),
+                        child: Row(
+                          mainAxisSize: MainAxisSize.min,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            HugeIcon(
                               icon: iconData,
                               color: statusColor,
-                              size: 20.0,
+                              size: 22.0,
                             ),
-                          ),
+                            const SizedBox(width: 10.0),
+                            Flexible(
+                              child: hasMessage
+                                  ? Column(
+                                      mainAxisSize: MainAxisSize.min,
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      children: [
+                                        Text(
+                                          widget.title,
+                                          style: TextStyle(
+                                            fontSize: 13.0,
+                                            fontWeight: FontWeight.w600,
+                                            color: colors.textPrimary,
+                                            letterSpacing: -0.2,
+                                          ),
+                                          maxLines: 1,
+                                          overflow: TextOverflow.ellipsis,
+                                        ),
+                                        Text(
+                                          widget.message!,
+                                          style: TextStyle(
+                                            fontSize: 11.5,
+                                            fontWeight: FontWeight.normal,
+                                            color: colors.textSecondary,
+                                          ),
+                                          maxLines: 1,
+                                          overflow: TextOverflow.ellipsis,
+                                        ),
+                                      ],
+                                    )
+                                  : Text(
+                                      widget.title,
+                                      style: TextStyle(
+                                        fontSize: 14.0,
+                                        fontWeight: FontWeight.w600,
+                                        color: colors.textPrimary,
+                                        letterSpacing: -0.2,
+                                      ),
+                                      maxLines: 1,
+                                      overflow: TextOverflow.ellipsis,
+                                    ),
+                            ),
+                          ],
                         ),
-                        const SizedBox(width: AppTheme.space12),
-                        Expanded(
-                          child: Column(
-                            mainAxisSize: MainAxisSize.min,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                widget.title,
-                                style: TextStyle(
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w700,
-                                  color: colors.textPrimary,
-                                ),
-                              ),
-                              if (widget.message != null && widget.message!.isNotEmpty) ...[
-                                const SizedBox(height: 2),
-                                Text(
-                                  widget.message!,
-                                  style: TextStyle(
-                                    fontSize: 13,
-                                    color: colors.textSecondary,
-                                  ),
-                                ),
-                              ],
-                            ],
-                          ),
-                        ),
-                      ],
+                      ),
                     ),
                   ),
                 ),
@@ -288,7 +314,6 @@ class _AcedexToastWidgetState extends State<_AcedexToastWidget>
           ),
         ),
       ),
-    ),
-  );
-}
+    );
+  }
 }

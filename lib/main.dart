@@ -527,8 +527,8 @@ class _DesignSystemShowcaseScreenState
             onPressed: () {
               AcedexToast.show(
                 context,
-                title: 'Primary Action Triggered',
-                message: 'Apple HIG Plum palette button tapped.',
+                title: 'Done',
+                message: 'Confirmed',
                 status: AcedexToastStatus.success,
               );
             },
@@ -540,8 +540,7 @@ class _DesignSystemShowcaseScreenState
             onPressed: () {
               AcedexToast.show(
                 context,
-                title: 'Secondary Action',
-                message: '14% primarySoft background button tapped.',
+                title: 'Study Goal Saved',
                 status: AcedexToastStatus.info,
               );
             },
