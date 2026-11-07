@@ -22,28 +22,24 @@ class PinDotsIndicator extends StatelessWidget {
       children: List.generate(maxDigits, (index) {
         final isFilled = index < pinLength;
 
-        return AnimatedContainer(
-          duration: const Duration(milliseconds: 200),
-          curve: Curves.easeOutBack,
-          margin: const EdgeInsets.symmetric(horizontal: 10.0),
-          width: isFilled ? 16.0 : 14.0,
-          height: isFilled ? 16.0 : 14.0,
-          decoration: BoxDecoration(
-            shape: BoxShape.circle,
-            color: isFilled ? colors.primary : colors.surfaceAlt,
-            border: Border.all(
-              color: isFilled ? colors.primary : colors.border,
-              width: 1.5,
+        return AnimatedScale(
+          scale: isFilled ? 1.15 : 1.0,
+          duration: const Duration(milliseconds: 180),
+          curve: Curves.easeOutCubic,
+          child: AnimatedContainer(
+            duration: const Duration(milliseconds: 180),
+            curve: Curves.easeOutCubic,
+            margin: const EdgeInsets.symmetric(horizontal: 10.0),
+            width: 15.0,
+            height: 15.0,
+            decoration: BoxDecoration(
+              shape: BoxShape.circle,
+              color: isFilled ? colors.primary : colors.surfaceAlt,
+              border: Border.all(
+                color: isFilled ? colors.primary : colors.border,
+                width: 1.5,
+              ),
             ),
-            boxShadow: isFilled
-                ? [
-                    BoxShadow(
-                      color: colors.primary.withValues(alpha: 0.3),
-                      blurRadius: 8,
-                      offset: const Offset(0, 2),
-                    ),
-                  ]
-                : null,
           ),
         );
       }),
