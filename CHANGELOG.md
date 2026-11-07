@@ -10,6 +10,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+- **App PIN Security & Lock**:
+  - Implemented secure hardware-backed PIN persistence via `FlutterSecureStorage`.
+  - Built custom Apple HIG on-screen numeric keypad (`AcedexPinKeypad`) featuring tactile spring buttons and dialer subtext that **never opens the device soft keyboard**.
+  - Built `PinDotsIndicator` with haptic feedback and error shake animations.
+  - Implemented automatic app lock interception on app background/resumption lifecycle events.
+  - Created full-screen `PinLockScreen` and two-step setup/confirmation flow (`PinSetupScreen`).
+- **Smooth Navigation Transitions**:
+  - Connected `AcedexFloatingNavBar` to an animated `PageView` providing smooth 320ms cubic transitions between app sections.
 - **Plum Design System**: Implemented `AppColors` ThemeExtension covering all specified light and dark tokens, derived colors, and status tints.
 - **Apple HIG Theme**: Built `AppTheme` with system typography, `BouncingScrollPhysics`, card/dialog/sheet radiuses, and zero heavy shadows.
 - **Theme Mode Persistence**: Created Riverpod `themeModeProvider` allowing seamless system/light/dark toggling persisted in `SharedPreferences`.

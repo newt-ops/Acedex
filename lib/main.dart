@@ -14,6 +14,9 @@ import 'core/widgets/acedex_badge.dart';
 import 'core/widgets/acedex_input.dart';
 import 'core/widgets/acedex_skeleton.dart';
 import 'core/widgets/acedex_nav_bar.dart';
+import 'features/security/pin_provider.dart';
+import 'features/security/screens/pin_lock_screen.dart';
+import 'features/security/screens/pin_setup_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -24,17 +27,45 @@ void main() async {
       overrides: [
         sharedPreferencesProvider.overrideWithValue(prefs),
       ],
-      child: const AcedexApp(),
+      child: const AcedexAppRoot(),
     ),
   );
 }
 
-class AcedexApp extends ConsumerWidget {
-  const AcedexApp({super.key});
+class AcedexAppRoot extends ConsumerStatefulWidget {
+  const AcedexAppRoot({super.key});
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
+  ConsumerState<AcedexAppRoot> createState() => _AcedexAppRootState();
+}
+
+class _AcedexAppRootState extends ConsumerState<AcedexAppRoot>
+    with WidgetsBindingObserver {
+  @override
+  void initState() {
+    super.initState();
+    WidgetsBinding.instance.addObserver(this);
+  }
+
+  @override
+  void dispose() {
+    WidgetsBinding.instance.removeObserver(this);
+    super.dispose();
+  }
+
+  @override
+  void didChangeAppLifecycleState(AppLifecycleState state) {
+    if (state == AppLifecycleState.paused) {
+      ref.read(pinProvider.notifier).onAppPaused();
+    } else if (state == AppLifecycleState.resumed) {
+      ref.read(pinProvider.notifier).onAppResumed();
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
     final themeMode = ref.watch(themeModeProvider);
+    final pinState = ref.watch(pinProvider);
 
     return MaterialApp(
       title: 'Acedex',
@@ -47,7 +78,160 @@ class AcedexApp extends ConsumerWidget {
           parent: AlwaysScrollableScrollPhysics(),
         ),
       ),
-      home: const DesignSystemShowcaseScreen(),
+      home: pinState.isLocked
+          ? const PinLockScreen()
+          : const MainNavigationShell(),
+    );
+  }
+}
+
+class MainNavigationShell extends ConsumerStatefulWidget {
+  const MainNavigationShell({super.key});
+
+  @override
+  ConsumerState<MainNavigationShell> createState() => _MainNavigationShellState();
+}
+
+class _MainNavigationShellState extends ConsumerState<MainNavigationShell> {
+  int _currentIndex = 0;
+  late final PageController _pageController;
+
+  @override
+  void initState() {
+    super.initState();
+    _pageController = PageController(initialPage: _currentIndex);
+  }
+
+  @override
+  void dispose() {
+    _pageController.dispose();
+    super.dispose();
+  }
+
+  void _onTabSelected(int index) {
+    setState(() => _currentIndex = index);
+    _pageController.animateToPage(
+      index,
+      duration: const Duration(milliseconds: 320),
+      curve: Curves.easeInOutCubic,
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final navItems = [
+      const AcedexNavItem(
+        icon: HugeIcons.strokeRoundedHome01,
+        tooltip: 'Today',
+      ),
+      const AcedexNavItem(
+        icon: HugeIcons.strokeRoundedBookOpen01,
+        tooltip: 'Curriculum',
+      ),
+      const AcedexNavItem(
+        icon: HugeIcons.strokeRoundedAnalytics01,
+        tooltip: 'Analytics',
+      ),
+      const AcedexNavItem(
+        icon: HugeIcons.strokeRoundedSettings02,
+        tooltip: 'Settings',
+      ),
+    ];
+
+    return Scaffold(
+      extendBody: true,
+      body: PageView(
+        controller: _pageController,
+        physics: const NeverScrollableScrollPhysics(),
+        children: const [
+          DesignSystemShowcaseScreen(),
+          PlaceholderTabScreen(
+            title: 'Curriculum & Units',
+            icon: HugeIcons.strokeRoundedBookOpen01,
+            description: 'Ethiopian Grade 9–12 syllabus tracking with 3-stage mastery.',
+          ),
+          PlaceholderTabScreen(
+            title: 'Study Analytics',
+            icon: HugeIcons.strokeRoundedAnalytics01,
+            description: 'Weekly study time consistency charts and subject breakdown.',
+          ),
+          PlaceholderTabScreen(
+            title: 'Settings & Profile',
+            icon: HugeIcons.strokeRoundedSettings02,
+            description: 'App preferences, PIN security, and developer appreciation.',
+          ),
+        ],
+      ),
+      bottomNavigationBar: AcedexFloatingNavBar(
+        currentIndex: _currentIndex,
+        onTap: _onTabSelected,
+        items: navItems,
+      ),
+    );
+  }
+}
+
+class PlaceholderTabScreen extends StatelessWidget {
+  const PlaceholderTabScreen({
+    super.key,
+    required this.title,
+    required this.icon,
+    required this.description,
+  });
+
+  final String title;
+  final List<List<dynamic>> icon;
+  final String description;
+
+  @override
+  Widget build(BuildContext context) {
+    final colors = context.appColors;
+
+    return Scaffold(
+      appBar: AppBar(title: Text(title)),
+      body: Center(
+        child: Padding(
+          padding: const EdgeInsets.all(AppTheme.space24),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Container(
+                width: 72,
+                height: 72,
+                decoration: BoxDecoration(
+                  color: colors.primarySoft,
+                  shape: BoxShape.circle,
+                ),
+                child: Center(
+                  child: HugeIcon(
+                    icon: icon,
+                    color: colors.primary,
+                    size: 32,
+                  ),
+                ),
+              ),
+              const SizedBox(height: AppTheme.space16),
+              Text(
+                title,
+                style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                  color: colors.textPrimary,
+                ),
+              ),
+              const SizedBox(height: AppTheme.space8),
+              Text(
+                description,
+                style: TextStyle(
+                  fontSize: 14,
+                  color: colors.textSecondary,
+                ),
+                textAlign: TextAlign.center,
+              ),
+            ],
+          ),
+        ),
+      ),
     );
   }
 }
@@ -62,7 +246,6 @@ class DesignSystemShowcaseScreen extends ConsumerStatefulWidget {
 
 class _DesignSystemShowcaseScreenState
     extends ConsumerState<DesignSystemShowcaseScreen> {
-  int _navIndex = 0;
   bool _isSeeded = false;
   int _subjectCount = 0;
   int _chapterCount = 0;
@@ -91,30 +274,12 @@ class _DesignSystemShowcaseScreenState
   Widget build(BuildContext context) {
     final colors = context.appColors;
     final currentThemeMode = ref.watch(themeModeProvider);
+    final pinState = ref.watch(pinProvider);
     final isDark = Theme.of(context).brightness == Brightness.dark;
-
-    final navItems = [
-      const AcedexNavItem(
-        icon: HugeIcons.strokeRoundedHome01,
-        tooltip: 'Today',
-      ),
-      const AcedexNavItem(
-        icon: HugeIcons.strokeRoundedBookOpen01,
-        tooltip: 'Curriculum',
-      ),
-      const AcedexNavItem(
-        icon: HugeIcons.strokeRoundedAnalytics01,
-        tooltip: 'Analytics',
-      ),
-      const AcedexNavItem(
-        icon: HugeIcons.strokeRoundedSettings02,
-        tooltip: 'Settings',
-      ),
-    ];
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Acedex Design System'),
+        title: const Text('Acedex Today'),
         actions: [
           IconButton(
             tooltip: 'Toggle Theme',
@@ -133,18 +298,12 @@ class _DesignSystemShowcaseScreenState
           ),
         ],
       ),
-      extendBody: true,
-      bottomNavigationBar: AcedexFloatingNavBar(
-        currentIndex: _navIndex,
-        onTap: (index) => setState(() => _navIndex = index),
-        items: navItems,
-      ),
       body: ListView(
         padding: const EdgeInsets.fromLTRB(
           AppTheme.space16,
           AppTheme.space8,
           AppTheme.space16,
-          100.0,
+          110.0,
         ),
         physics: const BouncingScrollPhysics(),
         children: [
@@ -185,6 +344,95 @@ class _DesignSystemShowcaseScreenState
                       fontSize: 14,
                       color: colors.textSecondary,
                     ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+          const SizedBox(height: AppTheme.space16),
+          Card(
+            child: Padding(
+              padding: const EdgeInsets.all(AppTheme.space16),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Row(
+                        children: [
+                          HugeIcon(
+                            icon: HugeIcons.strokeRoundedLockPassword,
+                            color: colors.primary,
+                            size: 20,
+                          ),
+                          const SizedBox(width: AppTheme.space8),
+                          Text(
+                            'App Security & PIN Lock',
+                            style: TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold,
+                              color: colors.textPrimary,
+                            ),
+                          ),
+                        ],
+                      ),
+                      AcedexBadge(
+                        label: pinState.isPinEnabled ? 'Active' : 'Disabled',
+                        color: pinState.isPinEnabled ? colors.success : colors.textSecondary,
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: AppTheme.space12),
+                  Text(
+                    'Lock Acedex with a custom on-screen numeric keypad whenever the app is reopened.',
+                    style: TextStyle(
+                      fontSize: 13,
+                      color: colors.textSecondary,
+                    ),
+                  ),
+                  const SizedBox(height: AppTheme.space16),
+                  Row(
+                    children: [
+                      Expanded(
+                        child: AcedexButton(
+                          label: pinState.isPinEnabled ? 'Disable PIN' : 'Set PIN Lock',
+                          variant: pinState.isPinEnabled
+                              ? AcedexButtonVariant.danger
+                              : AcedexButtonVariant.primary,
+                          onPressed: () async {
+                            if (pinState.isPinEnabled) {
+                              await ref.read(pinProvider.notifier).disablePin();
+                              if (context.mounted) {
+                                AcedexToast.show(
+                                  context,
+                                  title: 'PIN Removed',
+                                  message: 'PIN lock has been turned off.',
+                                  status: AcedexToastStatus.info,
+                                );
+                              }
+                            } else {
+                              Navigator.of(context).push(
+                                MaterialPageRoute(
+                                  builder: (context) => const PinSetupScreen(),
+                                ),
+                              );
+                            }
+                          },
+                        ),
+                      ),
+                      if (pinState.isPinEnabled) ...[
+                        const SizedBox(width: AppTheme.space8),
+                        AcedexButton(
+                          label: 'Lock Now',
+                          variant: AcedexButtonVariant.secondary,
+                          isFullWidth: false,
+                          onPressed: () {
+                            ref.read(pinProvider.notifier).onAppResumed();
+                          },
+                        ),
+                      ],
+                    ],
                   ),
                 ],
               ),
@@ -349,15 +597,6 @@ class _DesignSystemShowcaseScreenState
                 leading: HugeIcon(
                   icon: HugeIcons.strokeRoundedCheckmarkCircle02,
                   color: colors.primary,
-                  size: 14,
-                ),
-              ),
-              AcedexBadge(
-                label: 'Danger Notice',
-                color: colors.danger,
-                leading: HugeIcon(
-                  icon: HugeIcons.strokeRoundedCancelCircle,
-                  color: colors.danger,
                   size: 14,
                 ),
               ),

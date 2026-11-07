@@ -19,18 +19,17 @@ void main() {
           sharedPreferencesProvider.overrideWithValue(prefs),
           databaseProvider.overrideWithValue(testDb),
         ],
-        child: const AcedexApp(),
+        child: const AcedexAppRoot(),
       ),
     );
 
     await tester.pump();
     await tester.pump(const Duration(milliseconds: 200));
 
-    expect(find.text('Acedex Design System'), findsOneWidget);
+    expect(find.text('Acedex Today'), findsOneWidget);
     expect(find.text('Curriculum Database'), findsOneWidget);
+    expect(find.text('App Security & PIN Lock'), findsOneWidget);
     expect(find.text('Theme Mode'), findsOneWidget);
-    expect(find.text('Buttons'), findsOneWidget);
-    expect(find.text('Inputs'), findsOneWidget);
 
     await testDb.close();
   });
