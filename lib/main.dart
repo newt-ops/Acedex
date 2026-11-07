@@ -376,24 +376,30 @@ class _DesignSystemShowcaseScreenState
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Row(
-                        children: [
-                          HugeIcon(
-                            icon: HugeIcons.strokeRoundedLockPassword,
-                            color: colors.primary,
-                            size: 20,
-                          ),
-                          const SizedBox(width: AppTheme.space8),
-                          Text(
-                            'App Security & PIN Lock',
-                            style: TextStyle(
-                              fontSize: 16,
-                              fontWeight: FontWeight.bold,
-                              color: colors.textPrimary,
+                      Expanded(
+                        child: Row(
+                          children: [
+                            HugeIcon(
+                              icon: HugeIcons.strokeRoundedLockPassword,
+                              color: colors.primary,
+                              size: 20,
                             ),
-                          ),
-                        ],
+                            const SizedBox(width: AppTheme.space8),
+                            Flexible(
+                              child: Text(
+                                'App Security & PIN',
+                                style: TextStyle(
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.bold,
+                                  color: colors.textPrimary,
+                                ),
+                                overflow: TextOverflow.ellipsis,
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
+                      const SizedBox(width: AppTheme.space8),
                       AcedexBadge(
                         label: pinState.isPinEnabled ? 'Active' : 'Disabled',
                         color: pinState.isPinEnabled
@@ -471,34 +477,44 @@ class _DesignSystemShowcaseScreenState
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Row(
-                            children: [
-                              HugeIcon(
-                                icon: HugeIcons.strokeRoundedUser,
-                                color: colors.primary,
-                                size: 20,
-                              ),
-                              const SizedBox(width: AppTheme.space8),
-                              Text(
-                                'Student Profile & Auth',
-                                style: TextStyle(
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.bold,
-                                  color: colors.textPrimary,
+                          Expanded(
+                            child: Row(
+                              children: [
+                                HugeIcon(
+                                  icon: HugeIcons.strokeRoundedUser,
+                                  color: colors.primary,
+                                  size: 20,
                                 ),
-                              ),
-                            ],
+                                const SizedBox(width: AppTheme.space8),
+                                Flexible(
+                                  child: Text(
+                                    'Student Profile',
+                                    style: TextStyle(
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.bold,
+                                      color: colors.textPrimary,
+                                    ),
+                                    overflow: TextOverflow.ellipsis,
+                                  ),
+                                ),
+                              ],
+                            ),
                           ),
+                          const SizedBox(width: AppTheme.space8),
                           AcedexBadge(
                             label: student != null
-                                ? 'Grade ${student.grade} ${student.stream.toUpperCase()}'
-                                : 'Guest / Not Onboarded',
-                            color: student != null ? colors.success : colors.warning,
+                                ? 'Grade ${student.grade}'
+                                : 'Guest',
+                            color: student != null
+                                ? colors.success
+                                : colors.warning,
                             leading: HugeIcon(
                               icon: student != null
                                   ? HugeIcons.strokeRoundedCheckmarkCircle02
                                   : HugeIcons.strokeRoundedClock01,
-                              color: student != null ? colors.success : colors.warning,
+                              color: student != null
+                                  ? colors.success
+                                  : colors.warning,
                               size: 14,
                             ),
                           ),
@@ -542,7 +558,8 @@ class _DesignSystemShowcaseScreenState
                                 Navigator.of(context).push(
                                   MaterialPageRoute(
                                     builder: (_) => OnboardingScreen(
-                                      onCompleted: () => Navigator.of(context).pop(),
+                                      onCompleted: () =>
+                                          Navigator.of(context).pop(),
                                     ),
                                   ),
                                 );
@@ -558,7 +575,8 @@ class _DesignSystemShowcaseScreenState
                                 Navigator.of(context).push(
                                   MaterialPageRoute(
                                     builder: (_) => LoginScreen(
-                                      onLoginSuccess: () => Navigator.of(context).pop(),
+                                      onLoginSuccess: () =>
+                                          Navigator.of(context).pop(),
                                       onSkip: () => Navigator.of(context).pop(),
                                     ),
                                   ),
@@ -579,7 +597,8 @@ class _DesignSystemShowcaseScreenState
                                 Navigator.of(context).push(
                                   MaterialPageRoute(
                                     builder: (_) => SignUpScreen(
-                                      onSignUpSuccess: () => Navigator.of(context).pop(),
+                                      onSignUpSuccess: () =>
+                                          Navigator.of(context).pop(),
                                     ),
                                   ),
                                 );
@@ -592,7 +611,9 @@ class _DesignSystemShowcaseScreenState
                               label: 'Reset Profile',
                               variant: AcedexButtonVariant.secondary,
                               onPressed: () async {
-                                await ref.read(studentStateProvider.notifier).resetForTesting();
+                                await ref
+                                    .read(studentStateProvider.notifier)
+                                    .resetForTesting();
                                 if (context.mounted) {
                                   AcedexToast.show(
                                     context,

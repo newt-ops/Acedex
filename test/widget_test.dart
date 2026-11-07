@@ -58,8 +58,8 @@ void main() {
 
     expect(find.text('Acedex Today'), findsOneWidget);
     expect(find.text('Curriculum Database'), findsOneWidget);
-    expect(find.text('App Security & PIN Lock'), findsOneWidget);
-    expect(find.text('Student Profile & Auth'), findsOneWidget);
+    expect(find.text('App Security & PIN'), findsOneWidget);
+    expect(find.text('Student Profile'), findsOneWidget);
 
     await tester.drag(find.byType(ListView), const Offset(0, -300));
     await tester.pumpAndSettle();
