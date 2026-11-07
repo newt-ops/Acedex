@@ -31,3 +31,4 @@ class AppGate extends ConsumerWidget {
     return const MainNavigationShell();
   }
 }
+

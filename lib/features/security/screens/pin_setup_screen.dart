@@ -7,7 +7,7 @@ import '../../../core/theme/app_theme.dart';
 import '../../../core/widgets/acedex_toast.dart';
 import '../pin_provider.dart';
 import '../widgets/acedex_pin_keypad.dart';
-import '../widgets/pin_dots_indicator.dart';
+import '../widgets/pin_boxes_indicator.dart';
 
 class PinSetupScreen extends ConsumerStatefulWidget {
   const PinSetupScreen({super.key});
@@ -182,9 +182,10 @@ class _PinSetupScreenState extends ConsumerState<PinSetupScreen>
                   textAlign: TextAlign.center,
                 ),
                 const SizedBox(height: AppTheme.space24),
-                PinDotsIndicator(
+                PinBoxesIndicator(
                   pinLength: currentPin.length,
                   maxDigits: 4,
+                  isError: _errorMessage != null,
                   shakeAnimation: _shakeAnimation,
                 ),
                 const SizedBox(height: AppTheme.space12),

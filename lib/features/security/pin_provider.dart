@@ -73,6 +73,10 @@ class PinNotifier extends StateNotifier<PinState> {
     return false;
   }
 
+  void unlock() {
+    state = state.copyWith(isLocked: false);
+  }
+
   Future<void> enablePin(String pin) async {
     await _service.setPin(pin);
     state = state.copyWith(

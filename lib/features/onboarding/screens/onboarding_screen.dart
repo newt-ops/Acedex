@@ -11,10 +11,7 @@ import '../../profile/student_provider.dart';
 import '../models/onboarding_data.dart';
 
 class OnboardingScreen extends ConsumerStatefulWidget {
-  const OnboardingScreen({
-    super.key,
-    this.onCompleted,
-  });
+  const OnboardingScreen({super.key, this.onCompleted});
 
   final VoidCallback? onCompleted;
 
@@ -299,11 +296,7 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
               borderRadius: BorderRadius.circular(10),
             ),
             child: Center(
-              child: HugeIcon(
-                icon: icon,
-                color: colors.primary,
-                size: 20,
-              ),
+              child: HugeIcon(icon: icon, color: colors.primary, size: 20),
             ),
           ),
           const SizedBox(width: AppTheme.space16),
@@ -322,10 +315,7 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
                 const SizedBox(height: 2),
                 Text(
                   subtitle,
-                  style: TextStyle(
-                    fontSize: 12.5,
-                    color: colors.textSecondary,
-                  ),
+                  style: TextStyle(fontSize: 12.5, color: colors.textSecondary),
                 ),
               ],
             ),
@@ -355,16 +345,13 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
           const SizedBox(height: AppTheme.space8),
           Text(
             'We customize your study journey and streak milestones.',
-            style: TextStyle(
-              fontSize: 14,
-              color: colors.textSecondary,
-            ),
+            style: TextStyle(fontSize: 14, color: colors.textSecondary),
           ),
           const SizedBox(height: AppTheme.space32),
           AcedexInput(
             controller: _nameController,
             label: 'Your Full Name',
-            hintText: 'e.g. Aymen Newton',
+            hintText: 'Newton',
             leading: HugeIcon(
               icon: HugeIcons.strokeRoundedUser,
               color: colors.textSecondary,
@@ -417,9 +404,18 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
   Widget _buildGradeStep(AppColors colors) {
     final grades = [
       {'grade': 9, 'desc': 'Foundations: Common curriculum across all schools'},
-      {'grade': 10, 'desc': 'National prep: Common curriculum with core exam focus'},
-      {'grade': 11, 'desc': 'Specialization: Natural Science vs Social Science'},
-      {'grade': 12, 'desc': 'University Entrance: Comprehensive EUEE Exam Prep'},
+      {
+        'grade': 10,
+        'desc': 'National prep: Common curriculum with core exam focus',
+      },
+      {
+        'grade': 11,
+        'desc': 'Specialization: Natural Science vs Social Science',
+      },
+      {
+        'grade': 12,
+        'desc': 'University Entrance: Comprehensive EUEE Exam Prep',
+      },
     ];
 
     return Padding(
@@ -440,17 +436,15 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
           const SizedBox(height: AppTheme.space8),
           Text(
             'Acedex loads all units and subtopics for your syllabus.',
-            style: TextStyle(
-              fontSize: 14,
-              color: colors.textSecondary,
-            ),
+            style: TextStyle(fontSize: 14, color: colors.textSecondary),
           ),
           const SizedBox(height: AppTheme.space24),
           Expanded(
             child: ListView.separated(
               physics: const BouncingScrollPhysics(),
               itemCount: grades.length,
-              separatorBuilder: (_, _) => const SizedBox(height: AppTheme.space12),
+              separatorBuilder: (_, _) =>
+                  const SizedBox(height: AppTheme.space12),
               itemBuilder: (context, index) {
                 final item = grades[index];
                 final gradeNum = item['grade'] as int;
@@ -562,10 +556,7 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
             isCommon
                 ? 'Grades 9 and 10 study all common core subjects.'
                 : 'Select your field of specialization for Grade ${_data.grade}.',
-            style: TextStyle(
-              fontSize: 14,
-              color: colors.textSecondary,
-            ),
+            style: TextStyle(fontSize: 14, color: colors.textSecondary),
           ),
           const SizedBox(height: AppTheme.space24),
           if (isCommon) ...[
@@ -613,7 +604,8 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
             _buildStreamCard(
               colors,
               title: 'Natural Science',
-              subtitle: 'Physics, Chemistry, Biology, Mathematics, English, SAT',
+              subtitle:
+                  'Physics, Chemistry, Biology, Mathematics, English, SAT',
               streamKey: 'natural',
               icon: HugeIcons.strokeRoundedAtom02,
             ),
@@ -621,7 +613,8 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
             _buildStreamCard(
               colors,
               title: 'Social Science',
-              subtitle: 'History, Geography, Economics, Mathematics, English, SAT',
+              subtitle:
+                  'History, Geography, Economics, Mathematics, English, SAT',
               streamKey: 'social',
               icon: HugeIcons.strokeRoundedGlobe02,
             ),
@@ -712,10 +705,26 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
   // STEP 5: Daily Goal & Streak Welcome
   Widget _buildGoalStep(AppColors colors) {
     final goals = [
-      {'minutes': 60, 'label': '1 hour / day', 'desc': 'Light review & steady rhythm'},
-      {'minutes': 90, 'label': '1.5 hours / day', 'desc': 'Consistent daily coverage'},
-      {'minutes': 120, 'label': '2 hours / day (Recommended)', 'desc': 'Optimal EUEE score prep'},
-      {'minutes': 180, 'label': '3 hours / day', 'desc': 'Deep focus & mastery'},
+      {
+        'minutes': 60,
+        'label': '1 hour / day',
+        'desc': 'Light review & steady rhythm',
+      },
+      {
+        'minutes': 90,
+        'label': '1.5 hours / day',
+        'desc': 'Consistent daily coverage',
+      },
+      {
+        'minutes': 120,
+        'label': '2 hours / day (Recommended)',
+        'desc': 'Optimal EUEE score prep',
+      },
+      {
+        'minutes': 180,
+        'label': '3 hours / day',
+        'desc': 'Deep focus & mastery',
+      },
     ];
 
     return Padding(
@@ -736,17 +745,15 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
           const SizedBox(height: AppTheme.space8),
           Text(
             'Consistency unlocks streak freezes and high exam scores.',
-            style: TextStyle(
-              fontSize: 14,
-              color: colors.textSecondary,
-            ),
+            style: TextStyle(fontSize: 14, color: colors.textSecondary),
           ),
           const SizedBox(height: AppTheme.space24),
           Expanded(
             child: ListView.separated(
               physics: const BouncingScrollPhysics(),
               itemCount: goals.length,
-              separatorBuilder: (_, _) => const SizedBox(height: AppTheme.space12),
+              separatorBuilder: (_, _) =>
+                  const SizedBox(height: AppTheme.space12),
               itemBuilder: (context, index) {
                 final item = goals[index];
                 final minutes = item['minutes'] as int;
@@ -756,7 +763,8 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
                   onTap: () {
                     HapticFeedback.selectionClick();
                     setState(
-                        () => _data = _data.copyWith(dailyGoalMinutes: minutes));
+                      () => _data = _data.copyWith(dailyGoalMinutes: minutes),
+                    );
                   },
                   child: AnimatedContainer(
                     duration: const Duration(milliseconds: 200),
@@ -773,7 +781,9 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
                       children: [
                         HugeIcon(
                           icon: HugeIcons.strokeRoundedClock01,
-                          color: isSelected ? colors.primary : colors.textSecondary,
+                          color: isSelected
+                              ? colors.primary
+                              : colors.textSecondary,
                           size: 24,
                         ),
                         const SizedBox(width: AppTheme.space16),

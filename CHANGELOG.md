@@ -10,6 +10,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+- **Redesigned PIN Lock Screen (`PinLockScreen`)**: Upgraded to match the reference design:
+  - Header: `"Enter current PIN"` rendered in primary plum color (`colors.primary`).
+  - **Squircle Indicator Boxes (`PinBoxesIndicator`)**: 4 rounded squircle boxes (`14px` border radius) displaying active plum borders with solid plum dots while entering, emerald green borders with green dots on successful match ("Confirm" state), and crimson red borders with shake animation on error.
+  - **Minimalist Numeric Keypad (`AcedexPinKeypad`)**: Clean bold numerals, bottom-left `HugeIcons.strokeRoundedFingerprintPattern` (`FingerprintPatternIcon`), and bottom-right `HugeIcons.strokeRoundedArrowLeft02` (`ArrowLeft02Icon`).
+- **Biometric Fingerprint Authentication (`BiometricService`)**:
+  - Integrated `local_auth: ^3.0.2` with native `FlutterFragmentActivity` on Android and `NSFaceIDUsageDescription` on iOS.
+  - Added `USE_BIOMETRIC` permission in AndroidManifest.
+  - On tap: prompts fingerprint authentication; on success, transitions boxes to emerald green and unlocks immediately.
+  - **Graceful Fallback**: Checks device biometric hardware and enrollment; if the device cannot perform biometrics, displays an Apple capsule HUD toast (`AcedexToast.info(...)`) instructing the user to use their PIN without interruption.
+- **Biometric Unit Tests**: Added `test/security/biometric_test.dart` (32 / 32 total tests passing).
 - **Supabase Cloud Schema & RLS Migrations**: Deployed PostgreSQL schema for `students`, `subjects`, `chapters`, `chapter_progress`, and `study_sessions` with strict Row-Level Security policies (`(select auth.uid()) = student_id`), foreign key indexes, and auto-updating `updated_at` triggers. Saved migration in `supabase/migrations/20261107000000_init_acedex_schema.sql`.
 - **Supabase Client Service (`SupabaseService`)**: Initialized PKCE client with auto-refreshing JWTs and defensive fallbacks for offline testing.
 - **Apple HIG Authentication Screens (`lib/features/auth/`)**:

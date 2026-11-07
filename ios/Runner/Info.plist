@@ -6,6 +6,8 @@
 	<string>Acedex needs access to your photos to upload your student profile picture.</string>
 	<key>NSCameraUsageDescription</key>
 	<string>Acedex needs access to your camera to take a photo for your profile picture.</string>
+	<key>NSFaceIDUsageDescription</key>
+	<string>Acedex uses biometric authentication to securely unlock your study space.</string>
 	<key>CADisableMinimumFrameDurationOnPhone</key>
 	<true/>
 	<key>CFBundleDevelopmentRegion</key>

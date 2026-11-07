@@ -8,25 +8,16 @@ class AcedexPinKeypad extends StatelessWidget {
     super.key,
     required this.onDigitPressed,
     required this.onBackspace,
+    this.onFingerprintPressed,
     this.bottomLeftWidget,
+    this.showKeyBorders = false,
   });
 
   final ValueChanged<String> onDigitPressed;
   final VoidCallback onBackspace;
+  final VoidCallback? onFingerprintPressed;
   final Widget? bottomLeftWidget;
-
-  static const Map<String, String> _subtitles = {
-    '1': '',
-    '2': 'ABC',
-    '3': 'DEF',
-    '4': 'GHI',
-    '5': 'JKL',
-    '6': 'MNO',
-    '7': 'PQRS',
-    '8': 'TUV',
-    '9': 'WXYZ',
-    '0': '+',
-  };
+  final bool showKeyBorders;
 
   @override
   Widget build(BuildContext context) {
@@ -34,11 +25,11 @@ class AcedexPinKeypad extends StatelessWidget {
       mainAxisSize: MainAxisSize.min,
       children: [
         _buildRow(context, ['1', '2', '3']),
-        const SizedBox(height: 16),
+        const SizedBox(height: 18),
         _buildRow(context, ['4', '5', '6']),
-        const SizedBox(height: 16),
+        const SizedBox(height: 18),
         _buildRow(context, ['7', '8', '9']),
-        const SizedBox(height: 16),
+        const SizedBox(height: 18),
         _buildBottomRow(context),
       ],
     );
@@ -50,19 +41,19 @@ class AcedexPinKeypad extends StatelessWidget {
       children: [
         _PinKeyButton(
           digit: digits[0],
-          subtitle: _subtitles[digits[0]] ?? '',
+          showBorder: showKeyBorders,
           onPressed: () => onDigitPressed(digits[0]),
         ),
-        const SizedBox(width: 28),
+        const SizedBox(width: 32),
         _PinKeyButton(
           digit: digits[1],
-          subtitle: _subtitles[digits[1]] ?? '',
+          showBorder: showKeyBorders,
           onPressed: () => onDigitPressed(digits[1]),
         ),
-        const SizedBox(width: 28),
+        const SizedBox(width: 32),
         _PinKeyButton(
           digit: digits[2],
-          subtitle: _subtitles[digits[2]] ?? '',
+          showBorder: showKeyBorders,
           onPressed: () => onDigitPressed(digits[2]),
         ),
       ],
@@ -72,27 +63,42 @@ class AcedexPinKeypad extends StatelessWidget {
   Widget _buildBottomRow(BuildContext context) {
     final colors = context.appColors;
 
+    Widget leftAction;
+    if (bottomLeftWidget != null) {
+      leftAction = bottomLeftWidget!;
+    } else if (onFingerprintPressed != null) {
+      leftAction = _KeypadActionButton(
+        icon: HugeIcons.strokeRoundedFingerprintPattern,
+        color: colors.textPrimary,
+        size: 28,
+        onPressed: onFingerprintPressed!,
+      );
+    } else {
+      leftAction = const SizedBox.shrink();
+    }
+
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         SizedBox(
           width: 72,
           height: 72,
-          child: Center(child: bottomLeftWidget ?? const SizedBox.shrink()),
+          child: Center(child: leftAction),
         ),
-        const SizedBox(width: 28),
+        const SizedBox(width: 32),
         _PinKeyButton(
           digit: '0',
-          subtitle: _subtitles['0'] ?? '',
+          showBorder: showKeyBorders,
           onPressed: () => onDigitPressed('0'),
         ),
-        const SizedBox(width: 28),
+        const SizedBox(width: 32),
         SizedBox(
           width: 72,
           height: 72,
           child: _KeypadActionButton(
-            icon: HugeIcons.strokeRoundedDelete02,
+            icon: HugeIcons.strokeRoundedArrowLeft02,
             color: colors.textPrimary,
+            size: 28,
             onPressed: onBackspace,
           ),
         ),
@@ -104,12 +110,12 @@ class AcedexPinKeypad extends StatelessWidget {
 class _PinKeyButton extends StatefulWidget {
   const _PinKeyButton({
     required this.digit,
-    required this.subtitle,
+    required this.showBorder,
     required this.onPressed,
   });
 
   final String digit;
-  final String subtitle;
+  final bool showBorder;
   final VoidCallback onPressed;
 
   @override
@@ -124,6 +130,7 @@ class _PinKeyButtonState extends State<_PinKeyButton> {
     final colors = context.appColors;
 
     return GestureDetector(
+      behavior: HitTestBehavior.opaque,
       onTapDown: (_) => setState(() => _isPressed = true),
       onTapUp: (_) => setState(() => _isPressed = false),
       onTapCancel: () => setState(() => _isPressed = false),
@@ -132,53 +139,38 @@ class _PinKeyButtonState extends State<_PinKeyButton> {
         widget.onPressed();
       },
       child: AnimatedScale(
-        scale: _isPressed ? 0.92 : 1.0,
+        scale: _isPressed ? 0.88 : 1.0,
         duration: const Duration(milliseconds: 100),
         curve: Curves.easeOutCubic,
-        child: AnimatedContainer(
-          duration: const Duration(milliseconds: 140),
+        child: Container(
           width: 72,
           height: 72,
-          decoration: BoxDecoration(
-            shape: BoxShape.circle,
-            color: _isPressed ? colors.primarySoft : colors.surface,
-            border: Border.all(
-              color: _isPressed ? colors.primary : colors.border,
-              width: 1.0,
-            ),
-            boxShadow: [
-              BoxShadow(
-                color: Colors.black.withValues(alpha: 0.03),
-                blurRadius: 8,
-                offset: const Offset(0, 2),
-              ),
-            ],
-          ),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text(
-                widget.digit,
-                style: TextStyle(
-                  fontSize: 27,
-                  fontWeight: FontWeight.w600,
-                  color: _isPressed ? colors.primary : colors.textPrimary,
-                  height: 1.0,
-                ),
-              ),
-              if (widget.subtitle.isNotEmpty) ...[
-                const SizedBox(height: 2),
-                Text(
-                  widget.subtitle,
-                  style: TextStyle(
-                    fontSize: 9,
-                    fontWeight: FontWeight.w700,
-                    letterSpacing: 1.5,
-                    color: colors.textSecondary,
+          decoration: widget.showBorder
+              ? BoxDecoration(
+                  shape: BoxShape.circle,
+                  color: _isPressed ? colors.primarySoft : colors.surface,
+                  border: Border.all(
+                    color: _isPressed ? colors.primary : colors.border,
+                    width: 1.0,
                   ),
+                )
+              : BoxDecoration(
+                  shape: BoxShape.circle,
+                  color: _isPressed
+                      ? colors.primarySoft
+                      : Colors.transparent,
                 ),
-              ],
-            ],
+          child: Center(
+            child: Text(
+              widget.digit,
+              style: TextStyle(
+                fontSize: 28,
+                fontWeight: FontWeight.w600,
+                color: _isPressed ? colors.primary : colors.textPrimary,
+                height: 1.0,
+                letterSpacing: -0.5,
+              ),
+            ),
           ),
         ),
       ),
@@ -191,11 +183,13 @@ class _KeypadActionButton extends StatefulWidget {
     required this.icon,
     required this.color,
     required this.onPressed,
+    this.size = 26.0,
   });
 
   final List<List<dynamic>> icon;
   final Color color;
   final VoidCallback onPressed;
+  final double size;
 
   @override
   State<_KeypadActionButton> createState() => _KeypadActionButtonState();
@@ -206,7 +200,10 @@ class _KeypadActionButtonState extends State<_KeypadActionButton> {
 
   @override
   Widget build(BuildContext context) {
+    final colors = context.appColors;
+
     return GestureDetector(
+      behavior: HitTestBehavior.opaque,
       onTapDown: (_) => setState(() => _isPressed = true),
       onTapUp: (_) => setState(() => _isPressed = false),
       onTapCancel: () => setState(() => _isPressed = false),
@@ -215,13 +212,21 @@ class _KeypadActionButtonState extends State<_KeypadActionButton> {
         widget.onPressed();
       },
       child: AnimatedScale(
-        scale: _isPressed ? 0.88 : 1.0,
+        scale: _isPressed ? 0.85 : 1.0,
         duration: const Duration(milliseconds: 100),
-        child: Center(
-          child: HugeIcon(
-            icon: widget.icon,
-            color: widget.color,
-            size: 26,
+        child: Container(
+          width: 72,
+          height: 72,
+          decoration: BoxDecoration(
+            shape: BoxShape.circle,
+            color: _isPressed ? colors.primarySoft : Colors.transparent,
+          ),
+          child: Center(
+            child: HugeIcon(
+              icon: widget.icon,
+              color: _isPressed ? colors.primary : widget.color,
+              size: widget.size,
+            ),
           ),
         ),
       ),

@@ -204,3 +204,4 @@ CREATE POLICY "Users can delete own study sessions"
   FOR DELETE
   TO authenticated
   USING ((select auth.uid()) = student_id);
+
