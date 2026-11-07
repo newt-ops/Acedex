@@ -19,16 +19,24 @@ class ThemeModeNotifier extends StateNotifier<ThemeMode> {
   final SharedPreferences _prefs;
 
   static ThemeMode _loadInitialMode(SharedPreferences prefs) {
-    final raw = prefs.getString(_kThemeModeKey);
-    switch (raw) {
-      case 'light':
-        return ThemeMode.light;
-      case 'dark':
-        return ThemeMode.dark;
-      case 'system':
-      default:
-        return ThemeMode.system;
-    }
+    try {
+      final value = prefs.get(_kThemeModeKey);
+      if (value is bool) {
+        return value ? ThemeMode.dark : ThemeMode.light;
+      }
+      if (value is String) {
+        switch (value) {
+          case 'light':
+            return ThemeMode.light;
+          case 'dark':
+            return ThemeMode.dark;
+          case 'system':
+          default:
+            return ThemeMode.system;
+        }
+      }
+    } catch (_) {}
+    return ThemeMode.system;
   }
 
   Future<void> setThemeMode(ThemeMode mode) async {

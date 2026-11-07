@@ -41,6 +41,14 @@ void main() {
       await notifier.toggleLightDark(Brightness.dark);
       expect(notifier.state, ThemeMode.light);
     });
+
+    test('Handles boolean in SharedPreferences without type error', () async {
+      SharedPreferences.setMockInitialValues({'acedex_theme_mode': true});
+      final prefs = await SharedPreferences.getInstance();
+      final notifier = ThemeModeNotifier(prefs);
+
+      expect(notifier.state, ThemeMode.dark);
+    });
   });
 }
 

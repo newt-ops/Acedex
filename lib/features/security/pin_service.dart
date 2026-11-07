@@ -10,18 +10,30 @@ class PinService {
   static const String _kPinEnabledKey = 'acedex_pin_enabled';
 
   Future<bool> isPinEnabled() async {
-    final value = await _storage.read(key: _kPinEnabledKey);
-    return value == 'true';
+    try {
+      final value = await _storage.read(key: _kPinEnabledKey);
+      return value == 'true';
+    } catch (_) {
+      return false;
+    }
   }
 
   Future<bool> hasPin() async {
-    final pin = await _storage.read(key: _kPinCodeKey);
-    return pin != null && pin.length == 4;
+    try {
+      final pin = await _storage.read(key: _kPinCodeKey);
+      return pin != null && pin.length == 4;
+    } catch (_) {
+      return false;
+    }
   }
 
   Future<bool> verifyPin(String enteredPin) async {
-    final storedPin = await _storage.read(key: _kPinCodeKey);
-    return storedPin == enteredPin;
+    try {
+      final storedPin = await _storage.read(key: _kPinCodeKey);
+      return storedPin == enteredPin;
+    } catch (_) {
+      return false;
+    }
   }
 
   Future<void> setPin(String pin) async {
