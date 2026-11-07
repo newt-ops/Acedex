@@ -10,14 +10,32 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
-- Bundled verified Ethiopian national curriculum dataset (`assets/data/ethiopian_curriculum.json`) covering Grades 9–12 subjects, units, and subtopics across Natural and Social streams.
+- **Plum Design System**: Implemented `AppColors` ThemeExtension covering all specified light and dark tokens, derived colors, and status tints.
+- **Apple HIG Theme**: Built `AppTheme` with system typography, `BouncingScrollPhysics`, card/dialog/sheet radiuses, and zero heavy shadows.
+- **Theme Mode Persistence**: Created Riverpod `themeModeProvider` allowing seamless system/light/dark toggling persisted in `SharedPreferences`.
+- **Reusable HIG UI Component Library**:
+  - `AcedexFloatingNavBar`: Floating iOS-style pill navigation bar with blur backdrop and icon-only layout.
+  - `AcedexButton`: Primary, secondary, and danger button variants with spring tap animations.
+  - `AcedexToast`: Floating status overlay with Hugeicons and status-tinted borders.
+  - `AcedexDialog`: iOS modal dialog with destructive action styling.
+  - `AcedexSkeleton`: Shimmering skeleton loaders with reduced motion accessibility support.
+  - `AcedexBadge`: Fully rounded status badges.
+  - `AcedexInput`: HIG text inputs with smooth focus ring animations.
+- **Drift SQLite Database**: Configured `AppDatabase` with tables for students, subjects, chapters, progress, and study sessions.
+- **Curriculum Seeder**: Integrated automatic SQLite database preloading from `assets/data/ethiopian_curriculum.json`.
+- **Quality Assurance**: Added 10 automated unit and widget tests covering theme tokens, dark/light mode toggling, Drift database operations, and widget rendering.
 
 ### Changed
 - Configured `.gitignore` to explicitly ignore `data.json` and keep raw extracted docs in `Doc/data.json`.
 
 ### Planned
-- Design system implementation: Plum theme tokens, Apple HIG typography, and custom reusable widgets.
 - Supabase Auth flow with Email/Password & Google Sign-In and student onboarding.
+- Focus Timer (Pomodoro/Stopwatch) and manual study logging.
+- Consistency analytics with `fl_chart`.
+- Local notification schedules and inactivity detection.
+- Unity Rewarded Ads streak recovery integration.
+- Profile picture upload to Supabase Storage `avatars` bucket.
+- Developer appreciation profile for Aymen (Newton).
 - Local Drift database tables and two-way Supabase delta sync engine.
 - Focus Timer (Pomodoro/Stopwatch) and manual study logging.
 - Consistency analytics with `fl_chart`.
