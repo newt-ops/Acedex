@@ -80,6 +80,7 @@ class _AcedexToastWidgetState extends State<_AcedexToastWidget>
     with SingleTickerProviderStateMixin {
   late final AnimationController _controller;
   late final Animation<Offset> _offsetAnimation;
+  late final Animation<double> _scaleAnimation;
   late final Animation<double> _fadeAnimation;
   Timer? _timer;
   bool _isDismissing = false;
@@ -91,16 +92,25 @@ class _AcedexToastWidgetState extends State<_AcedexToastWidget>
 
     _controller = AnimationController(
       vsync: this,
-      duration: const Duration(milliseconds: 320),
-      reverseDuration: const Duration(milliseconds: 260),
+      duration: const Duration(milliseconds: 440),
+      reverseDuration: const Duration(milliseconds: 280),
     );
 
     _offsetAnimation = Tween<Offset>(
-      begin: const Offset(0, -1.2),
+      begin: const Offset(0, -1.25),
       end: Offset.zero,
     ).animate(CurvedAnimation(
       parent: _controller,
-      curve: Curves.easeOutCubic,
+      curve: Curves.easeOutBack,
+      reverseCurve: Curves.easeInBack,
+    ));
+
+    _scaleAnimation = Tween<double>(
+      begin: 0.88,
+      end: 1.0,
+    ).animate(CurvedAnimation(
+      parent: _controller,
+      curve: Curves.easeOutBack,
       reverseCurve: Curves.easeInCubic,
     ));
 
@@ -180,9 +190,11 @@ class _AcedexToastWidgetState extends State<_AcedexToastWidget>
       right: AppTheme.space16,
       child: SlideTransition(
         position: _offsetAnimation,
-        child: FadeTransition(
-          opacity: _fadeAnimation,
-          child: Material(
+        child: ScaleTransition(
+          scale: _scaleAnimation,
+          child: FadeTransition(
+            opacity: _fadeAnimation,
+            child: Material(
             color: Colors.transparent,
             child: GestureDetector(
               onTap: dismiss,
@@ -276,6 +288,7 @@ class _AcedexToastWidgetState extends State<_AcedexToastWidget>
           ),
         ),
       ),
-    );
-  }
+    ),
+  );
+}
 }
