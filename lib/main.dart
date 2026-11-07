@@ -15,19 +15,28 @@ import 'core/widgets/acedex_input.dart';
 import 'core/widgets/acedex_skeleton.dart';
 import 'core/widgets/acedex_nav_bar.dart';
 import 'core/widgets/acedex_header_bar.dart';
+import 'core/services/supabase_service.dart';
 import 'features/security/pin_provider.dart';
-import 'features/security/screens/pin_lock_screen.dart';
 import 'features/security/screens/pin_setup_screen.dart';
+import 'features/auth/app_gate.dart';
+import 'features/auth/screens/login_screen.dart';
+import 'features/auth/screens/signup_screen.dart';
+import 'features/onboarding/screens/onboarding_screen.dart';
+import 'features/profile/student_provider.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   final prefs = await SharedPreferences.getInstance();
 
+  try {
+    await SupabaseService.initialize();
+  } catch (e) {
+    debugPrint('Supabase initialization: $e');
+  }
+
   runApp(
     ProviderScope(
-      overrides: [
-        sharedPreferencesProvider.overrideWithValue(prefs),
-      ],
+      overrides: [sharedPreferencesProvider.overrideWithValue(prefs)],
       child: const AcedexAppRoot(),
     ),
   );
@@ -66,7 +75,6 @@ class _AcedexAppRootState extends ConsumerState<AcedexAppRoot>
   @override
   Widget build(BuildContext context) {
     final themeMode = ref.watch(themeModeProvider);
-    final pinState = ref.watch(pinProvider);
 
     return MaterialApp(
       title: 'Acedex',
@@ -79,9 +87,7 @@ class _AcedexAppRootState extends ConsumerState<AcedexAppRoot>
           parent: AlwaysScrollableScrollPhysics(),
         ),
       ),
-      home: pinState.isLocked
-          ? const PinLockScreen()
-          : const MainNavigationShell(),
+      home: const AppGate(),
     );
   }
 }
@@ -90,7 +96,8 @@ class MainNavigationShell extends ConsumerStatefulWidget {
   const MainNavigationShell({super.key});
 
   @override
-  ConsumerState<MainNavigationShell> createState() => _MainNavigationShellState();
+  ConsumerState<MainNavigationShell> createState() =>
+      _MainNavigationShellState();
 }
 
 class _MainNavigationShellState extends ConsumerState<MainNavigationShell> {
@@ -149,17 +156,20 @@ class _MainNavigationShellState extends ConsumerState<MainNavigationShell> {
           PlaceholderTabScreen(
             title: 'Curriculum & Units',
             icon: HugeIcons.strokeRoundedBookOpen01,
-            description: 'Ethiopian Grade 9–12 syllabus tracking with 3-stage mastery.',
+            description:
+                'Ethiopian Grade 9–12 syllabus tracking with 3-stage mastery.',
           ),
           PlaceholderTabScreen(
             title: 'Study Analytics',
             icon: HugeIcons.strokeRoundedAnalytics01,
-            description: 'Weekly study time consistency charts and subject breakdown.',
+            description:
+                'Weekly study time consistency charts and subject breakdown.',
           ),
           PlaceholderTabScreen(
             title: 'Settings & Profile',
             icon: HugeIcons.strokeRoundedSettings02,
-            description: 'App preferences, PIN security, and developer appreciation.',
+            description:
+                'App preferences, PIN security, and developer appreciation.',
           ),
         ],
       ),
@@ -189,9 +199,7 @@ class PlaceholderTabScreen extends StatelessWidget {
     final colors = context.appColors;
 
     return Scaffold(
-      appBar: AcedexFloatingHeaderBar(
-        title: title,
-      ),
+      appBar: AcedexFloatingHeaderBar(title: title),
       body: Center(
         child: Padding(
           padding: const EdgeInsets.all(AppTheme.space24),
@@ -206,11 +214,7 @@ class PlaceholderTabScreen extends StatelessWidget {
                   shape: BoxShape.circle,
                 ),
                 child: Center(
-                  child: HugeIcon(
-                    icon: icon,
-                    color: colors.primary,
-                    size: 32,
-                  ),
+                  child: HugeIcon(icon: icon, color: colors.primary, size: 32),
                 ),
               ),
               const SizedBox(height: AppTheme.space16),
@@ -225,10 +229,7 @@ class PlaceholderTabScreen extends StatelessWidget {
               const SizedBox(height: AppTheme.space8),
               Text(
                 description,
-                style: TextStyle(
-                  fontSize: 14,
-                  color: colors.textSecondary,
-                ),
+                style: TextStyle(fontSize: 14, color: colors.textSecondary),
                 textAlign: TextAlign.center,
               ),
             ],
@@ -310,9 +311,9 @@ class _DesignSystemShowcaseScreenState
               size: 20,
             ),
             onPressed: () {
-              ref.read(themeModeProvider.notifier).toggleLightDark(
-                    MediaQuery.platformBrightnessOf(context),
-                  );
+              ref
+                  .read(themeModeProvider.notifier)
+                  .toggleLightDark(MediaQuery.platformBrightnessOf(context));
             },
           ),
         ],
@@ -359,10 +360,7 @@ class _DesignSystemShowcaseScreenState
                   const SizedBox(height: AppTheme.space12),
                   Text(
                     'Local Drift SQLite initialized with $_subjectCount subjects and $_chapterCount curriculum units.',
-                    style: TextStyle(
-                      fontSize: 14,
-                      color: colors.textSecondary,
-                    ),
+                    style: TextStyle(fontSize: 14, color: colors.textSecondary),
                   ),
                 ],
               ),
@@ -398,24 +396,25 @@ class _DesignSystemShowcaseScreenState
                       ),
                       AcedexBadge(
                         label: pinState.isPinEnabled ? 'Active' : 'Disabled',
-                        color: pinState.isPinEnabled ? colors.success : colors.textSecondary,
+                        color: pinState.isPinEnabled
+                            ? colors.success
+                            : colors.textSecondary,
                       ),
                     ],
                   ),
                   const SizedBox(height: AppTheme.space12),
                   Text(
                     'Lock Acedex with a custom on-screen numeric keypad whenever the app is reopened.',
-                    style: TextStyle(
-                      fontSize: 13,
-                      color: colors.textSecondary,
-                    ),
+                    style: TextStyle(fontSize: 13, color: colors.textSecondary),
                   ),
                   const SizedBox(height: AppTheme.space16),
                   Row(
                     children: [
                       Expanded(
                         child: AcedexButton(
-                          label: pinState.isPinEnabled ? 'Disable PIN' : 'Set PIN Lock',
+                          label: pinState.isPinEnabled
+                              ? 'Disable PIN'
+                              : 'Set PIN Lock',
                           variant: pinState.isPinEnabled
                               ? AcedexButtonVariant.danger
                               : AcedexButtonVariant.primary,
@@ -456,6 +455,162 @@ class _DesignSystemShowcaseScreenState
                 ],
               ),
             ),
+          ),
+          const SizedBox(height: AppTheme.space16),
+          Consumer(
+            builder: (context, ref, _) {
+              final studentAsync = ref.watch(studentStateProvider);
+              final student = studentAsync.value;
+
+              return Card(
+                child: Padding(
+                  padding: const EdgeInsets.all(AppTheme.space16),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Row(
+                            children: [
+                              HugeIcon(
+                                icon: HugeIcons.strokeRoundedUser,
+                                color: colors.primary,
+                                size: 20,
+                              ),
+                              const SizedBox(width: AppTheme.space8),
+                              Text(
+                                'Student Profile & Auth',
+                                style: TextStyle(
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.bold,
+                                  color: colors.textPrimary,
+                                ),
+                              ),
+                            ],
+                          ),
+                          AcedexBadge(
+                            label: student != null
+                                ? 'Grade ${student.grade} ${student.stream.toUpperCase()}'
+                                : 'Guest / Not Onboarded',
+                            color: student != null ? colors.success : colors.warning,
+                            leading: HugeIcon(
+                              icon: student != null
+                                  ? HugeIcons.strokeRoundedCheckmarkCircle02
+                                  : HugeIcons.strokeRoundedClock01,
+                              color: student != null ? colors.success : colors.warning,
+                              size: 14,
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBox(height: AppTheme.space12),
+                      if (student != null) ...[
+                        Text(
+                          '${student.name} (${student.email})',
+                          style: TextStyle(
+                            fontSize: 15,
+                            fontWeight: FontWeight.bold,
+                            color: colors.textPrimary,
+                          ),
+                        ),
+                        const SizedBox(height: 2),
+                        Text(
+                          'Daily Target: ${student.dailyGoalMinutes} min/day  |  Streak Freezes: ${student.streakFreezes}',
+                          style: TextStyle(
+                            fontSize: 13,
+                            color: colors.textSecondary,
+                          ),
+                        ),
+                      ] else ...[
+                        Text(
+                          'No student profile active yet. Launch onboarding or sign in to configure your grade and academic stream.',
+                          style: TextStyle(
+                            fontSize: 13,
+                            color: colors.textSecondary,
+                          ),
+                        ),
+                      ],
+                      const SizedBox(height: AppTheme.space16),
+                      Row(
+                        children: [
+                          Expanded(
+                            child: AcedexButton(
+                              label: 'Onboarding',
+                              variant: AcedexButtonVariant.primary,
+                              onPressed: () {
+                                Navigator.of(context).push(
+                                  MaterialPageRoute(
+                                    builder: (_) => OnboardingScreen(
+                                      onCompleted: () => Navigator.of(context).pop(),
+                                    ),
+                                  ),
+                                );
+                              },
+                            ),
+                          ),
+                          const SizedBox(width: AppTheme.space8),
+                          Expanded(
+                            child: AcedexButton(
+                              label: 'Sign In',
+                              variant: AcedexButtonVariant.secondary,
+                              onPressed: () {
+                                Navigator.of(context).push(
+                                  MaterialPageRoute(
+                                    builder: (_) => LoginScreen(
+                                      onLoginSuccess: () => Navigator.of(context).pop(),
+                                      onSkip: () => Navigator.of(context).pop(),
+                                    ),
+                                  ),
+                                );
+                              },
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBox(height: AppTheme.space8),
+                      Row(
+                        children: [
+                          Expanded(
+                            child: AcedexButton(
+                              label: 'Sign Up',
+                              variant: AcedexButtonVariant.secondary,
+                              onPressed: () {
+                                Navigator.of(context).push(
+                                  MaterialPageRoute(
+                                    builder: (_) => SignUpScreen(
+                                      onSignUpSuccess: () => Navigator.of(context).pop(),
+                                    ),
+                                  ),
+                                );
+                              },
+                            ),
+                          ),
+                          const SizedBox(width: AppTheme.space8),
+                          Expanded(
+                            child: AcedexButton(
+                              label: 'Reset Profile',
+                              variant: AcedexButtonVariant.secondary,
+                              onPressed: () async {
+                                await ref.read(studentStateProvider.notifier).resetForTesting();
+                                if (context.mounted) {
+                                  AcedexToast.show(
+                                    context,
+                                    title: 'Profile Reset',
+                                    message: 'You can test onboarding again.',
+                                    status: AcedexToastStatus.info,
+                                  );
+                                }
+                              },
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+              );
+            },
           ),
           const SizedBox(height: AppTheme.space16),
           Text(
@@ -672,10 +827,7 @@ class _DesignSystemShowcaseScreenState
                 label: 'Only Title',
                 variant: AcedexButtonVariant.secondary,
                 onPressed: () {
-                  AcedexToast.onlyTitle(
-                    context,
-                    title: 'Only Title',
-                  );
+                  AcedexToast.onlyTitle(context, title: 'Only Title');
                 },
               ),
               AcedexButton(

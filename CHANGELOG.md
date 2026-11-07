@@ -9,10 +9,26 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+- **Supabase Cloud Schema & RLS Migrations**: Deployed PostgreSQL schema for `students`, `subjects`, `chapters`, `chapter_progress`, and `study_sessions` with strict Row-Level Security policies (`(select auth.uid()) = student_id`), foreign key indexes, and auto-updating `updated_at` triggers. Saved migration in `supabase/migrations/20261107000000_init_acedex_schema.sql`.
+- **Supabase Client Service (`SupabaseService`)**: Initialized PKCE client with auto-refreshing JWTs and defensive fallbacks for offline testing.
+- **Apple HIG Authentication Screens (`lib/features/auth/`)**:
+  - `LoginScreen`: Email/password and Google OAuth sign-in with forgotten password reset link and guest offline continuation.
+  - `SignUpScreen`: Account registration with validation and direct transition to curriculum onboarding.
+  - `AuthController` & `AcedexAuthState`: Riverpod state notifier managing auth lifecycle, user sessions, and error handling.
+- **5-Step Interactive Student Onboarding (`lib/features/onboarding/`)**:
+  - Step 1: Welcome & Ethiopian syllabus value proposition.
+  - Step 2: Student identity (Name input and Male/Female selection chips).
+  - Step 3: Grade selection (Grades 9 to 12).
+  - Step 4: Stream selection (Common curriculum for Grades 9–10; Natural vs Social Science for Grades 11–12).
+  - Step 5: Daily study target picker (60 to 180 min) with 1 free welcome Streak Freeze award.
+- **Student Profile Notifier (`studentStateProvider`)**: Local-first Drift SQLite storage with automatic cloud upsert to Supabase PostgreSQL when authenticated.
+- **App Navigation Gatekeeper (`AppGate`)**: Orchestrates top-level screen priorities (PIN Lock ➔ Onboarding Flow ➔ Main Dashboard Shell).
+- **Unit & Widget Tests**: Added `test/auth/auth_test.dart` and `test/onboarding/onboarding_test.dart` (27 / 27 total tests passing).
+
 ### Planned
-- **Supabase Authentication & Student Onboarding**: Email/password and Google Sign-In with multi-step HIG onboarding (Grade 9–12, Natural/Social stream selection, daily target hours).
 - **Profile Picture Upload**: Camera & gallery selection via `image_picker` with uploads to Supabase Storage `avatars` bucket and local Drift caching.
-- **Cloud Synchronization**: Two-way delta sync engine between local Drift SQLite and Supabase PostgreSQL.
+- **Cloud Synchronization Engine**: Two-way delta sync between local Drift SQLite and Supabase PostgreSQL.
 - **Focus Timer & Study Activity**: Built-in Pomodoro/Stopwatch linked to curriculum units and quick manual study hours logging.
 - **Consistency Analytics**: Interactive `fl_chart` weekly/monthly study graphs, consistency score, and subject breakdown.
 - **Local Smart Notifications**: Offline study alarms and inactivity re-engagement reminders.

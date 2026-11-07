@@ -30,15 +30,15 @@ class _PinLockScreenState extends ConsumerState<PinLockScreen>
       duration: const Duration(milliseconds: 400),
     );
 
-    _shakeAnimation = TweenSequence<double>([
-      TweenSequenceItem(tween: Tween(begin: 0.0, end: 1.0), weight: 1),
-      TweenSequenceItem(tween: Tween(begin: 1.0, end: -1.0), weight: 2),
-      TweenSequenceItem(tween: Tween(begin: -1.0, end: 1.0), weight: 2),
-      TweenSequenceItem(tween: Tween(begin: 1.0, end: 0.0), weight: 1),
-    ]).animate(CurvedAnimation(
-      parent: _shakeController,
-      curve: Curves.easeInOut,
-    ));
+    _shakeAnimation =
+        TweenSequence<double>([
+          TweenSequenceItem(tween: Tween(begin: 0.0, end: 1.0), weight: 1),
+          TweenSequenceItem(tween: Tween(begin: 1.0, end: -1.0), weight: 2),
+          TweenSequenceItem(tween: Tween(begin: -1.0, end: 1.0), weight: 2),
+          TweenSequenceItem(tween: Tween(begin: 1.0, end: 0.0), weight: 1),
+        ]).animate(
+          CurvedAnimation(parent: _shakeController, curve: Curves.easeInOut),
+        );
   }
 
   @override
@@ -70,7 +70,9 @@ class _PinLockScreenState extends ConsumerState<PinLockScreen>
   }
 
   Future<void> _handleVerification() async {
-    final success = await ref.read(pinProvider.notifier).verifyAndUnlock(_enteredPin);
+    final success = await ref
+        .read(pinProvider.notifier)
+        .verifyAndUnlock(_enteredPin);
     if (!success) {
       HapticFeedback.heavyImpact();
       _shakeController.forward(from: 0.0);
@@ -124,10 +126,7 @@ class _PinLockScreenState extends ConsumerState<PinLockScreen>
                   const SizedBox(height: AppTheme.space8),
                   Text(
                     'Enter your 4-digit PIN to access your study space',
-                    style: TextStyle(
-                      fontSize: 14,
-                      color: colors.textSecondary,
-                    ),
+                    style: TextStyle(fontSize: 14, color: colors.textSecondary),
                     textAlign: TextAlign.center,
                   ),
                   const SizedBox(height: AppTheme.space32),
@@ -165,4 +164,3 @@ class _PinLockScreenState extends ConsumerState<PinLockScreen>
     );
   }
 }
-
