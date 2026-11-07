@@ -111,3 +111,4 @@ class AcedexFloatingHeaderBar extends StatelessWidget implements PreferredSizeWi
     );
   }
 }
+

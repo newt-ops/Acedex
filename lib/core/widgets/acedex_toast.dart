@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:hugeicons/hugeicons.dart';
@@ -12,6 +13,9 @@ enum AcedexToastStatus {
 }
 
 class AcedexToast {
+  static _AcedexToastWidgetState? _activeToastState;
+  static OverlayEntry? _activeOverlayEntry;
+
   static void show(
     BuildContext context, {
     required String title,
@@ -19,6 +23,14 @@ class AcedexToast {
     AcedexToastStatus status = AcedexToastStatus.info,
     Duration duration = const Duration(seconds: 3),
   }) {
+    // If a toast is currently active, slide it out immediately
+    if (_activeToastState != null && _activeToastState!.mounted) {
+      _activeToastState!.dismissImmediately();
+    } else if (_activeOverlayEntry != null && _activeOverlayEntry!.mounted) {
+      _activeOverlayEntry!.remove();
+      _activeOverlayEntry = null;
+    }
+
     final overlayState = Overlay.of(context);
     late OverlayEntry overlayEntry;
 
@@ -27,21 +39,21 @@ class AcedexToast {
         title: title,
         message: message,
         status: status,
-        onDismiss: () {
+        duration: duration,
+        onRemoved: () {
           if (overlayEntry.mounted) {
             overlayEntry.remove();
+          }
+          if (_activeOverlayEntry == overlayEntry) {
+            _activeOverlayEntry = null;
+            _activeToastState = null;
           }
         },
       ),
     );
 
+    _activeOverlayEntry = overlayEntry;
     overlayState.insert(overlayEntry);
-
-    Future.delayed(duration, () {
-      if (overlayEntry.mounted) {
-        overlayEntry.remove();
-      }
-    });
   }
 }
 
@@ -50,13 +62,15 @@ class _AcedexToastWidget extends StatefulWidget {
     required this.title,
     this.message,
     required this.status,
-    required this.onDismiss,
+    required this.duration,
+    required this.onRemoved,
   });
 
   final String title;
   final String? message;
   final AcedexToastStatus status;
-  final VoidCallback onDismiss;
+  final Duration duration;
+  final VoidCallback onRemoved;
 
   @override
   State<_AcedexToastWidget> createState() => _AcedexToastWidgetState();
@@ -67,33 +81,67 @@ class _AcedexToastWidgetState extends State<_AcedexToastWidget>
   late final AnimationController _controller;
   late final Animation<Offset> _offsetAnimation;
   late final Animation<double> _fadeAnimation;
+  Timer? _timer;
+  bool _isDismissing = false;
 
   @override
   void initState() {
     super.initState();
+    AcedexToast._activeToastState = this;
+
     _controller = AnimationController(
       vsync: this,
       duration: const Duration(milliseconds: 320),
+      reverseDuration: const Duration(milliseconds: 260),
     );
 
     _offsetAnimation = Tween<Offset>(
-      begin: const Offset(0, -0.6),
+      begin: const Offset(0, -1.2),
       end: Offset.zero,
     ).animate(CurvedAnimation(
       parent: _controller,
       curve: Curves.easeOutCubic,
+      reverseCurve: Curves.easeInCubic,
     ));
 
     _fadeAnimation = CurvedAnimation(
       parent: _controller,
       curve: Curves.easeIn,
+      reverseCurve: Curves.easeOut,
     );
 
     _controller.forward();
+
+    _timer = Timer(widget.duration, () {
+      dismiss();
+    });
+  }
+
+  void dismiss() {
+    if (_isDismissing || !mounted) return;
+    _isDismissing = true;
+    _timer?.cancel();
+    _controller.reverse().then((_) {
+      if (mounted) {
+        widget.onRemoved();
+      }
+    });
+  }
+
+  void dismissImmediately() {
+    if (_isDismissing || !mounted) return;
+    _isDismissing = true;
+    _timer?.cancel();
+    _controller.reverse(from: _controller.value).then((_) {
+      if (mounted) {
+        widget.onRemoved();
+      }
+    });
   }
 
   @override
   void dispose() {
+    _timer?.cancel();
     _controller.dispose();
     super.dispose();
   }
@@ -137,7 +185,12 @@ class _AcedexToastWidgetState extends State<_AcedexToastWidget>
           child: Material(
             color: Colors.transparent,
             child: GestureDetector(
-              onTap: widget.onDismiss,
+              onTap: dismiss,
+              onVerticalDragUpdate: (details) {
+                if (details.primaryDelta != null && details.primaryDelta! < -4) {
+                  dismiss();
+                }
+              },
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(AppTheme.radiusCard),
                 child: BackdropFilter(
@@ -159,7 +212,7 @@ class _AcedexToastWidgetState extends State<_AcedexToastWidget>
                       ),
                       boxShadow: [
                         BoxShadow(
-                          color: Colors.black.withValues(alpha: 0.10),
+                          color: Colors.black.withValues(alpha: 0.12),
                           blurRadius: 18.0,
                           offset: const Offset(0, 8),
                         ),

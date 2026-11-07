@@ -13,7 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Floating Header Bar (`AcedexFloatingHeaderBar`)**: iOS-style suspended pill header with 20px frosted backdrop filter, screen title, subtitle, leading icon badge, and action buttons matching the floating navigation bar.
 
 ### Improved
-- **Toast Notifications (`AcedexToast`)**: Eliminated transparent ghosting by blending status tints over solid surface (`Color.alphaBlend`), adding frosted glass backdrop filters, subtle drop shadows, and circular status badges.
+- **Toast Notifications (`AcedexToast`)**: Eliminated toast overlap by managing a single active toast instance that cleanly dismisses prior toasts, implemented Apple-style fluid slide-up exit animations (`Offset(0, -1.2)`) into the top notch/bezel, and added vertical drag-to-dismiss gesture support.
 - **Button Styling (`AcedexButton`)**: Upgraded primary and secondary buttons with solid surface blending, distinct borders, colored elevation shadows, and responsive press states.
 - **Modal Dialogs (`AcedexDialog`)**: Redesigned dialog cards with 22px squircle radiuses, frosted glass blur backdrop, circular icon header badges, and integrated theme action buttons.
 
