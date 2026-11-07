@@ -631,6 +631,70 @@ class _DesignSystemShowcaseScreenState
           ),
           const SizedBox(height: AppTheme.space20),
           Text(
+            'Apple Capsule Toasts',
+            style: TextStyle(
+              fontSize: 15,
+              fontWeight: FontWeight.bold,
+              color: colors.textPrimary,
+            ),
+          ),
+          const SizedBox(height: AppTheme.space8),
+          Wrap(
+            spacing: AppTheme.space8,
+            runSpacing: AppTheme.space8,
+            children: [
+              AcedexButton(
+                label: 'Done / Confirmed',
+                variant: AcedexButtonVariant.secondary,
+                onPressed: () {
+                  AcedexToast.show(
+                    context,
+                    title: 'Done',
+                    message: 'Confirmed',
+                    status: AcedexToastStatus.info,
+                    badgeColor: const Color(0xFF007AFF),
+                  );
+                },
+              ),
+              AcedexButton(
+                label: 'Custom Image',
+                variant: AcedexButtonVariant.secondary,
+                onPressed: () {
+                  AcedexToast.custom(
+                    context,
+                    title: 'Custom Image',
+                    customIcon: HugeIcons.strokeRoundedSun01,
+                    iconColor: const Color(0xFFF5A623),
+                  );
+                },
+              ),
+              AcedexButton(
+                label: 'Only Title',
+                variant: AcedexButtonVariant.secondary,
+                onPressed: () {
+                  AcedexToast.onlyTitle(
+                    context,
+                    title: 'Only Title',
+                  );
+                },
+              ),
+              AcedexButton(
+                label: 'Bottom Present',
+                variant: AcedexButtonVariant.secondary,
+                onPressed: () {
+                  AcedexToast.custom(
+                    context,
+                    title: 'File Unlocked',
+                    customIcon: HugeIcons.strokeRoundedLockOpen,
+                    iconColor: const Color(0xFF34C759),
+                    isBottom: true,
+                  );
+                },
+              ),
+            ],
+          ),
+          const SizedBox(height: AppTheme.space20),
+          Text(
             'Skeleton Shimmer',
             style: TextStyle(
               fontSize: 15,

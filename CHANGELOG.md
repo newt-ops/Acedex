@@ -13,9 +13,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Floating Header Bar (`AcedexFloatingHeaderBar`)**: iOS-style suspended pill header with 20px frosted backdrop filter, screen title, subtitle, leading icon badge, and action buttons matching the floating navigation bar.
 
 ### Improved
-- **Apple Capsule Toast HUD (`AcedexToast`)**: Re-engineered toast notifications into an authentic Apple capsule HUD with rounded stadium borders (`100px` radius), 25px frosted blur backdrop, soft diffused drop shadow, centered dynamic layout (`MainAxisSize.min`), and support for dual-line ("Done / Confirmed") and single-line presets with spring bounce entry and recoil exit animations.
-- **Toast Notifications (`AcedexToast`)**: Added Apple-style spring physics with tactile bounce on entry (`Curves.easeOutBack` on offset and scale: 0.88 ➔ 1.0) and recoil slide-up exit animation (`Curves.easeInBack`).
-- **Toast Notifications (`AcedexToast`)**: Eliminated toast overlap by managing a single active toast instance that cleanly dismisses prior toasts, implemented Apple-style fluid slide-up exit animations (`Offset(0, -1.2)`) into the top notch/bezel, and added vertical drag-to-dismiss gesture support.
+- **Apple Capsule Toast HUD (`AcedexToast`)**: Re-engineered toast notifications to exactly mirror the Apple HIG stadium HUD specification:
+  - **Animatable Presets**: Dual-line stacked layout ("Done / Confirmed") with circular filled badges (Apple system blue, emerald green, orange, red) housing white glyphs.
+  - **Custom Image / Standalone Icons**: Added `AcedexToast.custom` supporting standalone icons (e.g. Sun icon, Lock Open padlock) without badges or custom leading widgets.
+  - **Only Title Capsule**: Added `AcedexToast.onlyTitle` for ultra-clean, icon-less compact stadium pills.
+  - **Top & Bottom Presentations**: Dynamic Island / notch presentation (slides down with spring bounce, recoils up into notch) and bottom presentation (slides up above home indicator, recoils down).
+  - **Apple Spring Physics & Bouncing**: Calibrated `Curves.easeOutBack` spring bounce entrance with scaling (0.78 ➔ 1.0) and tactile haptic impact (`HapticFeedback.lightImpact()`).
+  - **Zero Overlap & Drag Gestures**: Single-instance controller instantly recoils prior notifications before showing new ones; drag-to-dismiss and tap-to-dismiss supported.
 - **Button Styling (`AcedexButton`)**: Upgraded primary and secondary buttons with solid surface blending, distinct borders, colored elevation shadows, and responsive press states.
 - **Modal Dialogs (`AcedexDialog`)**: Redesigned dialog cards with 22px squircle radiuses, frosted glass blur backdrop, circular icon header badges, and integrated theme action buttons.
 
