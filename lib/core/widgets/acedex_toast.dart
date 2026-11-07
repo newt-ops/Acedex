@@ -1,3 +1,4 @@
+import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:hugeicons/hugeicons.dart';
 import '../theme/app_colors.dart';
@@ -80,7 +81,7 @@ class _AcedexToastWidgetState extends State<_AcedexToastWidget>
       end: Offset.zero,
     ).animate(CurvedAnimation(
       parent: _controller,
-      curve: Curves.easeOutBack,
+      curve: Curves.easeOutCubic,
     ));
 
     _fadeAnimation = CurvedAnimation(
@@ -137,55 +138,85 @@ class _AcedexToastWidgetState extends State<_AcedexToastWidget>
             color: Colors.transparent,
             child: GestureDetector(
               onTap: widget.onDismiss,
-              child: Container(
-                padding: const EdgeInsets.symmetric(
-                  horizontal: AppTheme.space16,
-                  vertical: AppTheme.space12,
-                ),
-                decoration: BoxDecoration(
-                  color: colors.statusTint(statusColor),
-                  borderRadius: BorderRadius.circular(AppTheme.radiusCard),
-                  border: Border.all(
-                    color: colors.statusBorder(statusColor),
-                    width: 1.0,
-                  ),
-                ),
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    HugeIcon(
-                      icon: iconData,
-                      color: statusColor,
-                      size: 22.0,
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(AppTheme.radiusCard),
+                child: BackdropFilter(
+                  filter: ImageFilter.blur(sigmaX: 20.0, sigmaY: 20.0),
+                  child: Container(
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: AppTheme.space16,
+                      vertical: AppTheme.space12,
                     ),
-                    const SizedBox(width: AppTheme.space12),
-                    Expanded(
-                      child: Column(
-                        mainAxisSize: MainAxisSize.min,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            widget.title,
-                            style: TextStyle(
-                              fontSize: 14,
-                              fontWeight: FontWeight.w600,
-                              color: colors.textPrimary,
+                    decoration: BoxDecoration(
+                      color: Color.alphaBlend(
+                        colors.statusTint(statusColor).withValues(alpha: 0.25),
+                        colors.surface,
+                      ),
+                      borderRadius: BorderRadius.circular(AppTheme.radiusCard),
+                      border: Border.all(
+                        color: colors.statusBorder(statusColor),
+                        width: 1.2,
+                      ),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.black.withValues(alpha: 0.10),
+                          blurRadius: 18.0,
+                          offset: const Offset(0, 8),
+                        ),
+                      ],
+                    ),
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Container(
+                          width: 38,
+                          height: 38,
+                          decoration: BoxDecoration(
+                            color: colors.statusTint(statusColor),
+                            shape: BoxShape.circle,
+                            border: Border.all(
+                              color: colors.statusBorder(statusColor),
+                              width: 1.0,
                             ),
                           ),
-                          if (widget.message != null && widget.message!.isNotEmpty) ...[
-                            const SizedBox(height: 2),
-                            Text(
-                              widget.message!,
-                              style: TextStyle(
-                                fontSize: 13,
-                                color: colors.textSecondary,
-                              ),
+                          child: Center(
+                            child: HugeIcon(
+                              icon: iconData,
+                              color: statusColor,
+                              size: 20.0,
                             ),
-                          ],
-                        ],
-                      ),
+                          ),
+                        ),
+                        const SizedBox(width: AppTheme.space12),
+                        Expanded(
+                          child: Column(
+                            mainAxisSize: MainAxisSize.min,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                widget.title,
+                                style: TextStyle(
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.w700,
+                                  color: colors.textPrimary,
+                                ),
+                              ),
+                              if (widget.message != null && widget.message!.isNotEmpty) ...[
+                                const SizedBox(height: 2),
+                                Text(
+                                  widget.message!,
+                                  style: TextStyle(
+                                    fontSize: 13,
+                                    color: colors.textSecondary,
+                                  ),
+                                ),
+                              ],
+                            ],
+                          ),
+                        ),
+                      ],
                     ),
-                  ],
+                  ),
                 ),
               ),
             ),
@@ -195,4 +226,3 @@ class _AcedexToastWidgetState extends State<_AcedexToastWidget>
     );
   }
 }
-

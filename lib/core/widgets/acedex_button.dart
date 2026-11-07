@@ -42,25 +42,67 @@ class _AcedexButtonState extends State<AcedexButton> {
 
     Color backgroundColor;
     Color foregroundColor;
+    Border? border;
+    List<BoxShadow>? shadows;
 
     switch (widget.variant) {
       case AcedexButtonVariant.primary:
-        backgroundColor = colors.primary;
+        backgroundColor = _isPressed
+            ? colors.primary.withValues(alpha: 0.90)
+            : colors.primary;
         foregroundColor = colors.onPrimary;
+        shadows = isEnabled && !_isPressed
+            ? [
+                BoxShadow(
+                  color: colors.primary.withValues(alpha: 0.28),
+                  blurRadius: 12.0,
+                  offset: const Offset(0, 4),
+                ),
+              ]
+            : null;
         break;
       case AcedexButtonVariant.secondary:
-        backgroundColor = colors.primarySoft;
+        backgroundColor = _isPressed
+            ? Color.alphaBlend(colors.primarySoft.withValues(alpha: 0.30), colors.surface)
+            : Color.alphaBlend(colors.primarySoft, colors.surface);
         foregroundColor = colors.primary;
+        border = Border.all(
+          color: _isPressed
+              ? colors.primary
+              : colors.primary.withValues(alpha: 0.25),
+          width: 1.0,
+        );
+        shadows = isEnabled && !_isPressed
+            ? [
+                BoxShadow(
+                  color: Colors.black.withValues(alpha: 0.03),
+                  blurRadius: 8.0,
+                  offset: const Offset(0, 2),
+                ),
+              ]
+            : null;
         break;
       case AcedexButtonVariant.danger:
-        backgroundColor = colors.danger;
+        backgroundColor = _isPressed
+            ? colors.danger.withValues(alpha: 0.90)
+            : colors.danger;
         foregroundColor = colors.onDanger;
+        shadows = isEnabled && !_isPressed
+            ? [
+                BoxShadow(
+                  color: colors.danger.withValues(alpha: 0.28),
+                  blurRadius: 12.0,
+                  offset: const Offset(0, 4),
+                ),
+              ]
+            : null;
         break;
     }
 
     if (!isEnabled) {
-      backgroundColor = backgroundColor.withValues(alpha: 0.4);
-      foregroundColor = foregroundColor.withValues(alpha: 0.6);
+      backgroundColor = backgroundColor.withValues(alpha: 0.35);
+      foregroundColor = foregroundColor.withValues(alpha: 0.55);
+      shadows = null;
     }
 
     Widget content = widget.isLoading
@@ -86,6 +128,7 @@ class _AcedexButtonState extends State<AcedexButton> {
                   fontSize: 15,
                   fontWeight: FontWeight.w600,
                   color: foregroundColor,
+                  letterSpacing: -0.2,
                 ),
               ),
               if (widget.trailing != null) ...[
@@ -98,7 +141,7 @@ class _AcedexButtonState extends State<AcedexButton> {
     return AnimatedScale(
       scale: _isPressed && isEnabled ? 0.97 : 1.0,
       duration: const Duration(milliseconds: 100),
-      curve: Curves.easeInOut,
+      curve: Curves.easeOutCubic,
       child: GestureDetector(
         onTapDown: isEnabled ? (_) => setState(() => _isPressed = true) : null,
         onTapUp: isEnabled ? (_) => setState(() => _isPressed = false) : null,
@@ -117,6 +160,8 @@ class _AcedexButtonState extends State<AcedexButton> {
           decoration: BoxDecoration(
             color: backgroundColor,
             borderRadius: BorderRadius.circular(AppTheme.radiusButton),
+            border: border,
+            boxShadow: shadows,
           ),
           alignment: Alignment.center,
           child: content,
@@ -125,4 +170,3 @@ class _AcedexButtonState extends State<AcedexButton> {
     );
   }
 }
-

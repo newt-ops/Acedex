@@ -14,6 +14,7 @@ import 'core/widgets/acedex_badge.dart';
 import 'core/widgets/acedex_input.dart';
 import 'core/widgets/acedex_skeleton.dart';
 import 'core/widgets/acedex_nav_bar.dart';
+import 'core/widgets/acedex_header_bar.dart';
 import 'features/security/pin_provider.dart';
 import 'features/security/screens/pin_lock_screen.dart';
 import 'features/security/screens/pin_setup_screen.dart';
@@ -188,7 +189,9 @@ class PlaceholderTabScreen extends StatelessWidget {
     final colors = context.appColors;
 
     return Scaffold(
-      appBar: AppBar(title: Text(title)),
+      appBar: AcedexFloatingHeaderBar(
+        title: title,
+      ),
       body: Center(
         child: Padding(
           padding: const EdgeInsets.all(AppTheme.space24),
@@ -278,8 +281,24 @@ class _DesignSystemShowcaseScreenState
     final isDark = Theme.of(context).brightness == Brightness.dark;
 
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Acedex Today'),
+      appBar: AcedexFloatingHeaderBar(
+        title: 'Acedex Today',
+        subtitle: 'Ethiopian EUEE Preparation',
+        leading: Container(
+          width: 36,
+          height: 36,
+          decoration: BoxDecoration(
+            color: colors.primarySoft,
+            shape: BoxShape.circle,
+          ),
+          child: Center(
+            child: HugeIcon(
+              icon: HugeIcons.strokeRoundedGraduationScroll,
+              color: colors.primary,
+              size: 18,
+            ),
+          ),
+        ),
         actions: [
           IconButton(
             tooltip: 'Toggle Theme',
@@ -288,7 +307,7 @@ class _DesignSystemShowcaseScreenState
                   ? HugeIcons.strokeRoundedSun01
                   : HugeIcons.strokeRoundedMoon02,
               color: colors.primary,
-              size: 22,
+              size: 20,
             ),
             onPressed: () {
               ref.read(themeModeProvider.notifier).toggleLightDark(

@@ -9,6 +9,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+- **Floating Header Bar (`AcedexFloatingHeaderBar`)**: iOS-style suspended pill header with 20px frosted backdrop filter, screen title, subtitle, leading icon badge, and action buttons matching the floating navigation bar.
+
+### Improved
+- **Toast Notifications (`AcedexToast`)**: Eliminated transparent ghosting by blending status tints over solid surface (`Color.alphaBlend`), adding frosted glass backdrop filters, subtle drop shadows, and circular status badges.
+- **Button Styling (`AcedexButton`)**: Upgraded primary and secondary buttons with solid surface blending, distinct borders, colored elevation shadows, and responsive press states.
+- **Modal Dialogs (`AcedexDialog`)**: Redesigned dialog cards with 22px squircle radiuses, frosted glass blur backdrop, circular icon header badges, and integrated theme action buttons.
+
 ### Fixed
 - Resolved `Text shadow blur radius should be non-negative` assertion in `PinDotsIndicator` by replacing shadow interpolation with smooth `AnimatedScale` and cubic easing curves.
 - Resolved `_TypeError (type 'bool' is not a subtype of type 'String?' in type cast)` when loading theme preference by supporting both legacy boolean values and string theme modes in `ThemeModeNotifier`.
