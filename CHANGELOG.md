@@ -9,6 +9,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Planned
+- **Supabase Authentication & Student Onboarding**: Email/password and Google Sign-In with multi-step HIG onboarding (Grade 9–12, Natural/Social stream selection, daily target hours).
+- **Profile Picture Upload**: Camera & gallery selection via `image_picker` with uploads to Supabase Storage `avatars` bucket and local Drift caching.
+- **Cloud Synchronization**: Two-way delta sync engine between local Drift SQLite and Supabase PostgreSQL.
+- **Focus Timer & Study Activity**: Built-in Pomodoro/Stopwatch linked to curriculum units and quick manual study hours logging.
+- **Consistency Analytics**: Interactive `fl_chart` weekly/monthly study graphs, consistency score, and subject breakdown.
+- **Local Smart Notifications**: Offline study alarms and inactivity re-engagement reminders.
+- **Unity Rewarded Ads**: Earn Streak Freezes / Recovery and custom UI perks via rewarded video placements (`Rewarded_Android` & `Rewarded_iOS`).
+- **Developer Appreciation Screen**: Dedicated Apple HIG card honoring Aymen (Newton) with Telegram, GitHub, and email triggers.
+
+---
+
+## [1.2.0+3] - 2026-11-07
+
 ### Added
 - **Floating Header Bar (`AcedexFloatingHeaderBar`)**: iOS-style suspended pill header with 20px frosted backdrop filter, screen title, subtitle, leading icon badge, and action buttons matching the floating navigation bar.
 
@@ -28,16 +42,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Resolved `_TypeError (type 'bool' is not a subtype of type 'String?' in type cast)` when loading theme preference by supporting both legacy boolean values and string theme modes in `ThemeModeNotifier`.
 - Hardened `PinService` with defensive error handling across secure storage read operations.
 - Resolved Android Gradle build failure by enabling Java 8+ core library desugaring (`isCoreLibraryDesugaringEnabled = true` with `desugar_jdk_libs:2.1.4`) in `android/app/build.gradle.kts` required by `flutter_local_notifications`.
-
-### Planned (Migrated to Next Release)
-- **Supabase Authentication & Student Onboarding**: Email/password and Google Sign-In with multi-step HIG onboarding (Grade 9–12, Natural/Social stream selection, daily target hours).
-- **Profile Picture Upload**: Camera & gallery selection via `image_picker` with uploads to Supabase Storage `avatars` bucket and local Drift caching.
-- **Cloud Synchronization**: Two-way delta sync engine between local Drift SQLite and Supabase PostgreSQL.
-- **Focus Timer & Study Activity**: Built-in Pomodoro/Stopwatch linked to curriculum units and quick manual study hours logging.
-- **Consistency Analytics**: Interactive `fl_chart` weekly/monthly study graphs, consistency score, and subject breakdown.
-- **Local Smart Notifications**: Offline study alarms and inactivity re-engagement reminders.
-- **Unity Rewarded Ads**: Earn Streak Freezes / Recovery and custom UI perks via rewarded video placements (`Rewarded_Android` & `Rewarded_iOS`).
-- **Developer Appreciation Screen**: Dedicated Apple HIG card honoring Aymen (Newton) with Telegram, GitHub, and email triggers.
 
 ---
 

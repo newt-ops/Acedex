@@ -172,3 +172,4 @@ void main() {
     expect(find.text('Second Toast'), findsOneWidget);
   });
 }
+

@@ -127,7 +127,8 @@ class AppColors extends ThemeExtension<AppColors> {
       surfaceAlt: Color.lerp(surfaceAlt, other.surfaceAlt, t) ?? surfaceAlt,
       border: Color.lerp(border, other.border, t) ?? border,
       textPrimary: Color.lerp(textPrimary, other.textPrimary, t) ?? textPrimary,
-      textSecondary: Color.lerp(textSecondary, other.textSecondary, t) ?? textSecondary,
+      textSecondary:
+          Color.lerp(textSecondary, other.textSecondary, t) ?? textSecondary,
       onPrimary: Color.lerp(onPrimary, other.onPrimary, t) ?? onPrimary,
       onDanger: Color.lerp(onDanger, other.onDanger, t) ?? onDanger,
       primarySoft: Color.lerp(primarySoft, other.primarySoft, t) ?? primarySoft,
@@ -136,6 +137,6 @@ class AppColors extends ThemeExtension<AppColors> {
 }
 
 extension AppColorsContextExtension on BuildContext {
-  AppColors get appColors => Theme.of(this).extension<AppColors>() ?? AppColors.light;
+  AppColors get appColors =>
+      Theme.of(this).extension<AppColors>() ?? AppColors.light;
 }
-
