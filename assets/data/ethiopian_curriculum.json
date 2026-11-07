@@ -1,1 +1,2676 @@
-[]
+[
+  {
+    "grade": 9,
+    "stream": "common",
+    "subject_name": "Biology",
+    "subject_code": "BIO_G9",
+    "total_units": 6,
+    "units": [
+      {
+        "unit_number": 1,
+        "title": "Introduction to Biology",
+        "subtopics": [
+          "1.1 Definition of Biology",
+          "1.2 Why do we study Biology?",
+          "1.3 The Scientific Method",
+          "1.4 Tools of a Biologist",
+          "1.5 The Light Microscope",
+          "1.6 General Laboratory Safety Rules"
+        ]
+      },
+      {
+        "unit_number": 2,
+        "title": "Characteristics and Classification of Organisms",
+        "subtopics": [
+          "2.1 Characteristics of living things",
+          "2.2 Taxonomy of living things",
+          "2.3 Relevance of classification",
+          "2.4 Linnaean system of nomenclature",
+          "2.5 Common Ethiopian animals and plants",
+          "2.6 The five-kingdom system of classification",
+          "2.7 Renowned Taxonomists in Ethiopia"
+        ]
+      },
+      {
+        "unit_number": 3,
+        "title": "Cells",
+        "subtopics": [
+          "3.1 What is a cell?",
+          "3.2 Cell theory",
+          "3.3 Cell structure and function",
+          "3.4 Types of cells",
+          "3.5 Animal and plant cells",
+          "3.6 Observing cells under a microscope",
+          "3.7 The cell and its environment",
+          "3.8 Levels of Biological Organization"
+        ]
+      },
+      {
+        "unit_number": 4,
+        "title": "Reproduction",
+        "subtopics": [
+          "4.1 Introduction to reproduction",
+          "4.2 Asexual reproduction",
+          "4.3 Types of asexual reproduction",
+          "4.4 Sexual reproduction in Humans",
+          "4.5 Primary and secondary sexual characteristics",
+          "4.6 Male reproductive structures",
+          "4.7 Female reproductive structures",
+          "4.8 The Menstrual cycle",
+          "4.9 Fertilization and pregnancy",
+          "4.10 Methods of birth control",
+          "4.11 Sexually transmitted infections (STIs): Transmission and prevention"
+        ]
+      },
+      {
+        "unit_number": 5,
+        "title": "Human Health, Nutrition, and Disease",
+        "subtopics": [
+          "5.1 What is food?",
+          "5.2 Nutrition",
+          "5.3 Nutrients",
+          "5.4 Balanced diets",
+          "5.5 Deficiency diseases",
+          "5.6 Malnutrition",
+          "5.7 Substance abuse",
+          "5.8 Infectious and noninfectious diseases",
+          "5.9 Renowned Nutritionists in Ethiopia"
+        ]
+      },
+      {
+        "unit_number": 6,
+        "title": "Ecology",
+        "subtopics": [
+          "6.1 Ecology",
+          "6.2 Ecological relationships"
+        ]
+      }
+    ]
+  },
+  {
+    "grade": 9,
+    "stream": "common",
+    "subject_name": "Chemistry",
+    "subject_code": "CHEM_G9",
+    "total_units": 5,
+    "units": [
+      {
+        "unit_number": 1,
+        "title": "Chemistry and Its Importance",
+        "subtopics": [
+          "1.1 Definition and Scope of Chemistry",
+          "1.2 Relationship between Chemistry and Other Natural Sciences",
+          "1.3 The Role Chemistry Plays in Production and in the Society",
+          "1.4 Some Common Chemical Industries in Ethiopia"
+        ]
+      },
+      {
+        "unit_number": 2,
+        "title": "Measurements and Scientific Methods",
+        "subtopics": [
+          "2.1 Measurements and Units in Chemistry",
+          "2.2 Chemistry as Experimental Science"
+        ]
+      },
+      {
+        "unit_number": 3,
+        "title": "Structure of the Atom",
+        "subtopics": [
+          "3.1 Historical Development of the Atomic Theories of Matter",
+          "3.2 Fundamental Laws of Chemical Reactions",
+          "3.3 Atomic Theory",
+          "3.4 Discoveries of Fundamental Subatomic Particles and the Atomic Nucleus",
+          "3.5 Composition of an Atom and the Isotopes"
+        ]
+      },
+      {
+        "unit_number": 4,
+        "title": "Periodic Classification of Elements",
+        "subtopics": [
+          "4.1 Historical Development of Periodic Classification of the Elements",
+          "4.2 Mendleev's Classification of the Elements",
+          "4.3 The Modern Periodic Table",
+          "4.4 The Major Trends in the Periodic Table"
+        ]
+      },
+      {
+        "unit_number": 5,
+        "title": "Chemical Bonding",
+        "subtopics": [
+          "5.1 Chemical Bonding",
+          "5.2 Ionic Bonding",
+          "5.3 Covalent Bonding",
+          "5.4 Metallic Bonding"
+        ]
+      }
+    ]
+  },
+  {
+    "grade": 9,
+    "stream": "common",
+    "subject_name": "Economics",
+    "subject_code": "ECON_G9",
+    "total_units": 8,
+    "units": [
+      {
+        "unit_number": 1,
+        "title": "Introducing Economics",
+        "subtopics": [
+          "1.1 Meaning of Economics",
+          "1.2 Branches of Economics",
+          "1.3 Methods and Approaches of Studying Economics",
+          "1.4 Decision Making Units"
+        ]
+      },
+      {
+        "unit_number": 2,
+        "title": "The Basic Economic Problems and Economic Systems",
+        "subtopics": [
+          "2.1 The Basic Economic Problems: Scarcity, Choice, and Opportunity Cost",
+          "2.2 Central Problems of Economies",
+          "2.3 Economic Systems"
+        ]
+      },
+      {
+        "unit_number": 3,
+        "title": "Economic Resources and Markets",
+        "subtopics": [
+          "3.1 Types of Resources and Factor Payments",
+          "3.2 Renewable and Non-renewable Resources",
+          "3.3 Types of Markets",
+          "3.4 Circular Flow of Economic Activities",
+          "3.5 Land as an Economic Resource in Ethiopia"
+        ]
+      },
+      {
+        "unit_number": 4,
+        "title": "Introduction to Demand and Supply",
+        "subtopics": [
+          "4.1 Concept of Demand",
+          "4.2 Concept of Supply",
+          "4.3 Market Equilibrium"
+        ]
+      },
+      {
+        "unit_number": 5,
+        "title": "Introduction to Production and Cost",
+        "subtopics": [
+          "5.1 Definition of Production, Inputs and Outputs",
+          "5.2 Periods of Production",
+          "5.3 Cost of Production"
+        ]
+      },
+      {
+        "unit_number": 6,
+        "title": "Introduction to Money",
+        "subtopics": [
+          "6.1 Definition of Money",
+          "6.2 Evolution of Money",
+          "6.3 Functions of Money",
+          "6.4 Demand and Supply of Money",
+          "6.5 Money and Electronic Money (e-money)"
+        ]
+      },
+      {
+        "unit_number": 7,
+        "title": "Introduction to Macroeconomics",
+        "subtopics": [
+          "7.1 Definition of Macroeconomic Variables",
+          "7.2 Macroeconomic Goals",
+          "7.3 Macroeconomic Problems"
+        ]
+      },
+      {
+        "unit_number": 8,
+        "title": "Basic Entrepreneurship",
+        "subtopics": [
+          "8.1 Definition of Enterprise, Entrepreneur and Entrepreneurship",
+          "8.2 Creativity and Innovation in Solving Local Problems",
+          "8.3 Entrepreneurial Attitudes, Behaviour and Mind-set",
+          "8.4 Windows of Entrepreneurial Opportunities",
+          "8.5 Entrepreneurial Success, Teamwork and Diversity",
+          "8.6 Finance and Promotion of Entrepreneurship"
+        ]
+      }
+    ]
+  },
+  {
+    "grade": 9,
+    "stream": "common",
+    "subject_name": "English",
+    "subject_code": "ENG_G9",
+    "total_units": 10,
+    "units": [
+      {
+        "unit_number": 1,
+        "title": "Living in Urban Areas",
+        "subtopics": [
+          "1.1 Listening Skills",
+          "1.2 Reading Skills",
+          "1.3 Vocabulary Development",
+          "1.4 Grammar",
+          "1.5 Speaking Skills",
+          "1.6 Writing Skills"
+        ]
+      },
+      {
+        "unit_number": 2,
+        "title": "Study Skills",
+        "subtopics": [
+          "2.1 Listening Skills",
+          "2.2 Reading Skills",
+          "2.3 Vocabulary Development",
+          "2.4 Grammar",
+          "2.5 Speaking Skills",
+          "2.6 Writing Skills"
+        ]
+      },
+      {
+        "unit_number": 3,
+        "title": "Traffic Accident",
+        "subtopics": [
+          "3.1 Listening Skills",
+          "3.2 Reading Skills",
+          "3.3 Vocabulary Development",
+          "3.4 Grammar",
+          "3.5 Speaking skills",
+          "3.6 Writing Skills"
+        ]
+      },
+      {
+        "unit_number": 4,
+        "title": "National Parks",
+        "subtopics": [
+          "4.1 Listening Skills",
+          "4.2 Reading skills",
+          "4.3 Vocabulary Development",
+          "4.4 Grammar",
+          "4.5 Speaking Skills",
+          "4.6 Writing Skills"
+        ]
+      },
+      {
+        "unit_number": 5,
+        "title": "Horticulture",
+        "subtopics": [
+          "5.1 Listening skills",
+          "5.2 Reading Skills",
+          "5.3 Vocabulary Development",
+          "5.4 Grammar",
+          "5.5 Speaking Skills",
+          "5.6 Writing Skills"
+        ]
+      },
+      {
+        "unit_number": 6,
+        "title": "Poverty in Ethiopia",
+        "subtopics": [
+          "6.1 Listening skills",
+          "6.2 Reading Skills",
+          "6.3 Vocabulary Development",
+          "6.4 Grammar",
+          "6.5 Speaking Skills",
+          "6.6 Writing Skills"
+        ]
+      },
+      {
+        "unit_number": 7,
+        "title": "Community Services",
+        "subtopics": [
+          "7.1 Listening skills: Community Services",
+          "7.2 Reading Skills",
+          "7.3 Vocabulary Development",
+          "7.4 Grammar",
+          "7.5 Speaking Skills",
+          "7.6 Writing Skills"
+        ]
+      },
+      {
+        "unit_number": 8,
+        "title": "Communicable Diseases",
+        "subtopics": [
+          "8.1 Listening Skills",
+          "8.2 Reading Skills",
+          "8.3 Vocabulary Development",
+          "8.4 Grammar",
+          "8.5 Speaking Skills",
+          "8.6 Writing Skills"
+        ]
+      },
+      {
+        "unit_number": 9,
+        "title": "Fairness and Equity",
+        "subtopics": [
+          "9.1 Listening Skills",
+          "9.2 Reading Skills",
+          "9.3 Vocabulary Development",
+          "9.4 Grammar",
+          "9.5 Speaking Skills",
+          "9.6 Writing Skills"
+        ]
+      },
+      {
+        "unit_number": 10,
+        "title": "The Internet",
+        "subtopics": [
+          "10.1 Listening Skills",
+          "10.2 Reading Skills",
+          "10.3 Vocabulary Development",
+          "10.4 Grammar",
+          "10.5 Speaking Activity",
+          "10.6 Writing Activity"
+        ]
+      }
+    ]
+  },
+  {
+    "grade": 9,
+    "stream": "common",
+    "subject_name": "Geography",
+    "subject_code": "GEO_G9",
+    "total_units": 8,
+    "units": [
+      {
+        "unit_number": 1,
+        "title": "Geological History and Topography of Ethiopia",
+        "subtopics": [
+          "1.1 Geography: Meaning, scope and branches",
+          "1.2 Location, size, and shape of Ethiopia",
+          "1.3 Geological history of Ethiopia"
+        ]
+      },
+      {
+        "unit_number": 2,
+        "title": "Weather and Climate of Ethiopia",
+        "subtopics": [
+          "2.1 Meaning of Weather and Climate",
+          "2.2 Elements of Weather and Climate",
+          "2.3 Controls of Weather and Climate in Ethiopia",
+          "2.4 Climatic Regions and Seasonal Variations in Ethiopia",
+          "2.5 Measurements of Weather and Climate"
+        ]
+      },
+      {
+        "unit_number": 3,
+        "title": "Natural Resource Base of Ethiopia",
+        "subtopics": [
+          "3.1 Meaning of Natural Resources",
+          "3.2 Drainage Systems of Ethiopia"
+        ]
+      },
+      {
+        "unit_number": 4,
+        "title": "Population of Ethiopia",
+        "subtopics": [
+          "4.1 Human Population Concept",
+          "4.2 Population Growth Trend",
+          "4.3 Population Structure and Settlement Patterns"
+        ]
+      },
+      {
+        "unit_number": 5,
+        "title": "Major Economic Activities in Ethiopia",
+        "subtopics": [
+          "5.1 Major Economic Activities in Ethiopia",
+          "5.2 Contribution of Subsistence Farming and Cash Crop to the Ethiopian Economy",
+          "5.3 Problems of Agriculture in Ethiopia",
+          "5.4 Trade and Transport in Ethiopia",
+          "5.5 Road Safety in Ethiopia",
+          "5.6 Cultural Landscape and Tourism in Ethiopia"
+        ]
+      },
+      {
+        "unit_number": 6,
+        "title": "Human - Environment Interaction in Ethiopia",
+        "subtopics": [
+          "6.1 Human - Environment Relationship",
+          "6.2 Optimum Population and Resource Use",
+          "6.3 Over-Population and Resource Use",
+          "6.4 Under-Population and Resource use",
+          "6.5 Impacts of Rapid Population Growth"
+        ]
+      },
+      {
+        "unit_number": 7,
+        "title": "Contemporary Geographic Issues and Public Concerns in Ethiopia",
+        "subtopics": [
+          "7.1 Natural Resource Degradation",
+          "7.2 The Ethiopian \"Green Legacy\" Movement"
+        ]
+      },
+      {
+        "unit_number": 8,
+        "title": "Geographic Enquiry, Skills and Techniques",
+        "subtopics": [
+          "8.1 Map and its basic components",
+          "8.2 Scale, scale conversion and measurements on maps"
+        ]
+      }
+    ]
+  },
+  {
+    "grade": 9,
+    "stream": "common",
+    "subject_name": "History",
+    "subject_code": "HIST_G9",
+    "total_units": 9,
+    "units": [
+      {
+        "unit_number": 1,
+        "title": "The Discipline of History and Human Evolution",
+        "subtopics": [
+          "1.1 Meaning of Prehistory and History",
+          "1.2 The Discipline of History",
+          "1.3 The Evolution of Human Beings",
+          "1.4 The Stone Age",
+          "1.5 The Emergence of States"
+        ]
+      },
+      {
+        "unit_number": 2,
+        "title": "Ancient World Civilizations up to c. 500 AD",
+        "subtopics": [
+          "2.1 Ancient Civilizations of Africa",
+          "2.2 Civilizations in Asia",
+          "2.3 Civilizations in Europe",
+          "2.4 Civilizations in Latin America",
+          "2.5 The Rise and Spread of Christianity"
+        ]
+      },
+      {
+        "unit_number": 3,
+        "title": "Peoples, States and Historical Processes in Ethiopia and the Horn to the end of 13th C.",
+        "subtopics": [
+          "3.1 Languages, Religions and Peoples of Ethiopia and the Horn",
+          "3.2 Pre-Aksumite States and their Geographical Setting",
+          "3.3 Aksumite Kingdom",
+          "3.4 Zagwe Dynasty",
+          "3.5 The Sultanate of Shewa"
+        ]
+      },
+      {
+        "unit_number": 4,
+        "title": "The Middle Ages and Early Modern World, c. 500 to 1750",
+        "subtopics": [
+          "4.1 The Middle Ages in Europe",
+          "4.2 The Middle Ages in Asia",
+          "4.3 Development of Early Capitalism",
+          "4.4 The Age of Explorations and Discoveries",
+          "4.5 The Renaissance",
+          "4.6 The Reformation",
+          "4.7 Industrial Revolution"
+        ]
+      },
+      {
+        "unit_number": 5,
+        "title": "Peoples and States of Africa to 1500",
+        "subtopics": [
+          "5.1 Languages and Peoples of Africa",
+          "5.2 States in North Africa",
+          "5.3 Spread of Islam and its Impact in West Africa",
+          "5.4 States in Western Africa",
+          "5.5 Equatorial, Central and Eastern Africa",
+          "5.6 Southern Africa",
+          "5.7 Africa's Intra and Inter-continental Relations",
+          "5.8 Trans-Saharan trade",
+          "5.9 Early Contacts with the Outside World"
+        ]
+      },
+      {
+        "unit_number": 6,
+        "title": "Africa and the Outside World 1500-1880s",
+        "subtopics": [
+          "6.1 Contact with the Outside World",
+          "6.2 Slavery",
+          "6.3 The \"Legitimate\" Trade",
+          "6.4 The White Settlement in South Africa",
+          "6.5 European Explorers and Missionaries"
+        ]
+      },
+      {
+        "unit_number": 7,
+        "title": "States, Principalities, Population Movements & Interactions in Ethiopia 13th to Mid-16th C.",
+        "subtopics": [
+          "7.1 The Restoration of the Solomonic Dynasty",
+          "7.2 The Christian Kingdom and Muslim Sultanates",
+          "7.3 Oromo Population Movement"
+        ]
+      },
+      {
+        "unit_number": 8,
+        "title": "Political, Social & Economic Processes in Ethiopia Mid-16th to Mid-19th C.",
+        "subtopics": [
+          "8.1 Peoples and States of Southern, Western and Eastern Ethiopia",
+          "8.2 Gondarine Period and Zemene Mesafint"
+        ]
+      },
+      {
+        "unit_number": 9,
+        "title": "The Age of Revolutions 1750s to 1815",
+        "subtopics": [
+          "9.1 Industrial Capitalism in Europe",
+          "9.2 American War of Independence",
+          "9.3 The French Revolution",
+          "9.4 The Napoleonic Era"
+        ]
+      }
+    ]
+  },
+  {
+    "grade": 9,
+    "stream": "common",
+    "subject_name": "Mathematics",
+    "subject_code": "MATH_G9",
+    "total_units": 9,
+    "units": [
+      {
+        "unit_number": 1,
+        "title": "Further on Sets",
+        "subtopics": [
+          "1.1 Sets and Elements",
+          "1.2 Set Description",
+          "1.3 The Notion of Sets",
+          "1.4 Operations on Sets",
+          "1.5 Application"
+        ]
+      },
+      {
+        "unit_number": 2,
+        "title": "The Number System",
+        "subtopics": [
+          "2.1 Revision on Natural Numbers and Integers",
+          "2.2 Rational Numbers",
+          "2.3 Irrational Numbers",
+          "2.4 Real Numbers",
+          "2.5 Application"
+        ]
+      },
+      {
+        "unit_number": 3,
+        "title": "Solving Equations",
+        "subtopics": [
+          "3.1 Revision on Linear Equation in One Variable",
+          "3.2 Systems of Linear Equations in Two Variables",
+          "3.3 Solving Non-linear Equations",
+          "3.4 Applications of Equations"
+        ]
+      },
+      {
+        "unit_number": 4,
+        "title": "Solving Inequalities",
+        "subtopics": [
+          "4.1 Linear Inequalities in One Variable",
+          "4.2 Systems of Linear Inequalities in Two Variables",
+          "4.3 Applications of Inequalities"
+        ]
+      },
+      {
+        "unit_number": 5,
+        "title": "Introduction to Trigonometry",
+        "subtopics": [
+          "5.1 Trigonometric Ratios",
+          "5.2 Trigonometric Values of Special Angles",
+          "5.3 Applications of Trigonometry"
+        ]
+      },
+      {
+        "unit_number": 6,
+        "title": "Regular Polygons",
+        "subtopics": [
+          "6.1 Properties of Regular Polygons",
+          "6.2 Angles of Regular Polygons",
+          "6.3 Area of Regular Polygons"
+        ]
+      },
+      {
+        "unit_number": 7,
+        "title": "Congruency and Similarity",
+        "subtopics": [
+          "7.1 Congruency of Triangles",
+          "7.2 Similarity of Triangles",
+          "7.3 Applications of Congruency and Similarity"
+        ]
+      },
+      {
+        "unit_number": 8,
+        "title": "Vectors in Two Dimensions",
+        "subtopics": [
+          "8.1 Vector and Scalar Quantities",
+          "8.2 Representation of a Vector",
+          "8.3 Vectors Operations",
+          "8.4 Position Vector",
+          "8.5 Applications of Vectors in Two Dimensions"
+        ]
+      },
+      {
+        "unit_number": 9,
+        "title": "Statistics and Probability",
+        "subtopics": [
+          "9.1 Statistical Data",
+          "9.2 Probability"
+        ]
+      }
+    ]
+  },
+  {
+    "grade": 9,
+    "stream": "common",
+    "subject_name": "Physics",
+    "subject_code": "PHYS_G9",
+    "total_units": 5,
+    "units": [
+      {
+        "unit_number": 1,
+        "title": "Physics and Human Society",
+        "subtopics": [
+          "1.1 Definition and Nature of Physics",
+          "1.2 Branches of Physics",
+          "1.3 Related Fields to Physics",
+          "1.4 Historical Issues and Contributors"
+        ]
+      },
+      {
+        "unit_number": 2,
+        "title": "Physical Quantities",
+        "subtopics": [
+          "2.1 Scales, Standards, Units (prefixes)",
+          "2.2 Measurement and Safety",
+          "2.3 Classification of Physical Quantities",
+          "2.4 Unit conversion"
+        ]
+      },
+      {
+        "unit_number": 3,
+        "title": "Motion in a Straight Line",
+        "subtopics": [
+          "3.1 Position, Distance and Displacement",
+          "3.2 Average Speed and Instantaneous Speed",
+          "3.3 Average Velocity and Instantaneous Velocity",
+          "3.4 Acceleration",
+          "3.5 Uniform Motion",
+          "3.6 Graphical Representation of Motion"
+        ]
+      },
+      {
+        "unit_number": 4,
+        "title": "Force, Work, Energy and Power",
+        "subtopics": [
+          "4.1 The Concept of Force",
+          "4.2 Newton's Laws of Motion",
+          "4.3 Forces of Friction",
+          "4.4 The Concept of Work",
+          "4.5 Kinetic and Potential Energies",
+          "4.6 Power"
+        ]
+      },
+      {
+        "unit_number": 5,
+        "title": "Simple Machines",
+        "subtopics": [
+          "5.1 Simple Machines and their Purposes",
+          "5.2 Simple Machines at Home",
+          "5.3 Simple Machines at Work Place",
+          "5.4 Classification of Simple Machines",
+          "5.5 Mechanical Advantage, Velocity Ratio and Efficiency of Simple Machine"
+        ]
+      }
+    ]
+  },
+  {
+    "grade": 10,
+    "stream": "common",
+    "subject_name": "Biology",
+    "subject_code": "BIO_G10",
+    "total_units": 6,
+    "units": [
+      {
+        "unit_number": 1,
+        "title": "Sub-fields of Biology",
+        "subtopics": [
+          "1.1 Sub-fields of Biology",
+          "1.2 Pure and applied fields of biology",
+          "1.3 Major discoveries that revolutionized biology",
+          "1.4 The contributions of biological discoveries to society and the environment",
+          "1.5 Ethiopian biologists and their contributions"
+        ]
+      },
+      {
+        "unit_number": 2,
+        "title": "Plants",
+        "subtopics": [
+          "2.1 Characteristics of plants",
+          "2.2 Flowering and non – flowering plants",
+          "2.3 Structure and function of plant parts",
+          "2.4 Reproduction in plants",
+          "2.5 Seeds",
+          "2.6 Seed dispersal and germination",
+          "2.7 Photosynthesis",
+          "2.8 Transport in plant",
+          "2.9 Response in plants",
+          "2.10 Medicinal plants",
+          "2.11 Renowned Ethiopian Botanist"
+        ]
+      },
+      {
+        "unit_number": 3,
+        "title": "Biochemical Molecules",
+        "subtopics": [
+          "3.1 Biochemical Molecules",
+          "3.1.1 Inorganic molecule: Water",
+          "3.1.2 Inorganic ions",
+          "3.1.3 Organic molecules"
+        ]
+      },
+      {
+        "unit_number": 4,
+        "title": "Cell Reproduction",
+        "subtopics": [
+          "4.1 Cell cycle",
+          "4.2 Cell division",
+          "4.3 Renowned Ethiopian Geneticist"
+        ]
+      },
+      {
+        "unit_number": 5,
+        "title": "Human Biology",
+        "subtopics": [
+          "5.1 The Digestive System",
+          "5.2 The circulatory and lymphatic system",
+          "5.3 The breathing system",
+          "5.4 The Human Urinary system",
+          "5.5 The immune system",
+          "5.6 Renowned Physicians in Ethiopia"
+        ]
+      },
+      {
+        "unit_number": 6,
+        "title": "Ecological Interaction",
+        "subtopics": [
+          "6.1 Trophic Levels",
+          "6.2 Cycling of Materials in an Ecosystem"
+        ]
+      }
+    ]
+  },
+  {
+    "grade": 10,
+    "stream": "common",
+    "subject_name": "Chemistry",
+    "subject_code": "CHEM_G10",
+    "total_units": 6,
+    "units": [
+      {
+        "unit_number": 1,
+        "title": "Chemical Reactions and Stoichiometry",
+        "subtopics": [
+          "1.1 Introduction",
+          "1.2 Chemical Equations",
+          "1.3 Types of Chemical Reactions",
+          "1.4 Oxidation and Reduction Reactions",
+          "1.5 Molecular and Formula Masses, the Mole Concept and Chemical Formulas",
+          "1.6 Stoichiometry"
+        ]
+      },
+      {
+        "unit_number": 2,
+        "title": "Solutions",
+        "subtopics": [
+          "2.1 Introduction",
+          "2.2 The Solution Process",
+          "2.3 Solubility and Factors Affecting Solubility",
+          "2.4 Concentration of Solutions",
+          "2.5 Preparation of Solutions"
+        ]
+      },
+      {
+        "unit_number": 3,
+        "title": "Important Inorganic Compounds",
+        "subtopics": [
+          "3.1 Introduction",
+          "3.2 Oxides",
+          "3.3 Acids",
+          "3.4 Bases",
+          "3.5 Salts"
+        ]
+      },
+      {
+        "unit_number": 4,
+        "title": "Energy Changes and Electrochemistry",
+        "subtopics": [
+          "4.1 Introduction",
+          "4.2 Energy Changes in Electrochemistry",
+          "4.3 Electrochemical Cells",
+          "4.4 Electrolysis"
+        ]
+      },
+      {
+        "unit_number": 5,
+        "title": "Metals and Nonmetals",
+        "subtopics": [
+          "5.1 Introduction",
+          "5.2 General Properties of Metals and Production of Some Metals",
+          "5.3 Production of Some Important Nonmetals"
+        ]
+      },
+      {
+        "unit_number": 6,
+        "title": "Hydrocarbons and Their Natural Sources",
+        "subtopics": [
+          "6.1 Introduction",
+          "6.2 Saturated Hydrocarbons: Alkanes (CnH2n+2)",
+          "6.3 Unsaturated Hydrocarbons: Alkenes, Alkynes and Aromatic Hydrocarbons",
+          "6.4 Aromatic Hydrocarbons: Benzene",
+          "6.5 Natural Sources of Hydrocarbons"
+        ]
+      }
+    ]
+  },
+  {
+    "grade": 10,
+    "stream": "common",
+    "subject_name": "English",
+    "subject_code": "ENG_G10",
+    "total_units": 10,
+    "units": [
+      {
+        "unit_number": 1,
+        "title": "Population Growth",
+        "subtopics": [
+          "1.1 Listening: Population Explosion",
+          "1.2 Speaking",
+          "1.3 Reading: Population Growth",
+          "1.4 Grammar",
+          "1.5 Writing"
+        ]
+      },
+      {
+        "unit_number": 2,
+        "title": "Travel Behaviors",
+        "subtopics": [
+          "2.1 Listening: Travelling and Places",
+          "2.2 Speaking",
+          "2.3 Reading: Travel Behaviors",
+          "2.4 Grammar",
+          "2.5 Writing"
+        ]
+      },
+      {
+        "unit_number": 3,
+        "title": "Punctuality",
+        "subtopics": [
+          "3.1 Listening: Punctual Students",
+          "3.2 Speaking",
+          "3.3 Reading: Punctuality",
+          "3.4 Vocabulary",
+          "3.5 Grammar",
+          "3.6 Writing"
+        ]
+      },
+      {
+        "unit_number": 4,
+        "title": "Tourist Attractions",
+        "subtopics": [
+          "4.1 Listening: Giving Information for Tourists",
+          "4.2 Speaking",
+          "4.3 Reading: Tourism",
+          "4.4 Vocabulary",
+          "4.5 Grammar",
+          "4.6 Writing"
+        ]
+      },
+      {
+        "unit_number": 5,
+        "title": "Honey Processing",
+        "subtopics": [
+          "5.1 Listening: Honey Processing",
+          "5.2 Speaking",
+          "5.3 Reading: The Importance of Honey",
+          "5.4 Vocabulary",
+          "5.5 Grammar",
+          "5.6 Writing"
+        ]
+      },
+      {
+        "unit_number": 6,
+        "title": "Migration",
+        "subtopics": [
+          "6.1 Listening",
+          "6.2 Speaking",
+          "6.3 Reading: Migration in Ethiopia",
+          "6.4 Vocabulary",
+          "6.5 Grammar: Tense",
+          "6.6 Writing"
+        ]
+      },
+      {
+        "unit_number": 7,
+        "title": "Branding Ethiopia and National Identity",
+        "subtopics": [
+          "7.1 Listening",
+          "7.2 Speaking",
+          "7.3 Reading",
+          "7.4 Vocabulary",
+          "7.5 Grammar",
+          "7.6 Writing"
+        ]
+      },
+      {
+        "unit_number": 8,
+        "title": "The Healing Power of Plants",
+        "subtopics": [
+          "8.1 Listening",
+          "8.2 Speaking",
+          "8.3 Reading: A Traditional Medicine, Moringa Olifera",
+          "8.4 Vocabulary",
+          "8.5 Grammar",
+          "8.6 Writing"
+        ]
+      },
+      {
+        "unit_number": 9,
+        "title": "Multilingualism",
+        "subtopics": [
+          "9.1 Listening: Multilingualism",
+          "9.2 Speaking",
+          "9.3 Reading: Cognitive Benefits of being Multilingual",
+          "9.4 Writing: Letters Writing",
+          "9.5 Grammar",
+          "9.6 Vocabulary"
+        ]
+      },
+      {
+        "unit_number": 10,
+        "title": "Digital Vs Satellite Television",
+        "subtopics": [
+          "10.1 Listening",
+          "10.2 Speaking",
+          "10.3 Reading",
+          "10.4 Vocabulary",
+          "10.5 Grammar",
+          "10.6 Writing"
+        ]
+      }
+    ]
+  },
+  {
+    "grade": 10,
+    "stream": "common",
+    "subject_name": "Geography",
+    "subject_code": "GEO_G10",
+    "total_units": 8,
+    "units": [
+      {
+        "unit_number": 1,
+        "title": "Landforms of Africa",
+        "subtopics": [
+          "1.1 Overview of the World's Major Landforms",
+          "1.2 Location and Related Features of Africa",
+          "1.3 Major Landforms of Africa"
+        ]
+      },
+      {
+        "unit_number": 2,
+        "title": "Climate of Africa",
+        "subtopics": [
+          "2.1 Overview of World Climatic Regions and Types",
+          "2.2 Climate Types and Zones of Africa",
+          "2.3 Benefits of Climate for Life of People of Africa",
+          "2.4 Climate Change and its Challenges to Africa's Development Vision"
+        ]
+      },
+      {
+        "unit_number": 3,
+        "title": "Natural Resource Base of Africa",
+        "subtopics": [
+          "3.1 Overview of Major Natural Resources of the World",
+          "3.2 Major Drainage and Water Resources in Africa",
+          "3.3 Main Types of Soils and Mineral Resources in Africa",
+          "3.4 Major Vegetation and Wildlife of Africa"
+        ]
+      },
+      {
+        "unit_number": 4,
+        "title": "Population of Africa",
+        "subtopics": [
+          "4.1 Overview of World Population Growth and Size",
+          "4.2 Africa's Major Demographic Trends",
+          "4.3 Population Structure",
+          "4.4 Distribution and Density of Africa's Population",
+          "4.5 Urban and Rural Settlement Patterns in Africa"
+        ]
+      },
+      {
+        "unit_number": 5,
+        "title": "Major Economic and Cultural Activities of Africa",
+        "subtopics": [
+          "5.1 Overview of Employment Structure in the World",
+          "5.2 Major Economic Activities in Africa",
+          "5.3 Possible Solutions to the Problem of Unemployment",
+          "5.4 Africa's Agenda 2063 and Its Implications",
+          "5.5 Africa's Agenda 2063 Vis-À-Vis Sustainable Development Goals (SDGs)",
+          "5.6 Linguistic and Religious Diversity in Africa"
+        ]
+      },
+      {
+        "unit_number": 6,
+        "title": "Human - Natural Environment Interactions",
+        "subtopics": [
+          "6.1 Overview of Global Population Change",
+          "6.2 Human-environment Relationship",
+          "6.3 Indigenous Knowledge in Conservation of Natural Resources in Africa"
+        ]
+      },
+      {
+        "unit_number": 7,
+        "title": "Geographic Issues and Public Concerns in Africa",
+        "subtopics": [
+          "7.1 Unplanned Urbanization",
+          "7.2 Migration – Factors and Impacts on Africa",
+          "7.3 Coastal Pollution in Africa"
+        ]
+      },
+      {
+        "unit_number": 8,
+        "title": "Geospatial Information and Data Processing",
+        "subtopics": [
+          "8.1 Basic Concepts of Geospatial Information",
+          "8.2 Sources and Tools of Geographic Data",
+          "8.3 Geographic Data Representations The Data Cycle",
+          "8.4 Advances in Mapmaking and the Birth of Geographic Information System",
+          "8.5 Making and Interpretation of Graphs, Charts and Diagrams"
+        ]
+      }
+    ]
+  },
+  {
+    "grade": 10,
+    "stream": "common",
+    "subject_name": "History",
+    "subject_code": "HIST_G10",
+    "total_units": 9,
+    "units": [
+      {
+        "unit_number": 1,
+        "title": "Development of Capitalism and Nationalism 1815-1914",
+        "subtopics": [
+          "1.1 Features of Capitalism",
+          "1.2 Features of Nationalism and Formation of Nation States"
+        ]
+      },
+      {
+        "unit_number": 2,
+        "title": "Africa & the Colonial Experience (1880s -1960s)",
+        "subtopics": [
+          "2.1 General Background to Colonialism",
+          "2.2 The Motives of European Colonialism",
+          "2.3 Scramble for Africa and the Berlin Conference"
+        ]
+      },
+      {
+        "unit_number": 3,
+        "title": "Ethiopia: Internal Developments and External Relations from 1840s to 1941",
+        "subtopics": [
+          "3.1 The Making of Modern Ethiopian State",
+          "3.2 The Reign of Emperor Yohannes IV",
+          "3.3 Emperor Menelik II and the Battle of Adwa",
+          "3.4 Power Struggle and Foreign Influence",
+          "3.5 Fascist Italian Aggression and Patriotic Resistance"
+        ]
+      },
+      {
+        "unit_number": 4,
+        "title": "Society and Politics in the Age of World Wars 1914-1945",
+        "subtopics": [
+          "4.1 The First World War: Causes and Consequence",
+          "4.2 The October 1917 Russian Revolution: Causes and Results",
+          "4.3 The League of Nations",
+          "4.4 The Worldwide Economic Crisis",
+          "4.5 The Rise of Fascism in Italy, Nazism in Germany and Militarism in Japan",
+          "4.6 The Second World War: 1939-45"
+        ]
+      },
+      {
+        "unit_number": 5,
+        "title": "Global and Regional Developments Since 1945",
+        "subtopics": [
+          "5.1 The United Nations Organization: Formation, Mission, Principles and Achievements",
+          "5.2 The Rise of the Superpowers and the Beginning of the Cold War",
+          "5.3 Situations in Asia During the Cold War: Japan, Korea, China, Vietnam",
+          "5.4 Non-Aligned Movement /NAM/",
+          "5.5 The Arab-Israeli Conflict",
+          "5.6 The Collapse of the Soviet Union"
+        ]
+      },
+      {
+        "unit_number": 6,
+        "title": "Ethiopia: Internal Developments and External Influences from 1941 to 1991",
+        "subtopics": [
+          "6.1 Major Administrative Reforms and Socio-Economic Conditions in the Post-Liberation Period",
+          "6.2 Early Opposition Movements against the Imperial Rule",
+          "6.3 The Ethiopian Revolution and the Fall of the Monarchy",
+          "6.4 The Ethio-Somalia War and Foreign Influences, the Question of Eritrea, and the Fall of the Derg"
+        ]
+      },
+      {
+        "unit_number": 7,
+        "title": "Africa Since 1960",
+        "subtopics": [
+          "7.1 Rise of Independent States in Africa",
+          "7.2 Struggle for Economic Independence",
+          "7.3 Major Issues in Contemporary Africa"
+        ]
+      },
+      {
+        "unit_number": 8,
+        "title": "Post-1991 Developments in Ethiopia",
+        "subtopics": [
+          "8.1 Transition Period and the 1995 Constitution",
+          "8.2 Major Economic and Social Developments"
+        ]
+      },
+      {
+        "unit_number": 9,
+        "title": "Indigenous Knowledge and Heritages of Ethiopia",
+        "subtopics": [
+          "9.1 Indigenous Knowledge Systems",
+          "9.2 Cultural and Natural Heritages of Ethiopia"
+        ]
+      }
+    ]
+  },
+  {
+    "grade": 10,
+    "stream": "common",
+    "subject_name": "Mathematics",
+    "subject_code": "MATH_G10",
+    "total_units": 7,
+    "units": [
+      {
+        "unit_number": 1,
+        "title": "Relations and Functions",
+        "subtopics": [
+          "1.1 Relations",
+          "1.2 Functions",
+          "1.3 Inverse of a Relation and Function"
+        ]
+      },
+      {
+        "unit_number": 2,
+        "title": "Polynomial Functions",
+        "subtopics": [
+          "2.1 Polynomial Functions and Their Operations",
+          "2.2 Zeros of Polynomial Functions",
+          "2.3 Graphs of Polynomial Functions"
+        ]
+      },
+      {
+        "unit_number": 3,
+        "title": "Exponential and Logarithmic Functions",
+        "subtopics": [
+          "3.1 Exponential Functions and Their Graphs",
+          "3.2 Logarithmic Functions and Their Graphs",
+          "3.3 Equations Involving Exponents and Logarithms",
+          "3.4 Applications"
+        ]
+      },
+      {
+        "unit_number": 4,
+        "title": "Trigonometric Functions",
+        "subtopics": [
+          "4.1 Trigonometric Functions of Any Angle",
+          "4.2 Graphs of Trigonometric Functions",
+          "4.3 Applications"
+        ]
+      },
+      {
+        "unit_number": 5,
+        "title": "Circles",
+        "subtopics": [
+          "5.1 Angles in a Circle",
+          "5.2 Secants, Tangents and Chords",
+          "5.3 Arc Length and Area of a Sector"
+        ]
+      },
+      {
+        "unit_number": 6,
+        "title": "Solid Figures",
+        "subtopics": [
+          "6.1 Prisms and Pyramids",
+          "6.2 Cylinders and Cones",
+          "6.3 Spheres",
+          "6.4 Surface Area and Volume of Composite Solids",
+          "6.5 Applications"
+        ]
+      },
+      {
+        "unit_number": 7,
+        "title": "Coordinate Geometry",
+        "subtopics": [
+          "7.1 Distance between two points",
+          "7.2 Division of a line segment",
+          "7.3 Equation of a line",
+          "7.4 Slopes of parallel and perpendicular lines",
+          "7.5 Equation of a Circle",
+          "7.6 Applications"
+        ]
+      }
+    ]
+  },
+  {
+    "grade": 11,
+    "stream": "natural",
+    "subject_name": "Biology",
+    "subject_code": "BIO_G11",
+    "total_units": 6,
+    "units": [
+      {
+        "unit_number": 1,
+        "title": "Biology and Technology",
+        "subtopics": [
+          "1.1 Learning from nature",
+          "1.2 Biology and technology",
+          "1.3 Impacts of biology and technology on society and the natural world",
+          "1.4 Ethical issues in biology"
+        ]
+      },
+      {
+        "unit_number": 2,
+        "title": "Animals",
+        "subtopics": [
+          "2.1 Characteristics of animals",
+          "2.2 Invertebrates and Vertebrates",
+          "2.3 Reproduction in Animals",
+          "2.4 The economic importance of animals (insects)",
+          "2.5 Animal Behavior",
+          "2.6 Homeostasis in animals",
+          "2.7 Renowned zoologists in Ethiopia"
+        ]
+      },
+      {
+        "unit_number": 3,
+        "title": "Enzymes",
+        "subtopics": [
+          "3.1 What are enzymes?",
+          "3.2 Properties and functions of enzymes",
+          "3.3 Protein structures",
+          "3.4 Enzyme substrate models",
+          "3.5 Enzyme regulation",
+          "3.6 Types of enzymes",
+          "3.7 Factors affecting enzyme action",
+          "3.8 Enzyme kinetics",
+          "3.9 Application of enzymes in industries and their benefits",
+          "3.10 Malting in Ethiopian tradition",
+          "3.11 Renowned Biochemists in Ethiopia"
+        ]
+      },
+      {
+        "unit_number": 4,
+        "title": "Genetics",
+        "subtopics": [
+          "4.1 The genetic materials",
+          "4.2 The structure and function of DNA and RNA",
+          "4.3 The process of cell division",
+          "4.4 Protein synthesis",
+          "4.5 Mendelian inheritance",
+          "4.6 Sex determination",
+          "4.7 Non-Mendelian inheritance",
+          "4.8 Human pedigree analysis and its importance",
+          "4.9 Genetic disorders",
+          "4.10 Genetic testing and counseling",
+          "4.11 Gene therapy",
+          "4.12 Breeding",
+          "4.13 Bioinformatics introduction"
+        ]
+      },
+      {
+        "unit_number": 5,
+        "title": "The Human Body Systems",
+        "subtopics": [
+          "5.1 Human Musculoskeletal Systems",
+          "5.2 The reproductive system",
+          "5.3 Harmful traditional practices",
+          "5.4 Family planning",
+          "5.5 Effects of alcohol use, chewing Khat, cannabis and other drug uses on STIs transmission and unwanted pregnancy"
+        ]
+      },
+      {
+        "unit_number": 6,
+        "title": "Population and Natural Resources",
+        "subtopics": [
+          "6.1 Population Ecology",
+          "6.2 Natural resources",
+          "6.3 Conservation of natural resources in Ethiopia",
+          "6.4 Impact of traffic accident on wild and domestic animals",
+          "6.5 Impact of human activities on the environment",
+          "6.6 Indigenous conservation practices in Ethiopia"
+        ]
+      }
+    ]
+  },
+  {
+    "grade": 11,
+    "stream": "natural",
+    "subject_name": "Chemistry",
+    "subject_code": "CHEM_G11",
+    "total_units": 6,
+    "units": [
+      {
+        "unit_number": 1,
+        "title": "Atomic Structure and Periodic Properties of the Elements",
+        "subtopics": [
+          "1.1 Introduction",
+          "1.2 Dalton's Atomic Theory and the Modern Atomic Theory",
+          "1.3 Early Experiments to Characterize the Atom",
+          "1.4 Make-up of the Nucleus",
+          "1.5 Electromagnetic Radiation and Atomic Spectra",
+          "1.6 The Quantum Mechanical Model of the Atom",
+          "1.7 Electronic Configurations and Orbital Diagrams",
+          "1.8 Electronic Configurations and the Periodic Table of the Elements"
+        ]
+      },
+      {
+        "unit_number": 2,
+        "title": "Chemical Bonding",
+        "subtopics": [
+          "2.1 Introduction",
+          "2.2 Ionic Bonds",
+          "2.3 Covalent Bonds and Molecular Geometry",
+          "2.4 Metallic Bonding",
+          "2.5 Chemical Bonding Theories",
+          "2.6 Types of Crystal"
+        ]
+      },
+      {
+        "unit_number": 3,
+        "title": "Physical States of Matter",
+        "subtopics": [
+          "3.1 Introduction",
+          "3.2 Kinetic Theory and Properties of Matter",
+          "3.3 The Gaseous State",
+          "3.4 The Liquid State",
+          "3.5 The Solid State"
+        ]
+      },
+      {
+        "unit_number": 4,
+        "title": "Chemical Kinetics",
+        "subtopics": [
+          "4.1 Introduction",
+          "4.2 The Rate of a Reaction",
+          "4.3 Factors Affecting the Rate of a Chemical Reaction"
+        ]
+      },
+      {
+        "unit_number": 5,
+        "title": "Chemical Equilibrium",
+        "subtopics": [
+          "5.1 Introduction",
+          "5.2 Chemical Equilibrium"
+        ]
+      },
+      {
+        "unit_number": 6,
+        "title": "Some Important Oxygen-Containing Organic Compounds",
+        "subtopics": [
+          "6.1 Introduction",
+          "6.2 Alcohols and Ethers",
+          "6.3 Aldehydes and Ketones",
+          "6.4 Carboxylic Acids",
+          "6.5 Esters",
+          "6.6 Fats and Oils"
+        ]
+      }
+    ]
+  },
+  {
+    "grade": 11,
+    "stream": "social",
+    "subject_name": "Economics",
+    "subject_code": "ECON_G11",
+    "total_units": 7,
+    "units": [
+      {
+        "unit_number": 1,
+        "title": "Theory of Consumer Behavior and Demand",
+        "subtopics": [
+          "1.1 Review of the Cardinal Utility Approach",
+          "1.2 The Ordinal Utility Theory and Preferences",
+          "1.3 The Budget Line or the Price line",
+          "1.4 Optimum of the Consumer"
+        ]
+      },
+      {
+        "unit_number": 2,
+        "title": "Market Structure and the Decision of Firms",
+        "subtopics": [
+          "2.1 Review of Market Structures",
+          "2.2 Perfect Competition Market",
+          "2.3 Pure Monopoly Market",
+          "2.4 Monopolistic Competition Market",
+          "2.5 Oligopoly Market"
+        ]
+      },
+      {
+        "unit_number": 3,
+        "title": "National Income Accounting",
+        "subtopics": [
+          "3.1 Concepts of National Income",
+          "3.2 Stock and Flow Concepts",
+          "3.3 Approaches of Measuring National Income (GDP/GNP)",
+          "3.4 Other National Income Account Aggregates",
+          "3.5 Nominal versus Real GDP",
+          "3.6 The GDP Deflator and Consumer Price Index (CPI)"
+        ]
+      },
+      {
+        "unit_number": 4,
+        "title": "Consumption, Saving and Investment",
+        "subtopics": [
+          "4.1 Consumption",
+          "4.2 Saving",
+          "4.3 The Relationship between Saving and Consumption",
+          "4.4 Investment"
+        ]
+      },
+      {
+        "unit_number": 5,
+        "title": "Trade and Finance",
+        "subtopics": [
+          "5.1 Meaning of Trade",
+          "5.2 International Trade Theories",
+          "5.3 Restrictions to International Trade",
+          "5.4 Balance of Payments",
+          "5.5 Foreign Exchange Market",
+          "5.6 Exchange Rate Systems",
+          "5.7 Regional Integration and Globalization Practices in the Ethiopian Context"
+        ]
+      },
+      {
+        "unit_number": 6,
+        "title": "Economic Development",
+        "subtopics": [
+          "6.1 Economic Growth and Economic Development",
+          "6.2 Measures of Productivity",
+          "6.3 Human Development Index (HDI)",
+          "6.4 Capability Approach",
+          "6.5 Sustainable Development",
+          "6.6 Millennium Development Goals (2000-2015)",
+          "6.7 The Sustainable Development Goals (2015-2030)"
+        ]
+      },
+      {
+        "unit_number": 7,
+        "title": "Main Sectors, Sectorial Policies and Strategies of Ethiopia",
+        "subtopics": [
+          "7.1 The Agricultural Sector Policies and Strategies",
+          "7.2 Agricultural Development Led Industrialization (ADLI)",
+          "7.3 The Industrial Sector Policies and Strategies",
+          "7.4 Performance and Problems of the Ethiopian Industrial Sector",
+          "7.5 The Service Sector Policies and Strategies in Ethiopia"
+        ]
+      }
+    ]
+  },
+  {
+    "grade": 11,
+    "stream": "both",
+    "subject_name": "English",
+    "subject_code": "ENG_G11",
+    "total_units": 10,
+    "units": [
+      {
+        "unit_number": 1,
+        "title": "Environmental Hazards",
+        "subtopics": [
+          "1A Listening Skills",
+          "1B Speaking Skills",
+          "1C Reading Skills",
+          "1D Vocabulary Skills",
+          "1E Grammar Skills",
+          "1F Writing Skills"
+        ]
+      },
+      {
+        "unit_number": 2,
+        "title": "Civilization",
+        "subtopics": [
+          "2A Listening Skills",
+          "2B Speaking Skills",
+          "2C Reading Skills",
+          "2D Vocabulary Skills",
+          "2E Grammar Skills",
+          "2F Writing Skills"
+        ]
+      },
+      {
+        "unit_number": 3,
+        "title": "Causes of Road Traffic Accidents",
+        "subtopics": [
+          "3A Listening Skills",
+          "3B Speaking Skills",
+          "3C Reading Skills",
+          "3D Vocabulary Skills",
+          "3E Grammar Skills",
+          "3F Writing Skills"
+        ]
+      },
+      {
+        "unit_number": 4,
+        "title": "People and Natural Resources",
+        "subtopics": [
+          "4A Listening Skills",
+          "4B Speaking Skills",
+          "4C Reading Skills",
+          "4D Vocabulary Skills",
+          "4E Grammar Skills",
+          "4F Writing Skills"
+        ]
+      },
+      {
+        "unit_number": 5,
+        "title": "Irrigation",
+        "subtopics": [
+          "5A Listening Skills",
+          "5B Speaking Skills",
+          "5C Reading Skills",
+          "5D Vocabulary Skills",
+          "5E Grammar Skills",
+          "5F Writing Skills"
+        ]
+      },
+      {
+        "unit_number": 6,
+        "title": "Global Warming",
+        "subtopics": [
+          "6A Listening Skills",
+          "6B Speaking Skills",
+          "6C Reading Skills",
+          "6D Vocabulary Skills",
+          "6E Grammar Skills",
+          "6F Writing Skills"
+        ]
+      },
+      {
+        "unit_number": 7,
+        "title": "Patriotism",
+        "subtopics": [
+          "7A Listening Skills",
+          "7B Speaking Skills",
+          "7C Reading Skills",
+          "7D Vocabulary Skills",
+          "7E Grammar Skills",
+          "7F Writing Skills"
+        ]
+      },
+      {
+        "unit_number": 8,
+        "title": "Efficiency of Health Services",
+        "subtopics": [
+          "8A Listening Skills",
+          "8B Speaking Skills",
+          "8C Reading Skills",
+          "8D Vocabulary Skills",
+          "8E Grammar Skills",
+          "8F Writing Skills"
+        ]
+      },
+      {
+        "unit_number": 9,
+        "title": "Indigenous Conflict Resolution",
+        "subtopics": [
+          "9A Listening Skills",
+          "9B Speaking Skills",
+          "9C Reading Skills",
+          "9D Vocabulary Skills",
+          "9E Grammar Skills",
+          "9F Writing Skills"
+        ]
+      },
+      {
+        "unit_number": 10,
+        "title": "Artificial Intelligence",
+        "subtopics": [
+          "10A Listening Skills",
+          "10B Speaking Skills",
+          "10C Reading Skills",
+          "10D Vocabulary Skills",
+          "10E Grammar Skills",
+          "10F Writing Skills"
+        ]
+      }
+    ]
+  },
+  {
+    "grade": 11,
+    "stream": "social",
+    "subject_name": "Geography",
+    "subject_code": "GEO_G11",
+    "total_units": 7,
+    "units": [
+      {
+        "unit_number": 1,
+        "title": "Formation of the Continents",
+        "subtopics": [
+          "1.1 Formation of the continents and oceans",
+          "1.2 Geological timescale",
+          "1.3 Distribution of the continents and oceans",
+          "1.4 Changing position of the continents and oceans"
+        ]
+      },
+      {
+        "unit_number": 2,
+        "title": "Climate Classification and Climate Regions of Our World",
+        "subtopics": [
+          "2.1 Criteria for climate classification",
+          "2.2 Köppen's climate classification",
+          "2.3 World climatic regions",
+          "2.4 Factors influencing the world climatic regions",
+          "2.5 Local/indigenous climate classification of Ethiopia"
+        ]
+      },
+      {
+        "unit_number": 3,
+        "title": "Natural Resources and Conflicts Over Resources",
+        "subtopics": [
+          "3.1 The functions and management of land",
+          "3.2 Resources under pressure",
+          "3.3 Land resource depletion and degradation",
+          "3.4 Transboundary rivers",
+          "3.5 Regional cooperation for sustainable use of transboundary rivers",
+          "3.6 Potential and actual use of water in Ethiopia, Sudan and Egypt",
+          "3.7 Conflicts over resources"
+        ]
+      },
+      {
+        "unit_number": 4,
+        "title": "Global Population Dynamics and Challenges",
+        "subtopics": [
+          "4.1 The growth of world population",
+          "4.2 Factors responsible for accelerated population growth",
+          "4.3 International migrations",
+          "4.4 Population policies"
+        ]
+      },
+      {
+        "unit_number": 5,
+        "title": "Geography and Economic Development",
+        "subtopics": [
+          "5.1 Effects of geographic location on development",
+          "5.2 Climate extremes and poverty",
+          "5.3 Disadvantages of landlocked countries",
+          "5.4 Intraregional trade in Africa"
+        ]
+      },
+      {
+        "unit_number": 6,
+        "title": "Major Global Environmental Changes",
+        "subtopics": [
+          "6.1 Persistent environmental problems",
+          "6.2 Poverty-environment nexus",
+          "6.3 Environmental degradation and sustainable development"
+        ]
+      },
+      {
+        "unit_number": 7,
+        "title": "Geographic Issues and Public Concerns",
+        "subtopics": [
+          "7.1 Population related concerns of our contemporary world",
+          "7.2 Land degradation and desertification",
+          "7.3 Recurrent drought and famine",
+          "7.4 Deforestation",
+          "7.5 Worldwide Digital Divide"
+        ]
+      }
+    ]
+  },
+  {
+    "grade": 11,
+    "stream": "social",
+    "subject_name": "History",
+    "subject_code": "HIST_G11",
+    "total_units": 9,
+    "units": [
+      {
+        "unit_number": 1,
+        "title": "History, Historiography, and Human Evolution",
+        "subtopics": [
+          "1.1 History and Historiography",
+          "1.2 Origin of Human Beings",
+          "1.3 Emergence of State"
+        ]
+      },
+      {
+        "unit_number": 2,
+        "title": "Major Spots of Ancient World Civilizations Up to c. 500 A.D",
+        "subtopics": [
+          "2.1 Ancient Civilizations of Africa",
+          "2.2 Civilizations in Asia",
+          "2.3 Civilizations in Europe",
+          "2.4 Civilizations in Latin America",
+          "2.5 The Rise and Spread of Christianity"
+        ]
+      },
+      {
+        "unit_number": 3,
+        "title": "Peoples, States and Historical Processes in Ethiopia and the Horn to the End of the 13th Century",
+        "subtopics": [
+          "3.1 Languages, Religions and Peoples of Ethiopia and the Horn",
+          "3.2 Pre-Aksumite States and their Geographical Setting",
+          "3.3 The Aksumite Kingdom",
+          "3.4 The Sultanate of Shewa",
+          "3.5 Zagwe Dynasty",
+          "3.6 The Kingdom of Damot",
+          "3.7 The Bete-Israel (Ethiopian Jews)"
+        ]
+      },
+      {
+        "unit_number": 4,
+        "title": "The Middle Ages and Early Modern World, c. 500 AD-1789",
+        "subtopics": [
+          "4.1 The European Middle Ages",
+          "4.2 Main Features of the Middle Ages",
+          "4.3 The Middle Ages in Asia",
+          "4.4 Development of Early Capitalism: 1500-1789",
+          "4.5 The Age of Exploration and Inception of Globalization",
+          "4.6 The Renaissance",
+          "4.7 The Reformation",
+          "4.8 The Scientific Revolution and the Enlightenment"
+        ]
+      },
+      {
+        "unit_number": 5,
+        "title": "Peoples and States of Africa to 1500",
+        "subtopics": [
+          "5.1 Languages and Peoples of Africa",
+          "5.2 States in North Africa",
+          "5.3 Spread of Islam and its Impact in West Africa",
+          "5.4 States in Western Africa",
+          "5.5 Equatorial, Central and Eastern Africa",
+          "5.6 Southern Africa",
+          "5.7 Africa's Intra and Inter-continental Relations",
+          "5.8 Trans-Saharan Trade"
+        ]
+      },
+      {
+        "unit_number": 6,
+        "title": "Africa and the Outside World, 1500-1880s",
+        "subtopics": [
+          "6.1 Contact with the Outside World",
+          "6.2 Slavery and Trans-Atlantic Slave Trade",
+          "6.3 The Legitimate Commerce",
+          "6.4 The White Settlement in Southern Africa",
+          "6.5 European Explorers and Missionaries"
+        ]
+      },
+      {
+        "unit_number": 7,
+        "title": "States, Principalities, Population Movements and Interactions in Ethiopia (13th – Mid-16th Century)",
+        "subtopics": [
+          "7.1 Restoration of the Solomonic Dynasty",
+          "7.2 The Christian Kingdom and Muslim Sultanates",
+          "7.3 The Oromo Population Movement"
+        ]
+      },
+      {
+        "unit_number": 8,
+        "title": "Political, Social and Economic Processes in Ethiopia, Mid 16th to Mid-19th Century",
+        "subtopics": [
+          "8.1 Peoples and States of Southern, Western and Eastern Ethiopia",
+          "8.2 Instability Versus Consolidation in the Christian Kingdom, 1559-1855"
+        ]
+      },
+      {
+        "unit_number": 9,
+        "title": "The Age of Revolutions, 1789 to 1815",
+        "subtopics": [
+          "9.1 The Industrial Revolution and its Political, Economic and Social Effects on Europe",
+          "9.2 The American War of Independence",
+          "9.3 The French Revolution",
+          "9.4 The Period of Napoleon Bonaparte"
+        ]
+      }
+    ]
+  },
+  {
+    "grade": 11,
+    "stream": "both",
+    "subject_name": "Mathematics",
+    "subject_code": "MATH_G11",
+    "total_units": 8,
+    "units": [
+      {
+        "unit_number": 1,
+        "title": "Relations and Functions",
+        "subtopics": [
+          "1.1 Relations",
+          "1.2 Inverse of Relations and Their Graphs",
+          "1.3 Types of Functions",
+          "1.4 Composition of Functions",
+          "1.5 Inverse Functions and their Graphs",
+          "1.6 Applications of Relations and Functions"
+        ]
+      },
+      {
+        "unit_number": 2,
+        "title": "Rational Expressions and Rational Functions",
+        "subtopics": [
+          "2.1 Rational Expressions",
+          "2.2 Rational Equations and Rational Inequalities",
+          "2.3 Rational Functions and Their Graphs",
+          "2.4 Applications"
+        ]
+      },
+      {
+        "unit_number": 3,
+        "title": "Matrices",
+        "subtopics": [
+          "3.1 Basic Concepts of Matrices",
+          "3.2 Operations on Matrices",
+          "3.3 Types of Matrices",
+          "3.4 Applications of Matrices"
+        ]
+      },
+      {
+        "unit_number": 4,
+        "title": "Determinants and Their Properties",
+        "subtopics": [
+          "4.1 Determinants of Square Matrices",
+          "4.2 Properties of Determinants",
+          "4.3 Inverse of a Matrix",
+          "4.4 System of Linear Equations using Cramer's Rule"
+        ]
+      },
+      {
+        "unit_number": 5,
+        "title": "Vectors",
+        "subtopics": [
+          "5.1 Revision on Vectors and Scalars",
+          "5.2 Representation of vectors",
+          "5.3 Vector Product",
+          "5.4 Application of Scalar and Cross Product",
+          "5.5 Application of Vectors",
+          "5.6 Applications"
+        ]
+      },
+      {
+        "unit_number": 6,
+        "title": "Transformations of the Plane",
+        "subtopics": [
+          "6.1 Introduction",
+          "6.2 Translation",
+          "6.3 Reflection",
+          "6.4 Rotation",
+          "6.5 Applications"
+        ]
+      },
+      {
+        "unit_number": 7,
+        "title": "Statistics",
+        "subtopics": [
+          "7.1 Types of Data",
+          "7.2 Introduction to Grouped Data",
+          "7.3 Graphical Representation of Grouped Data",
+          "7.4 Measures of Central Tendency and Their Interpretation",
+          "7.5 Real-life Application of Statistics"
+        ]
+      },
+      {
+        "unit_number": 8,
+        "title": "Probability",
+        "subtopics": [
+          "8.1 Introduction",
+          "8.2 Fundamental Principle of Counting",
+          "8.3 Permutations and Combinations",
+          "8.4 Binomial Theorem",
+          "8.5 Random Experiments and Their Outcomes",
+          "8.6 Events",
+          "8.7 Probability of an Event",
+          "8.8 Real-life Application of Probability"
+        ]
+      }
+    ]
+  },
+  {
+    "grade": 11,
+    "stream": "natural",
+    "subject_name": "Physics",
+    "subject_code": "PHYS_G11",
+    "total_units": 7,
+    "units": [
+      {
+        "unit_number": 1,
+        "title": "Physics and Human Society",
+        "subtopics": [
+          "1.1 Importance of Physics to Society",
+          "1.2 Physics Communities and Their Roles",
+          "1.3 Making of Physics Knowledge",
+          "1.4 The Mission of Physics and Career Awareness",
+          "1.5 Current Status of Physics"
+        ]
+      },
+      {
+        "unit_number": 2,
+        "title": "Vectors",
+        "subtopics": [
+          "2.1 Vectors and Types of Vectors",
+          "2.2 Graphical Method of Addition of Vectors in Two Dimensions (2-D)",
+          "2.3 Algebraic Method of addition of vectors in Two Dimensions (2-D)",
+          "2.4 Product of Vectors"
+        ]
+      },
+      {
+        "unit_number": 3,
+        "title": "Motion in One and Two Dimensions",
+        "subtopics": [
+          "3.1 Uniformly Accelerated Motion in 1D",
+          "3.2 Equations of Uniformly Accelerated Motion in 1D",
+          "3.3 Graphical Representation of Uniformly accelerated Motion in 1D",
+          "3.4 Vertical Motion",
+          "3.5 Uniform Circular Motion"
+        ]
+      },
+      {
+        "unit_number": 4,
+        "title": "Dynamics",
+        "subtopics": [
+          "4.1 The Concept of Force and Newton's Laws of motion",
+          "4.2 Frictional Force",
+          "4.3 The First Condition of Equilibrium",
+          "4.4 Work, Energy and Power",
+          "4.5 Conservation of mechanical energy",
+          "4.6 Impulse and Linear Momentum"
+        ]
+      },
+      {
+        "unit_number": 5,
+        "title": "Heat Conduction and Calorimetry",
+        "subtopics": [
+          "5.1 The Concept of Heat",
+          "5.2 Heat transfer mechanisms",
+          "5.3 Heat Capacity and Specific Heat Capacity",
+          "5.4 Thermal expansion",
+          "5.5 Change of phase",
+          "5.6 Calorimetry"
+        ]
+      },
+      {
+        "unit_number": 6,
+        "title": "Electrostatics and Electric Circuit",
+        "subtopics": [
+          "6.1 Coulomb's Law",
+          "6.2 Electric Fields",
+          "6.3 Electric Potential",
+          "6.4 Electric Current, Resistance and ohm's law",
+          "6.5 Capacitors and Capacitance",
+          "6.6 Electric Circuits in Our Surroundings"
+        ]
+      },
+      {
+        "unit_number": 7,
+        "title": "Nuclear Physics",
+        "subtopics": [
+          "7.1 The nucleus",
+          "7.2 Radioactivity",
+          "7.3 Use of nuclear radiation",
+          "7.4 Nuclear Reaction and Energy Production",
+          "7.5 Safety Rules Against Hazards of Nuclear Radiation"
+        ]
+      }
+    ]
+  },
+  {
+    "grade": 12,
+    "stream": "natural",
+    "subject_name": "Biology",
+    "subject_code": "BIO_G12",
+    "total_units": 6,
+    "units": [
+      {
+        "unit_number": 1,
+        "title": "Application of Biology",
+        "subtopics": [
+          "1.1 Application in Conservation of Natural Resources",
+          "1.2 Food and Nutrition Security",
+          "1.3 Creating Conscious Citizens and Ensuring Sustainable Development",
+          "1.4 Applications in Biotechnology"
+        ]
+      },
+      {
+        "unit_number": 2,
+        "title": "Microorganisms",
+        "subtopics": [
+          "2.1 Eubacteria",
+          "2.2 Archaea",
+          "2.3 Fungi",
+          "2.4 Protozoa",
+          "2.5 Viruses",
+          "2.6 Normal Microbiota",
+          "2.7 Modes of Disease Transmission and Ways of Prevention",
+          "2.8 Uses of Microorganisms",
+          "2.9 Controlling Microorganisms",
+          "2.10 Renowned Microbiologists in Ethiopia"
+        ]
+      },
+      {
+        "unit_number": 3,
+        "title": "Energy Transformation",
+        "subtopics": [
+          "3.1 Cellular Metabolism",
+          "3.2 Photosynthesis",
+          "3.3 Contributions of Photosynthesis for the Continuity of Life, for O2 and CO2 Balance and Global Warming",
+          "3.4 Cellular Respiration"
+        ]
+      },
+      {
+        "unit_number": 4,
+        "title": "Evolution",
+        "subtopics": [
+          "4.1 Evolution",
+          "4.2 Renowned Anthropologists in Ethiopia",
+          "4.3 Renowned Evolutionists in Ethiopia"
+        ]
+      },
+      {
+        "unit_number": 5,
+        "title": "Human Body System",
+        "subtopics": [
+          "5.1 The Nervous System",
+          "5.2 Sense Organs",
+          "5.3 Homeostasis in the Human Body"
+        ]
+      },
+      {
+        "unit_number": 6,
+        "title": "Climate Change",
+        "subtopics": [
+          "6.1 Climate Change: Causes and Effects",
+          "6.2 Effects of Climate Change",
+          "6.3 International Conventions"
+        ]
+      }
+    ]
+  },
+  {
+    "grade": 12,
+    "stream": "natural",
+    "subject_name": "Chemistry",
+    "subject_code": "CHEM_G12",
+    "total_units": 5,
+    "units": [
+      {
+        "unit_number": 1,
+        "title": "Acid-Base Equilibria",
+        "subtopics": [
+          "1.1 Acid-Base Concepts",
+          "1.2 Ionic Equilibria of Weak Acids and Bases",
+          "1.3 Common Ion Effect and Buffer Solution",
+          "1.4 Hydrolysis of Salts",
+          "1.5 Acid-Base Indicators and Titrations"
+        ]
+      },
+      {
+        "unit_number": 2,
+        "title": "Electrochemistry",
+        "subtopics": [
+          "2.1 Oxidation-Reduction Reactions",
+          "2.2 Electrolysis of Aqueous Solutions",
+          "2.3 Quantitative Aspects of Electrolysis",
+          "2.4 Industrial Applications of Electrolysis",
+          "2.5 Galvanic Cells",
+          "2.6 Corrosion"
+        ]
+      },
+      {
+        "unit_number": 3,
+        "title": "Industrial Chemistry",
+        "subtopics": [
+          "3.1 Introduction",
+          "3.2 Natural Resources and Industry",
+          "3.3 Manufacturing of Valuable Products/ Chemicals",
+          "3.4 Some Manufacturing Industries in Ethiopia"
+        ]
+      },
+      {
+        "unit_number": 4,
+        "title": "Polymers",
+        "subtopics": [
+          "4.1 Introduction to Polymers",
+          "4.2 Polymerization Reactions",
+          "4.3 Classification of Polymers"
+        ]
+      },
+      {
+        "unit_number": 5,
+        "title": "Introduction to Environmental Chemistry",
+        "subtopics": [
+          "5.1 Introduction",
+          "5.2 Environmental Pollution",
+          "5.3 Global Warming and Climate Change",
+          "5.4 Green Chemistry and Cleaner Production"
+        ]
+      }
+    ]
+  },
+  {
+    "grade": 12,
+    "stream": "social",
+    "subject_name": "Economics",
+    "subject_code": "ECON_G12",
+    "total_units": 8,
+    "units": [
+      {
+        "unit_number": 1,
+        "title": "The Fundamental Concepts of Macroeconomics",
+        "subtopics": [
+          "1.1 Definition and Focus Areas of Macroeconomics Revisited",
+          "1.2 Key Challenges in Macroeconomics",
+          "1.3 The Schools of Thought in Macroeconomic Analysis"
+        ]
+      },
+      {
+        "unit_number": 2,
+        "title": "Aggregate Demand and Aggregate Supply Analysis",
+        "subtopics": [
+          "2.1 Aggregate Demand",
+          "2.2 Aggregate Supply",
+          "2.3 Macroeconomic Equilibrium"
+        ]
+      },
+      {
+        "unit_number": 3,
+        "title": "Macroeconomic Policy",
+        "subtopics": [
+          "3.1 Fiscal Policy",
+          "3.2 Monetary Policy",
+          "3.3 Trade Policy"
+        ]
+      },
+      {
+        "unit_number": 4,
+        "title": "Poverty and Inequality",
+        "subtopics": [
+          "4.1 Definition and Concepts of Poverty",
+          "4.2 Measurement of Poverty",
+          "4.3 Inequality and Income Distribution"
+        ]
+      },
+      {
+        "unit_number": 5,
+        "title": "Tax Theory and Practice",
+        "subtopics": [
+          "5.1 Taxes: Definition, Principles, Objectives and Classifications",
+          "5.2 Approaches to Tax Equity",
+          "5.3 Tax System and Structure in Ethiopia",
+          "5.4 Types of Tax and Tax Accounting in Ethiopia",
+          "5.5 Problems Associated with Taxation in Ethiopia"
+        ]
+      },
+      {
+        "unit_number": 6,
+        "title": "International Trade and Finance",
+        "subtopics": [
+          "6.1 Foreign Trade of Ethiopia",
+          "6.2 Foreign Exchange Rates and Markets",
+          "6.3 Balance of Payments of Ethiopia"
+        ]
+      },
+      {
+        "unit_number": 7,
+        "title": "Macroeconomic Reforms in Ethiopia",
+        "subtopics": [
+          "7.1 National Development Objectives and Strategies- Historical Review",
+          "7.2 Overview of Home-grown Economic Reforms in Ethiopia",
+          "7.3 Fiscal Decentralization"
+        ]
+      },
+      {
+        "unit_number": 8,
+        "title": "Economy, Environment and Climate Change",
+        "subtopics": [
+          "8.1 Economy and the Environment",
+          "8.2 Global Warming and Climate Change",
+          "8.3 Green Economy and Green Growth",
+          "8.4 Overview of Environment and Climate Change in Ethiopia"
+        ]
+      }
+    ]
+  },
+  {
+    "grade": 12,
+    "stream": "both",
+    "subject_name": "English",
+    "subject_code": "ENG_G12",
+    "total_units": 10,
+    "units": [
+      {
+        "unit_number": 1,
+        "title": "Sustainable Development",
+        "subtopics": [
+          "1A Listening Skills",
+          "1B Speaking Skills",
+          "1C Reading Skills",
+          "1D Vocabulary Skills",
+          "1E Grammar Skills",
+          "1F Writing Skills"
+        ]
+      },
+      {
+        "unit_number": 2,
+        "title": "Time Management",
+        "subtopics": [
+          "2A Listening Skills",
+          "2B Speaking Skills",
+          "2C Reading Skills",
+          "2D Vocabulary Skills",
+          "2E Grammar",
+          "2F Writing Skills"
+        ]
+      },
+      {
+        "unit_number": 3,
+        "title": "Evidence on Traffic Accident",
+        "subtopics": [
+          "3A Listening Skills",
+          "3B Speaking skills",
+          "3C Reading Skills",
+          "3D Vocabulary Skills",
+          "3E Grammar Skills",
+          "3F Writing: Narrative Essay"
+        ]
+      },
+      {
+        "unit_number": 4,
+        "title": "Natural Resource Management",
+        "subtopics": [
+          "4A Listening Skills",
+          "4B Speaking Skills",
+          "4C Reading Skills",
+          "4D Vocabulary Skills",
+          "4E Grammar Skills",
+          "4F Writing Skills"
+        ]
+      },
+      {
+        "unit_number": 5,
+        "title": "Mechanized Agriculture",
+        "subtopics": [
+          "5A Listening Skills",
+          "5B Speaking Skills",
+          "5C Reading Skills",
+          "5D Vocabulary Skills",
+          "5E Grammar Skills",
+          "5F Writing Skills"
+        ]
+      },
+      {
+        "unit_number": 6,
+        "title": "Green Economies",
+        "subtopics": [
+          "6A Listening",
+          "6B Speaking Skills",
+          "6C Reading Skills",
+          "6D Vocabulary Skills",
+          "6E Grammar Skills",
+          "6F Writing Skills"
+        ]
+      },
+      {
+        "unit_number": 7,
+        "title": "National Pride",
+        "subtopics": [
+          "7A Listening Skills",
+          "7B Speaking Skills",
+          "7C Reading Skills",
+          "7D Vocabulary Skills",
+          "7E Grammar Skills",
+          "7F Writing Skills"
+        ]
+      },
+      {
+        "unit_number": 8,
+        "title": "Telemedicine",
+        "subtopics": [
+          "8A Listening Skills",
+          "8B Speaking Skills",
+          "8C Reading Skills",
+          "8D Vocabulary Skills",
+          "8E Grammar Skills",
+          "8F Writing Skills"
+        ]
+      },
+      {
+        "unit_number": 9,
+        "title": "Conflict Management",
+        "subtopics": [
+          "9A Listening Skills",
+          "9B Speaking Skills",
+          "9C Reading Skills",
+          "9D Vocabulary Skills",
+          "9E Grammar Skills",
+          "9F Writing Skills"
+        ]
+      },
+      {
+        "unit_number": 10,
+        "title": "Robotics",
+        "subtopics": [
+          "10A Listening Skills",
+          "10B Speaking Skills",
+          "10C Reading Skills",
+          "10D Vocabulary Skills",
+          "10E Grammar Skills",
+          "10F Writing Skills"
+        ]
+      }
+    ]
+  },
+  {
+    "grade": 12,
+    "stream": "social",
+    "subject_name": "Geography",
+    "subject_code": "GEO_G12",
+    "total_units": 7,
+    "units": [
+      {
+        "unit_number": 1,
+        "title": "Major Geological Processes Associated with Plate Tectonics",
+        "subtopics": [
+          "1.1 Continental Drift Theory",
+          "1.2 Plate Tectonics Theory",
+          "1.3 Plate Movements and Plate Boundaries",
+          "1.4 Major Geological Processes"
+        ]
+      },
+      {
+        "unit_number": 2,
+        "title": "Climate Change",
+        "subtopics": [
+          "2.1 Basic Concepts of Climate Change",
+          "2.2 Trends in Global Climate Change",
+          "2.3 Natural and Human Induced Climate Change",
+          "2.4 Consequences of Climate Change",
+          "2.5 Adaptation and Mitigation Strategies to Climate Change",
+          "2.6 International conventions and agreements on climate",
+          "2.7 Pillars of Climate Resilient Green Economy of Ethiopia"
+        ]
+      },
+      {
+        "unit_number": 3,
+        "title": "Management of Conflict Over Resources",
+        "subtopics": [
+          "3.1 Resource Conflict Concepts",
+          "3.2 Causes of Resource Conflict",
+          "3.3 Conflict Resolution Mechanisms"
+        ]
+      },
+      {
+        "unit_number": 4,
+        "title": "Population and Socio-Economic Development",
+        "subtopics": [
+          "4.1 Population Dynamics and Development",
+          "4.2 Human Resource Development",
+          "4.3 Sustainable Population Growth"
+        ]
+      },
+      {
+        "unit_number": 5,
+        "title": "Challenges of Economic Development",
+        "subtopics": [
+          "5.1 Multiple Faces of Poverty and Implication to Development",
+          "5.2 The Advantages and Disadvantage of Globalization",
+          "5.3 The Growing Imbalance Between Regions and Countries",
+          "5.4 Corruption",
+          "5.5 Global Health Crises"
+        ]
+      },
+      {
+        "unit_number": 6,
+        "title": "Solutions to Environmental and Sustainability Problems",
+        "subtopics": [
+          "6.1 Environmental Problems",
+          "6.2 Sustainability Challenge",
+          "6.3 Environmental Education",
+          "6.4 Environmental Movements",
+          "6.5 Environmentally Friendly Indigenous Practices"
+        ]
+      },
+      {
+        "unit_number": 7,
+        "title": "Contemporary Global Geographic Issues and Public Concerns",
+        "subtopics": [
+          "7.1 Climate Change",
+          "7.2 Desertification",
+          "7.3 Drought",
+          "7.4 Famine"
+        ]
+      }
+    ]
+  },
+  {
+    "grade": 12,
+    "stream": "social",
+    "subject_name": "History",
+    "subject_code": "HIST_G12",
+    "total_units": 9,
+    "units": [
+      {
+        "unit_number": 1,
+        "title": "Development of Capitalism and Nationalism from 1815 to 1914",
+        "subtopics": [
+          "1.1 Development of Capitalism",
+          "1.2 The Industrial Revolution",
+          "1.3 Nationalism",
+          "1.4 Unification of Italy",
+          "1.5 Unification of Germany",
+          "1.6 The American Civil War",
+          "1.7 The Eastern Question"
+        ]
+      },
+      {
+        "unit_number": 2,
+        "title": "Africa and the Colonial Experience (1880s – 1960s)",
+        "subtopics": [
+          "2.1 The Process of Colonization",
+          "2.2 African Resistance against Colonial Expansion",
+          "2.3 Colonial Administration and the Colonial States"
+        ]
+      },
+      {
+        "unit_number": 3,
+        "title": "Ethiopia: Internal Developments and External Relations from 1840s to 1941",
+        "subtopics": [
+          "3.1 Unification and Modernization Attempts",
+          "3.2 Foreign Aggression and Territorial Integrity",
+          "3.3 The Battle of Adwa and Its Significance",
+          "3.4 Fascist Italian Occupation and Patriotic Resistance"
+        ]
+      },
+      {
+        "unit_number": 4,
+        "title": "Society and Politics in the Age of World Wars, 1914 - 1945",
+        "subtopics": [
+          "4.1 World War I and Its Settlement",
+          "4.2 The Russian Revolution of 1917",
+          "4.3 Interwar Period: Capitalist Economy, Fascism and Nazism",
+          "4.4 World War II"
+        ]
+      },
+      {
+        "unit_number": 5,
+        "title": "Global and Regional Developments Since 1945",
+        "subtopics": [
+          "5.1 The Aftermath and Consequences of WW II",
+          "5.2 The United Nations Organization (the UN)",
+          "5.3 The Post-War Global Socio- Economic Recovery and Developments",
+          "5.4 The Cold War Realities",
+          "5.5 Situations in Asia during the Cold War",
+          "5.6 The Middle East",
+          "5.7 The Dissolution of the Communist Bloc and the Aftermath"
+        ]
+      },
+      {
+        "unit_number": 6,
+        "title": "Ethiopia: Internal Developments and External Influences from 1941 to 1991",
+        "subtopics": [
+          "6.1 The Restoration of the Monarchy and Socio-Economic Conditions",
+          "6.2 Popular Opposition and the 1974 Revolution",
+          "6.3 The Derg Regime and Its Fall"
+        ]
+      },
+      {
+        "unit_number": 7,
+        "title": "Africa Since 1960",
+        "subtopics": [
+          "7.1 The Road to Independence and the Rise of Independent States in Africa",
+          "7.2 Politics in Independent African States",
+          "7.3 Economy and Society in Independent Africa",
+          "7.4 The Cold War and Africa",
+          "7.5 Pan-Africanism, from Organization of African Unity to African Union",
+          "7.6 Issues in Contemporary Africa"
+        ]
+      },
+      {
+        "unit_number": 8,
+        "title": "Post-1991 Developments in Ethiopia",
+        "subtopics": [
+          "8.1 The Transitional Period and the Federal System",
+          "8.2 Socio-Economic Progress and Challenges"
+        ]
+      },
+      {
+        "unit_number": 9,
+        "title": "Indigenous Knowledge Systems and Heritages of Ethiopia",
+        "subtopics": [
+          "9.1 Indigenous Knowledge: Definition and Unique Characteristic Features",
+          "9.2 Indigenous knowledge and Development"
+        ]
+      }
+    ]
+  },
+  {
+    "grade": 12,
+    "stream": "both",
+    "subject_name": "Mathematics",
+    "subject_code": "MATH_G12",
+    "total_units": 5,
+    "units": [
+      {
+        "unit_number": 1,
+        "title": "Sequences and Series",
+        "subtopics": [
+          "1.1 Sequence",
+          "1.2 Arithmetic and Geometric Sequences",
+          "1.3 The Sigma Notation and Partial Sums",
+          "1.4 Infinite Series",
+          "1.5 Applications of Sequence and Series in Daily Life"
+        ]
+      },
+      {
+        "unit_number": 2,
+        "title": "Introductions to Calculus",
+        "subtopics": [
+          "2.1 Introduction to Derivatives",
+          "2.2 Application of Derivative",
+          "2.3 Introduction to Integration"
+        ]
+      },
+      {
+        "unit_number": 3,
+        "title": "Statistics",
+        "subtopics": [
+          "3.1 Sampling Techniques",
+          "3.2 Measures of Dispersion",
+          "3.3 Relative Measures of Dispersion",
+          "3.4 Skewness"
+        ]
+      },
+      {
+        "unit_number": 4,
+        "title": "Introduction to Linear Programming",
+        "subtopics": [
+          "4.1 Linear Inequalities",
+          "4.2 Graphical Solution of Linear Programming Problems",
+          "4.3 Applications"
+        ]
+      },
+      {
+        "unit_number": 5,
+        "title": "Mathematical Applications in Business",
+        "subtopics": [
+          "5.1 Basic Mathematical Concepts in Business",
+          "5.2 Time Value of Money",
+          "5.3 Saving, Investing and Borrowing Money",
+          "5.4 Taxation"
+        ]
+      }
+    ]
+  },
+  {
+    "grade": 12,
+    "stream": "natural",
+    "subject_name": "Physics",
+    "subject_code": "PHYS_G12",
+    "total_units": 5,
+    "units": [
+      {
+        "unit_number": 1,
+        "title": "Application of Physics in Other Fields",
+        "subtopics": [
+          "1.1 Physics and other sciences",
+          "1.2 Physics and engineering",
+          "1.3 Medical physics",
+          "1.4 Physics and defense technology",
+          "1.5 Physics in communication"
+        ]
+      },
+      {
+        "unit_number": 2,
+        "title": "Two-dimensional Motion",
+        "subtopics": [
+          "2.1 Projectile motion",
+          "2.2 Rotational Motion",
+          "2.3 Rotational Dynamics",
+          "2.4 Planetary motion and Kepler's laws",
+          "2.5 Newton's law of universal Gravitation"
+        ]
+      },
+      {
+        "unit_number": 3,
+        "title": "Fluid Mechanics",
+        "subtopics": [
+          "3.1 Fluid Statics",
+          "3.2 Pressure in fluids at rest",
+          "3.3 Archimedes' principle",
+          "3.4 Fluid flow",
+          "3.5 Safety and high pressure"
+        ]
+      },
+      {
+        "unit_number": 4,
+        "title": "Electromagnetism",
+        "subtopics": [
+          "4.1 Magnets and Magnetic field",
+          "4.2 Magnetic field lines",
+          "4.3 Current and Magnetism",
+          "4.4 Electromagnetic Induction",
+          "4.5 Faraday's Law of electromagnetic Induction",
+          "4.6 Transformers",
+          "4.7 Application and safety"
+        ]
+      },
+      {
+        "unit_number": 5,
+        "title": "Basics of Electronics",
+        "subtopics": [
+          "5.1 Semiconductors",
+          "5.2 Diodes and their Functions",
+          "5.3 Rectification",
+          "5.4 Transistors and their application",
+          "5.5 Integrated Circuits",
+          "5.6 Logic gates and logic circuits",
+          "5.7 Application of electronics"
+        ]
+      }
+    ]
+  }
+]

@@ -9,8 +9,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+- Bundled verified Ethiopian national curriculum dataset (`assets/data/ethiopian_curriculum.json`) covering Grades 9–12 subjects, units, and subtopics across Natural and Social streams.
+
+### Changed
+- Configured `.gitignore` to explicitly ignore `data.json` and keep raw extracted docs in `Doc/data.json`.
+
 ### Planned
-- Complete Ethiopian Grade 9–12 EUEE syllabus integration from Google NotebookLM extraction.
 - Design system implementation: Plum theme tokens, Apple HIG typography, and custom reusable widgets.
 - Supabase Auth flow with Email/Password & Google Sign-In and student onboarding.
 - Local Drift database tables and two-way Supabase delta sync engine.
@@ -42,3 +47,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Configured `.gitignore` ignoring documentation, agent directories, and local cache.
   - Added modern, comprehensive `README.md` and MIT `LICENSE`.
   - Connected Git origin to `https://github.com/newt-ops/Acedex.git`.
+

@@ -49,4 +49,5 @@ Doc/
 doc/
 .agents/
 skills-lock.json
+data.json
 
