@@ -66,3 +66,4 @@ class PinDotsIndicator extends StatelessWidget {
     return dotsRow;
   }
 }
+

@@ -9,18 +9,35 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Planned (Migrated to Next Release)
+- **Supabase Authentication & Student Onboarding**: Email/password and Google Sign-In with multi-step HIG onboarding (Grade 9–12, Natural/Social stream selection, daily target hours).
+- **Profile Picture Upload**: Camera & gallery selection via `image_picker` with uploads to Supabase Storage `avatars` bucket and local Drift caching.
+- **Cloud Synchronization**: Two-way delta sync engine between local Drift SQLite and Supabase PostgreSQL.
+- **Focus Timer & Study Activity**: Built-in Pomodoro/Stopwatch linked to curriculum units and quick manual study hours logging.
+- **Consistency Analytics**: Interactive `fl_chart` weekly/monthly study graphs, consistency score, and subject breakdown.
+- **Local Smart Notifications**: Offline study alarms and inactivity re-engagement reminders.
+- **Unity Rewarded Ads**: Earn Streak Freezes / Recovery and custom UI perks via rewarded video placements (`Rewarded_Android` & `Rewarded_iOS`).
+- **Developer Appreciation Screen**: Dedicated Apple HIG card honoring Aymen (Newton) with Telegram, GitHub, and email triggers.
+
+---
+
+## [1.1.0+2] - 2026-11-07
+
 ### Added
 - **App PIN Security & Lock**:
   - Implemented secure hardware-backed PIN persistence via `FlutterSecureStorage`.
   - Built custom Apple HIG on-screen numeric keypad (`AcedexPinKeypad`) featuring tactile spring buttons and dialer subtext that **never opens the device soft keyboard**.
   - Built `PinDotsIndicator` with haptic feedback and error shake animations.
-  - Implemented automatic app lock interception on app background/resumption lifecycle events.
+  - Implemented automatic app lock interception on app background/resumption lifecycle events via `WidgetsBindingObserver`.
   - Created full-screen `PinLockScreen` and two-step setup/confirmation flow (`PinSetupScreen`).
 - **Smooth Navigation Transitions**:
   - Connected `AcedexFloatingNavBar` to an animated `PageView` providing smooth 320ms cubic transitions between app sections.
-- **Plum Design System**: Implemented `AppColors` ThemeExtension covering all specified light and dark tokens, derived colors, and status tints.
-- **Apple HIG Theme**: Built `AppTheme` with system typography, `BouncingScrollPhysics`, card/dialog/sheet radiuses, and zero heavy shadows.
-- **Theme Mode Persistence**: Created Riverpod `themeModeProvider` allowing seamless system/light/dark toggling persisted in `SharedPreferences`.
+- **Plum Design System**:
+  - Implemented `AppColors` ThemeExtension covering all specified light and dark tokens, derived colors, and status tints.
+- **Apple HIG Theme**:
+  - Built `AppTheme` with system typography, `BouncingScrollPhysics`, card/dialog/sheet radiuses, and zero heavy shadows.
+- **Theme Mode Persistence**:
+  - Created Riverpod `themeModeProvider` allowing seamless system/light/dark toggling persisted in `SharedPreferences`.
 - **Reusable HIG UI Component Library**:
   - `AcedexFloatingNavBar`: Floating iOS-style pill navigation bar with blur backdrop and icon-only layout.
   - `AcedexButton`: Primary, secondary, and danger button variants with spring tap animations.
@@ -29,28 +46,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - `AcedexSkeleton`: Shimmering skeleton loaders with reduced motion accessibility support.
   - `AcedexBadge`: Fully rounded status badges.
   - `AcedexInput`: HIG text inputs with smooth focus ring animations.
-- **Drift SQLite Database**: Configured `AppDatabase` with tables for students, subjects, chapters, progress, and study sessions.
-- **Curriculum Seeder**: Integrated automatic SQLite database preloading from `assets/data/ethiopian_curriculum.json`.
-- **Quality Assurance**: Added 10 automated unit and widget tests covering theme tokens, dark/light mode toggling, Drift database operations, and widget rendering.
+- **Drift SQLite Database**:
+  - Configured `AppDatabase` with tables for students, subjects, chapters, progress, study sessions, and sync queues.
+- **Curriculum Seeder & Dataset**:
+  - Integrated automatic SQLite database preloading from `assets/data/ethiopian_curriculum.json` covering Grades 9–12 across Natural and Social streams.
+- **Automated Test Suite**:
+  - Added 14 unit and widget tests covering theme tokens, dark/light mode toggling, Drift database operations, PIN security verification, and UI showcase rendering.
 
 ### Changed
 - Configured `.gitignore` to explicitly ignore `data.json` and keep raw extracted docs in `Doc/data.json`.
-
-### Planned
-- Supabase Auth flow with Email/Password & Google Sign-In and student onboarding.
-- Focus Timer (Pomodoro/Stopwatch) and manual study logging.
-- Consistency analytics with `fl_chart`.
-- Local notification schedules and inactivity detection.
-- Unity Rewarded Ads streak recovery integration.
-- Profile picture upload to Supabase Storage `avatars` bucket.
-- Developer appreciation profile for Aymen (Newton).
-- Local Drift database tables and two-way Supabase delta sync engine.
-- Focus Timer (Pomodoro/Stopwatch) and manual study logging.
-- Consistency analytics with `fl_chart`.
-- Local notification schedules and inactivity detection.
-- Unity Rewarded Ads streak recovery integration.
-- Profile picture upload to Supabase Storage `avatars` bucket.
-- Developer appreciation profile for Aymen (Newton).
 
 ---
 
@@ -73,4 +77,3 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Configured `.gitignore` ignoring documentation, agent directories, and local cache.
   - Added modern, comprehensive `README.md` and MIT `LICENSE`.
   - Connected Git origin to `https://github.com/newt-ops/Acedex.git`.
-

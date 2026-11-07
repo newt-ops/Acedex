@@ -38,3 +38,4 @@ class PinService {
     await _storage.delete(key: _kPinEnabledKey);
   }
 }
+

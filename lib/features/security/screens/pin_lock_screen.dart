@@ -165,3 +165,4 @@ class _PinLockScreenState extends ConsumerState<PinLockScreen>
     );
   }
 }
+
