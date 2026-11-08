@@ -43,7 +43,7 @@ void main() {
     expect(find.byType(IntroSlidesScreen), findsOneWidget);
     expect(find.textContaining('Master', findRichText: true), findsWidgets);
     expect(find.textContaining('Offline', findRichText: true), findsWidgets);
-    expect(find.text('Next  ›'), findsOneWidget);
+    expect(find.text('Next'), findsOneWidget);
 
     await testDb.close();
   });

@@ -82,16 +82,16 @@ void main() {
       // Slide 1 checks
       expect(find.textContaining('Master', findRichText: true), findsWidgets);
       expect(find.textContaining('Offline', findRichText: true), findsWidgets);
-      expect(find.text('Next  ›'), findsOneWidget);
+      expect(find.text('Next'), findsOneWidget);
 
       // Tap Next to navigate to Slide 2
-      await tester.tap(find.text('Next  ›'));
+      await tester.tap(find.text('Next'));
       await tester.pumpAndSettle();
 
       // Slide 2 checks
       expect(find.textContaining('Structured', findRichText: true), findsWidgets);
       expect(find.textContaining('Focus', findRichText: true), findsWidgets);
-      expect(find.text('Next  ›'), findsOneWidget);
+      expect(find.text('Next'), findsOneWidget);
 
       // Use hand drag swipe gesture to navigate from Slide 2 to Slide 3
       await tester.fling(find.byType(PageView), const Offset(-500, 0), 1000);
@@ -100,10 +100,10 @@ void main() {
       // Slide 3 checks
       expect(find.textContaining('Daily', findRichText: true), findsWidgets);
       expect(find.textContaining('EUEE', findRichText: true), findsWidgets);
-      expect(find.text('Get Started  ›'), findsOneWidget);
+      expect(find.text('Get Started'), findsOneWidget);
 
       // Tap Get Started
-      await tester.tap(find.text('Get Started  ›'));
+      await tester.tap(find.text('Get Started'));
       await tester.pumpAndSettle();
 
       expect(finished, isTrue);

@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:hugeicons/hugeicons.dart';
 import '../../../core/theme/app_colors.dart';
 import '../../../core/theme/app_theme.dart';
+import '../../../core/widgets/acedex_button.dart';
 
-/// 3-Slide Interactive Intro Screen matching the Figma slide design:
-/// - Top 3-segment progress indicator lines
-/// - Hand swipe gesture (left/right PageView) + Next / Get Started button
-/// - Staggered slide-up animations for 3D illustration, headline, subtitle, and button
-/// - Two-tone brand plum highlighted headlines
+/// 3-Slide Interactive Intro Screen adhering to the Acedex design system:
+/// - Full-screen immersive display with transparent system bars
+/// - Consistent typography, icon sizing, and layout matching app standards
+/// - Hand swipe gesture (left/right PageView) + standard AcedexButton
+/// - Top bar with back navigation, segmented step indicator, and Skip button
+/// - Staggered slide-up animations for 3D illustration, headline, and subtitle
 class IntroSlidesScreen extends StatefulWidget {
   const IntroSlidesScreen({
     super.key,
@@ -40,14 +43,24 @@ class _IntroSlidesScreenState extends State<IntroSlidesScreen> {
   }
 
   void _onNext() {
-    HapticFeedback.lightImpact();
+    HapticFeedback.selectionClick();
     if (_currentPage < 2) {
       _pageController.nextPage(
-        duration: const Duration(milliseconds: 380),
-        curve: Curves.easeInOutCubic,
+        duration: const Duration(milliseconds: 360),
+        curve: Curves.easeOutCubic,
       );
     } else {
       widget.onFinish();
+    }
+  }
+
+  void _onPrevious() {
+    HapticFeedback.selectionClick();
+    if (_currentPage > 0) {
+      _pageController.previousPage(
+        duration: const Duration(milliseconds: 360),
+        curve: Curves.easeOutCubic,
+      );
     }
   }
 
@@ -55,113 +68,171 @@ class _IntroSlidesScreenState extends State<IntroSlidesScreen> {
   Widget build(BuildContext context) {
     final colors = context.appColors;
     final isDark = Theme.of(context).brightness == Brightness.dark;
-    final bgColor = isDark ? const Color(0xFF0E0B0E) : Colors.white;
+    final bgColor = isDark ? const Color(0xFF130D0F) : const Color(0xFFFEFAFB);
 
-    return Scaffold(
-      backgroundColor: bgColor,
-      body: SafeArea(
-        child: Column(
-          children: [
-            const SizedBox(height: AppTheme.space12),
-            // Top 3-segment progress lines
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: AppTheme.space24),
-              child: _StepIndicatorLines(
-                currentPage: _currentPage,
-                totalSteps: 3,
-                activeColor: colors.primary,
-                inactiveColor: isDark
-                    ? const Color(0xFF383239)
-                    : const Color(0xFFE1DAE2),
-              ),
-            ),
-            const SizedBox(height: AppTheme.space8),
-
-            // PageView with hand swiping enabled
-            Expanded(
-              child: PageView(
-                controller: _pageController,
-                physics: const BouncingScrollPhysics(
-                  parent: AlwaysScrollableScrollPhysics(),
+    return AnnotatedRegion<SystemUiOverlayStyle>(
+      value: SystemUiOverlayStyle(
+        statusBarColor: Colors.transparent,
+        statusBarIconBrightness: isDark ? Brightness.light : Brightness.dark,
+        systemNavigationBarColor: Colors.transparent,
+        systemNavigationBarIconBrightness:
+            isDark ? Brightness.light : Brightness.dark,
+        systemNavigationBarDividerColor: Colors.transparent,
+      ),
+      child: Scaffold(
+        backgroundColor: bgColor,
+        body: SizedBox.expand(
+          child: Column(
+            children: [
+              // Full-screen Top Bar
+              Padding(
+                padding: EdgeInsets.only(
+                  top: MediaQuery.of(context).padding.top + AppTheme.space8,
+                  left: AppTheme.space16,
+                  right: AppTheme.space16,
+                  bottom: AppTheme.space4,
                 ),
-                onPageChanged: (index) {
-                  setState(() => _currentPage = index);
-                },
-                children: [
-                  _IntroSlidePage(
-                    isActive: _currentPage == 0,
-                    imageAsset: 'assets/images/intro/slide_1_offline.png',
-                    headlineSpans: [
-                      TextSpan(
-                        text: 'Master ',
-                        style: TextStyle(color: colors.primary),
+                child: Row(
+                  children: [
+                    if (_currentPage > 0)
+                      IconButton(
+                        icon: HugeIcon(
+                          icon: HugeIcons.strokeRoundedArrowLeft01,
+                          color: colors.textPrimary,
+                          size: 22,
+                        ),
+                        onPressed: _onPrevious,
+                      )
+                    else
+                      const SizedBox(width: 48),
+                    const SizedBox(width: AppTheme.space8),
+                    Expanded(
+                      child: _StepIndicatorLines(
+                        currentPage: _currentPage,
+                        totalSteps: 3,
+                        activeColor: colors.primary,
+                        inactiveColor: isDark
+                            ? const Color(0xFF383239)
+                            : const Color(0xFFE5DEE6),
                       ),
-                      TextSpan(
-                        text: 'Every Subject,\n100% ',
-                        style: TextStyle(color: colors.textPrimary),
+                    ),
+                    const SizedBox(width: AppTheme.space8),
+                    TextButton(
+                      onPressed: widget.onFinish,
+                      child: Text(
+                        'Skip',
+                        style: TextStyle(
+                          color: colors.textSecondary,
+                          fontWeight: FontWeight.w600,
+                          fontSize: 14,
+                        ),
                       ),
-                      TextSpan(
-                        text: 'Offline',
-                        style: TextStyle(color: colors.primary),
-                      ),
-                    ],
-                    subtitle:
-                        'The complete Ethiopian Grade 9–12 syllabus in your pocket. Study all units and subtopics anywhere, anytime—zero data required.',
-                    buttonLabel: 'Next  ›',
-                    onButtonPressed: _onNext,
-                  ),
-                  _IntroSlidePage(
-                    isActive: _currentPage == 1,
-                    imageAsset: 'assets/images/intro/slide_2_mastery.png',
-                    headlineSpans: [
-                      TextSpan(
-                        text: 'Structured ',
-                        style: TextStyle(color: colors.primary),
-                      ),
-                      TextSpan(
-                        text: 'Mastery,\nUnmatched ',
-                        style: TextStyle(color: colors.textPrimary),
-                      ),
-                      TextSpan(
-                        text: 'Focus',
-                        style: TextStyle(color: colors.primary),
-                      ),
-                    ],
-                    subtitle:
-                        'Break down heavy chapters into digestible subtopics. Track your progression from first read to total mastery with built-in focus timers.',
-                    buttonLabel: 'Next  ›',
-                    onButtonPressed: _onNext,
-                  ),
-                  _IntroSlidePage(
-                    isActive: _currentPage == 2,
-                    imageAsset: 'assets/images/intro/slide_3_streaks.png',
-                    headlineSpans: [
-                      TextSpan(
-                        text: 'Build ',
-                        style: TextStyle(color: colors.textPrimary),
-                      ),
-                      TextSpan(
-                        text: 'Daily ',
-                        style: TextStyle(color: colors.primary),
-                      ),
-                      TextSpan(
-                        text: 'Streaks,\nConquer the ',
-                        style: TextStyle(color: colors.textPrimary),
-                      ),
-                      TextSpan(
-                        text: 'EUEE',
-                        style: TextStyle(color: colors.primary),
-                      ),
-                    ],
-                    subtitle:
-                        'Build unstoppable daily study momentum with streak freezes, conquer your target hours, and walk into national exams with total confidence',
-                    buttonLabel: 'Get Started  ›',
-                    onButtonPressed: _onNext,
-                  ),
-                ],
+                    ),
+                  ],
+                ),
               ),
-            ),
-          ],
+
+              // PageView with hand swipe enabled
+              Expanded(
+                child: PageView(
+                  controller: _pageController,
+                  physics: const BouncingScrollPhysics(
+                    parent: AlwaysScrollableScrollPhysics(),
+                  ),
+                  onPageChanged: (index) {
+                    setState(() => _currentPage = index);
+                  },
+                  children: [
+                    _IntroSlidePage(
+                      isActive: _currentPage == 0,
+                      imageAsset: 'assets/images/intro/slide_1_offline.png',
+                      headlineSpans: [
+                        TextSpan(
+                          text: 'Master ',
+                          style: TextStyle(color: colors.primary),
+                        ),
+                        TextSpan(
+                          text: 'Every Subject,\n100% ',
+                          style: TextStyle(color: colors.textPrimary),
+                        ),
+                        TextSpan(
+                          text: 'Offline',
+                          style: TextStyle(color: colors.primary),
+                        ),
+                      ],
+                      subtitle:
+                          'The complete Ethiopian Grade 9–12 syllabus in your pocket. Study all units and subtopics anywhere, anytime—zero data required.',
+                    ),
+                    _IntroSlidePage(
+                      isActive: _currentPage == 1,
+                      imageAsset: 'assets/images/intro/slide_2_mastery.png',
+                      headlineSpans: [
+                        TextSpan(
+                          text: 'Structured ',
+                          style: TextStyle(color: colors.primary),
+                        ),
+                        TextSpan(
+                          text: 'Mastery,\nUnmatched ',
+                          style: TextStyle(color: colors.textPrimary),
+                        ),
+                        TextSpan(
+                          text: 'Focus',
+                          style: TextStyle(color: colors.primary),
+                        ),
+                      ],
+                      subtitle:
+                          'Break down heavy chapters into digestible subtopics. Track your progression from first read to total mastery with built-in focus timers.',
+                    ),
+                    _IntroSlidePage(
+                      isActive: _currentPage == 2,
+                      imageAsset: 'assets/images/intro/slide_3_streaks.png',
+                      headlineSpans: [
+                        TextSpan(
+                          text: 'Build ',
+                          style: TextStyle(color: colors.textPrimary),
+                        ),
+                        TextSpan(
+                          text: 'Daily ',
+                          style: TextStyle(color: colors.primary),
+                        ),
+                        TextSpan(
+                          text: 'Streaks,\nConquer the ',
+                          style: TextStyle(color: colors.textPrimary),
+                        ),
+                        TextSpan(
+                          text: 'EUEE',
+                          style: TextStyle(color: colors.primary),
+                        ),
+                      ],
+                      subtitle:
+                          'Build unstoppable daily study momentum with streak freezes, conquer your target hours, and walk into national exams with total confidence.',
+                    ),
+                  ],
+                ),
+              ),
+
+              // Bottom Action Button using canonical AcedexButton
+              Padding(
+                padding: EdgeInsets.only(
+                  left: AppTheme.space24,
+                  right: AppTheme.space24,
+                  bottom:
+                      MediaQuery.of(context).padding.bottom + AppTheme.space20,
+                  top: AppTheme.space8,
+                ),
+                child: AcedexButton(
+                  label: _currentPage == 2 ? 'Get Started' : 'Next',
+                  variant: AcedexButtonVariant.primary,
+                  trailing: HugeIcon(
+                    icon: HugeIcons.strokeRoundedArrowRight01,
+                    color: colors.onPrimary,
+                    size: 20,
+                  ),
+                  onPressed: _onNext,
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
@@ -188,11 +259,13 @@ class _StepIndicatorLines extends StatelessWidget {
       children: List.generate(totalSteps, (index) {
         final isActive = index <= currentPage;
         return Expanded(
-          child: Container(
+          child: AnimatedContainer(
+            duration: const Duration(milliseconds: 240),
+            curve: Curves.easeOutCubic,
             height: 3.0,
             margin: EdgeInsets.only(
-              left: index == 0 ? 0 : 4.0,
-              right: index == totalSteps - 1 ? 0 : 4.0,
+              left: index == 0 ? 0 : 3.0,
+              right: index == totalSteps - 1 ? 0 : 3.0,
             ),
             decoration: BoxDecoration(
               color: isActive ? activeColor : inactiveColor,
@@ -205,23 +278,19 @@ class _StepIndicatorLines extends StatelessWidget {
   }
 }
 
-/// Individual slide page with staggered slide-up animations for each component
+/// Individual slide page with refined, app-consistent typography and balanced icon/illustration sizing
 class _IntroSlidePage extends StatefulWidget {
   const _IntroSlidePage({
     required this.isActive,
     required this.imageAsset,
     required this.headlineSpans,
     required this.subtitle,
-    required this.buttonLabel,
-    required this.onButtonPressed,
   });
 
   final bool isActive;
   final String imageAsset;
   final List<TextSpan> headlineSpans;
   final String subtitle;
-  final String buttonLabel;
-  final VoidCallback onButtonPressed;
 
   @override
   State<_IntroSlidePage> createState() => _IntroSlidePageState();
@@ -233,7 +302,6 @@ class _IntroSlidePageState extends State<_IntroSlidePage>
   late final Animation<Offset> _imageSlideAnim;
   late final Animation<Offset> _headlineSlideAnim;
   late final Animation<Offset> _subtitleSlideAnim;
-  late final Animation<Offset> _buttonSlideAnim;
   late final Animation<double> _fadeAnim;
 
   @override
@@ -241,7 +309,7 @@ class _IntroSlidePageState extends State<_IntroSlidePage>
     super.initState();
     _animController = AnimationController(
       vsync: this,
-      duration: const Duration(milliseconds: 600),
+      duration: const Duration(milliseconds: 550),
     );
 
     _fadeAnim = CurvedAnimation(
@@ -249,38 +317,30 @@ class _IntroSlidePageState extends State<_IntroSlidePage>
       curve: Curves.easeOutCubic,
     );
 
-    // Staggered slide-up curves (all sliding up from bottom to top)
-    _imageSlideAnim =
-        Tween<Offset>(begin: const Offset(0.0, 0.12), end: Offset.zero).animate(
-          CurvedAnimation(
-            parent: _animController,
-            curve: const Interval(0.0, 0.70, curve: Curves.easeOutCubic),
-          ),
-        );
+    // Staggered slide-up curves
+    _imageSlideAnim = Tween<Offset>(
+      begin: const Offset(0.0, 0.10),
+      end: Offset.zero,
+    ).animate(CurvedAnimation(
+      parent: _animController,
+      curve: const Interval(0.0, 0.65, curve: Curves.easeOutCubic),
+    ));
 
-    _headlineSlideAnim =
-        Tween<Offset>(begin: const Offset(0.0, 0.20), end: Offset.zero).animate(
-          CurvedAnimation(
-            parent: _animController,
-            curve: const Interval(0.15, 0.85, curve: Curves.easeOutCubic),
-          ),
-        );
+    _headlineSlideAnim = Tween<Offset>(
+      begin: const Offset(0.0, 0.16),
+      end: Offset.zero,
+    ).animate(CurvedAnimation(
+      parent: _animController,
+      curve: const Interval(0.12, 0.80, curve: Curves.easeOutCubic),
+    ));
 
-    _subtitleSlideAnim =
-        Tween<Offset>(begin: const Offset(0.0, 0.24), end: Offset.zero).animate(
-          CurvedAnimation(
-            parent: _animController,
-            curve: const Interval(0.25, 0.95, curve: Curves.easeOutCubic),
-          ),
-        );
-
-    _buttonSlideAnim =
-        Tween<Offset>(begin: const Offset(0.0, 0.30), end: Offset.zero).animate(
-          CurvedAnimation(
-            parent: _animController,
-            curve: const Interval(0.35, 1.0, curve: Curves.easeOutCubic),
-          ),
-        );
+    _subtitleSlideAnim = Tween<Offset>(
+      begin: const Offset(0.0, 0.20),
+      end: Offset.zero,
+    ).animate(CurvedAnimation(
+      parent: _animController,
+      curve: const Interval(0.22, 0.95, curve: Curves.easeOutCubic),
+    ));
 
     if (widget.isActive) {
       _animController.forward();
@@ -308,14 +368,15 @@ class _IntroSlidePageState extends State<_IntroSlidePage>
     return LayoutBuilder(
       builder: (context, constraints) {
         final availableHeight = constraints.maxHeight;
-        final imageHeight = (availableHeight * 0.38).clamp(180.0, 280.0);
+        // Balanced hero illustration height conforming to app proportions
+        final imageHeight = (availableHeight * 0.30).clamp(160.0, 210.0);
 
         return Padding(
           padding: const EdgeInsets.symmetric(horizontal: AppTheme.space24),
           child: Column(
             children: [
               const Spacer(flex: 1),
-              // 1. 3D Illustration (Slide Up)
+              // 1. 3D Character Illustration (Slide Up)
               SlideTransition(
                 position: _imageSlideAnim,
                 child: FadeTransition(
@@ -328,7 +389,7 @@ class _IntroSlidePageState extends State<_IntroSlidePage>
               ),
               const SizedBox(height: AppTheme.space20),
 
-              // 2. Headline with Two-Tone Styling (Slide Up)
+              // 2. Headline with Two-Tone Styling (App Standard 24px)
               SlideTransition(
                 position: _headlineSlideAnim,
                 child: FadeTransition(
@@ -336,12 +397,12 @@ class _IntroSlidePageState extends State<_IntroSlidePage>
                   child: RichText(
                     textAlign: TextAlign.center,
                     text: TextSpan(
-                      style: const TextStyle(
-                        fontFamily: 'Inter',
-                        fontSize: 27.0,
+                      style: TextStyle(
+                        fontSize: 24.0,
                         fontWeight: FontWeight.bold,
                         letterSpacing: -0.5,
-                        height: 1.25,
+                        height: 1.28,
+                        color: colors.textPrimary,
                       ),
                       children: widget.headlineSpans,
                     ),
@@ -350,7 +411,7 @@ class _IntroSlidePageState extends State<_IntroSlidePage>
               ),
               const SizedBox(height: AppTheme.space12),
 
-              // 3. Subtitle (Slide Up)
+              // 3. Subtitle (App Standard 14.5px)
               SlideTransition(
                 position: _subtitleSlideAnim,
                 child: FadeTransition(
@@ -363,92 +424,20 @@ class _IntroSlidePageState extends State<_IntroSlidePage>
                       widget.subtitle,
                       textAlign: TextAlign.center,
                       style: TextStyle(
-                        fontSize: 13.0,
+                        fontSize: 14.5,
                         color: colors.textSecondary,
                         height: 1.45,
-                        letterSpacing: 0.1,
+                        fontWeight: FontWeight.normal,
                       ),
                     ),
                   ),
                 ),
               ),
               const Spacer(flex: 2),
-
-              // 4. Bottom Button (Slide Up)
-              SlideTransition(
-                position: _buttonSlideAnim,
-                child: FadeTransition(
-                  opacity: _fadeAnim,
-                  child: SizedBox(
-                    width: double.infinity,
-                    height: 48.0,
-                    child: _PressableButton(
-                      label: widget.buttonLabel,
-                      backgroundColor: colors.primary,
-                      foregroundColor: colors.onPrimary,
-                      onPressed: widget.onButtonPressed,
-                    ),
-                  ),
-                ),
-              ),
-              const SizedBox(height: AppTheme.space24),
             ],
           ),
         );
       },
-    );
-  }
-}
-
-/// Clean button matching Figma design with smooth tactile press scaling and zero glow
-class _PressableButton extends StatefulWidget {
-  const _PressableButton({
-    required this.label,
-    required this.backgroundColor,
-    required this.foregroundColor,
-    required this.onPressed,
-  });
-
-  final String label;
-  final Color backgroundColor;
-  final Color foregroundColor;
-  final VoidCallback onPressed;
-
-  @override
-  State<_PressableButton> createState() => _PressableButtonState();
-}
-
-class _PressableButtonState extends State<_PressableButton> {
-  bool _isPressed = false;
-
-  @override
-  Widget build(BuildContext context) {
-    return AnimatedScale(
-      scale: _isPressed ? 0.97 : 1.0,
-      duration: const Duration(milliseconds: 100),
-      curve: Curves.easeOutCubic,
-      child: GestureDetector(
-        onTapDown: (_) => setState(() => _isPressed = true),
-        onTapUp: (_) => setState(() => _isPressed = false),
-        onTapCancel: () => setState(() => _isPressed = false),
-        onTap: widget.onPressed,
-        child: Container(
-          decoration: BoxDecoration(
-            color: widget.backgroundColor,
-            borderRadius: BorderRadius.circular(12.0),
-          ),
-          alignment: Alignment.center,
-          child: Text(
-            widget.label,
-            style: TextStyle(
-              fontSize: 15.0,
-              fontWeight: FontWeight.w600,
-              color: widget.foregroundColor,
-              letterSpacing: -0.2,
-            ),
-          ),
-        ),
-      ),
     );
   }
 }

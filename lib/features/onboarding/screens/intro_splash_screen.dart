@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import '../../../core/theme/app_colors.dart';
 import '../../../core/theme/app_theme.dart';
 
-/// Loading / Splash screen that displays the Acedex Gemini brand logo
+/// Full-screen Splash & Loading screen that displays the Acedex Gemini brand logo
 /// with a smooth fade-up animation and a horizontal loading bar underneath.
 class IntroSplashScreen extends StatefulWidget {
   const IntroSplashScreen({
@@ -42,7 +43,7 @@ class _IntroSplashScreenState extends State<IntroSplashScreen>
     );
 
     _slideAnimation = Tween<Offset>(
-      begin: const Offset(0.0, 0.18),
+      begin: const Offset(0.0, 0.16),
       end: Offset.zero,
     ).animate(CurvedAnimation(
       parent: _fadeController,
@@ -87,12 +88,21 @@ class _IntroSplashScreenState extends State<IntroSplashScreen>
         ? 'assets/logo/brand/acedex_logo_gemini_dark.jpg'
         : 'assets/logo/brand/acedex_logo_gemini_light.jpg';
 
+    // Background matches exact corner pixels of brand JPG for seamless blend
     final bgColor = isDark ? const Color(0xFF130D0F) : const Color(0xFFFEFAFB);
 
-    return Scaffold(
-      backgroundColor: bgColor,
-      body: SafeArea(
-        child: Center(
+    return AnnotatedRegion<SystemUiOverlayStyle>(
+      value: SystemUiOverlayStyle(
+        statusBarColor: Colors.transparent,
+        statusBarIconBrightness: isDark ? Brightness.light : Brightness.dark,
+        systemNavigationBarColor: Colors.transparent,
+        systemNavigationBarIconBrightness:
+            isDark ? Brightness.light : Brightness.dark,
+        systemNavigationBarDividerColor: Colors.transparent,
+      ),
+      child: Scaffold(
+        backgroundColor: bgColor,
+        body: SizedBox.expand(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -104,10 +114,12 @@ class _IntroSplashScreenState extends State<IntroSplashScreen>
                   position: _slideAnimation,
                   child: Container(
                     constraints: const BoxConstraints(
-                      maxWidth: 340,
-                      maxHeight: 120,
+                      maxWidth: 260,
+                      maxHeight: 90,
                     ),
-                    padding: const EdgeInsets.symmetric(horizontal: AppTheme.space24),
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: AppTheme.space24,
+                    ),
                     child: Image.asset(
                       logoAsset,
                       fit: BoxFit.contain,
@@ -115,16 +127,17 @@ class _IntroSplashScreenState extends State<IntroSplashScreen>
                   ),
                 ),
               ),
-              const SizedBox(height: AppTheme.space32),
+              const SizedBox(height: AppTheme.space24),
               // Horizontal loading bar under the logo
               AnimatedBuilder(
                 animation: _progressAnimation,
                 builder: (context, _) {
                   return Container(
-                    width: 220,
+                    width: 200,
                     height: 4.0,
                     decoration: BoxDecoration(
-                      color: colors.primary.withValues(alpha: isDark ? 0.20 : 0.12),
+                      color: colors.primary
+                          .withValues(alpha: isDark ? 0.20 : 0.12),
                       borderRadius: BorderRadius.circular(100.0),
                     ),
                     alignment: Alignment.centerLeft,

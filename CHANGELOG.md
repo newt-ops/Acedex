@@ -10,6 +10,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+- **Full-Screen Immersive Display**:
+  - `IntroSplashScreen` and `IntroSlidesScreen` render edge-to-edge with transparent system status bar and navigation bar via `AnnotatedRegion<SystemUiOverlayStyle>`.
+- **Acedex Design System Consistency**:
+  - **Balanced Illustration Sizing**: Proportioned 3D character graphics to 180–210px (`height: (availableHeight * 0.30).clamp(160.0, 210.0)`), resolving oversized visuals and providing clean vertical rhythm.
+  - **Unified Typography**: Standardized headline text size to 24px (bold, -0.5 letter spacing) and subtitle to 14.5px (regular, `textSecondary`), adhering to `AppTheme` standards.
+  - **Canonical `AcedexButton`**: Replaced custom buttons with the app's standard `AcedexButton` featuring `HugeIcon` trailing arrows and zero glow.
+  - **Unified Top Bar Navigation**: Added back arrow navigation, centered segmented indicator lines, and quick `Skip` action.
 - **Animated Splash & Loading Screen (`IntroSplashScreen`)**:
   - Displays the official Gemini brand logo with a smooth upward fade-in animation.
   - Automatically adapts between `acedex_logo_gemini_light.jpg` (light mode) and `acedex_logo_gemini_dark.jpg` (dark mode) on seamless background tokens (`#FEFAFB` / `#130D0F`).
