@@ -393,10 +393,13 @@ class SettingsScreen extends ConsumerWidget {
                         shape: BoxShape.circle,
                       ),
                       child: Center(
-                        child: HugeIcon(
-                          icon: HugeIcons.strokeRoundedGraduationScroll,
-                          color: colors.primary,
-                          size: 16,
+                        child: Image.asset(
+                          Theme.of(context).brightness == Brightness.dark
+                              ? 'assets/logo/in_app/acedex_icon_dark_64.png'
+                              : 'assets/logo/in_app/acedex_icon_plum_64.png',
+                          width: 18,
+                          height: 18,
+                          fit: BoxFit.contain,
                         ),
                       ),
                     ),

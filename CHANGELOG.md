@@ -10,6 +10,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+- **Brand Logo & Mobile Icon Suite**: Designed a clean, minimalist geometric emblem fusing a modern letter "A" with an academic mortarboard crown and knowledge bridge (strictly 2 flat solid colors, zero gradients, zero glow):
+  - **App Launcher Icons (`1024x1024` & `512x512`)**: Light mode (`#8A2BA3` on `#FFFFFF` and `#FFFFFF` on `#8A2BA3`) and Dark mode (`#D58CF0` on `#0E0B0E`).
+  - **Vector SVGs**: Exported vector files (`acedex_logo_light.svg`, `acedex_logo_dark.svg`, `acedex_logo_plum.svg`, transparent variants) for Figma design collections.
+  - **In-App Transparent Logos**: Exported in Plum, Dark Plum, and White across 512, 256, 128, and 64px resolutions (`assets/logo/in_app/`). Integrated directly into `TodayScreen` floating header and `SettingsScreen`.
+  - **Adaptive Android Notification Icons (`ic_notification.png`)**: Generated pure white monochrome silhouettes on 100% transparent backgrounds deployed to Android drawable mipmaps (`mdpi` 24px, `hdpi` 36px, `xhdpi` 48px, `xxhdpi` 72px, `xxxhdpi` 96px) for native adaptive status bar tinting.
+  - **Android Adaptive Launcher Layers**: Foreground and background layers (`432x432`) conforming to Google's 66% circular safe zone.
 - **Ethiopian Student Home Dashboard (`TodayScreen`)**: Replaced development test widgets on the primary tab with an inspiring, modern Apple HIG study hub:
   - Time-aware academic greeting ("Good morning / afternoon / evening, [Name]") with dynamic EUEE national exam countdown badge.
   - Study Streak counter (`HugeIcons.strokeRoundedFire`) and Streak Freeze protection status (`HugeIcons.strokeRoundedSnowflake`).

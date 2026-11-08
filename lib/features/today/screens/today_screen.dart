@@ -93,10 +93,13 @@ class _TodayScreenState extends ConsumerState<TodayScreen> {
             shape: BoxShape.circle,
           ),
           child: Center(
-            child: HugeIcon(
-              icon: HugeIcons.strokeRoundedGraduationScroll,
-              color: colors.primary,
-              size: 18,
+            child: Image.asset(
+              isDark
+                  ? 'assets/logo/in_app/acedex_icon_dark_64.png'
+                  : 'assets/logo/in_app/acedex_icon_plum_64.png',
+              width: 20,
+              height: 20,
+              fit: BoxFit.contain,
             ),
           ),
         ),

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  
+  <g fill="#8A2BA3">
+    <!-- Academic Mortarboard Diamond -->
+    <polygon points="256.0,96.0 396.0,172.0 256.0,248.0 116.0,172.0" />
+    <!-- Letter A Left Pillar -->
+    <polygon points="148.0 216.0 218.0 254.0 170.0 416.0 108.0 416.0" />
+    <!-- Letter A Right Pillar -->
+    <polygon points="364.0 216.0 294.0 254.0 342.0 416.0 404.0 416.0" />
+    <!-- Knowledge Bridge Crossbar -->
+    <polygon points="196.0 324.0 256.0 342.0 316.0 324.0 316.0 356.0 256.0 374.0 196.0 356.0" />
+  </g>
+</svg>
