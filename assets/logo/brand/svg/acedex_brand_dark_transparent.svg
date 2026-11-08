@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 260" width="600" height="260">
+  
+  <g transform="translate(60, 40)">
+    <!-- Perched Academic Emblem atop A -->
+    <g transform="translate(18, 12)">
+      <!-- Knowledge Horizon Curve -->
+      <path d="M -15 68 Q 50 48 115 66" fill="none" stroke="#D58CF0" stroke-width="4.5" stroke-linecap="round" />
+      
+      <!-- Graduation Mortarboard Cap Diamond (tilted) -->
+      <g transform="rotate(-12, 45, 30)">
+        <polygon points="45,10 90,30 45,50 0,30" fill="none" stroke="#D58CF0" stroke-width="4.5" stroke-linejoin="round" />
+        <!-- Skullcap Arc -->
+        <path d="M 22 40 Q 45 54 68 40" fill="none" stroke="#D58CF0" stroke-width="4.5" stroke-linecap="round" />
+        <!-- Tassel -->
+        <line x1="45" y1="30" x2="88" y2="52" stroke="#D58CF0" stroke-width="3" stroke-linecap="round" />
+        <circle cx="88" cy="52" r="4.5" fill="#D58CF0" />
+      </g>
+      
+      <!-- Beacon / Sun Circle -->
+      <circle cx="98" cy="10" r="8" fill="none" stroke="#D58CF0" stroke-width="4" />
+    </g>
+
+    <!-- Wordmark Typography -->
+    <text x="0" y="152" font-family="system-ui, -apple-system, 'SF Pro Display', 'Inter', 'Segoe UI', Roboto, sans-serif" font-weight="700" font-size="94" letter-spacing="-1.5" fill="#F3F1F4">Acedex<tspan fill="#D58CF0">.</tspan></text>
+  </g>
+</svg>
