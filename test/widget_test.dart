@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -56,14 +55,20 @@ void main() {
     await tester.pump();
     await tester.pump(const Duration(milliseconds: 200));
 
-    expect(find.text('Acedex Today'), findsOneWidget);
+    expect(find.text('Acedex'), findsOneWidget);
+    expect(find.text('Daily Study Target'), findsOneWidget);
+    expect(find.text('My Curriculum'), findsOneWidget);
+    expect(find.text('Study Streak'), findsOneWidget);
+
+    // Verify Developer Test Lab button opens DeveloperShowcaseScreen
+    final devButton = find.byTooltip('Developer Test Lab');
+    expect(devButton, findsOneWidget);
+    await tester.tap(devButton);
+    await tester.pumpAndSettle();
+
+    expect(find.text('Developer Test Lab'), findsOneWidget);
     expect(find.text('Curriculum Database'), findsOneWidget);
     expect(find.text('App Security & PIN'), findsOneWidget);
-    expect(find.text('Student Profile'), findsOneWidget);
-
-    await tester.drag(find.byType(ListView), const Offset(0, -300));
-    await tester.pumpAndSettle();
-    expect(find.text('Theme Mode'), findsOneWidget);
 
     await testDb.close();
   });

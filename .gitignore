@@ -49,6 +49,8 @@ app.*.map.json
 # Project Specific
 Doc/
 doc/
+UI/
+ui/
 .agents/
 skills-lock.json
 data.json

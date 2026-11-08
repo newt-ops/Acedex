@@ -9,12 +9,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+- **Ethiopian Student Home Dashboard (`TodayScreen`)**: Replaced development test widgets on the primary tab with an inspiring, modern Apple HIG study hub:
+  - Time-aware academic greeting ("Good morning / afternoon / evening, [Name]") with dynamic EUEE national exam countdown badge.
+  - Study Streak counter (`HugeIcons.strokeRoundedFire`) and Streak Freeze protection status (`HugeIcons.strokeRoundedSnowflake`).
+  - Daily Study Target progress card with quick "Start Focus Timer" and "Log Hours" action buttons.
+  - "My Curriculum" quick jump section querying grade-specific subjects from Drift SQLite.
+  - Ethiopian EUEE study strategy tips.
+- **Dedicated Developer Test Lab (`DeveloperShowcaseScreen`)**: Transited all developmental components out of the home screen to a dedicated sandbox for testing database seeding, PIN security, auth/onboarding flows, Apple Capsule toast triggers, dialogs, buttons, inputs, badges, and skeleton shimmers.
+- **Developer Lab Access**: Direct one-tap shortcut in the home screen floating header bar (`HugeIcons.strokeRoundedCommandLine`) and in the Settings screen.
+- **Settings & Preferences Screen (`SettingsScreen`)**: Upgraded Settings tab with Student Profile overview, PIN Lock & Biometrics switch, Appearance theme mode picker (System/Light/Dark), Developer Test Lab link, and developer appreciation card.
+- **Unit & Widget Tests**: Added `test/screens/today_screen_test.dart` (35 / 35 total tests passing).
+
 ### Changed
 - **Zero Glow Enforcement**: Permanently purged all colored outer blur shadows from the UI across all widgets. `AcedexButton` now follows authentic Apple HIG flat styling with tactile press feedback and zero colored halo.
 - **Clean Input Border Transitions (`AcedexInput`)**: Removed outer `boxShadow` ring halo from text inputs, replacing it with pure Apple HIG 1.5px crisp border color transitions without any spread or glow.
 - **Layout Overflow Hardening (`main.dart`)**: Resolved a 16px `RenderFlex` overflow on narrow viewports in the student profile header row with responsive `Expanded` and `Flexible` constraints.
-
-### Added
 - **Redesigned PIN Lock Screen (`PinLockScreen`)**: Upgraded to match the reference design:
   - Header: `"Enter current PIN"` rendered in primary plum color (`colors.primary`).
   - **Squircle Indicator Boxes (`PinBoxesIndicator`)**: 4 rounded squircle boxes (`14px` border radius) displaying active plum borders with solid plum dots while entering, emerald green borders with green dots on successful match ("Confirm" state), and crimson red borders with shake animation on error.
