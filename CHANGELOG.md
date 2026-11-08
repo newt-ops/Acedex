@@ -9,7 +9,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.3.0+4] - 2026-11-08
+
 ### Added
+- **Official Plum Mobile Launcher App Icon**:
+  - Launched the solid primary plum (`#8A2BA3`) app icon with crisp white geometric mortarboard emblem as the default mobile app launcher icon.
+  - Deployed pixel-perfect legacy squircle (`ic_launcher.png`) and circular (`ic_launcher_round.png`) icons across all Android densities (`mdpi` 48px, `hdpi` 72px, `xhdpi` 96px, `xxhdpi` 144px, `xxxhdpi` 192px).
+  - Deployed Android adaptive launcher icons (`mipmap-anydpi-v26/ic_launcher.xml` and `ic_launcher_round.xml`) with centered emblem conforming to Google's 66% circular safe zone.
+  - Deployed complete iOS AppIcon set (`1024x1024` down to `20x20` notification badges, 100% opaque RGB without alpha transparency conforming to Apple App Store review guidelines).
 - **Full-Screen Immersive Display**:
   - `IntroSplashScreen` and `IntroSlidesScreen` render edge-to-edge with transparent system status bar and navigation bar via `AnnotatedRegion<SystemUiOverlayStyle>`.
 - **Acedex Design System Consistency**:

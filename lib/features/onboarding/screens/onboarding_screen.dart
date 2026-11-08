@@ -11,11 +11,7 @@ import '../../profile/student_provider.dart';
 import '../models/onboarding_data.dart';
 
 class OnboardingScreen extends ConsumerStatefulWidget {
-  const OnboardingScreen({
-    super.key,
-    this.onCompleted,
-    this.initialPage = 0,
-  });
+  const OnboardingScreen({super.key, this.onCompleted, this.initialPage = 0});
 
   final VoidCallback? onCompleted;
   final int initialPage;
