@@ -9,6 +9,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+- **Zero Glow Enforcement**: Permanently purged all colored outer blur shadows from the UI across all widgets. `AcedexButton` now follows authentic Apple HIG flat styling with tactile press feedback and zero colored halo.
+- **Clean Input Border Transitions (`AcedexInput`)**: Removed outer `boxShadow` ring halo from text inputs, replacing it with pure Apple HIG 1.5px crisp border color transitions without any spread or glow.
+- **Layout Overflow Hardening (`main.dart`)**: Resolved a 16px `RenderFlex` overflow on narrow viewports in the student profile header row with responsive `Expanded` and `Flexible` constraints.
+
 ### Added
 - **Redesigned PIN Lock Screen (`PinLockScreen`)**: Upgraded to match the reference design:
   - Header: `"Enter current PIN"` rendered in primary plum color (`colors.primary`).

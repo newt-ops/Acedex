@@ -69,12 +69,6 @@ class _AcedexInputState extends State<AcedexInput> {
             ? colors.primary
             : colors.border;
 
-    final ringColor = hasError
-        ? colors.danger.withValues(alpha: 0.20)
-        : _isFocused
-            ? colors.primary.withValues(alpha: 0.20)
-            : Colors.transparent;
-
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       mainAxisSize: MainAxisSize.min,
@@ -92,75 +86,61 @@ class _AcedexInputState extends State<AcedexInput> {
         ],
         AnimatedContainer(
           duration: const Duration(milliseconds: 180),
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(AppTheme.radiusInput + 2),
-            boxShadow: _isFocused || hasError
-                ? [
-                    BoxShadow(
-                      color: ringColor,
-                      spreadRadius: 3.0,
-                      blurRadius: 0,
-                    ),
-                  ]
-                : [],
+          constraints: const BoxConstraints(
+            minHeight: AppTheme.minTapTarget,
           ),
-          child: Container(
-            constraints: const BoxConstraints(
-              minHeight: AppTheme.minTapTarget,
+          decoration: BoxDecoration(
+            color: colors.surface,
+            borderRadius: BorderRadius.circular(AppTheme.radiusInput),
+            border: Border.all(
+              color: borderColor,
+              width: _isFocused || hasError ? 1.5 : 1.0,
             ),
-            decoration: BoxDecoration(
-              color: colors.surface,
-              borderRadius: BorderRadius.circular(AppTheme.radiusInput),
-              border: Border.all(
-                color: borderColor,
-                width: _isFocused || hasError ? 1.5 : 1.0,
-              ),
-            ),
-            padding: const EdgeInsets.symmetric(horizontal: AppTheme.space12),
-            alignment: Alignment.center,
-            child: Row(
-              children: [
-                if (widget.leading != null) ...[
-                  widget.leading!,
-                  const SizedBox(width: AppTheme.space8),
-                ],
-                Expanded(
-                  child: TextField(
-                    controller: widget.controller,
-                    focusNode: _focusNode,
-                    enabled: widget.enabled,
-                    autofocus: widget.autofocus,
-                    obscureText: widget.obscureText,
-                    keyboardType: widget.keyboardType,
-                    textInputAction: widget.textInputAction,
-                    maxLines: widget.maxLines,
-                    onChanged: widget.onChanged,
-                    onSubmitted: widget.onSubmitted,
-                    style: TextStyle(
+          ),
+          padding: const EdgeInsets.symmetric(horizontal: AppTheme.space12),
+          alignment: Alignment.center,
+          child: Row(
+            children: [
+              if (widget.leading != null) ...[
+                widget.leading!,
+                const SizedBox(width: AppTheme.space8),
+              ],
+              Expanded(
+                child: TextField(
+                  controller: widget.controller,
+                  focusNode: _focusNode,
+                  enabled: widget.enabled,
+                  autofocus: widget.autofocus,
+                  obscureText: widget.obscureText,
+                  keyboardType: widget.keyboardType,
+                  textInputAction: widget.textInputAction,
+                  maxLines: widget.maxLines,
+                  onChanged: widget.onChanged,
+                  onSubmitted: widget.onSubmitted,
+                  style: TextStyle(
+                    fontSize: 15,
+                    color: colors.textPrimary,
+                  ),
+                  cursorColor: colors.primary,
+                  decoration: InputDecoration(
+                    isDense: true,
+                    hintText: widget.hintText,
+                    hintStyle: TextStyle(
                       fontSize: 15,
-                      color: colors.textPrimary,
+                      color: colors.textSecondary.withValues(alpha: 0.7),
                     ),
-                    cursorColor: colors.primary,
-                    decoration: InputDecoration(
-                      isDense: true,
-                      hintText: widget.hintText,
-                      hintStyle: TextStyle(
-                        fontSize: 15,
-                        color: colors.textSecondary.withValues(alpha: 0.7),
-                      ),
-                      border: InputBorder.none,
-                      contentPadding: const EdgeInsets.symmetric(
-                        vertical: AppTheme.space12,
-                      ),
+                    border: InputBorder.none,
+                    contentPadding: const EdgeInsets.symmetric(
+                      vertical: AppTheme.space12,
                     ),
                   ),
                 ),
-                if (widget.trailing != null) ...[
-                  const SizedBox(width: AppTheme.space8),
-                  widget.trailing!,
-                ],
+              ),
+              if (widget.trailing != null) ...[
+                const SizedBox(width: AppTheme.space8),
+                widget.trailing!,
               ],
-            ),
+            ],
           ),
         ),
         if (hasError) ...[
