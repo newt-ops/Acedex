@@ -3,7 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../profile/student_provider.dart';
 import '../security/pin_provider.dart';
 import '../security/screens/pin_lock_screen.dart';
-import '../onboarding/screens/onboarding_screen.dart';
+import '../onboarding/screens/intro_flow_screen.dart';
 import '../../main.dart';
 
 class AppGate extends ConsumerWidget {
@@ -20,7 +20,7 @@ class AppGate extends ConsumerWidget {
     // 2. Onboarding Gate
     final isOnboardingCompleted = ref.watch(isOnboardingCompletedProvider);
     if (!isOnboardingCompleted) {
-      return OnboardingScreen(
+      return IntroFlowScreen(
         onCompleted: () {
           ref.invalidate(isOnboardingCompletedProvider);
         },

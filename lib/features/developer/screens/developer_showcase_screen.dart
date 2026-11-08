@@ -18,6 +18,9 @@ import '../../security/screens/pin_setup_screen.dart';
 import '../../auth/screens/login_screen.dart';
 import '../../auth/screens/signup_screen.dart';
 import '../../onboarding/screens/onboarding_screen.dart';
+import '../../onboarding/screens/intro_flow_screen.dart';
+import '../../onboarding/screens/intro_splash_screen.dart';
+import '../../onboarding/screens/intro_slides_screen.dart';
 import '../../profile/student_provider.dart';
 
 /// Developer Test Lab & Feature Sandbox
@@ -316,8 +319,25 @@ class _DeveloperShowcaseScreenState
                         children: [
                           Expanded(
                             child: AcedexButton(
-                              label: 'Onboarding',
+                              label: 'Full Intro Flow',
                               variant: AcedexButtonVariant.primary,
+                              onPressed: () {
+                                Navigator.of(context).push(
+                                  MaterialPageRoute(
+                                    builder: (_) => IntroFlowScreen(
+                                      onCompleted: () =>
+                                          Navigator.of(context).pop(),
+                                    ),
+                                  ),
+                                );
+                              },
+                            ),
+                          ),
+                          const SizedBox(width: AppTheme.space8),
+                          Expanded(
+                            child: AcedexButton(
+                              label: 'Profile Setup',
+                              variant: AcedexButtonVariant.secondary,
                               onPressed: () {
                                 Navigator.of(context).push(
                                   MaterialPageRoute(
@@ -330,7 +350,49 @@ class _DeveloperShowcaseScreenState
                               },
                             ),
                           ),
+                        ],
+                      ),
+                      const SizedBox(height: AppTheme.space8),
+                      Row(
+                        children: [
+                          Expanded(
+                            child: AcedexButton(
+                              label: 'Splash Loading',
+                              variant: AcedexButtonVariant.secondary,
+                              onPressed: () {
+                                Navigator.of(context).push(
+                                  MaterialPageRoute(
+                                    builder: (_) => IntroSplashScreen(
+                                      onLoadingComplete: () =>
+                                          Navigator.of(context).pop(),
+                                    ),
+                                  ),
+                                );
+                              },
+                            ),
+                          ),
                           const SizedBox(width: AppTheme.space8),
+                          Expanded(
+                            child: AcedexButton(
+                              label: 'Intro Slides (3D)',
+                              variant: AcedexButtonVariant.secondary,
+                              onPressed: () {
+                                Navigator.of(context).push(
+                                  MaterialPageRoute(
+                                    builder: (_) => IntroSlidesScreen(
+                                      onFinish: () =>
+                                          Navigator.of(context).pop(),
+                                    ),
+                                  ),
+                                );
+                              },
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBox(height: AppTheme.space8),
+                      Row(
+                        children: [
                           Expanded(
                             child: AcedexButton(
                               label: 'Sign In',
@@ -348,11 +410,7 @@ class _DeveloperShowcaseScreenState
                               },
                             ),
                           ),
-                        ],
-                      ),
-                      const SizedBox(height: AppTheme.space8),
-                      Row(
-                        children: [
+                          const SizedBox(width: AppTheme.space8),
                           Expanded(
                             child: AcedexButton(
                               label: 'Sign Up',
@@ -369,7 +427,11 @@ class _DeveloperShowcaseScreenState
                               },
                             ),
                           ),
-                          const SizedBox(width: AppTheme.space8),
+                        ],
+                      ),
+                      const SizedBox(height: AppTheme.space8),
+                      Row(
+                        children: [
                           Expanded(
                             child: AcedexButton(
                               label: 'Reset Profile',

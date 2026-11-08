@@ -7,8 +7,12 @@ import 'package:acedex/core/theme/theme_provider.dart';
 import 'package:acedex/core/database/database_provider.dart';
 import 'package:acedex/core/database/database.dart';
 
+import 'package:acedex/features/onboarding/screens/intro_flow_screen.dart';
+import 'package:acedex/features/onboarding/screens/intro_splash_screen.dart';
+import 'package:acedex/features/onboarding/screens/intro_slides_screen.dart';
+
 void main() {
-  testWidgets('AcedexApp loads Onboarding flow on fresh install',
+  testWidgets('AcedexApp loads Intro flow on fresh install',
       (WidgetTester tester) async {
     SharedPreferences.setMockInitialValues({});
     final prefs = await SharedPreferences.getInstance();
@@ -27,9 +31,19 @@ void main() {
     await tester.pump();
     await tester.pump(const Duration(milliseconds: 200));
 
-    expect(find.text('Master Ethiopian Curriculum'), findsOneWidget);
-    expect(find.text('100% Offline First'), findsOneWidget);
-    expect(find.text('Consistency Streaks'), findsOneWidget);
+    // Fresh install displays IntroFlowScreen starting with IntroSplashScreen
+    expect(find.byType(IntroFlowScreen), findsOneWidget);
+    expect(find.byType(IntroSplashScreen), findsOneWidget);
+
+    // Fast forward past splash loading bar duration
+    await tester.pump(const Duration(milliseconds: 2100));
+    await tester.pumpAndSettle();
+
+    // Now transitioned to 3D IntroSlidesScreen
+    expect(find.byType(IntroSlidesScreen), findsOneWidget);
+    expect(find.textContaining('Master', findRichText: true), findsWidgets);
+    expect(find.textContaining('Offline', findRichText: true), findsWidgets);
+    expect(find.text('Next  ›'), findsOneWidget);
 
     await testDb.close();
   });

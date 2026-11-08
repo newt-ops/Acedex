@@ -10,6 +10,26 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+- **Animated Splash & Loading Screen (`IntroSplashScreen`)**:
+  - Displays the official Gemini brand logo with a smooth upward fade-in animation.
+  - Automatically adapts between `acedex_logo_gemini_light.jpg` (light mode) and `acedex_logo_gemini_dark.jpg` (dark mode) on seamless background tokens (`#FEFAFB` / `#130D0F`).
+  - Smooth horizontal progress loading bar under the brand logo animating from 0% to 100% with pill caps and zero glow.
+- **Interactive 3-Slide Intro Presentation (`IntroSlidesScreen`)**:
+  - Built from Figma design specs (`UI/Slide Screen.png` and `UI/Acedex UI design.figcraft`).
+  - Transparent high-resolution 3D character illustrations:
+    - Slide 1: `slide_1_offline.png` — "Master Every Subject, 100% Offline"
+    - Slide 2: `slide_2_mastery.png` — "Structured Mastery, Unmatched Focus"
+    - Slide 3: `slide_3_streaks.png` — "Build Daily Streaks, Conquer the EUEE"
+  - Top 3-segment progress indicator lines tracking active slide.
+  - Staggered slide-up component animations for 3D illustration, two-tone headline, subtitle, and action button.
+  - Full hand swiping gesture support (`PageView` + `BouncingScrollPhysics`) alongside tactile pressable Next / Get Started buttons.
+- **Intro Flow Coordinator (`IntroFlowScreen`)**:
+  - Orchestrates seamless cross-fade transitions between Splash Loading Screen, 3D Intro Slides, and Guided Student Profile Setup.
+  - Wired into `AppGate` for first-launch experience.
+- **Developer Test Lab Shortcuts**:
+  - Added dedicated preview triggers for `Full Intro Flow`, `Splash Loading`, `Intro Slides (3D)`, and `Profile Setup` in `DeveloperShowcaseScreen`.
+- **Intro & Onboarding Widget Tests (`test/onboarding/intro_slides_test.dart`)**:
+  - Comprehensive test suite verifying splash loading animations, light/dark brand asset selection, 3-slide page navigation, and hand swipe gestures (39 / 39 total tests passing).
 - **Brand Logo & Mobile Icon Suite**: Designed a clean, minimalist geometric emblem fusing a modern letter "A" with an academic mortarboard crown and knowledge bridge (strictly 2 flat solid colors, zero gradients, zero glow):
   - **App Launcher Icons (`1024x1024` & `512x512`)**: Light mode (`#8A2BA3` on `#FFFFFF` and `#FFFFFF` on `#8A2BA3`) and Dark mode (`#D58CF0` on `#0E0B0E`).
   - **Vector SVGs**: Exported vector files (`acedex_logo_light.svg`, `acedex_logo_dark.svg`, `acedex_logo_plum.svg`, transparent variants) for Figma design collections.

@@ -11,23 +11,35 @@ import '../../profile/student_provider.dart';
 import '../models/onboarding_data.dart';
 
 class OnboardingScreen extends ConsumerStatefulWidget {
-  const OnboardingScreen({super.key, this.onCompleted});
+  const OnboardingScreen({
+    super.key,
+    this.onCompleted,
+    this.initialPage = 0,
+  });
 
   final VoidCallback? onCompleted;
+  final int initialPage;
 
   @override
   ConsumerState<OnboardingScreen> createState() => _OnboardingScreenState();
 }
 
 class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
-  final PageController _pageController = PageController();
+  late final PageController _pageController;
   final TextEditingController _nameController = TextEditingController();
 
-  int _currentPage = 0;
+  late int _currentPage;
   final int _totalPages = 5;
 
   OnboardingData _data = const OnboardingData();
   bool _isSaving = false;
+
+  @override
+  void initState() {
+    super.initState();
+    _currentPage = widget.initialPage;
+    _pageController = PageController(initialPage: widget.initialPage);
+  }
 
   @override
   void dispose() {
