@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -43,7 +44,8 @@ void main() {
     expect(find.byType(IntroSlidesScreen), findsOneWidget);
     expect(find.textContaining('Master', findRichText: true), findsWidgets);
     expect(find.textContaining('Offline', findRichText: true), findsWidgets);
-    expect(find.text('Next'), findsOneWidget);
+    expect(find.text('Skip'), findsOneWidget);
+    expect(find.byKey(const ValueKey('intro_action_button')), findsOneWidget);
 
     await testDb.close();
   });

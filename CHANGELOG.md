@@ -9,6 +9,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+- **Two-Tier Split-Canvas Intro Presentation (`IntroSlidesScreen`)**:
+  - Implemented the exact design from `UI/updated_slide_screen.png` and `UI/Acedex_UI_design.figcraft`:
+    - Upper ~54% hero section with soft pastel lilac canvas (`#C9A0DC`, `#C49ED8`, `#D7B4E3`), centered floating 3D character illustrations, and 3 minimalist circular pagination dots (`6 × 6px`).
+    - Lower curved content panel (`BorderRadius.vertical(top: Radius.circular(30))`) featuring 26px two-tone bold headlines and refined concise syllabus copy.
+    - Asymmetric bottom action row: text `"Skip"` link on the bottom left and a `60 × 60px` rounded squircle FAB (`radius: 20px`) with centered white right arrow on the bottom right.
+- **Redesigned Study Space Loading Hub (`IntroSplashScreen`)**:
+  - Centered ambient spotlight card (`340 × 280px`, `#FCF8FD`) grounding the welcome message (*"Your study space, ready when you are."*).
+  - Minimalist circular loading spinner between the text and progress bar.
+  - Bottom progress section with `"SETTING UP YOUR STUDY SPACE"`, dynamic percentage counter (`0%` ➔ `100%`), and a 5px rounded horizontal progress bar.
+
 ## [1.3.0+4] - 2026-11-08
 
 ### Added
