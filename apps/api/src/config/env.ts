@@ -1,0 +1,37 @@
+import dotenv from 'dotenv';
+import path from 'path';
+import { z } from 'zod';
+
+// Load .env from current directory or root if present
+dotenv.config();
+dotenv.config({ path: path.resolve(__dirname, '../../.env') });
+
+const envSchema = z.object({
+  NODE_ENV: z.enum(['development', 'test', 'production']).default('development'),
+  PORT: z.coerce.number().default(5000),
+  API_PREFIX: z.string().default('/api/v1'),
+  MONGODB_URI: z.string().optional().default(''),
+  CORS_ORIGIN: z.string().default('http://localhost:3000,http://localhost:5173'),
+  LOG_LEVEL: z.enum(['fatal', 'error', 'warn', 'info', 'debug', 'trace', 'silent']).default('info'),
+  JWT_ACCESS_SECRET: z.string().default('development-jwt-access-secret-change-in-prod'),
+  JWT_REFRESH_SECRET: z.string().default('development-jwt-refresh-secret-change-in-prod'),
+  JWT_ACCESS_EXPIRES_IN: z.string().default('15m'),
+  JWT_REFRESH_EXPIRES_IN: z.string().default('7d'),
+  GOOGLE_CLIENT_ID: z.string().optional(),
+  GOOGLE_CLIENT_SECRET: z.string().optional(),
+  GOOGLE_ANDROID_CLIENT_ID: z.string().optional(),
+});
+
+const parsed = envSchema.safeParse(process.env);
+
+if (!parsed.success) {
+  console.error('❌ Invalid environment configuration:', JSON.stringify(parsed.error.format(), null, 2));
+  throw new Error('Environment variable validation failed');
+}
+
+export const env = parsed.data;
+
+// In production, enforce MONGODB_URI
+if (env.NODE_ENV === 'production' && !env.MONGODB_URI) {
+  throw new Error('MONGODB_URI is strictly required in production mode');
+}

@@ -1,0 +1,24 @@
+{
+  "name": "acedex",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Acedex — Cross-platform study management and assessment platform for EUEE students",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace=@acedex/api",
+    "build": "npm run build --workspaces --if-present",
+    "test": "npm run test --workspace=@acedex/api",
+    "lint": "npm run lint --workspaces --if-present"
+  },
+  "keywords": [
+    "acedex",
+    "education",
+    "euee",
+    "assessment"
+  ],
+  "author": "Acedex Team",
+  "license": "ISC"
+}
