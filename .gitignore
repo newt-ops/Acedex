@@ -54,9 +54,13 @@ app.*.map.json
 # Project Specific
 Doc/
 doc/
+docs/
+AGENTS.md
 UI/
 ui/
 .agents/
 skills-lock.json
 data.json
+Acedex-Question-Bank/
+assets/data/
 

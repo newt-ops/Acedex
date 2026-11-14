@@ -93,13 +93,17 @@ class _AcedexButtonState extends State<AcedexButton> {
                 widget.leading!,
                 const SizedBox(width: AppTheme.space8),
               ],
-              Text(
-                widget.label,
-                style: TextStyle(
-                  fontSize: 15,
-                  fontWeight: FontWeight.w600,
-                  color: foregroundColor,
-                  letterSpacing: -0.2,
+              Flexible(
+                child: Text(
+                  widget.label,
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                  style: TextStyle(
+                    fontSize: 15,
+                    fontWeight: FontWeight.w600,
+                    color: foregroundColor,
+                    letterSpacing: -0.2,
+                  ),
                 ),
               ),
               if (widget.trailing != null) ...[

@@ -22,6 +22,7 @@ import '../../onboarding/screens/intro_flow_screen.dart';
 import '../../onboarding/screens/intro_splash_screen.dart';
 import '../../onboarding/screens/intro_slides_screen.dart';
 import '../../profile/student_provider.dart';
+import '../../assessment/screens/assessment_intro_screen.dart';
 
 /// Developer Test Lab & Feature Sandbox
 /// Provides full testing controls for database, auth, PIN security,
@@ -39,6 +40,8 @@ class _DeveloperShowcaseScreenState
   bool _isSeeded = false;
   int _subjectCount = 0;
   int _chapterCount = 0;
+  int _assessmentCount = 0;
+  int _questionCount = 0;
 
   @override
   void initState() {
@@ -51,11 +54,15 @@ class _DeveloperShowcaseScreenState
     await CurriculumSeeder.seedIfEmpty(db);
     final subjects = (await db.select(db.subjects).get()).length;
     final chapters = (await db.select(db.chapters).get()).length;
+    final assessments = (await db.select(db.localAssessments).get()).length;
+    final questions = (await db.select(db.localQuestions).get()).length;
     if (mounted) {
       setState(() {
         _isSeeded = true;
         _subjectCount = subjects;
         _chapterCount = chapters;
+        _assessmentCount = assessments;
+        _questionCount = questions;
       });
     }
   }
@@ -715,6 +722,104 @@ class _DeveloperShowcaseScreenState
           ),
           const SizedBox(height: AppTheme.space8),
           const AcedexSkeleton(height: 56, width: double.infinity),
+          const SizedBox(height: AppTheme.space20),
+
+          // 10. Assessment Engine Sandbox Card
+          Card(
+            child: Padding(
+              padding: const EdgeInsets.all(AppTheme.space16),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        'Assessment Engine',
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                          color: colors.textPrimary,
+                        ),
+                      ),
+                      AcedexBadge(
+                        label: '$_assessmentCount Tests / $_questionCount Qs',
+                        color: _questionCount > 0 ? colors.success : colors.warning,
+                        leading: HugeIcon(
+                          icon: _questionCount > 0
+                              ? HugeIcons.strokeRoundedCheckmarkCircle02
+                              : HugeIcons.strokeRoundedClock01,
+                          color: _questionCount > 0 ? colors.success : colors.warning,
+                          size: 14,
+                        ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: AppTheme.space8),
+                  Text(
+                    'Offline assessment system with secure client question caching, instant answers, and local fallback evaluation.',
+                    style: TextStyle(fontSize: 13, color: colors.textSecondary),
+                  ),
+                  const SizedBox(height: AppTheme.space12),
+                  Row(
+                    children: [
+                      Expanded(
+                        child: AcedexButton(
+                          label: 'Re-Seed Assessments',
+                          variant: AcedexButtonVariant.secondary,
+                          onPressed: () async {
+                            final db = ref.read(databaseProvider);
+                            await CurriculumSeeder.seedSampleAssessmentIfEmpty(db);
+                            await _checkAndSeedDatabase();
+                            if (context.mounted) {
+                              AcedexToast.show(
+                                context,
+                                title: 'Assessments Seeded',
+                                message: 'Sample assessments re-seeded successfully!',
+                                status: AcedexToastStatus.success,
+                              );
+                            }
+                          },
+                        ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: AppTheme.space8),
+                  AcedexButton(
+                    label: 'Launch Physics Unit 1 (30 Q)',
+                    variant: AcedexButtonVariant.primary,
+                    onPressed: () {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (_) => const AssessmentIntroScreen(
+                            chapterId: 'PHYS_G9_U1',
+                            unitTitle: 'Physics and Human Society',
+                            subjectName: 'Physics',
+                          ),
+                        ),
+                      );
+                    },
+                  ),
+                  const SizedBox(height: AppTheme.space8),
+                  AcedexButton(
+                    label: 'Launch Physics Unit 2 (30 Q)',
+                    variant: AcedexButtonVariant.primary,
+                    onPressed: () {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (_) => const AssessmentIntroScreen(
+                            chapterId: 'PHYS_G9_U2',
+                            unitTitle: 'Physical Quantities',
+                            subjectName: 'Physics',
+                          ),
+                        ),
+                      );
+                    },
+                  ),
+                ],
+              ),
+            ),
+          ),
         ],
       ),
     );

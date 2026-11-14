@@ -8,9 +8,13 @@ import 'core/theme/theme_provider.dart';
 import 'core/widgets/acedex_nav_bar.dart';
 import 'core/widgets/acedex_header_bar.dart';
 import 'core/services/supabase_service.dart';
+import 'core/database/database.dart';
+import 'core/database/database_provider.dart';
+import 'core/database/curriculum_seeder.dart';
 import 'features/security/pin_provider.dart';
 import 'features/auth/app_gate.dart';
 import 'features/today/screens/today_screen.dart';
+import 'features/curriculum/screens/curriculum_screen.dart';
 import 'features/settings/screens/settings_screen.dart';
 
 void main() async {
@@ -23,9 +27,19 @@ void main() async {
     debugPrint('Supabase initialization: $e');
   }
 
+  final db = AppDatabase();
+  try {
+    await CurriculumSeeder.seedIfEmpty(db);
+  } catch (e) {
+    debugPrint('Database seeding error: $e');
+  }
+
   runApp(
     ProviderScope(
-      overrides: [sharedPreferencesProvider.overrideWithValue(prefs)],
+      overrides: [
+        sharedPreferencesProvider.overrideWithValue(prefs),
+        databaseProvider.overrideWithValue(db),
+      ],
       child: const AcedexAppRoot(),
     ),
   );
@@ -144,12 +158,7 @@ class _MainNavigationShellState extends ConsumerState<MainNavigationShell> {
           TodayScreen(
             onNavigateToCurriculum: () => _onTabSelected(1),
           ),
-          const PlaceholderTabScreen(
-            title: 'Curriculum & Units',
-            icon: HugeIcons.strokeRoundedBookOpen01,
-            description:
-                'Ethiopian Grade 9–12 syllabus tracking with 3-stage mastery.',
-          ),
+          const CurriculumScreen(),
           const PlaceholderTabScreen(
             title: 'Study Analytics',
             icon: HugeIcons.strokeRoundedAnalytics01,

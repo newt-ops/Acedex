@@ -9,16 +9,45 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.5.0+6] - 2026-11-14
+
 ### Added
-- **Two-Tier Split-Canvas Intro Presentation (`IntroSlidesScreen`)**:
-  - Implemented the exact design from `UI/updated_slide_screen.png` and `UI/Acedex_UI_design.figcraft`:
-    - Upper ~54% hero section with soft pastel lilac canvas (`#C9A0DC`, `#C49ED8`, `#D7B4E3`), centered floating 3D character illustrations, and 3 minimalist circular pagination dots (`6 × 6px`).
-    - Lower curved content panel (`BorderRadius.vertical(top: Radius.circular(30))`) featuring 26px two-tone bold headlines and refined concise syllabus copy.
-    - Asymmetric bottom action row: text `"Skip"` link on the bottom left and a `60 × 60px` rounded squircle FAB (`radius: 20px`) with centered white right arrow on the bottom right.
-- **Redesigned Study Space Loading Hub (`IntroSplashScreen`)**:
-  - Centered ambient spotlight card (`340 × 280px`, `#FCF8FD`) grounding the welcome message (*"Your study space, ready when you are."*).
-  - Minimalist circular loading spinner between the text and progress bar.
-  - Bottom progress section with `"SETTING UP YOUR STUDY SPACE"`, dynamic percentage counter (`0%` ➔ `100%`), and a 5px rounded horizontal progress bar.
+- **Acedex Unit Assessment & Examination Engine**:
+  - **Phase A (Database & Immutability)**:
+    - Authoritative Supabase migration (`supabase/migrations/20261115000000_create_assessment_platform_schema.sql`) and down migration.
+    - Air-gapped question security: answer keys (`question_solutions`) are completely inaccessible to client queries and protected with PostgreSQL row-level security.
+    - Hardened security definer RPC functions: `start_assessment_attempt`, `grade_and_submit_attempt`, `reconcile_and_grade_offline_attempt`, `publish_assessment_version` with pinned `search_path = ''`.
+    - Strict idempotency validation and payload tampering rejection.
+    - Verified 100% across 8 test suites on isolated local PostgreSQL 16 engine.
+  - **Phase B (Backend Integration & Domain Models)**:
+    - Hierarchical Dart assessment models (`Assessment`, `AssessmentVersion`, `Question`, `QuestionOption`, `SelectedAnswerSubmission`, `AssessmentSubmissionResult`, `QuestionCorrection`).
+    - Repository layer (`AssessmentRepository` & `SupabaseAssessmentRepository`) handling PostgREST queries and RPC evaluation.
+    - Active playback controller (`AssessmentPlayController`) with 0ms local answer selection.
+  - **Phase C (Offline Drift SQLite Integration)**:
+    - Drift schema bumped to v2 with 7 new tables (`LocalAssessments`, `LocalAssessmentVersions`, `LocalAssessmentVersionChapters`, `LocalQuestions`, `LocalQuestionOptions`, `LocalAssessmentAttempts`, `LocalAssessmentResults`).
+    - `LocalAssessmentService` provides offline caching, in-flight attempt backup, and synchronization queue querying.
+  - **Phase D (Apple HIG Assessment UI)**:
+    - `CurriculumScreen`: Ethiopian Grade 9–12 subject browser, unit cards with studied toggles, and contextual assessment unlocking.
+    - `AssessmentIntroScreen`: Test overview with question count, time limits, passing percentage, and rules.
+    - `AssessmentPlayerScreen`: 0ms tactile option selection, horizontal `PageView` pager, question navigator sheet, countdown timer, and review & submit confirmation modal.
+    - `AssessmentResultScreen`: Apple HIG score ring, pass/fail badge, breakdown metrics, and question review with NotebookLM-style pedagogical explanations.
+  - **Phase E (Verification & Testing)**:
+    - 62 unit and widget tests passing across all features (`flutter test`).
+  - **Pre-Assessment Answer Reveal Configuration (Practice vs Exam Mode)**:
+    - Added `AssessmentFeedbackMode` (`afterSubmit` vs `immediate`).
+    - Added Apple-style mode selection card on `AssessmentIntroScreen` allowing students to pick their desired feedback timing before starting.
+    - Built **Practice Mode (Instant Feedback)** in `AssessmentPlayerScreen`:
+      - Instant visual validation on option tap: selected correct option turns soft green with checkmark badge; incorrect option turns soft red with cross badge while highlighting the true correct option green.
+      - Integrated pedagogical explanation card expanding beneath the question immediately upon answer selection.
+      - Option locking after initial choice to prevent retrospective gaming.
+      - Dynamic question jumper map displaying green/red tiles for answered questions.
+    - Maintained full support for **Exam Mode (Standard)** where answers and explanations remain strictly private until final submission.
+  - **Question Bank Integration & Offline Self-Healing**:
+    - Fed Grade 9 Physics Unit 1 (`PHY-G09-U01.json`, 30 questions) and Unit 2 (`PHY-G09-U02.json`, 30 questions).
+    - Added self-healing eager seeding in `currentChapterAssessmentProvider` and `gradeSubjectsWithProgressProvider`.
+    - Added eager startup seeding in `main()` so Drift SQLite contains all assessments and questions upon launch.
+    - Added normalized chapter ID alias resolution (`PHYS_G9_U1`, `PHYS_G9_U01`, `PHY_G09_U01`, `PHY-G09-U01`) in `LocalAssessmentService`.
+    - Added "Check Again" button in `AssessmentIntroScreen`.
 
 ## [1.3.0+4] - 2026-11-08
 
