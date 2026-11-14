@@ -54,7 +54,7 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
 
     final initialName = googleName.isNotEmpty
         ? googleName
-        : (_data.name.isNotEmpty ? _data.name : '');
+        : (_data.name.isNotEmpty ? _data.name : 'Student Name');
 
     _nameController.text = initialName;
     _data = _data.copyWith(
@@ -126,7 +126,7 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
         context,
         title: 'Error Saving Profile',
         message: 'Could not complete profile setup. Please try again.',
-        status: AcedexToastStatus.danger,
+        status: AcedexToastStatus.error,
       );
     }
   }
@@ -185,7 +185,7 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
               decoration: BoxDecoration(
                 color: colors.surface,
                 borderRadius: BorderRadius.circular(12),
-                border: Border.all(color: colors.border),
+                border: Border.all(color: colors.cardBorder),
               ),
               child: Row(
                 mainAxisSize: MainAxisSize.min,
@@ -226,13 +226,13 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
                     decoration: BoxDecoration(
                       color: isActive
                           ? colors.primary
-                          : colors.border.withValues(alpha: 0.6),
+                          : colors.cardBorder.withValues(alpha: 0.6),
                       borderRadius: BorderRadius.circular(2),
                     ),
                   );
                 }),
               ),
-              const SizedBox(width: 0, height: AppTheme.space4),
+              const SizedBox(height: AppTheme.space4),
               Text(
                 'Step ${_currentPage + 1} of $_totalPages',
                 style: TextStyle(
@@ -259,10 +259,6 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
         ? displayName[0].toUpperCase()
         : 'S';
 
-    final googleUser = SupabaseService.currentUser;
-    final meta = googleUser?.userMetadata;
-    final avatarUrl = (meta?['avatar_url'] ?? meta?['picture'] ?? '').toString();
-
     return SingleChildScrollView(
       physics: const BouncingScrollPhysics(),
       padding: const EdgeInsets.symmetric(
@@ -282,7 +278,7 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
               letterSpacing: -0.5,
             ),
           ),
-          const SizedBox(height: 6.0),
+          const SizedBox(height: AppTheme.space6),
           Text(
             'Personalized from your Google account.',
             style: TextStyle(
@@ -291,7 +287,7 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
               color: colors.textSecondary,
             ),
           ),
-          const SizedBox(height: 28.0),
+          const SizedBox(height: AppTheme.space28),
 
           // Centered Circular Avatar Preview with Verified Badge
           Center(
@@ -309,31 +305,14 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
                     ),
                   ),
                   alignment: Alignment.center,
-                  child: avatarUrl.isNotEmpty
-                      ? ClipOval(
-                          child: Image.network(
-                            avatarUrl,
-                            width: 76,
-                            height: 76,
-                            fit: BoxFit.cover,
-                            errorBuilder: (_, _, _) => Text(
-                              initialLetter,
-                              style: TextStyle(
-                                fontSize: 32,
-                                fontWeight: FontWeight.w800,
-                                color: colors.primary,
-                              ),
-                            ),
-                          ),
-                        )
-                      : Text(
-                          initialLetter,
-                          style: TextStyle(
-                            fontSize: 32,
-                            fontWeight: FontWeight.w800,
-                            color: colors.primary,
-                          ),
-                        ),
+                  child: Text(
+                    initialLetter,
+                    style: TextStyle(
+                      fontSize: 32,
+                      fontWeight: FontWeight.w800,
+                      color: colors.primary,
+                    ),
+                  ),
                 ),
                 Positioned(
                   bottom: 0,
@@ -355,7 +334,7 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
               ],
             ),
           ),
-          const SizedBox(height: 28.0),
+          const SizedBox(height: AppTheme.space28),
 
           // Full Name Input Card
           Text(
@@ -366,7 +345,7 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
               color: colors.textSecondary,
             ),
           ),
-          const SizedBox(height: 6.0),
+          const SizedBox(height: AppTheme.space6),
           Container(
             padding: const EdgeInsets.symmetric(
               horizontal: AppTheme.space16,
@@ -375,7 +354,7 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
             decoration: BoxDecoration(
               color: colors.surface,
               borderRadius: BorderRadius.circular(16),
-              border: Border.all(color: colors.border),
+              border: Border.all(color: colors.cardBorder),
             ),
             child: TextField(
               controller: _nameController,
@@ -385,16 +364,10 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
                 fontWeight: FontWeight.w600,
                 color: colors.textPrimary,
               ),
-              decoration: InputDecoration(
-                hintText: 'Enter your full name',
-                hintStyle: TextStyle(
-                  fontSize: 15,
-                  fontWeight: FontWeight.w400,
-                  color: colors.textSecondary.withValues(alpha: 0.6),
-                ),
+              decoration: const InputDecoration(
                 border: InputBorder.none,
                 isDense: true,
-                contentPadding: const EdgeInsets.symmetric(vertical: 12),
+                contentPadding: EdgeInsets.symmetric(vertical: 12),
               ),
             ),
           ),
@@ -471,7 +444,7 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
               : colors.surface,
           borderRadius: BorderRadius.circular(16),
           border: Border.all(
-            color: isSelected ? colors.primary : colors.border,
+            color: isSelected ? colors.primary : colors.cardBorder,
             width: isSelected ? 2 : 1,
           ),
         ),
@@ -482,7 +455,7 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
               color: isSelected ? colors.primary : colors.textSecondary,
               size: 20,
             ),
-            const SizedBox(width: 10.0),
+            const SizedBox(width: AppTheme.space10),
             Text(
               label,
               style: TextStyle(
@@ -499,7 +472,7 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
                 shape: BoxShape.circle,
                 color: isSelected ? colors.primary : Colors.transparent,
                 border: Border.all(
-                  color: isSelected ? colors.primary : colors.border,
+                  color: isSelected ? colors.primary : colors.cardBorder,
                   width: 1.5,
                 ),
               ),
@@ -536,7 +509,7 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
               letterSpacing: -0.5,
             ),
           ),
-          const SizedBox(height: 6.0),
+          const SizedBox(height: AppTheme.space6),
           Text(
             "We'll tailor your subjects and assessments accordingly.",
             style: TextStyle(
@@ -545,7 +518,7 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
               color: colors.textSecondary,
             ),
           ),
-          const SizedBox(height: 28.0),
+          const SizedBox(height: AppTheme.space28),
 
           // 2x2 Grid of Grade Cards
           Row(
@@ -587,7 +560,7 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
               ),
             ],
           ),
-          const SizedBox(height: 28.0),
+          const SizedBox(height: AppTheme.space28),
 
           Center(
             child: Text(
@@ -631,7 +604,7 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
               : colors.surface,
           borderRadius: BorderRadius.circular(18),
           border: Border.all(
-            color: isSelected ? colors.primary : colors.border,
+            color: isSelected ? colors.primary : colors.cardBorder,
             width: isSelected ? 2 : 1,
           ),
         ),
@@ -656,7 +629,7 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
                     shape: BoxShape.circle,
                     color: isSelected ? colors.primary : Colors.transparent,
                     border: Border.all(
-                      color: isSelected ? colors.primary : colors.border,
+                      color: isSelected ? colors.primary : colors.cardBorder,
                       width: 1.5,
                     ),
                   ),
@@ -707,7 +680,7 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
               letterSpacing: -0.5,
             ),
           ),
-          const SizedBox(height: 6.0),
+          const SizedBox(height: AppTheme.space6),
           Text(
             isSenior
                 ? 'For Grade ${_data.grade}, choose the path that fits your studies.'
@@ -764,7 +737,7 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
                   Row(
                     children: [
                       Container(
-                        padding: const EdgeInsets.all(10.0),
+                        padding: const EdgeInsets.all(AppTheme.space10),
                         decoration: BoxDecoration(
                           color: colors.primary.withValues(alpha: 0.12),
                           borderRadius: BorderRadius.circular(12),
@@ -788,7 +761,7 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
                                 color: colors.textPrimary,
                               ),
                             ),
-                            const SizedBox(height: 2.0),
+                            const SizedBox(height: AppTheme.space2),
                             Text(
                               'Common Stream • Grades 9–10',
                               style: TextStyle(
@@ -855,7 +828,7 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
     required String streamKey,
     required String title,
     required String subtitle,
-    required dynamic icon,
+    required List<List<dynamic>> icon,
     required List<String> subjects,
   }) {
     final isSelected = _data.stream == streamKey;
@@ -874,7 +847,7 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
               : colors.surface,
           borderRadius: BorderRadius.circular(20),
           border: Border.all(
-            color: isSelected ? colors.primary : colors.border,
+            color: isSelected ? colors.primary : colors.cardBorder,
             width: isSelected ? 2 : 1,
           ),
         ),
@@ -925,7 +898,7 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
                     shape: BoxShape.circle,
                     color: isSelected ? colors.primary : Colors.transparent,
                     border: Border.all(
-                      color: isSelected ? colors.primary : colors.border,
+                      color: isSelected ? colors.primary : colors.cardBorder,
                       width: 1.5,
                     ),
                   ),
@@ -949,7 +922,7 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
                     color: colors.surface,
                     borderRadius: BorderRadius.circular(8),
                     border: Border.all(
-                      color: colors.border.withValues(alpha: 0.7),
+                      color: colors.cardBorder.withValues(alpha: 0.7),
                     ),
                   ),
                   child: Text(
@@ -1006,7 +979,7 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
               letterSpacing: -0.5,
             ),
           ),
-          const SizedBox(height: 6.0),
+          const SizedBox(height: AppTheme.space6),
           Text(
             'Consistency is the key to conquering the EUEE.',
             style: TextStyle(
@@ -1043,7 +1016,7 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
               ],
             ),
           ),
-          const SizedBox(height: 28.0),
+          const SizedBox(height: AppTheme.space28),
 
           // Interactive Horizontal Target Chips
           Row(
@@ -1074,7 +1047,7 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
                         border: Border.all(
                           color: isSelected
                               ? colors.primary
-                              : colors.border,
+                              : colors.cardBorder,
                         ),
                       ),
                       alignment: Alignment.center,
@@ -1114,7 +1087,7 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
               );
             }).toList(),
           ),
-          const SizedBox(height: 28.0),
+          const SizedBox(height: AppTheme.space28),
 
           // Motivational Card
           Container(
@@ -1122,12 +1095,12 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
             decoration: BoxDecoration(
               color: colors.surface,
               borderRadius: BorderRadius.circular(18),
-              border: Border.all(color: colors.border),
+              border: Border.all(color: colors.cardBorder),
             ),
             child: Row(
               children: [
                 Container(
-                  padding: const EdgeInsets.all(10.0),
+                  padding: const EdgeInsets.all(AppTheme.space10),
                   decoration: BoxDecoration(
                     color: colors.primary.withValues(alpha: 0.1),
                     shape: BoxShape.circle,
@@ -1151,7 +1124,7 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
                           color: colors.textPrimary,
                         ),
                       ),
-                      const SizedBox(height: 2.0),
+                      const SizedBox(height: AppTheme.space2),
                       Text(
                         'Students who maintain a 2-hour daily habit retain 40% more curriculum material.',
                         style: TextStyle(
@@ -1216,7 +1189,7 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
               letterSpacing: -0.5,
             ),
           ),
-          const SizedBox(height: 6.0),
+          const SizedBox(height: AppTheme.space6),
           Text(
             'Your Acedex study plan is ready to go.',
             style: TextStyle(
@@ -1232,7 +1205,7 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
             decoration: BoxDecoration(
               color: colors.surface,
               borderRadius: BorderRadius.circular(24),
-              border: Border.all(color: colors.border, width: 1.2),
+              border: Border.all(color: colors.cardBorder, width: 1.2),
               boxShadow: [
                 BoxShadow(
                   color: Colors.black.withValues(alpha: 0.04),
@@ -1302,7 +1275,7 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
                           ),
                         ],
                       ),
-                      const SizedBox(height: 10.0),
+                      const SizedBox(height: AppTheme.space10),
                       Text(
                         studentName,
                         style: TextStyle(
@@ -1362,7 +1335,7 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
                       Container(
                         height: 48,
                         width: 1,
-                        color: colors.border,
+                        color: colors.cardBorder,
                       ),
                       const SizedBox(width: AppTheme.space16),
                       Expanded(
@@ -1482,7 +1455,7 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
         color: colors.background,
         border: Border(
           top: BorderSide(
-            color: colors.border.withValues(alpha: 0.5),
+            color: colors.cardBorder.withValues(alpha: 0.5),
           ),
         ),
       ),

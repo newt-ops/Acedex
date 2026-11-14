@@ -39,6 +39,9 @@ class AppColors extends ThemeExtension<AppColors> {
   Color statusTint(Color baseStatus) => baseStatus.withValues(alpha: 0.12);
   Color statusBorder(Color baseStatus) => baseStatus.withValues(alpha: 0.35);
 
+  /// Card and container border color token (maps to standard border)
+  Color get cardBorder => border;
+
   static const light = AppColors(
     primary: Color(0xFF8A2BA3),
     secondary: Color(0xFF0A7F70),

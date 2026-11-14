@@ -65,6 +65,7 @@ void main() {
 
     await tester.tap(find.text('Back'));
     expect(backCalled, isTrue);
+    expect(authenticatedCalled, isFalse);
   });
 
   testWidgets('LoginScreen renders fields and buttons', (tester) async {

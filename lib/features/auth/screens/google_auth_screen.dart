@@ -54,7 +54,7 @@ class _GoogleAuthScreenState extends ConsumerState<GoogleAuthScreen> {
           context,
           title: 'Authentication Error',
           message: err,
-          status: AcedexToastStatus.danger,
+          status: AcedexToastStatus.error,
         );
       }
     }
@@ -95,7 +95,7 @@ class _GoogleAuthScreenState extends ConsumerState<GoogleAuthScreen> {
                         decoration: BoxDecoration(
                           color: colors.surface,
                           borderRadius: BorderRadius.circular(12),
-                          border: Border.all(color: colors.border),
+                          border: Border.all(color: colors.cardBorder),
                         ),
                         child: Row(
                           mainAxisSize: MainAxisSize.min,
@@ -235,7 +235,7 @@ class _GoogleAuthScreenState extends ConsumerState<GoogleAuthScreen> {
                 color: colors.background,
                 border: Border(
                   top: BorderSide(
-                    color: colors.border.withValues(alpha: 0.5),
+                    color: colors.cardBorder.withValues(alpha: 0.5),
                   ),
                 ),
               ),
@@ -252,7 +252,7 @@ class _GoogleAuthScreenState extends ConsumerState<GoogleAuthScreen> {
                         color: colors.surface,
                         borderRadius: BorderRadius.circular(16),
                         border: Border.all(
-                          color: colors.border,
+                          color: colors.cardBorder,
                           width: 1.2,
                         ),
                         boxShadow: [
@@ -309,7 +309,7 @@ class _GoogleAuthScreenState extends ConsumerState<GoogleAuthScreen> {
                         color: colors.textSecondary,
                         size: 14,
                       ),
-                      const SizedBox(width: 6.0),
+                      const SizedBox(width: AppTheme.space6),
                       Text(
                         'Fast, secure, one-tap authentication. No passwords required.',
                         style: TextStyle(
@@ -343,7 +343,7 @@ class _GoogleAuthScreenState extends ConsumerState<GoogleAuthScreen> {
 
   Widget _buildFeatureCard({
     required AppColors colors,
-    required dynamic icon,
+    required List<List<dynamic>> icon,
     required String title,
   }) {
     return Container(
@@ -354,7 +354,7 @@ class _GoogleAuthScreenState extends ConsumerState<GoogleAuthScreen> {
       decoration: BoxDecoration(
         color: colors.surface,
         borderRadius: BorderRadius.circular(16),
-        border: Border.all(color: colors.border),
+        border: Border.all(color: colors.cardBorder),
       ),
       child: Row(
         children: [
@@ -389,3 +389,4 @@ class _GoogleAuthScreenState extends ConsumerState<GoogleAuthScreen> {
     );
   }
 }
+

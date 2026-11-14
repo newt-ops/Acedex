@@ -10,6 +10,7 @@ enum AcedexToastStatus {
   success,
   warning,
   danger,
+  error,
 }
 
 class AcedexToast {
@@ -339,6 +340,7 @@ class _AcedexToastWidgetState extends State<_AcedexToastWidget>
         defaultIconData = HugeIcons.strokeRoundedAlert02;
         break;
       case AcedexToastStatus.danger:
+      case AcedexToastStatus.error:
         statusColor = const Color(0xFFFF3B30); // Apple System Red
         defaultIconData = HugeIcons.strokeRoundedCancel01;
         break;
