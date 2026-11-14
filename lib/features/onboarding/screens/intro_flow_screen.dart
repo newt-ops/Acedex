@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import '../../../core/services/supabase_service.dart';
+import '../../auth/screens/google_auth_screen.dart';
 import 'intro_splash_screen.dart';
 import 'intro_slides_screen.dart';
 import 'onboarding_screen.dart';
@@ -7,7 +9,8 @@ import 'onboarding_screen.dart';
 /// Flow coordinator managing the introductory lifecycle of Acedex:
 /// 1. [IntroSplashScreen]: First launch fade-up brand logo + horizontal loading bar
 /// 2. [IntroSlidesScreen]: 3 interactive Figma slides with 3D illustrations & staggered animations
-/// 3. [OnboardingScreen]: Guided student setup (Name, Grade, Stream, Daily Target)
+/// 3. [GoogleAuthScreen]: "Continue with Google" authentication screen
+/// 4. [OnboardingScreen]: Guided student setup (Identity/Name, Grade, Stream, Daily Target, Academic Pass)
 class IntroFlowScreen extends ConsumerStatefulWidget {
   const IntroFlowScreen({
     super.key,
@@ -25,7 +28,8 @@ class IntroFlowScreen extends ConsumerStatefulWidget {
 enum _FlowPhase {
   splash,
   slides,
-  profileSetup,
+  auth,
+  onboarding,
 }
 
 class _IntroFlowScreenState extends ConsumerState<IntroFlowScreen> {
@@ -34,8 +38,7 @@ class _IntroFlowScreenState extends ConsumerState<IntroFlowScreen> {
   @override
   void initState() {
     super.initState();
-    _currentPhase =
-        widget.skipSplash ? _FlowPhase.slides : _FlowPhase.splash;
+    _currentPhase = widget.skipSplash ? _FlowPhase.slides : _FlowPhase.splash;
   }
 
   void _onLoadingComplete() {
@@ -49,7 +52,35 @@ class _IntroFlowScreenState extends ConsumerState<IntroFlowScreen> {
   void _onSlidesFinish() {
     if (mounted) {
       setState(() {
-        _currentPhase = _FlowPhase.profileSetup;
+        if (SupabaseService.isAuthenticated) {
+          _currentPhase = _FlowPhase.onboarding;
+        } else {
+          _currentPhase = _FlowPhase.auth;
+        }
+      });
+    }
+  }
+
+  void _onAuthenticated() {
+    if (mounted) {
+      setState(() {
+        _currentPhase = _FlowPhase.onboarding;
+      });
+    }
+  }
+
+  void _onAuthBack() {
+    if (mounted) {
+      setState(() {
+        _currentPhase = _FlowPhase.slides;
+      });
+    }
+  }
+
+  void _onOnboardingBack() {
+    if (mounted) {
+      setState(() {
+        _currentPhase = _FlowPhase.auth;
       });
     }
   }
@@ -79,13 +110,19 @@ class _IntroFlowScreenState extends ConsumerState<IntroFlowScreen> {
           key: const ValueKey('intro_slides'),
           onFinish: _onSlidesFinish,
         );
-      case _FlowPhase.profileSetup:
+      case _FlowPhase.auth:
+        return GoogleAuthScreen(
+          key: const ValueKey('intro_auth'),
+          onAuthenticated: _onAuthenticated,
+          onBack: _onAuthBack,
+        );
+      case _FlowPhase.onboarding:
         return OnboardingScreen(
-          key: const ValueKey('intro_profile_setup'),
-          initialPage: 1, // Start directly at Name & Gender setup
+          key: const ValueKey('intro_onboarding'),
+          initialPage: 0,
           onCompleted: widget.onCompleted,
+          onBack: _onOnboardingBack,
         );
     }
   }
 }
-

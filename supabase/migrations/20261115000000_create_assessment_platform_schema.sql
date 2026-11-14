@@ -74,6 +74,8 @@ CREATE TABLE IF NOT EXISTS public.questions (
   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
   assessment_version_id UUID NOT NULL REFERENCES public.assessment_versions(id) ON DELETE RESTRICT,
   chapter_id TEXT NOT NULL REFERENCES public.chapters(id) ON DELETE RESTRICT,
+  code TEXT,
+  difficulty TEXT CHECK (difficulty IS NULL OR difficulty IN ('easy', 'medium', 'hard', 'challenging')),
   question_text TEXT NOT NULL,
   question_type TEXT NOT NULL DEFAULT 'single_choice' CHECK (question_type IN ('single_choice')),
   image_url TEXT,
@@ -82,7 +84,8 @@ CREATE TABLE IF NOT EXISTS public.questions (
   created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
   updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
   CONSTRAINT uq_questions_version_order UNIQUE (assessment_version_id, sort_order),
-  CONSTRAINT uq_questions_id_version UNIQUE (id, assessment_version_id)
+  CONSTRAINT uq_questions_id_version UNIQUE (id, assessment_version_id),
+  CONSTRAINT uq_questions_version_code UNIQUE (assessment_version_id, code)
 );
 
 -- 6. QUESTION OPTIONS TABLE (Public Content)

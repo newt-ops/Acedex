@@ -87,28 +87,45 @@ class StudentNotifier extends StateNotifier<AsyncValue<Student?>> {
       await _prefs.setBool(_onboardingCompleteKey, true);
 
       // If user is authenticated in Supabase, sync immediately to Supabase
-      if (SupabaseService.isAuthenticated && userId != null) {
+      final effectiveUserId = userId ?? SupabaseService.currentUserId;
+      if (SupabaseService.isAuthenticated && effectiveUserId != null) {
         try {
           final client = SupabaseService.clientOrNull;
           if (client != null) {
-            await client.from('students').upsert({
-              'id': id,
-              'email': studentEmail,
-              'name': onboardingData.name.trim().isEmpty
+            await client.rpc('save_onboarding_profile', params: {
+              'p_name': onboardingData.name.trim().isEmpty
                   ? 'Acedex Scholar'
                   : onboardingData.name.trim(),
-              'grade': onboardingData.grade,
-              'gender': onboardingData.gender,
-              'stream': effectiveStream,
-              'daily_goal_minutes': onboardingData.dailyGoalMinutes,
-              'streak_count': 0,
-              'streak_freezes': 1,
-              'created_at': now.toIso8601String(),
-              'updated_at': now.toIso8601String(),
+              'p_gender': onboardingData.gender,
+              'p_grade': onboardingData.grade,
+              'p_stream': effectiveStream,
+              'p_daily_goal_minutes': onboardingData.dailyGoalMinutes,
             });
           }
-        } catch (e) {
-          debugPrint('Cloud sync error during onboarding: $e');
+        } catch (rpcError) {
+          debugPrint('RPC save_onboarding_profile fallback to direct upsert: $rpcError');
+          try {
+            final client = SupabaseService.clientOrNull;
+            if (client != null) {
+              await client.from('students').upsert({
+                'id': effectiveUserId,
+                'email': studentEmail,
+                'name': onboardingData.name.trim().isEmpty
+                    ? 'Acedex Scholar'
+                    : onboardingData.name.trim(),
+                'grade': onboardingData.grade,
+                'gender': onboardingData.gender,
+                'stream': effectiveStream,
+                'daily_goal_minutes': onboardingData.dailyGoalMinutes,
+                'streak_count': 0,
+                'streak_freezes': 1,
+                'created_at': now.toIso8601String(),
+                'updated_at': now.toIso8601String(),
+              });
+            }
+          } catch (e) {
+            debugPrint('Cloud sync error during onboarding: $e');
+          }
         }
       }
 

@@ -3,6 +3,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:acedex/core/theme/app_theme.dart';
 import 'package:acedex/features/auth/auth_state.dart';
+import 'package:acedex/features/auth/screens/google_auth_screen.dart';
 import 'package:acedex/features/auth/screens/login_screen.dart';
 import 'package:acedex/features/auth/screens/signup_screen.dart';
 
@@ -23,6 +24,47 @@ void main() {
     );
     expect(error.status, AuthStatus.error);
     expect(error.errorMessage, 'Invalid password');
+  });
+
+  testWidgets('GoogleAuthScreen renders FigCraft branded components and Continue with Google button',
+      (tester) async {
+    bool authenticatedCalled = false;
+    bool backCalled = false;
+
+    await tester.pumpWidget(
+      ProviderScope(
+        child: MaterialApp(
+          theme: AppTheme.lightTheme,
+          home: GoogleAuthScreen(
+            onAuthenticated: () => authenticatedCalled = true,
+            onBack: () => backCalled = true,
+          ),
+        ),
+      ),
+    );
+
+    await tester.pump();
+    await tester.pump(const Duration(milliseconds: 200));
+
+    expect(find.text('Welcome to Acedex'), findsOneWidget);
+    expect(find.text('A'), findsOneWidget);
+    expect(find.text('Continue with Google'), findsOneWidget);
+    expect(
+      find.text('Verified Ethiopian curriculum question banks'),
+      findsOneWidget,
+    );
+    expect(
+      find.text('Offline study tracker and daily streaks'),
+      findsOneWidget,
+    );
+    expect(
+      find.text('Instant practice and exam simulations'),
+      findsOneWidget,
+    );
+    expect(find.text('Back'), findsOneWidget);
+
+    await tester.tap(find.text('Back'));
+    expect(backCalled, isTrue);
   });
 
   testWidgets('LoginScreen renders fields and buttons', (tester) async {

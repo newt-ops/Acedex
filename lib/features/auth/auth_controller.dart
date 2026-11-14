@@ -115,7 +115,7 @@ class AuthController extends StateNotifier<AcedexAuthState> {
     try {
       await SupabaseService.auth.signInWithOAuth(
         OAuthProvider.google,
-        redirectTo: 'acedex://login-callback',
+        redirectTo: 'com.aymen.acedex://login-callback',
       );
       return true;
     } on AuthException catch (e) {

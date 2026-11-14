@@ -106,27 +106,21 @@ void main() {
     await tester.pump();
     await tester.pump(const Duration(milliseconds: 200));
 
-    // Step 1: Welcome
-    expect(find.text('Master Ethiopian Curriculum'), findsOneWidget);
+    // Step 1: Confirm Profile
+    expect(find.text('Confirm your profile'), findsOneWidget);
+    expect(find.text('Personalized from your Google account.'), findsOneWidget);
     expect(find.text('Continue'), findsOneWidget);
-
-    // Tap Continue to go to Step 2
-    await tester.tap(find.text('Continue'));
-    await tester.pumpAndSettle();
-
-    // Step 2: Name & Gender
-    expect(find.text('What should we call you?'), findsOneWidget);
 
     // Enter name
     await tester.enterText(find.byType(TextField), 'Kenenisa Bekele');
     await tester.pump();
 
-    // Tap Continue to Step 3
+    // Tap Continue to go to Step 2
     await tester.tap(find.text('Continue'));
     await tester.pumpAndSettle();
 
-    // Step 3: Grade Selection
-    expect(find.text('Select your Grade'), findsOneWidget);
+    // Step 2: Grade Selection
+    expect(find.text('Which grade are you in?'), findsOneWidget);
     expect(find.text('Grade 9'), findsOneWidget);
     expect(find.text('Grade 12'), findsOneWidget);
 
@@ -134,25 +128,34 @@ void main() {
     await tester.tap(find.text('Grade 12'), warnIfMissed: false);
     await tester.pump();
 
+    // Tap Continue to Step 3
+    await tester.tap(find.text('Continue'));
+    await tester.pumpAndSettle();
+
+    // Step 3: Stream Selection
+    expect(find.text('Select your academic stream'), findsOneWidget);
+    expect(find.text('Natural Science Stream'), findsOneWidget);
+    expect(find.text('Social Science Stream'), findsOneWidget);
+
     // Tap Continue to Step 4
     await tester.tap(find.text('Continue'));
     await tester.pumpAndSettle();
 
-    // Step 4: Stream Selection
-    expect(find.text('Choose your Stream'), findsOneWidget);
-    expect(find.text('Natural Science'), findsOneWidget);
-    expect(find.text('Social Science'), findsOneWidget);
+    // Step 4: Daily Target Goal
+    expect(find.text('Set your daily goal'), findsOneWidget);
+    expect(find.text('PERSONAL STUDY TARGET'), findsOneWidget);
 
     // Tap Continue to Step 5
     await tester.tap(find.text('Continue'));
     await tester.pumpAndSettle();
 
-    // Step 5: Daily Target
-    expect(find.text('Set your Daily Target'), findsOneWidget);
-    expect(find.text('Launch Acedex'), findsOneWidget);
+    // Step 5: Academic Pass
+    expect(find.text('All set, Kenenisa Bekele!'), findsOneWidget);
+    expect(find.text('YOUR ACADEMIC PASS'), findsOneWidget);
+    expect(find.text('Start Learning'), findsOneWidget);
 
-    // Tap Launch Acedex
-    await tester.tap(find.text('Launch Acedex'));
+    // Tap Start Learning
+    await tester.tap(find.text('Start Learning'));
     await tester.pumpAndSettle();
 
     expect(completed, isTrue);

@@ -9,6 +9,29 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.6.0+7] - 2026-11-14
+
+### Added
+- **FigCraft Branded Google Authentication & 5-Step Academic Onboarding Flow**:
+  - Implemented `GoogleAuthScreen` matching exact FigCraft specification: Acedex crest, value proposition highlights, single-tap "Continue with Google" OAuth button, and privacy disclaimers.
+  - Implemented `OnboardingScreen` with 5 interactive stages:
+    - Step 1: Profile Confirmation (Google avatar sync/fallback, full name input, Male/Female selection).
+    - Step 2: Grade Selection (2x2 grid for Grades 9, 10, 11, and 12).
+    - Step 3: Stream Selection (General Foundation for Grades 9–10; Natural Science vs Social Science with subject pills for Grades 11–12).
+    - Step 4: Daily Goal Selection (Interactive chips: 1h, 1.5h, 2h [Recommended], 3h, 4h+).
+    - Step 5: Academic Pass Ticket (Connected badge, student name, email, stream, daily target, EUEE countdown, and "Start Learning" CTA).
+  - Integrated `IntroFlowScreen` sequence: `IntroSplashScreen` ➔ `IntroSlidesScreen` ➔ `GoogleAuthScreen` ➔ `OnboardingScreen` ➔ `MainNavigationShell`.
+  - Added Deep Linking support for mobile OAuth callbacks:
+    - Android: Added `com.aymen.acedex://login-callback` intent filter in `android/app/src/main/AndroidManifest.xml`.
+    - iOS: Added `com.aymen.acedex` URL scheme in `ios/Runner/Info.plist`.
+  - Added Security-Definer RPC `save_onboarding_profile` in Supabase PostgreSQL to safely persist and associate student data with their authenticated Google credentials.
+- **Backend Question Bank Infrastructure & Scaffolding**:
+  - Scaffolding of all 237 assessment JSON files created in `Acedex-Question-Bank/` across Grades 9–12 and all 8 subjects.
+  - Deployed production PostgreSQL assessment schema to Supabase project `kqrkkmyvpziapxpwiqoe`.
+  - Created reusable TypeScript import tool `scripts/import_question_bank.mjs` and imported Grade 9 Physics Units 1 & 2.
+- **Test Suite Expansion**:
+  - 66/66 unit and widget tests passing across all features (`flutter test`).
+
 ## [1.5.0+6] - 2026-11-14
 
 ### Added

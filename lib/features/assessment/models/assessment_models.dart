@@ -200,6 +200,8 @@ class Question {
   final String id;
   final String assessmentVersionId;
   final String chapterId;
+  final String? code;
+  final String? difficulty;
   final String questionText;
   final String questionType;
   final String? imageUrl;
@@ -211,6 +213,8 @@ class Question {
     required this.id,
     required this.assessmentVersionId,
     required this.chapterId,
+    this.code,
+    this.difficulty,
     required this.questionText,
     this.questionType = 'single_choice',
     this.imageUrl,
@@ -232,6 +236,8 @@ class Question {
       id: map['id'] as String,
       assessmentVersionId: map['assessment_version_id'] as String? ?? '',
       chapterId: map['chapter_id'] as String? ?? '',
+      code: map['code'] as String?,
+      difficulty: map['difficulty'] as String?,
       questionText: map['question_text'] as String,
       questionType: map['question_type'] as String? ?? 'single_choice',
       imageUrl: map['image_url'] as String?,

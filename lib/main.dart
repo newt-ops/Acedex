@@ -155,9 +155,7 @@ class _MainNavigationShellState extends ConsumerState<MainNavigationShell> {
         controller: _pageController,
         physics: const NeverScrollableScrollPhysics(),
         children: [
-          TodayScreen(
-            onNavigateToCurriculum: () => _onTabSelected(1),
-          ),
+          TodayScreen(onNavigateToCurriculum: () => _onTabSelected(1)),
           const CurriculumScreen(),
           const PlaceholderTabScreen(
             title: 'Study Analytics',

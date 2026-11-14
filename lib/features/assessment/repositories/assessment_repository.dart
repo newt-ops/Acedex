@@ -82,6 +82,8 @@ class SupabaseAssessmentRepository implements AssessmentRepository {
             questions (
               id,
               chapter_id,
+              code,
+              difficulty,
               question_text,
               image_url,
               points,

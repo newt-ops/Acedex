@@ -13,7 +13,8 @@ class Students extends Table {
   IntColumn get grade => integer()();
   TextColumn get gender => text()();
   TextColumn get stream => text()();
-  IntColumn get dailyGoalMinutes => integer().withDefault(const Constant(120))();
+  IntColumn get dailyGoalMinutes =>
+      integer().withDefault(const Constant(120))();
   IntColumn get streakCount => integer().withDefault(const Constant(0))();
   IntColumn get streakFreezes => integer().withDefault(const Constant(0))();
   DateTimeColumn get lastStudyDate => dateTime().nullable()();
@@ -42,7 +43,8 @@ class Subjects extends Table {
 
 class Chapters extends Table {
   TextColumn get id => text()();
-  TextColumn get subjectId => text().references(Subjects, #id, onDelete: KeyAction.cascade)();
+  TextColumn get subjectId =>
+      text().references(Subjects, #id, onDelete: KeyAction.cascade)();
   IntColumn get chapterNumber => integer()();
   TextColumn get title => text()();
   TextColumn get subtopicsJson => text().nullable()();
@@ -55,7 +57,8 @@ class Chapters extends Table {
 class ChapterProgress extends Table {
   TextColumn get id => text()();
   TextColumn get studentId => text()();
-  TextColumn get chapterId => text().references(Chapters, #id, onDelete: KeyAction.cascade)();
+  TextColumn get chapterId =>
+      text().references(Chapters, #id, onDelete: KeyAction.cascade)();
   TextColumn get status => text().withDefault(const Constant('not_started'))();
   DateTimeColumn get completedAt => dateTime().nullable()();
   DateTimeColumn get masteredAt => dateTime().nullable()();
@@ -139,7 +142,8 @@ class LocalQuestions extends Table {
   TextColumn get assessmentVersionId => text()();
   TextColumn get chapterId => text()();
   TextColumn get questionText => text()();
-  TextColumn get questionType => text().withDefault(const Constant('single_choice'))();
+  TextColumn get questionType =>
+      text().withDefault(const Constant('single_choice'))();
   TextColumn get imageUrl => text().nullable()();
   RealColumn get points => real().withDefault(const Constant(1.0))();
   IntColumn get sortOrder => integer().withDefault(const Constant(0))();
@@ -164,15 +168,20 @@ class LocalAssessmentAttempts extends Table {
   TextColumn get id => text()();
   TextColumn get studentId => text()();
   TextColumn get assessmentVersionId => text()();
-  TextColumn get status => text().withDefault(const Constant('in_progress'))(); // in_progress, submitted, pending_sync
-  BoolColumn get isOfflineSync => boolean().withDefault(const Constant(false))();
-  BoolColumn get timingVerified => boolean().withDefault(const Constant(false))();
+  TextColumn get status => text().withDefault(
+    const Constant('in_progress'),
+  )(); // in_progress, submitted, pending_sync
+  BoolColumn get isOfflineSync =>
+      boolean().withDefault(const Constant(false))();
+  BoolColumn get timingVerified =>
+      boolean().withDefault(const Constant(false))();
   DateTimeColumn get startedAt => dateTime()();
   DateTimeColumn get submittedAt => dateTime().nullable()();
   IntColumn get serverDurationSeconds => integer().nullable()();
   IntColumn get clientReportedDurationSeconds => integer().nullable()();
   TextColumn get idempotencyKey => text()();
-  TextColumn get answersJson => text().nullable()(); // Serialized array of choices
+  TextColumn get answersJson =>
+      text().nullable()(); // Serialized array of choices
 
   @override
   Set<Column> get primaryKey => {id};
@@ -200,21 +209,23 @@ class LocalAssessmentResults extends Table {
   Set<Column> get primaryKey => {id};
 }
 
-@DriftDatabase(tables: [
-  Students,
-  Subjects,
-  Chapters,
-  ChapterProgress,
-  StudySessions,
-  SyncQueue,
-  LocalAssessments,
-  LocalAssessmentVersions,
-  LocalAssessmentVersionChapters,
-  LocalQuestions,
-  LocalQuestionOptions,
-  LocalAssessmentAttempts,
-  LocalAssessmentResults,
-])
+@DriftDatabase(
+  tables: [
+    Students,
+    Subjects,
+    Chapters,
+    ChapterProgress,
+    StudySessions,
+    SyncQueue,
+    LocalAssessments,
+    LocalAssessmentVersions,
+    LocalAssessmentVersionChapters,
+    LocalQuestions,
+    LocalQuestionOptions,
+    LocalAssessmentAttempts,
+    LocalAssessmentResults,
+  ],
+)
 class AppDatabase extends _$AppDatabase {
   AppDatabase([QueryExecutor? e]) : super(e ?? _openConnection());
 
@@ -223,21 +234,21 @@ class AppDatabase extends _$AppDatabase {
 
   @override
   MigrationStrategy get migration => MigrationStrategy(
-        onCreate: (m) async {
-          await m.createAll();
-        },
-        onUpgrade: (m, from, to) async {
-          if (from < 2) {
-            await m.createTable(localAssessments);
-            await m.createTable(localAssessmentVersions);
-            await m.createTable(localAssessmentVersionChapters);
-            await m.createTable(localQuestions);
-            await m.createTable(localQuestionOptions);
-            await m.createTable(localAssessmentAttempts);
-            await m.createTable(localAssessmentResults);
-          }
-        },
-      );
+    onCreate: (m) async {
+      await m.createAll();
+    },
+    onUpgrade: (m, from, to) async {
+      if (from < 2) {
+        await m.createTable(localAssessments);
+        await m.createTable(localAssessmentVersions);
+        await m.createTable(localAssessmentVersionChapters);
+        await m.createTable(localQuestions);
+        await m.createTable(localQuestionOptions);
+        await m.createTable(localAssessmentAttempts);
+        await m.createTable(localAssessmentResults);
+      }
+    },
+  );
 
   static QueryExecutor _openConnection() {
     return LazyDatabase(() async {
