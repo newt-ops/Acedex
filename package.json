@@ -9,7 +9,10 @@
   ],
   "scripts": {
     "dev": "npm run dev --workspace=@acedex/api",
-    "build": "npm run build --workspaces --if-present",
+    "build": "npm run build:api",
+    "build:api": "npm run build --workspace=@acedex/contracts && npm run build --workspace=@acedex/api",
+    "build:web": "npm run build --workspace=@acedex/web",
+    "build:all": "npm run build:api && npm run build:web",
     "test": "npm run test --workspace=@acedex/api",
     "lint": "npm run lint --workspaces --if-present"
   },
