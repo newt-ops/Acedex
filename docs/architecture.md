@@ -6,44 +6,48 @@
 
 Acedex focuses strictly on practice, assessment, habit formation, and performance diagnostics for Grades 9 through 12. It does not attempt to be a digital textbook or generic video LMS.
 
-The system serves two client applications backed by a single unified backend:
-- **Mobile Client:** Android application built with **Flutter / Dart**.
-- **Web Client:** Responsive application built with **Next.js & TypeScript**.
-- **Unified Backend:** Modular monolith built with **Node.js, Express.js, TypeScript**, and **MongoDB Atlas**.
+The system serves two dedicated client applications backed by a single unified backend:
+- **Mobile Client (Student Platform):** Dedicated Android application built with **Flutter / Dart** for Grades 9–12 practice, assessments, results, and study habit tracking.
+- **Web Client (Internal Admin Portal):** Administration and management platform built with **Next.js & TypeScript (App Router)** for managing curriculum, reviewing/importing/publishing 30-item question banks, inspecting student records, configuring assessment rules, and viewing platform analytics.
+- **Unified Backend:** Modular monolith built with **Node.js, Express.js, TypeScript**, and **MongoDB Atlas** hosted on Render.
 
 ```mermaid
 flowchart TD
-    subgraph Clients["Student Clients"]
-        Flutter["Android App (Flutter)"]
-        NextWeb["Web App (Next.js)"]
+    subgraph Clients["Client Applications"]
+        Flutter["Student Mobile App (Flutter)"]
+        NextWeb["Internal Admin Portal (Next.js)"]
     end
 
     subgraph Backend["Unified Backend (Render)"]
         Express["Express.js REST API (/api/v1)"]
-        AuthModule["Auth & Session Module"]
-        CurriculumModule["Curriculum Module"]
+        AuthModule["Auth & RBAC Module"]
+        CurriculumModule["Curriculum & Question Bank Engine"]
         AssessmentModule["Assessment Engine"]
         ProgressModule["Progress & Analytics Engine"]
+        AdminModule["Admin & Audit Services"]
     end
 
     subgraph Data["Database (MongoDB Atlas)"]
-        MongoUsers[("Users & Sessions")]
-        MongoCurriculum[("Curriculum & Questions")]
+        MongoUsers[("Users, Sessions & Audit Logs")]
+        MongoCurriculum[("Subjects, Units & Questions")]
         MongoAnswers[("Protected Answer Keys")]
         MongoAttempts[("Attempts & Progress")]
     end
 
-    Flutter -->|JWT / HTTPS| Express
-    NextWeb -->|HTTP-only Cookies / HTTPS| Express
+    Flutter -->|Bearer JWT / HTTPS| Express
+    NextWeb -->|HTTP-only Cookie / HTTPS| Express
     Express --> AuthModule
     Express --> CurriculumModule
     Express --> AssessmentModule
     Express --> ProgressModule
+    Express --> AdminModule
     AuthModule --> MongoUsers
     CurriculumModule --> MongoCurriculum
     AssessmentModule --> MongoAnswers
     AssessmentModule --> MongoAttempts
     ProgressModule --> MongoAttempts
+    AdminModule --> MongoUsers
+    AdminModule --> MongoCurriculum
 ```
 
 ---

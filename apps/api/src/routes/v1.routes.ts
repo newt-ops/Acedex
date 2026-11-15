@@ -1,13 +1,14 @@
 import { Router } from 'express';
 import { healthRoutes } from '../modules/health/health.routes';
+import { authRoutes } from '../modules/auth/auth.routes';
 
 const router = Router();
 
 // Health and Diagnostics
 router.use('/health', healthRoutes);
 
-// Modular Mounts (Prepared for Phase 2+)
-// router.use('/auth', authRoutes);
+// Authentication & Identity
+router.use('/auth', authRoutes);
 // router.use('/curriculum', curriculumRoutes);
 // router.use('/assessments', assessmentRoutes);
 // router.use('/progress', progressRoutes);

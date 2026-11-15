@@ -21,17 +21,21 @@ export function validate(schema: RequestValidationSchema) {
         req.params = await schema.params.parseAsync(req.params);
       }
       next();
-    } catch (error) {
-      if (error instanceof ZodError) {
-        const details = error.errors.map((err) => ({
-          field: err.path.join('.'),
+    } catch (error: any) {
+      if (
+        error instanceof ZodError ||
+        error?.name === 'ZodError' ||
+        Array.isArray(error?.issues)
+      ) {
+        const issues = error.issues || error.errors || [];
+        const details = issues.map((err: any) => ({
+          field: Array.isArray(err.path) ? err.path.join('.') : err.path,
           message: err.message,
           code: err.code,
         }));
-        next(new ValidationError('Request validation failed', details));
-      } else {
-        next(error);
+        return next(new ValidationError('Request validation failed', details));
       }
+      next(error);
     }
   };
 }

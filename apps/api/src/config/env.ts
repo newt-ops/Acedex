@@ -20,6 +20,7 @@ const envSchema = z.object({
   GOOGLE_CLIENT_ID: z.string().optional(),
   GOOGLE_CLIENT_SECRET: z.string().optional(),
   GOOGLE_ANDROID_CLIENT_ID: z.string().optional(),
+  ADMIN_EMAILS: z.string().optional().default('aymenmubarek10@gmail.com'),
 });
 
 const parsed = envSchema.safeParse(process.env);
@@ -30,6 +31,12 @@ if (!parsed.success) {
 }
 
 export const env = parsed.data;
+
+export const adminEmails: string[] = env.ADMIN_EMAILS
+  ? env.ADMIN_EMAILS.split(',')
+      .map((email) => email.trim().toLowerCase())
+      .filter(Boolean)
+  : [];
 
 // In production, enforce MONGODB_URI
 if (env.NODE_ENV === 'production' && !env.MONGODB_URI) {

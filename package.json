@@ -16,6 +16,7 @@
     "test": "npm run test --workspace=@acedex/api",
     "test:mobile": "cd apps/mobile && flutter test",
     "test:all": "npm run test --workspace=@acedex/api && cd apps/mobile && flutter test",
+    "admin:promote": "npm run admin:promote --workspace=@acedex/api --",
     "lint": "npm run lint --workspaces --if-present"
   },
   "keywords": [

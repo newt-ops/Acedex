@@ -32,8 +32,9 @@ Stores student and staff accounts. Initially populated via Google OAuth 2.0 veri
   email: String,              // Normalized lower-case email (indexed, unique)
   displayName: String,        // Verified name from Google profile
   avatarUrl: String,          // Profile picture URL
-  role: 'student' | 'admin' | 'content_creator', // Default: 'student'
+  role: 'student' | 'content_manager' | 'admin' | 'super_admin', // Default: 'student'
   status: 'active' | 'suspended' | 'pending_deletion', // Default: 'active'
+  lastLoginAt: ISODate,
   createdAt: ISODate,
   updatedAt: ISODate
 }
@@ -224,6 +225,31 @@ Aggregated progress summary per student, maintained incrementally to ensure rapi
 **Indexes:**
 - `{ userId: 1 }` (unique)
 - `{ updatedAt: -1 }`
+
+---
+
+### 2.8 `audit_logs` Collection
+Records security and administrative activities (logins, role changes, question bank imports, deletions).
+
+```typescript
+{
+  _id: ObjectId,
+  userId: ObjectId,           // Optional reference to users._id
+  userEmail: String,
+  action: String,             // e.g. "USER_LOGIN", "ROLE_UPDATED", "QUESTION_BANK_IMPORTED"
+  resource: String,           // e.g. "auth", "users", "curriculum", "question_bank"
+  resourceId: String,
+  details: Object,            // Arbitrary metadata payload
+  ipAddress: String,
+  userAgent: String,
+  timestamp: ISODate
+}
+```
+
+**Indexes:**
+- `{ action: 1, timestamp: -1 }`
+- `{ userId: 1, timestamp: -1 }`
+- `{ resource: 1, resourceId: 1 }`
 
 ---
 

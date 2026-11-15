@@ -9,12 +9,12 @@ This document tracks development across all phases as defined in the master plan
 | Phase | Milestone | Focus Area | Status |
 |:---:|---|---|:---:|
 | **1** | **Backend Foundation** | Project setup, Express, TypeScript, MongoDB layer, health checks, error handling, tests | **COMPLETED** |
-| **2** | **Authentication & Sessions** | Google OAuth token verification, MongoDB User model, JWT access/refresh rotation | *UP NEXT* |
-| **3** | **Curriculum & Question Banks** | Grades, Subjects, Units APIs, Question Bank models, 30-item JSON importer & validation | *PLANNED* |
+| **2** | **Authentication & RBAC** | Google OAuth token verification, User model, JWT access/refresh rotation, RBAC, audit logging | **COMPLETED** |
+| **3** | **Curriculum & Question Banks** | Grades, Subjects, Units APIs, Question Bank models, 30-item JSON importer & validation | *IN PROGRESS* |
 | **4** | **Assessment Engine** | Question delivery, server-side scoring, protected answer isolation, idempotency | *PLANNED* |
 | **5** | **Student Progress** | Progress tracking, score history, subject/unit analytics APIs | *PLANNED* |
-| **6** | **Cloud Deployment** | Render backend deployment, MongoDB Atlas production setup, OpenAPI/Swagger | *PLANNED* |
-| **7** | **Client Integration** | Flutter Android application & Next.js Web application integration | *PLANNED* |
+| **6** | **Cloud Deployment** | Render backend deployment, MongoDB Atlas production setup, OpenAPI/Swagger | *IN PROGRESS* |
+| **7** | **Client Applications** | Flutter Student Mobile App & Next.js Admin Management Portal | *PLANNED* |
 
 ---
 
@@ -36,23 +36,30 @@ This document tracks development across all phases as defined in the master plan
 
 ---
 
-### Phase 2 — Authentication (Up Next)
-**Goal:** Enable seamless, secure student sign-in using Google accounts across Web and Android.
+### Phase 2 — Authentication, Sessions & RBAC (COMPLETED)
+**Goal:** Enable seamless, secure student sign-in using Google accounts across Web and Android, with strict role-based access control and session management.
 
-**Tasks:**
-1. Install `google-auth-library` and `jsonwebtoken`.
-2. Define MongoDB `User` and `RefreshToken` schemas & Mongoose models.
-3. Implement `AuthService.verifyGoogleIdToken(idToken: string)`.
-4. Implement user upsert logic (match by verified Google `sub` ID).
-5. Implement dual-token issuance:
-   - 15-minute Access Token (JWT).
-   - 7-day Refresh Token (cryptographic hash in MongoDB).
-6. Implement refresh token rotation with reuse detection.
-7. Implement `POST /api/v1/auth/google`, `POST /api/v1/auth/refresh`, `POST /api/v1/auth/logout`, `GET /api/v1/auth/me`.
-8. Write authentication middleware (`requireAuth`, `requireRole`).
-9. Add automated unit and integration tests for authentication flows.
-
----
+**Delivered Tasks:**
+- [x] Installed `google-auth-library` and `jsonwebtoken` with TypeScript definitions.
+- [x] Defined MongoDB `User`, `RefreshToken`, and `AuditLog` schemas & Mongoose models.
+- [x] Implemented `AuthService.verifyGoogleIdToken` with multi-client support (Web and Android Client IDs).
+- [x] Implemented user registration/login upsert logic (matching on verified Google `sub` ID).
+- [x] Implemented dual-token issuance:
+  - 15-minute Access Token (JWT).
+  - 7-day Refresh Token (cryptographic SHA-256 hash in MongoDB with TTL expiry index).
+- [x] Implemented refresh token rotation with token family reuse detection (revoking entire family on replay attacks).
+- [x] Implemented session endpoints:
+  - `POST /api/v1/auth/google` (Sign-in / sign-up via Google ID token).
+  - `POST /api/v1/auth/refresh` (Session rotation via refresh token).
+  - `POST /api/v1/auth/logout` (Session revocation and cookie clearing).
+  - `GET /api/v1/auth/me` (Authenticated user profile).
+- [x] Implemented security middlewares:
+  - `requireAuth` (validates Bearer token or cookie, populates `req.user`).
+  - `requireRole(...roles)` (enforces strict RBAC: student, content_manager, admin, super_admin).
+- [x] Implemented admin bootstrapping:
+  - Auto-promotion for whitelisted emails (`ADMIN_EMAILS`).
+  - CLI script `npm run admin:promote -- <email> <role>` for manual promotion.
+- [x] Automated test suite: 19/19 tests passing across 5 test suites.
 
 ### Phase 3 — Curriculum and Question Banks
 **Goal:** Ingest and manage Grade 9–12 subjects, units, and approved 30-question banks.

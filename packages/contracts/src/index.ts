@@ -69,10 +69,19 @@ export interface HealthCheckResponse {
 // 3. User & Authentication Contracts
 // ==========================================
 
-export const UserRoleSchema = z.enum(['student', 'admin', 'content_creator']);
+export const UserRoleSchema = z.enum([
+  'student',
+  'content_manager',
+  'admin',
+  'super_admin',
+]);
 export type UserRole = z.infer<typeof UserRoleSchema>;
 
-export const AccountStatusSchema = z.enum(['active', 'suspended', 'pending_deletion']);
+export const AccountStatusSchema = z.enum([
+  'active',
+  'suspended',
+  'pending_deletion',
+]);
 export type AccountStatus = z.infer<typeof AccountStatusSchema>;
 
 export const AuthProviderSchema = z.enum(['google']);
@@ -80,13 +89,19 @@ export type AuthProvider = z.infer<typeof AuthProviderSchema>;
 
 export const GoogleAuthRequestSchema = z.object({
   idToken: z.string().min(1, 'Google ID token is required'),
+  platform: z.enum(['web', 'android', 'ios']).optional(),
 });
 export type GoogleAuthRequest = z.infer<typeof GoogleAuthRequestSchema>;
+
+export const RefreshTokenRequestSchema = z.object({
+  refreshToken: z.string().min(1).optional(),
+});
+export type RefreshTokenRequest = z.infer<typeof RefreshTokenRequestSchema>;
 
 export interface AuthTokens {
   accessToken: string;
   refreshToken?: string;
-  expiresIn: number;
+  expiresIn: number; // in seconds
 }
 
 export interface AuthUserProfile {
@@ -96,6 +111,7 @@ export interface AuthUserProfile {
   avatarUrl?: string;
   role: UserRole;
   status: AccountStatus;
+  lastLoginAt?: string;
   createdAt: string;
   updatedAt: string;
 }
@@ -106,8 +122,16 @@ export interface AuthResponseData {
 }
 
 // ==========================================
-// 4. Question Bank & Curriculum Contracts
+// 4. Curriculum, Publication & Question Banks
 // ==========================================
+
+export const PublicationStatusSchema = z.enum([
+  'draft',
+  'in_review',
+  'published',
+  'archived',
+]);
+export type PublicationStatus = z.infer<typeof PublicationStatusSchema>;
 
 export const QuestionDifficultySchema = z.enum(['easy', 'medium', 'challenging']);
 export type QuestionDifficulty = z.infer<typeof QuestionDifficultySchema>;
@@ -169,3 +193,20 @@ export const AssessmentSubmissionSchema = z.object({
   durationSeconds: z.number().int().nonnegative().optional(),
 });
 export type AssessmentSubmission = z.infer<typeof AssessmentSubmissionSchema>;
+
+// ==========================================
+// 6. Audit Logging Contracts
+// ==========================================
+
+export interface AuditLogEntry {
+  id: string;
+  userId?: string;
+  userEmail?: string;
+  action: string;
+  resource: string;
+  resourceId?: string;
+  details?: Record<string, unknown>;
+  ipAddress?: string;
+  userAgent?: string;
+  timestamp: string;
+}

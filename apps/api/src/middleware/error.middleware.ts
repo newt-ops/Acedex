@@ -30,6 +30,16 @@ export function errorHandler(
     code = 'MALFORMED_JSON';
     message = 'Invalid JSON in request payload';
   }
+  // 3. Zod Schema Validation Error
+  else if (err.name === 'ZodError' || 'issues' in (err as any)) {
+    statusCode = 422;
+    code = 'VALIDATION_ERROR';
+    message = 'Request validation failed';
+    details = (err as any).issues?.map((e: any) => ({
+      field: Array.isArray(e.path) ? e.path.join('.') : e.path,
+      message: e.message,
+    }));
+  }
   // 3. Mongoose Validation Error
   else if (err instanceof mongoose.Error.ValidationError) {
     statusCode = 422;
