@@ -21,7 +21,7 @@ export default function AdminHomePage() {
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    const url = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000';
+    const url = process.env.NEXT_PUBLIC_API_URL || 'https://acedex-api.onrender.com';
     setApiUrl(url);
     checkHealth(url);
   }, []);

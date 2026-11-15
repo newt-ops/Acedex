@@ -118,6 +118,15 @@ Runs all Vitest unit and integration test suites (health probes, error handling,
 
 ---
 
+## 🌐 Live Deployments
+
+- **Backend API (Render):** [https://acedex-api.onrender.com](https://acedex-api.onrender.com)
+  - Health check: [https://acedex-api.onrender.com/health](https://acedex-api.onrender.com/health)
+  - API v1 Root: [https://acedex-api.onrender.com/api/v1](https://acedex-api.onrender.com/api/v1)
+- **Admin Web Portal (Vercel):** [https://acedex.vercel.app](https://acedex.vercel.app)
+
+---
+
 ## 🔍 API Verification
 
 Once the server is running on port 5000:
