@@ -73,4 +73,14 @@ export class CurriculumController {
       { total: questions.length }
     );
   }
+
+  public static async getOfflinePack(
+    req: AuthenticatedRequest,
+    res: Response
+  ): Promise<Response> {
+    const userId = req.user!.id;
+    const unitId = req.params.unitId as string;
+    const pack = await CurriculumService.getOfflinePack(userId, unitId);
+    return sendSuccess(res, pack, 200);
+  }
 }

@@ -1,6 +1,6 @@
 import { Router } from 'express';
 import { CurriculumController } from './curriculum.controller';
-import { optionalAuth } from '../../middleware/auth.middleware';
+import { requireAuth, optionalAuth } from '../../middleware/auth.middleware';
 import { asyncHandler } from '../../common/utils/async-handler';
 
 const router = Router();
@@ -13,6 +13,11 @@ router.get(
   '/units/:unitId/questions',
   optionalAuth,
   asyncHandler(CurriculumController.getQuestionsForUnit)
+);
+router.get(
+  '/units/:unitId/offline-pack',
+  requireAuth,
+  asyncHandler(CurriculumController.getOfflinePack)
 );
 
 export const curriculumRoutes = router;

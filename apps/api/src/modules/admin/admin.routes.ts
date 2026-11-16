@@ -1,8 +1,10 @@
 import { Router } from 'express';
 import { z } from 'zod';
 import { AdminController } from './admin.controller';
+import { AdminAdsController } from '../ads/admin-ads.controller';
 import { requireAuth, requireRole } from '../../middleware/auth.middleware';
 import { validate } from '../../middleware/validate';
+import { asyncHandler } from '../../common/utils/async-handler';
 import { PublicationStatusSchema } from '@acedex/contracts';
 
 const router = Router();
@@ -40,6 +42,12 @@ router.patch(
   }),
   AdminController.updateStudentStatus
 );
+
+// Rewarded Ads Analytics & Remote Configuration
+router.get('/ads/analytics', asyncHandler(AdminAdsController.getAnalytics));
+router.get('/ads/sessions', asyncHandler(AdminAdsController.getSessions));
+router.get('/ads/config', asyncHandler(AdminAdsController.getConfig));
+router.put('/ads/config', asyncHandler(AdminAdsController.updateConfig));
 
 // System Audit Logs
 router.get('/audit-logs', AdminController.listAuditLogs);
