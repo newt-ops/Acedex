@@ -9,6 +9,7 @@ import { notFoundHandler } from './middleware/not-found';
 import { errorHandler } from './middleware/error.middleware';
 import { v1Routes } from './routes/v1.routes';
 import { HealthController } from './modules/health/health.controller';
+import { API_VERSION } from './config/version';
 
 export function createApp(): Application {
   const app = express();
@@ -40,6 +41,12 @@ export function createApp(): Application {
   // 3. Response Compression (Gzip / Deflate for fast mobile bandwidth savings)
   app.use(compression());
 
+  // Attach API Version header for client synchronization
+  app.use((_req: Request, res: Response, next) => {
+    res.setHeader('X-API-Version', API_VERSION);
+    next();
+  });
+
   // 3. Request Parsers
   app.use(express.json({ limit: '10mb' }));
   app.use(express.urlencoded({ extended: true, limit: '10mb' }));
@@ -57,7 +64,7 @@ export function createApp(): Application {
     res.json({
       name: 'Acedex API',
       description: 'EUEE Study Management and Assessment Platform API',
-      version: '1.0.0',
+      version: API_VERSION,
       environment: env.NODE_ENV,
       endpoints: {
         health: '/health',
