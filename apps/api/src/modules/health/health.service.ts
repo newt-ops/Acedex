@@ -1,6 +1,7 @@
 import { HealthCheckResponse } from '@acedex/contracts';
 import { getDatabaseStatus } from '../../config/database';
 import { env } from '../../config/env';
+import { API_VERSION } from '../../config/version';
 
 export class HealthService {
   public static getHealth(): HealthCheckResponse {
@@ -17,7 +18,7 @@ export class HealthService {
       timestamp: new Date().toISOString(),
       uptimeSeconds: Math.floor(process.uptime()),
       environment: env.NODE_ENV,
-      version: '1.0.0',
+      version: API_VERSION,
       database: dbStatus,
       memory: {
         heapUsedMB: Math.round((mem.heapUsed / 1024 / 1024) * 100) / 100,

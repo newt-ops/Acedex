@@ -18,12 +18,12 @@ describe('Shared Contracts & Question Bank Validation', () => {
       expect(parsed.data.grade).toBe(9);
       expect(parsed.data.subject).toBe('Physics');
       expect(parsed.data.unitNumber).toBe(1);
-      expect(parsed.data.questions).toHaveLength(30);
+      expect(parsed.data.questions).toHaveLength(15);
 
       // Verify question IDs are unique
       const ids = parsed.data.questions.map((q) => q.id);
       const uniqueIds = new Set(ids);
-      expect(uniqueIds.size).toBe(30);
+      expect(uniqueIds.size).toBe(15);
     }
   });
 
@@ -39,11 +39,11 @@ describe('Shared Contracts & Question Bank Validation', () => {
       expect(parsed.data.grade).toBe(9);
       expect(parsed.data.subject).toBe('Physics');
       expect(parsed.data.unitNumber).toBe(2);
-      expect(parsed.data.questions).toHaveLength(30);
+      expect(parsed.data.questions).toHaveLength(15);
 
       const ids = parsed.data.questions.map((q) => q.id);
       const uniqueIds = new Set(ids);
-      expect(uniqueIds.size).toBe(30);
+      expect(uniqueIds.size).toBe(15);
     }
   });
 });

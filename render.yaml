@@ -35,3 +35,17 @@ services:
         sync: false
       - key: GOOGLE_ANDROID_CLIENT_ID
         sync: false
+      - key: UNITY_ADS_ANDROID_GAME_ID
+        value: "6220248"
+      - key: UNITY_ADS_IOS_GAME_ID
+        value: "6220249"
+      - key: UNITY_ADS_ANDROID_PLACEMENT
+        value: "Rewarded_Android"
+      - key: UNITY_ADS_IOS_PLACEMENT
+        value: "Rewarded_iOS"
+      - key: UNITY_ADS_SECRET_KEY
+        sync: false
+      - key: UNITY_ADS_S2S_REQUIRED
+        value: "false"
+      - key: REQUIRE_EXAM_TICKET
+        value: "false"

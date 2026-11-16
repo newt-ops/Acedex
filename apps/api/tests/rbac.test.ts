@@ -89,12 +89,12 @@ describe('RBAC Middleware', () => {
       env.JWT_ACCESS_SECRET,
       { expiresIn: '15m' }
     );
-  });
+  }, 30000);
 
   afterAll(async () => {
     await UserModel.deleteMany({ email: { $regex: /^test-rbac-/ } });
     await disconnectDatabase();
-  });
+  }, 30000);
 
   it('GET /test-rbac/admin-only should reject unauthenticated requests with 401', async () => {
     const res = await request(app).get('/test-rbac/admin-only');

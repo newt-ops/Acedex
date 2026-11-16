@@ -11,6 +11,9 @@ const stateMap: Record<number, DatabaseConnectionState> = {
   99: 'uninitialized',
 };
 
+// Configure mongoose global settings for resilient remote connections
+mongoose.set('bufferTimeoutMS', 30000);
+
 // Configure event listeners on the default mongoose connection
 mongoose.connection.on('connected', () => {
   logger.info(
@@ -55,13 +58,13 @@ export async function connectDatabase(customUri?: string): Promise<boolean> {
     logger.info('Connecting to MongoDB Atlas...');
     await mongoose.connect(uri, {
       autoIndex: env.NODE_ENV !== 'production',
-      serverSelectionTimeoutMS: 15000,
+      serverSelectionTimeoutMS: 30000,
       maxPoolSize: 10,
     });
     return true;
   } catch (error) {
     logger.error({ error }, 'Failed to connect to MongoDB');
-    if (env.NODE_ENV === 'production') {
+    if (env.NODE_ENV === 'production' || process.env.NODE_ENV === 'test') {
       throw error;
     }
     return false;
