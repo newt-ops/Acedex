@@ -1,0 +1,413 @@
+{
+  "grade": 9,
+  "subject": "Physics",
+  "unitNumber": 2,
+  "unitTitle": "Physical Quantities",
+  "questions": [
+    {
+      "id": "PHY-G09-U02-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is defined as a set of numbers or amounts marked on a measuring device used to measure or compare the level of something?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Scale"
+        },
+        {
+          "id": "B",
+          "text": "Vector"
+        },
+        {
+          "id": "C",
+          "text": "Prefix"
+        },
+        {
+          "id": "D",
+          "text": "Dimension"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "A scale on a measuring device consists of a set of numbers, markings, or amounts used to measure or compare the level of a physical property.",
+      "sourceReference": "Section 2.1, Page 12, 15"
+    },
+    {
+      "id": "PHY-G09-U02-Q002",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which of the following is a traditional, non-standard unit historically used in communities to measure length or mass rather than an internationally accepted standard?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Meter"
+        },
+        {
+          "id": "B",
+          "text": "Kilogram"
+        },
+        {
+          "id": "C",
+          "text": "Feresula"
+        },
+        {
+          "id": "D",
+          "text": "Second"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Units like the hand span, cubit, pace, and feresula are traditional measuring units that lack fixed international standards and vary under different conditions.",
+      "sourceReference": "Section 2.1, Page 16"
+    },
+    {
+      "id": "PHY-G09-U02-Q003",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How is the standard SI unit of length, the meter (m), scientifically defined?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The length of an alloy bar kept at a constant temperature in Paris"
+        },
+        {
+          "id": "B",
+          "text": "The distance traveled by light in a vacuum during a time interval of 1/299,792,458 of a second"
+        },
+        {
+          "id": "C",
+          "text": "One ten-millionth of the distance from the Earth's equator to the North Pole"
+        },
+        {
+          "id": "D",
+          "text": "The total length of 9,192,631,770 wavelengths of cesium radiation"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The meter is defined as the distance traveled by light in a vacuum during a time of 1/299,792,458 of a second.",
+      "sourceReference": "Section 2.1, Page 17–18"
+    },
+    {
+      "id": "PHY-G09-U02-Q004",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "The standard SI unit of time, the second (s), is defined based on:",
+      "options": [
+        {
+          "id": "A",
+          "text": "The daily rotation of the Earth on its axis"
+        },
+        {
+          "id": "B",
+          "text": "The yearly revolution of the Earth around the Sun"
+        },
+        {
+          "id": "C",
+          "text": "9,192,631,770 times the period of vibration of radiation from the cesium-133 atom"
+        },
+        {
+          "id": "D",
+          "text": "The period of a one-meter simple pendulum swinging at sea level"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "One second is defined as exactly 9,192,631,770 times the period of vibration of the radiation emitted by the cesium-133 atom.",
+      "sourceReference": "Section 2.1, Page 17–18"
+    },
+    {
+      "id": "PHY-G09-U02-Q005",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Under the revised SI standard, the kilogram (kg) is defined by fixing the numerical value of which fundamental physical constant?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The gravitational constant (G)"
+        },
+        {
+          "id": "B",
+          "text": "The Planck constant (h)"
+        },
+        {
+          "id": "C",
+          "text": "The speed of light (c)"
+        },
+        {
+          "id": "D",
+          "text": "The Boltzmann constant (k_B)"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The kilogram is defined by taking the fixed numerical value of the Planck constant h = 6.62607015 × 10^-34 expressed in units of J·s (kg·m^2/s).",
+      "sourceReference": "Section 2.1, Page 18"
+    },
+    {
+      "id": "PHY-G09-U02-Q006",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is the number 0.00000324 written in scientific notation?",
+      "options": [
+        {
+          "id": "A",
+          "text": "3.24 × 10^-6"
+        },
+        {
+          "id": "B",
+          "text": "3.24 × 10^-5"
+        },
+        {
+          "id": "C",
+          "text": "32.4 × 10^-7"
+        },
+        {
+          "id": "D",
+          "text": "0.324 × 10^-5"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "In scientific notation d × 10^n, the decimal is moved 6 places to the right to obtain 3.24, giving 3.24 × 10^-6.",
+      "sourceReference": "Section 2.1, Page 18"
+    },
+    {
+      "id": "PHY-G09-U02-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How many significant figures are in the numbers 2000 and 2000.0, respectively?",
+      "options": [
+        {
+          "id": "A",
+          "text": "1 and 1"
+        },
+        {
+          "id": "B",
+          "text": "4 and 5"
+        },
+        {
+          "id": "C",
+          "text": "1 and 5"
+        },
+        {
+          "id": "D",
+          "text": "4 and 1"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "In 2000, trailing zeros without a decimal point are not significant, giving 1 significant figure. In 2000.0, zeros at the end of the decimal part are significant, giving 5 significant figures.",
+      "sourceReference": "Section 2.1, Page 19"
+    },
+    {
+      "id": "PHY-G09-U02-Q008",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "When adding experimentally measured values 9.65 cm and 8.4 cm, what is the correct result adhering to the rule of significant figures?",
+      "options": [
+        {
+          "id": "A",
+          "text": "18.05 cm"
+        },
+        {
+          "id": "B",
+          "text": "18.1 cm"
+        },
+        {
+          "id": "C",
+          "text": "18 cm"
+        },
+        {
+          "id": "D",
+          "text": "18.0 cm"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In addition or subtraction, the result cannot have more decimal places than the term with the fewest decimal places. Since 8.4 cm has one decimal place, 9.65 + 8.4 = 18.05 rounds to 18.1 cm.",
+      "sourceReference": "Section 2.1, Page 19"
+    },
+    {
+      "id": "PHY-G09-U02-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What is the product of 8.65 (three significant figures) and 2.035 (four significant figures) expressed with the proper number of significant digits?",
+      "options": [
+        {
+          "id": "A",
+          "text": "17.758"
+        },
+        {
+          "id": "B",
+          "text": "17.76"
+        },
+        {
+          "id": "C",
+          "text": "17.8"
+        },
+        {
+          "id": "D",
+          "text": "18"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "In multiplication, the product must retain the same number of significant figures as the term with the smallest number of significant figures (8.65 has 3). Thus, 17.75845 rounds to 17.8.",
+      "sourceReference": "Section 2.1, Page 19"
+    },
+    {
+      "id": "PHY-G09-U02-Q010",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which prefix corresponds to a multiplier factor of 10^-9?",
+      "options": [
+        {
+          "id": "A",
+          "text": "micro (μ)"
+        },
+        {
+          "id": "B",
+          "text": "milli (m)"
+        },
+        {
+          "id": "C",
+          "text": "pico (p)"
+        },
+        {
+          "id": "D",
+          "text": "nano (n)"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "The prefix 'nano' (symbol n) represents a multiplier of 10^-9 (one-billionth).",
+      "sourceReference": "Section 2.1, Page 20"
+    },
+    {
+      "id": "PHY-G09-U02-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which three key elements are essential to any measurement process?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The physical quantity, the measuring tool, and the standard unit"
+        },
+        {
+          "id": "B",
+          "text": "The observer, the laboratory space, and the ambient temperature"
+        },
+        {
+          "id": "C",
+          "text": "The mathematical formula, the calculator, and the graph"
+        },
+        {
+          "id": "D",
+          "text": "The direction, the vector angle, and the coordinate origin"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The measurement process consists of three key elements: the physical quantity to be measured, the necessary measuring tools, and the units of measurement used.",
+      "sourceReference": "Section 2.2, Page 21"
+    },
+    {
+      "id": "PHY-G09-U02-Q012",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Every measured physical quantity consists of which two essential parts?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A direction and an arrow"
+        },
+        {
+          "id": "B",
+          "text": "A numerical value (magnitude) and a unit"
+        },
+        {
+          "id": "C",
+          "text": "A formula and a constant"
+        },
+        {
+          "id": "D",
+          "text": "A scale factor and an error margin"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Every physical quantity is expressed as a numerical value (its magnitude) accompanied by an appropriate unit of measurement.",
+      "sourceReference": "Section 2.2, Page 23"
+    },
+    {
+      "id": "PHY-G09-U02-Q013",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which instrument is best suited for measuring the diameter of a thin electric wire or a small spherical marble with high precision?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Meter tape"
+        },
+        {
+          "id": "B",
+          "text": "Micrometer screw gauge or Vernier caliper"
+        },
+        {
+          "id": "C",
+          "text": "Beam balance"
+        },
+        {
+          "id": "D",
+          "text": "Standard measuring stick"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "A Vernier caliper or a micrometer screw gauge is designed to measure small dimensions such as the diameter of wires, spheres, or sheet thicknesses precisely.",
+      "sourceReference": "Section 2.2, Page 21–22"
+    },
+    {
+      "id": "PHY-G09-U02-Q014",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is the scientific definition of mass, and what laboratory instrument is primarily used to measure it?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The gravitational force on an object; measured using a stopwatch"
+        },
+        {
+          "id": "B",
+          "text": "The amount of space occupied by an object; measured using a graduated cylinder"
+        },
+        {
+          "id": "C",
+          "text": "The amount of matter contained in a body; measured using a beam balance"
+        },
+        {
+          "id": "D",
+          "text": "The weight of a body per unit volume; measured using a spring balance"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Mass is defined as the amount of matter contained in a body, and in scientific practice it is measured using a beam balance.",
+      "sourceReference": "Section 2.2, Page 24"
+    },
+    {
+      "id": "PHY-G09-U02-Q015",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is the name of a traditional device that estimates the time of day using the shadow cast by an upright object onto a marked flat surface?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Sundial"
+        },
+        {
+          "id": "B",
+          "text": "Stopwatch"
+        },
+        {
+          "id": "C",
+          "text": "Barometer"
+        },
+        {
+          "id": "D",
+          "text": "Beam balance"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "A sundial is a traditional clock that indicates the time of day by the shadow of an upright object falling onto a surface marked with hours.",
+      "sourceReference": "Section 2.2, Page 24–25"
+    }
+  ]
+}

@@ -1,5 +1,11 @@
 import { Response } from 'express';
-import { GoogleAuthRequest, RefreshTokenRequest } from '@acedex/contracts';
+import {
+  GoogleAuthRequest,
+  RefreshTokenRequest,
+  PhoneRegisterRequest,
+  PhoneLoginRequest,
+  ChangePinRequest,
+} from '@acedex/contracts';
 import { AuthService } from './auth.service';
 import { AuthenticatedRequest } from '../../middleware/auth.middleware';
 import { sendSuccess } from '../../common/utils/response';
@@ -19,6 +25,62 @@ export class AuthController {
       maxAge: SEVEN_DAYS_MS,
       path: '/',
     });
+  }
+
+  /**
+   * Student registration with phone, PIN, name, gender, grade, and stream.
+   */
+  public static async registerPhone(
+    req: AuthenticatedRequest,
+    res: Response
+  ): Promise<Response> {
+    const body = req.body as PhoneRegisterRequest;
+
+    const result = await AuthService.registerWithPhone(
+      body,
+      req.ip,
+      req.headers['user-agent']
+    );
+
+    return sendSuccess(res, result, 201);
+  }
+
+  /**
+   * Student login with phone and PIN.
+   */
+  public static async loginPhone(
+    req: AuthenticatedRequest,
+    res: Response
+  ): Promise<Response> {
+    const body = req.body as PhoneLoginRequest;
+
+    const result = await AuthService.loginWithPhone(
+      body,
+      req.ip,
+      req.headers['user-agent']
+    );
+
+    return sendSuccess(res, result, 200);
+  }
+
+  /**
+   * Authenticated PIN change.
+   */
+  public static async changePin(
+    req: AuthenticatedRequest,
+    res: Response
+  ): Promise<Response> {
+    const { currentPin, newPin } = req.body as ChangePinRequest;
+
+    const result = await AuthService.changePin(
+      req.user!.id,
+      currentPin,
+      newPin,
+      req.ip,
+      req.headers['user-agent']
+    );
+
+    return sendSuccess(res, result, 200);
   }
 
   public static async google(
