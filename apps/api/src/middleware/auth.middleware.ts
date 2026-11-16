@@ -56,6 +56,29 @@ export async function requireAuth(
   }
 }
 
+export async function optionalAuth(
+  req: AuthenticatedRequest,
+  _res: Response,
+  next: NextFunction
+): Promise<void> {
+  const authHeader = req.headers.authorization;
+  if (!authHeader || !authHeader.startsWith('Bearer ')) {
+    return next();
+  }
+
+  const token = authHeader.split(' ')[1];
+  try {
+    const decoded = jwt.verify(token, env.JWT_ACCESS_SECRET) as JwtPayload;
+    const user = await UserModel.findById(decoded.sub);
+    if (user && user.status !== 'suspended') {
+      req.user = AuthService.mapUserToProfile(user);
+    }
+    next();
+  } catch {
+    next();
+  }
+}
+
 export function requireRole(...allowedRoles: UserRole[]) {
   return (req: AuthenticatedRequest, _res: Response, next: NextFunction): void => {
     if (!req.user) {

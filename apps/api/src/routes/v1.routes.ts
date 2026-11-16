@@ -1,6 +1,7 @@
 import { Router } from 'express';
 import { healthRoutes } from '../modules/health/health.routes';
 import { authRoutes } from '../modules/auth/auth.routes';
+import { curriculumRoutes } from '../modules/curriculum/curriculum.routes';
 
 const router = Router();
 
@@ -9,7 +10,9 @@ router.use('/health', healthRoutes);
 
 // Authentication & Identity
 router.use('/auth', authRoutes);
-// router.use('/curriculum', curriculumRoutes);
+
+// Curriculum & Question Bank
+router.use('/curriculum', curriculumRoutes);
 // router.use('/assessments', assessmentRoutes);
 // router.use('/progress', progressRoutes);
 
