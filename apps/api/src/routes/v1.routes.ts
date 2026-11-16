@@ -4,6 +4,7 @@ import { authRoutes } from '../modules/auth/auth.routes';
 import { curriculumRoutes } from '../modules/curriculum/curriculum.routes';
 import assessmentRoutes from '../modules/assessments/assessment.routes';
 import progressRoutes from '../modules/progress/progress.routes';
+import adminRoutes from '../modules/admin/admin.routes';
 
 const router = Router();
 
@@ -21,5 +22,8 @@ router.use('/assessments', assessmentRoutes);
 
 // Student Progress & Analytics
 router.use('/progress', progressRoutes);
+
+// Administration & Management (Protected with RBAC)
+router.use('/admin', adminRoutes);
 
 export const v1Routes = router;
