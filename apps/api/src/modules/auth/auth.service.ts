@@ -1,12 +1,16 @@
 import crypto from 'crypto';
 import jwt from 'jsonwebtoken';
+import bcrypt from 'bcryptjs';
 import { OAuth2Client } from 'google-auth-library';
 import {
   AuthTokens,
   AuthUserProfile,
   UserRole,
+  PhoneRegisterRequest,
+  PhoneLoginRequest,
+  normalizeEthiopianPhone,
 } from '@acedex/contracts';
-import { UserModel, IUser } from '../users/user.model';
+import { UserModel, IUser, generateUniqueAcedexId } from '../users/user.model';
 import { RefreshTokenModel } from './refresh-token.model';
 import { AuditService } from '../audit/audit.service';
 import { env, adminEmails } from '../../config/env';
@@ -14,6 +18,8 @@ import {
   UnauthorizedError,
   ForbiddenError,
   NotFoundError,
+  ConflictError,
+  BadRequestError,
 } from '../../common/errors/app-error';
 import { logger } from '../../common/utils/logger';
 
@@ -58,6 +64,168 @@ export class AuthService {
     }
   }
 
+  /**
+   * Registers a new student using phone number, PIN, name, gender, grade, and stream.
+   * Instant onboarding without SMS OTP cost.
+   */
+  public static async registerWithPhone(
+    payload: PhoneRegisterRequest,
+    ipAddress?: string,
+    userAgent?: string
+  ): Promise<{ user: AuthUserProfile; tokens: AuthTokens }> {
+    const normalizedPhone = normalizeEthiopianPhone(payload.phone);
+
+    // 1. Check for duplicate phone
+    const existingUser = await UserModel.findOne({ phone: normalizedPhone });
+    if (existingUser) {
+      throw new ConflictError('Phone number is already registered. Please log in.');
+    }
+
+    // 2. Hash PIN securely (10 rounds)
+    const pinHash = await bcrypt.hash(payload.pin, 10);
+
+    // 3. Generate unique branded ACEDEX Student ID
+    const acedexId = await generateUniqueAcedexId();
+
+    // 4. Save user document
+    const user = await UserModel.create({
+      acedexId,
+      phone: normalizedPhone,
+      pinHash,
+      displayName: payload.fullName.trim(),
+      gender: payload.gender,
+      grade: payload.grade,
+      stream: (payload.grade === 11 || payload.grade === 12) ? payload.stream : null,
+      role: 'student',
+      status: 'active',
+      authProvider: 'phone',
+      lastLoginAt: new Date(),
+    });
+
+    // 5. Audit registration
+    await AuditService.record({
+      userId: user._id.toString(),
+      action: 'USER_REGISTERED_PHONE',
+      resource: 'users',
+      resourceId: user._id.toString(),
+      details: {
+        acedexId,
+        phone: normalizedPhone,
+        grade: payload.grade,
+        stream: user.stream,
+        gender: payload.gender,
+      },
+      ipAddress,
+      userAgent,
+    });
+
+    // 6. Issue access and refresh tokens
+    const tokens = await this.issueSessionTokens(user);
+
+    return {
+      user: this.mapUserToProfile(user),
+      tokens,
+    };
+  }
+
+  /**
+   * Logs in a student using normalized phone number and PIN.
+   */
+  public static async loginWithPhone(
+    payload: PhoneLoginRequest,
+    ipAddress?: string,
+    userAgent?: string
+  ): Promise<{ user: AuthUserProfile; tokens: AuthTokens }> {
+    const normalizedPhone = normalizeEthiopianPhone(payload.phone);
+
+    // 1. Find user by phone, including pinHash
+    const user = await UserModel.findOne({ phone: normalizedPhone }).select('+pinHash');
+    if (!user || !user.pinHash) {
+      throw new UnauthorizedError('Invalid phone number or PIN');
+    }
+
+    // 2. Check suspension
+    if (user.status === 'suspended') {
+      throw new ForbiddenError('Account is suspended. Please contact support.');
+    }
+
+    // 3. Verify PIN
+    const isPinValid = await bcrypt.compare(payload.pin, user.pinHash);
+    if (!isPinValid) {
+      throw new UnauthorizedError('Invalid phone number or PIN');
+    }
+
+    // 4. Update last login
+    user.lastLoginAt = new Date();
+    await user.save();
+
+    // 5. Issue session tokens
+    const tokens = await this.issueSessionTokens(user);
+
+    // 6. Audit login
+    await AuditService.record({
+      userId: user._id.toString(),
+      action: 'USER_LOGIN_PHONE',
+      resource: 'auth',
+      details: { acedexId: user.acedexId, role: user.role },
+      ipAddress,
+      userAgent,
+    });
+
+    return {
+      user: this.mapUserToProfile(user),
+      tokens,
+    };
+  }
+
+  /**
+   * Allows authenticated student to change their PIN.
+   */
+  public static async changePin(
+    userId: string,
+    currentPin: string,
+    newPin: string,
+    ipAddress?: string,
+    userAgent?: string
+  ): Promise<{ user: AuthUserProfile; tokens: AuthTokens }> {
+    const user = await UserModel.findById(userId).select('+pinHash');
+    if (!user) {
+      throw new NotFoundError('User not found');
+    }
+
+    if (!user.pinHash) {
+      throw new BadRequestError('This account does not use PIN authentication');
+    }
+
+    const isMatch = await bcrypt.compare(currentPin, user.pinHash);
+    if (!isMatch) {
+      throw new UnauthorizedError('Current PIN is incorrect');
+    }
+
+    // Update PIN
+    user.pinHash = await bcrypt.hash(newPin, 10);
+    await user.save();
+
+    // Revoke old refresh tokens for security
+    await RefreshTokenModel.updateMany({ userId: user._id }, { isRevoked: true });
+
+    // Issue fresh tokens
+    const tokens = await this.issueSessionTokens(user);
+
+    await AuditService.record({
+      userId: user._id.toString(),
+      action: 'USER_PIN_CHANGED',
+      resource: 'auth',
+      ipAddress,
+      userAgent,
+    });
+
+    return {
+      user: this.mapUserToProfile(user),
+      tokens,
+    };
+  }
+
   public static async loginWithGoogle(
     idToken: string,
     ipAddress?: string,
@@ -76,8 +244,10 @@ export class AuthService {
     if (!user) {
       isNewUser = true;
       const initialRole: UserRole = isWhitelistedAdmin ? 'super_admin' : 'student';
+      const acedexId = await generateUniqueAcedexId();
 
       user = await UserModel.create({
+        acedexId,
         googleId: googleProfile.sub,
         email: googleProfile.email,
         displayName: googleProfile.displayName,
@@ -94,7 +264,7 @@ export class AuthService {
         action: 'USER_REGISTERED',
         resource: 'users',
         resourceId: user._id.toString(),
-        details: { role: user.role, provider: 'google' },
+        details: { role: user.role, provider: 'google', acedexId },
         ipAddress,
         userAgent,
       });
@@ -240,12 +410,16 @@ export class AuthService {
   ): Promise<AuthTokens> {
     const userId = user._id.toString();
 
-    // 1. Generate 15m Access JWT
+    // 1. Generate 15m Access JWT with acedexId, grade & stream
     const accessToken = jwt.sign(
       {
         sub: userId,
+        acedexId: user.acedexId,
         email: user.email,
+        phone: user.phone,
         role: user.role,
+        grade: user.grade,
+        stream: user.stream,
         displayName: user.displayName,
       },
       env.JWT_ACCESS_SECRET,
@@ -276,11 +450,17 @@ export class AuthService {
   public static mapUserToProfile(user: IUser): AuthUserProfile {
     return {
       id: user._id.toString(),
+      acedexId: user.acedexId,
       email: user.email,
+      phone: user.phone,
       displayName: user.displayName,
       avatarUrl: user.avatarUrl,
+      gender: user.gender,
+      grade: user.grade,
+      stream: user.stream,
       role: user.role,
       status: user.status,
+      authProvider: user.authProvider,
       lastLoginAt: user.lastLoginAt ? user.lastLoginAt.toISOString() : undefined,
       createdAt: user.createdAt.toISOString(),
       updatedAt: user.updatedAt.toISOString(),

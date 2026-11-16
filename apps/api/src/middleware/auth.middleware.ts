@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from 'express';
 import jwt from 'jsonwebtoken';
-import { AuthUserProfile, UserRole } from '@acedex/contracts';
+import { AuthUserProfile, UserRole, StudentStream } from '@acedex/contracts';
 import { UserModel } from '../modules/users/user.model';
 import { AuthService } from '../modules/auth/auth.service';
 import { env } from '../config/env';
@@ -12,8 +12,12 @@ export interface AuthenticatedRequest extends Request {
 
 interface JwtPayload {
   sub: string;
-  email: string;
+  acedexId?: string;
+  email?: string;
+  phone?: string;
   role: UserRole;
+  grade?: number;
+  stream?: StudentStream | null;
   displayName: string;
 }
 
