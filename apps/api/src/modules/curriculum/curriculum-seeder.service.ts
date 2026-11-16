@@ -189,7 +189,7 @@ export class CurriculumSeederService {
     }));
 
     if (unitOps.length > 0) {
-      await UnitModel.bulkWrite(unitOps);
+      await UnitModel.bulkWrite(unitOps as any);
     }
 
     // 4. Retrieve saved units for accurate ObjectIds
