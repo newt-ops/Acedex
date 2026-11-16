@@ -1,6 +1,7 @@
 import express, { Application, Request, Response } from 'express';
 import cors from 'cors';
 import helmet from 'helmet';
+import compression from 'compression';
 import cookieParser from 'cookie-parser';
 import { env } from './config/env';
 import { requestLogger } from './middleware/request-logger';
@@ -35,6 +36,9 @@ export function createApp(): Application {
       allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With'],
     })
   );
+
+  // 3. Response Compression (Gzip / Deflate for fast mobile bandwidth savings)
+  app.use(compression());
 
   // 3. Request Parsers
   app.use(express.json({ limit: '10mb' }));

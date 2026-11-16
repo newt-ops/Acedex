@@ -9,6 +9,7 @@ import { UnitModel, IUnit } from './models/unit.model';
 import { QuestionModel } from './models/question.model';
 import { StudentProgressModel } from '../progress/models/student-progress.model';
 import { ProgressService } from '../progress/progress.service';
+import { ContentCacheService } from '../../common/services/cache.service';
 import { NotFoundError, ForbiddenError } from '../../common/errors/app-error';
 
 export class CurriculumService {
@@ -29,6 +30,10 @@ export class CurriculumService {
     grade?: number,
     stream?: StudentStream | null
   ): Promise<ISubject[]> {
+    const cacheKey = `subjects:${grade || 'all'}:${stream || 'all'}`;
+    const cached = ContentCacheService.get<ISubject[]>(cacheKey);
+    if (cached) return cached;
+
     const filter: Record<string, any> = { isActive: true };
 
     if (grade) {
@@ -44,7 +49,13 @@ export class CurriculumService {
       }
     }
 
-    return SubjectModel.find(filter).sort({ order: 1 });
+    const subjects = (await SubjectModel.find(filter)
+      .sort({ order: 1 })
+      .read('secondaryPreferred')
+      .lean()) as unknown as ISubject[];
+
+    ContentCacheService.set(cacheKey, subjects, 3600);
+    return subjects;
   }
 
   /**
@@ -55,6 +66,10 @@ export class CurriculumService {
     subjectCode: string,
     studentOnly = true
   ): Promise<IUnit[]> {
+    const cacheKey = `units:${grade}:${subjectCode.toUpperCase().trim()}:${studentOnly}`;
+    const cached = ContentCacheService.get<IUnit[]>(cacheKey);
+    if (cached) return cached;
+
     const filter: Record<string, any> = {
       grade,
       subjectCode: subjectCode.toUpperCase().trim(),
@@ -65,18 +80,29 @@ export class CurriculumService {
       filter.status = 'published';
     }
 
-    return UnitModel.find(filter).sort({ unitNumber: 1 });
+    const units = (await UnitModel.find(filter)
+      .sort({ unitNumber: 1 })
+      .read('secondaryPreferred')
+      .lean()) as unknown as IUnit[];
+
+    ContentCacheService.set(cacheKey, units, 3600);
+    return units;
   }
 
   /**
    * Retrieves a single unit by ID
    */
   public static async getUnitById(unitId: string): Promise<IUnit> {
-    const unit = await UnitModel.findById(unitId);
+    const cacheKey = `unit_summary:${unitId}`;
+    const cached = ContentCacheService.get<IUnit>(cacheKey);
+    if (cached) return cached;
+
+    const unit = await UnitModel.findById(unitId).read('secondaryPreferred').lean();
     if (!unit) {
       throw new NotFoundError('Curriculum unit not found');
     }
-    return unit;
+    ContentCacheService.set(cacheKey, unit as unknown as IUnit, 3600);
+    return unit as unknown as IUnit;
   }
 
   /**
@@ -86,6 +112,11 @@ export class CurriculumService {
     unitId: string,
     studentOnly = true
   ): Promise<PublicQuestionItem[]> {
+    if (studentOnly) {
+      const cached = ContentCacheService.getUnitQuestions(unitId);
+      if (cached) return cached;
+    }
+
     const unit = await this.getUnitById(unitId);
 
     if (studentOnly && (!unit.isPublished || unit.status !== 'published')) {
@@ -95,16 +126,26 @@ export class CurriculumService {
     const questions = await QuestionModel.find({
       unitId: unit._id,
       isPublished: true,
-    }).sort({ externalId: 1 });
+    })
+      .select('externalId difficulty question options')
+      .sort({ externalId: 1 })
+      .read('secondaryPreferred')
+      .lean();
 
     // Sanitize to PublicQuestionItem format (ZERO answer keys or explanations)
-    return questions.map((q) => ({
+    const sanitized: PublicQuestionItem[] = questions.map((q) => ({
       id: q.externalId,
       type: 'multiple_choice',
       difficulty: q.difficulty,
       question: q.question,
       options: q.options,
     }));
+
+    if (studentOnly) {
+      ContentCacheService.setUnitQuestions(unitId, sanitized);
+    }
+
+    return sanitized;
   }
 
   /**

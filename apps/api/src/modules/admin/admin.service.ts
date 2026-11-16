@@ -12,6 +12,7 @@ import { AnswerKeyModel } from '../curriculum/models/answer-key.model';
 import { AssessmentAttemptModel } from '../assessments/models/assessment-attempt.model';
 import { AuditLogModel } from '../audit/audit-log.model';
 import { AuditService } from '../audit/audit.service';
+import { ContentCacheService } from '../../common/services/cache.service';
 import { NotFoundError, BadRequestError } from '../../common/errors/app-error';
 
 export interface DashboardStats {
@@ -250,6 +251,9 @@ export class AdminService {
 
     await AnswerKeyModel.bulkWrite(answerKeyOps as any);
 
+    // Invalidate cached unit content so students immediately receive updated question bank
+    ContentCacheService.invalidateUnit(unitDoc._id.toString());
+
     AuditService.record({
       action: 'QUESTION_BANK_IMPORTED',
       resource: 'units',
@@ -309,6 +313,9 @@ export class AdminService {
 
     unit.status = status;
     await unit.save();
+
+    // Invalidate cached unit content when publication status changes
+    ContentCacheService.invalidateUnit(unit._id.toString());
 
     AuditService.record({
       action: 'UNIT_STATUS_UPDATED',

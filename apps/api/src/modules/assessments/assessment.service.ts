@@ -10,6 +10,7 @@ import { QuestionModel } from '../curriculum/models/question.model';
 import { AnswerKeyModel } from '../curriculum/models/answer-key.model';
 import { AssessmentAttemptModel } from './models/assessment-attempt.model';
 import { ProgressService } from '../progress/progress.service';
+import { ContentCacheService } from '../../common/services/cache.service';
 import { NotFoundError, BadRequestError, ForbiddenError } from '../../common/errors/app-error';
 import { AuditService } from '../audit/audit.service';
 import { env } from '../../config/env';
@@ -49,35 +50,60 @@ export class AssessmentService {
       throw new NotFoundError(`Unit '${submission.unitId}' not found`);
     }
 
-    // 2. Fetch all published questions for this unit
-    const questions = await QuestionModel.find({
-      unitId: unit._id,
-      isPublished: true,
-    });
+    // 2. Resolve cached questions & answer keys or load with .lean() projection from read replicas
+    let cachedKeys = ContentCacheService.getUnitAnswerKeys(unit._id.toString());
+    let questionMap = ContentCacheService.get<Map<string, { _id: string; externalId: string }>>(
+      `unit_qmap:${unit._id.toString()}`
+    );
+    let totalQuestions = ContentCacheService.get<number>(`unit_qcount:${unit._id.toString()}`);
 
-    if (questions.length === 0) {
-      throw new BadRequestError(`Unit '${unit.code}' has no published questions to assess`);
+    if (!cachedKeys || !questionMap || !totalQuestions) {
+      const questions = await QuestionModel.find({
+        unitId: unit._id,
+        isPublished: true,
+      })
+        .select('_id externalId')
+        .read('secondaryPreferred')
+        .lean();
+
+      if (questions.length === 0) {
+        throw new BadRequestError(`Unit '${unit.code}' has no published questions to assess`);
+      }
+
+      const questionIds = questions.map((q) => q._id);
+      const answerKeys = await AnswerKeyModel.find({
+        questionId: { $in: questionIds },
+      })
+        .select('questionId externalId correctOptionId explanation')
+        .read('secondaryPreferred')
+        .lean();
+
+      cachedKeys = new Map();
+      for (const k of answerKeys) {
+        const item = {
+          correctOptionId: k.correctOptionId as 'A' | 'B' | 'C' | 'D',
+          explanation: k.explanation,
+        };
+        cachedKeys.set(k.questionId.toString(), item);
+        cachedKeys.set(k.externalId, item);
+      }
+
+      questionMap = new Map();
+      for (const q of questions) {
+        const entry = { _id: q._id.toString(), externalId: q.externalId };
+        questionMap.set(q._id.toString(), entry);
+        questionMap.set(q.externalId, entry);
+      }
+
+      totalQuestions = questions.length;
+
+      // Cache for 1 hour in-memory
+      ContentCacheService.setUnitAnswerKeys(unit._id.toString(), cachedKeys);
+      ContentCacheService.set(`unit_qmap:${unit._id.toString()}`, questionMap, 3600);
+      ContentCacheService.set(`unit_qcount:${unit._id.toString()}`, totalQuestions, 3600);
     }
 
-    // 3. Fetch Answer Keys strictly server-side
-    const questionIds = questions.map((q) => q._id);
-    const answerKeys = await AnswerKeyModel.find({
-      questionId: { $in: questionIds },
-    });
-
-    const keyByQuestionId = new Map(
-      answerKeys.map((k) => [k.questionId.toString(), k])
-    );
-    const keyByExternalId = new Map(
-      answerKeys.map((k) => [k.externalId, k])
-    );
-    const questionMap = new Map<string, any>();
-    for (const q of questions) {
-      questionMap.set(q._id.toString(), q);
-      questionMap.set(q.externalId, q);
-    }
-
-    // 4. Grade answers
+    // 3. Authoritative Zero-Trust Grading against in-memory key cache
     const gradedAnswers: GradedAnswerItem[] = [];
     let score = 0;
 
@@ -88,8 +114,8 @@ export class AssessmentService {
       }
 
       const answerKey =
-        keyByQuestionId.get(qDoc._id.toString()) ||
-        keyByExternalId.get(qDoc.externalId);
+        cachedKeys.get(qDoc._id) ||
+        cachedKeys.get(qDoc.externalId);
 
       if (!answerKey) {
         logger.error({ questionId: qDoc.externalId }, 'Answer key missing for question');
@@ -105,7 +131,7 @@ export class AssessmentService {
       }
 
       gradedAnswers.push({
-        questionId: qDoc._id.toString(),
+        questionId: qDoc._id,
         externalId: qDoc.externalId,
         selectedOptionId: ans.selectedOptionId,
         correctOptionId: answerKey.correctOptionId,
@@ -114,7 +140,6 @@ export class AssessmentService {
       });
     }
 
-    const totalQuestions = questions.length;
     const percentage = Math.round((score / totalQuestions) * 100 * 10) / 10;
     const passed = percentage >= 70;
     const attemptId = submission.attemptId || crypto.randomUUID();

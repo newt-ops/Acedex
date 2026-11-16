@@ -8,6 +8,7 @@ import { SubjectModel } from './models/subject.model';
 import { UnitModel } from './models/unit.model';
 import { QuestionModel } from './models/question.model';
 import { AnswerKeyModel } from './models/answer-key.model';
+import { ContentCacheService } from '../../common/services/cache.service';
 import { logger } from '../../common/utils/logger';
 
 export interface SeederReport {
@@ -267,6 +268,7 @@ export class CurriculumSeederService {
       report.answerKeysUpserted = answerKeyOps.length;
     }
 
+    ContentCacheService.clear();
     logger.info(report, 'Curriculum & question bank ingestion completed');
     return report;
   }

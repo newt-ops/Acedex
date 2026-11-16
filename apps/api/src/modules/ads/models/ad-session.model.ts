@@ -39,7 +39,7 @@ const AdSessionSchema = new Schema<IAdSessionDocument>(
       default: 'pending',
       index: true,
     },
-    unityOrderId: { type: String, sparse: true },
+    unityOrderId: { type: String },
     startedAt: { type: Date, default: Date.now },
     expiresAt: { type: Date, required: true },
     claimedAt: { type: Date },
