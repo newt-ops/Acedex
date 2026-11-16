@@ -1,10 +1,14 @@
 import mongoose, { Schema, Document, Types } from 'mongoose';
+import { StudyStatus } from '@acedex/contracts';
 
 export interface IProgressUnitSubdoc {
   unitId: Types.ObjectId;
   unitCode: string;
   subjectCode: string;
   grade: number;
+  studyStatus: StudyStatus;
+  isStudyCompleted: boolean;
+  studyCompletedAt?: Date;
   bestScore: number;
   bestPercentage: number;
   totalQuestions: number;
@@ -60,6 +64,13 @@ const ProgressUnitSchema = new Schema<IProgressUnitSubdoc>(
     unitCode: { type: String, required: true },
     subjectCode: { type: String, required: true },
     grade: { type: Number, required: true },
+    studyStatus: {
+      type: String,
+      enum: ['not_started', 'in_progress', 'completed'],
+      default: 'not_started',
+    },
+    isStudyCompleted: { type: Boolean, default: false },
+    studyCompletedAt: { type: Date },
     bestScore: { type: Number, default: 0 },
     bestPercentage: { type: Number, default: 0 },
     totalQuestions: { type: Number, default: 15 },

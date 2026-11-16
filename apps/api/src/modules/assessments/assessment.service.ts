@@ -8,6 +8,7 @@ import {
 import { UnitModel } from '../curriculum/models/unit.model';
 import { QuestionModel } from '../curriculum/models/question.model';
 import { AnswerKeyModel } from '../curriculum/models/answer-key.model';
+import { UserModel } from '../users/user.model';
 import { AssessmentAttemptModel } from './models/assessment-attempt.model';
 import { ProgressService } from '../progress/progress.service';
 import { ContentCacheService } from '../../common/services/cache.service';
@@ -48,6 +49,18 @@ export class AssessmentService {
 
     if (!unit) {
       throw new NotFoundError(`Unit '${submission.unitId}' not found`);
+    }
+
+    // 1.5 Enforce Unit Study Completion (Exam Gating)
+    const user = await UserModel.findById(userObjectId);
+    if (user && user.role === 'student') {
+      const isUnlocked = await ProgressService.isExamUnlocked(userObjectId, unit._id);
+      if (!isUnlocked) {
+        throw new ForbiddenError(
+          'Exam assessment is locked for this unit. Please mark this unit as finished in your study tracker before taking the exam.',
+          'EXAM_LOCKED_STUDY_REQUIRED'
+        );
+      }
     }
 
     // 2. Resolve cached questions & answer keys or load with .lean() projection from read replicas

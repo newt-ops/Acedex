@@ -4,6 +4,7 @@ import { authRoutes } from '../modules/auth/auth.routes';
 import { curriculumRoutes } from '../modules/curriculum/curriculum.routes';
 import assessmentRoutes from '../modules/assessments/assessment.routes';
 import progressRoutes from '../modules/progress/progress.routes';
+import { studyRoutes } from '../modules/study/study.routes';
 import { adsRoutes } from '../modules/ads/ads.routes';
 import adminRoutes from '../modules/admin/admin.routes';
 
@@ -20,6 +21,9 @@ router.use('/curriculum', curriculumRoutes);
 
 // Assessments & Scoring
 router.use('/assessments', assessmentRoutes);
+
+// Study Management & Unit Tracking
+router.use('/study', studyRoutes);
 
 // Student Progress & Analytics
 router.use('/progress', progressRoutes);

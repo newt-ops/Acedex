@@ -9,6 +9,7 @@ import { QuestionModel } from '../src/modules/curriculum/models/question.model';
 import { AnswerKeyModel } from '../src/modules/curriculum/models/answer-key.model';
 import { AssessmentAttemptModel } from '../src/modules/assessments/models/assessment-attempt.model';
 import { StudentProgressModel } from '../src/modules/progress/models/student-progress.model';
+import { ProgressService } from '../src/modules/progress/progress.service';
 import { UserModel } from '../src/modules/users/user.model';
 import { env } from '../src/config/env';
 
@@ -105,6 +106,9 @@ describe('Student Progress & Analytics Engine', () => {
         selectedOptionId: index < 12 ? correctOpt : (correctOpt === 'A' ? 'B' : 'A'),
       };
     });
+
+    // Mark unit completed in study tracker to unlock exam
+    await ProgressService.updateUnitStudyStatus(studentId, sampleUnit._id.toString(), 'completed');
 
     const submitRes = await request(app)
       .post('/api/v1/assessments/submit')
