@@ -20,6 +20,12 @@ export interface ISubjectMasterySubdoc {
   masteryPercentage: number;
 }
 
+export interface IUnlockedUnitSubdoc {
+  unitId: Types.ObjectId;
+  unitCode: string;
+  expiresAt: Date;
+}
+
 export interface IStudentProgressDocument extends Document {
   userId: Types.ObjectId;
   overallStats: {
@@ -32,6 +38,15 @@ export interface IStudentProgressDocument extends Document {
     currentStreak: number;
     longestStreak: number;
     lastActivityDate?: string; // YYYY-MM-DD
+    previousBrokenStreak: number;
+    lastRepairedAt?: Date;
+  };
+  examAccess: {
+    ticketsAvailable: number;
+    totalAdsWatched: number;
+  };
+  offlineAccess: {
+    unlockedUnits: IUnlockedUnitSubdoc[];
   };
   units: IProgressUnitSubdoc[];
   subjectMastery: ISubjectMasterySubdoc[];
@@ -65,6 +80,15 @@ const SubjectMasterySchema = new Schema<ISubjectMasterySubdoc>(
   { _id: false }
 );
 
+const UnlockedUnitSchema = new Schema<IUnlockedUnitSubdoc>(
+  {
+    unitId: { type: Schema.Types.ObjectId, ref: 'Unit', required: true },
+    unitCode: { type: String, required: true },
+    expiresAt: { type: Date, required: true },
+  },
+  { _id: false }
+);
+
 const StudentProgressSchema = new Schema<IStudentProgressDocument>(
   {
     userId: { type: Schema.Types.ObjectId, ref: 'User', required: true, unique: true, index: true },
@@ -78,6 +102,15 @@ const StudentProgressSchema = new Schema<IStudentProgressDocument>(
       currentStreak: { type: Number, default: 0 },
       longestStreak: { type: Number, default: 0 },
       lastActivityDate: { type: String, default: '' },
+      previousBrokenStreak: { type: Number, default: 0 },
+      lastRepairedAt: { type: Date },
+    },
+    examAccess: {
+      ticketsAvailable: { type: Number, default: 1 },
+      totalAdsWatched: { type: Number, default: 0 },
+    },
+    offlineAccess: {
+      unlockedUnits: { type: [UnlockedUnitSchema], default: [] },
     },
     units: { type: [ProgressUnitSchema], default: [] },
     subjectMastery: { type: [SubjectMasterySchema], default: [] },

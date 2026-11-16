@@ -10,8 +10,9 @@ import { QuestionModel } from '../curriculum/models/question.model';
 import { AnswerKeyModel } from '../curriculum/models/answer-key.model';
 import { AssessmentAttemptModel } from './models/assessment-attempt.model';
 import { ProgressService } from '../progress/progress.service';
-import { NotFoundError, BadRequestError } from '../../common/errors/app-error';
+import { NotFoundError, BadRequestError, ForbiddenError } from '../../common/errors/app-error';
 import { AuditService } from '../audit/audit.service';
+import { env } from '../../config/env';
 import { logger } from '../../common/utils/logger';
 
 export class AssessmentService {
@@ -24,6 +25,16 @@ export class AssessmentService {
     submission: AssessmentSubmission
   ): Promise<AssessmentResultData> {
     const userObjectId = new Types.ObjectId(userId);
+
+    // 0. Enforce exam ticket if enabled
+    if (env.REQUIRE_EXAM_TICKET) {
+      const consumed = await ProgressService.consumeExamTicket(userObjectId);
+      if (!consumed) {
+        throw new ForbiddenError(
+          'Exam attempt requires an active exam ticket. Watch a rewarded ad to get one.'
+        );
+      }
+    }
 
     // 1. Resolve unit by ObjectId or Unit Code
     let unit = null;

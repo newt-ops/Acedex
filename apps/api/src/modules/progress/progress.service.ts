@@ -7,7 +7,7 @@ import {
 import { UnitModel } from '../curriculum/models/unit.model';
 import { SubjectModel } from '../curriculum/models/subject.model';
 import { AssessmentAttemptModel } from '../assessments/models/assessment-attempt.model';
-import { StudentProgressOverview } from '@acedex/contracts';
+import { StudentProgressOverview, StudentAdStatusData } from '@acedex/contracts';
 import { logger } from '../../common/utils/logger';
 
 export interface RecordAttemptInput {
@@ -47,6 +47,14 @@ export class ProgressService {
           currentStreak: 0,
           longestStreak: 0,
           lastActivityDate: '',
+          previousBrokenStreak: 0,
+        },
+        examAccess: {
+          ticketsAvailable: 1,
+          totalAdsWatched: 0,
+        },
+        offlineAccess: {
+          unlockedUnits: [],
         },
         units: [],
         subjectMastery: [],
@@ -85,6 +93,7 @@ export class ProgressService {
           progress.streak.longestStreak = progress.streak.currentStreak;
         }
       } else if (diffDays > 1) {
+        progress.streak.previousBrokenStreak = progress.streak.currentStreak;
         progress.streak.currentStreak = 1;
       }
       progress.streak.lastActivityDate = todayStr;
@@ -284,6 +293,220 @@ export class ProgressService {
       subjectCode: subjectCode.toUpperCase(),
       grade,
       units: detailedUnits,
+    };
+  }
+
+  /**
+   * Restores a broken study streak after watching an ad
+   */
+  public static async repairStreak(userId: string | Types.ObjectId): Promise<number> {
+    const userObjectId = new Types.ObjectId(userId);
+    const progress = await StudentProgressModel.findOne({ userId: userObjectId });
+    if (!progress) {
+      throw new Error('Student progress record not found');
+    }
+
+    if (!progress.streak.previousBrokenStreak || progress.streak.previousBrokenStreak <= 0) {
+      throw new Error('No broken streak available to repair');
+    }
+
+    const restoredStreak = progress.streak.previousBrokenStreak + 1;
+    progress.streak.currentStreak = restoredStreak;
+    if (restoredStreak > progress.streak.longestStreak) {
+      progress.streak.longestStreak = restoredStreak;
+    }
+    progress.streak.previousBrokenStreak = 0;
+    progress.streak.lastRepairedAt = new Date();
+    progress.streak.lastActivityDate = new Date().toISOString().split('T')[0];
+
+    if (!progress.examAccess) {
+      progress.examAccess = { ticketsAvailable: 1, totalAdsWatched: 0 };
+    }
+    progress.examAccess.totalAdsWatched += 1;
+
+    await progress.save();
+    logger.info({ userId: userId.toString(), restoredStreak }, 'Student streak successfully repaired');
+    return restoredStreak;
+  }
+
+  /**
+   * Grants exam access tickets after watching an ad
+   */
+  public static async grantExamTicket(
+    userId: string | Types.ObjectId,
+    count = 1
+  ): Promise<number> {
+    const userObjectId = new Types.ObjectId(userId);
+    let progress = await StudentProgressModel.findOne({ userId: userObjectId });
+
+    if (!progress) {
+      progress = new StudentProgressModel({
+        userId: userObjectId,
+        overallStats: { totalAssessmentsTaken: 0, totalAssessmentsPassed: 0, averageScore: 0, totalTimeSpentSeconds: 0 },
+        streak: { currentStreak: 0, longestStreak: 0, lastActivityDate: '', previousBrokenStreak: 0 },
+        examAccess: { ticketsAvailable: 1, totalAdsWatched: 0 },
+        offlineAccess: { unlockedUnits: [] },
+        units: [],
+        subjectMastery: [],
+      });
+    }
+
+    if (!progress.examAccess) {
+      progress.examAccess = { ticketsAvailable: 1, totalAdsWatched: 0 };
+    }
+
+    progress.examAccess.ticketsAvailable += count;
+    progress.examAccess.totalAdsWatched += 1;
+    await progress.save();
+
+    logger.info({ userId: userId.toString(), newTicketCount: progress.examAccess.ticketsAvailable }, 'Exam tickets granted');
+    return progress.examAccess.ticketsAvailable;
+  }
+
+  /**
+   * Consumes one exam ticket when taking an assessment
+   */
+  public static async consumeExamTicket(userId: string | Types.ObjectId): Promise<boolean> {
+    const userObjectId = new Types.ObjectId(userId);
+    const progress = await StudentProgressModel.findOne({ userId: userObjectId });
+    if (!progress || !progress.examAccess || progress.examAccess.ticketsAvailable <= 0) {
+      return false;
+    }
+
+    progress.examAccess.ticketsAvailable -= 1;
+    await progress.save();
+    return true;
+  }
+
+  /**
+   * Grants 24-hour offline study pass for a specific unit
+   */
+  public static async grantOfflinePack(
+    userId: string | Types.ObjectId,
+    unitId: string | Types.ObjectId,
+    unitCode: string,
+    durationHours = 24
+  ): Promise<{ unitId: string; unitCode: string; expiresAt: Date }> {
+    const userObjectId = new Types.ObjectId(userId);
+    const targetUnitObjectId = new Types.ObjectId(unitId);
+
+    let progress = await StudentProgressModel.findOne({ userId: userObjectId });
+    if (!progress) {
+      progress = new StudentProgressModel({
+        userId: userObjectId,
+        overallStats: { totalAssessmentsTaken: 0, totalAssessmentsPassed: 0, averageScore: 0, totalTimeSpentSeconds: 0 },
+        streak: { currentStreak: 0, longestStreak: 0, lastActivityDate: '', previousBrokenStreak: 0 },
+        examAccess: { ticketsAvailable: 1, totalAdsWatched: 0 },
+        offlineAccess: { unlockedUnits: [] },
+        units: [],
+        subjectMastery: [],
+      });
+    }
+
+    if (!progress.offlineAccess) {
+      progress.offlineAccess = { unlockedUnits: [] };
+    }
+
+    const expiresAt = new Date(Date.now() + durationHours * 3600 * 1000);
+    const existingIndex = progress.offlineAccess.unlockedUnits.findIndex(
+      (u) => u.unitId.toString() === targetUnitObjectId.toString()
+    );
+
+    if (existingIndex >= 0) {
+      progress.offlineAccess.unlockedUnits[existingIndex].expiresAt = expiresAt;
+      progress.offlineAccess.unlockedUnits[existingIndex].unitCode = unitCode;
+    } else {
+      progress.offlineAccess.unlockedUnits.push({
+        unitId: targetUnitObjectId,
+        unitCode,
+        expiresAt,
+      });
+    }
+
+    if (!progress.examAccess) {
+      progress.examAccess = { ticketsAvailable: 1, totalAdsWatched: 0 };
+    }
+    progress.examAccess.totalAdsWatched += 1;
+
+    await progress.save();
+    logger.info(
+      { userId: userId.toString(), unitCode, expiresAt },
+      'Offline study pack granted for 24 hours'
+    );
+
+    return {
+      unitId: targetUnitObjectId.toString(),
+      unitCode,
+      expiresAt,
+    };
+  }
+
+  /**
+   * Checks if user has a valid unexpired offline pass for a unit
+   */
+  public static async hasOfflineAccess(
+    userId: string | Types.ObjectId,
+    unitId: string | Types.ObjectId
+  ): Promise<boolean> {
+    const userObjectId = new Types.ObjectId(userId);
+    const targetUnitObjectId = new Types.ObjectId(unitId);
+    const progress = await StudentProgressModel.findOne({ userId: userObjectId });
+    if (!progress || !progress.offlineAccess) return false;
+
+    const entry = progress.offlineAccess.unlockedUnits.find(
+      (u) => u.unitId.toString() === targetUnitObjectId.toString()
+    );
+    if (!entry) return false;
+
+    return new Date(entry.expiresAt).getTime() > Date.now();
+  }
+
+  /**
+   * Returns current ad monetization status for student
+   */
+  public static async getStudentAdStatus(userId: string | Types.ObjectId): Promise<StudentAdStatusData> {
+    const userObjectId = new Types.ObjectId(userId);
+    let progress = await StudentProgressModel.findOne({ userId: userObjectId });
+
+    if (!progress) {
+      progress = new StudentProgressModel({
+        userId: userObjectId,
+        overallStats: { totalAssessmentsTaken: 0, totalAssessmentsPassed: 0, averageScore: 0, totalTimeSpentSeconds: 0 },
+        streak: { currentStreak: 0, longestStreak: 0, lastActivityDate: '', previousBrokenStreak: 0 },
+        examAccess: { ticketsAvailable: 1, totalAdsWatched: 0 },
+        offlineAccess: { unlockedUnits: [] },
+        units: [],
+        subjectMastery: [],
+      });
+      await progress.save();
+    }
+
+    const now = Date.now();
+    const activeOffline = (progress.offlineAccess?.unlockedUnits || [])
+      .filter((u) => new Date(u.expiresAt).getTime() > now)
+      .map((u) => ({
+        unitId: u.unitId.toString(),
+        unitCode: u.unitCode,
+        expiresAt: new Date(u.expiresAt).toISOString(),
+      }));
+
+    const tickets = progress.examAccess?.ticketsAvailable ?? 1;
+    const canRepair = (progress.streak?.previousBrokenStreak || 0) > 0;
+
+    return {
+      streak: {
+        currentStreak: progress.streak?.currentStreak || 0,
+        canRepair,
+        brokenStreakCount: canRepair ? progress.streak.previousBrokenStreak : undefined,
+      },
+      examAccess: {
+        canTakeExam: tickets > 0,
+        ticketsAvailable: tickets,
+        requiresAd: tickets <= 0,
+      },
+      offlineAccess: {
+        unlockedUnits: activeOffline,
+      },
     };
   }
 }
