@@ -9,6 +9,7 @@ import { UnitModel } from '../src/modules/curriculum/models/unit.model';
 import { QuestionModel } from '../src/modules/curriculum/models/question.model';
 import { AnswerKeyModel } from '../src/modules/curriculum/models/answer-key.model';
 import { ContentCacheService } from '../src/common/services/cache.service';
+import { ProgressService } from '../src/modules/progress/progress.service';
 import { env } from '../src/config/env';
 
 describe('Scaling & In-Memory Caching Engine', () => {
@@ -77,6 +78,9 @@ describe('Scaling & In-Memory Caching Engine', () => {
     for (const k of keys) {
       answerKeyMap.set(k.externalId, k.correctOptionId);
     }
+
+    // Unlock exam by marking unit completed in study tracker
+    await ProgressService.updateUnitStudyStatus(studentUser._id.toString(), sampleUnit._id.toString(), 'completed');
   }, 60000);
 
   afterAll(async () => {

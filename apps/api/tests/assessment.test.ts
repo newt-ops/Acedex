@@ -9,6 +9,7 @@ import { QuestionModel } from '../src/modules/curriculum/models/question.model';
 import { AnswerKeyModel } from '../src/modules/curriculum/models/answer-key.model';
 import { AssessmentAttemptModel } from '../src/modules/assessments/models/assessment-attempt.model';
 import { StudentProgressModel } from '../src/modules/progress/models/student-progress.model';
+import { ProgressService } from '../src/modules/progress/progress.service';
 import { UserModel } from '../src/modules/users/user.model';
 import { env } from '../src/config/env';
 
@@ -77,6 +78,9 @@ describe('Assessment & Scoring Engine (Zero Client Trust)', () => {
       answerKeyMap.set(ak.externalId, ak.correctOptionId);
       answerKeyMap.set(ak.questionId.toString(), ak.correctOptionId);
     }
+
+    // Mark the unit as finished in study tracker to unlock exam
+    await ProgressService.updateUnitStudyStatus(studentId, sampleUnit._id.toString(), 'completed');
   }, 60000);
 
   afterAll(async () => {

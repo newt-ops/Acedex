@@ -6,8 +6,17 @@ import {
 } from './models/student-progress.model';
 import { UnitModel } from '../curriculum/models/unit.model';
 import { SubjectModel } from '../curriculum/models/subject.model';
+import { UserModel } from '../users/user.model';
 import { AssessmentAttemptModel } from '../assessments/models/assessment-attempt.model';
-import { StudentProgressOverview, StudentAdStatusData } from '@acedex/contracts';
+import {
+  StudentProgressOverview,
+  StudentAdStatusData,
+  StudyStatus,
+  UnitStudyProgressItem,
+  SubjectStudyProgressResponse,
+  StudyOverviewResponse,
+} from '@acedex/contracts';
+import { NotFoundError } from '../../common/errors/app-error';
 import { logger } from '../../common/utils/logger';
 
 export interface RecordAttemptInput {
@@ -199,6 +208,12 @@ export class ProgressService {
           longestStreak: 0,
           lastActivityDate: undefined,
         },
+        studyStats: {
+          totalUnits: 0,
+          completedUnits: 0,
+          inProgressUnits: 0,
+          completionPercentage: 0,
+        },
         subjectMastery: allSubjects.map((s) => ({
           subjectCode: s.code,
           subjectName: s.name,
@@ -227,6 +242,13 @@ export class ProgressService {
       masteryPercentage: sm.masteryPercentage,
     }));
 
+    // Compute study completion stats
+    const totalEnrolledUnits = progress.units.length;
+    const completedUnits = progress.units.filter((u) => u.isStudyCompleted).length;
+    const inProgressUnits = progress.units.filter((u) => u.studyStatus === 'in_progress').length;
+    const studyCompletionPct =
+      totalEnrolledUnits > 0 ? Math.round((completedUnits / totalEnrolledUnits) * 100) : 0;
+
     return {
       overallStats: {
         totalAssessmentsTaken: progress.overallStats.totalAssessmentsTaken,
@@ -238,6 +260,12 @@ export class ProgressService {
         currentStreak: progress.streak.currentStreak,
         longestStreak: progress.streak.longestStreak,
         lastActivityDate: progress.streak.lastActivityDate || undefined,
+      },
+      studyStats: {
+        totalUnits: totalEnrolledUnits,
+        completedUnits,
+        inProgressUnits,
+        completionPercentage: studyCompletionPct,
       },
       subjectMastery: subjectMasteryList,
       recentAttempts: recentAttempts.map((a) => ({
@@ -507,6 +535,298 @@ export class ProgressService {
       offlineAccess: {
         unlockedUnits: activeOffline,
       },
+    };
+  }
+
+  /**
+   * Updates study status for a specific unit (mark finished, in_progress, not_started)
+   * When status is 'completed', unlocks exam assessment and updates streak.
+   */
+  public static async updateUnitStudyStatus(
+    userId: string | Types.ObjectId,
+    unitIdOrCode: string,
+    status: StudyStatus
+  ): Promise<UnitStudyProgressItem> {
+    const userObjectId = new Types.ObjectId(userId);
+
+    // Resolve unit
+    let unit = null;
+    if (Types.ObjectId.isValid(unitIdOrCode)) {
+      unit = await UnitModel.findById(unitIdOrCode);
+    }
+    if (!unit) {
+      unit = await UnitModel.findOne({ code: unitIdOrCode.toUpperCase() });
+    }
+    if (!unit) {
+      throw new NotFoundError(`Unit '${unitIdOrCode}' not found`);
+    }
+
+    let progress = await StudentProgressModel.findOne({ userId: userObjectId });
+    if (!progress) {
+      progress = new StudentProgressModel({
+        userId: userObjectId,
+        overallStats: { totalAssessmentsTaken: 0, totalAssessmentsPassed: 0, averageScore: 0, totalTimeSpentSeconds: 0 },
+        streak: { currentStreak: 0, longestStreak: 0, lastActivityDate: '', previousBrokenStreak: 0 },
+        examAccess: { ticketsAvailable: 1, totalAdsWatched: 0 },
+        offlineAccess: { unlockedUnits: [] },
+        units: [],
+        subjectMastery: [],
+      });
+    }
+
+    let unitEntry = progress.units.find(
+      (u) => u.unitId.toString() === unit._id.toString() || u.unitCode === unit.code
+    );
+
+    const isCompleted = status === 'completed';
+
+    if (!unitEntry) {
+      unitEntry = {
+        unitId: unit._id,
+        unitCode: unit.code,
+        subjectCode: unit.subjectCode,
+        grade: unit.grade,
+        studyStatus: status,
+        isStudyCompleted: isCompleted,
+        studyCompletedAt: isCompleted ? new Date() : undefined,
+        bestScore: 0,
+        bestPercentage: 0,
+        totalQuestions: 15,
+        passed: false,
+        attemptsCount: 0,
+        lastAttemptAt: new Date(),
+      } as IProgressUnitSubdoc;
+      progress.units.push(unitEntry);
+    } else {
+      unitEntry.studyStatus = status;
+      unitEntry.isStudyCompleted = isCompleted;
+      if (isCompleted) {
+        unitEntry.studyCompletedAt = unitEntry.studyCompletedAt || new Date();
+      } else {
+        unitEntry.studyCompletedAt = undefined;
+      }
+    }
+
+    // If marked completed, record streak activity for today
+    if (isCompleted) {
+      const todayStr = new Date().toISOString().split('T')[0];
+      const lastDateStr = progress.streak.lastActivityDate;
+      if (!lastDateStr) {
+        progress.streak.currentStreak = 1;
+        progress.streak.longestStreak = 1;
+        progress.streak.lastActivityDate = todayStr;
+      } else if (lastDateStr !== todayStr) {
+        const lastDate = new Date(lastDateStr);
+        const todayDate = new Date(todayStr);
+        const diffTime = todayDate.getTime() - lastDate.getTime();
+        const diffDays = Math.round(diffTime / (1000 * 3600 * 24));
+        if (diffDays === 1) {
+          progress.streak.currentStreak += 1;
+          if (progress.streak.currentStreak > progress.streak.longestStreak) {
+            progress.streak.longestStreak = progress.streak.currentStreak;
+          }
+        } else if (diffDays > 1) {
+          progress.streak.previousBrokenStreak = progress.streak.currentStreak;
+          progress.streak.currentStreak = 1;
+        }
+        progress.streak.lastActivityDate = todayStr;
+      }
+    }
+
+    await progress.save();
+
+    logger.info(
+      { userId: userId.toString(), unitCode: unit.code, status, isCompleted },
+      'Unit study status updated'
+    );
+
+    return {
+      unitId: unit._id.toString(),
+      unitCode: unit.code,
+      subjectCode: unit.subjectCode,
+      grade: unit.grade,
+      unitNumber: unit.unitNumber,
+      title: unit.title,
+      studyStatus: unitEntry.studyStatus || status,
+      isStudyCompleted: unitEntry.isStudyCompleted,
+      isExamUnlocked: unitEntry.isStudyCompleted,
+      studyCompletedAt: unitEntry.studyCompletedAt ? unitEntry.studyCompletedAt.toISOString() : undefined,
+      bestScore: unitEntry.bestScore,
+      bestPercentage: unitEntry.bestPercentage,
+      passed: unitEntry.passed,
+      attemptsCount: unitEntry.attemptsCount,
+    };
+  }
+
+  /**
+   * Verifies if a unit's exam assessment is unlocked for this student
+   */
+  public static async isExamUnlocked(
+    userId: string | Types.ObjectId,
+    unitIdOrCode: string | Types.ObjectId
+  ): Promise<boolean> {
+    const userObjectId = new Types.ObjectId(userId);
+    const progress = await StudentProgressModel.findOne({ userId: userObjectId });
+    if (!progress || !progress.units) return false;
+
+    const targetStr = unitIdOrCode.toString();
+    const entry = progress.units.find(
+      (u) => u.unitId.toString() === targetStr || u.unitCode === targetStr.toUpperCase()
+    );
+
+    return entry ? entry.isStudyCompleted === true : false;
+  }
+
+  /**
+   * Returns subject-level study progress including each unit's study & exam status
+   */
+  public static async getSubjectStudyProgress(
+    userId: string | Types.ObjectId,
+    subjectCode: string,
+    gradeInput?: number
+  ): Promise<SubjectStudyProgressResponse> {
+    const userObjectId = new Types.ObjectId(userId);
+    let grade = gradeInput;
+    if (!grade) {
+      const user = await UserModel.findById(userObjectId);
+      grade = user?.grade || 9;
+    }
+
+    const code = subjectCode.toUpperCase();
+    const subject = await SubjectModel.findOne({ code });
+    const subjectName = subject ? subject.name : code;
+
+    const units = await UnitModel.find({
+      subjectCode: code,
+      grade,
+      isPublished: true,
+    }).sort({ unitNumber: 1 });
+
+    const progress = await StudentProgressModel.findOne({ userId: userObjectId });
+    const studentUnitMap = new Map(
+      (progress?.units || []).map((u) => [u.unitCode, u])
+    );
+
+    let completedUnits = 0;
+    let inProgressUnits = 0;
+
+    const unitItems: UnitStudyProgressItem[] = units.map((u) => {
+      const record = studentUnitMap.get(u.code);
+      const isCompleted = record ? record.isStudyCompleted === true : false;
+      const studyStatus: StudyStatus = record
+        ? (record.studyStatus || (isCompleted ? 'completed' : 'not_started'))
+        : 'not_started';
+
+      if (isCompleted) {
+        completedUnits++;
+      } else if (studyStatus === 'in_progress') {
+        inProgressUnits++;
+      }
+
+      return {
+        unitId: u._id.toString(),
+        unitCode: u.code,
+        subjectCode: u.subjectCode,
+        grade: u.grade,
+        unitNumber: u.unitNumber,
+        title: u.title,
+        studyStatus,
+        isStudyCompleted: isCompleted,
+        isExamUnlocked: isCompleted,
+        studyCompletedAt: record?.studyCompletedAt ? record.studyCompletedAt.toISOString() : undefined,
+        bestScore: record ? record.bestScore : 0,
+        bestPercentage: record ? record.bestPercentage : 0,
+        passed: record ? record.passed : false,
+        attemptsCount: record ? record.attemptsCount : 0,
+      };
+    });
+
+    const totalUnits = units.length;
+    const completionPercentage = totalUnits > 0 ? Math.round((completedUnits / totalUnits) * 100) : 0;
+
+    return {
+      subjectCode: code,
+      subjectName,
+      grade,
+      totalUnits,
+      completedUnits,
+      inProgressUnits,
+      completionPercentage,
+      units: unitItems,
+    };
+  }
+
+  /**
+   * Returns student's overall study overview across enrolled subjects
+   */
+  public static async getStudyOverview(userId: string | Types.ObjectId): Promise<StudyOverviewResponse> {
+    const userObjectId = new Types.ObjectId(userId);
+    const user = await UserModel.findById(userObjectId);
+    const grade = user?.grade || 9;
+    const stream = user?.stream;
+
+    let subjectFilter: Record<string, any> = { isActive: true };
+    if (grade === 11 || grade === 12) {
+      if (stream === 'natural') {
+        subjectFilter.streamCategory = { $in: ['natural', 'common'] };
+      } else if (stream === 'social') {
+        subjectFilter.streamCategory = { $in: ['social', 'common'] };
+      }
+    }
+
+    const subjects = await SubjectModel.find(subjectFilter).sort({ order: 1 });
+    const progress = await StudentProgressModel.findOne({ userId: userObjectId });
+    const studentUnitMap = new Map(
+      (progress?.units || []).map((u) => [u.unitCode, u])
+    );
+
+    let totalUnitsOverall = 0;
+    let completedUnitsOverall = 0;
+    let inProgressUnitsOverall = 0;
+
+    const subjectSummaries = await Promise.all(
+      subjects.map(async (s) => {
+        const units = await UnitModel.find({
+          subjectCode: s.code,
+          grade,
+          isPublished: true,
+        }).select('code');
+
+        let subCompleted = 0;
+        for (const u of units) {
+          totalUnitsOverall++;
+          const rec = studentUnitMap.get(u.code);
+          if (rec?.isStudyCompleted) {
+            subCompleted++;
+            completedUnitsOverall++;
+          } else if (rec?.studyStatus === 'in_progress') {
+            inProgressUnitsOverall++;
+          }
+        }
+
+        const subTotal = units.length;
+        const subPct = subTotal > 0 ? Math.round((subCompleted / subTotal) * 100) : 0;
+
+        return {
+          subjectCode: s.code,
+          subjectName: s.name,
+          grade,
+          totalUnits: subTotal,
+          completedUnits: subCompleted,
+          completionPercentage: subPct,
+        };
+      })
+    );
+
+    const overallPct =
+      totalUnitsOverall > 0 ? Math.round((completedUnitsOverall / totalUnitsOverall) * 100) : 0;
+
+    return {
+      totalUnits: totalUnitsOverall,
+      completedUnits: completedUnitsOverall,
+      inProgressUnits: inProgressUnitsOverall,
+      completionPercentage: overallPct,
+      subjects: subjectSummaries,
     };
   }
 }

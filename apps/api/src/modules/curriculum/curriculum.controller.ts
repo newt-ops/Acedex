@@ -1,6 +1,8 @@
 import { Response } from 'express';
+import { Types } from 'mongoose';
 import { CurriculumService } from './curriculum.service';
 import { AuthenticatedRequest } from '../../middleware/auth.middleware';
+import { StudentProgressModel } from '../progress/models/student-progress.model';
 import { sendSuccess } from '../../common/utils/response';
 import { BadRequestError } from '../../common/errors/app-error';
 import { StudentStream } from '@acedex/contracts';
@@ -45,6 +47,30 @@ export class CurriculumController {
     // Admins can see all units, students only published units
     const isStaff = req.user?.role === 'admin' || req.user?.role === 'super_admin';
     const units = await CurriculumService.getUnits(grade, subjectCode, !isStaff);
+
+    // If authenticated as a student, decorate with study tracking and exam unlock status
+    const studentId = req.user?.id;
+    if (studentId && !isStaff) {
+      const progress = await StudentProgressModel.findOne({ userId: new Types.ObjectId(studentId) });
+      const studentUnitMap = new Map((progress?.units || []).map((u) => [u.unitCode, u]));
+      const decorated = units.map((u: any) => {
+        const record = studentUnitMap.get(u.code);
+        const isCompleted = record ? record.isStudyCompleted === true : false;
+        const studyStatus = record
+          ? record.studyStatus || (isCompleted ? 'completed' : 'not_started')
+          : 'not_started';
+        return {
+          ...u,
+          studyStatus,
+          isStudyCompleted: isCompleted,
+          isExamUnlocked: isCompleted,
+          bestScore: record ? record.bestScore : 0,
+          bestPercentage: record ? record.bestPercentage : 0,
+          passed: record ? record.passed : false,
+        };
+      });
+      return sendSuccess(res, decorated, 200);
+    }
 
     return sendSuccess(res, units, 200);
   }
