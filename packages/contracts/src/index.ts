@@ -235,7 +235,7 @@ export const QuestionBankFileSchema = z.object({
   subject: z.string().min(1, 'Subject name is required'),
   unitNumber: z.number().int().positive('Unit number must be positive'),
   unitTitle: z.string().min(1, 'Unit title is required'),
-  questions: z.array(RawQuestionItemSchema).length(30, 'Each approved unit must contain exactly 30 questions'),
+  questions: z.array(RawQuestionItemSchema).length(15, 'Each approved unit must contain exactly 15 questions'),
 });
 export type QuestionBankFile = z.infer<typeof QuestionBankFileSchema>;
 

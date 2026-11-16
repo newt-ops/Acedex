@@ -94,7 +94,7 @@ Organizes the national curriculum hierarchy across Grades 9–12.
   unitNumber: Number,         // e.g. 1, 2, 3
   title: String,              // e.g. "Physics and Human Society"
   isPublished: Boolean,       // Default: false
-  questionCount: Number,      // Expected: 30
+  questionCount: Number,      // Expected: 15
   createdAt: ISODate,
   updatedAt: ISODate
 }
