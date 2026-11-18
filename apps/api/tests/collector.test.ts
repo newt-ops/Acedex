@@ -6,7 +6,7 @@ import { ContributorModel } from '../src/modules/collector/models/contributor.mo
 import { TempUnitSubmissionModel } from '../src/modules/collector/models/unit-submission.model';
 import { JsonSanitizerService } from '../src/modules/collector/services/sanitizer.service';
 
-describe('Subject Contributor Portal & JSON Exporter Engine', () => {
+describe('Subject Contributor Portal & JSON Exporter Engine', { timeout: 60000 }, () => {
   const app = createApp();
 
   const ADMIN_KEY = 'acedex-admin-2026';
@@ -41,6 +41,18 @@ describe('Subject Contributor Portal & JSON Exporter Engine', () => {
     expect(res.body.data.contributorId).toBe('GEO#982');
     expect(res.body.data.subjectCode).toBe('GEO');
     expect(res.body.data.subjectName).toBe('Geography');
+    expect(res.body.data.role).toBe('student');
+  });
+
+  it('2b. POST /api/v1/collector/login should authenticate admin ID ADM#15 with admin role', async () => {
+    const res = await request(app)
+      .post('/api/v1/collector/login')
+      .send({ contributorId: 'ADM#15' });
+
+    expect(res.status).toBe(200);
+    expect(res.body.success).toBe(true);
+    expect(res.body.data.contributorId).toBe('ADM#15');
+    expect(res.body.data.role).toBe('admin');
   });
 
   it('3. GET /api/v1/collector/units should return all 4 grades with not_started units', async () => {

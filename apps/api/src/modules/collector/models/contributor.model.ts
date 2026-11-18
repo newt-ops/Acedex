@@ -5,6 +5,7 @@ export interface IContributorDoc extends Document {
   name: string;
   subjectCode: string;
   subjectName: string;
+  role: 'student' | 'admin';
   lastActiveAt?: Date;
   createdAt: Date;
   updatedAt: Date;
@@ -36,6 +37,11 @@ const ContributorSchema = new Schema<IContributorDoc>(
       type: String,
       required: true,
       trim: true,
+    },
+    role: {
+      type: String,
+      enum: ['student', 'admin'],
+      default: 'student',
     },
     lastActiveAt: {
       type: Date,

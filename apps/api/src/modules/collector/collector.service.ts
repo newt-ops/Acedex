@@ -19,15 +19,17 @@ export const DEFAULT_CONTRIBUTORS: Array<{
   name: string;
   subjectCode: string;
   subjectName: string;
+  role?: 'student' | 'admin';
 }> = [
-  { contributorId: 'GEO#982', name: 'Geography Lead', subjectCode: 'GEO', subjectName: 'Geography' },
-  { contributorId: 'PHY#101', name: 'Physics Lead', subjectCode: 'PHY', subjectName: 'Physics' },
-  { contributorId: 'CHE#202', name: 'Chemistry Lead', subjectCode: 'CHE', subjectName: 'Chemistry' },
-  { contributorId: 'BIO#303', name: 'Biology Lead', subjectCode: 'BIO', subjectName: 'Biology' },
-  { contributorId: 'MAT#404', name: 'Mathematics Lead', subjectCode: 'MAT', subjectName: 'Mathematics' },
-  { contributorId: 'ENG#505', name: 'English Lead', subjectCode: 'ENG', subjectName: 'English' },
-  { contributorId: 'ECO#606', name: 'Economics Lead', subjectCode: 'ECO', subjectName: 'Economics' },
-  { contributorId: 'HIS#808', name: 'History Lead', subjectCode: 'HIS', subjectName: 'History' },
+  { contributorId: 'ADM#15', name: 'Master Administrator', subjectCode: 'ADMIN', subjectName: 'Admin Review Hub', role: 'admin' },
+  { contributorId: 'GEO#982', name: 'Geography Lead', subjectCode: 'GEO', subjectName: 'Geography', role: 'student' },
+  { contributorId: 'PHY#101', name: 'Physics Lead', subjectCode: 'PHY', subjectName: 'Physics', role: 'student' },
+  { contributorId: 'CHE#202', name: 'Chemistry Lead', subjectCode: 'CHE', subjectName: 'Chemistry', role: 'student' },
+  { contributorId: 'BIO#303', name: 'Biology Lead', subjectCode: 'BIO', subjectName: 'Biology', role: 'student' },
+  { contributorId: 'MAT#404', name: 'Mathematics Lead', subjectCode: 'MAT', subjectName: 'Mathematics', role: 'student' },
+  { contributorId: 'ENG#505', name: 'English Lead', subjectCode: 'ENG', subjectName: 'English', role: 'student' },
+  { contributorId: 'ECO#606', name: 'Economics Lead', subjectCode: 'ECO', subjectName: 'Economics', role: 'student' },
+  { contributorId: 'HIS#808', name: 'History Lead', subjectCode: 'HIS', subjectName: 'History', role: 'student' },
 ];
 
 export class CollectorService {
@@ -39,10 +41,13 @@ export class CollectorService {
       await ContributorModel.findOneAndUpdate(
         { contributorId: c.contributorId.toUpperCase() },
         {
-          $setOnInsert: {
+          $set: {
             name: c.name,
             subjectCode: c.subjectCode.toUpperCase(),
             subjectName: c.subjectName,
+            role: c.role || 'student',
+          },
+          $setOnInsert: {
             lastActiveAt: new Date(),
           },
         },
@@ -53,7 +58,7 @@ export class CollectorService {
   }
 
   /**
-   * Contributor login with ID only (e.g. GEO#982)
+   * Contributor login with ID only (e.g. GEO#982, ADM#15)
    */
   public static async login(contributorId: string): Promise<ContributorProfile> {
     const cleanId = contributorId.trim().toUpperCase();
@@ -75,6 +80,7 @@ export class CollectorService {
       name: contributor.name,
       subjectCode: contributor.subjectCode,
       subjectName: contributor.subjectName,
+      role: contributor.role || (cleanId === 'ADM#15' ? 'admin' : 'student'),
     };
   }
 

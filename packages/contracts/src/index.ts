@@ -536,6 +536,7 @@ export interface ContributorProfile {
   name: string;
   subjectCode: string;
   subjectName: string;
+  role?: 'student' | 'admin';
 }
 
 export const UnitSubmissionStatusSchema = z.enum([
