@@ -7,6 +7,7 @@ import progressRoutes from '../modules/progress/progress.routes';
 import { studyRoutes } from '../modules/study/study.routes';
 import { adsRoutes } from '../modules/ads/ads.routes';
 import adminRoutes from '../modules/admin/admin.routes';
+import { collectorRoutes } from '../modules/collector/collector.routes';
 
 const router = Router();
 
@@ -33,5 +34,8 @@ router.use('/ads', adsRoutes);
 
 // Administration & Management (Protected with RBAC)
 router.use('/admin', adminRoutes);
+
+// Temporary Subject Question Collector & Exporter
+router.use('/collector', collectorRoutes);
 
 export const v1Routes = router;
