@@ -2,6 +2,304 @@
   "grade": 9,
   "subject": "History",
   "unitNumber": 8,
-  "unitTitle": "Political, Social & Economic Processes in Ethiopia Mid-16th to Mid-19th C.",
-  "questions": []
+  "unitTitle": "Political, Social and Economic Processes in Ethiopia Mid-16th to Mid-19th C.",
+  "questions": [
+    {
+      "id": "HIS-G09-U08-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which Ethiopian monarch founded Gondar as a permanent imperial capital around 1636, terminating the long-standing tradition of roving tent capitals?",
+      "options": [
+        { "id": "A", "text": "Emperor Susenyos" },
+        { "id": "B", "text": "Emperor Fasiladas" },
+        { "id": "C", "text": "Emperor Iyasu I" },
+        { "id": "D", "text": "Emperor Gelawdewos" }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Emperor Fasiladas founded Gondar around 1636, establishing it as a permanent political and economic center that ended the era of mobile imperial courts.",
+      "sourceReference": "Section 8.2, Page 178"
+    },
+    {
+      "id": "HIS-G09-U08-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In the indigenous state structure of the Omotic kingdom of Kafa, what royal title was held by the supreme monarch?",
+      "options": [
+        { "id": "A", "text": "Tato" },
+        { "id": "B", "text": "Kawo" },
+        { "id": "C", "text": "Mootii" },
+        { "id": "D", "text": "Woma" }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The kingdom of Kafa was governed by a hereditary king who held the royal title of Tato and wore elaborate golden regalia including a triple-phallus crown.",
+      "sourceReference": "Section 8.1.1, Page 154"
+    },
+    {
+      "id": "HIS-G09-U08-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which ruling dynasty was founded in 1786 by Ali Gwangul (Ali I) and maintained predominant political authority during the Zemene Mesafint from Debre Tabor?",
+      "options": [
+        { "id": "A", "text": "The Walasma dynasty" },
+        { "id": "B", "text": "The Mwa dynasty" },
+        { "id": "C", "text": "The Yejju dynasty (Warra Sheh)" },
+        { "id": "D", "text": "The Kawuka dynasty" }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The Yejju dynasty, also known as the Warra Sheh, was established by Ali Gwangul in 1786 and dominated the political landscape of northern Ethiopia during the Zemene Mesafint in the name of figurehead Gondarine kings.",
+      "sourceReference": "Section 8.4, Page 183"
+    },
+    {
+      "id": "HIS-G09-U08-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Who constructed the famous protective stone wall of Jugol around the city of Harar in the 1550s?",
+      "options": [
+        { "id": "A", "text": "Emir Abdullahi" },
+        { "id": "B", "text": "Imam Ahmad ibn Ibrahim" },
+        { "id": "C", "text": "Emir Ali ibn Dawd" },
+        { "id": "D", "text": "Emir Nur ibn al-Wazir" }
+      ],
+      "correctOptionId": "D",
+      "explanation": "Emir Nur ibn al-Wazir, the immediate successor of Imam Ahmad, constructed the Jugol wall surrounding Harar between 1552 and 1553 to safeguard the city against external attacks.",
+      "sourceReference": "Section 8.1.3, Page 174"
+    },
+    {
+      "id": "HIS-G09-U08-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which local leader laid the foundation for the autonomous Kingdom of Shewa in the late seventeenth century around 1696?",
+      "options": [
+        { "id": "A", "text": "Negasi Kristos" },
+        { "id": "B", "text": "Sahle Sellase" },
+        { "id": "C", "text": "Sebestyanos" },
+        { "id": "D", "text": "Asfawosen" }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Negasi Kristos of Menz (c. 1696) initiated the consolidation of Shewa by uniting several local districts and establishing the lineage that developed into the autonomous Kingdom of Shewa.",
+      "sourceReference": "Section 8.5, Page 185"
+    },
+    {
+      "id": "HIS-G09-U08-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What traditional institution served as the supreme council of elders among Somali clans to decide civil, criminal, and inter-clan disputes?",
+      "options": [
+        { "id": "A", "text": "Songo" },
+        { "id": "B", "text": "Guurti" },
+        { "id": "C", "text": "Chaffe" },
+        { "id": "D", "text": "Raga" }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The Guurti was the Somali council of elders that served as the highest political and judicial body mandated to resolve disputes, maintain peace, and govern clan affairs.",
+      "sourceReference": "Section 8.1.3, Page 177"
+    },
+    {
+      "id": "HIS-G09-U08-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Under the customary governance system of YeSiltie Sera, what title was given to the supreme political leader of the assembly?",
+      "options": [
+        { "id": "A", "text": "Abba Duulaa" },
+        { "id": "B", "text": "Kawo" },
+        { "id": "C", "text": "Mule Gerad" },
+        { "id": "D", "text": "Mote" }
+      ],
+      "correctOptionId": "C",
+      "explanation": "In the Siltie socio-political system (YeSiltie Sera), the highest political authority who led the general assembly (YeMule Siltie Melcho) was titled the Mule Gerad.",
+      "sourceReference": "Section 8.1.1, Page 165"
+    },
+    {
+      "id": "HIS-G09-U08-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which of the five Gibe Oromo monarchies was the earliest to adopt Islam as its official religion?",
+      "options": [
+        { "id": "A", "text": "Jimma" },
+        { "id": "B", "text": "Limmu-Ennarya" },
+        { "id": "C", "text": "Gera" },
+        { "id": "D", "text": "Gomma" }
+      ],
+      "correctOptionId": "D",
+      "explanation": "Among the five monarchical Gibe states (Jimma, Limmu-Ennarya, Gomma, Gumma, and Gera), Gomma was the earliest to embrace Islam as its official state religion.",
+      "sourceReference": "Section 8.1.2, Page 169"
+    },
+    {
+      "id": "HIS-G09-U08-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What military engineering strategy was undertaken by rulers such as King Halala of Dawuro and Kawo Amado of Wolaita to defend their territories?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Constructing extensive stone fortifications and dry-stone boundary walls"
+        },
+        {
+          "id": "B",
+          "text": "Erecting earthwork river dams to flood incoming cavalry routes"
+        },
+        {
+          "id": "C",
+          "text": "Digging underground tunnel complexes across highland escarpments"
+        },
+        {
+          "id": "D",
+          "text": "Building wooden palisade stockades equipped with imported Portuguese cannons"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Both Kawo Amado of Wolaita and King Halala of Dawuro (Halala Keela) constructed monumental dry-stone defensive walls and trenches along strategic borders to defend their kingdoms against invasions.",
+      "sourceReference": "Section 8.1.1, Page 159"
+    },
+    {
+      "id": "HIS-G09-U08-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Why did the Kingdom of Shewa experience political stability and steady territorial growth while northern Ethiopia was engulfed in the Zemene Mesafint?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It established a permanent military alliance with the Ottoman pashas of Massawa"
+        },
+        {
+          "id": "B",
+          "text": "It remained geographically and politically detached from the destructive civil conflicts among the northern warlords"
+        },
+        {
+          "id": "C",
+          "text": "It eliminated all forms of internal taxation and peasant tribute"
+        },
+        {
+          "id": "D",
+          "text": "It converted to Catholicism and secured European mercenary regiments"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "During the Zemene Mesafint, Shewa stayed insulated from the endless factional wars of Gondar, Gojjam, Tigray, and Wollo, enabling its rulers to expand southwards and build a stable, centralized administration.",
+      "sourceReference": "Section 8.5, Page 185"
+    },
+    {
+      "id": "HIS-G09-U08-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In the decentralized political organization of the Anywaa people of Gambella, what two titles were held by village leaders responsible for peacekeeping and redistributing wealth?",
+      "options": [
+        { "id": "A", "text": "Mote and Songo" },
+        { "id": "B", "text": "Tato and Mikerecho" },
+        { "id": "C", "text": "Nyieye and Kuaari" },
+        { "id": "D", "text": "Khati and Arti" }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Anywaa villages were self-governing political units managed by either nobles known as nyieye or headmen called kuaari, whose central roles were maintaining order and communal wealth redistribution.",
+      "sourceReference": "Section 8.1.2, Page 172"
+    },
+    {
+      "id": "HIS-G09-U08-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Which combination of economic, religious, and military factors catalyzed the transformation of the Gibe Oromo from the egalitarian Gadaa system into monarchical states (Mooti)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Wealth accumulated from long-distance trade, the ideological influence of Islam, and the rise of powerful war leaders (Abbaa Duulaa) with standing retinues"
+        },
+        {
+          "id": "B",
+          "text": "The introduction of European steam power and direct colonial protectorates by Britain"
+        },
+        {
+          "id": "C",
+          "text": "Direct military conquest and feudal reorganization by the Gondarine emperors"
+        },
+        {
+          "id": "D",
+          "text": "The collapse of cash-crop agriculture and a return to nomadic pastoralism"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "In the Gibe valley, surplus agricultural production, profits from the coffee and slave trades, the spread of Islam, and the emergence of successful war leaders (Abbaa Duulaa) who retained personal armed forces undermined the rotating Gadaa system and led to monarchies.",
+      "sourceReference": "Section 8.1.2, Page 167"
+    },
+    {
+      "id": "HIS-G09-U08-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "How did the persistent feudal conflicts of the Zemene Mesafint (1769–1855) undermine northern Ethiopia's economy and social cohesion?",
+      "options": [
+        {
+          "id": "A",
+          "text": "They caused the complete abolition of the salt bar (amole) as a medium of commercial exchange"
+        },
+        {
+          "id": "B",
+          "text": "They compelled northern regional rulers to establish joint agricultural trading companies in the Red Sea"
+        },
+        {
+          "id": "C",
+          "text": "They eliminated all foreign importation of firearms across the western frontiers"
+        },
+        {
+          "id": "D",
+          "text": "They disrupted peasant farming through regular troop pillaging and burdened caravan traders with extortionate tolls at numerous regional checkpoints"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "Continuous feudal warfare devastated agriculture because competing armies looted grain reserves and burned farmlands, while merchants were subjected to robberies and multiple arbitrary taxes at each warlord's toll gate.",
+      "sourceReference": "Section 8.3, Page 182"
+    },
+    {
+      "id": "HIS-G09-U08-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "What political strategy was orchestrated by Empress Mentewab at the Gondar court, and what significant long-term consequence did it have?",
+      "options": [
+        {
+          "id": "A",
+          "text": "She expelled all European travelers to keep the Ethiopian Orthodox Church isolated from foreign influences"
+        },
+        {
+          "id": "B",
+          "text": "She arranged the marriage of her son Emperor Iyasu II to Wubit of the Wollo Oromo, which brought the Wollo Oromo into the center of imperial politics"
+        },
+        {
+          "id": "C",
+          "text": "She transferred the permanent imperial capital from Gondar to Ankober in northern Shewa"
+        },
+        {
+          "id": "D",
+          "text": "She signed a mutual defense pact with Muhammad Ali of Egypt against Sudanese border tribes"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Empress Mentewab sought to consolidate her power base by arranging a marriage between her son, Iyasu II, and Wubit from a prominent Wollo Oromo family, inadvertently establishing Wollo Oromo leaders as dominant political actors at the Gondarine court.",
+      "sourceReference": "Section 8.2 & 8.3, Pages 180-181"
+    },
+    {
+      "id": "HIS-G09-U08-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Why is the assassination of Emperor Iyoas by Ras Mikael Sehul in 1769 regarded by historians as the definitive beginning of the Zemene Mesafint?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It led to the immediate dissolution of the Ethiopian Orthodox Tewahedo Church"
+        },
+        {
+          "id": "B",
+          "text": "It permanently shifted the imperial capital from Gondar to Debre Tabor"
+        },
+        {
+          "id": "C",
+          "text": "It shattered the traditional sanctity of the monarch, reducing emperors to political puppets under regional kingmakers and warlords"
+        },
+        {
+          "id": "D",
+          "text": "It caused the immediate annexation of the northern Red Sea coastal lowlands by the Ottoman Empire"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Ras Mikael Sehul's regicide of Emperor Iyoas in 1769 broke the sacred prestige of the imperial throne, demonstrating that real authority rested with regional warlords who could install, manipulate, or depose figurehead monarchs at will.",
+      "sourceReference": "Section 8.3, Page 181"
+    }
+  ]
 }

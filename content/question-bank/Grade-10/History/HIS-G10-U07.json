@@ -3,5 +3,348 @@
   "subject": "History",
   "unitNumber": 7,
   "unitTitle": "Africa Since 1960",
-  "questions": []
+  "questions": [
+    {
+      "id": "HIS-G10-U07-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which West African nation was the only French colony to reject membership in the new French Community by voting 'NO' in the 1958 constitutional referendum, attaining immediate independence?",
+      "options": [
+        { "id": "A", "text": "Senegal" },
+        { "id": "B", "text": "Guinea" },
+        { "id": "C", "text": "Mali" },
+        { "id": "D", "text": "Ivory Coast" }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In the September 1958 constitutional referendum organized by French President Charles de Gaulle, Guinea, led by Ahmed Sékou Touré, was the only territory to vote 'NO', leading to the proclamation of its independence on October 2, 1958.",
+      "sourceReference": "Section 7.1.2, Pages 173-174"
+    },
+    {
+      "id": "HIS-G10-U07-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In which African capital city did delegates from thirty-two independent states convene in May 1963 to establish the Organization of African Unity (OAU)?",
+      "options": [
+        { "id": "A", "text": "Cairo, Egypt" },
+        { "id": "B", "text": "Accra, Ghana" },
+        { "id": "C", "text": "Addis Ababa, Ethiopia" },
+        { "id": "D", "text": "Dakar, Senegal" }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Between May 22 and 25, 1963, delegates from thirty-two independent African nations met in Addis Ababa, Ethiopia, where they signed the founding charter establishing the Organization of African Unity (OAU).",
+      "sourceReference": "Section 7.1.6, Pages 183-184"
+    },
+    {
+      "id": "HIS-G10-U07-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What tragedy occurred on March 21, 1960, in South Africa when police opened fire on peaceful, unarmed demonstrators protesting against discriminatory pass laws?",
+      "options": [
+        { "id": "A", "text": "The Soweto Uprising" },
+        { "id": "B", "text": "The Sharpeville Massacre" },
+        { "id": "C", "text": "The Rivonia Incident" },
+        { "id": "D", "text": "The Boipatong Raid" }
+      ],
+      "correctOptionId": "B",
+      "explanation": "On March 21, 1960, South African police opened fire on an unarmed demonstration against apartheid pass laws in Sharpeville, killing 72 people and wounding 186, an event that provoked international outrage and economic sanctions.",
+      "sourceReference": "Section 7.1.5, Page 180"
+    },
+    {
+      "id": "HIS-G10-U07-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Who was inaugurated as the first democratically elected president of the Republic of South Africa following the end of apartheid in April 1994?",
+      "options": [
+        { "id": "A", "text": "Oliver Tambo" },
+        { "id": "B", "text": "Albert Luthuli" },
+        { "id": "C", "text": "Walter Sisulu" },
+        { "id": "D", "text": "Nelson Mandela" }
+      ],
+      "correctOptionId": "D",
+      "explanation": "Following decades of anti-apartheid struggle and twenty-seven years of imprisonment, Nelson Mandela led the African National Congress (ANC) to victory in South Africa's first non-racial, universal suffrage election in April 1994.",
+      "sourceReference": "Section 7.1.5, Page 180"
+    },
+    {
+      "id": "HIS-G10-U07-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which Regional Economic Community was officially established in December 1994, succeeding the Preferential Trade Area (PTA) that had operated since 1981?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Economic Community of West African States (ECOWAS)"
+        },
+        {
+          "id": "B",
+          "text": "Common Market for Eastern and Southern Africa (COMESA)"
+        },
+        { "id": "C", "text": "Southern African Development Community (SADC)" },
+        {
+          "id": "D",
+          "text": "Intergovernmental Authority on Development (IGAD)"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The Common Market for Eastern and Southern Africa (COMESA) was established in December 1994, replacing the Preferential Trade Area (PTA) to promote economic integration across member states stretching from North Africa to Southern Africa.",
+      "sourceReference": "Section 7.2, Page 187"
+    },
+    {
+      "id": "HIS-G10-U07-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How did political party formation in pre-independence Nigeria differ fundamentally from that of the Gold Coast (Ghana)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Nigerian parties were organized directly by British governors, while Ghanaian parties were illegal underground leagues"
+        },
+        {
+          "id": "B",
+          "text": "In Ghana, the Convention People's Party enjoyed broad nationwide support, whereas in Nigeria, major parties (NCNC, AG, NPC) were divided along regional and ethnic lines"
+        },
+        {
+          "id": "C",
+          "text": "Nigerian parties uniformly agreed on an immediate date for independence, while Ghanaian parties opposed decolonization"
+        },
+        {
+          "id": "D",
+          "text": "Ghanaian parties established an absolute monarchy, whereas Nigerian parties supported a military junta"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In Ghana, Kwame Nkrumah's Convention People's Party (CPP) achieved nationwide mobilization; in Nigeria, parties were fragmented along regional and ethnic divisions—the NCNC among the Igbo in the East, the Action Group among the Yoruba in the West, and the Northern People's Congress among the Hausa-Fulani in the North.",
+      "sourceReference": "Section 7.1.2, Pages 172-173"
+    },
+    {
+      "id": "HIS-G10-U07-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Why did the national liberation struggles in Portuguese African territories (Angola, Mozambique, and Guinea-Bissau) take the form of prolonged armed guerrilla warfare rather than peaceful constitutional transfer of power?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The United Nations Security Council explicitly barred Portuguese colonies from participating in international diplomacy"
+        },
+        {
+          "id": "B",
+          "text": "Portugal constitutionally treated its colonies as overseas provinces and its authoritarian government refused all demands for decolonization"
+        },
+        {
+          "id": "C",
+          "text": "Indigenous populations unanimously voted in referendums to remain within the Portuguese Empire"
+        },
+        {
+          "id": "D",
+          "text": "Portuguese settlers surrendered state authority voluntarily to the Organization of African Unity"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Unlike Britain and France, Portugal's authoritarian regime under Salazar classified its African possessions as constitutionally inalienable 'overseas provinces' and adamantly refused to grant independence, leaving liberation movements with no alternative other than armed struggle.",
+      "sourceReference": "Section 7.1.2, Pages 174-175"
+    },
+    {
+      "id": "HIS-G10-U07-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What measure implemented by Prime Minister Ian Smith in November 1965 delayed the realization of African majority rule in Southern Rhodesia?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The voluntary surrender of royal administrative charters back to Great Britain"
+        },
+        {
+          "id": "B",
+          "text": "The Unilateral Declaration of Independence (UDI) by the white minority regime"
+        },
+        {
+          "id": "C",
+          "text": "The formation of an immediate coalition government with the Zimbabwe African National Union (ZANU)"
+        },
+        {
+          "id": "D",
+          "text": "The direct annexation of Southern Rhodesia into the Republic of South Africa"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In 1965, the white-minority government under Ian Smith issued a Unilateral Declaration of Independence (UDI) to block British pressure for majority African rule, triggering a prolonged guerrilla liberation war that lasted until independence in 1980.",
+      "sourceReference": "Section 7.1.4, Pages 178-179"
+    },
+    {
+      "id": "HIS-G10-U07-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Immediately following the independence of the Belgian Congo in June 1960, which mineral-rich southern province attempted to secede under Moise Tshombe?",
+      "options": [
+        { "id": "A", "text": "South Kasai" },
+        { "id": "B", "text": "Katanga" },
+        { "id": "C", "text": "Leopoldville" },
+        { "id": "D", "text": "Kivu" }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Shortly after Congo attained independence under Prime Minister Patrice Lumumba and President Joseph Kasavubu, the mineral-rich province of Katanga announced its secession under Moise Tshombe with the military backing of Belgian forces.",
+      "sourceReference": "Section 7.1.3, Page 176"
+    },
+    {
+      "id": "HIS-G10-U07-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "On the eve of the establishment of the OAU in 1963, what primary policy divergence separated the Casablanca Group from the Monrovia Group?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The Casablanca Group advocated rapid continental political unification with centralized economic planning, while the Monrovia Group favored a loose confederation preserving national sovereignty"
+        },
+        {
+          "id": "B",
+          "text": "The Casablanca Group sought incorporation into the British Commonwealth, while the Monrovia Group allied with the Warsaw Pact"
+        },
+        {
+          "id": "C",
+          "text": "The Casablanca Group opposed African decolonization, whereas the Monrovia Group supported European trusteeship"
+        },
+        {
+          "id": "D",
+          "text": "The Casablanca Group defended apartheid in South Africa, while the Monrovia Group opposed racial segregation"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The radical Casablanca Group (led by Nkrumah and Sékou Touré) favored a strong political union—the 'United States of Africa'—with common defense and centralized planning; the moderate Monrovia Group favored a loose association respecting state sovereignty and gradual economic cooperation.",
+      "sourceReference": "Section 7.1.6, Pages 182-183"
+    },
+    {
+      "id": "HIS-G10-U07-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which combination of factors served as the primary catalyst for the Nigerian Civil War (the Biafran War) between 1967 and 1970?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A territorial dispute with French Cameroon over mineral extraction along Lake Chad"
+        },
+        {
+          "id": "B",
+          "text": "Regional imbalances inherited from British indirect rule, ethnic friction following military coups, and the secession of the southeastern Igbo region"
+        },
+        {
+          "id": "C",
+          "text": "The unilateral imposition of Roman Catholicism as the state religion across northern provinces"
+        },
+        {
+          "id": "D",
+          "text": "A naval blockade organized by the Organization of African Unity against Lagos"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "British indirect rule had governed Nigerian regions separately, hardening ethnic divisions; following political violence, the 1966 military coup, and anti-Igbo pogroms in the north, the southeastern Igbo-dominated region seceded as the Republic of Biafra, sparking a civil war.",
+      "sourceReference": "Section 7.3, Pages 188-189"
+    },
+    {
+      "id": "HIS-G10-U07-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Why was the anti-colonial struggle in Kenya (the Mau Mau uprising) more violent and protracted than the decolonization process in neighboring Uganda or Tanganyika?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Uganda and Tanganyika had standing royal armies that defeated British garrisons without civilian casualties"
+        },
+        {
+          "id": "B",
+          "text": "Kenya had a large European settler population that had expropriated the fertile 'White Highlands' and fiercely resisted African land claims and political enfranchisement"
+        },
+        {
+          "id": "C",
+          "text": "The League of Nations mandated that Kenya remain under British military occupation until all cash crops were privatized"
+        },
+        {
+          "id": "D",
+          "text": "The Mau Mau uprising was an armed military invasion launched and staffed by foreign forces from Mozambique"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Kenya was a settler colony where white settlers had dispossessed indigenous populations (especially the Kikuyu) of ancestral lands in the fertile White Highlands; the settlers' resistance to African political rights and land reclamation provoked the armed Mau Mau uprising (1952–1955).",
+      "sourceReference": "Section 7.1.3, Page 175"
+    },
+    {
+      "id": "HIS-G10-U07-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "How did adverse international terms of trade and the structural role of the IMF and World Bank perpetuate economic distress across sub-Saharan Africa during the 1980s?",
+      "options": [
+        {
+          "id": "A",
+          "text": "International institutions required African countries to halt all mineral exports to industrialized economies"
+        },
+        {
+          "id": "B",
+          "text": "African primary export commodities suffered steep price declines relative to imported manufactured goods, creating severe debt burdens that compelled reliance on Western-funded financial institutions prioritizing debt repayment over autonomous industrialization"
+        },
+        {
+          "id": "C",
+          "text": "The World Bank forced African nations to completely eliminate agricultural crop production in favor of European imports"
+        },
+        {
+          "id": "D",
+          "text": "African countries generated massive foreign exchange reserves that Western banks refused to deposit"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "African economies remained primary commodity suppliers; as raw material prices plummeted relative to manufactured imports, foreign exchange reserves dried up, forcing governments to seek emergency loans from the IMF and World Bank under terms reflecting Western capitalist priorities.",
+      "sourceReference": "Section 7.2, Page 186"
+    },
+    {
+      "id": "HIS-G10-U07-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Which statement accurately evaluates the historical context and tragic consequences of the 1994 Rwandan Genocide?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It was a spontaneous conflict between nomadic pastoralists over border pastures that was resolved through traditional mediation"
+        },
+        {
+          "id": "B",
+          "text": "It was a systematic state-sponsored extermination campaign executed by Hutu extremist forces against the Tutsi minority and moderate Hutus, resulting in approximately 800,000 deaths and demonstrating the failure of international intervention"
+        },
+        {
+          "id": "C",
+          "text": "It began as an armed cross-border invasion conducted by the government of Zaire to annex Kigali"
+        },
+        {
+          "id": "D",
+          "text": "It was a labor rebellion organized by industrial factory workers against Belgian coffee plantations"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Between April and July 1994, extremist Hutu militias and state forces carried out the systematic slaughter of around 800,000 Tutsis and moderate Hutus, representing one of the deadliest genocides in modern history and highlighting the tragic shortcomings of international peacekeeping.",
+      "sourceReference": "Section 7.3, Page 189"
+    },
+    {
+      "id": "HIS-G10-U07-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Why did African heads of state decide to dissolve the Organization of African Unity (OAU) and replace it with the African Union (AU) in Durban in 2002?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The OAU had rejected the 1991 Abuja Treaty establishing the African Economic Community"
+        },
+        {
+          "id": "B",
+          "text": "Although successful in spearheading decolonization and ending apartheid, the OAU's strict non-interference clause and limited institutional authority rendered it ineffective in addressing internal civil wars, human rights abuses, and the challenges of globalization"
+        },
+        {
+          "id": "C",
+          "text": "The United Nations General Assembly mandated the unification of all regional economic communities under Arab League leadership"
+        },
+        {
+          "id": "D",
+          "text": "The OAU Charter restricted membership exclusively to English-speaking states"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The OAU succeeded in its primary founding mission of eradicating colonialism and white minority rule; however, its rigid principle of non-interference left it powerless to resolve internal civil conflicts, prevent human rights violations, or promote continental integration, prompting the launch of the African Union (AU) with a mandate for proactive intervention and democratic governance.",
+      "sourceReference": "Section 7.1.7, Pages 185-186"
+    }
+  ]
 }

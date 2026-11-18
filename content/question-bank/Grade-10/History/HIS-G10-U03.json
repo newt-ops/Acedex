@@ -2,6 +2,358 @@
   "grade": 10,
   "subject": "History",
   "unitNumber": 3,
-  "unitTitle": "Ethiopia: Internal Developments and External Relations from 1840s to 1941",
-  "questions": []
+  "unitTitle": "Social, Economic and Political Developments in Ethiopia from mid-19th c. to 1941",
+  "questions": [
+    {
+      "id": "HIS-G10-U03-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which southwestern commercial town served as the common starting point for both major 19th-century Ethiopian long-distance trade routes?",
+      "options": [
+        { "id": "A", "text": "Hirmata (Jimma)" },
+        { "id": "B", "text": "Bonga (Kafa)" },
+        { "id": "C", "text": "Saqa (Limmu-Ennarya)" },
+        { "id": "D", "text": "Assandabo (Horro Guduru)" }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In 19th-century Ethiopia, the two primary long-distance trade routes connecting the southern, northern, and eastern parts of the Horn originated from Bonga, the capital of the Kingdom of Kafa.",
+      "sourceReference": "Section 3.1.1, Page 45"
+    },
+    {
+      "id": "HIS-G10-U03-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which historic battle fought on June 29, 1853, resulted in the defeat of Ras Ali II and symbolized the end of the Zemene Mesafint?",
+      "options": [
+        { "id": "A", "text": "Battle of Gur Amba" },
+        { "id": "B", "text": "Battle of Gorgora Bicheng" },
+        { "id": "C", "text": "Battle of Ayshal" },
+        { "id": "D", "text": "Battle of Deresge" }
+      ],
+      "correctOptionId": "C",
+      "explanation": "At the Battle of Ayshal on June 29, 1853, Kassa Hailu defeated Ras Ali II, the last powerful ruler of the Yejju dynasty, an event widely regarded as symbolizing the end of the Zemene Mesafint.",
+      "sourceReference": "Section 3.2, Page 49"
+    },
+    {
+      "id": "HIS-G10-U03-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "At which historic council in 1878 did Emperor Yohannes IV declare Tewahdo as the sole official doctrine of the Ethiopian Orthodox Church?",
+      "options": [
+        { "id": "A", "text": "Council of Boru Meda" },
+        { "id": "B", "text": "Council of Liche" },
+        { "id": "C", "text": "Council of Deresge" },
+        { "id": "D", "text": "Council of Debre Tabor" }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Emperor Yohannes IV presided over the Council of Boru Meda in 1878 to resolve deep theological divisions within the church, officially establishing Tewahdo as the only recognized doctrine of the Ethiopian Orthodox Church.",
+      "sourceReference": "Section 3.2, Page 52"
+    },
+    {
+      "id": "HIS-G10-U03-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What primary military and diplomatic objective motivated the British military expedition commanded by Sir Robert Napier to storm Meqdela in 1868?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To annex the Lake Tana basin into Anglo-Egyptian Sudan"
+        },
+        {
+          "id": "B",
+          "text": "To enforce the immediate installation of Kassa Mircha as emperor"
+        },
+        {
+          "id": "C",
+          "text": "To secure the release of imprisoned British diplomats and European missionaries"
+        },
+        {
+          "id": "D",
+          "text": "To conquer northern trade corridors connecting Massawa with the Red Sea"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The Napier expedition of 1867–1868 was dispatched by the British government specifically to rescue Consul Cameron, British envoy Hormuzd Rassam, and European missionaries held captive by Emperor Tewodros II at Meqdela.",
+      "sourceReference": "Section 3.3, Pages 58-59"
+    },
+    {
+      "id": "HIS-G10-U03-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What was the official name given to the consolidated Italian colonial territory formed in 1936 by merging occupied Ethiopia with Eritrea and Italian Somaliland?",
+      "options": [
+        { "id": "A", "text": "Federation of Eastern Africa" },
+        { "id": "B", "text": "Africa Orientale Italiana (AOI)" },
+        { "id": "C", "text": "Protectorate of the Horn of Africa" },
+        { "id": "D", "text": "Colonia Eritrea-Somalia" }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Following Marshal Pietro Badoglio's occupation of Addis Ababa in May 1936, Benito Mussolini proclaimed the formation of Italian East Africa (Africa Orientale Italiana - AOI), divided into six administrative governorates.",
+      "sourceReference": "Section 3.5, Pages 71-72"
+    },
+    {
+      "id": "HIS-G10-U03-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which groups of merchants were the primary carriers of long-distance caravan trade in northern and southwestern 19th-century Ethiopia?",
+      "options": [
+        { "id": "A", "text": "The Sado in Gojjam and the Afqala in Tigray" },
+        {
+          "id": "B",
+          "text": "The Jabarti in northern Ethiopia and the Afqala among the southwestern Oromo"
+        },
+        {
+          "id": "C",
+          "text": "The Kistane in Shewa and the Askaris in Massawa"
+        },
+        { "id": "D", "text": "The Agaw in Lasta and the Falasha in Gondar" }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Long-distance caravan commerce was heavily dominated by Muslim merchant communities: northern Muslim traders were known as Jabarti, while southwestern Oromo Muslim traders were designated as Afqala.",
+      "sourceReference": "Section 3.1.1, Page 46"
+    },
+    {
+      "id": "HIS-G10-U03-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What military lesson learned at the Battle of Dabarqi in 1848 motivated Kassa Hailu (Tewodros II) to modernize his army?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The tactical superiority of traditional cavalry maneuvers against stationary artillery"
+        },
+        {
+          "id": "B",
+          "text": "The necessity of adopting strict military organization, discipline, and advanced European armaments"
+        },
+        {
+          "id": "C",
+          "text": "The importance of relying solely on British diplomatic mediation rather than domestic arms manufacture"
+        },
+        {
+          "id": "D",
+          "text": "The total futility of deploying cannons and mortars in rugged mountainous terrain"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "At Dabarqi in 1848, Kassa's forces were defeated by disciplined, modernly equipped Egyptian troops; this setback gave him a lasting lesson regarding the decisive value of military discipline, tactical coordination, and modern firearms.",
+      "sourceReference": "Section 3.2, Page 49"
+    },
+    {
+      "id": "HIS-G10-U03-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which terms were concluded under the Liche Agreement of 1878 between Emperor Yohannes IV and King Menilek of Shewa?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Menilek agreed to abdicate his royal title and surrendered all Shewan military artillery to the imperial treasury"
+        },
+        {
+          "id": "B",
+          "text": "Yohannes recognized Menilek as hereditary King of Shewa and legitimate successor to the imperial throne"
+        },
+        {
+          "id": "C",
+          "text": "Menilek recognized Yohannes as Emperor, agreed to pay regular tribute, and was confirmed as King of Shewa"
+        },
+        {
+          "id": "D",
+          "text": "Yohannes transferred the administration of Gojjam and Kafa entirely to the Shewan administration"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Under the Liche Agreement of 1878, Emperor Yohannes IV preserved national political unity through decentralized recognition: Menilek submitted to Yohannes as supreme Emperor and agreed to pay tribute, while Yohannes officially recognized Menilek as King of Shewa.",
+      "sourceReference": "Section 3.2, Page 52"
+    },
+    {
+      "id": "HIS-G10-U03-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How did the Hewett (Adwa) Treaty of 1884 signed with Britain affect Ethiopia's geopolitical relations with Mahdist Sudan?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It established a permanent defensive alliance between Ethiopia and the Mahdists against European naval expansion"
+        },
+        {
+          "id": "B",
+          "text": "It incited severe hostilities with the Mahdists because Ethiopia agreed to facilitate the safe evacuation of trapped Egyptian garrisons"
+        },
+        {
+          "id": "C",
+          "text": "It compelled Mahdist Sudan to cede Kassala and Gallabat unconditionally to Emperor Yohannes IV"
+        },
+        {
+          "id": "D",
+          "text": "It granted the Mahdists unrestricted maritime access through the Red Sea port of Massawa"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Under the Hewett Treaty, Ethiopia agreed to facilitate the evacuation of encircled Egyptian soldiers through its territory to Massawa; this intervention provoked the Mahdist leadership and triggered devastating armed clashes between Sudan and Ethiopia from 1885 to 1889.",
+      "sourceReference": "Section 3.3, Pages 61-62"
+    },
+    {
+      "id": "HIS-G10-U03-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What crucial discrepancy between the Amharic and Italian versions of Article XVII of the 1889 Treaty of Wuchale led to the Battle of Adwa?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The Amharic version established Italian sovereignty over the Red Sea, while the Italian text recognized Ethiopian control of Assab"
+        },
+        {
+          "id": "B",
+          "text": "The Amharic text permitted the unrestricted purchase of firearms, while the Italian text prohibited importing European weapons"
+        },
+        {
+          "id": "C",
+          "text": "The Amharic text made the use of Italian diplomatic channels optional, whereas the Italian text made it mandatory, reducing Ethiopia to an Italian protectorate"
+        },
+        {
+          "id": "D",
+          "text": "The Amharic version fixed the border along the Marab River, whereas the Italian version placed the boundary south of the Abay River"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Article XVII differed fundamentally: the Amharic version stated that the Emperor 'could' optionally use Italy's diplomatic services for foreign affairs, whereas the Italian text stated that Ethiopia 'consents' to conduct all foreign relations through Rome, effectively claiming a colonial protectorate over Ethiopia.",
+      "sourceReference": "Section 3.3, Page 63"
+    },
+    {
+      "id": "HIS-G10-U03-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which progressive legal and socio-administrative measures were introduced during the de facto regency of Lij Iyasu (1911–1916)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "He drafted Ethiopia's first written constitution and established the Holeta Military Academy"
+        },
+        {
+          "id": "B",
+          "text": "He established a municipal police force, reformed land taxation, and outlawed the abusive practices of Quragna and Lebashay"
+        },
+        {
+          "id": "C",
+          "text": "He nationalized all agricultural lands and abolished church tithes completely"
+        },
+        {
+          "id": "D",
+          "text": "He founded the Bank of Abyssinia and concluded the tripartite boundary treaties"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Lij Iyasu introduced notable reforms: he founded the first municipal police force (Terenbulle), modified property taxation, abolished the chaining of litigants (Quragna), and prohibited the mystical thief-detecting institution (Lebashay).",
+      "sourceReference": "Section 3.4, Pages 66-67"
+    },
+    {
+      "id": "HIS-G10-U03-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Why did Emperor Tewodros II's domestic socio-economic and religious policies encounter fierce resistance from the traditional Ethiopian clergy and nobility?",
+      "options": [
+        {
+          "id": "A",
+          "text": "He sought to replace Orthodox Christianity with Roman Catholicism and banned all regional vernacular languages"
+        },
+        {
+          "id": "B",
+          "text": "He redistributed state farmland exclusively to European craft workers at Gafat and dissolved the traditional peasant militia"
+        },
+        {
+          "id": "C",
+          "text": "He curtailed church estates to reallocate land to productive tax-paying peasants, limited the number of clergy per church, and sought to replace regional feudal lords with salaried imperial appointees"
+        },
+        {
+          "id": "D",
+          "text": "He transferred supreme judicial authority to the British consular mission and banned monastic land tenure in Gondar"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Tewodros's centralization drive alienated powerful interest groups: the clergy fiercely resisted his reduction of church-administered lands and limiting church staff to two priests and three deacons, while regional hereditary aristocrats violently opposed his efforts to abolish regional autonomy and replace feudal levies with a salaried national standing army.",
+      "sourceReference": "Section 3.2, Pages 50-51"
+    },
+    {
+      "id": "HIS-G10-U03-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "How did the Great Famine (Kefu Qen) of 1888–1892 influence the pace and direction of Emperor Menilek II's southern and southwestern territorial expansion?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It forced the imperial court to suspend all southern campaigns and cede territory to the Mahdists"
+        },
+        {
+          "id": "B",
+          "text": "It provoked widespread peasant revolts across Shewa that permanently paralyzed central military authority"
+        },
+        {
+          "id": "C",
+          "text": "It destroyed northern livestock through rinderpest, necessitating rapid military advances southward into fertile, unaffected regions to secure food supplies and cattle for devastated highland armies"
+        },
+        {
+          "id": "D",
+          "text": "It compelled Menilek to sign the Tripartite Treaty to secure imported grain from European colonial powers"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The rinderpest epidemic brought through Italian-imported cattle at Massawa wiped out nearly 90% of highland cattle and triggered catastrophic famine; this acute resource depletion gave major urgency to Menilek's southward campaigns (1889–1894) into fertile regions such as Wolaita, Sidama, and Kafa to secure livestock and grain.",
+      "sourceReference": "Section 3.2, Pages 55-56"
+    },
+    {
+      "id": "HIS-G10-U03-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Which statement accurately evaluates the political nature of the 'Diarchy' (1916–1930) and how it shaped the consolidation of absolute imperial monarchy in Ethiopia?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It was an egalitarian alliance where conservative traditionalists and progressive modernizers unified smoothly to establish a parliamentary republic"
+        },
+        {
+          "id": "B",
+          "text": "It represented a structural power struggle between the conservative nobility led by Empress Zewditu and Fitawrari Habte Giyorgis and the progressive faction under Ras Teferi Mekonnen, whose eventual neutralization of conservative rivals culminated in autocratic centralization"
+        },
+        {
+          "id": "C",
+          "text": "It established a permanent division of the empire into northern and southern autonomous federations under British supervision"
+        },
+        {
+          "id": "D",
+          "text": "It restored the mobile tent court system and eliminated all ministerial posts established by Emperor Menilek II"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The 1916 political settlement established a dual administration (diarchy) marked by continuous friction between traditional conservatives (championed by Empress Zewditu, Minister of War Habte Giyorgis, and regional figures like Dejjach Balcha and Ras Gugsa Wale) and the modernizing faction under Regent Ras Teferi; Teferi methodically eliminated his opponents, leading to his coronation in 1930 and the absolutist 1931 Constitution.",
+      "sourceReference": "Section 3.4, Pages 67-68"
+    },
+    {
+      "id": "HIS-G10-U03-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "What combination of clandestine operations, intelligence networks, and civic support defined the role of 'Yewust Arbegnoch' (Inner Patriots) during the 1936–1941 anti-fascist resistance?",
+      "options": [
+        {
+          "id": "A",
+          "text": "They served as uniformed combatants who open-confronted Marshal Graziani's divisions on the southern front"
+        },
+        {
+          "id": "B",
+          "text": "They operated as rural peasant councils that negotiated agricultural concession treaties with Italian colonial companies"
+        },
+        {
+          "id": "C",
+          "text": "They lived in occupied towns working inside or alongside Italian administrative bureaus while secretly smuggling arms, ammunition, medical supplies, and military intelligence to rural guerrilla fighters"
+        },
+        {
+          "id": "D",
+          "text": "They were European diplomatic missions that represented the exiled emperor at the League of Nations"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Yewust Arbegnoch ('inner patriots') were urban-based resistance networks (with prominent leadership and participation by Ethiopian women such as Shewareged Gedle) who lived among the Italian occupiers, often holding employment in colonial administrative offices, while surreptitiously procuring vital intelligence, weapons, ammunition, food, and medicine for rural guerrilla forces.",
+      "sourceReference": "Section 3.5, Pages 75-76"
+    }
+  ]
 }

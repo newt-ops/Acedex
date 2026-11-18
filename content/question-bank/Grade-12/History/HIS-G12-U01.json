@@ -3,5 +3,354 @@
   "subject": "History",
   "unitNumber": 1,
   "unitTitle": "Development of Capitalism and Nationalism from 1815 to 1914",
-  "questions": []
+  "questions": [
+    {
+      "id": "HIS-G12-U01-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which landmark economic treatise published in 1776 by Scottish moral philosopher Adam Smith formulated the foundational principles of classical capitalism and laissez-faire economics?",
+      "options": [
+        { "id": "A", "text": "Das Kapital" },
+        { "id": "B", "text": "The Communist Manifesto" },
+        {
+          "id": "C",
+          "text": "An Inquiry into the Nature and Causes of the Wealth of Nations"
+        },
+        { "id": "D", "text": "Principles of Political Economy and Taxation" }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Adam Smith articulated the ideology of classical capitalism in his 1776 book 'An Inquiry into the Nature and Causes of the Wealth of Nations', advocating that economic decisions should be guided by self-regulating market forces without government intervention (laissez-faire).",
+      "sourceReference": "Section 1.1, Page 3"
+    },
+    {
+      "id": "HIS-G12-U01-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which Italian state was the only constitutional monarchy independent of Austrian dominance that served as the spearhead for the unification of Italy?",
+      "options": [
+        { "id": "A", "text": "The Kingdom of the Two Sicilies" },
+        { "id": "B", "text": "The Grand Duchy of Tuscany" },
+        { "id": "C", "text": "The Papal States" },
+        { "id": "D", "text": "The Kingdom of Piedmont-Sardinia" }
+      ],
+      "correctOptionId": "D",
+      "explanation": "The Kingdom of Piedmont-Sardinia, governed under a constitution and parliament by King Victor Emmanuel II and Prime Minister Camillo Cavour, was the only Italian state genuinely free from Austrian control, making it the natural leader of Italian national unification.",
+      "sourceReference": "Section 1.4, Page 12"
+    },
+    {
+      "id": "HIS-G12-U01-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "At which decisive battle in 1866 did Prussian armies defeat the Austrian Empire, allowing Otto von Bismarck to exclude Austria from German affairs and establish the North German Confederation?",
+      "options": [
+        { "id": "A", "text": "The Battle of Sedan" },
+        { "id": "B", "text": "The Battle of Königgrätz" },
+        { "id": "C", "text": "The Battle of Leipzig" },
+        { "id": "D", "text": "The Battle of Solferino" }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In the 1866 Austro-Prussian War, Prussia won a crushing victory over Austria at the Battle of Königgrätz (Sadowa), which enabled Bismarck to dissolve the Austrian-dominated German Confederation and form the Prussian-led North German Confederation.",
+      "sourceReference": "Section 1.5, Page 16"
+    },
+    {
+      "id": "HIS-G12-U01-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which amendment to the United States Constitution formally abolished chattel slavery throughout the nation following the conclusion of the American Civil War?",
+      "options": [
+        { "id": "A", "text": "The Thirteenth Amendment" },
+        { "id": "B", "text": "The Fourteenth Amendment" },
+        { "id": "C", "text": "The Fifteenth Amendment" },
+        { "id": "D", "text": "The Sixteenth Amendment" }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Following the victory of the Union in 1865, three landmark constitutional amendments were enacted: the Thirteenth Amendment abolished slavery, the Fourteenth granted citizenship to former slaves, and the Fifteenth protected their voting rights.",
+      "sourceReference": "Section 1.6, Page 19"
+    },
+    {
+      "id": "HIS-G12-U01-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which military alliance was formed in 1912 by Serbia, Montenegro, Bulgaria, and Greece with Russian backing to seize Macedonia and expel the Ottoman Empire from the Balkans?",
+      "options": [
+        { "id": "A", "text": "The Holy Alliance" },
+        { "id": "B", "text": "The Balkan League" },
+        { "id": "C", "text": "The Triple Entente" },
+        { "id": "D", "text": "The Dual Alliance" }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In 1912, Serbia, Montenegro, Bulgaria, and Greece formed the Balkan League under Russian sponsorship, launching the First Balkan War to liberate remaining ethnic populations and strip the Ottoman Empire of Macedonia.",
+      "sourceReference": "Section 1.7, Page 22"
+    },
+    {
+      "id": "HIS-G12-U01-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In Marxian economics, what is identified as the core mechanism through which the capitalist class exploits industrial wage laborers?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Imposing prohibitive mercantilist tariffs on agricultural grain imports"
+        },
+        {
+          "id": "B",
+          "text": "Appropriating the surplus value generated by labor beyond the wages paid to workers for their subsistence"
+        },
+        {
+          "id": "C",
+          "text": "Preventing workers from investing their wages in corporate shares and municipal bonds"
+        },
+        {
+          "id": "D",
+          "text": "Enforcing compulsory guild apprenticeships that restrict upward social mobility"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Karl Marx argued that the exploitation of the surplus value of labor is the primary flaw of capitalism; workers sell their labor power to employers who pay them subsistence wages while extracting and accumulating the surplus profits created by that labor.",
+      "sourceReference": "Section 1.1, Page 4"
+    },
+    {
+      "id": "HIS-G12-U01-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How did the root cause of economic depressions in industrial capitalist societies differ fundamentally from economic crises of pre-industrial epochs?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Pre-industrial depressions were caused by paper money inflation, whereas industrial crises stemmed from silver shortages"
+        },
+        {
+          "id": "B",
+          "text": "Pre-industrial crises were triggered by government trade regulations, while industrial crises resulted exclusively from naval blockades"
+        },
+        {
+          "id": "C",
+          "text": "Pre-industrial depressions arose from commodity scarcity due to bad harvests, wars, or epidemics, whereas industrial depressions stemmed from overproduction caused by a lack of effective consumer demand"
+        },
+        {
+          "id": "D",
+          "text": "Pre-industrial crises were solved by expanding factory output, whereas industrial crises were resolved through manorial self-sufficiency"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Before the Industrial Revolution, economic hardship was caused by physical shortages of food and goods resulting from wars, crop failures, or epidemics; after the Industrial Revolution, depressions were driven by industrial overproduction coupled with limited purchasing power among impoverished workers.",
+      "sourceReference": "Section 1.2, Pages 6-7"
+    },
+    {
+      "id": "HIS-G12-U01-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How did the character of European nationalism transform in the period between the 1880s and 1914 compared to the earlier nineteenth century?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It shifted from promoting large-scale unifications (as in Italy and Germany) toward territorial fragmentation, linguistic assertiveness, and petty-bourgeois competition among small submerged nationalities"
+        },
+        {
+          "id": "B",
+          "text": "It completely eliminated ethnic rivalries in favor of a universal, borderless European federation"
+        },
+        {
+          "id": "C",
+          "text": "It abandoned public primary schooling and relied solely on religious monastic recruitment"
+        },
+        {
+          "id": "D",
+          "text": "It ceased to influence state foreign policies as socialist parties won universal control over European parliaments"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Whereas early 19th-century nationalism forged larger nation-states out of fragmented provinces (Italy and Germany), post-1880 nationalism became divisive; language and ethnicity became rigid criteria, and small minority nationalities mobilized by the petty bourgeoisie sought autonomy, threatening multinational empires.",
+      "sourceReference": "Section 1.3, Pages 10-11"
+    },
+    {
+      "id": "HIS-G12-U01-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How did the newly established Kingdom of Italy leverage wider European great-power conflicts between 1866 and 1870 to complete its national unification?",
+      "options": [
+        {
+          "id": "A",
+          "text": "By purchasing Sicily from Spain during the Carlist Wars and seizing Corsica from France"
+        },
+        {
+          "id": "B",
+          "text": "By joining the Crimean War to acquire Savoy and Nice directly from the Ottoman Empire"
+        },
+        {
+          "id": "C",
+          "text": "By allying with Prussia in 1866 to obtain Venetia from defeated Austria, and taking Rome in 1870 when the Franco-Prussian War forced France to withdraw its garrison"
+        },
+        {
+          "id": "D",
+          "text": "By signing a mutual defense treaty with Austria to partition the Papal States equally"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Italy completed its unification by utilizing Prussian victories: in the 1866 Austro-Prussian War, Italy gained Venetia from Austria, and in 1870, the outbreak of the Franco-Prussian War forced Napoleon III to withdraw his troops protecting the Pope in Rome, allowing Italian forces to occupy the city.",
+      "sourceReference": "Section 1.4, Page 14"
+    },
+    {
+      "id": "HIS-G12-U01-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What shared geopolitical interest allowed Otto von Bismarck to secure Russian neutrality during his campaigns to unify Germany under Prussian leadership?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Both powers were jointly committed to opposing Polish nationalism, prompting Prussia to support Russia during the 1863 Polish revolt"
+        },
+        {
+          "id": "B",
+          "text": "Prussia promised to assist Russia in conquering the Suez Canal from Great Britain"
+        },
+        {
+          "id": "C",
+          "text": "Russia and Prussia signed a secret convention to divide the Danish Jutland peninsula"
+        },
+        {
+          "id": "D",
+          "text": "Prussia agreed to surrender the port of Danzig to the Russian Baltic fleet"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Bismarck cultivated friendly relations with Russia because both empires ruled over large Polish populations and opposed Polish national self-determination; during the 1863 Polish uprising, Prussia was the only major power that supported Tsarist Russia, securing Russian goodwill during the wars of 1864, 1866, and 1870.",
+      "sourceReference": "Section 1.5, Page 16"
+    },
+    {
+      "id": "HIS-G12-U01-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How did the Congress of Berlin in July 1878 revise the Treaty of San Stefano to prevent Imperial Russia from establishing hegemony over Southeastern Europe?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It ceded the Crimean Peninsula to the Ottoman Empire and expelled Russian consuls from the Black Sea"
+        },
+        {
+          "id": "B",
+          "text": "It divided the proposed 'Big Bulgaria' into two separate entities and transferred the administration of Bosnia and Herzegovina to Austria-Hungary"
+        },
+        {
+          "id": "C",
+          "text": "It forced Serbia and Montenegro to surrender their independence and return to direct Turkish rule"
+        },
+        {
+          "id": "D",
+          "text": "It granted Great Britain sovereign colonial ownership of Albania and Macedonia"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Alarmed that the large Bulgaria created by the Treaty of San Stefano would serve as a Russian satellite, Britain and other Great Powers revised the settlement at the 1878 Congress of Berlin by dividing Bulgaria into two smaller units (Bulgaria and Eastern Rumelia) and assigning Bosnia-Herzegovina to Austro-Hungarian administration.",
+      "sourceReference": "Section 1.7, Page 22"
+    },
+    {
+      "id": "HIS-G12-U01-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "In what structural manner did the organizational transition from the domestic 'putting-out system' to the mechanized 'factory system' transform social relations and political dominance in nineteenth-century Europe?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It revived rural artisan guilds by decentralizing yarn production into peasant cottages across the countryside"
+        },
+        {
+          "id": "B",
+          "text": "It concentrated expensive inanimate steam machinery in urban factories owned by the industrial bourgeoisie, reducing laborers to wage-dependent proletarians and fostering class consciousness that propelled socialist political movements"
+        },
+        {
+          "id": "C",
+          "text": "It strengthened the political authority of feudal landed aristocrats by making agricultural estates the primary centers of metallurgical production"
+        },
+        {
+          "id": "D",
+          "text": "It eliminated wage disparities by legally requiring factory owners to share corporate profits equally with industrial laborers"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The factory system replaced dispersed household workshop production with centralized industrial establishments utilizing steam power and complex machinery; this concentrated capital in the hands of the industrial bourgeoisie, created an urban proletariat selling only its labor, and stimulated working-class consciousness and socialist political parties.",
+      "sourceReference": "Section 1.2, Pages 5-6, 8"
+    },
+    {
+      "id": "HIS-G12-U01-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Why was the nineteenth-century United States exceptionally effective in assimilating millions of diverse European immigrants into a unified national identity, whereas multinational European empires like Austria-Hungary experienced deepening political fragmentation?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The United States enforced mandatory multilingualism in all state legislatures, whereas Austria-Hungary outlawed regional languages"
+        },
+        {
+          "id": "B",
+          "text": "The United States possessed no rural population, whereas Tsarist Russia and Austria-Hungary lacked urban manufacturing centers"
+        },
+        {
+          "id": "C",
+          "text": "European immigrants chose to leave home countries due to dissatisfaction and voluntarily integrated into an American nation offering greater economic opportunities, political freedoms, and civic rights, whereas multinational empires ruled over historic, submerged nationalities demanding territorial autonomy"
+        },
+        {
+          "id": "D",
+          "text": "The United States prohibited immigration from non-English-speaking regions, whereas European empires encouraged unregulated ethnic resettlement"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The USA successfully assimilated European migrants because those individuals were fleeing dissatisfaction in Europe and embraced American citizenship in exchange for economic mobility and political liberty; conversely, multinational empires like Austria-Hungary governed historic subject nationalities on their ancestral lands whose demands for language rights and self-rule generated political instability.",
+      "sourceReference": "Section 1.3, Pages 10-11"
+    },
+    {
+      "id": "HIS-G12-U01-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "How did conflicting regional economic interests between the American North and South over tariffs and federal authority transform into an irreconcilable sectional crisis centered on slavery by 1860?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The South demanded prohibitive tariffs to protect cotton textiles, whereas the North wanted unrestricted duty-free trade with Great Britain"
+        },
+        {
+          "id": "B",
+          "text": "The industrial North sought protective tariffs and resisted the spread of slave labor into western territories, while the agrarian South relied on European manufactured imports and viewed northern political ascendancy under Abraham Lincoln as an existential threat to its slave economy"
+        },
+        {
+          "id": "C",
+          "text": "The South advocated centralized federal banking regulations, while the North insisted on absolute state nullification of national laws"
+        },
+        {
+          "id": "D",
+          "text": "The North sought to deport enslaved workers to the Caribbean, while the Southern planter elite pushed to abolish the slave trade voluntarily"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Economic differences—such as the North's demand for protective industrial tariffs versus the South's desire for low tariffs on European goods—heightened regional friction; however, the expansion of slavery was the paramount issue. When the newly formed anti-slavery Republican Party elected Abraham Lincoln in 1860, southern states seceded to protect the institution of slavery from northern domination.",
+      "sourceReference": "Section 1.6, Pages 17-18"
+    },
+    {
+      "id": "HIS-G12-U01-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "How did the 1908 Austro-Hungarian annexation of Bosnia and Herzegovina escalate the 'Eastern Question' into an immediate structural catalyst for the outbreak of World War I?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It provoked the Ottoman Empire into declaring immediate war against Germany and Italy"
+        },
+        {
+          "id": "B",
+          "text": "It led Great Britain to formally sign a naval partition treaty with Russia at San Stefano"
+        },
+        {
+          "id": "C",
+          "text": "It outraged Serbian Pan-Slav nationalists who sought a southern Slav union with Bosnia, inflaming tensions that led to the 1914 assassination of Franz Ferdinand by Gavrilo Princip and Austria-Hungary's invasion of Serbia"
+        },
+        {
+          "id": "D",
+          "text": "It caused Bulgaria and Greece to form an offensive military coalition with the Habsburg monarchy against Russia"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Austria-Hungary's formal annexation of Bosnia and Herzegovina in 1908 infuriated Serbia and Pan-Slav nationalists who envisioned unifying Bosnia with Serbia. This unresolved territorial hostility culminated in the assassination of Archduke Franz Ferdinand in Sarajevo on June 28, 1914, by Serb nationalist Gavrilo Princip, setting off the chain of alliance commitments that ignited World War I.",
+      "sourceReference": "Section 1.7, Pages 22-23"
+    }
+  ]
 }

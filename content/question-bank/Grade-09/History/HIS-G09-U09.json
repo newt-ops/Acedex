@@ -3,5 +3,360 @@
   "subject": "History",
   "unitNumber": 9,
   "unitTitle": "The Age of Revolutions 1750s to 1815",
-  "questions": []
+  "questions": [
+    {
+      "id": "HIS-G09-U09-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What technological innovation in the late eighteenth and early nineteenth centuries replaced human and animal muscle power to operate industrial machinery and power modern transportation?",
+      "options": [
+        { "id": "A", "text": "The internal combustion engine" },
+        { "id": "B", "text": "The hydroelectric water turbine" },
+        { "id": "C", "text": "The steam engine" },
+        { "id": "D", "text": "The nuclear reactor" }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The machine production of the Industrial Revolution was operated by steam power, fueled by coal, which replaced traditional wind, water, and muscle power in factories, steamships, and railway locomotives.",
+      "sourceReference": "Section 9.1, Pages 189-190"
+    },
+    {
+      "id": "HIS-G09-U09-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which historic event on July 14, 1789, marked the dramatic outbreak of the popular phase of the French Revolution?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The storming of the royal castle and prison of the Bastille"
+        },
+        {
+          "id": "B",
+          "text": "The execution of King Louis XVI on the guillotine"
+        },
+        {
+          "id": "C",
+          "text": "The convocation of the Estates-General at Versailles"
+        },
+        { "id": "D", "text": "The signing of the Treaty of Campo Formio" }
+      ],
+      "correctOptionId": "A",
+      "explanation": "On July 14, 1789, the armed Parisian populace stormed the royal fortress and prison of the Bastille to seize weapons and ammunition, an action that symbolized the fall of royal despotism and ignited the revolution.",
+      "sourceReference": "Section 9.2, Pages 191-193"
+    },
+    {
+      "id": "HIS-G09-U09-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "At which decisive battle in Belgium on June 18, 1815, was Napoleon Bonaparte finally defeated by allied British and Prussian armies?",
+      "options": [
+        { "id": "A", "text": "Battle of Leipzig" },
+        { "id": "B", "text": "Battle of Trafalgar" },
+        { "id": "C", "text": "Battle of Austerlitz" },
+        { "id": "D", "text": "Battle of Waterloo" }
+      ],
+      "correctOptionId": "D",
+      "explanation": "Following his escape from Elba and his Hundred Days rule, Napoleon was decisively defeated on June 18, 1815, at the Battle of Waterloo in Belgium by British forces under the Duke of Wellington and Prussian forces under Blücher.",
+      "sourceReference": "Section 9.3, Pages 200-201"
+    },
+    {
+      "id": "HIS-G09-U09-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Who was the principal author of the American Declaration of Independence adopted by the Continental Congress on July 4, 1776?",
+      "options": [
+        { "id": "A", "text": "George Washington" },
+        { "id": "B", "text": "Thomas Jefferson" },
+        { "id": "C", "text": "Benjamin Franklin" },
+        { "id": "D", "text": "Alexander Hamilton" }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Thomas Jefferson drafted the historic American Declaration of Independence, drawing heavily upon Enlightenment philosophy and John Locke's theory of natural rights to justify rebellion against British rule.",
+      "sourceReference": "Section 9.4, Page 201"
+    },
+    {
+      "id": "HIS-G09-U09-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What was the primary goal of the European powers convening at the Congress of Vienna between 1814 and 1815?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To establish a long-term peace settlement and restore monarchical order following the Napoleonic Wars"
+        },
+        {
+          "id": "B",
+          "text": "To partition the continent of Africa into commercial colonies and protectorates"
+        },
+        {
+          "id": "C",
+          "text": "To create a military alliance supporting the American war against Great Britain"
+        },
+        {
+          "id": "D",
+          "text": "To establish a socialist commonwealth across Central and Eastern Europe"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The Congress of Vienna (1814-1815) was organized by European statesmen to restore conservative stability, redraw territorial borders, re-establish legitimate royal dynasties, and maintain a balance of power after Napoleon's defeat.",
+      "sourceReference": "Section 9.5, Pages 203-204"
+    },
+    {
+      "id": "HIS-G09-U09-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How did the economic philosophy of nineteenth-century industrial capitalism differ from the earlier mercantilist economic system?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Industrial capitalism enforced state-fixed monopolies on raw material exports"
+        },
+        {
+          "id": "B",
+          "text": "Industrial capitalism prohibited private ownership of factories and banking corporations"
+        },
+        {
+          "id": "C",
+          "text": "Industrial capitalism relied strictly on agricultural barter rather than cash transactions"
+        },
+        {
+          "id": "D",
+          "text": "Industrial capitalism rejected protective trade barriers in favor of free-market competition and laissez-faire principles"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "Industrial capitalism challenged mercantilist tariffs, monopolies, and state regulations, embracing laissez-faire doctrines that championed free trade, open market competition, and private capital accumulation.",
+      "sourceReference": "Section 9.1, Pages 189-190"
+    },
+    {
+      "id": "HIS-G09-U09-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What fundamental socio-economic class polarization emerged in European urban centers as a result of the Industrial Revolution?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A divide between feudal serfs and medieval guild masters"
+        },
+        {
+          "id": "B",
+          "text": "A divide between the factory-owning bourgeoisie and the wage-earning industrial proletariat"
+        },
+        {
+          "id": "C",
+          "text": "A divide between royal aristocrats and peasant tenant farmers"
+        },
+        {
+          "id": "D",
+          "text": "A divide between monastic clergy and merchant bankers"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The rise of factory production divided industrial society into two antagonistic classes: the bourgeoisie (who owned capital, raw materials, and machinery) and the proletariat (who possessed only their labor, earning low wages under strict discipline).",
+      "sourceReference": "Section 9.1, Pages 190-191"
+    },
+    {
+      "id": "HIS-G09-U09-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In pre-revolutionary French society under the Old Regime (Ancien Régime), why was the tax burden considered deeply unjust by the Third Estate?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The Third Estate was forced to pay taxes exclusively to the British government"
+        },
+        {
+          "id": "B",
+          "text": "Only foreign merchants were required to contribute to royal finances"
+        },
+        {
+          "id": "C",
+          "text": "The wealthy First and Second Estates were largely exempt from taxes, leaving the burden on peasants and the bourgeoisie"
+        },
+        {
+          "id": "D",
+          "text": "The Catholic Church had eliminated all feudal tithes, bankrupting rural villages"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Under the Old Regime, the privileged First Estate (clergy) and Second Estate (nobility) owned vast lands but enjoyed exemption from direct taxation, forcing the unprivileged Third Estate to shoulder nearly all government taxes.",
+      "sourceReference": "Section 9.2, Pages 192-193"
+    },
+    {
+      "id": "HIS-G09-U09-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What was the political objective of the Reign of Terror instituted by the Jacobins under Maximilien Robespierre between 1793 and 1794?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To eliminate counter-revolutionary enemies and preserve the Republic during severe foreign and domestic crises"
+        },
+        {
+          "id": "B",
+          "text": "To restore King Louis XVI to an absolute monarchical throne"
+        },
+        {
+          "id": "C",
+          "text": "To surrender French territory to the invading Austro-Prussian coalition"
+        },
+        {
+          "id": "D",
+          "text": "To dissolve the French army and abolish all centralized government offices"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Faced with civil war, revolts, and foreign invasion, the Jacobin revolutionary leadership implemented the Reign of Terror to ruthlessly suppress suspected treason, counter-revolutionaries, and political dissent using the guillotine.",
+      "sourceReference": "Section 9.2, Pages 194-195"
+    },
+    {
+      "id": "HIS-G09-U09-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What agreement did Napoleon Bonaparte conclude with the Papacy in 1801 to settle the religious conflicts generated by the French Revolution?",
+      "options": [
+        { "id": "A", "text": "The Treaty of Campo Formio" },
+        { "id": "B", "text": "The Civil Constitution of the Clergy" },
+        { "id": "C", "text": "The Concordat of 1801" },
+        { "id": "D", "text": "The Edict of Nantes" }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Through the Concordat of 1801, Napoleon reached a formal reconciliation with the Catholic Church: the Pope recognized the loss of confiscated church properties, while the French state agreed to pay clergy salaries and protect religious toleration.",
+      "sourceReference": "Section 9.3, Page 197"
+    },
+    {
+      "id": "HIS-G09-U09-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Why did American colonists bitterly oppose the Stamp Act passed by the British Parliament in 1765?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It banned the importation of manufactured European tools into the colonies"
+        },
+        {
+          "id": "B",
+          "text": "It levied a direct tax on printed materials without granting the colonists representation in Parliament"
+        },
+        {
+          "id": "C",
+          "text": "It forced all colonial farmers to sell their cotton exclusively to French merchants"
+        },
+        {
+          "id": "D",
+          "text": "It abolished local colonial militias and mandated military service in India"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The Stamp Act imposed a direct stamp tax on legal documents, newspapers, and pamphlets; colonists protested under the slogan 'no taxation without representation' because they had no elected representatives in the British Parliament.",
+      "sourceReference": "Section 9.4, Page 201"
+    },
+    {
+      "id": "HIS-G09-U09-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "How did the development of steam-powered locomotives and railway infrastructure fundamentally accelerate global industrial capitalism in the nineteenth century?",
+      "options": [
+        {
+          "id": "A",
+          "text": "By shifting industrial manufacturing back to home-based artisan workshops"
+        },
+        {
+          "id": "B",
+          "text": "By completely eliminating the need for iron, steel, and coal mining industries"
+        },
+        {
+          "id": "C",
+          "text": "By restricting commercial markets solely to regional agricultural river valleys"
+        },
+        {
+          "id": "D",
+          "text": "By drastically reducing transportation costs, integrating vast continental markets, and opening new sources of raw materials"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "Steam locomotives and transcontinental railways dramatically lowered the freight costs of moving bulky raw materials and manufactured products, linked interior resources with coastal ports, and integrated extensive continental spaces into a unified capitalist market.",
+      "sourceReference": "Section 9.1, Pages 190-191"
+    },
+    {
+      "id": "HIS-G09-U09-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Which of the following describes an undemocratic limitation of the French Constitution of 1791 drafted by the National Assembly?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It divided male citizens into 'active' and 'passive' categories, restricting voting rights only to property-owning taxpayers"
+        },
+        {
+          "id": "B",
+          "text": "It reinstated hereditary serfdom and feudal dues across all agrarian provinces"
+        },
+        {
+          "id": "C",
+          "text": "It granted the Catholic Church supreme executive authority over the National Assembly"
+        },
+        {
+          "id": "D",
+          "text": "It declared the absolute infallibility of the monarch and abolished trial by jury"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "While establishing a constitutional limited monarchy and civil equality, the 1791 Constitution restricted political franchise by distinguishing 'active citizens' (taxpayers with voting rights) from impoverished 'passive citizens' who could not vote.",
+      "sourceReference": "Section 9.2, Pages 193-194"
+    },
+    {
+      "id": "HIS-G09-U09-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Why did Napoleon's 1812 military campaign against Russia turn into a catastrophic failure that marked the beginning of his empire's downfall?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The Russian navy destroyed the French fleet in the Baltic Sea before ground fighting began"
+        },
+        {
+          "id": "B",
+          "text": "Napoleon's generals defected en masse to join the Ottoman imperial forces"
+        },
+        {
+          "id": "C",
+          "text": "The Russian army avoided decisive battles using scorched-earth tactics, leaving the French Grand Army devastated by cold, hunger, and disease"
+        },
+        {
+          "id": "D",
+          "text": "Tsar Alexander I immediately signed an unconditional surrender that trapped French troops in Moscow"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Instead of facing Napoleon in open battle, Russian forces retreated deep into the interior, burning crops and shelters (scorched-earth tactics); when Napoleon occupied a ruined Moscow, the brutal winter, lack of supplies, and disease destroyed his 600,000-strong army.",
+      "sourceReference": "Section 9.3, Page 200"
+    },
+    {
+      "id": "HIS-G09-U09-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Which statement accurately evaluates the primary diplomatic flaw of the territorial settlement crafted by the statesmen at the Congress of Vienna in 1815?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It dissolved all standing armies in Europe, leaving the continent defenseless against foreign invasion"
+        },
+        {
+          "id": "B",
+          "text": "It ignored emerging nationalist aspirations by bartering territories and peoples among dynasties to preserve the balance of power"
+        },
+        {
+          "id": "C",
+          "text": "It permanently ceded the German Rhineland and Northern Italy to the British Empire"
+        },
+        {
+          "id": "D",
+          "text": "It abolished monarchies across Europe and enforced universal representative democracy"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Although the Congress of Vienna successfully prevented general European warfare for decades through the principle of balance of power and dynastic legitimacy, it disregarded the growing forces of popular nationalism by exchanging territories without regard to the wishes of the inhabitants.",
+      "sourceReference": "Section 9.5, Pages 205-206"
+    }
+  ]
 }

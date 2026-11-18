@@ -522,3 +522,94 @@ export interface StudyOverviewResponse {
   }>;
 }
 
+// ==========================================
+// 8. Temporary Subject Question Collector & Exporter
+// ==========================================
+
+export const ContributorLoginRequestSchema = z.object({
+  contributorId: z.string().min(3, 'Contributor ID must be at least 3 characters').trim(),
+});
+export type ContributorLoginRequest = z.infer<typeof ContributorLoginRequestSchema>;
+
+export interface ContributorProfile {
+  contributorId: string;
+  name: string;
+  subjectCode: string;
+  subjectName: string;
+  role?: 'student' | 'admin';
+}
+
+export const UnitSubmissionStatusSchema = z.enum([
+  'not_started',
+  'submitted',
+  'approved',
+  'rejected',
+]);
+export type UnitSubmissionStatus = z.infer<typeof UnitSubmissionStatusSchema>;
+
+export interface CollectorUnitProgressItem {
+  unitCode: string;
+  grade: number;
+  unitNumber: number;
+  unitTitle: string;
+  status: UnitSubmissionStatus;
+  questionCount?: number;
+  submittedAt?: string;
+  approvedAt?: string;
+  reviewNotes?: string;
+}
+
+export interface CollectorSubjectUnitsResponse {
+  subjectCode: string;
+  subjectName: string;
+  contributorId: string;
+  totalUnits: number;
+  approvedUnits: number;
+  submittedUnits: number;
+  grades: {
+    grade: number;
+    units: CollectorUnitProgressItem[];
+  }[];
+}
+
+export const SubmitUnitQuestionsRequestSchema = z.object({
+  unitCode: z.string().optional(),
+  contributorId: z.string().min(3, 'contributorId must be at least 3 characters'),
+  questions: z.array(RawQuestionItemSchema).length(15, 'Must contain exactly 15 questions'),
+  rawPastedText: z.string().optional(),
+});
+export type SubmitUnitQuestionsRequest = z.infer<typeof SubmitUnitQuestionsRequestSchema>;
+
+export const SanitizeQuestionsRequestSchema = z.object({
+  rawText: z.string().min(1, 'Raw text cannot be empty'),
+  expectedUnitCode: z.string().optional(),
+});
+export type SanitizeQuestionsRequest = z.infer<typeof SanitizeQuestionsRequestSchema>;
+
+export const AdminReviewSubmissionRequestSchema = z.object({
+  action: z.enum(['approve', 'reject']),
+  notes: z.string().optional(),
+});
+export type AdminReviewSubmissionRequest = z.infer<typeof AdminReviewSubmissionRequestSchema>;
+
+export interface CollectorAdminSubmissionSummary {
+  _id: string;
+  unitCode: string;
+  subjectCode: string;
+  grade: number;
+  unitNumber: number;
+  unitTitle: string;
+  contributorId: string;
+  questionCount: number;
+  status: UnitSubmissionStatus;
+  submittedAt: string;
+  reviewedAt?: string;
+  reviewNotes?: string;
+}
+
+export interface CollectorAdminSubmissionDetail extends CollectorAdminSubmissionSummary {
+  questions: RawQuestionItem[];
+  rawPastedText?: string;
+}
+
+

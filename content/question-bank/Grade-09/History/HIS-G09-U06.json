@@ -3,5 +3,351 @@
   "subject": "History",
   "unitNumber": 6,
   "unitTitle": "Africa and the Outside World 1500-1880s",
-  "questions": []
+  "questions": [
+    {
+      "id": "HIS-G09-U06-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which European maritime nation pioneered exploration along the West African coast in the fifteenth century under the patronage of Prince Henry the Navigator?",
+      "options": [
+        { "id": "A", "text": "Spain" },
+        { "id": "B", "text": "Portugal" },
+        { "id": "C", "text": "The Netherlands" },
+        { "id": "D", "text": "Great Britain" }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Portugal was the first European country to establish direct maritime contacts along the coastal regions of West Africa, sponsored by Prince Henry the Navigator during the early fifteenth century.",
+      "sourceReference": "Section 6.1, Page 104"
+    },
+    {
+      "id": "HIS-G09-U06-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What historical term describes the traumatic transatlantic crossing endured by enslaved Africans shipped from coastal ports to the Americas?",
+      "options": [
+        { "id": "A", "text": "The Middle Passage" },
+        { "id": "B", "text": "The Great Trek" },
+        { "id": "C", "text": "The Silent Trade" },
+        { "id": "D", "text": "The Triangular Route" }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The perilous ocean journey of slave ships across the Atlantic from Africa to the Americas was known as the Middle Passage, during which high numbers of captives died due to brutal conditions.",
+      "sourceReference": "Section 6.2, Page 108"
+    },
+    {
+      "id": "HIS-G09-U06-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What defined the concept of 'legitimate trade' that emerged in West Africa during the first half of the nineteenth century?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The clandestine trafficking of enslaved people across the Sahara Desert"
+        },
+        {
+          "id": "B",
+          "text": "The barter of African mineral rights exclusively with chartered companies"
+        },
+        {
+          "id": "C",
+          "text": "Commerce in primary commodities and agricultural products instead of human captives"
+        },
+        {
+          "id": "D",
+          "text": "The duty-free importation of European firearms into coastal city-states"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "As the slave trade was progressively outlawed, 'legitimate trade' developed, referring to commerce in commodities where African raw materials and agricultural cash crops were exchanged for manufactured European goods.",
+      "sourceReference": "Section 6.3, Page 111"
+    },
+    {
+      "id": "HIS-G09-U06-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In 1652, which commercial company established the first permanent European settlement at the Cape of Good Hope?",
+      "options": [
+        { "id": "A", "text": "The British Royal Niger Company" },
+        { "id": "B", "text": "The French West Indies Company" },
+        { "id": "C", "text": "The Imperial British East Africa Company" },
+        { "id": "D", "text": "The Dutch East India Company" }
+      ],
+      "correctOptionId": "D",
+      "explanation": "In 1652, the Dutch East India Company established a permanent settlement at the Cape of Good Hope under commander Jan van Riebeeck to supply provisions for ships sailing between Europe and Asia.",
+      "sourceReference": "Section 6.4, Page 112"
+    },
+    {
+      "id": "HIS-G09-U06-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which British organization was founded in 1788 to sponsor scientific explorations into the African interior, notably seeking the course of the Niger River?",
+      "options": [
+        { "id": "A", "text": "The African Association" },
+        { "id": "B", "text": "The Royal Geographical Society" },
+        { "id": "C", "text": "The London Missionary Society" },
+        { "id": "D", "text": "The Church Missionary Society" }
+      ],
+      "correctOptionId": "A",
+      "explanation": "In 1788, a group of wealthy Englishmen established the 'African Association' with the goal of exploring the interior of Africa, locating the city of Timbuktu, and tracing the course of the Niger River.",
+      "sourceReference": "Section 6.5, Page 115"
+    },
+    {
+      "id": "HIS-G09-U06-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What immediate strategic and economic motive drove initial Portuguese expeditions along the West African coast?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To conquer the Kingdom of Kongo and establish large-scale sugarcane plantations"
+        },
+        {
+          "id": "B",
+          "text": "To recruit indigenous armies to defend Lisbon from Spanish expansion"
+        },
+        {
+          "id": "C",
+          "text": "To bypass Muslim North Africa and secure direct maritime access to West African gold-producing areas"
+        },
+        {
+          "id": "D",
+          "text": "To capture and monopolize the trans-Saharan salt mines at Taghaza"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "While reaching India was a long-term aspiration, the immediate Portuguese goal was to circumvent Muslim-dominated North African trade intermediaries and gain direct access to the gold resources of West Africa.",
+      "sourceReference": "Section 6.1, Page 104"
+    },
+    {
+      "id": "HIS-G09-U06-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Why did European colonial powers in the Americas turn to importing millions of enslaved Africans rather than relying on Native Americans or indentured Europeans?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Native Americans organized naval coalitions that successfully repelled European slave raiders"
+        },
+        {
+          "id": "B",
+          "text": "Native Americans suffered catastrophic mortality from European diseases, and European laborers struggled to survive tropical climates and diseases"
+        },
+        {
+          "id": "C",
+          "text": "The Papacy legally forbade the employment of any laborers other than baptized Africans in American mines"
+        },
+        {
+          "id": "D",
+          "text": "West African kingdoms offered captive laborers free of charge to promote diplomatic alliances"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Indigenous American populations were decimated by imported European diseases and harsh treatment, while indentured white laborers failed to endure tropical working conditions, prompting Europeans to import enslaved West Africans.",
+      "sourceReference": "Section 6.2, Page 108"
+    },
+    {
+      "id": "HIS-G09-U06-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What major military and commercial turning point in 1642 ended Portugal's trade hegemony on the Gold Coast?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The destruction of the Portuguese fleet by the British Royal Navy"
+        },
+        {
+          "id": "B",
+          "text": "The annexation of coastal forts by the Asante Empire"
+        },
+        {
+          "id": "C",
+          "text": "The voluntary withdrawal of Portuguese merchants following royal bankruptcy"
+        },
+        {
+          "id": "D",
+          "text": "The capture of the key trading castle of Elmina by the Dutch"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "During the seventeenth century, European competition intensified; when the Dutch captured the principal Portuguese coastal stronghold of Elmina in 1642, the Portuguese permanently evacuated the Gold Coast.",
+      "sourceReference": "Section 6.1, Page 105"
+    },
+    {
+      "id": "HIS-G09-U06-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which West African export commodity experienced soaring European demand during the nineteenth century to serve as industrial machinery lubricant and raw material for soap manufacturing?",
+      "options": [
+        { "id": "A", "text": "Palm oil" },
+        { "id": "B", "text": "Cocoa beans" },
+        { "id": "C", "text": "Gum Arabic" },
+        { "id": "D", "text": "Natural rubber" }
+      ],
+      "correctOptionId": "A",
+      "explanation": "With the rise of the Industrial Revolution, palm oil from West Africa's coastal forest belts became highly sought after in Europe as a mechanical lubricant for factory engines and railways, as well as for industrial soap production.",
+      "sourceReference": "Section 6.3, Page 111"
+    },
+    {
+      "id": "HIS-G09-U06-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What underlying issue provoked the First Khoi-Dutch War of 1659 around the Cape settlement?",
+      "options": [
+        {
+          "id": "A",
+          "text": "British naval intervention demanding free trade rights at Table Bay"
+        },
+        {
+          "id": "B",
+          "text": "A dispute over the price of firearms imported through Portuguese merchants"
+        },
+        {
+          "id": "C",
+          "text": "The encroachment of Boer farmers onto ancestral Khoisan pastures and water sources"
+        },
+        {
+          "id": "D",
+          "text": "The refusal of Khoisan chiefs to accept Christian missionary baptism"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "When the Dutch East India Company released former company employees to farm as independent 'Boers,' their seizure of traditional Khoisan grazing lands and waterholes sparked the First Khoi-Dutch War of 1659.",
+      "sourceReference": "Section 6.4, Page 112"
+    },
+    {
+      "id": "HIS-G09-U06-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How did the geographical and cultural activities of nineteenth-century European explorers and missionaries directly influence the political future of Africa?",
+      "options": [
+        {
+          "id": "A",
+          "text": "They assisted African kings in manufacturing domestic modern firearms to resist external invasions"
+        },
+        {
+          "id": "B",
+          "text": "They gathered detailed geographic, demographic, and economic intelligence that paved the way for subsequent European colonial conquest"
+        },
+        {
+          "id": "C",
+          "text": "They established permanent military protectorates governed jointly with indigenous clan councils"
+        },
+        {
+          "id": "D",
+          "text": "They persuaded European governments to sign unconditional non-intervention treaties across the continent"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "While explorers and missionaries were motivated by adventure, scientific inquiry, or religious zeal, their expeditions mapped navigable routes, resources, and populations, ultimately preparing the ground for the late nineteenth-century Scramble for Africa.",
+      "sourceReference": "Section 6.5, Page 115"
+    },
+    {
+      "id": "HIS-G09-U06-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Which statement correctly explains the operational structure of the Transatlantic 'Triangular Trade' system?",
+      "options": [
+        {
+          "id": "A",
+          "text": "African raw materials were shipped to Asia, manufactured goods were sent to the Americas, and silver returned to Europe"
+        },
+        {
+          "id": "B",
+          "text": "American tobacco was exported to Africa in exchange for gold, which was transported to European royal treasuries"
+        },
+        {
+          "id": "C",
+          "text": "Enslaved Africans were carried directly to Europe, trained as industrial artisans, and then deployed to American factory towns"
+        },
+        {
+          "id": "D",
+          "text": "European manufactured goods (textiles, firearms) were traded in Africa for enslaved laborers, who were shipped to the Americas to produce plantation cash crops (sugar, cotton) exported back to Europe"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "The Triangular Trade linked three continents: European ships carried manufactured goods to West Africa, transported enslaved Africans across the Atlantic (the Middle Passage), and returned to Europe laden with plantation products like sugar, rum, tobacco, and cotton.",
+      "sourceReference": "Section 6.2, Pages 108-109"
+    },
+    {
+      "id": "HIS-G09-U06-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Why did the nineteenth-century expansion of 'legitimate commerce' fail to generate independent economic industrialization for West African states?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It relegated African societies to suppliers of cheap agricultural raw materials and consumers of European manufactured imports, deepening structural dependency"
+        },
+        {
+          "id": "B",
+          "text": "Indigenous rulers uniformly banned the cultivation of export crops to safeguard domestic food sovereignty"
+        },
+        {
+          "id": "C",
+          "text": "The international market value of vegetable oils dropped to zero due to synthetic chemical discoveries in North America"
+        },
+        {
+          "id": "D",
+          "text": "European merchants paid exclusively in depreciated paper currencies that could not be exchanged internationally"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Legitimate commerce did not allow African states to develop autonomous industrial manufacturing; instead, it entrenched an unequal economic structure in which Africa supplied agricultural raw materials needed by European factories in exchange for manufactured goods.",
+      "sourceReference": "Section 6.3, Pages 111-112"
+    },
+    {
+      "id": "HIS-G09-U06-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "What fundamental socio-economic transformation resulted from the gradual territorial expansion of the Dutch Boers into indigenous Khoisan territories in South Africa?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The Khoisan integrated as equal voting citizens within the administrative councils of the Dutch East India Company"
+        },
+        {
+          "id": "B",
+          "text": "The Khoisan preserved their communal autonomy by establishing heavily fortified stone towns along the Orange River"
+        },
+        {
+          "id": "C",
+          "text": "The Khoisan were dispossessed of their pastoral herds and grazing lands through armed conflict, reducing many to impoverished domestic servants and farm laborers for European settlers"
+        },
+        {
+          "id": "D",
+          "text": "The Khoisan completely abandoned cattle pastoralism to become commercial maritime traders operating in the Indian Ocean"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The expansion of Boer pastoral farmers deprived the indigenous Khoisan of their livestock, hunting grounds, and grazing lands through wars and land alienation, ultimately forcing many surviving Khoisan into dependent labor servitude on white-owned farms.",
+      "sourceReference": "Section 6.4, Pages 112-113"
+    },
+    {
+      "id": "HIS-G09-U06-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "How did the rise of industrial capitalism in Britain and Western Europe reshape European economic policy toward Africa between the late eighteenth and early nineteenth centuries?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It caused European financiers to abandon foreign trade entirely and redirect all investment into domestic feudal manors"
+        },
+        {
+          "id": "B",
+          "text": "It rendered human slave exportation counterproductive compared to keeping African populations in their home regions to produce raw materials and consume European factory goods"
+        },
+        {
+          "id": "C",
+          "text": "It led European industrialists to establish heavy metallurgical manufacturing centers inside West African coastal cities"
+        },
+        {
+          "id": "D",
+          "text": "It eliminated European demand for African commodities by relying solely on coal deposits in Britain and Germany"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Industrial capitalism transformed European economic priorities: industrial factory production required reliable sources of agricultural raw materials and expanding consumer markets, making the export of African labor as slaves less profitable than employing African labor locally to harvest cash crops.",
+      "sourceReference": "Section 6.2 & Section 6.3, Pages 106, 111-112"
+    }
+  ]
 }

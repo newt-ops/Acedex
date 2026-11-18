@@ -3,5 +3,366 @@
   "subject": "History",
   "unitNumber": 2,
   "unitTitle": "Africa & the Colonial Experience (1880s -1960s)",
-  "questions": []
+  "questions": [
+    {
+      "id": "HIS-G10-U02-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which of the following defines colonialism as presented in the study of modern African history?",
+      "options": [
+        {
+          "id": "A",
+          "text": "An equitable bilateral trade partnership between independent nations"
+        },
+        {
+          "id": "B",
+          "text": "The voluntary cultural assimilation of one society into another"
+        },
+        {
+          "id": "C",
+          "text": "The direct and total dominance of one country by another based on the possession of state authority by a foreign power"
+        },
+        {
+          "id": "D",
+          "text": "A temporary military alliance established to protect regional borders"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Colonialism is defined as the direct and total dominance of one country by another based on the possession of state authority by a foreign power, whereby one nation subjugates, conquers, and exploits another.",
+      "sourceReference": "Section 2.1, Page 24"
+    },
+    {
+      "id": "HIS-G10-U02-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Who convened and served as the chairman of the Berlin Conference of 1884–1885 that laid the international ground rules for the partition of Africa?",
+      "options": [
+        { "id": "A", "text": "King Leopold II of Belgium" },
+        { "id": "B", "text": "German Chancellor Otto von Bismarck" },
+        { "id": "C", "text": "British Prime Minister Lord Salisbury" },
+        { "id": "D", "text": "French Minister Albert Sarraut" }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The Berlin Conference (1884–1885) was initiated and chaired by the German Chancellor Otto von Bismarck to establish agreed rules among European colonial powers for carving up the African continent.",
+      "sourceReference": "Section 2.3.1, Page 31"
+    },
+    {
+      "id": "HIS-G10-U02-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which commercial concessionaire company, controlled by Cecil Rhodes, administered Nyasaland, Northern Rhodesia, and Southern Rhodesia under company rule until 1924?",
+      "options": [
+        { "id": "A", "text": "The British South Africa Company (BSAC)" },
+        {
+          "id": "B",
+          "text": "The Imperial British East Africa Company (IBEAC)"
+        },
+        { "id": "C", "text": "The Royal Niger Company" },
+        { "id": "D", "text": "The Dutch East India Company" }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Formed in 1887 under the control of Cecil Rhodes, the British South Africa Company (BSAC) exercised chartered company rule over Nyasaland, Northern Rhodesia, and Southern Rhodesia until 1924.",
+      "sourceReference": "Section 2.4.1, Page 33"
+    },
+    {
+      "id": "HIS-G10-U02-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Who was the chief architect of the British colonial policy of 'Indirect Rule' and author of the 1922 treatise 'The Dual Mandate in British Tropical Africa'?",
+      "options": [
+        { "id": "A", "text": "Cecil Rhodes" },
+        { "id": "B", "text": "Albert Sarraut" },
+        { "id": "C", "text": "Jan van Riebeeck" },
+        { "id": "D", "text": "Frederick Lugard" }
+      ],
+      "correctOptionId": "D",
+      "explanation": "Frederick Lugard formulated the British colonial administrative system of Indirect Rule in Northern Nigeria and articulated its principles in his 1922 book, 'The Dual Mandate in British Tropical Africa.'",
+      "sourceReference": "Section 2.4.3, Page 35"
+    },
+    {
+      "id": "HIS-G10-U02-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which religious prophet led the Maji-Maji Uprising (1905–1907) in Tanganyika against oppressive German colonial policies?",
+      "options": [
+        { "id": "A", "text": "Samori Toure" },
+        { "id": "B", "text": "Kinjikitle Ngwale" },
+        { "id": "C", "text": "Urabi Pasha" },
+        { "id": "D", "text": "Asantehene Prempe" }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The Maji-Maji Uprising against German colonial forced labor and taxation in Tanganyika was led by the prophet Kinjikitle Ngwale, who taught the people to sprinkle sacred water believed to neutralize enemy bullets.",
+      "sourceReference": "Section 2.5.2, Page 38"
+    },
+    {
+      "id": "HIS-G10-U02-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What defined the commercial pattern known as 'Legitimate Trade' that developed between Europe and West Africa in the nineteenth century?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The exchange of African agricultural raw materials and cash crops for manufactured European commodities following the abolition of the slave trade"
+        },
+        {
+          "id": "B",
+          "text": "The state-monopolized barter of gold and ivory exclusively through Mediterranean ports"
+        },
+        {
+          "id": "C",
+          "text": "An equal commercial trade agreement enforced by the Organization of African Unity"
+        },
+        {
+          "id": "D",
+          "text": "A duty-free trans-Saharan barter system managed by Berber merchants"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Following the abolition of the transatlantic slave trade, 'legitimate trade' referred to commerce in which African agricultural products and raw materials (such as palm oil and groundnuts) were exchanged for European industrial manufactures.",
+      "sourceReference": "Section 2.1, Page 24"
+    },
+    {
+      "id": "HIS-G10-U02-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How did European imperialists utilize the ideology of the 'Civilizing Mission' and the concept of the 'White Man's Burden' to justify colonization in Africa?",
+      "options": [
+        {
+          "id": "A",
+          "text": "They argued that Africans were intellectually superior and should govern European overseas trade outposts"
+        },
+        {
+          "id": "B",
+          "text": "They claimed that colonialism was a temporary military partnership aimed at introducing socialist economic planning"
+        },
+        {
+          "id": "C",
+          "text": "They portrayed Africans as uncivilized and inferior, asserting that Europeans had a moral obligation to rule them and introduce Christianity, commerce, and Western culture"
+        },
+        {
+          "id": "D",
+          "text": "They asserted that European workers had a duty to migrate permanently and surrender all industrial technology to African chiefs"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The 'civilizing mission' and Rudyard Kipling's concept of 'the white man's burden' operated as imperialist rationales asserting that non-Western peoples were backward and that white powers had a paternalistic responsibility to govern and civilize them.",
+      "sourceReference": "Section 2.2, Pages 28-29"
+    },
+    {
+      "id": "HIS-G10-U02-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What did the 'Principle of Effective Occupation' established under Article 35 of the General Act of the Berlin Conference require of European powers?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Drawing coastal boundaries without entering or exploring the interior hinterland"
+        },
+        {
+          "id": "B",
+          "text": "Demonstrating real authority over a claimed territory through treaties with local rulers, hoisting national flags, and establishing an active administration and police force to maintain order"
+        },
+        {
+          "id": "C",
+          "text": "Securing unanimous voting approval from all independent African monarchs before occupying any land"
+        },
+        {
+          "id": "D",
+          "text": "Transferring all natural mineral and agricultural concessions directly to the League of Nations"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Article 35 established the principle of effective occupation, declaring that colonial powers could acquire legal rights over African territory only if they proved actual possession through treaties, displayed authority flags, and instituted administrative and security apparatuses.",
+      "sourceReference": "Section 2.3.1, Page 31"
+    },
+    {
+      "id": "HIS-G10-U02-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In French colonial administration, how did the policy of 'Assimilation' contrast with the later approach of 'Association'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Assimilation preserved traditional chieftaincies, whereas Association completely erased African languages"
+        },
+        {
+          "id": "B",
+          "text": "Assimilation was applied only in North Africa, while Association was used exclusively in Madagascar"
+        },
+        {
+          "id": "C",
+          "text": "Assimilation granted automatic independence to colonies, while Association annexed territories into the British Commonwealth"
+        },
+        {
+          "id": "D",
+          "text": "Assimilation aimed to turn Africans into culturally French citizens based on assumed French superiority, whereas Association emphasized cooperation and mutual ties between ruler and ruled without cultural merging"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "Assimilation sought to absorb colonial subjects into French culture, laws, and customs based on the premise of French cultural supremacy; Association, by contrast, abandoned total cultural identity in favor of practical cooperation between European administrators and indigenous communities.",
+      "sourceReference": "Section 2.4.2, Pages 34-35"
+    },
+    {
+      "id": "HIS-G10-U02-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What were the primary grievances that led Colonel Ahmed Urabi Pasha to lead the Egyptian nationalist revolt of 1881–1882?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Opposition to Anglo-French dual financial domination, foreign interference, and demands for equal standing and social justice under Khedive Tewfik"
+        },
+        {
+          "id": "B",
+          "text": "Demands to annex the Sultanate of Darfur and construct railway links to British Kenya"
+        },
+        {
+          "id": "C",
+          "text": "A royal decree requiring all Egyptian soldiers to convert to Roman Catholicism"
+        },
+        {
+          "id": "D",
+          "text": "A territorial dispute with the Kingdom of Buganda over navigation of Lake Victoria"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The Urabi Revolt of 1881–1882 erupted against the weak regime of Khedive Tewfik, which was subordinated to an Anglo-French dual administration, aiming to end foreign control, establish social justice, and curb foreign dominance.",
+      "sourceReference": "Section 2.5.4, Page 38"
+    },
+    {
+      "id": "HIS-G10-U02-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which of the following describes a long-lasting political impact of the Berlin Conference on modern Africa?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The establishment of a unified continental democratic federation under indigenous leadership"
+        },
+        {
+          "id": "B",
+          "text": "The complete preservation of pre-colonial kingdom borders and linguistic distributions"
+        },
+        {
+          "id": "C",
+          "text": "The creation of artificial frontiers that divided cohesive ethnic communities and grouped unrelated groups together, triggering post-independence border conflicts"
+        },
+        {
+          "id": "D",
+          "text": "The immediate eradication of authoritarian military regimes across the Sahel"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "European colonizers partitioned Africa by drawing arbitrary borders without consulting local populations; this created a colonial legacy that partitioned homogeneous cultural groups and combined disparate ones, causing numerous post-independence border and ethnic disputes.",
+      "sourceReference": "Section 2.6.1, Page 39"
+    },
+    {
+      "id": "HIS-G10-U02-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "What diplomatic and military strategy did Samori Toure of the Mandinka Empire implement to sustain his armed resistance against French expansion from 1882 to 1898?",
+      "options": [
+        {
+          "id": "A",
+          "text": "He surrendered his gold-producing districts immediately to secure an unconditional French protectorate"
+        },
+        {
+          "id": "B",
+          "text": "He maintained a well-disciplined 30,000-man army, imported modern firearms through British Sierra Leone, built defensive alliances, and used scorched-earth warfare before retreating eastward"
+        },
+        {
+          "id": "C",
+          "text": "He relied exclusively on naval blockades across the Gulf of Guinea using European-built steamships"
+        },
+        {
+          "id": "D",
+          "text": "He formed an offensive alliance with the Ottoman Empire that sent Janissary regiments to West Africa"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Samori Toure organized an efficient army divided into cavalry and infantry, financed modern weapon purchases from British merchants in Freetown with gold from Bure, utilized flexible tactical retreats and scorched-earth operations, and attempted an alliance with Asante before being captured in 1898.",
+      "sourceReference": "Section 2.5.1, Pages 37-38"
+    },
+    {
+      "id": "HIS-G10-U02-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "How did the British colonial system of Indirect Rule systematically hinder the emergence of unified African anti-colonial movements?",
+      "options": [
+        {
+          "id": "A",
+          "text": "By enforcing universal French language instruction in all local village schools"
+        },
+        {
+          "id": "B",
+          "text": "By granting all educated Africans immediate voting representation in the British House of Commons"
+        },
+        {
+          "id": "C",
+          "text": "By abolishing all hereditary African courts and replacing them with military tribunals"
+        },
+        {
+          "id": "D",
+          "text": "By governing through separate pre-colonial chiefdoms, exaggerating dialectal and cultural differences into rigid tribal divisions, and applying 'divide and rule'"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "Indirect Rule relied on co-opting traditional rulers and intentionally accentuating minor customary, dialectal, and religious differences into rigid 'tribal' distinctions, practicing 'divide and rule' to obstruct collective, territory-wide nationalist unity.",
+      "sourceReference": "Section 2.4.3, Page 35"
+    },
+    {
+      "id": "HIS-G10-U02-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Why did the colonial political economy in Africa generate structural underdevelopment and recurring subsistence crises rather than autonomous industrialization?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Colonial policies coerced Africans through taxation into primary cash-crop and mineral extraction for European industries, neglected food crops, discouraged domestic manufacturing, and exported capital profits abroad"
+        },
+        {
+          "id": "B",
+          "text": "European administrators invested all state revenues into establishing heavy steelworks and automotive manufacturing plants inside African cities"
+        },
+        {
+          "id": "C",
+          "text": "African farmers refused to cultivate export commodities because international commodity prices remained permanently fixed and high"
+        },
+        {
+          "id": "D",
+          "text": "Colonial governments prohibited European private companies from extracting mineral wealth in Katanga and the Witwatersrand"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Colonial economic structures confined African territories to raw-material suppliers and captive consumer markets; coercive taxation forced peasants into single-cash-crop farming at the expense of food security, while mineral profits were extracted abroad without developing local industrial manufacturing.",
+      "sourceReference": "Section 2.6.2, Pages 39-40, 42-43"
+    },
+    {
+      "id": "HIS-G10-U02-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "How did European Settler Rule in regions such as Kenya, Southern Rhodesia, and Algeria produce unique socio-economic distress for indigenous populations compared to non-settler colonies?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Settler authorities abolished wage labor and distributed large European farming estates to local clan elders"
+        },
+        {
+          "id": "B",
+          "text": "Settler colonies completely excluded European administrative personnel and relied exclusively on African customary assemblies"
+        },
+        {
+          "id": "C",
+          "text": "Minority white settlers dispossessed Africans of fertile fertile lands (such as the 'White Highlands'), confining them to infertile reserves and compelling them into low-wage agricultural tenancy or urban labor"
+        },
+        {
+          "id": "D",
+          "text": "Settler administrations granted indigenous peasants full parity with European immigrants in legislative voting rights"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "In settler colonies, minority European immigrants expropriated the most fertile agricultural lands (such as the White Highlands of Kenya), relegating indigenous communities to landless laborers, low-wage tenants, or migrants in growing urban centers under harsh racial legislation.",
+      "sourceReference": "Section 2.4.4, Page 35"
+    }
+  ]
 }

@@ -2,6 +2,364 @@
   "grade": 12,
   "subject": "History",
   "unitNumber": 3,
-  "unitTitle": "Ethiopia: Internal Developments and External Relations from 1840s to 1941",
-  "questions": []
+  "unitTitle": "Social, Economic and Political Developments in Ethiopia, Mid 19th C. to 1941",
+  "questions": [
+    {
+      "id": "HIS-G12-U03-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "At which decisive battle in February 1855 did Dejazmach Kassa Hailu defeat Dejazmach Wube of Simen, leading to his coronation as Emperor Tewodros II and marking the end of the Zemene Mesafint?",
+      "options": [
+        { "id": "A", "text": "The Battle of Guramba" },
+        { "id": "B", "text": "The Battle of Gorgora Bichen" },
+        { "id": "C", "text": "The Battle of Ayshal" },
+        { "id": "D", "text": "The Battle of Deresge" }
+      ],
+      "correctOptionId": "D",
+      "explanation": "In February 1855, Kassa Hailu defeated his final northern rival, Dejach Wube of Simen, at the Battle of Deresge and was subsequently crowned Emperor Tewodros II at Deresge Mariam Church, bringing an official end to the Era of the Princes (Zemene Mesafint).",
+      "sourceReference": "Section 3.2, Page 53"
+    },
+    {
+      "id": "HIS-G12-U03-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which article of the 1889 Treaty of Wuchale contained conflicting Amharic and Italian interpretations regarding Ethiopian foreign relations, ultimately serving as the catalyst for the Battle of Adwa?",
+      "options": [
+        { "id": "A", "text": "Article 3" },
+        { "id": "B", "text": "Article 11" },
+        { "id": "C", "text": "Article 17" },
+        { "id": "D", "text": "Article 20" }
+      ],
+      "correctOptionId": "C",
+      "explanation": "While Article 3 established territorial boundaries for Italian-held Eritrea, Article 17 generated conflict because the Amharic version stated that Ethiopia 'may' utilize Italian diplomatic channels, whereas the Italian text made it mandatory, reducing Ethiopia to a protectorate.",
+      "sourceReference": "Section 3.5, Page 71"
+    },
+    {
+      "id": "HIS-G12-U03-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "At which battle on June 6, 1882, did the forces of Negus Menelik of Shewa defeat the army of Negus Tekle Haimanot of Gojjam to secure control over the resource-rich southwestern territories?",
+      "options": [
+        { "id": "A", "text": "The Battle of Embabo" },
+        { "id": "B", "text": "The Battle of Azule" },
+        { "id": "C", "text": "The Battle of Chelenqo" },
+        { "id": "D", "text": "The Battle of Asem" }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The rivalry between Negus Menelik and Negus Tekle Haimanot over hegemony in southwestern Ethiopia was resolved at the Battle of Embabo on June 6, 1882, where Shewan forces won a decisive victory that opened the southwestern region to Menelik's expansion.",
+      "sourceReference": "Section 3.3, Page 60"
+    },
+    {
+      "id": "HIS-G12-U03-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What major religious decision was decreed by Emperor Yohannes IV at the Council of Boru Meda in 1878?",
+      "options": [
+        {
+          "id": "A",
+          "text": "He adopted the Qebat (Unction) doctrine as the official faith of the imperial court"
+        },
+        {
+          "id": "B",
+          "text": "He settled internal church controversies by declaring the Tewahedo doctrine as the sole legitimate faith and gave Muslims an ultimatum to convert or forfeit property"
+        },
+        {
+          "id": "C",
+          "text": "He abolished the authority of the Egyptian Patriarch over church appointments"
+        },
+        {
+          "id": "D",
+          "text": "He declared complete freedom of conscience for all Protestant and Catholic missionaries in northern Ethiopia"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "At the 1878 Council of Boru Meda, Emperor Yohannes IV resolved the theological disputes of the Orthodox Church by proclaiming the Tewahedo (Union) doctrine supreme and mandated that Muslims in Wollo convert to Orthodox Christianity or face land confiscation.",
+      "sourceReference": "Section 3.2 & 3.4, Pages 51, 70"
+    },
+    {
+      "id": "HIS-G12-U03-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which institutional reform was introduced by Emperor Menelik II in October 1907 to modernize administrative decision-making in the face of his failing health?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The promulgation of Ethiopia's first written constitution"
+        },
+        {
+          "id": "B",
+          "text": "The establishment of the first Council of Ministers in Ethiopian history"
+        },
+        {
+          "id": "C",
+          "text": "The dissolution of the traditional hereditary regional titles"
+        },
+        {
+          "id": "D",
+          "text": "The formation of the Chamber of Deputies through universal suffrage"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In October 1907, following a stroke that weakened his health and the passing of his cousin Ras Mekonnen, Emperor Menelik II established Ethiopia's first formal Council of Ministers to ensure institutionalized central administration.",
+      "sourceReference": "Section 3.6, Pages 77-78"
+    },
+    {
+      "id": "HIS-G12-U03-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How did the commercial role of the Afkala merchants in 19th-century long-distance trade distinguish them from the northern Jabarti traders?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The Afkala were European licensed agents who controlled maritime shipping from Massawa"
+        },
+        {
+          "id": "B",
+          "text": "The Afkala were southwestern Muslim Oromo traders who organized local collection networks and came to dominate internal trade between the Gibe region and northern markets"
+        },
+        {
+          "id": "C",
+          "text": "The Afkala dealt exclusively in imported firearms and artillery, refusing to handle natural commodities"
+        },
+        {
+          "id": "D",
+          "text": "The Afkala were monastic Christian guilds that monopolized salt bar (amole) extraction in the Afar depression"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "While Jabarti were northern Muslim merchants operating large caravans along the main routes, the Afkala were local Muslim Oromo merchants of the southwest who dominated regional collection of coffee, ivory, gold, and civet, successfully competing with northern caravans.",
+      "sourceReference": "Section 3.1, Pages 49-50"
+    },
+    {
+      "id": "HIS-G12-U03-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What socio-economic transformation accompanied the introduction of the Qelad system of land measurement in southern Ethiopia under Emperor Menelik II?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It restored traditional communal clan ownership and exempted farmers from agricultural tribute"
+        },
+        {
+          "id": "B",
+          "text": "It facilitated the appropriation and privatization of land by the state, reducing many indigenous peasants from autonomous landholders to insecure tenants (gebbars)"
+        },
+        {
+          "id": "C",
+          "text": "It established identical rist rights across all southern provinces modeled on Tigray and Gojjam"
+        },
+        {
+          "id": "D",
+          "text": "It completely abolished the melkegna system in favor of cash wage labor"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The Qelad system measured land using ropes to categorize fertility and levy taxes, enabling the imperial government to confiscate substantial territory, distribute it to church and state elites, and reduce local farming populations into tenants on their ancestral lands.",
+      "sourceReference": "Section 3.3, Pages 64-65"
+    },
+    {
+      "id": "HIS-G12-U03-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What diplomatic trade-off was formalized in the Hewett (Adwa) Treaty signed on June 3, 1884, between Emperor Yohannes IV and Great Britain?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Ethiopia recognized Italian possession of Asmara in return for naval armaments from London"
+        },
+        {
+          "id": "B",
+          "text": "Ethiopia agreed to facilitate the safe evacuation of trapped Egyptian garrisons from eastern Sudan through its territory in exchange for the return of Bogos and free transit through Massawa"
+        },
+        {
+          "id": "C",
+          "text": "Ethiopia agreed to pay a war indemnity to the Mahdist state in exchange for commercial rights in Khartoum"
+        },
+        {
+          "id": "D",
+          "text": "Great Britain established a joint protectorate over the Ogaden and Zeila"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Under the 1884 Hewett Treaty, Emperor Yohannes IV agreed to assist British-led Egyptian troops trapped by Mahdists in Sudan to evacuate safely through Ethiopian territory, in exchange for Britain restoring Bogos to Ethiopia and facilitating free trade through Massawa (a promise Britain broke by letting Italy occupy Massawa in 1885).",
+      "sourceReference": "Section 3.4, Page 67"
+    },
+    {
+      "id": "HIS-G12-U03-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What military action was undertaken by Ras Alula Engeda at Dogali on January 26, 1887?",
+      "options": [
+        {
+          "id": "A",
+          "text": "He defeated Egyptian forces attempting to march inland from Tajura"
+        },
+        {
+          "id": "B",
+          "text": "He intercepted and annihilated an Italian relief column of approximately 500 soldiers advancing to reinforce the fortress at Saati"
+        },
+        {
+          "id": "C",
+          "text": "He recaptured the port city of Massawa from French naval forces"
+        },
+        {
+          "id": "D",
+          "text": "He crushed the Mahdist army before it could enter Gondar"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "On January 26, 1887, Ras Alula, governor of the Mereb Melash, intercepted and destroyed an Italian detachment of 500 troops commanded by Colonel De Cristoforis at Dogali as they advanced to relieve the Italian post at Saati, dealing Italy its first serious setback.",
+      "sourceReference": "Section 3.4, Page 67"
+    },
+    {
+      "id": "HIS-G12-U03-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which decisive engagement in October 1916 crushed the armed attempt of Negus Mikael of Wollo to reverse the coup that deposed his son, Lij Iyasu?",
+      "options": [
+        { "id": "A", "text": "The Battle of Tora Mesk" },
+        { "id": "B", "text": "The Battle of Anchim" },
+        { "id": "C", "text": "The Battle of Segele" },
+        { "id": "D", "text": "The Battle of Koramas" }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Following the deposition of Lij Iyasu on September 27, 1916, his father Negus Mikael marched toward Shewa with a massive Wollo army; after an initial success at Tora Mesk, his forces were routed and he was captured at the Battle of Segele near Sheno on October 27, 1916.",
+      "sourceReference": "Section 3.6, Page 80"
+    },
+    {
+      "id": "HIS-G12-U03-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How did the second phase of the Ethiopian patriotic resistance against Fascist Italian occupation (1937–1941) differ from the initial phase?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It shifted from conventional frontal engagements to widespread nationwide guerrilla warfare, sparked by the brutal Graziani massacre of February 1937"
+        },
+        {
+          "id": "B",
+          "text": "It abandoned rural skirmishes to focus entirely on naval blockades along the Red Sea"
+        },
+        {
+          "id": "C",
+          "text": "It was led exclusively by European mercenaries without domestic peasant participation"
+        },
+        {
+          "id": "D",
+          "text": "It relied entirely on diplomatic petitions to the League of Nations without armed activity"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The first phase of resistance (1936–early 1937) was marked by conventional attempts to assault Addis Ababa and defend regional strongholds; following the February 1937 Yekatit 12 massacre by Graziani, the struggle evolved into resilient rural guerrilla warfare supported by inner patriots (West Arbegnoch).",
+      "sourceReference": "Section 3.7, Pages 86-88"
+    },
+    {
+      "id": "HIS-G12-U03-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "In what structural manner did Emperor Yohannes IV's approach to national reunification and state-building contrast with that of Emperor Tewodros II?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Tewodros II allied with foreign European powers to partition Ethiopia, whereas Yohannes IV isolated the country from all international contact"
+        },
+        {
+          "id": "B",
+          "text": "Tewodros II attempted rigorous political centralization by replacing hereditary regional rulers with appointed officials and seeking an indigenous weapons industry, whereas Yohannes IV practiced a flexible, quasi-federal approach that recognized the internal autonomy of powerful regional kings as long as they paid tribute and acknowledged his imperial supremacy"
+        },
+        {
+          "id": "C",
+          "text": "Tewodros II abolished the Orthodox Church's land tenure, whereas Yohannes IV adopted Roman Catholicism as the state religion"
+        },
+        {
+          "id": "D",
+          "text": "Tewodros II governed exclusively from mobile royal tents, whereas Yohannes IV established a permanent European-style parliamentary capital at Gondar"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Tewodros II attempted to crush regional feudal dynasties directly and impose central administrative control, which alienated local princes and clergy. In contrast, Yohannes IV followed a decentralized, quasi-federal framework, confirming Menelik as King of Shewa and Adal Tesema as King of Gojjam, focusing imperial energy on defending frontiers against Egypt, Mahdists, and Italy.",
+      "sourceReference": "Section 3.2, Pages 53-54, 57-58"
+    },
+    {
+      "id": "HIS-G12-U03-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "How did the administrative outcomes of Menelik II's expansion into southern and southwestern Ethiopia differ between regions that submitted peacefully and those that mounted armed resistance?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Resisting kingdoms were granted full representation in the Council of Ministers, while peacefully submitting rulers were exiled to Harar"
+        },
+        {
+          "id": "B",
+          "text": "Peacefully submitting states (such as Jimma, Leqa Naqamte, and Leqa Qellem) preserved internal administrative autonomy and retained their hereditary rulers as vassals, whereas resisting polities (such as Arsi, Wolaita, and Kafa) suffered violent conquest, the removal and imprisonment of their monarchs, direct Shewan governance, and widespread land alienation"
+        },
+        {
+          "id": "C",
+          "text": "Resisting kingdoms were completely exempt from paying taxes, while peaceful rulers had all communal land measured and seized under the qelad system"
+        },
+        {
+          "id": "D",
+          "text": "Peaceful states were placed under Italian colonial protection, while resisting kingdoms were absorbed into British East Africa"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Rulers like Abba Jifar II of Jimma, Kumsa Moreda of Leqa Naqamte, and Jote Tulu of Leqa Qellem submitted peacefully and negotiated the retention of their hereditary titles, internal autonomy, and customary land tenure; conversely, regions that fought bitterly—such as Arsi (defeated at Azule), Wolaita (under Kawo Tona), and Kafa (under Tato Gaki Sherecho)—had their dynasties deposed, lands confiscated, and administration placed under Shewan appointees.",
+      "sourceReference": "Section 3.3, Pages 60-64"
+    },
+    {
+      "id": "HIS-G12-U03-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Which combination of factors explains why the Ethiopian armed forces secured a decisive victory against Italy at Adwa in 1896, but suffered conventional defeat during the 1935–1936 Fascist invasion?",
+      "options": [
+        {
+          "id": "A",
+          "text": "At Adwa, Ethiopia had total air superiority with modern biplanes, whereas in 1935, Italian troops fought exclusively with traditional spears and muzzleloaders"
+        },
+        {
+          "id": "B",
+          "text": "At Adwa, Ethiopia mobilized a united national coalition of approximately 100,000 troops with modern rifle parity against divided Italian columns, whereas in 1935–1936, Fascist Italy deployed mechanized armor, complete aerial control, and asphyxiating mustard gas against an arms-embargoed, uncoordinated Ethiopian defense"
+        },
+        {
+          "id": "C",
+          "text": "The League of Nations imposed devastating naval sanctions on Italy in 1896, while actively arming the Fascist Italian regime in 1935"
+        },
+        {
+          "id": "D",
+          "text": "Ethiopian regional commanders united harmoniously under Haile Selassie in 1935, whereas in 1896, northern princes had openly defected to the Italian side"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "At Adwa, Menelik mobilized around 100,000 troops, nearly three-quarters armed with modern repeating rifles, and capitalized on Italian tactical blunders and split columns; in 1935–1936, Fascist Italy invaded with massive technological asymmetry, deploying heavy bombers, tanks, modern artillery, and illegal mustard gas, while Ethiopia suffered from arms embargoes and inadequate inter-front coordination.",
+      "sourceReference": "Section 3.5 & 3.7, Pages 72-74, 83-85"
+    },
+    {
+      "id": "HIS-G12-U03-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "How did the political resolution of the Diarchy (1916–1930) between Empress Zewditu and Ras Teferi Mekonnen culminate in the foundation of modern autocracy under Emperor Haile Selassie I?",
+      "options": [
+        {
+          "id": "A",
+          "text": "By signing an alliance with the British to establish a constitutional democracy with full parliamentary veto power"
+        },
+        {
+          "id": "B",
+          "text": "By outmaneuvering traditionalist opponents like Dejach Balcha, attaining kingship (Negus) in 1928, defeating the Empress's husband Ras Gugsa Wole at the Battle of Anchim in 1930, and promulgating the 1931 Constitution to concentrate absolute power in the crown and eliminate hereditary regional autonomy"
+        },
+        {
+          "id": "C",
+          "text": "By executing Empress Zewditu and restoring Lij Iyasu to the imperial throne under a shared regency"
+        },
+        {
+          "id": "D",
+          "text": "By transferring supreme legislative power to the Confederation of Ethiopian Labor Unions"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "During the Diarchy, Ras Teferi progressively expanded his authority against traditionalists; following the deaths of Fitawrari Habte Giorgis and Abune Matewos in 1926, he secured the crown of Negus in 1928, crushed Ras Gugsa Wole's revolt at Anchim on March 31, 1930, ascended as Emperor Haile Selassie I after Zewditu's death, and codified supreme monarchical absolutism in the 1931 Constitution.",
+      "sourceReference": "Section 3.6, Pages 81-83"
+    }
+  ]
 }

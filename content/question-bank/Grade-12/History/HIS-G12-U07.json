@@ -2,6 +2,340 @@
   "grade": 12,
   "subject": "History",
   "unitNumber": 7,
-  "unitTitle": "Africa Since 1960",
-  "questions": []
+  "unitTitle": "Africa since the 1960s",
+  "questions": [
+    {
+      "id": "HIS-G12-U07-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which West African nation became the first British colony south of the Sahara to achieve independence in March 1957 under the leadership of Kwame Nkrumah?",
+      "options": [
+        { "id": "A", "text": "Nigeria" },
+        { "id": "B", "text": "Sierra Leone" },
+        { "id": "C", "text": "Ghana" },
+        { "id": "D", "text": "The Gambia" }
+      ],
+      "correctOptionId": "C",
+      "explanation": "In March 1957, the British colony of the Gold Coast achieved sovereign independence under Prime Minister Kwame Nkrumah and adopted the historic African name Ghana, pioneering decolonization in Sub-Saharan Africa.",
+      "sourceReference": "Section 7.1, Page 211"
+    },
+    {
+      "id": "HIS-G12-U07-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which French West African colony, led by Sékou Touré, was the only territory to vote 'No' in the 1958 French constitutional referendum, thereby achieving immediate independence?",
+      "options": [
+        { "id": "A", "text": "Senegal" },
+        { "id": "B", "text": "Guinea" },
+        { "id": "C", "text": "Mali" },
+        { "id": "D", "text": "Ivory Coast" }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In the September 1958 referendum organized by French President Charles de Gaulle, Guinea was the sole French colony that rejected the French Community by voting 'No', leading France to sever economic and administrative ties and recognize Guinea's immediate sovereignty.",
+      "sourceReference": "Section 7.1, Page 212"
+    },
+    {
+      "id": "HIS-G12-U07-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "On March 21, 1960, South African police opened fire on a peaceful anti-pass protest, killing 69 people in an event known as the:",
+      "options": [
+        { "id": "A", "text": "Soweto Uprising" },
+        { "id": "B", "text": "Sharpeville Massacre" },
+        { "id": "C", "text": "Rivonia Trial" },
+        { "id": "D", "text": "Boipatong Massacre" }
+      ],
+      "correctOptionId": "B",
+      "explanation": "On March 21, 1960, South African police killed 69 peaceful demonstrators and wounded over 180 others in Sharpeville near Johannesburg during a campaign against the pass laws, marking a major turning point that led the ANC to establish its armed wing, Umkhonto we Sizwe.",
+      "sourceReference": "Section 7.4, Pages 225-226"
+    },
+    {
+      "id": "HIS-G12-U07-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which prominent African-American scholar and author organized multiple Pan-African congresses between 1919 and 1945 and is widely regarded as the 'Father of Pan-Africanism'?",
+      "options": [
+        { "id": "A", "text": "Marcus Garvey" },
+        { "id": "B", "text": "H. Sylvester Williams" },
+        { "id": "C", "text": "Dr. W. E. B. Du Bois" },
+        { "id": "D", "text": "George Padmore" }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Dr. William Edward Burghardt (W. E. B.) Du Bois (1868–1963) organized several Pan-African congresses after World War I, advocated for equal rights and self-determination for people of African descent, and earned the title 'Father of Pan-Africanism'.",
+      "sourceReference": "Section 7.5, Page 229"
+    },
+    {
+      "id": "HIS-G12-U07-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In which city and year was the Organization of African Unity (OAU) formally established by thirty-two independent African states?",
+      "options": [
+        { "id": "A", "text": "Accra in 1957" },
+        { "id": "B", "text": "Cairo in 1961" },
+        { "id": "C", "text": "Addis Ababa in 1963" },
+        { "id": "D", "text": "Durban in 2002" }
+      ],
+      "correctOptionId": "C",
+      "explanation": "On May 25, 1963, thirty-two independent African heads of state and government gathered in Addis Ababa, Ethiopia, under the diplomatic leadership of Emperor Haile Selassie I to sign the OAU Charter and designate Addis Ababa as the permanent headquarters.",
+      "sourceReference": "Section 7.5, Pages 231-232"
+    },
+    {
+      "id": "HIS-G12-U07-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What primary political dilemma precipitated the collapse of the French Fourth Republic in 1958 and brought General Charles de Gaulle back to power?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A general labor strike of railroad workers in Paris demanding wage increases"
+        },
+        {
+          "id": "B",
+          "text": "The military crisis and rebellion of French generals and white settlers (colons) in Algeria opposed to negotiating with the FLN"
+        },
+        {
+          "id": "C",
+          "text": "A maritime dispute with Great Britain over fishing rights along the English Channel"
+        },
+        {
+          "id": "D",
+          "text": "The refusal of the United States to provide Marshall Plan subsidies for industrial modernization"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The protracted, brutal Algerian War of Independence caused deep political divisions in France. In May 1958, French military officers and white colons seized control in Algiers and threatened an airborne coup against Paris, collapsing the Fourth Republic and prompting the return of Charles de Gaulle to establish the Fifth Republic.",
+      "sourceReference": "Section 7.1, Pages 213-214"
+    },
+    {
+      "id": "HIS-G12-U07-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What immediate regional and ethnic crisis in Nigeria triggered the secession of the Eastern Region as the Republic of Biafra and caused the 1967–1970 civil war?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A disputed national census regarding cocoa export quotas across the Western Region"
+        },
+        {
+          "id": "B",
+          "text": "The January and July 1966 military counter-coups followed by the massacre of roughly 20,000 Igbo people in the Northern Region"
+        },
+        {
+          "id": "C",
+          "text": "A territorial invasion of the Niger Delta launched by the government of Cameroon"
+        },
+        {
+          "id": "D",
+          "text": "The unilateral privatization of the Nigerian Railway Corporation by British mining conglomerates"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Ethnic tensions flared after the January 1966 military coup (perceived as Igbo-led) and the July 1966 northern counter-coup. Widespread massacres of about 20,000 Igbo residents in Northern Nigeria drove survivors back to the Eastern Region, leading Lieutenant Colonel Odumegwu Ojukwu to declare the secession of Biafra in May 1967.",
+      "sourceReference": "Section 7.2, Pages 215-216"
+    },
+    {
+      "id": "HIS-G12-U07-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which combination of three authoritarian African rulers was overthrown in 1979, ending some of the continent's most notorious dictatorships?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Kwame Nkrumah of Ghana, General Yakubu Gowon of Nigeria, and Modibo Keïta of Mali"
+        },
+        {
+          "id": "B",
+          "text": "Jean-Bédel Bokassa of the Central African Empire, Idi Amin of Uganda, and Francisco Macías Nguema of Equatorial Guinea"
+        },
+        {
+          "id": "C",
+          "text": "Jomo Kenyatta of Kenya, Julius Nyerere of Tanzania, and Kenneth Kaunda of Zambia"
+        },
+        {
+          "id": "D",
+          "text": "Agostinho Neto of Angola, Samora Machel of Mozambique, and Amílcar Cabral of Guinea-Bissau"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The year 1979 witnessed the fall of three tyrannical dictators: Idi Amin of Uganda was ousted following the Tanzania-Uganda War, self-proclaimed Emperor Jean-Bédel Bokassa of the Central African Empire was overthrown in a French-backed coup, and Francisco Macías Nguema of Equatorial Guinea was deposed and executed.",
+      "sourceReference": "Section 7.2, Page 215"
+    },
+    {
+      "id": "HIS-G12-U07-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which pair of liberation movements waged the armed anti-colonial struggle against Portuguese rule in Angola and Mozambique, respectively?",
+      "options": [
+        { "id": "A", "text": "SWAPO and UNITA" },
+        { "id": "B", "text": "ZANU and ZAPU" },
+        { "id": "C", "text": "MPLA and FRELIMO" },
+        { "id": "D", "text": "PAC and PAIGC" }
+      ],
+      "correctOptionId": "C",
+      "explanation": "In Portugal's African colonies, the armed struggles for national liberation were led primarily by the Popular Movement for the Liberation of Angola (MPLA, led by Agostinho Neto) in Angola and the Front for the Liberation of Mozambique (FRELIMO, founded by Eduardo Mondlane and later led by Samora Machel) in Mozambique.",
+      "sourceReference": "Section 7.4, Pages 221-222"
+    },
+    {
+      "id": "HIS-G12-U07-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What core ideological distinction regarding the future of the African diaspora existed between Marcus Garvey and Dr. W. E. B. Du Bois?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Garvey championed an armed invasion of Europe, whereas Du Bois proposed permanent assimilation into Latin American monarchies"
+        },
+        {
+          "id": "B",
+          "text": "Garvey advocated the 'Back to Africa' movement through the Universal Negro Improvement Association, while Du Bois argued that Black people in the diaspora should fight for full civil rights in their host countries"
+        },
+        {
+          "id": "C",
+          "text": "Garvey sought to establish a socialist commonwealth across the Caribbean, while Du Bois opposed all political organizing"
+        },
+        {
+          "id": "D",
+          "text": "Garvey rejected African cultural traditions, whereas Du Bois insisted that all diaspora intellectuals convert to Islam"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Marcus Garvey believed that people of African descent would never receive equal treatment under white-dominated Western governments and urged repatriation through his 'Back to Africa' movement. Conversely, W. E. B. Du Bois insisted that Black Americans and Afro-Caribbeans should struggle for complete civil, legal, and political equality within their respective homelands.",
+      "sourceReference": "Section 7.5, Page 229"
+    },
+    {
+      "id": "HIS-G12-U07-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What primary diplomatic objective motivated African heads of state to issue the 1999 Sirte Declaration in Libya?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To establish a joint military command to expel foreign naval fleets from the Red Sea"
+        },
+        {
+          "id": "B",
+          "text": "To replace the Organization of African Unity with the African Union to accelerate continental political and economic integration in the era of globalization"
+        },
+        {
+          "id": "C",
+          "text": "To formally dissolve all regional economic communities across East and West Africa"
+        },
+        {
+          "id": "D",
+          "text": "To demand financial reparations from European powers for the Trans-Atlantic slave trade"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "On September 9, 1999, an extraordinary OAU summit in Sirte, Libya, adopted the Sirte Declaration, deciding to establish the African Union (AU) to replace the OAU. The goal was to move beyond the decolonization focus of the OAU toward deeper economic integration, democratic governance, and collective responses to globalization.",
+      "sourceReference": "Section 7.5, Pages 234-235"
+    },
+    {
+      "id": "HIS-G12-U07-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Why did the presence of large white settler populations in colonies such as Algeria, Kenya, Southern Rhodesia, and Angola necessitate armed liberation struggles, unlike most of British and French West Africa?",
+      "options": [
+        {
+          "id": "A",
+          "text": "West African territories lacked mineral and agricultural resources, making them unprofitable for European investors"
+        },
+        {
+          "id": "B",
+          "text": "Settler minorities held expropriated agricultural land, monopolized political and economic privileges, and fiercely resisted democratic majority rule, forcing nationalist movements to abandon constitutional appeals in favor of guerrilla warfare"
+        },
+        {
+          "id": "C",
+          "text": "The United Nations explicitly barred settler colonies from participating in international diplomatic negotiations"
+        },
+        {
+          "id": "D",
+          "text": "Colonial metropolitan governments withdrew their administrative personnel from settler regions immediately after World War II"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In settler colonies, white minorities had established permanent roots, seized fertile lands, and controlled local state apparatuses. Because settlers viewed majority Black rule as an existential threat to their racial privileges and property, they resisted constitutional concessions (exemplified by Ian Smith's Unilateral Declaration of Independence in Rhodesia and the colons in Algeria), leaving armed resistance as the only viable path to liberation.",
+      "sourceReference": "Section 7.1 & Section 7.4, Pages 210, 212-214, 221-224"
+    },
+    {
+      "id": "HIS-G12-U07-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "In what structural manner did the 'neo-colonial' economic structure inherited at independence undermine the political sovereignty of newly independent African nations?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It forced newly independent states to adopt universal industrial manufacturing, creating acute urban food shortages"
+        },
+        {
+          "id": "B",
+          "text": "Economies remained oriented around the export of single raw commodities whose prices were dictated by Western metropolitan markets, while high import costs and debt repayment left states financially dependent on former colonizers"
+        },
+        {
+          "id": "C",
+          "text": "It eliminated central bank reserves and compelled African states to return to barter trading networks"
+        },
+        {
+          "id": "D",
+          "text": "It mandated that all African national budgets be submitted to the United Nations General Assembly for approval"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Colonial rule disarticulated African economies by structuring them around monoculture cash crops and raw mineral extraction for export without developing domestic processing industries. Post-colonial states were trapped in unequal terms of trade—selling low-value primary commodities and purchasing expensive manufactured imports—which accumulated debt and allowed former colonial powers to exert indirect economic dominance (neo-colonialism).",
+      "sourceReference": "Section 7.3 & Section 7.5, Pages 217-218, 233, 236-237"
+    },
+    {
+      "id": "HIS-G12-U07-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "How did the 1974 Ethiopian Revolution and the 1977 Somali invasion of the Ogaden trigger an ideological and strategic reversal of Cold War alliances in the Horn of Africa?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The United States provided fighter jets to the Derg while the Soviet Union deployed ground troops to defend Mogadishu"
+        },
+        {
+          "id": "B",
+          "text": "The Derg adopted Marxism-Leninism, prompting the Soviet Union and Cuba to back Ethiopia with massive arms and combat forces, while Somalia expelled Soviet advisers and sought Western and Arab backing"
+        },
+        {
+          "id": "C",
+          "text": "Both Ethiopia and Somalia severed ties with all foreign states and formed a joint regional federation"
+        },
+        {
+          "id": "D",
+          "text": "The Warsaw Pact withdrew entirely from Africa to concentrate military resources on the Vietnam conflict"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Prior to 1974, Ethiopia was the primary American military ally in Sub-Saharan Africa, while Siad Barre's Somalia was a close client of the Soviet Union. When the Derg embraced socialism and Somalia launched an irredentist invasion of the Ogaden in July 1977, Moscow switched support to Ethiopia, delivering $2 billion in arms and Cuban combat troops. In response, Somalia expelled Soviet advisers and turned to the West.",
+      "sourceReference": "Section 7.4, Page 220"
+    },
+    {
+      "id": "HIS-G12-U07-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "How did the ideological rift between the 'Casablanca Group' and the 'Monrovia Group' shape the compromise reached in the 1963 Charter of the Organization of African Unity (OAU)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The Casablanca Group demanded immediate political federation (a United States of Africa), while the Monrovia Group favored gradual economic cooperation and respect for national sovereignty, leading to a charter that prioritized state sovereignty and territorial integrity"
+        },
+        {
+          "id": "B",
+          "text": "The Casablanca Group sought to preserve European colonial borders, whereas the Monrovia Group demanded the immediate dissolution of all African armies"
+        },
+        {
+          "id": "C",
+          "text": "The Casablanca Group supported white minority regimes in Southern Africa, while the Monrovia Group organized armed liberation battalions"
+        },
+        {
+          "id": "D",
+          "text": "The two blocs agreed to establish a single African currency governed by the Central Bank of Egypt"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The radical Casablanca Group (led by Nkrumah, Sékou Touré, and Nasser) pushed for an immediate continental federation with a joint military high command. The moderate Monrovia Group (including Nigeria, Liberia, and most Francophone states) preferred gradual economic cooperation, national sovereignty, and non-interference. The resulting 1963 OAU Charter reflected a victory for the Monrovia vision, enshrining non-interference, sovereign equality, and respect for inherited borders.",
+      "sourceReference": "Section 7.5, Pages 230-232"
+    }
+  ]
 }

@@ -2,6 +2,328 @@
   "grade": 11,
   "subject": "History",
   "unitNumber": 6,
-  "unitTitle": "Africa and the Outside World, 1500-1880s",
-  "questions": []
+  "unitTitle": "Africa and the Outside World: 1500-1880s",
+  "questions": [
+    {
+      "id": "HIS-G11-U06-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In which year and at which political center was the Funj Sultanate established in Nilotic Sudan?",
+      "options": [
+        { "id": "A", "text": "In 1275 at Dongola" },
+        { "id": "B", "text": "In 1504 at Sennar" },
+        { "id": "C", "text": "In 1591 at Timbuktu" },
+        { "id": "D", "text": "In 1652 at Suakin" }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In 1504, the pastoral Funj converted to Islam and established the Funj Sultanate with its center at Sennar, defeating the rival Abdallabi Arabs and ruling Nilotic Sudan for over three centuries.",
+      "sourceReference": "Section 6.1.1, Page 142"
+    },
+    {
+      "id": "HIS-G11-U06-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which West African kingdom was uniquely famous for training elite all-female military regiments known as the 'Amazons'?",
+      "options": [
+        { "id": "A", "text": "The Kingdom of Benin" },
+        { "id": "B", "text": "The Empire of Oyo" },
+        { "id": "C", "text": "The Kingdom of Dahomey" },
+        { "id": "D", "text": "The Kingdom of Buganda" }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The Kingdom of Dahomey was unique in Africa for training specialized female regiments, popularly called the Abomey Amazons, who served as elite royal shock troops in campaigns against neighbors and in anti-colonial battles against the French.",
+      "sourceReference": "Section 6.1.2, Page 145"
+    },
+    {
+      "id": "HIS-G11-U06-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What royal title was held by the supreme ruler of the medieval Kingdom of Kongo?",
+      "options": [
+        { "id": "A", "text": "Kabaka" },
+        { "id": "B", "text": "Manikongo" },
+        { "id": "C", "text": "Mwene Mutapa" },
+        { "id": "D", "text": "Ashantehene" }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The monarch of the Kingdom of Kongo, established around 1400 south of the Congo River, bore the royal title of Manikongo and governed a centralized administration from the capital Mbanza Kongo (later São Salvador).",
+      "sourceReference": "Section 6.1.4, Page 146"
+    },
+    {
+      "id": "HIS-G11-U06-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which Portuguese royal prince played a leading role in sponsoring and organizing early 15th-century maritime explorations along the West African coast?",
+      "options": [
+        { "id": "A", "text": "Prince Henry the Navigator" },
+        { "id": "B", "text": "King John II" },
+        { "id": "C", "text": "King Manuel I" },
+        { "id": "D", "text": "Afonso de Albuquerque" }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Prince Henry the Navigator (1394–1460) founded a school for navigation in southern Portugal, assembled mapmakers and astronomers, and sponsored expeditions southward along the African coast to bypass Arab intermediaries and reach West African gold sources.",
+      "sourceReference": "Section 6.2.1, Page 151"
+    },
+    {
+      "id": "HIS-G11-U06-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In 1652, which commercial enterprise established the first permanent European settlement at the Cape of Good Hope in South Africa?",
+      "options": [
+        { "id": "A", "text": "The British South Africa Company" },
+        { "id": "B", "text": "The Dutch East India Company" },
+        { "id": "C", "text": "The Royal Niger Company" },
+        { "id": "D", "text": "The French West Africa Company" }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In 1652, the Dutch East India Company founded a permanent coastal station at the Cape of Good Hope to grow vegetables, trade meat with the native Khoisan, and provide medical care and supplies to passing merchant vessels.",
+      "sourceReference": "Section 6.5, Page 163"
+    },
+    {
+      "id": "HIS-G11-U06-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What were the Moroccan troops who conquered the Songhai Empire in 1591, intermarried with the local population, and ruled as independent military governors on the Niger bend called?",
+      "options": [
+        { "id": "A", "text": "Spahis" },
+        { "id": "B", "text": "Janissaries" },
+        { "id": "C", "text": "Arma" },
+        { "id": "D", "text": "Tuareg" }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The Moroccan soldiers stationed on the Niger bend following the 1591 invasion were known as Arma; they intermarried locally, severed their tributary allegiance to the Moroccan Sultan by the mid-17th century, and ruled rival local principalities until overthrown by the Tuareg in 1737.",
+      "sourceReference": "Section 6.1.1, Pages 143-144"
+    },
+    {
+      "id": "HIS-G11-U06-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How was the Rozwi Empire established on the plateau of Zimbabwe in the late 17th century?",
+      "options": [
+        {
+          "id": "A",
+          "text": "By Dutch settler farmers migrating from the Cape Colony across the Limpopo River"
+        },
+        {
+          "id": "B",
+          "text": "By a Shona military leader named Changamire who conquered the Torwa state and drove the Portuguese off the Zimbabwean plateau in 1693"
+        },
+        {
+          "id": "C",
+          "text": "By Omani Arab merchants seeking to divert the gold trade of Sofala to Zanzibar"
+        },
+        {
+          "id": "D",
+          "text": "By the British South Africa Company following the discovery of gold mines along the Zambezi River"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In the late 17th century, the Shona warrior Changamire organized his followers (the Rozwi, meaning 'the destroyers'), conquered the neighboring Torwa state in the 1680s, and expelled the Portuguese from the Zimbabwe plateau in 1693 to establish the Rozwi Empire.",
+      "sourceReference": "Section 6.1.4, Page 148"
+    },
+    {
+      "id": "HIS-G11-U06-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In the Ottoman administrative system established in North African provinces, what was the distinction between the Janissaries and the Spahis?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Janissaries were local Berber camel herders, while Spahis were European naval mercenaries"
+        },
+        {
+          "id": "B",
+          "text": "Janissaries were professional imperial infantry corps sent from Istanbul, while Spahis were provincial cavalry units whose officers were often offspring of Turkish soldiers and local Arab women"
+        },
+        {
+          "id": "C",
+          "text": "Janissaries collected agricultural grain taxes, while Spahis operated autonomous religious courts for non-Muslim minorities"
+        },
+        {
+          "id": "D",
+          "text": "Janissaries were civil diplomats stationed in coastal towns, while Spahis were trans-Saharan caravan merchants"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Ottoman provincial garrisons in North Africa relied on Turkish Janissary infantry corps sent directly from Istanbul, supported by local provincial cavalry units called Spahis, whose members were offspring of Turkish soldiers and local Arab women and thus enjoyed greater local respect.",
+      "sourceReference": "Section 6.1.6, Page 150"
+    },
+    {
+      "id": "HIS-G11-U06-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which of the following correctly outlines the chronological progression of the Trans-Atlantic slave trade through its three distinct operational phases?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Monopolistic phase → Piratic phase → Free trade phase"
+        },
+        {
+          "id": "B",
+          "text": "Free trade phase → Chartered company phase → State monopoly phase"
+        },
+        {
+          "id": "C",
+          "text": "Piratic phase (15th–late 16th c.) → Monopolistic phase (1580s–late 17th c.) → Free trade phase (late 17th–mid-19th c.)"
+        },
+        {
+          "id": "D",
+          "text": "Mercantilist phase → Industrial phase → Imperialist phase"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The Trans-Atlantic slave trade developed through three historical stages: the piratic phase (unregulated individual adventurers and smugglers), the monopolistic phase (state-chartered monopoly companies backed by national navies), and the free trade phase (inaugurated after British legal liberalization in 1689).",
+      "sourceReference": "Section 6.3.3, Pages 157-158"
+    },
+    {
+      "id": "HIS-G11-U06-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which agricultural commodity emerged as West Africa's leading overseas export during the 19th-century 'Legitimate Trade' to lubricate European industrial machinery?",
+      "options": [
+        { "id": "A", "text": "Gum Arabic" },
+        { "id": "B", "text": "Groundnuts" },
+        { "id": "C", "text": "Palm oil" },
+        { "id": "D", "text": "Cocoa beans" }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Following the abolition of the maritime slave trade, palm oil extracted from coastal forest regions became West Africa's principal export, serving as the essential lubricant for factory machinery and locomotives in industrializing Europe before petroleum was developed.",
+      "sourceReference": "Section 6.4, Page 162"
+    },
+    {
+      "id": "HIS-G11-U06-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What primary political and social grievances drove the Dutch-descended Boers to embark on the 'Great Trek' into the South African interior during the 1830s and 1840s?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The discovery of diamond pipes along the Vaal River that sparked a competitive rush"
+        },
+        {
+          "id": "B",
+          "text": "Resentment against British colonial authority at the Cape, which had abolished slavery, altered land policies, and introduced English judicial procedures"
+        },
+        {
+          "id": "C",
+          "text": "An invitation from the Zulu king Dingane offering uncultivated farming territories in Natal"
+        },
+        {
+          "id": "D",
+          "text": "Catastrophic crop failure across the western Cape that forced the entire settler community to adopt nomadic pastoralism"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Dissatisfied with British colonial administration at the Cape—particularly the 1834 abolition of slavery without sufficient compensation, land tenure reforms, and restrictions on their control over indigenous labor—thousands of pastoral Boers migrated northward across the Orange and Vaal rivers.",
+      "sourceReference": "Section 6.5, Page 164"
+    },
+    {
+      "id": "HIS-G11-U06-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "How did Sultan Ahmad al-Mansur's military conquest of the Songhai Empire in 1591 paradoxically undermine Morocco's own long-term economic prosperity?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Moroccan finances were drained by purchasing European muskets, forcing the Sultan to surrender Atlantic seaports to Spain"
+        },
+        {
+          "id": "B",
+          "text": "The destruction of Songhai's administrative structure created chronic insecurity, causing the Trans-Saharan gold trade to divert eastward to Tunis and Cairo or southward to European maritime merchants on the Atlantic coast"
+        },
+        {
+          "id": "C",
+          "text": "The surviving Songhai cavalry regrouped in the Sahara and placed Marrakesh under a destructive two-year siege"
+        },
+        {
+          "id": "D",
+          "text": "The Ottoman Turks invaded Morocco from Algeria to punish the Sa'dids for attacking an Islamic sultanate"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Although Moroccan armies destroyed the Songhai Empire in 1591, Morocco could not govern the vast territories across the Sahara; the resulting political breakdown ruined Timbuktu and Gao and diverted the gold trade away from Morocco toward North African rivals and European trading ships on the Atlantic coast.",
+      "sourceReference": "Section 6.1.1, Page 143"
+    },
+    {
+      "id": "HIS-G11-U06-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "In what structural manner did the Trans-Atlantic slave trade retard indigenous economic and technological progress across Sub-Saharan Africa between the 16th and 19th centuries?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It caused extreme domestic monetary inflation by flooding local barter markets with Spanish silver currency"
+        },
+        {
+          "id": "B",
+          "text": "It drained millions of the most able-bodied and productive young laborers, encouraged chronic warfare and raiding by local elites to capture slaves, and undermined local crafts through the influx of cheap European manufactured goods"
+        },
+        {
+          "id": "C",
+          "text": "It compelled African farming communities to abandon food crops in favor of exclusive maritime commerce"
+        },
+        {
+          "id": "D",
+          "text": "It eradicated domestic forms of servitude and replaced them with European contractual wage-labor relations across the forest belt"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The Trans-Atlantic slave trade removed approximately 12 million young, productive individuals, encouraged endemic warfare and kidnapping as ruling elites competed for captives to exchange for firearms and luxury imports, and stagnated local productive forces like ironworking and textiles due to cheap European imports.",
+      "sourceReference": "Section 6.3.3 & 6.3.5, Pages 157-161"
+    },
+    {
+      "id": "HIS-G11-U06-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "What primary economic transition in Great Britain prompted British industrial and political elites to spearhead the abolition of the maritime slave trade in the early 19th century?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The rise of industrial capitalism, which rendered slave labor obsolete and required African populations to remain in Africa to produce raw materials and purchase mass-produced factory goods"
+        },
+        {
+          "id": "B",
+          "text": "The complete exhaustion of Caribbean sugarcane fields due to irreversible tropical soil erosion"
+        },
+        {
+          "id": "C",
+          "text": "A formal military treaty signed between Great Britain and the Ashanti Empire banning all maritime slave shipments"
+        },
+        {
+          "id": "D",
+          "text": "A ruling by the International Court of Justice declaring maritime slaving an international war crime"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "With the rise of the Industrial Revolution, British capitalists realized that slave-based plantation agriculture was less profitable than industrial wage production; British industries needed African workers to stay in Africa to harvest cash-crop raw materials (like palm oil and cotton) and create an expanding market for manufactured goods.",
+      "sourceReference": "Section 6.3.4 & Section 6.4, Pages 160-162"
+    },
+    {
+      "id": "HIS-G11-U06-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "How did the activities of 19th-century European explorers and Christian missionaries directly pave the way for the late 19th-century 'Scramble for Africa'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "They gathered critical geographical, commercial, and resource intelligence on navigable rivers and minerals, while mission stations in conflict zones routinely appealed to home governments for military protection, providing ready pretexts for colonial annexation"
+        },
+        {
+          "id": "B",
+          "text": "They mobilized private standing mercenary armies that overthrew indigenous kings without the knowledge of European chancelleries"
+        },
+        {
+          "id": "C",
+          "text": "They persuaded African monarchs to formally cede all sovereign territorial authority to the Papacy in Rome in exchange for medical aid"
+        },
+        {
+          "id": "D",
+          "text": "They established industrial factories that transformed traditional African kingdoms into self-governing European dominions"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "European explorers charted interior waterways (like the Niger, Congo, and Zambezi) and cataloged economic resources for commercial exploitation, while missionaries established outposts whose appeals for armed protection during local conflicts were used by European governments as pretexts for declaring protectorates and launching colonial conquest.",
+      "sourceReference": "Section 6.6, Pages 165-167"
+    }
+  ]
 }

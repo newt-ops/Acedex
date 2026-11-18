@@ -3,5 +3,354 @@
   "subject": "History",
   "unitNumber": 5,
   "unitTitle": "Peoples and States of Africa to 1500",
-  "questions": []
+  "questions": [
+    {
+      "id": "HIS-G09-U05-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Linguists classify the indigenous languages spoken across the African continent into how many major language super-families?",
+      "options": [
+        { "id": "A", "text": "Two" },
+        { "id": "B", "text": "Four" },
+        { "id": "C", "text": "Six" },
+        { "id": "D", "text": "Eight" }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Linguists classify the over 1,000 languages spoken across Africa into four major language super-families: Congo-Kordofanian (Niger-Congo), Afro-Asiatic, Nilo-Saharan, and Khoisan.",
+      "sourceReference": "Section 5.1, Page 84"
+    },
+    {
+      "id": "HIS-G09-U05-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which people founded the ancient empire of Ghana in the fourth century AD?",
+      "options": [
+        { "id": "A", "text": "The Mandinka" },
+        { "id": "B", "text": "The Songhai" },
+        { "id": "C", "text": "The Soninke" },
+        { "id": "D", "text": "The Hausa" }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The ancient Ghana Empire was established in the fourth century AD by the Soninke people and reached the pinnacle of its power around 1000 AD through its control of the trans-Saharan trade.",
+      "sourceReference": "Section 5.4, Page 89"
+    },
+    {
+      "id": "HIS-G09-U05-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is the literal meaning of the Bantu (Shona) word 'Zimbabwe'?",
+      "options": [
+        { "id": "A", "text": "Land of Gold" },
+        { "id": "B", "text": "Sacred Mountain" },
+        { "id": "C", "text": "Stone Houses" },
+        { "id": "D", "text": "Royal Throne" }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The word Zimbabwe is derived from a Shona (Bantu) term that literally translates to 'stone houses,' describing the monumental dry-stone walled architecture of the civilization.",
+      "sourceReference": "Section 5.6, Page 94"
+    },
+    {
+      "id": "HIS-G09-U05-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "From what ethnic and occupational background did the Mamluk rulers of Egypt originally emerge before seizing state power in 1250 AD?",
+      "options": [
+        { "id": "A", "text": "Arab maritime merchants from the Red Sea" },
+        {
+          "id": "B",
+          "text": "Turkish soldier-slaves and military commanders serving the Fatimids"
+        },
+        { "id": "C", "text": "Berber pastoralists from the Sahara Desert" },
+        { "id": "D", "text": "Nubian farmers along the Upper Nile" }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The Mamluks were originally enslaved soldiers of Turkish origin recruited by the Fatimids who rose to become high military officers and eventually seized political power, ruling Egypt from 1250 to 1517 AD.",
+      "sourceReference": "Section 5.2, Page 87"
+    },
+    {
+      "id": "HIS-G09-U05-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which two commodities formed the principal economic foundation of the Trans-Saharan caravan trade?",
+      "options": [
+        { "id": "A", "text": "Silk and porcelain" },
+        { "id": "B", "text": "Timber and ivory" },
+        { "id": "C", "text": "Wheat and olive oil" },
+        { "id": "D", "text": "Gold and salt" }
+      ],
+      "correctOptionId": "D",
+      "explanation": "The primary foundation of the Trans-Saharan trade network was the exchange of gold mined from the forest zones of West Africa for rock salt mined in northwest Africa (such as Taghaza).",
+      "sourceReference": "Section 5.8, Page 97"
+    },
+    {
+      "id": "HIS-G09-U05-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What external military invasion brought about the destruction of the ancient Ghana Empire in 1076 AD?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The capture and sack of its capital, Kumbi Saleh, by the Muslim Almoravids"
+        },
+        {
+          "id": "B",
+          "text": "The naval bombardment of the Niger Delta by Portuguese expeditions"
+        },
+        {
+          "id": "C",
+          "text": "The conquest of the western Sahel by the Ottoman army of Selim I"
+        },
+        {
+          "id": "D",
+          "text": "The expansion of the Hausa city-states under Queen Amina of Zaria"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Ancient Ghana's dominance ended in 1076 AD when the Islamic Almoravid movement from North Africa invaded the empire, captured and plundered its capital of Kumbi Saleh, and disrupted its trade networks.",
+      "sourceReference": "Section 5.4, Page 89"
+    },
+    {
+      "id": "HIS-G09-U05-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Why is the Arabic language, widely spoken across North Africa, classified as a non-native language to the continent?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It was introduced through European colonial schools following the Berlin Conference"
+        },
+        {
+          "id": "B",
+          "text": "It was brought to North Africa by Muslim Arab migrations and conquests between the 7th and 11th centuries AD"
+        },
+        {
+          "id": "C",
+          "text": "It developed synthetically in medieval Mediterranean ports among Venetian merchants"
+        },
+        {
+          "id": "D",
+          "text": "It was imposed as a diplomatic medium by the Ottoman administration after 1517 AD"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Arabic is not indigenous to Africa; it was introduced from the Arabian Peninsula into North Africa by Muslim Arabs between the 7th and 11th centuries AD during the expansion of Islam.",
+      "sourceReference": "Section 5.1, Page 86"
+    },
+    {
+      "id": "HIS-G09-U05-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What primary socio-economic activity distinguished the Khoi-Khoi from the San people in pre-colonial southern Africa?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The Khoi-Khoi were pastoralists engaged in cattle breeding, while the San were hunter-gatherers"
+        },
+        {
+          "id": "B",
+          "text": "The Khoi-Khoi practiced irrigated riverine agriculture, while the San were nomadic pastoralists"
+        },
+        {
+          "id": "C",
+          "text": "The Khoi-Khoi established walled stone cities, while the San were deep-sea fishermen"
+        },
+        {
+          "id": "D",
+          "text": "The Khoi-Khoi engaged in industrial gold smelting, while the San controlled trans-continental caravan trade"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "While both groups belong linguistically to the Khoisan language super-family, the Khoi-Khoi adopted pastoralism and cattle-breeding starting around 1000 AD, whereas the San maintained their traditional hunter-gatherer way of life.",
+      "sourceReference": "Section 5.6, Pages 94-95"
+    },
+    {
+      "id": "HIS-G09-U05-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What major development in the fourth century AD transformed Trans-Saharan commerce into a regular and large-scale trade network?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The construction of paved roads by Roman legions across the Sahara"
+        },
+        {
+          "id": "B",
+          "text": "The introduction of horse-drawn war chariots by the Sanhaja Berbers"
+        },
+        {
+          "id": "C",
+          "text": "The introduction and widespread utilization of the camel as a desert pack animal"
+        },
+        {
+          "id": "D",
+          "text": "The discovery of deep-water wells powered by steam engines in the central oases"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The Trans-Saharan trade expanded into a well-organized caravan network starting in the fourth century AD following the introduction of the camel, which could travel long distances across arid deserts without water.",
+      "sourceReference": "Section 5.7, Page 96"
+    },
+    {
+      "id": "HIS-G09-U05-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which combination of factors was central to the emergence and prosperity of the Swahili city-states along the East African coast?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Direct military conquest and colonization by the Roman Empire"
+        },
+        {
+          "id": "B",
+          "text": "A mixed Afro-Arab maritime culture driven by Indian Ocean commerce and the spread of Islam"
+        },
+        {
+          "id": "C",
+          "text": "An exclusive monopoly over the West African trans-Saharan gold trade"
+        },
+        {
+          "id": "D",
+          "text": "The enforcement of an isolationist policy that barred foreign merchant vessels"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The Swahili coastal civilization developed from the integration of indigenous Bantu farming and fishing communities with Arab Muslim traders, creating commercial maritime city-states linked across the Indian Ocean.",
+      "sourceReference": "Section 5.5, Page 92"
+    },
+    {
+      "id": "HIS-G09-U05-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which military power overthrew the Mamluk Sultanate of Egypt in 1517 AD, and what technological asset ensured their victory?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The Almoravid dynasty relying on camel-mounted desert archers"
+        },
+        {
+          "id": "B",
+          "text": "The Portuguese maritime fleet using cannon-armed caravels"
+        },
+        {
+          "id": "C",
+          "text": "The Christian kingdom of Ethiopia deploying imported musketeers"
+        },
+        {
+          "id": "D",
+          "text": "The Ottoman Turks using superior firearms and artillery"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "The Mamluk dynasty was overthrown in 1517 by the Ottoman Turks, whose effective mastery of gunpowder weaponry (firearms and artillery) easily routed the traditional Mamluk cavalry.",
+      "sourceReference": "Section 5.2, Page 87"
+    },
+    {
+      "id": "HIS-G09-U05-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "How did the spread and royal adoption of Islam in medieval West African empires like Mali and Songhai functionally strengthen state administration?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It forced the rural farming population to abandon local languages in favor of spoken Arabic"
+        },
+        {
+          "id": "B",
+          "text": "It provided literate administrative scribes, codified Islamic legal systems, and broader diplomatic and commercial ties across the Muslim world"
+        },
+        {
+          "id": "C",
+          "text": "It eliminated all domestic taxation on agricultural produce and gold production"
+        },
+        {
+          "id": "D",
+          "text": "It subordinated the authority of the emperor to the direct political control of the Caliph in Baghdad"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Islam brought administrative literacy in Arabic, a cadre of educated jurists and scribes (ulama) who managed royal bureaucracies and written records, and integrated West African rulers into international diplomatic and commercial networks.",
+      "sourceReference": "Section 5.3 & 5.4, Pages 88-91"
+    },
+    {
+      "id": "HIS-G09-U05-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "How was the inland empire of Great Zimbabwe commercially linked to the international Indian Ocean trade network prior to 1500 AD?",
+      "options": [
+        {
+          "id": "A",
+          "text": "By transporting gold directly across the Sahara Desert to Mediterranean terminals"
+        },
+        {
+          "id": "B",
+          "text": "By navigating large royal fleets of ocean-going junks across the Arabian Sea to China"
+        },
+        {
+          "id": "C",
+          "text": "By trading exclusively with Portuguese merchant forts on the Atlantic coast of the Congo"
+        },
+        {
+          "id": "D",
+          "text": "By channeling mined gold and ivory through East African Swahili coastal ports such as Sofala in exchange for Asian luxury goods"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "Great Zimbabwe functioned as the interior hub of gold mining and ivory extraction, channeling these commodities through Swahili coastal ports like Sofala to Asian markets in exchange for glazed ceramics, glass beads, and textiles.",
+      "sourceReference": "Section 5.5 & 5.6, Pages 92, 94-95"
+    },
+    {
+      "id": "HIS-G09-U05-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Which statement accurately describes the historical nature and technological impact of the Bantu migrations across Central, Eastern, and Southern Africa?",
+      "options": [
+        {
+          "id": "A",
+          "text": "They were sudden, unified military campaigns that rapidly annihilated pre-existing communities"
+        },
+        {
+          "id": "B",
+          "text": "They were state-sponsored naval expeditions dispatched by the kingdom of Kongo into the Indian Ocean"
+        },
+        {
+          "id": "C",
+          "text": "They represented a gradual, centuries-long expansion of farming communities that disseminated iron smelting, settled agriculture, and pottery technology"
+        },
+        {
+          "id": "D",
+          "text": "They were forced migrations provoked by European slave raiders along the Atlantic coast in the 10th century"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Beginning in the 1st millennium BC from the Niger-Benue region, Bantu-speaking peoples expanded gradually in small communities across central, eastern, and southern Africa, diffusing iron metallurgy, crop cultivation, and sedentary settlement patterns.",
+      "sourceReference": "Section 5.5 & 5.6, Pages 92, 94"
+    },
+    {
+      "id": "HIS-G09-U05-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "What immediate strategic and commercial objective motivated 15th-century Portuguese voyages along the coast of West Africa, and what historic consequence followed?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To bypass the Muslim-controlled North African trans-Saharan routes to access West African gold and reach India, which eventually led to the Trans-Atlantic slave trade"
+        },
+        {
+          "id": "B",
+          "text": "To establish inland cotton plantations across the Sahara to supply English textile mills"
+        },
+        {
+          "id": "C",
+          "text": "To assist the Mamluk Sultanate of Egypt against the naval incursions of the Ottoman Empire"
+        },
+        {
+          "id": "D",
+          "text": "To colonize the Cape of Good Hope to halt Dutch commercial expansion in Southern Africa"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The Portuguese sought direct maritime access to West African gold and an oceanic route to India to circumvent Muslim middlemen in North Africa and the Levant; this coastal interaction later initiated European participation in the Trans-Atlantic slave trade.",
+      "sourceReference": "Section 5.9, Pages 98-99"
+    }
+  ]
 }

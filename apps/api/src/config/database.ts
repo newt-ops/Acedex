@@ -54,21 +54,34 @@ export async function connectDatabase(customUri?: string): Promise<boolean> {
     return true;
   }
 
-  try {
-    logger.info('Connecting to MongoDB Atlas...');
-    await mongoose.connect(uri, {
-      autoIndex: env.NODE_ENV !== 'production',
-      serverSelectionTimeoutMS: 30000,
-      maxPoolSize: 10,
-    });
-    return true;
-  } catch (error) {
-    logger.error({ error }, 'Failed to connect to MongoDB');
-    if (env.NODE_ENV === 'production' || process.env.NODE_ENV === 'test') {
-      throw error;
+  let attempts = 0;
+  const maxAttempts = 3;
+
+  while (attempts < maxAttempts) {
+    attempts++;
+    try {
+      logger.info({ attempt: attempts }, 'Connecting to MongoDB Atlas...');
+      await mongoose.connect(uri, {
+        autoIndex: env.NODE_ENV !== 'production',
+        serverSelectionTimeoutMS: 30000,
+        maxPoolSize: 10,
+      });
+      return true;
+    } catch (error) {
+      logger.warn({ error, attempt: attempts }, `Failed to connect to MongoDB (attempt ${attempts}/${maxAttempts})`);
+      if (attempts >= maxAttempts) {
+        logger.error({ error }, 'Exhausted MongoDB connection attempts');
+        if (env.NODE_ENV === 'production' || process.env.NODE_ENV === 'test') {
+          throw error;
+        }
+        return false;
+      }
+      // Wait 2 seconds before retry
+      await new Promise((resolve) => setTimeout(resolve, 2000));
     }
-    return false;
   }
+
+  return false;
 }
 
 export async function disconnectDatabase(): Promise<void> {
