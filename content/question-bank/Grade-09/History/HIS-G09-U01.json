@@ -3,5 +3,372 @@
   "subject": "History",
   "unitNumber": 1,
   "unitTitle": "The Discipline of History and Human Evolution",
-  "questions": []
+  "questions": [
+    {
+      "id": "HIS-G09-U01-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What primary development marks the dividing line between prehistory and history?",
+      "options": [
+        { "id": "A", "text": "The discovery and mastery of fire" },
+        { "id": "B", "text": "The invention of the art of writing" },
+        { "id": "C", "text": "The manufacture of the first stone hand-axes" },
+        { "id": "D", "text": "The beginning of upright bipedal movement" }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Prehistory covers the distant past before people developed writing, whereas history refers to the study of the past beginning approximately 5,500 years ago when writing and recording techniques first emerged.",
+      "sourceReference": "Section 1.1, Page 2"
+    },
+    {
+      "id": "HIS-G09-U01-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which of the following historical materials is categorized as a primary source?",
+      "options": [
+        { "id": "A", "text": "A modern biography of an ancient ruler" },
+        {
+          "id": "B",
+          "text": "A standard school textbook on world civilization"
+        },
+        {
+          "id": "C",
+          "text": "An ancient coin bearing the inscription of King Endybis"
+        },
+        {
+          "id": "D",
+          "text": "A journal article reviewing historical events of the 19th century"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Primary sources are original materials contemporary with the events under study that have direct relations to those events, such as coins, monuments, inscriptions, charters, and eyewitness accounts.",
+      "sourceReference": "Section 1.2.3, Page 5"
+    },
+    {
+      "id": "HIS-G09-U01-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "The Islamic calendar establishes its starting point (Year 1 AH) on which significant historical event?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The migration of Prophet Mohammed and his followers from Mecca to Medina in 622 AD"
+        },
+        {
+          "id": "B",
+          "text": "The conquest of the city of Mecca by early Muslim forces in 630 AD"
+        },
+        {
+          "id": "C",
+          "text": "The compilation and canonization of the Holy Quran under Caliph Uthman"
+        },
+        {
+          "id": "D",
+          "text": "The death of Prophet Mohammed and the election of the first Caliph in 632 AD"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The Islamic calendar counts time forwards (AH) and backwards (BH) from the Hijra, which was the flight of Prophet Mohammed and his early followers from Mecca to Medina in 622 AD.",
+      "sourceReference": "Section 1.2.4, Page 7"
+    },
+    {
+      "id": "HIS-G09-U01-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which species of the genus Homo was the first to master the use of fire and migrate out of Africa into Asia and Europe?",
+      "options": [
+        { "id": "A", "text": "Homo habilis" },
+        { "id": "B", "text": "Australopithecus afarensis" },
+        { "id": "C", "text": "Homo sapiens sapiens" },
+        { "id": "D", "text": "Homo erectus" }
+      ],
+      "correctOptionId": "D",
+      "explanation": "Homo erectus ('upright human being'), which emerged about 2 million years ago, was the first hominid to leave Africa and move into Europe and Asia because they learned to use fire to survive in colder climates.",
+      "sourceReference": "Section 1.3, Pages 9-10"
+    },
+    {
+      "id": "HIS-G09-U01-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What fundamental socio-economic change characterized the Neolithic Revolution?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The transition from sedentary village life to nomadic pastoralism"
+        },
+        {
+          "id": "B",
+          "text": "The shift from hunting and gathering to systematic agriculture and animal domestication"
+        },
+        {
+          "id": "C",
+          "text": "The replacement of bronze implements with iron tools"
+        },
+        {
+          "id": "D",
+          "text": "The invention of alphabetic writing systems and paper production"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The real transformation during the Neolithic Revolution was the shift from hunting wild animals and gathering wild food to cultivating crops and keeping animals regularly, establishing systematic agriculture.",
+      "sourceReference": "Section 1.4, Pages 15-16"
+    },
+    {
+      "id": "HIS-G09-U01-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Why is the German historian Leopold von Ranke recognized as the 'father of modern historiography'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "He established the ancient Greek tradition of recording military conflicts chronologically"
+        },
+        {
+          "id": "B",
+          "text": "He authored the first comprehensive universal world history textbook"
+        },
+        {
+          "id": "C",
+          "text": "He established history as an independent discipline based on the critical, scientific study of primary sources"
+        },
+        {
+          "id": "D",
+          "text": "He introduced the concept of the dynastic cycle to interpret imperial transitions"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Leopold von Ranke (1795-1886) established history as an independent academic discipline in the 19th century by pioneering rigorous, critical, and scientific examination of primary archival evidence.",
+      "sourceReference": "Section 1.2.2, Page 4"
+    },
+    {
+      "id": "HIS-G09-U01-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "The 1960s represented a decisive turning point in Ethiopian historiography primarily because:",
+      "options": [
+        {
+          "id": "A",
+          "text": "History emerged as an institutionalized academic discipline with critical research replacing royal chronicles"
+        },
+        {
+          "id": "B",
+          "text": "Foreign European historians were completely prohibited from conducting field studies in the country"
+        },
+        {
+          "id": "C",
+          "text": "The imperial court ceased recording any government files or written administrative archives"
+        },
+        {
+          "id": "D",
+          "text": "Oral tradition was entirely replaced by archaeological excavations across northern Ethiopia"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "In Ethiopia, history moved away from the traditional royal chronicle style and emerged as a modern academic discipline in the 1960s, marked by rigorous critical research and professionalization.",
+      "sourceReference": "Section 1.2.2, Pages 4-5"
+    },
+    {
+      "id": "HIS-G09-U01-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Why must oral traditions be subjected to rigorous external cross-checking before being accepted as valid historical evidence?",
+      "options": [
+        {
+          "id": "A",
+          "text": "They provide strictly chronological numerical dates that contradict astronomical dating"
+        },
+        {
+          "id": "B",
+          "text": "They are exclusively maintained by government officials to justify royal policies"
+        },
+        {
+          "id": "C",
+          "text": "They represent written manuscripts that are prone to physical deterioration over centuries"
+        },
+        {
+          "id": "D",
+          "text": "They are transmitted by word of mouth and risk losing authenticity through gradual distortion over generations"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "Oral traditions are passed down orally from generation to generation and may suffer from memory loss, bias, or distortion over time; hence, they must be cross-checked with written documents and archaeological findings.",
+      "sourceReference": "Section 1.2.3, Pages 5-6"
+    },
+    {
+      "id": "HIS-G09-U01-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "The discovery of Australopithecus afarensis ('Lucy' or 'Dinkinesh') at Hadar in 1974 provided decisive paleontological proof that early hominids:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Possessed brain capacities identical to those of modern Homo sapiens"
+        },
+        {
+          "id": "B",
+          "text": "Practiced bipedalism and walked upright as their primary form of locomotion"
+        },
+        {
+          "id": "C",
+          "text": "Manufactured complex Acheulean bifacial stone tools"
+        },
+        {
+          "id": "D",
+          "text": "Controlled fire to migrate across the Sahara into Eurasia"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Dated to approximately 3.18 million years ago, the fossil skeleton of Australopithecus afarensis proved that bipedalism (walking upright on two feet) evolved early in hominid history, even before major brain enlargement.",
+      "sourceReference": "Section 1.3.2, Pages 12-13"
+    },
+    {
+      "id": "HIS-G09-U01-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which group of cultivated crops represents indigenous plants domesticated in the Ethiopian region during the Neolithic period?",
+      "options": [
+        { "id": "A", "text": "Wheat, barley, rice, and maize" },
+        { "id": "B", "text": "Sorghum, cassava, yams, and oil palm" },
+        { "id": "C", "text": "Teff, dagussa, nug, and enset" },
+        { "id": "D", "text": "Millet, dates, sugarcane, and cotton" }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The textbook explicitly identifies teff, dagussa (finger millet), nug, and enset as indigenous crops domesticated in the Ethiopian region when agriculture began around 7,000 years ago.",
+      "sourceReference": "Section 1.4, Page 16"
+    },
+    {
+      "id": "HIS-G09-U01-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which combination of elements is necessary to define the existence of a state as an organized political entity?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Population, defined territory, government, sovereignty, and recognition"
+        },
+        {
+          "id": "B",
+          "text": "A monotheistic religion, standing military, written constitution, and markets"
+        },
+        {
+          "id": "C",
+          "text": "Linguistic uniformity, royal lineage, surplus agriculture, and city walls"
+        },
+        {
+          "id": "D",
+          "text": "Elected parliamentary assembly, judicial councils, universal taxation, and trade guilds"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "A state is defined as a politically organized body of people occupying a defined territory with an organized legitimate government, exercising sovereignty free from external control, and possessing recognition.",
+      "sourceReference": "Section 1.5, Pages 17-18"
+    },
+    {
+      "id": "HIS-G09-U01-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Which statement correctly evaluates the relationship between historical facts and historical interpretation in the study of history?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Historical interpretation is equivalent to fictional writing because no ancient event can be proved"
+        },
+        {
+          "id": "B",
+          "text": "Historical facts change constantly with every generation, whereas interpretation remains fixed and unalterable"
+        },
+        {
+          "id": "C",
+          "text": "A historian must exclude all secondary sources because interpretation is only permissible on material fossils"
+        },
+        {
+          "id": "D",
+          "text": "Historical facts provide verifiable evidence, while interpretation is the objective process of explaining cause, effect, and significance based on verified sources"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "Historical facts are proven statements supported by evidence, while historical interpretation is the critical process through which historians analyze, contextualize, and explain why and how past events occurred using reliable sources.",
+      "sourceReference": "Section 1.1 & 1.2.2, Pages 3-5"
+    },
+    {
+      "id": "HIS-G09-U01-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Why does the Ethiopian calendar lag 7 to 8 years behind the Western Gregorian calendar?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The Ethiopian calendar began counting years from the arrival of the Nine Saints rather than the birth of Christ"
+        },
+        {
+          "id": "B",
+          "text": "Differences exist in the calculation and historical determination of the exact year of the birth of Jesus Christ"
+        },
+        {
+          "id": "C",
+          "text": "The Ethiopian calendar was synchronized directly with the Islamic Hijra calendar in 622 AD"
+        },
+        {
+          "id": "D",
+          "text": "The Ethiopian church rejected the 365-day solar system in favor of a purely lunar reckoning"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The 7- to 8-year discrepancy between the Ethiopian and Gregorian calendars stems from distinct historical calculations regarding the Annunciation and the birth date of Jesus Christ, leading to different periodization starting points.",
+      "sourceReference": "Section 1.2.4, Pages 7-8"
+    },
+    {
+      "id": "HIS-G09-U01-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "According to the trade theory of state formation, how did commercial development stimulate the transition from simple chieftaincies to early centralized states?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Priestly aristocracies banned foreign trade and forced all agriculturalists into unified royal communes"
+        },
+        {
+          "id": "B",
+          "text": "Nomadic hunter-gatherers conquered river valleys to monopolize long-distance obsidian distribution"
+        },
+        {
+          "id": "C",
+          "text": "Local chiefs who controlled regional trade routes and market security accumulated wealth and tribute, gradually replacing priestly administrative authority"
+        },
+        {
+          "id": "D",
+          "text": "Merchant guilds established democratic republics that eliminated the need for executive war leadership"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Under the trade theory, control over trade and trade routes enabled village chiefs to amass wealth through tolls and tribute, provide security for markets, and gradually consolidate political authority over communities, supplanting early theocratic rulers.",
+      "sourceReference": "Section 1.5, Pages 17-18"
+    },
+    {
+      "id": "HIS-G09-U01-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "How did the mastery of fire and Acheulean stone tool technology fundamentally transform the evolutionary trajectory of Homo erectus compared to Homo habilis?",
+      "options": [
+        {
+          "id": "A",
+          "text": "They enabled Homo erectus to adapt to colder Eurasian environments, hunt more efficiently with standardized hand-axes, and expand geographically beyond Africa"
+        },
+        {
+          "id": "B",
+          "text": "They immediately prompted the establishment of permanent agricultural villages and pottery production in the Nile valley"
+        },
+        {
+          "id": "C",
+          "text": "They restricted hominid populations exclusively to the tropical forested caves of the East African Rift Valley"
+        },
+        {
+          "id": "D",
+          "text": "They eliminated the biological need for bipedal locomotion by promoting maritime river navigation"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Acheulean tools (such as standardized bifacial hand-axes) provided superior butchering and wood-working capacity, while fire provided warmth, protection from predators, and cooked food, allowing Homo erectus to become the first hominid species to migrate out of Africa into Asia and Europe.",
+      "sourceReference": "Section 1.3 & 1.4, Pages 9-10, 14-15"
+    }
+  ]
 }

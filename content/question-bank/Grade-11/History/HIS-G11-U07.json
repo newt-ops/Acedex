@@ -3,5 +3,339 @@
   "subject": "History",
   "unitNumber": 7,
   "unitTitle": "States, Principalities, Population Movements and Interactions in Ethiopia (13th – Mid-16th Century)",
-  "questions": []
+  "questions": [
+    {
+      "id": "HIS-G11-U07-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which mountain fortress was established around 1300 to resolve bloody royal succession struggles by detaining all eligible male descendants of Yikuno Amlak?",
+      "options": [
+        { "id": "A", "text": "Amba Wehni" },
+        { "id": "B", "text": "Amba Gishen" },
+        { "id": "C", "text": "Debre Damo" },
+        { "id": "D", "text": "Amba Alaje" }
+      ],
+      "correctOptionId": "B",
+      "explanation": "To prevent succession crises among royal descendants, the flat-topped mountain fortress of Amba Gishen (also known as Debre Negest or Mountain of Kings) was established around 1300 to house and guard all male princes except the reigning king and his direct sons.",
+      "sourceReference": "Section 7.1.3, Page 175"
+    },
+    {
+      "id": "HIS-G11-U07-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which Gulf of Aden port served as the primary gateway for internal and external long-distance commerce in the Ethiopian region between 1270 and 1529?",
+      "options": [
+        { "id": "A", "text": "Massawa" },
+        { "id": "B", "text": "Suakin" },
+        { "id": "C", "text": "Zeila" },
+        { "id": "D", "text": "Mogadishu" }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Between 1270 and 1529, the port of Zeila on the Gulf of Aden replaced the Red Sea coast as the most vital trade outlet linking the highland Christian kingdom, the Muslim sultanates, and the interior with Middle Eastern and Mediterranean markets.",
+      "sourceReference": "Section 7.1.2 & 7.2.1, Pages 173, 180"
+    },
+    {
+      "id": "HIS-G11-U07-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Who was the founder of the Walasma dynasty of Ifat who subdued and incorporated the older Sultanate of Shewa in 1285?",
+      "options": [
+        { "id": "A", "text": "Umar Walasma" },
+        { "id": "B", "text": "Sabr ad-Din I" },
+        { "id": "C", "text": "Haqq ad-Din II" },
+        { "id": "D", "text": "Sa'ad ad-Din II" }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Umar Walasma, a contemporary of King Yikuno Amlak, founded the Walasma dynasty in the mid-13th century and annexed the Makhzumite Sultanate of Shewa in 1285, making Ifat the leading Muslim state of the region.",
+      "sourceReference": "Section 7.2.2, Page 181"
+    },
+    {
+      "id": "HIS-G11-U07-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "At which decisive battle in March 1529 did the forces of the Sultanate of Adal led by Imam Ahmad defeat the imperial army of King Libne Dingil?",
+      "options": [
+        { "id": "A", "text": "The Battle of Woyna Dega" },
+        { "id": "B", "text": "The Battle of Dabarwa" },
+        { "id": "C", "text": "The Battle of Gomit" },
+        { "id": "D", "text": "The Battle of Shimbra Kure" }
+      ],
+      "correctOptionId": "D",
+      "explanation": "In March 1529, Imam Ahmad's army, supported by Ottoman-supplied Yemeni musketeers, met and completely routed the numerically superior imperial army of King Libne Dingil at the Battle of Shimbra Kure near modern Mojo.",
+      "sourceReference": "Section 7.4, Pages 189-190"
+    },
+    {
+      "id": "HIS-G11-U07-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What was the Oromo customary institution of collective adoption in which an entire non-Oromo community or clan was integrated en masse into an Oromo gossa?",
+      "options": [
+        { "id": "A", "text": "Guddifacha" },
+        { "id": "B", "text": "Siinqee" },
+        { "id": "C", "text": "Moggassa" },
+        { "id": "D", "text": "Chaffee" }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Moggassa was the institution of collective, en masse adoption of outside social groups or clans into an Oromo sub-group, granting them full status as 'Ilma Gossa' (sons of the clan) with equal social, economic, and defensive rights.",
+      "sourceReference": "Section 7.5.2, Pages 199-200"
+    },
+    {
+      "id": "HIS-G11-U07-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How did the Gult system function in relation to Rist land rights within the medieval Christian Highland Kingdom?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Gult abolished communal clan ownership and converted all peasant farmland into private royal estates"
+        },
+        {
+          "id": "B",
+          "text": "Gult was a conditional royal right granting officials the power to levy tribute, demand corvée labor, and exercise judicial administration over hereditary Rist landholders"
+        },
+        {
+          "id": "C",
+          "text": "Gult was an inheritable property right granted exclusively to foreign mercenaries in exchange for cash taxes"
+        },
+        {
+          "id": "D",
+          "text": "Gult exempted highland peasants from paying agricultural tithes provided they served in naval fleets along the Red Sea"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In Ethiopian feudalism, Rist was hereditary land-use right vested in family lineages, while Gult was a state grant given to nobles, church institutions, or military commanders empowering them to collect agricultural tribute and labor services from peasant Rist-owners.",
+      "sourceReference": "Section 7.1.2, Pages 173-174"
+    },
+    {
+      "id": "HIS-G11-U07-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Why did the rulers of the medieval Christian Highland Kingdom adopt 'roving' or mobile royal courts rather than establishing a permanent capital city between 1270 and 1636?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To supervise provincial governors directly, suppress regional rebellions quickly, and secure continuous food provisions and firewood for the vast court retinue"
+        },
+        {
+          "id": "B",
+          "text": "Because imperial law strictly forbade constructing stone architecture south of the Tekeze River"
+        },
+        {
+          "id": "C",
+          "text": "To avoid paying customs duties to coastal Ottoman naval garrisons along the Gulf of Aden"
+        },
+        {
+          "id": "D",
+          "text": "Because the Patriarch of Alexandria required emperors to lead annual monastic pilgrimages to Lake Tana"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Mobile encampments in Shewa and adjacent districts allowed medieval monarchs to project royal authority, deter provincial uprisings, and prevent the rapid depletion of local grain, livestock, and firewood that a stationary court of thousands would cause.",
+      "sourceReference": "Section 7.1.2, Pages 174-175"
+    },
+    {
+      "id": "HIS-G11-U07-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How was the Sultanate of Adal established following Emperor Amde Tsiyon's subjugation of Ifat in 1332?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It was formed through a peace treaty brokered by the Mamluk Sultanate of Egypt at Massawa"
+        },
+        {
+          "id": "B",
+          "text": "It arose as a breakaway province founded by rebellious Christian cavalry officers in Bali"
+        },
+        {
+          "id": "C",
+          "text": "The militant faction of the Walasma dynasty under Haqq ad-Din II retreated eastward to Dakar near Harar to continue armed resistance"
+        },
+        {
+          "id": "D",
+          "text": "It emerged when the Makhzumite clan overthrew the pastoral Afar leadership in the Danakil depression"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "After Ifat's annexation reduced its compliant merchants to tributary status, a militant wing of the Walasma family led by Haqq ad-Din II retreated further southeast to the Harar plateau, establishing Dakar around 1380 as the capital of the newly emergent Sultanate of Adal.",
+      "sourceReference": "Section 7.2.2, Page 184"
+    },
+    {
+      "id": "HIS-G11-U07-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What strategic method did Christian emperors like Zera Ya'iqob, Be'ede Mariyam, and Libne Dingil repeatedly employ to secure the political loyalty of the wealthy Sultanate of Hadya?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Exempting Hadya merchants entirely from paying customs fees at the port of Zeila"
+        },
+        {
+          "id": "B",
+          "text": "Arranging high-level political marriages with Hadya royal princesses, including the celebrated Queen Mother Elleni"
+        },
+        {
+          "id": "C",
+          "text": "Appointing Egyptian Coptic bishops to govern Hadya's agrarian markets"
+        },
+        {
+          "id": "D",
+          "text": "Relocating the imperial mountain prison from Amba Gishen to the Gibe River basin"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Christian monarchs frequently cemented political alliances with Hadya through royal marriages; prominent examples include Queen Mother Elleni, daughter of the Garad of Hadya, who played a central role in imperial diplomacy during the 15th and early 16th centuries.",
+      "sourceReference": "Section 7.2.2, Page 182"
+    },
+    {
+      "id": "HIS-G11-U07-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which southern medieval kingdom was the only state in the region that successfully repulsed the invading armies of Imam Ahmad between 1531 and 1533?",
+      "options": [
+        { "id": "A", "text": "Hadya" },
+        { "id": "B", "text": "Damot" },
+        { "id": "C", "text": "Dawaro" },
+        { "id": "D", "text": "Wolaita" }
+      ],
+      "correctOptionId": "D",
+      "explanation": "During his extensive campaigns between 1531 and 1533 that brought Bali, Dawaro, Hadya, and other southern and central territories under Adal's hegemony, the Omotic Kingdom of Wolaita stood out as the only state that successfully repelled Imam Ahmad's forces.",
+      "sourceReference": "Section 7.4, Page 190"
+    },
+    {
+      "id": "HIS-G11-U07-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What wider international rivalry prompted Ottoman Turkey and Portugal to intervene with troops and firearms in the 16th-century war between Adal and the Christian kingdom?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Strategic competition between the two naval empires to dominate the maritime trade routes of the Red Sea and the Indian Ocean"
+        },
+        {
+          "id": "B",
+          "text": "A joint quest to capture the agricultural coffee plantations of Kafa and Yem"
+        },
+        {
+          "id": "C",
+          "text": "A diplomatic dispute regarding the demarcation of the Nile River delta boundary"
+        },
+        {
+          "id": "D",
+          "text": "A commercial treaty to enforce European textile monopolies over the trans-Saharan caravan routes"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Portugal and the Ottoman Empire were global maritime competitors striving for commercial and naval supremacy over the Red Sea and Indian Ocean spice routes, leading them to supply firearms and soldiers to the Christian kingdom and Adal respectively.",
+      "sourceReference": "Section 7.4, Page 190"
+    },
+    {
+      "id": "HIS-G11-U07-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "How did the fourteenth-century royal narrative codified in the 'Kibre Negest' (Glory of Kings) serve the political consolidation of the restored Solomonic dynasty?",
+      "options": [
+        {
+          "id": "A",
+          "text": "By establishing a secular constitution that abolished church land ownership across the Shewan plateau"
+        },
+        {
+          "id": "B",
+          "text": "By commanding Christian monarchs to share supreme legislative power equally with the Muslim Walasma sultans"
+        },
+        {
+          "id": "C",
+          "text": "By articulating an ideological doctrine of divine royal lineage tracing back to King Solomon and Makeda, thereby delegitimizing the displaced Zagwe rulers as usurpers"
+        },
+        {
+          "id": "D",
+          "text": "By mandating that imperial succession rotate democratically every eight years among provincial warlords"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The Kibre Negest provided ideological legitimacy for the dynasty founded by Yikuno Amlak by asserting that Ethiopian monarchs held divine rights inherited through uninterrupted Solomonic descent from Menelik I, framing the Agaw Zagwe dynasty as illegitimate interlopers.",
+      "sourceReference": "Section 7.1.1, Page 171"
+    },
+    {
+      "id": "HIS-G11-U07-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "What was the fundamental economic and geopolitical motive underlying Emperor Amde Tsiyon's aggressive military campaigns against Ifat, Hadya, Damot, and Gojjam in the early fourteenth century?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The desire to divert all caravan trade northward into the Mamluk markets of Egypt"
+        },
+        {
+          "id": "B",
+          "text": "The strategic objective to bring the lucrative Zeila trade routes under imperial control and secure continuous access to high-value commodities like gold, ivory, and slaves from the southwestern interior"
+        },
+        {
+          "id": "C",
+          "text": "The enforcement of an imperial ban on the cultivation of highland cereal crops in conquered territories"
+        },
+        {
+          "id": "D",
+          "text": "The preparation for a joint naval crusade across the Red Sea against the Ilkhanate of Persia"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Amde Tsiyon's expansionism was driven by the imperative to control the rich trade networks terminating at Zeila and monopolize the extraction of export goods (gold, ivory, slaves, and civet) originating in the southwestern periphery, using provincial tribute to sustain the expanding Christian state.",
+      "sourceReference": "Section 7.1.2 & 7.1.3, Pages 172-177"
+    },
+    {
+      "id": "HIS-G11-U07-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "How did Imam Ahmad al-Ghazi successfully overcome the chronic internal instability of the lowlands to build an effective military coalition against the Christian Highland Kingdom in the 1520s?",
+      "options": [
+        {
+          "id": "A",
+          "text": "He acted as an arbitrator to reconcile warring Afar, Somali, and Harari pastoral communities, redirecting their demographic and military energies outward into a unified campaign against the highlands"
+        },
+        {
+          "id": "B",
+          "text": "He signed a commercial subsidy pact with the Portuguese Crown that provided artillery in exchange for port concessions at Massawa"
+        },
+        {
+          "id": "C",
+          "text": "He executed all traditional clan elders and replaced them with salaried civil servants recruited from Cairo"
+        },
+        {
+          "id": "D",
+          "text": "He partitioned the Harar plateau among the highland Amhara nobility in exchange for cavalry horses"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Imam Ahmad eliminated rival warlords, resolved internal blood feuds, and reconciled resource conflicts among the Afar, Somali, and Harari pastoralists, channeling their collective military manpower into a well-organized offensive against the Christian kingdom.",
+      "sourceReference": "Section 7.4, Page 189"
+    },
+    {
+      "id": "HIS-G11-U07-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Which combination of factors accounted for the structural erosion of the democratic Gadaa system and the emergence of monarchical states (Mootii) among the Macha Oromo in the Gibe Valley by 1800?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Severe droughts in Bale that forced the total abandonment of agriculture in favor of nomadic coastal fishing"
+        },
+        {
+          "id": "B",
+          "text": "Geographic dispersion over vast territories, the adoption of sedentary mixed farming, the spread of Islam, and the rise of wealthy war leaders (Abbaa Duulaas) who built private standing armies from trade and tribute"
+        },
+        {
+          "id": "C",
+          "text": "The imposition of the 1931 imperial constitution across western Wallaga by the League of Nations"
+        },
+        {
+          "id": "D",
+          "text": "A decree issued by the Council of Nicaea outlawing the rotation of age-grade assemblies"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "As the Oromo settled extensive areas, maintaining unified Chaffee assemblies became impractical; simultaneously, sedentary farming fostered class differentiation, while wealth from long-distance trade and warfare enabled ambitious Abbaa Duulaas to maintain private armies, bypass the 8-year term limits, and proclaim themselves kings (Mootii).",
+      "sourceReference": "Section 7.5.2 & Section 8.1.2.1, Pages 198-199, 211-212"
+    }
+  ]
 }

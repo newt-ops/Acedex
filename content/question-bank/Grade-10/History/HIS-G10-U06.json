@@ -3,5 +3,357 @@
   "subject": "History",
   "unitNumber": 6,
   "unitTitle": "Ethiopia: Internal Developments and External Influences from 1941 to 1991",
-  "questions": []
+  "questions": [
+    {
+      "id": "HIS-G10-U06-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Under what administrative framework did the British military maintain direct authority over Eritrea and the Ogaden following the 1941 expulsion of Fascist Italy?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The British Military Mission to Ethiopia (BMME)"
+        },
+        {
+          "id": "B",
+          "text": "The Occupied Enemy Territory Administration (OETA)"
+        },
+        { "id": "C", "text": "The United Nations Trusteeship Council" },
+        { "id": "D", "text": "The Anglo-Egyptian Condominium Authority" }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Immediately following liberation in 1941, the British military established the Occupied Enemy Territory Administration (OETA) over Eritrea and the Ogaden, placing both regions under direct British jurisdiction.",
+      "sourceReference": "Section 6.1.1, Page 145"
+    },
+    {
+      "id": "HIS-G10-U06-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Under the imperial qalad (land measurement) system, into which three categories was measured agricultural land classified for tax assessment?",
+      "options": [
+        { "id": "A", "text": "Gult, Rist, and Samon" },
+        { "id": "B", "text": "Hudad, Madarya, and Galla-meret" },
+        { "id": "C", "text": "Lem, Lem-tef, and Tef" },
+        { "id": "D", "text": "Gebbar, Chisegna, and Melkegna" }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The qalad system classified measured land into three categories based on fertility: lem (fertile), lem-tef (semi-fertile), and tef (unfertile), with lem land paying the highest tax rate and tef the lowest.",
+      "sourceReference": "Section 6.1.4, Page 150"
+    },
+    {
+      "id": "HIS-G10-U06-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which radical socio-political slogan was popularized by the Ethiopian Student Movement in 1965 to demand the eradication of the feudal land tenure system?",
+      "options": [
+        { "id": "A", "text": "'Ethiopia Tikdem'" },
+        { "id": "B", "text": "'Meret Learashu' ('Land to the Tiller')" },
+        { "id": "C", "text": "'Peace, Bread and Liberty'" },
+        { "id": "D", "text": "'Edget Behebret'" }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In 1965, university and secondary students adopted the famous slogan 'Meret Learashu' ('Land to the Tiller'), demanding the abolition of feudal landlordism and the redistribution of land to the peasants.",
+      "sourceReference": "Section 6.2.3, Page 157"
+    },
+    {
+      "id": "HIS-G10-U06-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Who served as the first chairman of the Provisional Military Administrative Council (Derg) following the deposition of Emperor Haile Selassie in September 1974?",
+      "options": [
+        { "id": "A", "text": "Brigadier General Teferi Benti" },
+        { "id": "B", "text": "Major Mengistu Haile Mariam" },
+        { "id": "C", "text": "Lieutenant General Aman Mikael Andom" },
+        { "id": "D", "text": "Major Atnafu Abate" }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Lieutenant General Aman Mikael Andom was named the first chairman of the PMAC (Derg) and head of state in September 1974, though he was killed in November 1974 following policy disputes with radical Derg members.",
+      "sourceReference": "Section 6.3.1, Page 160"
+    },
+    {
+      "id": "HIS-G10-U06-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What irredentist political objective motivated President Siad Barre of Somalia to launch a full-scale invasion of the Ogaden region in 1977?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The creation of 'Greater Somalia' uniting all Somali-inhabited territories in the Horn"
+        },
+        {
+          "id": "B",
+          "text": "The annexation of the Red Sea port of Assab for commercial shipping"
+        },
+        {
+          "id": "C",
+          "text": "The enforcement of an Islamic military alliance with Sudan against Kenya"
+        },
+        {
+          "id": "D",
+          "text": "The restoration of the former Sultanate of Ifat along the Awash River"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The 1977 invasion was driven by Siad Barre's irredentist policy of creating 'Greater Somalia', represented by the five-pointed star on the Somali flag, aiming to annex Somali-inhabited lands in Ethiopia, Kenya, and Djibouti.",
+      "sourceReference": "Section 6.4.1, Page 164"
+    },
+    {
+      "id": "HIS-G10-U06-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In what key respect did the Second Anglo-Ethiopian Agreement of 1944 grant Ethiopia greater diplomatic and sovereign autonomy compared to the First Agreement of 1942?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It transferred total British control of Eritrea to the Ethiopian crown immediately"
+        },
+        {
+          "id": "B",
+          "text": "It abolished the British East African Shilling and made the Maria Theresa Thaler the sole currency"
+        },
+        {
+          "id": "C",
+          "text": "It lifted the precedence of the British minister over other foreign diplomats and recognized Ethiopia's right to operate the Addis Ababa-Djibouti railway"
+        },
+        {
+          "id": "D",
+          "text": "It expelled all British military advisers from Ethiopian armed forces and police commands"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The 1944 treaty lifted the diplomatic precedence previously enjoyed by the British minister over other ambassadors, agreed to restore the Ogaden, and permitted Ethiopia to use and manage the vital Addis Ababa-Djibouti railway.",
+      "sourceReference": "Section 6.1.1, Page 146"
+    },
+    {
+      "id": "HIS-G10-U06-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Under the 1953 Ethio-United States Treaty, what strategic facility in Asmara was granted to the United States military in exchange for modern defense aid and training?",
+      "options": [
+        { "id": "A", "text": "The Holeta Military Academy" },
+        { "id": "B", "text": "Kagnew Station" },
+        { "id": "C", "text": "Radio Marina Naval Port" },
+        { "id": "D", "text": "The Debre Zeit Air Base" }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The 1953 bilateral pact allowed the United States to operate Kagnew Station, a major military radio communications facility in Asmara, in exchange for military equipment and training provided through MAAG.",
+      "sourceReference": "Section 6.1.1, Page 148"
+    },
+    {
+      "id": "HIS-G10-U06-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What primary political factor necessitated the promulgation of the Revised Constitution of 1955 by Emperor Haile Selassie?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To accommodate the 1952 federation with Eritrea, which possessed an elected parliament and modern democratic charter, while codifying imperial absolutism"
+        },
+        {
+          "id": "B",
+          "text": "To introduce a multi-party parliamentary system and popular national sovereignty"
+        },
+        {
+          "id": "C",
+          "text": "To comply with democratic conditions set by the World Bank for agricultural development loans"
+        },
+        {
+          "id": "D",
+          "text": "To establish a constitutional diarchy between the crown and the Ethiopian Orthodox Church"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The 1955 revision was prompted by the 1952 federation with Eritrea—which already had an elected parliament and a constitution—and the Emperor's Golden Jubilee; however, the new text concentrated absolute executive, legislative, and judicial power in the monarch.",
+      "sourceReference": "Section 6.1.3, Page 149"
+    },
+    {
+      "id": "HIS-G10-U06-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which combination of social groups formed a united front during the 1943 Woyyane rebellion in Tigray against the centralizing policies of Emperor Haile Selassie?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Western-educated university students, urban civil servants, and railway workers"
+        },
+        {
+          "id": "B",
+          "text": "Semi-pastoralist communities of Raya and Azebo, highland cultivators, and disgruntled local feudal nobles"
+        },
+        {
+          "id": "C",
+          "text": "Italian settler farmers, ex-askari veterans, and Catholic clergy"
+        },
+        {
+          "id": "D",
+          "text": "Commercial coffee merchants, tenant farmers, and provincial police officers"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The 1943 Woyyane uprising brought together semi-pastoralists (Raya and Azebo) defending communal egalitarianism, highland peasants resisting tax exactions, and local nobles seeking regional autonomy under the leadership of Bilata Haile Mariam Reda.",
+      "sourceReference": "Section 6.2.1, Page 154"
+    },
+    {
+      "id": "HIS-G10-U06-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What political program was declared by the leaders of the 1960 abortive coup d'état, Brigadier General Mengistu Neway and Germame Neway?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The establishment of an egalitarian Marxist-Leninist military council"
+        },
+        {
+          "id": "B",
+          "text": "The restoration of regional hereditary princely dynasties across Gojjam and Tigray"
+        },
+        {
+          "id": "C",
+          "text": "The proclamation of a constitutional monarchy under Crown Prince Asfawosen with Ras Emeru Haile Selassie as Prime Minister to accelerate modernization"
+        },
+        {
+          "id": "D",
+          "text": "The unconditional secession of the southern provinces into autonomous federal republics"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "On December 14, 1960, the coup leaders proclaimed Crown Prince Asfawosen as a salaried constitutional monarch and designated the liberal aristocrat Ras Emeru Haile Selassie as prime minister to modernize governance and eliminate feudal stagnation.",
+      "sourceReference": "Section 6.2.2, Pages 155-156"
+    },
+    {
+      "id": "HIS-G10-U06-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What fundamental socio-economic transformation was enacted by the Derg's Rural Land Proclamation of March 1975?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It redistributed all farmland to foreign agribusinesses on long-term commercial leases"
+        },
+        {
+          "id": "B",
+          "text": "It nationalized all rural land as public property, abolished tenancy and landlord exploitation, and instituted Peasant Associations to oversee periodic land redistribution"
+        },
+        {
+          "id": "C",
+          "text": "It privatized state estates and allowed commercial banks to auction mortgaged smallholdings"
+        },
+        {
+          "id": "D",
+          "text": "It restricted agricultural land ownership exclusively to certified members of the Imperial Bodyguard"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The March 1975 proclamation dismantled rural feudal relations by nationalizing all rural land, outlawing the hiring of wage labor and tenancy (chisegna), and establishing kebele-based Peasant Associations to manage land distribution.",
+      "sourceReference": "Section 6.3.2, Page 161"
+    },
+    {
+      "id": "HIS-G10-U06-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Which statement accurately contrasts the positions of the Unionist Party and the Independence Bloc regarding the political fate of post-World War II Eritrea?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The Unionist Party sought partition by joining the lowlands with Sudan, while the Independence Bloc demanded union with Italy"
+        },
+        {
+          "id": "B",
+          "text": "The Unionist Party, supported mainly by highland Christian communities, demanded complete unconditional union with Ethiopia, whereas the Independence Bloc, uniting the Muslim League, Liberal Progressive Party, and Pro-Italians, opposed union"
+        },
+        {
+          "id": "C",
+          "text": "The Unionist Party championed complete Marxist-Leninist independence, while the Independence Bloc demanded integration into the British Commonwealth"
+        },
+        {
+          "id": "D",
+          "text": "The Unionist Party campaigned for an autonomous federation, while the Independence Bloc demanded direct annexation by the United States"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The Unionist Party (predominantly Tigrigna-speaking Orthodox Christians) campaigned for full integration with Ethiopia, whereas the Independence Bloc united diverse anti-union groups (the Muslim League, the Liberal Progressive Party, and the Pro-Italian Party) who rejected Ethiopian sovereignty.",
+      "sourceReference": "Section 6.1.1, Pages 146-147"
+    },
+    {
+      "id": "HIS-G10-U06-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "How did the underlying causes of the Bale peasant revolt (1963–1970) differ fundamentally from the immediate catalyst of the Gojjam peasant uprising of 1968?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Bale rebelled against modern factory construction, while Gojjam rebelled against military conscription for the Korean War"
+        },
+        {
+          "id": "B",
+          "text": "Bale was fueled by land alienation, heavy taxation, corrupt officials, and religious grievances with Somali support, whereas Gojjam erupted over the government's attempt to impose the 1967 agricultural income tax and send tax assessors"
+        },
+        {
+          "id": "C",
+          "text": "Bale fought to restore Emperor Iyasu's descendants, while Gojjam sought integration into the British Sudan protectorate"
+        },
+        {
+          "id": "D",
+          "text": "Bale rejected the Orthodox Church's agricultural calendar, while Gojjam fought against the abolition of serfdom"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The Bale uprising stemmed from chronic land alienation, religious and ethnic discrimination, and mal-administration (supported by Somalia), whereas the 1968 Gojjam revolt was sparked by the central government's enforcement of the new 1967 agricultural income tax and resistance to tax assessors.",
+      "sourceReference": "Section 6.2.1, Pages 154-155"
+    },
+    {
+      "id": "HIS-G10-U06-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "What strategic disagreement between the All-Ethiopian Socialist Movement (MEISON) and the Ethiopian People's Revolutionary Party (EPRP) catalyzed the urban warfare that culminated in the Red Terror (1976–1978)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "MEISON demanded the immediate restoration of the imperial monarchy, whereas EPRP demanded annexation by the Soviet Union"
+        },
+        {
+          "id": "B",
+          "text": "MEISON advocated critical support to the Derg to steer it toward socialism, whereas EPRP demanded the immediate transfer of state power to a broad-based civilian provisional government and took up urban armed struggle"
+        },
+        {
+          "id": "C",
+          "text": "MEISON opposed the nationalization of rural land, while EPRP demanded complete privatization of all banks"
+        },
+        {
+          "id": "D",
+          "text": "MEISON supported an alliance with NATO, while EPRP sought military intervention from the Arab League"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "MEISON, led by Haile Fida, adopted a strategy of 'critical support' to work within the military regime, whereas the EPRP condemned military rule, demanded an immediate civilian provisional government, and launched urban guerrilla attacks, leading the Derg to execute the Red Terror to annihilate its opponents.",
+      "sourceReference": "Section 6.3.2, Pages 162-163"
+    },
+    {
+      "id": "HIS-G10-U06-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Which combination of domestic economic disasters, failed social policies, and shifting global alliances contributed most decisively to the downfall of the Derg in May 1991?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The termination of coffee exports to the United States and the dissolution of the Imperial Bodyguard"
+        },
+        {
+          "id": "B",
+          "text": "The devastation of the 1984/85 famine aggravated by coercive resettlement and villagization, the termination of Soviet military aid, and coordinated offensives by the EPLF and EPRDF"
+        },
+        {
+          "id": "C",
+          "text": "The naval blockade of Massawa by Great Britain and the restoration of the 1931 Constitution"
+        },
+        {
+          "id": "D",
+          "text": "The military intervention of the Organization of African Unity to reinstate Crown Prince Asfawosen"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The military dictatorship collapsed due to the severe socio-economic impact of the 1984/85 famine and unpopular forced resettlement/villagization schemes, the withdrawal of economic and military backing by the Soviet Union under Gorbachev, and relentless joint military campaigns by the EPLF and EPRDF.",
+      "sourceReference": "Section 6.4.2, Pages 166-167"
+    }
+  ]
 }

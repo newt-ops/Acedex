@@ -3,5 +3,363 @@
   "subject": "History",
   "unitNumber": 4,
   "unitTitle": "Society and Politics in the Age of World Wars, 1914 - 1945",
-  "questions": []
+  "questions": [
+    {
+      "id": "HIS-G12-U04-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which event served as the immediate trigger that ignited the outbreak of World War I in the summer of 1914?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The German military invasion of neutral Belgium"
+        },
+        {
+          "id": "B",
+          "text": "The assassination of Archduke Franz Ferdinand in Sarajevo by Gavrilo Princip"
+        },
+        {
+          "id": "C",
+          "text": "The signing of the Treaty of Brest-Litovsk by revolutionary Russia"
+        },
+        {
+          "id": "D",
+          "text": "The sinking of the British passenger liner Lusitania by German submarines"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "On June 28, 1914, Archduke Franz Ferdinand, heir to the Austro-Hungarian throne, and his wife Sophie were assassinated in Sarajevo, Bosnia, by Gavrilo Princip, a member of the Serbian nationalist group 'Black Hand'. This event provoked Austria-Hungary's ultimatum and declaration of war on Serbia, setting off alliance commitments that caused World War I.",
+      "sourceReference": "Section 4.1, Pages 95-96"
+    },
+    {
+      "id": "HIS-G12-U04-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What was the core operational objective of the German 'Schlieffen Plan' executed at the outbreak of World War I in 1914?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To launch an immediate naval blockade against the British Isles using U-boats"
+        },
+        {
+          "id": "B",
+          "text": "To conquer France rapidly within six weeks by invading through neutral Belgium before pivoting eastward to confront Russia"
+        },
+        {
+          "id": "C",
+          "text": "To assist the Ottoman Empire in capturing the Suez Canal from British forces"
+        },
+        {
+          "id": "D",
+          "text": "To maintain a permanent defensive line along the Rhine River while invading Russian Poland"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Designed by former Chief of Staff Alfred von Schlieffen, the Schlieffen Plan aimed to prevent a protracted two-front war by sweeping rapidly through Belgium to defeat France in six weeks, after which the German army would deploy east against the more slowly mobilizing Russian forces.",
+      "sourceReference": "Section 4.1, Page 96"
+    },
+    {
+      "id": "HIS-G12-U04-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which revolutionary leader returned to Russia from Swiss exile in April 1917 and rallied the Bolsheviks under the slogan 'All Power to the Soviets!' to seize state power in October 1917?",
+      "options": [
+        { "id": "A", "text": "Alexander Kerensky" },
+        { "id": "B", "text": "Vladimir Lenin" },
+        { "id": "C", "text": "Leon Trotsky" },
+        { "id": "D", "text": "Joseph Stalin" }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Following the February 1917 overthrow of Tsar Nicholas II, Vladimir Lenin returned to Petrograd from exile in Switzerland, issued his 'April Theses' demanding an end to cooperation with the Provisional Government, and led the Bolsheviks to power in the October Revolution of 1917.",
+      "sourceReference": "Section 4.2, Pages 103-104"
+    },
+    {
+      "id": "HIS-G12-U04-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which book, written by Adolf Hitler during his imprisonment following the failed 1923 Munich Putsch, set forth his extreme nationalist ideology, racial theories, and anti-Semitic doctrines?",
+      "options": [
+        { "id": "A", "text": "Das Kapital" },
+        { "id": "B", "text": "Mein Kampf" },
+        { "id": "C", "text": "The State and Revolution" },
+        { "id": "D", "text": "The Myth of the Twentieth Century" }
+      ],
+      "correctOptionId": "B",
+      "explanation": "While imprisoned in 1923–1924 after the abortive Beer Hall Putsch, Adolf Hitler wrote 'Mein Kampf' ('My Struggle'), articulating his ideas of Aryan racial supremacy, visceral hatred of Jewish people, militant anti-communism, and the quest for Lebensraum (living space) in Eastern Europe.",
+      "sourceReference": "Section 4.3, Page 108"
+    },
+    {
+      "id": "HIS-G12-U04-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What was the military codename for the massive Allied amphibious invasion of Normandy on June 6, 1944 (D-Day), commanded by General Dwight D. Eisenhower?",
+      "options": [
+        { "id": "A", "text": "Operation Barbarossa" },
+        { "id": "B", "text": "Operation Overlord" },
+        { "id": "C", "text": "Operation Bagration" },
+        { "id": "D", "text": "Operation Torch" }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Operation Overlord was the codename for the Allied cross-channel invasion of German-occupied northern France on June 6, 1944, landing over 150,000 American, British, and Canadian troops along Normandy's beaches to open the Western Front and liberate France.",
+      "sourceReference": "Section 4.4, Page 115"
+    },
+    {
+      "id": "HIS-G12-U04-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What key diplomatic shift after Otto von Bismarck's dismissal in 1890 drove Imperial Russia to ally with the French Third Republic between 1891 and 1894?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Germany's decision to support British colonial claims in Egypt against Russia"
+        },
+        {
+          "id": "B",
+          "text": "Kaiser Wilhelm II's refusal to renew the Reinsurance Treaty with Russia, leaving Russia diplomatically isolated and fearful of the Triple Alliance"
+        },
+        {
+          "id": "C",
+          "text": "A joint naval attack by Austro-Hungarian and German fleets on the Russian Black Sea port of Sevastopol"
+        },
+        {
+          "id": "D",
+          "text": "France's formal accession to the Holy Alliance to restore absolute monarchical rule"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In 1890, after Bismarck's resignation, Germany chose not to renew the secret Reinsurance Treaty with Russia, signaling a pro-Austrian and anti-Russian shift in German policy. Fearing diplomatic isolation opposite the Triple Alliance, Russia formed a defensive military alliance with France between 1891 and 1894.",
+      "sourceReference": "Section 4.1, Page 94"
+    },
+    {
+      "id": "HIS-G12-U04-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which combination of territorial, military, and economic terms was imposed on defeated Germany by the 1919 Treaty of Versailles?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Germany retained all overseas colonies but ceded Bavaria and Saxony to Austria"
+        },
+        {
+          "id": "B",
+          "text": "Germany lost Alsace-Lorraine to France, ceded territory to create the Polish Corridor, placed the Saar coalfield under League of Nations supervision for 15 years, was forbidden from uniting with Austria, and lost all overseas colonies"
+        },
+        {
+          "id": "C",
+          "text": "Germany was partitioned immediately into four separate sovereign republics and expelled permanently from international diplomacy"
+        },
+        {
+          "id": "D",
+          "text": "Germany was permitted to maintain an unlimited merchant navy and standing army provided it paid reparations exclusively in agricultural grain"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The Treaty of Versailles stripped Germany of 13% of its European territory—returning Alsace-Lorraine to France and transferring West Prussia and Posen to Poland (creating the Polish Corridor). It placed the Saar under the League of Nations for 15 years, banned political union (Anschluss) with Austria, stripped Germany of all colonies, and imposed massive financial reparations.",
+      "sourceReference": "Section 4.1, Pages 99-100"
+    },
+    {
+      "id": "HIS-G12-U04-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In what structural organizational respect did Vladimir Lenin's Bolshevik faction differ from the Menshevik faction within the Russian Social Democratic Labor Party (RSDLP)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Bolsheviks rejected all socialist literature, while Mensheviks strictly adhered to anarchist terrorism"
+        },
+        {
+          "id": "B",
+          "text": "Bolsheviks advocated a tightly centralized party of disciplined professional revolutionaries refusing compromises with liberal bourgeois groups, whereas Mensheviks favored broad, open party membership and democratic cooperation with other political organizations"
+        },
+        {
+          "id": "C",
+          "text": "Bolsheviks sought to restore Tsarist autocracy, whereas Mensheviks supported immediate military dictatorship"
+        },
+        {
+          "id": "D",
+          "text": "Bolsheviks were based entirely among rural peasant landlords, whereas Mensheviks represented factory owners"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "At the 1903 RSDLP congress, the party split into Bolsheviks ('majority') and Mensheviks ('minority'). Lenin's Bolsheviks insisted on a vanguard party of dedicated professional revolutionaries operating under strict democratic centralism; Mensheviks preferred an open, inclusive mass party willing to cooperate with liberal reformers during Russia's transition to socialism.",
+      "sourceReference": "Section 4.2, Page 103"
+    },
+    {
+      "id": "HIS-G12-U04-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How did President Franklin D. Roosevelt's 'New Deal' administration (1933–1938) endeavor to counteract the catastrophic impacts of the Great Depression in the United States?",
+      "options": [
+        {
+          "id": "A",
+          "text": "By adopting strict laissez-faire policies and terminating all federal government spending"
+        },
+        {
+          "id": "B",
+          "text": "By nationalizing all privately owned manufacturing corporations and eliminating the stock exchange"
+        },
+        {
+          "id": "C",
+          "text": "By enacting state regulations to stimulate the economy, raising worker wages, redistributing purchasing power, and launching extensive federal relief and public works programs"
+        },
+        {
+          "id": "D",
+          "text": "By imposing total prohibitions on the importation of European capital and deporting industrial workers"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Instituted by FDR from 1933 to 1938, the New Deal moved away from unbridled laissez-faire by using federal intervention to rescue banks, provide emergency relief, fund massive public works (creating employment), raise industrial wages, and boost consumer purchasing power across the economy.",
+      "sourceReference": "Section 4.3, Page 106"
+    },
+    {
+      "id": "HIS-G12-U04-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What primary political motivation prompted Great Britain and France to pursue the policy of 'appeasement' toward Adolf Hitler's aggressive expansionism between 1933 and September 1939?",
+      "options": [
+        {
+          "id": "A",
+          "text": "They were militarily unprepared for a major war, suffered acute economic distress from the Great Depression, harbored deep public revulsion against another conflict like WWI, and believed concessions could satisfy Hitler's grievances"
+        },
+        {
+          "id": "B",
+          "text": "They intended to provoke an immediate full-scale war between Germany and the United States"
+        },
+        {
+          "id": "C",
+          "text": "They had signed a secret military alliance with Nazi Germany to partition the Soviet Union and Poland"
+        },
+        {
+          "id": "D",
+          "text": "They were legally bound by the League of Nations Covenant to cede all European borderlands to Axis powers"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Britain and France pursued appeasement—conceding to German rearmament, the remilitarization of the Rhineland, the annexation of Austria, and the Sudetenland—because memories of World War I's slaughter made their publics desperate to avoid war, their armed forces were not yet ready, and leaders like Neville Chamberlain mistakenly believed Hitler's territorial demands were finite.",
+      "sourceReference": "Section 4.4, Page 111"
+    },
+    {
+      "id": "HIS-G12-U04-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which crucial technological innovation gave the British Royal Air Force (RAF) an early warning advantage against the German Luftwaffe during the Battle of Britain in 1940?",
+      "options": [
+        { "id": "A", "text": "Submarine sonar tracking systems" },
+        { "id": "B", "text": "Radar (Radio Direction Finding - RDF)" },
+        { "id": "C", "text": "Jet-propelled interceptor fighter aircraft" },
+        { "id": "D", "text": "Infrared night-vision bombsights" }
+      ],
+      "correctOptionId": "B",
+      "explanation": "During the Battle of Britain in the summer and autumn of 1940, British air defenses relied on newly developed Radar (Radio Direction Finding), which detected approaching German bomber formations well in advance, allowing RAF Fighter Command to scramble interceptors efficiently and defeat the Luftwaffe.",
+      "sourceReference": "Section 4.4, Page 113"
+    },
+    {
+      "id": "HIS-G12-U04-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "How did the 1908 Austro-Hungarian annexation of Bosnia and Herzegovina create an enduring diplomatic impasse that escalated into the outbreak of World War I?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It caused the Ottoman Empire to declare an offensive alliance with Britain against Italy"
+        },
+        {
+          "id": "B",
+          "text": "It outraged Serbian Pan-Slav nationalists; although German backing forced a weakened Russia to back down in 1908, it ensured that in any subsequent Balkan showdown, Russia would mobilize militarily to defend Serbia rather than suffer another humiliation"
+        },
+        {
+          "id": "C",
+          "text": "It forced Greece and Bulgaria to immediately partition Albania under the mediation of the United States"
+        },
+        {
+          "id": "D",
+          "text": "It dismantled the Triple Alliance by causing Italy to declare war against Austria-Hungary in 1908"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "When Austria-Hungary annexed Bosnia-Herzegovina in 1908, Serbia and Russia protested bitterly. Unrecovered from the 1904–1905 Russo-Japanese War and 1905 revolution, Russia backed down when Germany issued a firm ultimatum. However, the humiliation hardened Russian resolve: in July 1914, following the Sarajevo assassination, Russia mobilized immediately in support of Serbia, transforming a local crisis into a world war.",
+      "sourceReference": "Section 4.1, Pages 95, 98"
+    },
+    {
+      "id": "HIS-G12-U04-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Why did the Russian Provisional Government under Alexander Kerensky rapidly forfeit popular support between February and October 1917, creating the conditions for the Bolshevik seizure of power?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It dissolved the Petrograd Soviet by force and restored Tsar Nicholas II to the imperial throne"
+        },
+        {
+          "id": "B",
+          "text": "It insisted on keeping Russia in the disastrous First World War to honor Allied commitments and postponed fundamental agrarian land reform, leaving the populace receptive to the Bolshevik slogan of 'Peace, Land, and Bread'"
+        },
+        {
+          "id": "C",
+          "text": "It signed the Treaty of Brest-Litovsk prematurely, angering Russian military commanders and factory workers"
+        },
+        {
+          "id": "D",
+          "text": "It outlawed all industrial labor unions and invited German troops to occupy the Baltic provinces"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The Provisional Government failed to address the two primary demands of the exhausted Russian population: ending participation in the catastrophic First World War and distributing land to the peasantry. By launching the disastrous July 1917 military offensive and delaying land reform until a constituent assembly could meet, it alienated soldiers, workers, and peasants, enabling the Bolsheviks to seize power.",
+      "sourceReference": "Section 4.2, Pages 103-104"
+    },
+    {
+      "id": "HIS-G12-U04-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "In what fundamental sociological and economic respects did European Fascism and Nazism appeal to mass followings while differing sharply from Marxist-Leninist socialism?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Fascism advocated the complete elimination of private capital and collective state ownership of all factories, whereas Marxism defended private corporations"
+        },
+        {
+          "id": "B",
+          "text": "Fascism drew heavily from the petty bourgeoisie, unemployed youth, and disillusioned veterans by weaponizing fear of communism and national humiliation, promoting aggressive chauvinism, racial hierarchy, and absolute state authority while preserving private property and capitalist industrialists"
+        },
+        {
+          "id": "C",
+          "text": "Fascism focused strictly on rural monastic communities, whereas Marxism-Leninism was an exclusively aristocratic parliamentary movement"
+        },
+        {
+          "id": "D",
+          "text": "Fascism upheld universal human equality and peaceful international disarmament, whereas Marxism rejected all social struggle"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Fascism mobilized shopkeepers, lower-level salaried employees, impoverished veterans, and youth by exploiting economic dislocation, anti-communist paranoia, and nationalist humiliation. Crucially, while Marxism-Leninism abolished private property and sought the dictatorship of the proletariat, Fascism maintained the private ownership of industry and forged alliances with conservative capitalists and the military.",
+      "sourceReference": "Section 4.3, Pages 106-108"
+    },
+    {
+      "id": "HIS-G12-U04-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Which strategic miscalculations by Nazi Germany and Imperial Japan in 1941 transformed the operational scope of World War II and ensured the ultimate defeat of the Axis Powers?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Germany surrendered the Western Front to Britain while Japan abandoned all Pacific naval bases"
+        },
+        {
+          "id": "B",
+          "text": "Hitler's invasion of the Soviet Union (Operation Barbarossa) and Japan's surprise attack on Pearl Harbor brought the immense industrial capacities, manpower reserves, and natural resources of the USSR and the United States into a united Grand Alliance that the Axis could not outmatch in a war of attrition"
+        },
+        {
+          "id": "C",
+          "text": "The Axis powers dissolved the Tripartite Pact and engaged in mutual warfare across the Indian Ocean"
+        },
+        {
+          "id": "D",
+          "text": "Germany and Japan refused to utilize synthetic fuel technology, forcing their armies to rely exclusively on animal transport"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In 1941, the Axis made two fateful strategic decisions: Hitler invaded the USSR in June (Operation Barbarossa), opening an unsustainable 2,000-mile Eastern Front that consumed three-quarters of the German army, and Japan attacked Pearl Harbor in December, bringing the United States into the war. These moves unified the USSR, USA, and British Empire into a Grand Alliance whose industrial output and demographics overwhelmed Axis forces.",
+      "sourceReference": "Section 4.4, Pages 113-116"
+    }
+  ]
 }

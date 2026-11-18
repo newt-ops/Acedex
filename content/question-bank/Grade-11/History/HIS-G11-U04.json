@@ -3,5 +3,354 @@
   "subject": "History",
   "unitNumber": 4,
   "unitTitle": "The Middle Ages and Early Modern World, c. 500 AD-1789",
-  "questions": []
+  "questions": [
+    {
+      "id": "HIS-G11-U04-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which Byzantine emperor codified centuries of Roman legal precedents into the landmark 'Justinian Code' and constructed the cathedral of Hagia Sophia in Constantinople?",
+      "options": [
+        { "id": "A", "text": "Heraclius" },
+        { "id": "B", "text": "Justinian I" },
+        { "id": "C", "text": "Constantine the Great" },
+        { "id": "D", "text": "Alexius I Comnenus" }
+      ],
+      "correctOptionId": "B",
+      "explanation": "During his reign (527–565 A.D.), Byzantine Emperor Justinian I organized Roman legal traditions into the celebrated Justinian Code and built the magnificent cathedral of Hagia Sophia between 532 and 537 A.D.",
+      "sourceReference": "Section 4.1.1.1, Page 76"
+    },
+    {
+      "id": "HIS-G11-U04-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In the medieval European manorial system, what term was used for the portion of the manor retained under the direct control of the lord and cultivated by the unpaid labor of serfs?",
+      "options": [
+        { "id": "A", "text": "Fief" },
+        { "id": "B", "text": "Demesne" },
+        { "id": "C", "text": "Chivalry" },
+        { "id": "D", "text": "Vassalage" }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Under manorialism, the lord kept a section of the estate under his direct administration called the demesne, which was farmed through the unpaid, compulsory labor services of resident serfs.",
+      "sourceReference": "Section 4.2, Page 80"
+    },
+    {
+      "id": "HIS-G11-U04-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which 14th-century North African Muslim scholar and philosopher is celebrated as the pioneer of scientific historiography for identifying social and economic patterns in the rise and fall of dynasties?",
+      "options": [
+        { "id": "A", "text": "Ibn Battuta" },
+        { "id": "B", "text": "Al-Razi" },
+        { "id": "C", "text": "Ibn Khaldun" },
+        { "id": "D", "text": "Ibn Sina (Avicenna)" }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Ibn Khaldun (1332–1406) of Tunis laid the foundation for the scientific study of history by analyzing social cohesion, economic structures, and dynastic lifecycles, while warning against historian bias and uncritical acceptance of sources.",
+      "sourceReference": "Section 4.3.1, Page 93"
+    },
+    {
+      "id": "HIS-G11-U04-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which Italian poet and scholar is widely recognized as the 'Father of Humanism' for collecting, studying, and reviving classical Greek and Roman texts?",
+      "options": [
+        { "id": "A", "text": "Niccolò Machiavelli" },
+        { "id": "B", "text": "Francesco Petrarch" },
+        { "id": "C", "text": "Giovanni Boccaccio" },
+        { "id": "D", "text": "Desiderius Erasmus" }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Francesco Petrarch is celebrated as the 'Father of Humanism' because he spearheaded the Renaissance revival of classical antiquity by recovering, preserving, and critically studying ancient Latin and Greek manuscripts.",
+      "sourceReference": "Section 4.6, Page 108"
+    },
+    {
+      "id": "HIS-G11-U04-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What specific church practice did Martin Luther openly attack when he posted his 95 Theses on the door of the Castle Church in Wittenberg in 1517?",
+      "options": [
+        { "id": "A", "text": "The Latin translation of the New Testament" },
+        { "id": "B", "text": "The monastic vow of poverty" },
+        { "id": "C", "text": "The commercial sale of papal indulgences" },
+        {
+          "id": "D",
+          "text": "The election of popes by the College of Cardinals"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Martin Luther launched the Protestant Reformation in 1517 by publishing his 95 Theses, which directly challenged the Roman Catholic Church's practice of selling indulgences (certificates of pardon) without requiring genuine spiritual repentance.",
+      "sourceReference": "Section 4.7, Pages 110-111"
+    },
+    {
+      "id": "HIS-G11-U04-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How did the Frankish defeat of the Muslim Arab forces at the Battle of Tours in 732 A.D. shape the political and religious destiny of Western Europe?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It led to the immediate dissolution of the Papacy and the adoption of Greek liturgy across France"
+        },
+        {
+          "id": "B",
+          "text": "It halted the further northward expansion of Islamic armies into Western Europe, preserving Western Christendom under Frankish leadership"
+        },
+        {
+          "id": "C",
+          "text": "It provoked the Vikings of Scandinavia to launch naval raids against Muslim Andalusia"
+        },
+        {
+          "id": "D",
+          "text": "It resulted in the unconditional surrender of the Byzantine Empire to the Carolingian dynasty"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "At the Battle of Tours (Poitiers) in 732 A.D., Frankish forces commanded by Charles Martel defeated the advancing Muslim Arab armies from Spain, halting the advance of Islam into Western Europe and solidifying the Frankish kingdom as the defender of Western Christendom.",
+      "sourceReference": "Section 4.1.1.2, Pages 78-79"
+    },
+    {
+      "id": "HIS-G11-U04-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In what architectural characteristics did the Gothic cathedrals of the late Middle Ages fundamentally differ from earlier Romanesque churches?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Gothic cathedrals used thick, windowless fortress walls and flat wooden timber roofs"
+        },
+        {
+          "id": "B",
+          "text": "Gothic cathedrals eliminated all stone columns and sculptured figures of saints"
+        },
+        {
+          "id": "C",
+          "text": "Gothic cathedrals incorporated pointed arches, ribbed vaulting, and flying buttresses that allowed for high soaring walls and large stained-glass windows"
+        },
+        {
+          "id": "D",
+          "text": "Gothic cathedrals were built exclusively in circular domes modeled after ancient Etruscan tombs"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Unlike Romanesque architecture, which featured heavy stone walls, rounded arches, and massive columns that resulted in dark interiors, Gothic style introduced pointed arches, ribbed vaults, and external flying buttresses that supported towering heights and expansive stained-glass windows.",
+      "sourceReference": "Section 4.2, Pages 83-84"
+    },
+    {
+      "id": "HIS-G11-U04-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How did the Ottoman administrative 'millet' system manage the diverse religious communities residing within the empire?",
+      "options": [
+        {
+          "id": "A",
+          "text": "By coercing all subjects to convert to Sunni Islam under threat of confiscation of property"
+        },
+        {
+          "id": "B",
+          "text": "By organizing religious minorities (such as Greek Orthodox Christians, Armenian Christians, and Jews) into autonomous communities governed by their own religious leaders in civil, educational, and legal matters"
+        },
+        {
+          "id": "C",
+          "text": "By expelling all non-Muslim merchants from major trading centers like Istanbul"
+        },
+        {
+          "id": "D",
+          "text": "By creating separate military regiments of foreign mercenaries stationed outside the empire's borders"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The Ottoman Empire governed its multi-confessional populace through the millet system, granting recognized non-Muslim religious communities (millets) internal autonomy to run their own courts, schools, and religious institutions under their own clerical authorities.",
+      "sourceReference": "Section 4.3.2, Pages 95-96"
+    },
+    {
+      "id": "HIS-G11-U04-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "According to the traditional Chinese political concept of the 'Mandate of Heaven', what signs demonstrated that an imperial dynasty was losing its legitimate right to rule?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Prolonged periods of national economic prosperity and low agricultural taxation"
+        },
+        {
+          "id": "B",
+          "text": "The arrival of foreign diplomatic embassies from Mediterranean empires"
+        },
+        {
+          "id": "C",
+          "text": "Severe corruption, peasant rebellions, banditry, and recurring natural disasters such as catastrophic floods and earthquakes"
+        },
+        {
+          "id": "D",
+          "text": "The complete replacement of Confucian scholars with Daoist monks in the civil service examinations"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "In Chinese dynastic political theory, heavens granted the mandate to virtuous rulers; severe bureaucratic corruption, heavy taxation, widespread peasant uprisings, banditry, and natural catastrophes (like floods and earthquakes) were viewed as divine portents that the ruling house had forfeited the Mandate of Heaven.",
+      "sourceReference": "Section 4.3.3, Pages 97-98"
+    },
+    {
+      "id": "HIS-G11-U04-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What historic navigational milestone was achieved by the surviving crew of Ferdinand Magellan's expedition aboard the ship 'Victoria' between 1519 and 1522?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Discovering the shortest overland route across the Isthmus of Panama"
+        },
+        {
+          "id": "B",
+          "text": "Completing the first recorded circumnavigation of the globe"
+        },
+        {
+          "id": "C",
+          "text": "Establishing the first permanent European settlement in Hudson Bay"
+        },
+        {
+          "id": "D",
+          "text": "Mapping the complete course of the Amazon River from the Andes to the Atlantic"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Although Magellan was killed in the Philippines in 1521, his surviving crew aboard the 'Victoria' continued sailing across the Indian Ocean and around the southern tip of Africa, returning to Spain in September 1522 and completing the first circumnavigation of the Earth.",
+      "sourceReference": "Section 4.5, Page 104"
+    },
+    {
+      "id": "HIS-G11-U04-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How did Nicholas Copernicus's 1543 publication 'On the Revolutions of the Heavenly Spheres' revolutionize humanity's scientific conception of the universe?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It validated the Ptolemaic doctrine that the Earth remains motionless at the center of the universe"
+        },
+        {
+          "id": "B",
+          "text": "It proposed the heliocentric theory, demonstrating mathematically that the sun is the center of the solar system and that the Earth and other planets revolve around it"
+        },
+        {
+          "id": "C",
+          "text": "It introduced the law of universal gravitation to explain oceanic tides"
+        },
+        {
+          "id": "D",
+          "text": "It proved that light travels in electromagnetic waves across interstellar vacuums"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Copernicus overturned the ancient Ptolemaic geocentric model by formulating the heliocentric (sun-centered) astronomical model, arguing that planetary orbits circle the sun, which sparked the Scientific Revolution.",
+      "sourceReference": "Section 4.8, Pages 113-114"
+    },
+    {
+      "id": "HIS-G11-U04-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "While the military expeditions of the Crusades (1096–1270) ultimately failed to secure permanent Christian control over the Holy Land, in what profound way did they accelerate the decline of European feudalism and the growth of early capitalism?",
+      "options": [
+        {
+          "id": "A",
+          "text": "They caused the complete depopulation of Italian trading ports like Venice and Genoa"
+        },
+        {
+          "id": "B",
+          "text": "They strengthened the self-sufficiency of rural manors by isolating Western Europe entirely from Eastern Mediterranean commerce"
+        },
+        {
+          "id": "C",
+          "text": "They spurred a money economy as lords demanded cash taxes from peasants to finance their campaigns, encouraged peasants to sell goods in revived towns, and expanded Mediterranean trade in eastern luxuries"
+        },
+        {
+          "id": "D",
+          "text": "They prompted European monarchs to abolish all royal taxation and transfer sovereign power permanently to rural knights"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Financing crusading voyages compelled feudal lords to commute traditional labor dues into cash payments, driving peasants to sell surplus produce in urban markets; additionally, Venetian and Genoese fleets built to transport crusaders subsequently expanded profitable commerce in spices, silk, and cotton, reviving towns and eroding manorial serfdom.",
+      "sourceReference": "Section 4.2, Pages 85-86"
+    },
+    {
+      "id": "HIS-G11-U04-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "In what fundamental socio-political aspect did the administrative policy of the Abbasid Caliphate (750–1258) diverge from that of the preceding Umayyad dynasty (661–750)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The Abbasids restricted all administrative posts exclusively to ethnic Arab military aristocracy and banned the use of the Arabic language"
+        },
+        {
+          "id": "B",
+          "text": "The Abbasids shifted the imperial capital to Damascus and refused to engage in commercial contacts with India and China"
+        },
+        {
+          "id": "C",
+          "text": "The Abbasids dissolved the special poll tax (jizya) for all subjects and made Christianity the state creed of Baghdad"
+        },
+        {
+          "id": "D",
+          "text": "The Abbasids ended the privileged monopoly of the Arab military aristocracy, eliminated systemic discrimination against non-Arab Muslim converts, and established a cosmopolitan Islamic administration centered at Baghdad"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "While the Umayyad dynasty favored an ethnic Arab military ruling class, the Abbasid revolution dismantled this elite monopoly by integrating non-Arab Muslims (such as Persians and Turks) on equal standing into the administration, fostering a cosmopolitan Islamic civilization centered in their new capital of Baghdad.",
+      "sourceReference": "Section 4.3.1, Pages 90-92"
+    },
+    {
+      "id": "HIS-G11-U04-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "How did the Protestant Reformation and the Catholic Counter-Reformation fundamentally alter the political landscape and secular statecraft of Western Europe?",
+      "options": [
+        {
+          "id": "A",
+          "text": "They restored the universal spiritual and political hegemony of the Papacy over all European monarchs"
+        },
+        {
+          "id": "B",
+          "text": "They eliminated regional vernacular languages and enforced uniform Latin liturgy across all schools"
+        },
+        {
+          "id": "C",
+          "text": "They strengthened the authority of secular monarchs over internal church affairs, fostered national sovereignty, and stimulated capital accumulation in Protestant nations where papal taxes were terminated"
+        },
+        {
+          "id": "D",
+          "text": "They established an unbroken pan-European democratic league that outlawed religious warfare permanently"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The Reformation shattered universal papal authority; in Protestant realms, rulers assumed supreme ecclesiastical jurisdiction (e.g., Henry VIII's Act of Supremacy) and retained wealth within national borders by terminating taxes to Rome, while Catholic monarchs gained greater leverage over national church appointments in exchange for defending the faith.",
+      "sourceReference": "Section 4.7, Pages 112-113"
+    },
+    {
+      "id": "HIS-G11-U04-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "In what way did John Locke's political philosophy in the 'Two Treatises of Government' provide the ideological foundation for modern constitutional government and democratic revolutions?",
+      "options": [
+        {
+          "id": "A",
+          "text": "By asserting that absolute monarchs rule by divine right and that subjects have no lawful right to resist tyranny under any circumstances"
+        },
+        {
+          "id": "B",
+          "text": "By arguing that human beings possess natural inalienable rights to life, liberty, and property, that government is a social contract created to protect these rights, and that citizens have the right to alter or overthrow a government that breaches this trust"
+        },
+        {
+          "id": "C",
+          "text": "By demonstrating that total censorship of public speech and religious uniformity are necessary preconditions for economic progress"
+        },
+        {
+          "id": "D",
+          "text": "By advocating that all legislative, executive, and judicial powers be permanently concentrated in a single hereditary monarch to prevent factionalism"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Locke articulated that individuals possess natural rights (life, liberty, and property) and that political societies are formed through the consent of the governed via a social contract; if a sovereign fails to protect those rights, citizens possess the moral and constitutional right to alter or overthrow the regime, an idea that directly inspired the American and French revolutions.",
+      "sourceReference": "Section 4.8, Pages 115-116"
+    }
+  ]
 }

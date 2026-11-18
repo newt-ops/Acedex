@@ -3,5 +3,372 @@
   "subject": "History",
   "unitNumber": 4,
   "unitTitle": "Society and Politics in the Age of World Wars 1914-1945",
-  "questions": []
+  "questions": [
+    {
+      "id": "HIS-G10-U04-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What was the immediate spark that triggered the outbreak of the First World War in late July 1914?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The German naval invasion of Great Britain across the English Channel"
+        },
+        {
+          "id": "B",
+          "text": "The assassination of Archduke Franz Ferdinand of Austria-Hungary by Gavrilo Princip in Sarajevo"
+        },
+        {
+          "id": "C",
+          "text": "The signing of the secret Treaty of London between Italy and the Allies"
+        },
+        {
+          "id": "D",
+          "text": "The Bolshevik uprising against the Tsarist regime in Petrograd"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "On June 28, 1914, Archduke Franz Ferdinand, heir to the Austro-Hungarian throne, was assassinated in Sarajevo by the Serbian nationalist Gavrilo Princip, providing Austria-Hungary the pretext to issue an ultimatum and declare war on Serbia.",
+      "sourceReference": "Section 4.1, Page 84"
+    },
+    {
+      "id": "HIS-G10-U04-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which popular slogan did the Bolshevik party under Vladimir Lenin use in 1917 to mobilize broad public support among Russian workers, peasants, and soldiers?",
+      "options": [
+        { "id": "A", "text": "'Liberty, Equality, Fraternity'" },
+        { "id": "B", "text": "'Blood and Iron for the Motherland'" },
+        { "id": "C", "text": "'Peace, Land and Bread!'" },
+        { "id": "D", "text": "'Order, Hierarchy, and Discipline'" }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The Bolsheviks rallied mass popular support during the 1917 revolutionary upheavals around simple, urgent demands encapsulated in the slogans 'All Power to the Soviets!' and 'Peace, Land and Bread!'.",
+      "sourceReference": "Section 4.2, Pages 93-94"
+    },
+    {
+      "id": "HIS-G10-U04-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Where was the headquarters of the League of Nations established following the Paris Peace Conference of 1919?",
+      "options": [
+        { "id": "A", "text": "Geneva, Switzerland" },
+        { "id": "B", "text": "Paris, France" },
+        { "id": "C", "text": "The Hague, Netherlands" },
+        { "id": "D", "text": "New York City, United States" }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The League of Nations was founded on January 10, 1920, with its permanent headquarters established in the neutral city of Geneva, Switzerland.",
+      "sourceReference": "Section 4.3, Page 96"
+    },
+    {
+      "id": "HIS-G10-U04-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which dramatic financial event in October 1929 marked the onset of the worldwide Great Depression?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The hyperinflation crisis in the German Weimar Republic"
+        },
+        {
+          "id": "B",
+          "text": "The bankruptcy of the Bank of England in London"
+        },
+        {
+          "id": "C",
+          "text": "The unilateral cancellation of reparations by the Soviet Union"
+        },
+        { "id": "D", "text": "The New York Wall Street stock market crash" }
+      ],
+      "correctOptionId": "D",
+      "explanation": "The Great Depression, the most severe economic downturn in modern industrial history, began with the Wall Street stock market crash in New York in October 1929, triggering bank failures, factory closures, and soaring unemployment globally.",
+      "sourceReference": "Section 4.4, Page 98"
+    },
+    {
+      "id": "HIS-G10-U04-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which aggressive action by Nazi Germany on September 1, 1939, officially marked the outbreak of the Second World War?",
+      "options": [
+        { "id": "A", "text": "The military reoccupation of the Rhineland" },
+        { "id": "B", "text": "The invasion of Poland" },
+        { "id": "C", "text": "The aerial bombardment of London" },
+        { "id": "D", "text": "The annexation of Austria (Anschluss)" }
+      ],
+      "correctOptionId": "B",
+      "explanation": "World War II began on September 1, 1939, when Nazi Germany launched its Blitzkrieg invasion of Poland, prompting Great Britain and France to declare war on Germany two days later on September 3.",
+      "sourceReference": "Section 4.6, Page 106"
+    },
+    {
+      "id": "HIS-G10-U04-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What was the strategic objective of the German Schlieffen Plan executed at the start of World War I in 1914?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To achieve a rapid defeat of France by invading through neutral Belgium before turning the German army eastward against slower-mobilizing Russia"
+        },
+        {
+          "id": "B",
+          "text": "To launch an immediate amphibious naval invasion against the British Isles to secure the North Sea"
+        },
+        {
+          "id": "C",
+          "text": "To concentrate the entire German army on the Eastern Front to capture Moscow within six weeks"
+        },
+        {
+          "id": "D",
+          "text": "To defend the fortified Franco-German border along Alsace and Lorraine without crossing foreign frontiers"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Devised by Count Alfred von Schlieffen, the plan sought to prevent a prolonged two-front war by swiftly invading France through neutral Belgium, capturing Paris within six weeks, and then shifting forces to defeat Russia.",
+      "sourceReference": "Section 4.1, Page 85"
+    },
+    {
+      "id": "HIS-G10-U04-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How did the political outcome of the February Revolution of 1917 differ fundamentally from that of the October Revolution in Russia?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The February Revolution brought the Bolsheviks to power, whereas the October Revolution reinstated Tsar Nicholas II"
+        },
+        {
+          "id": "B",
+          "text": "The February Revolution established a military dictatorship under General Kornilov, whereas the October Revolution created a constitutional monarchy"
+        },
+        {
+          "id": "C",
+          "text": "The February Revolution toppled the Romanov Tsarist autocracy and formed the Provisional Government, while the October Revolution overthrew the Provisional Government to install Bolshevik Soviet rule"
+        },
+        {
+          "id": "D",
+          "text": "The February Revolution ended Russian participation in World War I, whereas the October Revolution resumed the offensive against Germany"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The spontaneous February Revolution of 1917 forced Tsar Nicholas II to abdicate, terminating Romanov dynastic rule and creating the liberal Provisional Government; the October Revolution of 1917 was an armed insurrection that deposed the Provisional Government and transferred power to the Bolsheviks.",
+      "sourceReference": "Section 4.2, Pages 93-94"
+    },
+    {
+      "id": "HIS-G10-U04-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Under the terms of the Treaty of Versailles signed in June 1919, how were Germany's overseas colonies and armed forces treated by the victorious Allied powers?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Germany was permitted to retain all African colonies while its army was expanded to counter Soviet Russia"
+        },
+        {
+          "id": "B",
+          "text": "Germany's colonies were placed under League of Nations mandates, its military was severely restricted, and it was forced to accept sole war guilt and pay reparations"
+        },
+        {
+          "id": "C",
+          "text": "All German territories were partitioned equally between the United States and Italy without financial indemnities"
+        },
+        {
+          "id": "D",
+          "text": "Germany surrendered its navy to France while being exempted from paying any economic damages"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The Versailles Treaty placed sole responsibility for the war on Germany (Article 231), required heavy financial reparations, stripped Germany of its African and Pacific colonies (turning them into League of Nations mandates), and severely restricted the size of its army and navy.",
+      "sourceReference": "Section 4.1, Pages 89-90"
+    },
+    {
+      "id": "HIS-G10-U04-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What domestic and international conditions in post-World War I Italy primarily facilitated Benito Mussolini's rise to power and the establishment of a Fascist regime in 1922?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The widespread popularity of direct democratic referendums and full employment across southern Italian villages"
+        },
+        {
+          "id": "B",
+          "text": "A massive territorial expansion awarded to Italy in the German Rhineland and the Middle East"
+        },
+        {
+          "id": "C",
+          "text": "A formal military alliance with Soviet Russia that subsidized Italian state industries"
+        },
+        {
+          "id": "D",
+          "text": "Disappointment over the Versailles Peace settlement, severe postwar economic disruption, rising unemployment, and fear among the middle and propertied classes of a communist revolution"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "Italians felt cheated by the Versailles settlement because they did not receive promised territories, while postwar inflation, labour strikes, and high unemployment enabled Mussolini to portray the Fascist party as the only bulwark capable of restoring national pride and preventing a Bolshevik-style communist upheaval.",
+      "sourceReference": "Section 4.5, Pages 99-101"
+    },
+    {
+      "id": "HIS-G10-U04-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Why did the Weimar Republic lose credibility and popular legitimacy among broad segments of the German population during the 1920s and early 1930s?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because it was held responsible for signing the humiliating Treaty of Versailles and proved incapable of resolving catastrophic hyperinflation, political factionalism, and massive depression-era unemployment"
+        },
+        {
+          "id": "B",
+          "text": "Because it successfully nationalized all private farms and abolished the industrial ownership of the Krupp corporation"
+        },
+        {
+          "id": "C",
+          "text": "Because its leaders declared war against both Great Britain and the United States in 1923"
+        },
+        {
+          "id": "D",
+          "text": "Because it permanently banned the Reichstag and instituted a hereditary Catholic monarchy"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Right-wing nationalists and ordinary citizens blamed the democratic Weimar Republic for accepting the 'dictated' Versailles Treaty and failing to master recurring crises—the 1923 hyperinflation and the 1929 Great Depression—creating conditions exploited by Adolf Hitler's Nazi party.",
+      "sourceReference": "Section 4.5, Pages 103-104"
+    },
+    {
+      "id": "HIS-G10-U04-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What diplomatic approach was embodied in the 1938 Munich Agreement concluded by Great Britain, France, and Germany?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A mutual security alliance guaranteeing the territorial borders of Poland against Soviet invasion"
+        },
+        {
+          "id": "B",
+          "text": "An ultimatum ordering immediate German disarmament under threat of joint Allied air attacks"
+        },
+        {
+          "id": "C",
+          "text": "The policy of appeasement, in which Britain and France conceded the German-speaking Sudetenland of Czechoslovakia to Hitler in the hope of avoiding a general European war"
+        },
+        {
+          "id": "D",
+          "text": "The immediate partition of Austria between Fascist Italy and Nazi Germany"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Under the British and French policy of appeasement, prime ministers Neville Chamberlain and Édouard Daladier signed the Munich Deal in September 1938, yielding Czechoslovakia's Sudetenland to Germany in the mistaken belief that satisfying Hitler's territorial demands would preserve peace.",
+      "sourceReference": "Section 4.6, Pages 105-106"
+    },
+    {
+      "id": "HIS-G10-U04-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "How did the rigid European military alliance structure (the Triple Alliance and the Triple Entente) transform a localized diplomatic dispute between Austria-Hungary and Serbia into a global armed conflict?",
+      "options": [
+        {
+          "id": "A",
+          "text": "By requiring all signatory powers to conduct direct popular plebiscites before declaring hostilities"
+        },
+        {
+          "id": "B",
+          "text": "By establishing interlocking mutual defense obligations that compelled allied powers to mobilize and enter the war sequentially once their treaty partners became engaged"
+        },
+        {
+          "id": "C",
+          "text": "By placing all European military forces under the sole supreme command of the Ottoman Sultan"
+        },
+        {
+          "id": "D",
+          "text": "By dissolving sovereign national armies in favor of a unified international peacekeeping corps stationed in Belgium"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The alliance systems (Triple Alliance vs. Triple Entente) acted as a chain reaction: when Austria-Hungary attacked Serbia, Russia mobilized to protect its Slavic ally, prompting Germany to declare war on Russia and France, which in turn brought Great Britain into the conflict when Germany violated Belgian neutrality.",
+      "sourceReference": "Section 4.1, Pages 82-84"
+    },
+    {
+      "id": "HIS-G10-U04-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "What economic rationale motivated Vladimir Lenin and the Bolshevik government to adopt the New Economic Policy (NEP) in 1921 after the Russian Civil War?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To immediately eliminate all private property and force peasants into collective state farms (kolkhozes)"
+        },
+        {
+          "id": "B",
+          "text": "To integrate Soviet Russia into the American-funded Marshall Plan"
+        },
+        {
+          "id": "C",
+          "text": "To restore the Tsarist nobility to their ancestral landed estates in exchange for tax payments"
+        },
+        {
+          "id": "D",
+          "text": "To introduce a temporary strategic compromise with capitalism by allowing small private enterprises, permitting peasants to sell surplus grain on the open market, and reviving commerce to overcome economic collapse and famine"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "Following the devastation of the Civil War and the harsh exactions of War Communism, Lenin introduced the NEP in 1921 as a pragmatic retreat, reintroducing limited market mechanisms, small private business, and peasant grain sales for profit to revive agricultural and commercial output.",
+      "sourceReference": "Section 4.2, Page 95"
+    },
+    {
+      "id": "HIS-G10-U04-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Which combination of structural and political weaknesses most directly undermined the League of Nations' capacity to maintain collective security during the inter-war period?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The refusal of the United States to join, the absence of an independent armed force to enforce sanctions, and the reluctance of leading powers like Britain and France to confront aggressive dictatorships in Manchuria and Ethiopia"
+        },
+        {
+          "id": "B",
+          "text": "The complete domination of the General Assembly by African and Asian member nations who vetoed European defense measures"
+        },
+        {
+          "id": "C",
+          "text": "The requirement that all international disputes be resolved exclusively by the International Court of Justice without diplomatic mediation"
+        },
+        {
+          "id": "D",
+          "text": "The automatic expulsion of any member state that maintained a standing infantry of more than 50,000 soldiers"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The League's failure to prevent World War II stemmed from critical institutional flaws: the U.S. Senate refused to join, leaving the organization without decisive backing; the League lacked its own enforcement army; and permanent members pursued national appeasement rather than imposing effective penalties against Japanese aggression in Manchuria (1931) or Fascist Italy's invasion of Ethiopia (1935).",
+      "sourceReference": "Section 4.3 & Section 4.6, Pages 96, 105"
+    },
+    {
+      "id": "HIS-G10-U04-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Why is the Soviet victory over Nazi forces at the Battle of Stalingrad (1942–1943) universally recognized as the decisive turning point of the Second World War in Europe?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It resulted in the immediate signing of an unconditional peace treaty between Germany and the USSR"
+        },
+        {
+          "id": "B",
+          "text": "It caused the United States to withdraw all military aid from the Western European theatre"
+        },
+        {
+          "id": "C",
+          "text": "It shattered the military advance of the German army on the Eastern Front, halted Nazi eastward expansion, and initiated an unbroken Soviet counter-offensive that culminated in the fall of Berlin"
+        },
+        {
+          "id": "D",
+          "text": "It prevented the Japanese naval fleet from crossing the Indian Ocean to link up with Italian forces in Libya"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The catastrophic German defeat at Stalingrad in early 1943 destroyed an entire German army, permanently broke the offensive momentum of the Wehrmacht in the East, and marked the shift to a relentless strategic counter-offensive by the Red Army that pushed Nazi forces all the way back to Berlin.",
+      "sourceReference": "Section 4.6, Page 107"
+    }
+  ]
 }

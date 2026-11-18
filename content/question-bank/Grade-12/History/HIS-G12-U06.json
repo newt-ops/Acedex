@@ -3,5 +3,363 @@
   "subject": "History",
   "unitNumber": 6,
   "unitTitle": "Ethiopia: Internal Developments and External Influences from 1941 to 1991",
-  "questions": []
+  "questions": [
+    {
+      "id": "HIS-G12-U06-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which military telecommunications facility in Asmara was leased to the United States for twenty-five years under the bilateral Ethio-American agreement concluded on May 22, 1953?",
+      "options": [
+        { "id": "A", "text": "Camp Gilbert" },
+        { "id": "B", "text": "Kagnew Station" },
+        { "id": "C", "text": "Tateq Station" },
+        { "id": "D", "text": "Debre Zeit Base" }
+      ],
+      "correctOptionId": "B",
+      "explanation": "On May 22, 1953, Ethiopia and the United States signed a treaty granting the US military a 25-year lease on the Kagnew communications station in Asmara. The facility was named Kagnew to honor the Ethiopian battalion that served on the American/UN side during the Korean War.",
+      "sourceReference": "Section 6.1, Page 162"
+    },
+    {
+      "id": "HIS-G12-U06-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What was the primary operational objective of the 'Zemecha' (Development through Cooperation Campaign) launched by the Derg in December 1974?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To construct asphalt highways connecting all fourteen provincial capitals with the Red Sea ports"
+        },
+        {
+          "id": "B",
+          "text": "To deploy university and secondary school students and teachers to the countryside to explain the socialist revolution, assist with land reform, and improve rural literacy"
+        },
+        {
+          "id": "C",
+          "text": "To conscript an emergency civilian militia of 100,000 peasants to repel the Somali invasion of the Ogaden"
+        },
+        {
+          "id": "D",
+          "text": "To enforce the immediate relocation of peasant households into standardized nucleated villages under the villagization scheme"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The Development through Cooperation Campaign (Zemecha), announced in late 1974 and initiated in December, mobilized thousands of university and high school students along with their teachers to rural areas to promote socialist ideology, organize peasant associations, enforce upcoming land reforms, and teach basic literacy.",
+      "sourceReference": "Section 6.5, Page 191"
+    },
+    {
+      "id": "HIS-G12-U06-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which prominent local leader commanded the 1943 peasant uprising in Eastern Tigray known as the 'Woyane Rebellion' before it was crushed by imperial troops supported by British aircraft?",
+      "options": [
+        { "id": "A", "text": "Dejazmach Belay Zeleke" },
+        { "id": "B", "text": "Blatta Haile Mariam Redda" },
+        { "id": "C", "text": "Waqo Gutu" },
+        { "id": "D", "text": "Bitwoded Negash Bezabih" }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The 1943 Woyane Rebellion in Eastern Tigray was led by Blatta Haile Mariam Redda. After initial rebel successes—including the capture of Mekelle—the revolt was suppressed by imperial forces under Ras Abebe Aregay aided by British Royal Air Force bombardment.",
+      "sourceReference": "Section 6.3, Page 177"
+    },
+    {
+      "id": "HIS-G12-U06-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "On which date was Emperor Haile Selassie I formally deposed by the military coordinating committee, leading to the establishment of the Provisional Military Administrative Council (PMAC)?",
+      "options": [
+        { "id": "A", "text": "February 18, 1974" },
+        { "id": "B", "text": "June 28, 1974" },
+        { "id": "C", "text": "September 12, 1974" },
+        { "id": "D", "text": "November 23, 1974" }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Following months of the 'creeping coup' that systematically dismantled the imperial order, the Derg formally deposed Emperor Haile Selassie on September 12, 1974, suspended the 1955 Constitution, dissolved Parliament, and established itself as the Provisional Military Administrative Council (PMAC).",
+      "sourceReference": "Section 6.4, Page 189"
+    },
+    {
+      "id": "HIS-G12-U06-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "At which strategic mountain pass outside Jigjiga was the decisive battle of the 1977–1978 Ethio-Somalia War fought on March 5, 1978, resulting in the routing of invading Somali forces?",
+      "options": [
+        { "id": "A", "text": "Amba Aradom" },
+        { "id": "B", "text": "Endabaguna" },
+        { "id": "C", "text": "Kara Mara" },
+        { "id": "D", "text": "Dogali" }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The decisive engagement of the 1977–1978 Ogaden War took place on March 5, 1978, at the strategic pass of Kara Mara near Jigjiga, where Ethiopian ground forces and militia, supported by Soviet equipment and Cuban units, routed the invading army of Siad Barre.",
+      "sourceReference": "Section 6.6, Page 201"
+    },
+    {
+      "id": "HIS-G12-U06-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In what specific ways did the second Anglo-Ethiopian Agreement of December 1944 restore Ethiopian sovereign rights that had been restricted under the 1942 agreement?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It returned all administrative authority over Eritrea directly to the Ethiopian crown and expelled Italian settlers"
+        },
+        {
+          "id": "B",
+          "text": "It abolished the diplomatic precedence of the British minister, removed the British veto on appointing foreign advisers, restored sections of the Ethio-Djibouti railway, and placed the army under the Ethiopian Ministry of War"
+        },
+        {
+          "id": "C",
+          "text": "It ended British military trusteeship over the Haud and the Reserved Area immediately in 1944"
+        },
+        {
+          "id": "D",
+          "text": "It required Great Britain to pay substantial financial reparations for looting the royal treasury at Meqdela"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The 1944 Anglo-Ethiopian Agreement eliminated the exceptional diplomatic precedence previously held by the British representative over other envoys, revoked British control over internal appointments, restored Ethiopian control over the railway, and placed armed forces command under the Ethiopian Ministry of War.",
+      "sourceReference": "Section 6.1, Page 160"
+    },
+    {
+      "id": "HIS-G12-U06-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What institutional feature was introduced into the Ethiopian parliamentary structure by the Revised Constitution of 1955?",
+      "options": [
+        {
+          "id": "A",
+          "text": "An elected Senate chosen directly by provincial peasant associations"
+        },
+        {
+          "id": "B",
+          "text": "Universal adult suffrage and an elected Chamber of Deputies, alongside an appointive Senate"
+        },
+        {
+          "id": "C",
+          "text": "A Council of Ministers possessing constitutional veto authority over imperial decrees"
+        },
+        {
+          "id": "D",
+          "text": "A multi-party electoral system granting legal recognition to opposition political parties"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Promulgated during Emperor Haile Selassie's silver jubilee and partly necessitated by the federation with Eritrea, the 1955 Revised Constitution established a bicameral parliament providing for universal adult suffrage and an elected Chamber of Deputies, though the Senate remained purely appointed and absolute imperial powers were reaffirmed.",
+      "sourceReference": "Section 6.3, Page 172"
+    },
+    {
+      "id": "HIS-G12-U06-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What was the immediate cause of the 1968 peasant rebellion in Gojjam that compelled the central government to make administrative concessions?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The establishment of the Chilalo Agricultural Development Unit (CADU) on communal grazing lands"
+        },
+        {
+          "id": "B",
+          "text": "The enforcement of the agricultural income tax law passed in November 1967 and coercive measures, including land measurement and back-tax collection, under Governor Dejazmach Tsehayu Enqu-Selassie"
+        },
+        {
+          "id": "C",
+          "text": "The imperial government's refusal to appoint hereditary rulers from the family of Ras Hailu Belaw"
+        },
+        {
+          "id": "D",
+          "text": "The implementation of the Education Sector Review across rural secondary schools"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The 1968 Gojjam peasant revolt was sparked by the central government's attempt to enforce a new agricultural income tax passed in November 1967, compounded by the heavy-handed policies of Governor Tsehayu Enqu-Selassie, who demanded gun registration fees, back-taxes to 1940, and contributions for an imperial statue.",
+      "sourceReference": "Section 6.3, Pages 178-179"
+    },
+    {
+      "id": "HIS-G12-U06-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How did the leaders of the aborted December 1960 coup d'état—Brigadier General Mengistu Neway and Germame Neway—propose to reorganize the imperial executive authority?",
+      "options": [
+        {
+          "id": "A",
+          "text": "By executing the royal family and establishing an immediate single-party Marxist-Leninist republic"
+        },
+        {
+          "id": "B",
+          "text": "By declaring Crown Prince Asfawosen a salaried constitutional monarch heading a progressive reformist government led by Ras Emeru Haile Selassie"
+        },
+        {
+          "id": "C",
+          "text": "By transferring state sovereignty to an elected assembly of peasant elders and Orthodox clergy"
+        },
+        {
+          "id": "D",
+          "text": "By partitioning Ethiopia into autonomous regional federation states under provincial army commanders"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "During the December 1960 coup while the Emperor was in Brazil, the Neway brothers took control of the radio station, declared Haile Selassie deposed, designated Crown Prince Asfawosen as a constitutional monarch with a fixed salary, and appointed the respected, reform-minded aristocrat Ras Emeru Haile Selassie as Prime Minister.",
+      "sourceReference": "Section 6.3, Pages 175-176"
+    },
+    {
+      "id": "HIS-G12-U06-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which combination of public grievances catalyzed the outbreak of coordinated strikes and demonstrations in Addis Ababa on February 18, 1974?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The execution of 52 former imperial ministers alongside mutinies by the Imperial Bodyguard"
+        },
+        {
+          "id": "B",
+          "text": "A nationwide strike by the Ethiopian Teachers' Association against the Education Sector Review, combined with taxi drivers protesting a 50% increase in petrol prices"
+        },
+        {
+          "id": "C",
+          "text": "The banning of the Confederation of Ethiopian Labor Unions and the dissolution of Parliament"
+        },
+        {
+          "id": "D",
+          "text": "The arrival of Soviet military advisers and the nationalization of private banks"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "On February 18, 1974, the revolutionary crisis erupted in Addis Ababa when the Ethiopian Teachers' Association struck against the proposed Education Sector Review curriculum reforms and low salaries, while urban taxi drivers stopped operations to demand fare adjustments following a 50% fuel price hike caused by the 1973 global oil crisis.",
+      "sourceReference": "Section 6.4, Page 185"
+    },
+    {
+      "id": "HIS-G12-U06-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What legal tenure provisions and land ceiling restrictions were established by the PMAC's Rural Land Proclamation of March 1975?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It permitted private land sales provided that estates did not exceed one hundred hectares"
+        },
+        {
+          "id": "B",
+          "text": "It abolished all private rural land ownership, transferred land to public collective ownership, set a maximum family ceiling of ten hectares, and established Peasant Associations to oversee distribution"
+        },
+        {
+          "id": "C",
+          "text": "It transformed traditional southern tenants into freehold owners while preserving church gult rights in northern provinces"
+        },
+        {
+          "id": "D",
+          "text": "It placed all agricultural farms under direct ownership of foreign commercial syndicates"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The historic proclamation of March 1975 nationalized all rural land, abolished private landlordism and tenancy, banned the sale, lease, or mortgaging of land, capped individual family holdings at ten hectares, and authorized the creation of village Peasant Associations to distribute land.",
+      "sourceReference": "Section 6.5, Page 192"
+    },
+    {
+      "id": "HIS-G12-U06-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "How did the contrasting land tenure structures of northern Ethiopia (rist) and southern Ethiopia (gabbar/privatized land) shape the socio-economic impact of imperial taxation and commercialization between 1941 and 1974?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Northern peasants were widely evicted from family holdings to make way for foreign-owned sugarcane concessions, while southern farmers retained permanent communal land security"
+        },
+        {
+          "id": "B",
+          "text": "In the north, communal rist rights proved resilient against eviction though peasants rebelled against state tax assessments; in the south, state land grants, the qelad measurement system, and expanding commercial farming accelerated land alienation, turning indigenous cultivators into insecure tenants vulnerable to arbitrary eviction"
+        },
+        {
+          "id": "C",
+          "text": "Southern tenants enjoyed low, fixed rental rates and complete immunity from eviction, whereas northern rist-holders were forced to pay tribute exclusively in cash crops"
+        },
+        {
+          "id": "D",
+          "text": "The imperial government abolished the rist system in 1942 to create a uniform agrarian system modeled entirely on southern tenancy"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In northern provinces, the lineage-based rist system protected peasants from outright land loss even as they resisted central tax assessments. In contrast, in the south, the expansion of the qelad system, land sales, and modern commercial farms (such as CADU and Tendaho) accelerated the privatization of land by elites, reducing indigenous farmers to insecure tenants who faced eviction without compensation.",
+      "sourceReference": "Section 6.2, Pages 164-166"
+    },
+    {
+      "id": "HIS-G12-U06-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Why did the popular revolutionary movement of 1974 rapidly degenerate into the violent internecine conflict known as the 'Red Terror' and 'White Terror' between 1976 and 1978?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The imperial nobility organized a 100,000-man peasant militia to restore Emperor Haile Selassie to the throne by force"
+        },
+        {
+          "id": "B",
+          "text": "Civilian leftist organizations like the EPRP opposed military rule and demanded an immediate, broad-based provisional civilian government, engaging in targeted urban guerrilla warfare (White Terror), which the Derg countered with state-sponsored campaigns (Red Terror) that systematically eliminated suspected opposition members"
+        },
+        {
+          "id": "C",
+          "text": "The United States Armed Forces intervened militarily in Addis Ababa to install Meison as the sole ruling party"
+        },
+        {
+          "id": "D",
+          "text": "The Confederation of Ethiopian Labor Unions launched conventional frontline assaults against the air force base at Bishoftu"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Friction erupted when civilian leftist organizations, primarily the EPRP, refused to accept military dictatorship and demanded a democratic 'people's government'. As the EPRP launched underground urban assassinations against regime officials ('White Terror'), the Derg unleashed the state-directed 'Red Terror', deploying urban kebeles and security forces to execute an estimated 100,000 suspected dissidents.",
+      "sourceReference": "Section 6.4 & 6.6, Pages 189-190, 197-199"
+    },
+    {
+      "id": "HIS-G12-U06-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "In what structural manner did the Derg's controversial policies of forced resettlement and villagization in the mid-1980s compound the agricultural crisis following the 1984/85 famine?",
+      "options": [
+        {
+          "id": "A",
+          "text": "They abolished all state-managed cooperative farms in favor of completely unregulated private market capitalism"
+        },
+        {
+          "id": "B",
+          "text": "They successfully eliminated rural poverty by providing mechanized combines and electricity to every relocated peasant household"
+        },
+        {
+          "id": "C",
+          "text": "The schemes were poorly planned and forcibly implemented, uprooting peasants, separating families, causing tens of thousands of deaths from disease in poorly prepared lowland reception zones, disrupting agricultural cycles, and serving counter-insurgency goals of depopulating guerrilla support bases in the north"
+        },
+        {
+          "id": "D",
+          "text": "They concentrated all rural labor resources into urban textile manufacturing in Addis Ababa and Dire Dawa"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The Derg's emergency resettlement relocated hundreds of thousands from drought-affected northern zones to the southwest; however, poor planning and coercive execution broke up families, caused approximately 100,000 deaths from malaria and sleeping sickness, and drew criticism for attempting to deprive northern insurgencies of their popular base. Similarly, compulsory villagization uprooted millions without providing promised amenities, disrupting farm production.",
+      "sourceReference": "Section 6.5, Pages 194-196"
+    },
+    {
+      "id": "HIS-G12-U06-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Which combination of international geopolitical shifts and domestic military crises brought about the definitive collapse of the military dictatorship in May 1991?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A joint military invasion by the League of Nations and the deployment of NATO troops to capture Addis Ababa"
+        },
+        {
+          "id": "B",
+          "text": "The severance of vital Soviet military and financial assistance under Gorbachev's glasnost and perestroika, the execution of experienced military officers following the failed 1989 coup, and crushing battlefield defeats at Afabet (1988) and Massawa (1990) by the EPLF and multi-front advances by the EPRDF"
+        },
+        {
+          "id": "C",
+          "text": "The voluntary abdication of Mengistu Haile Mariam to allow the restoration of Crown Prince Asfawosen to the throne"
+        },
+        {
+          "id": "D",
+          "text": "An embargo imposed by the Organization of African Unity that forced the complete surrender of the Ethiopian Ground Forces at Harar"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The Derg's demise was driven by external and internal factors: Gorbachev's reforms curtailed Soviet arms and economic aid; the execution of veteran generals after the aborted May 1989 coup crippled armed forces leadership; and northern insurgencies inflicted decisive defeats—the EPLF overrunning the Nadew Command at Afabet in 1988 and Massawa in 1990, while the EPRDF liberated Tigray and northern provinces, culminating in Mengistu fleeing on May 21 and the EPRDF entering Addis Ababa on May 28, 1991.",
+      "sourceReference": "Section 6.6, Pages 202-205"
+    }
+  ]
 }

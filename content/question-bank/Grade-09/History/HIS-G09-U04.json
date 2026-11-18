@@ -2,6 +2,352 @@
   "grade": 9,
   "subject": "History",
   "unitNumber": 4,
-  "unitTitle": "The Middle Ages and Early Modern World, c. 500 to 1750",
-  "questions": []
+  "unitTitle": "The Middle Ages and Early Modern World, C. 500 to 1750s",
+  "questions": [
+    {
+      "id": "HIS-G09-U04-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In medieval European feudalism, what was the term given to a grant of land provided by a lord to a vassal in exchange for service and loyalty?",
+      "options": [
+        { "id": "A", "text": "Demesne" },
+        { "id": "B", "text": "Fief" },
+        { "id": "C", "text": "Manor" },
+        { "id": "D", "text": "Chivalry" }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In the feudal vassalage system, a higher lord granted a piece of land known as a fief (or feud) to a lower lord, who in return became his vassal and pledged loyalty and military assistance.",
+      "sourceReference": "Section 4.1.2, Page 65"
+    },
+    {
+      "id": "HIS-G09-U04-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What was the capital city and official state language of the Eastern Roman (Byzantine) Empire?",
+      "options": [
+        { "id": "A", "text": "Rome and Latin" },
+        { "id": "B", "text": "Alexandria and Coptic" },
+        { "id": "C", "text": "Constantinople and Greek" },
+        { "id": "D", "text": "Athens and Aramaic" }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The Byzantine Empire, which survived the fall of the Western Roman Empire, had its imperial capital at Constantinople (modern Istanbul) and adopted Greek as its official language.",
+      "sourceReference": "Section 4.1.3, Page 67"
+    },
+    {
+      "id": "HIS-G09-U04-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which historical event in 622 AD marks the start of the Islamic calendar (Year 1 AH)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The migration (Hejira) of Prophet Mohammed and his followers from Mecca to Medina"
+        },
+        {
+          "id": "B",
+          "text": "The triumphant conquest of Mecca by early Muslim forces"
+        },
+        {
+          "id": "C",
+          "text": "The first revelation received by Prophet Mohammed on Mount Hira"
+        },
+        {
+          "id": "D",
+          "text": "The establishment of the Umayyad Caliphate in Damascus"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "In 622 AD, facing persecution from Quraysh leaders, Prophet Mohammed and his early followers migrated from Mecca to Medina; this historic journey is called the Hejira and marks Year 1 of the Islamic calendar.",
+      "sourceReference": "Section 4.2.1, Page 68"
+    },
+    {
+      "id": "HIS-G09-U04-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which navigator led the Spanish maritime expedition that first circumnavigated the globe between 1519 and 1522?",
+      "options": [
+        { "id": "A", "text": "Vasco da Gama" },
+        { "id": "B", "text": "Christopher Columbus" },
+        { "id": "C", "text": "Amerigo Vespucci" },
+        { "id": "D", "text": "Ferdinand Magellan" }
+      ],
+      "correctOptionId": "D",
+      "explanation": "Ferdinand Magellan, sailing in the service of Spain, led the expedition that successfully circumnavigated the world between 1519 and 1522, proving the oceans were interconnected.",
+      "sourceReference": "Section 4.4, Pages 72-73"
+    },
+    {
+      "id": "HIS-G09-U04-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "The Protestant Reformation began in 1517 in Germany when which religious leader challenged Catholic Church practices such as the sale of indulgences?",
+      "options": [
+        { "id": "A", "text": "Jean Calvin" },
+        { "id": "B", "text": "Martin Luther" },
+        { "id": "C", "text": "John Knox" },
+        { "id": "D", "text": "King Henry VIII" }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The Reformation began in Germany in 1517 when Martin Luther protested against corruption in the Catholic Church, especially the sale of indulgences, and outlined his criticisms.",
+      "sourceReference": "Section 4.6, Page 76"
+    },
+    {
+      "id": "HIS-G09-U04-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What was the fundamental socio-economic and judicial function of the manor in medieval Western Europe?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It was an economically self-sufficient agrarian estate where the lord exercised military, judicial, and political control over dependent peasants"
+        },
+        {
+          "id": "B",
+          "text": "It was a commercial guild corporation owned cooperatively by urban artisans and merchant capitalists"
+        },
+        {
+          "id": "C",
+          "text": "It served strictly as a monastic retreat devoted to translating classical Greek texts"
+        },
+        {
+          "id": "D",
+          "text": "It functioned as an elective municipal assembly that chose imperial delegates for the monarch"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The manor was the basic unit of European feudalism; it was an economically self-sufficient rural village where the manorial lord exercised political, judicial, and military authority over the unprivileged peasants.",
+      "sourceReference": "Section 4.1.2, Pages 65-66"
+    },
+    {
+      "id": "HIS-G09-U04-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What major geopolitical consequence resulted from the Ottoman conquest of Constantinople under Sultan Mehmed II in 1453?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It prompted the reunification of the Catholic and Orthodox churches under the Pope"
+        },
+        {
+          "id": "B",
+          "text": "It caused the immediate dissolution of the Safavid Empire in Persia"
+        },
+        {
+          "id": "C",
+          "text": "It ended the Byzantine Empire and blocked traditional European overland and Black Sea trade routes to the East"
+        },
+        {
+          "id": "D",
+          "text": "It compelled the Holy Roman Empire to surrender the Iberian peninsula to the Ottomans"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The capture of Constantinople in 1453 marked the final destruction of the Byzantine Empire, and Ottoman dominance in the Eastern Mediterranean created trade barriers that prompted Europeans to seek new sea routes to Asia.",
+      "sourceReference": "Section 4.2.2 & 4.4, Pages 69-70, 72"
+    },
+    {
+      "id": "HIS-G09-U04-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "According to the traditional Chinese concept of the 'Dynastic Cycle', how was the rise and fall of imperial dynasties justified?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Through universal plebiscites held every decade among all land-owning peasants"
+        },
+        {
+          "id": "B",
+          "text": "Through the 'Mandate of Heaven', which granted legitimacy to just rulers and withdrew it when a dynasty became corrupt and weak"
+        },
+        {
+          "id": "C",
+          "text": "Through military appointments controlled directly by Buddhist monastic councils"
+        },
+        {
+          "id": "D",
+          "text": "Through hereditary covenants established exclusively between nomadic tribes and provincial governors"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Under the dynastic cycle, a ruler maintained power as long as he held the 'Mandate of Heaven'; when a ruling dynasty became corrupt, oppressive, or weak, it lost heaven's mandate, paving the way for a new dynasty.",
+      "sourceReference": "Section 4.2.3, Page 71"
+    },
+    {
+      "id": "HIS-G09-U04-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What primary economic practice distinguished early capitalism from preceding feudal and ancient economic systems?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The strict reliance on barter and prohibition of monetary transactions in international trade"
+        },
+        {
+          "id": "B",
+          "text": "The total nationalization of all workshops, farmlands, and transportation routes by the crown"
+        },
+        {
+          "id": "C",
+          "text": "The restriction of investment exclusively to monumental religious architecture and palaces"
+        },
+        {
+          "id": "D",
+          "text": "The reinvestment of accumulated capital to expand productive capacity rather than spending on economically unproductive enterprises"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "A distinguishing characteristic of capitalism was its use of accumulated capital to enlarge productive economic capacity rather than investing in economically unproductive monuments, such as pyramids and medieval cathedrals.",
+      "sourceReference": "Section 4.3, Page 71"
+    },
+    {
+      "id": "HIS-G09-U04-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which cultural and intellectual shift characterized the Renaissance movement that originated in 14th-century Italian city-states?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A renewed emphasis on humanism, secular inquiry, individual potential, and writing in vernacular languages rather than Latin"
+        },
+        {
+          "id": "B",
+          "text": "The absolute ban on secular philosophy in favor of rigid scholastic theology"
+        },
+        {
+          "id": "C",
+          "text": "The complete rejection of Greco-Roman art, literature, and architectural styles"
+        },
+        {
+          "id": "D",
+          "text": "The prohibition of commercial banking and international trade by urban patricians"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The Renaissance embraced humanism, revived classical Greco-Roman learning, cultivated secular thinking and critical inquiry, and popularized vernacular languages (such as Italian and English) in literary works.",
+      "sourceReference": "Section 4.5, Pages 74-75"
+    },
+    {
+      "id": "HIS-G09-U04-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What new source of power, improved by James Watt in the late 18th century, revolutionized manufacturing and transportation during the Industrial Revolution?",
+      "options": [
+        { "id": "A", "text": "Nuclear energy" },
+        { "id": "B", "text": "Hydroelectric turbines" },
+        { "id": "C", "text": "Steam power fueled by coal" },
+        { "id": "D", "text": "Internal combustion engines fueled by petroleum" }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The Industrial Revolution relied on steam power (improved by James Watt in 1782-1784) fueled by coal, which replaced traditional wind and water power to operate factory machinery, steamboats, and steam locomotives.",
+      "sourceReference": "Section 4.7, Pages 78-79"
+    },
+    {
+      "id": "HIS-G09-U04-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "What was the long-term political and ecclesiastical significance of the Great Schism of 1054 in European history?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It united the Byzantine monarchy with the Papacy in Rome to defeat Ottoman armies in the Balkans"
+        },
+        {
+          "id": "B",
+          "text": "It permanently split Christianity into the Eastern Orthodox Church and the Roman Catholic Church, consolidating the Orthodox Church as an imperial institution closely tied to the Byzantine emperor"
+        },
+        {
+          "id": "C",
+          "text": "It led to the immediate adoption of Protestantism by the German princes of the Holy Roman Empire"
+        },
+        {
+          "id": "D",
+          "text": "It eliminated all linguistic differences across Europe by enforcing Greek as the universal language of liturgy"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In 1054, theological and jurisdictional disputes caused the official separation between the Roman Catholic Church and the Eastern Orthodox Church, solidifying the Orthodox Church as the national church that supported Byzantine imperial authority.",
+      "sourceReference": "Section 4.1.3, Page 67"
+    },
+    {
+      "id": "HIS-G09-U04-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "How did the Ottoman Turkish domination of the Eastern Mediterranean directly accelerate the European Age of Explorations in the 15th and 16th centuries?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The Ottomans financed Portuguese voyages across the Pacific Ocean to spread Islam to Latin America"
+        },
+        {
+          "id": "B",
+          "text": "European rulers sought military alliances with Native American empires against the Sultan"
+        },
+        {
+          "id": "C",
+          "text": "European merchants abandoned oceanic trade completely and focused entirely on local manor agriculture"
+        },
+        {
+          "id": "D",
+          "text": "Ottoman control over traditional overland and Red Sea trading routes led to high tariffs, compelling Atlantic nations like Portugal and Spain to pioneer all-water routes to the Far East"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "Because the Ottoman Turks blockaded and levied high taxes on the old overland trade routes connecting Europe to India and China, Western European seafaring nations (especially Portugal and Spain) were motivated to discover direct ocean routes.",
+      "sourceReference": "Section 4.4, Pages 72-73"
+    },
+    {
+      "id": "HIS-G09-U04-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "In what manner did the Protestant Reformation interact with the emergence of modern sovereign nation-states and capitalism in Western Europe?",
+      "options": [
+        {
+          "id": "A",
+          "text": "By challenging papal supremacy and church taxation, endorsing the political independence of secular monarchs, and aligning with the principles of individualism and capital accumulation"
+        },
+        {
+          "id": "B",
+          "text": "By reinforcing the feudal manorial monopoly and forbidding merchants from charging commercial interest on capital"
+        },
+        {
+          "id": "C",
+          "text": "By subordinating all northern European monarchs to the judicial authority of the College of Cardinals"
+        },
+        {
+          "id": "D",
+          "text": "By outlawing all private ownership of industrial enterprises across Switzerland, England, and the Netherlands"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Protestant reformers attacked the universal supremacy and financial extractions of the Roman Church, strengthened national rulers who created state churches, and supported the socio-economic ideals of individualism, enterprise, and early capitalism.",
+      "sourceReference": "Section 4.6, Pages 76-77"
+    },
+    {
+      "id": "HIS-G09-U04-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Which statement accurately explains why the transition from the domestic handicraft system to the industrial factory system created sharp socio-economic class polarization?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It allowed rural serfs to buy out noble manors and establish communal agricultural estates"
+        },
+        {
+          "id": "B",
+          "text": "It redistributed factory profits equally among guild masters, apprentices, and feudal lords"
+        },
+        {
+          "id": "C",
+          "text": "It concentrated productive machinery, raw materials, and profits in the hands of the bourgeoisie, while turning workers into wage-earning proletarians subjected to harsh discipline and insecure livelihoods"
+        },
+        {
+          "id": "D",
+          "text": "It eliminated urban wage labor by returning the majority of manufacturing tasks back to cottage workshops"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The factory system replaced home-based handcrafts with centralized machine manufacturing, creating a fundamental class divide between the bourgeoisie (who owned the factories, machines, and capital) and the proletariat (who possessed only their labor, earning low wages under strict discipline).",
+      "sourceReference": "Section 4.7, Pages 78-79"
+    }
+  ]
 }

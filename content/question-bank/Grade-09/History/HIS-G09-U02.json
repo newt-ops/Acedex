@@ -3,5 +3,351 @@
   "subject": "History",
   "unitNumber": 2,
   "unitTitle": "Ancient World Civilizations up to c. 500 AD",
-  "questions": []
+  "questions": [
+    {
+      "id": "HIS-G09-U02-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which historic ruler is credited with uniting Upper and Lower Egypt around 3200 BC and establishing the capital at Memphis?",
+      "options": [
+        { "id": "A", "text": "Thutmose III" },
+        { "id": "B", "text": "Menes" },
+        { "id": "C", "text": "Piankhi" },
+        { "id": "D", "text": "Khufu" }
+      ],
+      "correctOptionId": "B",
+      "explanation": "According to ancient historical tradition, Upper and Lower Egypt were unified by King Menes around 3200 BC, who established Egypt's first unified capital at Memphis in the delta region.",
+      "sourceReference": "Section 2.1.1, Page 23"
+    },
+    {
+      "id": "HIS-G09-U02-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What non-alphabetic writing system was invented by the Sumerians of ancient Mesopotamia using wedge-shaped marks on clay tablets?",
+      "options": [
+        { "id": "A", "text": "Cuneiform" },
+        { "id": "B", "text": "Hieroglyphics" },
+        { "id": "C", "text": "Logographic script" },
+        { "id": "D", "text": "Aramaic alphabet" }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The Sumerians developed a complex writing system around 3200 BC known as cuneiform, which consisted of wedge-shaped ideographs impressed upon soft clay tablets that were subsequently dried in the sun.",
+      "sourceReference": "Section 2.2.1, Page 26"
+    },
+    {
+      "id": "HIS-G09-U02-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which ancient Asian empire, founded by Cyrus the Great around 550 BC, was celebrated for constructing extensive roads and creating the world's first organized postal service?",
+      "options": [
+        { "id": "A", "text": "The Babylonian Empire" },
+        { "id": "B", "text": "The Assyrian Empire" },
+        { "id": "C", "text": "The Persian Empire" },
+        { "id": "D", "text": "The Shang Dynasty" }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The Persian Empire, established by Cyrus the Great around 550 BC, became the largest empire in the ancient world and made notable contributions to state administration by building networks of roads and introducing the world's first postal service.",
+      "sourceReference": "Section 2.2.2, Pages 26-27"
+    },
+    {
+      "id": "HIS-G09-U02-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What common historical fate was shared by the ancient Latin American civilizations of the Maya, the Aztecs, and the Incas?",
+      "options": [
+        {
+          "id": "A",
+          "text": "They were built exclusively along major river valleys and relied on wheat cultivation"
+        },
+        {
+          "id": "B",
+          "text": "They unified under a single centralized Andean emperor"
+        },
+        {
+          "id": "C",
+          "text": "They collapsed entirely due to prolonged internal peasant revolts before 1000 AD"
+        },
+        {
+          "id": "D",
+          "text": "They were conquered and brought to an end by Spanish colonial forces in the 16th and 17th centuries"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "All three major civilizations of the Americas encountered Spanish conquistadors: the Aztecs were defeated in 1521, the Incas were conquered after 1532, and Spanish control over the Maya region was completed in the late 17th century.",
+      "sourceReference": "Section 2.3, Pages 29-30"
+    },
+    {
+      "id": "HIS-G09-U02-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In the Roman Republic established in 509 BC, who held the executive authority at the head of the government for a one-year term?",
+      "options": [
+        { "id": "A", "text": "Tribunes" },
+        { "id": "B", "text": "Two elected Consuls" },
+        { "id": "C", "text": "Permanent lifetime Senators" },
+        { "id": "D", "text": "Military Emperors" }
+      ],
+      "correctOptionId": "B",
+      "explanation": "After Roman nobles overthrew the monarchy in 509 BC, the executive branch of the Roman Republic was led by two elected officials called Consuls, each serving for a term of only one year.",
+      "sourceReference": "Section 2.4.2, Pages 32-33"
+    },
+    {
+      "id": "HIS-G09-U02-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which development best explains why the Nubian city of Meroe became a major industrial and commercial center of the ancient Nile valley?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It developed an extensive iron-smelting industry and traded metal products across regional networks"
+        },
+        {
+          "id": "B",
+          "text": "It maintained an absolute monopoly over maritime shipbuilding on the Mediterranean Sea"
+        },
+        {
+          "id": "C",
+          "text": "It replaced agriculture entirely with trans-Saharan salt mining"
+        },
+        {
+          "id": "D",
+          "text": "It adopted the Greek language as its sole imperial medium of diplomacy"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Meroe possessed rich timber and ore resources, enabling it to become an important center of metallurgy and iron technology producing gold, copper, silver, and iron tools that sustained its economy and regional power.",
+      "sourceReference": "Section 2.1.2, Page 25"
+    },
+    {
+      "id": "HIS-G09-U02-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In the social hierarchy of ancient India that developed following the Indo-Aryan migrations, which class occupied the highest tier?",
+      "options": [
+        { "id": "A", "text": "Kshatriyas (rulers and warriors)" },
+        { "id": "B", "text": "Vaishyas (merchants and farmers)" },
+        { "id": "C", "text": "Brahmins (priestly and academic class)" },
+        { "id": "D", "text": "Shudras (manual laborers)" }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Ancient Indian society was divided hierarchically into distinct hereditary groups, where the Brahmins formed the priestly and academic class at the summit of the social order.",
+      "sourceReference": "Section 2.2.3, Page 27"
+    },
+    {
+      "id": "HIS-G09-U02-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What primary military and strategic objective motivated ancient Chinese dynasties to construct and maintain the Great Wall of China?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To prevent maritime trade along the Pacific coastline"
+        },
+        {
+          "id": "B",
+          "text": "To mark the boundary between the Roman Empire and the Han Dynasty"
+        },
+        {
+          "id": "C",
+          "text": "To facilitate irrigation projects connecting the Yellow River and the Yangtze"
+        },
+        {
+          "id": "D",
+          "text": "To protect Chinese agricultural civilization from invasions by nomadic peoples of Central Asia"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "The Great Wall of China was constructed across northern frontiers to defend Chinese settled agricultural society against repeated invasions and raids by nomadic pastoral groups from Central Asia.",
+      "sourceReference": "Section 2.2.4, Page 28"
+    },
+    {
+      "id": "HIS-G09-U02-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What major intellectual and scientific breakthrough did Maya priests achieve to fulfill their religious and agricultural scheduling needs?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The discovery of the magnetic compass for oceanic voyages"
+        },
+        {
+          "id": "B",
+          "text": "The development of a 365-day solar calendar and a numbering system incorporating the concept of zero"
+        },
+        {
+          "id": "C",
+          "text": "The invention of movable metal type printing for administrative archives"
+        },
+        {
+          "id": "D",
+          "text": "The creation of an alphabetic script consisting of 24 consonants"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Maya priests required precise time measurements to perform religious rituals and track seasons, leading them to become expert astronomers and mathematicians who devised an accurate 365-day solar calendar and a base-20 numbering system using zero.",
+      "sourceReference": "Section 2.3.1, Page 29"
+    },
+    {
+      "id": "HIS-G09-U02-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What distinguished the democratic political system of classical Athens from modern representative democracies?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Athenian citizens voted directly on laws and state policies rather than electing parliamentary representatives"
+        },
+        {
+          "id": "B",
+          "text": "Athenian democracy extended universal voting rights to women, resident foreigners, and slaves"
+        },
+        {
+          "id": "C",
+          "text": "Executive power in Athens was held by a hereditary monarch advised by religious elders"
+        },
+        {
+          "id": "D",
+          "text": "Citizens exercised authority exclusively through written referendums administered by military commanders"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Athens practiced direct democracy, where eligible adult male citizens assembled to debate and vote directly on legislation and government decisions, unlike modern representative democracies where citizens elect officials to make decisions on their behalf.",
+      "sourceReference": "Section 2.4.1, Page 31"
+    },
+    {
+      "id": "HIS-G09-U02-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What was the historical significance of the Edict of Milan issued by Roman Emperor Constantine in 313 AD?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It divided the Roman Empire permanently into Eastern and Western halves"
+        },
+        {
+          "id": "B",
+          "text": "It banished all non-Christian philosophers from the city of Rome"
+        },
+        {
+          "id": "C",
+          "text": "It granted religious toleration throughout the empire, ending official persecutions of Christians"
+        },
+        {
+          "id": "D",
+          "text": "It established the Bishop of Rome as the sole political ruler of the Mediterranean world"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The Edict of Milan, granted by Emperor Constantine in 313 AD, ordered religious toleration for Christianity within the Roman Empire, terminating centuries of persecution and paving the way for it to become the state religion.",
+      "sourceReference": "Section 2.5, Pages 34-35"
+    },
+    {
+      "id": "HIS-G09-U02-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "How did the political conception of the ruler in ancient Egypt differ fundamentally from that in Sumerian city-states?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Sumerian kings were worshiped as living gods on earth, whereas Egyptian pharaohs were elected magistrates"
+        },
+        {
+          "id": "B",
+          "text": "Egyptian pharaohs were restricted by written legal constitutions, whereas Sumerian rulers exercised unlimited power"
+        },
+        {
+          "id": "C",
+          "text": "Sumerian rulers held office through hereditary succession, while Egyptian pharaohs were selected by high priests"
+        },
+        {
+          "id": "D",
+          "text": "Egyptian pharaohs were regarded as incarnated gods themselves, whereas Sumerian lugals governed as mortal earthly representatives of their city-state's patron deity"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "In ancient Egypt, the pharaoh was viewed as a divine living god who maintained cosmic order (Ma'at) and would continue as a god after death; in contrast, Sumerian monarchs (lugals) derived divine authority as earthly agents and high servants appointed to represent the city's supreme god.",
+      "sourceReference": "Section 2.1.1 & Section 2.2.1, Pages 23, 26"
+    },
+    {
+      "id": "HIS-G09-U02-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "What was the primary geopolitical consequence of Rome's total victory over Carthage in the three Punic Wars (264–146 BC)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It forced Rome to abandon its overseas possessions and establish an isolated monarchy"
+        },
+        {
+          "id": "B",
+          "text": "It eliminated Rome's chief naval rival, establishing unchallenged Roman hegemony across the western Mediterranean"
+        },
+        {
+          "id": "C",
+          "text": "It caused Carthage to conquer southern Gaul and unite the Iberian peninsula"
+        },
+        {
+          "id": "D",
+          "text": "It compelled the Roman Senate to dismantle its standing army and rely entirely on foreign mercenaries"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The Punic Wars resulted in the destruction of Carthage, allowing Rome to secure complete naval dominance, absorb North African and Iberian territories, and transform from a regional Italian power into an expansive Mediterranean empire.",
+      "sourceReference": "Section 2.4.2, Pages 32-33"
+    },
+    {
+      "id": "HIS-G09-U02-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "How did Buddhism's core theological and social message, as articulated by Siddhartha Gautama, challenge the prevailing tenets of early Hinduism?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It proposed a 'middle way' to spiritual salvation open to all individuals regardless of hereditary caste distinctions, rejecting extreme asceticism and ritualism"
+        },
+        {
+          "id": "B",
+          "text": "It demanded the absolute centralization of imperial power under an infallible priestly aristocracy"
+        },
+        {
+          "id": "C",
+          "text": "It eliminated all belief in karma and prohibited the practice of meditation"
+        },
+        {
+          "id": "D",
+          "text": "It enforced strict animal sacrifices as the exclusive requirement to achieve spiritual enlightenment"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Emerging as a reform movement within the Vedic/Hindu context, Buddhism rejected caste-based spiritual exclusivity, animal sacrifices, and extreme mortification, preaching the Four Noble Truths and the Eightfold Path ('the middle way') accessible to anyone seeking Nirvana.",
+      "sourceReference": "Section 2.2.3, Pages 27-28"
+    },
+    {
+      "id": "HIS-G09-U02-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Which statement accurately contrasts the physical infrastructure and geographical orientation of the Aztec Empire with that of the Inca Empire?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The Aztecs constructed their empire across high Andean valleys using suspension bridges, whereas the Incas built their capital on an island in Lake Texcoco"
+        },
+        {
+          "id": "B",
+          "text": "The Aztecs developed maritime trading fleets across the Pacific, while the Incas relied strictly on riverine canoes in the Amazon basin"
+        },
+        {
+          "id": "C",
+          "text": "The Aztecs centered their urban state around Tenochtitlan in the lacustrine Valley of Mexico, whereas the Incas engineered thousands of kilometers of paved mountain roads across the Andean cordillera"
+        },
+        {
+          "id": "D",
+          "text": "The Aztecs abolished agricultural terraces, while the Incas relied solely on rain-fed chinampa wetland farming"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The Aztec civilization was centered around their island capital of Tenochtitlan in the Valley of Mexico (modern Mexico City), utilizing causeways and chinampas, whereas the Inca Empire encompassed vast western South American territories linked through an extraordinary system of mountain roads, bridges, and runner communications.",
+      "sourceReference": "Section 2.3.2 & Section 2.3.3, Pages 29-30"
+    }
+  ]
 }

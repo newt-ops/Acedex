@@ -3,5 +3,342 @@
   "subject": "History",
   "unitNumber": 8,
   "unitTitle": "Post-1991 Developments in Ethiopia",
-  "questions": []
+  "questions": [
+    {
+      "id": "HIS-G10-U08-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Who served as the international mediator on behalf of the United States government during the May 1991 London Conference between the collapsing Derg regime and insurgent forces?",
+      "options": [
+        { "id": "A", "text": "Robert Skinner" },
+        { "id": "B", "text": "Herman Cohen" },
+        { "id": "C", "text": "Jonathan Dimbleby" },
+        { "id": "D", "text": "George Marshall" }
+      ],
+      "correctOptionId": "B",
+      "explanation": "United States Assistant Secretary of State for African Affairs Herman Cohen served as the principal mediator at the May 1991 London Conference convened to explore a political transition prior to the entry of EPRDF forces into Addis Ababa.",
+      "sourceReference": "Section 8.1.1, Page 195"
+    },
+    {
+      "id": "HIS-G10-U08-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Who was elected by the Council of Representatives as President of the Transitional Government of Ethiopia (TGE) in July 1991?",
+      "options": [
+        { "id": "A", "text": "Negaso Gidada" },
+        { "id": "B", "text": "Tesfaye Dinka" },
+        { "id": "C", "text": "Meles Zenawi" },
+        { "id": "D", "text": "Lencho Letta" }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Following the adoption of the Transitional Charter in July 1991, the 87-member Council of Representatives elected Meles Zenawi as Chairman of the Council of Representatives and President of the Transitional Government of Ethiopia.",
+      "sourceReference": "Section 8.1.1, Page 196"
+    },
+    {
+      "id": "HIS-G10-U08-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which constitutional organ is vested with the supreme authority of constitutional interpretation under Article 62 of the 1995 FDRE Constitution?",
+      "options": [
+        { "id": "A", "text": "The Federal Supreme Court" },
+        { "id": "B", "text": "The House of Peoples' Representatives" },
+        { "id": "C", "text": "The Council of Constitutional Inquiry" },
+        { "id": "D", "text": "The House of Federation" }
+      ],
+      "correctOptionId": "D",
+      "explanation": "Under Article 62 of the 1995 FDRE Constitution, the ultimate power of interpreting the federal constitution is explicitly assigned to the House of Federation (HoF), which represents the nations, nationalities, and peoples of Ethiopia.",
+      "sourceReference": "Section 8.1.2, Page 197"
+    },
+    {
+      "id": "HIS-G10-U08-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "From which specific geographic location in the highlands of Western Gojjam does the Blue Nile (Gilgel Abay) originate?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Sekela, approximately 100 km south of Lake Tana"
+        },
+        { "id": "B", "text": "The Semien Mountains northeast of Gondar" },
+        { "id": "C", "text": "The Gafat plateau near Debre Tabor" },
+        { "id": "D", "text": "The volcanic crater lakes of Bishoftu" }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The source of the Blue Nile originates in the highlands of Western Gojjam at Sekela, situated roughly 100 kilometers south of Lake Tana, where it first flows as the Gilgel Abay into Lake Tana.",
+      "sourceReference": "Section 8.2.1, Page 200"
+    },
+    {
+      "id": "HIS-G10-U08-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In which national regional state of Ethiopia is the Grand Ethiopian Renaissance Dam (GERD) constructed along the Abay River?",
+      "options": [
+        { "id": "A", "text": "Amhara Regional State" },
+        { "id": "B", "text": "Gambella Regional State" },
+        { "id": "C", "text": "Benishangul-Gumuz Regional State" },
+        { "id": "D", "text": "Oromia Regional State" }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The construction of the Grand Ethiopian Renaissance Dam (GERD), initiated in April 2011, is situated in the Benishangul-Gumuz Regional State on the main stem of the Abay (Blue Nile) River.",
+      "sourceReference": "Section 8.2.1, Page 202"
+    },
+    {
+      "id": "HIS-G10-U08-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What mutual political compromise regarding Eritrea was adopted during the July 1991 Addis Ababa Transitional Conference?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Eritrea was declared an autonomous imperial protectorate under joint British and Ethiopian supervision"
+        },
+        {
+          "id": "B",
+          "text": "A referendum on Eritrean independence was scheduled within two years, while the EPLF granted Ethiopia free port access to Assab"
+        },
+        {
+          "id": "C",
+          "text": "The United Nations Trusteeship Council was given direct executive control over the port of Massawa for ten years"
+        },
+        {
+          "id": "D",
+          "text": "Eritrea was permanently partitioned into a highland Christian province and a western lowland Muslim territory"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "During the July 1991 Transitional Conference, the right to conduct an internationally observed referendum on independence within two years was endorsed for Eritrea, while the EPLF agreed to allow Ethiopia the use of the port of Assab as a free port.",
+      "sourceReference": "Section 8.1.1, Page 196"
+    },
+    {
+      "id": "HIS-G10-U08-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which article of the 1995 FDRE Constitution grants ethno-national communities the unconditional right to self-determination, up to and including secession?",
+      "options": [
+        { "id": "A", "text": "Article 39" },
+        { "id": "B", "text": "Article 13" },
+        { "id": "C", "text": "Article 62" },
+        { "id": "D", "text": "Article 106" }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Article 39 of the 1995 Federal Constitution explicitly recognizes the right of every Nation, Nationality, and People in Ethiopia to self-determination, including the right to promote their culture, self-govern, and secede from the federation.",
+      "sourceReference": "Section 8.1.2, Page 197"
+    },
+    {
+      "id": "HIS-G10-U08-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How are executive and legislative powers structured between the two chambers under the parliamentary system established by the 1995 FDRE Constitution?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The House of Federation drafts national civil legislation while the House of Peoples' Representatives interprets customary law"
+        },
+        {
+          "id": "B",
+          "text": "Both chambers hold equal veto authority over all cabinet ministerial appointments and executive treaties"
+        },
+        {
+          "id": "C",
+          "text": "The House of Federation serves as the supreme law-making organ, whereas the House of Peoples' Representatives serves solely as an advisory council for regional governors"
+        },
+        {
+          "id": "D",
+          "text": "The House of Peoples' Representatives acts as the supreme law-making body elected for five-year terms, while the House of Federation represents ethnic communities and resolves constitutional questions"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "The 1995 FDRE Constitution sets up a bicameral structure where the House of Peoples' Representatives (HPR) acts as the highest legislative body with law-making and government oversight powers, while the House of Federation (HoF) represents ethnic groups and handles constitutional interpretation.",
+      "sourceReference": "Section 8.1.2, Page 197"
+    },
+    {
+      "id": "HIS-G10-U08-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What specific annual water volume allocation was codified under the 1959 Nile Waters Agreement between Egypt and Sudan, completely excluding upstream riparian nations?",
+      "options": [
+        {
+          "id": "A",
+          "text": "40.0 billion cubic meters for Egypt and 34.0 billion cubic meters for Sudan"
+        },
+        {
+          "id": "B",
+          "text": "55.5 billion cubic meters for Egypt and 18.5 billion cubic meters for Sudan"
+        },
+        {
+          "id": "C",
+          "text": "74.0 billion cubic meters for Egypt and 4.0 billion cubic meters for Sudan"
+        },
+        {
+          "id": "D",
+          "text": "68.0 billion cubic meters for Egypt and 16.0 billion cubic meters for Sudan"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The 1959 bilateral agreement between Cairo and Khartoum divided the full annual measurable flow of the Nile, assigning 55.5 billion cubic meters per year to Egypt and 18.5 billion cubic meters to Sudan, leaving no quota for upstream states like Ethiopia.",
+      "sourceReference": "Section 8.2.1, Page 201"
+    },
+    {
+      "id": "HIS-G10-U08-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What was the landmark significance of the Nile Basin Initiative (NBI) launched in Dar es Salaam, Tanzania, on February 22, 1999?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It ratified the 1929 Anglo-Egyptian treaty as permanently binding on all African Great Lakes countries"
+        },
+        {
+          "id": "B",
+          "text": "It transferred total administrative management of all Nile river headwaters to the United Nations Security Council"
+        },
+        {
+          "id": "C",
+          "text": "It established the first all-inclusive basin-wide forum for consultation, coordination, and sustainable shared water management among all riparian states"
+        },
+        {
+          "id": "D",
+          "text": "It legally prohibited upstream countries from building hydroelectric dams on any tributaries of the Blue Nile"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "On February 22, 1999, water ministers from Nile Basin countries established the Nile Basin Initiative (NBI) in Dar es Salaam, creating the first comprehensive, inclusive institutional framework for dialogue and equitable water resource cooperation.",
+      "sourceReference": "Section 8.2.1, Page 202"
+    },
+    {
+      "id": "HIS-G10-U08-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What was the developmental rationale behind the Agricultural Development Led Industrialization (ADLI) strategy adopted by the Ethiopian government in the 1990s?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Boosting smallholder agricultural productivity to produce rural surpluses that stimulate consumer purchasing power and generate market demand for domestic industrial goods"
+        },
+        {
+          "id": "B",
+          "text": "Prioritizing urban heavy metallurgy to manufacture tractors before investing in rural peasant education"
+        },
+        {
+          "id": "C",
+          "text": "Nationalizing all agrarian land into centralized state-run collective farms modelled after the Soviet Five-Year Plans"
+        },
+        {
+          "id": "D",
+          "text": "Transitioning exclusively to mineral oil extraction while subsidizing grain imports from international markets"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The ADLI strategy aimed to transform Ethiopia's agrarian economy by increasing peasant agricultural yields; the resulting rural surplus was expected to feed the nation, supply agro-processing industries with raw materials, and create a broad consumer market for locally manufactured goods.",
+      "sourceReference": "Section 8.2.2, Page 204"
+    },
+    {
+      "id": "HIS-G10-U08-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Which statement accurately evaluates the institutional and demographic complexities arising from the internal asymmetry of the regional states established under the 1995 FDRE Constitution?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Every regional state was formed with identical geographical landmasses and culturally homogeneous single-clan populations"
+        },
+        {
+          "id": "B",
+          "text": "Significant demographic and territorial disparities exist—with Oromia and Amhara together constituting roughly 70% of the population—while regions like SNNPRS, Gambella, and Benishangul-Gumuz encompass multiple heterogeneous ethnic groups requiring complex power-sharing mechanisms"
+        },
+        {
+          "id": "C",
+          "text": "All member states possess absolute legal authority to issue sovereign national currencies and conduct independent military treaties with foreign powers"
+        },
+        {
+          "id": "D",
+          "text": "The constitution strictly mandated that each of the nine regional states adopt identical local vernacular languages for all state court and primary school systems"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Ethiopian federalism displays marked geographic and demographic asymmetry: Oromia spans one-third of the country and alongside Amhara comprises roughly 70% of the populace, whereas small states like Harari occupy only 340 square kilometers; moreover, states such as SNNPRS (with around 56 ethnic groups), Gambella, and Benishangul-Gumuz are internally diverse, making rigid territorial homogeneity impossible.",
+      "sourceReference": "Section 8.1.2, Pages 198-199"
+    },
+    {
+      "id": "HIS-G10-U08-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Why did the historical Nile water treaties of 1929 and 1959 produce an enduring hydro-political impasse between downstream states and upstream Ethiopia?",
+      "options": [
+        {
+          "id": "A",
+          "text": "They allocated the majority of the river's volume to the East African Great Lakes nations while levying financial fines on Egyptian farmers"
+        },
+        {
+          "id": "B",
+          "text": "They required Egypt and Sudan to surrender all customs revenues collected along the Suez Canal directly to Addis Ababa"
+        },
+        {
+          "id": "C",
+          "text": "They dissolved all border regulations between upstream and downstream states, enabling unregulated mass migration across the Nile Delta"
+        },
+        {
+          "id": "D",
+          "text": "They codified an exclusive bilateral volumetric monopoly and veto power for Egypt and Sudan, completely ignoring the sovereign rights of upstream states like Ethiopia that contributes roughly 86% of the Nile's total annual discharge"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "The 1929 British-brokered pact and the 1959 Cairo-Khartoum agreement divided 100% of the utilized Nile waters between Egypt (55.5 bcm) and Sudan (18.5 bcm) and granted Egypt veto privileges over upstream works; upstream countries, especially Ethiopia (which supplies 86% of the river's flow via the Blue Nile and Tekeze), were not parties to these agreements and rejected their validity, pushing instead for equitable utilization.",
+      "sourceReference": "Section 8.2.1, Pages 200-202"
+    },
+    {
+      "id": "HIS-G10-U08-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "How did the political dynamics and subsequent aftermath of the May 2005 Ethiopian general elections mark a critical juncture in the country's democratization process under the EPRDF?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Opposition coalitions boycotted the entire voting process, resulting in an uncontested 100% parliamentary victory for the ruling party"
+        },
+        {
+          "id": "B",
+          "text": "The election proceeded without any contested seats, leading to a peaceful, voluntary dissolution of the House of Federation"
+        },
+        {
+          "id": "C",
+          "text": "Competitive campaigning enabled opposition alliances (such as CUD and UEDF) to capture 173 parliamentary seats and win Addis Ababa, but disputed results, premature victory proclamations, street protests, and state crackdowns led to the imprisonment of opposition figures and shrinking political space"
+        },
+        {
+          "id": "D",
+          "text": "The military council intervened directly to annul the 1995 Constitution and restore the 1974 Provisional Military Administrative Council"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The 2005 national election witnessed unprecedented voter turnout and major gains for opposition coalitions (CUD and UEDF), which captured all parliamentary seats in Addis Ababa and 173 seats nationwide; however, mutual accusations of vote fraud, premature declarations of victory, and subsequent deadly street protests led to the arrest of major opposition leaders and journalists, setting back democratic openings.",
+      "sourceReference": "Section 8.2.2, Pages 205-206"
+    },
+    {
+      "id": "HIS-G10-U08-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "In what foundational way did the 1995 FDRE Constitution depart from the political philosophy of earlier Ethiopian constitutional frameworks (1931, 1955, and 1987) regarding the locus of national sovereignty?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It vested ultimate sovereignty not in the monarch, the unitary central state, or an undifferentiated citizenry, but directly in the 'Nations, Nationalities, and Peoples of Ethiopia' as the constituent holders of sovereign power"
+        },
+        {
+          "id": "B",
+          "text": "It restored hereditary nobility as the sole source of executive authority across provincial courts"
+        },
+        {
+          "id": "C",
+          "text": "It established a mono-party vanguard dictatorship modeled precisely on the 1987 Workers' Party of Ethiopia"
+        },
+        {
+          "id": "D",
+          "text": "It declared that all judicial and political sovereignty was derived from the divine mandate of the Ethiopian Orthodox Church"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Unlike the 1931 and 1955 imperial constitutions (which centered absolute sovereignty in the Emperor) and the 1987 PDRE constitution (which maintained a unitary Marxist state), the 1995 FDRE Constitution founded the federation on ethnic sovereignty, explicitly declaring that all sovereign authority resides in the Nations, Nationalities, and Peoples of Ethiopia.",
+      "sourceReference": "Section 8.1.2, Pages 197-198"
+    }
+  ]
 }

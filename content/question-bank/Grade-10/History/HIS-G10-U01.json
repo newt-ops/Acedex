@@ -2,6 +2,364 @@
   "grade": 10,
   "subject": "History",
   "unitNumber": 1,
-  "unitTitle": "Development of Capitalism and Nationalism 1815-1914",
-  "questions": []
+  "unitTitle": "Development of Capitalism and Nationalism 1815 to 1914",
+  "questions": [
+    {
+      "id": "HIS-G10-U01-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which of the following is a primary characteristic feature of a capitalist economic system?",
+      "options": [
+        {
+          "id": "A",
+          "text": "State-directed allocation of production quotas and fixed retail prices"
+        },
+        {
+          "id": "B",
+          "text": "Public and collective ownership of industrial factories by municipal councils"
+        },
+        {
+          "id": "C",
+          "text": "Private ownership of the means of production operated for profit in a competitive market"
+        },
+        {
+          "id": "D",
+          "text": "Prohibition of wage labor in favor of traditional agrarian feudal tenancy"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "In a capitalist economic system, the means of production (factories, machinery, capital) are privately owned by individuals or corporations who operate them for profit, with prices and production volume determined primarily by supply and demand in a market economy.",
+      "sourceReference": "Section 1.1, Pages 2-3"
+    },
+    {
+      "id": "HIS-G10-U01-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which Italian nationalist founded the society known as 'Young Italy' in 1831 to promote the creation of a unified, democratic Italian republic?",
+      "options": [
+        { "id": "A", "text": "Count Camillo di Cavour" },
+        { "id": "B", "text": "Giuseppe Mazzini" },
+        { "id": "C", "text": "Victor Emmanuel II" },
+        { "id": "D", "text": "Giuseppe Garibaldi" }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Giuseppe Mazzini was a dedicated writer and nationalist who founded 'Young Italy' in 1831, inspiring the Italian youth with the ideal of a free, independent, and republican nation.",
+      "sourceReference": "Section 1.2.1, Pages 8-9"
+    },
+    {
+      "id": "HIS-G10-U01-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What was the Zollverein, established under Prussian leadership in 1834?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A customs union that removed internal tariffs on trade among German states"
+        },
+        {
+          "id": "B",
+          "text": "A military mutual defense pact between Prussia and the Austrian Empire"
+        },
+        {
+          "id": "C",
+          "text": "A legislative assembly representing the landed nobility of the Junker class"
+        },
+        {
+          "id": "D",
+          "text": "An educational council established to standardize German primary schooling"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The Zollverein, created in 1834, was an economic customs union between German states under Prussian sponsorship that eliminated internal tariffs and spurred trade, laying the economic foundation for political unification.",
+      "sourceReference": "Section 1.2.2, Page 13"
+    },
+    {
+      "id": "HIS-G10-U01-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which constitutional amendment adopted on December 6, 1865, officially outlawed slavery throughout the United States?",
+      "options": [
+        { "id": "A", "text": "Tenth Amendment" },
+        { "id": "B", "text": "Fourteenth Amendment" },
+        { "id": "C", "text": "Fifteenth Amendment" },
+        { "id": "D", "text": "Thirteenth Amendment" }
+      ],
+      "correctOptionId": "D",
+      "explanation": "On December 6, 1865, following the conclusion of the American Civil War, the Thirteenth Amendment to the United States Constitution was officially adopted, legally abolishing slavery throughout the nation.",
+      "sourceReference": "Section 1.2.3, Page 18"
+    },
+    {
+      "id": "HIS-G10-U01-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In 19th-century European diplomacy, the phrase 'The Eastern Question' referred primarily to the geopolitical challenges arising from the decay of which empire?",
+      "options": [
+        { "id": "A", "text": "The Austro-Hungarian Empire" },
+        { "id": "B", "text": "The Ottoman Turkish Empire" },
+        { "id": "C", "text": "The Russian Tsarist Empire" },
+        { "id": "D", "text": "The Persian Qajar Empire" }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The 'Eastern Question' was an international diplomatic dilemma regarding the fate of the declining Ottoman Empire ('the sick man of Europe'), the rise of national liberation movements in the Balkans, and the competing ambitions of European Great Powers in the region.",
+      "sourceReference": "Section 1.2.4, Pages 19-20"
+    },
+    {
+      "id": "HIS-G10-U01-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How did 18th-century transatlantic commerce directly facilitate the rise of industrial capitalism in Western Europe?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Vast fortunes accumulated from the slave trade and colonial plantations provided the investment capital that funded factory industrialization"
+        },
+        {
+          "id": "B",
+          "text": "It eliminated all competition by legally binding colonial artisans into British craft guilds"
+        },
+        {
+          "id": "C",
+          "text": "It forced European monarchs to surrender state monopolies directly to American farmers"
+        },
+        {
+          "id": "D",
+          "text": "It caused the rapid migration of millions of European factory workers to Caribbean sugar estates"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Europeans amassed enormous amounts of capital through colonial plantation networks producing sugar, cotton, and tobacco, alongside the transatlantic slave trade; these accumulated riches (capital) were subsequently invested to finance mechanization and factory industrialization in port and manufacturing cities like Liverpool and Manchester.",
+      "sourceReference": "Section 1.1, Pages 2-3"
+    },
+    {
+      "id": "HIS-G10-U01-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What secret diplomatic agreement did Prime Minister Count Camillo di Cavour conclude with Emperor Napoleon III of France in 1858?",
+      "options": [
+        {
+          "id": "A",
+          "text": "France promised to surrender Corsica to Sardinia in exchange for naval bases in Genoa"
+        },
+        {
+          "id": "B",
+          "text": "Sardinia agreed to join the French invasion of Mexico in exchange for Austrian territory"
+        },
+        {
+          "id": "C",
+          "text": "France agreed to help drive Austrian forces out of Lombardy and Venetia in return for receiving Nice and Savoy"
+        },
+        {
+          "id": "D",
+          "text": "France promised to depose the Pope in Rome if Sardinia accepted French royal governance"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "In 1858, Cavour and Napoleon III concluded a secret pact wherein France agreed to send troops to expel Austria from northern Italy (Lombardy and Venetia) if Austria declared war on Piedmont-Sardinia; in exchange for this assistance, Cavour promised to cede Nice and Savoy to France.",
+      "sourceReference": "Section 1.2.1, Pages 9-10"
+    },
+    {
+      "id": "HIS-G10-U01-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What was the immediate political consequence of Prussia's swift victory over the Austrian army at the Battle of Königgrätz (Sadowa) in July 1866?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The complete annexation of the Austro-Hungarian Empire by Prussia"
+        },
+        {
+          "id": "B",
+          "text": "The restoration of French military control over the German Rhineland"
+        },
+        {
+          "id": "C",
+          "text": "The dissolution of the Zollverein customs union by southern German princes"
+        },
+        {
+          "id": "D",
+          "text": "The exclusion of Austria from German affairs and the formation of the Prussian-led North German Confederation"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "At the Battle of Königgrätz (Sadowa) on July 3, 1866, Prussian forces decisively routed Austria; this victory ended Austrian leadership in Germany, dissolved the old German Confederation, and established the North German Confederation dominated by Prussia.",
+      "sourceReference": "Section 1.2.2, Page 14"
+    },
+    {
+      "id": "HIS-G10-U01-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which French provinces were annexed by the newly proclaimed German Empire under the Treaty of Frankfurt following the Franco-Prussian War of 1870–1871?",
+      "options": [
+        { "id": "A", "text": "Alsace and Lorraine" },
+        { "id": "B", "text": "Nice and Savoy" },
+        { "id": "C", "text": "Schleswig and Holstein" },
+        { "id": "D", "text": "Flanders and Wallonia" }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Following France's defeat in the Franco-Prussian War (1870-1871), the Treaty of Frankfurt forced France to surrender its border provinces of Alsace and Lorraine to the newly unified German Empire, instigating enduring French resentment.",
+      "sourceReference": "Section 1.2.2, Pages 14, 16"
+    },
+    {
+      "id": "HIS-G10-U01-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What underlying socio-economic contrast between the Northern and Southern United States in the 1850s fueled the sectional crisis leading to the American Civil War?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The North relied exclusively on subsistence farming while the South developed heavy metallurgical factory complexes"
+        },
+        {
+          "id": "B",
+          "text": "The North possessed an expanding industrial, urban, mixed economy with free wage labor, whereas the South was dominated by an agrarian plantation system dependent on enslaved labor"
+        },
+        {
+          "id": "C",
+          "text": "The North practiced state-mandated command socialism while the South was dedicated to British-style free trade mercantilism"
+        },
+        {
+          "id": "D",
+          "text": "The North aimed to secede from the federal Union to join Canada, while the South fought to preserve federal supremacy"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The North had developed an industrial economy with thriving cities, manufacturing, and free wage labor, viewing slavery as unfair competition and morally wrong; the South remained largely agrarian, dominated by cotton plantations that relied entirely on chattel slavery and defended a social order rooted in white supremacy.",
+      "sourceReference": "Section 1.2.3, Pages 16-17"
+    },
+    {
+      "id": "HIS-G10-U01-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "During 19th-century Balkan nationalist struggles against the Ottoman Empire, why did Great Britain consistently intervene on the side of the Turks?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Britain sought to spread the Anglican faith among Ottoman administrative officials"
+        },
+        {
+          "id": "B",
+          "text": "Britain planned to annex Greece and Serbia as formal colonial protectorates"
+        },
+        {
+          "id": "C",
+          "text": "Britain aimed to protect its strategic routes to India and prevent Russian naval expansion into the Mediterranean"
+        },
+        {
+          "id": "D",
+          "text": "Britain was bound by a military alliance requiring it to oppose all Christian minorities in the Balkans"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Great Britain's overriding diplomatic concern was safeguarding its maritime routes and interests in India; London feared that the collapse of the Ottoman Empire would allow Tsarist Russia to control the Turkish Straits, dominate the Mediterranean, and threaten British sea power.",
+      "sourceReference": "Section 1.2.4, Pages 20-21"
+    },
+    {
+      "id": "HIS-G10-U01-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "How did Karl Marx's critique of industrial capitalism challenge Adam Smith's classical economic doctrine of the 'free market'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Marx argued that free markets generate perfect class equality by distributing raw materials to individual guild masters"
+        },
+        {
+          "id": "B",
+          "text": "Marx claimed that mercantilist tariffs were the sole cause of international armed conflict and poverty"
+        },
+        {
+          "id": "C",
+          "text": "Marx maintained that private enterprise creates higher wages than the value of finished commodities, leading to enterprise bankruptcies"
+        },
+        {
+          "id": "D",
+          "text": "Marx asserted that capitalism is inherently exploitative of the surplus value of labor, produces systemic overproduction crises, and inevitably generates revolutionary class struggle between the bourgeoisie and the proletariat"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "While Adam Smith argued that self-regulating market forces and the profit motive promote general societal welfare (laissez-faire), Karl Marx demonstrated that capitalism divides society into antagonistic classes where capitalists extract surplus value from underpaid wage laborers, resulting in wealth concentration, recurrent economic crises of overproduction, and eventual proletarian revolution.",
+      "sourceReference": "Section 1.1, Pages 3-4"
+    },
+    {
+      "id": "HIS-G10-U01-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Which statement accurately evaluates a key difference in the political and diplomatic methods employed during the unification of Italy compared to that of Germany?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Italian unification relied heavily on foreign military alliances and popular territorial plebiscites, whereas German unification was driven by Prussian military might, Junker leadership, and calculated wars without plebiscites"
+        },
+        {
+          "id": "B",
+          "text": "Italy achieved statehood by defeating Great Britain in naval combat, while Germany unified through universal peaceful referendums"
+        },
+        {
+          "id": "C",
+          "text": "Italy established an absolute autocratic monarchy that dissolved all parliamentarianism, whereas Germany adopted direct democracy"
+        },
+        {
+          "id": "D",
+          "text": "Italian patriots rejected any role for regional rulers, while Bismarck subordinated Prussian sovereignty to the Austrian Crown"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Piedmont-Sardinia relied on external foreign alliances (such as French military intervention in 1859 and Prussian alliance in 1866) alongside popular plebiscites that legitimized the annexation of central and southern states; by contrast, Bismarck unified Germany 'from above' through Prussian military supremacy, Hohenzollern monarchism, and three distinct wars ('Blood and Iron') without resorting to popular plebiscites.",
+      "sourceReference": "Section 1.2.1 & Section 1.2.2, Pages 9-10, 13-15"
+    },
+    {
+      "id": "HIS-G10-U01-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "In what structural manner did the outcome of the American Civil War (1861–1865) reshape the political and constitutional framework of the United States?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It established a loose confederation where individual states retained the constitutional right of nullification and secession"
+        },
+        {
+          "id": "B",
+          "text": "It definitively affirmed the supremacy of the federal national government over individual state sovereignty and dismantled the economic base of the Southern planter aristocracy"
+        },
+        {
+          "id": "C",
+          "text": "It transferred supreme executive authority to the Supreme Court while eliminating political parties"
+        },
+        {
+          "id": "D",
+          "text": "It restricted future industrialization solely to northeastern coastal seaports while preserving indentured labor in the West"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The Union victory resolved the long-standing constitutional crisis regarding state sovereignty by establishing the indivisibility of the Union and the clear supremacy of the federal government, while destroying the Southern plantation slave economy and providing a constitutional foundation (via the 13th Amendment) for equal civil rights.",
+      "sourceReference": "Section 1.2.3, Pages 16, 18"
+    },
+    {
+      "id": "HIS-G10-U01-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Why did the rise of ethnic nationalism in the Balkan provinces of the Ottoman Empire during the late 19th and early 20th centuries create conditions that ultimately made a general European war possible?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The Balkan states formed a unified naval force that blockaded all British and French commerce in the Atlantic Ocean"
+        },
+        {
+          "id": "B",
+          "text": "Ottoman authorities convinced European powers to sign a permanent disarmament treaty in Geneva"
+        },
+        {
+          "id": "C",
+          "text": "Balkan national liberation struggles collided with Austrian and Russian imperial rivalries, entangling the competing Great Power alliance systems in regional Balkan disputes"
+        },
+        {
+          "id": "D",
+          "text": "The Balkan peoples successfully overthrew the Tsarist monarchy in Russia, sparking widespread socialist uprisings across Western Europe"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "As subject nationalities (Greeks, Serbs, Bulgarians, Romanians) rebelled against decaying Ottoman rule, Tsarist Russia supported Slavic and Orthodox independence to expand its influence toward the Mediterranean, while Austria-Hungary opposed Balkan nationalism to prevent its own multi-ethnic empire from fracturing; this clash of imperial interests pulled rival Great Power alliance networks into regional Balkan crises, transforming the region into the 'powder keg' that ignited World War I.",
+      "sourceReference": "Section 1.2.4, Pages 19-21"
+    }
+  ]
 }

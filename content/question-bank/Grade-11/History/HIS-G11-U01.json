@@ -3,5 +3,372 @@
   "subject": "History",
   "unitNumber": 1,
   "unitTitle": "History, Historiography, and Human Evolution",
-  "questions": []
+  "questions": [
+    {
+      "id": "HIS-G11-U01-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is the etymological origin and literal meaning of the word 'history'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "From the Latin word 'historia', meaning a fictitious narrative of heroic deeds"
+        },
+        {
+          "id": "B",
+          "text": "From the Greek word 'istoria', meaning inquiry or knowledge acquired by investigation"
+        },
+        {
+          "id": "C",
+          "text": "From the Arabic word 'tarikh', meaning chronological annals of royal dynasties"
+        },
+        {
+          "id": "D",
+          "text": "From the German word 'geschichte', meaning recorded natural phenomena"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The term history is derived from the ancient Greek word 'istoria' (or historia), which literally translates to an inquiry, investigation, or knowledge acquired through systematic inquiry into the human past.",
+      "sourceReference": "Section 1.1.1, Page 2"
+    },
+    {
+      "id": "HIS-G11-U01-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which 19th-century German scholar is widely recognized as the 'father of modern historiography' for establishing history as an independent academic discipline based on rigorous archival source criticism?",
+      "options": [
+        { "id": "A", "text": "Herodotus" },
+        { "id": "B", "text": "Thucydides" },
+        { "id": "C", "text": "Leopold von Ranke" },
+        { "id": "D", "text": "Job Ludolf" }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Leopold von Ranke (1795–1886) from the German Historical School laid the foundations of modern academic history by insisting on primary documentary evidence to describe the past 'as it really occurred' (wie es eigentlich gewesen).",
+      "sourceReference": "Section 1.1.2, Pages 3-4"
+    },
+    {
+      "id": "HIS-G11-U01-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Who founded modern Ethiopian studies in Europe in the late seventeenth century and published the first comprehensive modern European history of Ethiopia in 1684?",
+      "options": [
+        { "id": "A", "text": "James Bruce" },
+        { "id": "B", "text": "Job Ludolf" },
+        { "id": "C", "text": "Pedro Paez" },
+        { "id": "D", "text": "Hiob de Abbadie" }
+      ],
+      "correctOptionId": "B",
+      "explanation": "German scholar Job Ludolf (1624–1704), working closely with the Ethiopian monk Abba Gorgoryos, established modern Ethiopian studies in Europe and published his pioneering work, 'Historia Aethiopica', in 1684.",
+      "sourceReference": "Section 1.1.2, Page 5"
+    },
+    {
+      "id": "HIS-G11-U01-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which early hominid species was the first of the genus Homo to manufacture primitive core and flake stone implements known as Oldowan tools?",
+      "options": [
+        { "id": "A", "text": "Australopithecus afarensis" },
+        { "id": "B", "text": "Homo erectus" },
+        { "id": "C", "text": "Homo habilis" },
+        { "id": "D", "text": "Homo sapiens" }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Homo habilis ('handy human'), which appeared in eastern and southern Africa around 2 to 2.5 million years ago, was the earliest member of the genus Homo and the maker of the oldest stone tools (Oldowan technology).",
+      "sourceReference": "Section 1.2.2, Page 12"
+    },
+    {
+      "id": "HIS-G11-U01-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What fundamental socio-economic change defines the prehistoric period known as the Neolithic Revolution?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The discovery of fire and shelter in natural limestone caves"
+        },
+        {
+          "id": "B",
+          "text": "The invention of heavy iron cavalry armor and chariot wheels"
+        },
+        {
+          "id": "C",
+          "text": "The transition from hunting and gathering to food production through plant cultivation and animal domestication"
+        },
+        {
+          "id": "D",
+          "text": "The migration of hominids out of the African continent into Eurasia"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The Neolithic Revolution refers to the radical transformation that occurred roughly after 11,000 years ago when human societies shifted from a mobile foraging/hunting-gathering subsistence strategy to sedentary food production through agriculture and animal domestication.",
+      "sourceReference": "Section 1.2.2, Pages 15-16"
+    },
+    {
+      "id": "HIS-G11-U01-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How do historians distinguish between primary and secondary sources when conducting historical research?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Primary sources are always written in ancient classical languages, whereas secondary sources are printed modern texts"
+        },
+        {
+          "id": "B",
+          "text": "Primary sources possess direct proximity in time and space to the event under investigation, whereas secondary sources are later historical reconstructions"
+        },
+        {
+          "id": "C",
+          "text": "Primary sources represent complete objective historical truth, whereas secondary sources are biased political propaganda"
+        },
+        {
+          "id": "D",
+          "text": "Primary sources are exclusively preserved in government national archives, whereas secondary sources are found in archaeological sites"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Primary sources (such as coins, inscriptions, memoirs, and eyewitness accounts) originate directly from the time and place of the event being studied, while secondary sources (like textbooks and monographs) are analytical reconstructions written later by researchers.",
+      "sourceReference": "Section 1.1.3, Pages 6-7"
+    },
+    {
+      "id": "HIS-G11-U01-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Why does the standard periodization of Ethiopian history diverge fundamentally from the tripartite 'pre-colonial, colonial, and post-colonial' framework applied across the rest of the African continent?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Ethiopia adopted a calendar system that is seven to eight years ahead of the Gregorian calendar"
+        },
+        {
+          "id": "B",
+          "text": "Ethiopia avoided 19th-century European colonial conquest and maintained unbroken sovereign statehood, requiring periodization based on internal political milestones"
+        },
+        {
+          "id": "C",
+          "text": "Ethiopian historical writing strictly prohibited any chronological division prior to the rise of the Solomonic Dynasty in 1270"
+        },
+        {
+          "id": "D",
+          "text": "The Organization of African Unity declared Ethiopia exempt from standard historiographical classifications"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "While most African national histories are periodized around European imperial conquest and colonial administrative ruptures, Ethiopia's successful defense of its independence led historians to periodize its past internally: Ancient (c. 1000 B.C.–1270 A.D.), Medieval (1270–1855 A.D.), and Modern (1855 to the present).",
+      "sourceReference": "Section 1.1.4, Page 8"
+    },
+    {
+      "id": "HIS-G11-U01-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How did the establishment of the Institute of Ethiopian Studies (IES) in 1963 at Haile Sellassie I University reshape modern Ethiopian historiography?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It banned all foreign academic researchers from accessing imperial church archives in Gondar"
+        },
+        {
+          "id": "B",
+          "text": "It eliminated oral traditions from academic historical research in favor of Ge'ez hagiographies"
+        },
+        {
+          "id": "C",
+          "text": "It challenged the historical research bias towards the northern highlands by systematically investigating the southern regions and establishing scientific methodology for utilizing oral sources"
+        },
+        {
+          "id": "D",
+          "text": "It declared that prehistoric archaeology should be completely separated from the teaching of national history"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Prior to the 1960s, Ethiopian historiography focused heavily on the north due to written records, classical external accounts, and visible monuments; the establishment of the IES in 1963 broadened historical inquiry into southern Ethiopia and incorporated scientific collection of oral traditions.",
+      "sourceReference": "Section 1.1.2, Page 5"
+    },
+    {
+      "id": "HIS-G11-U01-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What technological and morphological advancement distinguishes Acheulean stone tools from the earlier Oldowan industry?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Acheulean tools were small, geometric microliths mounted onto bone handles to form composite weapons"
+        },
+        {
+          "id": "B",
+          "text": "Acheulean tools were bifacially flaked, symmetrical hand axes with standardized pear or teardrop shapes associated with Homo erectus"
+        },
+        {
+          "id": "C",
+          "text": "Acheulean tools were unworked river pebbles utilized strictly for crushing wild seeds without deliberate modification"
+        },
+        {
+          "id": "D",
+          "text": "Acheulean tools were polished ceramic blades manufactured through furnace heating"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Oldowan tools consisted of crude cores and sharp flakes struck by direct percussion, whereas Acheulean technology (dating from about 1.5 million to 200,000 B.P. and manufactured by Homo erectus) featured standardized, bifacially flaked hand axes with symmetrical cutting edges.",
+      "sourceReference": "Section 1.2.2, Pages 14-15"
+    },
+    {
+      "id": "HIS-G11-U01-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which pair of Ethiopian paleoanthropological discoveries correctly links archaic Homo sapiens and anatomically modern Homo sapiens respectively to their fossil discovery sites?",
+      "options": [
+        { "id": "A", "text": "Dinknesh (Lucy) at Hadar and Ardi at Aramis" },
+        {
+          "id": "B",
+          "text": "Homo habilis skull at Lower Omo and Turkana Boy at Lake Turkana"
+        },
+        {
+          "id": "C",
+          "text": "Archaic Homo sapiens partial cranium at Bodo and anatomically modern Homo sapiens skull at Omo Kibish"
+        },
+        {
+          "id": "D",
+          "text": "Neanderthal cranium at Melka Kunture and Cro-Magnon skeleton at Gademotta"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The partial cranium of archaic Homo sapiens (dated between 300,000 and 600,000 years ago) was discovered at Bodo in the Middle Awash, while complete fossil skull remains of modern Homo sapiens (dated over 100,000 years ago) were uncovered at Kibish in the Lower Omo Basin.",
+      "sourceReference": "Section 1.2.2, Pages 12-13"
+    },
+    {
+      "id": "HIS-G11-U01-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What is the central premise of the 'Oriental Despotism' (hydraulic) theory regarding the origin of early river-valley states in ancient Egypt and Mesopotamia?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Kingship emerged because hereditary priests required armed soldiers to protect sacred religious shrines from pastoral invaders"
+        },
+        {
+          "id": "B",
+          "text": "Centralized autocratic state authority was necessary to mobilize mass labor, construct large-scale dikes, and regulate complex irrigation and flood-control canals"
+        },
+        {
+          "id": "C",
+          "text": "Merchant guilds established autocratic monarchs along trade routes to guarantee fixed prices for imported commodities"
+        },
+        {
+          "id": "D",
+          "text": "Nomadic pastoralists conquered sedentary farming villages and imposed direct tributary obligations on peasant cultivators"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The 'oriental despotism' or hydraulic hypothesis posits that in arid river basins like the Nile, Tigris, and Euphrates, the technical imperative to manage annual river floods, construct dikes, and allocate canal water required centralized, powerful governmental leadership to coordinate mass labor.",
+      "sourceReference": "Section 1.3, Pages 18-19"
+    },
+    {
+      "id": "HIS-G11-U01-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Which combination of structural historiographical limitations characterized traditional Ethiopian historical writing produced prior to the 1960s?",
+      "options": [
+        {
+          "id": "A",
+          "text": "An over-reliance on radio broadcasts, total focus on industrial working-class strikes, and complete neglect of ecclesiastical texts"
+        },
+        {
+          "id": "B",
+          "text": "A strict geographical imbalance favoring the literate North, a thematic preoccupation with political-dynastic narratives at the expense of socio-cultural history, and royal court partisanship compromising objectivity"
+        },
+        {
+          "id": "C",
+          "text": "A total absence of royal chronicles, excessive reliance on folklore from the Horn of Africa, and exclusion of external Arabic travel accounts"
+        },
+        {
+          "id": "D",
+          "text": "The complete replacement of Ge'ez source documents with Portuguese Jesuit missionary reports"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Traditional Ethiopian historiography suffered from three primary deficiencies: geographic imbalance (focus on the north where written Ge'ez records, Greek/Roman accounts, and archaeological ruins existed), lack of comprehensiveness (centering almost exclusively on military and political achievements of emperors while omitting social/cultural realities), and subjective partisanship by court chroniclers attached to ruling dynasties.",
+      "sourceReference": "Section 1.1.2, Pages 5-6"
+    },
+    {
+      "id": "HIS-G11-U01-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "How does the research methodology of academic history differ fundamentally from that of the natural sciences?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Natural sciences utilize systematic empirical scrutiny, whereas history relies entirely on romantic fiction and unverified myths"
+        },
+        {
+          "id": "B",
+          "text": "Natural scientists conduct repeatable, controlled laboratory experiments to verify physical phenomena, whereas historians examine unrepeatable human actions in the past using surviving evidence and critical interpretation"
+        },
+        {
+          "id": "C",
+          "text": "Natural sciences evaluate value-laden judgments, whereas historians report mathematical formulas in complete neutrality"
+        },
+        {
+          "id": "D",
+          "text": "Natural sciences depend upon ancient inscriptions, whereas historians gather quantitative demographic samples"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Unlike natural scientists who observe physical phenomena through controlled, repeatable laboratory experiments yielding universal physical laws, historians study unique past human actions that cannot be directly replicated, relying instead on rigorous source criticism, corroboration of surviving evidence, and reasoned interpretation.",
+      "sourceReference": "Section 1.1.1, Pages 2-3"
+    },
+    {
+      "id": "HIS-G11-U01-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "What archaeological significance distinguishes the Gademotta site in the central Ethiopian Rift Valley within the context of African Stone Age prehistory?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It provides the oldest evidence of iron-smelting blast furnaces south of the Sahara"
+        },
+        {
+          "id": "B",
+          "text": "It yielded the world's earliest known fossil skeleton of an Australopithecine infant"
+        },
+        {
+          "id": "C",
+          "text": "Dated to approximately 200,000 years ago, it represents one of the oldest Middle Paleolithic sites in Africa, documenting the shift from heavy hand axes to refined flake tools and projectile points"
+        },
+        {
+          "id": "D",
+          "text": "It preserves the earliest rock-hewn underground granaries constructed by sedentary agriculturalists"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Gademotta, situated in the central Ethiopian Rift Valley and dated to about 200,000 years B.P., is one of the oldest Middle Paleolithic/Middle Stone Age sites in Africa, illustrating the technological transition where hominids abandoned bulky Acheulean hand axes in favor of refined, prepared-core flake tools used as knives and spear points.",
+      "sourceReference": "Section 1.2.2, Pages 14-15"
+    },
+    {
+      "id": "HIS-G11-U01-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Which combination of archaeological discoveries substantiates the early development of an indigenous Neolithic agricultural and pastoral tradition in Ethiopia and the Horn?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Camel dental fragments at Gobedra (c. 2,500 B.C.), chickpeas and vegetables at Lalibela Cave (c. 500 B.C.), and cattle domestication remains at Lake Beseka (2nd millennium B.C.)"
+        },
+        {
+          "id": "B",
+          "text": "Bronze plowshares at Yeha, wheat granaries at Roha, and horse remains at Melka Kunture"
+        },
+        {
+          "id": "C",
+          "text": "Terraced masonry walls at Sof Omar, sorghum fields at Gona, and irrigation aqueducts at Debre Damo"
+        },
+        {
+          "id": "D",
+          "text": "Coffee beans at Omo Kibish, maize kernels at Bodo, and potter's wheels at Hadar"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Evidence of early Neolithic domestication and material culture in Ethiopia includes camel teeth fragments from Gobedra near Aksum (c. 2,500 B.C.), domesticated chickpea and vegetable remains from Lalibela Cave (c. 500 B.C.), and domesticated cattle pastoralism at Lake Beseka (2nd millennium B.C.), alongside polished axes and grinding stones at Akordat and Barentu.",
+      "sourceReference": "Section 1.2.2, Pages 16-17"
+    }
+  ]
 }

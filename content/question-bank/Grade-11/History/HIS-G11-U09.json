@@ -3,5 +3,339 @@
   "subject": "History",
   "unitNumber": 9,
   "unitTitle": "The Age of Revolutions, 1789 to 1815",
-  "questions": []
+  "questions": [
+    {
+      "id": "HIS-G11-U09-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which inventor made the breakthrough in 1765 that transformed the steam engine into a practical and fuel-efficient power source for factories and transportation?",
+      "options": [
+        { "id": "A", "text": "John Kay" },
+        { "id": "B", "text": "James Watt" },
+        { "id": "C", "text": "Eli Whitney" },
+        { "id": "D", "text": "James Hargreaves" }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In 1765, Scottish mathematical instrument maker James Watt redesigned earlier, fuel-wasteful steam-powered pumps, creating an engine that ran faster and far more efficiently while consuming significantly less coal.",
+      "sourceReference": "Section 9.1, Page 241"
+    },
+    {
+      "id": "HIS-G11-U09-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Who was the principal author of the American Declaration of Independence adopted by the Second Continental Congress on July 4, 1776?",
+      "options": [
+        { "id": "A", "text": "Thomas Jefferson" },
+        { "id": "B", "text": "George Washington" },
+        { "id": "C", "text": "Benjamin Franklin" },
+        { "id": "D", "text": "Alexander Hamilton" }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Drafted by political leader Thomas Jefferson, the Declaration of Independence articulated the natural rights philosophy of John Locke, asserting that all people possess unalienable rights to life, liberty, and the pursuit of happiness.",
+      "sourceReference": "Section 9.2, Page 247"
+    },
+    {
+      "id": "HIS-G11-U09-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which fortress and state prison in Paris was stormed by revolutionary citizens on July 14, 1789, marking a major symbolic victory against royal absolutism?",
+      "options": [
+        { "id": "A", "text": "The Tuileries" },
+        { "id": "B", "text": "Versailles" },
+        { "id": "C", "text": "The Bastille" },
+        { "id": "D", "text": "The Conciergerie" }
+      ],
+      "correctOptionId": "C",
+      "explanation": "On July 14, 1789, crowds in Paris stormed the Bastille to seize stored arms and ammunition and challenge King Louis XVI's deployment of royal troops, turning the medieval prison into the enduring symbol of the French Revolution.",
+      "sourceReference": "Section 9.3, Page 251"
+    },
+    {
+      "id": "HIS-G11-U09-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In pre-revolutionary France under the Old Regime, which estate constituted the unprivileged majority comprising peasants, urban workers, and the bourgeoisie?",
+      "options": [
+        { "id": "A", "text": "The First Estate" },
+        { "id": "B", "text": "The Second Estate" },
+        { "id": "C", "text": "The Fourth Estate" },
+        { "id": "D", "text": "The Third Estate" }
+      ],
+      "correctOptionId": "D",
+      "explanation": "Under the Old Regime, French society was divided into three estates: the First Estate was the Catholic clergy, the Second was the nobility, and the Third Estate represented about 97% of the population, including peasant farmers, wage laborers, and the wealthy bourgeoisie.",
+      "sourceReference": "Section 9.3, Page 250"
+    },
+    {
+      "id": "HIS-G11-U09-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "At which battle in Belgium in June 1815 was Napoleon Bonaparte defeated by an allied army commanded by the Duke of Wellington and Prussian forces?",
+      "options": [
+        { "id": "A", "text": "The Battle of Trafalgar" },
+        { "id": "B", "text": "The Battle of Waterloo" },
+        { "id": "C", "text": "The Battle of Leipzig" },
+        { "id": "D", "text": "The Battle of Austerlitz" }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Following his escape from Elba and brief Hundred Days rule, Napoleon's army was defeated at the Battle of Waterloo in Belgium on June 18, 1815, by combined British and Prussian armies, leading to his permanent exile to St. Helena.",
+      "sourceReference": "Section 9.4, Page 260"
+    },
+    {
+      "id": "HIS-G11-U09-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which combination of economic and natural factors explains why the Industrial Revolution originated in Great Britain before spreading to continental Europe?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Abundant coal and iron ore deposits, navigable rivers and canals, agricultural enclosures that supplied factory labor, and commercial capital accumulated from global trade"
+        },
+        {
+          "id": "B",
+          "text": "State-mandated socialist five-year plans and complete prohibition of private commerce"
+        },
+        {
+          "id": "C",
+          "text": "Total reliance on watermills along mountainous rivers and absence of urban merchant classes"
+        },
+        {
+          "id": "D",
+          "text": "Direct financial subsidies provided by the Papacy and the Holy Roman Empire"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Britain pioneered industrialization due to rich deposits of coal and iron, an extensive system of waterways and canals for low-cost transport, agricultural changes that created an available urban labor force, and ample investment capital generated by maritime commerce.",
+      "sourceReference": "Section 9.1, Pages 240-241"
+    },
+    {
+      "id": "HIS-G11-U09-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In northern England between 1811 and 1816, what was the primary objective of the worker movement known as the Luddites?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Campaigning for universal voting rights in parliamentary elections"
+        },
+        {
+          "id": "B",
+          "text": "Forming agricultural communes across southern rural counties"
+        },
+        {
+          "id": "C",
+          "text": "Smashed automated textile machinery that they believed was eliminating employment and depressing wages"
+        },
+        {
+          "id": "D",
+          "text": "Demanding that factory owners replace steam power with manual hand-spinning wheels"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Named after the mythical figure Ned Ludd, the Luddites were distressed weavers and textile artisans who reacted to mechanization by attacking factories and destroying power looms and shearing frames that cost them their jobs.",
+      "sourceReference": "Section 9.1, Page 243"
+    },
+    {
+      "id": "HIS-G11-U09-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What principle was encapsulated in the colonial rallying cry 'No taxation without representation' following Britain's enactment of the Stamp Act of 1765?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Colonists demanded complete exemption from all local sales duties and harbor fees"
+        },
+        {
+          "id": "B",
+          "text": "Colonists argued that as British subjects, they could not be taxed by a Parliament in London in which they had no elected representatives"
+        },
+        {
+          "id": "C",
+          "text": "Colonists wanted taxes to be paid exclusively in French silver currency"
+        },
+        {
+          "id": "D",
+          "text": "Colonists insisted that all imperial taxation revenue be remitted directly to the King without legislative consent"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Under British constitutional tradition, subjects could only be taxed through representatives they elected; because the American colonies elected no members to the British Parliament, colonists denounced the Stamp Act and Townshend duties as unlawful usurpations.",
+      "sourceReference": "Section 9.2, Page 246"
+    },
+    {
+      "id": "HIS-G11-U09-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What major change did the Civil Constitution of the Clergy, enacted by the French National Assembly in 1790, introduce to the Catholic Church?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It abolished Christianity and declared Calvinist Protestantism the state religion of France"
+        },
+        {
+          "id": "B",
+          "text": "It transferred supreme administrative oversight of all French dioceses directly to the Archbishop of Canterbury"
+        },
+        {
+          "id": "C",
+          "text": "It ordered all monastic orders to relocate to French colonies in the West Indies"
+        },
+        {
+          "id": "D",
+          "text": "It placed the Catholic Church under secular state control, confiscated church lands, and made bishops and priests salaried civil servants elected by citizens"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "Passed in 1790, the Civil Constitution of the Clergy subordinated the Roman Catholic Church to the French government, dissolved religious orders, auctioned off church estates to address national debt, and required clergy to be publicly elected and swear an oath of civic allegiance.",
+      "sourceReference": "Section 9.3, Page 252"
+    },
+    {
+      "id": "HIS-G11-U09-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which executive committee, led by Maximilien Robespierre, directed the Reign of Terror in France between 1793 and 1794?",
+      "options": [
+        { "id": "A", "text": "The Directory" },
+        { "id": "B", "text": "The Estates-General" },
+        { "id": "C", "text": "The Committee of Public Safety" },
+        { "id": "D", "text": "The Council of Five Hundred" }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Established by the National Convention in April 1793 to protect the revolution against foreign coalition invasions and domestic revolts, the twelve-man Committee of Public Safety exercised dictatorial powers that resulted in thousands of executions.",
+      "sourceReference": "Section 9.3, Pages 253-254"
+    },
+    {
+      "id": "HIS-G11-U09-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What was the purpose of Napoleon Bonaparte's 'Continental System' instituted through the Berlin and Milan Decrees?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To establish a uniform gold currency and common central bank across all Italian principalities"
+        },
+        {
+          "id": "B",
+          "text": "To cripple the British economy by closing continental European ports to British trade and manufactured goods"
+        },
+        {
+          "id": "C",
+          "text": "To dissolve the Confederation of the Rhine and restore the Holy Roman Empire"
+        },
+        {
+          "id": "D",
+          "text": "To conclude an offensive alliance with the Ottoman Empire against Tsarist Russia"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Unable to invade Great Britain following his naval defeat at Trafalgar in 1805, Napoleon adopted economic warfare by forbidding all European allies and occupied territories from trading with Britain, attempting to ruin its industrial economy.",
+      "sourceReference": "Section 9.4, Page 258"
+    },
+    {
+      "id": "HIS-G11-U09-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "How did Adam Smith's classical economic doctrine in 'The Wealth of Nations' (1776) contrast with the critique of industrial capitalism formulated by Karl Marx and Friedrich Engels in 'The Communist Manifesto' (1848)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Smith argued that self-interest, competition, and unregulated free markets (laissez-faire) produce economic progress, whereas Marx and Engels asserted that capitalism concentrates wealth among the bourgeoisie while exploiting the proletariat, necessitating class struggle and public ownership"
+        },
+        {
+          "id": "B",
+          "text": "Smith advocated government control of factories, while Marx and Engels championed international tariffs to protect infant manufacturing firms"
+        },
+        {
+          "id": "C",
+          "text": "Smith argued that feudal manors were more efficient than mechanized factories, while Marx and Engels defended unregulated monopolies"
+        },
+        {
+          "id": "D",
+          "text": "Smith believed industrialization would inevitably impoverish entrepreneurs, whereas Marx and Engels claimed industrial capitalism eliminated social classes"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Adam Smith maintained that individual pursuit of self-interest guided by the 'invisible hand' in free markets without government interference spurs societal wealth; in contrast, Marx and Engels argued that industrial capitalism inherently generates class polarization and worker exploitation, calling for collective ownership of the means of production.",
+      "sourceReference": "Section 9.1, Pages 244-245"
+    },
+    {
+      "id": "HIS-G11-U09-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "In what way did Olympe de Gouges' 1791 'Declaration of the Rights of Woman and the Female Citizen' critique the revolutionary settlement of the French National Assembly?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It demanded the complete restoration of feudal tithes and royal censorship over women's publishing houses"
+        },
+        {
+          "id": "B",
+          "text": "It demonstrated that the 1789 Declaration of the Rights of Man and of the Citizen proclaimed universal natural rights while denying women political enfranchisement, civic equality, and property rights"
+        },
+        {
+          "id": "C",
+          "text": "It argued that French women should be legally barred from participating in public debates and judicial assemblies"
+        },
+        {
+          "id": "D",
+          "text": "It urged the National Assembly to dissolve public schools in favor of convent instruction"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Olympe de Gouges exposed the gender limitations of the revolutionary leadership by rewriting the 1789 charter to assert that women are born free and equal to men, demanding equal voting rights, public office eligibility, and legal protections.",
+      "sourceReference": "Section 9.3, Pages 252-253"
+    },
+    {
+      "id": "HIS-G11-U09-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Which statement evaluates the dual legacy of the Napoleonic Code (Civil Code of 1804) regarding revolutionary principles and social equality?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It abolished private property rights while establishing direct democratic workers' councils in all French municipalities"
+        },
+        {
+          "id": "B",
+          "text": "It reinstated hereditary feudal nobility and granted the Catholic Church exclusive authority over civil courts"
+        },
+        {
+          "id": "C",
+          "text": "It preserved revolutionary gains such as legal equality for adult males, religious toleration, and the abolition of feudalism, but subordinated women under patriarchal authority and restricted labor unions"
+        },
+        {
+          "id": "D",
+          "text": "It eliminated central tax-collection bureaucracies in favor of independent provincial guilds"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The Napoleonic Code consolidated critical bourgeois achievements of 1789—including uniform civil law, equality before the law, freedom of religion, and protection of property; however, it reflected social conservatism by placing married women under their husbands' legal custody and outlawing trade unions.",
+      "sourceReference": "Section 9.4, Pages 256-257"
+    },
+    {
+      "id": "HIS-G11-U09-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "How did the conservative diplomatic settlement negotiated under Klemens von Metternich at the Congress of Vienna (1814–1815) attempt to restore order in post-Napoleonic Europe?",
+      "options": [
+        {
+          "id": "A",
+          "text": "By encouraging universal suffrage elections and creating independent nation-states based on linguistic self-determination"
+        },
+        {
+          "id": "B",
+          "text": "By dismantling the British Royal Navy and partitioning France among Scandinavian kingdoms"
+        },
+        {
+          "id": "C",
+          "text": "By placing all Central European armies under the direct constitutional supervision of the United States Congress"
+        },
+        {
+          "id": "D",
+          "text": "By applying the principles of legitimacy and compensation to restore pre-revolutionary ruling dynasties and establishing a balance of power to prevent French hegemony and suppress future liberal revolutions"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "Led by Austrian Chancellor Metternich, the Congress of Vienna sought to establish durable peace by restoring traditional monarchies ('legitimacy'), redrawing European borders to encircle France with stronger buffer states ('balance of power'), and forming an alliance network to suppress revolutionary uprisings.",
+      "sourceReference": "Section 9.4, Pages 259-260"
+    }
+  ]
 }

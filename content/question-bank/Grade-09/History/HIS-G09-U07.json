@@ -2,6 +2,340 @@
   "grade": 9,
   "subject": "History",
   "unitNumber": 7,
-  "unitTitle": "States, Principalities, Population Movements & Interactions in Ethiopia 13th to Mid-16th C.",
-  "questions": []
+  "unitTitle": "States, Principalities, Population Movements and Interactions in Ethiopia, 13th - Mid-16th C.",
+  "questions": [
+    {
+      "id": "HIS-G09-U07-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Who founded the 'Solomonic' dynasty in 1270 AD by overthrowing the last ruler of the Zagwe dynasty?",
+      "options": [
+        { "id": "A", "text": "Amde Tsiyon" },
+        { "id": "B", "text": "Yekuno Amlak" },
+        { "id": "C", "text": "Zera Ya'ekob" },
+        { "id": "D", "text": "Libne Dingil" }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In 1270 AD, a local ruler in Amhara named Yekuno Amlak overthrew the Zagwe dynasty and established the 'Solomonic' dynasty, claiming descent from King Solomon and the Queen of Sheba.",
+      "sourceReference": "Section 7.1, Page 120"
+    },
+    {
+      "id": "HIS-G09-U07-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which of the following describes the nature of the political centers of the Christian highland kingdom during much of the medieval period before the founding of Gondar?",
+      "options": [
+        { "id": "A", "text": "Permanent stone-walled castles at Lalibela" },
+        { "id": "B", "text": "Roving or mobile tent capitals" },
+        { "id": "C", "text": "A heavily fortified coastal citadel at Zeila" },
+        { "id": "D", "text": "An underground monastic complex in Debre Damo" }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Rather than residing in a fixed permanent capital, medieval Christian monarchs ruled from mobile or roving tent capitals that shifted across districts in the Shewan plateau and adjoining regions.",
+      "sourceReference": "Section 7.1, Page 121"
+    },
+    {
+      "id": "HIS-G09-U07-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "At which decisive battle in March 1529 did the forces of the Sultanate of Adal led by Imam Ahmad defeat King Libne Dingil's imperial army?",
+      "options": [
+        { "id": "A", "text": "Battle of Wayna Dega" },
+        { "id": "B", "text": "Battle of Wofla" },
+        { "id": "C", "text": "Battle of Shimbra Kure" },
+        { "id": "D", "text": "Battle of Gomit" }
+      ],
+      "correctOptionId": "C",
+      "explanation": "In March 1529, the forces of the Sultanate of Adal under Imam Ahmad ibn Ibrahim al-Ghazi won a decisive victory over the army of Emperor Libne Dingil at the Battle of Shimbra Kure.",
+      "sourceReference": "Section 7.3, Page 127"
+    },
+    {
+      "id": "HIS-G09-U07-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What were the two major confederacies of the Oromo people prior to the sixteenth-century population movement?",
+      "options": [
+        { "id": "A", "text": "Macha and Tulama" },
+        { "id": "B", "text": "Borana and Barentu" },
+        { "id": "C", "text": "Ittu and Karayu" },
+        { "id": "D", "text": "Guji and Arsi" }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Before initiating their large-scale sixteenth-century movement, the Oromo people were organized into two overarching confederacies: the Borana and the Barentu.",
+      "sourceReference": "Section 7.5, Page 135"
+    },
+    {
+      "id": "HIS-G09-U07-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In the indigenous egalitarian governance system of the Sidama, what is the rotating eight-year age-grade institution called?",
+      "options": [
+        { "id": "A", "text": "Luwa" },
+        { "id": "B", "text": "Ballee" },
+        { "id": "C", "text": "Gadaa" },
+        { "id": "D", "text": "Seera" }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The traditional governance of the Sidama is structured around the Luwa system, which operates on an 8-year cyclical age-grade rotation through five distinct generational classes.",
+      "sourceReference": "Section 7.8, Page 144"
+    },
+    {
+      "id": "HIS-G09-U07-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Why did the medieval monarchs of the restored 'Solomonic' dynasty adopt that specific dynastic designation?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To satisfy a treaty signed with the Mamluk sultans of Egypt"
+        },
+        {
+          "id": "B",
+          "text": "To claim legitimacy based on the Kibre Negest tradition and portray the Zagwe rulers as usurpers"
+        },
+        {
+          "id": "C",
+          "text": "To emphasize their conversion to Western Roman Catholicism"
+        },
+        {
+          "id": "D",
+          "text": "To secure trade concessions from the Italian city-states of Venice and Genoa"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The rulers of the new dynasty justified their legitimacy through the national epic Kibre Negest, asserting ancient descent from King Solomon and the Queen of Sheba while portraying the preceding Zagwe dynasty as illegitimate.",
+      "sourceReference": "Section 7.1, Pages 120-121"
+    },
+    {
+      "id": "HIS-G09-U07-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What primary economic and strategic factor served as the principal catalyst for medieval wars between the Christian Kingdom and the Muslim Sultanates?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Disputes over navigation rights along the Omo River"
+        },
+        {
+          "id": "B",
+          "text": "Competition to control and monopolize the lucrative long-distance trade routes to the port of Zeila"
+        },
+        {
+          "id": "C",
+          "text": "Rivalry over the appointment of bishops by the Coptic Patriarchate of Alexandria"
+        },
+        {
+          "id": "D",
+          "text": "Direct military confrontations provoked by the Portuguese fleet in the Red Sea"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The primary cause of rivalry and warfare between the Christian highland state and Muslim sultanates was competition over the control of the Zeila trade routes, which formed the main artery for trade commodities and customs revenues.",
+      "sourceReference": "Section 7.2 & 7.3, Pages 123, 126"
+    },
+    {
+      "id": "HIS-G09-U07-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which of the following describes the historical significance of the reign of Emperor Amde Tsiyon (1314–1344)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "He founded the permanent capital at Gondar and built the Fasil Ghebbi"
+        },
+        {
+          "id": "B",
+          "text": "He was the first monarch to introduce firearms from Ottoman Turkey"
+        },
+        {
+          "id": "C",
+          "text": "He launched major expansionist campaigns, incorporating Damot, Gojjam, and the Sultanate of Ifat into tributary status"
+        },
+        {
+          "id": "D",
+          "text": "He converted to Catholicism under the influence of Jesuit missionaries"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Amde Tsiyon was the most expansionist medieval ruler, subduing Damot, Gojjam, the Falasha, and eastern sultanates like Ifat, thereby establishing imperial supremacy across trade corridors.",
+      "sourceReference": "Section 7.1, Page 121"
+    },
+    {
+      "id": "HIS-G09-U07-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What role did the Sinqe institution play in the traditional Oromo socio-political system?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It was a council of war commanders responsible for leading military cavalry"
+        },
+        {
+          "id": "B",
+          "text": "It was an institution through which women maintained solidarity, exercised moral authority, and engaged in conflict resolution"
+        },
+        {
+          "id": "C",
+          "text": "It served as the supreme judiciary body solely composed of elderly retired Abba Gadaas"
+        },
+        {
+          "id": "D",
+          "text": "It was a taxation department that regulated tribute collected from caravan merchants"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In the Gadaa system, the Sinqe institution symbolized women's ritual authority and solidarity, empowering them to protect their rights, advise leaders, and intervene in community peace-making.",
+      "sourceReference": "Section 7.6, Page 140"
+    },
+    {
+      "id": "HIS-G09-U07-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What distinguished the Oromo integration mechanism of Moggasa from Guddifacha?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Moggasa was individual adoption into a family, whereas Guddifacha was clan-level incorporation"
+        },
+        {
+          "id": "B",
+          "text": "Moggasa was a religious conversion ritual, whereas Guddifacha was a commercial treaty"
+        },
+        {
+          "id": "C",
+          "text": "Moggasa was the adoption of an entire non-Oromo group or community into a clan, whereas Guddifacha referred to adopting a child into a family"
+        },
+        {
+          "id": "D",
+          "text": "Moggasa was practiced only by the Barentu, whereas Guddifacha was restricted to the Borana"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Moggasa was a collective adoption mechanism where non-Oromo groups were incorporated into an Oromo clan with full rights, while Guddifacha was the custom of adopting an individual child into a family.",
+      "sourceReference": "Section 7.7, Page 142"
+    },
+    {
+      "id": "HIS-G09-U07-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In the traditional Ballee governance system of the Gedeo, who held supreme political, ritual, and social leadership over the society?",
+      "options": [
+        { "id": "A", "text": "The Mote" },
+        { "id": "B", "text": "The Tato" },
+        { "id": "C", "text": "The Abba Gadaa" },
+        { "id": "D", "text": "The Kawo" }
+      ],
+      "correctOptionId": "C",
+      "explanation": "In the Gedeo Ballee system, officials were elected by the general assembly (Yaa), with the Abba Gadaa serving as the supreme political, social, and ritual leader assisted by territorial administrators called roga.",
+      "sourceReference": "Section 7.8, Page 147"
+    },
+    {
+      "id": "HIS-G09-U07-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "How did foreign intervention by the Ottoman Empire and Portugal transform the internal conflict between the Christian Kingdom and the Sultanate of Adal in the 1540s?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Both external powers forced the local combatants to sign a lasting partition treaty at Massawa"
+        },
+        {
+          "id": "B",
+          "text": "It transformed a regional struggle into a proxy conflict between major imperial powers seeking naval supremacy in the Red Sea and Indian Ocean"
+        },
+        {
+          "id": "C",
+          "text": "The foreign forces completely disarmed all local fighters and established direct European colonial protectorates"
+        },
+        {
+          "id": "D",
+          "text": "It prompted the immediate conversion of Adal's ruling dynasty to Roman Catholicism"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The intervention of Ottoman Turkey (providing matchlocks and musketeers to Adal) and Portugal (sending 400 musketeers under Christopher da Gama to the Christian kingdom) reflected their global geopolitical rivalry to control maritime trade routes in the Red Sea and Indian Ocean.",
+      "sourceReference": "Section 7.3, Pages 126-128"
+    },
+    {
+      "id": "HIS-G09-U07-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "What major political and demographic shifts occurred in the Horn of Africa as a result of the sixteenth-century Oromo population movement?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The Christian kingdom established its permanent capital in Harar and eliminated the coastal trade of Zeila"
+        },
+        {
+          "id": "B",
+          "text": "Pre-existing southern kingdoms like Damot and Ennarya were destroyed or assimilated, and the Christian state shifted its center north of the Abay River toward Lake Tana"
+        },
+        {
+          "id": "C",
+          "text": "The Sultanate of Adal conquered all northern provinces and annexed Tigray permanently"
+        },
+        {
+          "id": "D",
+          "text": "The Oromo completely abandoned livestock pastoralism in favor of marine fishing along the Red Sea"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The Oromo population expansion profoundly restructured the political geography of the Horn: ancient states like Damot and Ennarya were absorbed or pushed northward, and the Christian kingdom was forced to relocate its political center north of the Abay to the Lake Tana basin.",
+      "sourceReference": "Section 7.5, Pages 137-138"
+    },
+    {
+      "id": "HIS-G09-U07-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Which statement correctly analyzes the institutional mechanisms that ensured accountability and prevented autocratic rule within the Oromo Gadaa system?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Power was inherited by the eldest son, who was subject to approval by an appointed royal council"
+        },
+        {
+          "id": "B",
+          "text": "Authority was checked by fixed eight-year term limits, separation of executive and judicial functions, and the right of impeachment (buqqisu) through the Chaffe assembly"
+        },
+        {
+          "id": "C",
+          "text": "Leadership was monopolized permanently by hereditary priests who served life appointments"
+        },
+        {
+          "id": "D",
+          "text": "Rulers could only issue decrees with the unanimous consent of foreign caravan merchants"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The Gadaa system operated on egalitarian democratic principles: peaceful cyclic power transfers every eight years, institutional separation of powers, and the mechanism of impeachment (buqqisu) if leaders failed to uphold customary laws (seera).",
+      "sourceReference": "Section 7.6, Pages 138-141"
+    },
+    {
+      "id": "HIS-G09-U07-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "How did trade during the medieval period foster cultural and socio-economic integration between politically conflicting states in the Ethiopian region?",
+      "options": [
+        {
+          "id": "A",
+          "text": "By enforcing identical religious laws and eliminating all indigenous belief systems along caravan lines"
+        },
+        {
+          "id": "B",
+          "text": "By facilitating regular commercial exchanges, mutual interdependence, and cultural contact as highland agricultural produce was traded for coastal goods via Muslim merchant networks"
+        },
+        {
+          "id": "C",
+          "text": "By ensuring that all states were placed under the unified administrative control of the Walasma dynasty"
+        },
+        {
+          "id": "D",
+          "text": "By establishing a single monetary bank in Zeila that prohibited the circulation of salt bars"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Despite prolonged military conflicts, the long-distance trade corridors linked diverse peoples and polities into an interdependent economic network, facilitating cultural interaction and linguistic exchange across highland and lowland societies.",
+      "sourceReference": "Section 7.2 & 7.3, Pages 123-125, 128"
+    }
+  ]
 }

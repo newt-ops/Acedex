@@ -3,5 +3,351 @@
   "subject": "History",
   "unitNumber": 9,
   "unitTitle": "Indigenous Knowledge Systems and Heritages of Ethiopia",
-  "questions": []
+  "questions": [
+    {
+      "id": "HIS-G12-U09-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which historic religious site in northern Ethiopia was established in the 7th century AD to shelter the earliest followers of the Prophet Muhammad who fled persecution in Mecca?",
+      "options": [
+        { "id": "A", "text": "The Grand Anwar Mosque" },
+        { "id": "B", "text": "The Al Nejashi Mosque" },
+        { "id": "C", "text": "The Jamia Mosque of Harar" },
+        { "id": "D", "text": "The Sheikh Hussein Shrine" }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In the 7th century AD, early followers of the Prophet Muhammad fled the Quraysh ruling class of Mecca and found refuge in the Christian Kingdom of Aksum under King Negash; the Al Nejashi Mosque in Tigray was named after him and is recognized as the first mosque in Ethiopia and Africa.",
+      "sourceReference": "Section 9.2, Pages 262-263"
+    },
+    {
+      "id": "HIS-G12-U09-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which annual thanksgiving festival is celebrated by the Oromo people at the onset of Birraa (spring) at sacred water bodies such as Hora Harsadi in Bishoftu?",
+      "options": [
+        { "id": "A", "text": "Fichee-Chambalaalla" },
+        { "id": "B", "text": "Gifaataa" },
+        { "id": "C", "text": "Irreecha" },
+        { "id": "D", "text": "Ashenda" }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Irreecha is the traditional thanksgiving holiday of the Oromo people, celebrated at the close of the rainy winter season and the beginning of spring (Birraa) at sacred lakes such as Lake Hora Harsadi in Bishoftu and in Addis Ababa.",
+      "sourceReference": "Section 9.2, Page 272"
+    },
+    {
+      "id": "HIS-G12-U09-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which historical province of northern Ethiopia is credited with originating the four major secular traditional musical melodies (Bati, Tizeta, Ambassel, and Anchihoye)?",
+      "options": [
+        { "id": "A", "text": "Gojjam" },
+        { "id": "B", "text": "Wollo" },
+        { "id": "C", "text": "Tigray" },
+        { "id": "D", "text": "Begemder" }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In Ethiopian secular musical traditions, the four foundational modal scales or melodies—Bati, Tizeta, Ambassel, and Anchihoye—are cultural contributions developed in the province of Wollo.",
+      "sourceReference": "Section 9.2, Page 266"
+    },
+    {
+      "id": "HIS-G12-U09-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which national park, established in 1969 and home to Mount Ras Dejen as well as the endemic Walia Ibex, was inscribed by UNESCO in 1978 as Ethiopia's first Natural World Heritage Site?",
+      "options": [
+        { "id": "A", "text": "Bale Mountains National Park" },
+        { "id": "B", "text": "Awash National Park" },
+        { "id": "C", "text": "Simen Mountains National Park" },
+        { "id": "D", "text": "Omo National Park" }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Established in 1969 and encompassing dramatic pinnacles, cliffs, and Mount Ras Dejen (4,620 m), the Simen Mountains National Park serves as the habitat for the endemic Walia Ibex, Gelada Baboon, and Ethiopian Wolf, and was registered by UNESCO as a Natural World Heritage Site in 1978.",
+      "sourceReference": "Section 9.2, Pages 278-279"
+    },
+    {
+      "id": "HIS-G12-U09-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is the traditional, oral information-exchange institution practiced by the pastoralist Afar people that is popularly known as the 'Internet of the Afar'?",
+      "options": [
+        { "id": "A", "text": "Dagu" },
+        { "id": "B", "text": "Yajoka" },
+        { "id": "C", "text": "Sera" },
+        { "id": "D", "text": "Gordanna" }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Dagu is the indigenous, networked oral news and communication system of the Afar people, in which travelers exchange news regarding weather, pasture, security, and social developments upon meeting.",
+      "sourceReference": "Section 9.1 & 9.2, Pages 257, 274"
+    },
+    {
+      "id": "HIS-G12-U09-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which of the following best defines the concept and scope of indigenous knowledge systems?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Standardized academic scientific formulas created in university research laboratories and funded by state industrial ministries"
+        },
+        {
+          "id": "B",
+          "text": "Knowledge and practices developed outside formal educational systems over centuries of community experimentation to adapt to specific agro-ecological and socio-cultural environments"
+        },
+        {
+          "id": "C",
+          "text": "Colonial legal frameworks and bureaucratic civil codes imported from Western Europe during the nineteenth century"
+        },
+        {
+          "id": "D",
+          "text": "Exclusive religious doctrines translated into local languages by foreign missionary organizations"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Indigenous or traditional local knowledge refers to the cumulative skills, technologies, and philosophies developed by communities over centuries of empirical experimentation outside formal schooling to solve production, medical, environmental, and social challenges in their surroundings.",
+      "sourceReference": "Section 9.1, Pages 255-257"
+    },
+    {
+      "id": "HIS-G12-U09-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What architectural and historical features characterize the 19th-century Palace of King Abba Jifar II in Jimma?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It was built entirely of imported European bricks and served as an administrative outpost for Portuguese naval consuls"
+        },
+        {
+          "id": "B",
+          "text": "It was heavily influenced by Indian architecture, constructed at a cost of 400 kg of gold and 65,000 Maria Theresa Thalers, and featured a watchtower, family mosque, and courtroom overlooking the city"
+        },
+        {
+          "id": "C",
+          "text": "It was a mobile tented encampment that relocated annually between the Gojeb and Gibe river basins"
+        },
+        {
+          "id": "D",
+          "text": "It was constructed as an underground rock-hewn sanctuary to conceal royal treasures during foreign invasions"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Constructed in the late 19th century under King Abba Jifar II (r. 1877–1933), the palace in Jimma exhibits strong Indian architectural influences, cost an estimated 400 kg of gold and 65,000 Maria Theresa Thalers, and contains a family mosque, public reception hall, courtroom, and a high watchtower overlooking surrounding regions.",
+      "sourceReference": "Section 9.2, Pages 263-264"
+    },
+    {
+      "id": "HIS-G12-U09-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What was the structural nature and defensive purpose of the 'Kati Halala Kella' constructed in the kingdom of Dawuro between the 16th and 18th centuries?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A network of irrigation canals linking Lake Abaya to the Omo River basin"
+        },
+        {
+          "id": "B",
+          "text": "Dry stone defensive walls built across multiple rows without mortar, stretching hundreds of kilometers with guarded gateways to protect the kingdom from external invasions and population pressures"
+        },
+        {
+          "id": "C",
+          "text": "A set of subterranean granite tombs built to house deceased kings"
+        },
+        {
+          "id": "D",
+          "text": "A continuous timber palisade erected to confine captive elephant herds for ivory harvesting"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The Kati Halala Kella of Dawuro comprises extensive defensive dry-stone walls and ditches constructed between the 16th and 18th centuries without mortar. Built in three to seven rows with an estimated total length reaching up to 1,000 km, they were designed to defend the kingdom against external adversaries and territorial incursions.",
+      "sourceReference": "Section 9.2, Pages 264-265"
+    },
+    {
+      "id": "HIS-G12-U09-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What significant archaeological discovery was made in 2019 at the Fincha Habera rock shelter in the Bale Mountains?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The discovery of the fossilized hominid remains of Lucy (Australopithecus afarensis)"
+        },
+        {
+          "id": "B",
+          "text": "The recovery of the stolen 12th-century gold-plated Lalibela Cross (Afro Ayigeba)"
+        },
+        {
+          "id": "C",
+          "text": "Evidence of a 30,000-year-old Middle Stone Age rock shelter situated over 11,000 feet above sea level, proving the earliest high-altitude human dwelling"
+        },
+        {
+          "id": "D",
+          "text": "The excavation of the royal treasury of Emperor Tewodros II containing Ge'ez manuscripts looted during the Meqdela expedition"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "In 2019, archaeologists at Fincha Habera in the Bale Mountains uncovered a 30,000-year-old Middle Stone Age settlement at an elevation exceeding 11,000 feet, providing the earliest global archaeological proof of permanent human adaptation to high-altitude habitats.",
+      "sourceReference": "Section 9.2, Pages 265-266"
+    },
+    {
+      "id": "HIS-G12-U09-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which of the following accurately describes the social and cultural observance of the Shadey/Ashenda/Solel festival in northern Ethiopia?",
+      "options": [
+        {
+          "id": "A",
+          "text": "An exclusive male initiation ceremony held in December to elect youth into cavalry ranks"
+        },
+        {
+          "id": "B",
+          "text": "A colorful girls' and young women's festival celebrated between August 16 and 26 across Tigray, Amhara, and Agaw communities, originating from the commemoration of the ascension of the Virgin Mary"
+        },
+        {
+          "id": "C",
+          "text": "A competitive agricultural exhibition held in April where farmers display terraced grain yields"
+        },
+        {
+          "id": "D",
+          "text": "A solemn monastic fasting period observed exclusively by ordained Orthodox hermits"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Shadey, Ashenda, or Solel is a cultural girls' festival celebrated annually from August 16 to 26 in Tigray, Amhara, and Agaw regions. While rooted in religious traditions commemorating the Dormition/Ascension of the Virgin Mary, it has evolved into a vibrant celebration of female self-expression, attire, and community solidarity.",
+      "sourceReference": "Section 9.2, Pages 268-269"
+    },
+    {
+      "id": "HIS-G12-U09-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How is leadership structured and rotated within the traditional Luwa generation-set system of the Sidama people?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Through hereditary succession passing from eldest uncle to nephew within a single royal clan"
+        },
+        {
+          "id": "B",
+          "text": "Through five generational cycles (Fulasa, Darara, Mogisa, Wawasa, and Hirbora) rotating every eight years to complete a 40-year cycle under the elected leadership of the Gadana and his deputy Jalawa"
+        },
+        {
+          "id": "C",
+          "text": "Through appointment by municipal urban councils based on commercial wealth"
+        },
+        {
+          "id": "D",
+          "text": "Through lifetime appointments determined by Islamic qadi courts"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The Sidama Luwa is an age-grade and generational system comprising five cycles—Fulasa, Darara, Mogisa, Wawasa, and Hirbora. Each grade exercises responsibility for eight years (completing a 40-year total cycle) under the elected guidance of the Gadana and his deputy (Jalawa) to administer customary defense and civic leadership.",
+      "sourceReference": "Section 9.2, Pages 273-274"
+    },
+    {
+      "id": "HIS-G12-U09-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "In what structural manner does the Konso Cultural Landscape demonstrate centuries of sophisticated indigenous engineering and environmental adaptation?",
+      "options": [
+        {
+          "id": "A",
+          "text": "By clearing highland indigenous forests to establish mechanized single-crop export coffee plantations"
+        },
+        {
+          "id": "B",
+          "text": "By constructing dry-stone hillside terraces up to 5 meters high over 21 generations (more than 400 years) to prevent soil erosion, retain water, and support intensive farming alongside fortified stone-walled settlements"
+        },
+        {
+          "id": "C",
+          "text": "By digging underground aqueducts that divert floodwaters from Lake Turkana into industrial copper smelters"
+        },
+        {
+          "id": "D",
+          "text": "By relying solely on nomadic pastoralist migration between river valleys to avoid tsetse fly infestations"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The Konso Cultural Landscape (inscribed by UNESCO in 2011) represents a 400-year-old living tradition spanning over 21 generations. Faced with dry, hilly, and eroded conditions in the Rift Valley margins, Konso farmers built stone terrace walls up to 5 meters high to conserve topsoil and moisture, combining crop diversification, manuring, and walled hilltop towns (paletas).",
+      "sourceReference": "Section 9.2, Pages 277-278"
+    },
+    {
+      "id": "HIS-G12-U09-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "What archaeological evidence and cultural interpretations have been established regarding the Tiya megalithic site in central Ethiopia?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The site contains 46 carved stones dating between the 10th and 15th centuries AD, marking the burial ground of fallen warriors and featuring engraved motifs of swords and enset (false banana) trees"
+        },
+        {
+          "id": "B",
+          "text": "The megaliths represent 16th-century Ottoman boundary pillars commemorating the conquests of Ahmed Gragn"
+        },
+        {
+          "id": "C",
+          "text": "The monuments served as astronomical observatories constructed by Portuguese Jesuit architects in the 17th century"
+        },
+        {
+          "id": "D",
+          "text": "The stele are royal victory monuments erected by King Ezana to record tributes collected from Nubian chieftains"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The Tiya megalithic site in the Gurage Zone consists of 46 carved stone monuments dating from the 10th to 15th centuries AD. Archaeological excavations reveal that the site was a warrior cemetery where graves contained skeletal remains of battle casualties along with grave goods, displaying carved motifs identified as swords and stylized enset (false banana) symbols.",
+      "sourceReference": "Section 9.2, Pages 275-276"
+    },
+    {
+      "id": "HIS-G12-U09-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Why do traditional indigenous practices—such as traditional bone-setting, Surma family planning, and placing lightning-strike victims in contact with moist earth or dung—frequently decline despite their practical community value?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because international conventions enforce criminal penalties on all traditional community practices"
+        },
+        {
+          "id": "B",
+          "text": "Because indigenous knowledge is largely oral, unwritten, and vulnerable to displacement by foreign technologies and top-down development schemes that offer short-term solutions without sustainable local integration"
+        },
+        {
+          "id": "C",
+          "text": "Because rural elders intentionally refuse to pass techniques to descendants to prevent economic competition"
+        },
+        {
+          "id": "D",
+          "text": "Because indigenous knowledge systems require expensive electronic laboratories to be applied in rural villages"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Indigenous knowledge systems are predominantly transmitted orally from generation to generation and lack formal written documentation. Consequently, they are vulnerable to disappearing when foreign technologies, modern pharmaceuticals, and external developmental paradigms displace local practices without preserving their empirical wisdom (such as grounding static electricity in moist soil or herbal medicine).",
+      "sourceReference": "Section 9.1, Pages 255-257"
+    },
+    {
+      "id": "HIS-G12-U09-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "What historical and socio-cultural factors earned the fortified historic town of Harar (Jugol) recognition both as the 'fourth holy city of Islam' and a UNESCO City of Peace?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It signed an exclusive maritime alliance with the Portuguese empire to monopolize Red Sea commerce"
+        },
+        {
+          "id": "B",
+          "text": "Within its 16th-century defensive stone wall, it houses 82 mosques and 102 shrines, while historically fostering peaceful coexistence, trade, and intermarriage among diverse ethnic groups (Harari, Oromo, Somali, and Amhara)"
+        },
+        {
+          "id": "C",
+          "text": "It was designed by British colonial surveyors as an open, unfortified commercial railway junction in 1917"
+        },
+        {
+          "id": "D",
+          "text": "Its administrative council completely outlawed all non-Muslim residents from entering surrounding provincial trade markets"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Harar Jugol is enclosed by a 16th-century stone wall built during the emirate period. It contains an extraordinary density of Islamic sacred sites (82 mosques and 102 shrines), ranking it among Islam's most venerated cities. Simultaneously, the historic interaction, trade integration, and cultural tolerance practiced among its Harari, Oromo, Somali, and Amhara inhabitants earned it international recognition as a UNESCO City of Peace.",
+      "sourceReference": "Section 9.2, Pages 276-277"
+    }
+  ]
 }

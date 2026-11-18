@@ -3,5 +3,351 @@
   "subject": "History",
   "unitNumber": 5,
   "unitTitle": "Peoples and States of Africa to 1500",
-  "questions": []
+  "questions": [
+    {
+      "id": "HIS-G11-U05-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which African language super-family includes the Bantu language subgroup and encompasses languages such as Yoruba, Shona, Zulu, and Swahili?",
+      "options": [
+        { "id": "A", "text": "Afro-Asiatic" },
+        { "id": "B", "text": "Nilo-Saharan" },
+        { "id": "C", "text": "Niger-Congo" },
+        { "id": "D", "text": "Khoisan" }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The Niger-Congo super-family is one of Africa's largest language groups, covering western, central, eastern, and southern Africa, and includes the extensive Bantu branch with languages such as Shona, Zulu, and Swahili.",
+      "sourceReference": "Section 5.1.1, Page 120"
+    },
+    {
+      "id": "HIS-G11-U05-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is the origin and literal Arabic meaning of the term 'Mamluk', referring to the military aristocracy that ruled Egypt from 1250 to 1517?",
+      "options": [
+        { "id": "A", "text": "'Holy warrior' or crusader" },
+        { "id": "B", "text": "'Owned' or 'slave'" },
+        { "id": "C", "text": "'Noble administrator'" },
+        { "id": "D", "text": "'Caravan merchant'" }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The term 'Mamluk' is an Arabic word meaning 'owned' or 'slave', reflecting their origin as enslaved Turkish military mercenaries who served Ayyubid sultans before seizing sovereign power in Egypt in 1250.",
+      "sourceReference": "Section 5.2.1, Page 121"
+    },
+    {
+      "id": "HIS-G11-U05-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which West African people founded the ancient kingdom of Ghana around the 4th century A.D.?",
+      "options": [
+        { "id": "A", "text": "The Mandinka" },
+        { "id": "B", "text": "The Soninke" },
+        { "id": "C", "text": "The Songhai" },
+        { "id": "D", "text": "The Kanuri" }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The ancient kingdom of Ghana, the oldest known state in Western Sudan, was founded around the 4th century A.D. by the Soninke people and reached its peak around 1000 A.D.",
+      "sourceReference": "Section 5.4, Page 125"
+    },
+    {
+      "id": "HIS-G11-U05-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which emperor of Mali undertook a celebrated pilgrimage to Mecca in 1324, distributing vast quantities of gold that brought international fame to his empire?",
+      "options": [
+        { "id": "A", "text": "Sundiata Keita" },
+        { "id": "B", "text": "Sunni Ali" },
+        { "id": "C", "text": "Mansa Musa" },
+        { "id": "D", "text": "Askia Muhammad" }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Mansa Musa (r. 1312–1337) ruled the Empire of Mali at its zenith and made a legendary pilgrimage to Mecca in 1324 with an enormous retinue, distributing gold that demonstrated Mali's wealth to Europe and the Middle East.",
+      "sourceReference": "Section 5.4, Pages 126, 130"
+    },
+    {
+      "id": "HIS-G11-U05-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What does the Bantu-derived word 'Zimbabwe' literally mean, describing the imposing architectural ruins of Great Zimbabwe?",
+      "options": [
+        { "id": "A", "text": "'Sacred spring'" },
+        { "id": "B", "text": "'Hill of gold'" },
+        { "id": "C", "text": "'Stone house'" },
+        { "id": "D", "text": "'Royal palace'" }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The word 'Zimbabwe' comes from a Shona (Bantu) term meaning 'stone house' or 'venerated stone enclosures', referring to the dry-stone palaces and walls constructed between 900 and 1500 A.D.",
+      "sourceReference": "Section 5.6, Page 134"
+    },
+    {
+      "id": "HIS-G11-U05-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What religious and political objective motivated the 11th-century Almoravid movement founded by the Lamtuna Berbers in the Maghreb?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To enforce the translation of the Quran into the Berber language across southern Spain"
+        },
+        {
+          "id": "B",
+          "text": "To establish a political community strictly applying the primitive purity and judicial principles of orthodox Islam"
+        },
+        {
+          "id": "C",
+          "text": "To form a military coalition with the Christian kingdom of Aragon against the Fatimids"
+        },
+        {
+          "id": "D",
+          "text": "To eliminate trans-Saharan trade in favor of Mediterranean naval piracy"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The Almoravid movement, initiated by the Lamtuna Berbers under Ibn Yasin and Yahya, was an Islamic reform movement aimed at purging local religious innovations and strictly adhering to the orthodox moral and legal tenets of Islam.",
+      "sourceReference": "Section 5.3, Page 123"
+    },
+    {
+      "id": "HIS-G11-U05-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What technological advantage enabled ancient Ghana to dominate neighboring communities and expand into an empire controlling the trans-Saharan trade?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Mastery of gunpowder artillery imported from the Ottoman Empire"
+        },
+        {
+          "id": "B",
+          "text": "Advanced iron-working technology for crafting tools and superior weapons"
+        },
+        {
+          "id": "C",
+          "text": "Large-scale deployment of camel cavalry trained by Egyptian instructors"
+        },
+        {
+          "id": "D",
+          "text": "Bronze casting techniques adopted from the forest kingdom of Benin"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Ghanaian craftsmen were skilled in iron smelting and blacksmithing, equipping Ghana's armies with durable iron weapons that gave them military superiority over neighboring communities who lacked advanced metallurgy.",
+      "sourceReference": "Section 5.4, Pages 125-126"
+    },
+    {
+      "id": "HIS-G11-U05-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In what significant administrative and religious respect did the rule of Askia Muhammad (1493–1528) depart from that of his predecessor Sunni Ali in the Songhai Empire?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Askia Muhammad abandoned the trans-Saharan trade to focus solely on Atlantic commerce"
+        },
+        {
+          "id": "B",
+          "text": "Askia Muhammad embraced Islam, established Quranic schools, and created a departmentalized imperial bureaucracy supervised by royal appointees"
+        },
+        {
+          "id": "C",
+          "text": "Askia Muhammad rejected Islamic jurisprudence and reinstated traditional indigenous ancestral worship in Gao"
+        },
+        {
+          "id": "D",
+          "text": "Askia Muhammad dissolved the standing infantry in favor of regional mercenary forces from Morocco"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "While Sunni Ali adhered primarily to traditional indigenous beliefs, Askia Muhammad established a devout Muslim dynasty, promoted Islamic education by building mosques and schools, and organized a centralized bureaucracy with distinct departments for farming, the military, and finance.",
+      "sourceReference": "Section 5.4, Page 127"
+    },
+    {
+      "id": "HIS-G11-U05-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What military innovation acquired during the 16th century under Mai Idris Alooma allowed the Kanem-Bornu Empire to renew its territorial expansion?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Equipping his army with firearms obtained from the Ottoman Turks in North Africa"
+        },
+        {
+          "id": "B",
+          "text": "Deploying armored river gunboats along the Niger River"
+        },
+        {
+          "id": "C",
+          "text": "Constructing deep defensive trenches modeled after the Ethiopian 'Hiriyoo'"
+        },
+        {
+          "id": "D",
+          "text": "Importing European-trained mercenary cavalry from the Portuguese"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The 16th century was a period of revived power and expansion for Kanem-Bornu under Mai Idris Alooma, who modernized his forces by acquiring firearms and tactical training from Ottoman Turks in North Africa.",
+      "sourceReference": "Section 5.4, Page 128"
+    },
+    {
+      "id": "HIS-G11-U05-Q0010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which of the following correctly describes the occupational and economic specialization among the historical Hausa city-states of northern Nigeria?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Daura specialized in iron working, Zaria was the primary provider of slaves, and Kano was a hub for crafts and trade"
+        },
+        {
+          "id": "B",
+          "text": "Kano specialized exclusively in sea salt extraction, while Gobir was the agricultural granary"
+        },
+        {
+          "id": "C",
+          "text": "Katsina was the center for bronze sculpting, while Rano monopolized gold mining"
+        },
+        {
+          "id": "D",
+          "text": "Daura was the chief provider of cavalry horses, while Zaria was the center of copper smelting"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Each Hausa city-state developed economic specializations: Kano and Katsina in the north focused on commerce and crafts; Daura specialized in iron metallurgy; and southernmost Zaria (Zazzau) acted as the main procurer of slaves.",
+      "sourceReference": "Section 5.4, Page 130"
+    },
+    {
+      "id": "HIS-G11-U05-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What economic role did the southern Swahili island city-state of Kilwa play along the medieval East African coast?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It held an agricultural monopoly on wheat cultivation for export to the Arabian Peninsula"
+        },
+        {
+          "id": "B",
+          "text": "It operated an outpost at Sofala to control the highly lucrative trade in gold originating from Great Zimbabwe"
+        },
+        {
+          "id": "C",
+          "text": "It served as the primary naval shipyard for the imperial fleets of the Ming dynasty"
+        },
+        {
+          "id": "D",
+          "text": "It functioned as the sole entry point for European textiles into the interior of the Congo Basin"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Kilwa, located off the coast of modern Tanzania, maintained an outpost at Sofala (in modern Mozambique) through which it monopolized the lucrative gold trade coming from the inland kingdom of Great Zimbabwe.",
+      "sourceReference": "Section 5.5, Page 133"
+    },
+    {
+      "id": "HIS-G11-U05-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "How did Mamluk Egypt sustain its remarkable economic prosperity and military dominance across the eastern Mediterranean and Red Sea between 1250 and 1517?",
+      "options": [
+        {
+          "id": "A",
+          "text": "By maintaining a strict trade embargo against all European Christian merchants while subsisting on domestic wheat harvests"
+        },
+        {
+          "id": "B",
+          "text": "By monopolizing transit revenues from the global spice trade linking the Far East with Europe via the Red Sea and taxing the trans-Saharan pilgrim gold caravans from West Africa"
+        },
+        {
+          "id": "C",
+          "text": "By relying entirely on direct financial subsidies granted by the Abbasid caliphs residing in Baghdad"
+        },
+        {
+          "id": "D",
+          "text": "By conquering the gold fields of Great Zimbabwe and establishing permanent garrisons along the Swahili coast"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Mamluk Egypt's prosperity rested on its dual commercial role: controlling the Red Sea spice trade route connecting Asia with Mediterranean markets, and deriving customs duties from the trans-Saharan trade and West African pilgrims carrying vast amounts of gold through Cairo.",
+      "sourceReference": "Section 5.2.1, Pages 121-122"
+    },
+    {
+      "id": "HIS-G11-U05-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Why did the Moroccan invasion of 1591, led by Sultan Ahmad al-Mansur, ultimately result in an economic setback for Morocco despite its military victory over Songhai?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Moroccan forces were defeated at the Battle of Tondibi by Songhai cavalry"
+        },
+        {
+          "id": "B",
+          "text": "The use of firearms caused European powers to impose a total maritime blockade on Moroccan ports"
+        },
+        {
+          "id": "C",
+          "text": "The conquest shattered the political stability of Songhai and disrupted the regular trans-Saharan gold trade, which diverted eastward to Tunis and Cairo or southward to European coastal traders"
+        },
+        {
+          "id": "D",
+          "text": "The Tuareg nomads immediately allied with the Ottoman Turks to conquer Marrakesh"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Although Moroccan armies armed with muskets defeated Songhai in 1591 and seized gold and captives, Morocco could not govern across the desert; the invasion destabilized the region, ruined Timbuktu's commercial hub, and diverted gold routes away from Morocco toward North African rivals and European coastal merchants.",
+      "sourceReference": "Section 5.4, Pages 127-128"
+    },
+    {
+      "id": "HIS-G11-U05-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "How did the socio-economic organization and subsistence strategies of the Khoi Khoi diverge from those of the neighboring San prior to European colonial expansion?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The Khoi Khoi abandoned foraging to become pastoral cattle herders organized into larger social units, whereas the San maintained a hunter-gatherer way of life in small foraging bands of about ten families"
+        },
+        {
+          "id": "B",
+          "text": "The Khoi Khoi lived exclusively as sedentary urban iron-smelters, while the San practiced large-scale terrace farming"
+        },
+        {
+          "id": "C",
+          "text": "The Khoi Khoi were hunter-gatherers using poison-tipped arrows, while the San were trans-Atlantic slave merchants"
+        },
+        {
+          "id": "D",
+          "text": "The Khoi Khoi lived in stone-walled fortresses, while the San were maritime fishermen along the Indian Ocean"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "While both groups belong to the Khoisan linguistic family, the Khoi Khoi transitioned around the 14th century from hunting to nomadic pastoral cattle herding, whereas the San remained hunter-gatherers organized in small kinship bands of about ten families using bows and poisoned arrows.",
+      "sourceReference": "Section 5.6, Pages 136-137"
+    },
+    {
+      "id": "HIS-G11-U05-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Which statement accurately synthesizes the commodity flow and commercial interdependence that characterized the medieval trans-Saharan caravan trade?",
+      "options": [
+        {
+          "id": "A",
+          "text": "West Africa exported manufactured woolen textiles and rock salt to North Africa in exchange for copper and horses"
+        },
+        {
+          "id": "B",
+          "text": "Forest and savanna zones of West Africa supplied gold, kola nuts, slaves, and animal hides northward, in exchange for Saharan rock salt (from Taghaza), foodstuffs, cloth, and Mediterranean manufactured goods"
+        },
+        {
+          "id": "C",
+          "text": "Mediterranean cities traded exclusively in porcelain and tea with the Sahelian states in return for iron ore"
+        },
+        {
+          "id": "D",
+          "text": "The trans-Saharan trade was conducted without intermediary stops, using direct maritime voyages from the Atlantic coast of Morocco to the Gulf of Guinea"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The trans-Saharan trade balanced regional scarcities: northern traders transported rock salt from Taghaza alongside Mediterranean cloth and foodstuffs into the Sahel and forest fringes, exchanging them for precious West African gold (from Wangara and Bambuk), kola nuts, ivory, hides, and slaves.",
+      "sourceReference": "Section 5.7, Pages 137-138"
+    }
+  ]
 }

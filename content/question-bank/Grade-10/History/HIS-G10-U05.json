@@ -3,5 +3,339 @@
   "subject": "History",
   "unitNumber": 5,
   "unitTitle": "Global and Regional Developments Since 1945",
-  "questions": []
+  "questions": [
+    {
+      "id": "HIS-G10-U05-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In which European city is the permanent seat of the International Court of Justice, the principal judicial organ of the United Nations, located?",
+      "options": [
+        { "id": "A", "text": "Geneva, Switzerland" },
+        { "id": "B", "text": "The Hague, Netherlands" },
+        { "id": "C", "text": "Vienna, Austria" },
+        { "id": "D", "text": "Brussels, Belgium" }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The International Court of Justice is the principal judicial organ of the United Nations, composed of 15 judges elected by the General Assembly, with its permanent seat situated in The Hague, Netherlands.",
+      "sourceReference": "Section 5.1, Page 115"
+    },
+    {
+      "id": "HIS-G10-U05-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Who coined the phrase 'Iron Curtain' during a famous 1946 speech in Fulton, Missouri, to describe the ideological and physical boundary dividing Europe?",
+      "options": [
+        { "id": "A", "text": "Harry S. Truman" },
+        { "id": "B", "text": "George F. Kennan" },
+        { "id": "C", "text": "Winston Churchill" },
+        { "id": "D", "text": "George C. Marshall" }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The term 'Iron Curtain' was popularized by former British Prime Minister Winston Churchill in March 1946 in Fulton, Missouri, to describe the barrier erected by the Soviet Union to isolate itself and its Eastern European satellites from the non-communist West.",
+      "sourceReference": "Section 5.2, Page 118"
+    },
+    {
+      "id": "HIS-G10-U05-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which political organization led by Mao Zedong established the People's Republic of China (PRC) in October 1949 after defeating the Nationalist forces?",
+      "options": [
+        { "id": "A", "text": "The Kuomintang (KMT)" },
+        { "id": "B", "text": "The Chinese Communist Party (CCP)" },
+        { "id": "C", "text": "The Viet Minh League" },
+        { "id": "D", "text": "The Workers' Party of Korea" }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Following the Chinese Civil War (1946–1949), the Chinese Communist Party (CCP) led by Mao Zedong emerged victorious and formally established the People's Republic of China on October 1, 1949, forcing the Nationalist government to flee to Taiwan.",
+      "sourceReference": "Section 5.3, Page 129"
+    },
+    {
+      "id": "HIS-G10-U05-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "At which 1955 international gathering in Indonesia did leaders from twenty-nine Asian and African nations establish the foundational principles of the Non-Aligned Movement (NAM)?",
+      "options": [
+        { "id": "A", "text": "The Belgrade Conference" },
+        { "id": "B", "text": "The Bandung Conference" },
+        { "id": "C", "text": "The Cairo Conference" },
+        { "id": "D", "text": "The Havana Conference" }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The core concepts of the Non-Aligned Movement originated during the historic Afro-Asian Conference held in Bandung, Indonesia, in April 1955, where leaders pledged peaceful coexistence and mutual opposition to colonialism and superpower military blocs.",
+      "sourceReference": "Section 5.4, Page 135"
+    },
+    {
+      "id": "HIS-G10-U05-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What twin political and economic reform programs were launched by Mikhail Gorbachev after becoming leader of the Soviet Communist Party in 1985?",
+      "options": [
+        { "id": "A", "text": "New Economic Policy and War Communism" },
+        { "id": "B", "text": "Great Leap Forward and Cultural Revolution" },
+        { "id": "C", "text": "Glasnost and Perestroika" },
+        { "id": "D", "text": "Collectivization and Five-Year Plans" }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Mikhail Gorbachev introduced 'glasnost' (openness and transparency in government affairs) and 'perestroika' (economic restructuring allowing limited private enterprise) to reform and revitalize the stagnant Soviet system.",
+      "sourceReference": "Section 5.6, Page 139"
+    },
+    {
+      "id": "HIS-G10-U05-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What primary structural and political deficiencies caused the collapse of the League of Nations and necessitated the creation of the United Nations in 1945?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The absence of key world powers like the United States and the reluctance of member states to confront aggression in Manchuria and Ethiopia"
+        },
+        {
+          "id": "B",
+          "text": "The complete domination of the League's Council by newly independent African member nations"
+        },
+        {
+          "id": "C",
+          "text": "The refusal of France and Great Britain to accept the Fourteen Points proposed by Woodrow Wilson"
+        },
+        {
+          "id": "D",
+          "text": "The enforcement of unanimous voting that required all decisions to be ratified by the International Court of Justice"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The League of Nations suffered fatal structural weaknesses: the United States never joined, and its members proved hesitant and ineffective when challenged by Japanese aggression in Manchuria, Italian invasion of Ethiopia, and German rearmament.",
+      "sourceReference": "Section 5.1, Page 112"
+    },
+    {
+      "id": "HIS-G10-U05-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What specific geopolitical crisis prompted President Harry S. Truman to announce the Truman Doctrine in March 1947?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The deployment of Soviet intercontinental ballistic missiles in Cuba"
+        },
+        {
+          "id": "B",
+          "text": "The North Korean invasion across the 38th parallel into South Korea"
+        },
+        {
+          "id": "C",
+          "text": "Great Britain's inability to continue financial and military assistance to Greece and Turkey against communist pressure"
+        },
+        {
+          "id": "D",
+          "text": "The nationalization of Western oil concessions in the Persian Gulf"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "When Britain announced it could no longer afford to support the governments of Greece and Turkey against communist insurgencies, Truman requested $400 million in aid from Congress to assist free peoples resisting subjugation, formalizing the Containment policy.",
+      "sourceReference": "Section 5.2, Page 121"
+    },
+    {
+      "id": "HIS-G10-U05-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How did the Western Allied nations successfully counter the land and canal blockade imposed by the Soviet Union on West Berlin between June 1948 and May 1949?",
+      "options": [
+        {
+          "id": "A",
+          "text": "By signing an immediate peace treaty that recognized East Germany's boundaries"
+        },
+        {
+          "id": "B",
+          "text": "By conducting the massive 'Berlin Airlift' to deliver food, coal, and medicine to the besieged population by transport aircraft"
+        },
+        {
+          "id": "C",
+          "text": "By deploying naval flotillas to blockade Soviet maritime ports in the Baltic Sea"
+        },
+        {
+          "id": "D",
+          "text": "By executing armored military strikes to demolish Soviet checkpoints along the autobahn"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In response to Stalin's blockade of all road and rail access to West Berlin, the United States and Britain mounted the massive 'Berlin Airlift', flying round-the-clock cargo missions to supply over two million West Berliners until the Soviets lifted the blockade in May 1949.",
+      "sourceReference": "Section 5.2, Page 124"
+    },
+    {
+      "id": "HIS-G10-U05-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Along which geographic boundary was the Korean Peninsula partitioned into Soviet and American administrative occupation zones following World War II in 1945?",
+      "options": [
+        { "id": "A", "text": "The 17th parallel of latitude" },
+        { "id": "B", "text": "The 38th parallel of latitude" },
+        { "id": "C", "text": "The Yalu River border" },
+        { "id": "D", "text": "The Han River corridor" }
+      ],
+      "correctOptionId": "B",
+      "explanation": "At the conclusion of World War II, Korea was liberated from Japanese colonial rule and divided along the 38th parallel, with Soviet forces occupying the north (establishing the DPRK under Kim Il Sung) and American forces occupying the south (establishing the ROK under Syngman Rhee).",
+      "sourceReference": "Section 5.3, Page 129"
+    },
+    {
+      "id": "HIS-G10-U05-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What was the international diplomatic outcome of the catastrophic French military defeat at the Battle of Dien Bien Phu in May 1954?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The immediate unification of Vietnam under an American-sponsored parliamentary monarchy"
+        },
+        {
+          "id": "B",
+          "text": "The annexation of Indochina into the Southeast Asia Treaty Organization"
+        },
+        {
+          "id": "C",
+          "text": "The signing of the Geneva Accords, which recognized the independence of Laos and Cambodia and temporarily partitioned Vietnam at the 17th parallel"
+        },
+        {
+          "id": "D",
+          "text": "The unconditional surrender of the Viet Minh forces to the French colonial expeditionary corps"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The defeat of French troops at Dien Bien Phu ended the First Indochina War; under the May 1954 Geneva Accords, France withdrew, Laos and Cambodia attained independence, and Vietnam was divided at the 17th parallel pending national elections.",
+      "sourceReference": "Section 5.3, Page 131"
+    },
+    {
+      "id": "HIS-G10-U05-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What decisive sovereign action taken by Egyptian President Gamal Abdel Nasser in July 1956 precipitated the Second Arab-Israeli War (the Suez Crisis)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The full-scale armored assault across the Sinai Peninsula against Tel Aviv"
+        },
+        {
+          "id": "B",
+          "text": "The signing of a mutual defense treaty with the government of Jordan"
+        },
+        {
+          "id": "C",
+          "text": "The nationalization of the foreign-operated Suez Canal Company"
+        },
+        {
+          "id": "D",
+          "text": "The official proclamation of an international petroleum embargo against Western Europe"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "On July 26, 1956, Egyptian President Gamal Abdel Nasser nationalized the Suez Canal Company to finance the Aswan High Dam, prompting a tripartite military attack by Israel, Great Britain, and France in October 1956.",
+      "sourceReference": "Section 5.5, Page 137"
+    },
+    {
+      "id": "HIS-G10-U05-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Why did Soviet leader Joseph Stalin condemn the American Marshall Plan as 'Dollar Imperialism' and prohibit Eastern European satellite nations from accepting its aid?",
+      "options": [
+        {
+          "id": "A",
+          "text": "He argued that the aid was an American strategy to impose capitalist dominance, erode national sovereignty, and rebuild Western Germany as an anti-Soviet outpost"
+        },
+        {
+          "id": "B",
+          "text": "He claimed the funds were derived entirely from confiscated Japanese imperial gold reserves"
+        },
+        {
+          "id": "C",
+          "text": "He asserted that accepting foreign assistance was punishable under the founding covenant of the Warsaw Pact"
+        },
+        {
+          "id": "D",
+          "text": "He maintained that European economies had fully recovered through the agricultural collectivization of Ukraine"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Stalin denounced the European Recovery Program (Marshall Plan) as an imperialist mechanism created by the United States to purchase political influence, penetrate European markets, and integrate West Germany into a hostile capitalist bloc, creating the Molotov Plan as a countermeasure.",
+      "sourceReference": "Section 5.2, Pages 121-123"
+    },
+    {
+      "id": "HIS-G10-U05-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "What operational design defined the 'Strategic Hamlet' program introduced in South Vietnam in 1961, and why did it ultimately backfire?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It established heavy industrial complexes in border forests, but lacked access to domestic electrical power"
+        },
+        {
+          "id": "B",
+          "text": "It forcibly relocated rural peasants into fortified villages to isolate them from the Viet Cong, which alienated the local population and fueled rural support for the insurgency"
+        },
+        {
+          "id": "C",
+          "text": "It deployed United Nations peacekeeping battalions that disarmed the South Vietnamese army"
+        },
+        {
+          "id": "D",
+          "text": "It partitioned agrarian land exclusively among French rubber concessionaires, triggering urban labor strikes"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The 'Strategic Hamlet' (Safe Village) program aimed to sever ties between villagers and Viet Cong guerrillas by destroying traditional settlements and forcing peasants into fortified hamlets, an approach that uprooted ancestral lands and caused widespread rural resentment against the Saigon government.",
+      "sourceReference": "Section 5.3, Page 132"
+    },
+    {
+      "id": "HIS-G10-U05-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Which statement accurately evaluates the territorial transformation resulting from the Six-Day War fought in June 1967 between Israel and the Arab states?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Arab coalition armies seized northern Galilee and dismantled the international borders established in 1948"
+        },
+        {
+          "id": "B",
+          "text": "The United Nations Security Council dissolved the state of Israel and placed the Suez Canal under direct Soviet trusteeship"
+        },
+        {
+          "id": "C",
+          "text": "Israeli preemptive air strikes destroyed the Egyptian air force on the ground, leading to Israel's occupation of the Sinai Peninsula, Gaza Strip, West Bank, East Jerusalem, and the Golan Heights"
+        },
+        {
+          "id": "D",
+          "text": "Jordan annexed the southern Negev desert, while Syria secured permanent access to the Mediterranean Sea"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "On June 5, 1967, Israel launched preemptive air attacks that destroyed Egypt's air force, subsequently routing Egyptian, Syrian, and Jordanian forces within six days and seizing the Gaza Strip, Sinai Peninsula, West Bank, East Jerusalem, and Golan Heights.",
+      "sourceReference": "Section 5.5, Pages 137-138"
+    },
+    {
+      "id": "HIS-G10-U05-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "How did the disproportionate burden of the Cold War arms race interact with internal economic factors to precipitate the final collapse of the Soviet Union in 1991?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Heavy military expenditures absorbed excessive shares of national GDP, starving the civilian consumer economy and making the state unable to withstand the political openings enabled by glasnost and perestroika"
+        },
+        {
+          "id": "B",
+          "text": "The Soviet government completely disarmed its conventional infantry in 1980 to finance the construction of nuclear space stations"
+        },
+        {
+          "id": "C",
+          "text": "The Warsaw Pact nations launched a joint naval invasion of Moscow after the Soviet treasury rejected American agricultural loans"
+        },
+        {
+          "id": "D",
+          "text": "The United States forced the Soviet Union to pay full financial reparations for damage caused during the Korean War"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The Soviet Union spent a ruinous percentage of its gross domestic product maintaining military parity and developing weapons (such as ICBMs and Sputnik), which aggravated severe consumer shortages and economic stagnation; when Gorbachev's reforms permitted political criticism, national independence movements rapidly dismantled the union.",
+      "sourceReference": "Section 5.2 & Section 5.6, Pages 127, 139-140"
+    }
+  ]
 }

@@ -3,5 +3,351 @@
   "subject": "History",
   "unitNumber": 3,
   "unitTitle": "Peoples, States and Historical Processes in Ethiopia and the Horn to the End of the 13th Century",
-  "questions": []
+  "questions": [
+    {
+      "id": "HIS-G11-U03-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which of the following African language super-families has the widest geographical distribution in northern, central, northeastern Africa and the Horn?",
+      "options": [
+        { "id": "A", "text": "Niger-Congo" },
+        { "id": "B", "text": "Khoisan" },
+        { "id": "C", "text": "Nilo-Saharan" },
+        { "id": "D", "text": "Afro-Asiatic" }
+      ],
+      "correctOptionId": "D",
+      "explanation": "Afro-Asiatic is the most important super-family in terms of geographical distribution in northern, central, northeastern Africa and the Horn, comprising Cushitic, Omotic, Semitic, Berber, Chadic, and ancient Egyptian families.",
+      "sourceReference": "Section 3.1.1, Pages 52-53"
+    },
+    {
+      "id": "HIS-G11-U03-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which ancient commercial port on the western coast of the Red Sea served as the primary maritime outlet for the Kingdom of Aksum according to the 'Periplus of the Erythraean Sea'?",
+      "options": [
+        { "id": "A", "text": "Avalites (Zeila)" },
+        { "id": "B", "text": "Adulis" },
+        { "id": "C", "text": "Malao (Berbera)" },
+        { "id": "D", "text": "Serapion (Mogadishu)" }
+      ],
+      "correctOptionId": "B",
+      "explanation": "According to the 1st-century travel guide 'Periplus of the Erythraean Sea', Adulis on the western coast of the Red Sea served as the primary port and maritime gateway of the Aksumite state.",
+      "sourceReference": "Section 3.3, Page 63"
+    },
+    {
+      "id": "HIS-G11-U03-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Who was consecrated by Patriarch Athanasius of Alexandria as the first Christian bishop of the Kingdom of Aksum in the 4th century A.D.?",
+      "options": [
+        { "id": "A", "text": "Abba Aregawi" },
+        { "id": "B", "text": "Abba Minas" },
+        { "id": "C", "text": "Frumentius" },
+        { "id": "D", "text": "Saint Yared" }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Frumentius, credited with converting King Ezana to Christianity in the 4th century A.D., traveled to Alexandria where Patriarch Athanasius consecrated him as the first bishop (Abuna) of the Ethiopian Orthodox Church.",
+      "sourceReference": "Section 3.1.2, Pages 57-58"
+    },
+    {
+      "id": "HIS-G11-U03-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which local ruling dynasty founded the medieval Zagwe dynasty around the middle of the twelfth century?",
+      "options": [
+        { "id": "A", "text": "The Walasma dynasty of Ifat" },
+        {
+          "id": "B",
+          "text": "The Agaw of Wag and Lasta under Mera Tekle Haymanot"
+        },
+        { "id": "C", "text": "The Makhzumite clan of eastern Shewa" },
+        { "id": "D", "text": "The Minjo royal clan of Kafa" }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The Zagwe dynasty was founded in the mid-12th century by Mera Tekle Haymanot, an Agaw general from Lasta married to the daughter of the last Aksumite king, Dil Na'od.",
+      "sourceReference": "Section 3.5, Pages 67-68"
+    },
+    {
+      "id": "HIS-G11-U03-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In the indigenous Waqefanna religion of the Oromo people, who serves as the spiritual father and leader whose ceremonial anointment (Jila) provides nationwide blessings?",
+      "options": [
+        { "id": "A", "text": "Abba Muda" },
+        { "id": "B", "text": "Abbaa Duulaa" },
+        { "id": "C", "text": "Abbaa Bokku" },
+        { "id": "D", "text": "Abba Sera" }
+      ],
+      "correctOptionId": "A",
+      "explanation": "In Oromo indigenous religion, Abba Muda is the supreme spiritual leader to whom pilgrims from various Oromo confederacies travel during the sacred Jila pilgrimage to receive blessings and anointments of righteousness.",
+      "sourceReference": "Section 3.1.2, Pages 55-56"
+    },
+    {
+      "id": "HIS-G11-U03-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which of the following correctly pairs a branch of the Cushitic language family with its representative languages spoken in Ethiopia and the Horn?",
+      "options": [
+        { "id": "A", "text": "North Cushitic — Shinasha and South Ma'o" },
+        {
+          "id": "B",
+          "text": "Central Cushitic (Agaw) — Bilen, Qimant, Hamtang, and Awgni"
+        },
+        {
+          "id": "C",
+          "text": "Lowland East Cushitic — Hadiya, Kambata, Sidama, and Gedeo"
+        },
+        {
+          "id": "D",
+          "text": "Highland East Cushitic — Afan Oromo, Afar, and Somali"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Central Cushitic (also called Agaw languages) comprises Bilen (in Eritrea), Hamtang, Qimant, and Awgni; Shinasha is Omotic, while Hadiya and Sidama are Highland East Cushitic, and Afan Oromo and Somali are Lowland East Cushitic.",
+      "sourceReference": "Section 3.1.1, Pages 52-53"
+    },
+    {
+      "id": "HIS-G11-U03-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What archaeological evidence from the pre-Aksumite state of Da'amat confirms its advanced metallurgical technology, sedentary agricultural economy, and external maritime trade?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Manufacture of iron tools and weapons, millet cultivation, and exchange of gold, ivory, and slaves with South Arabian merchants through Yeha"
+        },
+        {
+          "id": "B",
+          "text": "Large-scale coin mintage in bronze and silver bearing Sabaean script discovered at Sof Omar"
+        },
+        {
+          "id": "C",
+          "text": "Extensive monolithic rock-hewn basilicas built from soft limestone in the Awash Valley"
+        },
+        {
+          "id": "D",
+          "text": "Construction of terraced hydraulic canals along the Blue Nile to export frankincense to Meroe"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The Kingdom of Da'amat (c. 980–400 B.C.), centered at Yeha, produced iron tools and weapons, cultivated millet, and conducted active trade in gold, silver, ivory, and tortoise shells with South Arabian merchants.",
+      "sourceReference": "Section 3.2, Page 62"
+    },
+    {
+      "id": "HIS-G11-U03-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How did internal and external long-distance commercial exchange operate between Aksum and the region of Sasu as recorded in Cosmas Indicopleustes' 'Christian Topography'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Through standardized gold coin auctions conducted by Alexandrian consular brokers"
+        },
+        {
+          "id": "B",
+          "text": "Via silent barter trade where Aksumite merchants exchanged cattle, iron, and salt blocks for gold without verbal negotiation"
+        },
+        {
+          "id": "C",
+          "text": "By direct military confiscation of gold mines along the Omo River basin"
+        },
+        {
+          "id": "D",
+          "text": "Through royal maritime flotillas operating across the Gulf of Aden to Ceylon"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The Adulis inscription recorded in Cosmas' 'Christian Topography' documents a large caravan of royal Aksumite traders traveling to Sasu (in present-day Benishangul) who conducted 'silent trade' by leaving cattle, salt blocks, and iron to be exchanged for gold without direct contact.",
+      "sourceReference": "Section 3.3, Page 64"
+    },
+    {
+      "id": "HIS-G11-U03-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What primary military motivation led King Kaleb of Aksum (r. c. 500–535 A.D.) to launch an overseas naval expedition across the Red Sea into South Arabia?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To conquer the Persian Sassanid capital of Ctesiphon with Byzantine naval support"
+        },
+        {
+          "id": "B",
+          "text": "To defeat the Jewish ruler Dhu-Nuwas, who had persecuted Christians in Zafar and Najran, and restore Aksumite hegemony over Himyar and Saba"
+        },
+        {
+          "id": "C",
+          "text": "To seize commercial monopolies over the trans-Saharan caravan network in Meroe"
+        },
+        {
+          "id": "D",
+          "text": "To secure exclusive possession of the Dahlak Islands against Arab pirates"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "King Kaleb crossed the Red Sea with Byzantine assistance to defeat Dhu-Nuwas, a South Arabian prince converted to Judaism who had massacred Christians in Najran and Zafar, subsequently appointing Abreha as governor of the South Arabian province.",
+      "sourceReference": "Section 3.3, Page 64"
+    },
+    {
+      "id": "HIS-G11-U03-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What major socio-cultural and ecclesiastical contributions are attributed to the Nine Saints who arrived in the Aksumite kingdom from the Eastern Roman Empire in the late 5th century?",
+      "options": [
+        {
+          "id": "A",
+          "text": "They minted the first gold coins bearing the sign of the cross and built the defensive ditch of Hiriyoo"
+        },
+        {
+          "id": "B",
+          "text": "They expanded monastic institutions, introduced church architecture resembling Syrian basilicas, and translated the Holy Bible into Ge'ez"
+        },
+        {
+          "id": "C",
+          "text": "They established the Council of Boru Meda and outlawed the practice of ritual ablution"
+        },
+        {
+          "id": "D",
+          "text": "They formulated the Fitha Negest civil code and negotiated the 42nd Pseudo-Canon with Alexandria"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The Nine Saints founded monasteries (such as Debre Damo), spread Christianity among the broader rural populace, influenced church architecture, and translated Biblical scriptures into the Ge'ez language.",
+      "sourceReference": "Section 3.1.2, Page 58"
+    },
+    {
+      "id": "HIS-G11-U03-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What was the political fate of the Muslim Sultanate of Shewa in 1285 A.D.?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It was conquered and incorporated by the rising Walasma dynasty of the neighboring Sultanate of Ifat"
+        },
+        {
+          "id": "B",
+          "text": "It formed an unbroken confederation with the Kingdom of Damot to overthrow the Zagwe dynasty"
+        },
+        {
+          "id": "C",
+          "text": "It was partitioned between the Mamluk Sultanate of Egypt and the Dahlak Sultanate"
+        },
+        {
+          "id": "D",
+          "text": "Its Makhzumite ruling family was peacefully restored to the throne of Aksum"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "In 1285 A.D., the Makhzumite dynasty of Shewa was overthrown and annexed by Umar Walasma, the founder of the Sultanate of Ifat, terminating the existence of the Sultanate of Shewa as an independent polity.",
+      "sourceReference": "Section 3.4, Page 67"
+    },
+    {
+      "id": "HIS-G11-U03-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Which combination of internal and external factors brought about the economic decline and eventual political collapse of the Aksumite Empire?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The Portuguese naval blockade of Massawa combined with large-scale peasant uprisings in Gojjam"
+        },
+        {
+          "id": "B",
+          "text": "Arab Muslim destruction of Adulis (c. 702 A.D.) and control of Red Sea trade routes, alongside environmental degradation, agricultural decline, and rebellions by the Beja, Agaw, and Queen Bani al-Hamwiyah (Yodit)"
+        },
+        {
+          "id": "C",
+          "text": "The complete annexation of northern Tigray by the Mamluk armies of Egypt"
+        },
+        {
+          "id": "D",
+          "text": "The total exhaustion of iron deposits in Yeha and the northward migration of the Oromo"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Aksum's international trade artery was cut when Arab Muslims destroyed the port of Adulis around 702 A.D. and took control of Red Sea commerce; this external isolation combined with environmental degradation, declining soil fertility, and recurring internal revolts by the Beja, Agaw, and Queen Yodit to cause its collapse.",
+      "sourceReference": "Section 3.3, Page 65"
+    },
+    {
+      "id": "HIS-G11-U03-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "What religious and geopolitical motivation inspired King Lalibela and other Zagwe monarchs to undertake the monumental construction of the rock-hewn monolithic churches at Roha?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To establish a 'second Jerusalem' in the Ethiopian highlands after Muslim Arab control of the Red Sea and Egypt made traditional pilgrimages to the Holy Land hazardous for Ethiopian Christians"
+        },
+        {
+          "id": "B",
+          "text": "To replace the Patriarchate of Alexandria with an independent indigenous papacy in Lasta"
+        },
+        {
+          "id": "C",
+          "text": "To shelter royal gold treasuries from expanding naval raids by the Ottoman Empire"
+        },
+        {
+          "id": "D",
+          "text": "To celebrate the military defeat of the Solomonic restoration movement in Shewa"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Because Muslim control over the Middle East and Red Sea made Christian pilgrimages to Jerusalem perilous, Zagwe rulers—especially King Lalibela—embarked on building the rock-hewn churches at Roha (Adafa) to replicate the holy sites as a 'second Jerusalem' on Ethiopian soil.",
+      "sourceReference": "Section 3.5, Pages 68-69"
+    },
+    {
+      "id": "HIS-G11-U03-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "How did the royal succession dispute within the Zagwe dynasty interact with the ideological narrative of the 'Kibre Negest' to bring about its downfall in 1270 A.D.?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Rival Agaw princes invited the Mamluks to arbitrate dynastic legitimacy at Debre Damo"
+        },
+        {
+          "id": "B",
+          "text": "Internal succession feuds weakened Zagwe authority, enabling Yekuno Amlak of Amhara to rally influential church leaders like Abune Tekle Haymanot and depose King Yetbarek by claiming legitimate descent from King Solomon and Queen Sheba through the Aksumite line"
+        },
+        {
+          "id": "C",
+          "text": "The Council of Nicea invalidated Zagwe monastic land holdings due to Greek liturgy"
+        },
+        {
+          "id": "D",
+          "text": "The Zagwe rulers converted to Islam, prompting an excommunication by the Patriarch of Alexandria"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The Zagwe dynasty was plagued by internal succession rivalries, which anti-Zagwe factions exploited by branding the Agaw rulers 'illegitimate usurpers' who lacked Solomonic descent; Yekuno Amlak mobilized armed forces with the backing of church leaders like Abune Tekle Haymanot, defeated Yetbarek in Gaynt in 1270, and restored the 'Solomonic' dynasty.",
+      "sourceReference": "Section 3.5, Pages 68-69"
+    },
+    {
+      "id": "HIS-G11-U03-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "What was the regional geopolitical standing of the medieval Kingdom of Damot prior to the late 13th-century rise of the restored Solomonic dynasty?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It was an isolated agrarian chiefdom completely confined to the lowlands of Benishangul"
+        },
+        {
+          "id": "B",
+          "text": "It was a tributary province directly administered by the bishops of the Coptic Church in Alexandria"
+        },
+        {
+          "id": "C",
+          "text": "It was a dominant regional power situated south of the Abay River that defeated Zagwe expeditions, forced the Sultanate of Shewa to pay tribute, and prompted a Christian-Muslim alliance to contain its influence"
+        },
+        {
+          "id": "D",
+          "text": "It maintained an exclusive commercial monopoly over the Red Sea port of Adulis"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Located south of the Blue Nile (Abay), the powerful Kingdom of Damot defeated Zagwe armies, subjugated Muslim territories, and forced the Sultanate of Shewa into tributary status, prompting the Sultanate of Shewa and the newly established Christian state under Yekuno Amlak to form an alliance to counter its dominance.",
+      "sourceReference": "Section 3.6, Pages 69-70"
+    }
+  ]
 }
