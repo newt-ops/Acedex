@@ -3,5 +3,351 @@
   "subject": "History",
   "unitNumber": 9,
   "unitTitle": "Indigenous Knowledge and Heritages of Ethiopia",
-  "questions": []
+  "questions": [
+    {
+      "id": "HIS-G10-U09-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "How is indigenous knowledge predominantly preserved and transmitted across generations in traditional societies?",
+      "options": [
+        { "id": "A", "text": "Through peer-reviewed academic journals" },
+        {
+          "id": "B",
+          "text": "Through centrally standardized legislative decrees"
+        },
+        {
+          "id": "C",
+          "text": "Orally through folklore, rituals, songs, and communal practice"
+        },
+        { "id": "D", "text": "By state-administered digital databases" }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Indigenous knowledge is local knowledge developed over generations within a community and transmitted primarily through oral traditions, folklore, rituals, songs, and everyday customary practices.",
+      "sourceReference": "Section 9.1 & 9.1.2, Pages 211-212"
+    },
+    {
+      "id": "HIS-G10-U09-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is the traditional communication network of the pastoral Afar people that serves as an egalitarian news and information exchange system called?",
+      "options": [
+        { "id": "A", "text": "Dagu" },
+        { "id": "B", "text": "Mada'a" },
+        { "id": "C", "text": "Seera" },
+        { "id": "D", "text": "Heera" }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Dagu is the unique, age-old information exchange network among the Afar that allows community members to pass and receive news about pasture, water holes, trails, and social events regardless of social status.",
+      "sourceReference": "Section 9.1.3, Page 214"
+    },
+    {
+      "id": "HIS-G10-U09-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In the moral code of the Sidama society, what concept serves as the foundational standard of truth that distinguishes 'good' from 'evil'?",
+      "options": [
+        { "id": "A", "text": "Halale" },
+        { "id": "B", "text": "Safuu" },
+        { "id": "C", "text": "Cimeeyye" },
+        { "id": "D", "text": "Luwa" }
+      ],
+      "correctOptionId": "A",
+      "explanation": "In Sidama culture, the moral code of halale (the ultimate truth) provides the ethical basis for the Seera system, distinguishing right from wrong and guiding communal life.",
+      "sourceReference": "Section 9.1.3, Page 219"
+    },
+    {
+      "id": "HIS-G10-U09-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which traditional Ethiopian socio-political system was inscribed by UNESCO on the Representative List of the Intangible Cultural Heritage of Humanity in 2016?",
+      "options": [
+        { "id": "A", "text": "Tiya" },
+        { "id": "B", "text": "Jugol" },
+        { "id": "C", "text": "Gadaa" },
+        { "id": "D", "text": "Fichee-Chambalaalla" }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The Gadaa system, an indigenous democratic socio-political system of the Oromo people, was inscribed on the UNESCO Representative List of the Intangible Cultural Heritage of Humanity in 2016.",
+      "sourceReference": "Section 9.2.2, Page 223"
+    },
+    {
+      "id": "HIS-G10-U09-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which river carved the extensive underground limestone galleries of the historic Sof Omar cave system in southeastern Ethiopia?",
+      "options": [
+        { "id": "A", "text": "Awash River" },
+        { "id": "B", "text": "Gojeb River" },
+        { "id": "C", "text": "Omo River" },
+        { "id": "D", "text": "Weyb River" }
+      ],
+      "correctOptionId": "D",
+      "explanation": "The Sof Omar cave system was formed by the Weyb River as it altered its course and carved subterranean channels through limestone foothills over geological eras.",
+      "sourceReference": "Section 9.2.2, Page 227"
+    },
+    {
+      "id": "HIS-G10-U09-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In traditional Oromo customary law, what is the specific function of the Gumaa institution?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It is an annual military council that mobilizes youth for defense"
+        },
+        {
+          "id": "B",
+          "text": "It is a system of blood money compensation and ritual reconciliation used to settle homicides and serious injuries"
+        },
+        {
+          "id": "C",
+          "text": "It is an exclusively female council that oversees marital disputes"
+        },
+        {
+          "id": "D",
+          "text": "It is a commercial tribunal that regulates marketplace transactions"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Gumaa is an indigenous conflict resolution mechanism in Oromo customary law that resolves cases of homicide and severe bodily harm through blood money compensation and rituals that restore social peace.",
+      "sourceReference": "Section 9.1.3, Page 216"
+    },
+    {
+      "id": "HIS-G10-U09-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What defines the Siinqee institution as both a material symbol and a social organization among Oromo women?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It is a hereditary royal sceptre passed among queen consorts"
+        },
+        {
+          "id": "B",
+          "text": "It is an agricultural implement strictly utilized by unmarried maidens during harvest festivals"
+        },
+        {
+          "id": "C",
+          "text": "It is an age-grade council that trains boys for the Gadaa cavalry"
+        },
+        {
+          "id": "D",
+          "text": "It is a staff gifted at marriage and an all-female institution exercising moral, religious, and political authority to protect women's rights and mediate peace"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "Siinqee is both the ritual stick received by a legally married woman and an autonomous female institution that mobilizes women to defend their customary rights, maintain moral authority, and mediate conflicts.",
+      "sourceReference": "Section 9.1.3, Pages 216-217"
+    },
+    {
+      "id": "HIS-G10-U09-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Why is the customary dispute resolution mechanism of Shimgelina widely preferred over formal court litigation in Amhara rural communities?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It completely exempts criminal offenders from admitting guilt or paying restitution"
+        },
+        {
+          "id": "B",
+          "text": "It relies on expensive written briefs drafted by certified advocates"
+        },
+        {
+          "id": "C",
+          "text": "It is accessible, low-cost, rooted in communal trust, and aims at long-term restorative reconciliation rather than punitive confrontation"
+        },
+        {
+          "id": "D",
+          "text": "It enforces automatic secular imprisonment without community consultation"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Shimgelina is favored in Amhara society because it is affordable, locally accessible, founded on community trust, and seeks to restore lasting communal harmony and mutual respect between conflicting parties.",
+      "sourceReference": "Section 9.1.3, Pages 217-218"
+    },
+    {
+      "id": "HIS-G10-U09-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What are the two primary structural objectives of the five rotating eight-year age grades in the Sidama Luwa system?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Training and recruiting able-bodied men for national defense, and developing mature elders (Cimeeyye) authorized to govern and redistribute knowledge"
+        },
+        {
+          "id": "B",
+          "text": "Collecting imperial grain tithes and organizing international export caravans"
+        },
+        {
+          "id": "C",
+          "text": "Standardizing written Ge'ez calligraphy and training monastic clergy"
+        },
+        {
+          "id": "D",
+          "text": "Enforcing strict hereditary kingship and collecting customs duties at river crossings"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The Sidama Luwa system aims to train youth for societal defense while progressively preparing men to assume senior leadership roles as elders (Cimeeyye) responsible for communal governance and wisdom sharing.",
+      "sourceReference": "Section 9.1.3, Page 219"
+    },
+    {
+      "id": "HIS-G10-U09-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which of the following correctly pairs an Ethiopian World Heritage site with its proper UNESCO heritage category?",
+      "options": [
+        { "id": "A", "text": "Harar Jugol — Intangible Cultural Heritage" },
+        { "id": "B", "text": "Mesqel Demera festival — Natural Heritage" },
+        {
+          "id": "C",
+          "text": "Tiya archaeological site — Tangible Cultural Heritage"
+        },
+        {
+          "id": "D",
+          "text": "Simien Mountains National Park — Intangible Cultural Heritage"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Tiya, located in the Soddo region and containing 36 carved funerary monuments, is classified as a Tangible Cultural World Heritage site (inscribed in 1980).",
+      "sourceReference": "Section 9.2.2, Pages 221-223"
+    },
+    {
+      "id": "HIS-G10-U09-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What was the historical origin and defensive purpose of the monumental dry-stone walls known as Halala Keela (Halala Kab) in Dawuro?",
+      "options": [
+        {
+          "id": "A",
+          "text": "They were built in the 4th century AD by King Ezana to demarcate Aksumite borders"
+        },
+        {
+          "id": "B",
+          "text": "They were constructed between the 16th and 18th centuries along strategic boundaries bordered by the Omo and Gojeb rivers to defend the kingdom against external invasions"
+        },
+        {
+          "id": "C",
+          "text": "They were erected by Jesuit architects in Gondar as residential castles"
+        },
+        {
+          "id": "D",
+          "text": "They were built by the British military mission in 1941 to encircle retreating Italian forces"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Halala Keela is an extensive network of dry-stone fortifications built between the 16th and 18th centuries (completed under King Halala) on strategic borders along the Omo and Gojeb rivers to protect Dawuro from external assaults.",
+      "sourceReference": "Section 9.2.2, Page 228"
+    },
+    {
+      "id": "HIS-G10-U09-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "In what fundamental way does the philosophical premise of Ethiopian customary dispute resolution (such as Jaarsummaa, Mada'a, and Shimgelina) differ from modern adversarial court litigation?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Customary systems focus on punitive retributive deterrence where the winner takes all, whereas courts prioritize moral reconciliation"
+        },
+        {
+          "id": "B",
+          "text": "Customary dispute resolution is administered exclusively by state-salaried bureaucratic judges"
+        },
+        {
+          "id": "C",
+          "text": "Customary methods reject any witness testimony or physical restitution, relying solely on trial by combat"
+        },
+        {
+          "id": "D",
+          "text": "Customary mechanisms seek a win-win restorative resolution ('for the lake not to dry, for the frog not to die') to repair social harmony, whereas formal courts render zero-sum, win-lose judgments"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "Unlike formal courts that determine winners and losers based on strict codification, indigenous Ethiopian arbitration seeks restorative reconciliation, compromise, and mutual dignity ('win-win') to maintain ongoing community cohesion.",
+      "sourceReference": "Section 9.1.3, Pages 213, 215-218"
+    },
+    {
+      "id": "HIS-G10-U09-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "How does the concept of Seera in Kambata, Hadiya, and Sidama societies function beyond mere conflict resolution?",
+      "options": [
+        {
+          "id": "A",
+          "text": "As a strict military penal code that enforces corporal punishment exclusively during wartime"
+        },
+        {
+          "id": "B",
+          "text": "As a comprehensive social constitution that guides moral ethics, environmental resource stewardship, family relations, peer associations, and community reintegration"
+        },
+        {
+          "id": "C",
+          "text": "As a commercial monopoly contract reserved solely for foreign caravan traders"
+        },
+        {
+          "id": "D",
+          "text": "As an ecclesiastical canon law enforced exclusively by ordained monastic clergy"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In Kambata, Hadiya, and Sidama societies, Seera operates as a comprehensive customary constitution that sets ethical norms, guides marital and peer relations, governs resource usage, and ensures social reintegration.",
+      "sourceReference": "Section 9.1.3, Pages 219-220"
+    },
+    {
+      "id": "HIS-G10-U09-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Why is the Temple of Yeha in northern Ethiopia regarded as a pivotal tangible heritage site for ancient Ethiopian historiography?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It provides the earliest evidence of 16th-century Ottoman military fortifications in the Horn of Africa"
+        },
+        {
+          "id": "B",
+          "text": "Its Sabaean-style monumental tower, dated to around 700 BC, provides tangible architectural evidence of South Arabian interactions and pre-Christian monumental construction in the northern highlands"
+        },
+        {
+          "id": "C",
+          "text": "It represents the only surviving rock-hewn monolithic church constructed during the Zagwe period"
+        },
+        {
+          "id": "D",
+          "text": "It contains the earliest written manuscripts in modern Amharic script"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The Temple of Yeha, dating to approximately 700 BC and built in Sabaean architectural style, represents the oldest standing monumental stone structure in Ethiopia, documenting early cultural contact and state formation before the rise of Aksum.",
+      "sourceReference": "Section 9.2.2, Page 226"
+    },
+    {
+      "id": "HIS-G10-U09-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Why do contemporary development planners and environmental scientists increasingly recognize indigenous knowledge systems in Ethiopia as vital for sustainable development?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because indigenous practices enforce commercial mono-crop export agriculture across all regional states"
+        },
+        {
+          "id": "B",
+          "text": "Because international financial institutions legally mandate that all infrastructure projects use oral traditions"
+        },
+        {
+          "id": "C",
+          "text": "Because it consists of time-tested, socially accepted, and economically viable practices that conserve local ecosystems and manage natural resources with low capital risk to rural producers"
+        },
+        {
+          "id": "D",
+          "text": "Because indigenous knowledge completely replaces the need for any modern engineering and scientific tools"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Indigenous knowledge systems provide socially legitimate, resource-conserving, and economically viable strategies developed through generations of adaptation, offering practical solutions for healthcare, agriculture, and environmental management.",
+      "sourceReference": "Section 9.1.1, Pages 211-212"
+    }
+  ]
 }

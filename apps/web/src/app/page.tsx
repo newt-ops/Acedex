@@ -106,6 +106,92 @@ export default function AdminHomePage() {
         </div>
       </header>
 
+      {/* Direct Ingestion & Collector Portals (Featured) */}
+      <section style={{ marginBottom: '2.5rem' }}>
+        <h2 style={{ fontSize: '1.25rem', marginBottom: '1rem', fontWeight: 700 }}>
+          ⚡ Question Collector & Sync Workflow
+        </h2>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '1.5rem' }}>
+          <div
+            style={{
+              background: 'linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(30, 41, 59, 0.7))',
+              border: '1px solid rgba(59, 130, 246, 0.4)',
+              borderRadius: '14px',
+              padding: '1.75rem',
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'space-between',
+            }}
+          >
+            <div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem' }}>
+                <span style={{ fontSize: '1.5rem' }}>📝</span>
+                <h3 style={{ fontSize: '1.2rem', fontWeight: 700, color: '#93c5fd' }}>
+                  Contributor Portal (/contribute)
+                </h3>
+              </div>
+              <p style={{ color: 'var(--muted)', fontSize: '0.9rem', lineHeight: 1.5, marginBottom: '1.25rem' }}>
+                Fast ID-only login for assigned students (e.g. <code>GEO#982</code>, <code>PHY#101</code>). View all 4 grades, paste NotebookLM JSON with live auto-cleaner, and submit units.
+              </p>
+            </div>
+            <a
+              href="/contribute"
+              style={{
+                display: 'inline-block',
+                textAlign: 'center',
+                padding: '0.75rem 1.25rem',
+                background: 'var(--primary)',
+                color: '#fff',
+                borderRadius: '8px',
+                fontWeight: 700,
+                fontSize: '0.9rem',
+              }}
+            >
+              Open Contributor Portal →
+            </a>
+          </div>
+
+          <div
+            style={{
+              background: 'linear-gradient(135deg, rgba(16, 185, 129, 0.15), rgba(30, 41, 59, 0.7))',
+              border: '1px solid rgba(16, 185, 129, 0.4)',
+              borderRadius: '14px',
+              padding: '1.75rem',
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'space-between',
+            }}
+          >
+            <div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem' }}>
+                <span style={{ fontSize: '1.5rem' }}>🛡️</span>
+                <h3 style={{ fontSize: '1.2rem', fontWeight: 700, color: '#6ee7b7' }}>
+                  Admin Review Hub (/admin/collector)
+                </h3>
+              </div>
+              <p style={{ color: 'var(--muted)', fontSize: '0.9rem', lineHeight: 1.5, marginBottom: '1.25rem' }}>
+                Inspect submitted questions with answers revealed. 1-click <strong>Approve</strong> (marks student checkmark ✅) and <strong>Export as JSON</strong> for git repository sync.
+              </p>
+            </div>
+            <a
+              href="/admin/collector"
+              style={{
+                display: 'inline-block',
+                textAlign: 'center',
+                padding: '0.75rem 1.25rem',
+                background: 'var(--success)',
+                color: '#fff',
+                borderRadius: '8px',
+                fontWeight: 700,
+                fontSize: '0.9rem',
+              }}
+            >
+              Open Review & Exporter Hub →
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* Backend API Connection Banner */}
       <section
         style={{

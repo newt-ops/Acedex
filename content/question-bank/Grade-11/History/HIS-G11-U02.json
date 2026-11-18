@@ -2,6 +2,382 @@
   "grade": 11,
   "subject": "History",
   "unitNumber": 2,
-  "unitTitle": "Major Spots of Ancient World Civilizations Up to c. 500 A.D",
-  "questions": []
+  "unitTitle": "Major Spots of Ancient World Civilizations up to c.500 A.D",
+  "questions": [
+    {
+      "id": "HIS-G11-U02-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which ruler unified Upper and Lower Egypt around 3100 B.C. and established the first capital of the unified kingdom at Memphis?",
+      "options": [
+        { "id": "A", "text": "Thutmose III" },
+        { "id": "B", "text": "Menes" },
+        { "id": "C", "text": "Khufu" },
+        { "id": "D", "text": "Piankhi" }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Around 3100 B.C., King Menes united Upper Egypt in the south and Lower Egypt in the delta north, establishing Egypt's first unified dynasty with its capital at Memphis.",
+      "sourceReference": "Section 2.1.1, Page 23"
+    },
+    {
+      "id": "HIS-G11-U02-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Why did Meroe become an ideal center for iron smelting and weapon production in the Kingdom of Kush from the 6th century B.C. onwards?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It was granted exclusive iron export monopolies by the Roman Senate"
+        },
+        {
+          "id": "B",
+          "text": "It was situated near abundant natural iron ore deposits and ample timber resources along trade routes"
+        },
+        {
+          "id": "C",
+          "text": "It captured the entire iron reserves of the Persian Empire at the Battle of Pelusium"
+        },
+        {
+          "id": "D",
+          "text": "It abandoned agricultural cultivation to become a purely metallurgical outpost"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Having learned the necessity of iron weapons following defeats by the Assyrians, the Kushites shifted their capital to Meroe around 590 B.C. because the area possessed rich iron ore deposits, abundant fuel for smelting, and access to major trade networks.",
+      "sourceReference": "Section 2.1.2, Page 27"
+    },
+    {
+      "id": "HIS-G11-U02-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What non-alphabetic writing system, consisting of wedge-shaped characters impressed onto soft clay tablets, was developed by the Sumerians in Mesopotamia?",
+      "options": [
+        { "id": "A", "text": "Hieroglyphics" },
+        { "id": "B", "text": "Cuneiform" },
+        { "id": "C", "text": "Logographs" },
+        { "id": "D", "text": "Sanskrit" }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Between roughly 3200 and 2900 B.C., the Sumerians in southern Mesopotamia invented cuneiform, a complex script created by pressing reed styluses into damp clay tablets that were subsequently sun-dried.",
+      "sourceReference": "Section 2.2.1, Pages 29-30"
+    },
+    {
+      "id": "HIS-G11-U02-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which social groups were entirely excluded from political citizenship and voting rights in the direct democracy of classical 5th-century B.C. Athens?",
+      "options": [
+        { "id": "A", "text": "Merchants and craft artisans" },
+        { "id": "B", "text": "Sailors and rowers in the Athenian navy" },
+        {
+          "id": "C",
+          "text": "Women, resident foreigners, and enslaved persons"
+        },
+        {
+          "id": "D",
+          "text": "Property-owning adult males without aristocratic descent"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "While Athenian direct democracy granted adult male citizens the right to debate and vote directly in the Assembly, political enfranchisement completely excluded women, resident aliens (metics), and the large enslaved population.",
+      "sourceReference": "Section 2.3.1, Pages 36-37"
+    },
+    {
+      "id": "HIS-G11-U02-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What architectural and agricultural engineering methods enabled the Inca civilization to establish a thriving empire in the rugged Andes mountains?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Constructing subterranean brick sewage aqueducts and clay irrigation domes"
+        },
+        {
+          "id": "B",
+          "text": "Carving hillside agricultural terraces and assembling mortarless, precisely fitted stone masonry"
+        },
+        {
+          "id": "C",
+          "text": "Building floating artificial garden islands known as chinampas on mountain lakes"
+        },
+        {
+          "id": "D",
+          "text": "Smelting iron tools to clear lowland tropical rainforests along river valleys"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The Incas adapted to steep Andean terrains by constructing stepped stone terraces for crop cultivation and engineering massive palaces and temples from mortarless stone blocks shaped to fit so tightly that they withstood major earthquakes.",
+      "sourceReference": "Section 2.4.3, Pages 45-46"
+    },
+    {
+      "id": "HIS-G11-U02-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What historic accomplishment in African antiquity was achieved by the Kushite King Piankhi around 751 B.C.?",
+      "options": [
+        {
+          "id": "A",
+          "text": "He sacked the city of Adulis and forced the Aksumite kingdom into tributary status"
+        },
+        {
+          "id": "B",
+          "text": "He conquered both Upper and Lower Egypt, establishing Egypt's 25th Dynasty under Kushite rule"
+        },
+        {
+          "id": "C",
+          "text": "He concluded a permanent naval defense alliance with the Persian emperor Cyrus the Great"
+        },
+        {
+          "id": "D",
+          "text": "He introduced monotheistic Aten worship as the official state creed of Nubia"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In 751 B.C., King Piankhi led Kushite forces northward from Napata, captured Memphis, united Egypt and Kush under Nubian authority, and established the 25th Dynasty of ancient Egypt.",
+      "sourceReference": "Section 2.1.2, Page 27"
+    },
+    {
+      "id": "HIS-G11-U02-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How did the criminal provisions of the Law Code of Hammurabi reflect the socio-legal structure of ancient Babylonia?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Penalties were strictly identical for all individuals regardless of social class or gender"
+        },
+        {
+          "id": "B",
+          "text": "It eliminated all physical punishments in favor of commercial monetary restitution"
+        },
+        {
+          "id": "C",
+          "text": "Punishments were unequal and retaliatory ('eye for an eye'), imposing harsher physical sentences on lower classes and slaves than on nobles"
+        },
+        {
+          "id": "D",
+          "text": "It vested supreme judicial decision-making solely in independent assemblies of peasant farmers"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "While Hammurabi's Code (c. 1792–1750 B.C.) established standardized legal precedents and regulated property, its criminal justice applied the principle of lex talionis with strict class and gender distinctions, punishing offenses against noblemen far more severely than those against ordinary subjects or slaves.",
+      "sourceReference": "Section 2.2.1, Page 30"
+    },
+    {
+      "id": "HIS-G11-U02-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In what primary way did Siddhartha Gautama's concept of the 'Middle Way' depart from prevailing religious practices in ancient India?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It mandated extreme bodily mortification and complete physical self-torture as the only path to enlightenment"
+        },
+        {
+          "id": "B",
+          "text": "It advocated pursuing uninhibited material hedonism and worldly pleasures without ethical restraint"
+        },
+        {
+          "id": "C",
+          "text": "It rejected both extreme ascetic self-denial and vulgar materialism, guiding spiritual salvation through moderation and moral conduct"
+        },
+        {
+          "id": "D",
+          "text": "It enforced hereditary caste restrictions that barred lower-caste Shudras from spiritual enlightenment"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Buddhism emerged from Hinduism as a reform movement founded by Siddhartha Gautama (c. 563–483 B.C.), preaching the 'Middle Way' to Nirvana by avoiding the twin extremes of severe asceticism on one hand and attachment to material indulgence on the other.",
+      "sourceReference": "Section 2.2.2, Page 33"
+    },
+    {
+      "id": "HIS-G11-U02-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How did the political philosophy of Legalism applied during the Qin dynasty contrast with classical Confucianism in ancient China?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Legalism emphasized moral benevolence and filial piety, whereas Confucianism promoted total military autocracy"
+        },
+        {
+          "id": "B",
+          "text": "Legalism asserted that social harmony depends on absolute ruler authority, rigid administration, and harsh punitive laws, whereas Confucianism stressed personal virtue, ethical education, and moral relationships"
+        },
+        {
+          "id": "C",
+          "text": "Legalism demanded democratic village assemblies, while Confucianism banned all formal education"
+        },
+        {
+          "id": "D",
+          "text": "Legalism advocated religious monasticism, while Confucianism focused exclusively on commercial expansion"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "While Confucius and Mencius taught that harmonious order stems from internal moral character, proper human relationships, and benevolence, Legalism (embraced by the First Emperor Qin Shi Huang) argued that humans are inherently selfish and can only be governed through unquestioned state authority, strict laws, and severe penalties.",
+      "sourceReference": "Section 2.2.3, Pages 34-35"
+    },
+    {
+      "id": "HIS-G11-U02-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What characterized the roughly two-century historical era known as the 'Pax Romana' initiated under the rule of Augustus Caesar?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The complete abolition of slavery and the restoration of Etruscan royal dynasties"
+        },
+        {
+          "id": "B",
+          "text": "A prolonged period of imperial stability, secure frontiers, economic prosperity, and commercial integration across the Mediterranean world"
+        },
+        {
+          "id": "C",
+          "text": "The dissolution of the Roman army in favor of international mercenary treaties"
+        },
+        {
+          "id": "D",
+          "text": "A severe economic contraction caused by the abandonment of civil roads and stone aqueducts"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Beginning in 27 B.C. with the accession of Octavian (Augustus), the Pax Romana (Roman Peace) was a 200-year golden age of relative peace, administrative cohesion, secure trade networks, and flourishing artistic and legal output across the Mediterranean basin.",
+      "sourceReference": "Section 2.3.2, Pages 40-41"
+    },
+    {
+      "id": "HIS-G11-U02-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What agricultural method did the Maya develop to sustain dense urban populations in the tropical lowlands of Central America?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Constructing elevated, raised planting beds along riverbanks to protect crops from seasonal floodwaters"
+        },
+        {
+          "id": "B",
+          "text": "Relying exclusively on imported wheat purchased from Andean merchant caravans"
+        },
+        {
+          "id": "C",
+          "text": "Building deep underground tunnels to avoid evaporation of mountain snowmelt"
+        },
+        {
+          "id": "D",
+          "text": "Employing animal-drawn iron wheeled plows across arid sand savannas"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "To farm their humid tropical environment and support large city-states like Tikal and Calakmul, Mayan farmers cleared dense forest cover and engineered raised fields along riverbanks that elevated maize crops safely above annual flood levels.",
+      "sourceReference": "Section 2.4.1, Page 42"
+    },
+    {
+      "id": "HIS-G11-U02-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "How did the cultural developments of the Hellenistic Age (323–30 B.C.) transform the legacy of classical Greek civilization across the Near East and Mediterranean?",
+      "options": [
+        {
+          "id": "A",
+          "text": "They isolated Greek culture strictly within the Peloponnesian peninsula, purging all external foreign words and ideas"
+        },
+        {
+          "id": "B",
+          "text": "They blended classical Greek (Hellenic) language, philosophy, and art with the diverse traditions of Egypt, Persia, and South Asia following Alexander the Great's conquests"
+        },
+        {
+          "id": "C",
+          "text": "They dismantled all Greek scientific advancements in favor of traditional Babylonian polytheistic astrology"
+        },
+        {
+          "id": "D",
+          "text": "They replaced Athenian philosophical logic with the legalistic doctrines of imperial China"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The Hellenistic Age, spanning from the death of Alexander the Great in 323 B.C. to the Roman conquest of Ptolemaic Egypt in 30 B.C., was characterized by the widespread diffusion and synthesis of classical Greek (Hellenic) culture with Persian, Egyptian, and Asian traditions across urban centers like Alexandria.",
+      "sourceReference": "Section 2.3.1, Page 38"
+    },
+    {
+      "id": "HIS-G11-U02-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Which strategic shift in military and naval power resulted from Rome's victory over Carthage in the three Punic Wars (264–146 B.C.)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Rome dismantled its naval fleet and retreated permanently into the northern Italian hills"
+        },
+        {
+          "id": "B",
+          "text": "Carthage retained political control of Spain while ceding only western Sicily to Rome"
+        },
+        {
+          "id": "C",
+          "text": "Rome destroyed its primary maritime competitor, established unchallenged hegemony over the western Mediterranean, and opened the path to conquering the Hellenistic east"
+        },
+        {
+          "id": "D",
+          "text": "The conflict resulted in a stalemate that partitioned the Mediterranean coastline equally under Greek League arbitration"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Rome's defeat of the North African commercial power Carthage across the three Punic Wars gave Rome naval supremacy, control of coastal Spain and North Africa, and the momentum to conquer the eastern Mediterranean Hellenistic kingdoms, transforming the Mediterranean into a Roman domain ('Mare Nostrum').",
+      "sourceReference": "Section 2.3.2, Page 40"
+    },
+    {
+      "id": "HIS-G11-U02-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Why did early Christian refusal to make sacrificial offerings in honor of the Roman emperor evoke violent persecution by Roman imperial authorities prior to 313 A.D.?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Imperial officials viewed Christian monotheistic refusal to venerate the emperor as political disloyalty and treason against the state, rather than a mere theological difference"
+        },
+        {
+          "id": "B",
+          "text": "Roman law prohibited any religious beliefs originating outside the Italian peninsula"
+        },
+        {
+          "id": "C",
+          "text": "Early Christians formed armed partisan battalions that openly joined invading Germanic forces on the Rhine"
+        },
+        {
+          "id": "D",
+          "text": "The Roman Senate had mandated that all imperial subjects convert to Egyptian Osiris worship"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Roman authorities generally tolerated local polytheisms provided subjects made public civic sacrifices honoring the emperor and state deities; early Christians strictly refused this idolatrous practice, which Roman governors interpreted not as benign religious dissent, but as active political sedition and disloyalty against the Roman Empire.",
+      "sourceReference": "Section 2.5, Pages 47-49"
+    },
+    {
+      "id": "HIS-G11-U02-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "In contrasting the material foundations of early Old World river-valley civilizations (such as Egypt, Mesopotamia, and China) with Mesoamerican civilizations (Maya and Aztec), which difference is most prominent?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Mesoamerican states relied on large herds of domesticated horses and wheeled plows, whereas Old World river civilizations lacked draft animals entirely"
+        },
+        {
+          "id": "B",
+          "text": "Old World civilizations developed agriculture around major river flood basins utilizing animal traction and metal tools, whereas Mesoamerican civilizations achieved monumental urbanism and intensive farming (raised fields and chinampas) without draft animals, wheeled transport, or iron metallurgy"
+        },
+        {
+          "id": "C",
+          "text": "Old World river valleys had no written records, while Mesoamerican societies used fully vocalized alphabetic scripts"
+        },
+        {
+          "id": "D",
+          "text": "Mesoamerican civilizations had strictly egalitarian societies, whereas Old World civilizations were ruled by absolute kings"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "While ancient Old World civilizations (Nile, Tigris-Euphrates, Huang He) relied on river irrigation networks, draft animals (oxen, horses), wheeled vehicles, and bronze/iron technology, Mesoamerican societies achieved complex urban architecture, mathematical innovations, and intensive food production without draft animals, wheeled transport, or iron metallurgy.",
+      "sourceReference": "Section 1.3, Section 2.1, & Section 2.4, Pages 18-19, 23, 28, 42-45"
+    }
+  ]
 }

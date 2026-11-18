@@ -3,5 +3,351 @@
   "subject": "History",
   "unitNumber": 8,
   "unitTitle": "Political, Social and Economic Processes in Ethiopia, Mid 16th to Mid-19th Century",
-  "questions": []
+  "questions": [
+    {
+      "id": "HIS-G11-U08-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which monarch established Gondar as the permanent capital city of the Christian highland kingdom around 1636?",
+      "options": [
+        { "id": "A", "text": "Emperor Susenyos" },
+        { "id": "B", "text": "Emperor Fasiledes" },
+        { "id": "C", "text": "Emperor Iyasu I" },
+        { "id": "D", "text": "Emperor Bakaffa" }
+      ],
+      "correctOptionId": "B",
+      "explanation": "During the reign of Emperor Fasiledes (r. 1632–1667), Gondar was founded as the permanent imperial capital of the Christian highland kingdom around 1636, ending the era of mobile royal courts.",
+      "sourceReference": "Section 8.2.3, Page 224"
+    },
+    {
+      "id": "HIS-G11-U08-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What royal title was borne by the hereditary monarchs of the medieval and early modern Omotic kingdoms of Kafa and Shekka?",
+      "options": [
+        { "id": "A", "text": "Kawo" },
+        { "id": "B", "text": "Amno" },
+        { "id": "C", "text": "Tato" },
+        { "id": "D", "text": "Mootii" }
+      ],
+      "correctOptionId": "C",
+      "explanation": "In the southwestern Omotic kingdoms of Kafa and Shekka, the hereditary monarchs governed with extensive political authority under the royal title of Tato.",
+      "sourceReference": "Section 8.1.1.1, Pages 204-205"
+    },
+    {
+      "id": "HIS-G11-U08-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which ruler of Harar constructed the historic Jugol wall between 1552 and 1553 to protect the city against external attacks?",
+      "options": [
+        { "id": "A", "text": "Imam Ahmad ibn-Ibrahim al-Ghazi" },
+        { "id": "B", "text": "Emir Nur ibn al-Wazir" },
+        { "id": "C", "text": "Sultan Umar Walasma" },
+        { "id": "D", "text": "Emir Mahfuz" }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Emir Nur ibn al-Wazir, the immediate successor of Imam Ahmad, constructed the defensive stone Jugol wall surrounding the city of Harar between 1552 and 1553 to safeguard the populace.",
+      "sourceReference": "Section 8.1.3.1, Page 215"
+    },
+    {
+      "id": "HIS-G11-U08-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Who was the founder of the Yejju (Werre Sheh) dynasty that established hegemony over the central provinces of the Christian kingdom in 1786?",
+      "options": [
+        { "id": "A", "text": "Ras Gugsa" },
+        { "id": "B", "text": "Ras Michael Sehul" },
+        { "id": "C", "text": "Ali Gwangul (Ali the Great)" },
+        { "id": "D", "text": "Ras Ali Alula (Ras Ali II)" }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Ali Gwangul, also known as Ali I or Ali the Great, founded the Yejju (Werre Sheh) dynasty in 1786, whose descendants monopolized the influential position of Rasbitweded throughout the Zemene Mesafint.",
+      "sourceReference": "Section 8.2.4, Page 231"
+    },
+    {
+      "id": "HIS-G11-U08-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which ruler of the Kingdom of Shewa was the first to officially assume the sovereign title of Nigus (King)?",
+      "options": [
+        { "id": "A", "text": "Negasi Kirstos" },
+        { "id": "B", "text": "Wossen Seged" },
+        { "id": "C", "text": "Sahle Selassie" },
+        { "id": "D", "text": "Asfawosen" }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Sahle Selassie (r. 1813–1847) was the first ruler of the autonomous Kingdom of Shewa to formally take the title of Nigus, presiding over an era of administrative expansion and international treaty-making.",
+      "sourceReference": "Section 8.2.5, Page 234"
+    },
+    {
+      "id": "HIS-G11-U08-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In the indigenous socio-political system of the Sidama, what is the structure and function of the Luwa generation-set institution?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It is an association of commercial caravan guides regulating customs between Lake Abaya and Zeila"
+        },
+        {
+          "id": "B",
+          "text": "It is an age-grade system consisting of five rotating eight-year grades responsible for military defense and providing senior elders (Cimeeyye) authorized to enforce the customary constitution (Sera)"
+        },
+        {
+          "id": "C",
+          "text": "It is a hereditary council of royal priests residing permanently at royal enclosures in the lowlands"
+        },
+        {
+          "id": "D",
+          "text": "It is an exclusive female assembly empowered to select candidates for provincial kingship"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The Sidama Luwa is an age-grade system comprising five cyclical grades rotating every eight years; it prepares young men for communal defense and facilitates the election of mature leaders (Gadanna and Jalawa) who enforce the societal moral code and customary constitution (Sera).",
+      "sourceReference": "Section 8.1.1.3, Pages 208-209"
+    },
+    {
+      "id": "HIS-G11-U08-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which combination of factors catalyzed the political transition from democratic Gadaa governance to monarchical statehood (Mootii) among the Macha Oromo in the Gibe Valley by 1800?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The intervention of Ottoman Turkish naval troops along the Gojeb River basin"
+        },
+        {
+          "id": "B",
+          "text": "The revival of long-distance trade, the spread of Islam, and the rise of wealthy war leaders (Abbaa Duulaas) who built private standing armies from agricultural surplus and tolls"
+        },
+        {
+          "id": "C",
+          "text": "A severe ecological drought that forced sedentary agriculturalists to revert completely to nomadic pastoralism"
+        },
+        {
+          "id": "D",
+          "text": "An imperial decree issued from Gondar mandating the appointment of salaried Amhara tax collectors"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The shift from Gadaa to monarchical governance in the Gibe Valley was driven by the growth of long-distance trade, the ideological influence of Islam, and the accumulation of wealth by successful war leaders (Abbaa Duulaas), who used private troops to bypass term limits and declare themselves kings (Mootii).",
+      "sourceReference": "Section 8.1.2.1, Pages 211-212"
+    },
+    {
+      "id": "HIS-G11-U08-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How was urban residential settlement organized in the city of Gondar during its 17th and 18th-century golden age?",
+      "options": [
+        {
+          "id": "A",
+          "text": "All inhabitants resided in unsegregated stone compounds regardless of faith or occupation"
+        },
+        {
+          "id": "B",
+          "text": "European diplomats and the imperial family lived together in the central Fasil Ghebbi enclosure"
+        },
+        {
+          "id": "C",
+          "text": "Distinct groups such as Muslims (Islamge), the Bete-Israel, and foreign merchants were assigned separate living quarters in the outskirts of the city"
+        },
+        {
+          "id": "D",
+          "text": "Only ordained Christian clergy were permitted to live within the municipal limits of the capital"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "In Gondar, communities tended to live in distinct quarters: while the nobility and clergy occupied the central city and royal quarter, Muslim merchants, the Bete-Israel artisans, and foreign expatriates were assigned separate residential quarters on the city's outskirts, such as Islamge.",
+      "sourceReference": "Section 8.2.3, Pages 225-226"
+    },
+    {
+      "id": "HIS-G11-U08-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What major legal, administrative, and economic reforms characterized the reign of Emperor Iyasu I (Iyasu the Great, r. 1682–1706)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The total replacement of Ge'ez liturgy with Latin script across all monastery schools"
+        },
+        {
+          "id": "B",
+          "text": "The revision of the traditional civil code (Fitha Negest), amendment of land and taxation regulations, reorganization of customs, and campaigns across the Abay to collect tribute"
+        },
+        {
+          "id": "C",
+          "text": "The formal abolition of the Solomonic crown and voluntary dissolution of the standing imperial army"
+        },
+        {
+          "id": "D",
+          "text": "The complete termination of external commercial relations with Egypt and the Red Sea ports"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Iyasu the Great was a reforming Gondarine monarch who revised the Fitha Negest, amended land and tax policies, rationalized customs and toll collection to promote trade, and campaigned south of the Abay into Shewa to reassert imperial authority.",
+      "sourceReference": "Section 8.2.3, Page 226"
+    },
+    {
+      "id": "HIS-G11-U08-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Through which primary political mechanisms did Empress (Etege) Mintiwab maintain authority in the Gondarine court during the mid-18th century?",
+      "options": [
+        {
+          "id": "A",
+          "text": "By commanding private mercenary armies and personally directing artillery battles at Massawa"
+        },
+        {
+          "id": "B",
+          "text": "By appointing close Quara kin to strategic posts, forging political marriage alliances with influential regional noble houses (including the Wollo Oromo), and granting extensive gult lands to the Orthodox Church"
+        },
+        {
+          "id": "C",
+          "text": "By declaring Roman Catholicism the state religion and signing an exclusive defense pact with Portugal"
+        },
+        {
+          "id": "D",
+          "text": "By abolishing the position of Rasbitweded and governing without any regional aristocratic council"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Empress Mintiwab consolidated her authority by promoting her Quara relatives, securing alliances through strategic marriages (such as marrying her son Iyasu II to Wabit of Wollo), and building churches (like Qusquam) to maintain the unwavering loyalty of the clergy.",
+      "sourceReference": "Section 8.2.3, Pages 227-228"
+    },
+    {
+      "id": "HIS-G11-U08-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What was the primary motive of 19th-century Ethiopian regional lords in concluding diplomatic and commercial agreements with European travelers and envoys?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To recruit foreign naval forces to conquer the coastal ports of the Mediterranean Sea"
+        },
+        {
+          "id": "B",
+          "text": "To obtain modern firearms, munitions, and skilled artisans (masons and gunsmiths) to strengthen their power against domestic rivals"
+        },
+        {
+          "id": "C",
+          "text": "To convert their subjects to European Protestantism in return for commercial bank loans"
+        },
+        {
+          "id": "D",
+          "text": "To surrender provincial sovereignty to European trading companies in exchange for annual monetary pensions"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Regional rulers such as Ras Wolde Sellassie of Tigray and Nigus Sahle Selassie of Shewa entered into treaties with Europeans primarily to acquire modern firearms, ammunition, and skilled craftsmen, which were critical for defending and expanding their regional autonomy.",
+      "sourceReference": "Section 8.2.5 & 8.2.6, Pages 234-236"
+    },
+    {
+      "id": "HIS-G11-U08-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "How did the missionary strategy of Patriarch Alfonso Mendez differ fundamentally from that of Father Pedro Páez, and why did Mendez's approach trigger widespread rebellion under Emperor Susenyos?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Páez demanded immediate public Latin recantations, whereas Mendez promoted the translation of liturgy into local vernacular languages"
+        },
+        {
+          "id": "B",
+          "text": "Páez was tactful and accommodative of Ethiopian court culture while slowly gaining royal trust, whereas Mendez aggressively enforced Latin rituals, demanded the re-consecration of churches, re-baptism of Christians, and prohibited indigenous customs like Saturday Sabbath and circumcision"
+        },
+        {
+          "id": "C",
+          "text": "Páez collaborated with Muslim merchants at Massawa, whereas Mendez allied with the Bete-Israel in Simien"
+        },
+        {
+          "id": "D",
+          "text": "Páez relied on Portuguese armed infantry to force conversions, whereas Mendez was an unarmed scholar who avoided royal politics"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Pedro Páez achieved influence through patience and cultural sensitivity; in contrast, Alfonso Mendez arrived with uncompromising zeal, forcing Susenyos to ban ancient customs (Saturday Sabbath, circumcision), mandate re-baptism, and desecrate traditional practices, which provoked intense civil war that compelled Susenyos to abdicate.",
+      "sourceReference": "Section 8.2.2, Pages 221-223"
+    },
+    {
+      "id": "HIS-G11-U08-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Why is the assassination of Emperor Iyo'as by Ras Michael Sehul in 1769 regarded as the definitive catalyst that inaugurated the Zemene Mesafint (Era of the Warlords)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It led to the immediate military conquest of the Ethiopian highlands by Ottoman forces stationed in Yemen"
+        },
+        {
+          "id": "B",
+          "text": "It shattered the traditional sanctity and authority of the Solomonic crown, reducing reigning emperors to mere puppets enthroned and deposed at the whim of powerful regional lords (Rasbitwededs)"
+        },
+        {
+          "id": "C",
+          "text": "It prompted the Patriarch of Alexandria to officially abolish the Ethiopian Orthodox bishopric for over a century"
+        },
+        {
+          "id": "D",
+          "text": "It unified the provincial lords of Tigray, Gojjam, and Shewa into a single centralized democratic assembly"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Ras Michael Sehul's regicide of Emperor Iyo'as in 1769 broke the sacred taboo surrounding the imperial monarchy; thereafter, emperors lost actual political and military power, becoming ceremonial figures manipulated, enthroned, and dethroned by rival regional warlords.",
+      "sourceReference": "Section 8.2.3 & 8.2.4, Pages 228-230"
+    },
+    {
+      "id": "HIS-G11-U08-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "In what concrete structural ways did the chronic armed conflicts of the Zemene Mesafint (1769–1855) undermine the economic stability of northern and central Ethiopia?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Peasants faced regular plunder by undisciplined provincial armies, their farmlands became battlegrounds, and many turned to banditry (shiftas), while merchants faced extortionate duties at numerous regional tollgates (kellas)"
+        },
+        {
+          "id": "B",
+          "text": "Regional lords abolished agricultural tribute, causing an acute collapse of local commodity markets"
+        },
+        {
+          "id": "C",
+          "text": "The entire population was conscripted into overseas maritime commerce, leaving arable lands uncultivated"
+        },
+        {
+          "id": "D",
+          "text": "Rapid industrial development in regional capitals depleted rural labor reserves and created urban inflation"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The endless military conflicts of the Zemene Mesafint severely harmed the agricultural base: armies plundered peasant crops and livestock, driving many farmers into banditry, while inter-provincial trade stagnated due to insecurity and excessive taxation at arbitrary customs posts (kellas).",
+      "sourceReference": "Section 8.2.4, Pages 231-232"
+    },
+    {
+      "id": "HIS-G11-U08-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "How did the customary institutions of the non-centralized southern and eastern societies—such as the Gurage Yajoka Qicha/Gordanna Sera, the Somali Shir, and the Afar Makabonto—maintain social order in the absence of a centralized monarch?",
+      "options": [
+        {
+          "id": "A",
+          "text": "By enforcing administrative decrees issued from the royal court of Gondar through imperial garrison troops"
+        },
+        {
+          "id": "B",
+          "text": "By relying on egalitarian councils of elders and clan assemblies that exercised legislative, judicial, and arbitral authority to settle disputes, regulate resources, and maintain consensus based on customary law"
+        },
+        {
+          "id": "C",
+          "text": "By appointing foreign trading consuls to administer commercial arbitration and corporal punishment"
+        },
+        {
+          "id": "D",
+          "text": "By instituting autocratic military tribunals where hereditary war chiefs held unchecked power over community life"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In decentralized communities, social cohesion and justice were sustained through participatory institutions (like Gurage Yajoka/Gordanna, Somali Shir, and Afar Makabonto) where councils of respected elders applied customary laws to arbitrate disputes, determine restitution, and preserve collective peace.",
+      "sourceReference": "Section 8.1.1.6, Section 8.1.3.2, & Section 8.1.3.3, Pages 210, 216-218"
+    }
+  ]
 }

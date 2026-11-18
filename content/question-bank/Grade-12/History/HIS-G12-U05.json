@@ -3,5 +3,231 @@
   "subject": "History",
   "unitNumber": 5,
   "unitTitle": "Global and Regional Developments Since 1945",
-  "questions": []
+  "questions": [
+    {
+      "id": "HIS-G12-U05-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which American journalist popularized the term 'Cold War' in September 1947 to characterize the prolonged geopolitical standoff between the United States and the Soviet Union?",
+      "options": [
+        {"id": "A", "text": "George F. Kennan"},
+        {"id": "B", "text": "Walter Lippmann"},
+        {"id": "C", "text": "Walter Cronkite"},
+        {"id": "D", "text": "Samuel Huntington"}
+      ],
+      "correctOptionId": "B",
+      "explanation": "The term 'Cold War' came into general use in September 1947 when American journalist Walter Lippmann published a series of newspaper columns and a book entitled 'The Cold War' analyzing the intensifying rivalry between the USA and the USSR.",
+      "sourceReference": "Section 5.4, Page 131"
+    },
+    {
+      "id": "HIS-G12-U05-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which five countries were granted permanent seats and individual veto power in the United Nations Security Council upon the organization's founding in 1945?",
+      "options": [
+        {"id": "A", "text": "The United States, the Soviet Union, Great Britain, France, and China"},
+        {"id": "B", "text": "The United States, Great Britain, Germany, France, and Japan"},
+        {"id": "C", "text": "The United States, the Soviet Union, Canada, Italy, and India"},
+        {"id": "D", "text": "Great Britain, France, China, West Germany, and the Soviet Union"}
+      ],
+      "correctOptionId": "A",
+      "explanation": "Under the UN Charter, the Security Council was designated as the primary organ responsible for maintaining international peace and security, consisting of fifteen members with five permanent seats holding veto power: the United States, Russia (originally the USSR), Great Britain, France, and China.",
+      "sourceReference": "Section 5.2, Page 126"
+    },
+    {
+      "id": "HIS-G12-U05-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What was the official designation of the massive financial assistance program proposed by U.S. Secretary of State George C. Marshall in 1948 to rebuild the shattered economies of post-war Western Europe?",
+      "options": [
+        {"id": "A", "text": "The Lend-Lease Agreement"},
+        {"id": "B", "text": "The European Recovery Program (ERP)"},
+        {"id": "C", "text": "The Point Four Program"},
+        {"id": "D", "text": "The Atlantic Charter"}
+      ],
+      "correctOptionId": "B",
+      "explanation": "Introduced in 1948 by U.S. Secretary of State George C. Marshall, the European Recovery Program (ERP)—popularly known as the Marshall Plan—provided billions of dollars in economic aid to reconstruct Western Europe's industrial infrastructure and prevent communist expansion.",
+      "sourceReference": "Section 5.1 & 5.3, Pages 121, 128"
+    },
+    {
+      "id": "HIS-G12-U05-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which landmark 1955 conference held in Indonesia brought together 29 Asian and African states, providing the diplomatic foundation for the formal establishment of the Non-Aligned Movement (NAM) in Belgrade in 1961?",
+      "options": [
+        {"id": "A", "text": "The Cairo Conference"},
+        {"id": "B", "text": "The Bandung Conference"},
+        {"id": "C", "text": "The Geneva Conference"},
+        {"id": "D", "text": "The Casablanca Conference"}
+      ],
+      "correctOptionId": "B",
+      "explanation": "The April 1955 Bandung Conference in Indonesia brought together delegates from 22 Asian and 7 African nations to assert their collective independence from both Cold War superpowers, leading directly to the founding of the Non-Aligned Movement at Belgrade in September 1961.",
+      "sourceReference": "Section 5.4, Pages 133-134"
+    },
+    {
+      "id": "HIS-G12-U05-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which Soviet leader assumed power in 1985 and initiated the sweeping reform programs known as 'Perestroika' (restructuring) and 'Glasnost' (openness)?",
+      "options": [
+        {"id": "A", "text": "Leonid Brezhnev"},
+        {"id": "B", "text": "Nikita Khrushchev"},
+        {"id": "C", "text": "Mikhail Gorbachev"},
+        {"id": "D", "text": "Boris Yeltsin"}
+      ],
+      "correctOptionId": "C",
+      "explanation": "Assuming the leadership of the Soviet Communist Party in 1985, Mikhail Gorbachev introduced Perestroika to restructure the stagnant Soviet economy toward market incentives and Glasnost to allow freedom of public discussion and political openness.",
+      "sourceReference": "Section 5.4 & 5.7, Pages 132, 151"
+    },
+    {
+      "id": "HIS-G12-U05-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Under the London Agreement of 1945, into which three legal categories were the charges divided during the Nuremberg Trials prosecuting major Nazi war criminals?",
+      "options": [
+        {"id": "A", "text": "Seditious conspiracy, espionage, and interstate treason"},
+        {"id": "B", "text": "Crimes against peace, war crimes, and crimes against humanity"},
+        {"id": "C", "text": "Violation of maritime neutrality, currency sabotage, and ideological heresy"},
+        {"id": "D", "text": "Breeches of the Versailles treaty, illegal conscription, and unauthorized rearmament"}
+      ],
+      "correctOptionId": "B",
+      "explanation": "The charter established by the 1945 London Agreement categorized the offenses tried at the International Military Tribunal in Nuremberg into three distinct classes: Crimes against peace (planning and waging aggressive war), War crimes (violating customs of war), and Crimes against humanity (extermination, enslavement, and deportation of civilian populations).",
+      "sourceReference": "Section 5.1, Page 123"
+    },
+    {
+      "id": "HIS-G12-U05-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What primary military and political development in Western Europe prompted the Soviet Union and seven Eastern European communist states to establish the Warsaw Pact alliance in May 1955?",
+      "options": [
+        {"id": "A", "text": "The deployment of American atomic weapons during the Korean War"},
+        {"id": "B", "text": "The rearmament of the Federal Republic of Germany (West Germany) and its formal admission into NATO"},
+        {"id": "C", "text": "The construction of the Berlin Wall across divided Germany"},
+        {"id": "D", "text": "The outbreak of anti-communist worker demonstrations in Budapest, Hungary"}
+      ],
+      "correctOptionId": "B",
+      "explanation": "Signed on May 14, 1955, the Warsaw Pact was created by the Soviet Union and its Eastern European satellites as a direct collective countermeasure to the rearmament of West Germany and its integration into the North Atlantic Treaty Organization (NATO).",
+      "sourceReference": "Section 5.4, Page 132"
+    },
+    {
+      "id": "HIS-G12-U05-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Following the military triumph of Mao Zedong's Chinese Communist Party in October 1949, where did Chiang Kai-shek and the Nationalist (Kuomintang) leadership flee to establish their government?",
+      "options": [
+        {"id": "A", "text": "Hong Kong"},
+        {"id": "B", "text": "The island province of Taiwan"},
+        {"id": "C", "text": "Singapore"},
+        {"id": "D", "text": "Tibet"}
+      ],
+      "correctOptionId": "B",
+      "explanation": "After their defeat in the four-year civil war that concluded with the proclamation of the People's Republic of China in Beijing in October 1949, Chiang Kai-shek and the remnants of the Kuomintang retreated to the island province of Taiwan, maintaining a rival Nationalist administration.",
+      "sourceReference": "Section 5.5, Page 138"
+    },
+    {
+      "id": "HIS-G12-U05-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Why was the United Nations Security Council able to adopt Resolution 82 in June 1950 authorizing collective military action against North Korea without facing a Soviet veto?",
+      "options": [
+        {"id": "A", "text": "The Soviet Union had permanently surrendered its veto power following the Potsdam Conference"},
+        {"id": "B", "text": "The Soviet delegate was voluntarily boycotting Security Council sessions to protest the UN's refusal to recognize the People's Republic of China"},
+        {"id": "C", "text": "The resolution was passed under the provisions of the Warsaw Pact mutual assistance clause"},
+        {"id": "D", "text": "The Soviet Union initially supported South Korea before switching alliances in 1951"}
+      ],
+      "correctOptionId": "B",
+      "explanation": "When North Korea invaded South Korea in June 1950, the Soviet Union was boycotting the UN Security Council over the international body's refusal to seat Mao's newly established People's Republic of China in place of the Taiwan-based Nationalist government, enabling the Council to approve military sanctions without a Soviet veto.",
+      "sourceReference": "Section 5.5, Page 143"
+    },
+    {
+      "id": "HIS-G12-U05-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What international diplomatic intervention brought the military hostilities of the 1956 Suez Crisis to an end?",
+      "options": [
+        {"id": "A", "text": "The signing of the Warsaw Pact mutual assistance protocol in Cairo"},
+        {"id": "B", "text": "Severe political and economic pressure from the United States and the United Nations compelling Britain, France, and Israel to withdraw forces from Egyptian territory"},
+        {"id": "C", "text": "A military counter-offensive launched by the Arab League that destroyed the British Mediterranean fleet"},
+        {"id": "D", "text": "The formal transfer of the Suez Canal to permanent joint Anglo-French corporate ownership"}
+      ],
+      "correctOptionId": "B",
+      "explanation": "Following the tripartite invasion of Sinai and the Suez Canal zone by Israel, Britain, and France in October–November 1956, strong diplomatic and financial opposition from the United States and the UN forced the invading powers into a ceasefire and unconditional withdrawal, securing Egypt's sovereign control over the canal.",
+      "sourceReference": "Section 5.6, Pages 147-148"
+    },
+    {
+      "id": "HIS-G12-U05-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What territorial and diplomatic arrangements were formalized under the 1978 Camp David Accords and the 1979 Egypt-Israel Peace Treaty brokered by US President Jimmy Carter?",
+      "options": [
+        {"id": "A", "text": "Israel ceded the Golan Heights to Syria in exchange for full diplomatic recognition from Iraq"},
+        {"id": "B", "text": "Egypt regained sovereignty over the demilitarized Sinai Peninsula and established normalized diplomatic ties with Israel, resulting in Egypt's suspension from the Arab League"},
+        {"id": "C", "text": "Jerusalem was declared a neutral international enclave under direct United Nations administration"},
+        {"id": "D", "text": "Egypt and Israel formed a joint military council to administer the West Bank and Gaza Strip"}
+      ],
+      "correctOptionId": "B",
+      "explanation": "Mediated by President Carter between Egyptian President Anwar Sadat and Israeli Prime Minister Menachem Begin, the 1979 treaty returned the Sinai Peninsula to Egypt in exchange for Israeli maritime transit rights and normalized diplomatic relations; in response, the Arab League condemned the accords and expelled Egypt.",
+      "sourceReference": "Section 5.6, Page 148"
+    },
+    {
+      "id": "HIS-G12-U05-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "In what structural manner did Mao Zedong's 'Great Leap Forward' (1958–1962) depart from conventional Soviet central planning, and what was its catastrophic humanitarian consequence?",
+      "options": [
+        {"id": "A", "text": "It abandoned central planning in favor of Western private banking, causing unprecedented hyperinflation across coastal trading cities"},
+        {"id": "B", "text": "It replaced technical bureaucratic management and material incentives with ideological mass mobilization, agrarian communes, and rural backyard steel furnaces; exaggerated output reports and natural disasters subsequently triggered a famine that claimed over 20 million lives"},
+        {"id": "C", "text": "It converted heavy industrial complexes into private peasant cooperatives, provoking an immediate military invasion by the Soviet Red Army"},
+        {"id": "D", "text": "It prohibited peasant agriculture entirely to focus national labor reserves on nuclear armaments, resulting in widespread urban de-industrialization"}
+      ],
+      "correctOptionId": "B",
+      "explanation": "Rejecting the Soviet emphasis on centralized technical bureaucracy and material incentives, Mao launched the Great Leap Forward in 1958, relying on mass spiritual mobilization, giant rural communes, and primitive backyard furnaces. Fabricated agricultural quotas led state grain requisitions to empty the countryside, creating a catastrophic famine between 1960 and 1962 in which over 20 million people died.",
+      "sourceReference": "Section 5.5, Pages 139-140"
+    },
+    {
+      "id": "HIS-G12-U05-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Which combination of political, geographic, and strategic factors explains why the massive military commitment of the United States ultimately failed to avert the fall of South Vietnam in April 1975?",
+      "options": [
+        {"id": "A", "text": "The United States restricted its military forces entirely to naval blockades along the Mekong River while the Warsaw Pact deployed half a million ground troops"},
+        {"id": "B", "text": "The corruption and unpopularity of the Saigon regime, the broad national prestige of Ho Chi Minh, the superior tactical discipline of Viet Cong guerrillas suited to dense jungle terrain, and intense domestic anti-war opposition in the United States that compelled military disengagement"},
+        {"id": "C", "text": "A joint military treaty signed between SEATO and the Soviet Union mandating the immediate removal of all foreign armed personnel from Southeast Asia"},
+        {"id": "D", "text": "The complete absence of Soviet and Chinese economic aid to North Vietnam, which forced Hanoi to adopt Western democratic capitalism"}
+      ],
+      "correctOptionId": "B",
+      "explanation": "Despite committing over 500,000 troops and immense aerial firepower, the US effort faltered because South Vietnam's military government was corrupt and viewed by many as a foreign puppet; conversely, the communist forces under Ho Chi Minh enjoyed strong nationalistic legitimacy, utilized jungle guerrilla tactics that neutralized American technological advantages, and capitalized on growing anti-war sentiment in the US that forced an American withdrawal.",
+      "sourceReference": "Section 5.5, Pages 142-143"
+    },
+    {
+      "id": "HIS-G12-U05-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "How did the Cold War categorization of nations into 'First', 'Second', and 'Third' Worlds relate socio-economically to the 'North-South' divide in the post-1945 international order?",
+      "options": [
+        {"id": "A", "text": "The First and Second Worlds were strictly located in the Southern Hemisphere, while the Third World comprised wealthy industrialized European nations"},
+        {"id": "B", "text": "While the First (capitalist) and Second (communist) worlds were demarcated by political-ideological alignment, the Third World comprised non-aligned, formerly colonized developing nations in Africa, Asia, and Latin America that predominantly coincided with the economically disadvantaged Global South"},
+        {"id": "C", "text": "The classification was determined solely by whether a country possessed nuclear weapons, with Northern states holding total monopolies over conventional infantry"},
+        {"id": "D", "text": "The North-South divide represented military alliance memberships, whereas the First and Third worlds were based exclusively on agricultural coffee exports"}
+      ],
+      "correctOptionId": "B",
+      "explanation": "The three-world typology was born from Cold War geopolitics: the First World (US and capitalist allies) and Second World (Soviet bloc) represented rival industrialized camps. The Third World designated non-aligned states emerging from colonial rule across Africa, Asia, and Latin America, which shared structural problems of underdevelopment and largely corresponded to the economically marginalized 'Global South' vis-à-vis the wealthy 'Global North'.",
+      "sourceReference": "Section 5.3, Pages 129-130"
+    },
+    {
+      "id": "HIS-G12-U05-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "What core thesis regarding the primary source of international conflict in the post-Cold War era was advanced by political scientist Samuel Huntington in his work 'The Clash of Civilizations'?",
+      "options": [
+        {"id": "A", "text": "That global conflicts would be eradicated through universal adherence to democratic free-market capitalism"},
+        {"id": "B", "text": "That future warfare would be waged predominantly between nuclear superpowers disputing maritime boundaries in the Arctic Ocean"},
+        {"id": "C", "text": "That post-Cold War confrontations would occur primarily along cultural and religious fault lines between distinct global civilizations rather than ideological or economic divisions between nation-states"},
+        {"id": "D", "text": "That interstate conflicts would be replaced exclusively by domestic labor union strikes against multinational corporations"}
+      ],
+      "correctOptionId": "C",
+      "explanation": "In 'The Clash of Civilizations', Samuel Huntington argued that following the demise of Cold War ideological confrontations, global conflicts would no longer be driven primarily by political or economic disputes between sovereign states, but would emerge along cultural, ethnic, and religious boundaries separating the world's major civilizations.",
+      "sourceReference": "Section 5.7, Page 153"
+    }
+  ]
 }

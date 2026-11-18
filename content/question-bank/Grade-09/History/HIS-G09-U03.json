@@ -2,6 +2,340 @@
   "grade": 9,
   "subject": "History",
   "unitNumber": 3,
-  "unitTitle": "Peoples, States and Historical Processes in Ethiopia and the Horn to the end of 13th C.",
-  "questions": []
+  "unitTitle": "Peoples and States in Ethiopia and the Horn to the end of 13th C.",
+  "questions": [
+    {
+      "id": "HIS-G09-U03-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which of the following linguistic sub-groups represents the three families belonging to the Afro-Asiatic super-family spoken in Ethiopia?",
+      "options": [
+        { "id": "A", "text": "Chari-Nile, Koman, and Cushitic" },
+        { "id": "B", "text": "Cushitic, Semitic, and Omotic" },
+        { "id": "C", "text": "Bantu, Nilotic, and Semitic" },
+        { "id": "D", "text": "Khoisan, Cushitic, and Omotic" }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In Ethiopia, the Afro-Asiatic super-family comprises three linguistic families: Cushitic, Semitic, and Omotic, while Chari-Nile and Koman belong to the Nilo-Saharan super-family.",
+      "sourceReference": "Section 3.1.1, Pages 40-41"
+    },
+    {
+      "id": "HIS-G09-U03-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Who was consecrated as the first bishop of the Ethiopian Orthodox Tewahedo Church by Patriarch Atnatewos of Alexandria?",
+      "options": [
+        { "id": "A", "text": "Abune Tekle-Haymanot" },
+        { "id": "B", "text": "Abba Iyesus Moa" },
+        { "id": "C", "text": "Freminatos (Abuna Salama)" },
+        { "id": "D", "text": "Abune Baselios" }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Patriarch Atnatewos of Alexandria consecrated Freminatos as Abuna Salama, the first bishop of the Ethiopian Orthodox Church, initiating a tradition of Egyptian-appointed bishops that lasted until 1959.",
+      "sourceReference": "Section 3.1.2, Page 45"
+    },
+    {
+      "id": "HIS-G09-U03-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which ancient state in the Horn of Africa is documented in ancient Egyptian hieroglyphic records as an active trading partner starting from the third millennium BC?",
+      "options": [
+        { "id": "A", "text": "Punt" },
+        { "id": "B", "text": "Aksum" },
+        { "id": "C", "text": "Meroe" },
+        { "id": "D", "text": "Damat" }
+      ],
+      "correctOptionId": "A",
+      "explanation": "According to ancient Egyptian hieroglyphic inscriptions, the land of Punt had regular trade relations with Egypt by land and maritime routes as early as the third millennium BC.",
+      "sourceReference": "Section 3.2, Page 52"
+    },
+    {
+      "id": "HIS-G09-U03-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What archaeological feature distinguished the material civilization and urban monumental architecture of ancient Aksum?",
+      "options": [
+        { "id": "A", "text": "Sun-dried brick ziggurats" },
+        { "id": "B", "text": "Carved monolithic stelae and minted coins" },
+        { "id": "C", "text": "Limestone stepped pyramids" },
+        { "id": "D", "text": "Terracotta fortifications without stone masonry" }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The kingdom of Aksum was renowned for its impressive monolithic stone stelae (obelisks) and was one of the few great ancient civilizations that minted its own gold, silver, and bronze coins.",
+      "sourceReference": "Section 3.3, Pages 53-54"
+    },
+    {
+      "id": "HIS-G09-U03-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which enduring architectural legacy is attributed to the Zagwe dynasty during the reign of Emperor Lalibela in the 13th century?",
+      "options": [
+        { "id": "A", "text": "The dry-stone enclosure of Great Zimbabwe" },
+        { "id": "B", "text": "The monolithic rock-hewn churches of Roha" },
+        { "id": "C", "text": "The fortified perimeter wall of Harar Jugol" },
+        { "id": "D", "text": "The stone castles of Fasil Ghebbi" }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The Zagwe dynasty is celebrated for its architectural masterworks, particularly the eleven monolithic rock-hewn churches carved at Adefa/Roha during the reign of Emperor Lalibela.",
+      "sourceReference": "Section 3.4, Pages 55-56"
+    },
+    {
+      "id": "HIS-G09-U03-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Why did Prophet Mohammed instruct his early followers to seek asylum in the Aksumite Kingdom in 615 AD?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because Aksum was an active military ally of the Quraysh merchants of Mecca"
+        },
+        {
+          "id": "B",
+          "text": "Because the Aksumite king was renowned as a righteous ruler under whom no one was wronged"
+        },
+        {
+          "id": "C",
+          "text": "Because the port of Adulis had accepted Islam as its official state religion"
+        },
+        {
+          "id": "D",
+          "text": "Because Aksum promised to furnish military forces to conquer the Arabian peninsula"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Prophet Mohammed told his persecuted followers to seek refuge in Ethiopia because its Christian king (Armah Ella Seham, or Ahmed al-Nejash in Arabic records) was a just king who did not oppress anyone.",
+      "sourceReference": "Section 3.1.2, Page 48"
+    },
+    {
+      "id": "HIS-G09-U03-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which of the following ports served as the primary commercial and religious gateway through which Islam expanded into eastern Harar, Shewa, and south-central Ethiopia?",
+      "options": [
+        { "id": "A", "text": "Massawa" },
+        { "id": "B", "text": "Assab" },
+        { "id": "C", "text": "Zeila" },
+        { "id": "D", "text": "Mogadishu" }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Following the decline of Adulis, the port of Zeila on the Gulf of Aden became the vital commercial gateway connecting the coast with the interior, enabling Arab Muslim merchants to spread Islam inland.",
+      "sourceReference": "Section 3.1.2, Page 49"
+    },
+    {
+      "id": "HIS-G09-U03-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How are the Semitic languages of Ethiopia classified into Northern and Southern branches?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Northern consists of Ge'ez, Tegra, and Tigrigna; Southern consists of Amharic, Argobba, Guraghigna, Harari, and Siltie"
+        },
+        {
+          "id": "B",
+          "text": "Northern consists of Amharic and Tigrigna; Southern consists of Afan Oromo, Somali, and Siltie"
+        },
+        {
+          "id": "C",
+          "text": "Northern consists of Ge'ez and Agaw; Southern consists of Harari, Kafa, and Wolaita"
+        },
+        {
+          "id": "D",
+          "text": "Northern consists of Tegra and Kunama; Southern consists of Amharic, Gumuz, and Zay"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The Ethio-Semitic family is divided into Northern Ethio-Semitic (Ge'ez, Tegra, Tigrigna) and Southern Ethio-Semitic (Amharic, Argobba, extinct Gafat, Guraghigna, Harari, Siltie, and Zay).",
+      "sourceReference": "Section 3.1.1, Page 41"
+    },
+    {
+      "id": "HIS-G09-U03-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What primary economic role did the Red Sea port of Adulis perform within the Aksumite state?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It functioned solely as an isolated religious sanctuary for Christian monks"
+        },
+        {
+          "id": "B",
+          "text": "It served as the principal maritime trade hub exporting ivory, gold, and spices, and importing luxury goods from the Greco-Roman world and Asia"
+        },
+        {
+          "id": "C",
+          "text": "It was the exclusive agricultural grain-producing zone of the northern highlands"
+        },
+        {
+          "id": "D",
+          "text": "It was established as the royal coronation capital of the Zagwe emperors"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Adulis was Aksum's main maritime outlet on the Red Sea, connecting interior trade routes with international trade networks spanning the Mediterranean, Egypt, Arabia, India, and Ceylon.",
+      "sourceReference": "Section 3.3, Pages 53-54"
+    },
+    {
+      "id": "HIS-G09-U03-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What political change marked the emergence of the Zagwe dynasty around 1150 AD under Mera Tekle Haymanot?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The complete replacement of Christianity by an indigenous polytheistic belief system"
+        },
+        {
+          "id": "B",
+          "text": "A shift of imperial leadership to the local Agaw ruling class of Lasta, moving the capital to Adefa (Roha)"
+        },
+        {
+          "id": "C",
+          "text": "The total annexation of the Ethiopian highlands by the Sultanate of Ifat"
+        },
+        {
+          "id": "D",
+          "text": "The introduction of a hereditary Islamic caliphate in northern Ethiopia"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The rise of the Zagwe dynasty around 1150 AD under Mera Tekle Haymanot did not represent a new kingdom, but rather a transfer of political power to the Christianized Agaw ruling class with a new capital at Adefa in Lasta.",
+      "sourceReference": "Section 3.4, Page 55"
+    },
+    {
+      "id": "HIS-G09-U03-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which ruling family established the early medieval Sultanate of Shewa, and which neighboring power overthrew it in 1285 AD?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The Walasma dynasty established it; it was overthrown by the Zagwe dynasty"
+        },
+        {
+          "id": "B",
+          "text": "The Makhzumite dynasty established it; it was overthrown and incorporated by the Walasma dynasty of Ifat"
+        },
+        {
+          "id": "C",
+          "text": "The Fatimid dynasty established it; it was conquered by the Mamluks of Egypt"
+        },
+        {
+          "id": "D",
+          "text": "The Solomonic dynasty established it; it was dismantled by the kingdom of Damot"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The Sultanate of Shewa was governed by the Makhzumite dynasty until 1285 AD, when Umar Walasma, founder of the Sultanate of Ifat, conquered Shewa and incorporated its territories into the Walasma state.",
+      "sourceReference": "Section 3.5, Pages 58-59"
+    },
+    {
+      "id": "HIS-G09-U03-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Why did Islam fail to expand into the highland interior of northern Ethiopia from the Red Sea coast, whereas it successfully penetrated the interior from the Gulf of Aden port of Zeila?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The Red Sea coast had no maritime trade relations with the Arabian peninsula"
+        },
+        {
+          "id": "B",
+          "text": "Christianity was already firmly entrenched across northern highland communities since the fourth century AD, while the Zeila trade routes directly connected Muslim merchants with eastern and south-central interior populations"
+        },
+        {
+          "id": "C",
+          "text": "Arab Muslim merchants were legally forbidden by Egyptian authorities from docking at northern Red Sea ports"
+        },
+        {
+          "id": "D",
+          "text": "The pastoral communities of the northern lowlands refused to trade or interact with incoming Muslim travelers"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In northern Ethiopia, Christianity had been solidly established as the state and popular religion since the mid-4th century, halting the inward expansion of Islam beyond the coastal lowlands; conversely, the Zeila route penetrated non-Christian eastern, central, and southern populations along major caravan paths.",
+      "sourceReference": "Section 3.1.2, Page 49"
+    },
+    {
+      "id": "HIS-G09-U03-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Which statement accurately evaluates the historical relationship between the Aksumite Kingdom and the Zagwe Dynasty in terms of institutional change and continuity?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The Zagwe dynasty completely abandoned the Christian faith, maritime trade contacts, and Ge'ez religious literature"
+        },
+        {
+          "id": "B",
+          "text": "The Zagwe dynasty was an exact biological continuation of the Aksumite royal lineage that retained Aksum as the political capital"
+        },
+        {
+          "id": "C",
+          "text": "The Zagwe dynasty represented a shift of political power to the Agaw elite of Lasta, while maintaining continuity in Christian royal traditions, ecclesiastical culture, agriculture, and external trade outlets"
+        },
+        {
+          "id": "D",
+          "text": "The Zagwe dynasty abolished church architecture in favor of establishing fortified defensive garrisons on the Sudanese border"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The transition to the Zagwe dynasty marked a shift in political center and ruling ethnic group (from Semitic-speaking Aksumites to Agaw rulers of Lasta), yet preserved institutional and cultural continuity by upholding the Orthodox Christian faith, church construction traditions, and trade connections via Zeila and Dahlak.",
+      "sourceReference": "Section 3.4, Pages 55-56"
+    },
+    {
+      "id": "HIS-G09-U03-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "What underlying economic factor became the primary catalyst for territorial competition and conflict between the Christian highland state and the Muslim Sultanate of Ifat from 1270 AD onward?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Rivalry over the monopoly of Nile river irrigation networks in the Lake Tana basin"
+        },
+        {
+          "id": "B",
+          "text": "Mutual ambition to control the highly lucrative long-distance trade routes linking the interior of the Horn to the Gulf of Aden port of Zeila"
+        },
+        {
+          "id": "C",
+          "text": "A dispute over the appointment of Coptic bishops from the Patriarchate of Alexandria"
+        },
+        {
+          "id": "D",
+          "text": "Direct military intervention by Portuguese fleets seeking naval bases in the Gulf of Aden"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "After the restoration of the Christian highland dynasty in 1270 and the rise of the Walasma dynasty of Ifat in 1285, both states sought hegemony over the rich Zeila trade corridor, making control of commercial flow and toll collection the central motive for medieval conflict.",
+      "sourceReference": "Section 3.5, Pages 58-59"
+    },
+    {
+      "id": "HIS-G09-U03-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "How do modern historians view the relationship between South Arabian cultural elements and indigenous societies during the development of pre-Aksumite states like Da'mat?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Pre-Aksumite civilization was entirely imported by large-scale South Arabian military conquerors who wiped out local populations"
+        },
+        {
+          "id": "B",
+          "text": "Indigenous African communities developed complex societies locally, while selective cultural and commercial exchanges with South Arabia enriched inscriptions, script, and monumental masonry without displacing local heritage"
+        },
+        {
+          "id": "C",
+          "text": "South Arabian travelers adopted Ethiopian indigenous pagan religion and severed all contact with Yemen"
+        },
+        {
+          "id": "D",
+          "text": "Pre-Aksumite societies had no external trade contacts with any regions outside the Awash River valley"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Historical and archaeological evidence indicates that early state formation and cultural development in northern Ethiopia and the Horn had deep indigenous roots, with South Arabian cultural elements (such as Sabaean inscriptions and monumental architecture) incorporated through mutual trade and cultural exchange rather than demographic replacement.",
+      "sourceReference": "Sections 3.2 & 3.3, Pages 52-54"
+    }
+  ]
 }

@@ -2,6 +2,346 @@
   "grade": 12,
   "subject": "History",
   "unitNumber": 8,
-  "unitTitle": "Post-1991 Developments in Ethiopia",
-  "questions": []
+  "unitTitle": "Post 1991 Developments in Ethiopia",
+  "questions": [
+    {
+      "id": "HIS-G12-U08-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which document served as the supreme interim legal framework governing Ethiopia between the downfall of the Derg in 1991 and the endorsement of the 1995 Constitution?",
+      "options": [
+        { "id": "A", "text": "The Fitha Negest" },
+        { "id": "B", "text": "The Transitional Period Charter of Ethiopia" },
+        { "id": "C", "text": "The Revised Constitution of 1955" },
+        { "id": "D", "text": "The PDRE Constitution" }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Following the collapse of the Derg in May 1991, a National Conference convened in Addis Ababa in July 1991 adopted the 'Transitional Period Charter of Ethiopia', which served as the interim constitutional foundation for the Transitional Government of Ethiopia (TGE) until August 1995.",
+      "sourceReference": "Section 8.1, Pages 241-242"
+    },
+    {
+      "id": "HIS-G12-U08-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Following the adoption of the 1995 Constitution, who were elected as the first President and first Prime Minister of the Federal Democratic Republic of Ethiopia (FDRE), respectively?",
+      "options": [
+        { "id": "A", "text": "Dr. Negaso Gidada and Ato Meles Zenawi" },
+        { "id": "B", "text": "Ato Meles Zenawi and Dr. Abiy Ahmed" },
+        {
+          "id": "C",
+          "text": "Lieutenant General Aman Andom and Mengistu Haile Mariam"
+        },
+        { "id": "D", "text": "Dr. Negaso Gidada and Tamrat Layne" }
+      ],
+      "correctOptionId": "A",
+      "explanation": "With the formal establishment of the FDRE in August 1995, Dr. Negaso Gidada of the Oromo People's Democratic Organization (OPDO) became the first elected President, while Ato Meles Zenawi, chairperson of the EPRDF, became the first Prime Minister and Commander-in-Chief of the Armed Forces.",
+      "sourceReference": "Section 8.2, Page 244"
+    },
+    {
+      "id": "HIS-G12-U08-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which article of the 1995 FDRE Constitution explicitly guarantees the 'unconditional right to self-determination, including the right to secession' to every nation, nationality, and people in Ethiopia?",
+      "options": [
+        { "id": "A", "text": "Article 17" },
+        { "id": "B", "text": "Article 36" },
+        { "id": "C", "text": "Article 39" },
+        { "id": "D", "text": "Article 52" }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Article 39 of the 1995 FDRE Constitution is one of its most debated provisions, stating that 'Every Nation, Nationality and People in Ethiopia has an unconditional right to self-determination, including the right to secession', along with the right to full self-government.",
+      "sourceReference": "Section 8.1 & 8.2, Page 243"
+    },
+    {
+      "id": "HIS-G12-U08-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What was the military codename of the major Ethiopian counter-offensive launched on February 22, 1999, that broke through fortified positions and restored Badme during the Ethio-Eritrean War?",
+      "options": [
+        { "id": "A", "text": "Operation Sunset" },
+        { "id": "B", "text": "Operation Overlord" },
+        { "id": "C", "text": "Operation Bagration" },
+        { "id": "D", "text": "Operation Red Star" }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Following Eritrea's refusal of the US-Rwanda peace proposal, Ethiopia launched a large-scale military counter-offensive codenamed 'Operation Sunset' on February 22, 1999, which successfully recaptured the contested territory of Badme.",
+      "sourceReference": "Section 8.2, Pages 247-248"
+    },
+    {
+      "id": "HIS-G12-U08-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In 2011, Prime Minister Meles Zenawi laid the foundation stone for which major national hydroelectric project intended to generate thousands of megawatts of electricity along the Blue Nile?",
+      "options": [
+        { "id": "A", "text": "The Gilgel Gibe III Hydroelectric Dam" },
+        { "id": "B", "text": "The Aswan High Dam" },
+        { "id": "C", "text": "The Grand Ethiopian Renaissance Dam (GERD)" },
+        { "id": "D", "text": "The Tekeze Hydroelectric Dam" }
+      ],
+      "correctOptionId": "C",
+      "explanation": "In 2011, Prime Minister Meles Zenawi laid the cornerstone for the Grand Ethiopian Renaissance Dam (GERD) on the Blue Nile, designed to generate up to 6,000 MW and financed through the domestic mobilization of the Ethiopian government and public.",
+      "sourceReference": "Section 8.3, Page 251"
+    },
+    {
+      "id": "HIS-G12-U08-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How did the Transitional Government of Ethiopia (1991–1995) restructure the sub-national administrative geography of the country compared to the imperial and Derg eras?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It retained the historic fourteen geographic provinces under centrally appointed military administrators"
+        },
+        {
+          "id": "B",
+          "text": "It established fourteen ethnic- and language-based autonomous regional self-governments to replace the former provinces"
+        },
+        {
+          "id": "C",
+          "text": "It consolidated the entire nation into three large federal territories centered on major urban economic corridors"
+        },
+        {
+          "id": "D",
+          "text": "It transferred provincial authority directly to the United Nations trusteeship mission"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "During the Transitional Period (1991–1995), the TGE replaced the fourteen historical geographic provinces (teklay-gizats) with a new language- and ethnicity-based administrative framework comprising fourteen newly demarcated autonomous regions.",
+      "sourceReference": "Section 8.1, Page 242"
+    },
+    {
+      "id": "HIS-G12-U08-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What is the constitutional structure of executive power and governance established by the 1995 FDRE Constitution?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A presidential republic where the President exercises absolute executive authority over the cabinet"
+        },
+        {
+          "id": "B",
+          "text": "A federal structure with a parliamentary system in which executive authority resides in the Prime Minister and Council of Ministers accountable to an elected parliament"
+        },
+        {
+          "id": "C",
+          "text": "A unitary constitutional monarchy governed by an appointive hereditary Senate"
+        },
+        {
+          "id": "D",
+          "text": "A military junta governing through decrees without legislative oversight"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The 1995 Constitution established the Federal Democratic Republic of Ethiopia as a federal parliamentary state where highest executive authority is exercised by the Prime Minister and Council of Ministers, accountable to the House of Peoples' Representatives.",
+      "sourceReference": "Section 8.2, Page 244"
+    },
+    {
+      "id": "HIS-G12-U08-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What historic political outcome distinguished the May 2005 general parliamentary elections from the previous 1995 and 2000 national elections in Ethiopia?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Opposition political parties boycotted the election entirely, leaving all seats uncontested"
+        },
+        {
+          "id": "B",
+          "text": "Opposition coalitions unified, securing 180 parliamentary seats and winning all 23 federal parliamentary seats in the capital city of Addis Ababa"
+        },
+        {
+          "id": "C",
+          "text": "The election resulted in the immediate peaceful transfer of the prime ministership to an opposition party"
+        },
+        {
+          "id": "D",
+          "text": "The United Nations suspended the election and appointed an interim international caretaker administration"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The 2005 elections witnessed unprecedented public mobilization and opposition participation; the Coalition for Unity and Democracy (CUD) and other opposition groups won 180 seats in the House of Peoples' Representatives and swept all 23 federal seats in Addis Ababa.",
+      "sourceReference": "Section 8.2, Pages 245-246"
+    },
+    {
+      "id": "HIS-G12-U08-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What was the final outcome of the border demarcation process following the April 2002 verdict of the Ethio-Eritrean Boundary Commission established under the Algiers Agreement?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Both nations immediately completed physical border demarcation under joint military patrols"
+        },
+        {
+          "id": "B",
+          "text": "The commission awarded the contested territory of Badme to Eritrea, and subsequent disagreements over implementation led to a protracted 'no-war, no-peace' standoff"
+        },
+        {
+          "id": "C",
+          "text": "Eritrea agreed to integrate its armed forces into the Ethiopian Northern Command"
+        },
+        {
+          "id": "D",
+          "text": "The United Nations Security Council transferred sovereignty of the port of Assab to Ethiopia"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In April 2002, the Boundary Commission in The Hague delivered its verdict awarding Badme to Eritrea. Disagreements over interpretation and implementation, particularly Ethiopia's call for further dialogue before demarcation, resulted in an unresolved 'no-peace, no-war' impasse lasting over a decade.",
+      "sourceReference": "Section 8.2, Page 248"
+    },
+    {
+      "id": "HIS-G12-U08-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What was the strategic focus of Ethiopia's post-1991 economic framework known as Agricultural Development-Led Industrialization (ADLI)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Abolishing peasant farming to allocate all arable land to foreign manufacturing syndicates"
+        },
+        {
+          "id": "B",
+          "text": "Using agriculture as the primary engine of economic growth through fertilizers, improved seeds, and extension workers, while expanding rural infrastructure to foster domestic industries"
+        },
+        {
+          "id": "C",
+          "text": "Prioritizing deep-sea commercial fishing over highland cereal production"
+        },
+        {
+          "id": "D",
+          "text": "Mandating state ownership of all retail grain shops and imposing price controls on crops"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Adopted in the mid-1990s, ADLI was designed to drive structural economic transformation by raising smallholder agricultural productivity through modern inputs, extension services, and infrastructure expansion (roads, water, electrification), thereby creating linkages with industrial development.",
+      "sourceReference": "Section 8.3, Pages 249-250"
+    },
+    {
+      "id": "HIS-G12-U08-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In which international theaters did post-1991 Ethiopia deploy major armed forces contingents under United Nations and African Union peacekeeping mandates?",
+      "options": [
+        { "id": "A", "text": "The Persian Gulf, Afghanistan, and the Balkans" },
+        {
+          "id": "B",
+          "text": "Rwanda, Burundi, Liberia, Sudan, South Sudan, and Somalia"
+        },
+        { "id": "C", "text": "Vietnam, Korea, and Cambodia" },
+        { "id": "D", "text": "Algeria, Angola, and Mozambique" }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Building on its longstanding history of multilateral peacekeeping dating back to Korea and Congo in the 1950s and 1960s, post-1991 Ethiopia contributed thousands of troops and personnel to UN and AU peacekeeping and humanitarian operations in Rwanda, Burundi, Liberia, Sudan, South Sudan, and Somalia (AMISOM).",
+      "sourceReference": "Section 8.4, Page 252"
+    },
+    {
+      "id": "HIS-G12-U08-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "What core constitutional divergence characterizes the ongoing debate among Ethiopian political thinkers regarding Article 39 of the 1995 FDRE Constitution?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Proponents argue it establishes an absolute monarchy, while critics argue it grants excessive legislative power to the judiciary"
+        },
+        {
+          "id": "B",
+          "text": "Proponents view it as the ultimate democratic guarantee correcting historic national oppression and recognizing equality, whereas critics contend that institutionalizing the right to secession endangers national unity and fosters territorial fragmentation"
+        },
+        {
+          "id": "C",
+          "text": "Proponents claim it enforces a single national language, while critics assert it outlaws vernacular schooling"
+        },
+        {
+          "id": "D",
+          "text": "Proponents argue it bans private economic enterprise, whereas critics maintain it privatizes all state resources"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Advocates of Article 39 maintain that recognizing the unconditional right to self-determination resolves historic grievances of national marginalization and secures genuine unity based on consent; critics argue that codifying the right to secession threatens the stability and territorial integrity of the Ethiopian state.",
+      "sourceReference": "Section 8.1 & 8.2, Page 243"
+    },
+    {
+      "id": "HIS-G12-U08-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Despite shifting from a Marxist command economy to a market-oriented economic system after 1991, in what fundamental area did the EPRDF government maintain policy continuity with the Derg regime?",
+      "options": [
+        {
+          "id": "A",
+          "text": "By enforcing compulsory military conscription for all university graduates"
+        },
+        {
+          "id": "B",
+          "text": "By capping the maximum capital of private investors at 500,000 Ethiopian Birr"
+        },
+        {
+          "id": "C",
+          "text": "By maintaining constitutional state and public ownership of all rural and urban land, forbidding its private sale or mortgaging"
+        },
+        {
+          "id": "D",
+          "text": "By preserving state monopolies over all retail commerce and small urban businesses"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "While the EPRDF liberalized private capital investment and dismantled the Derg's price controls and command structures, it retained public and state ownership of land, continuing the policy established in 1975 that prevents land from being bought, sold, or alienated as private property.",
+      "sourceReference": "Section 8.3, Pages 249-250"
+    },
+    {
+      "id": "HIS-G12-U08-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "On what legal and geopolitical principles did Ethiopia base its refusal to recognize the colonial-era 1929 and 1959 Nile water agreements when constructing the Grand Ethiopian Renaissance Dam (GERD)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Ethiopia argued that it was bound by the agreements to construct dams only within the territory of Sudan"
+        },
+        {
+          "id": "B",
+          "text": "Ethiopia was completely excluded from negotiations despite contributing over 85% of the Nile's waters, rejected downstream monopolistic allocations, and asserted its sovereign right to equitable and reasonable utilization under the 'no-harm principle'"
+        },
+        {
+          "id": "C",
+          "text": "Ethiopia maintained that international river basins must be managed under the exclusive oversight of the Arab League"
+        },
+        {
+          "id": "D",
+          "text": "Ethiopia argued that the 1959 treaty had granted it sovereign ownership of all Mediterranean irrigation outlets"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The 1929 and 1959 agreements allocated the Nile's waters exclusively to Egypt and Sudan (55.5 and 18.5 billion cubic meters respectively) while excluding Ethiopia, the source of over 85% of the river's flow. Ethiopia consistently rejected these colonial-era treaties as null and void regarding its sovereignty, asserting its right to develop the river based on equitable utilization and the 'no-harm principle'.",
+      "sourceReference": "Section 8.3, Pages 251-252"
+    },
+    {
+      "id": "HIS-G12-U08-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Which dynamic explained why Ethiopia's post-1995 constitutional multi-party framework operated in practice as a 'single dominant party system' throughout the EPRDF era?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The 1995 Constitution explicitly outlawed the registration of opposition political parties"
+        },
+        {
+          "id": "B",
+          "text": "The ruling EPRDF coalition fused party structures with the state bureaucracy and security apparatus under its ideology of Revolutionary Democracy, restricting opposition organizational efficacy and civic space despite periodic elections"
+        },
+        {
+          "id": "C",
+          "text": "Opposition parties held an uninterrupted majority in the House of Federation from 1995 to 2015"
+        },
+        {
+          "id": "D",
+          "text": "The United Nations Security Council mandated single-party governance until full infrastructural electrification was achieved"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Although the 1995 Constitution provided for multi-party competition and periodic elections, the EPRDF dominated national political life through its ideological framework of Revolutionary Democracy, deep integration of party and state administrative organs, and structural advantages that constrained the operational capacity of opposition parties.",
+      "sourceReference": "Section 8.2, Pages 244-247"
+    }
+  ]
 }
