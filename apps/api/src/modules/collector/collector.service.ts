@@ -7,8 +7,9 @@ import {
   RawQuestionItem,
   UnitSubmissionStatus,
 } from '@acedex/contracts';
-import { ContributorModel } from './models/contributor.model';
-import { TempUnitSubmissionModel } from './models/unit-submission.model';
+import { ContributorModel, ICollectorContributorDoc } from './models/collector-contributor.model';
+import { UnitSubmissionModel, ICollectorSubmissionDoc } from './models/collector-submission.model';
+import { CollectorAuditModel, CollectorAuditAction } from './models/collector-audit.model';
 import { UnitModel } from '../curriculum/models/unit.model';
 import { SubjectModel } from '../curriculum/models/subject.model';
 import { UnauthorizedError, NotFoundError, BadRequestError } from '../../common/errors/app-error';
@@ -34,7 +35,33 @@ export const DEFAULT_CONTRIBUTORS: Array<{
 
 export class CollectorService {
   /**
-   * Initializes default subject contributor accounts if they do not exist
+   * Records an immutable audit log entry in acedex_collector.audit_logs
+   */
+  public static async logAudit(entry: {
+    action: CollectorAuditAction;
+    actorId: string;
+    actorRole: 'student' | 'admin';
+    targetUnitCode?: string;
+    metadata?: Record<string, any>;
+    ipAddress?: string;
+  }): Promise<void> {
+    try {
+      await CollectorAuditModel.create({
+        action: entry.action,
+        actorId: entry.actorId.toUpperCase(),
+        actorRole: entry.actorRole,
+        targetUnitCode: entry.targetUnitCode ? entry.targetUnitCode.toUpperCase() : undefined,
+        metadata: entry.metadata,
+        ipAddress: entry.ipAddress,
+        timestamp: new Date(),
+      });
+    } catch (err) {
+      logger.warn({ err, action: entry.action }, 'Failed to record collector audit log');
+    }
+  }
+
+  /**
+   * Initializes default subject contributor accounts in acedex_collector if they do not exist
    */
   public static async seedDefaultContributors(): Promise<void> {
     for (const c of DEFAULT_CONTRIBUTORS) {
@@ -46,21 +73,28 @@ export class CollectorService {
             subjectCode: c.subjectCode.toUpperCase(),
             subjectName: c.subjectName,
             role: c.role || 'student',
+            isActive: true,
           },
           $setOnInsert: {
             lastActiveAt: new Date(),
+            stats: {
+              totalUnits: 0,
+              submittedUnits: 0,
+              approvedUnits: 0,
+              rejectedUnits: 0,
+            },
           },
         },
         { upsert: true, new: true }
       );
     }
-    logger.info('Default subject contributor IDs initialized');
+    logger.info('Default subject contributor IDs initialized in acedex_collector');
   }
 
   /**
    * Contributor login with ID only (e.g. GEO#982, ADM#15)
    */
-  public static async login(contributorId: string): Promise<ContributorProfile> {
+  public static async login(contributorId: string, ipAddress?: string): Promise<ContributorProfile> {
     const cleanId = contributorId.trim().toUpperCase();
 
     // Ensure defaults exist
@@ -75,12 +109,42 @@ export class CollectorService {
     contributor.lastActiveAt = new Date();
     await contributor.save();
 
+    const role = contributor.role || (cleanId === 'ADM#15' ? 'admin' : 'student');
+
+    // Audit log login
+    await this.logAudit({
+      action: 'LOGIN',
+      actorId: cleanId,
+      actorRole: role,
+      ipAddress,
+    });
+
     return {
       contributorId: contributor.contributorId,
       name: contributor.name,
       subjectCode: contributor.subjectCode,
       subjectName: contributor.subjectName,
-      role: contributor.role || (cleanId === 'ADM#15' ? 'admin' : 'student'),
+      role,
+    };
+  }
+
+  /**
+   * Retrieves contributor profile by ID
+   */
+  public static async getProfile(contributorId: string): Promise<ContributorProfile> {
+    const cleanId = contributorId.trim().toUpperCase();
+    const contributor = await ContributorModel.findOne({ contributorId: cleanId });
+
+    if (!contributor) {
+      throw new NotFoundError(`Contributor '${contributorId}' not found`);
+    }
+
+    return {
+      contributorId: contributor.contributorId,
+      name: contributor.name,
+      subjectCode: contributor.subjectCode,
+      subjectName: contributor.subjectName,
+      role: contributor.role,
     };
   }
 
@@ -100,14 +164,13 @@ export class CollectorService {
     // 1. Fetch all units for this subject from UnitModel (or fallback to question-bank folder)
     let unitDocs = await UnitModel.find({ subjectCode: code }).sort({ grade: 1, unitNumber: 1 });
 
-    // Fallback if DB was not fully seeded: read from question-bank directory
     if (!unitDocs || unitDocs.length === 0) {
       unitDocs = await this.readUnitsFromDisk(code, subjectName);
     }
 
-    // 2. Fetch existing temporary submissions for this subject
-    const submissions = await TempUnitSubmissionModel.find({ subjectCode: code });
-    const subMap = new Map<string, typeof submissions[0]>();
+    // 2. Fetch existing submissions for this subject from acedex_collector.unit_submissions
+    const submissions = await UnitSubmissionModel.find({ subjectCode: code });
+    const subMap = new Map<string, ICollectorSubmissionDoc>();
     for (const s of submissions) {
       subMap.set(s.unitCode, s);
     }
@@ -183,13 +246,15 @@ export class CollectorService {
     unitCode: string,
     contributorId: string,
     questions: RawQuestionItem[],
-    rawPastedText?: string
-  ) {
+    rawPastedText?: string,
+    ipAddress?: string
+  ): Promise<ICollectorSubmissionDoc> {
     if (!questions || questions.length !== 15) {
       throw new BadRequestError('Submission must contain exactly 15 questions');
     }
 
     const cleanCode = unitCode.trim().toUpperCase();
+    const cleanContributor = contributorId.trim().toUpperCase();
 
     // Parse grade, subjectCode, and unitNumber from unitCode (e.g. GEO-G10-U02)
     const match = cleanCode.match(/^([A-Z]{3})-G(09|10|11|12)-U(\d{2})$/);
@@ -201,7 +266,7 @@ export class CollectorService {
     const grade = parseInt(match[2], 10);
     const unitNumber = parseInt(match[3], 10);
 
-    // Resolve title from unit model or fallback
+    // Resolve title from unit model or disk fallback
     let unitTitle = `Unit ${unitNumber}`;
     const unitDoc = await UnitModel.findOne({ code: cleanCode });
     if (unitDoc && unitDoc.title) {
@@ -218,8 +283,24 @@ export class CollectorService {
       id: `${cleanCode}-Q${String(idx + 1).padStart(3, '0')}`,
     }));
 
-    // Upsert into temp_unit_submissions
-    const submission = await TempUnitSubmissionModel.findOneAndUpdate(
+    // Find existing submission to handle versioning & history
+    const existing = await UnitSubmissionModel.findOne({ unitCode: cleanCode });
+    const currentVersion = existing ? (existing.version || 1) + 1 : 1;
+    const history = existing ? existing.history || [] : [];
+
+    if (existing) {
+      history.push({
+        version: existing.version || 1,
+        submittedAt: existing.submittedAt,
+        contributorId: existing.contributorId,
+        questionsCount: existing.questions.length,
+        status: existing.status,
+        notes: existing.reviewNotes,
+      });
+    }
+
+    // Upsert into acedex_collector.unit_submissions
+    const submission = await UnitSubmissionModel.findOneAndUpdate(
       { unitCode: cleanCode },
       {
         $set: {
@@ -227,34 +308,49 @@ export class CollectorService {
           grade,
           unitNumber,
           unitTitle,
-          contributorId: contributorId.trim().toUpperCase(),
+          contributorId: cleanContributor,
           questions: canonQuestions,
           rawPastedText,
           status: 'submitted',
+          version: currentVersion,
+          history,
           submittedAt: new Date(),
         },
         $unset: {
           reviewNotes: 1,
+          reviewedAt: 1,
+          reviewedBy: 1,
         },
       },
       { upsert: true, new: true }
     );
 
+    // Audit log submission
+    await this.logAudit({
+      action: 'SUBMIT',
+      actorId: cleanContributor,
+      actorRole: 'student',
+      targetUnitCode: cleanCode,
+      metadata: { version: currentVersion, questionCount: canonQuestions.length },
+      ipAddress,
+    });
+
     logger.info(
-      { unitCode: cleanCode, contributorId, questionsCount: questions.length },
-      'Unit questions submitted to collector staging'
+      { unitCode: cleanCode, contributorId: cleanContributor, version: currentVersion },
+      'Unit questions submitted to acedex_collector'
     );
 
     return submission;
   }
 
   /**
-   * Admin: Lists all submissions in staging
+   * Admin: Lists all submissions in staging with rich filtering
    */
   public static async listAdminSubmissions(query?: {
     subjectCode?: string;
     status?: string;
     grade?: number;
+    contributorId?: string;
   }) {
     const filter: Record<string, any> = {};
 
@@ -267,8 +363,11 @@ export class CollectorService {
     if (query?.grade) {
       filter.grade = Number(query.grade);
     }
+    if (query?.contributorId) {
+      filter.contributorId = query.contributorId.toUpperCase();
+    }
 
-    const list = await TempUnitSubmissionModel.find(filter).sort({ submittedAt: -1 });
+    const list = await UnitSubmissionModel.find(filter).sort({ submittedAt: -1 });
 
     return list.map((s) => ({
       _id: s._id.toString(),
@@ -280,21 +379,23 @@ export class CollectorService {
       contributorId: s.contributorId,
       questionCount: s.questions.length,
       status: s.status,
+      version: s.version || 1,
       submittedAt: s.submittedAt.toISOString(),
       reviewedAt: s.reviewedAt ? s.reviewedAt.toISOString() : undefined,
+      reviewedBy: s.reviewedBy,
       reviewNotes: s.reviewNotes,
     }));
   }
 
   /**
-   * Admin: Gets full submission detail with all 15 questions
+   * Admin or Contributor: Gets full submission detail with all 15 questions
    */
   public static async getSubmissionDetail(idOrUnitCode: string) {
     const query = idOrUnitCode.includes('-')
       ? { unitCode: idOrUnitCode.toUpperCase() }
       : { _id: idOrUnitCode };
 
-    const submission = await TempUnitSubmissionModel.findOne(query);
+    const submission = await UnitSubmissionModel.findOne(query);
 
     if (!submission) {
       throw new NotFoundError(`Submission '${idOrUnitCode}' not found`);
@@ -310,23 +411,68 @@ export class CollectorService {
       contributorId: submission.contributorId,
       questionCount: submission.questions.length,
       status: submission.status,
+      version: submission.version || 1,
       questions: submission.questions,
       rawPastedText: submission.rawPastedText,
+      history: submission.history || [],
       submittedAt: submission.submittedAt.toISOString(),
       reviewedAt: submission.reviewedAt ? submission.reviewedAt.toISOString() : undefined,
+      reviewedBy: submission.reviewedBy,
       reviewNotes: submission.reviewNotes,
     };
   }
 
   /**
-   * Admin: Approves a unit submission
+   * Admin: In-place edit of questions in a unit
    */
-  public static async approveSubmission(idOrUnitCode: string, adminUserId: string) {
+  public static async updateSubmissionQuestions(
+    idOrUnitCode: string,
+    adminUserId: string,
+    questions: RawQuestionItem[],
+    ipAddress?: string
+  ): Promise<ICollectorSubmissionDoc> {
+    if (!questions || questions.length !== 15) {
+      throw new BadRequestError('Updated questions must contain exactly 15 questions');
+    }
+
     const query = idOrUnitCode.includes('-')
       ? { unitCode: idOrUnitCode.toUpperCase() }
       : { _id: idOrUnitCode };
 
-    const submission = await TempUnitSubmissionModel.findOne(query);
+    const submission = await UnitSubmissionModel.findOne(query);
+    if (!submission) {
+      throw new NotFoundError(`Submission '${idOrUnitCode}' not found`);
+    }
+
+    submission.questions = questions;
+    await submission.save();
+
+    await this.logAudit({
+      action: 'EDIT_QUESTION',
+      actorId: adminUserId,
+      actorRole: 'admin',
+      targetUnitCode: submission.unitCode,
+      metadata: { questionCount: questions.length },
+      ipAddress,
+    });
+
+    logger.info({ unitCode: submission.unitCode, adminUserId }, 'Questions modified in-place by admin');
+    return submission;
+  }
+
+  /**
+   * Admin: Approves a unit submission
+   */
+  public static async approveSubmission(
+    idOrUnitCode: string,
+    adminUserId: string,
+    ipAddress?: string
+  ): Promise<ICollectorSubmissionDoc> {
+    const query = idOrUnitCode.includes('-')
+      ? { unitCode: idOrUnitCode.toUpperCase() }
+      : { _id: idOrUnitCode };
+
+    const submission = await UnitSubmissionModel.findOne(query);
 
     if (!submission) {
       throw new NotFoundError(`Submission '${idOrUnitCode}' not found`);
@@ -337,20 +483,32 @@ export class CollectorService {
     submission.reviewedBy = adminUserId;
     await submission.save();
 
-    logger.info({ unitCode: submission.unitCode, adminUserId }, 'Unit submission approved by admin');
+    await this.logAudit({
+      action: 'APPROVE',
+      actorId: adminUserId,
+      actorRole: 'admin',
+      targetUnitCode: submission.unitCode,
+      ipAddress,
+    });
 
+    logger.info({ unitCode: submission.unitCode, adminUserId }, 'Unit submission approved by admin');
     return submission;
   }
 
   /**
    * Admin: Rejects a unit submission with revision notes
    */
-  public static async rejectSubmission(idOrUnitCode: string, adminUserId: string, notes?: string) {
+  public static async rejectSubmission(
+    idOrUnitCode: string,
+    adminUserId: string,
+    notes?: string,
+    ipAddress?: string
+  ): Promise<ICollectorSubmissionDoc> {
     const query = idOrUnitCode.includes('-')
       ? { unitCode: idOrUnitCode.toUpperCase() }
       : { _id: idOrUnitCode };
 
-    const submission = await TempUnitSubmissionModel.findOne(query);
+    const submission = await UnitSubmissionModel.findOne(query);
 
     if (!submission) {
       throw new NotFoundError(`Submission '${idOrUnitCode}' not found`);
@@ -362,20 +520,36 @@ export class CollectorService {
     submission.reviewedBy = adminUserId;
     await submission.save();
 
-    logger.info({ unitCode: submission.unitCode, adminUserId, notes }, 'Unit submission rejected by admin');
+    await this.logAudit({
+      action: 'REJECT',
+      actorId: adminUserId,
+      actorRole: 'admin',
+      targetUnitCode: submission.unitCode,
+      metadata: { reason: submission.reviewNotes },
+      ipAddress,
+    });
 
+    logger.info({ unitCode: submission.unitCode, adminUserId, notes }, 'Unit submission rejected by admin');
     return submission;
   }
 
   /**
    * Admin: Exports approved/submitted unit as canonical QuestionBankFile JSON
    */
-  public static async exportUnitJson(idOrUnitCode: string) {
+  public static async exportUnitJson(idOrUnitCode: string, actorId = 'admin', ipAddress?: string) {
     const submission = await this.getSubmissionDetail(idOrUnitCode);
 
     // Resolve full subject name
     const subject = await SubjectModel.findOne({ code: submission.subjectCode });
     const subjectName = subject ? subject.name : DEFAULT_CONTRIBUTORS.find((c) => c.subjectCode === submission.subjectCode)?.subjectName || submission.subjectCode;
+
+    await this.logAudit({
+      action: 'EXPORT_JSON',
+      actorId,
+      actorRole: 'admin',
+      targetUnitCode: submission.unitCode,
+      ipAddress,
+    });
 
     return {
       grade: submission.grade,
@@ -383,6 +557,106 @@ export class CollectorService {
       unitNumber: submission.unitNumber,
       unitTitle: submission.unitTitle,
       questions: submission.questions,
+    };
+  }
+
+  /**
+   * Admin: Exports all approved units for a subject bundled together
+   */
+  public static async exportSubjectUnits(subjectCode: string, actorId = 'admin') {
+    const code = subjectCode.trim().toUpperCase();
+    const submissions = await UnitSubmissionModel.find({
+      subjectCode: code,
+      status: 'approved',
+    }).sort({ grade: 1, unitNumber: 1 });
+
+    const subject = await SubjectModel.findOne({ code });
+    const subjectName = subject ? subject.name : DEFAULT_CONTRIBUTORS.find((c) => c.subjectCode === code)?.subjectName || code;
+
+    await this.logAudit({
+      action: 'EXPORT_JSON',
+      actorId,
+      actorRole: 'admin',
+      metadata: { subjectCode: code, exportedUnitsCount: submissions.length },
+    });
+
+    return {
+      subjectCode: code,
+      subjectName,
+      approvedUnitsCount: submissions.length,
+      units: submissions.map((s) => ({
+        grade: s.grade,
+        unitNumber: s.unitNumber,
+        unitTitle: s.unitTitle,
+        unitCode: s.unitCode,
+        questions: s.questions,
+      })),
+    };
+  }
+
+  /**
+   * Admin: System-wide collection dashboard statistics
+   */
+  public static async getAdminStats() {
+    const [totalContributors, submissions] = await Promise.all([
+      ContributorModel.countDocuments({ isActive: true }),
+      UnitSubmissionModel.find({}, { unitCode: 1, subjectCode: 1, status: 1, grade: 1 }),
+    ]);
+
+    let submittedCount = 0;
+    let approvedCount = 0;
+    let rejectedCount = 0;
+
+    const subjectMap: Record<string, { total: number; submitted: number; approved: number; rejected: number }> = {};
+
+    for (const s of submissions) {
+      if (s.status === 'submitted') submittedCount++;
+      if (s.status === 'approved') approvedCount++;
+      if (s.status === 'rejected') rejectedCount++;
+
+      if (!subjectMap[s.subjectCode]) {
+        subjectMap[s.subjectCode] = { total: 0, submitted: 0, approved: 0, rejected: 0 };
+      }
+      subjectMap[s.subjectCode].total++;
+      if (s.status === 'submitted') subjectMap[s.subjectCode].submitted++;
+      if (s.status === 'approved') subjectMap[s.subjectCode].approved++;
+      if (s.status === 'rejected') subjectMap[s.subjectCode].rejected++;
+    }
+
+    return {
+      totalContributors,
+      submissionsCount: submissions.length,
+      submittedUnits: submittedCount,
+      approvedUnits: approvedCount,
+      rejectedUnits: rejectedCount,
+      pendingReview: submittedCount,
+      subjectStats: subjectMap,
+    };
+  }
+
+  /**
+   * Admin: Lists immutable audit trail
+   */
+  public static async listAuditLogs(limit = 50, offset = 0) {
+    const [total, logs] = await Promise.all([
+      CollectorAuditModel.countDocuments(),
+      CollectorAuditModel.find().sort({ timestamp: -1 }).skip(offset).limit(limit),
+    ]);
+
+    return {
+      total,
+      limit,
+      offset,
+      logs: logs.map((l) => ({
+        id: l._id.toString(),
+        action: l.action,
+        actorId: l.actorId,
+        actorRole: l.actorRole,
+        targetUnitCode: l.targetUnitCode,
+        metadata: l.metadata,
+        ipAddress: l.ipAddress,
+        timestamp: l.timestamp.toISOString(),
+      })),
     };
   }
 
@@ -409,14 +683,14 @@ export class CollectorService {
         const matchesSubject =
           (subjectName && sDir.toLowerCase() === subjectName.toLowerCase()) ||
           sDir.toUpperCase().startsWith(subjectCode) ||
-          subjectCode === 'GEO' && sDir.toLowerCase() === 'geography' ||
-          subjectCode === 'PHY' && sDir.toLowerCase() === 'physics' ||
-          subjectCode === 'CHE' && sDir.toLowerCase() === 'chemistry' ||
-          subjectCode === 'BIO' && sDir.toLowerCase() === 'biology' ||
-          subjectCode === 'MAT' && sDir.toLowerCase() === 'mathematics' ||
-          subjectCode === 'ENG' && sDir.toLowerCase() === 'english' ||
-          subjectCode === 'ECO' && sDir.toLowerCase() === 'economics' ||
-          subjectCode === 'HIS' && sDir.toLowerCase() === 'history';
+          (subjectCode === 'GEO' && sDir.toLowerCase() === 'geography') ||
+          (subjectCode === 'PHY' && sDir.toLowerCase() === 'physics') ||
+          (subjectCode === 'CHE' && sDir.toLowerCase() === 'chemistry') ||
+          (subjectCode === 'BIO' && sDir.toLowerCase() === 'biology') ||
+          (subjectCode === 'MAT' && sDir.toLowerCase() === 'mathematics') ||
+          (subjectCode === 'ENG' && sDir.toLowerCase() === 'english') ||
+          (subjectCode === 'ECO' && sDir.toLowerCase() === 'economics') ||
+          (subjectCode === 'HIS' && sDir.toLowerCase() === 'history');
 
         if (!matchesSubject) continue;
 

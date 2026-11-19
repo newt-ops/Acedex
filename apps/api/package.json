@@ -1,6 +1,6 @@
 {
   "name": "@acedex/api",
-  "version": "1.3.2",
+  "version": "1.4.0",
   "description": "Acedex Express & TypeScript backend API",
   "main": "dist/server.js",
   "scripts": {
@@ -8,6 +8,7 @@
     "build": "node -e \"try{require('fs').rmSync('dist',{recursive:true,force:true})}catch(e){}\" && tsc",
     "start": "node dist/server.js",
     "admin:promote": "tsx src/scripts/promote-user.ts",
+    "cleanup:legacy-collector": "tsx src/scripts/drop-legacy-collector-collections.ts",
     "seed:curriculum": "tsx src/scripts/seed-curriculum.ts",
     "test": "vitest run",
     "test:watch": "vitest",
