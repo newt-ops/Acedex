@@ -3,31 +3,32 @@
 @tailwind utilities;
 
 :root, .light {
-  --background: lab(98.6332% -.128895 1.51819);
-  --foreground: lab(9.2083% -6.48291 2.56682);
-  --card: lab(100% 0 0);
-  --card-foreground: lab(9.2083% -6.48291 2.56682);
-  --popover: lab(100% 0 0);
-  --popover-foreground: lab(9.2083% -6.48291 2.56682);
-  --primary: lab(40.0013% -36.9774 19.1113);
-  --primary-foreground: lab(98.423% -3.70666 1.89806);
-  --secondary: lab(94.8764% -1.75828 2.32178);
-  --secondary-foreground: lab(21.5218% -9.61119 4.24346);
-  --muted: lab(95.1831% -.708431 2.14471);
-  --muted-foreground: lab(42.2361% -5.02983 3.91402);
-  --accent: lab(93.8619% -5.31858 3.38657);
-  --accent-foreground: lab(19.4574% -15.9754 7.81841);
-  --destructive: lab(45.8049% 62.9533 44.1);
-  --destructive-foreground: lab(97.5918% 3.00431 1.76224);
-  --success: lab(49.4516% -40.332 24.2186);
-  --success-foreground: lab(97.8423% -3.61246 2.11393);
-  --warning: lab(67.1959% 24.4167 67.5432);
-  --warning-foreground: lab(16.3459% 9.83904 23.7715);
-  --info: lab(49.1746% -17.3087 -27.8832);
-  --info-foreground: lab(97.7192% -2.12559 -2.92403);
-  --border: lab(90% -0.8 2.0);
-  --input: lab(92% -0.8 2.0);
-  --ring: lab(40.0013% -36.9774 19.1113);
+  --background: #F3F4F4;
+  --foreground: #2C2C2C;
+  --card: #FFFFFF;
+  --card-foreground: #2C2C2C;
+  --popover: #FFFFFF;
+  --popover-foreground: #2C2C2C;
+  --primary: #853953;
+  --primary-hover: #612D53;
+  --primary-foreground: #FFFFFF;
+  --secondary: #F8EEF2;
+  --secondary-foreground: #612D53;
+  --muted: #EAEBEB;
+  --muted-foreground: #665C62;
+  --accent: #F1E3E8;
+  --accent-foreground: #612D53;
+  --destructive: #BE123C;
+  --destructive-foreground: #FFFFFF;
+  --success: #1B7A43;
+  --success-foreground: #FFFFFF;
+  --warning: #B45309;
+  --warning-foreground: #FFFFFF;
+  --info: #6366F1;
+  --info-foreground: #FFFFFF;
+  --border: #E2D9DE;
+  --input: #E5DCDE;
+  --ring: #853953;
 
   /* Acedex design system aliases */
   --acedex-bg: var(--background);
@@ -35,7 +36,50 @@
   --acedex-card-hover: var(--secondary);
   --acedex-border: var(--border);
   --acedex-primary: var(--primary);
-  --acedex-primary-hover: lab(35% -34 17);
+  --acedex-primary-hover: var(--primary-hover);
+  --acedex-accent: var(--primary);
+  --acedex-text: var(--foreground);
+  --acedex-muted: var(--muted-foreground);
+  --acedex-success: var(--success);
+  --acedex-warning: var(--warning);
+  --acedex-danger: var(--destructive);
+}
+
+.dark {
+  --background: #191417;
+  --foreground: #F3F4F4;
+  --card: #2C2C2C;
+  --card-foreground: #F3F4F4;
+  --popover: #2C2C2C;
+  --popover-foreground: #F3F4F4;
+  --primary: #9E4663;
+  --primary-hover: #853953;
+  --primary-foreground: #FFFFFF;
+  --secondary: #3A3337;
+  --secondary-foreground: #F3F4F4;
+  --muted: #352E32;
+  --muted-foreground: #A89FA4;
+  --accent: #612D53;
+  --accent-foreground: #FFFFFF;
+  --destructive: #F87171;
+  --destructive-foreground: #180407;
+  --success: #34D399;
+  --success-foreground: #041B10;
+  --warning: #FBBF24;
+  --warning-foreground: #211302;
+  --info: #818CF8;
+  --info-foreground: #0B0E2B;
+  --border: #3F373B;
+  --input: #3A3337;
+  --ring: #9E4663;
+
+  /* Acedex design system aliases */
+  --acedex-bg: var(--background);
+  --acedex-card: var(--card);
+  --acedex-card-hover: var(--secondary);
+  --acedex-border: var(--border);
+  --acedex-primary: var(--primary);
+  --acedex-primary-hover: var(--primary-hover);
   --acedex-accent: var(--primary);
   --acedex-text: var(--foreground);
   --acedex-muted: var(--muted-foreground);

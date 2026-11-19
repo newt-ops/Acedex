@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: 'class',
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
@@ -21,6 +22,7 @@ module.exports = {
         primary: {
           DEFAULT: 'var(--primary)',
           foreground: 'var(--primary-foreground)',
+          hover: 'var(--primary-hover)',
         },
         secondary: {
           DEFAULT: 'var(--secondary)',
@@ -59,17 +61,22 @@ module.exports = {
           'card-hover': 'var(--secondary)',
           border: 'var(--border)',
           primary: 'var(--primary)',
-          'primary-hover': 'lab(35% -34 17)',
-          accent: 'var(--primary)',
+          'primary-hover': 'var(--primary-hover)',
+          accent: 'var(--accent)',
           text: 'var(--foreground)',
           muted: 'var(--muted-foreground)',
           success: 'var(--success)',
           warning: 'var(--warning)',
           danger: 'var(--destructive)',
+          // Canonical Brand Palette
+          charcoal: '#2C2C2C',
+          plum: '#853953',
+          aubergine: '#612D53',
+          mist: '#F3F4F4',
         },
       },
       backgroundImage: {
-        'acedex-gradient': 'linear-gradient(135deg, var(--primary) 0%, var(--info) 100%)',
+        'acedex-gradient': 'linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%)',
       },
     },
   },

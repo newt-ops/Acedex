@@ -1,6 +1,8 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
+import 'core/theme/app_colors.dart';
+import 'core/theme/app_theme.dart';
 
 void main() {
   runApp(const AcedexApp());
@@ -14,14 +16,9 @@ class AcedexApp extends StatelessWidget {
     return MaterialApp(
       title: 'Acedex',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(
-          seedColor: const Color(0xFF3B82F6),
-          brightness: Brightness.dark,
-        ),
-        scaffoldBackgroundColor: const Color(0xFF0F172A),
-        useMaterial3: true,
-      ),
+      theme: AppTheme.lightTheme,
+      darkTheme: AppTheme.darkTheme,
+      themeMode: ThemeMode.system,
       home: const BackendHealthCheckScreen(),
     );
   }
@@ -84,34 +81,43 @@ class _BackendHealthCheckScreenState extends State<BackendHealthCheckScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+    final isDark = theme.brightness == Brightness.dark;
     final dbConnected = _healthData?['database']?['connected'] == true;
     final status = _healthData?['status']?.toString().toUpperCase() ?? 'UNKNOWN';
 
+    final successColor = isDark ? AppColors.darkSuccess : AppColors.success;
+    final warningColor = isDark ? AppColors.darkWarning : AppColors.warning;
+    final errorColor = isDark ? AppColors.darkError : AppColors.error;
+
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: const Color(0xFF1E293B),
-        elevation: 0,
         title: Row(
           children: [
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
               decoration: BoxDecoration(
-                color: const Color(0xFF3B82F6),
-                borderRadius: BorderRadius.circular(6),
+                color: theme.colorScheme.primary,
+                borderRadius: BorderRadius.circular(8),
               ),
               child: const Text(
                 'ACEDEX',
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
-                  fontSize: 16,
+                  fontSize: 15,
                   color: Colors.white,
+                  letterSpacing: 0.5,
                 ),
               ),
             ),
             const SizedBox(width: 10),
-            const Text(
-              'Mobile Client',
-              style: TextStyle(fontSize: 16, color: Colors.white70),
+            Text(
+              'Mobile Platform',
+              style: TextStyle(
+                fontSize: 15,
+                fontWeight: FontWeight.w500,
+                color: isDark ? AppColors.darkSubtext : AppColors.lightSubtext,
+              ),
             ),
           ],
         ),
@@ -123,51 +129,45 @@ class _BackendHealthCheckScreenState extends State<BackendHealthCheckScreen> {
           children: [
             // Target API Card
             Card(
-              color: const Color(0xFF1E293B),
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(12),
-                side: const BorderSide(color: Color(0xFF334155)),
-              ),
               child: Padding(
                 padding: const EdgeInsets.all(16),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const Text(
-                      'Target Backend API',
+                    Text(
+                      'TARGET BACKEND API',
                       style: TextStyle(
-                        fontSize: 12,
+                        fontSize: 11,
                         fontWeight: FontWeight.bold,
-                        color: Colors.grey,
-                        letterSpacing: 1,
+                        color: isDark ? AppColors.darkSubtext : AppColors.lightSubtext,
+                        letterSpacing: 1.1,
                       ),
                     ),
                     const SizedBox(height: 6),
                     Text(
                       defaultApiUrl,
-                      style: const TextStyle(
+                      style: TextStyle(
                         fontFamily: 'monospace',
-                        color: Color(0xFF60A5FA),
-                        fontSize: 14,
+                        color: theme.colorScheme.primary,
+                        fontWeight: FontWeight.w600,
+                        fontSize: 13,
                       ),
                     ),
                   ],
                 ),
               ),
             ),
-            const SizedBox(height: 20),
+            const SizedBox(height: 16),
 
             // Health Status Result Card
             Card(
-              color: const Color(0xFF1E293B),
               shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(12),
+                borderRadius: BorderRadius.circular(16),
                 side: BorderSide(
                   color: _healthData != null
-                      ? (dbConnected
-                          ? const Color(0xFF10B981)
-                          : const Color(0xFFF59E0B))
-                      : const Color(0xFF334155),
+                      ? (dbConnected ? successColor.withValues(alpha: 0.5) : warningColor.withValues(alpha: 0.5))
+                      : theme.colorScheme.outline,
+                  width: 1.2,
                 ),
               ),
               child: Padding(
@@ -178,21 +178,21 @@ class _BackendHealthCheckScreenState extends State<BackendHealthCheckScreen> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        const Text(
-                          'System Status',
+                        Text(
+                          'System Health',
                           style: TextStyle(
                             fontSize: 16,
                             fontWeight: FontWeight.bold,
-                            color: Colors.white,
+                            color: theme.colorScheme.onSurface,
                           ),
                         ),
                         if (_isLoading)
-                          const SizedBox(
+                          SizedBox(
                             width: 18,
                             height: 18,
                             child: CircularProgressIndicator(
                               strokeWidth: 2,
-                              color: Color(0xFF3B82F6),
+                              color: theme.colorScheme.primary,
                             ),
                           )
                         else if (_healthData != null)
@@ -201,8 +201,8 @@ class _BackendHealthCheckScreenState extends State<BackendHealthCheckScreen> {
                                 horizontal: 10, vertical: 4),
                             decoration: BoxDecoration(
                               color: dbConnected
-                                  ? const Color(0xFF10B981).withOpacity(0.2)
-                                  : const Color(0xFFF59E0B).withOpacity(0.2),
+                                  ? successColor.withValues(alpha: 0.15)
+                                  : warningColor.withValues(alpha: 0.15),
                               borderRadius: BorderRadius.circular(20),
                             ),
                             child: Text(
@@ -210,59 +210,63 @@ class _BackendHealthCheckScreenState extends State<BackendHealthCheckScreen> {
                               style: TextStyle(
                                 fontWeight: FontWeight.bold,
                                 fontSize: 12,
-                                color: dbConnected
-                                    ? const Color(0xFF34D399)
-                                    : const Color(0xFFFBBF24),
+                                color: dbConnected ? successColor : warningColor,
                               ),
                             ),
                           ),
                       ],
                     ),
-                    const Divider(color: Color(0xFF334155), height: 30),
+                    const Divider(height: 28),
 
                     if (_errorMessage != null)
                       Text(
                         'Error: $_errorMessage',
-                        style: const TextStyle(color: Color(0xFFF87171)),
+                        style: TextStyle(color: errorColor, fontSize: 13),
                       )
                     else if (_healthData != null) ...[
                       _buildMetricRow(
+                        context,
                         'Database',
                         dbConnected
                             ? 'Connected (${_healthData!['database']?['name'] ?? 'acedex'})'
                             : 'Disconnected',
-                        dbConnected
-                            ? const Color(0xFF34D399)
-                            : const Color(0xFFF87171),
+                        dbConnected ? successColor : errorColor,
                       ),
                       const SizedBox(height: 12),
                       _buildMetricRow(
+                        context,
                         'Database Host',
                         _healthData!['database']?['host'] ?? 'N/A',
-                        Colors.white70,
+                        theme.colorScheme.onSurface,
                       ),
                       const SizedBox(height: 12),
                       _buildMetricRow(
+                        context,
                         'Environment',
                         _healthData!['environment'] ?? 'N/A',
-                        Colors.white,
+                        theme.colorScheme.onSurface,
                       ),
                       const SizedBox(height: 12),
                       _buildMetricRow(
+                        context,
                         'Server Uptime',
-                        '${_healthData!['uptimeSeconds'] ?? 0} seconds',
-                        Colors.white,
+                        '${_healthData!['uptimeSeconds'] ?? 0}s',
+                        theme.colorScheme.onSurface,
                       ),
                       const SizedBox(height: 12),
                       _buildMetricRow(
+                        context,
                         'API Version',
-                        _healthData!['version'] ?? '1.0.0',
-                        Colors.white,
+                        _healthData!['version'] ?? '1.4.0',
+                        theme.colorScheme.onSurface,
                       ),
                     ] else
-                      const Text(
+                      Text(
                         'Waiting for probe...',
-                        style: TextStyle(color: Colors.grey),
+                        style: TextStyle(
+                          color: isDark ? AppColors.darkSubtext : AppColors.lightSubtext,
+                          fontSize: 13,
+                        ),
                       ),
                   ],
                 ),
@@ -273,16 +277,8 @@ class _BackendHealthCheckScreenState extends State<BackendHealthCheckScreen> {
             // Probe Button
             ElevatedButton.icon(
               onPressed: _isLoading ? null : _checkBackendHealth,
-              icon: const Icon(Icons.refresh),
+              icon: const Icon(Icons.refresh, size: 18),
               label: Text(_isLoading ? 'Probing...' : 'Re-probe Backend & Database'),
-              style: ElevatedButton.styleFrom(
-                backgroundColor: const Color(0xFF3B82F6),
-                foregroundColor: Colors.white,
-                padding: const EdgeInsets.symmetric(vertical: 14),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(8),
-                ),
-              ),
             ),
           ],
         ),
@@ -290,13 +286,19 @@ class _BackendHealthCheckScreenState extends State<BackendHealthCheckScreen> {
     );
   }
 
-  Widget _buildMetricRow(String label, String value, Color valueColor) {
+  Widget _buildMetricRow(BuildContext context, String label, String value, Color valueColor) {
+    final theme = Theme.of(context);
+    final isDark = theme.brightness == Brightness.dark;
+
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Text(
           label,
-          style: const TextStyle(color: Colors.grey, fontSize: 13),
+          style: TextStyle(
+            color: isDark ? AppColors.darkSubtext : AppColors.lightSubtext,
+            fontSize: 13,
+          ),
         ),
         Text(
           value,
