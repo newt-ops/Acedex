@@ -56,10 +56,22 @@ export class CollectorController {
   public static async submitUnit(req: Request, res: Response, next: NextFunction): Promise<void> {
     try {
       const unitCode = req.params.unitCode as string;
-      const { contributorId, questions, rawPastedText } = req.body;
+      let { contributorId, questions, rawPastedText } = req.body;
 
       if (!contributorId) {
         throw new BadRequestError('contributorId is required in request body');
+      }
+
+      // Resilient fallback: auto-sanitize rawPastedText if questions is missing or empty
+      if ((!questions || !Array.isArray(questions) || questions.length === 0) && rawPastedText) {
+        const sanitized = JsonSanitizerService.sanitize(rawPastedText, unitCode);
+        if (!sanitized.success || !sanitized.questions || sanitized.questions.length !== 15) {
+          const errMsg =
+            (sanitized.errors && sanitized.errors.join('; ')) ||
+            'Could not extract exactly 15 valid questions from pasted text';
+          throw new BadRequestError(errMsg);
+        }
+        questions = sanitized.questions;
       }
 
       if (!questions || !Array.isArray(questions) || questions.length !== 15) {

@@ -3,6 +3,8 @@ import { RawQuestionItem, RawQuestionItemSchema, QuestionBankFileSchema } from '
 export interface SanitizationResult {
   success: boolean;
   questions?: RawQuestionItem[];
+  parsedQuestions?: RawQuestionItem[];
+  questionCount?: number;
   unitMeta?: {
     grade?: number;
     subject?: string;
@@ -10,7 +12,9 @@ export interface SanitizationResult {
     unitTitle?: string;
   };
   errors?: string[];
+  warnings?: string[];
   autoFixedIssues?: string[];
+  fixesApplied?: string[];
 }
 
 export class JsonSanitizerService {
@@ -19,9 +23,19 @@ export class JsonSanitizerService {
    */
   public static sanitize(rawText: string, expectedUnitCode?: string): SanitizationResult {
     const autoFixedIssues: string[] = [];
+    const warnings: string[] = [];
 
     if (!rawText || !rawText.trim()) {
-      return { success: false, errors: ['Input text is empty'] };
+      return {
+        success: false,
+        errors: ['Input text is empty'],
+        warnings: [],
+        autoFixedIssues: [],
+        fixesApplied: [],
+        questions: [],
+        parsedQuestions: [],
+        questionCount: 0,
+      };
     }
 
     let cleaned = rawText.trim();
@@ -86,7 +100,12 @@ export class JsonSanitizerService {
       return {
         success: false,
         errors: [`JSON syntax error: ${parseError.message}. Please check for missing brackets or quotes.`],
+        warnings: [],
         autoFixedIssues,
+        fixesApplied: autoFixedIssues,
+        questions: [],
+        parsedQuestions: [],
+        questionCount: 0,
       };
     }
 
@@ -115,7 +134,12 @@ export class JsonSanitizerService {
       return {
         success: false,
         errors: ['No questions array found in the parsed JSON'],
+        warnings: [],
         autoFixedIssues,
+        fixesApplied: autoFixedIssues,
+        questions: [],
+        parsedQuestions: [],
+        questionCount: 0,
       };
     }
 
@@ -123,7 +147,12 @@ export class JsonSanitizerService {
       return {
         success: false,
         errors: [`Expected exactly 15 questions, but found ${rawQuestions.length}`],
+        warnings: [],
         autoFixedIssues,
+        fixesApplied: autoFixedIssues,
+        questions: [],
+        parsedQuestions: [],
+        questionCount: rawQuestions.length,
       };
     }
 
@@ -137,10 +166,12 @@ export class JsonSanitizerService {
 
       // Resolve question id
       let qId = q.id;
-      if (!qId && expectedUnitCode) {
+      if (expectedUnitCode) {
         qId = `${expectedUnitCode}-Q${String(qNum).padStart(3, '0')}`;
-        autoFixedIssues.push(`Auto-generated missing ID for ${qPrefix}: ${qId}`);
-      } else if (!qId) {
+        if (q.id && q.id !== qId) {
+          autoFixedIssues.push(`Normalized question ID for ${qPrefix} to ${qId}`);
+        }
+      } else if (!qId || !/^[A-Z]{3}-G\d{2}-U\d{2}-Q\d{3}$/.test(qId)) {
         qId = `Q${String(qNum).padStart(3, '0')}`;
       }
 
@@ -233,15 +264,25 @@ export class JsonSanitizerService {
       return {
         success: false,
         errors: validationErrors,
+        warnings: [],
         autoFixedIssues,
+        fixesApplied: autoFixedIssues,
+        questions: [],
+        parsedQuestions: [],
+        questionCount: normalizedQuestions.length,
       };
     }
 
     return {
       success: true,
       questions: normalizedQuestions,
+      parsedQuestions: normalizedQuestions,
+      questionCount: normalizedQuestions.length,
       unitMeta,
-      autoFixedIssues: autoFixedIssues.length > 0 ? autoFixedIssues : undefined,
+      autoFixedIssues,
+      fixesApplied: autoFixedIssues,
+      errors: [],
+      warnings: [],
     };
   }
 }

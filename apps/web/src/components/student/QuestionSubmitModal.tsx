@@ -37,7 +37,7 @@ export function QuestionSubmitModal({
     setSanitizing(true);
     setSubmitError(null);
     try {
-      const result = await api.sanitize(rawText);
+      const result = await api.sanitize(rawText, unit.unitCode);
       setReport(result);
     } catch (err: any) {
       setSubmitError(err.message || 'Auto-fix service failed');
@@ -55,21 +55,26 @@ export function QuestionSubmitModal({
       // First sanitize to get validated questions
       let activeReport = report;
       if (!activeReport || !activeReport.success) {
-        activeReport = await api.sanitize(rawText);
+        activeReport = await api.sanitize(rawText, unit.unitCode);
         setReport(activeReport);
       }
 
       if (!activeReport.success) {
-        throw new Error(
-          activeReport.errors.join('; ') || 'Pasted content failed syntax validation'
-        );
+        const errorMsg =
+          activeReport.errors && activeReport.errors.length > 0
+            ? activeReport.errors.join('; ')
+            : 'Pasted content failed syntax validation';
+        throw new Error(errorMsg);
       }
+
+      const questionsToSubmit =
+        activeReport.questions || activeReport.parsedQuestions || [];
 
       await api.submitUnit(
         unit.unitCode,
         profile.contributorId,
         rawText,
-        activeReport.parsedQuestions
+        questionsToSubmit
       );
 
       setSubmitSuccess(true);
