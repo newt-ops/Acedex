@@ -2,7 +2,8 @@
 
 import React from 'react';
 import { SUBJECTS, GRADES } from '../../lib/constants';
-import { Filter, RefreshCw } from 'lucide-react';
+import { HugeiconsIcon } from '@hugeicons/react';
+import { FilterIcon, Refresh01Icon } from '@hugeicons/core-free-icons';
 import { Button } from '../ui/Button';
 
 interface SubmissionFilterBarProps {
@@ -32,7 +33,7 @@ export function SubmissionFilterBar({
         {/* Filter controls */}
         <div className="flex flex-wrap items-center gap-2 flex-1">
           <div className="flex items-center gap-1.5 text-xs font-semibold text-acedex-muted mr-1">
-            <Filter className="w-3.5 h-3.5 text-acedex-primary" /> Filters:
+            <HugeiconsIcon icon={FilterIcon} size={15} className="text-acedex-primary" strokeWidth={1.5} /> Filters:
           </div>
 
           {/* Subject Dropdown */}
@@ -72,9 +73,9 @@ export function SubmissionFilterBar({
             className="h-9 px-2.5 rounded-lg bg-acedex-bg border border-acedex-border text-xs text-acedex-text focus:outline-none focus:border-acedex-primary min-h-[36px]"
           >
             <option value="ALL">All Statuses</option>
-            <option value="submitted">Under Review 🟡</option>
-            <option value="approved">Approved ✅</option>
-            <option value="rejected">Rejected 🔴</option>
+            <option value="submitted">Under Review</option>
+            <option value="approved">Approved</option>
+            <option value="rejected">Rejected</option>
           </select>
         </div>
 
@@ -84,7 +85,7 @@ export function SubmissionFilterBar({
           variant="secondary"
           onClick={onRefresh}
           loading={loading}
-          icon={<RefreshCw className="w-3.5 h-3.5" />}
+          icon={<HugeiconsIcon icon={Refresh01Icon} size={14} strokeWidth={1.5} />}
           className="shrink-0"
         >
           Refresh Queue

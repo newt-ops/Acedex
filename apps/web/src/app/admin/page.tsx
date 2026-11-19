@@ -12,7 +12,8 @@ import { SubmissionsMobileCards } from '../../components/admin/SubmissionsMobile
 import { ReviewDrawer } from '../../components/admin/ReviewDrawer';
 import { SubmissionSummary } from '../../types/collector';
 import { api } from '../../lib/api';
-import { Loader2, ShieldCheck, AlertCircle } from 'lucide-react';
+import { HugeiconsIcon } from '@hugeicons/react';
+import { Loading01Icon, ShieldCheckIcon, AlertCircleIcon } from '@hugeicons/core-free-icons';
 
 export default function AdminPage() {
   const { profile, isAuthenticated, isAdmin, loading: authLoading } = useAuth();
@@ -95,7 +96,7 @@ export default function AdminPage() {
   if (authLoading || !profile) {
     return (
       <div className="flex-1 flex items-center justify-center p-4">
-        <Loader2 className="w-8 h-8 animate-spin text-acedex-primary" />
+        <HugeiconsIcon icon={Loading01Icon} size={32} className="animate-spin text-acedex-primary" strokeWidth={2} />
       </div>
     );
   }
@@ -110,7 +111,7 @@ export default function AdminPage() {
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
             <div>
               <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-semibold bg-acedex-accent/15 text-acedex-accent border border-acedex-accent/30 mb-1.5">
-                <ShieldCheck className="w-3.5 h-3.5" />
+                <HugeiconsIcon icon={ShieldCheckIcon} size={15} className="shrink-0" strokeWidth={1.5} />
                 <span>Master Review & Exporter Hub</span>
               </div>
               <h1 className="text-xl sm:text-2xl font-bold text-acedex-text tracking-tight">
@@ -140,7 +141,7 @@ export default function AdminPage() {
           {/* Error Message */}
           {error && (
             <div className="p-4 bg-rose-500/15 border border-rose-500/30 rounded-xl text-xs sm:text-sm text-rose-400 flex items-center gap-2">
-              <AlertCircle className="w-5 h-5 shrink-0" />
+              <HugeiconsIcon icon={AlertCircleIcon} size={20} className="shrink-0 text-rose-500" strokeWidth={1.5} />
               <span>{error}</span>
             </div>
           )}
@@ -148,7 +149,7 @@ export default function AdminPage() {
           {/* Content Views */}
           {loading ? (
             <div className="py-16 flex flex-col items-center justify-center text-acedex-muted gap-2">
-              <Loader2 className="w-8 h-8 animate-spin text-acedex-primary" />
+              <HugeiconsIcon icon={Loading01Icon} size={32} className="animate-spin text-acedex-primary" strokeWidth={2} />
               <span className="text-sm">Loading submission queue...</span>
             </div>
           ) : (

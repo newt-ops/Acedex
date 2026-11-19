@@ -6,7 +6,14 @@ import { Card } from '../ui/Card';
 import { Badge } from '../ui/Badge';
 import { Button } from '../ui/Button';
 import { formatDate } from '../../lib/utils';
-import { Eye, CheckCircle2, Download, User, Calendar } from 'lucide-react';
+import { HugeiconsIcon } from '@hugeicons/react';
+import {
+  EyeIcon,
+  CheckmarkCircle02Icon,
+  Download01Icon,
+  UserIcon,
+  Calendar01Icon,
+} from '@hugeicons/core-free-icons';
 
 interface SubmissionsMobileCardsProps {
   submissions: SubmissionSummary[];
@@ -62,11 +69,11 @@ export function SubmissionsMobileCards({
             {/* Meta row */}
             <div className="flex items-center justify-between text-xs text-acedex-muted mb-3 pt-2 border-t border-acedex-border/40">
               <div className="flex items-center gap-1">
-                <User className="w-3.5 h-3.5 text-acedex-muted" />
+                <HugeiconsIcon icon={UserIcon} size={14} className="text-acedex-muted shrink-0" strokeWidth={1.5} />
                 <span className="font-mono">{sub.contributorId}</span>
               </div>
               <div className="flex items-center gap-1">
-                <Calendar className="w-3.5 h-3.5 text-acedex-muted" />
+                <HugeiconsIcon icon={Calendar01Icon} size={14} className="text-acedex-muted shrink-0" strokeWidth={1.5} />
                 <span>{formatDate(sub.submittedAt)}</span>
               </div>
             </div>
@@ -79,7 +86,7 @@ export function SubmissionsMobileCards({
                 className="w-full text-xs"
                 onClick={() => onInspect(sub)}
               >
-                <Eye className="w-3.5 h-3.5 mr-1 text-acedex-primary" /> Inspect ({sub.questionCount})
+                <HugeiconsIcon icon={EyeIcon} size={15} className="mr-1 text-acedex-primary" strokeWidth={1.5} /> Inspect ({sub.questionCount})
               </Button>
 
               {!isApproved ? (
@@ -90,7 +97,7 @@ export function SubmissionsMobileCards({
                   onClick={() => onApprove(sub)}
                   loading={isApproving}
                 >
-                  <CheckCircle2 className="w-3.5 h-3.5 mr-1" /> Approve
+                  <HugeiconsIcon icon={CheckmarkCircle02Icon} size={15} className="mr-1" strokeWidth={1.75} /> Approve
                 </Button>
               ) : (
                 <Button
@@ -99,7 +106,7 @@ export function SubmissionsMobileCards({
                   className="w-full text-xs text-emerald-400 border-emerald-500/30 hover:bg-emerald-500/10"
                   onClick={() => onExport(sub.unitCode)}
                 >
-                  <Download className="w-3.5 h-3.5 mr-1" /> Export JSON
+                  <HugeiconsIcon icon={Download01Icon} size={15} className="mr-1" strokeWidth={1.5} /> Export JSON
                 </Button>
               )}
             </div>

@@ -3,7 +3,8 @@
 import React from 'react';
 import Link from 'next/link';
 import { Button } from '../components/ui/Button';
-import { Home } from 'lucide-react';
+import { HugeiconsIcon } from '@hugeicons/react';
+import { Home01Icon } from '@hugeicons/core-free-icons';
 
 export default function NotFound() {
   return (
@@ -19,7 +20,7 @@ export default function NotFound() {
         <div className="pt-2">
           <Link href="/">
             <Button variant="primary" size="md">
-              <Home className="w-4 h-4 mr-2" /> Return to Login
+              <HugeiconsIcon icon={Home01Icon} size={16} className="mr-2 shrink-0" strokeWidth={1.5} /> Return to Login
             </Button>
           </Link>
         </div>

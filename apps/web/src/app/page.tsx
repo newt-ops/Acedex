@@ -6,7 +6,14 @@ import { useAuth } from '../context/AuthContext';
 import { Card, CardContent } from '../components/ui/Card';
 import { Button } from '../components/ui/Button';
 import { getBaseApiUrl, setBaseApiUrl } from '../lib/api';
-import { KeyRound, ArrowRight, AlertCircle, ShieldCheck, Server } from 'lucide-react';
+import { HugeiconsIcon } from '@hugeicons/react';
+import {
+  Key01Icon,
+  ArrowRight01Icon,
+  AlertCircleIcon,
+  ShieldCheckIcon,
+  ServerIcon,
+} from '@hugeicons/core-free-icons';
 
 export default function LoginPage() {
   const { login, isAuthenticated, isAdmin, loading: authLoading } = useAuth();
@@ -98,7 +105,7 @@ export default function LoginPage() {
                 </label>
                 <div className="relative">
                   <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-acedex-muted">
-                    <KeyRound className="w-4 h-4 text-acedex-primary" />
+                    <HugeiconsIcon icon={Key01Icon} size={16} className="text-acedex-primary" strokeWidth={1.5} />
                   </div>
                   <input
                     id="accessId"
@@ -123,7 +130,7 @@ export default function LoginPage() {
               {/* Error message */}
               {error && (
                 <div className="p-3 bg-rose-500/10 border border-rose-500/25 rounded-xl text-xs text-rose-400 flex items-start gap-2">
-                  <AlertCircle className="w-4 h-4 shrink-0 mt-0.5" />
+                  <HugeiconsIcon icon={AlertCircleIcon} size={16} className="shrink-0 mt-0.5 text-rose-500" strokeWidth={1.5} />
                   <span className="leading-snug">{error}</span>
                 </div>
               )}
@@ -137,7 +144,7 @@ export default function LoginPage() {
                 className="w-full text-sm font-semibold min-h-[48px]"
               >
                 <span>Enter Workspace</span>
-                <ArrowRight className="w-4 h-4 ml-1.5" />
+                <HugeiconsIcon icon={ArrowRight01Icon} size={16} className="ml-1.5 shrink-0" strokeWidth={2} />
               </Button>
             </form>
           </CardContent>
@@ -145,7 +152,7 @@ export default function LoginPage() {
 
         {/* Security badge */}
         <div className="flex items-center justify-center gap-1.5 mt-6 text-xs text-acedex-muted/80">
-          <ShieldCheck className="w-4 h-4 text-emerald-400" />
+          <HugeiconsIcon icon={ShieldCheckIcon} size={16} className="text-emerald-500 shrink-0" strokeWidth={1.5} />
           <span>Role-Gated Access • Direct Question Bank Sync</span>
         </div>
       </div>
@@ -156,7 +163,7 @@ export default function LoginPage() {
           onClick={() => setShowConfig(!showConfig)}
           className="inline-flex items-center gap-1.5 text-xs text-acedex-muted/60 hover:text-acedex-muted transition-colors"
         >
-          <Server className="w-3.5 h-3.5" />
+          <HugeiconsIcon icon={ServerIcon} size={14} className="shrink-0" strokeWidth={1.5} />
           <span>Backend: {isLocal ? 'Local:5000' : 'Production Render'}</span>
         </button>
 

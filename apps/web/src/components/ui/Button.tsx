@@ -2,7 +2,8 @@
 
 import React from 'react';
 import { cn } from '../../lib/utils';
-import { Loader2 } from 'lucide-react';
+import { HugeiconsIcon } from '@hugeicons/react';
+import { Loading01Icon } from '@hugeicons/core-free-icons';
 
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
@@ -58,7 +59,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         {...props}
       >
         {loading ? (
-          <Loader2 className="w-4 h-4 animate-spin" />
+          <HugeiconsIcon icon={Loading01Icon} size={16} className="animate-spin shrink-0" strokeWidth={2} />
         ) : (
           icon && <span className="shrink-0">{icon}</span>
         )}

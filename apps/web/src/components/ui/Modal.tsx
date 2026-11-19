@@ -2,7 +2,8 @@
 
 import React, { useEffect } from 'react';
 import { cn } from '../../lib/utils';
-import { X } from 'lucide-react';
+import { HugeiconsIcon } from '@hugeicons/react';
+import { Cancel01Icon } from '@hugeicons/core-free-icons';
 
 interface ModalProps {
   isOpen: boolean;
@@ -84,10 +85,10 @@ export function Modal({
           </div>
           <button
             onClick={onClose}
-            className="p-1.5 text-acedex-muted hover:text-white rounded-lg hover:bg-acedex-card-hover transition-colors shrink-0"
+            className="p-1.5 text-acedex-muted hover:text-acedex-text rounded-lg hover:bg-acedex-card-hover transition-colors shrink-0"
             aria-label="Close dialog"
           >
-            <X className="w-5 h-5" />
+            <HugeiconsIcon icon={Cancel01Icon} size={20} strokeWidth={1.5} />
           </button>
         </div>
 

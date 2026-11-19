@@ -4,7 +4,13 @@ import React from 'react';
 import { cn } from '../../lib/utils';
 import { SubmissionStatus } from '../../types/collector';
 import { STATUS_LABELS, STATUS_BADGE_STYLES } from '../../lib/constants';
-import { CheckCircle2, Clock, AlertCircle, CircleDashed } from 'lucide-react';
+import { HugeiconsIcon } from '@hugeicons/react';
+import {
+  CheckmarkCircle02Icon,
+  Clock01Icon,
+  CancelCircleIcon,
+  AlertCircleIcon,
+} from '@hugeicons/core-free-icons';
 
 interface BadgeProps {
   status?: SubmissionStatus;
@@ -21,13 +27,13 @@ export function Badge({ status, label, className, children }: BadgeProps) {
     const renderIcon = () => {
       switch (status) {
         case 'approved':
-          return <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />;
+          return <HugeiconsIcon icon={CheckmarkCircle02Icon} size={14} className="text-emerald-500 shrink-0" strokeWidth={1.75} />;
         case 'submitted':
-          return <Clock className="w-3.5 h-3.5 text-amber-400" />;
+          return <HugeiconsIcon icon={Clock01Icon} size={14} className="text-amber-500 shrink-0" strokeWidth={1.75} />;
         case 'rejected':
-          return <AlertCircle className="w-3.5 h-3.5 text-rose-400" />;
+          return <HugeiconsIcon icon={CancelCircleIcon} size={14} className="text-rose-500 shrink-0" strokeWidth={1.75} />;
         default:
-          return <CircleDashed className="w-3.5 h-3.5 text-slate-400" />;
+          return <HugeiconsIcon icon={AlertCircleIcon} size={14} className="text-slate-400 shrink-0" strokeWidth={1.75} />;
       }
     };
 

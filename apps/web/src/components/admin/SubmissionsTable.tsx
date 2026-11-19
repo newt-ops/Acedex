@@ -5,7 +5,8 @@ import { SubmissionSummary } from '../../types/collector';
 import { Badge } from '../ui/Badge';
 import { Button } from '../ui/Button';
 import { formatDate } from '../../lib/utils';
-import { Eye, CheckCircle2, Download } from 'lucide-react';
+import { HugeiconsIcon } from '@hugeicons/react';
+import { EyeIcon, CheckmarkCircle02Icon, Download01Icon } from '@hugeicons/core-free-icons';
 
 interface SubmissionsTableProps {
   submissions: SubmissionSummary[];
@@ -84,7 +85,7 @@ export function SubmissionsTable({
                       onClick={() => onInspect(sub)}
                       title="Inspect questions"
                     >
-                      <Eye className="w-3.5 h-3.5 mr-1 text-acedex-primary" /> Inspect
+                      <HugeiconsIcon icon={EyeIcon} size={15} className="mr-1 text-acedex-primary" strokeWidth={1.5} /> Inspect
                     </Button>
 
                     {!isApproved && (
@@ -96,7 +97,7 @@ export function SubmissionsTable({
                         loading={isApproving}
                         title="Approve Unit"
                       >
-                        <CheckCircle2 className="w-3.5 h-3.5 mr-1" /> Approve
+                        <HugeiconsIcon icon={CheckmarkCircle02Icon} size={15} className="mr-1" strokeWidth={1.75} /> Approve
                       </Button>
                     )}
 
@@ -108,7 +109,7 @@ export function SubmissionsTable({
                         onClick={() => onExport(sub.unitCode)}
                         title="Export canonical JSON"
                       >
-                        <Download className="w-3.5 h-3.5 mr-1" /> Export
+                        <HugeiconsIcon icon={Download01Icon} size={15} className="mr-1" strokeWidth={1.5} /> Export
                       </Button>
                     )}
                   </div>

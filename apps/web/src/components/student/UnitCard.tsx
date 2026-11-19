@@ -6,7 +6,14 @@ import { Card } from '../ui/Card';
 import { Badge } from '../ui/Badge';
 import { Button } from '../ui/Button';
 import { formatDate } from '../../lib/utils';
-import { CheckCircle2, UploadCloud, Clock, Edit3, BookOpen } from 'lucide-react';
+import { HugeiconsIcon } from '@hugeicons/react';
+import {
+  CheckmarkCircle02Icon,
+  CloudUploadIcon,
+  Clock01Icon,
+  PencilEdit01Icon,
+  BookOpen01Icon,
+} from '@hugeicons/core-free-icons';
 
 interface UnitCardProps {
   unit: UnitProgressItem;
@@ -39,7 +46,7 @@ export function UnitCard({ unit, onOpenSubmit }: UnitCardProps) {
 
         {/* Unit Title */}
         <h4 className="text-sm sm:text-base font-semibold text-acedex-text leading-snug line-clamp-2 mb-2 flex items-start gap-2">
-          <BookOpen className="w-4 h-4 text-acedex-muted shrink-0 mt-0.5" />
+          <HugeiconsIcon icon={BookOpen01Icon} size={16} className="text-acedex-muted shrink-0 mt-0.5" strokeWidth={1.5} />
           <span>
             Unit {unit.unitNumber}: {unit.unitTitle}
           </span>
@@ -48,15 +55,15 @@ export function UnitCard({ unit, onOpenSubmit }: UnitCardProps) {
         {/* Submission meta / notes */}
         <div className="text-xs text-acedex-muted space-y-1 mt-3 pt-3 border-t border-acedex-border/40">
           {isApproved && (
-            <div className="flex items-center gap-1.5 text-emerald-400 font-medium">
-              <CheckCircle2 className="w-3.5 h-3.5" />
+            <div className="flex items-center gap-1.5 text-emerald-500 font-medium">
+              <HugeiconsIcon icon={CheckmarkCircle02Icon} size={15} strokeWidth={1.75} />
               <span>Approved ({unit.questionCount || 15} questions)</span>
             </div>
           )}
 
           {isSubmitted && (
-            <div className="flex items-center gap-1.5 text-amber-400">
-              <Clock className="w-3.5 h-3.5" />
+            <div className="flex items-center gap-1.5 text-amber-500">
+              <HugeiconsIcon icon={Clock01Icon} size={15} strokeWidth={1.75} />
               <span>Submitted {formatDate(unit.submittedAt)}</span>
             </div>
           )}
@@ -81,19 +88,19 @@ export function UnitCard({ unit, onOpenSubmit }: UnitCardProps) {
           <Button
             size="sm"
             variant="outline"
-            className="w-full text-xs text-emerald-400 border-emerald-500/30 hover:bg-emerald-500/10"
+            className="w-full text-xs text-emerald-500 border-emerald-500/30 hover:bg-emerald-500/10"
             onClick={() => onOpenSubmit(unit)}
           >
-            <CheckCircle2 className="w-3.5 h-3.5 mr-1" /> View / Replace
+            <HugeiconsIcon icon={CheckmarkCircle02Icon} size={15} className="mr-1 shrink-0" strokeWidth={1.75} /> View / Replace
           </Button>
         ) : isSubmitted ? (
           <Button
             size="sm"
             variant="secondary"
-            className="w-full text-xs text-amber-400 border-amber-500/30 hover:bg-amber-500/10"
+            className="w-full text-xs text-amber-500 border-amber-500/30 hover:bg-amber-500/10"
             onClick={() => onOpenSubmit(unit)}
           >
-            <Edit3 className="w-3.5 h-3.5 mr-1" /> Re-paste / Update
+            <HugeiconsIcon icon={PencilEdit01Icon} size={15} className="mr-1 shrink-0" strokeWidth={1.5} /> Re-paste / Update
           </Button>
         ) : (
           <Button
@@ -102,7 +109,7 @@ export function UnitCard({ unit, onOpenSubmit }: UnitCardProps) {
             className="w-full text-xs"
             onClick={() => onOpenSubmit(unit)}
           >
-            <UploadCloud className="w-3.5 h-3.5 mr-1" /> Submit Questions
+            <HugeiconsIcon icon={CloudUploadIcon} size={15} className="mr-1 shrink-0" strokeWidth={1.5} /> Submit Questions
           </Button>
         )}
       </div>

@@ -7,16 +7,16 @@ import { Modal } from '../ui/Modal';
 import { Button } from '../ui/Button';
 import { Badge } from '../ui/Badge';
 import { formatDate } from '../../lib/utils';
+import { HugeiconsIcon } from '@hugeicons/react';
 import {
-  CheckCircle2,
-  XCircle,
-  Download,
-  HelpCircle,
-  Check,
-  FileText,
-  Loader2,
-  AlertCircle,
-} from 'lucide-react';
+  CheckmarkCircle02Icon,
+  CancelCircleIcon,
+  Download01Icon,
+  FileCodeIcon,
+  Loading01Icon,
+  AlertCircleIcon,
+  Tick02Icon,
+} from '@hugeicons/core-free-icons';
 
 interface ReviewDrawerProps {
   submission: SubmissionSummary | null;
@@ -103,7 +103,7 @@ export function ReviewDrawer({
       maxWidth="4xl"
       title={
         <div className="flex items-center gap-2">
-          <FileText className="w-5 h-5 text-acedex-primary" />
+          <HugeiconsIcon icon={FileCodeIcon} size={20} className="text-acedex-primary" strokeWidth={1.5} />
           <span>Inspect Submission: {submission.unitCode}</span>
         </div>
       }
@@ -125,7 +125,7 @@ export function ReviewDrawer({
                 className="text-emerald-400 border-emerald-500/30 hover:bg-emerald-500/10 text-xs"
                 onClick={() => onExport(submission.unitCode)}
               >
-                <Download className="w-3.5 h-3.5 mr-1" /> Export JSON
+                <HugeiconsIcon icon={Download01Icon} size={15} className="mr-1" strokeWidth={1.5} /> Export JSON
               </Button>
             ) : (
               <>
@@ -137,7 +137,7 @@ export function ReviewDrawer({
                     onClick={() => setShowRejectInput(true)}
                     disabled={actionLoading}
                   >
-                    <XCircle className="w-3.5 h-3.5 mr-1" /> Reject
+                    <HugeiconsIcon icon={CancelCircleIcon} size={15} className="mr-1" strokeWidth={1.5} /> Reject
                   </Button>
                 ) : (
                   <Button
@@ -157,7 +157,7 @@ export function ReviewDrawer({
                   onClick={handleApprove}
                   loading={actionLoading}
                 >
-                  <CheckCircle2 className="w-3.5 h-3.5 mr-1" /> Approve Unit
+                  <HugeiconsIcon icon={CheckmarkCircle02Icon} size={15} className="mr-1" strokeWidth={1.75} /> Approve Unit
                 </Button>
               </>
             )}
@@ -169,7 +169,7 @@ export function ReviewDrawer({
         {/* Error message */}
         {error && (
           <div className="p-3 bg-rose-500/15 border border-rose-500/30 rounded-xl text-xs text-rose-400 flex items-center gap-2">
-            <AlertCircle className="w-4 h-4 shrink-0" />
+            <HugeiconsIcon icon={AlertCircleIcon} size={16} className="shrink-0 text-rose-500" strokeWidth={1.5} />
             <span>{error}</span>
           </div>
         )}
@@ -205,7 +205,7 @@ export function ReviewDrawer({
         {/* Loading state */}
         {loading && (
           <div className="py-12 flex flex-col items-center justify-center text-acedex-muted gap-2">
-            <Loader2 className="w-6 h-6 animate-spin text-acedex-primary" />
+            <HugeiconsIcon icon={Loading01Icon} size={24} className="animate-spin text-acedex-primary" strokeWidth={2} />
             <span className="text-xs">Loading questions and options...</span>
           </div>
         )}
@@ -262,7 +262,7 @@ export function ReviewDrawer({
                         </span>
                         <span className="flex-1 leading-normal">{opt.text}</span>
                         {isCorrect && (
-                          <Check className="w-3.5 h-3.5 text-emerald-400 shrink-0 ml-1" />
+                          <HugeiconsIcon icon={Tick02Icon} size={15} className="text-emerald-400 shrink-0 ml-1" strokeWidth={2} />
                         )}
                       </div>
                     );

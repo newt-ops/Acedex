@@ -4,7 +4,14 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { useAuth } from '../../context/AuthContext';
 import { getBaseApiUrl, setBaseApiUrl } from '../../lib/api';
-import { LogOut, ShieldCheck, UserCheck, Server, ChevronDown } from 'lucide-react';
+import { HugeiconsIcon } from '@hugeicons/react';
+import {
+  Logout01Icon,
+  ShieldCheckIcon,
+  UserIcon,
+  ServerIcon,
+  ChevronDownIcon,
+} from '@hugeicons/core-free-icons';
 
 export function Navbar() {
   const { profile, logout, isAdmin } = useAuth();
@@ -53,13 +60,13 @@ export function Navbar() {
                 <span className="hidden md:inline font-mono">
                   {isLocal ? 'Local:5000' : 'Render Live'}
                 </span>
-                <ChevronDown className="w-3 h-3 text-acedex-muted" />
+                <HugeiconsIcon icon={ChevronDownIcon} size={14} className="text-acedex-muted" strokeWidth={1.5} />
               </button>
 
               {showConfig && (
                 <div className="absolute right-0 mt-2 w-64 bg-acedex-card border border-acedex-border rounded-xl shadow-xl p-3 z-50 text-xs text-acedex-text">
                   <div className="font-semibold text-acedex-text mb-2 flex items-center gap-1.5">
-                    <Server className="w-3.5 h-3.5 text-acedex-primary" /> Target API Endpoint
+                    <HugeiconsIcon icon={ServerIcon} size={15} className="text-acedex-primary" strokeWidth={1.5} /> Target API Endpoint
                   </div>
                   <div className="space-y-1.5">
                     <button
@@ -99,9 +106,9 @@ export function Navbar() {
                 <div className="hidden sm:flex flex-col text-right">
                   <span className="text-xs font-semibold text-acedex-text leading-tight flex items-center justify-end gap-1">
                     {isAdmin ? (
-                      <ShieldCheck className="w-3.5 h-3.5 text-acedex-accent" />
+                      <HugeiconsIcon icon={ShieldCheckIcon} size={15} className="text-acedex-accent" strokeWidth={1.5} />
                     ) : (
-                      <UserCheck className="w-3.5 h-3.5 text-acedex-primary" />
+                      <HugeiconsIcon icon={UserIcon} size={15} className="text-acedex-primary" strokeWidth={1.5} />
                     )}
                     {profile.name}
                   </span>
@@ -116,7 +123,7 @@ export function Navbar() {
                   className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium bg-acedex-card hover:bg-red-500/15 hover:text-red-400 text-acedex-muted border border-acedex-border transition-colors min-h-[36px]"
                   title="Sign Out"
                 >
-                  <LogOut className="w-3.5 h-3.5" />
+                  <HugeiconsIcon icon={Logout01Icon} size={15} strokeWidth={1.5} />
                   <span className="hidden sm:inline">Sign Out</span>
                 </button>
               </div>

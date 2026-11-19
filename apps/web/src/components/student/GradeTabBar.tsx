@@ -2,7 +2,8 @@
 
 import React from 'react';
 import { GRADES } from '../../lib/constants';
-import { GraduationCap } from 'lucide-react';
+import { HugeiconsIcon } from '@hugeicons/react';
+import { GraduationCapIcon } from '@hugeicons/core-free-icons';
 
 interface GradeTabBarProps {
   activeGrade: number;
@@ -32,7 +33,12 @@ export function GradeTabBar({
                   : 'bg-acedex-card hover:bg-acedex-card-hover text-acedex-muted hover:text-acedex-text border border-acedex-border/80'
               }`}
             >
-              <GraduationCap className={`w-4 h-4 ${isActive ? 'text-white' : 'text-acedex-muted'}`} />
+              <HugeiconsIcon
+                icon={GraduationCapIcon}
+                size={16}
+                className={isActive ? 'text-white' : 'text-acedex-muted'}
+                strokeWidth={1.5}
+              />
               <span>Grade {grade}</span>
               {stats && (
                 <span
