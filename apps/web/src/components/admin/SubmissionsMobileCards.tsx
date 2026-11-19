@@ -1,0 +1,111 @@
+'use client';
+
+import React from 'react';
+import { SubmissionSummary } from '../../types/collector';
+import { Card } from '../ui/Card';
+import { Badge } from '../ui/Badge';
+import { Button } from '../ui/Button';
+import { formatDate } from '../../lib/utils';
+import { Eye, CheckCircle2, Download, User, Calendar } from 'lucide-react';
+
+interface SubmissionsMobileCardsProps {
+  submissions: SubmissionSummary[];
+  onInspect: (submission: SubmissionSummary) => void;
+  onApprove: (submission: SubmissionSummary) => void;
+  onExport: (unitCode: string) => void;
+  approvingId?: string | null;
+}
+
+export function SubmissionsMobileCards({
+  submissions,
+  onInspect,
+  onApprove,
+  onExport,
+  approvingId,
+}: SubmissionsMobileCardsProps) {
+  if (submissions.length === 0) {
+    return (
+      <div className="md:hidden p-6 text-center text-acedex-muted bg-acedex-card border border-acedex-border rounded-xl text-sm">
+        No submissions match the current filters.
+      </div>
+    );
+  }
+
+  return (
+    <div className="md:hidden space-y-3">
+      {submissions.map((sub) => {
+        const isApproved = sub.status === 'approved';
+        const isApproving = approvingId === sub._id;
+
+        return (
+          <Card
+            key={sub._id}
+            className={`p-4 border transition-all ${
+              isApproved
+                ? 'border-emerald-500/30'
+                : 'border-acedex-border'
+            }`}
+          >
+            {/* Top row: Unit code & status */}
+            <div className="flex items-center justify-between gap-2 mb-2">
+              <span className="font-mono text-xs px-2 py-0.5 rounded bg-acedex-bg border border-acedex-border text-acedex-primary font-bold">
+                {sub.unitCode}
+              </span>
+              <Badge status={sub.status} />
+            </div>
+
+            {/* Title */}
+            <h4 className="font-semibold text-sm text-acedex-text line-clamp-2 mb-2">
+              Grade {sub.grade} Unit {sub.unitNumber}: {sub.unitTitle}
+            </h4>
+
+            {/* Meta row */}
+            <div className="flex items-center justify-between text-xs text-acedex-muted mb-3 pt-2 border-t border-acedex-border/40">
+              <div className="flex items-center gap-1">
+                <User className="w-3.5 h-3.5 text-acedex-muted" />
+                <span className="font-mono">{sub.contributorId}</span>
+              </div>
+              <div className="flex items-center gap-1">
+                <Calendar className="w-3.5 h-3.5 text-acedex-muted" />
+                <span>{formatDate(sub.submittedAt)}</span>
+              </div>
+            </div>
+
+            {/* Action buttons (Touch targets >= 44px) */}
+            <div className="grid grid-cols-2 gap-2 pt-2 border-t border-acedex-border/50">
+              <Button
+                size="sm"
+                variant="secondary"
+                className="w-full text-xs"
+                onClick={() => onInspect(sub)}
+              >
+                <Eye className="w-3.5 h-3.5 mr-1 text-acedex-primary" /> Inspect ({sub.questionCount})
+              </Button>
+
+              {!isApproved ? (
+                <Button
+                  size="sm"
+                  variant="success"
+                  className="w-full text-xs"
+                  onClick={() => onApprove(sub)}
+                  loading={isApproving}
+                >
+                  <CheckCircle2 className="w-3.5 h-3.5 mr-1" /> Approve
+                </Button>
+              ) : (
+                <Button
+                  size="sm"
+                  variant="outline"
+                  className="w-full text-xs text-emerald-400 border-emerald-500/30 hover:bg-emerald-500/10"
+                  onClick={() => onExport(sub.unitCode)}
+                >
+                  <Download className="w-3.5 h-3.5 mr-1" /> Export JSON
+                </Button>
+              )}
+            </div>
+          </Card>
+        );
+      })}
+    </div>
+  );
+}

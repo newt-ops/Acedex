@@ -1,9 +1,18 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import './globals.css';
+import { AuthProvider } from '../context/AuthContext';
 
 export const metadata: Metadata = {
-  title: 'Acedex Admin Portal',
-  description: 'Internal Educational & Assessment Management Portal for Acedex',
+  title: 'ACEDEX — Question Collector & Admin Review Portal',
+  description:
+    'Dedicated question ingestion, auto-sanitization, and curriculum management platform for Grades 9–12.',
+};
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+  themeColor: '#0F172A',
 };
 
 export default function RootLayout({
@@ -12,8 +21,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body>{children}</body>
+    <html lang="en" className="dark">
+      <body className="bg-acedex-bg text-acedex-text min-h-screen antialiased flex flex-col">
+        <AuthProvider>
+          <div className="flex-1 flex flex-col">{children}</div>
+        </AuthProvider>
+      </body>
     </html>
   );
 }
