@@ -27,14 +27,31 @@ export function createApp(): Application {
       ) => {
         // Allow requests with no origin (e.g. mobile apps, curl, server-to-server)
         if (!origin) return callback(null, true);
-        if (allowedOrigins.indexOf(origin) !== -1 || allowedOrigins.includes('*')) {
+        if (
+          allowedOrigins.indexOf(origin) !== -1 ||
+          allowedOrigins.includes('*') ||
+          /^https:\/\/[a-zA-Z0-9_-]+\.vercel\.app$/.test(origin)
+        ) {
           return callback(null, true);
         }
         return callback(new Error(`Origin ${origin} not allowed by CORS`));
       },
       credentials: true,
       methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
-      allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With'],
+      allowedHeaders: [
+        'Content-Type',
+        'Authorization',
+        'X-Requested-With',
+        'X-Contributor-Id',
+        'x-contributor-id',
+        'X-Admin-Key',
+        'x-admin-key',
+        'X-API-Version',
+        'x-api-version',
+        'Accept',
+        'Origin',
+      ],
+      exposedHeaders: ['X-API-Version'],
     })
   );
 

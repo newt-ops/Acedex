@@ -1,6 +1,6 @@
 {
   "name": "@acedex/api",
-  "version": "1.3.0",
+  "version": "1.3.1",
   "description": "Acedex Express & TypeScript backend API",
   "main": "dist/server.js",
   "scripts": {

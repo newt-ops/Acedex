@@ -48,4 +48,16 @@ describe('Health and Status Endpoints', () => {
     expect(res.body.data.version).toBe(API_VERSION);
     expect(res.body.data.database).toHaveProperty('connected');
   });
+
+  it('OPTIONS should allow CORS preflight with x-contributor-id from vercel.app', async () => {
+    const res = await request(app)
+      .options('/api/v1/collector/units')
+      .set('Origin', 'https://acedex.vercel.app')
+      .set('Access-Control-Request-Method', 'GET')
+      .set('Access-Control-Request-Headers', 'x-contributor-id, content-type');
+
+    expect(res.status).toBe(204);
+    expect(res.headers['access-control-allow-origin']).toBe('https://acedex.vercel.app');
+    expect(res.headers['access-control-allow-headers']).toContain('x-contributor-id');
+  });
 });
