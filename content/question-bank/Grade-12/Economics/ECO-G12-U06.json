@@ -3,5 +3,411 @@
   "subject": "Economics",
   "unitNumber": 6,
   "unitTitle": "International Trade and Finance",
-  "questions": []
+  "questions": [
+    {
+      "id": "ECO-G12-U06-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is the primary statutory objective of the National Bank of Ethiopia (NBE) as the nation's central bank?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Maximizing corporate profits through commercial retail lending to private real estate developers"
+        },
+        {
+          "id": "B",
+          "text": "Maintaining price stability, exchange rate stability, and fostering a sound and stable financial system conducive to sustainable economic growth"
+        },
+        {
+          "id": "C",
+          "text": "Distributing equal equity dividend shares to all registered commercial businesses"
+        },
+        {
+          "id": "D",
+          "text": "Collecting all municipal property and land rent taxes across regional states"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "According to Section 6.1 and central banking legislation outlined in the textbook, the core mandate of the National Bank of Ethiopia (NBE) is to maintain price and monetary stability, safeguard the purchasing power of the national currency, ensure exchange rate stability, and maintain the health and soundness of the financial system.",
+      "sourceReference": "Section 6.1, Pages 125-127 & EUEE 2017 EC, Q5"
+    },
+    {
+      "id": "ECO-G12-U06-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which of the following forms the largest sub-sector of Ethiopia's formal financial system in terms of total assets, deposits, and nationwide branch networks?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Insurance corporations"
+        },
+        {
+          "id": "B",
+          "text": "Commercial banks"
+        },
+        {
+          "id": "C",
+          "text": "Microfinance institutions (MFIs)"
+        },
+        {
+          "id": "D",
+          "text": "Stock and securities exchanges"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Section 6.2 highlights that the Ethiopian financial system is predominantly bank-based, with commercial banks accounting for the vast majority of total financial assets, customer deposit mobilization, and loan disbursements.",
+      "sourceReference": "Section 6.2, Pages 128-130"
+    },
+    {
+      "id": "ECO-G12-U06-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is the main function of Microfinance Institutions (MFIs) within the Ethiopian financial sector?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Underwriting international sovereign Eurobonds for state infrastructure projects"
+        },
+        {
+          "id": "B",
+          "text": "Providing small-scale financial services—particularly collateral-free or group-guaranteed microloans and savings—to low-income households and micro-enterprises excluded from formal commercial banks"
+        },
+        {
+          "id": "C",
+          "text": "Setting statutory statutory legal reserve requirements for insurance firms"
+        },
+        {
+          "id": "D",
+          "text": "Managing national foreign exchange reserves held in foreign commercial banks"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Microfinance institutions were established under Proclamation No. 40/1996 specifically to bridge the credit gap for the poor, rural smallholders, and urban micro-entrepreneurs who lack traditional physical collateral required by commercial banks.",
+      "sourceReference": "Section 6.2.2, Pages 132-134 & Review Questions, Page 148"
+    },
+    {
+      "id": "ECO-G12-U06-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In monetary economics, what constitutes the narrow money supply (M1)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Long-term commercial real estate mortgages and equity certificates"
+        },
+        {
+          "id": "B",
+          "text": "Currency held by the public outside commercial banks plus transferable demand deposits (checking accounts)"
+        },
+        {
+          "id": "C",
+          "text": "Total fixed time deposits plus foreign currency savings deposits"
+        },
+        {
+          "id": "D",
+          "text": "Statutory capital reserves held by the central bank"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Section 6.3 explains that M1 (narrow money) is the most liquid measure of the money supply, consisting of currency outside banks (paper notes and coins in circulation) and demand/checkable deposits that can be directly used as a medium of exchange.",
+      "sourceReference": "Section 6.3.1, Pages 135-136 & EUEE 2018 Round 1, Q16"
+    },
+    {
+      "id": "ECO-G12-U06-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What historical monetary milestone occurred in Ethiopia on 23 July 1945?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The complete replacement of the Maria Theresa Thaler by the newly established Ethiopian legal tender paper currency (Ethiopian Birr/Dollar)"
+        },
+        {
+          "id": "B",
+          "text": "The establishment of the first private commercial bank in East Africa"
+        },
+        {
+          "id": "C",
+          "text": "The introduction of the Value Added Tax system"
+        },
+        {
+          "id": "D",
+          "text": "The launch of the Ethiopian Commodity Exchange"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Under the Legal Tender Proclamation of 23 July 1945, the Imperial Ethiopian Government introduced the Ethiopian legal tender currency (the Ethiopian Dollar, later renamed Birr) issued by the State Bank of Ethiopia, bringing an end to the dominance of the Maria Theresa Thaler.",
+      "sourceReference": "Section 6.1.1, Pages 124-125"
+    },
+    {
+      "id": "ECO-G12-U06-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How did the 1974 socialist revolution fundamentally transform the institutional landscape of the banking and insurance industry in Ethiopia?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It established a free-market floating exchange rate system open to foreign retail banks."
+        },
+        {
+          "id": "B",
+          "text": "It nationalized all private commercial banks, specialized financial institutions, and insurance companies under state ownership, consolidating them into monolithic state monopolies (such as the Commercial Bank of Ethiopia and the Ethiopian Insurance Corporation)."
+        },
+        {
+          "id": "C",
+          "text": "It eliminated all physical paper currency and enforced an electronic payments system."
+        },
+        {
+          "id": "D",
+          "text": "It transferred monetary policymaking authority from the central bank to agricultural peasant associations."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Following the 1974 revolution, the military Derg regime nationalized all private banks (such as Addis Ababa Bank) and 13 private insurance companies in January 1975, merging them into state-owned monopolies (CBE, EIC, AIDB, and the Housing and Savings Bank), completely banning private financial enterprise.",
+      "sourceReference": "Section 6.1.2 & Section 6.2, Pages 126-128"
+    },
+    {
+      "id": "ECO-G12-U06-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What was the landmark significance of Proclamation No. 84/1994 (and Proclamation No. 86/1994) in the post-1991 Ethiopian economic reform era?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It prohibited private domestic citizens from establishing commercial banking enterprises."
+        },
+        {
+          "id": "B",
+          "text": "It re-authorized and legally legalized the establishment of private domestic commercial banks and insurance companies after two decades of state monopoly."
+        },
+        {
+          "id": "C",
+          "text": "It pegged the Ethiopian Birr permanently to the British Pound Sterling."
+        },
+        {
+          "id": "D",
+          "text": "It eliminated statutory reserve requirements for all financial institutions."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The Monetary and Banking Proclamation No. 83/1994 and the Licensing and Supervision of Banking Business Proclamation No. 84/1994 dismantled the state banking monopoly, allowing domestic private investors to establish private commercial banks (such as Awash Bank, Dashen Bank, etc.) and private insurance firms.",
+      "sourceReference": "Section 6.1.3 & Section 6.2, Pages 127-129"
+    },
+    {
+      "id": "ECO-G12-U06-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How does the broad money supply (M2) differ conceptually and quantitatively from the narrow money supply (M1)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "M2 includes M1 plus quasi-money (savings deposits and time/fixed deposits in commercial banks)."
+        },
+        {
+          "id": "B",
+          "text": "M2 excludes physical paper currency and comprises only commercial bank loans to government."
+        },
+        {
+          "id": "C",
+          "text": "M2 is always smaller than M1 because it deducts commercial bank vault cash."
+        },
+        {
+          "id": "D",
+          "text": "M2 measures only foreign exchange held by private commercial exporters."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Broad money (M2) is a wider measure of national liquidity consisting of narrow money (M1) plus 'quasi-money' (less liquid interest-bearing deposits such as savings deposits and fixed-term deposits with commercial banks): M2 = M1 + Quasi-Money.",
+      "sourceReference": "Section 6.3.1, Pages 136-137"
+    },
+    {
+      "id": "ECO-G12-U06-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which of the following is a direct monetary policy instrument utilized by the National Bank of Ethiopia when indirect market-based tools are constrained?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Open market operations on secondary stock exchanges"
+        },
+        {
+          "id": "B",
+          "text": "Setting statutory credit ceilings on commercial bank loan portfolios and imposing mandatory lending interest rate floors/caps"
+        },
+        {
+          "id": "C",
+          "text": "Floating the national currency without intervention in private parallel markets"
+        },
+        {
+          "id": "D",
+          "text": "Selling municipal revenue bonds to rural agricultural cooperatives"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Because secondary securities and bond markets are underdeveloped in Ethiopia, the NBE has historically relied heavily on direct monetary policy instruments, such as setting credit growth ceilings for commercial banks, establishing minimum deposit interest rate floors, and directing selective credit allocations.",
+      "sourceReference": "Section 6.3.2, Pages 138-140 & EUEE 2017 EC, Q6"
+    },
+    {
+      "id": "ECO-G12-U06-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In Ethiopia's foreign exchange regulatory architecture, what is the role and characteristic of the 'interbank foreign exchange market'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A completely unregulated black market operating in border towns without customs oversight"
+        },
+        {
+          "id": "B",
+          "text": "A wholesale market where authorized commercial banks and the National Bank of Ethiopia trade foreign exchange among themselves at officially determined indicative rates to meet trade financing demands"
+        },
+        {
+          "id": "C",
+          "text": "A commodity auction floor operated exclusively by peasant coffee farmers"
+        },
+        {
+          "id": "D",
+          "text": "A secondary securities exchange where foreign corporate equities are bought and sold in domestic currency"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The wholesale interbank foreign exchange market was introduced in October 1998, enabling licensed commercial banks and the central bank to trade foreign currency among themselves to intermediate liquidity for import letters of credit and international payments.",
+      "sourceReference": "Section 6.4, Pages 141-143"
+    },
+    {
+      "id": "ECO-G12-U06-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Why do informal traditional financial institutions, such as 'Iddir' and 'Iqub', continue to maintain strong popularity and relevance alongside modern formal commercial banks in Ethiopia?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because formal commercial banks are legally barred from accepting cash deposits below Birr 100,000"
+        },
+        {
+          "id": "B",
+          "text": "Because informal institutions possess deep cultural roots, require no complex bureaucratic paperwork or rigid physical collateral, and rely on mutual social trust, proximity, and solidarity"
+        },
+        {
+          "id": "C",
+          "text": "Because the National Bank of Ethiopia provides complete deposit insurance only to informal saving groups"
+        },
+        {
+          "id": "D",
+          "text": "Because informal saving associations are exempt from international foreign trade restrictions"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Section 6.2.3 examines informal financial institutions like Iddir (mutual funeral/insurance aid) and Iqub (rotating savings and credit). They remain vital because they are accessible, flexible, free of tedious administrative paperwork and collateral barriers, and operate through community trust and solidarity.",
+      "sourceReference": "Section 6.2.3, Pages 134-135 & Review Questions, Page 148"
+    },
+    {
+      "id": "ECO-G12-U06-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "The National Bank of Ethiopia compiles the following monetary data for an economy (in billions of Birr):\n- Currency in circulation held by the non-bank public = 180\n- Demand deposits (transferable checking accounts) in commercial banks = 220\n- Savings deposits in commercial banks = 350\n- Fixed time deposits in commercial banks = 150\n- Commercial bank vault cash = 40\nWhat are the values of Narrow Money (M1), Quasi-Money, and Broad Money (M2)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "M1 = 400 billion; Quasi-Money = 500 billion; M2 = 900 billion"
+        },
+        {
+          "id": "B",
+          "text": "M1 = 440 billion; Quasi-Money = 500 billion; M2 = 940 billion"
+        },
+        {
+          "id": "C",
+          "text": "M1 = 400 billion; Quasi-Money = 540 billion; M2 = 940 billion"
+        },
+        {
+          "id": "D",
+          "text": "M1 = 180 billion; Quasi-Money = 720 billion; M2 = 900 billion"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "1. M1 = Currency outside banks + Demand deposits = 180 + 220 = 400 billion Birr (vault cash is excluded from M1 to avoid double counting).\n2. Quasi-Money = Savings deposits + Time deposits = 350 + 150 = 500 billion Birr.\n3. M2 = M1 + Quasi-Money = 400 + 500 = 900 billion Birr.",
+      "sourceReference": "Section 6.3.1, Pages 136-137 & Review Questions, Page 149"
+    },
+    {
+      "id": "ECO-G12-U06-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Assume that the commercial banking sector in Ethiopia holds total deposit liabilities of Birr 200 billion. The National Bank of Ethiopia maintains a legal reserve requirement ratio of 10% (r = 0.10). In response to rising urban inflation, the NBE raises the required reserve ratio to 15% (r = 0.15). Assuming commercial banks held no initial excess reserves, what is the immediate impact on commercial bank lending capacity, and what is the potential contraction in the total money supply if the credit multiplier operates fully?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Immediate liquidity reduced by Birr 10 billion; potential money supply contraction of Birr 100 billion"
+        },
+        {
+          "id": "B",
+          "text": "Immediate liquidity reduced by Birr 10 billion; potential money supply contraction of approximately Birr 666.7 billion"
+        },
+        {
+          "id": "C",
+          "text": "Immediate liquidity increased by Birr 10 billion; potential money supply expansion of Birr 100 billion"
+        },
+        {
+          "id": "D",
+          "text": "Immediate liquidity reduced by Birr 5 billion; potential money supply contraction of Birr 50 billion"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "1. Initial required reserves = 10% of 200 billion = Birr 20 billion. New required reserves = 15% of 200 billion = Birr 30 billion. Banks must lock away an additional 30 - 20 = Birr 10 billion, reducing immediate loanable reserves by Birr 10 billion.\n2. Initial deposit multiplier was m1 = 1 / 0.10 = 10. Maximum deposit capacity was 20 billion * 10 = 200 billion. The new multiplier is m2 = 1 / 0.15 = 6.67. With a reserve drain of Birr 10 billion across the multiplier, the potential credit contraction is 100 billion / 0.15 ≈ Birr 66.7 to 666.7 billion depending on the monetary base shift.",
+      "sourceReference": "Section 6.3.2, Pages 139-140 & EUEE 2018 Round 1, Q17-18"
+    },
+    {
+      "id": "ECO-G12-U06-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A persistent feature of Ethiopia's macroeconomic performance has been 'negative real interest rates' on commercial bank savings deposits. What occurs when the nominal savings deposit interest rate is 7% while the annual domestic headline inflation rate stands at 25%, and what are the resulting economic distortions?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The real interest rate is +18%; households aggressively expand bank savings and reduce consumption of physical assets."
+        },
+        {
+          "id": "B",
+          "text": "The real interest rate is -18%; savers suffer an erosion of purchasing power, creating a disincentive to save in banks and encouraging capital flight or speculative investment into physical assets (real estate, gold, foreign currencies)."
+        },
+        {
+          "id": "C",
+          "text": "Commercial banks experience an immediate surge in loanable funds."
+        },
+        {
+          "id": "D",
+          "text": "The domestic currency automatically appreciates in the interbank market."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Using the Fisher relation: Real interest rate = Nominal rate - Inflation rate = 7% - 25% = -18%. Severely negative real interest rates punish formal bank depositors, penalize saving, discourage financial deepening, and channel wealth into speculative unproductive inflation hedges like land, imported goods, and foreign exchange.",
+      "sourceReference": "Section 6.3.2, Pages 138-140 & Unit Summary, Page 147"
+    },
+    {
+      "id": "ECO-G12-U06-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "What is the primary structural difference between the financial sector reforms introduced under the Home-Grown Economic Reform (HGER) agenda and the historical post-1994 financial framework?",
+      "options": [
+        {
+          "id": "A",
+          "text": "HGER re-nationalized all private domestic commercial banks into a unified state enterprise."
+        },
+        {
+          "id": "B",
+          "text": "HGER modernized the policy framework by preparing for the establishment of a formal capital market (securities and stock exchange), opening the banking sector to foreign financial participation, and shifting toward interest rate-based monetary management."
+        },
+        {
+          "id": "C",
+          "text": "HGER completely prohibited microfinance institutions from transforming into commercial banks."
+        },
+        {
+          "id": "D",
+          "text": "HGER banned mobile money and digital financial service platforms from operating in the country."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Section 6.5 and current reform analyses highlight that the Home-Grown Economic Reform (HGER) marked a decisive transition from a closed, quantitative, bank-dominated system to establishing the Ethiopian Capital Market, opening the banking sector to foreign competition and investment, liberalizing the foreign exchange market, and shifting monetary policy toward modern price-based (interest rate) management.",
+      "sourceReference": "Section 6.5, Pages 144-147 & Review Questions, Page 150"
+    }
+  ]
 }

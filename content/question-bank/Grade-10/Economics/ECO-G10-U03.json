@@ -3,5 +3,411 @@
   "subject": "Economics",
   "unitNumber": 3,
   "unitTitle": "Theories of Production and Cost",
-  "questions": []
+  "questions": [
+    {
+      "id": "ECO-G10-U03-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which of the following best defines a production function in economic theory?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The monetary expenditures incurred by a business firm on advertising and marketing"
+        },
+        {
+          "id": "B",
+          "text": "A function showing the highest or maximum output that a firm can produce for every specified combination of inputs given technology"
+        },
+        {
+          "id": "C",
+          "text": "The statutory minimum number of workers legally mandated in manufacturing enterprises"
+        },
+        {
+          "id": "D",
+          "text": "The accounting profit earned by distributing finished goods to retail markets"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "A production function shows the highest output that a firm can produce for every specified combination of inputs, representing the maximum quantity of output obtainable given technology.",
+      "sourceReference": "Section 3.1.1, Page 50"
+    },
+    {
+      "id": "ECO-G10-U03-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In the theory of production, an isoquant is formally defined as a curve that depicts:",
+      "options": [
+        {
+          "id": "A",
+          "text": "different levels of total revenue obtained from charging alternative product prices"
+        },
+        {
+          "id": "B",
+          "text": "all possible combinations of two goods that provide equal utility to an individual consumer"
+        },
+        {
+          "id": "C",
+          "text": "all possible efficient combinations of two variable inputs (such as labor and capital) that yield an equal level of total output"
+        },
+        {
+          "id": "D",
+          "text": "the relationship between total variable cost and total fixed overhead expenditures"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "An isoquant is a curve showing all possible efficient combinations of two inputs (such as labor and capital) that yield an equal level of output.",
+      "sourceReference": "Section 3.1.3.1, Page 55"
+    },
+    {
+      "id": "ECO-G10-U03-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which of the following short-run cost curves is NOT U-shaped?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The Average Variable Cost (AVC) curve"
+        },
+        {
+          "id": "B",
+          "text": "The Marginal Cost (MC) curve"
+        },
+        {
+          "id": "C",
+          "text": "The Average Total Cost (ATC) curve"
+        },
+        {
+          "id": "D",
+          "text": "The Average Fixed Cost (AFC) curve"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "Because Total Fixed Cost (TFC) is constant at all output levels, Average Fixed Cost (AFC = TFC / Q) continuously declines as output expands, forming a downward-sloping rectangular hyperbola rather than a U-shaped curve.",
+      "sourceReference": "Section 3.2.1, Pages 61-62 & Review Questions, Page 66"
+    },
+    {
+      "id": "ECO-G10-U03-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In the short run, what is the exact economic term for costs such as administrative salaries and building depreciation that must be paid even if output is zero?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Total Variable Costs (TVC)"
+        },
+        {
+          "id": "B",
+          "text": "Total Fixed Costs (TFC)"
+        },
+        {
+          "id": "C",
+          "text": "Marginal Costs (MC)"
+        },
+        {
+          "id": "D",
+          "text": "Long-Run Variable Costs (LVC)"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Total Fixed Cost (TFC) is cost that does not vary with the level of output and must be incurred even when the firm temporarily shuts down and produces zero output.",
+      "sourceReference": "Section 3.2.1, Page 59"
+    },
+    {
+      "id": "ECO-G10-U03-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is the relationship between the Marginal Cost (MC) curve and the Average Total Cost (ATC) curve in short-run cost analysis?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The MC curve lies entirely above the ATC curve at all levels of production."
+        },
+        {
+          "id": "B",
+          "text": "The MC curve intersects the ATC curve at the minimum point of the ATC curve."
+        },
+        {
+          "id": "C",
+          "text": "The ATC curve cuts the MC curve at the minimum point of the MC curve."
+        },
+        {
+          "id": "D",
+          "text": "The MC curve is horizontal, while the ATC curve slopes continuously upward."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "When MC < ATC, ATC is falling; when MC > ATC, ATC is rising. Consequently, the Marginal Cost curve intersects both the AVC and ATC curves exactly from below at their minimum points.",
+      "sourceReference": "Section 3.2.1, Pages 62-63"
+    },
+    {
+      "id": "ECO-G10-U03-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "According to the Law of Diminishing Marginal Productivity, what occurs when a firm continually increases a variable factor (labor) while holding other factors (capital and land) fixed?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The marginal contribution of additional labor eventually declines, followed by an eventual decline in total output."
+        },
+        {
+          "id": "B",
+          "text": "Total product increases at an accelerating rate indefinitely."
+        },
+        {
+          "id": "C",
+          "text": "Average product immediately drops to zero after hiring the second worker."
+        },
+        {
+          "id": "D",
+          "text": "Fixed overhead costs begin to increase at an increasing rate."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The Law of Diminishing Marginal Productivity states that as more units of a variable factor are added to fixed factors, the marginal contribution of additional variable units will eventually decline and ultimately total product will decline.",
+      "sourceReference": "Section 3.1.2.1, Page 52"
+    },
+    {
+      "id": "ECO-G10-U03-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In the short-run analysis of production, Stage I of production is characterized as the range where:",
+      "options": [
+        {
+          "id": "A",
+          "text": "marginal product is negative and total product is declining"
+        },
+        {
+          "id": "B",
+          "text": "marginal product of labor is rising up to its maximum, and average product of labor is increasing to its peak"
+        },
+        {
+          "id": "C",
+          "text": "total product is at its absolute maximum while marginal product is zero"
+        },
+        {
+          "id": "D",
+          "text": "a rational firm prefers to operate to maximize profit"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Stage I covers the range from the origin up to the maximum point of Average Product (APL), where Marginal Product (MPL) initially increases and lies above APL, pulling average productivity upward.",
+      "sourceReference": "Section 3.1.2.2, Pages 53-54"
+    },
+    {
+      "id": "ECO-G10-U03-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "When a firm increases all its inputs by 20% and its total output increases by 35%, the firm is experiencing:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Constant returns to scale"
+        },
+        {
+          "id": "B",
+          "text": "Decreasing returns to scale"
+        },
+        {
+          "id": "C",
+          "text": "Increasing returns to scale"
+        },
+        {
+          "id": "D",
+          "text": "Negative marginal returns to a factor"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Increasing returns to scale occurs when scaling up all inputs by a certain proportion leads to an increase in output by a larger proportion (here, 35% output growth from a 20% input expansion).",
+      "sourceReference": "Section 3.1.3.2, Pages 57-58"
+    },
+    {
+      "id": "ECO-G10-U03-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How does technological progress affect a firm's production curves and isoquants?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It shifts the Total Product (TP) curve upward and the isoquants inward toward the origin."
+        },
+        {
+          "id": "B",
+          "text": "It shifts the Total Product (TP) curve downward and rotates the isoquants outward."
+        },
+        {
+          "id": "C",
+          "text": "It causes a movement along a fixed Total Product curve without shifting it."
+        },
+        {
+          "id": "D",
+          "text": "It shifts the Total Product curve to the right while making the marginal cost curve vertical."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Technological advancement increases productivity, enabling higher output from the same inputs (shifting TP upward) or producing the same output using fewer inputs (shifting isoquants inward toward the origin).",
+      "sourceReference": "Section 3.1.4, Page 58 & Review Questions, Pages 66-67"
+    },
+    {
+      "id": "ECO-G10-U03-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "As a firm expands its output in the short run, what happens to the vertical distance between its Average Total Cost (ATC) curve and Average Variable Cost (AVC) curve?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It remains strictly constant across all output levels."
+        },
+        {
+          "id": "B",
+          "text": "It widens continuously because marginal cost rises rapidly."
+        },
+        {
+          "id": "C",
+          "text": "It narrows continuously because Average Fixed Cost (AFC) declines as output increases."
+        },
+        {
+          "id": "D",
+          "text": "It narrows initially, reaches zero at maximum capacity, and then widens."
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Since ATC = AFC + AVC, the vertical gap between ATC and AVC equals AFC. Because Total Fixed Cost is spread over larger output volumes, AFC falls continuously toward zero, causing the vertical distance to continuously narrow.",
+      "sourceReference": "Section 3.2.1, Pages 61-63 & Review Questions, Page 66"
+    },
+    {
+      "id": "ECO-G10-U03-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In the long run, what economic phenomenon occurs along the downward-sloping segment of the Long-Run Average Cost (LAC) curve, up to its minimum point?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Diseconomies of scale"
+        },
+        {
+          "id": "B",
+          "text": "Economies of scale (increasing returns to scale)"
+        },
+        {
+          "id": "C",
+          "text": "Diminishing marginal returns to variable labor"
+        },
+        {
+          "id": "D",
+          "text": "Negative marginal physical productivity"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The downward-sloping range of the LAC curve (from the origin to the minimum point of LAC) is called the economies of scale range, where output can be doubled for less than a doubled cost.",
+      "sourceReference": "Section 3.2.2, Pages 63-64"
+    },
+    {
+      "id": "ECO-G10-U03-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Based on the short-run production schedule in the Grade 10 textbook (Table 3.1), when variable labor increases from 5 to 6 workers on 1 hectare of land, Total Product increases from 40 to 48 quintals. What are the Marginal Product (MP) and Average Product (AP) at 6 units of labor, and what geometric condition does this point represent?",
+      "options": [
+        {
+          "id": "A",
+          "text": "MP = 10, AP = 8; MPL is increasing at an increasing rate"
+        },
+        {
+          "id": "B",
+          "text": "MP = 8, AP = 8; MPL equals APL at the maximum point of the APL curve"
+        },
+        {
+          "id": "C",
+          "text": "MP = 6, AP = 7.71; the firm enters Stage III of production"
+        },
+        {
+          "id": "D",
+          "text": "MP = 0, AP = 6; Total Product reaches its absolute peak"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "At L = 6: MP = (48 - 40) / (6 - 5) = 8 quintals, and AP = 48 / 6 = 8 quintals. When MP = AP, Average Product of labor reaches its maximum, marking the boundary between Stage I and Stage II.",
+      "sourceReference": "Section 3.1.2.2, Pages 53-54"
+    },
+    {
+      "id": "ECO-G10-U03-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A production function is defined as Q = f(L, K). If both inputs are increased by a factor of m, and the resulting new output is Q' such that Q' < mQ, which of the following is true regarding the production characteristics and isoquants?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The firm exhibits decreasing returns to scale, and successive multiple isoquants lie farther apart."
+        },
+        {
+          "id": "B",
+          "text": "The firm exhibits increasing returns to scale, and the gap between successive isoquants decreases."
+        },
+        {
+          "id": "C",
+          "text": "The firm operates with constant returns to scale, and the expansion path is curved toward labor."
+        },
+        {
+          "id": "D",
+          "text": "Marginal product of capital is negative across all input combinations."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "When scaling up inputs by m increases output by less than m, the firm experiences decreasing returns to scale. In an isoquant map representing equal output increments under decreasing returns to scale, successive isoquants lie progressively farther apart because larger proportional increases in inputs are required.",
+      "sourceReference": "Section 3.1.3.2, Pages 57-58 & Review Questions, Page 66"
+    },
+    {
+      "id": "ECO-G10-U03-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A firm has Total Fixed Cost (TFC) of Birr 100. Its Total Variable Cost (TVC) schedule is given as: Q = 1, TVC = Birr 30; Q = 2, TVC = Birr 56; Q = 3, TVC = Birr 75; Q = 4, TVC = Birr 85; Q = 5, TVC = Birr 90; Q = 6, TVC = Birr 100; Q = 7, TVC = Birr 130. What are the Marginal Cost (MC) of the 7th unit and the Average Total Cost (ATC) at 7 units of output?",
+      "options": [
+        {
+          "id": "A",
+          "text": "MC = Birr 10; ATC = Birr 33.33"
+        },
+        {
+          "id": "B",
+          "text": "MC = Birr 30; ATC = Birr 32.86"
+        },
+        {
+          "id": "C",
+          "text": "MC = Birr 25; ATC = Birr 46.25"
+        },
+        {
+          "id": "D",
+          "text": "MC = Birr 30; ATC = Birr 18.57"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "At Q = 7: TC = TFC + TVC = 100 + 130 = Birr 230. ATC = TC / Q = 230 / 7 ≈ Birr 32.86. Marginal Cost of the 7th unit is MC = ΔTVC / ΔQ = (130 - 100) / (7 - 6) = Birr 30.",
+      "sourceReference": "Section 3.2.1, Pages 61-62 (Table 3.4)"
+    },
+    {
+      "id": "ECO-G10-U03-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "In microeconomic theory, short-run cost curves are considered the 'mirror reflections' of short-run production curves. Which of the following statements correctly expresses this dual relationship?",
+      "options": [
+        {
+          "id": "A",
+          "text": "When Marginal Product (MP) rises, Marginal Cost (MC) rises; and when Average Product (AP) is maximum, Average Variable Cost (AVC) is maximum."
+        },
+        {
+          "id": "B",
+          "text": "When Marginal Product (MP) rises, Marginal Cost (MC) falls; and when Marginal Product (MP) is at its maximum, Marginal Cost (MC) is at its minimum."
+        },
+        {
+          "id": "C",
+          "text": "Average Variable Cost (AVC) is minimized when Total Product (TP) reaches its absolute maximum."
+        },
+        {
+          "id": "D",
+          "text": "Average Fixed Cost (AFC) is the mirror image of the Average Product (AP) curve."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Assuming a constant input wage w, MC = w / MP and AVC = w / AP. Therefore, when MP is increasing, MC is declining; when MP reaches its peak, MC reaches its minimum; and when AP reaches its maximum, AVC reaches its minimum.",
+      "sourceReference": "Section 3.2.3, Pages 64-65"
+    }
+  ]
 }

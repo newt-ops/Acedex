@@ -3,5 +3,411 @@
   "subject": "Economics",
   "unitNumber": 7,
   "unitTitle": "Introduction to Macroeconomics",
-  "questions": []
+  "questions": [
+    {
+      "id": "ECO-G09-U07-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which of the following topics falls strictly within the scope of macroeconomic analysis rather than microeconomic analysis?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The determination of the equilibrium market price of teff in Addis Ababa"
+        },
+        {
+          "id": "B",
+          "text": "The wage rate paid to workers in a specific shoe factory in Hawassa"
+        },
+        {
+          "id": "C",
+          "text": "The general price level and the nationwide rate of inflation"
+        },
+        {
+          "id": "D",
+          "text": "The profit-maximizing output level chosen by a private poultry farmer"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Macroeconomics studies the behavior, structure, and performance of the economy as a whole, focusing on nationwide aggregates such as the general price level and inflation, whereas specific prices, individual factory wages, and single-firm profit maximization fall under microeconomics.",
+      "sourceReference": "Section 7.1, Pages 82-83"
+    },
+    {
+      "id": "ECO-G09-U07-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Gross Domestic Product (GDP) is defined as the market value of:",
+      "options": [
+        {
+          "id": "A",
+          "text": "all intermediate and final goods produced by citizens living inside or outside a country"
+        },
+        {
+          "id": "B",
+          "text": "all final goods and services produced within the geographic boundaries of a country during a year, irrespective of who produces them"
+        },
+        {
+          "id": "C",
+          "text": "all financial stocks, bonds, and government transfer payments issued during a year"
+        },
+        {
+          "id": "D",
+          "text": "total exports of agricultural goods minus total imports of industrial capital goods"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "GDP is the total market value of all final goods and services produced within the boundaries or territory of a country over a specific time period (usually a year), irrespective of who produces them or owns the factors of production.",
+      "sourceReference": "Section 7.1, Pages 83-84"
+    },
+    {
+      "id": "ECO-G09-U07-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In macroeconomic policy, the goal of achieving 'price stability' means:",
+      "options": [
+        {
+          "id": "A",
+          "text": "mandating legal price ceilings on every consumer good sold in the country"
+        },
+        {
+          "id": "B",
+          "text": "maintaining a steady, predictable general price level that avoids prolonged periods of excessive inflation or deflation"
+        },
+        {
+          "id": "C",
+          "text": "freezing all nominal wages and rents permanently across all sectors"
+        },
+        {
+          "id": "D",
+          "text": "ensuring that the prices of all agricultural goods equal the prices of industrial goods"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Price stability is defined as maintaining a stable level of general prices in the economy that avoids prolonged periods of inflation or deflation and sustains the purchasing power of money over time.",
+      "sourceReference": "Section 7.2, Page 85"
+    },
+    {
+      "id": "ECO-G09-U07-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What type of unemployment occurs when a person is between jobs or is a recent graduate actively searching for a suitable position?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Cyclical unemployment"
+        },
+        {
+          "id": "B",
+          "text": "Structural unemployment"
+        },
+        {
+          "id": "C",
+          "text": "Disguised unemployment"
+        },
+        {
+          "id": "D",
+          "text": "Frictional unemployment"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "Frictional unemployment is temporary unemployment that arises when individuals are voluntarily switching jobs in search of better opportunities or when recent graduates are transitioning into the labour force.",
+      "sourceReference": "Section 7.3, Pages 87-88"
+    },
+    {
+      "id": "ECO-G09-U07-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "A nation experiences a deficit in its balance of trade when:",
+      "options": [
+        {
+          "id": "A",
+          "text": "export earnings from merchandise exceed import expenditures on merchandise"
+        },
+        {
+          "id": "B",
+          "text": "the total payments made for imported goods exceed the total receipts earned from exported goods"
+        },
+        {
+          "id": "C",
+          "text": "foreign grant inflows exactly balance public external debt repayments"
+        },
+        {
+          "id": "D",
+          "text": "the central bank sells foreign currency reserves to domestic commercial banks"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "A trade deficit occurs when total import expenditures on goods exceed total export earnings from goods (Trade Balance = Receipts for exported goods - Payments on imported goods < 0).",
+      "sourceReference": "Section 7.3, Page 89"
+    },
+    {
+      "id": "ECO-G09-U07-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How are Gross Domestic Product (GDP) and Gross National Product (GNP) functionally related in an open economy?",
+      "options": [
+        {
+          "id": "A",
+          "text": "GNP = GDP + Net Factor Income received from abroad (NFI)"
+        },
+        {
+          "id": "B",
+          "text": "GNP = GDP - Personal Consumption Expenditures (C)"
+        },
+        {
+          "id": "C",
+          "text": "GNP = GDP + Gross Domestic Investment (I)"
+        },
+        {
+          "id": "D",
+          "text": "GNP = GDP / Total National Population"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Gross National Product measures output produced by domestically owned factors of production regardless of location. It is related to GDP by the equation: GNP = GDP + NFI, where NFI is Net Factor Income received from abroad.",
+      "sourceReference": "Section 7.1, Pages 83-84"
+    },
+    {
+      "id": "ECO-G09-U07-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "If an economy is completely closed to international trade and has no interaction or financial flows with the rest of the world, what is the exact relationship between its GDP and GNP?",
+      "options": [
+        {
+          "id": "A",
+          "text": "GNP must be greater than GDP."
+        },
+        {
+          "id": "B",
+          "text": "GNP must be less than GDP."
+        },
+        {
+          "id": "C",
+          "text": "GNP must be equal to GDP."
+        },
+        {
+          "id": "D",
+          "text": "GDP equals zero while GNP remains positive."
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "In a closed economy with no foreign economic interaction, Net Factor Income from abroad (NFI) is zero. Because GNP = GDP + NFI, it follows that GNP = GDP.",
+      "sourceReference": "Section 7.1, Page 84 & Review Questions, Page 92"
+    },
+    {
+      "id": "ECO-G09-U07-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which of the following scenarios best illustrates demand-pull inflation?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A global oil price shock sharply raises transportation and manufacturing input costs across the economy."
+        },
+        {
+          "id": "B",
+          "text": "A severe regional drought destroys staple crops, causing an abrupt contraction in agricultural aggregate supply."
+        },
+        {
+          "id": "C",
+          "text": "Rapid expansion of the domestic money supply and consumer credit results in aggregate spending exceeding available goods ('too much money chasing too few goods')."
+        },
+        {
+          "id": "D",
+          "text": "Trade unions negotiate higher statutory wages that force business firms to raise product prices to maintain profit margins."
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Demand-pull inflation originates on the demand side when aggregate demand expands beyond the economy's productive capacity, commonly characterized as 'too much money chasing too few goods.' The other options describe cost-push or supply-side inflation.",
+      "sourceReference": "Section 7.3, Pages 86-87 & Review Questions, Page 92"
+    },
+    {
+      "id": "ECO-G09-U07-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "A trained mechanical engineer is unable to find employment in the industrial manufacturing sector and chooses to search for work in retail trade while acquiring new ICT certification. This worker's situation is classified as:",
+      "options": [
+        {
+          "id": "A",
+          "text": "structural unemployment"
+        },
+        {
+          "id": "B",
+          "text": "cyclical unemployment"
+        },
+        {
+          "id": "C",
+          "text": "seasonal unemployment"
+        },
+        {
+          "id": "D",
+          "text": "voluntary leisure"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Structural unemployment arises from a mismatch between the skills possessed by job seekers and the requirements or geographic locations of available vacancies in the economy.",
+      "sourceReference": "Section 7.3, Pages 87-88 & Review Questions, Page 92"
+    },
+    {
+      "id": "ECO-G09-U07-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What is the defining characteristic of disguised unemployment, a phenomenon commonly observed in traditional agricultural sectors of developing economies?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Workers are actively looking for formal factory jobs but are prevented from registering by municipal laws."
+        },
+        {
+          "id": "B",
+          "text": "Too many workers are engaged on a fixed plot of land such that the marginal productivity of additional laborers is close to zero, and withdrawing some workers would not reduce total output."
+        },
+        {
+          "id": "C",
+          "text": "Workers are temporarily laid off exclusively during the rainy harvest season."
+        },
+        {
+          "id": "D",
+          "text": "Educated urban professionals voluntarily choose not to enter the active labor force."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Disguised unemployment occurs when more people are working on a task than is technically necessary (such as in smallholder peasant agriculture) with very low marginal productivity, meaning that withdrawing some workers does not reduce total economic output.",
+      "sourceReference": "Section 7.3, Page 88"
+    },
+    {
+      "id": "ECO-G09-U07-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How does the Balance of Trade (BOT) differ from the broader Balance of Payments (BOP)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "BOT records all international financial transfers and loans, while BOP records only physical exports of cash crops."
+        },
+        {
+          "id": "B",
+          "text": "BOT records transactions solely between private commercial banks, while BOP records central government transactions."
+        },
+        {
+          "id": "C",
+          "text": "BOT is strictly restricted to merchandise (visible) export receipts and import payments, whereas BOP records all economic transactions (visible goods, services, and capital transfers) between domestic residents and the rest of the world."
+        },
+        {
+          "id": "D",
+          "text": "There is no distinction; BOT and BOP are identical accounts in national income accounting."
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The Balance of Trade (visible balance) measures the difference between exports and imports of physical merchandise, whereas the Balance of Payments is a comprehensive statistical record of all economic transactions (goods, services, income, transfers, and capital flows) between domestic residents and the rest of the world.",
+      "sourceReference": "Section 7.3, Pages 89-90 & Review Questions, Page 92"
+    },
+    {
+      "id": "ECO-G09-U07-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Suppose Country A reports a Gross Domestic Product (GDP) of Birr 500 billion. During the same year, citizens of Country A working abroad remit factor income of Birr 35 billion back home, while foreign multinational firms operating within Country A remit profits of Birr 50 billion back to their home nations. What is Country A's Gross National Product (GNP)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Birr 585 billion"
+        },
+        {
+          "id": "B",
+          "text": "Birr 485 billion"
+        },
+        {
+          "id": "C",
+          "text": "Birr 515 billion"
+        },
+        {
+          "id": "D",
+          "text": "Birr 450 billion"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Net Factor Income from abroad (NFI) = Factor income received from abroad - Factor income paid abroad = 35 billion - 50 billion = -15 billion Birr. Since GNP = GDP + NFI, GNP = 500 + (-15) = Birr 485 billion.",
+      "sourceReference": "Section 7.1, Pages 83-84"
+    },
+    {
+      "id": "ECO-G09-U07-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "During a severe economic downturn (recession), consumer demand declines sharply across the economy, forcing manufacturing enterprises to operate below capacity and lay off thousands of assembly-line workers. What type of unemployment is created by this deficiency in aggregate demand?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Frictional unemployment"
+        },
+        {
+          "id": "B",
+          "text": "Structural unemployment"
+        },
+        {
+          "id": "C",
+          "text": "Seasonal unemployment"
+        },
+        {
+          "id": "D",
+          "text": "Cyclical unemployment"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "Cyclical unemployment arises directly from fluctuations in the business cycle; specifically, it is caused by a deficiency of aggregate demand during the downswing, recession, or depression phase of the trade cycle.",
+      "sourceReference": "Section 7.3, Page 88"
+    },
+    {
+      "id": "ECO-G09-U07-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Which of the following combinations of policy actions represents the most appropriate macroeconomic strategy to correct high demand-pull inflation caused by an overheated economy?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Decreasing tax rates and expanding government infrastructure expenditure"
+        },
+        {
+          "id": "B",
+          "text": "Increasing government expenditure and lowering commercial bank interest rates"
+        },
+        {
+          "id": "C",
+          "text": "Adopting contractionary policies such as restraining excessive money supply growth and curbing government spending"
+        },
+        {
+          "id": "D",
+          "text": "Increasing national import tariffs and subsidizing domestic consumption borrowing"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Demand-pull inflation is caused by excess aggregate spending ('too much money chasing too few goods'). To stabilize prices, macroeconomic policy must restrain aggregate demand through contractionary monetary and fiscal measures, including curbing excessive money supply growth and cutting public expenditure.",
+      "sourceReference": "Section 7.2, Page 85 & Section 7.3, Pages 86-87"
+    },
+    {
+      "id": "ECO-G09-U07-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Why does high and erratic inflation create substantial economic costs and misallocation of resources across a society, even if some nominal wages are periodically adjusted?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because all consumer prices and factor costs rise in exact equal proportion, rendering money completely useless as a medium of exchange."
+        },
+        {
+          "id": "B",
+          "text": "Because costs and prices do not rise together in the same proportion, distorting relative price signals, eroding the purchasing power of fixed-income earners and savers, and discouraging long-term productive investments."
+        },
+        {
+          "id": "C",
+          "text": "Because it automatically converts all domestic unemployment into structural unemployment."
+        },
+        {
+          "id": "D",
+          "text": "Because it forces the Gross National Product to become permanently larger than the Gross Domestic Product."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "During inflation, all prices and costs do not rise together or in the same proportion. This unpredictability distorts relative prices, misallocates resources, reduces real purchasing power for fixed-income earners, and punishes savers, making price stability a primary macroeconomic goal.",
+      "sourceReference": "Section 7.2, Page 85, Section 7.3, Pages 86-87, & Review Questions, Page 92"
+    }
+  ]
 }

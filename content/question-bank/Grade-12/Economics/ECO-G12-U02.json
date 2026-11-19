@@ -3,5 +3,411 @@
   "subject": "Economics",
   "unitNumber": 2,
   "unitTitle": "Aggregate Demand and Aggregate Supply Analysis",
-  "questions": []
+  "questions": [
+    {
+      "id": "ECO-G12-U02-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What does the Aggregate Demand (AD) curve represent in macroeconomic analysis?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The relationship between the wage rate and the total supply of factory labor across manufacturing sectors"
+        },
+        {
+          "id": "B",
+          "text": "The total quantity of all final goods and services demanded (real GDP) at various price levels, holding other factors constant"
+        },
+        {
+          "id": "C",
+          "text": "The physical volume of consumer goods exported exclusively to international markets"
+        },
+        {
+          "id": "D",
+          "text": "The nominal money supply maintained by the central bank at different interest rates"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Aggregate demand (AD) is the schedule or curve showing the total quantity of goods and services (real domestic output, or real GDP) that households, businesses, the government, and foreign buyers collectively desire to purchase at each possible price level.",
+      "sourceReference": "Section 2.1, Pages 26-27"
+    },
+    {
+      "id": "ECO-G12-U02-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which of the following correctly lists the four expenditure components that constitute Aggregate Demand (AD) in an open economy?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Wages, rent, interest, and corporate profit"
+        },
+        {
+          "id": "B",
+          "text": "Consumption (C), Investment (I), Government purchases (G), and Net Exports (X - M)"
+        },
+        {
+          "id": "C",
+          "text": "Money supply, velocity of money, required reserves, and foreign exchange reserves"
+        },
+        {
+          "id": "D",
+          "text": "Taxes, transfers, public debt, and capital depreciation"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Aggregate demand consists of four expenditure components: consumption expenditure by households (C), planned investment spending by businesses (I), government purchases of goods and services (G), and net exports (NX = X - M). Thus, AD = C + I + G + (X - M).",
+      "sourceReference": "Section 2.1.1, Pages 26-27"
+    },
+    {
+      "id": "ECO-G12-U02-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "According to the classical macroeconomic view, what is the graphical shape of the Long-Run Aggregate Supply (LRAS) curve?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Completely horizontal at a fixed price level"
+        },
+        {
+          "id": "B",
+          "text": "A downward-sloping linear line identical to the market demand curve"
+        },
+        {
+          "id": "C",
+          "text": "A vertical line located at the economy's potential or full-employment level of output (Yp)"
+        },
+        {
+          "id": "D",
+          "text": "An upward-sloping curve with a constant slope equal to the marginal propensity to save"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "In classical theory, all input and output prices are completely flexible in the long run. Consequently, output is determined exclusively by technology, capital stock, and the full-employment labor force, making the Long-Run Aggregate Supply (LRAS) curve perfectly vertical at potential GDP (Yp).",
+      "sourceReference": "Section 2.2.2, Pages 35-37"
+    },
+    {
+      "id": "ECO-G12-U02-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is an economy experiencing when its actual real GDP level is less than its potential (full-employment) output level?",
+      "options": [
+        {
+          "id": "A",
+          "text": "An inflationary gap"
+        },
+        {
+          "id": "B",
+          "text": "A recessionary (deflationary) gap"
+        },
+        {
+          "id": "C",
+          "text": "Hyperinflation"
+        },
+        {
+          "id": "D",
+          "text": "A permanent budget surplus"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "When equilibrium real output is below potential output (Y < Yp), the economy faces a recessionary gap (or contractionary/deflationary gap), characterized by underutilized plant capacity and elevated cyclical unemployment.",
+      "sourceReference": "Section 2.3.2, Pages 42-43"
+    },
+    {
+      "id": "ECO-G12-U02-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What macroeconomic phenomenon occurs when an economy simultaneously suffers from stagnant or declining real output alongside high rates of price inflation?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Hyper-growth"
+        },
+        {
+          "id": "B",
+          "text": "Stagflation"
+        },
+        {
+          "id": "C",
+          "text": "Deflationary boom"
+        },
+        {
+          "id": "D",
+          "text": "Monetary neutrality"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Stagflation is defined as a macroeconomic situation where an economy experiences economic stagnation (declining real GDP and rising unemployment) accompanied by high price inflation, typically triggered by an adverse supply shock.",
+      "sourceReference": "Section 2.3.3, Pages 44-45 & Unit Summary, Page 47"
+    },
+    {
+      "id": "ECO-G12-U02-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which of the following explains the downward slope of the Aggregate Demand (AD) curve via the 'Interest Rate Effect'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A higher price level increases the demand for money, which pushes up nominal interest rates and consequently reduces interest-sensitive investment and consumption expenditures."
+        },
+        {
+          "id": "B",
+          "text": "A lower price level leads commercial banks to immediately increase statutory lending fees on residential mortgages."
+        },
+        {
+          "id": "C",
+          "text": "Rising prices reduce the cost of borrowing capital from foreign multilateral lenders."
+        },
+        {
+          "id": "D",
+          "text": "A higher price level causes the national government to automatically cut sales tax rates."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The interest rate effect explains that a rise in the price level increases the transaction demand for money. With a fixed money supply, higher money demand bids up interest rates. Higher interest rates make borrowing more expensive, depressing business investment (I) and consumer durable spending (C), thereby reducing aggregate real output demanded.",
+      "sourceReference": "Section 2.1.2, Pages 27-28"
+    },
+    {
+      "id": "ECO-G12-U02-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How does the 'Foreign Purchases Effect' (Net Export Effect) contribute to the inverse relationship between the general price level and real GDP demanded?",
+      "options": [
+        {
+          "id": "A",
+          "text": "When domestic prices fall, domestic goods become relatively cheaper compared to foreign goods, expanding exports and reducing imports, which increases real GDP demanded."
+        },
+        {
+          "id": "B",
+          "text": "When domestic prices rise, foreign goods become relatively more expensive, causing domestic net exports to surge."
+        },
+        {
+          "id": "C",
+          "text": "Domestic price changes have no impact on foreign exchange transactions or international competitiveness."
+        },
+        {
+          "id": "D",
+          "text": "A higher domestic price level causes foreign governments to eliminate all customs tariffs."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The foreign purchases effect explains that when a nation's price level falls relative to foreign price levels, domestic exports become more attractive to foreign buyers while imports become relatively more expensive to domestic residents. As a result, net exports (X - M) rise, raising aggregate output demanded.",
+      "sourceReference": "Section 2.1.2, Page 28"
+    },
+    {
+      "id": "ECO-G12-U02-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Holding the general price level constant, which of the following events will cause a rightward shift in the Aggregate Demand (AD) curve?",
+      "options": [
+        {
+          "id": "A",
+          "text": "An increase in personal and corporate income tax rates"
+        },
+        {
+          "id": "B",
+          "text": "An appreciation of the domestic currency that makes exports more expensive abroad"
+        },
+        {
+          "id": "C",
+          "text": "An increase in government purchases of infrastructure goods paired with a surge in consumer business confidence"
+        },
+        {
+          "id": "D",
+          "text": "A sharp rise in commercial lending interest rates"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Aggregate demand shifts rightward due to positive non-price determinants of spending, such as increased government purchases (G), cuts in personal taxes, rising consumer and business confidence, lower interest rates, or depreciation of the domestic currency boosting net exports.",
+      "sourceReference": "Section 2.1.3, Pages 29-31"
+    },
+    {
+      "id": "ECO-G12-U02-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "According to the sticky-wage theory of the Short-Run Aggregate Supply (SRAS) curve, why do firms expand output when the price level rises above expectations?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because nominal wages are temporarily fixed by multi-year contracts, a higher price level reduces real labor costs, increasing firm profitability and incentivizing higher production."
+        },
+        {
+          "id": "B",
+          "text": "Because workers immediately demand lower wages whenever consumer prices increase."
+        },
+        {
+          "id": "C",
+          "text": "Because higher prices immediately eliminate all technological production bottlenecks."
+        },
+        {
+          "id": "D",
+          "text": "Because government mandates require manufacturing firms to produce at full capacity regardless of profit."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Under the sticky-wage theory, nominal wages are slow to adjust due to explicit labor contracts or implicit social norms. When the price level rises unexpectedly, the nominal price of output increases while the nominal wage remains fixed, lowering the real wage (W/P). This boosts profit margins per unit, leading firms to hire more labor and expand output.",
+      "sourceReference": "Section 2.2.1, Pages 33-35"
+    },
+    {
+      "id": "ECO-G12-U02-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which of the following events will shift the Short-Run Aggregate Supply (SRAS) curve to the left without directly shifting the Long-Run Aggregate Supply (LRAS) curve?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A permanent discovery of massive domestic crude petroleum and mineral deposits"
+        },
+        {
+          "id": "B",
+          "text": "A sudden, unexpected spike in world oil prices or an agricultural drought that raises imported raw material costs"
+        },
+        {
+          "id": "C",
+          "text": "A long-term permanent expansion of the domestic labor force through vocational training"
+        },
+        {
+          "id": "D",
+          "text": "A continuous technological breakthrough that permanently increases total factor productivity"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "A sudden rise in the price of imported inputs (such as global oil shocks) or severe drought is an adverse supply shock that raises per-unit production costs. This shifts the short-run aggregate supply curve upward and leftward (SRAS decreases) without altering the economy's underlying long-term potential capacity (LRAS).",
+      "sourceReference": "Section 2.2.3, Pages 37-39"
+    },
+    {
+      "id": "ECO-G12-U02-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In the Keynesian Aggregate Expenditure model, what determines the numerical value of the simple spending multiplier (k)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "k = 1 / (1 - MPC) = 1 / MPS"
+        },
+        {
+          "id": "B",
+          "text": "k = MPC / (1 - MPS)"
+        },
+        {
+          "id": "C",
+          "text": "k = MPS * MPC"
+        },
+        {
+          "id": "D",
+          "text": "k = 1 - (MPC / MPS)"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The simple expenditure multiplier measures the multiple by which equilibrium income changes in response to an initial change in autonomous spending. It is defined mathematically as k = 1 / (1 - MPC) = 1 / MPS.",
+      "sourceReference": "Section 2.1.4, Pages 31-32 & Review Questions, Page 49"
+    },
+    {
+      "id": "ECO-G12-U02-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Suppose an economy has an autonomous consumption of Birr 80 million, a Marginal Propensity to Consume (MPC) of 0.75, planned investment of Birr 120 million, government purchases of Birr 100 million, and net exports of Birr 20 million. There are no taxes. If the government decides to increase its infrastructure spending by Birr 30 million, by how much will aggregate equilibrium income (real GDP) change?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Real GDP will increase by Birr 30 million."
+        },
+        {
+          "id": "B",
+          "text": "Real GDP will increase by Birr 75 million."
+        },
+        {
+          "id": "C",
+          "text": "Real GDP will increase by Birr 120 million."
+        },
+        {
+          "id": "D",
+          "text": "Real GDP will increase by Birr 40 million."
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The expenditure multiplier is k = 1 / (1 - MPC) = 1 / (1 - 0.75) = 1 / 0.25 = 4. The change in equilibrium GDP resulting from a change in government purchases is: ΔY = k * ΔG = 4 * Birr 30 million = Birr 120 million.",
+      "sourceReference": "Section 2.1.4, Pages 31-33 & Review Questions (Part IV Work Out), Page 50"
+    },
+    {
+      "id": "ECO-G12-U02-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Assume that an economy's aggregate demand and short-run aggregate supply curves are given by the equations:\n- AD: Y = 1,200 - 50P\n- SRAS: Y = 300 + 40P\nWhere Y is real GDP and P is the general price level. What are the short-run macroeconomic equilibrium price level (P) and real GDP (Y)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "P = 10, Y = 700"
+        },
+        {
+          "id": "B",
+          "text": "P = 15, Y = 450"
+        },
+        {
+          "id": "C",
+          "text": "P = 10, Y = 800"
+        },
+        {
+          "id": "D",
+          "text": "P = 12, Y = 600"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Equilibrium occurs where aggregate demand equals short-run aggregate supply (AD = SRAS): 1,200 - 50P = 300 + 40P => 1,200 - 300 = 40P + 50P => 900 = 90P => P = 10. Substituting P = 10 into either equation gives: Y = 1,200 - 50(10) = 1,200 - 500 = 700 (or Y = 300 + 40(10) = 700).",
+      "sourceReference": "Section 2.3.1, Pages 40-41 & Review Questions (Part IV Work Out), Page 50"
+    },
+    {
+      "id": "ECO-G12-U02-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Using the equilibrium outcome from the preceding question (Equilibrium Y = 700, P = 10), suppose the economy's potential (full-employment) output is Yp = 850. What type of output gap does this economy face, and what counter-cyclical fiscal policy should the government implement to restore full employment?",
+      "options": [
+        {
+          "id": "A",
+          "text": "An inflationary gap of 150 units; contractionary fiscal policy (reducing government spending or raising taxes)"
+        },
+        {
+          "id": "B",
+          "text": "A recessionary gap of 150 units; expansionary fiscal policy (increasing government spending or cutting taxes to shift AD rightward)"
+        },
+        {
+          "id": "C",
+          "text": "A zero output gap; no fiscal policy adjustment is required"
+        },
+        {
+          "id": "D",
+          "text": "A stagflationary gap of 100 units; imposing price controls across all consumer markets"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Because actual equilibrium real output (Y = 700) is below potential full-employment output (Yp = 850), the economy faces a recessionary gap of Yp - Y = 850 - 700 = 150 units. To close this gap and eliminate unemployment, the government should adopt expansionary fiscal policy—raising government spending (G) or decreasing taxes (T)—to shift the AD curve rightward until equilibrium reaches Yp = 850.",
+      "sourceReference": "Section 2.3.2, Pages 41-43 & EUEE 2017 EC, Q39-40"
+    },
+    {
+      "id": "ECO-G12-U02-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Starting from long-run equilibrium at potential GDP (Yp), suppose a major adverse supply shock occurs (e.g., severe national drought and an international fuel crisis). What are the immediate short-run impacts on the price level and real GDP, and how does the classical self-correcting mechanism restore long-run equilibrium in the absence of government intervention?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The price level falls and real output expands; government permanently subsidizes production."
+        },
+        {
+          "id": "B",
+          "text": "SRAS shifts leftward, causing stagflation (higher price level and lower real output). In the long run, the resulting high unemployment puts downward pressure on wages and input prices, shifting SRAS back to the right until output returns to Yp."
+        },
+        {
+          "id": "C",
+          "text": "Aggregate demand collapses permanently, driving both the price level and real output to zero."
+        },
+        {
+          "id": "D",
+          "text": "The Long-Run Aggregate Supply (LRAS) curve becomes horizontal at the newly inflated price level."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In the short run, an adverse supply shock shifts the SRAS curve leftward, driving the price level up and output down below potential output (stagflation). Over the long run, the recessionary gap creates high unemployment and downward pressure on wages. As nominal wages and production costs decline, SRAS shifts back to the right, restoring real GDP to potential output (Yp) at the original price level.",
+      "sourceReference": "Section 2.3.3 & Section 2.3.4, Pages 44-46"
+    }
+  ]
 }

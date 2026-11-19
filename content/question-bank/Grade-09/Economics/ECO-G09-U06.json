@@ -3,5 +3,411 @@
   "subject": "Economics",
   "unitNumber": 6,
   "unitTitle": "Introduction to Money",
-  "questions": []
+  "questions": [
+    {
+      "id": "ECO-G09-U06-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which of the following is an essential physical and functional criterion that a commodity must possess to be widely accepted as money?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It must be non-divisible so that small everyday transactions are eliminated."
+        },
+        {
+          "id": "B",
+          "text": "It must be perishable to encourage rapid consumption within the local community."
+        },
+        {
+          "id": "C",
+          "text": "It must be standardized, durable, portable, and easily divisible to make change."
+        },
+        {
+          "id": "D",
+          "text": "It must be exclusively issued as an unbacked digital token on private electronic networks."
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "According to Section 6.1 of the textbook, for a commodity to be accepted as money, it must satisfy key criteria: standardization (simple to ascertain its value), acceptability, divisibility (easy to make change), portability (easy to carry), and durability (not degrading quickly).",
+      "sourceReference": "Section 6.1, Page 68"
+    },
+    {
+      "id": "ECO-G09-U06-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In a direct barter economy, what major obstacle occurs when two traders wish to exchange goods but neither wants the specific commodity offered by the other?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Lack of double coincidence of wants"
+        },
+        {
+          "id": "B",
+          "text": "Excess supply of fiat currency"
+        },
+        {
+          "id": "C",
+          "text": "Underutilization of bank checking accounts"
+        },
+        {
+          "id": "D",
+          "text": "Depreciation of foreign exchange reserves"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The most significant limitation of the barter system is the lack of double coincidence of wants, which requires that a person with a surplus of one commodity find another trader who not only wants that commodity but also has something acceptable to offer in return.",
+      "sourceReference": "Section 6.2, Page 69"
+    },
+    {
+      "id": "ECO-G09-U06-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which fundamental function of money acts as an economic 'lubricant' that eliminates the need for barter exchange and lowers transaction costs?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Unit of account"
+        },
+        {
+          "id": "B",
+          "text": "Medium of exchange"
+        },
+        {
+          "id": "C",
+          "text": "Store of value"
+        },
+        {
+          "id": "D",
+          "text": "Standard of deferred payment"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Serving as a medium of exchange is the most basic function of money. It promotes economic efficiency by eliminating the high transaction costs of barter and overcoming the need for a double coincidence of wants.",
+      "sourceReference": "Section 6.3, Page 73"
+    },
+    {
+      "id": "ECO-G09-U06-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Under the Keynesian framework, holding money to provide for unexpected emergencies such as sudden illness, accidents, or temporary unemployment is known as the:",
+      "options": [
+        {
+          "id": "A",
+          "text": "speculative motive"
+        },
+        {
+          "id": "B",
+          "text": "business motive"
+        },
+        {
+          "id": "C",
+          "text": "precautionary motive"
+        },
+        {
+          "id": "D",
+          "text": "income motive"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The precautionary motive refers to the desire of individuals and families to hold cash balances for unforeseen contingencies and unexpected emergencies, including sickness, accidents, and unemployment.",
+      "sourceReference": "Section 6.4, Page 75"
+    },
+    {
+      "id": "ECO-G09-U06-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is the primary operational role of an Automated Teller Machine (ATM) in the modern banking system?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Printing legal tender currency notes on behalf of the central bank"
+        },
+        {
+          "id": "B",
+          "text": "Determining national interest rates for commercial loans"
+        },
+        {
+          "id": "C",
+          "text": "Providing customers with 24-hour electronic access to cash withdrawals and banking services"
+        },
+        {
+          "id": "D",
+          "text": "Eliminating all credit risk from commercial bank lending portfolios"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "In electronic banking, ATMs are electronic terminals that provide bank customers with convenient 24-hour access to cash withdrawals, deposits, and account inquiries using payment cards and PINs.",
+      "sourceReference": "Section 6.5, Pages 77-78"
+    },
+    {
+      "id": "ECO-G09-U06-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What defines 'fiat money' in a modern economy?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Currency fully backed and redeemable into a fixed weight of gold or silver at commercial banks"
+        },
+        {
+          "id": "B",
+          "text": "Paper currency decreed by government legislation as legal tender, which is not convertible into coins or precious metals"
+        },
+        {
+          "id": "C",
+          "text": "Foreign currency notes circulating during periods of wartime administration"
+        },
+        {
+          "id": "D",
+          "text": "Commodity items such as salt bars whose intrinsic value equals their exchange value"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Fiat money is paper currency decreed by government authority as legal tender (legally mandatory to accept in settlement of all debts and transactions), but it is not backed by or convertible into gold or precious metals.",
+      "sourceReference": "Section 6.2, Pages 70-71"
+    },
+    {
+      "id": "ECO-G09-U06-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Before modern monetary institutions were established in Ethiopia, which commodity served as the most widespread traditional medium of exchange alongside the Maria Theresa Thaler?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Paper promissory notes issued by private merchants"
+        },
+        {
+          "id": "B",
+          "text": "Iron ingots and copper rods"
+        },
+        {
+          "id": "C",
+          "text": "Bars of salt (amole)"
+        },
+        {
+          "id": "D",
+          "text": "Cowrie shells imported from the Indian Ocean"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Section 6.2 and the Unit Summary emphasize that among traditional commodity currencies in Ethiopia (such as cloth, beads, and salt), the salt bar ('amole') was the most popular and widespread, continuing to circulate as a medium of exchange even after the introduction of the Maria Theresa Thaler.",
+      "sourceReference": "Section 6.2, Page 71 & Unit Summary, Page 79"
+    },
+    {
+      "id": "ECO-G09-U06-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In the monetary history of Ethiopia, in which year did the Ethiopian government officially issue the modern national currency, the Birr?",
+      "options": [
+        {
+          "id": "A",
+          "text": "1893, under Emperor Menelik II"
+        },
+        {
+          "id": "B",
+          "text": "1914, by the Bank of Abyssinia"
+        },
+        {
+          "id": "C",
+          "text": "July 1945, following the restoration of independence"
+        },
+        {
+          "id": "D",
+          "text": "1932, under the Bank of Ethiopia"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Following the liberation of Ethiopia in 1941, several foreign currencies circulated. In July 1945, the Ethiopian government formally issued the new national currency, the Birr, establishing modern monetary sovereignty.",
+      "sourceReference": "Section 6.2, Page 71"
+    },
+    {
+      "id": "ECO-G09-U06-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How does money functioning as a 'unit of account' solve a major dilemma of complex marketplace shopping?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It guarantees that the purchasing power of money will never erode during inflation."
+        },
+        {
+          "id": "B",
+          "text": "It provides a common denominator to express and compare the relative prices of thousands of distinct goods without calculating hundreds of exchange ratios."
+        },
+        {
+          "id": "C",
+          "text": "It compels commercial banks to maintain 100 percent cash reserves against deposits."
+        },
+        {
+          "id": "D",
+          "text": "It ensures that every buyer possesses equal purchasing power in product markets."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "As a unit of account, money serves as a universal measuring rod for economic value. In a store with 1,000 items, money eliminates the need for up to 999 separate barter exchange ratios per item by stating all prices in a single, comparable monetary unit.",
+      "sourceReference": "Section 6.3, Pages 73-74"
+    },
+    {
+      "id": "ECO-G09-U06-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Within the transaction demand for money, how does the business motive differ from the household income motive?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The business motive is driven by speculative interest rate changes, while the income motive is entirely risk-free."
+        },
+        {
+          "id": "B",
+          "text": "The business motive depends directly on a firm's volume of trade (turnover) to pay for operating expenses, whereas the income motive bridges the time gap between a household's wage receipts and daily expenditures."
+        },
+        {
+          "id": "C",
+          "text": "The business motive applies only to state-owned enterprises, while the income motive applies solely to public sector civil servants."
+        },
+        {
+          "id": "D",
+          "text": "The business motive involves hoarding physical gold, while the income motive involves opening bank checking deposits."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The income motive is held by consumers to bridge the interval between receiving regular wages and paying daily living expenses. The business motive is held by entrepreneurs to cover operating costs (wages, raw materials, freight), and its magnitude depends primarily on turnover (volume of trade).",
+      "sourceReference": "Section 6.4, Pages 75-76"
+    },
+    {
+      "id": "ECO-G09-U06-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Why does physical cash (currency) hold a much larger share in the total money supply of developing nations compared to advanced economies?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Commercial banks in developing nations are legally prohibited from accepting demand deposits."
+        },
+        {
+          "id": "B",
+          "text": "The vast majority of commercial transactions in developing nations are conducted in cash rather than through cheques and electronic payments."
+        },
+        {
+          "id": "C",
+          "text": "Currency notes in developing countries are 100 percent backed by gold bullion."
+        },
+        {
+          "id": "D",
+          "text": "Central banks in developing nations do not issue banking charters to financial institutions."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Section 6.4 explains that currency has a dominant position in the money supply of developing countries because the majority of commercial transactions are conducted directly in cash as a medium of exchange, rather than through cheques and electronic transfers common in advanced economies.",
+      "sourceReference": "Section 6.4, Page 76"
+    },
+    {
+      "id": "ECO-G09-U06-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Real estate, gold, and fine art often yield capital gains and hedge against inflation, unlike paper currency whose purchasing power declines during inflation. Why do rational wealth holders continue to hold money as a store of value?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Money yields higher contractual interest payments than corporate bonds and commercial real estate."
+        },
+        {
+          "id": "B",
+          "text": "Money possesses perfect liquidity, allowing it to be converted into goods and services immediately with zero conversion delay and zero transaction cost."
+        },
+        {
+          "id": "C",
+          "text": "Government regulations prohibit households from storing personal wealth in non-monetary physical assets."
+        },
+        {
+          "id": "D",
+          "text": "Physical assets lose their physical durability much faster than paper currency degrades in circulation."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "While physical assets may yield financial returns or protect against inflation, money possesses the unique advantage of perfect liquidity: it is already the medium of exchange and can be used immediately to settle transactions without conversion time or price penalties.",
+      "sourceReference": "Section 6.3, Page 74"
+    },
+    {
+      "id": "ECO-G09-U06-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "According to the Keynesian theory of money demand, how does the speculative motive behave when market interest rates rise to unusually high levels?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Speculative demand for liquid cash balances decreases because holding cash carries a high opportunity cost in forgone interest."
+        },
+        {
+          "id": "B",
+          "text": "Speculative demand for liquid cash balances increases because households expect interest rates to double again."
+        },
+        {
+          "id": "C",
+          "text": "The transaction demand for money falls to zero, forcing the central bank to withdraw metallic coins."
+        },
+        {
+          "id": "D",
+          "text": "Speculative demand remains completely unaffected because Keynes argued that liquidity preference is independent of bond prices."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The speculative motive relates to holding resources in liquid cash to exploit future market changes in interest rates and bond prices. When interest rates are very high, the opportunity cost of holding non-interest-bearing cash is high, and bond prices are low, inducing wealth holders to purchase securities rather than hold idle cash.",
+      "sourceReference": "Section 6.4, Page 76"
+    },
+    {
+      "id": "ECO-G09-U06-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Suppose an economy's banking data reveals the following monetary statistics:\n- Currency notes in circulation = Birr 42 billion\n- Circulation of birr coins and small change = Birr 3 billion\n- Cash reserves held in bank vaults (cash in hand with banks) = Birr 7 billion\n- Demand deposits held by the public in commercial banks = Birr 55 billion\nBased on the measurement rules in the textbook, what is the total amount of 'currency with the public' in this economy?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Birr 52 billion"
+        },
+        {
+          "id": "B",
+          "text": "Birr 45 billion"
+        },
+        {
+          "id": "C",
+          "text": "Birr 38 billion"
+        },
+        {
+          "id": "D",
+          "text": "Birr 93 billion"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "According to Section 6.4, to arrive at 'currency with the public', one must sum currency notes in circulation (42 billion) plus coin circulation (3 billion), and from this total (45 billion), deduct 'cash in hand with banks' (7 billion). Thus, Currency with the Public = 45 - 7 = Birr 38 billion.",
+      "sourceReference": "Section 6.4, Page 76"
+    },
+    {
+      "id": "ECO-G09-U06-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "What is the primary operational distinction between a payment made with a bank debit card and a payment made with a bank credit card?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A debit card payment directly and immediately deducts existing funds from the cardholder's bank account, whereas a credit card payment generates a short-term loan from the issuing financial institution."
+        },
+        {
+          "id": "B",
+          "text": "A debit card represents fiat money issued by the central bank, while a credit card is classified as legal tender commodity money."
+        },
+        {
+          "id": "C",
+          "text": "Debit cards can only be utilized for ATM cash withdrawals, while credit cards are used exclusively for interbank clearing through the ACH network."
+        },
+        {
+          "id": "D",
+          "text": "A credit card deducts funds from checkable deposits, whereas a debit card requires collateral endorsement from an indigenous Iqub."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "In electronic fund transfer (EFT) mechanisms, a debit card allows electronic access to the user's existing funds by immediately transferring funds out of their deposit account at point-of-sale terminals, while a credit card extends an instantaneous short-term revolving loan from the card-issuing financial institution that must be settled later.",
+      "sourceReference": "Section 6.5, Pages 77-78"
+    }
+  ]
 }

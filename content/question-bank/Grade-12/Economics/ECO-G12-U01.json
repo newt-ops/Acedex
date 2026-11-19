@@ -3,5 +3,411 @@
   "subject": "Economics",
   "unitNumber": 1,
   "unitTitle": "The Fundamental Concepts of Macroeconomics",
-  "questions": []
+  "questions": [
+    {
+      "id": "ECO-G12-U01-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which of the following topics falls strictly within the domain of macroeconomics rather than microeconomics?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Determining the profit-maximizing output level of a private manufacturing firm"
+        },
+        {
+          "id": "B",
+          "text": "Analyzing the causes and consequences of national price inflation across the economy"
+        },
+        {
+          "id": "C",
+          "text": "Evaluating an individual consumer's marginal utility from consuming injera and bread"
+        },
+        {
+          "id": "D",
+          "text": "Calculating the price elasticity of demand for a specific beverage company"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Microeconomics focuses on individual decision-making units (households, single firms, individual prices). In contrast, macroeconomics studies aggregate economic behavior across the entire economic system, such as total output, national employment, and the general price level (inflation).",
+      "sourceReference": "Section 1.1.1, Pages 2-3 & EUEE 2017 EC, Q31-32"
+    },
+    {
+      "id": "ECO-G12-U01-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "The emergence of modern macroeconomics as a distinct, formal sub-discipline of economics is widely attributed to which milestone?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The establishment of the Bretton Woods monetary system in 1944"
+        },
+        {
+          "id": "B",
+          "text": "The publication of John Maynard Keynes' book 'The General Theory of Employment, Interest and Money' in 1936"
+        },
+        {
+          "id": "C",
+          "text": "The signing of the General Agreement on Tariffs and Trade (GATT) in 1948"
+        },
+        {
+          "id": "D",
+          "text": "The formulation of the Human Development Index by the UNDP in 1990"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Macroeconomics is a relatively new branch of economics that formally emerged following the publication of John Maynard Keynes' landmark 1936 work, 'The General Theory of Employment, Interest and Money', following the failure of classical models during the Great Depression.",
+      "sourceReference": "Section 1.1.1, Pages 2-3"
+    },
+    {
+      "id": "ECO-G12-U01-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is the standard macroeconomic definition of 'inflation'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A temporary seasonal rise in the price of a single agricultural food crop"
+        },
+        {
+          "id": "B",
+          "text": "A regular, continuous, and persistent increase in the general (overall) price level of goods and services over time"
+        },
+        {
+          "id": "C",
+          "text": "A statutory increase in corporate profit tax rates legislated by parliament"
+        },
+        {
+          "id": "D",
+          "text": "An appreciation of the domestic paper currency relative to foreign reserve currencies"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Inflation is defined as a regular and continuous rise in the general price level of goods and services over a period of time, which diminishes the purchasing power of the national currency.",
+      "sourceReference": "Section 1.2.2, Page 8 & Unit Summary, Page 22"
+    },
+    {
+      "id": "ECO-G12-U01-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which category of unemployment arises because workers entering the labor force or switching jobs spend time searching for suitable employment matching their skills?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Cyclical unemployment"
+        },
+        {
+          "id": "B",
+          "text": "Frictional unemployment"
+        },
+        {
+          "id": "C",
+          "text": "Deficient-demand unemployment"
+        },
+        {
+          "id": "D",
+          "text": "Seasonal depression unemployment"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Frictional unemployment is temporary unemployment that occurs while workers are between jobs or searching for employment opportunities that match their qualifications, such as recent college graduates entering the workforce for the first time.",
+      "sourceReference": "Section 1.2.3, Pages 13-14"
+    },
+    {
+      "id": "ECO-G12-U01-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is the Balance of Trade of a nation?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The difference between total government fiscal revenue and total public expenditure"
+        },
+        {
+          "id": "B",
+          "text": "The difference between export earnings and import expenditures on goods and services over a given time period"
+        },
+        {
+          "id": "C",
+          "text": "The total volume of international portfolio capital invested in foreign stock exchanges"
+        },
+        {
+          "id": "D",
+          "text": "The monetary value of official foreign exchange reserves held in the central bank"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The balance of trade is the difference between the export value and import value of goods and services of a country for a given period (X - M). It is a vital component of the current account in the balance of payments.",
+      "sourceReference": "Section 1.2.5, Page 16 & EUEE 2017 EC, Q34"
+    },
+    {
+      "id": "ECO-G12-U01-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How do classical and Keynesian economists fundamentally differ regarding the speed of macroeconomic adjustment during a recession?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Classical economists argue that prices and wages are sticky, requiring continuous government budget deficits, while Keynesians believe the market self-corrects instantly."
+        },
+        {
+          "id": "B",
+          "text": "Classical economists believe that flexible prices and wages allow the economy to self-correct quickly back to full employment, whereas Keynesians argue that sticky wages and prices impede automatic adjustments, requiring active fiscal policy."
+        },
+        {
+          "id": "C",
+          "text": "Classical economists advocate for mandatory minimum wages, while Keynesians argue for complete wage suppression."
+        },
+        {
+          "id": "D",
+          "text": "Keynesian economists believe supply creates its own demand (Say's Law), whereas Classical economists reject Say's Law."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Classical economics assumed flexible prices and wages that quickly eliminate surpluses and self-correct back to full employment (supporting laissez-faire). Keynes showed that wages and prices are sticky in the downward direction, meaning aggregate demand can remain deficient for extended periods, necessitating active fiscal intervention.",
+      "sourceReference": "Section 1.3.2 & Section 1.3.3, Pages 18-20 & EUEE 2017 EC, Q35-36"
+    },
+    {
+      "id": "ECO-G12-U01-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What was Milton Friedman and the Monetarist school's central policy recommendation regarding the conduct of central bank monetary policy?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The central bank should aggressively alter the money supply month-to-month to eliminate all short-run unemployment."
+        },
+        {
+          "id": "B",
+          "text": "The central bank should avoid discretionary monetary tinkering and instead adhere to a constant, predictable growth rate rule for a chosen monetary aggregate."
+        },
+        {
+          "id": "C",
+          "text": "The central bank should be permanently abolished and replaced by an ad hoc parliamentary fiscal committee."
+        },
+        {
+          "id": "D",
+          "text": "The central bank should set the nominal discount window lending interest rate to zero permanently."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Monetarists, led by Milton Friedman, argued that long and variable time lags in formulating and executing monetary policy cause discretionary tinkering to destabilize the economy. Therefore, they advocated for a steady, constant growth rule for the money supply matching the rate of output growth.",
+      "sourceReference": "Section 1.3.4, Pages 20-21 & EUEE 2017 EC, Q38"
+    },
+    {
+      "id": "ECO-G12-U01-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Why did the events of the Great Depression of the 1930s directly contradict Say's Law ('supply creates its own demand')?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because all industrial factories were physically destroyed by natural disasters"
+        },
+        {
+          "id": "B",
+          "text": "Because immense physical production capacity existed, yet firms were unable to sell their output due to weak aggregate demand, leading to prolonged unemployment and idle capacity"
+        },
+        {
+          "id": "C",
+          "text": "Because consumers held zero paper currency and relied exclusively on the barter exchange of agricultural commodities"
+        },
+        {
+          "id": "D",
+          "text": "Because real GDP exceeded potential GDP across all industrialized economies"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Say's Law claimed that production inherently generates equivalent spending, preventing general gluts. The Great Depression disproved this: despite ample production capacity and unemployed workers willing to work, firms faced collapsed aggregate demand and could not sell their products, leaving real GDP far below potential GDP.",
+      "sourceReference": "Section 1.3.3, Pages 19-20"
+    },
+    {
+      "id": "ECO-G12-U01-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What type of unemployment occurs when workers are displaced because technological innovations or structural shifts in the economy make their specific vocational skills obsolete?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Frictional unemployment"
+        },
+        {
+          "id": "B",
+          "text": "Cyclical unemployment"
+        },
+        {
+          "id": "C",
+          "text": "Structural unemployment"
+        },
+        {
+          "id": "D",
+          "text": "Voluntary search unemployment"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Structural unemployment arises when there is a mismatch between the skills possessed by available workers and the skills demanded by employers, typically driven by long-term technological transformations or changes in industrial structure.",
+      "sourceReference": "Section 1.2.3, Pages 13-14 & Review Questions, Page 23 & EUEE 2017 EC, Q37"
+    },
+    {
+      "id": "ECO-G12-U01-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In macroeconomic accounting, how are Gross National Product (GNP) and Gross Domestic Product (GDP) related when an economy has transactions with the rest of the world?",
+      "options": [
+        {
+          "id": "A",
+          "text": "GNP = GDP - Personal Income Taxes"
+        },
+        {
+          "id": "B",
+          "text": "GNP = GDP + Net Factor Income from Abroad (NFI)"
+        },
+        {
+          "id": "C",
+          "text": "GNP = GDP / GDP Deflator * 100"
+        },
+        {
+          "id": "D",
+          "text": "GNP = GDP - Gross Domestic Capital Formation"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "GDP measures the market value of final output produced within the nation's borders, whereas GNP measures the market value produced by factors owned by the nation's citizens. The relationship is GNP = GDP + NFI, where NFI equals factor income received from abroad minus factor payments made abroad.",
+      "sourceReference": "Section 1.1.2, Pages 4-5"
+    },
+    {
+      "id": "ECO-G12-U01-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which of the following describes the 'real balance effect' that explains why the aggregate demand curve slopes downward?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A lower price level increases the real purchasing power of accumulated money balances, making households feel wealthier and encouraging them to demand more real output."
+        },
+        {
+          "id": "B",
+          "text": "A higher price level reduces commercial banks' required reserve ratios, lowering commercial loan demand."
+        },
+        {
+          "id": "C",
+          "text": "A fall in domestic prices causes domestic consumers to purchase more imported goods from abroad."
+        },
+        {
+          "id": "D",
+          "text": "A rise in government debt automatically decreases business income tax rates."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The real balance effect (or wealth effect) explains that when the general price level falls, the real purchasing power of nominal monetary wealth increases. Consequently, consumers feel wealthier and expand their consumption expenditure, increasing the aggregate quantity of real output demanded.",
+      "sourceReference": "Section 1.2.2 & Unit 2, Section 2.1.2, Pages 27-28"
+    },
+    {
+      "id": "ECO-G12-U01-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "In a developing economy, the statistical agency records the following labor market data for the working-age population:\n- Total working-age population (aged 14 to 60) = 50 million\n- Number of employed persons = 27 million\n- Number of unemployed persons actively looking for work = 3 million\n- Full-time students, homemakers, and retirees = 20 million\nWhat are the size of the labor force, the labor force participation rate (LFPR), and the unemployment rate (UR)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Labor force = 30 million; LFPR = 60%; Unemployment rate = 10%"
+        },
+        {
+          "id": "B",
+          "text": "Labor force = 50 million; LFPR = 100%; Unemployment rate = 6%"
+        },
+        {
+          "id": "C",
+          "text": "Labor force = 27 million; LFPR = 54%; Unemployment rate = 11.1%"
+        },
+        {
+          "id": "D",
+          "text": "Labor force = 30 million; LFPR = 60%; Unemployment rate = 6%"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "1. Labor Force = Employed + Unemployed = 27 million + 3 million = 30 million.\n2. Labor Force Participation Rate = (Labor Force / Working-Age Population) * 100% = (30 / 50) * 100% = 60%.\n3. Unemployment Rate = (Unemployed / Labor Force) * 100% = (3 / 30) * 100% = 10%.",
+      "sourceReference": "Section 1.2.3, Pages 12-13 & EUEE 2017 EC, Q79"
+    },
+    {
+      "id": "ECO-G12-U01-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A national statistical bureau tracks consumer prices using a typical consumer basket. Data across four consecutive years (in Ethiopian Calendar) are recorded as follows:\n- Base Year 2000 E.C.: Basket Cost = Birr 200 (CPI = 100)\n- Year 2001 E.C.: Basket Cost = Birr 280 (CPI = 140)\n- Year 2002 E.C.: Basket Cost = Birr 240 (CPI = 120)\n- Year 2003 E.C.: Basket Cost = Birr 400 (CPI = 200)\nWhat was the rate of inflation (or deflation) between 2001 E.C. and 2002 E.C., and between 2002 E.C. and 2003 E.C.?",
+      "options": [
+        {
+          "id": "A",
+          "text": "2001–2002: Deflation of -14.3%; 2002–2003: Inflation of +66.7%"
+        },
+        {
+          "id": "B",
+          "text": "2001–2002: Inflation of +20.0%; 2002–2003: Inflation of +80.0%"
+        },
+        {
+          "id": "C",
+          "text": "2001–2002: Deflation of -20.0%; 2002–2003: Inflation of +100.0%"
+        },
+        {
+          "id": "D",
+          "text": "2001–2002: Inflation of -16.7%; 2002–2003: Inflation of +50.0%"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "1. Inflation rate from 2001 to 2002 = [(CPI_2002 - CPI_2001) / CPI_2001] * 100% = [(120 - 140) / 140] * 100% = (-20 / 140) * 100% ≈ -14.29% (deflation of 14.3%).\n2. Inflation rate from 2002 to 2003 = [(CPI_2003 - CPI_2002) / CPI_2002] * 100% = [(200 - 120) / 120] * 100% = (80 / 120) * 100% ≈ +66.67% (inflation of 66.7%).",
+      "sourceReference": "Section 1.2.2, Pages 9-10"
+    },
+    {
+      "id": "ECO-G12-U01-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A closed economy (no foreign trade or cross-border factor flows) has a GDP of Birr 800 billion. The government runs a budget deficit of Birr 50 billion, and domestic private investment equals Birr 150 billion. If the economy opens up to international trade and begins receiving net factor income from abroad of Birr 20 billion, what will be the new Gross National Product (GNP)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Birr 820 billion"
+        },
+        {
+          "id": "B",
+          "text": "Birr 780 billion"
+        },
+        {
+          "id": "C",
+          "text": "Birr 950 billion"
+        },
+        {
+          "id": "D",
+          "text": "Birr 870 billion"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "GNP is mathematically defined as GNP = GDP + Net Factor Income from Abroad (NFI). When the economy opens up and receives NFI = Birr 20 billion, GNP = 800 billion + 20 billion = Birr 820 billion. (In a closed economy, NFI = 0, so GNP = GDP = 800 billion).",
+      "sourceReference": "Section 1.1.2, Pages 4-5 & Review Questions, Page 23 & EUEE 2017 EC, Q3"
+    },
+    {
+      "id": "ECO-G12-U01-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Why do textbook analysts emphasize that nominal GDP per capita is an imperfect indicator of human living standards, particularly in developing agrarian economies like Ethiopia?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because it incorporates the value of unpaid household work and subsistence food crops while completely ignoring industrial manufacturing"
+        },
+        {
+          "id": "B",
+          "text": "Because it fails to capture non-market subsistence production and the informal economy, ignores environmental degradation, and conceals income inequality behind a mathematical average"
+        },
+        {
+          "id": "C",
+          "text": "Because per capita GDP is legally prohibited from being adjusted for purchasing power parity (PPP)"
+        },
+        {
+          "id": "D",
+          "text": "Because it reflects only the market transactions conducted by foreign transnational corporations"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "As discussed in Section 1.2.1, real income in developing countries is understated because conventional GDP omits non-market subsistence agricultural production, unpaid domestic work, and the large underground/informal economy. Furthermore, per capita income says nothing about how output is distributed or about health and environmental quality, which led to composite indices like the Human Development Index (HDI).",
+      "sourceReference": "Section 1.2.1, Pages 6-8"
+    }
+  ]
 }

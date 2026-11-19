@@ -3,5 +3,411 @@
   "subject": "Economics",
   "unitNumber": 5,
   "unitTitle": "Introduction to Production and Cost",
-  "questions": []
+  "questions": [
+    {
+      "id": "ECO-G09-U05-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which of the following best defines production in economics?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The monetary transaction between consumers and retail stores in the goods market"
+        },
+        {
+          "id": "B",
+          "text": "A process of combining various inputs to create an output that contributes to the utility of individuals"
+        },
+        {
+          "id": "C",
+          "text": "The accumulation of unspent household funds in formal commercial bank accounts"
+        },
+        {
+          "id": "D",
+          "text": "The allocation of tax revenues to construct non-excludable public infrastructure"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Production is defined as a scientific process of combining various inputs (resources) to produce an output in the form of a commodity or service that contributes to human utility.",
+      "sourceReference": "Section 5.1, Page 55"
+    },
+    {
+      "id": "ECO-G09-U05-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which of the following is classified as a tangible output of a production process?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A commercial airline passenger transport service"
+        },
+        {
+          "id": "B",
+          "text": "A factory-manufactured motor vehicle"
+        },
+        {
+          "id": "C",
+          "text": "An insurance policy coverage plan"
+        },
+        {
+          "id": "D",
+          "text": "An agricultural consultancy training session"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Tangible outputs are physical goods that can be seen and touched and have a physical existence (such as motor vehicles, machinery, and buildings), whereas insurance, transport, and consultancy are intangible services.",
+      "sourceReference": "Section 5.1, Page 56"
+    },
+    {
+      "id": "ECO-G09-U05-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In economics, how is the short-run period of production fundamentally defined?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A planning horizon lasting strictly less than three calendar months"
+        },
+        {
+          "id": "B",
+          "text": "A period during which all productive factor inputs are variable"
+        },
+        {
+          "id": "C",
+          "text": "A period of production in which at least one factor input is fixed while others can be varied"
+        },
+        {
+          "id": "D",
+          "text": "A production duration where business firms operate with zero fixed overhead costs"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The short run refers to a period of production in which at least one input is fixed while the remaining inputs are variable. It does not refer to a calendar duration, but to the operational flexibility of inputs.",
+      "sourceReference": "Section 5.2, Page 57"
+    },
+    {
+      "id": "ECO-G09-U05-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which cost represents the extra or additional total cost resulting from producing one more unit of output?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Average Fixed Cost (AFC)"
+        },
+        {
+          "id": "B",
+          "text": "Average Variable Cost (AVC)"
+        },
+        {
+          "id": "C",
+          "text": "Marginal Cost (MC)"
+        },
+        {
+          "id": "D",
+          "text": "Total Variable Cost (TVC)"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Marginal Cost (MC) is the change in total cost (or change in total variable cost) that results from producing one additional unit of output (MC = ΔTC / ΔQ).",
+      "sourceReference": "Section 5.3, Page 62"
+    },
+    {
+      "id": "ECO-G09-U05-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Costs that are incurred continuously even when a firm temporarily halts production and produces zero output are called:",
+      "options": [
+        {
+          "id": "A",
+          "text": "fixed costs"
+        },
+        {
+          "id": "B",
+          "text": "variable costs"
+        },
+        {
+          "id": "C",
+          "text": "marginal costs"
+        },
+        {
+          "id": "D",
+          "text": "implicit costs"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Fixed costs (such as factory rent, administrative salaries, and machinery depreciation) are independent of output and must be paid even when output is zero.",
+      "sourceReference": "Section 5.3, Page 61"
+    },
+    {
+      "id": "ECO-G09-U05-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "A bakery employs 4 bakers and produces 76 loaves of bread per hour. When it hires a 5th baker, total output rises to 95 loaves per hour. What is the marginal product (MP) of the 5th baker?",
+      "options": [
+        {
+          "id": "A",
+          "text": "15 loaves"
+        },
+        {
+          "id": "B",
+          "text": "19 loaves"
+        },
+        {
+          "id": "C",
+          "text": "25 loaves"
+        },
+        {
+          "id": "D",
+          "text": "95 loaves"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Marginal Product is calculated as MP = ΔTP / ΔL. Here, ΔTP = 95 - 76 = 19 loaves, and ΔL = 5 - 4 = 1 worker. Thus, MP = 19 / 1 = 19 loaves.",
+      "sourceReference": "Section 5.2, Pages 58-59"
+    },
+    {
+      "id": "ECO-G09-U05-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In short-run production analysis, which of the following defines Stage II of production?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The range where marginal product is negative and total product is declining"
+        },
+        {
+          "id": "B",
+          "text": "The range from the origin up to the maximum point of marginal product"
+        },
+        {
+          "id": "C",
+          "text": "The range over which marginal product is positive but diminishing, ending where marginal product equals zero"
+        },
+        {
+          "id": "D",
+          "text": "The range where average product is rising faster than marginal product"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Stage II (the diminishing returns stage) covers the range where the marginal product of the variable input is positive but falling, continuing until MP reaches zero (where Total Product reaches its maximum).",
+      "sourceReference": "Section 5.2, Pages 58-59"
+    },
+    {
+      "id": "ECO-G09-U05-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How do accountants and economists differ in their evaluation of business production costs?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Accountants evaluate opportunity costs of self-owned factors, while economists consider only explicit cash outlays."
+        },
+        {
+          "id": "B",
+          "text": "Accounting cost considers only explicit out-of-pocket expenses for purchased inputs, while economic cost includes both explicit and implicit costs."
+        },
+        {
+          "id": "C",
+          "text": "Economic cost excludes raw material costs, while accounting cost includes both materials and depreciation."
+        },
+        {
+          "id": "D",
+          "text": "Accountants include fixed and variable costs, whereas economists analyze only fixed overhead costs."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Accounting cost refers only to explicit, direct monetary payments for purchased inputs. In contrast, economists define cost in terms of opportunity cost, summing both explicit expenses and implicit costs (the value of self-owned, non-purchased resources).",
+      "sourceReference": "Section 5.3, Pages 60-61"
+    },
+    {
+      "id": "ECO-G09-U05-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which of the following is an example of an implicit cost for an entrepreneurial firm?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Monthly electricity bills paid to the national power utility"
+        },
+        {
+          "id": "B",
+          "text": "Wages paid to hired assembly line workers"
+        },
+        {
+          "id": "C",
+          "text": "Forgone rental income from using the owner's own building for factory operations rather than leasing it to outsiders"
+        },
+        {
+          "id": "D",
+          "text": "Transportation fees paid to a third-party logistics company for shipping finished goods"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Implicit costs represent the opportunity costs of using self-owned, non-purchased factors of production—such as the forgone market rent on an owner's own building or the salary the owner could have earned working elsewhere.",
+      "sourceReference": "Section 5.3, Pages 60-61"
+    },
+    {
+      "id": "ECO-G09-U05-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "A firm has total fixed costs of Birr 120. When it produces 4 units of output, its total variable cost is Birr 80. What are the average fixed cost (AFC) and average total cost (ATC) at 4 units of output?",
+      "options": [
+        {
+          "id": "A",
+          "text": "AFC = Birr 30; ATC = Birr 50"
+        },
+        {
+          "id": "B",
+          "text": "AFC = Birr 20; ATC = Birr 30"
+        },
+        {
+          "id": "C",
+          "text": "AFC = Birr 40; ATC = Birr 60"
+        },
+        {
+          "id": "D",
+          "text": "AFC = Birr 30; ATC = Birr 20"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "AFC = TFC / Q = 120 / 4 = Birr 30. Total Cost (TC) = TFC + TVC = 120 + 80 = Birr 200. Thus, ATC = TC / Q = 200 / 4 = Birr 50 (or ATC = AFC + AVC = 30 + 20 = Birr 50).",
+      "sourceReference": "Section 5.3, Pages 61-62"
+    },
+    {
+      "id": "ECO-G09-U05-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "As a firm expands its production in the short run, what happens to the vertical distance between its Average Total Cost (ATC) curve and Average Variable Cost (AVC) curve?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It remains constant because total fixed costs are constant."
+        },
+        {
+          "id": "B",
+          "text": "It continuously widens because marginal cost rises at an increasing rate."
+        },
+        {
+          "id": "C",
+          "text": "It continuously narrows because average fixed cost declines as output increases."
+        },
+        {
+          "id": "D",
+          "text": "It initially narrows, reaches zero at maximum output, and then expands."
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Since ATC = AFC + AVC, the vertical distance between ATC and AVC at any output level equals AFC (TFC / Q). Because TFC is constant, AFC continuously declines as output rises, meaning the gap between ATC and AVC continuously narrows.",
+      "sourceReference": "Section 5.3, Pages 61-62"
+    },
+    {
+      "id": "ECO-G09-U05-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "According to the production schedule in the Grade 9 textbook, when variable labor increases from 6 to 7 workers on a fixed capital input of 10 units, total product remains constant at 108 quintals. What does this indicate about the marginal product and average product of labor?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Marginal product is 13 quintals, and average product reaches its overall maximum."
+        },
+        {
+          "id": "B",
+          "text": "Marginal product is 0 quintals, and average product declines from 18 to 15.4 quintals."
+        },
+        {
+          "id": "C",
+          "text": "Marginal product is negative 12 quintals, and the firm enters Stage III."
+        },
+        {
+          "id": "D",
+          "text": "Marginal product equals average product, indicating constant returns to scale."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "When TP remains unchanged at 108 quintals between L = 6 and L = 7, the change in TP is zero (MP = ΔTP / ΔL = 0 / 1 = 0). Average product falls from 108 / 6 = 18 to 108 / 7 ≈ 15.4 quintals.",
+      "sourceReference": "Section 5.2, Pages 58-59"
+    },
+    {
+      "id": "ECO-G09-U05-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Why will a rational, profit-maximizing firm never choose to operate in Stage III of short-run production?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because fixed factor costs become zero, eliminating the incentive to economize."
+        },
+        {
+          "id": "B",
+          "text": "Because marginal product is negative, meaning additional workers reduce total output while adding to total labor costs."
+        },
+        {
+          "id": "C",
+          "text": "Because average product is rising faster than marginal cost."
+        },
+        {
+          "id": "D",
+          "text": "Because the firm would be compelled to pay higher excise taxes on surplus output."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In Stage III, marginal product is negative (MP < 0), which means hiring more workers actually decreases total product (TP falls). A rational firm would never pay additional wages to reduce its total output.",
+      "sourceReference": "Section 5.2, Pages 58-59"
+    },
+    {
+      "id": "ECO-G09-U05-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Suppose a shoe manufacturing workshop produces 50 pairs of shoes at a total cost of Birr 2,600. When it increases its output to 51 pairs, its total cost rises to Birr 2,930. What is the marginal cost of producing the 51st pair of shoes?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Birr 5,530"
+        },
+        {
+          "id": "B",
+          "text": "Birr 330"
+        },
+        {
+          "id": "C",
+          "text": "Birr 57.45"
+        },
+        {
+          "id": "D",
+          "text": "Birr 29.30"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Marginal Cost is calculated as MC = ΔTC / ΔQ. Here, ΔTC = 2,930 - 2,600 = Birr 330, and ΔQ = 51 - 50 = 1 pair. Therefore, MC = 330 / 1 = Birr 330.",
+      "sourceReference": "Section 5.3, Page 62 & Review Questions, Page 66"
+    },
+    {
+      "id": "ECO-G09-U05-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "What mathematical and geometric relationship exists between the Average Product (AP) curve and the Marginal Product (MP) curve of a variable input?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The MP curve intersects the AP curve from above at the maximum point of the AP curve."
+        },
+        {
+          "id": "B",
+          "text": "The AP curve always lies above the MP curve across all three stages of production."
+        },
+        {
+          "id": "C",
+          "text": "The MP curve reaches its peak at the exact same output level where the AP curve reaches its peak."
+        },
+        {
+          "id": "D",
+          "text": "When MP is decreasing, AP must also be decreasing regardless of whether MP is greater than AP."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "As long as MP > AP, the average product rises. When MP < AP, the average product falls. Consequently, when AP is at its maximum point, MP must equal AP (MP intersects AP at its maximum point from above).",
+      "sourceReference": "Section 5.2, Pages 58-59"
+    }
+  ]
 }

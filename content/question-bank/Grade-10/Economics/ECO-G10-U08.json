@@ -3,5 +3,411 @@
   "subject": "Economics",
   "unitNumber": 8,
   "unitTitle": "Business Startups and Innovation",
-  "questions": []
+  "questions": [
+    {
+      "id": "ECO-G10-U08-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "According to the Oslo Manual and the Grade 10 Economics textbook, how is 'innovation' fundamentally defined?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The statutory registration of trademarks and patents with municipal government offices"
+        },
+        {
+          "id": "B",
+          "text": "Something new, improved, or introduced that creates value, combining creativity with practical implementation"
+        },
+        {
+          "id": "C",
+          "text": "The routine seasonal maintenance and repair of existing factory assembly machinery"
+        },
+        {
+          "id": "D",
+          "text": "The mandatory conversion of private enterprises into state-owned corporations"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Innovation is defined as a new or improved product or process (or combination thereof) that differs significantly from previous versions and creates value. It can be summarized as the combination of two key elements: creativity and implementation.",
+      "sourceReference": "Section 8.1, Pages 162-163 & Unit Summary, Page 182"
+    },
+    {
+      "id": "ECO-G10-U08-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is the primary operational distinction between a business startup and a traditional small business regarding growth objectives?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Startups are content operating in a small local market segment, whereas small businesses aim for global market domination."
+        },
+        {
+          "id": "B",
+          "text": "A startup is a temporary business model designed for rapid growth and top-end revenue expansion across a large market, while a small business focuses on stable local operations within set boundaries."
+        },
+        {
+          "id": "C",
+          "text": "Startups are legally prohibited from seeking external equity investment or venture capital."
+        },
+        {
+          "id": "D",
+          "text": "Small businesses take years to earn their first dollar of profit, whereas startups are instantly profitable from day one."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Startups are focused primarily on top-end revenue and rapid growth potential without self-imposed geographic limitations, whereas small businesses are content with operating stably in a small portion of a local market.",
+      "sourceReference": "Section 8.2, Pages 167-168"
+    },
+    {
+      "id": "ECO-G10-U08-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which of the following is a defining characteristic of a sole proprietorship form of business organization?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Ownership is divided into freely transferable shares of common stock traded on financial exchanges."
+        },
+        {
+          "id": "B",
+          "text": "The enterprise is owned and managed by a single individual who enjoys all profits and personally bears all losses."
+        },
+        {
+          "id": "C",
+          "text": "The business entity exists as an independent legal person completely separate from its owner."
+        },
+        {
+          "id": "D",
+          "text": "Management authority is legally delegated to an elected corporate board of directors."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "A sole proprietorship is a business organization owned and managed by a single individual who is solely responsible for providing capital, managing daily operations, taking all profits, and personally bearing all business risks and losses.",
+      "sourceReference": "Section 8.3.1, Pages 169-170"
+    },
+    {
+      "id": "ECO-G10-U08-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is the principal legal advantage that shareholders enjoy when investing in a corporation rather than a general partnership?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Complete exemption from corporate income and dividend taxation"
+        },
+        {
+          "id": "B",
+          "text": "Direct personal management of day-to-day shop floor activities"
+        },
+        {
+          "id": "C",
+          "text": "Limited liability, meaning their financial risk is restricted solely to the amount invested in shares"
+        },
+        {
+          "id": "D",
+          "text": "The automatic right to convert corporate shares into physical real estate assets on demand"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "In a corporation, stockholders enjoy limited liability; if the corporation faces bankruptcy or heavy financial losses, creditors cannot pursue the personal assets of the shareholders beyond their investment in company shares.",
+      "sourceReference": "Section 8.3.3, Pages 172-173"
+    },
+    {
+      "id": "ECO-G10-U08-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is the fundamental purpose of conducting a business feasibility study before commissioning a full business plan?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To determine whether a business concept is viable and worth pursuing before incurring major financial costs and commitments"
+        },
+        {
+          "id": "B",
+          "text": "To guarantee that the venture will secure an immediate statutory monopoly from the government"
+        },
+        {
+          "id": "C",
+          "text": "To provide a complete 50-page operational manual for staffing, monthly payroll, and office furniture procurement"
+        },
+        {
+          "id": "D",
+          "text": "To eliminate the need for conducting market research or cost-benefit analysis"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "A feasibility study serves as a proof of business concept designed to discover if an idea is viable and warrants further investment of time, money, and planning, costing less than 20% of a full business plan.",
+      "sourceReference": "Section 8.4.1, Pages 174-175"
+    },
+    {
+      "id": "ECO-G10-U08-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "A dairy processing company designs an innovative biodegradable, waste-free packaging carton and introduces an advertising campaign promoting its zero-waste delivery model. Under the Oslo Manual framework, which two types of innovation are demonstrated?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Organizational innovation and process innovation"
+        },
+        {
+          "id": "B",
+          "text": "Marketing innovation and eco-innovation"
+        },
+        {
+          "id": "C",
+          "text": "Monetary innovation and financial intermediation"
+        },
+        {
+          "id": "D",
+          "text": "Statutory innovation and command innovation"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Marketing innovation involves developing new marketing strategies that produce significant changes in product design, packaging, pricing, or promotion. Eco-innovation reduces environmental impacts and promotes sustainable natural resource use.",
+      "sourceReference": "Section 8.1, Pages 163-164"
+    },
+    {
+      "id": "ECO-G10-U08-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "According to Joseph Schumpeter, dynamic economic growth is driven by innovative business ideas that incessantly overturn the existing market status quo, making older technologies, models, and enterprises obsolete. What term describes this phenomenon?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Creative destruction"
+        },
+        {
+          "id": "B",
+          "text": "Diminishing marginal returns"
+        },
+        {
+          "id": "C",
+          "text": "Asymmetric information"
+        },
+        {
+          "id": "D",
+          "text": "Deadweight loss"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Schumpeter coined the term 'creative destruction' to explain how innovation drives economic progress by revolutionizing the economic structure from within—destroying obsolete products, firms, and industries while creating new ones.",
+      "sourceReference": "Section 8.1, Pages 164-165"
+    },
+    {
+      "id": "ECO-G10-U08-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In the financing of business startups, who are 'angel investors' and what is their role in seed funding?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Public officials who distribute non-repayable municipal relief grants to rural cooperatives"
+        },
+        {
+          "id": "B",
+          "text": "Wealthy private individuals who invest their own personal capital into high-growth potential startups in exchange for an equity share"
+        },
+        {
+          "id": "C",
+          "text": "Commercial bank managers who issue fully collateralized short-term overdraft facilities"
+        },
+        {
+          "id": "D",
+          "text": "Traditional revolving credit organizers who distribute lottery contributions without taking shares"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Angel investors are wealthy individuals (often experienced entrepreneurs) who invest their own financial capital in early-stage startups that they believe will succeed, typically receiving a 5% to 10% equity share in return for taking on substantial business risk.",
+      "sourceReference": "Section 8.2, Page 168"
+    },
+    {
+      "id": "ECO-G10-U08-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What is the legal status regarding the financial liabilities of partners in a general partnership firm?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Each partner's liability is strictly limited to their initial monetary contribution."
+        },
+        {
+          "id": "B",
+          "text": "The government assumes all liabilities if the partnership operates in the industrial manufacturing sector."
+        },
+        {
+          "id": "C",
+          "text": "All partners have unlimited liability and are jointly and individually liable for the debts and obligations of the firm."
+        },
+        {
+          "id": "D",
+          "text": "Partners have no liability because a partnership is recognized as a separate legal personality from its owners."
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "In a general partnership, all partners have unlimited liability; they are jointly and individually liable for all debts and contractual obligations of the firm, meaning their personal properties can be seized if business assets fall short.",
+      "sourceReference": "Section 8.3.2, Pages 171-172"
+    },
+    {
+      "id": "ECO-G10-U08-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which of the following is NOT one of the five essential core questions that a business feasibility study must answer?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Will the proposed venture work or not?"
+        },
+        {
+          "id": "B",
+          "text": "Is the proposed business venture profitable or not?"
+        },
+        {
+          "id": "C",
+          "text": "Which foreign stock exchange will immediately list the firm's equity shares?"
+        },
+        {
+          "id": "D",
+          "text": "Is the project worth commissioning a full business plan for?"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Section 8.4.2 explicitly states that a feasibility study must answer five core questions: (1) Will it work or not? (2) Is it profitable or not? (3) What will it basically cost to fund or start? (4) Is it worth doing? and (5) Is it worth commissioning a business plan? Stock exchange listing is not a primary concern for initial feasibility.",
+      "sourceReference": "Section 8.4.2, Page 175"
+    },
+    {
+      "id": "ECO-G10-U08-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "When evaluating an entrepreneurial investment proposal using Cost-Benefit Analysis (CBA) and Net Present Value (NPV), when should an entrepreneur proceed with the project?",
+      "options": [
+        {
+          "id": "A",
+          "text": "When the net present value is negative, indicating that future costs exceed future benefits"
+        },
+        {
+          "id": "B",
+          "text": "When the sum of present value benefits outweighs the sum of present value costs (NPV is positive)"
+        },
+        {
+          "id": "C",
+          "text": "Only when tangible costs are zero and all benefits consist entirely of non-monetary goodwill"
+        },
+        {
+          "id": "D",
+          "text": "When the discounted benefit-cost ratio equals zero"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In Cost-Benefit Analysis, net present value compares future benefits and costs in terms of their present value. If NPV is positive (benefits outweigh costs), the project is considered a sound and viable investment.",
+      "sourceReference": "Section 8.4.2, Pages 179-181"
+    },
+    {
+      "id": "ECO-G10-U08-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Tolasa established a grain trading enterprise as a sole proprietorship. After two years of volatile market swings, the enterprise collapsed with Birr 500,000 in outstanding creditor liabilities, while the business assets could only be liquidated for Birr 200,000. Under Ethiopian commercial law, how will the remaining Birr 300,000 debt be settled?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The remaining debt is automatically cancelled because the enterprise was legally terminated."
+        },
+        {
+          "id": "B",
+          "text": "The commercial creditors must absorb the loss because sole proprietors enjoy limited corporate liability."
+        },
+        {
+          "id": "C",
+          "text": "Tolasa's personal properties (such as his private house or vehicle) can be lawfully seized and sold to settle the unpaid liabilities because he has unlimited liability and no separate legal personality from his business."
+        },
+        {
+          "id": "D",
+          "text": "The Ministry of Finance will issue public treasury vouchers to cover the deficit."
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "In a sole proprietorship, the owner and the business enterprise are legally one and the same (no separate entity). Because the proprietor has unlimited liability, creditors have legal recourse against the owner's personal assets if business assets are insufficient to cover liabilities.",
+      "sourceReference": "Section 8.3.1, Pages 169-170"
+    },
+    {
+      "id": "ECO-G10-U08-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Why does a general partnership suffer from inherent instability and lack of continuity compared to a joint-stock corporation?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because partnerships are legally restricted from trading agricultural commodities"
+        },
+        {
+          "id": "B",
+          "text": "Because the retirement, insolvency, insanity, or death of any single partner legally dissolves the partnership, whereas a corporation possesses perpetual succession independent of changes in shareholders"
+        },
+        {
+          "id": "C",
+          "text": "Because corporations are run without a board of directors or managers"
+        },
+        {
+          "id": "D",
+          "text": "Because general partners are forbidden from signing commercial contracts with suppliers"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "A partnership lacks business continuity because the death, bankruptcy, withdrawal, or mental incapacitation of any general partner can legally dissolve the firm. In contrast, a corporation is a separate legal entity with perpetual existence that continues unaffected by changes in share ownership.",
+      "sourceReference": "Section 8.3.2 & Section 8.3.3, Pages 171-173"
+    },
+    {
+      "id": "ECO-G10-U08-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "An aspiring entrepreneur seeks bank financing and immediately hires a consultancy firm to prepare a 60-page business plan complete with five-year financial forecasts, staffing schedules, and appendices, without first conducting a feasibility study. Why does the textbook describe this as a flawed approach?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because business plans are used exclusively by municipal tax inspectors rather than private commercial banks"
+        },
+        {
+          "id": "B",
+          "text": "Because a feasibility study is a low-cost screening tool (<20% of business plan cost) that tests core viability and saves time and money before major financial resources are committed to an elaborate roadmap"
+        },
+        {
+          "id": "C",
+          "text": "Because commercial banks reject any venture that has a detailed budget and staffing schedule"
+        },
+        {
+          "id": "D",
+          "text": "Because feasibility studies provide statutory legal immunity against product failure in competitive markets"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Section 8.4 emphasizes the rule of thumb: never commission an expensive business plan before completing a feasibility study. A feasibility study costs less than 20% of a business plan and acts as a preliminary screening mechanism to test whether the concept works, avoiding wasted resources on unviable projects.",
+      "sourceReference": "Section 8.4.1, Pages 174-175"
+    },
+    {
+      "id": "ECO-G10-U08-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "When conducting a comprehensive Cost-Benefit Analysis (CBA) for installing automated inventory management software in an enterprise, why must an entrepreneur evaluate both direct cash expenses and indirect opportunity costs?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because indirect factors—such as temporary employee downtime and lost productivity during system implementation—represent real economic sacrifices that, if ignored, lead to an underestimation of total project costs"
+        },
+        {
+          "id": "B",
+          "text": "Because indirect costs are reimbursed in cash by commercial banks upon software installation"
+        },
+        {
+          "id": "C",
+          "text": "Because accounting profit automatically excludes direct hardware and software purchase expenses"
+        },
+        {
+          "id": "D",
+          "text": "Because net present value applies only to physical tangible tools and ignores labor time"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "In thorough CBA, assigning monetary values to both direct costs (e.g., $500 software fee) and indirect/opportunity costs (e.g., employee computer downtime costing hours of productive working time) is essential to capture the true economic cost and prevent misleading profitability estimates.",
+      "sourceReference": "Section 8.4.2, Pages 179-181"
+    }
+  ]
 }

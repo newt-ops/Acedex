@@ -3,5 +3,411 @@
   "subject": "Economics",
   "unitNumber": 5,
   "unitTitle": "Trade and Finance",
-  "questions": []
+  "questions": [
+    {
+      "id": "ECO-G11-U05-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is the primary factor that fundamentally distinguishes international (foreign) trade from domestic (internal) trade?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Domestic trade involves manufactured industrial goods, whereas international trade deals strictly in agricultural food crops."
+        },
+        {
+          "id": "B",
+          "text": "International trade involves sovereign borders, different national currencies, separate legal jurisdictions, and differing mobility of factors of production across nations."
+        },
+        {
+          "id": "C",
+          "text": "Domestic trade is conducted exclusively through barter mechanisms without money."
+        },
+        {
+          "id": "D",
+          "text": "International trade is conducted without transportation costs or commercial documentation."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "According to Section 5.1 of the Grade 11 textbook, international trade differs from domestic trade because it crosses national frontiers, involves different legal systems and languages, uses different foreign currencies, and faces restrictions on the cross-border mobility of labor and capital.",
+      "sourceReference": "Section 5.1, Pages 115-116"
+    },
+    {
+      "id": "ECO-G11-U05-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which of the following classical economists formulated the Theory of Absolute Advantage in his seminal 1776 work 'The Wealth of Nations'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "David Ricardo"
+        },
+        {
+          "id": "B",
+          "text": "Adam Smith"
+        },
+        {
+          "id": "C",
+          "text": "John Maynard Keynes"
+        },
+        {
+          "id": "D",
+          "text": "Eli Heckscher"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Adam Smith introduced the principle of absolute advantage, arguing that a nation should specialize in and export commodities that it can produce more efficiently (using fewer resources or labor hours per unit of output) than any other nation.",
+      "sourceReference": "Section 5.2.1, Pages 117-118"
+    },
+    {
+      "id": "ECO-G11-U05-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "According to David Ricardo's Theory of Comparative Advantage, on what basis should a country specialize and engage in international trade?",
+      "options": [
+        {
+          "id": "A",
+          "text": "On the basis of having the lowest monetary wage rate in manufacturing"
+        },
+        {
+          "id": "B",
+          "text": "On the basis of producing a good at a lower opportunity cost relative to other nations, even if it has an absolute disadvantage in producing all goods"
+        },
+        {
+          "id": "C",
+          "text": "On the basis of possessing the largest domestic consumer market size"
+        },
+        {
+          "id": "D",
+          "text": "On the basis of holding an absolute advantage in all traded commodities"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "David Ricardo demonstrated that mutually beneficial trade occurs when countries specialize according to comparative advantage—meaning a country specializes in producing the good in which its opportunity cost is lower compared to its trading partner.",
+      "sourceReference": "Section 5.2.2, Pages 119-121 & EUEE 2018 Round 1, Q11"
+    },
+    {
+      "id": "ECO-G11-U05-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is an import tariff in international commercial policy?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A physical numerical limit on the total volume of a good allowed into the country"
+        },
+        {
+          "id": "B",
+          "text": "A direct financial grant or subsidy paid by the government to domestic exporters"
+        },
+        {
+          "id": "C",
+          "text": "A tax, duty, or customs fee levied by a government on imported goods as they cross the border"
+        },
+        {
+          "id": "D",
+          "text": "A mandatory embargo prohibiting all foreign currency transactions"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "A tariff is a tax, duty, or customs levy imposed by a government on goods imported from abroad, designed to raise fiscal revenue and protect domestic import-competing industries.",
+      "sourceReference": "Section 5.3.1, Pages 127-128"
+    },
+    {
+      "id": "ECO-G11-U05-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In the Balance of Payments (BOP) accounting system, what does the Current Account record?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Flows of foreign direct investment and long-term portfolio equities"
+        },
+        {
+          "id": "B",
+          "text": "Transactions involving exports and imports of goods (merchandise trade), services, primary investment income, and secondary current transfers"
+        },
+        {
+          "id": "C",
+          "text": "The statutory minimum reserve assets held in the central bank's gold vault"
+        },
+        {
+          "id": "D",
+          "text": "Purchases of foreign government bonds by domestic commercial banks"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The current account records all transactions in goods (exports and imports of merchandise), services (tourism, shipping, banking), net factor income from abroad, and unilateral current transfers (remittances and grants).",
+      "sourceReference": "Section 5.4.1, Pages 133-134"
+    },
+    {
+      "id": "ECO-G11-U05-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What does the Heckscher-Ohlin (H-O) factor endowment theory state regarding the pattern of international trade?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A country will export commodities that intensively use its relatively abundant and cheap factor of production, and import commodities that intensively use its relatively scarce factor."
+        },
+        {
+          "id": "B",
+          "text": "Trade patterns are determined entirely by government subsidies and trade tariffs."
+        },
+        {
+          "id": "C",
+          "text": "Nations with identical factor endowments will trade the largest volume of homogeneous agricultural goods."
+        },
+        {
+          "id": "D",
+          "text": "Capital-rich nations will strictly import capital-intensive industrial machinery from labor-abundant nations."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The Heckscher-Ohlin theorem states that a nation will specialize in and export the commodity that utilizes its abundant and cheap factor of production intensively, while importing the commodity that requires its scarce factor.",
+      "sourceReference": "Section 5.2.3, Pages 122-124 & Review Questions, Page 144"
+    },
+    {
+      "id": "ECO-G11-U05-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What is the core argument of the 'Infant Industry Argument' for trade protectionism in developing countries?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Newly established domestic manufacturing industries need temporary protection from mature foreign competition until they achieve scale economies and international competitiveness."
+        },
+        {
+          "id": "B",
+          "text": "Agricultural farming should be permanently insulated from technological modernization."
+        },
+        {
+          "id": "C",
+          "text": "Export taxes should be permanently levied on manufactured goods to protect infant consumers."
+        },
+        {
+          "id": "D",
+          "text": "Foreign direct investment must be prohibited across all sectors of the economy."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The infant industry argument posits that newly emerging domestic industries in developing economies cannot initially compete against well-established foreign producers. Temporary tariffs or subsidies allow them to learn by doing and achieve economies of scale before facing open competition.",
+      "sourceReference": "Section 5.3.2, Pages 129-130"
+    },
+    {
+      "id": "ECO-G11-U05-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How does an import quota differ fundamentally from an import tariff in terms of government fiscal revenue and market effects?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A tariff fixes the quantitative ceiling of imports, while a quota generates direct tax revenue for the public treasury."
+        },
+        {
+          "id": "B",
+          "text": "A tariff generates customs tax revenue for the government, whereas a quota establishes a quantitative import limit and creates quota rents that accrue to import license holders unless auctioned."
+        },
+        {
+          "id": "C",
+          "text": "A quota always lowers the domestic price of the imported commodity, while a tariff increases it."
+        },
+        {
+          "id": "D",
+          "text": "An import tariff completely eliminates domestic deadweight loss, while a quota does not."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "While both tariffs and quotas raise domestic prices and reduce import volumes, a tariff generates direct customs revenue for the government. An import quota sets a quantitative physical ceiling, generating windfall profits (quota rents) for holders of import licenses unless the state auctions them.",
+      "sourceReference": "Section 5.3.1, Pages 127-129"
+    },
+    {
+      "id": "ECO-G11-U05-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In a floating (flexible) foreign exchange rate regime, what causes a country's currency to depreciate in value relative to foreign currencies?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A legal decree by the national parliament officially altering the gold parity of the currency"
+        },
+        {
+          "id": "B",
+          "text": "An increase in market demand for the domestic currency or a decrease in its supply"
+        },
+        {
+          "id": "C",
+          "text": "A shift in market forces resulting from an increase in the supply of the domestic currency or a decrease in demand for it in foreign exchange markets"
+        },
+        {
+          "id": "D",
+          "text": "A massive surge in foreign tourists bringing foreign currency into the country"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Under a flexible exchange rate system, exchange rates are determined purely by market supply and demand. Depreciation (a fall in the price of the domestic currency) occurs when the supply of the domestic currency increases or the foreign demand for it decreases.",
+      "sourceReference": "Section 5.5, Pages 137-138"
+    },
+    {
+      "id": "ECO-G11-U05-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How do economists distinguish between 'currency depreciation' and 'currency devaluation'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Depreciation occurs when a currency loses value due to market forces in a floating system, whereas devaluation is an official administrative reduction in the fixed exchange rate by the monetary authority."
+        },
+        {
+          "id": "B",
+          "text": "Devaluation is caused by market forces of supply and demand, while depreciation is set by central bank decree."
+        },
+        {
+          "id": "C",
+          "text": "Depreciation raises the international value of the currency, while devaluation lowers it."
+        },
+        {
+          "id": "D",
+          "text": "There is no distinction; depreciation and devaluation are exact synonyms under all monetary systems."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Depreciation refers to a decrease in the market value of a currency under a floating exchange rate system driven by market forces. Devaluation refers to an official government decision to lower the value of a domestic currency under a pegged or fixed exchange rate system.",
+      "sourceReference": "Section 5.5.1, Pages 138-139"
+    },
+    {
+      "id": "ECO-G11-U05-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What is the primary role of the 'Capital and Financial Account' within the overall Balance of Payments (BOP)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To record the export and import values of coffee and livestock"
+        },
+        {
+          "id": "B",
+          "text": "To record cross-border international flows of financial and capital assets, including foreign direct investments (FDI), loans, and international securities"
+        },
+        {
+          "id": "C",
+          "text": "To measure the daily volume of retail currency exchanged at airport counters"
+        },
+        {
+          "id": "D",
+          "text": "To record non-repayable grants distributed by domestic philanthropic societies"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The capital and financial account records international transactions involving the purchase and sale of financial assets, debt securities, direct investments (FDI), and government loans between domestic residents and the rest of the world.",
+      "sourceReference": "Section 5.4.1, Pages 134-135"
+    },
+    {
+      "id": "ECO-G11-U05-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Assume that in Country A, producing 1 unit of Clothing requires 2 hours of labor and 1 unit of Food requires 4 hours of labor. In Country B, producing 1 unit of Clothing requires 6 hours of labor and 1 unit of Food requires 8 hours of labor. What are the opportunity costs of producing Clothing in both countries, and which country has the comparative advantage in Clothing?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Country A: 1 Clothing costs 2 Food; Country B: 1 Clothing costs 1.33 Food; Country B has comparative advantage in Clothing."
+        },
+        {
+          "id": "B",
+          "text": "Country A: 1 Clothing costs 0.5 Food; Country B: 1 Clothing costs 0.75 Food; Country A has comparative advantage in Clothing."
+        },
+        {
+          "id": "C",
+          "text": "Country A: 1 Clothing costs 4 Food; Country B: 1 Clothing costs 8 Food; Country B has comparative advantage in Clothing."
+        },
+        {
+          "id": "D",
+          "text": "Country A: 1 Clothing costs 1 Food; Country B: 1 Clothing costs 1 Food; Neither country has a comparative advantage."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In Country A: 1 unit of Clothing requires 2 hours, which could have produced 2/4 = 0.5 units of Food. In Country B: 1 unit of Clothing requires 6 hours, which could have produced 6/8 = 0.75 units of Food. Because Country A has a lower opportunity cost in producing Clothing (0.5 Food < 0.75 Food), Country A holds the comparative advantage in Clothing.",
+      "sourceReference": "Section 5.2.2, Pages 119-121 & Review Questions (Part IV Work Out), Page 145"
+    },
+    {
+      "id": "ECO-G11-U05-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "In a competitive small open economy, the domestic demand and supply equations for wheat are given as:\n- Demand: Qd = 100 - P\n- Supply: Qs = 20 + P\nThe prevailing world price of wheat is Pw = Birr 30. If the government allows free international trade, what will be the quantity of wheat imported by the domestic economy?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Imports = 10 units"
+        },
+        {
+          "id": "B",
+          "text": "Imports = 20 units"
+        },
+        {
+          "id": "C",
+          "text": "Imports = 40 units"
+        },
+        {
+          "id": "D",
+          "text": "Imports = 0 units (country becomes an exporter)"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "At the world price Pw = Birr 30: Domestic quantity demanded is Qd = 100 - 30 = 70 units. Domestic quantity supplied is Qs = 20 + 30 = 50 units. The domestic shortage at the world price is met by imports: Imports = Qd - Qs = 70 - 50 = 20 units.",
+      "sourceReference": "Section 5.3.1, Pages 127-128 & Section 5.3.3, Page 131"
+    },
+    {
+      "id": "ECO-G11-U05-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Using the wheat market data from the preceding question (Qd = 100 - P, Qs = 20 + P, Pw = Birr 30, Imports = 20 units), suppose the government imposes a specific tariff of Birr 5 per unit on imported wheat, raising the domestic market price to Birr 35. What is the new volume of imports, and how much tariff revenue is collected by the government?",
+      "options": [
+        {
+          "id": "A",
+          "text": "New imports = 10 units; Tariff revenue = Birr 50"
+        },
+        {
+          "id": "B",
+          "text": "New imports = 15 units; Tariff revenue = Birr 75"
+        },
+        {
+          "id": "C",
+          "text": "New imports = 10 units; Tariff revenue = Birr 100"
+        },
+        {
+          "id": "D",
+          "text": "New imports = 5 units; Tariff revenue = Birr 25"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "At the tariff-inclusive price P = 30 + 5 = Birr 35: Domestic quantity demanded is Qd = 100 - 35 = 65 units. Domestic quantity supplied is Qs = 20 + 35 = 55 units. New import volume = Qd - Qs = 65 - 55 = 10 units. Total tariff revenue collected by the government = Tariff * Imports = Birr 5 * 10 = Birr 50.",
+      "sourceReference": "Section 5.3.1, Pages 127-128 & EUEE 2017 EC, Q27"
+    },
+    {
+      "id": "ECO-G11-U05-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A nation's statistical authority compiles the following annual international transactions data (in millions of USD):\n- Merchandise Exports = +400\n- Merchandise Imports = -750\n- Net Services = -100\n- Net Investment Income = -50\n- Net Current Transfers (Remittances & Grants) = +300\n- Capital and Financial Account Balance = +250\nWhat is the nation's Current Account Balance, and what is the overall Balance of Payments (BOP) outcome?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Current account deficit = -$200 million; Overall BOP surplus = +$50 million"
+        },
+        {
+          "id": "B",
+          "text": "Current account deficit = -$350 million; Overall BOP deficit = -$100 million"
+        },
+        {
+          "id": "C",
+          "text": "Current account surplus = +$100 million; Overall BOP surplus = +$350 million"
+        },
+        {
+          "id": "D",
+          "text": "Current account deficit = -$200 million; Overall BOP deficit = -$50 million"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "1. Trade Balance (Merchandise) = 400 - 750 = -$350 million.\n2. Current Account Balance = Trade Balance + Net Services + Net Income + Net Transfers = -350 + (-100) + (-50) + 300 = -$200 million (deficit of $200m).\n3. Overall BOP = Current Account + Capital & Financial Account = -$200 million + $250 million = +$50 million (overall BOP surplus of $50m, increasing official reserve assets).",
+      "sourceReference": "Section 5.4.1 & 5.4.2, Pages 133-136 & EUEE 2018 Round 1, Q13"
+    }
+  ]
 }

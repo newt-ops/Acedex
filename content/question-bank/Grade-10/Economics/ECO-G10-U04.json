@@ -3,5 +3,411 @@
   "subject": "Economics",
   "unitNumber": 4,
   "unitTitle": "Market Structure",
-  "questions": []
+  "questions": [
+    {
+      "id": "ECO-G10-U04-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which of the following is a defining feature of a perfectly competitive market?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Firms produce unique goods with no close substitutes."
+        },
+        {
+          "id": "B",
+          "text": "Firms possess significant market power to influence price."
+        },
+        {
+          "id": "C",
+          "text": "There are substantial structural barriers to the entry and exit of firms."
+        },
+        {
+          "id": "D",
+          "text": "There are a large number of buyers and sellers trading a homogeneous product."
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "According to Section 4.1, a perfectly competitive market is characterized by a very large number of buyers and sellers, homogeneous (standardized) products, free entry and exit, and perfect information, making all participants price takers.",
+      "sourceReference": "Section 4.1, Pages 70-71"
+    },
+    {
+      "id": "ECO-G10-U04-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is the primary characteristic that distinguishes a pure monopoly from other market structures?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A single seller supplies the entire market for a product with no close substitutes."
+        },
+        {
+          "id": "B",
+          "text": "A single buyer exercises monopsony control over input prices."
+        },
+        {
+          "id": "C",
+          "text": "Firms sell differentiated products with completely free market entry."
+        },
+        {
+          "id": "D",
+          "text": "Two dominant firms engage in mutual price matching."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "A pure monopoly exists when there is only one supplier (a single firm) in a given market or industry that produces a commodity for which there are no close substitutes, shielded by barriers to entry.",
+      "sourceReference": "Section 4.2, Pages 74-75"
+    },
+    {
+      "id": "ECO-G10-U04-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In a monopolistically competitive market, what provides individual firms with a limited degree of market power over product pricing?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Direct government price fixing and quota allocations"
+        },
+        {
+          "id": "B",
+          "text": "Product differentiation in style, brand, quality, or packaging"
+        },
+        {
+          "id": "C",
+          "text": "Prohibitive legal barriers that prevent new entrants"
+        },
+        {
+          "id": "D",
+          "text": "Complete horizontal collusion among competing sellers"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In monopolistic competition, each firm produces and supplies a product that is differentiated (heterogeneous) from rivals' offerings in style, brand, or quality, giving each seller limited price-making power over brand-loyal consumers.",
+      "sourceReference": "Section 4.3, Pages 80-81"
+    },
+    {
+      "id": "ECO-G10-U04-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is the simplest type of oligopoly market structure, consisting of exactly two competing firms?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Monopsony"
+        },
+        {
+          "id": "B",
+          "text": "Duopoly"
+        },
+        {
+          "id": "C",
+          "text": "Pure competition"
+        },
+        {
+          "id": "D",
+          "text": "Cartel monopoly"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Section 4.4 explicitly defines a duopoly as the simplest special case of an oligopoly in which there are only two firms operating and possessing power over the market.",
+      "sourceReference": "Section 4.4, Page 83"
+    },
+    {
+      "id": "ECO-G10-U04-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which of the following is correct regarding the rank ordering of market structures from most competitive to least competitive?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Pure monopoly → Oligopoly → Monopolistic competition → Perfect competition"
+        },
+        {
+          "id": "B",
+          "text": "Perfect competition → Monopolistic competition → Oligopoly → Pure monopoly"
+        },
+        {
+          "id": "C",
+          "text": "Oligopoly → Perfect competition → Pure monopoly → Monopolistic competition"
+        },
+        {
+          "id": "D",
+          "text": "Perfect competition → Oligopoly → Monopolistic competition → Pure monopoly"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Based on the degree of competition and number of independent rivals, the market structures rank in descending order of competitiveness from perfect competition to monopolistic competition, then oligopoly, and finally pure monopoly.",
+      "sourceReference": "Section 4.1 & Section 4.4, Pages 68, 85"
+    },
+    {
+      "id": "ECO-G10-U04-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Why is the demand curve facing an individual competitive firm perfectly elastic (horizontal), whereas the market demand curve for the same industry slopes downward?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because each firm is so small relative to the market that it can sell any quantity at the market price without affecting that price."
+        },
+        {
+          "id": "B",
+          "text": "Because competitive firms collude secretly to fix market output quotas."
+        },
+        {
+          "id": "C",
+          "text": "Because consumers have perfectly inelastic demand for agricultural goods."
+        },
+        {
+          "id": "D",
+          "text": "Because individual competitive firms face prohibitive transportation costs."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Under perfect competition, the individual firm's output is an insignificant fraction of total market supply. The firm can sell as much output as it wishes at the prevailing market price, making its perceived demand curve horizontal (P = AR = MR), while the industry demand curve is downward-sloping.",
+      "sourceReference": "Section 4.1, Pages 72-73"
+    },
+    {
+      "id": "ECO-G10-U04-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which of the following is NOT a recognized source or cause of monopoly power?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Exclusive ownership of a key resource or essential production factor"
+        },
+        {
+          "id": "B",
+          "text": "Government patents, exclusive franchises, and statutory licensing restrictions"
+        },
+        {
+          "id": "C",
+          "text": "Substantial economies of scale that allow one firm to supply the entire market at the lowest cost"
+        },
+        {
+          "id": "D",
+          "text": "Complete absence of barriers to entry and presence of many small firms"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "Monopoly power is maintained through barriers to entry, including key resource ownership, government patents/licenses, and economies of scale (natural monopoly). Complete absence of entry barriers and presence of many small firms are traits of perfect competition.",
+      "sourceReference": "Section 4.2, Pages 75-76, 85"
+    },
+    {
+      "id": "ECO-G10-U04-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How does the Marginal Revenue (MR) curve of a single-price monopolist behave relative to its Average Revenue (AR / Demand) curve?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The MR curve lies entirely above the downward-sloping demand curve."
+        },
+        {
+          "id": "B",
+          "text": "The MR curve is identical to the demand curve and is perfectly horizontal."
+        },
+        {
+          "id": "C",
+          "text": "The MR curve lies below the downward-sloping demand curve, declining at twice the slope."
+        },
+        {
+          "id": "D",
+          "text": "The MR curve is upward-sloping because higher output commands higher unit prices."
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "To sell an additional unit of output, a single-price monopolist must reduce the price on both the marginal unit and all preceding intra-marginal units. Consequently, marginal revenue is less than price (MR < P = AR), placing the linear MR curve below the demand curve with twice the negative slope.",
+      "sourceReference": "Section 4.2, Pages 76-78"
+    },
+    {
+      "id": "ECO-G10-U04-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Comparing the perceived demand curves of a pure monopolist and a monopolistically competitive firm, the demand curve of the monopolistic competitor is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "steeper than the monopoly demand curve because it has fewer customers"
+        },
+        {
+          "id": "B",
+          "text": "flatter (more price-elastic) than the monopoly demand curve because its product has many close substitutes"
+        },
+        {
+          "id": "C",
+          "text": "completely vertical because of extreme brand loyalty"
+        },
+        {
+          "id": "D",
+          "text": "horizontal and identical to the perfectly competitive firm's price line"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "A pure monopolist produces a product with no close substitutes and faces the entire downward-sloping market demand curve. In contrast, a monopolistic competitor faces numerous rivals selling close substitutes, making its perceived demand curve flatter (more elastic).",
+      "sourceReference": "Section 4.3, Pages 81-82"
+    },
+    {
+      "id": "ECO-G10-U04-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What is the defining behavioural characteristic of firms operating in an oligopolistic market structure?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Firms act as price takers and ignore the actions of competitors."
+        },
+        {
+          "id": "B",
+          "text": "Firms produce identical goods without incurring any advertising expenditures."
+        },
+        {
+          "id": "C",
+          "text": "Firms exhibit strategic mutual interdependence, where each firm's decisions depend on the reactions of rival firms."
+        },
+        {
+          "id": "D",
+          "text": "Firms earn zero total revenue in both the short run and long run."
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Because an oligopoly is dominated by a few large firms with significant market shares, the actions of one firm regarding price, output, or advertising directly impact rival firms, creating strategic interdependence.",
+      "sourceReference": "Section 4.4, Pages 83-84"
+    },
+    {
+      "id": "ECO-G10-U04-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How do collusive oligopolies differ fundamentally from non-collusive oligopolies regarding price and output decisions?",
+      "options": [
+        {
+          "id": "A",
+          "text": "In a collusive oligopoly, firms form cartels to jointly set price and output like a monopoly, whereas non-collusive firms compete independently."
+        },
+        {
+          "id": "B",
+          "text": "Collusive firms sell differentiated goods, whereas non-collusive firms sell only agricultural commodities."
+        },
+        {
+          "id": "C",
+          "text": "Collusive oligopolies eliminate all fixed overhead costs of production."
+        },
+        {
+          "id": "D",
+          "text": "Non-collusive firms enter into legal agreements to eliminate advertising expenses."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "In a collusive oligopoly, member firms formally or tacitly cooperate (such as forming a cartel) to eliminate competition and coordinate pricing and output to maximize joint industry profits. In non-collusive oligopolies, firms make decisions independently, competing directly with rivals.",
+      "sourceReference": "Section 4.4, Pages 83-84"
+    },
+    {
+      "id": "ECO-G10-U04-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Suppose a perfectly competitive farmer sells 100 quintals of wheat at the market price of Birr 200 per quintal. If the farmer expands output and sells 101 quintals at the ruling market price, what are the farmer's Average Revenue (AR) and Marginal Revenue (MR) for the 101st quintal?",
+      "options": [
+        {
+          "id": "A",
+          "text": "AR = Birr 200; MR = Birr 20,200"
+        },
+        {
+          "id": "B",
+          "text": "AR = Birr 200; MR = Birr 200"
+        },
+        {
+          "id": "C",
+          "text": "AR = Birr 202; MR = Birr 100"
+        },
+        {
+          "id": "D",
+          "text": "AR = Birr 100; MR = Birr 0"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Because a perfectly competitive firm is a price taker, price equals average revenue and marginal revenue (P = AR = MR). At P = Birr 200: TR for 100 units = 20,000; TR for 101 units = 20,200. MR = ΔTR / ΔQ = (20,200 - 20,000) / 1 = Birr 200, and AR = TR / Q = 200.",
+      "sourceReference": "Section 4.1, Pages 72-73"
+    },
+    {
+      "id": "ECO-G10-U04-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A pure monopolist faces the linear market demand function P = 100 - 2Q, where P is unit price in Birr and Q is output in units. What are the firm's Total Revenue (TR) and Marginal Revenue (MR) functions?",
+      "options": [
+        {
+          "id": "A",
+          "text": "TR = 100Q - 2Q²; MR = 100 - 4Q"
+        },
+        {
+          "id": "B",
+          "text": "TR = 100 - 2Q²; MR = 100 - 2Q"
+        },
+        {
+          "id": "C",
+          "text": "TR = 100Q - 4Q²; MR = 100 - 2Q"
+        },
+        {
+          "id": "D",
+          "text": "TR = 50Q - Q²; MR = 50 - 2Q"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Total Revenue is TR = P * Q = (100 - 2Q) * Q = 100Q - 2Q². Marginal Revenue is the rate of change of total revenue with respect to output: MR = d(TR)/dQ = 100 - 4Q, showing that the slope of the linear MR curve is twice the slope of the demand curve.",
+      "sourceReference": "Section 4.2, Pages 76-77"
+    },
+    {
+      "id": "ECO-G10-U04-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Consider a profit-maximizing firm in a monopolistically competitive industry. At its current output of 500 units, the firm's Marginal Revenue equals Marginal Cost (MR = MC = Birr 15). At this output level, its Average Revenue is Birr 25 and its Average Total Cost is Birr 18. What is the firm's economic profit, and what long-run adjustment will occur?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Economic profit is Birr 3,500; existing firms will shut down immediately."
+        },
+        {
+          "id": "B",
+          "text": "Economic profit is Birr 5,000; the firm will exit the market in the long run."
+        },
+        {
+          "id": "C",
+          "text": "Economic profit is Birr 3,500; new rival firms will enter the industry, shifting the firm's perceived demand curve leftward until only normal profits remain."
+        },
+        {
+          "id": "D",
+          "text": "Economic profit is zero; the industry is already in long-run equilibrium."
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Economic profit = (P - ATC) * Q = (25 - 18) * 500 = Birr 3,500 (supernormal profit). In monopolistic competition, free entry allows new firms attracted by profits to enter the industry. Entry increases substitute varieties, shifting existing firms' demand curves leftward until P = ATC and economic profits fall to zero (normal profit).",
+      "sourceReference": "Section 4.3, Pages 80-82"
+    },
+    {
+      "id": "ECO-G10-U04-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Why is pure monopoly generally considered economically less desirable than a perfectly competitive market from a social welfare perspective?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Monopolists always produce where marginal cost is negative, leading to excessive overproduction."
+        },
+        {
+          "id": "B",
+          "text": "Under monopoly, the profit-maximizing price exceeds marginal cost (P > MC), causing allocative inefficiency, deadweight loss, and output restriction."
+        },
+        {
+          "id": "C",
+          "text": "A monopolist is forced by market competition to sell only standardized homogeneous goods."
+        },
+        {
+          "id": "D",
+          "text": "Monopoly firms face perfectly elastic demand curves that prevent price adjustments."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In pure competition, allocative efficiency is achieved because price equals marginal cost (P = MC). A monopolist restricts output and sets price above marginal cost (P > MC), leading to an underallocation of resources, higher consumer prices, lower output, and deadweight social welfare loss.",
+      "sourceReference": "Section 4.1 & Section 4.2, Pages 72, 77-78, 85"
+    }
+  ]
 }

@@ -3,5 +3,411 @@
   "subject": "Economics",
   "unitNumber": 6,
   "unitTitle": "Economic Growth",
-  "questions": []
+  "questions": [
+    {
+      "id": "ECO-G10-U06-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In macroeconomics, how is economic growth formally defined?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The statutory minimum wage established by federal labour proclamations"
+        },
+        {
+          "id": "B",
+          "text": "The amount by which the total output or real output within an economy increases over a given time period, usually a year"
+        },
+        {
+          "id": "C",
+          "text": "The accumulation of foreign currency reserves in the central bank's vaults"
+        },
+        {
+          "id": "D",
+          "text": "The periodic fluctuation of market interest rates across commercial banks"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Economic growth is defined as the amount by which the level of output (real gross domestic product) within an economy increases over a given time period, usually a year, indicating that the economy is producing more goods and services.",
+      "sourceReference": "Section 6.1, Page 116 & Section 6.2, Page 118"
+    },
+    {
+      "id": "ECO-G10-U06-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which of the following mathematical formulas is used to calculate a country's Per Capita Real Gross Domestic Product (Per Capita Income)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Per Capita RGDP = Total Population / Nominal GDP"
+        },
+        {
+          "id": "B",
+          "text": "Per Capita RGDP = RGDP of the given year / Total Population of that year"
+        },
+        {
+          "id": "C",
+          "text": "Per Capita RGDP = (RGDP_t - RGDP_{t-1}) / RGDP_{t-1} * 100%"
+        },
+        {
+          "id": "D",
+          "text": "Per Capita RGDP = RGDP * GDP Deflator"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Per capita real GDP, also referred to as per capita income, measures average output per person and is computed by dividing the Real Gross Domestic Product of a given year by the total population of that country in the same year.",
+      "sourceReference": "Section 6.2, Page 118"
+    },
+    {
+      "id": "ECO-G10-U06-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "How do economists fundamentally distinguish 'economic growth' from 'economic development'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Economic growth applies strictly to socialist nations, while economic development applies only to capitalist nations."
+        },
+        {
+          "id": "B",
+          "text": "Economic growth is a quantitative increase in GDP or per capita output, whereas economic development is a broader multidimensional process involving structural, institutional, and social transformation."
+        },
+        {
+          "id": "C",
+          "text": "Economic growth measures environmental sustainability, while economic development measures only physical infrastructure."
+        },
+        {
+          "id": "D",
+          "text": "There is no difference; economic growth and economic development are identical synonyms in modern economics."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Growth refers specifically to the quantitative rate of increase in GDP or per capita GDP. In contrast, development is a much broader, qualitative concept entailing progressive changes in social, political, institutional, and economic structures. Growth is a necessary, but not sufficient, condition for development.",
+      "sourceReference": "Section 6.2, Page 119"
+    },
+    {
+      "id": "ECO-G10-U06-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "According to the productivity model presented in the Grade 10 Economics textbook, what are the four primary determinants of a nation's labor productivity?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Tax rates, tariff schedules, import quotas, and budget subsidies"
+        },
+        {
+          "id": "B",
+          "text": "Physical capital, human capital, natural resources, and technological knowledge"
+        },
+        {
+          "id": "C",
+          "text": "Money supply, inflation rate, discount window, and reserve ratios"
+        },
+        {
+          "id": "D",
+          "text": "Commercial paper, corporate bonds, mutual funds, and treasury bills"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Using the analogy of a Robinson Crusoe economy, the textbook identifies four core determinants of productivity: physical capital per worker, human capital per worker, natural resources per worker, and technological knowledge.",
+      "sourceReference": "Section 6.3.2, Pages 123-124"
+    },
+    {
+      "id": "ECO-G10-U06-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which phase of the business cycle represents the lowest turning point of economic activity, characterized by widespread unemployment, idle industrial capacity, and depressed consumer demand?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Peak / Boom"
+        },
+        {
+          "id": "B",
+          "text": "Expansion / Recovery"
+        },
+        {
+          "id": "C",
+          "text": "Trough / Depression"
+        },
+        {
+          "id": "D",
+          "text": "Trend line"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The trough (or depression) represents the lowest point of the business cycle, where total output, investment, employment, and incomes sink to their lowest levels, leaving substantial idle capacity before the recovery phase commences.",
+      "sourceReference": "Section 6.5, Pages 129-130"
+    },
+    {
+      "id": "ECO-G10-U06-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In the macroeconomic analysis of long-run economic growth, what structural changes typically accompany a sustained increase in per capita income?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A permanent expansion in the share of agriculture in both GDP and total employment"
+        },
+        {
+          "id": "B",
+          "text": "A decline in the relative share of agriculture in both GDP and the labor force, accompanied by an increase in the shares of the industrial and service sectors"
+        },
+        {
+          "id": "C",
+          "text": "A transition to a pure barter exchange mechanism across all domestic markets"
+        },
+        {
+          "id": "D",
+          "text": "A complete cessation of technological innovation in manufacturing"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Long-run economic growth requires sustained increases in per capita output accompanied by structural economic transformation—specifically industrialization, whereby the share of agriculture in GDP and total workforce declines while the shares of the industrial and service sectors increase.",
+      "sourceReference": "Section 6.2, Page 118"
+    },
+    {
+      "id": "ECO-G10-U06-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Early neoclassical growth theory predicted that poorer countries would grow faster than rich countries and eventually catch up due to diminishing returns to capital in advanced nations. Why did Keefer and Knack (1997) argue that poor countries have instead fallen behind?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Poor countries have completely exhausted their domestic stocks of natural resources."
+        },
+        {
+          "id": "B",
+          "text": "Poor countries suffer from deficient institutional environments, characterized by weak rule of law, pervasive corruption, and the risk of expropriation and contract repudiation."
+        },
+        {
+          "id": "C",
+          "text": "Rich nations legally prohibit the export of modern agricultural machinery to developing countries."
+        },
+        {
+          "id": "D",
+          "text": "Poor countries maintain excessively high domestic saving rates that dampen consumption."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Keefer and Knack (1997) showed that the failure of poor countries to catch up with rich countries stems from deficient institutional environments—specifically a lack of institutional quality, absence of the rule of law, pervasive corruption, and the high risk of property expropriation and contract repudiation.",
+      "sourceReference": "Section 6.3, Page 120"
+    },
+    {
+      "id": "ECO-G10-U06-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How do economists analytically distinguish between 'human capital' and 'technological knowledge' as drivers of national productivity?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Technological knowledge is society's understanding of the best ways to produce goods and services, whereas human capital is the stock of skills, education, and health embodied in the workforce to apply that understanding."
+        },
+        {
+          "id": "B",
+          "text": "Human capital consists of physical tools and tractors, whereas technological knowledge consists of uneducated manual laborers."
+        },
+        {
+          "id": "C",
+          "text": "Technological knowledge is owned exclusively by the central government, while human capital is owned by foreign multinational corporations."
+        },
+        {
+          "id": "D",
+          "text": "Human capital is a non-renewable natural resource, while technological knowledge is a renewable resource."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Technological knowledge refers to society's collective understanding of the best recipes, blueprints, and methods to produce goods and services. Human capital refers to the resources spent conveying that understanding to the labor force through schooling, on-the-job training, and healthcare.",
+      "sourceReference": "Section 6.3.2, Pages 123-124"
+    },
+    {
+      "id": "ECO-G10-U06-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Nobel Laureate Simon Kuznets identified several core characteristics that distinguish modern economic growth from pre-modern eras. Which of the following is NOT one of Kuznets's identified characteristics?",
+      "options": [
+        {
+          "id": "A",
+          "text": "High rates of increase in per capita product and population"
+        },
+        {
+          "id": "B",
+          "text": "High rates of increase in total factor productivity"
+        },
+        {
+          "id": "C",
+          "text": "A permanent shift of labor away from urban manufacturing into rural subsistence farming"
+        },
+        {
+          "id": "D",
+          "text": "Increasing application of modern scientific knowledge and technology to the production process"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Simon Kuznets identified high rates of growth in per capita output, high factor productivity, structural transformation (moving from agriculture to industry and services, and from rural to urban areas), and the widespread application of modern scientific knowledge. Reverting to subsistence farming contradicts modern economic growth.",
+      "sourceReference": "Section 6.3.3, Pages 125-126"
+    },
+    {
+      "id": "ECO-G10-U06-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which of the following represents a significant limitation of relying on Gross Domestic Product (GDP) as a comprehensive measure of human wellbeing?",
+      "options": [
+        {
+          "id": "A",
+          "text": "GDP counts government purchases of infrastructure at factor cost rather than market value."
+        },
+        {
+          "id": "B",
+          "text": "GDP fails to account for environmental degradation and pollution, the value of leisure time, non-market household production, and the distribution of income among citizens."
+        },
+        {
+          "id": "C",
+          "text": "GDP strictly excludes all consumer expenditures on durable manufactured goods."
+        },
+        {
+          "id": "D",
+          "text": "GDP cannot be expressed in constant base-year currency prices."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "GDP measures market output but omits crucial welfare factors: it ignores the deterioration of air and water quality caused by pollution, excludes non-market transactions (e.g., unpaid domestic work and volunteer services), omits the underground economy, and says nothing about whether income is distributed equitably.",
+      "sourceReference": "Section 6.4, Pages 127-128"
+    },
+    {
+      "id": "ECO-G10-U06-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "During the 'Boom' or 'Peak' phase of the business cycle, what typical combination of economic conditions is observed in an economy?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Falling output, sharp rises in cyclical unemployment, and falling prices"
+        },
+        {
+          "id": "B",
+          "text": "Rising aggregate demand, high business investment, expanding employment, rising incomes, and upward pressure on prices"
+        },
+        {
+          "id": "C",
+          "text": "Zero capacity utilization and mass liquidation of commercial banks"
+        },
+        {
+          "id": "D",
+          "text": "Total real GDP permanently falling below the long-term potential growth trend"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The boom (peak) phase is characterized by brisk economic activity: rising demand, expanding production, increased investment fueled by optimistic business expectations, high employment, rising purchasing power, and potential inflationary pressures.",
+      "sourceReference": "Section 6.5, Pages 129-130"
+    },
+    {
+      "id": "ECO-G10-U06-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Suppose that in a developing economy, Real GDP in 2021 was Birr 2,500 billion and in 2022 it increased to Birr 2,700 billion. Over the same period, the national population grew from 100 million to 104 million. What was the economic growth rate of Real GDP, and what was the approximate growth rate of Per Capita Real GDP?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Real GDP growth = 8.00%; Per Capita Real GDP growth ≈ 3.85%"
+        },
+        {
+          "id": "B",
+          "text": "Real GDP growth = 7.41%; Per Capita Real GDP growth ≈ 4.00%"
+        },
+        {
+          "id": "C",
+          "text": "Real GDP growth = 8.00%; Per Capita Real GDP growth ≈ 8.00%"
+        },
+        {
+          "id": "D",
+          "text": "Real GDP growth = 4.00%; Per Capita Real GDP growth ≈ 2.50%"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Real GDP growth rate g = [(2,700 - 2,500) / 2,500] * 100% = (200 / 2,500) * 100% = 8.00%. Per capita RGDP in 2021 was 2,500 billion / 100 million = Birr 25,000. In 2022, per capita RGDP was 2,700 billion / 104 million ≈ Birr 25,961.54. Growth rate of per capita RGDP = [(25,961.54 - 25,000) / 25,000] * 100% ≈ 3.85% (which roughly matches the approximation: 8% GDP growth - 4% population growth ≈ 4%).",
+      "sourceReference": "Section 6.2, Page 118"
+    },
+    {
+      "id": "ECO-G10-U06-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Consider two hypothetical nations, Country X and Country Y, each reporting an identical Real GDP per capita of $40,000. In Country X, national income is distributed relatively evenly across all quintiles. In Country Y, the top 10% of households receive 90% of total income, while the remaining 90% survive at subsistence levels. What does this comparison illustrate regarding the limitation of per capita GDP?",
+      "options": [
+        {
+          "id": "A",
+          "text": "GDP per capita is an ordinal ranking that cannot be compared across different nations."
+        },
+        {
+          "id": "B",
+          "text": "Per capita GDP is an arithmetic mean that conceals extreme disparities in the personal/size distribution of income and fails to reflect the standard of living of the typical citizen."
+        },
+        {
+          "id": "C",
+          "text": "Country Y must have an inflation rate that is ten times higher than that of Country X."
+        },
+        {
+          "id": "D",
+          "text": "Country X is operating in a deep depression while Country Y is experiencing a business cycle peak."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Section 6.4 emphasizes that GDP per capita tells us what happens to the mathematical average person, but hides large variations in personal experiences. A country where a wealthy minority captures nearly all income exhibits the same average GDP per capita as an egalitarian society, obscuring widespread poverty behind the aggregate average.",
+      "sourceReference": "Section 6.4, Pages 127-128"
+    },
+    {
+      "id": "ECO-G10-U06-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Why do contemporary economists argue that the term 'business cycle' is somewhat misleading when describing real-world macroeconomic fluctuations?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because macroeconomic fluctuations occur only in communist economies, not market-based business economies."
+        },
+        {
+          "id": "B",
+          "text": "Because the word 'cycle' implies that economic fluctuations follow a regular, predictable, and periodic rhythm, whereas actual fluctuations are irregular, variable in duration, and practically impossible to forecast with precision."
+        },
+        {
+          "id": "C",
+          "text": "Because central banks have permanently eliminated the occurrence of recessions through open market operations."
+        },
+        {
+          "id": "D",
+          "text": "Because output and employment move in opposite directions during expansions and contractions."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "As noted in Section 6.5, the term 'business cycle' is misleading because it implies that fluctuations repeat in a regular, clockwork pattern. In reality, economic fluctuations are not regular, vary widely in duration and severity, and are virtually impossible to predict accurately.",
+      "sourceReference": "Section 6.5, Page 129"
+    },
+    {
+      "id": "ECO-G10-U06-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Historical data on long-run global economic growth (such as the century-long comparison in Table 6.1 of the textbook) demonstrates that Japan's average annual growth of 2.71% enabled it to transform from a poorer nation in 1890 into an industrial superpower, whereas the United Kingdom lagged with a growth rate of 1.47%. What key economic principle does this historical divergence demonstrate?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Small differences in annual compound growth rates sustained over a century lead to massive differences in national income and living standards."
+        },
+        {
+          "id": "B",
+          "text": "Rich nations are guaranteed to maintain their global economic dominance indefinitely regardless of productivity trends."
+        },
+        {
+          "id": "C",
+          "text": "Natural resource abundance is the sole determinant of whether an economy expands or contracts over time."
+        },
+        {
+          "id": "D",
+          "text": "A nation's standard of living is completely decoupled from its physical and human capital per worker."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Because of compounding over long horizons, even a small difference of 1% to 1.5% in average annual economic growth generates monumental differences in real GDP per person over decades. Japan's 2.71% annual growth propelled it past nations that were far richer in 1890, illustrating the transformative power of sustained productivity growth.",
+      "sourceReference": "Section 6.3.1, Pages 121-123"
+    }
+  ]
 }

@@ -3,5 +3,411 @@
   "subject": "Economics",
   "unitNumber": 3,
   "unitTitle": "National Income Accounting",
-  "questions": []
+  "questions": [
+    {
+      "id": "ECO-G11-U03-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In macroeconomics, how is Gross Domestic Product (GDP) formally defined?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The total market value of all final goods and services produced annually by the citizens of a country, regardless of where their resources are located"
+        },
+        {
+          "id": "B",
+          "text": "The total market value of all final goods and services produced annually within a country's geographic borders, regardless of resource ownership"
+        },
+        {
+          "id": "C",
+          "text": "The accumulated stock of physical wealth and monetary gold stored in commercial bank vaults"
+        },
+        {
+          "id": "D",
+          "text": "The gross value of intermediate transactions carried out between domestic manufacturing firms"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Section 3.2.1 of the Grade 11 textbook defines Gross Domestic Product (GDP) as the total market value of all final goods and services produced annually within a country's geographic borders during a specific period, irrespective of whether the production is owned by domestic citizens or foreigners.",
+      "sourceReference": "Section 3.2.1, Pages 70-71"
+    },
+    {
+      "id": "ECO-G11-U03-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In macroeconomic theory, why is GDP classified as a 'flow' variable rather than a 'stock' variable?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because it measures total accumulated wealth built up over past decades"
+        },
+        {
+          "id": "B",
+          "text": "Because it represents a quantity of new production measured per unit of time (such as annually), rather than an accumulated total measured at a single point in time"
+        },
+        {
+          "id": "C",
+          "text": "Because it fluctuates unpredictably based on seasonal weather patterns"
+        },
+        {
+          "id": "D",
+          "text": "Because it accounts only for cash circulating outside the commercial banking system"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "A stock is a quantity measured at a specific point in time (e.g., national debt or wealth), whereas a flow is a quantity measured per unit of time (e.g., GDP, income, or investment). GDP is a flow because it measures the value of new goods and services produced over a year.",
+      "sourceReference": "Section 3.2.2, Page 71 (Table 3.1)"
+    },
+    {
+      "id": "ECO-G11-U03-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which accounting approach calculates GDP by summing household consumption (C), business investment (I), government purchases (G), and net exports (NX)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The income approach"
+        },
+        {
+          "id": "B",
+          "text": "The value-added approach"
+        },
+        {
+          "id": "C",
+          "text": "The expenditure approach"
+        },
+        {
+          "id": "D",
+          "text": "The factor cost approach"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The expenditure approach measures GDP by adding together the market value of all expenditures on final goods and services produced in the economy: GDP = C + I + G + NX.",
+      "sourceReference": "Section 3.3.1, Pages 72-74 & EUEE 2018 Round 1, Q22"
+    },
+    {
+      "id": "ECO-G11-U03-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is the primary reason why intermediate goods are strictly excluded when computing national income and GDP?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Intermediate goods do not have a determinable monetary market price."
+        },
+        {
+          "id": "B",
+          "text": "To prevent the problem of double counting, which would artificially overestimate the true value of total production."
+        },
+        {
+          "id": "C",
+          "text": "Intermediate goods are consumed entirely by public government agencies."
+        },
+        {
+          "id": "D",
+          "text": "Intermediate goods represent foreign transactions that belong exclusively to the capital account."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Intermediate goods are inputs used to produce final goods. If intermediate transactions were counted alongside final products (such as counting both wheat flour and the bread made from it), their value would be counted more than once, leading to an overestimation of GDP.",
+      "sourceReference": "Section 3.3.1, Pages 72-73"
+    },
+    {
+      "id": "ECO-G11-U03-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "How is Net Domestic Product (NDP) derived from Gross Domestic Product (GDP)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "NDP = GDP + Net Factor Income from Abroad"
+        },
+        {
+          "id": "B",
+          "text": "NDP = GDP - Capital Consumption Allowance (Depreciation)"
+        },
+        {
+          "id": "C",
+          "text": "NDP = GDP - Personal Income Taxes"
+        },
+        {
+          "id": "D",
+          "text": "NDP = GDP + Indirect Business Taxes"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Net Domestic Product (NDP) is the output of final goods and services after deducting the capital worn out or consumed in the production process: NDP = GDP - Capital Consumption Allowance (Depreciation).",
+      "sourceReference": "Section 3.6, Page 83"
+    },
+    {
+      "id": "ECO-G11-U03-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How is Gross National Product (GNP) mathematically related to Gross Domestic Product (GDP)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "GNP = GDP - Indirect Business Taxes + Subsidies"
+        },
+        {
+          "id": "B",
+          "text": "GNP = GDP + Net Foreign Factor Income (NFFI)"
+        },
+        {
+          "id": "C",
+          "text": "GNP = GDP - Depreciation of Fixed Capital Assets"
+        },
+        {
+          "id": "D",
+          "text": "GNP = GDP + Personal Saving - Household Consumption"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "GNP measures output produced by factors of production owned by a nation's citizens regardless of location. It is related to GDP by: GNP = GDP + Net Foreign Factor Income (NFFI), where NFFI equals factor receipts from abroad minus factor payments made to abroad.",
+      "sourceReference": "Section 3.2.2, Page 71"
+    },
+    {
+      "id": "ECO-G11-U03-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In a completely closed economy with zero foreign trade and zero cross-border factor payments, what is the exact relationship between GDP and GNP?",
+      "options": [
+        {
+          "id": "A",
+          "text": "GNP must be strictly greater than GDP."
+        },
+        {
+          "id": "B",
+          "text": "GNP must be strictly less than GDP."
+        },
+        {
+          "id": "C",
+          "text": "GNP is equal to GDP because Net Factor Income from abroad is zero."
+        },
+        {
+          "id": "D",
+          "text": "Both GDP and GNP become mathematically zero."
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Because GNP = GDP + NFFI, if an economy is closed and has no interaction with the rest of the world, factor income received from abroad and factor income paid to foreigners are both zero (NFFI = 0). Consequently, GDP = GNP.",
+      "sourceReference": "Section 3.2.2, Page 71 & EUEE 2017 EC, Q3"
+    },
+    {
+      "id": "ECO-G11-U03-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "When computing GDP using the income approach, why are indirect business taxes (such as VAT and sales taxes) and depreciation added to national factor income?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because they represent direct cash transfer payments distributed to households"
+        },
+        {
+          "id": "B",
+          "text": "Because they represent non-factor business costs that are included in the final market price paid by buyers but do not accrue as factor income to resource owners"
+        },
+        {
+          "id": "C",
+          "text": "Because depreciation is paid directly as corporate dividends to equity shareholders"
+        },
+        {
+          "id": "D",
+          "text": "Because factor payments exclude all wages and salaries paid to industrial labor"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "National income measures the factor returns earned by owners of land, labor, and capital. However, market prices also include indirect business taxes (which go to the government) and capital depreciation (cost of maintaining capital assets). To match the market valuation of output, these two non-factor cost items must be added back.",
+      "sourceReference": "Section 3.3.2, Pages 75-76"
+    },
+    {
+      "id": "ECO-G11-U03-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In measuring GDP using the product or value-added approach, how is the 'value added' at each production stage determined?",
+      "options": [
+        {
+          "id": "A",
+          "text": "By multiplying total sales revenue by the prevailing statutory rate of corporate profit tax"
+        },
+        {
+          "id": "B",
+          "text": "By calculating the difference between the sales value of the firm's output and the purchase cost of intermediate goods used up in production"
+        },
+        {
+          "id": "C",
+          "text": "By adding the total wages paid to labor to the accumulated book value of fixed assets"
+        },
+        {
+          "id": "D",
+          "text": "By dividing total production volume by the number of labor hours worked"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Under the value-added approach, value added at any stage of production is defined as the monetary value of output minus the cost of intermediate inputs purchased from other firms. Summing value added across all firms yields GDP without double counting.",
+      "sourceReference": "Section 3.3.3, Pages 75-76 & EUEE 2018 Round 1, Q23"
+    },
+    {
+      "id": "ECO-G11-U03-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How do economists analytically distinguish Real GDP from Nominal GDP when comparing national output over time?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Nominal GDP values output using constant base-year prices, while Real GDP uses current market prices."
+        },
+        {
+          "id": "B",
+          "text": "Nominal GDP values output using current market prices, whereas Real GDP values output using constant base-year prices to isolate changes in physical volume from price inflation."
+        },
+        {
+          "id": "C",
+          "text": "Nominal GDP accounts for informal black-market transactions, whereas Real GDP excludes exports."
+        },
+        {
+          "id": "D",
+          "text": "Real GDP is derived only through the income approach, while Nominal GDP is derived via the expenditure approach."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Nominal GDP values goods and services at current prices, so it can rise simply because prices increase. Real GDP evaluates current production using constant prices from a chosen base year, reflecting solely changes in physical output.",
+      "sourceReference": "Section 3.5.1, Pages 80-81 & EUEE 2018 Round 1, Q24"
+    },
+    {
+      "id": "ECO-G11-U03-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which of the following is a key difference between the GDP deflator and the Consumer Price Index (CPI)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The GDP deflator reflects the prices of all domestically produced goods and services (including capital equipment and government purchases), whereas the CPI reflects the prices of a fixed basket of goods and services purchased by typical consumers, including imports."
+        },
+        {
+          "id": "B",
+          "text": "The CPI measures only domestically manufactured capital machinery, while the GDP deflator measures only agricultural crops."
+        },
+        {
+          "id": "C",
+          "text": "The GDP deflator is always computed using a fixed, unchanging basket of goods across decades."
+        },
+        {
+          "id": "D",
+          "text": "Imported goods are reflected in the GDP deflator but completely excluded from the CPI."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The GDP deflator covers all domestically produced final goods and services (consumer goods, capital goods, and government purchases) and allows its basket to change over time, but excludes imports. The CPI is based on a fixed consumer basket and includes imported consumer items.",
+      "sourceReference": "Section 3.5.2, Pages 82-83"
+    },
+    {
+      "id": "ECO-G11-U03-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A national economy's statistical agency compiles the following annual national accounts data (in millions of Birr):\n- Gross Domestic Product (GDP) = 1,200\n- Capital Consumption Allowance (Depreciation) = 120\n- Undistributed Corporate Profits = 60\n- Corporate Profit Taxes = 50\n- Social Security (Insurance) Taxes = 40\n- Government and NGO Transfer Payments = 70\n- Personal Income Taxes = 90\nAssuming that National Income equals Net Domestic Product (NDP), what are the Personal Income (PI) and Disposable Personal Income (DPI)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Personal Income = 1,000 million Birr; Disposable Personal Income = 910 million Birr"
+        },
+        {
+          "id": "B",
+          "text": "Personal Income = 1,180 million Birr; Disposable Personal Income = 1,090 million Birr"
+        },
+        {
+          "id": "C",
+          "text": "Personal Income = 1,080 million Birr; Disposable Personal Income = 990 million Birr"
+        },
+        {
+          "id": "D",
+          "text": "Personal Income = 950 million Birr; Disposable Personal Income = 860 million Birr"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "1. NDP = GDP - Depreciation = 1,200 - 120 = 1,080 million Birr (National Income).\n2. Personal Income (PI) = National Income - Undistributed Profits - Corporate Taxes - Social Security Taxes + Transfer Payments = 1,080 - 60 - 50 - 40 + 70 = 1,000 million Birr.\n3. Disposable Personal Income (DPI) = PI - Personal Taxes = 1,000 - 90 = 910 million Birr.",
+      "sourceReference": "Section 3.6, Pages 83-84"
+    },
+    {
+      "id": "ECO-G11-U03-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Consider a hypothetical economy producing only two commodities, wheat and automobiles, with production and price data for two years as follows:\n- Year 2000 (Base Year): Price of wheat = Birr 1,000 per ton, Quantity = 2,000 tons; Price of automobile = Birr 80,000, Quantity = 1,000 cars\n- Year 2021: Price of wheat = Birr 2,000 per ton, Quantity = 2,400 tons; Price of automobile = Birr 300,000, Quantity = 1,500 cars\nWhat are the Nominal GDP for 2021, the Real GDP for 2021, and the GDP Deflator for 2021?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Nominal GDP = Birr 454.8 million; Real GDP = Birr 122.4 million; GDP Deflator ≈ 371.6"
+        },
+        {
+          "id": "B",
+          "text": "Nominal GDP = Birr 82.0 million; Real GDP = Birr 82.0 million; GDP Deflator = 100.0"
+        },
+        {
+          "id": "C",
+          "text": "Nominal GDP = Birr 122.4 million; Real GDP = Birr 454.8 million; GDP Deflator ≈ 26.9"
+        },
+        {
+          "id": "D",
+          "text": "Nominal GDP = Birr 454.8 million; Real GDP = Birr 82.0 million; GDP Deflator ≈ 554.6"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "1. Nominal GDP (2021) = (2,000 * 2,400) + (300,000 * 1,500) = 4,800,000 + 450,000,000 = Birr 454,800,000 (454.8 million).\n2. Real GDP (2021 at 2000 prices) = (1,000 * 2,400) + (80,000 * 1,500) = 2,400,000 + 120,000,000 = Birr 122,400,000 (122.4 million).\n3. GDP Deflator = (Nominal GDP / Real GDP) * 100 = (454,800,000 / 122,400,000) * 100 ≈ 371.57.",
+      "sourceReference": "Section 3.5.2, Pages 81-82 & Review Questions (Part III Work Out), Page 88"
+    },
+    {
+      "id": "ECO-G11-U03-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A typical household consumes a market basket of 10 units of bananas and 3 units of coffee. Data on unit prices across two years are:\n- Base Year: Price of banana = Birr 12; Price of coffee = Birr 60\n- Current Year: Price of banana = Birr 15; Price of coffee = Birr 85\nWhat is the Consumer Price Index (CPI) for the current year, and what is the inflation rate relative to the base year?",
+      "options": [
+        {
+          "id": "A",
+          "text": "CPI = 120.0; Inflation rate = 20.0%"
+        },
+        {
+          "id": "B",
+          "text": "CPI = 135.0; Inflation rate = 35.0%"
+        },
+        {
+          "id": "C",
+          "text": "CPI = 145.0; Inflation rate = 45.0%"
+        },
+        {
+          "id": "D",
+          "text": "CPI = 115.5; Inflation rate = 15.5%"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "1. Base-year basket cost = (10 * 12) + (3 * 60) = 120 + 180 = Birr 300.\n2. Current-year basket cost = (10 * 15) + (3 * 85) = 150 + 255 = Birr 405.\n3. CPI = (Current cost / Base cost) * 100 = (405 / 300) * 100 = 135.0.\n4. Inflation rate = ((135 - 100) / 100) * 100% = 35.0%.",
+      "sourceReference": "Section 3.5.2, Pages 82-83"
+    },
+    {
+      "id": "ECO-G11-U03-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "In a developing agrarian economy like Ethiopia, why do conventional GDP measurements tend to systematically understate the actual volume of economic activity and aggregate welfare?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because national accounts deliberately overvalue all government infrastructure investments"
+        },
+        {
+          "id": "B",
+          "text": "Because a substantial portion of production occurs in subsistence agriculture for own-family consumption, alongside large informal and unpaid household sectors that bypass formal organized markets"
+        },
+        {
+          "id": "C",
+          "text": "Because indirect sales taxes and value-added taxes are counted multiple times across retail distribution"
+        },
+        {
+          "id": "D",
+          "text": "Because export earnings are deducted twice when calculating net trade balance"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "As detailed in Section 3.4 of the Grade 11 textbook, GDP relies on market transactions. In developing countries, significant economic activity takes place in subsistence agriculture (food produced and consumed by rural families without entering the market), the informal/underground economy, and unpaid domestic labor, meaning official GDP figures understate total real production.",
+      "sourceReference": "Section 3.4, Pages 78-79 & Section 3.7, Page 86"
+    }
+  ]
 }

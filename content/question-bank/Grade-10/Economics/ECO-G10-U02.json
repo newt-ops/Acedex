@@ -3,5 +3,411 @@
   "subject": "Economics",
   "unitNumber": 2,
   "unitTitle": "Theories of Demand and Supply",
-  "questions": []
+  "questions": [
+    {
+      "id": "ECO-G10-U02-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In economics, how is the concept of demand formally defined?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The subjective desire of an individual to possess a product regardless of price"
+        },
+        {
+          "id": "B",
+          "text": "The total physical volume of goods held in factory warehouses for future release"
+        },
+        {
+          "id": "C",
+          "text": "The ability and willingness to buy a specific quantity of a commodity at prevailing prices over a given period of time"
+        },
+        {
+          "id": "D",
+          "text": "The statutory quota mandated by the government for essential household consumer goods"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Demand implies a desire to acquire a commodity backed by the willingness and the ability to pay for it at prevailing prices during a given period of time (Demand = Willingness to buy + Ability to pay).",
+      "sourceReference": "Section 2.1, Page 18"
+    },
+    {
+      "id": "ECO-G10-U02-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In the analysis of demand, what is the graphical distinction between a 'change in quantity demanded' and a 'change in demand'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A change in quantity demanded is a shift of the entire curve, while a change in demand is a movement along the curve."
+        },
+        {
+          "id": "B",
+          "text": "A change in quantity demanded is a movement along a fixed demand curve caused by a price change, whereas a change in demand is a shift of the entire curve caused by non-price factors."
+        },
+        {
+          "id": "C",
+          "text": "Both terms describe identical horizontal movements caused exclusively by consumer income changes."
+        },
+        {
+          "id": "D",
+          "text": "A change in quantity demanded is caused by changes in population, while a change in demand is caused only by supply shocks."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "A change in quantity demanded designates a movement from one point to another along a fixed demand curve caused solely by a change in the product's own price. A change in demand refers to an inward or outward shift of the entire curve caused by changes in other determinants (tastes, income, prices of related goods, etc.).",
+      "sourceReference": "Section 2.1, Pages 20-21"
+    },
+    {
+      "id": "ECO-G10-U02-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "The Law of Supply states that, holding other factors constant (ceteris paribus):",
+      "options": [
+        {
+          "id": "A",
+          "text": "there is an inverse relationship between product price and the quantity suppliers offer for sale"
+        },
+        {
+          "id": "B",
+          "text": "producers offer more of a commodity for sale as its unit price rises in the market"
+        },
+        {
+          "id": "C",
+          "text": "the quantity supplied remains unaffected by fluctuations in market prices"
+        },
+        {
+          "id": "D",
+          "text": "higher production costs automatically shift the individual supply curve downward to the right"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The Law of Supply expresses the direct (positive) relationship between price and quantity supplied: as the price of a good rises, suppliers are willing and able to make greater quantities available in the market, ceteris paribus.",
+      "sourceReference": "Section 2.2, Pages 24-25"
+    },
+    {
+      "id": "ECO-G10-U02-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "When the prevailing market price of a good is above its equilibrium price level, what market disequilibrium condition occurs?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Excess demand (shortage), which puts upward pressure on the price"
+        },
+        {
+          "id": "B",
+          "text": "A state of rest where neither price nor quantity will adjust"
+        },
+        {
+          "id": "C",
+          "text": "Excess supply (surplus), which induces sellers to bid the price downward"
+        },
+        {
+          "id": "D",
+          "text": "A complete cessation of all commercial exchange transactions"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "At any price above the equilibrium price, quantity supplied exceeds quantity demanded, creating a market surplus (excess supply). To clear their unsold inventories, competing sellers bid the market price down towards equilibrium.",
+      "sourceReference": "Section 2.3, Pages 30-31"
+    },
+    {
+      "id": "ECO-G10-U02-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "If the cross-price elasticity of demand between good X and good Y is negative, the two goods are classified as:",
+      "options": [
+        {
+          "id": "A",
+          "text": "substitute goods"
+        },
+        {
+          "id": "B",
+          "text": "complementary goods"
+        },
+        {
+          "id": "C",
+          "text": "independent goods"
+        },
+        {
+          "id": "D",
+          "text": "inferior goods"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "When cross-price elasticity of demand is negative, an increase in the price of one good causes a decrease in the demand for the other, indicating that the two goods 'go together' as complementary goods (such as phone and SIM card, or tea and sugar).",
+      "sourceReference": "Section 2.4, Pages 41-42"
+    },
+    {
+      "id": "ECO-G10-U02-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Suppose the individual demand equation for a consumer in a competitive market is given by Qi = 40 - 4P. If there are 80 identical consumers in this market, what is the resulting market demand equation (Qm)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Qm = 40 - 320P"
+        },
+        {
+          "id": "B",
+          "text": "Qm = 3,200 - 4P"
+        },
+        {
+          "id": "C",
+          "text": "Qm = 3,200 - 320P"
+        },
+        {
+          "id": "D",
+          "text": "Qm = 80 - 4P"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The market demand equation is derived by multiplying the individual demand function of a representative consumer by the total number of identical buyers in the market: Qm = 80 * (40 - 4P) = 3,200 - 320P.",
+      "sourceReference": "Section 2.1, Page 23"
+    },
+    {
+      "id": "ECO-G10-U02-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Assuming butter and cooking oil are substitute goods, what will happen in the market for cooking oil if the price of butter rises significantly?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The demand curve for cooking oil shifts to the right, raising its equilibrium price and quantity."
+        },
+        {
+          "id": "B",
+          "text": "The demand curve for cooking oil shifts to the left, lowering its equilibrium price and quantity."
+        },
+        {
+          "id": "C",
+          "text": "There is an upward movement along the demand curve for cooking oil without any shift."
+        },
+        {
+          "id": "D",
+          "text": "The supply curve of cooking oil shifts to the right, causing a market surplus."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "For substitute goods, a rise in the price of one good causes consumers to switch to the alternative good. As the price of butter increases, consumer demand for cooking oil increases (shifting its demand curve rightward), which leads to a higher equilibrium price and quantity.",
+      "sourceReference": "Section 2.1, Pages 19-20 & Section 2.3, Page 34"
+    },
+    {
+      "id": "ECO-G10-U02-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which of the following events will cause the market supply curve of manufactured textiles to shift to the left?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A substantial decrease in the wage rates paid to factory textile workers"
+        },
+        {
+          "id": "B",
+          "text": "An advance in industrial weaving technology that raises labor productivity"
+        },
+        {
+          "id": "C",
+          "text": "A sharp increase in the market price of raw cotton inputs used by textile mills"
+        },
+        {
+          "id": "D",
+          "text": "A government production subsidy granted to all textile manufacturers"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "An increase in the cost of production factors (such as higher prices for raw cotton) raises total production costs and reduces profit margins, causing producers to decrease supply and shifting the supply curve leftward (inward).",
+      "sourceReference": "Section 2.2, Pages 25-26"
+    },
+    {
+      "id": "ECO-G10-U02-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Assuming supply remains constant, what are the effects of a decrease in consumer income on the equilibrium price and equilibrium quantity of a normal good?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Equilibrium price rises, and equilibrium quantity increases."
+        },
+        {
+          "id": "B",
+          "text": "Equilibrium price falls, and equilibrium quantity decreases."
+        },
+        {
+          "id": "C",
+          "text": "Equilibrium price falls, but equilibrium quantity increases."
+        },
+        {
+          "id": "D",
+          "text": "Equilibrium price rises, but equilibrium quantity decreases."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "According to the summary table of shifting factors in the textbook (Table 2.7), a decrease in consumer income for a normal good decreases demand (shifts the demand curve leftward). With supply held constant, this leads to a decrease in both the equilibrium price and the equilibrium quantity.",
+      "sourceReference": "Section 2.3, Pages 33-34"
+    },
+    {
+      "id": "ECO-G10-U02-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "When the price of a pharmaceutical product increases by 15%, the quantity demanded falls by only 3%. What is the absolute value of the price elasticity coefficient, and how is the demand classified?",
+      "options": [
+        {
+          "id": "A",
+          "text": "0.20; Inelastic"
+        },
+        {
+          "id": "B",
+          "text": "5.00; Elastic"
+        },
+        {
+          "id": "C",
+          "text": "1.00; Unitary elastic"
+        },
+        {
+          "id": "D",
+          "text": "0.45; Perfectly inelastic"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Price elasticity of demand is calculated as Ep = (% change in Qd) / (% change in P) = 3% / 15% = 0.20. Since the absolute value of Ep is less than 1 (0 < Ep < 1), the demand is inelastic.",
+      "sourceReference": "Section 2.4, Pages 36-37"
+    },
+    {
+      "id": "ECO-G10-U02-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Why is the price elasticity of supply generally much higher (more elastic) in the long run than in the short run?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because consumer demand becomes perfectly vertical over longer time periods"
+        },
+        {
+          "id": "B",
+          "text": "Because producers have sufficient time to adjust their production capacity, adopt new technologies, and vary all inputs"
+        },
+        {
+          "id": "C",
+          "text": "Because governments prohibit price adjustments in the long run"
+        },
+        {
+          "id": "D",
+          "text": "Because all economic resources become free goods over long horizons"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The production period is a primary determinant of supply elasticity. In the short run, firms cannot easily alter fixed plant capacity. In the long run, firms have ample time to adjust scale, vary all inputs, and develop factor substitutes, making supply more responsive (elastic) to price changes.",
+      "sourceReference": "Section 2.4, Pages 43-44"
+    },
+    {
+      "id": "ECO-G10-U02-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Suppose the market demand and market supply functions for a commodity are given as Qd = 220 - 5P and Qs = 20 + 5P, where P is the unit price in Birr. If the government establishes a legal price ceiling at P = Birr 15, what will be the resulting market outcome?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A market surplus of 50 units"
+        },
+        {
+          "id": "B",
+          "text": "A market shortage of 50 units"
+        },
+        {
+          "id": "C",
+          "text": "A stable market equilibrium with 95 units exchanged"
+        },
+        {
+          "id": "D",
+          "text": "An excess supply of 145 units"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Equilibrium requires Qd = Qs => 220 - 5P = 20 + 5P => 10P = 200 => P* = Birr 20, Q* = 120 units. A legal price ceiling of Birr 15 is imposed below the equilibrium price. At P = 15: Qd = 220 - 5(15) = 145 units, while Qs = 20 + 5(15) = 95 units. The resulting shortage is Qd - Qs = 145 - 95 = 50 units.",
+      "sourceReference": "Section 2.3, Pages 31-32 & Unit Review, Page 48"
+    },
+    {
+      "id": "ECO-G10-U02-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A demand schedule shows that when the price of a good is Birr 10, the quantity demanded is 120 units. When the price rises to Birr 14, the quantity demanded falls to 80 units. Using the arc elasticity formula from the textbook, what is the price elasticity of demand?",
+      "options": [
+        {
+          "id": "A",
+          "text": "0.60"
+        },
+        {
+          "id": "B",
+          "text": "1.00"
+        },
+        {
+          "id": "C",
+          "text": "1.20"
+        },
+        {
+          "id": "D",
+          "text": "1.80"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Using the arc elasticity formula: Ep = |(ΔQ / ΔP) * ((P1 + P2) / (Q1 + Q2))|. Here, ΔQ = 80 - 120 = -40; ΔP = 14 - 10 = 4; P1 + P2 = 10 + 14 = 24; Q1 + Q2 = 120 + 80 = 200. Ep = |(-40 / 4) * (24 / 200)| = |-10 * 0.12| = 1.20.",
+      "sourceReference": "Section 2.4, Pages 37-38"
+    },
+    {
+      "id": "ECO-G10-U02-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A household's annual income increases from Birr 20,000 to Birr 25,000. Over the same timeframe, the household's annual purchase of good X decreases from 50 kg to 40 kg. What is the income elasticity of demand, and what type of good is good X?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Income elasticity = +0.80; Normal luxury good"
+        },
+        {
+          "id": "B",
+          "text": "Income elasticity = -0.80; Inferior good"
+        },
+        {
+          "id": "C",
+          "text": "Income elasticity = -1.25; Normal necessity good"
+        },
+        {
+          "id": "D",
+          "text": "Income elasticity = 0.00; Neutral good"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Income elasticity of demand is Ei = (ΔQ / ΔI) * (I / Q). Here, ΔQ = 40 - 50 = -10 kg; ΔI = 25,000 - 20,000 = Birr 5,000. Ei = (-10 / 5,000) * (20,000 / 50) = -0.002 * 400 = -0.80. Since Ei < 0, good X is an inferior good.",
+      "sourceReference": "Section 2.4, Pages 39-40"
+    },
+    {
+      "id": "ECO-G10-U02-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Suppose that in the market for a commodity, consumer preferences experience a positive surge (demand shifts right) while simultaneously advanced production technology reduces manufacturing costs (supply shifts right). What is the definite effect on market equilibrium?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Equilibrium price definitely rises, while equilibrium quantity is indeterminate."
+        },
+        {
+          "id": "B",
+          "text": "Equilibrium price definitely falls, while equilibrium quantity decreases."
+        },
+        {
+          "id": "C",
+          "text": "Equilibrium quantity definitely increases, while the effect on equilibrium price is indeterminate without knowing the relative magnitudes of the shifts."
+        },
+        {
+          "id": "D",
+          "text": "Both equilibrium price and equilibrium quantity remain completely unchanged."
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "An increase in demand exerts upward pressure on price and increases quantity. An increase in supply exerts downward pressure on price and increases quantity. Because both shifts increase quantity, the equilibrium quantity unambiguously increases. However, the net effect on equilibrium price is indeterminate as it depends on whether the shift in demand or supply is larger.",
+      "sourceReference": "Section 2.3, Pages 32-34"
+    }
+  ]
 }

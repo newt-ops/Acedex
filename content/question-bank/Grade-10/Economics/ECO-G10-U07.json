@@ -3,5 +3,411 @@
   "subject": "Economics",
   "unitNumber": 7,
   "unitTitle": "The Ethiopian Economy",
-  "questions": []
+  "questions": [
+    {
+      "id": "ECO-G10-U07-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In national income accounting, which major expenditure component of Gross Domestic Product (GDP) accounts for the largest share in an economy?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Net exports (NX)"
+        },
+        {
+          "id": "B",
+          "text": "Government purchases (G)"
+        },
+        {
+          "id": "C",
+          "text": "Gross private domestic investment (I)"
+        },
+        {
+          "id": "D",
+          "text": "Personal consumption expenditure (C)"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "GDP measured by the expenditure approach is divided into four components: consumption (C), investment (I), government purchases (G), and net exports (NX). Personal consumption expenditure by households consistently accounts for the largest proportion (lion's share) of total GDP.",
+      "sourceReference": "Section 7.1, Pages 135-136"
+    },
+    {
+      "id": "ECO-G10-U07-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which of the following household expenditures is classified under consumption of services rather than consumer goods?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Purchases of refrigerators and televisions"
+        },
+        {
+          "id": "B",
+          "text": "Purchases of clothing and footwear"
+        },
+        {
+          "id": "C",
+          "text": "Payments made for haircuts and medical care"
+        },
+        {
+          "id": "D",
+          "text": "Purchases of staple food grains and bread"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "In GDP expenditure accounting, goods include durable items (like household appliances) and non-durable items (like food and clothing), whereas services consist of intangible items such as medical visits, haircuts, cleaning, and education.",
+      "sourceReference": "Section 7.1, Page 136"
+    },
+    {
+      "id": "ECO-G10-U07-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is the numerical value of the GDP deflator in the designated base year?",
+      "options": [
+        {
+          "id": "A",
+          "text": "0"
+        },
+        {
+          "id": "B",
+          "text": "50"
+        },
+        {
+          "id": "C",
+          "text": "100"
+        },
+        {
+          "id": "D",
+          "text": "1,000"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The GDP deflator is calculated as (Nominal GDP / Real GDP) * 100. Because nominal GDP and real GDP are identical in the designated base year, the GDP deflator is always equal to 100 in the base year.",
+      "sourceReference": "Section 7.2.1, Pages 140-141"
+    },
+    {
+      "id": "ECO-G10-U07-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which farming system is the most dominant in Ethiopia, accounting for over 90 percent of agricultural production and about 95 percent of the total area under crop cultivation?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The state-owned mechanized farm system"
+        },
+        {
+          "id": "B",
+          "text": "The smallholder farming system"
+        },
+        {
+          "id": "C",
+          "text": "The pastoral nomadic system"
+        },
+        {
+          "id": "D",
+          "text": "The private foreign commercial plantation system"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The smallholder farming system is the dominant agricultural structure in Ethiopia, accounting for more than 90% of total agricultural output and approximately 95% of the total land area under crop production.",
+      "sourceReference": "Section 7.3, Page 146"
+    },
+    {
+      "id": "ECO-G10-U07-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is the name of the central long-term development strategy adopted by the Ethiopian government to achieve economic transformation by using agriculture as the driving force?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Industrial Development-Led Agriculture (IDLA)"
+        },
+        {
+          "id": "B",
+          "text": "Agricultural Development-Led Industrialization (ADLI)"
+        },
+        {
+          "id": "C",
+          "text": "Import-Substituting Heavy Industrialization (ISHI)"
+        },
+        {
+          "id": "D",
+          "text": "Export-Led Service Strategy (ELSS)"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "To transform the agricultural sector and foster broader economic growth, the Federal Democratic Republic of Ethiopia adopted the Agricultural Development-Led Industrialization (ADLI) strategy, which views agriculture as the primary engine to supply raw materials, food, and surplus labor to the industrial sector.",
+      "sourceReference": "Section 7.6, Pages 157-159"
+    },
+    {
+      "id": "ECO-G10-U07-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Why does a domestic household's purchase of an imported foreign commodity (such as a foreign-made car) have no net effect on a country's Gross Domestic Product (GDP)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because imported commodities are completely exempt from customs duties."
+        },
+        {
+          "id": "B",
+          "text": "Because the purchase increases consumption (C) but simultaneously reduces net exports (NX = X - M) by the exact same amount."
+        },
+        {
+          "id": "C",
+          "text": "Because GDP accounting only measures capital investments made by the government."
+        },
+        {
+          "id": "D",
+          "text": "Because commercial banks immediately sterilize foreign exchange outflows."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "GDP measures only domestically produced goods and services. When an imported good is purchased, household consumption (C) rises by that amount, but net exports (NX) decreases by the identical amount because imports (M) are subtracted. The two offsetting entries leave total GDP unchanged.",
+      "sourceReference": "Section 7.1, Pages 137-138"
+    },
+    {
+      "id": "ECO-G10-U07-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How do economists analytically distinguish Real Gross Domestic Product (Real GDP) from Nominal Gross Domestic Product (Nominal GDP)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Nominal GDP measures output at constant base-year prices, whereas Real GDP measures output at current market prices."
+        },
+        {
+          "id": "B",
+          "text": "Nominal GDP reflects both changes in quantities and prices, whereas Real GDP isolates changes in physical production by valuing output at fixed base-year prices."
+        },
+        {
+          "id": "C",
+          "text": "Nominal GDP includes intermediate transactions, while Real GDP excludes government infrastructure spending."
+        },
+        {
+          "id": "D",
+          "text": "Real GDP is computed exclusively using the income approach, while Nominal GDP is computed using the expenditure approach."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Nominal GDP values output using current-period prices, meaning it can rise simply because prices increase. Real GDP holds prices constant at base-year levels, reflecting solely the actual volume of goods and services produced.",
+      "sourceReference": "Section 7.2, Pages 139-140"
+    },
+    {
+      "id": "ECO-G10-U07-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which of the following describes an essential 'backward linkage' provided by the industrial and external sectors to the agricultural sector?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Supplying modern manufactured inputs such as chemical fertilizers, improved seeds, and mechanized tools to enhance farm productivity"
+        },
+        {
+          "id": "B",
+          "text": "Providing cheap agricultural raw materials to urban textile and beverage manufacturing plants"
+        },
+        {
+          "id": "C",
+          "text": "Supplying surplus rural labor to urban service industries without compensation"
+        },
+        {
+          "id": "D",
+          "text": "Imposing grain quotas at below-market prices through state marketing boards"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "A backward linkage for agriculture involves the supply of modern industrial inputs—such as chemical fertilizers, pesticides, improved seeds, and machinery—from the non-farm sector into agriculture, enabling higher farm productivity.",
+      "sourceReference": "Section 7.3, Pages 144-145"
+    },
+    {
+      "id": "ECO-G10-U07-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Within the manufacturing sub-sector of Ethiopia, which industrial group generates the largest share of output value and sales revenue?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Chemical and pharmaceutical manufacturing"
+        },
+        {
+          "id": "B",
+          "text": "Food and beverage manufacturing"
+        },
+        {
+          "id": "C",
+          "text": "Basic iron, steel, and motor assembly"
+        },
+        {
+          "id": "D",
+          "text": "Paper and paperboard manufacturing"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Large- and medium-scale manufacturing in Ethiopia is dominated by the food and beverage industrial group, which contributes over 50% of the gross value of manufacturing production and nearly half of its sales revenue.",
+      "sourceReference": "Section 7.4, Pages 151-152"
+    },
+    {
+      "id": "ECO-G10-U07-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which manufacturing industry generates the largest share of foreign exchange earnings within Ethiopia's industrial sector?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Chemical products"
+        },
+        {
+          "id": "B",
+          "text": "Wood and furniture"
+        },
+        {
+          "id": "C",
+          "text": "Textiles and apparel"
+        },
+        {
+          "id": "D",
+          "text": "Cement and non-metallic mineral products"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Within the industrial sector's modest export earnings, the textile sub-sector generates the largest share of foreign exchange (over 41%), followed by food and beverages, and leather and footwear.",
+      "sourceReference": "Section 7.4, Pages 152-153"
+    },
+    {
+      "id": "ECO-G10-U07-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In the national income accounting of Ethiopia, which sub-sectors are grouped together under 'distributive services'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Public administration, defense, and artistic exhibitions"
+        },
+        {
+          "id": "B",
+          "text": "Wholesale and retail trade, hotels and restaurants, and transport and communication"
+        },
+        {
+          "id": "C",
+          "text": "Smallholder crop cultivation, animal husbandry, and forestry"
+        },
+        {
+          "id": "D",
+          "text": "Mining, quarrying, water supply, and building construction"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "According to the Ethiopian National Income Account classification, service activities such as trade, hotels and restaurants, and transport and communication are classified as distributive services, while public administration, defense, education, and health are grouped under other services.",
+      "sourceReference": "Section 7.5, Pages 155-156"
+    },
+    {
+      "id": "ECO-G10-U07-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Suppose a simplified economy produces only two final goods: Kitfo and Chumbo. Data for 2020 (the base year) and 2021 are as follows:\n- 2020: Kitfo Price = Birr 100, Quantity = 50; Chumbo Price = Birr 200, Quantity = 25\n- 2021: Kitfo Price = Birr 150, Quantity = 60; Chumbo Price = Birr 250, Quantity = 40\nWhat are the Nominal GDP for 2021, the Real GDP for 2021 (using 2020 as base year), and the GDP Deflator for 2021?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Nominal GDP = Birr 19,000; Real GDP = Birr 14,000; GDP Deflator ≈ 135.7"
+        },
+        {
+          "id": "B",
+          "text": "Nominal GDP = Birr 10,000; Real GDP = Birr 10,000; GDP Deflator = 100.0"
+        },
+        {
+          "id": "C",
+          "text": "Nominal GDP = Birr 14,000; Real GDP = Birr 19,000; GDP Deflator ≈ 73.7"
+        },
+        {
+          "id": "D",
+          "text": "Nominal GDP = Birr 19,000; Real GDP = Birr 10,000; GDP Deflator = 190.0"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Nominal GDP (2021) = (150 * 60) + (250 * 40) = 9,000 + 10,000 = Birr 19,000. Real GDP (2021 at 2020 base prices) = (100 * 60) + (200 * 40) = 6,000 + 8,000 = Birr 14,000. GDP Deflator = (Nominal GDP / Real GDP) * 100 = (19,000 / 14,000) * 100 ≈ 135.71.",
+      "sourceReference": "Section 7.2.1, Pages 140-142"
+    },
+    {
+      "id": "ECO-G10-U07-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "If an economy's GDP Deflator was 125 in the year 2021 and rose to 150 in the year 2022, what was the annual inflation rate between 2021 and 2022 as measured by the GDP deflator?",
+      "options": [
+        {
+          "id": "A",
+          "text": "25.0%"
+        },
+        {
+          "id": "B",
+          "text": "20.0%"
+        },
+        {
+          "id": "C",
+          "text": "16.7%"
+        },
+        {
+          "id": "D",
+          "text": "15.0%"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The inflation rate using the GDP deflator is computed as: Inflation Rate = [(Deflator_2022 - Deflator_2021) / Deflator_2021] * 100% = [(150 - 125) / 125] * 100% = (25 / 125) * 100% = 20.0%.",
+      "sourceReference": "Section 7.2.1, Pages 141-142"
+    },
+    {
+      "id": "ECO-G10-U07-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Despite receiving priority allocation of land, machinery, chemical inputs, credit, and price subsidies during the socialist Derg regime, state farms in Ethiopia proved largely unsuccessful. According to textbook analysis, what primary factors caused this failure?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Widespread adoption of highly competitive private marketing practices"
+        },
+        {
+          "id": "B",
+          "text": "Severe lack of fertile land in the Awash Valley and Rift Valley areas"
+        },
+        {
+          "id": "C",
+          "text": "Mismanagement, abuse of assets, corruption, and development of projects without adequate feasibility studies"
+        },
+        {
+          "id": "D",
+          "text": "Mandatory integration into the African Growth and Opportunity Act (AGOA)"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "State farms under the Derg were heavily subsidized and received unrestricted inputs and credit, but they remained unproductive and unprofitable due to bureaucratic mismanagement, corruption, asset abuse, and launching projects without adequate preparatory studies.",
+      "sourceReference": "Section 7.3, Pages 147-148"
+    },
+    {
+      "id": "ECO-G10-U07-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "How does the theoretical premise of Ethiopia's Agricultural Development-Led Industrialization (ADLI) strategy differ from traditional Western development models regarding the historical role of agriculture?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Western paradigms treated agriculture as a passive, secondary supplier of labor and resources to leading urban industry, whereas ADLI views agriculture as the primary, leading engine of economic growth."
+        },
+        {
+          "id": "B",
+          "text": "Western models prioritized subsistence peasant smallholders, while ADLI relies entirely on foreign state-owned monopolies."
+        },
+        {
+          "id": "C",
+          "text": "ADLI completely bans the development of domestic manufacturing in order to preserve agrarian feudal structures."
+        },
+        {
+          "id": "D",
+          "text": "Western paradigms completely eliminated industry, whereas ADLI eliminates all agricultural trade."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "In Western industrial models, agriculture played a passive, supportive role while industry led economic growth. In contrast, ADLI posits that in an agrarian economy like Ethiopia, agriculture must be the dynamic, leading sector that generates productivity, food security, purchasing power, and raw materials to support industrialization.",
+      "sourceReference": "Section 7.6, Pages 157-158"
+    }
+  ]
 }

@@ -3,5 +3,411 @@
   "subject": "Economics",
   "unitNumber": 4,
   "unitTitle": "Poverty and Inequality",
-  "questions": []
+  "questions": [
+    {
+      "id": "ECO-G12-U04-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is the primary definition of 'fiscal policy' in macroeconomic management?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The regulation of the money supply and commercial bank lending interest rates by the central bank"
+        },
+        {
+          "id": "B",
+          "text": "The use of government taxation, public expenditure, and borrowing to influence aggregate demand and macroeconomic activity"
+        },
+        {
+          "id": "C",
+          "text": "The direct administrative rationing of foreign exchange reserves to importing enterprises"
+        },
+        {
+          "id": "D",
+          "text": "The setting of maximum price ceilings on staple food commodities in urban retail markets"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Fiscal policy refers to government decisions regarding taxation, public spending, and borrowing aimed at achieving macroeconomic goals such as full employment, price stability, and economic growth.",
+      "sourceReference": "Section 4.1, Pages 72-73 & EUEE 2017 EC, Q2"
+    },
+    {
+      "id": "ECO-G12-U04-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is an autonomous 'automatic stabilizer' (built-in stabilizer) in fiscal policy?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A deliberate new spending bill passed by parliament to combat a recession"
+        },
+        {
+          "id": "B",
+          "text": "A fiscal mechanism (such as progressive income taxation or unemployment compensation) that automatically dampens economic fluctuations without requiring new legislative action"
+        },
+        {
+          "id": "C",
+          "text": "A computer algorithm that automatically adjusts the legal reserve requirement of commercial banks"
+        },
+        {
+          "id": "D",
+          "text": "A statutory rule requiring balanced government budgets every fiscal year"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Automatic stabilizers are built-in features of the fiscal system (e.g., progressive income taxes and transfer payments like unemployment benefits) that automatically increase net government injections during downturns and increase tax withdrawals during booms without explicit legislative intervention.",
+      "sourceReference": "Section 4.1.3, Pages 76-77"
+    },
+    {
+      "id": "ECO-G12-U04-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which institution has the sole legal authority to conduct monetary policy and issue legal tender currency in Ethiopia?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The Ministry of Finance"
+        },
+        {
+          "id": "B",
+          "text": "The National Bank of Ethiopia (NBE)"
+        },
+        {
+          "id": "C",
+          "text": "The Commercial Bank of Ethiopia (CBE)"
+        },
+        {
+          "id": "D",
+          "text": "The Ethiopian Commodity Exchange (ECX)"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The National Bank of Ethiopia (NBE) is the central bank of the nation, established by law as the sole monetary authority responsible for formulating and implementing monetary policy, regulating commercial banks, and issuing the national currency (Birr).",
+      "sourceReference": "Section 4.2.1, Pages 79-80 & EUEE 2017 EC, Q5"
+    },
+    {
+      "id": "ECO-G12-U04-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is the 'reserve requirement ratio' in central bank monetary regulation?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The maximum percentage of foreign currency a private business is legally allowed to hold in overseas bank accounts"
+        },
+        {
+          "id": "B",
+          "text": "The minimum fraction of customer deposits that commercial banks are legally mandated to keep as liquid reserves with the central bank or in their own vaults"
+        },
+        {
+          "id": "C",
+          "text": "The statutory corporate income tax rate applied to commercial bank profits"
+        },
+        {
+          "id": "D",
+          "text": "The ratio between a nation's gold reserves and its total merchandise exports"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The legal reserve requirement (or required reserve ratio) is the minimum percentage of total customer deposit liabilities that commercial banks are legally mandated to maintain as reserves (at the central bank or vault cash), limiting the amount available for lending.",
+      "sourceReference": "Section 4.2.2, Pages 82-83 & EUEE 2018 Round 1, Q17"
+    },
+    {
+      "id": "ECO-G12-U04-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What open market operation (OMO) should the central bank execute if it wants to pursue an expansionary monetary policy to combat a recession?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Selling government bonds and treasury bills to commercial banks and the public"
+        },
+        {
+          "id": "B",
+          "text": "Purchasing government bonds and treasury bills from commercial banks and the public"
+        },
+        {
+          "id": "C",
+          "text": "Increasing the required reserve ratio on demand deposits"
+        },
+        {
+          "id": "D",
+          "text": "Raising the discount lending rate charged to commercial banks"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "When the central bank purchases government securities on the open market, it pays commercial banks and bondholders, directly injecting liquidity and increasing commercial bank excess reserves. This expands credit availability and lowers interest rates.",
+      "sourceReference": "Section 4.2.2, Pages 81-82 & Review Questions, Page 97"
+    },
+    {
+      "id": "ECO-G12-U04-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What is the 'crowding-out effect' often associated with deficit-financed expansionary fiscal policy?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A situation where foreign commercial banks completely take over the domestic retail banking sector"
+        },
+        {
+          "id": "B",
+          "text": "A situation where large-scale government borrowing to finance budget deficits drives up domestic interest rates, leading to a reduction in private investment and interest-sensitive consumption spending"
+        },
+        {
+          "id": "C",
+          "text": "The rapid expansion of the informal economy at the expense of the state enterprise sector"
+        },
+        {
+          "id": "D",
+          "text": "The automatic reduction in personal tax revenues when real GDP expands"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The crowding-out effect occurs when government deficit spending requires heavy domestic borrowing. Increased competition for loanable funds drives interest rates upward, raising the cost of borrowing for private firms and households, thereby displacing (crowding out) private capital investment.",
+      "sourceReference": "Section 4.1.4, Pages 77-78 & Review Questions, Page 96"
+    },
+    {
+      "id": "ECO-G12-U04-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How do economists analytically distinguish between the 'recognition lag' and the 'implementation (administrative) lag' in discretionary fiscal policy?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The recognition lag is the delay in commercial banks cutting interest rates, while the implementation lag is the time it takes for households to spend their income."
+        },
+        {
+          "id": "B",
+          "text": "The recognition lag is the time elapsed between an economic shock occurring and policymakers identifying it from data, whereas the implementation lag is the time taken by parliament and the executive branch to debate, pass, and enact policy legislation."
+        },
+        {
+          "id": "C",
+          "text": "The recognition lag applies only to monetary policy, while the implementation lag applies exclusively to import tariffs."
+        },
+        {
+          "id": "D",
+          "text": "There is no difference; both terms describe the time it takes for economic agents to adapt to new market price levels."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The recognition lag is the time required to gather and verify economic statistics to recognize an emerging recession or inflation. The implementation (or operational/legislative) lag is the period required for political leaders and parliament to propose, debate, and pass the appropriate fiscal legislation.",
+      "sourceReference": "Section 4.1.4, Pages 77-78"
+    },
+    {
+      "id": "ECO-G12-U04-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which of the following monetary actions represents a contractionary monetary policy stance by the central bank?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Lowering the statutory discount rate and purchasing treasury bills on the open market"
+        },
+        {
+          "id": "B",
+          "text": "Selling government bonds on the open market, raising the legal reserve requirement ratio, and increasing the discount rate"
+        },
+        {
+          "id": "C",
+          "text": "Decreasing the required reserve ratio while expanding direct commercial bank credit lines"
+        },
+        {
+          "id": "D",
+          "text": "Instructing state-owned commercial banks to lower collateral requirements on consumer loans"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Contractionary monetary policy (designed to combat high inflation) drains money supply and credit from the banking system by: (1) selling government bonds on the open market, (2) raising the reserve requirement ratio, and (3) increasing the discount lending rate.",
+      "sourceReference": "Section 4.2.2, Pages 81-84 & EUEE 2017 EC, Q6"
+    },
+    {
+      "id": "ECO-G12-U04-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What is the defining characteristic of a 'moral suasion' policy instrument in central banking?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The central bank levies punitive monetary fines on commercial banks that fail to maintain reserve accounts."
+        },
+        {
+          "id": "B",
+          "text": "The central bank uses informal persuasion, appeals, and consultative directives to encourage commercial banks to voluntarily align their credit policies with national economic priorities."
+        },
+        {
+          "id": "C",
+          "text": "The legislative branch revokes the operating license of foreign-owned insurance corporations."
+        },
+        {
+          "id": "D",
+          "text": "The government enforces a mandatory ceiling on all commercial banking executive compensation."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Moral suasion is a qualitative monetary policy instrument where the central bank uses persuasion, informal advice, and informal pressure to induce commercial banks to alter lending practices (e.g., directing credit to productive priority sectors or restraining speculative lending) without formal legal coercion.",
+      "sourceReference": "Section 4.2.3, Pages 84-85 & Review Questions, Page 97"
+    },
+    {
+      "id": "ECO-G12-U04-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What is the simple deposit (money) multiplier formula in a banking system without cash leakages and excess reserves?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Multiplier = 1 / (1 - MPC)"
+        },
+        {
+          "id": "B",
+          "text": "Multiplier = 1 / Required Reserve Ratio (1 / r)"
+        },
+        {
+          "id": "C",
+          "text": "Multiplier = Required Reserve Ratio * Discount Rate"
+        },
+        {
+          "id": "D",
+          "text": "Multiplier = 1 - Required Reserve Ratio"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Under fractional reserve banking, if there are no currency drains into public cash holdings and banks hold zero excess reserves, the potential expansion of money through deposit creation is given by the simple deposit multiplier: m = 1 / r (where r is the required reserve ratio).",
+      "sourceReference": "Section 4.2.2, Pages 82-83"
+    },
+    {
+      "id": "ECO-G12-U04-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Under what economic circumstances can a high and persistent national public debt become a destabilizing burden on a developing country's economy?",
+      "options": [
+        {
+          "id": "A",
+          "text": "When borrowed funds are invested in self-financing capital infrastructure that expands national productive capacity faster than the real interest rate"
+        },
+        {
+          "id": "B",
+          "text": "When heavy external debt servicing consumes a large portion of scarce export earnings, diverting public revenue from healthcare and education, and increasing default risks and currency depreciation"
+        },
+        {
+          "id": "C",
+          "text": "When the government maintains a zero nominal inflation rate across consecutive decades"
+        },
+        {
+          "id": "D",
+          "text": "When commercial banks operate without legal reserve requirements"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "As detailed in Section 4.1.5, severe public debt accumulation (especially external debt denominated in foreign currencies) imposes a heavy debt-servicing burden. Paying interest and principal diverts fiscal resources from productive social sectors, drains foreign exchange reserves, fuels inflation, and creates severe macroeconomic vulnerability.",
+      "sourceReference": "Section 4.1.5, Pages 78-79 & Review Questions, Page 96"
+    },
+    {
+      "id": "ECO-G12-U04-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Suppose the required reserve ratio set by the central bank is 10% (r = 0.10). An individual deposits Birr 50,000 in cash into a commercial bank. Assuming commercial banks hold zero excess reserves and the public holds no cash, what are the total maximum volume of demand deposits created in the banking system and the net increase in the total money supply?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Total deposits created = Birr 500,000; Net increase in money supply = Birr 450,000"
+        },
+        {
+          "id": "B",
+          "text": "Total deposits created = Birr 50,000; Net increase in money supply = Birr 5,000"
+        },
+        {
+          "id": "C",
+          "text": "Total deposits created = Birr 250,000; Net increase in money supply = Birr 200,000"
+        },
+        {
+          "id": "D",
+          "text": "Total deposits created = Birr 500,000; Net increase in money supply = Birr 500,000"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The deposit multiplier is m = 1 / r = 1 / 0.10 = 10. Total demand deposits created = Initial Deposit * m = 50,000 * 10 = Birr 500,000. Because the initial Birr 50,000 was already part of the currency in circulation, the net new money created through credit expansion is 500,000 - 50,000 = Birr 450,000 (equal to maximum new loans: 50,000 * (1 - 0.10) * 10 = 450,000).",
+      "sourceReference": "Section 4.2.2, Pages 82-83 & EUEE 2018 Round 1, Q18"
+    },
+    {
+      "id": "ECO-G12-U04-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "An economy is currently experiencing an inflationary gap, with actual equilibrium output (Y = Birr 900 billion) exceeding potential full-employment output (Yp = Birr 800 billion) by Birr 100 billion. The Marginal Propensity to Consume (MPC) is 0.80. If the government decides to use changes in autonomous government purchases (G) to close the gap and restore stability, how much should government spending be reduced?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Reduce government spending by Birr 100 billion"
+        },
+        {
+          "id": "B",
+          "text": "Reduce government spending by Birr 20 billion"
+        },
+        {
+          "id": "C",
+          "text": "Reduce government spending by Birr 80 billion"
+        },
+        {
+          "id": "D",
+          "text": "Reduce government spending by Birr 25 billion"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The required reduction in real GDP is ΔY = -100 billion. The simple expenditure multiplier is k = 1 / (1 - MPC) = 1 / (1 - 0.80) = 1 / 0.20 = 5. Since ΔY = k * ΔG, we have -100 = 5 * ΔG => ΔG = -100 / 5 = -Birr 20 billion. Thus, government purchases should be reduced by Birr 20 billion.",
+      "sourceReference": "Section 4.1.2, Pages 74-76 & Review Questions (Part IV Work Out), Page 98"
+    },
+    {
+      "id": "ECO-G12-U04-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Consider the same macroeconomic scenario as the preceding question (Inflationary gap = Birr 100 billion; MPC = 0.80). If the government chooses to eliminate the gap using lump-sum taxes (T) rather than spending cuts, by how much must lump-sum taxes be increased?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Increase lump-sum taxes by Birr 20 billion"
+        },
+        {
+          "id": "B",
+          "text": "Increase lump-sum taxes by Birr 25 billion"
+        },
+        {
+          "id": "C",
+          "text": "Increase lump-sum taxes by Birr 100 billion"
+        },
+        {
+          "id": "D",
+          "text": "Increase lump-sum taxes by Birr 50 billion"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The tax multiplier is kt = -MPC / (1 - MPC) = -0.80 / 0.20 = -4. To achieve the required reduction in real GDP of ΔY = -100 billion: ΔY = kt * ΔT => -100 = -4 * ΔT => ΔT = -100 / -4 = +Birr 25 billion. Taxes must increase by Birr 25 billion (which is larger than the required spending cut because part of any tax increase is absorbed by reduced saving rather than reduced spending).",
+      "sourceReference": "Section 4.1.2, Pages 74-76 & Review Questions (Part IV Work Out), Page 98"
+    },
+    {
+      "id": "ECO-G12-U04-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Why is the monetary policy transmission mechanism often less effective and more constrained in low-income developing countries like Ethiopia compared to advanced financial economies?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because developing economies operate under a gold bullion standard that prevents paper money circulation"
+        },
+        {
+          "id": "B",
+          "text": "Because shallow and underdeveloped financial markets, a large unbanked cash-based rural informal sector, and limited secondary bond markets weaken the interest rate channel and credit creation multipliers"
+        },
+        {
+          "id": "C",
+          "text": "Because the Ministry of Finance legally prohibits commercial banks from adjusting their interest rates"
+        },
+        {
+          "id": "D",
+          "text": "Because consumer spending is entirely insensitive to changes in bank credit availability"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "As analyzed across Sections 4.2.2 and 4.2.4, underdeveloped financial markets, the absence of active and deep secondary securities markets, a substantial non-monetized subsistence sector, and a large informal cash economy diminish the sensitivity of market interest rates and reduce the efficacy of conventional open market operations and discount rates.",
+      "sourceReference": "Section 4.2.2 & 4.2.4, Pages 81-83, 86-87 & EUEE 2017 EC, Q4"
+    }
+  ]
 }

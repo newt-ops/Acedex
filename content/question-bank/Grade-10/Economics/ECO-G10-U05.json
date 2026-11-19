@@ -3,5 +3,411 @@
   "subject": "Economics",
   "unitNumber": 5,
   "unitTitle": "Banking and Finance",
-  "questions": []
+  "questions": [
+    {
+      "id": "ECO-G10-U05-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In financial economics, what is the primary role of a financial intermediary in an economy?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To act as an entity that mediates between surplus spending units (savers) and deficit spending units (borrowers)"
+        },
+        {
+          "id": "B",
+          "text": "To print legal tender paper currency on behalf of regional administrations"
+        },
+        {
+          "id": "C",
+          "text": "To mandate statutory retail price ceilings on all essential consumer commodities"
+        },
+        {
+          "id": "D",
+          "text": "To eliminate the need for commercial interest payments in credit markets"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "A financial intermediary is an entity that acts as the middleman between two parties in a financial transaction, transferring funds from surplus spending units (those with excess money) to deficit spending units (those with a shortage of money).",
+      "sourceReference": "Section 5.1, Pages 89-90"
+    },
+    {
+      "id": "ECO-G10-U05-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "By standard definition, what distinguishes money market instruments from capital market instruments?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Money market instruments have original maturities of one year or less, whereas capital market instruments have maturities greater than one year or are perpetual securities."
+        },
+        {
+          "id": "B",
+          "text": "Money market instruments are issued exclusively by private households, while capital market instruments are issued only by central banks."
+        },
+        {
+          "id": "C",
+          "text": "Money market instruments trade only in physical goods, whereas capital market instruments trade only in foreign currencies."
+        },
+        {
+          "id": "D",
+          "text": "Money market instruments carry no interest or discount, while capital market instruments carry fixed statutory wages."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The money market includes financial instruments with original maturities of one year or less at the time of issuance (such as Treasury bills and commercial paper). In contrast, the capital market includes securities with maturities greater than one year and perpetual securities (such as corporate bonds and equities).",
+      "sourceReference": "Section 5.2, Pages 91-92"
+    },
+    {
+      "id": "ECO-G10-U05-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which of the following is classified as a non-bank financial institution (NBFI)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The National Bank of Ethiopia"
+        },
+        {
+          "id": "B",
+          "text": "An insurance company"
+        },
+        {
+          "id": "C",
+          "text": "A commercial deposit-taking bank"
+        },
+        {
+          "id": "D",
+          "text": "The central monetary authority"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Non-bank financial institutions (NBFIs) are financial entities that do not hold a full banking license or accept checkable public deposits; they facilitate bank-related services such as insurance, risk pooling, and contractual savings.",
+      "sourceReference": "Section 5.3.2, Pages 94-95"
+    },
+    {
+      "id": "ECO-G10-U05-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In what year did modern banking formally commence in Ethiopia with the establishment of the Bank of Abyssinia?",
+      "options": [
+        {
+          "id": "A",
+          "text": "1931"
+        },
+        {
+          "id": "B",
+          "text": "1943"
+        },
+        {
+          "id": "C",
+          "text": "1905"
+        },
+        {
+          "id": "D",
+          "text": "1963"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Modern banking in Ethiopia started in 1905 with the establishment of the Bank of Abyssinia under Emperor Menelik II, based on a fifty-year concession agreement with the British-owned National Bank of Egypt.",
+      "sourceReference": "Section 5.4, Pages 96-97"
+    },
+    {
+      "id": "ECO-G10-U05-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is the primary operational mechanism utilized by microfinance institutions (MFIs) to extend credit to the poor without requiring physical asset collateral?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Auctioning municipal corporate bonds in capital markets"
+        },
+        {
+          "id": "B",
+          "text": "Group lending where peer pressure and mutual guarantees act as collateral"
+        },
+        {
+          "id": "C",
+          "text": "Requiring commercial real estate deeds and vehicle logbooks"
+        },
+        {
+          "id": "D",
+          "text": "Direct central bank guarantees backed by physical gold reserves"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Microcredit is often offered without conventional collateral through a group lending mechanism. In this scheme, the borrower group serves as collective collateral, and the incentive to repay relies on social ties and peer pressure.",
+      "sourceReference": "Section 5.5.1, Pages 103-104"
+    },
+    {
+      "id": "ECO-G10-U05-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which of the following is a money market instrument consisting of short-term unsecured promissory notes issued by large, creditworthy corporations or municipalities with maturities ranging up to 270 days?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Syndicated bank loans"
+        },
+        {
+          "id": "B",
+          "text": "Commercial papers"
+        },
+        {
+          "id": "C",
+          "text": "Common stocks"
+        },
+        {
+          "id": "D",
+          "text": "Corporate mortgage bonds"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Commercial papers are short-term promissory notes—written promises to pay—issued by large, creditworthy corporations or municipalities with original maturities ranging from 1 to 270 days.",
+      "sourceReference": "Section 5.2, Pages 91-92"
+    },
+    {
+      "id": "ECO-G10-U05-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Under Proclamation No. 206 of 1963, into which two distinct financial institutions was the former State Bank of Ethiopia split?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The Bank of Abyssinia and the Agricultural and Industrial Bank"
+        },
+        {
+          "id": "B",
+          "text": "The National Bank of Ethiopia and the Commercial Bank of Ethiopia"
+        },
+        {
+          "id": "C",
+          "text": "The Development Bank of Ethiopia and Addis Bank"
+        },
+        {
+          "id": "D",
+          "text": "Banco di Roma and Banco di Napoli"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In 1963, the Ethiopian government split the former State Bank of Ethiopia (established in 1943) into two separate entities: the National Bank of Ethiopia (as the central bank) and the Commercial Bank of Ethiopia (to handle commercial banking operations).",
+      "sourceReference": "Section 5.4.1, Page 98"
+    },
+    {
+      "id": "ECO-G10-U05-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "During the socialist Derg regime (1974–1991), what three state-owned banks held exclusive monopoly power across the entire Ethiopian financial sector?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Bank of Abyssinia, Dashen Bank, and Awash International Bank"
+        },
+        {
+          "id": "B",
+          "text": "National Bank of Ethiopia, Commercial Bank of Ethiopia, and Agricultural and Industrial Development Bank"
+        },
+        {
+          "id": "C",
+          "text": "Banco di Roma, Barclays Bank, and State Bank of Ethiopia"
+        },
+        {
+          "id": "D",
+          "text": "Development Bank of Ethiopia, Wegagen Bank, and Hibret Bank"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Following nationalization and mergers under the Derg regime, the formal financial sector was consolidated into three monopoly state banks: the National Bank of Ethiopia (NBE), the Commercial Bank of Ethiopia (CBE), and the Agricultural and Industrial Development Bank (AIDB).",
+      "sourceReference": "Section 5.4.1, Pages 98-99"
+    },
+    {
+      "id": "ECO-G10-U05-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How do the core objectives of the National Bank of Ethiopia (NBE) fundamentally differ from those of commercial banks?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The NBE operates to maximize shareholder dividends from personal loans, whereas commercial banks regulate interest rates."
+        },
+        {
+          "id": "B",
+          "text": "The NBE controls the money supply and manages the financial sector to maintain price stability, whereas commercial banks operate to generate profit through deposit mobilization and lending."
+        },
+        {
+          "id": "C",
+          "text": "The NBE focuses on retail consumer overdrafts, while commercial banks hold monopoly power over issuing currency notes."
+        },
+        {
+          "id": "D",
+          "text": "There is no difference; all banks in Ethiopia share identical statutory profit targets."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Commercial banks generate profits by accepting deposits and lending to households and firms. In contrast, the National Bank of Ethiopia is not a profit-making institution; its primary objective is to regulate the financial sector, control the money supply and credit creation, and maintain price stability.",
+      "sourceReference": "Section 5.4.2, Pages 100-101"
+    },
+    {
+      "id": "ECO-G10-U05-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which of the following is an accurate description of the traditional Ethiopian indigenous institution called 'Iddir'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A speculative stock brokerage that trades foreign currencies in capital markets"
+        },
+        {
+          "id": "B",
+          "text": "A rotating credit club where accumulated weekly contributions are distributed by lottery to fund business startups"
+        },
+        {
+          "id": "C",
+          "text": "An indigenous socio-financial association functioning like mutual life insurance to provide financial and material assistance during bereavement, funerals, and emergencies"
+        },
+        {
+          "id": "D",
+          "text": "A specialized commercial bank branch licensed directly by the National Bank of Ethiopia"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Iddir is an indigenous community-based association in Ethiopia that functions like a mutual life insurance society. Members make monthly contributions to a common fund that provides financial, material, and social assistance to families during funerals and unforeseen emergencies.",
+      "sourceReference": "Section 5.7, Pages 108-109"
+    },
+    {
+      "id": "ECO-G10-U05-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What electronic network allows direct deposit fund transfers—such as salaries, pensions, and tax refunds—to take place automatically between different commercial banks?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Automated Clearing House (ACH)"
+        },
+        {
+          "id": "B",
+          "text": "Point of Sale (POS) terminal"
+        },
+        {
+          "id": "C",
+          "text": "Automated Teller Machine (ATM)"
+        },
+        {
+          "id": "D",
+          "text": "Revolving Credit Association (RCA)"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Direct deposit requires an electronic network that facilitates interbank transfers. This network is known as the Automated Clearing House (ACH), which automatically routes and credits funds across participating financial institutions.",
+      "sourceReference": "Section 5.6, Pages 106-107"
+    },
+    {
+      "id": "ECO-G10-U05-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Why are the 'poorest of the poor' (the destitute) typically excluded from receiving microcredit loans from formal microfinance institutions (MFIs)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because MFIs require clients to invest in capital market debt securities before qualifying for loans."
+        },
+        {
+          "id": "B",
+          "text": "Because microfinance targets the 'economically active poor' who have viable economic opportunities and skills to generate income for loan repayment, whereas the destitute require direct relief and social safety nets."
+        },
+        {
+          "id": "C",
+          "text": "Because central banking laws prohibit MFIs from operating in rural woredas."
+        },
+        {
+          "id": "D",
+          "text": "Because group lending requires each borrower to hold an existing checking account with commercial banks."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Microfinance institutions target the 'economically active poor'—individuals with entrepreneurial skills and viable business opportunities where a small capital injection generates income to repay the loan. The destitute lack these immediate economic opportunities, so loan funds would be diverted to survival consumption, making them better served by grant-based social protection programs.",
+      "sourceReference": "Section 5.5.2, Page 104"
+    },
+    {
+      "id": "ECO-G10-U05-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Which of the following legal landmarks officially dismantled the state banking monopoly in Ethiopia and established the regulatory framework for private domestic commercial banks?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The Anglo-Egyptian Agreement of 1905"
+        },
+        {
+          "id": "B",
+          "text": "Proclamation No. 206 of 1963"
+        },
+        {
+          "id": "C",
+          "text": "The Monetary and Banking Proclamation No. 83/1994"
+        },
+        {
+          "id": "D",
+          "text": "The Nationalization Proclamation of 1975"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Following the transition to a market economy in 1991, the Licensing and Supervision of Banking Business Proclamation No. 84/1994 and Monetary and Banking Proclamation No. 83/1994 were enacted in 1994, establishing the legal framework for private investment in commercial banking.",
+      "sourceReference": "Section 5.4.1, Pages 99-100"
+    },
+    {
+      "id": "ECO-G10-U05-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Despite having access to formal commercial bank branches, why do many small business operators and households in Ethiopia continue to actively participate in informal 'Iqubs'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Iqub enforces statutory tax deductions on behalf of the Ministry of Revenues."
+        },
+        {
+          "id": "B",
+          "text": "Iqub offers forced contractual savings, zero administrative overhead, social solidarity ties, and freedom from formal collateral requirements."
+        },
+        {
+          "id": "C",
+          "text": "Commercial banks are prohibited from offering deposit interest to retail customers."
+        },
+        {
+          "id": "D",
+          "text": "Iqub funds are fully insured and underwritten by international investment banks."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "According to Section 5.7, people prefer Iqub over formal banking due to social solidarity and friendship ties, contractual forced saving, flexibility to meet urgent cash needs, negligible administrative costs, and the absence of asset collateral barriers.",
+      "sourceReference": "Section 5.7, Pages 108-109"
+    },
+    {
+      "id": "ECO-G10-U05-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "How do Savings and Credit Cooperatives (SACCos) structurally differ from both pure commercial banks and informal indigenous institutions like Iqub?",
+      "options": [
+        {
+          "id": "A",
+          "text": "SACCos are state-owned monopolies governed directly by the National Bank of Ethiopia's executive board."
+        },
+        {
+          "id": "B",
+          "text": "SACCos are semi-formal member-owned financial institutions that mobilize member savings and provide credit outside central banking authority, combining cooperative governance with legal organizational status."
+        },
+        {
+          "id": "C",
+          "text": "SACCos operate solely as charitable foundations that distribute non-repayable cash grants."
+        },
+        {
+          "id": "D",
+          "text": "SACCos deal exclusively in foreign exchange arbitrage and long-term corporate Eurobonds."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "SACCos are classified as semi-formal financial institutions. Unlike informal Iqubs, they have formal cooperative structures and by-laws; unlike commercial banks, they are owned and managed by their members outside direct central monetary control, providing accessible credit for agriculture and off-farm enterprises.",
+      "sourceReference": "Section 5.7, Pages 109-110"
+    }
+  ]
 }

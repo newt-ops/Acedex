@@ -3,5 +3,411 @@
   "subject": "Economics",
   "unitNumber": 2,
   "unitTitle": "Market Structure and the Decision of Firms",
-  "questions": []
+  "questions": [
+    {
+      "id": "ECO-G11-U02-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which of the following correctly lists market structures in order from most competitive to least competitive?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Pure monopoly → Oligopoly → Monopolistic competition → Perfect competition"
+        },
+        {
+          "id": "B",
+          "text": "Perfect competition → Monopolistic competition → Oligopoly → Pure monopoly"
+        },
+        {
+          "id": "C",
+          "text": "Oligopoly → Perfect competition → Monopolistic competition → Pure monopoly"
+        },
+        {
+          "id": "D",
+          "text": "Perfect competition → Oligopoly → Monopolistic competition → Pure monopoly"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "According to Section 2.1 (Table 2.1) of the Grade 11 textbook, the correct sequence of market structures from most to least competitive is: perfect competition, monopolistic competition, oligopoly, and pure monopoly.",
+      "sourceReference": "Section 2.1, Page 35"
+    },
+    {
+      "id": "ECO-G11-U02-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Because an individual firm in a perfectly competitive market is a price-taker, what is the graphical shape of the demand curve it faces?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A downward-sloping curve identical to the industry demand curve"
+        },
+        {
+          "id": "B",
+          "text": "A horizontal straight line at the market-determined equilibrium price where P = AR = MR"
+        },
+        {
+          "id": "C",
+          "text": "A vertical line at the profit-maximizing level of output"
+        },
+        {
+          "id": "D",
+          "text": "A U-shaped curve tangent to the average variable cost curve"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In perfect competition, an individual firm is an insignificant portion of the market and can sell any quantity at the market-determined price. Hence, its perceived demand curve is horizontal and satisfies P = AR = MR = DD.",
+      "sourceReference": "Section 2.2.1, Pages 36-38"
+    },
+    {
+      "id": "ECO-G11-U02-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "For a single-price monopolist facing a downward-sloping linear market demand curve, how does the marginal revenue (MR) curve behave relative to demand?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The MR curve lies entirely above the demand curve."
+        },
+        {
+          "id": "B",
+          "text": "The MR curve is horizontal at the profit-maximizing price level."
+        },
+        {
+          "id": "C",
+          "text": "The MR curve lies below the demand curve, decreasing twice as fast so its horizontal intercept is halfway to the demand curve's intercept."
+        },
+        {
+          "id": "D",
+          "text": "The MR curve is identical to the average revenue curve."
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Because a monopolist must lower the price on all units to sell an additional unit, MR is less than price (P). For a linear demand curve, MR has the same vertical intercept and declines twice as fast as demand, making its horizontal intercept halfway to that of demand.",
+      "sourceReference": "Section 2.3.1, Pages 48-49"
+    },
+    {
+      "id": "ECO-G11-U02-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is the defining characteristic of a duopoly?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A single buyer dominating factor input purchases"
+        },
+        {
+          "id": "B",
+          "text": "A special case of an oligopoly in which exactly two firms operate and hold power over the market"
+        },
+        {
+          "id": "C",
+          "text": "A perfectly competitive industry with two homogeneous product varieties"
+        },
+        {
+          "id": "D",
+          "text": "A market with free entry where firms sell identical goods without incurring transport costs"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Section 2.5 explicitly defines a duopoly as a special case of an oligopoly where exactly two firms operate and exert power over the market (e.g., Boeing and Airbus in commercial aircraft manufacturing).",
+      "sourceReference": "Section 2.5, Page 61"
+    },
+    {
+      "id": "ECO-G11-U02-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Under what condition does a firm operating in any market structure maximize its total profit or minimize its total loss?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Where Total Revenue (TR) equals Total Cost (TC)"
+        },
+        {
+          "id": "B",
+          "text": "Where Marginal Revenue equals Marginal Cost (MR = MC) and the MC curve cuts the MR curve from below"
+        },
+        {
+          "id": "C",
+          "text": "Where Average Total Cost (ATC) is at its maximum"
+        },
+        {
+          "id": "D",
+          "text": "Where unit price equals Average Fixed Cost (AFC)"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The profit-maximizing rule requires that marginal revenue equals marginal cost (MR = MC, necessary condition) and that marginal cost is rising (MC cuts MR from below, sufficient condition).",
+      "sourceReference": "Section 2.2.2, Pages 40-41 & Section 2.3.2, Pages 51-52"
+    },
+    {
+      "id": "ECO-G11-U02-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In the short run, what constitutes the individual supply curve of a profit-maximizing firm in a perfectly competitive market?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The entire upward-sloping Average Total Cost (ATC) curve"
+        },
+        {
+          "id": "B",
+          "text": "That portion of the short-run Marginal Cost (SMC) curve that lies above the Average Variable Cost (SAVC) curve"
+        },
+        {
+          "id": "C",
+          "text": "The downward-sloping segment of the Average Fixed Cost (AFC) curve"
+        },
+        {
+          "id": "D",
+          "text": "The horizontal Average Revenue (AR) curve"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "At prices below the minimum Average Variable Cost (SAVC), the firm shuts down to minimize losses to fixed costs. Above minimum SAVC, the firm produces where P = MC. Therefore, the firm's short-run supply curve is that portion of the SMC curve lying above the SAVC curve.",
+      "sourceReference": "Section 2.2.3, Pages 44-45"
+    },
+    {
+      "id": "ECO-G11-U02-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In a perfectly competitive industry, when does a firm decide to shut down operations immediately in the short run?",
+      "options": [
+        {
+          "id": "A",
+          "text": "When market price falls below Average Total Cost (P < ATC) but remains above Average Variable Cost"
+        },
+        {
+          "id": "B",
+          "text": "When total revenue is insufficient to cover total variable costs (P < AVC)"
+        },
+        {
+          "id": "C",
+          "text": "When economic profit is zero and the firm earns only normal profits"
+        },
+        {
+          "id": "D",
+          "text": "When Marginal Cost (MC) is rising faster than Average Cost (AC)"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "By shutting down, variable costs drop to zero, leaving only fixed costs. If price falls below the minimum average variable cost (P < AVC), continuing production would result in operating losses greater than total fixed costs. Thus, the firm shuts down immediately.",
+      "sourceReference": "Section 2.2.2, Pages 43-44"
+    },
+    {
+      "id": "ECO-G11-U02-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What full condition characterizes the long-run equilibrium of an individual firm in a perfectly competitive market?",
+      "options": [
+        {
+          "id": "A",
+          "text": "P = MR > SMC = LMC > SAC = LAC"
+        },
+        {
+          "id": "B",
+          "text": "SMC = LMC = SAC = LAC = P = MR at the minimum point of the LAC curve"
+        },
+        {
+          "id": "C",
+          "text": "P = ATC > MC = MR, generating perpetual supernormal profit"
+        },
+        {
+          "id": "D",
+          "text": "TR = TC while MR is negative"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Due to free entry and exit, excess profits or losses are eliminated over the long run. Long-run competitive equilibrium occurs at the minimum point of the long-run average cost curve, satisfying: SMC = LMC = SAC = LAC = P = MR.",
+      "sourceReference": "Section 2.2.4, Pages 46-47 & Review Questions, Page 66"
+    },
+    {
+      "id": "ECO-G11-U02-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "When a monopolist practices first-degree (perfect) price discrimination, what is the resulting economic outcome?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Deadweight loss reaches its highest possible level in the economy."
+        },
+        {
+          "id": "B",
+          "text": "The entire consumer surplus is extracted and converted into monopoly revenue, output expands to the competitive level, and deadweight loss is zero."
+        },
+        {
+          "id": "C",
+          "text": "Different consumer groups are charged uniform regulated prices regardless of willingness to pay."
+        },
+        {
+          "id": "D",
+          "text": "The firm operates at a loss because price equals average fixed cost."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Under first-degree price discrimination, the seller charges each buyer their exact reservation price. All consumer surplus is transformed into revenue/profit, output expands until reservation price equals marginal cost (identical to competitive output), and deadweight loss is eliminated.",
+      "sourceReference": "Section 2.3.3, Pages 53-54"
+    },
+    {
+      "id": "ECO-G11-U02-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In microeconomics, what differentiates a 'product group' from a traditional 'industry'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "An industry consists of firms selling differentiated products, while a product group sells perfectly homogeneous commodities."
+        },
+        {
+          "id": "B",
+          "text": "An industry refers to firms producing a homogeneous product, whereas a product group refers to a collection of firms producing closely related, differentiated substitute products with high price and cross elasticity."
+        },
+        {
+          "id": "C",
+          "text": "A product group consists exclusively of state-owned enterprises."
+        },
+        {
+          "id": "D",
+          "text": "There is no difference; product group and industry are identical terms in all market structures."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "An 'industry' strictly denotes firms producing an identical (homogeneous) good. Under monopolistic competition, because products are differentiated, economists use the term 'product group' to designate firms producing close substitutes with high cross elasticity of demand (such as different brands of soap or clothing).",
+      "sourceReference": "Section 2.4.4, Page 61 & EUEE 2018 Round 1, Q44"
+    },
+    {
+      "id": "ECO-G11-U02-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What is the defining feature that distinguishes a collusive oligopoly from a non-collusive oligopoly?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Collusive oligopolies produce only agricultural commodities, while non-collusive oligopolies produce services."
+        },
+        {
+          "id": "B",
+          "text": "In a collusive oligopoly, firms eliminate competition through formal agreements (cartels) or informal arrangements (price leadership) to set joint price and output, whereas non-collusive firms determine price and output independently."
+        },
+        {
+          "id": "C",
+          "text": "Non-collusive oligopolies face completely horizontal demand curves."
+        },
+        {
+          "id": "D",
+          "text": "Collusive oligopolies operate without any mutual interdependence among sellers."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In a collusive oligopoly, firms cooperate through formal cartels or tacit price leadership to act collectively like a monopoly, setting joint prices and output. In a non-collusive oligopoly, each firm pursues independent price and output policies under direct rivalry.",
+      "sourceReference": "Section 2.5.1 & 2.5.2, Pages 61-63 (Table 2.4)"
+    },
+    {
+      "id": "ECO-G11-U02-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A perfectly competitive firm operates in the short run with the total cost function C = Q² + 20Q + 700. If the ruling market equilibrium price is Birr 100, what are the profit-maximizing level of output (Q) and the maximum economic profit (π)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Q = 50 units; Profit = Birr 1,500"
+        },
+        {
+          "id": "B",
+          "text": "Q = 40 units; Profit = Birr 900"
+        },
+        {
+          "id": "C",
+          "text": "Q = 40 units; Profit = Birr 1,600"
+        },
+        {
+          "id": "D",
+          "text": "Q = 60 units; Profit = Birr 2,100"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Marginal cost is MC = dC/dQ = 2Q + 20. In perfect competition, profit maximization requires P = MC: 100 = 2Q + 20 => 2Q = 80 => Q = 40 units. Total Revenue = P * Q = 100 * 40 = Birr 4,000. Total Cost = (40)² + 20(40) + 700 = 1,600 + 800 + 700 = Birr 3,100. Maximum profit π = TR - TC = 4,000 - 3,100 = Birr 900.",
+      "sourceReference": "Section 2.2.2, Page 44 (Activity 2.2)"
+    },
+    {
+      "id": "ECO-G11-U02-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A pure monopolist with the cost function C = 0.5Q² faces the market demand curve Q = 12 - P. What are the monopolist's profit-maximizing price (P) and quantity (Q)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "P = Birr 8, Q = 4 units"
+        },
+        {
+          "id": "B",
+          "text": "P = Birr 6, Q = 6 units"
+        },
+        {
+          "id": "C",
+          "text": "P = Birr 9, Q = 3 units"
+        },
+        {
+          "id": "D",
+          "text": "P = Birr 10, Q = 2 units"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Rearrange demand to inverse demand: P = 12 - Q. Total Revenue is TR = P * Q = 12Q - Q². Marginal Revenue is MR = 12 - 2Q. Marginal Cost is MC = dC/dQ = Q. Setting MR = MC: 12 - 2Q = Q => 3Q = 12 => Q = 4 units. Substituting Q = 4 into inverse demand yields P = 12 - 4 = Birr 8.",
+      "sourceReference": "Section 2.3.2, Pages 51-52 & Review Questions, Page 67"
+    },
+    {
+      "id": "ECO-G11-U02-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Using the monopoly data from the preceding question (Cost: C = 0.5Q²; Demand: P = 12 - Q), if the firm were forced by a regulatory authority to behave like a perfectly competitive industry (pricing at marginal cost, P = MC), what would the new equilibrium price and quantity be?",
+      "options": [
+        {
+          "id": "A",
+          "text": "P = Birr 4, Q = 8 units"
+        },
+        {
+          "id": "B",
+          "text": "P = Birr 6, Q = 6 units"
+        },
+        {
+          "id": "C",
+          "text": "P = Birr 8, Q = 4 units"
+        },
+        {
+          "id": "D",
+          "text": "P = Birr 7, Q = 5 units"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Under competitive behavior, price equals marginal cost: P = MC. Inverse demand is P = 12 - Q and MC = Q. Equating P = MC gives 12 - Q = Q => 2Q = 12 => Q = 6 units. Substituting into inverse demand gives P = 12 - 6 = Birr 6.",
+      "sourceReference": "Section 2.3.2, Pages 51-52 & Review Questions, Page 67"
+    },
+    {
+      "id": "ECO-G11-U02-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A monopolistically competitive firm earns supernormal profits in short-run equilibrium. What dynamic adjustments will occur in the industry over the long run, and why?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Existing firms merge to establish a monopoly cartel and raise price above Average Total Cost permanently."
+        },
+        {
+          "id": "B",
+          "text": "Because entry is free, new firms enter the product group attracted by profits, expanding available product varieties and shifting existing firms' perceived demand curves leftward until each firm earns only normal profits (P = ATC)."
+        },
+        {
+          "id": "C",
+          "text": "The government imposes production quotas to prevent new firms from entering the market."
+        },
+        {
+          "id": "D",
+          "text": "The perceived demand curve of each firm shifts rightward and becomes completely inelastic."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In monopolistic competition, entry is free. Short-run supernormal profits attract new firms producing close substitutes. This increases consumer choice and reduces the market share of incumbent firms, shifting each firm's perceived demand curve leftward and making it more elastic until tangency with ATC occurs (P = ATC), driving economic profits to zero.",
+      "sourceReference": "Section 2.4.1 & 2.4.3, Pages 57-61 & Unit Summary, Page 64"
+    }
+  ]
 }

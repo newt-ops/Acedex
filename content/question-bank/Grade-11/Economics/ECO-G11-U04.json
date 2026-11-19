@@ -3,5 +3,411 @@
   "subject": "Economics",
   "unitNumber": 4,
   "unitTitle": "Consumption, Saving and Investment",
-  "questions": []
+  "questions": [
+    {
+      "id": "ECO-G11-U04-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In macroeconomic analysis, how is disposable personal income (Yd) defined and utilized by households?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It is gross income plus transfer payments, allocated entirely to commercial banking reserves."
+        },
+        {
+          "id": "B",
+          "text": "It is personal income remaining after the deduction of personal taxes (Y - T), which households divide between consumption and saving."
+        },
+        {
+          "id": "C",
+          "text": "It is the statutory minimum wage legally established for manufacturing workers."
+        },
+        {
+          "id": "D",
+          "text": "It is the value of physical capital accumulated by business firms before depreciation."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Disposable income (Yd) is the net income left in the hands of households after personal direct taxes are deducted: Yd = Y - T. In macroeconomic theory, disposable income is divided exclusively between consumption expenditure and saving: Yd = C + S.",
+      "sourceReference": "Section 4.1, Page 91"
+    },
+    {
+      "id": "ECO-G11-U04-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What does autonomous consumption (Co) represent in the linear consumption function C = Co + cYd?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The portion of consumer spending that varies directly with disposable income"
+        },
+        {
+          "id": "B",
+          "text": "The minimum baseline consumption expenditure that occurs even when disposable income is zero, financed through dissaving or borrowing"
+        },
+        {
+          "id": "C",
+          "text": "The total volume of capital goods purchased by private business enterprises"
+        },
+        {
+          "id": "D",
+          "text": "The statutory sales taxes levied on household retail purchases"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Autonomous consumption (Co) is the vertical intercept of the consumption function. It represents baseline consumer expenditure that is independent of the level of income and must be sustained through borrowing or liquidating past savings (dissaving) when income is zero.",
+      "sourceReference": "Section 4.1, Pages 91-93"
+    },
+    {
+      "id": "ECO-G11-U04-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In the Keynesian consumption model, how are the Marginal Propensity to Consume (MPC) and Marginal Propensity to Save (MPS) mathematically related?",
+      "options": [
+        {
+          "id": "A",
+          "text": "MPC * MPS = 1"
+        },
+        {
+          "id": "B",
+          "text": "MPC - MPS = 1"
+        },
+        {
+          "id": "C",
+          "text": "MPC + MPS = 1"
+        },
+        {
+          "id": "D",
+          "text": "MPC / MPS = 1"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Because any extra increment of disposable income (ΔYd) can only be either consumed (ΔC) or saved (ΔS), dividing both sides of ΔYd = ΔC + ΔS by ΔYd proves that MPC + MPS = 1 (or c + (1 - c) = 1).",
+      "sourceReference": "Section 4.3, Pages 99-100"
+    },
+    {
+      "id": "ECO-G11-U04-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is the economic definition of 'investment' in national income accounting and macroeconomic theory?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Purchasing existing corporate common stock or government treasury bonds on secondary financial markets"
+        },
+        {
+          "id": "B",
+          "text": "The purchase and accumulation of capital goods (machinery, structures, and inventories) per unit of time that are not consumed today but used to produce future wealth"
+        },
+        {
+          "id": "C",
+          "text": "Depositing paper currency into commercial bank savings accounts for emergency reserves"
+        },
+        {
+          "id": "D",
+          "text": "Household purchases of imported perishable food commodities"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In economics, investment refers to physical capital formation—the purchase of goods (machinery, equipment, new buildings, and changes in inventories) not consumed in the current period, which expand the productive capital stock of the economy.",
+      "sourceReference": "Section 4.4, Pages 102-103 & EUEE 2018 Round 1, Q9"
+    },
+    {
+      "id": "ECO-G11-U04-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "How is Net Investment mathematically derived from Gross Investment?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Net Investment = Gross Investment + Capital Depreciation"
+        },
+        {
+          "id": "B",
+          "text": "Net Investment = Gross Investment - Capital Consumption Allowance (Depreciation)"
+        },
+        {
+          "id": "C",
+          "text": "Net Investment = Gross Investment * Average Propensity to Save"
+        },
+        {
+          "id": "D",
+          "text": "Net Investment = Gross Investment / Accelerator Coefficient"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Gross investment includes total capital spending before deducting wear and tear. Net investment represents the actual net addition to the capital stock after subtracting capital depreciation (replacement investment): Net Investment = Gross Investment - Depreciation.",
+      "sourceReference": "Section 4.4.1, Page 103"
+    },
+    {
+      "id": "ECO-G11-U04-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "According to Keynesian consumption theory, what happens to the Average Propensity to Consume (APC) as household disposable income rises?",
+      "options": [
+        {
+          "id": "A",
+          "text": "APC rises continuously and eventually exceeds unity."
+        },
+        {
+          "id": "B",
+          "text": "APC remains strictly constant at all levels of disposable income."
+        },
+        {
+          "id": "C",
+          "text": "APC declines as income rises because consumption increases at a slower rate than income."
+        },
+        {
+          "id": "D",
+          "text": "APC falls immediately to zero once autonomous consumption is met."
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Keynes posited that the proportion of total income spent on consumption (APC = C / Yd) falls as income rises, because as households become wealthier, they allocate an increasing share of their income to savings.",
+      "sourceReference": "Section 4.1.1, Page 94 & Review Questions, Page 111"
+    },
+    {
+      "id": "ECO-G11-U04-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What is the graphical interpretation of the 45-degree reference line in the Keynesian consumption and saving diagram?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It represents the profit-maximizing output line of a pure monopoly."
+        },
+        {
+          "id": "B",
+          "text": "It is the 'expenditure equals income' line (Y = C + S) where any point on the line indicates that aggregate expenditure equals total income."
+        },
+        {
+          "id": "C",
+          "text": "It represents a perfectly inelastic supply curve of investment funds."
+        },
+        {
+          "id": "D",
+          "text": "It depicts the locus of points where marginal propensity to consume is zero."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In the consumption-income diagram, the 45-degree line represents all points where aggregate expenditure equals aggregate income (Y = C + S). Where the consumption curve intersects the 45-degree line, consumption equals disposable income (C = Yd), meaning saving is zero (the break-even point).",
+      "sourceReference": "Section 4.3, Pages 100-101"
+    },
+    {
+      "id": "ECO-G11-U04-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In a consumption-income diagram, what economic condition exists at income levels below the break-even point where the consumption curve lies above the 45-degree line?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Positive saving (S > 0)"
+        },
+        {
+          "id": "B",
+          "text": "Dissaving (S < 0), meaning households spend more than their current disposable income"
+        },
+        {
+          "id": "C",
+          "text": "Hyperinflation in consumer goods markets"
+        },
+        {
+          "id": "D",
+          "text": "Zero autonomous consumption"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "When the consumption curve lies above the 45-degree line (C > Yd), household spending exceeds current income. This gap represents dissaving (negative saving), which households finance by drawing down existing savings or borrowing.",
+      "sourceReference": "Section 4.3, Pages 100-101 & Review Questions, Page 111 & EUEE 2018 Round 1, Q8"
+    },
+    {
+      "id": "ECO-G11-U04-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How do economists analytically distinguish between 'autonomous investment' and 'induced investment'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Autonomous investment is undertaken solely by foreign multinational corporations, while induced investment is undertaken by domestic households."
+        },
+        {
+          "id": "B",
+          "text": "Autonomous investment is independent of the level of national income or profit expectations, whereas induced investment is profit-motivated and varies directly with changes in income and output."
+        },
+        {
+          "id": "C",
+          "text": "Autonomous investment is financed exclusively by corporate equities, while induced investment is financed by foreign aid grants."
+        },
+        {
+          "id": "D",
+          "text": "Induced investment has an accelerator coefficient equal to zero."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Autonomous investment is income-inelastic capital spending (often undertaken by governments for infrastructure and social welfare) that does not depend on changes in income. Induced investment is profit-driven and income-elastic, expanding when aggregate demand and national income rise.",
+      "sourceReference": "Section 4.4.1, Pages 103-104"
+    },
+    {
+      "id": "ECO-G11-U04-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Holding all other factors constant, what is the theoretical relationship between the real interest rate and the level of planned investment spending in an economy?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Direct (positive) relationship: higher interest rates stimulate greater business capital spending."
+        },
+        {
+          "id": "B",
+          "text": "Inverse (negative) relationship: as interest rates rise, the borrowing cost of capital increases, making fewer investment projects profitable."
+        },
+        {
+          "id": "C",
+          "text": "Neutral relationship: real investment is completely insensitive to commercial borrowing costs."
+        },
+        {
+          "id": "D",
+          "text": "Planned investment spending falls to zero whenever nominal interest rates equal inflation."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The interest rate measures the opportunity cost of holding funds and the financing cost of borrowed capital. As interest rates rise, borrowing costs increase and expected net returns on investment decline, leading firms to reduce capital expenditure.",
+      "sourceReference": "Section 4.4.2, Pages 105-106"
+    },
+    {
+      "id": "ECO-G11-U04-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What is the core principle of the accelerator theory of investment?",
+      "options": [
+        {
+          "id": "A",
+          "text": "High rates of price inflation automatically reduce the real value of government debt."
+        },
+        {
+          "id": "B",
+          "text": "Changes in final output or aggregate demand induce magnified proportional changes in the demand for capital investment goods (It = α * ΔY)."
+        },
+        {
+          "id": "C",
+          "text": "A rise in personal income taxes permanently accelerates household savings deposits."
+        },
+        {
+          "id": "D",
+          "text": "Commercial banks expand credit at a rate that is inversely proportional to the required reserve ratio."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The accelerator theory posits that investment demand is a function of the rate of change in national output/demand (It = α * ΔY). An increase in demand for final consumer goods induces a proportionate need for additional capital equipment to expand productive capacity.",
+      "sourceReference": "Section 4.4.3, Pages 108-109 & Review Questions, Page 112"
+    },
+    {
+      "id": "ECO-G11-U04-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A household has a linear consumption function given by C = 60 + 0.8Yd, where Yd is disposable income in Birr. What is the corresponding saving function, and what are the levels of consumption (C) and saving (S) when disposable income is Birr 500?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Saving function: S = -60 + 0.8Yd; C = Birr 460; S = Birr 340"
+        },
+        {
+          "id": "B",
+          "text": "Saving function: S = -60 + 0.2Yd; C = Birr 460; S = Birr 40"
+        },
+        {
+          "id": "C",
+          "text": "Saving function: S = 60 + 0.2Yd; C = Birr 400; S = Birr 100"
+        },
+        {
+          "id": "D",
+          "text": "Saving function: S = -60 + 0.2Yd; C = Birr 400; S = Birr 60"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Since Yd = C + S, S = Yd - C = Yd - (60 + 0.8Yd) = -60 + (1 - 0.8)Yd = -60 + 0.2Yd. When Yd = 500: C = 60 + 0.8(500) = 60 + 400 = Birr 460. Saving S = -60 + 0.2(500) = -60 + 100 = Birr 40 (or S = 500 - 460 = 40).",
+      "sourceReference": "Section 4.2 & Section 4.3, Pages 97-100 & Review Questions (Part III Work Out), Page 112"
+    },
+    {
+      "id": "ECO-G11-U04-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A household's consumption expenditure data across two income levels is as follows:\n- Combination A: Disposable Income = Birr 200, Consumption Spending = Birr 205\n- Combination B: Disposable Income = Birr 225, Consumption Spending = Birr 225\n- Combination C: Disposable Income = Birr 250, Consumption Spending = Birr 245\nWhat is the Marginal Propensity to Consume (MPC), what is the autonomous consumption (Co), and what is the break-even disposable income where saving equals zero?",
+      "options": [
+        {
+          "id": "A",
+          "text": "MPC = 0.80; Co = Birr 45; Break-even income = Birr 225"
+        },
+        {
+          "id": "B",
+          "text": "MPC = 0.75; Co = Birr 55; Break-even income = Birr 250"
+        },
+        {
+          "id": "C",
+          "text": "MPC = 0.80; Co = Birr 50; Break-even income = Birr 200"
+        },
+        {
+          "id": "D",
+          "text": "MPC = 0.20; Co = Birr 45; Break-even income = Birr 225"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "MPC = ΔC / ΔYd = (225 - 205) / (225 - 200) = 20 / 25 = 0.80. Autonomous consumption Co = C - MPC(Yd) = 205 - 0.80(200) = 205 - 160 = Birr 45. The break-even point occurs where C = Yd => 45 + 0.80Yd = Yd => 0.20Yd = 45 => Yd = Birr 225 (where S = 225 - 225 = 0).",
+      "sourceReference": "Section 4.1.2 & Section 4.3, Pages 94-95, 100 & Review Questions (Table 4.2), Page 112"
+    },
+    {
+      "id": "ECO-G11-U04-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A commercial bank offers an annual nominal lending interest rate of 14% on business expansion loans. Over the same annual period, national consumer prices rise at an inflation rate of 9%. What is the real interest rate faced by investing firms, and what is its policy implication for capital formation?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Real interest rate = 23%; businesses will accelerate borrowing due to rising nominal returns."
+        },
+        {
+          "id": "B",
+          "text": "Real interest rate = 5%; only investment projects with an expected rate of return exceeding 5% will be economically viable."
+        },
+        {
+          "id": "C",
+          "text": "Real interest rate = 1.56%; firms face zero cost of borrowing."
+        },
+        {
+          "id": "D",
+          "text": "Real interest rate = -5%; commercial banks will refuse to accept public deposits."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "According to the Fisher equation highlighted in the textbook, Real interest rate = Nominal interest rate - Inflation rate = 14% - 9% = 5%. A project is profitable and viable only if its expected marginal productivity of capital exceeds this real cost of borrowed funds (5%).",
+      "sourceReference": "Section 4.4.1 & Section 4.4.2, Pages 105-106"
+    },
+    {
+      "id": "ECO-G11-U04-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Why does the traditional Ethiopian institution of 'Iqub' serve as an essential indigenous mechanism for both consumption and investment financing in the domestic economy?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because it operates through central bank discount windows and issues corporate treasury certificates"
+        },
+        {
+          "id": "B",
+          "text": "Because it provides contractual forced savings, pools financial resources through mutual social trust and member guarantees, and provides lump-sum payouts that overcome formal banking collateral hurdles"
+        },
+        {
+          "id": "C",
+          "text": "Because it guarantees fixed equity dividend returns backed by international commercial banks"
+        },
+        {
+          "id": "D",
+          "text": "Because the Ministry of Finance exempts all Iqub payouts from domestic import duties"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "As detailed in the textbook's dedicated case study on Iqub, this rotating saving and credit association mobilizes savings through mutual trust, informal social communication, and peer guarantees. It enables participants to accumulate lump sums to finance household consumption or invest in small business ventures without conventional bank collateral barriers.",
+      "sourceReference": "Section 4.3, Pages 101-102"
+    }
+  ]
 }

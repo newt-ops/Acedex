@@ -3,5 +3,411 @@
   "subject": "Economics",
   "unitNumber": 3,
   "unitTitle": "Economic Resources and Markets",
-  "questions": []
+  "questions": [
+    {
+      "id": "ECO-G09-U03-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In economics, how is an economic resource fundamentally differentiated from a free resource?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Economic resources are provided directly by nature, whereas free resources are manufactured by business firms."
+        },
+        {
+          "id": "B",
+          "text": "Economic resources exist in unlimited quantities, whereas free resources exist in strictly limited quantities."
+        },
+        {
+          "id": "C",
+          "text": "Economic resources command a positive price because they are scarce relative to human wants, whereas free resources have zero price because available supply exceeds desires at zero price."
+        },
+        {
+          "id": "D",
+          "text": "Economic resources are owned exclusively by the government, whereas free resources are owned by private households."
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "A resource is free if the amount available to a society is greater than what people desire at zero price (e.g., sunshine, air). An economic resource is scarce because the amount available is less than what people want at zero price, meaning it commands a positive market price.",
+      "sourceReference": "Section 3.1, Page 30"
+    },
+    {
+      "id": "ECO-G09-U03-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is the specific factor payment received by households for providing capital goods to business firms in the production process?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Rent"
+        },
+        {
+          "id": "B",
+          "text": "Interest"
+        },
+        {
+          "id": "C",
+          "text": "Wages"
+        },
+        {
+          "id": "D",
+          "text": "Profit"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "According to the textbook, each category of economic resources earns a distinct factor reward: land earns rent, labour earns wages, capital earns interest, and entrepreneurship earns profit.",
+      "sourceReference": "Section 3.1, Page 30"
+    },
+    {
+      "id": "ECO-G09-U03-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which of the following natural resources is classified as a non-renewable economic resource?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Solar energy"
+        },
+        {
+          "id": "B",
+          "text": "Wind power"
+        },
+        {
+          "id": "C",
+          "text": "Natural timber forests"
+        },
+        {
+          "id": "D",
+          "text": "Petroleum deposits"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "Non-renewable resources are those whose stock or reserve in the earth is fixed and limited, taking millions of years to form, such as fossil fuels (petroleum, coal, and natural gas). Solar, wind, and properly managed timber can replenish naturally over time.",
+      "sourceReference": "Section 3.2, Page 31"
+    },
+    {
+      "id": "ECO-G09-U03-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In which type of market do households act primarily as buyers while business firms act as sellers of final commodities?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Goods and services market"
+        },
+        {
+          "id": "B",
+          "text": "Labour market"
+        },
+        {
+          "id": "C",
+          "text": "Financial market"
+        },
+        {
+          "id": "D",
+          "text": "Resource market"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "In the goods and services (product) market, business firms sell finished end products and consumable goods, while households act as consumers who spend money to acquire them.",
+      "sourceReference": "Section 3.3, Page 32"
+    },
+    {
+      "id": "ECO-G09-U03-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In the circular flow model of economic activities, the physical movement of factor services and finished commodities is termed the:",
+      "options": [
+        {
+          "id": "A",
+          "text": "money flow"
+        },
+        {
+          "id": "B",
+          "text": "real flow"
+        },
+        {
+          "id": "C",
+          "text": "financial flow"
+        },
+        {
+          "id": "D",
+          "text": "taxation flow"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Economic transactions generate two opposite flows: real flows (the physical flow of factor services from households to firms, and goods and services from firms to households) and money flows (the monetary compensation paid for those resources and goods).",
+      "sourceReference": "Section 3.4, Pages 34-35"
+    },
+    {
+      "id": "ECO-G09-U03-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What special characteristic distinguishes entrepreneurship from the other three factors of production (land, labour, and capital)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It consists solely of physical tools and machinery used in factories."
+        },
+        {
+          "id": "B",
+          "text": "It is a free gift of nature that carries no opportunity cost."
+        },
+        {
+          "id": "C",
+          "text": "It is a specialized human talent that organizes other factors of production and bears the financial risk of business losses."
+        },
+        {
+          "id": "D",
+          "text": "It receives a guaranteed fixed return regardless of whether the business succeeds or fails."
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Entrepreneurship is defined as a special type of human talent that helps to organize and coordinate land, labour, and capital to produce goods and services, while taking on the inherent risk of making financial losses in pursuit of profit.",
+      "sourceReference": "Section 3.1, Page 30"
+    },
+    {
+      "id": "ECO-G09-U03-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which of the following actions best illustrates the conservation principle of 'recycling' natural resources?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Turning off electrical appliances when leaving a room to reduce electricity demand"
+        },
+        {
+          "id": "B",
+          "text": "Switching from motor vehicle transport to walking or riding a bicycle"
+        },
+        {
+          "id": "C",
+          "text": "Washing and refilling glass jars to store food repeatedly without re-manufacturing"
+        },
+        {
+          "id": "D",
+          "text": "Collecting discarded scrap aluminium cans and melting them down to produce new metal sheets"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "Recycling means reprocessing a discarded product or resource into a new usable item (such as reprocessing scrap metals or used paper). Reducing means consuming less (Option A and B), and reusing means utilizing an item again in its existing form (Option C).",
+      "sourceReference": "Section 3.2, Pages 31-32"
+    },
+    {
+      "id": "ECO-G09-U03-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How does the financial market facilitate economic growth within the circular flow of an economy?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It mobilizes unspent household savings and channels them to business firms for capital investment."
+        },
+        {
+          "id": "B",
+          "text": "It replaces the need for labour and capital in the direct manufacturing of goods."
+        },
+        {
+          "id": "C",
+          "text": "It fixes administrative prices on all agricultural goods traded between regions."
+        },
+        {
+          "id": "D",
+          "text": "It eliminates the collection of taxes by the central government."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The financial market serves as an intermediary mechanism where savings deposited by households are transferred to business firms in the form of investment loans, allowing businesses to purchase capital equipment and expand productive capacity.",
+      "sourceReference": "Section 3.3, Page 33 & Section 3.4, Page 37"
+    },
+    {
+      "id": "ECO-G09-U03-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which of the following is a fundamental assumption of the simplified two-sector circular flow model?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The economy engages actively in foreign export and import trade."
+        },
+        {
+          "id": "B",
+          "text": "Firms finance their capital needs primarily through government subsidies."
+        },
+        {
+          "id": "C",
+          "text": "Households spend the entire factor income they receive, with zero saving and no government intervention."
+        },
+        {
+          "id": "D",
+          "text": "Households produce all goods and services, while business firms own the factors of production."
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The two-sector circular flow model assumes a private closed economy containing only households and firms, where households own all factor services, firms purchase these services to produce goods, and households spend their entire income on consumption with no savings and no government sector.",
+      "sourceReference": "Section 3.4, Pages 35-36"
+    },
+    {
+      "id": "ECO-G09-U03-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In a three-sector circular flow model, which pair of fiscal flows moves directly from the government sector to the household and business firm sectors, respectively?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Direct taxes to households and indirect taxes to firms"
+        },
+        {
+          "id": "B",
+          "text": "Transfer payments to households and production subsidies to firms"
+        },
+        {
+          "id": "C",
+          "text": "Factor incomes to households and corporate profits to firms"
+        },
+        {
+          "id": "D",
+          "text": "Loan repayments to households and personal income taxes to firms"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In the three-sector model, the government collects taxes from households and firms, while injecting purchasing power back into the economy by providing transfer payments (e.g., social aid, pensions) to households and subsidies to business enterprises.",
+      "sourceReference": "Section 3.4, Pages 36-37"
+    },
+    {
+      "id": "ECO-G09-U03-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "According to the Grade 9 Economics textbook, approximately what proportion of Ethiopia's total surface area of 1,106,000 square kilometres is considered suitable for agriculture?",
+      "options": [
+        {
+          "id": "A",
+          "text": "10 percent"
+        },
+        {
+          "id": "B",
+          "text": "20 percent"
+        },
+        {
+          "id": "C",
+          "text": "65 percent"
+        },
+        {
+          "id": "D",
+          "text": "35 percent"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "Section 3.5 of the textbook notes that Ethiopia has a total area of 1,106,000 square kilometres, of which approximately 35 per cent is considered suitable for agricultural production.",
+      "sourceReference": "Section 3.5, Page 38"
+    },
+    {
+      "id": "ECO-G09-U03-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Consider the exact relationship between real flows and money flows in the circular flow of income. Which of the following correctly pairs a real flow with its exact monetary counterpart in the resource market?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Real Flow: Supply of labour services by households → Money Flow: Payment of wages by firms"
+        },
+        {
+          "id": "B",
+          "text": "Real Flow: Supply of finished consumer goods by firms → Money Flow: Payment of rent by households"
+        },
+        {
+          "id": "C",
+          "text": "Real Flow: Consumption expenditure by households → Money Flow: Delivery of machinery by firms"
+        },
+        {
+          "id": "D",
+          "text": "Real Flow: Payment of interest by firms → Money Flow: Delivery of raw materials by households"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "In the factor (resource) market, the real flow is the supply of productive factors (such as labour) from households to business firms. The exact monetary counterpart running in the opposite direction is the factor payment (wages) paid by business firms to households.",
+      "sourceReference": "Section 3.4, Pages 34-36"
+    },
+    {
+      "id": "ECO-G09-U03-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "How did the land tenure regime established in post-1991 Ethiopia modify rural property rights compared to the Derg socialist regime (1975–1991)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It fully privatized all land holdings, granting rural farmers unrestricted rights to sell, divide, and mortgage rural land."
+        },
+        {
+          "id": "B",
+          "text": "It abolished the concept of state ownership of land and reinstated the pre-1974 landlord-tenant sharecropping system."
+        },
+        {
+          "id": "C",
+          "text": "It retained state ownership of land, but granted rural peasants and pastoralists lifetime holding rights with constitutional protection against arbitrary eviction, while still prohibiting land sales and mortgages."
+        },
+        {
+          "id": "D",
+          "text": "It eliminated urban lease contracts and converted all residential properties into collective state farms."
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The post-1991 government maintained state ownership of all land and natural resources (originating under the 1975 Derg reform), but provided rural peasants and pastoralists with lifetime 'holding' rights. However, these rights exclude the power of sale or mortgage.",
+      "sourceReference": "Section 3.5, Pages 38-39"
+    },
+    {
+      "id": "ECO-G09-U03-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Suppose the government in a three-sector economy increases personal income tax rates on households while simultaneously reducing its purchases of goods and services from domestic firms. What is the immediate effect of these fiscal adjustments on the circular flow?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Both household disposable income and firm business revenues will expand rapidly."
+        },
+        {
+          "id": "B",
+          "text": "Household disposable income decreases, dampening consumer expenditure, while lower government procurement contracts diminish total business revenue."
+        },
+        {
+          "id": "C",
+          "text": "Factor market real flows increase because households are compelled to supply less labour."
+        },
+        {
+          "id": "D",
+          "text": "Firms will experience an immediate shortage of productive factors in the resource market."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In the three-sector model, higher taxes on households reduce their take-home disposable income, directly decreasing consumption expenditure in the goods market. Simultaneously, reduced government purchases lower direct injections into business firms, contracting overall business revenues.",
+      "sourceReference": "Section 3.4, Pages 36-37"
+    },
+    {
+      "id": "ECO-G09-U03-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Fresh clean water in an uninhabited highland stream is initially a free resource. Under which of the following circumstances would this water scientifically transform into an economic resource?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Rapid industrialization and population growth cause pollution and local shortages, so acquiring clean water requires treatment facilities and capital expenditures."
+        },
+        {
+          "id": "B",
+          "text": "The government officially declares that all water flowing through national rivers has infinite natural abundance."
+        },
+        {
+          "id": "C",
+          "text": "Consumers decide to consume more water without any change in available water volume or quality."
+        },
+        {
+          "id": "D",
+          "text": "The price of agricultural land adjacent to the highland stream drops to zero."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "A resource is free only as long as its available quantity exceeds human desires at zero price. Once contamination, scarcity, or excessive demand makes the resource scarce, purifying and distributing it requires scarce inputs (labour and capital), giving it a positive price and opportunity cost, thus converting it into an economic resource.",
+      "sourceReference": "Section 3.1, Page 30 & Section 3.2, Page 31"
+    }
+  ]
 }

@@ -3,5 +3,411 @@
   "subject": "Economics",
   "unitNumber": 3,
   "unitTitle": "Macroeconomic Policy",
-  "questions": []
+  "questions": [
+    {
+      "id": "ECO-G12-U03-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In microeconomic analysis, how is 'market failure' formally defined?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A situation where business firms incur accounting losses due to rising statutory tax rates"
+        },
+        {
+          "id": "B",
+          "text": "An economic situation characterized by the inefficient distribution or allocation of goods and services in a free market"
+        },
+        {
+          "id": "C",
+          "text": "A macroeconomic condition where aggregate demand equals aggregate supply at full employment"
+        },
+        {
+          "id": "D",
+          "text": "The statutory bankruptcy and physical liquidation of private commercial enterprises"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "According to Section 3.1 of the Grade 12 Economics textbook, market failure is defined as an economic situation characterized by an inefficient distribution or allocation of goods and services in the free market, occurring when the price mechanism fails to account for all costs and benefits.",
+      "sourceReference": "Section 3.1, Pages 48-49 & EUEE 2017 EC, Q7"
+    },
+    {
+      "id": "ECO-G12-U03-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What two fundamental characteristics define a 'pure public good'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Rivalry in consumption and excludability"
+        },
+        {
+          "id": "B",
+          "text": "Non-rivalry in consumption and non-excludability"
+        },
+        {
+          "id": "C",
+          "text": "Non-rivalry in consumption and excludability"
+        },
+        {
+          "id": "D",
+          "text": "Rivalry in consumption and non-excludability"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Section 3.2 defines pure public goods as goods possessing two essential features: non-rivalry in consumption (one person's use does not diminish availability for others) and non-excludability (it is costly or impossible to prevent non-payers from consuming the good).",
+      "sourceReference": "Section 3.2, Pages 51-52 & EUEE 2018 Round 1, Q59"
+    },
+    {
+      "id": "ECO-G12-U03-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which of the following is a classic example of a pure public good?",
+      "options": [
+        {
+          "id": "A",
+          "text": "National defence"
+        },
+        {
+          "id": "B",
+          "text": "A loaf of bakery bread"
+        },
+        {
+          "id": "C",
+          "text": "A private passenger taxi ride"
+        },
+        {
+          "id": "D",
+          "text": "A toll bridge operating at maximum capacity"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "National defence is non-excludable (all citizens within the borders are protected regardless of payment) and non-rival (protecting an additional citizen involves zero marginal cost and does not reduce defence available to others). Food and taxi rides are rival and excludable private goods.",
+      "sourceReference": "Section 3.1.1 & Section 3.2, Pages 50, 52"
+    },
+    {
+      "id": "ECO-G12-U03-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is the economic definition of the 'free rider' problem in public goods provision?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A situation where consumers receive free public transport funded entirely by ticket sales"
+        },
+        {
+          "id": "B",
+          "text": "A situation where individuals enjoy the benefits of a public good without contributing to the cost of financing it"
+        },
+        {
+          "id": "C",
+          "text": "A condition where private firms produce goods at zero marginal cost without earning profit"
+        },
+        {
+          "id": "D",
+          "text": "The statutory entitlement of corporate shareholders to receive non-taxable dividends"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "A free rider is an individual who seeks to enjoy the benefits of a public good without contributing anything toward its cost. Because public goods are non-excludable, individuals have a strong incentive to let others bear the expense.",
+      "sourceReference": "Section 3.2, Page 54 & EUEE 2017 EC, Q9"
+    },
+    {
+      "id": "ECO-G12-U03-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is an externality in economic theory?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A transaction fee levied by commercial banks on overseas wire transfers"
+        },
+        {
+          "id": "B",
+          "text": "A cost or benefit of production or consumption that affects an uninvolved third party and is not reflected in market prices"
+        },
+        {
+          "id": "C",
+          "text": "The legal right of the government to confiscate private manufacturing machinery"
+        },
+        {
+          "id": "D",
+          "text": "The difference between total revenue and total explicit accounting costs"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "An externality occurs when the consumption or production activities of economic agents generate uncompensated side effects—either costs (negative externalities) or benefits (positive externalities)—on third parties that are not reflected in market prices.",
+      "sourceReference": "Section 3.3, Pages 55-56 & EUEE 2017 EC, Q82"
+    },
+    {
+      "id": "ECO-G12-U03-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "According to Table 3.1 of the textbook, how are common pool resources (or common property resources, such as open ocean fish stocks or shared grazing pasture) classified?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Excludable and rivalrous"
+        },
+        {
+          "id": "B",
+          "text": "Excludable and non-rivalrous"
+        },
+        {
+          "id": "C",
+          "text": "Non-excludable and rivalrous"
+        },
+        {
+          "id": "D",
+          "text": "Non-excludable and non-rivalrous"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Common pool resources (e.g., fisheries, grazing pastures, timber) are rivalrous (one person catching fish reduces the fish available for others) but non-excludable (it is difficult or prohibitively costly to stop individuals from accessing the resource).",
+      "sourceReference": "Section 3.2, Page 52 (Table 3.1) & Review Questions, Page 68"
+    },
+    {
+      "id": "ECO-G12-U03-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Why does a free, unregulated market produce an inefficiently high quantity of goods associated with negative production externalities (such as cement or leather manufacturing that pollutes local rivers)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because Marginal Social Benefit (MSB) exceeds Marginal Private Benefit (MPB)"
+        },
+        {
+          "id": "B",
+          "text": "Because profit-maximizing firms base output decisions only on Marginal Private Cost (MPC), ignoring Marginal External Costs (MEC), resulting in MSC > MPC"
+        },
+        {
+          "id": "C",
+          "text": "Because the government imposes per-unit production subsidies on polluting firms"
+        },
+        {
+          "id": "D",
+          "text": "Because consumers have complete symmetric information regarding all environmental impacts"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "When negative externalities exist, the true economic cost to society is Marginal Social Cost: MSC = MPC + MEC. Since competitive firms only pay their private production costs (MPC = P), they ignore external pollution costs, leading to overproduction (Q_market > Q_socially optimal) and deadweight efficiency loss.",
+      "sourceReference": "Section 3.3, Pages 56-57 (Figure 3.1)"
+    },
+    {
+      "id": "ECO-G12-U03-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In 1920, economist Arthur C. Pigou proposed that the government could resolve market failures caused by negative production externalities through what policy mechanism?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Paying direct per-unit subsidies to the polluting firm to expand output"
+        },
+        {
+          "id": "B",
+          "text": "Imposing a per-unit corrective tax equal to the difference between Marginal Social Cost and Marginal Private Cost (the Marginal External Cost) at the socially optimal output"
+        },
+        {
+          "id": "C",
+          "text": "Abolishing all private property rights over rivers and land"
+        },
+        {
+          "id": "D",
+          "text": "Fixing a legal price ceiling below the competitive market price"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Pigou demonstrated that a per-unit corrective tax (a Pigouvian tax) equal to the marginal external cost (MSC - MPC) internalizes the externality. This raises the firm's private marginal cost curve to coincide with the social marginal cost curve, reducing output to the socially optimal level.",
+      "sourceReference": "Section 3.3, Pages 58-59 & EUEE 2017 EC, Q8"
+    },
+    {
+      "id": "ECO-G12-U03-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What is the core proposition of the Coase Theorem regarding private bargaining as a solution to externality problems?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Government taxation is the only mechanism capable of reducing industrial emissions."
+        },
+        {
+          "id": "B",
+          "text": "Under zero or negligible transaction costs, a small number of affected parties, and clearly defined initial property rights, private bargaining will lead to an efficient outcome regardless of who initially holds the property rights."
+        },
+        {
+          "id": "C",
+          "text": "Optimum environmental pollution requires the total elimination of all manufacturing production."
+        },
+        {
+          "id": "D",
+          "text": "Property rights must always be assigned exclusively to consumers rather than producers."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Ronald Coase (1960) established that if property rights are well defined, transaction costs are near zero, and only a few parties are involved, private negotiations will resolve externalities and achieve economic efficiency without direct government tax intervention.",
+      "sourceReference": "Section 3.3, Page 59"
+    },
+    {
+      "id": "ECO-G12-U03-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How do economists conceptually distinguish 'adverse selection' from 'moral hazard' in the study of asymmetric information?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Adverse selection is a hidden action problem occurring after a contract is signed, while moral hazard is a hidden characteristics problem occurring prior to the transaction."
+        },
+        {
+          "id": "B",
+          "text": "Adverse selection arises from hidden information/quality prior to an agreement (such as high-risk individuals seeking health insurance), whereas moral hazard arises from hidden post-contractual actions when a party is insulated from risk."
+        },
+        {
+          "id": "C",
+          "text": "Adverse selection occurs exclusively in public goods, while moral hazard occurs exclusively in monopolistic competition."
+        },
+        {
+          "id": "D",
+          "text": "There is no distinction; both terms refer strictly to employee educational screening."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Adverse selection refers to pre-contractual hidden information where one side cannot observe the quality or risk type of the other side (e.g., unhealthy people buying insurance). Moral hazard refers to post-contractual hidden actions where an agent behaves less cautiously because they are insulated from the full consequences of their actions.",
+      "sourceReference": "Section 3.4, Pages 60-61"
+    },
+    {
+      "id": "ECO-G12-U03-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "When commercial banks evaluate potential loan borrowers by scrutinizing their credit history, income verification, and employment status, which asymmetric information remedy are they implementing?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Signalling"
+        },
+        {
+          "id": "B",
+          "text": "Screening"
+        },
+        {
+          "id": "C",
+          "text": "Free riding"
+        },
+        {
+          "id": "D",
+          "text": "Pigouvian subsidization"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Screening is a strategy implemented by the uninformed party (e.g., the bank) to induce the informed party (e.g., the borrower) to reveal private information, such as checking financial records and employment stability to mitigate adverse selection.",
+      "sourceReference": "Section 3.4, Pages 61-62 & EUEE 2017 EC, Q12"
+    },
+    {
+      "id": "ECO-G12-U03-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A factory producing chemical dye operates on the upstream of a river. The private marginal cost of producing dye is given by MC = 10 + 0.5Q. Production generates toxic chemical effluent causing downstream external damage valued at Birr 10 per unit of output (Marginal External Cost, MEC = 10). The factory faces a downward-sloping marginal revenue curve given by MR = 30 - 0.5Q. What are the private profit-maximizing output level and the socially optimal output level?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Profit-maximizing output Q = 20 units; Socially optimal output Q* = 10 units"
+        },
+        {
+          "id": "B",
+          "text": "Profit-maximizing output Q = 30 units; Socially optimal output Q* = 15 units"
+        },
+        {
+          "id": "C",
+          "text": "Profit-maximizing output Q = 10 units; Socially optimal output Q* = 20 units"
+        },
+        {
+          "id": "D",
+          "text": "Profit-maximizing output Q = 25 units; Socially optimal output Q* = 10 units"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "1. Private profit maximization equates MR = MC: 30 - 0.5Q = 10 + 0.5Q => Q = 20 units.\n2. Social optimization requires MR = MSC, where MSC = MC + MEC = (10 + 0.5Q) + 10 = 20 + 0.5Q. Equating MR = MSC gives 30 - 0.5Q = 20 + 0.5Q => Q* = 10 units. (Matches textbook Part III Workout Question 5).",
+      "sourceReference": "Section 3.3, Pages 57-58 & Review Questions, Pages 69-70"
+    },
+    {
+      "id": "ECO-G12-U03-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Using the chemical dye data from the preceding question (Private MC = 10 + 0.5Q, MEC = 10, MR = 30 - 0.5Q), what specific policy measure should the environmental regulatory agency impose on the factory to achieve the socially efficient allocation of resources?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A per-unit production subsidy of Birr 10 to encourage clean technology"
+        },
+        {
+          "id": "B",
+          "text": "A per-unit Pigouvian tax of Birr 10 levied on each unit of dye produced"
+        },
+        {
+          "id": "C",
+          "text": "A price ceiling set strictly at Birr 10 per unit"
+        },
+        {
+          "id": "D",
+          "text": "A legal mandate forcing the factory to expand output from 10 to 20 units"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "To internalize the external cost and move the firm from the overproducing market equilibrium (Q = 20) to the socially optimal level (Q* = 10), the government must impose a Pigouvian tax equal to the marginal external cost at the social optimum: Tax = MEC = Birr 10 per unit.",
+      "sourceReference": "Section 3.3, Pages 58-59 & Review Questions, Pages 69-70"
+    },
+    {
+      "id": "ECO-G12-U03-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A beekeeper places hives near an apple orchard. The bees pollinate the apple blossoms, increasing apple crop yields without the orchard owner paying for the pollination service. At the same time, the bees gather nectar from the apple flowers, increasing honey output. In economic analysis, what does this scenario illustrate regarding externalities and market equilibrium?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A negative consumption externality leading to deadweight losses from overproduction"
+        },
+        {
+          "id": "B",
+          "text": "A reciprocal positive production externality where Marginal Social Benefit exceeds Marginal Private Benefit (MSB > MPB), causing the unregulated competitive market to underproduce both goods relative to the social optimum"
+        },
+        {
+          "id": "C",
+          "text": "An asymmetric information problem solvable exclusively through government licensing"
+        },
+        {
+          "id": "D",
+          "text": "A pure public good characterized by congestion and high marginal cost"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "This is a classic reciprocal positive production externality. Each party generates uncompensated external benefits for the other, meaning marginal social benefits exceed marginal private benefits (MSB > MPB). Left to the free market without subsidies or coordination, both honey and apple yields will be underproduced relative to the socially efficient level.",
+      "sourceReference": "Section 3.3, Pages 56-58 (Figure 3.2)"
+    },
+    {
+      "id": "ECO-G12-U03-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Under the Consumer Protection framework detailed in the textbook, what is the economic justification for government legislation prohibiting the sale of adulterated goods and misleading commercial advertisements?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because deceptive practices exacerbate asymmetric information, distort consumer choices, transfer consumer surplus fraudulently, and undermine market efficiency and public health"
+        },
+        {
+          "id": "B",
+          "text": "Because advertising is legally prohibited under perfect competition"
+        },
+        {
+          "id": "C",
+          "text": "Because statutory consumer protection laws eliminate the need for competitive market pricing"
+        },
+        {
+          "id": "D",
+          "text": "Because consumer protection guarantees equal profit margins for all retail business firms"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Section 3.5 outlines that fraudulent practices (adulterated goods, false advertising, spurious products) exploit severe information asymmetries. They deprive consumers of accurate product knowledge, harm consumer health, transfer consumer surplus through unethical extortion, and distort allocative efficiency, justifying statutory consumer protection regulations.",
+      "sourceReference": "Section 3.5, Pages 63-65 & EUEE 2017 EC, Q13"
+    }
+  ]
 }

@@ -3,5 +3,411 @@
   "subject": "Economics",
   "unitNumber": 4,
   "unitTitle": "Introduction to Demand and Supply",
-  "questions": []
+  "questions": [
+    {
+      "id": "ECO-G09-U04-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In economics, how is effective demand fundamentally distinguished from a mere desire or want?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Desire requires government authorization, whereas demand is determined solely by business firms."
+        },
+        {
+          "id": "B",
+          "text": "Demand is an effective desire backed by the ability to pay, the willingness to pay, and the availability of the good."
+        },
+        {
+          "id": "C",
+          "text": "Desire applies exclusively to tangible manufactured goods, while demand applies only to intangible services."
+        },
+        {
+          "id": "D",
+          "text": "Demand exists only when a product is distributed free of charge by public institutions."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Human desires and wants are unlimited, but in economics, a desire becomes an effective demand only when it is supported by three essential elements: the ability to pay the price, the willingness to purchase the commodity, and the availability of the good itself.",
+      "sourceReference": "Section 4.1, Page 44"
+    },
+    {
+      "id": "ECO-G09-U04-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "The Law of Demand states that, holding other factors constant (ceteris paribus):",
+      "options": [
+        {
+          "id": "A",
+          "text": "as the price of a commodity increases, the quantity demanded increases"
+        },
+        {
+          "id": "B",
+          "text": "there is a direct or positive relationship between price and quantity demanded"
+        },
+        {
+          "id": "C",
+          "text": "as the price of a commodity falls, the quantity demanded increases"
+        },
+        {
+          "id": "D",
+          "text": "the quantity demanded remains completely unchanged when the price fluctuates"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The Law of Demand states that, ceteris paribus (all other things remaining constant), the price of a commodity and its quantity demanded are inversely related: a lower price leads to a higher quantity demanded, and a higher price leads to a lower quantity demanded.",
+      "sourceReference": "Section 4.1, Page 45"
+    },
+    {
+      "id": "ECO-G09-U04-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "How does economic theory distinguish between a producer's 'stock' and 'supply' of a commodity?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Stock represents the quantity actually offered for sale at a given price, whereas supply is the total volume stored in warehouses."
+        },
+        {
+          "id": "B",
+          "text": "Stock is the potential supply consisting of the total output available, whereas supply is the specific quantity actually brought to the market for sale at a given price."
+        },
+        {
+          "id": "C",
+          "text": "Supply is always larger than stock because of seasonal agricultural price fluctuations."
+        },
+        {
+          "id": "D",
+          "text": "Stock applies strictly to agricultural commodities, while supply applies only to manufactured industrial goods."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Stock refers to the total volume of a commodity produced during a period less the quantity already sold (potential supply). Supply, in contrast, refers specifically to the various quantities that producers are willing and able to offer for sale in the market at particular prices.",
+      "sourceReference": "Section 4.2, Page 47"
+    },
+    {
+      "id": "ECO-G09-U04-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Because of the direct (positive) relationship between price and quantity supplied, the individual supply curve typically:",
+      "options": [
+        {
+          "id": "A",
+          "text": "slopes downwards from left to right"
+        },
+        {
+          "id": "B",
+          "text": "is a completely horizontal straight line parallel to the quantity axis"
+        },
+        {
+          "id": "C",
+          "text": "slopes upwards from left to right"
+        },
+        {
+          "id": "D",
+          "text": "is a vertical straight line parallel to the price axis"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The Law of Supply states that, ceteris paribus, price and quantity supplied are directly related. As price rises, producers are willing and able to offer more for sale, causing the supply curve to slope upward from left to right.",
+      "sourceReference": "Section 4.2, Pages 47-48"
+    },
+    {
+      "id": "ECO-G09-U04-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In market analysis, 'market equilibrium' is achieved when:",
+      "options": [
+        {
+          "id": "A",
+          "text": "the quantity demanded by buyers equals the quantity supplied by sellers at a specific market clearing price"
+        },
+        {
+          "id": "B",
+          "text": "the government mandates fixed ceiling prices on all essential agricultural consumer goods"
+        },
+        {
+          "id": "C",
+          "text": "market supply exceeds market demand, creating an ongoing inventory surplus"
+        },
+        {
+          "id": "D",
+          "text": "the price of a commodity falls to zero so that all consumers can satisfy their desires"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Market equilibrium is a state of balance where the opposing market forces of demand and supply match exactly; that is, the quantity demanded equals the quantity supplied at the equilibrium (market-clearing) price.",
+      "sourceReference": "Section 4.3, Pages 50-51"
+    },
+    {
+      "id": "ECO-G09-U04-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which of the following correctly pairs the three standard methods used in economics to present the relationship between price and quantity demanded?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Tabular presentation: Demand schedule; Graphical representation: Demand curve; Mathematical equation: Demand function"
+        },
+        {
+          "id": "B",
+          "text": "Tabular presentation: Demand curve; Graphical representation: Demand schedule; Mathematical equation: Production possibility frontier"
+        },
+        {
+          "id": "C",
+          "text": "Tabular presentation: Circular flow; Graphical representation: Demand function; Mathematical equation: Demand schedule"
+        },
+        {
+          "id": "D",
+          "text": "Tabular presentation: Demand function; Graphical representation: Stock equation; Mathematical equation: Demand curve"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Demand can be expressed in three complementary forms: as a demand schedule (a table listing prices and quantities), a demand curve (a graph plotting the price-quantity relationship), and a demand function (a mathematical statement such as Qd = f(P)).",
+      "sourceReference": "Section 4.1, Pages 45-46"
+    },
+    {
+      "id": "ECO-G09-U04-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "A buyer desires to purchase a high-end smartphone priced at Birr 40,000. Although the phone is widely available in retail shops and the buyer genuinely wants it, the buyer only has Birr 10,000 in personal savings and cannot obtain credit. In economics, this situation is classified as:",
+      "options": [
+        {
+          "id": "A",
+          "text": "effective market demand"
+        },
+        {
+          "id": "B",
+          "text": "a mere desire or want, but not effective demand"
+        },
+        {
+          "id": "C",
+          "text": "an excess supply of purchasing power"
+        },
+        {
+          "id": "D",
+          "text": "a shift of the individual demand curve to the right"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Demand requires not only a desire to acquire the good and its availability, but also the ability to pay (purchasing power). Because the buyer lacks the financial means to pay the prevailing price, the desire cannot be considered effective economic demand.",
+      "sourceReference": "Section 4.1, Page 44"
+    },
+    {
+      "id": "ECO-G09-U04-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In a local market, there are only two consumers of wheat: Consumer X and Consumer Y. At a price of Birr 20 per quintal, Consumer X demands 4 quintals and Consumer Y demands 6 quintals. At Birr 30 per quintal, Consumer X demands 2 quintals and Consumer Y demands 3 quintals. What is the total market demand at Birr 20 and Birr 30, respectively?",
+      "options": [
+        {
+          "id": "A",
+          "text": "24 quintals at Birr 20, and 6 quintals at Birr 30"
+        },
+        {
+          "id": "B",
+          "text": "10 quintals at Birr 20, and 5 quintals at Birr 30"
+        },
+        {
+          "id": "C",
+          "text": "2 quintals at Birr 20, and 1 quintal at Birr 30"
+        },
+        {
+          "id": "D",
+          "text": "12 quintals at Birr 20, and 8 quintals at Birr 30"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Market demand is obtained by the horizontal summation of individual quantities demanded at each price. At Birr 20, Market Demand = 4 + 6 = 10 quintals. At Birr 30, Market Demand = 2 + 3 = 5 quintals.",
+      "sourceReference": "Section 4.1, Page 46"
+    },
+    {
+      "id": "ECO-G09-U04-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What is the key analytical difference between the economic concept of 'supply' and the concept of 'quantity supplied'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Supply refers to a specific amount sold at one exact price, whereas quantity supplied refers to the entire supply curve."
+        },
+        {
+          "id": "B",
+          "text": "Supply refers to the entire schedule or relationship showing amounts offered at various alternative prices, while quantity supplied refers to a specific amount offered at a particular price."
+        },
+        {
+          "id": "C",
+          "text": "Supply is always determined by consumers, while quantity supplied is determined by the central bank."
+        },
+        {
+          "id": "D",
+          "text": "There is no difference; the two terms are identical in theoretical economics."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "According to the textbook, 'supply' refers to the overall relationship or schedule between price and the various quantities producers are willing and able to offer, whereas 'quantity supplied' refers to a specific number of units offered at a single specified price.",
+      "sourceReference": "Section 4.2, Page 47"
+    },
+    {
+      "id": "ECO-G09-U04-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Suppose the market supply schedule for oranges is formed by three identical farmers. At a price of Birr 15 per kg, each farmer is willing and able to supply 70 kg per week. What is the total market quantity supplied at Birr 15 per kg?",
+      "options": [
+        {
+          "id": "A",
+          "text": "70 kg per week"
+        },
+        {
+          "id": "B",
+          "text": "140 kg per week"
+        },
+        {
+          "id": "C",
+          "text": "210 kg per week"
+        },
+        {
+          "id": "D",
+          "text": "105 kg per week"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Market supply is derived by horizontally summing the quantities supplied by all individual sellers at that given price. With 3 identical sellers supplying 70 kg each: Market Supply = 70 + 70 + 70 = 210 kg per week.",
+      "sourceReference": "Section 4.2, Pages 48-49"
+    },
+    {
+      "id": "ECO-G09-U04-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Consider the following weekly market schedule for shoes:\n- At Birr 500: Quantity Demanded = 80 pairs; Quantity Supplied = 20 pairs\n- At Birr 700: Quantity Demanded = 50 pairs; Quantity Supplied = 50 pairs\n- At Birr 900: Quantity Demanded = 30 pairs; Quantity Supplied = 75 pairs\nWhich of the following statements is correct regarding this market?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The market clearing price is Birr 500, with an equilibrium quantity of 80 pairs."
+        },
+        {
+          "id": "B",
+          "text": "The market clearing price is Birr 900, creating an equilibrium quantity of 75 pairs."
+        },
+        {
+          "id": "C",
+          "text": "The equilibrium price is Birr 700, and the equilibrium quantity is 50 pairs."
+        },
+        {
+          "id": "D",
+          "text": "There is no equilibrium because quantity demanded decreases as price increases."
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Market equilibrium occurs at the unique price where quantity demanded equals quantity supplied. At Birr 700, both quantity demanded and quantity supplied are exactly 50 pairs, making Birr 700 the equilibrium price and 50 pairs the equilibrium quantity.",
+      "sourceReference": "Section 4.3, Pages 50-51"
+    },
+    {
+      "id": "ECO-G09-U04-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Suppose the market demand function for a good is given by Qd = 100 - 4P and the market supply function is given by Qs = 20 + 4P, where P is the unit price in Birr. What are the equilibrium price and equilibrium quantity in this market?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Equilibrium Price = Birr 15; Equilibrium Quantity = 40 units"
+        },
+        {
+          "id": "B",
+          "text": "Equilibrium Price = Birr 10; Equilibrium Quantity = 60 units"
+        },
+        {
+          "id": "C",
+          "text": "Equilibrium Price = Birr 8; Equilibrium Quantity = 68 units"
+        },
+        {
+          "id": "D",
+          "text": "Equilibrium Price = Birr 12; Equilibrium Quantity = 52 units"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Equating Qd and Qs for equilibrium: 100 - 4P = 20 + 4P => 8P = 80 => P* = Birr 10. Substituting P* = 10 into Qd: Q* = 100 - 4(10) = 60 units (or into Qs: Q* = 20 + 4(10) = 60 units).",
+      "sourceReference": "Section 4.1, Page 46 & Section 4.3, Pages 50-51"
+    },
+    {
+      "id": "ECO-G09-U04-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Assume that the equilibrium price of cooking oil in a competitive market is Birr 150 per litre. If the prevailing market price temporarily settles at Birr 200 per litre, what market condition emerges, and how does the market mechanism restore equilibrium?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A shortage occurs because buyers demand more; unsatisfied buyers bid the price up towards Birr 250."
+        },
+        {
+          "id": "B",
+          "text": "A surplus occurs because quantity supplied exceeds quantity demanded; sellers compete and bid the price down towards Birr 150."
+        },
+        {
+          "id": "C",
+          "text": "A surplus occurs because quantity demanded exceeds quantity supplied; buyers force the supply curve to shift outward."
+        },
+        {
+          "id": "D",
+          "text": "The market remains permanently at Birr 200 because the law of supply prevents downward price adjustments."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "At any price above the equilibrium price (Birr 200 > Birr 150), suppliers offer more than buyers are willing to purchase (Qs > Qd), resulting in a market surplus (excess supply). To clear unsold inventories, competing sellers bid the price down towards the equilibrium price.",
+      "sourceReference": "Section 4.3, Pages 50-52"
+    },
+    {
+      "id": "ECO-G09-U04-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Suppose the individual demand function of an individual consumer is given by Qi = 12 - 2P. If there are 50 identical consumers in this competitive market, what is the resulting market demand equation (Qm)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Qm = 600 - 2P"
+        },
+        {
+          "id": "B",
+          "text": "Qm = 12 - 100P"
+        },
+        {
+          "id": "C",
+          "text": "Qm = 600 - 100P"
+        },
+        {
+          "id": "D",
+          "text": "Qm = 50 - 2P"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Market demand is the horizontal summation of all individual consumer demands at each price level. With 50 identical buyers: Qm = 50 * Qi = 50 * (12 - 2P) = 600 - 100P.",
+      "sourceReference": "Section 4.1, Page 46"
+    },
+    {
+      "id": "ECO-G09-U04-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Why do economists construct market demand and market supply curves by adding individual curves horizontally rather than vertically?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because price is determined outside the market by government planners and cannot be measured on axes."
+        },
+        {
+          "id": "B",
+          "text": "Because at each possible uniform market price, we must sum the physical quantities demanded or supplied by all individual participants."
+        },
+        {
+          "id": "C",
+          "text": "Because vertical addition would violate the mathematical assumption that price is the dependent variable."
+        },
+        {
+          "id": "D",
+          "text": "Because adding vertically would result in a negatively sloped market supply curve."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In a market, transactions take place at given market prices. To determine total market volume, economists must sum the quantities demanded (or supplied) by all individuals at each specific price. Since quantity is plotted along the horizontal axis, this aggregation is a horizontal summation.",
+      "sourceReference": "Section 4.1, Page 46 & Section 4.2, Page 49"
+    }
+  ]
 }

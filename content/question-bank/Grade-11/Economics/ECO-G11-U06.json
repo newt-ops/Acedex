@@ -3,5 +3,411 @@
   "subject": "Economics",
   "unitNumber": 6,
   "unitTitle": "Economic Development",
-  "questions": []
+  "questions": [
+    {
+      "id": "ECO-G11-U06-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "How do development economists fundamentally distinguish between 'economic growth' and 'economic development'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Economic growth is multidimensional, while economic development focuses solely on physical infrastructure."
+        },
+        {
+          "id": "B",
+          "text": "Economic growth is a quantitative expansion in aggregate or per capita output, whereas economic development is a multidimensional process involving structural, institutional, and social transformation."
+        },
+        {
+          "id": "C",
+          "text": "Economic growth applies strictly to developing nations, while economic development applies only to high-income industrialized nations."
+        },
+        {
+          "id": "D",
+          "text": "There is no distinction; economic growth and economic development are identical synonyms in modern macroeconomic accounting."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "According to Section 6.1 and the Unit Introduction, economic growth is unidimensional, measuring quantitative increases in aggregate output or per capita income. Economic development is a broader, multidimensional process involving major transformations in social structures, popular attitudes, institutions, poverty reduction, and inequality eradication.",
+      "sourceReference": "Section 6.1, Pages 144-146 & Review Questions, Page 163"
+    },
+    {
+      "id": "ECO-G11-U06-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is the standard economic definition of 'productivity'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The statutory minimum wage legally mandated by federal government proclamations"
+        },
+        {
+          "id": "B",
+          "text": "A ratio between the volume of output produced and the volume of inputs utilized in the production process"
+        },
+        {
+          "id": "C",
+          "text": "The total monetary value of foreign direct investment accumulated in the domestic banking system"
+        },
+        {
+          "id": "D",
+          "text": "The total area of arable land reserved exclusively for state commercial farming"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Productivity is commonly defined as the ratio between output volume and input volume (Productivity = Output / Input). It measures how efficiently production inputs, such as labor and capital, are utilized within an economy to generate output.",
+      "sourceReference": "Section 6.2, Pages 146-147"
+    },
+    {
+      "id": "ECO-G11-U06-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which United Nations specialized agency originally conceived and publishes the Human Development Index (HDI)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "United Nations Educational, Scientific and Cultural Organization (UNESCO)"
+        },
+        {
+          "id": "B",
+          "text": "World Health Organization (WHO)"
+        },
+        {
+          "id": "C",
+          "text": "United Nations Development Programme (UNDP)"
+        },
+        {
+          "id": "D",
+          "text": "United Nations Children's Fund (UNICEF)"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The Human Development Index (HDI) was created and launched by the United Nations Development Programme (UNDP) to measure human wellbeing and development beyond conventional monetary income measures.",
+      "sourceReference": "Section 6.3, Pages 148-149"
+    },
+    {
+      "id": "ECO-G11-U06-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "According to the Brundtland definition highlighted in the textbook, what is 'sustainable development'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Development that maximizes short-term industrial profits regardless of resource depletion"
+        },
+        {
+          "id": "B",
+          "text": "Development that meets the needs of the present generation without compromising the ability of future generations to meet their own needs"
+        },
+        {
+          "id": "C",
+          "text": "Economic expansion achieved solely through the complete nationalization of all rural agricultural land"
+        },
+        {
+          "id": "D",
+          "text": "Maintaining a permanent balance of trade surplus across all export categories"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Sustainable development is defined as development that meets the needs of the present without compromising the ability of future generations to meet their own needs, ensuring ecological sustainability, social equity, and economic wellbeing.",
+      "sourceReference": "Section 6.5, Page 155 & Review Questions, Page 164"
+    },
+    {
+      "id": "ECO-G11-U06-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "How many global development goals were established under the Millennium Development Goals (MDGs, 2000–2015) and the Sustainable Development Goals (SDGs, 2015–2030), respectively?",
+      "options": [
+        {
+          "id": "A",
+          "text": "8 MDGs and 17 SDGs"
+        },
+        {
+          "id": "B",
+          "text": "10 MDGs and 20 SDGs"
+        },
+        {
+          "id": "C",
+          "text": "5 MDGs and 12 SDGs"
+        },
+        {
+          "id": "D",
+          "text": "12 MDGs and 24 SDGs"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The Millennium Development Goals (2000–2015) consisted of 8 specific anti-poverty targets, whereas the post-2015 Sustainable Development Goals (2015–2030) expanded the global agenda to 17 comprehensive goals.",
+      "sourceReference": "Section 6.6 & Section 6.7, Pages 156-157 (Tables 6.2 and 6.3)"
+    },
+    {
+      "id": "ECO-G11-U06-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What three core dimensions of human development are combined to compute the composite Human Development Index (HDI)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Export volume, foreign exchange reserves, and capital stock"
+        },
+        {
+          "id": "B",
+          "text": "A long and healthy life (longevity), access to education (knowledge), and a decent standard of living (income)"
+        },
+        {
+          "id": "C",
+          "text": "Budget surplus, money supply growth, and commercial bank deposit volume"
+        },
+        {
+          "id": "D",
+          "text": "Agricultural yield, industrial output value, and infrastructure density"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The HDI combines three essential dimensions: (1) a long and healthy life (measured by life expectancy at birth), (2) access to education and knowledge (measured by mean years of schooling and expected years of schooling), and (3) a decent standard of living (measured by GNI/GDP per capita adjusted for PPP).",
+      "sourceReference": "Section 6.3, Pages 149-151 & Review Questions, Page 164"
+    },
+    {
+      "id": "ECO-G11-U06-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In Amartya Sen's capability approach to human development, how are 'functionings' conceptually distinguished from 'capabilities'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Capabilities are monetary cash salaries, whereas functionings are physical consumer appliances."
+        },
+        {
+          "id": "B",
+          "text": "Functionings are what a person chooses to actually be and do (actual states of beings and doings), whereas capabilities represent the substantive freedoms and alternative combinations of functionings a person has the real opportunity to achieve."
+        },
+        {
+          "id": "C",
+          "text": "Capabilities are enforced by statutory law, while functionings are informal social traditions."
+        },
+        {
+          "id": "D",
+          "text": "There is no conceptual difference; Sen uses both terms interchangeably to describe labor market employment."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In Sen's capability framework, 'functionings' are the actual beings and doings achieved by a person (e.g., being well-nourished, educated, healthy). 'Capabilities' represent the real or substantive freedoms an individual enjoys—the alternative combinations of functionings they are able to choose among and achieve.",
+      "sourceReference": "Section 6.4, Pages 153-154 & Review Questions, Page 164"
+    },
+    {
+      "id": "ECO-G11-U06-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In capability theory, what are 'conversion factors'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Statutory central bank exchange rates used to convert domestic paper currency into foreign currencies"
+        },
+        {
+          "id": "B",
+          "text": "Personal, sociopolitical, and environmental characteristics that determine whether and to what degree a person can convert a resource or commodity into an actual functioning"
+        },
+        {
+          "id": "C",
+          "text": "Mathematical multipliers used to convert nominal GDP into real GDP deflator values"
+        },
+        {
+          "id": "D",
+          "text": "Technical input-output coefficients used in agricultural crop planning"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Section 6.4 notes that whether an individual can convert commodities and public goods into actual functionings depends on personal, social, and environmental conditions known as 'conversion factors' (e.g., a bicycle is of little value to a person with a physical disability unless converted through appropriate support).",
+      "sourceReference": "Section 6.4, Pages 153-154"
+    },
+    {
+      "id": "ECO-G11-U06-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Why did the UNDP introduce the Inequality-adjusted Human Development Index (IHDI) in 2010 to complement the standard HDI?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To eliminate life expectancy from the calculation of developing countries' living standards"
+        },
+        {
+          "id": "B",
+          "text": "Because the standard HDI is an average measure that overlooks internal disparities, whereas the IHDI discounts the average score of each dimension according to its level of domestic inequality"
+        },
+        {
+          "id": "C",
+          "text": "To replace monetary per capita income with the national unemployment rate"
+        },
+        {
+          "id": "D",
+          "text": "To evaluate only member states of the Organization for Economic Cooperation and Development (OECD)"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The standard HDI measures the average achievements in a country, concealing large internal disparities. The Inequality-adjusted HDI (IHDI) takes into account the distribution of health, education, and income across the population by discounting each dimension's average value by its respective level of inequality.",
+      "sourceReference": "Section 6.3, Pages 148-149"
+    },
+    {
+      "id": "ECO-G11-U06-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What is the concrete 50-year strategic framework adopted by African heads of state during the Golden Jubilee celebration of the OAU/AU in 2013 to achieve an integrated, prosperous, and peaceful Africa?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The Lagos Plan of Action"
+        },
+        {
+          "id": "B",
+          "text": "Agenda 2063"
+        },
+        {
+          "id": "C",
+          "text": "The New Partnership for Africa's Development (NEPAD)"
+        },
+        {
+          "id": "D",
+          "text": "The African Continental Free Trade Agreement of 1991"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Agenda 2063 is Africa's blueprint and master plan for transforming the continent into the global powerhouse of the future, adopted in May 2013 during the 50th Anniversary Solemn Declaration of the OAU/AU as a 50-year strategic framework (2013–2063).",
+      "sourceReference": "Section 6.7, Pages 158-159"
+    },
+    {
+      "id": "ECO-G11-U06-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In Ethiopia's post-2015 national development framework, how were the Sustainable Development Goals (SDGs) harmonized and integrated into national development planning?",
+      "options": [
+        {
+          "id": "A",
+          "text": "By suspending all domestic agriculture in favor of foreign import subsidies"
+        },
+        {
+          "id": "B",
+          "text": "Through integration into the Second Growth and Transformation Plan (GTP II, 2015–2020) and the subsequent Ten-Year Development/Prosperity Plan (2020–2030)"
+        },
+        {
+          "id": "C",
+          "text": "By privatizing the National Bank of Ethiopia and commercial state banks"
+        },
+        {
+          "id": "D",
+          "text": "Through replacing national economic accounting with municipal tax assessments"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Ethiopia integrated the 17 SDGs into its national development framework by embedding them directly within the Second Growth and Transformation Plan (GTP II, 2015–2020) and subsequently into the Ten-Year Prosperity Plan (2020–2030).",
+      "sourceReference": "Section 6.7, Pages 159-161"
+    },
+    {
+      "id": "ECO-G11-U06-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Suppose a country's actual life expectancy at birth is 65 years. The UNDP global goalposts specify a minimum value of 20 years and a maximum value of 85 years for life expectancy. What is the country's Life Expectancy Index (LEI)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "0.692"
+        },
+        {
+          "id": "B",
+          "text": "0.750"
+        },
+        {
+          "id": "C",
+          "text": "0.529"
+        },
+        {
+          "id": "D",
+          "text": "0.800"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Using the UNDP dimensional achievement formula: Dimension Index = (Actual Value - Minimum Value) / (Maximum Value - Minimum Value). For life expectancy: LEI = (65 - 20) / (85 - 20) = 45 / 65 ≈ 0.692. (Note: When the textbook illustrates with maximum 80 years, (65-20)/(80-20) = 45/60 = 0.75; under standard global goalpost 85, it is 0.692).",
+      "sourceReference": "Section 6.3, Pages 150-151"
+    },
+    {
+      "id": "ECO-G11-U06-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Suppose a nation's dimensional indices are calculated as follows: Life Expectancy Index = 0.70, Education Index = 0.50, and Income Index = 0.60. Using the arithmetic mean method presented in the Grade 11 textbook, what is the country's Human Development Index (HDI), and how is this composite score categorized?",
+      "options": [
+        {
+          "id": "A",
+          "text": "HDI = 0.60; Medium Human Development"
+        },
+        {
+          "id": "B",
+          "text": "HDI = 0.50; Low Human Development"
+        },
+        {
+          "id": "C",
+          "text": "HDI = 0.72; High Human Development"
+        },
+        {
+          "id": "D",
+          "text": "HDI = 0.85; Very High Human Development"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Taking the simple arithmetic average of the three component indices: HDI = (0.70 + 0.50 + 0.60) / 3 = 1.80 / 3 = 0.60. In human development reporting, an HDI score between 0.550 and 0.699 falls into the Medium Human Development category.",
+      "sourceReference": "Section 6.3, Pages 150-151"
+    },
+    {
+      "id": "ECO-G11-U06-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "In Table 6.1 of the textbook, Ethiopia's HDI value rose consistently from 0.292 in 2000 to 0.485 in 2019, while life expectancy at birth expanded from 51.9 years to 66.6 years. Despite this substantial progress, why does Ethiopia remain in the 'Low Human Development' category (< 0.550)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because Ethiopia's population growth exceeded its real GDP growth rate across the entire two decades"
+        },
+        {
+          "id": "B",
+          "text": "Because mean years of schooling remained very low (rising to only 2.9 years by 2019) alongside a relatively modest GNI per capita ($2,207 PPP), holding down the overall composite index"
+        },
+        {
+          "id": "C",
+          "text": "Because the UNDP automatically caps low-income agrarian countries below 0.500 regardless of achievements"
+        },
+        {
+          "id": "D",
+          "text": "Because the HDI formula deducts all public infrastructure capital spending from national income"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "As shown in Table 6.1 and Section 6.3.1, although life expectancy showed remarkable gains (reaching 66.6 years), educational attainment indicators—particularly mean years of schooling (only 2.9 years in 2019) and expected schooling (8.8 years)—remained severely constrained, keeping the composite average in the low human development tier (< 0.550).",
+      "sourceReference": "Section 6.3.1, Pages 151-152 (Table 6.1)"
+    },
+    {
+      "id": "ECO-G11-U06-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "What is the primary methodological criticism raised by economists regarding the Human Development Index (HDI) as a measure of social welfare?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It completely excludes life expectancy and literacy from its formula."
+        },
+        {
+          "id": "B",
+          "text": "It assigns equal arbitrary weights to its three components, implying constant trade-offs among health, education, and income, while correlating highly with simple measures of per capita income without providing substantial additional empirical information."
+        },
+        {
+          "id": "C",
+          "text": "It values industrial manufacturing output ten times higher than peasant agriculture."
+        },
+        {
+          "id": "D",
+          "text": "It cannot be calculated for countries with flexible foreign exchange rates."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Section 6.3.2 and the Unit Summary explain that the HDI has been criticized by social advocates for not capturing political freedom and inequality, and by economists because the components are highly correlated with GDP per capita, while the equal weighting scheme assumes questionable constant trade-offs among distinct human capabilities.",
+      "sourceReference": "Section 6.3.2, Page 153 & Unit Summary, Page 162 & EUEE 2018 Round 1, Q63"
+    }
+  ]
 }

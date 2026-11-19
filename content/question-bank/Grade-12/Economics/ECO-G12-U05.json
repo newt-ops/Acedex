@@ -3,5 +3,411 @@
   "subject": "Economics",
   "unitNumber": 5,
   "unitTitle": "Tax Theory and Practice",
-  "questions": []
+  "questions": [
+    {
+      "id": "ECO-G12-U05-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "According to the Organisation for Economic Cooperation and Development (OECD) definition cited in the textbook, what is the defining characteristic of a tax?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A voluntary contribution made by citizens in exchange for commercial public contracts"
+        },
+        {
+          "id": "B",
+          "text": "A compulsory, unrequited payment to general government, levied without any direct quid pro quo (direct benefit in return)"
+        },
+        {
+          "id": "C",
+          "text": "A refundable security deposit paid to local municipal administrations"
+        },
+        {
+          "id": "D",
+          "text": "A contractual fee charged by state enterprises strictly for services rendered"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Section 5.1.1 defines a tax as a 'compulsory, unrequited payment to general government.' The payment is compulsory because it is legally mandated, and unrequited because benefits provided by the government are not in proportion to payments made by an individual taxpayer (no direct quid pro quo).",
+      "sourceReference": "Section 5.1.1, Pages 102-103 & EUEE 2017 EC, Q26"
+    },
+    {
+      "id": "ECO-G12-U05-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "How do economists fundamentally distinguish direct taxes from indirect taxes on the basis of impact and incidence?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Direct taxes are paid in foreign currency, while indirect taxes are paid in domestic currency."
+        },
+        {
+          "id": "B",
+          "text": "Direct taxes impose the impact (first point of contact) and incidence (ultimate burden) on the same person, whereas indirect taxes impose the impact and incidence on different persons through tax shifting."
+        },
+        {
+          "id": "C",
+          "text": "Direct taxes apply only to imports, while indirect taxes apply only to commercial farming."
+        },
+        {
+          "id": "D",
+          "text": "Direct taxes are voluntary, while indirect taxes are compulsory."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In direct taxes (e.g., employment income tax, business profit tax), the person legally liable to pay the tax also bears the ultimate economic burden. In indirect taxes (e.g., VAT, excise taxes), the statutory liability falls on the seller/vendor, but the tax burden is shifted forward onto the final consumer in higher prices.",
+      "sourceReference": "Section 5.1.5, Pages 106-107 & Review Questions, Page 119"
+    },
+    {
+      "id": "ECO-G12-U05-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is the critical distinction between 'tax avoidance' and 'tax evasion' in tax administration?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Tax avoidance is an illegal criminal offense, while tax evasion is legal."
+        },
+        {
+          "id": "B",
+          "text": "Tax avoidance entails lawful arrangements to minimize tax liabilities using approved exemptions and allowances, whereas tax evasion is the illegal falsification of tax returns or failure to pay legally due taxes."
+        },
+        {
+          "id": "C",
+          "text": "Tax avoidance applies only to corporate bodies, while tax evasion applies only to wage-earners."
+        },
+        {
+          "id": "D",
+          "text": "There is no distinction; both terms denote criminal fraud punishable by immediate imprisonment."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Section 5.5 explains that tax avoidance is the legal minimization of tax liability by taking advantage of loopholes, deductions, and exemptions within the tax schedule. Tax evasion is the illegal non-compliance involving fraudulent declarations, falsification of books, or non-filing of tax returns.",
+      "sourceReference": "Section 5.5, Pages 117-118 & EUEE 2017 EC, Q64 & EUEE 2018 Round 1, Q38"
+    },
+    {
+      "id": "ECO-G12-U05-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "When was the Value Added Tax (VAT) officially introduced in Ethiopia, and what is its standard statutory rate?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Introduced on 1 January 1995 at a rate of 10%"
+        },
+        {
+          "id": "B",
+          "text": "Introduced on 1 January 2003 at a standard rate of 15%"
+        },
+        {
+          "id": "C",
+          "text": "Introduced on 11 October 1992 at a rate of 20%"
+        },
+        {
+          "id": "D",
+          "text": "Introduced on 1 September 2010 at a rate of 5%"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "According to Section 5.4, Ethiopia replaced the conventional sales tax by introducing the Value Added Tax (VAT) Act on 1 January 2003 with a standard rate of 15% applied on all taxable transactions by registered vendors.",
+      "sourceReference": "Section 5.4, Pages 113-114"
+    },
+    {
+      "id": "ECO-G12-U05-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which of Adam Smith's classical canons of taxation requires that the cost of tax assessment and collection be kept to the absolute minimum possible?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The canon of certainty"
+        },
+        {
+          "id": "B",
+          "text": "The canon of convenience"
+        },
+        {
+          "id": "C",
+          "text": "The canon of economy"
+        },
+        {
+          "id": "D",
+          "text": "The canon of fiscal adequacy"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The canon (principle) of economy states that every tax should be planned and administered so that it takes as little as possible out of the pockets of the people over and above what it brings into the public treasury, minimizing administrative and compliance costs.",
+      "sourceReference": "Section 5.1.3, Pages 104-105 & EUEE 2018 Round 1, Q35"
+    },
+    {
+      "id": "ECO-G12-U05-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What is the primary conceptual advantage of the 'benefits approach' to tax equity over the 'ability-to-pay approach'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It completely exempts high-income households from paying direct taxes."
+        },
+        {
+          "id": "B",
+          "text": "It links the revenue (taxation) side of the government budget directly with the expenditure (public services) side by taxing citizens in accordance with the specific benefits they receive."
+        },
+        {
+          "id": "C",
+          "text": "It eliminates the need for keeping financial accounting records in small businesses."
+        },
+        {
+          "id": "D",
+          "text": "It guarantees that income inequality in the economy drops to zero."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Under the benefits approach, taxpayers contribute in line with the benefits they enjoy from publicly provided goods and services (analogous to market pricing), thereby connecting public spending decisions directly to tax liabilities. In contrast, the ability-to-pay approach focuses purely on distribution without linking to specific expenditures.",
+      "sourceReference": "Section 5.2.1, Pages 108-109 & EUEE 2017 EC, Q61"
+    },
+    {
+      "id": "ECO-G12-U05-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In tax equity analysis, how is 'horizontal equity' distinguished from 'vertical equity' under the ability-to-pay principle?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Horizontal equity requires unequals to be treated unequally, whereas vertical equity requires equals to be treated equally."
+        },
+        {
+          "id": "B",
+          "text": "Horizontal equity requires taxpayers in the same economic circumstances (with equal ability to pay) to pay equal taxes, whereas vertical equity requires taxpayers in different economic circumstances to be treated unequally (those with greater capacity pay more)."
+        },
+        {
+          "id": "C",
+          "text": "Horizontal equity applies to indirect consumption taxes, while vertical equity applies exclusively to customs tariffs."
+        },
+        {
+          "id": "D",
+          "text": "Horizontal equity requires constant tax rates across all provinces, while vertical equity requires federal grants-in-aid."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The ability-to-pay approach incorporates two equity dimensions: Horizontal equity dictates that individuals with equal taxable capacity should pay identical amounts of tax. Vertical equity dictates that individuals in unequal economic positions should bear different tax burdens, with higher-income earners paying a higher share.",
+      "sourceReference": "Section 5.2.2, Pages 109-110"
+    },
+    {
+      "id": "ECO-G12-U05-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How do progressive, proportional, and regressive taxes behave as a taxpayer's income increases?",
+      "options": [
+        {
+          "id": "A",
+          "text": "In a progressive tax, the average tax rate (ATR) rises; in a proportional tax, the ATR remains constant; in a regressive tax, the ATR falls as income rises."
+        },
+        {
+          "id": "B",
+          "text": "In a progressive tax, total tax revenue falls; in a proportional tax, total tax revenue is zero; in a regressive tax, total tax revenue rises."
+        },
+        {
+          "id": "C",
+          "text": "In a regressive tax, high-income earners pay a higher percentage of their income than low-income earners."
+        },
+        {
+          "id": "D",
+          "text": "In a proportional tax, the marginal tax rate is always double the average tax rate."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Taxes are classified by their impact on income: A progressive tax takes a larger percentage of income as income increases (ATR rises). A proportional tax takes the same percentage of income across all income brackets (ATR is constant). A regressive tax takes a smaller percentage of income as income rises (ATR falls).",
+      "sourceReference": "Section 5.2.2, Pages 109-110"
+    },
+    {
+      "id": "ECO-G12-U05-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Under Ethiopian income tax legislation (Proclamation No. 286/2002 and later amendments), what category of income is governed by Schedule 'B'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Income derived from formal employment and wages"
+        },
+        {
+          "id": "B",
+          "text": "Income derived from the rental of buildings"
+        },
+        {
+          "id": "C",
+          "text": "Income derived from commercial business operations"
+        },
+        {
+          "id": "D",
+          "text": "Exempt income such as travel allowances and pension payments"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The Ethiopian income tax structure organizes income into schedules: Schedule A covers employment income; Schedule B covers income from the rental of buildings; Schedule C covers business profit income; Schedule D covers other income (royalties, dividends, casual rentals); and Schedule E covers exempt income.",
+      "sourceReference": "Section 5.4, Pages 111-113"
+    },
+    {
+      "id": "ECO-G12-U05-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What is the primary purpose and coverage threshold of the Turnover Tax (TOT) in the Ethiopian tax system?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It is an export duty imposed on commercial cut flower growers."
+        },
+        {
+          "id": "B",
+          "text": "It is an equalization tax imposed on business persons who are not registered for VAT (annual turnover below Birr 500,000), charged at 2% on goods and 10% on services."
+        },
+        {
+          "id": "C",
+          "text": "It is a 500% luxury tax applied to used vehicles exceeding seven years of age."
+        },
+        {
+          "id": "D",
+          "text": "It is a flat 30% tax applied to commercial banks and corporate share companies."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The turnover tax (TOT) serves as an equalization tax to ensure fairness and full tax coverage for entities whose annual turnover is below the VAT registration threshold of Birr 500,000. It charges 2% on goods, contractors, grain mills, and tractors, and 10% on other local services.",
+      "sourceReference": "Section 5.4, Pages 113-115 & EUEE 2017 EC, Q63"
+    },
+    {
+      "id": "ECO-G12-U05-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How do economists distinguish among the terms 'tax incidence', 'tax impact', and 'tax effect'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Tax impact is the final economic resting place; tax incidence is the first point of contact; tax effect is the revenue collected."
+        },
+        {
+          "id": "B",
+          "text": "Tax impact is the initial point of contact on the statutory taxpayer; tax incidence is the ultimate resting place of the tax burden; and tax effect refers to the broader behavioral and macroeconomic responses across the economy."
+        },
+        {
+          "id": "C",
+          "text": "Tax incidence refers to tax avoidance; tax impact refers to tax evasion; tax effect refers to auditing fines."
+        },
+        {
+          "id": "D",
+          "text": "There are no differences; they are interchangeable terms describing statutory tax liability."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Section 5.1.1 defines: Tax impact is the first point of contact with the taxpayer who has the legal obligation to pay. Tax incidence is the ultimate resting place of the economic burden after any shifting. Tax effect refers to the broader consequences of the tax on production, consumption, saving, and investment.",
+      "sourceReference": "Section 5.1.1, Pages 103-104 & Review Questions, Page 120 & EUEE 2017 EC, Q29"
+    },
+    {
+      "id": "ECO-G12-U05-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "In Ethiopia, an employee of a public development enterprise earns a gross monthly salary of Birr 10,000. According to the statutory Employment Income Tax Schedule (Schedule A), what is the employee's monthly employment income tax (EIT) liability?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Birr 3,000.00"
+        },
+        {
+          "id": "B",
+          "text": "Birr 2,045.00"
+        },
+        {
+          "id": "C",
+          "text": "Birr 1,500.00"
+        },
+        {
+          "id": "D",
+          "text": "Birr 2,545.00"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "A monthly income of Birr 10,000 falls into the 7,801 - 10,900 bracket where the marginal tax rate is 30% and the statutory deduction is Birr 955. Using the official deduction formula: EIT = (Income * Rate) - Deduction = (10,000 * 0.30) - 955 = 3,000 - 955 = Birr 2,045.00. (Alternatively, taxing slice-by-slice: 0-600 @ 0% = 0; 601-1650 (1050) @ 10% = 105; 1651-3200 (1550) @ 15% = 232.50; 3201-5250 (2050) @ 20% = 410; 5251-7800 (2550) @ 25% = 637.50; 7801-10000 (2200) @ 30% = 660. Total = 105 + 232.50 + 410 + 637.50 + 660 = Birr 2,045.00).",
+      "sourceReference": "Section 5.4, Pages 112-113 (Table 5.2) & Review Questions (Part IV Workout), Page 120"
+    },
+    {
+      "id": "ECO-G12-U05-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Suppose individual A earns an annual income of Birr 4,000 and pays Birr 300 in taxes, while individual B earns an annual income of Birr 20,000 and pays Birr 1,400 in taxes. What type of tax does this schedule represent, and why?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Progressive tax, because individual B pays a larger absolute monetary amount of tax (1,400 > 300)."
+        },
+        {
+          "id": "B",
+          "text": "Regressive tax, because individual A's average tax rate is 7.5% while individual B's average tax rate is 7.0%, meaning the average tax rate declines as income rises."
+        },
+        {
+          "id": "C",
+          "text": "Proportional tax, because both individuals are taxed under identical statutory proclamations."
+        },
+        {
+          "id": "D",
+          "text": "A lump-sum poll tax, because it is levied independent of property value."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The classification of a tax depends on the average tax rate (ATR = Tax / Income), not absolute Birr amounts. For individual A: ATR = 300 / 4,000 = 0.075 (7.5%). For individual B: ATR = 1,400 / 20,000 = 0.070 (7.0%). Because the fraction of income paid in taxes decreases as income increases (7.5% to 7.0%), the tax is regressive.",
+      "sourceReference": "Section 5.2.2, Pages 109-110 & Review Questions (Part II, Q1), Page 119"
+    },
+    {
+      "id": "ECO-G12-U05-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Under the FDRE Constitution (1995) and Proclamation No. 33/1992, how is the authority to levy taxes and allocate public revenue legally structured between the federal government and regional states?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The federal government centralizes 100% of tax collections and prohibits regional states from budgeting."
+        },
+        {
+          "id": "B",
+          "text": "Taxing powers and revenue sources are constitutionally divided into federal powers (Article 51), regional state powers (Article 52), and concurrent/joint powers, with the Ministry of Revenues administering federal taxes and fiscal equalization grants bridging regional gaps."
+        },
+        {
+          "id": "C",
+          "text": "Regional states levy and collect all customs duties on international foreign trade."
+        },
+        {
+          "id": "D",
+          "text": "Municipal city councils hold the sole legal power to determine corporate profit tax rates."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Under the FDRE Constitution and Proclamation No. 33/1992, taxing authority is decentralized: the federal government legislates and collects duties and taxes reserved to it (Article 51(10)), while regional states collect taxes reserved to states (Article 52(2(e))), supplemented by concurrent powers and fiscal equalization transfers administered by the federal government.",
+      "sourceReference": "Section 5.3, Pages 110-111 & EUEE 2017 EC, Q62"
+    },
+    {
+      "id": "ECO-G12-U05-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "What is the primary economic rationale for imposing steep excise taxes (ranging up to 500% in Ethiopia) on demerit commodities such as tobacco, alcohol, and aged imported motor vehicles?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To guarantee that foreign automobile manufacturers earn higher corporate profits"
+        },
+        {
+          "id": "B",
+          "text": "To internalize negative external costs (health damage and environmental pollution), discourage the consumption of harmful goods, and generate public revenue from price-inelastic demands"
+        },
+        {
+          "id": "C",
+          "text": "To artificially depress domestic agricultural food production"
+        },
+        {
+          "id": "D",
+          "text": "To eliminate the need for implementing value-added taxes across retail markets"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "As discussed in Sections 5.1.2 and 5.4, excise (and 'sin') taxes are levied on demerit goods and luxury/harmful items (such as alcohol, cigarettes, and old vehicles causing environmental pollution). Because these items generate severe negative externalities and have price-inelastic demand, heavy excise duties discourage harmful consumption while securing substantial fiscal revenue for the state.",
+      "sourceReference": "Section 5.1.2, Pages 103-104 & Section 5.4, Pages 114-115 & EUEE 2017 EC, Q28 & EUEE 2018 Round 1, Q37"
+    }
+  ]
 }

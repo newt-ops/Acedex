@@ -3,5 +3,411 @@
   "subject": "Economics",
   "unitNumber": 1,
   "unitTitle": "Theory of Consumer Behavior and Demand",
-  "questions": []
+  "questions": [
+    {
+      "id": "ECO-G11-U01-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In the theory of consumer behavior, an indifference curve is formally defined as a line or curve that represents:",
+      "options": [
+        {
+          "id": "A",
+          "text": "alternative combinations of two goods that cost exactly the same amount of money"
+        },
+        {
+          "id": "B",
+          "text": "different combinations of two goods that yield the same level of utility or satisfaction to the consumer"
+        },
+        {
+          "id": "C",
+          "text": "the maximum quantities of two goods that a firm can produce using a given technology"
+        },
+        {
+          "id": "D",
+          "text": "the relationship between the price of a good and the quantity demanded by all market participants"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "According to Section 1.2.1, an indifference curve (an iso-utility curve) is the locus of points showing alternative combinations of two goods that yield the same level of total utility or satisfaction to the consumer, making the consumer indifferent among them.",
+      "sourceReference": "Section 1.2.1, Pages 7-8"
+    },
+    {
+      "id": "ECO-G11-U01-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What does a complete collection or set of indifference curves reflecting a consumer's entire preference ranking system represent?",
+      "options": [
+        {
+          "id": "A",
+          "text": "An indifference schedule"
+        },
+        {
+          "id": "B",
+          "text": "A budget constraint"
+        },
+        {
+          "id": "C",
+          "text": "An indifference map"
+        },
+        {
+          "id": "D",
+          "text": "A price-consumption line"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "An indifference map is defined as the entire set or collection of indifference curves reflecting the complete set of tastes and preferences of the consumer, where curves further from the origin denote higher utility levels.",
+      "sourceReference": "Section 1.2.1, Page 9"
+    },
+    {
+      "id": "ECO-G11-U01-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which of the following is NOT a standard property of typical indifference curves?",
+      "options": [
+        {
+          "id": "A",
+          "text": "They slope downward from left to right."
+        },
+        {
+          "id": "B",
+          "text": "They are convex to the origin."
+        },
+        {
+          "id": "C",
+          "text": "They can intersect each other when income changes."
+        },
+        {
+          "id": "D",
+          "text": "Higher indifference curves represent higher levels of satisfaction."
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Standard indifference curves can never intersect. If two indifference curves crossed, it would imply that a single consumption bundle yields two different levels of utility, violating the transitivity and consistency assumptions.",
+      "sourceReference": "Section 1.2.2, Pages 10-11 & Review Questions, Page 32"
+    },
+    {
+      "id": "ECO-G11-U01-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is the graphical shape of indifference curves for two goods that are perfect complements (such as a left shoe and a right shoe consumed in pairs)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A downward-sloping straight line"
+        },
+        {
+          "id": "B",
+          "text": "An L-shaped (right-angled) curve"
+        },
+        {
+          "id": "C",
+          "text": "A circular curve centered on the origin"
+        },
+        {
+          "id": "D",
+          "text": "A horizontal straight line"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Perfect complements must be consumed jointly in fixed proportions (e.g., U = Min(aX, bY)). Because one cannot be substituted for the other, the indifference curve takes the shape of a right angle (L-shaped line).",
+      "sourceReference": "Section 1.2.5, Pages 15-16"
+    },
+    {
+      "id": "ECO-G11-U01-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is the slope of a standard budget line representing two commodities, X and Y?",
+      "options": [
+        {
+          "id": "A",
+          "text": "- Px / Py"
+        },
+        {
+          "id": "B",
+          "text": "- Py / Px"
+        },
+        {
+          "id": "C",
+          "text": "- M / Px"
+        },
+        {
+          "id": "D",
+          "text": "- M / Py"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The slope of the budget line is defined as the negative of the price ratio of the two goods: -(Px / Py), which measures the relative price of good X in terms of good Y.",
+      "sourceReference": "Section 1.3.1, Page 21"
+    },
+    {
+      "id": "ECO-G11-U01-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Under the ordinal utility approach, how is the Marginal Rate of Substitution of X for Y (MRS_x,y) expressed in terms of the marginal utilities of the two goods?",
+      "options": [
+        {
+          "id": "A",
+          "text": "MRS_x,y = MUy / MUx"
+        },
+        {
+          "id": "B",
+          "text": "MRS_x,y = MUx / MUy"
+        },
+        {
+          "id": "C",
+          "text": "MRS_x,y = MUx * MUy"
+        },
+        {
+          "id": "D",
+          "text": "MRS_x,y = MUx + MUy"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Since total utility remains constant along an indifference curve (ΔU = MUx*ΔX + MUy*ΔY = 0), rearranging gives -ΔY / ΔX = MUx / MUy. Thus, the absolute value of the slope of the indifference curve is MRS_x,y = MUx / MUy.",
+      "sourceReference": "Section 1.2.4, Pages 13-14"
+    },
+    {
+      "id": "ECO-G11-U01-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "If two goods, X and Y, are perfect substitutes with a utility function given by U(X, Y) = aX + bY, what can be concluded about their indifference curves and Marginal Rate of Substitution?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The indifference curves are L-shaped, and the MRS is zero."
+        },
+        {
+          "id": "B",
+          "text": "The indifference curves are downward-sloping straight lines with a constant MRS equal to a / b."
+        },
+        {
+          "id": "C",
+          "text": "The indifference curves are strictly convex, and the MRS diminishes continuously."
+        },
+        {
+          "id": "D",
+          "text": "The indifference curves are upward-sloping, indicating that both goods are inferior."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "For perfect substitutes, the rate at which the consumer is willing to trade one good for another remains fixed regardless of the quantities possessed. Consequently, the indifference curve is a straight line with a constant slope and constant MRS = a / b.",
+      "sourceReference": "Section 1.2.5, Pages 14-15"
+    },
+    {
+      "id": "ECO-G11-U01-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What is the necessary condition for a consumer to attain optimum (utility maximization) in ordinal utility theory?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The indifference curve intersects both the horizontal and vertical axes."
+        },
+        {
+          "id": "B",
+          "text": "The consumer spends only half of their money income and saves the remainder."
+        },
+        {
+          "id": "C",
+          "text": "The budget line is tangent to the highest attainable indifference curve such that MRS_x,y = Px / Py."
+        },
+        {
+          "id": "D",
+          "text": "Total utility from good X equals total utility from good Y."
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Consumer optimum is established at the point of tangency between the budget line and the highest attainable indifference curve. At this point, the slope of the indifference curve equals the slope of the budget line: MRS_x,y = Px / Py (or MUx / Px = MUy / Py).",
+      "sourceReference": "Section 1.4, Pages 25-26"
+    },
+    {
+      "id": "ECO-G11-U01-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Holding the prices of goods X and Y constant, what happens to the budget line if a consumer's money income increases by 25%?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The budget line pivots inward along the horizontal axis."
+        },
+        {
+          "id": "B",
+          "text": "The budget line rotates outward along the vertical axis only."
+        },
+        {
+          "id": "C",
+          "text": "The budget line undergoes a parallel shift outward (to the right) with its slope unchanged."
+        },
+        {
+          "id": "D",
+          "text": "The budget line becomes horizontal."
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "An increase in money income increases both intercepts (M/Px and M/Py) in equal proportion. Because commodity prices are unchanged, the price ratio -Px/Py remains constant, resulting in a parallel outward shift of the budget line.",
+      "sourceReference": "Section 1.3.3, Pages 22-23"
+    },
+    {
+      "id": "ECO-G11-U01-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What is the name of the curve that connects all the consumer equilibrium points resulting exclusively from variations in the consumer's income, ceteris paribus?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Price-Consumption Curve (PCC)"
+        },
+        {
+          "id": "B",
+          "text": "Income-Consumption Curve (ICC)"
+        },
+        {
+          "id": "C",
+          "text": "Individual Demand Curve"
+        },
+        {
+          "id": "D",
+          "text": "Expansion Path of production"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The Income-Consumption Curve (ICC) is defined as the locus of consumer equilibrium points resulting when only the consumer's income varies while product prices and preferences are held constant.",
+      "sourceReference": "Section 1.4.1, Pages 27-28 & Review Questions, Page 32"
+    },
+    {
+      "id": "ECO-G11-U01-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How is an individual's downward-sloping demand curve for a commodity derived in indifference curve analysis?",
+      "options": [
+        {
+          "id": "A",
+          "text": "By plotting the vertical intercepts of successive budget lines against income"
+        },
+        {
+          "id": "B",
+          "text": "From the Price-Consumption Curve (PCC) by observing the equilibrium quantities demanded at alternative prices of the good"
+        },
+        {
+          "id": "C",
+          "text": "By adding the marginal rate of substitution to the marginal cost of production"
+        },
+        {
+          "id": "D",
+          "text": "Directly from the 45-degree reference line where expenditure equals income"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "As the price of good X varies, the budget line rotates, generating new tangency points with indifference curves. Connecting these points forms the Price-Consumption Curve (PCC), from which the individual demand curve is derived by plotting price against the corresponding equilibrium quantities.",
+      "sourceReference": "Section 1.4.2, Pages 28-30"
+    },
+    {
+      "id": "ECO-G11-U01-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A consumer has a budget equation given by 2X + 3Y = 60, where Px = Birr 2, Py = Birr 3, and money income M = Birr 60. What is the slope of this budget line, and what are its horizontal (X) and vertical (Y) intercepts?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Slope = -3/2; X-intercept = 20; Y-intercept = 30"
+        },
+        {
+          "id": "B",
+          "text": "Slope = -2/3; X-intercept = 30; Y-intercept = 20"
+        },
+        {
+          "id": "C",
+          "text": "Slope = 2/3; X-intercept = 60; Y-intercept = 60"
+        },
+        {
+          "id": "D",
+          "text": "Slope = -1/3; X-intercept = 15; Y-intercept = 20"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Rearranging the budget equation into slope-intercept form gives Y = (60/3) - (2/3)X = 20 - (2/3)X. Thus, the slope is -Px/Py = -2/3. The X-intercept is M/Px = 60/2 = 30, and the Y-intercept is M/Py = 60/3 = 20. (This matches the EUEE 2018 assessment pattern).",
+      "sourceReference": "Section 1.3.1, Pages 19-21 & EUEE 2018 Round 1, Q75"
+    },
+    {
+      "id": "ECO-G11-U01-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Assume that a consumer's total expenditure on two goods X and Y is E = Birr 2,900. The prices of goods X and Y are Px = Birr 50 and Py = Birr 40, respectively. The marginal utilities are given as MUx = X and MUy = 4Y. To maximize utility subject to the budget constraint, what are the optimum quantities of goods X and Y?",
+      "options": [
+        {
+          "id": "A",
+          "text": "X = 50 units, Y = 10 units"
+        },
+        {
+          "id": "B",
+          "text": "X = 20 units, Y = 30 units"
+        },
+        {
+          "id": "C",
+          "text": "X = 10 units, Y = 60 units"
+        },
+        {
+          "id": "D",
+          "text": "X = 40 units, Y = 25 units"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Equilibrium condition requires MRS_x,y = Px / Py => MUx / MUy = Px / Py => X / (4Y) = 50 / 40 = 5/4. Multiplying both sides by 4 gives X / Y = 5 => X = 5Y. Substitute into the budget constraint: 50X + 40Y = 2,900 => 50(5Y) + 40Y = 2,900 => 250Y + 40Y = 2,900 => 290Y = 2,900 => Y = 10 units. Then, X = 5(10) = 50 units.",
+      "sourceReference": "Section 1.4, Pages 25-26 & Review Questions (Part IV Work Out), Page 33"
+    },
+    {
+      "id": "ECO-G11-U01-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "At the current consumption basket of goods X and Y, a consumer finds that MRS_x,y = 4, while the market prices are Px = Birr 6 and Py = Birr 3. What adjustment should the rational consumer make to reach equilibrium?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The consumer is already at equilibrium because MRS is greater than zero."
+        },
+        {
+          "id": "B",
+          "text": "The consumer should consume more of good Y and less of good X because the market price ratio exceeds the MRS."
+        },
+        {
+          "id": "C",
+          "text": "The consumer should consume more of good X and less of good Y, which reduces the MRS until MRS_x,y equals Px / Py = 2."
+        },
+        {
+          "id": "D",
+          "text": "The consumer should reduce consumption of both goods simultaneously until income equals zero."
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Here, MRS_x,y = 4, whereas the price ratio Px / Py = 6 / 3 = 2. Since MRS_x,y > Px / Py, the subjective rate at which the consumer is willing to give up Y for an additional unit of X (4 units of Y) exceeds the market exchange rate (2 units of Y). The consumer can increase total utility by purchasing more X and less Y. Due to the diminishing MRS, as more X is substituted for Y, MRS_x,y declines until it equals 2.",
+      "sourceReference": "Section 1.2.3, Pages 11-13 & Section 1.4, Pages 25-26"
+    },
+    {
+      "id": "ECO-G11-U01-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Suppose the government imposes a 100% ad valorem excise tax that doubles the price of good X (from Px to 2Px), while the price of good Y and the consumer's money income remain completely unchanged. What is the geometric effect of this tax policy on the consumer's budget line?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The budget line undergoes a parallel shift inward toward the origin."
+        },
+        {
+          "id": "B",
+          "text": "The vertical Y-intercept remains fixed at M / Py, while the budget line rotates inward on the horizontal axis, halving the X-intercept to M / (2Px)."
+        },
+        {
+          "id": "C",
+          "text": "The horizontal X-intercept shifts outward, making the budget line flatter."
+        },
+        {
+          "id": "D",
+          "text": "Both the X-intercept and Y-intercept are reduced by half, keeping the slope unchanged."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Since the price of good Y and money income are unchanged, the vertical intercept M/Py remains unaltered. However, because the price of good X doubles to 2Px, the maximum amount of X that can be purchased falls from M/Px to M/(2Px) (halving the X-intercept). Consequently, the budget line pivots (rotates) inward around the fixed Y-intercept, becoming twice as steep.",
+      "sourceReference": "Section 1.3.4, Pages 23-24 & EUEE 2018 Round 1, Q41"
+    }
+  ]
 }

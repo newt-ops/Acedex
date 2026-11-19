@@ -3,5 +3,411 @@
   "subject": "Economics",
   "unitNumber": 2,
   "unitTitle": "The Basic Economic Problems and Economic Systems",
-  "questions": []
+  "questions": [
+    {
+      "id": "ECO-G09-U02-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In economics, how is the concept of scarcity fundamentally distinguished from the concept of shortage?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Scarcity is a temporary market condition, whereas shortage is permanent and universal."
+        },
+        {
+          "id": "B",
+          "text": "Scarcity means goods cannot be acquired at the prevailing price, while shortage applies only at zero price."
+        },
+        {
+          "id": "C",
+          "text": "Scarcity reflects a universal and endless imbalance between finite resources and unlimited wants, whereas shortage is a specific, short-term imbalance at the prevailing market price."
+        },
+        {
+          "id": "D",
+          "text": "Scarcity applies exclusively to command economies, whereas shortage occurs only in free market economies."
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "According to the textbook, a good is scarce if the amount available is less than people wish to have at zero price, making scarcity a universal and endless problem. In contrast, a shortage is a specific, short-term situation where buyers cannot obtain the quantity they want at the prevailing price.",
+      "sourceReference": "Section 2.1, Page 14"
+    },
+    {
+      "id": "ECO-G09-U02-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "The fundamental economic problem of deciding 'what goods and services are to be produced' primarily relates to:",
+      "options": [
+        {
+          "id": "A",
+          "text": "the choice between manual labour and automated machinery"
+        },
+        {
+          "id": "B",
+          "text": "the allocation of scarce resources among competing types and quantities of commodities"
+        },
+        {
+          "id": "C",
+          "text": "the personal distribution of national income among citizens"
+        },
+        {
+          "id": "D",
+          "text": "the selection of foreign trading partners for exporting surplus goods"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The question 'What to produce?' is also called the problem of resource allocation. It requires an economy to choose which goods (e.g., consumption vs. capital goods, necessity vs. luxury goods) to produce and in what quantities.",
+      "sourceReference": "Section 2.2, Page 19"
+    },
+    {
+      "id": "ECO-G09-U02-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "The central economic question of 'how to produce' requires a society to resolve the problem of:",
+      "options": [
+        {
+          "id": "A",
+          "text": "the distribution of national product among households"
+        },
+        {
+          "id": "B",
+          "text": "the choice of technique between labour-intensive and capital-intensive production methods"
+        },
+        {
+          "id": "C",
+          "text": "the elimination of scarcity through price controls"
+        },
+        {
+          "id": "D",
+          "text": "the balance between exports and imports"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The problem of 'How to produce?' is known as the choice of technique, which involves choosing between alternative production methods, such as labour-intensive or capital-intensive techniques, based on factor availability and relative factor prices.",
+      "sourceReference": "Section 2.2, Pages 19-20"
+    },
+    {
+      "id": "ECO-G09-U02-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which of the following is a key institutional characteristic of a pure capitalist (free market) economic system?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Central economic planning by a state planning commission"
+        },
+        {
+          "id": "B",
+          "text": "State ownership of all key natural and capital resources"
+        },
+        {
+          "id": "C",
+          "text": "Private ownership of the means of production guided primarily by the profit motive"
+        },
+        {
+          "id": "D",
+          "text": "Equitable distribution of all final output guaranteed by the government"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Under capitalism (free market economy), all means of production are privately owned, production decisions occur at the initiative of private entrepreneurs driven by profit, and resource allocation is coordinated by the market price mechanism.",
+      "sourceReference": "Section 2.3, Page 22"
+    },
+    {
+      "id": "ECO-G09-U02-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "On a production possibilities frontier (PPF), any combination of goods lying inside the boundary indicates that the economy is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "operating at full employment and achieving maximum productive efficiency"
+        },
+        {
+          "id": "B",
+          "text": "producing an unattainable output level given current resources and technology"
+        },
+        {
+          "id": "C",
+          "text": "experiencing rapid outward economic growth"
+        },
+        {
+          "id": "D",
+          "text": "producing at an attainable output level, but with inefficient use or unemployment of resources"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "Points on the PPF represent attainable and efficient production; points outside the PPF are unattainable with current resources; and points inside the curve represent attainable but inefficient production, where resources are underutilized or unemployed.",
+      "sourceReference": "Section 2.1, Pages 16-17"
+    },
+    {
+      "id": "ECO-G09-U02-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which of the following statements is correct regarding the economic concept of opportunity cost?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It is measured strictly in terms of the monetary cash outlay incurred during a transaction."
+        },
+        {
+          "id": "B",
+          "text": "It represents the value of the next best alternative sacrificed when making an economic decision."
+        },
+        {
+          "id": "C",
+          "text": "It only exists in command economies where the state directs resource allocation."
+        },
+        {
+          "id": "D",
+          "text": "It equals the total sum of all possible alternatives that an individual chose not to pursue."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Opportunity cost is defined as the amount or value of the next best alternative that must be sacrificed (forgone) to obtain one more unit of a product. It is measured in real goods and services forgone rather than in money terms.",
+      "sourceReference": "Section 2.1, Pages 14-15"
+    },
+    {
+      "id": "ECO-G09-U02-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Suppose a nation's production possibilities schedule shows that moving from combination B to combination C increases computer production from 500 to 1,000 units while food production decreases from 420 to 320 metric tons. What is the opportunity cost per computer produced?",
+      "options": [
+        {
+          "id": "A",
+          "text": "5.0 metric tons of food"
+        },
+        {
+          "id": "B",
+          "text": "0.2 metric tons of food"
+        },
+        {
+          "id": "C",
+          "text": "100 metric tons of food"
+        },
+        {
+          "id": "D",
+          "text": "1.5 metric tons of food"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Opportunity cost of a good is calculated as (Amount of next best alternative sacrificed) / (Amount of good gained). Sacrificed food = 420 - 320 = 100 metric tons; gained computers = 1,000 - 500 = 500 units. Thus, Opportunity Cost = 100 / 500 = 0.2 metric tons of food per computer.",
+      "sourceReference": "Section 2.1, Page 17"
+    },
+    {
+      "id": "ECO-G09-U02-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What primary economic factor explains why the standard production possibilities frontier is concave (bowed outward) to the origin?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Economic resources are perfectly adaptable and equally productive in all alternative lines of production."
+        },
+        {
+          "id": "B",
+          "text": "Consumer wants decline as the production of a particular good expands indefinitely."
+        },
+        {
+          "id": "C",
+          "text": "Economic resources are specialized and not completely adaptable to alternative uses, leading to increasing opportunity costs."
+        },
+        {
+          "id": "D",
+          "text": "Government regulations mandate lower production targets as industries expand."
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The PPF is concave to the origin due to the law of increasing opportunity cost, which arises because economic resources are specialized and not completely adaptable to alternative uses. As more of one good is produced, progressively less suitable resources must be shifted, raising per-unit sacrifice.",
+      "sourceReference": "Section 2.1, Page 17"
+    },
+    {
+      "id": "ECO-G09-U02-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How are the basic economic questions ('what', 'how', and 'for whom') solved in a pure command (socialist) economy?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Through voluntary exchange between buyers and sellers in competitive markets"
+        },
+        {
+          "id": "B",
+          "text": "Through ancestral customs, traditions, and hereditary occupational roles"
+        },
+        {
+          "id": "C",
+          "text": "Through centralized government planning directives and state-controlled allocation mechanisms"
+        },
+        {
+          "id": "D",
+          "text": "Through price signals generated by decentralized consumer demand"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "In a command (socialist) economy, economic institutions are owned and controlled by the state, and all fundamental decisions regarding what to produce, how to produce, and for whom to produce are determined by a centralized government plan rather than the market price mechanism.",
+      "sourceReference": "Section 2.3, Pages 23-24"
+    },
+    {
+      "id": "ECO-G09-U02-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "If a technological breakthrough significantly improves productivity in the agricultural (food) sector while technology and resource productivity in the industrial (manufacturing) sector remain unchanged, how is this reflected on the nation's PPF?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A parallel outward shift of the entire PPF along both axes"
+        },
+        {
+          "id": "B",
+          "text": "An asymmetric outward rotation of the PPF pivoting outward only along the food axis"
+        },
+        {
+          "id": "C",
+          "text": "An inward shift of the PPF along both axes due to technological obsolescence"
+        },
+        {
+          "id": "D",
+          "text": "A movement from a point on the frontier to an inefficient point inside the curve"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "When technological progress or productivity growth occurs in only one sector, the PPF experiences asymmetric growth, illustrated by an outward shift or rotation along the axis of the advancing sector (food) while the maximum potential output on the other axis remains fixed.",
+      "sourceReference": "Section 2.1, Page 18"
+    },
+    {
+      "id": "ECO-G09-U02-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In a mixed economic system, such as that found in modern developing nations, how are economic resources predominantly allocated?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Solely through administrative barter agreements between regional tribes"
+        },
+        {
+          "id": "B",
+          "text": "Exclusively by autonomous market forces without any legal or regulatory framework"
+        },
+        {
+          "id": "C",
+          "text": "Jointly through the market price mechanism and government regulatory policies and public investments"
+        },
+        {
+          "id": "D",
+          "text": "By direct military decrees abolishing private business initiatives"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "A mixed economy combines private enterprise and public intervention. Resources are allocated jointly through the price mechanism (which guides private producers and consumers) and government planning/intervention (which provides public goods, infrastructure, and regulations).",
+      "sourceReference": "Section 2.3, Pages 23-24"
+    },
+    {
+      "id": "ECO-G09-U02-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "During a severe economic downturn, thousands of factories sit idle and unemployment rises sharply across the economy. How should this macroeconomic event be represented on a nation's Production Possibilities Frontier (PPF)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "An inward shift of the entire PPF boundary, indicating a loss in national productive capacity"
+        },
+        {
+          "id": "B",
+          "text": "A shift of the economy's actual production point from the frontier boundary to an interior point inside the PPF"
+        },
+        {
+          "id": "C",
+          "text": "A clockwise rotation of the PPF reflecting a change in the relative prices of consumer goods"
+        },
+        {
+          "id": "D",
+          "text": "A movement along the frontier from capital-intensive goods to labour-intensive goods"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "A recession causing idle factories and unemployment does not reduce the economy's physical production capacity (the PPF boundary itself remains unchanged). Instead, it prevents the economy from utilizing its existing resources fully, shifting the operating point from the boundary to an inefficient point inside the PPF.",
+      "sourceReference": "Section 2.1, Pages 16-17"
+    },
+    {
+      "id": "ECO-G09-U02-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A nation's production possibilities schedule for cloth and sugar is given as follows: Combination A (0 cloth, 50 sugar), Combination B (1 cloth, 45 sugar), Combination C (2 cloth, 38 sugar), Combination D (3 cloth, 30 sugar), and Combination E (4 cloth, 20 sugar). Which of the following statements correctly identifies the trend in opportunity cost and the economic principle it demonstrates?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The opportunity cost per unit of cloth is constant at 5 units of sugar, demonstrating constant returns to scale."
+        },
+        {
+          "id": "B",
+          "text": "The opportunity cost per unit of cloth falls from 5 to 2 units of sugar, demonstrating economies of scale."
+        },
+        {
+          "id": "C",
+          "text": "The opportunity cost per unit of cloth increases successively from 5 to 7, then to 8, and then to 10 units of sugar, demonstrating the law of increasing opportunity cost."
+        },
+        {
+          "id": "D",
+          "text": "The opportunity cost of sugar remains zero because cloth is a manufactured good."
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Moving from A to B sacrifices 5 sugar (50 - 45); B to C sacrifices 7 sugar (45 - 38); C to D sacrifices 8 sugar (38 - 30); and D to E sacrifices 10 sugar (30 - 20) per unit of cloth gained. The rising sacrifice illustrates the law of increasing opportunity cost.",
+      "sourceReference": "Section 2.1, Pages 17, 27"
+    },
+    {
+      "id": "ECO-G09-U02-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "In resolving the central economic problem of 'how to produce', an agrarian developing country with an abundant, low-wage labour supply and severe capital shortages would achieve the most efficient resource allocation by primarily choosing:",
+      "options": [
+        {
+          "id": "A",
+          "text": "capital-intensive production techniques to maximize import expenditure on heavy machinery"
+        },
+        {
+          "id": "B",
+          "text": "labour-intensive production techniques to make the best possible use of its abundant factor and conserve scarce capital"
+        },
+        {
+          "id": "C",
+          "text": "fully automated robotic systems to eliminate domestic wage payments"
+        },
+        {
+          "id": "D",
+          "text": "subsistence barter arrangements without employing either capital or labour"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The textbook explains that the choice between labour-intensive and capital-intensive techniques depends on the relative supplies of production factors and their relative prices. In an economy where labour is abundant and cheap while capital is scarce and expensive, adopting labour-intensive techniques optimizes scarce resource use.",
+      "sourceReference": "Section 2.2, Pages 19-20"
+    },
+    {
+      "id": "ECO-G09-U02-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Suppose a sudden drought creates an acute shortage of staple grains. How do pure capitalist market systems and pure command economic systems fundamentally differ in their institutional mechanisms for rationing the scarce food supplies?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Under capitalism, the government fixes low prices and issues ration cards, while command economies let market prices rise freely."
+        },
+        {
+          "id": "B",
+          "text": "Under capitalism, rising market equilibrium prices ration grain based on consumers' willingness and ability to pay, whereas a command economy relies on state quotas, administrative rationing, and predetermined distribution."
+        },
+        {
+          "id": "C",
+          "text": "Both economic systems rely solely on informal traditional barter to distribute emergency food supplies."
+        },
+        {
+          "id": "D",
+          "text": "Under capitalism, all grain is confiscated for collective storage, while command economies rely on unregulated private hoarders."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In capitalism, scarcity is resolved through the price mechanism: prices rise, rationing goods to those with purchasing power and willingness to pay. In a command economy, the state controls distribution and fixes prices, addressing scarcity through administrative decrees, quotas, or ration cards.",
+      "sourceReference": "Section 2.3, Pages 21-24"
+    }
+  ]
 }

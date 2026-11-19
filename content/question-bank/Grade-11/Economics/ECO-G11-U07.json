@@ -3,5 +3,411 @@
   "subject": "Economics",
   "unitNumber": 7,
   "unitTitle": "Main Sectors, Sectorial Policies and Strategies of Ethiopia",
-  "questions": []
+  "questions": [
+    {
+      "id": "ECO-G11-U07-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is the core feature of a 'uni-modal' agricultural development strategy as defined in development economics?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Agricultural transformation is achieved through the technological intensification of small-scale peasant family farms without separating farmers from their land."
+        },
+        {
+          "id": "B",
+          "text": "Agricultural development relies entirely on large-scale mechanized state farms that replace peasant smallholders."
+        },
+        {
+          "id": "C",
+          "text": "All rural agricultural land is privatized and auctioned to foreign multinational agribusiness corporations."
+        },
+        {
+          "id": "D",
+          "text": "The government enforces a complete ban on the use of modern chemical fertilizers and improved seeds."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "A uni-modal agricultural strategy achieves sector transformation by intensifying the productivity of small-scale peasant farms (as historically practiced in Japan, Taiwan, and China), ensuring smallholders retain control over their land and family labor rather than being evicted.",
+      "sourceReference": "Section 7.1.1, Pages 168-169"
+    },
+    {
+      "id": "ECO-G11-U07-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What was the central objective of the Imperial Ethiopian Government and international donors when launching comprehensive package projects (such as CADU and WADU) in the late 1960s?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To nationalize commercial banks and establish state-run grain export cartels"
+        },
+        {
+          "id": "B",
+          "text": "To replicate the success of the Green Revolution by providing improved high-yielding seeds, fertilizers, credit, and extension services"
+        },
+        {
+          "id": "C",
+          "text": "To resettle the entire northern highland peasant population into lowland pastoralist areas"
+        },
+        {
+          "id": "D",
+          "text": "To dismantle all domestic manufacturing industries in favor of imported agricultural tools"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The package approach (e.g., Chilalo Agricultural Development Unit - CADU and Wolaita Agricultural Development Unit - WADU) was modeled on the Green Revolution in India and Mexico, aiming to dramatically boost smallholder productivity through a coordinated package of high-yielding variety (HYV) seeds, fertilizers, credit, and marketing infrastructure.",
+      "sourceReference": "Section 7.2, Pages 171-172"
+    },
+    {
+      "id": "ECO-G11-U07-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which overriding long-term development strategy was adopted by the Ethiopian government in 1994 to achieve economic structural transformation by using smallholder agriculture as the primary engine of growth?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Export-Oriented Heavy Industrialization (EOHI)"
+        },
+        {
+          "id": "B",
+          "text": "Agricultural Development-Led Industrialization (ADLI)"
+        },
+        {
+          "id": "C",
+          "text": "Import-Substituting Mechanized Agriculture (ISMA)"
+        },
+        {
+          "id": "D",
+          "text": "State-Controlled Agrarian Collectivization (SCAC)"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In 1994, the Ethiopian government adopted Agricultural Development-Led Industrialization (ADLI). The essence of ADLI is that smallholder agriculture acts as the driving force of economic transformation by supplying food, raw materials, and surplus labor to industry while creating domestic demand for manufactured goods.",
+      "sourceReference": "Section 7.2, Pages 173-174"
+    },
+    {
+      "id": "ECO-G11-U07-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Within the large- and medium-scale manufacturing sub-sector of Ethiopia, which industrial group contributes the largest share of gross production value and sales revenue?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Chemical and pharmaceutical manufacturing"
+        },
+        {
+          "id": "B",
+          "text": "Basic iron, steel, and motor vehicle assembly"
+        },
+        {
+          "id": "C",
+          "text": "Food and beverage manufacturing"
+        },
+        {
+          "id": "D",
+          "text": "Paper and paperboard products"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "According to industrial sector data in the textbook, the food and beverage industrial group is the single largest sub-sector, contributing over 50% of gross manufacturing output value and nearly half of total sales revenue.",
+      "sourceReference": "Section 7.4.2 & 7.4.3, Pages 180-181"
+    },
+    {
+      "id": "ECO-G11-U07-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "According to the Ethiopian National Income Accounting classification, which sub-sectors are grouped together under 'distributive services'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Public administration, defense, education, and health"
+        },
+        {
+          "id": "B",
+          "text": "Wholesale and retail trade, hotels and restaurants, and transport and communication"
+        },
+        {
+          "id": "C",
+          "text": "Smallholder crop cultivation, animal husbandry, and forestry"
+        },
+        {
+          "id": "D",
+          "text": "Mining, quarrying, water supply, and residential construction"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In Ethiopian national accounting, the service sector is divided into distributive services (wholesale and retail trade, hotels and restaurants, transport and communication) and other services (education, health, public administration, and defense).",
+      "sourceReference": "Section 7.5, Pages 183-184"
+    },
+    {
+      "id": "ECO-G11-U07-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What is a major socio-economic drawback of implementing a 'bi-modal' agricultural development strategy in an agrarian developing economy?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It completely halts all technological innovation in urban manufacturing plants."
+        },
+        {
+          "id": "B",
+          "text": "It creates a sharp dualistic agrarian structure, promotes the eviction of small peasant tenants, and generates severe rural landlessness without sufficient off-farm jobs."
+        },
+        {
+          "id": "C",
+          "text": "It prohibits private commercial investors from accessing international credit markets."
+        },
+        {
+          "id": "D",
+          "text": "It mandates equal land distribution among all rural households."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "A bi-modal strategy focuses resources on a favored commercial sub-sector alongside an impoverished peasant sector. This dualism often causes commercial farmers to expand onto peasant lands, causing peasant eviction, landlessness, and worsening rural poverty when off-farm employment cannot absorb displaced labor.",
+      "sourceReference": "Section 7.1.2, Pages 169-170 & EUEE 2018 Round 1, Q67"
+    },
+    {
+      "id": "ECO-G11-U07-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "During the socialist Derg regime (1974–1991), what agricultural marketing mechanism was utilized by the state that severely undermined smallholder production incentives?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Complete free-market price determination through the Ethiopian Commodity Exchange (ECX)"
+        },
+        {
+          "id": "B",
+          "text": "Compulsory food-grain delivery quotas imposed on peasant farmers at below-market prices through the Agricultural Marketing Corporation (AMC)"
+        },
+        {
+          "id": "C",
+          "text": "Export subsidies paid directly to commercial coffee estates"
+        },
+        {
+          "id": "D",
+          "text": "Elimination of all agricultural input taxes and fertilizer tariffs"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Under the Derg regime, smallholder farmers were subjected to compulsory grain delivery quotas through the state-owned Agricultural Marketing Corporation (AMC) at fixed, below-market prices. This price suppression, combined with inter-regional grain movement controls, destroyed peasant production incentives.",
+      "sourceReference": "Section 7.2, Pages 172-173"
+    },
+    {
+      "id": "ECO-G11-U07-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In the analysis of inter-sectoral linkages under ADLI, which of the following illustrates an essential 'forward linkage' of the agricultural sector to the industrial sector?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Supplying domestic agricultural raw materials (such as cotton, sugarcane, and oilseeds) to urban agro-processing factories"
+        },
+        {
+          "id": "B",
+          "text": "Purchasing chemical fertilizers and tractors manufactured by industrial factories"
+        },
+        {
+          "id": "C",
+          "text": "Subsidizing rural transportation fares for urban civil servants"
+        },
+        {
+          "id": "D",
+          "text": "Establishing retail banking branches exclusively in rural pastoral woredas"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Forward linkages from agriculture occur when agricultural output serves as intermediate inputs for downstream secondary activities (e.g., supplying cotton to textile mills or barley to breweries). Supplying manufactured inputs (fertilizers/machinery) to agriculture represents a backward linkage from industry to agriculture.",
+      "sourceReference": "Section 7.2, Pages 173-174"
+    },
+    {
+      "id": "ECO-G11-U07-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What legal proclamation marked the official deregulation and liberalization of the freight and passenger transport sector in Ethiopia, dismantling the strict state-controlled corporation established during the Derg era?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Proclamation No. 107/1976"
+        },
+        {
+          "id": "B",
+          "text": "Proclamation No. 31/1975"
+        },
+        {
+          "id": "C",
+          "text": "Proclamation No. 14/1992"
+        },
+        {
+          "id": "D",
+          "text": "Proclamation No. 206/1963"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "During the Derg regime, commercial transport was heavily controlled under Proclamation No. 107/1976. Major liberalization and deregulation occurred under Proclamation No. 14/1992, which allowed private commercial transport operators to leave the state corporation and form independent associations.",
+      "sourceReference": "Section 7.5.3, Pages 188-189"
+    },
+    {
+      "id": "ECO-G11-U07-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which of the following is identified in the textbook as a persistent structural problem confronting Ethiopia's industrial sector in the post-1991 era?",
+      "options": [
+        {
+          "id": "A",
+          "text": "High dependence on imported intermediate inputs and capital goods coupled with acute foreign exchange shortages and low domestic savings"
+        },
+        {
+          "id": "B",
+          "text": "Excessive domestic saving rates exceeding aggregate investment capacity"
+        },
+        {
+          "id": "C",
+          "text": "A complete lack of agricultural labor willing to migrate to urban centers"
+        },
+        {
+          "id": "D",
+          "text": "Universal price subsidies that eliminate operating costs for private manufacturers"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "As detailed in Section 7.4.4, Ethiopian industries are highly import-dependent for raw materials, machinery, and spare parts. This dependence, coupled with low domestic saving rates, severe shortages of foreign currency, and high collateral requirements from commercial banks, severely constrains industrial expansion.",
+      "sourceReference": "Section 7.4.4, Pages 181-182"
+    },
+    {
+      "id": "ECO-G11-U07-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What were the primary recommendations of the landmark Education Sector Review (ESR) initiated under the Imperial Government in the early 1970s?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Universal primary education, ruralizing the curricula through non-formal and vocational training, and equalizing educational opportunities across regions"
+        },
+        {
+          "id": "B",
+          "text": "Closing all secondary comprehensive schools to focus exclusively on higher university education"
+        },
+        {
+          "id": "C",
+          "text": "Privatizing the entire national public school system under foreign church missions"
+        },
+        {
+          "id": "D",
+          "text": "Banning vocational and technical education programs from the formal school system"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The Education Sector Review (ESR) recommended universal primary education, restructuring curricula to include non-formal and practical vocational training suited to rural agrarian life, and reducing regional disparities. However, publication delays (until February 1974) and public misunderstandings contributed to widespread teacher and student protests on the eve of the 1974 revolution.",
+      "sourceReference": "Section 7.5.1, Pages 184-185"
+    },
+    {
+      "id": "ECO-G11-U07-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Although the Chilalo Agricultural Development Unit (CADU) demonstrated that high-yielding input packages could substantially raise grain yields, why did it produce adverse socio-economic consequences for smallholder tenant farmers in the pre-1974 period?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because the Imperial government nationalized tenant lands into state-owned producer cooperatives"
+        },
+        {
+          "id": "B",
+          "text": "Because rising crop yields dramatically increased agricultural land values, prompting feudal absentee landlords to evict tenant smallholders in order to engage in mechanized commercial farming"
+        },
+        {
+          "id": "C",
+          "text": "Because the project exclusively distributed seeds suited for arid tropical pastoralism"
+        },
+        {
+          "id": "D",
+          "text": "Because peasant associations legally prohibited tenant farmers from purchasing fertilizers"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "A major unintended consequence of CADU was tenant eviction. Demonstrating that farming could be highly lucrative caused feudal landlords to raise rents, reclaim leased parcels, and mechanically cultivate the land themselves, evicting thousands of peasant tenant families due to the insecure tenancy system under the Imperial regime.",
+      "sourceReference": "Section 7.2, Pages 171-172"
+    },
+    {
+      "id": "ECO-G11-U07-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "How did the industrial policies of the socialist Derg regime fundamentally contrast with both the pre-1974 Imperial era and the post-1991 market reform era regarding private capital?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The Derg permitted unrestricted multinational equity investment while banning state-owned enterprises."
+        },
+        {
+          "id": "B",
+          "text": "The Derg nationalized medium and large private industrial enterprises, established state monopolies, and imposed strict legal capital ceilings on private investment, whereas the pre-1974 and post-1991 regimes actively encouraged private and foreign capital."
+        },
+        {
+          "id": "C",
+          "text": "The Derg eliminated all state tariffs on consumer goods to promote private import competition."
+        },
+        {
+          "id": "D",
+          "text": "The Derg privatized all mining operations and abolished central planning."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Following the 1975 nationalization proclamations, the Derg seized major private factories and imposed rigid legal capital ceilings (e.g., capping private industrial investment at Birr 500,000), restricting the private sector. In contrast, both the Imperial era and the post-1991 EPRDF era actively pursued policies to attract domestic and foreign private capital.",
+      "sourceReference": "Section 7.4.1, 7.4.2 & 7.4.3, Pages 179-181"
+    },
+    {
+      "id": "ECO-G11-U07-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "During the implementation of the Growth and Transformation Plans (GTP I & II), Ethiopia achieved rapid real GDP growth driven primarily by public infrastructure spending. However, what structural shortfall led to the formulation of the Home-Grown Economic Reform (HGER) program?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Agriculture became an exclusively export-based cash crop monopoly that eliminated domestic food production."
+        },
+        {
+          "id": "B",
+          "text": "Manufacturing growth and structural transformation lagged behind targets, sector linkages remained weak, public investments created heavy external debt distress and persistent inflation, and export earnings failed to keep pace with imports."
+        },
+        {
+          "id": "C",
+          "text": "Domestic private saving rates exceeded 70% of GDP, leading to an oversupply of loanable capital."
+        },
+        {
+          "id": "D",
+          "text": "Commercial banks completely stopped lending to state infrastructure projects."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "As analyzed across the textbook, while GTP I and II delivered strong headline growth, structural transformation remained sluggish: manufacturing did not become the growth engine, exports remained stagnant, and debt-financed public projects triggered persistent inflation and external debt distress, necessitating the Home-Grown Economic Reform agenda.",
+      "sourceReference": "Section 7.4.4, Pages 181-182 & Unit Summary, Page 190 & EUEE 2017 EC, Q47"
+    },
+    {
+      "id": "ECO-G11-U07-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Which of the following correctly displays the chronological progression of national development and poverty reduction frameworks implemented in Ethiopia from 2002 to 2030?",
+      "options": [
+        {
+          "id": "A",
+          "text": "GTP I → SDPRP → PASDEP → GTP II → Ten-Year Prosperity Plan"
+        },
+        {
+          "id": "B",
+          "text": "SDPRP (2002–2005) → PASDEP (2005–2010) → GTP I (2010–2015) → GTP II (2015–2020) → Ten-Year Prosperity Plan (2020–2030)"
+        },
+        {
+          "id": "C",
+          "text": "PASDEP → GTP I → SDPRP → Ten-Year Prosperity Plan → GTP II"
+        },
+        {
+          "id": "D",
+          "text": "ADLI → GTP II → GTP I → PASDEP → SDPRP"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The post-1991 development framework sequence consists of: the Sustainable Development and Poverty Reduction Program (SDPRP, 2002/03–2004/05), followed by the Plan for Accelerated and Sustained Development to End Poverty (PASDEP, 2005/06–2009/10), Growth and Transformation Plan I (GTP I, 2010/11–2014/15), GTP II (2015/16–2019/20), and the Ten-Year Prosperity Plan (2020–2030).",
+      "sourceReference": "Section 7.1.3, Section 7.2 & Unit Summary, Pages 173-175, 189-190"
+    }
+  ]
 }

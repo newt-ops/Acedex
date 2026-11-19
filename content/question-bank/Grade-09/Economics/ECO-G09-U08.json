@@ -3,5 +3,411 @@
   "subject": "Economics",
   "unitNumber": 8,
   "unitTitle": "Basic Entrepreneurship",
-  "questions": []
+  "questions": [
+    {
+      "id": "ECO-G09-U08-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In basic entrepreneurship, how is an 'enterprise' formally defined?",
+      "options": [
+        {
+          "id": "A",
+          "text": "An informal meeting of community elders to resolve financial disputes"
+        },
+        {
+          "id": "B",
+          "text": "A legal entity possessing the right to conduct business on its own, enter into contracts, own property, and incur liabilities"
+        },
+        {
+          "id": "C",
+          "text": "A temporary government subsidy program designed exclusively for smallholder peasants"
+        },
+        {
+          "id": "D",
+          "text": "A commercial bank branch operated by the monetary authority"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "According to Section 8.1 of the textbook, an enterprise is defined as a legal entity possessing the right to conduct business on its own—for example, to enter into contracts, own property, incur liabilities, and establish bank accounts.",
+      "sourceReference": "Section 8.1, Page 95"
+    },
+    {
+      "id": "ECO-G09-U08-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which of the following is considered an essential psychological attitude that an entrepreneur must possess to navigate business uncertainty and learn from failures?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Aversion to risk and strict dependence on government subsidies"
+        },
+        {
+          "id": "B",
+          "text": "Bravery to take calculated risks and utilize the fear of failing as motivation to correct mistakes"
+        },
+        {
+          "id": "C",
+          "text": "Reluctance to alter original production techniques regardless of customer feedback"
+        },
+        {
+          "id": "D",
+          "text": "Complete reliance on informal revolving savings to finance all operating costs"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Entrepreneurs must possess bravery; although they may fear failure, they do not allow this fear to inhibit them. Instead, brave entrepreneurs learn from their mistakes and use the experience to push for success.",
+      "sourceReference": "Section 8.3, Page 99"
+    },
+    {
+      "id": "ECO-G09-U08-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which of the following represents the primary starting source of finance that an entrepreneur is expected to provide when establishing a new venture?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Long-term loans from international commercial banks"
+        },
+        {
+          "id": "B",
+          "text": "Personal savings from the entrepreneur's own pocket"
+        },
+        {
+          "id": "C",
+          "text": "Bilateral foreign aid grants from multilateral development agencies"
+        },
+        {
+          "id": "D",
+          "text": "Direct central bank equity investments"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "As a general rule, entrepreneurs should fund start-up capital from their own pockets first. The textbook notes that entrepreneurs should ideally provide at least half of the initial start-up funds in the form of personal savings before approaching outside investors.",
+      "sourceReference": "Section 8.6, Page 106"
+    },
+    {
+      "id": "ECO-G09-U08-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In the study of innovation, which type of innovation involves the creation of an entirely new product, service, or process that did not exist previously?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Invention"
+        },
+        {
+          "id": "B",
+          "text": "Extension"
+        },
+        {
+          "id": "C",
+          "text": "Duplication"
+        },
+        {
+          "id": "D",
+          "text": "Synthesis"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Section 8.2 classifies innovation into four distinct types: invention (the creation of a new product, service, or process), extension (the growth of an existing product or service), duplication (replication of an existing product or process), and synthesis (combination of existing concepts into a new formulation).",
+      "sourceReference": "Section 8.2, Page 98"
+    },
+    {
+      "id": "ECO-G09-U08-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which people management skill enables an entrepreneur to assign specific tasks and operational responsibilities effectively to team members?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Delegation skill"
+        },
+        {
+          "id": "B",
+          "text": "Financial skill"
+        },
+        {
+          "id": "C",
+          "text": "Marketing skill"
+        },
+        {
+          "id": "D",
+          "text": "Strategic skill"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Delegation skill is a critical people management skill defined as the ability to allocate specific operational tasks and responsibilities to different team members according to their abilities.",
+      "sourceReference": "Section 8.3, Page 101 & Review Questions, Page 109"
+    },
+    {
+      "id": "ECO-G09-U08-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How did 18th-century economist Richard Cantillon conceptually differentiate the role of an entrepreneur from that of a capital provider?",
+      "options": [
+        {
+          "id": "A",
+          "text": "By defining the entrepreneur as a public civil servant managing state-owned monopolies"
+        },
+        {
+          "id": "B",
+          "text": "By identifying the entrepreneur specifically as a risk-taker who buys at a known price and sells at an unknown future price"
+        },
+        {
+          "id": "C",
+          "text": "By viewing the entrepreneur merely as a provider of physical manual labour without managerial responsibility"
+        },
+        {
+          "id": "D",
+          "text": "By defining the entrepreneur as a moneylender who receives fixed interest returns without bearing commercial risk"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In the 18th century, Richard Cantillon developed the first formal theory of entrepreneurship by defining the entrepreneur as a risk-taker who purchases goods at known current prices and sells them at unknown future market prices, distinguishing this risk-bearing role from simply supplying capital.",
+      "sourceReference": "Section 8.1, Page 96"
+    },
+    {
+      "id": "ECO-G09-U08-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What is the primary defining characteristic of a social entrepreneur compared to a traditional commercial entrepreneur?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A social entrepreneur operates strictly within state corporations to maximize government tax revenue."
+        },
+        {
+          "id": "B",
+          "text": "A social entrepreneur develops innovative business solutions primarily designed to address pressing social problems and create lasting positive community benefits."
+        },
+        {
+          "id": "C",
+          "text": "A social entrepreneur is legally barred from charging any monetary fees for goods or services rendered."
+        },
+        {
+          "id": "D",
+          "text": "A social entrepreneur avoids the use of creativity and technological innovation in business operations."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Social entrepreneurship is the process by which entrepreneurs develop and implement innovative business models to directly solve social problems and create transformative benefits for their communities and society.",
+      "sourceReference": "Section 8.1, Pages 96-97 & Unit Summary, Page 108"
+    },
+    {
+      "id": "ECO-G09-U08-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How is 'creativity' conceptually related to 'innovation' in the entrepreneurial process?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Creativity is the implementation of business models, whereas innovation is the passive generation of random thoughts."
+        },
+        {
+          "id": "B",
+          "text": "Creativity is the ability to discover new ideas and alternative ways of looking at problems, while innovation is the practical application of those creative solutions to improve lives or commercialize opportunities."
+        },
+        {
+          "id": "C",
+          "text": "Creativity applies only to corporate enterprises, whereas innovation applies only to subsistence agriculture."
+        },
+        {
+          "id": "D",
+          "text": "There is no conceptual relationship; creativity and innovation are mutually exclusive in economics."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Creativity is the ability to develop novel ideas and look at problems and opportunities from fresh perspectives. Innovation is the application of these creative solutions at an individual or organizational level to exploit commercial opportunities.",
+      "sourceReference": "Section 8.2, Pages 97-98"
+    },
+    {
+      "id": "ECO-G09-U08-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In the classification of entrepreneurial finance, which type of capital is typically required to purchase short-lived operational assets and cover immediate recurrent expenses like raw materials?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Asset finance"
+        },
+        {
+          "id": "B",
+          "text": "Working capital"
+        },
+        {
+          "id": "C",
+          "text": "Long-term mortgage capital"
+        },
+        {
+          "id": "D",
+          "text": "Sovereign bond finance"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Working capital is short-term financing needed to pay for day-to-day operating requirements, such as raw materials and routine expenses, or to fund short-lived assets that turn over quickly.",
+      "sourceReference": "Section 8.6, Pages 105-106"
+    },
+    {
+      "id": "ECO-G09-U08-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Who are 'angel investors' in the financing landscape of newly established entrepreneurial ventures?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Government civil servants managing municipal revenue offices"
+        },
+        {
+          "id": "B",
+          "text": "Wealthy private individuals who invest their own financial capital into startup businesses in exchange for taking on business risks"
+        },
+        {
+          "id": "C",
+          "text": "Commercial bank officers who issue collateralized short-term overdrafts"
+        },
+        {
+          "id": "D",
+          "text": "Traditional revolving credit associations that prohibit private equity ownership"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Angels are wealthy private individuals, often experienced entrepreneurs themselves, who invest their own capital directly into early-stage startup ventures in exchange for equity or a share in the business, bearing substantial investment risk.",
+      "sourceReference": "Section 8.6, Page 106"
+    },
+    {
+      "id": "ECO-G09-U08-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Why is teamwork increasingly recognized as a vital contributor to entrepreneurial success in modern business organizations?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It eliminates the need for leadership, planning, and individual accountability."
+        },
+        {
+          "id": "B",
+          "text": "It fosters cooperation, builds mutual trust, combines diverse skills, and raises organizational productivity beyond what an isolated individual can achieve."
+        },
+        {
+          "id": "C",
+          "text": "It allows business firms to bypass formal tax registration and licensing requirements."
+        },
+        {
+          "id": "D",
+          "text": "It guarantees that a startup will never face financial losses or market competition."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Teamwork fosters cooperation, shapes a supportive corporate culture, leverages complementary employee skills, and enhances overall problem-solving capacity, leading to greater organizational productivity and enterprise resilience.",
+      "sourceReference": "Section 8.5, Pages 103-104"
+    },
+    {
+      "id": "ECO-G09-U08-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "In the 20th century, Joseph Schumpeter articulated that entrepreneurial innovation acts as a disruptive force that drives economic growth while simultaneously making older products, technologies, and businesses obsolete. What economic term did Schumpeter assign to this dynamic process?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Diminishing marginal utility"
+        },
+        {
+          "id": "B",
+          "text": "Creative destruction"
+        },
+        {
+          "id": "C",
+          "text": "Asymmetric information"
+        },
+        {
+          "id": "D",
+          "text": "Liquidity preference"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Joseph Schumpeter coined the term 'creative destruction' to describe how entrepreneurial innovation incessantly revolutionizes economic structures from within, destroying outdated technologies and enterprises while creating new industries and economic growth.",
+      "sourceReference": "Section 8.4, Page 102"
+    },
+    {
+      "id": "ECO-G09-U08-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Joseph Schumpeter outlined five specific methods for identifying and exploiting new entrepreneurial business opportunities. Which of the following is NOT one of Schumpeter's recognized methods?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Developing a new market for an existing product"
+        },
+        {
+          "id": "B",
+          "text": "Discovering a new source of raw materials or resources that lowers production costs"
+        },
+        {
+          "id": "C",
+          "text": "Lobbying the government for permanent statutory monopoly status to block all incoming technological innovation"
+        },
+        {
+          "id": "D",
+          "text": "Using existing technology to produce an old product in a new way or producing a new product using new technology"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Schumpeter's methods for finding new business opportunities involve: developing new markets, discovering new resource sources, using existing technology to produce old products in new ways, using existing technology to produce new products, and using new technology to produce new products. Seeking state-enforced protection to prevent innovation contradicts entrepreneurship.",
+      "sourceReference": "Section 8.4, Pages 102-103"
+    },
+    {
+      "id": "ECO-G09-U08-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A footwear entrepreneur establishes an enterprise that utilizes discarded automobile tires and recycled materials to produce fashionable, durable shoes for domestic and international markets. According to the entrepreneurial concepts in Unit 8, this venture exemplifies:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Synthesis and creative problem-solving by turning environmental waste into commercial value, similar to SoleRebels founded by Bethlehem Tilahun Alemu"
+        },
+        {
+          "id": "B",
+          "text": "A purely speculative transaction aimed at manipulating foreign exchange rates without physical production"
+        },
+        {
+          "id": "C",
+          "text": "A state-run command monopoly that restricts private individual initiatives"
+        },
+        {
+          "id": "D",
+          "text": "A non-economic activity that does not generate factor payments or employment"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The textbook highlights Bethlehem Tilahun Alemu, who founded SoleRebels by recycling car tires into shoes. This demonstrates creativity, environmental sustainability, and innovation (synthesis of existing materials into a new valuable offering) that created hundreds of jobs and generated export earnings.",
+      "sourceReference": "Section 8.1, Page 95 & Section 8.2, Pages 97-98"
+    },
+    {
+      "id": "ECO-G09-U08-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Why is the promotion of basic entrepreneurship considered crucial for developing economies with high youth unemployment rates, such as Ethiopia?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because it guarantees that all newly created enterprises will operate without needing financial working capital"
+        },
+        {
+          "id": "B",
+          "text": "Because it transforms citizens from passive 'job seekers' into innovative 'job creators' who mobilize resources to solve local community problems and expand national productive capacity"
+        },
+        {
+          "id": "C",
+          "text": "Because it shifts all national economic decision-making from private markets to a centralized planning bureau"
+        },
+        {
+          "id": "D",
+          "text": "Because it eliminates the need for general management, marketing, and communication skills"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Section 8.1 highlights that engaging in entrepreneurship shifts individuals from being passive 'job seekers' to active 'job creators.' In developing economies facing high unemployment, entrepreneurs mobilize underutilized resources, introduce creative solutions to local challenges, generate jobs, and foster national economic growth.",
+      "sourceReference": "Section 8.1, Page 95 & Section 8.3, Pages 99-101"
+    }
+  ]
 }

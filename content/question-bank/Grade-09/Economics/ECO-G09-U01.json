@@ -3,5 +3,411 @@
   "subject": "Economics",
   "unitNumber": 1,
   "unitTitle": "Introducing Economics",
-  "questions": []
+  "questions": [
+    {
+      "id": "ECO-G09-U01-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "The English word 'economics' is derived from the ancient Greek word 'oikonomia', which originally referred to:",
+      "options": [
+        {
+          "id": "A",
+          "text": "the management of a family or a household"
+        },
+        {
+          "id": "B",
+          "text": "the political administration of a city-state"
+        },
+        {
+          "id": "C",
+          "text": "the accumulation of gold and national wealth"
+        },
+        {
+          "id": "D",
+          "text": "the regulation of foreign trade and commerce"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The term economics originates from the Greek word 'oikonomia', meaning the management of a family or household, indicating that economic study first began with managing household resources.",
+      "sourceReference": "Section 1.1, Page 2"
+    },
+    {
+      "id": "ECO-G09-U01-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which of the following statements best defines the subject matter of economics as a science of choice?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Eliminating the physical scarcity of productive resources through industrial expansion"
+        },
+        {
+          "id": "B",
+          "text": "Studying the efficient allocation of scarce resources to attain the maximum fulfillment of unlimited human needs"
+        },
+        {
+          "id": "C",
+          "text": "Guaranteeing equal distribution of income and wealth among all households"
+        },
+        {
+          "id": "D",
+          "text": "Maximizing government tax revenues to finance national budget expenditures"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Economics is defined as a branch of social science that studies the efficient allocation of scarce resources in order to attain the maximum fulfillment of unlimited human needs.",
+      "sourceReference": "Section 1.1, Page 2"
+    },
+    {
+      "id": "ECO-G09-U01-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which of the following topics is an example of microeconomic analysis?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The general price level and inflation rate across Ethiopia"
+        },
+        {
+          "id": "B",
+          "text": "The annual growth rate of Ethiopia's Gross Domestic Product (GDP)"
+        },
+        {
+          "id": "C",
+          "text": "The national unemployment rate in the Ethiopian economy"
+        },
+        {
+          "id": "D",
+          "text": "The determination of the market price and quantity of teff in a local market"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "Microeconomics focuses on individual decision-making units and the determination of prices of specific products (such as teff) in individual markets, whereas GDP growth, nationwide inflation, and national unemployment are macroeconomic aggregates.",
+      "sourceReference": "Section 1.2, Pages 4-5"
+    },
+    {
+      "id": "ECO-G09-U01-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which of the following statements represents a normative economic statement?",
+      "options": [
+        {
+          "id": "A",
+          "text": "An increase in the price of fertilizer leads to a decrease in the quantity demanded by farmers."
+        },
+        {
+          "id": "B",
+          "text": "Higher grain supplies during harvest seasons typically cause market prices to decline."
+        },
+        {
+          "id": "C",
+          "text": "The government ought to introduce free school feeding programmes in all public schools."
+        },
+        {
+          "id": "D",
+          "text": "Households pay direct and indirect taxes out of their factor earnings."
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Normative economics entails value judgments and opinions regarding 'what ought to be' or 'what should be', which cannot be tested or verified solely by empirical facts. The other choices describe testable factual relationships ('what is').",
+      "sourceReference": "Section 1.3, Page 7"
+    },
+    {
+      "id": "ECO-G09-U01-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In an economic system, households primarily function as:",
+      "options": [
+        {
+          "id": "A",
+          "text": "the chief owners of factors of production who supply factor services to producers"
+        },
+        {
+          "id": "B",
+          "text": "the sole producers of finished commodities and employers of labor"
+        },
+        {
+          "id": "C",
+          "text": "regulatory agencies that levy direct and indirect taxes on businesses"
+        },
+        {
+          "id": "D",
+          "text": "institutions whose primary goal is public investment and administration"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Households are the primary owners of the factors of production (land, labour, capital, and entrepreneurship) and sell these factor services to business firms in exchange for factor incomes.",
+      "sourceReference": "Section 1.4, Page 8"
+    },
+    {
+      "id": "ECO-G09-U01-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Economics is recognized both as a science and as an art. In this context, economics is considered an art because it:",
+      "options": [
+        {
+          "id": "A",
+          "text": "relies purely on artistic imagination without empirical data or classification of facts"
+        },
+        {
+          "id": "B",
+          "text": "provides principles, methods, and practical procedures to solve problems like poverty and unemployment"
+        },
+        {
+          "id": "C",
+          "text": "focuses exclusively on aesthetic services such as music, theater, and painting"
+        },
+        {
+          "id": "D",
+          "text": "avoids making any predictions regarding cause-and-effect relationships"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Economics is a science because it systematically collects, classifies, and analyzes facts to establish cause-and-effect relationships. It is an art because it provides practical principles and techniques to solve real-world problems like unemployment, poverty, and inflation.",
+      "sourceReference": "Section 1.1, Page 3"
+    },
+    {
+      "id": "ECO-G09-U01-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "According to the Grade 9 curriculum, what are the central problems addressed by microeconomics and macroeconomics, respectively?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Income distribution for microeconomics; family budgeting for macroeconomics"
+        },
+        {
+          "id": "B",
+          "text": "Full employment of resources for microeconomics; commodity pricing for macroeconomics"
+        },
+        {
+          "id": "C",
+          "text": "Price determination and resource allocation for microeconomics; full employment of economic resources for macroeconomics"
+        },
+        {
+          "id": "D",
+          "text": "Determination of aggregate demand for microeconomics; business accounting for macroeconomics"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The fundamental problem of microeconomics is resource allocation and price determination (what, how, and for whom to produce), whereas the fundamental problem of macroeconomics is associated with the full employment of an economy's resources and determination of national income.",
+      "sourceReference": "Section 1.2, Pages 4-5"
+    },
+    {
+      "id": "ECO-G09-U01-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "An agricultural officer observes that in five separate regional markets, grain prices fell sharply following an increase in grain supply. From these specific observations, she formulates the broad rule: 'Other things being equal, an increase in supply leads to a fall in price.' This process of reasoning exemplifies the:",
+      "options": [
+        {
+          "id": "A",
+          "text": "deductive method"
+        },
+        {
+          "id": "B",
+          "text": "normative approach"
+        },
+        {
+          "id": "C",
+          "text": "inductive method"
+        },
+        {
+          "id": "D",
+          "text": "ceteris paribus fallacy"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The inductive method of reasoning moves from particular facts or specific empirical observations to a general economic principle or law. The deductive method, conversely, moves from general principles to specific instances.",
+      "sourceReference": "Section 1.3, Page 6"
+    },
+    {
+      "id": "ECO-G09-U01-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which of the following pairs correctly contrasts a positive economic statement with a normative economic statement?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Positive: 'A country must eliminate poverty.' / Normative: 'Unemployment affects national production.'"
+        },
+        {
+          "id": "B",
+          "text": "Positive: 'Fair income distribution is necessary.' / Normative: 'Taxes should be progressive.'"
+        },
+        {
+          "id": "C",
+          "text": "Positive: 'Higher consumer income leads to increased spending on clothes.' / Normative: 'The government should subsidize clothing for low-income families.'"
+        },
+        {
+          "id": "D",
+          "text": "Positive: 'Prices ought to remain stable.' / Normative: 'Inflation reduces the purchasing power of money.'"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Positive economics describes 'what is' based on testable facts and objective relationships (higher income leads to increased spending). Normative economics involves value judgments about 'what should be' (the government should subsidize clothing).",
+      "sourceReference": "Section 1.3, Pages 6-7"
+    },
+    {
+      "id": "ECO-G09-U01-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In factor markets, what specific factor payment is earned by households for supplying the services of capital to business firms?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Wage"
+        },
+        {
+          "id": "B",
+          "text": "Rent"
+        },
+        {
+          "id": "C",
+          "text": "Profit"
+        },
+        {
+          "id": "D",
+          "text": "Interest"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "Each factor of production earns a specific factor payment: labour earns wages, land earns rent, capital earns interest, and entrepreneurship earns profit.",
+      "sourceReference": "Section 1.4, Page 8"
+    },
+    {
+      "id": "ECO-G09-U01-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Why does economic theory analyze the 'general government' as a distinct decision-making unit separate from government-owned business enterprises?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Government enterprises operate without hiring factors of production from households."
+        },
+        {
+          "id": "B",
+          "text": "Public commercial enterprises never operate in mixed or developing economies."
+        },
+        {
+          "id": "C",
+          "text": "General government activities are restricted solely to conducting international trade negotiations."
+        },
+        {
+          "id": "D",
+          "text": "The general government primarily provides non-market public services financed through compulsory tax revenues rather than commodity sales."
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "Economics takes government in the sense of 'general government' to disregard government commercial enterprises. The general government provides collective services (defense, judicial, education, sanitation) financed through compulsory taxes, whereas business firms sell goods in markets for revenue.",
+      "sourceReference": "Section 1.4, Pages 8-9"
+    },
+    {
+      "id": "ECO-G09-U01-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "The textbook emphasizes that microeconomics and macroeconomics are complementary rather than competing branches of economics. Which of the following statements best illustrates this relationship?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Macroeconomic aggregates, such as national inflation and total output, represent the cumulative outcome of individual microeconomic decisions made by households and firms."
+        },
+        {
+          "id": "B",
+          "text": "Microeconomic principles apply exclusively to developed capitalist economies, while macroeconomic models apply only to developing agrarian economies."
+        },
+        {
+          "id": "C",
+          "text": "A study of national economic growth can be completed entirely without reference to the functioning of individual product and factor markets."
+        },
+        {
+          "id": "D",
+          "text": "Microeconomic price determination operates independently of economy-wide monetary and fiscal policy conditions."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Microeconomics and macroeconomics are complementary because macroeconomics cannot be studied independently of microeconomics; overall aggregates (such as GDP, employment, and the general price level) emerge from the millions of individual decisions made by consumers, workers, and business firms.",
+      "sourceReference": "Section 1.2, Pages 4-5"
+    },
+    {
+      "id": "ECO-G09-U01-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "An economist starts from the fundamental behavioral assumption that 'all business firms seek to maximize profits.' From this general principle, she logically deduces that an increase in production costs will lead a competitive firm to reduce its output, and subsequently tests this prediction against market data. Which method of logical reasoning did the economist apply in formulating this prediction?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Inductive reasoning, because the conclusion was formulated after gathering field surveys"
+        },
+        {
+          "id": "B",
+          "text": "Deductive reasoning, because the specific conclusion was derived logically from an established general principle"
+        },
+        {
+          "id": "C",
+          "text": "Normative reasoning, because profit maximization is an ethical standard of conduct"
+        },
+        {
+          "id": "D",
+          "text": "Dialectical reasoning, because it resolves contradictions between private firms and the state"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The deductive method of economic reasoning proceeds from accepted general principles, truths, or behavioral assumptions down to the analysis of specific facts and predictions. Deriving a specific output response from the general premise of profit maximization is a classic example of deduction.",
+      "sourceReference": "Section 1.3, Page 6"
+    },
+    {
+      "id": "ECO-G09-U01-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "How do households and business firms interact in resource (factor) markets and product (goods) markets to create the circular flow of economic activity?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Households buy factor services from firms in resource markets and sell finished goods to firms in product markets."
+        },
+        {
+          "id": "B",
+          "text": "Firms act as sellers in both resource and product markets, while households act exclusively as buyers in both markets."
+        },
+        {
+          "id": "C",
+          "text": "Households supply factor services to firms in resource markets in exchange for factor income, which they then spend in product markets to buy goods produced by firms."
+        },
+        {
+          "id": "D",
+          "text": "The government allocates factor services directly to households, eliminating the need for monetary transactions between households and business firms."
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "In factor (resource) markets, households are the sellers of factor services and firms are the buyers, generating factor income for households. In product markets, firms are sellers of goods and services and households are buyers, spending their income on consumption.",
+      "sourceReference": "Section 1.4, Pages 8-9"
+    },
+    {
+      "id": "ECO-G09-U01-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "In scientific economic methodology, economists frequently employ the 'ceteris paribus' (other things remaining constant) assumption. What is the fundamental scientific purpose of this assumption?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To convert normative value judgments into universally accepted ethical laws"
+        },
+        {
+          "id": "B",
+          "text": "To isolate and examine the specific relationship between two variables by holding all other confounding factors unchanged"
+        },
+        {
+          "id": "C",
+          "text": "To demonstrate that economic resources are unlimited over the long run"
+        },
+        {
+          "id": "D",
+          "text": "To ensure that economic theory applies only to static traditional subsistence economies"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In real-world economies, numerous variables change simultaneously. To establish systematic cause-and-effect relationships (such as between price and quantity), economists use the 'ceteris paribus' assumption to isolate the effect of one independent variable while holding all other influencing factors constant.",
+      "sourceReference": "Section 1.1, Page 3 & Section 1.3, Page 6"
+    }
+  ]
 }
