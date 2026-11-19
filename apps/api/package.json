@@ -9,6 +9,7 @@
     "start": "node dist/server.js",
     "admin:promote": "tsx src/scripts/promote-user.ts",
     "cleanup:legacy-collector": "tsx src/scripts/drop-legacy-collector-collections.ts",
+    "cleanup:sample-questions": "tsx src/scripts/clear-sample-questions.ts",
     "seed:curriculum": "tsx src/scripts/seed-curriculum.ts",
     "test": "vitest run",
     "test:watch": "vitest",
