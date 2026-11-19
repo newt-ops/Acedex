@@ -8,23 +8,68 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        background: 'var(--background)',
+        foreground: 'var(--foreground)',
+        card: {
+          DEFAULT: 'var(--card)',
+          foreground: 'var(--card-foreground)',
+        },
+        popover: {
+          DEFAULT: 'var(--popover)',
+          foreground: 'var(--popover-foreground)',
+        },
+        primary: {
+          DEFAULT: 'var(--primary)',
+          foreground: 'var(--primary-foreground)',
+        },
+        secondary: {
+          DEFAULT: 'var(--secondary)',
+          foreground: 'var(--secondary-foreground)',
+        },
+        muted: {
+          DEFAULT: 'var(--muted)',
+          foreground: 'var(--muted-foreground)',
+        },
+        accent: {
+          DEFAULT: 'var(--accent)',
+          foreground: 'var(--accent-foreground)',
+        },
+        destructive: {
+          DEFAULT: 'var(--destructive)',
+          foreground: 'var(--destructive-foreground)',
+        },
+        success: {
+          DEFAULT: 'var(--success)',
+          foreground: 'var(--success-foreground)',
+        },
+        warning: {
+          DEFAULT: 'var(--warning)',
+          foreground: 'var(--warning-foreground)',
+        },
+        info: {
+          DEFAULT: 'var(--info)',
+          foreground: 'var(--info-foreground)',
+        },
+        border: 'var(--border)',
+        input: 'var(--input)',
+        ring: 'var(--ring)',
         acedex: {
-          bg: '#0F172A',
-          card: '#1E293B',
-          'card-hover': '#243248',
-          border: '#334155',
-          primary: '#3B82F6',
-          'primary-hover': '#2563EB',
-          accent: '#8B5CF6',
-          text: '#F8FAFC',
-          muted: '#94A3B8',
-          success: '#10B981',
-          warning: '#F59E0B',
-          danger: '#EF4444',
+          bg: 'var(--background)',
+          card: 'var(--card)',
+          'card-hover': 'var(--secondary)',
+          border: 'var(--border)',
+          primary: 'var(--primary)',
+          'primary-hover': 'lab(35% -34 17)',
+          accent: 'var(--primary)',
+          text: 'var(--foreground)',
+          muted: 'var(--muted-foreground)',
+          success: 'var(--success)',
+          warning: 'var(--warning)',
+          danger: 'var(--destructive)',
         },
       },
       backgroundImage: {
-        'acedex-gradient': 'linear-gradient(135deg, #3B82F6 0%, #8B5CF6 100%)',
+        'acedex-gradient': 'linear-gradient(135deg, var(--primary) 0%, var(--info) 100%)',
       },
     },
   },
