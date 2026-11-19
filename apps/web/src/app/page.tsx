@@ -108,7 +108,7 @@ export default function LoginPage() {
                       setAccessId(e.target.value.toUpperCase());
                       setError(null);
                     }}
-                    placeholder="e.g. GEO#982 or ADM#15"
+                    placeholder="Enter your ID"
                     autoCapitalize="characters"
                     autoCorrect="off"
                     spellCheck="false"
