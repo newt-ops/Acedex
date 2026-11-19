@@ -23,23 +23,23 @@ export const STATUS_LABELS: Record<string, string> = {
 
 export const STATUS_BADGE_STYLES: Record<string, { bg: string; text: string; border: string }> = {
   approved: {
-    bg: 'bg-emerald-500/15',
-    text: 'text-emerald-400',
-    border: 'border-emerald-500/30',
+    bg: 'bg-emerald-50 dark:bg-emerald-950/40',
+    text: 'text-emerald-800 dark:text-emerald-300',
+    border: 'border-emerald-300 dark:border-emerald-800',
   },
   submitted: {
-    bg: 'bg-amber-500/15',
-    text: 'text-amber-400',
-    border: 'border-amber-500/30',
+    bg: 'bg-amber-50 dark:bg-amber-950/40',
+    text: 'text-amber-800 dark:text-amber-300',
+    border: 'border-amber-300 dark:border-amber-800',
   },
   not_started: {
-    bg: 'bg-slate-800',
-    text: 'text-slate-400',
-    border: 'border-slate-700',
+    bg: 'bg-acedex-card-hover',
+    text: 'text-acedex-muted',
+    border: 'border-acedex-border',
   },
   rejected: {
-    bg: 'bg-rose-500/15',
-    text: 'text-rose-400',
-    border: 'border-rose-500/30',
+    bg: 'bg-rose-50 dark:bg-rose-950/40',
+    text: 'text-rose-700 dark:text-rose-300',
+    border: 'border-rose-300 dark:border-rose-800',
   },
 };

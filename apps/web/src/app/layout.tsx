@@ -12,7 +12,7 @@ export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
   maximumScale: 1,
-  themeColor: '#0F172A',
+  themeColor: '#FAFAF9',
 };
 
 export default function RootLayout({
@@ -21,7 +21,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en" className="light">
       <body className="bg-acedex-bg text-acedex-text min-h-screen antialiased flex flex-col">
         <AuthProvider>
           <div className="flex-1 flex flex-col">{children}</div>

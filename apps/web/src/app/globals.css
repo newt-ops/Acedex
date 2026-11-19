@@ -2,19 +2,46 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --acedex-bg: #0F172A;
-  --acedex-card: #1E293B;
-  --acedex-card-hover: #243248;
-  --acedex-border: #334155;
-  --acedex-primary: #3B82F6;
-  --acedex-primary-hover: #2563EB;
-  --acedex-accent: #8B5CF6;
-  --acedex-text: #F8FAFC;
-  --acedex-muted: #94A3B8;
-  --acedex-success: #10B981;
-  --acedex-warning: #F59E0B;
-  --acedex-danger: #EF4444;
+:root, .light {
+  --background: lab(98.6332% -.128895 1.51819);
+  --foreground: lab(9.2083% -6.48291 2.56682);
+  --card: lab(100% 0 0);
+  --card-foreground: lab(9.2083% -6.48291 2.56682);
+  --popover: lab(100% 0 0);
+  --popover-foreground: lab(9.2083% -6.48291 2.56682);
+  --primary: lab(40.0013% -36.9774 19.1113);
+  --primary-foreground: lab(98.423% -3.70666 1.89806);
+  --secondary: lab(94.8764% -1.75828 2.32178);
+  --secondary-foreground: lab(21.5218% -9.61119 4.24346);
+  --muted: lab(95.1831% -.708431 2.14471);
+  --muted-foreground: lab(42.2361% -5.02983 3.91402);
+  --accent: lab(93.8619% -5.31858 3.38657);
+  --accent-foreground: lab(19.4574% -15.9754 7.81841);
+  --destructive: lab(45.8049% 62.9533 44.1);
+  --destructive-foreground: lab(97.5918% 3.00431 1.76224);
+  --success: lab(49.4516% -40.332 24.2186);
+  --success-foreground: lab(97.8423% -3.61246 2.11393);
+  --warning: lab(67.1959% 24.4167 67.5432);
+  --warning-foreground: lab(16.3459% 9.83904 23.7715);
+  --info: lab(49.1746% -17.3087 -27.8832);
+  --info-foreground: lab(97.7192% -2.12559 -2.92403);
+  --border: lab(90% -0.8 2.0);
+  --input: lab(92% -0.8 2.0);
+  --ring: lab(40.0013% -36.9774 19.1113);
+
+  /* Acedex design system aliases */
+  --acedex-bg: var(--background);
+  --acedex-card: var(--card);
+  --acedex-card-hover: var(--secondary);
+  --acedex-border: var(--border);
+  --acedex-primary: var(--primary);
+  --acedex-primary-hover: lab(35% -34 17);
+  --acedex-accent: var(--primary);
+  --acedex-text: var(--foreground);
+  --acedex-muted: var(--muted-foreground);
+  --acedex-success: var(--success);
+  --acedex-warning: var(--warning);
+  --acedex-danger: var(--destructive);
 }
 
 * {
@@ -22,8 +49,8 @@
 }
 
 body {
-  background-color: #0F172A;
-  color: #F8FAFC;
+  background-color: var(--background);
+  color: var(--foreground);
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
   min-height: 100vh;
   -webkit-font-smoothing: antialiased;
