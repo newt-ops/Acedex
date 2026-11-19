@@ -7,8 +7,8 @@ void main() {
     await tester.pumpWidget(const AcedexApp());
 
     expect(find.text('ACEDEX'), findsOneWidget);
-    expect(find.text('Mobile Client'), findsOneWidget);
-    expect(find.text('Target Backend API'), findsOneWidget);
-    expect(find.text('System Status'), findsOneWidget);
+    expect(find.text('Mobile Platform'), findsOneWidget);
+    expect(find.text('TARGET BACKEND API'), findsOneWidget);
+    expect(find.text('System Health'), findsOneWidget);
   });
 }
