@@ -83,30 +83,54 @@ export function SubmissionsMobileCards({
               <Button
                 size="sm"
                 variant="secondary"
-                className="w-full text-xs"
+                className="w-full text-xs px-2 truncate min-h-[40px]"
+                icon={
+                  <HugeiconsIcon
+                    icon={EyeIcon}
+                    size={14}
+                    className="text-acedex-primary shrink-0"
+                    strokeWidth={1.5}
+                  />
+                }
                 onClick={() => onInspect(sub)}
               >
-                <HugeiconsIcon icon={EyeIcon} size={15} className="mr-1 text-acedex-primary" strokeWidth={1.5} /> Inspect ({sub.questionCount})
+                Inspect ({sub.questionCount})
               </Button>
 
               {!isApproved ? (
                 <Button
                   size="sm"
                   variant="success"
-                  className="w-full text-xs"
+                  className="w-full text-xs px-2 min-h-[40px]"
+                  icon={
+                    <HugeiconsIcon
+                      icon={CheckmarkCircle02Icon}
+                      size={14}
+                      strokeWidth={1.75}
+                      className="shrink-0"
+                    />
+                  }
                   onClick={() => onApprove(sub)}
                   loading={isApproving}
                 >
-                  <HugeiconsIcon icon={CheckmarkCircle02Icon} size={15} className="mr-1" strokeWidth={1.75} /> Approve
+                  Approve
                 </Button>
               ) : (
                 <Button
                   size="sm"
                   variant="outline"
-                  className="w-full text-xs text-emerald-400 border-emerald-500/30 hover:bg-emerald-500/10"
+                  className="w-full text-xs px-2 text-emerald-500 border-emerald-500/30 hover:bg-emerald-500/10 min-h-[40px]"
+                  icon={
+                    <HugeiconsIcon
+                      icon={Download01Icon}
+                      size={14}
+                      strokeWidth={1.5}
+                      className="shrink-0"
+                    />
+                  }
                   onClick={() => onExport(sub.unitCode)}
                 >
-                  <HugeiconsIcon icon={Download01Icon} size={15} className="mr-1" strokeWidth={1.5} /> Export JSON
+                  Export JSON
                 </Button>
               )}
             </div>

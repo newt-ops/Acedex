@@ -82,10 +82,18 @@ export function SubmissionsTable({
                       size="sm"
                       variant="secondary"
                       className="h-8 text-xs px-2.5"
+                      icon={
+                        <HugeiconsIcon
+                          icon={EyeIcon}
+                          size={15}
+                          className="text-acedex-primary shrink-0"
+                          strokeWidth={1.5}
+                        />
+                      }
                       onClick={() => onInspect(sub)}
                       title="Inspect questions"
                     >
-                      <HugeiconsIcon icon={EyeIcon} size={15} className="mr-1 text-acedex-primary" strokeWidth={1.5} /> Inspect
+                      Inspect
                     </Button>
 
                     {!isApproved && (
@@ -93,11 +101,19 @@ export function SubmissionsTable({
                         size="sm"
                         variant="success"
                         className="h-8 text-xs px-2.5"
+                        icon={
+                          <HugeiconsIcon
+                            icon={CheckmarkCircle02Icon}
+                            size={15}
+                            strokeWidth={1.75}
+                            className="shrink-0"
+                          />
+                        }
                         onClick={() => onApprove(sub)}
                         loading={isApproving}
                         title="Approve Unit"
                       >
-                        <HugeiconsIcon icon={CheckmarkCircle02Icon} size={15} className="mr-1" strokeWidth={1.75} /> Approve
+                        Approve
                       </Button>
                     )}
 
@@ -105,11 +121,19 @@ export function SubmissionsTable({
                       <Button
                         size="sm"
                         variant="outline"
-                        className="h-8 text-xs px-2.5 text-emerald-400 border-emerald-500/30 hover:bg-emerald-500/10"
+                        className="h-8 text-xs px-2.5 text-emerald-500 border-emerald-500/30 hover:bg-emerald-500/10"
+                        icon={
+                          <HugeiconsIcon
+                            icon={Download01Icon}
+                            size={15}
+                            strokeWidth={1.5}
+                            className="shrink-0"
+                          />
+                        }
                         onClick={() => onExport(sub.unitCode)}
                         title="Export canonical JSON"
                       >
-                        <HugeiconsIcon icon={Download01Icon} size={15} className="mr-1" strokeWidth={1.5} /> Export
+                        Export
                       </Button>
                     )}
                   </div>

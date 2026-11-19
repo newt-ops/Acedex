@@ -142,8 +142,16 @@ export function QuestionSubmitModal({
               onClick={handleTestAutoFix}
               loading={sanitizing}
               disabled={!rawText.trim() || submitting || submitSuccess}
+              icon={
+                <HugeiconsIcon
+                  icon={SparklesIcon}
+                  size={15}
+                  className="text-acedex-accent shrink-0"
+                  strokeWidth={1.5}
+                />
+              }
             >
-              <HugeiconsIcon icon={SparklesIcon} size={15} className="mr-1 text-acedex-accent" strokeWidth={1.5} /> Test Auto-Fix
+              Test Auto-Fix
             </Button>
 
             <Button
@@ -152,16 +160,25 @@ export function QuestionSubmitModal({
               onClick={handleSubmit}
               loading={submitting}
               disabled={!rawText.trim() || sanitizing || submitSuccess}
+              icon={
+                submitSuccess ? (
+                  <HugeiconsIcon
+                    icon={CheckmarkCircle02Icon}
+                    size={15}
+                    className="shrink-0 text-white"
+                    strokeWidth={1.75}
+                  />
+                ) : (
+                  <HugeiconsIcon
+                    icon={SentIcon}
+                    size={15}
+                    className="shrink-0"
+                    strokeWidth={1.5}
+                  />
+                )
+              }
             >
-              {submitSuccess ? (
-                <>
-                  <HugeiconsIcon icon={CheckmarkCircle02Icon} size={15} className="mr-1" strokeWidth={1.75} /> Submitted!
-                </>
-              ) : (
-                <>
-                  <HugeiconsIcon icon={SentIcon} size={15} className="mr-1" strokeWidth={1.5} /> Submit to Review
-                </>
-              )}
+              {submitSuccess ? 'Submitted!' : 'Submit to Review'}
             </Button>
           </div>
         </div>

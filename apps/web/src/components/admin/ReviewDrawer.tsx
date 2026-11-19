@@ -122,10 +122,11 @@ export function ReviewDrawer({
               <Button
                 variant="outline"
                 size="sm"
-                className="text-emerald-400 border-emerald-500/30 hover:bg-emerald-500/10 text-xs"
+                className="text-emerald-400 border-emerald-500/30 hover:bg-emerald-500/10 text-xs shrink-0"
                 onClick={() => onExport(submission.unitCode)}
+                icon={<HugeiconsIcon icon={Download01Icon} size={15} className="shrink-0" strokeWidth={1.5} />}
               >
-                <HugeiconsIcon icon={Download01Icon} size={15} className="mr-1" strokeWidth={1.5} /> Export JSON
+                Export JSON
               </Button>
             ) : (
               <>
@@ -133,17 +134,18 @@ export function ReviewDrawer({
                   <Button
                     variant="danger"
                     size="sm"
-                    className="text-xs"
+                    className="text-xs shrink-0"
                     onClick={() => setShowRejectInput(true)}
                     disabled={actionLoading}
+                    icon={<HugeiconsIcon icon={CancelCircleIcon} size={15} className="shrink-0" strokeWidth={1.5} />}
                   >
-                    <HugeiconsIcon icon={CancelCircleIcon} size={15} className="mr-1" strokeWidth={1.5} /> Reject
+                    Reject
                   </Button>
                 ) : (
                   <Button
                     variant="ghost"
                     size="sm"
-                    className="text-xs"
+                    className="text-xs shrink-0"
                     onClick={() => setShowRejectInput(false)}
                   >
                     Cancel
@@ -153,11 +155,12 @@ export function ReviewDrawer({
                 <Button
                   variant="success"
                   size="sm"
-                  className="text-xs"
+                  className="text-xs shrink-0"
                   onClick={handleApprove}
                   loading={actionLoading}
+                  icon={<HugeiconsIcon icon={CheckmarkCircle02Icon} size={15} className="shrink-0" strokeWidth={1.75} />}
                 >
-                  <HugeiconsIcon icon={CheckmarkCircle02Icon} size={15} className="mr-1" strokeWidth={1.75} /> Approve Unit
+                  Approve Unit
                 </Button>
               </>
             )}

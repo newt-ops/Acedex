@@ -11,6 +11,7 @@ export interface ButtonProps
   size?: 'sm' | 'md' | 'lg';
   loading?: boolean;
   icon?: React.ReactNode;
+  iconPosition?: 'left' | 'right';
 }
 
 export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
@@ -21,6 +22,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       size = 'md',
       loading = false,
       icon,
+      iconPosition = 'left',
       children,
       disabled,
       ...props
@@ -28,7 +30,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     ref
   ) => {
     const baseStyles =
-      'inline-flex items-center justify-center font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-acedex-primary focus-visible:ring-offset-2 focus-visible:ring-offset-acedex-bg disabled:opacity-50 disabled:pointer-events-none rounded-lg select-none active:scale-[0.98]';
+      'inline-flex items-center justify-center font-medium whitespace-nowrap transition-all duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-acedex-primary focus-visible:ring-offset-2 focus-visible:ring-offset-acedex-bg disabled:opacity-50 disabled:pointer-events-none rounded-xl select-none active:scale-[0.98]';
 
     const variants = {
       primary:
@@ -51,6 +53,8 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       lg: 'h-12 px-6 text-base gap-2.5 min-h-[48px]',
     };
 
+    const iconSize = size === 'sm' ? 15 : size === 'lg' ? 18 : 16;
+
     return (
       <button
         ref={ref}
@@ -59,11 +63,32 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         {...props}
       >
         {loading ? (
-          <HugeiconsIcon icon={Loading01Icon} size={16} className="animate-spin shrink-0" strokeWidth={2} />
+          <span className="inline-flex items-center justify-center shrink-0">
+            <HugeiconsIcon
+              icon={Loading01Icon}
+              size={iconSize}
+              className="animate-spin shrink-0"
+              strokeWidth={2}
+            />
+          </span>
         ) : (
-          icon && <span className="shrink-0">{icon}</span>
+          icon &&
+          iconPosition === 'left' && (
+            <span className="inline-flex items-center justify-center shrink-0">
+              {icon}
+            </span>
+          )
         )}
-        <span>{children}</span>
+        {children && (
+          <span className="inline-flex items-center justify-center gap-1.5 truncate leading-none">
+            {children}
+          </span>
+        )}
+        {!loading && icon && iconPosition === 'right' && (
+          <span className="inline-flex items-center justify-center shrink-0">
+            {icon}
+          </span>
+        )}
       </button>
     );
   }

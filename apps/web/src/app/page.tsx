@@ -5,14 +5,12 @@ import { useRouter } from 'next/navigation';
 import { useAuth } from '../context/AuthContext';
 import { Card, CardContent } from '../components/ui/Card';
 import { Button } from '../components/ui/Button';
-import { getBaseApiUrl, setBaseApiUrl } from '../lib/api';
 import { HugeiconsIcon } from '@hugeicons/react';
 import {
   Key01Icon,
   ArrowRight01Icon,
   AlertCircleIcon,
   ShieldCheckIcon,
-  ServerIcon,
 } from '@hugeicons/core-free-icons';
 
 export default function LoginPage() {
@@ -23,12 +21,7 @@ export default function LoginPage() {
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
 
-  // API Url setting toggle
-  const [apiUrl, setApiUrlState] = useState<string>('https://acedex-api.onrender.com');
-  const [showConfig, setShowConfig] = useState<boolean>(false);
-
   useEffect(() => {
-    setApiUrlState(getBaseApiUrl());
     if (isAuthenticated) {
       if (isAdmin) {
         router.push('/admin');
@@ -50,18 +43,11 @@ export default function LoginPage() {
 
     try {
       await login(accessId.trim().toUpperCase());
-      // AuthProvider automatically routes to /admin or /student
     } catch (err: any) {
       setError(err.message || 'Invalid Access ID or server unreachable');
     } finally {
       setLoading(false);
     }
-  };
-
-  const handleUrlChange = (url: string) => {
-    setBaseApiUrl(url);
-    setApiUrlState(url);
-    setShowConfig(false);
   };
 
   if (authLoading) {
@@ -72,13 +58,8 @@ export default function LoginPage() {
     );
   }
 
-  const isLocal = apiUrl.includes('localhost') || apiUrl.includes('127.0.0.1');
-
   return (
-    <div className="flex-1 flex flex-col justify-between p-4 sm:p-6 lg:p-8 max-w-lg mx-auto w-full">
-      {/* Top spacer */}
-      <div />
-
+    <div className="flex-1 flex flex-col justify-center items-center p-4 sm:p-6 lg:p-8 max-w-lg mx-auto w-full min-h-[calc(100vh-4rem)]">
       {/* Main Login Card */}
       <div className="w-full my-auto">
         {/* Brand Header */}
@@ -105,7 +86,12 @@ export default function LoginPage() {
                 </label>
                 <div className="relative">
                   <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-acedex-muted">
-                    <HugeiconsIcon icon={Key01Icon} size={16} className="text-acedex-primary" strokeWidth={1.5} />
+                    <HugeiconsIcon
+                      icon={Key01Icon}
+                      size={16}
+                      className="text-acedex-primary shrink-0"
+                      strokeWidth={1.5}
+                    />
                   </div>
                   <input
                     id="accessId"
@@ -130,7 +116,12 @@ export default function LoginPage() {
               {/* Error message */}
               {error && (
                 <div className="p-3 bg-rose-500/10 border border-rose-500/25 rounded-xl text-xs text-rose-400 flex items-start gap-2">
-                  <HugeiconsIcon icon={AlertCircleIcon} size={16} className="shrink-0 mt-0.5 text-rose-500" strokeWidth={1.5} />
+                  <HugeiconsIcon
+                    icon={AlertCircleIcon}
+                    size={16}
+                    className="shrink-0 mt-0.5 text-rose-500"
+                    strokeWidth={1.5}
+                  />
                   <span className="leading-snug">{error}</span>
                 </div>
               )}
@@ -141,55 +132,33 @@ export default function LoginPage() {
                 variant="primary"
                 size="lg"
                 loading={loading}
+                icon={
+                  <HugeiconsIcon
+                    icon={ArrowRight01Icon}
+                    size={18}
+                    strokeWidth={2}
+                    className="shrink-0"
+                  />
+                }
+                iconPosition="right"
                 className="w-full text-sm font-semibold min-h-[48px]"
               >
-                <span>Enter Workspace</span>
-                <HugeiconsIcon icon={ArrowRight01Icon} size={16} className="ml-1.5 shrink-0" strokeWidth={2} />
+                Enter Workspace
               </Button>
             </form>
           </CardContent>
         </Card>
 
         {/* Security badge */}
-        <div className="flex items-center justify-center gap-1.5 mt-6 text-xs text-acedex-muted/80">
-          <HugeiconsIcon icon={ShieldCheckIcon} size={16} className="text-emerald-500 shrink-0" strokeWidth={1.5} />
+        <div className="flex items-center justify-center gap-2 mt-6 text-xs text-acedex-muted/80">
+          <HugeiconsIcon
+            icon={ShieldCheckIcon}
+            size={16}
+            className="text-emerald-500 shrink-0"
+            strokeWidth={1.5}
+          />
           <span>Role-Gated Access • Direct Question Bank Sync</span>
         </div>
-      </div>
-
-      {/* Target Backend API switcher */}
-      <div className="pt-8 text-center">
-        <button
-          onClick={() => setShowConfig(!showConfig)}
-          className="inline-flex items-center gap-1.5 text-xs text-acedex-muted/60 hover:text-acedex-muted transition-colors"
-        >
-          <HugeiconsIcon icon={ServerIcon} size={14} className="shrink-0" strokeWidth={1.5} />
-          <span>Backend: {isLocal ? 'Local:5000' : 'Production Render'}</span>
-        </button>
-
-        {showConfig && (
-          <div className="mt-3 p-3 bg-acedex-card border border-acedex-border rounded-xl max-w-sm mx-auto text-xs space-y-2">
-            <div className="font-semibold text-acedex-text">Select Backend API:</div>
-            <div className="flex gap-2">
-              <Button
-                size="sm"
-                variant={!isLocal ? 'primary' : 'outline'}
-                className="flex-1 text-xs"
-                onClick={() => handleUrlChange('https://acedex-api.onrender.com')}
-              >
-                Production (Render)
-              </Button>
-              <Button
-                size="sm"
-                variant={isLocal ? 'primary' : 'outline'}
-                className="flex-1 text-xs"
-                onClick={() => handleUrlChange('http://localhost:5000')}
-              >
-                Localhost (5000)
-              </Button>
-            </div>
-          </div>
-        )}
       </div>
     </div>
   );

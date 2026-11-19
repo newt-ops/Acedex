@@ -19,8 +19,12 @@ export default function NotFound() {
         </p>
         <div className="pt-2">
           <Link href="/">
-            <Button variant="primary" size="md">
-              <HugeiconsIcon icon={Home01Icon} size={16} className="mr-2 shrink-0" strokeWidth={1.5} /> Return to Login
+            <Button
+              variant="primary"
+              size="md"
+              icon={<HugeiconsIcon icon={Home01Icon} size={16} className="shrink-0" strokeWidth={1.5} />}
+            >
+              Return to Login
             </Button>
           </Link>
         </div>

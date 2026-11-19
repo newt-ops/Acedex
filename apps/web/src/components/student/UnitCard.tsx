@@ -89,27 +89,51 @@ export function UnitCard({ unit, onOpenSubmit }: UnitCardProps) {
             size="sm"
             variant="outline"
             className="w-full text-xs text-emerald-500 border-emerald-500/30 hover:bg-emerald-500/10"
+            icon={
+              <HugeiconsIcon
+                icon={CheckmarkCircle02Icon}
+                size={15}
+                strokeWidth={1.75}
+                className="shrink-0"
+              />
+            }
             onClick={() => onOpenSubmit(unit)}
           >
-            <HugeiconsIcon icon={CheckmarkCircle02Icon} size={15} className="mr-1 shrink-0" strokeWidth={1.75} /> View / Replace
+            View / Replace
           </Button>
         ) : isSubmitted ? (
           <Button
             size="sm"
             variant="secondary"
             className="w-full text-xs text-amber-500 border-amber-500/30 hover:bg-amber-500/10"
+            icon={
+              <HugeiconsIcon
+                icon={PencilEdit01Icon}
+                size={15}
+                strokeWidth={1.5}
+                className="shrink-0"
+              />
+            }
             onClick={() => onOpenSubmit(unit)}
           >
-            <HugeiconsIcon icon={PencilEdit01Icon} size={15} className="mr-1 shrink-0" strokeWidth={1.5} /> Re-paste / Update
+            Re-paste / Update
           </Button>
         ) : (
           <Button
             size="sm"
             variant="primary"
             className="w-full text-xs"
+            icon={
+              <HugeiconsIcon
+                icon={CloudUploadIcon}
+                size={15}
+                strokeWidth={1.5}
+                className="shrink-0"
+              />
+            }
             onClick={() => onOpenSubmit(unit)}
           >
-            <HugeiconsIcon icon={CloudUploadIcon} size={15} className="mr-1 shrink-0" strokeWidth={1.5} /> Submit Questions
+            Submit Questions
           </Button>
         )}
       </div>

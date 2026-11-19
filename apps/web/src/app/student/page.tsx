@@ -130,8 +130,13 @@ export default function StudentPortalPage() {
                 <HugeiconsIcon icon={AlertCircleIcon} size={20} className="shrink-0 text-rose-500" strokeWidth={1.5} />
                 <span>{error}</span>
               </div>
-              <Button size="sm" variant="outline" onClick={loadUnits}>
-                <HugeiconsIcon icon={Refresh01Icon} size={14} className="mr-1 shrink-0" strokeWidth={1.5} /> Retry
+              <Button
+                size="sm"
+                variant="outline"
+                onClick={loadUnits}
+                icon={<HugeiconsIcon icon={Refresh01Icon} size={14} className="shrink-0" strokeWidth={1.5} />}
+              >
+                Retry
               </Button>
             </div>
           )}
