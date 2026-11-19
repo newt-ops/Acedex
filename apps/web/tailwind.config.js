@@ -69,10 +69,12 @@ module.exports = {
           warning: 'var(--warning)',
           danger: 'var(--destructive)',
           // Canonical Brand Palette
+          techBlue: '#005A9C',
+          cobalt: '#005A9C',
           charcoal: '#2C2C2C',
+          mist: '#F3F4F4',
           plum: '#853953',
           aubergine: '#612D53',
-          mist: '#F3F4F4',
         },
       },
       backgroundImage: {
