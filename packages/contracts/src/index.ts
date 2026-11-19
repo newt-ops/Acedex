@@ -572,10 +572,27 @@ export interface CollectorSubjectUnitsResponse {
   }[];
 }
 
+export const CollectorQuestionSubmissionItemSchema = z.object({
+  id: z.string().optional(),
+  type: z.string().default('multiple_choice'),
+  difficulty: z.string().default('medium'),
+  question: z.string().min(1, 'Question text cannot be empty'),
+  options: z.array(
+    z.object({
+      id: z.string().min(1),
+      text: z.string().min(1, 'Option text cannot be empty'),
+    })
+  ).length(4, 'Exactly 4 options (A, B, C, D) are required'),
+  correctOptionId: z.string().min(1),
+  explanation: z.string().min(1, 'Explanation cannot be empty'),
+  sourceReference: z.string().optional(),
+});
+export type CollectorQuestionSubmissionItem = z.infer<typeof CollectorQuestionSubmissionItemSchema>;
+
 export const SubmitUnitQuestionsRequestSchema = z.object({
   unitCode: z.string().optional(),
   contributorId: z.string().min(3, 'contributorId must be at least 3 characters'),
-  questions: z.array(RawQuestionItemSchema).length(15, 'Must contain exactly 15 questions'),
+  questions: z.array(CollectorQuestionSubmissionItemSchema).length(15, 'Must contain exactly 15 questions').optional(),
   rawPastedText: z.string().optional(),
 });
 export type SubmitUnitQuestionsRequest = z.infer<typeof SubmitUnitQuestionsRequestSchema>;

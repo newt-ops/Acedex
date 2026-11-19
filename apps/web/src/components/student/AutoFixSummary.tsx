@@ -9,6 +9,15 @@ interface AutoFixSummaryProps {
 }
 
 export function AutoFixSummary({ report }: AutoFixSummaryProps) {
+  const fixes = report?.fixesApplied || report?.autoFixedIssues || [];
+  const warnings = report?.warnings || [];
+  const errors = report?.errors || [];
+  const questionCount =
+    report?.questionCount ??
+    report?.questions?.length ??
+    report?.parsedQuestions?.length ??
+    0;
+
   return (
     <div className="space-y-3 my-3">
       {/* Status banner */}
@@ -27,7 +36,7 @@ export function AutoFixSummary({ report }: AutoFixSummaryProps) {
         <div className="text-xs sm:text-sm">
           <div className="font-semibold">
             {report.success
-              ? `Successfully Parsed ${report.questionCount} Questions`
+              ? `Successfully Parsed ${questionCount} Questions`
               : 'Syntax Issues Found in Pasted JSON'}
           </div>
           <div className="text-xs opacity-90 mt-0.5">
@@ -39,13 +48,13 @@ export function AutoFixSummary({ report }: AutoFixSummaryProps) {
       </div>
 
       {/* Applied Fixes */}
-      {report.fixesApplied.length > 0 && (
+      {fixes.length > 0 && (
         <div className="p-3 bg-acedex-bg border border-acedex-border/60 rounded-xl text-xs space-y-1.5">
           <div className="font-semibold text-acedex-primary flex items-center gap-1.5">
             <Sparkles className="w-3.5 h-3.5" /> Auto-Fixes Applied:
           </div>
           <ul className="list-disc list-inside space-y-1 text-acedex-muted pl-1">
-            {report.fixesApplied.map((fix, idx) => (
+            {fixes.map((fix, idx) => (
               <li key={idx} className="text-acedex-text/90">
                 {fix}
               </li>
@@ -55,13 +64,13 @@ export function AutoFixSummary({ report }: AutoFixSummaryProps) {
       )}
 
       {/* Warnings */}
-      {report.warnings.length > 0 && (
+      {warnings.length > 0 && (
         <div className="p-3 bg-amber-500/10 border border-amber-500/20 rounded-xl text-xs space-y-1">
           <div className="font-semibold text-amber-400 flex items-center gap-1.5">
             <AlertTriangle className="w-3.5 h-3.5" /> Warnings:
           </div>
           <ul className="list-disc list-inside space-y-0.5 text-amber-300/90 pl-1">
-            {report.warnings.map((warn, idx) => (
+            {warnings.map((warn, idx) => (
               <li key={idx}>{warn}</li>
             ))}
           </ul>
@@ -69,13 +78,13 @@ export function AutoFixSummary({ report }: AutoFixSummaryProps) {
       )}
 
       {/* Errors */}
-      {report.errors.length > 0 && (
+      {errors.length > 0 && (
         <div className="p-3 bg-rose-500/10 border border-rose-500/20 rounded-xl text-xs space-y-1">
           <div className="font-semibold text-rose-400 flex items-center gap-1.5">
             <XCircle className="w-3.5 h-3.5" /> Errors:
           </div>
           <ul className="list-disc list-inside space-y-0.5 text-rose-300 pl-1">
-            {report.errors.map((err, idx) => (
+            {errors.map((err, idx) => (
               <li key={idx}>{err}</li>
             ))}
           </ul>

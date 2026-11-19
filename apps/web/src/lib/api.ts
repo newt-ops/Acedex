@@ -96,10 +96,10 @@ export const api = {
     );
   },
 
-  async sanitize(rawText: string): Promise<SanitizeResult> {
+  async sanitize(rawText: string, expectedUnitCode?: string): Promise<SanitizeResult> {
     return request<SanitizeResult>('/api/v1/collector/sanitize', {
       method: 'POST',
-      body: JSON.stringify({ rawText }),
+      body: JSON.stringify({ rawText, expectedUnitCode }),
     });
   },
 

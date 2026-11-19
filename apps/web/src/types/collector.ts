@@ -73,9 +73,11 @@ export interface SubmissionDetail extends SubmissionSummary {
 
 export interface SanitizeResult {
   success: boolean;
-  questionCount: number;
-  errors: string[];
-  warnings: string[];
-  fixesApplied: string[];
-  parsedQuestions: QuestionItem[];
+  questionCount?: number;
+  errors?: string[];
+  warnings?: string[];
+  fixesApplied?: string[];
+  autoFixedIssues?: string[];
+  questions?: QuestionItem[];
+  parsedQuestions?: QuestionItem[];
 }
