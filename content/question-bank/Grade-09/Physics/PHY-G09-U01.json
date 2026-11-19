@@ -3,5 +3,411 @@
   "subject": "Physics",
   "unitNumber": 1,
   "unitTitle": "Physics and Human Society",
-  "questions": []
+  "questions": [
+    {
+      "id": "PHY-G09-U01-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "The word 'physics' originates from the ancient Greek word 'phusis'. What is the literal meaning of 'phusis'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Measurement"
+        },
+        {
+          "id": "B",
+          "text": "Motion"
+        },
+        {
+          "id": "C",
+          "text": "Nature"
+        },
+        {
+          "id": "D",
+          "text": "Energy"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The term physics comes from the Greek word 'phusis', which translates to 'nature'. Physics is the natural science dedicated to describing the fundamental mechanisms of the universe.",
+      "sourceReference": "Section 1.1, Page 2"
+    },
+    {
+      "id": "PHY-G09-U01-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which branch of physics specifically investigates sound waves, including their production, transmission, and physical effects?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Optics"
+        },
+        {
+          "id": "B",
+          "text": "Acoustics"
+        },
+        {
+          "id": "C",
+          "text": "Mechanics"
+        },
+        {
+          "id": "D",
+          "text": "Thermodynamics"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Acoustics is the specialized branch of physics dealing with the study of sound, sound generation, wave propagation, and its physical effects.",
+      "sourceReference": "Section 1.2, Page 4"
+    },
+    {
+      "id": "PHY-G09-U01-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which interdisciplinary field applies physical concepts and methods to medical diagnosis and treatment, such as X-rays and MRI scans?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Geophysics"
+        },
+        {
+          "id": "B",
+          "text": "Biophysics"
+        },
+        {
+          "id": "C",
+          "text": "Medical Physics"
+        },
+        {
+          "id": "D",
+          "text": "Astrophysics"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Medical Physics applies physical principles, radiation properties, and imaging technologies (like X-rays, MRI, and ultrasonics) to healthcare diagnostics and patient treatment.",
+      "sourceReference": "Section 1.3, Page 5"
+    },
+    {
+      "id": "PHY-G09-U01-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which prominent scientist formulated the three fundamental laws of motion and demonstrated that universal gravitation governs both terrestrial falling bodies and celestial motion?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Michael Faraday"
+        },
+        {
+          "id": "B",
+          "text": "James Prescott Joule"
+        },
+        {
+          "id": "C",
+          "text": "Isaac Newton"
+        },
+        {
+          "id": "D",
+          "text": "Anders Celsius"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Sir Isaac Newton formulated the three classical laws of motion and the law of universal gravitation, laying the foundation for classical physics.",
+      "sourceReference": "Section 1.4, Page 5"
+    },
+    {
+      "id": "PHY-G09-U01-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which branch of physics focuses on the behavior, wave propagation, and visual phenomena of light?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Electromagnetism"
+        },
+        {
+          "id": "B",
+          "text": "Optics"
+        },
+        {
+          "id": "C",
+          "text": "Acoustics"
+        },
+        {
+          "id": "D",
+          "text": "Thermodynamics"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Optics is the branch of physics concerned with light behavior, optical instruments, reflection, refraction, and wave properties of light.",
+      "sourceReference": "Section 1.2, Page 4"
+    },
+    {
+      "id": "PHY-G09-U01-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How does classical mechanics differ fundamentally from quantum mechanics within the field of mechanics?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Classical mechanics deals with thermal heat transfer, whereas quantum mechanics studies magnetic fields."
+        },
+        {
+          "id": "B",
+          "text": "Classical mechanics describes macroscopic objects and forces, while quantum mechanics governs the behavior of microscopic particles like protons and electrons."
+        },
+        {
+          "id": "C",
+          "text": "Classical mechanics was developed in the 20th century, whereas quantum mechanics originated during the Renaissance."
+        },
+        {
+          "id": "D",
+          "text": "Classical mechanics ignores gravitational forces, whereas quantum mechanics deals exclusively with planetary motion."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Mechanics is subdivided into classical mechanics (which governs physical laws of macroscopic objects) and quantum mechanics (which describes subatomic particles like neutrons, protons, and electrons).",
+      "sourceReference": "Section 1.2, Page 4"
+    },
+    {
+      "id": "PHY-G09-U01-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In 1831, Michael Faraday succeeded in converting magnetic force into electrical force. What major technological innovation resulted from this discovery?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The steam engine"
+        },
+        {
+          "id": "B",
+          "text": "The first electric generator"
+        },
+        {
+          "id": "C",
+          "text": "The liquid thermometer"
+        },
+        {
+          "id": "D",
+          "text": "The optical microscope"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Michael Faraday converted magnetic energy into electrical current in 1831, demonstrating electromagnetic induction and inventing the world's first electric generator.",
+      "sourceReference": "Section 1.4, Page 6"
+    },
+    {
+      "id": "PHY-G09-U01-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Ethiopian historical heritages, such as the Obelisk of Axum and the rock-hewn churches of Lalibela, have maintained their structural balance for centuries. Which branch of physics provides the physical principles explaining their equilibrium?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Thermodynamics"
+        },
+        {
+          "id": "B",
+          "text": "Mechanics"
+        },
+        {
+          "id": "C",
+          "text": "Electromagnetism"
+        },
+        {
+          "id": "D",
+          "text": "Nuclear Physics"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Mechanics (specifically static equilibrium and force balance) explains how architectural structures maintain balance, support weight, and withstand gravitational forces over long periods.",
+      "sourceReference": "Section 1.1, Page 2"
+    },
+    {
+      "id": "PHY-G09-U01-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "James Prescott Joule investigated the nature of heat and its quantitative relationship to mechanical work. Which fundamental law of physics was directly established through his work?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The law of universal gravitation"
+        },
+        {
+          "id": "B",
+          "text": "The law of conservation of energy"
+        },
+        {
+          "id": "C",
+          "text": "The law of light refraction"
+        },
+        {
+          "id": "D",
+          "text": "The law of electrical resistance"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Joule established the mechanical equivalent of heat, proving that work transforms into thermal energy, which led directly to the formulation of the law of conservation of energy.",
+      "sourceReference": "Section 1.4, Page 6"
+    },
+    {
+      "id": "PHY-G09-U01-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "A scientist uses radiometric dating and seismic wave analysis to study Earth's structure and rock formations. Which interdisciplinary field connects these methods?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Astrophysics"
+        },
+        {
+          "id": "B",
+          "text": "Geophysics"
+        },
+        {
+          "id": "C",
+          "text": "Biophysics"
+        },
+        {
+          "id": "D",
+          "text": "Acoustics"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Geophysics applies physical principles—such as wave mechanics and nuclear radioactivity—to investigate nonliving Earth materials, earthquakes, and geological history.",
+      "sourceReference": "Section 1.3, Page 5"
+    },
+    {
+      "id": "PHY-G09-U01-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which statement best describes the shift from classical physics to modern physics at the beginning of the 20th century?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Classical physics was completely abandoned as incorrect for all everyday applications."
+        },
+        {
+          "id": "B",
+          "text": "Revolutionary discoveries introduced modifications to classical laws to explain atomic-scale and high-speed phenomena."
+        },
+        {
+          "id": "C",
+          "text": "Modern physics replaced mathematical analysis with qualitative descriptions of nature."
+        },
+        {
+          "id": "D",
+          "text": "Classical physics studied biology, whereas modern physics shifted focus to engineering."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Modern physics emerged at the start of the 20th century, expanding classical physics through new discoveries (like quantum theory and relativity) to explain phenomena at subatomic scales and high velocities.",
+      "sourceReference": "Section 1.4, Page 5"
+    },
+    {
+      "id": "PHY-G09-U01-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A civil engineer designs a multi-story building for structural safety against earthquakes, while an acoustic engineer designs its interior rooms for clear sound transmission. How do these engineering disciplines connect to physics?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Both disciplines rely exclusively on quantum electrodynamics to calculate atomic forces."
+        },
+        {
+          "id": "B",
+          "text": "Both apply distinct branches of classical physics—civil engineering uses mechanics for structural stability, while acoustic engineering uses acoustics for sound wave propagation."
+        },
+        {
+          "id": "C",
+          "text": "Civil engineering relies on thermodynamics, while acoustic engineering relies on nuclear physics."
+        },
+        {
+          "id": "D",
+          "text": "Neither engineering field relies on physics laws since engineering is purely empirical."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Engineering fields apply physical laws: civil engineering uses mechanics (forces and structural stability), whereas acoustic engineering utilizes wave acoustics (sound transmission and absorption).",
+      "sourceReference": "Section 1.3, Page 4"
+    },
+    {
+      "id": "PHY-G09-U01-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Chemistry investigates atomic interactions and molecular reactions. What underlying physical principles explain chemical bonding and atomic interactions?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Macroscopic gravitational attraction between molecules."
+        },
+        {
+          "id": "B",
+          "text": "Atomic and subatomic particle physics governing electron structures and electromagnetic forces."
+        },
+        {
+          "id": "C",
+          "text": "Acoustic resonance produced by vibrating atomic nuclei."
+        },
+        {
+          "id": "D",
+          "text": "Thermodynamic convection currents inside solid crystals."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Chemistry is fundamentally rooted in atomic and subatomic particle physics, as electrostatic forces and electron configurations govern atomic bonding and chemical behavior.",
+      "sourceReference": "Section 1.3, Page 3"
+    },
+    {
+      "id": "PHY-G09-U01-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Biophysics uses physical laws to analyze biological systems. Which of the following examples demonstrates the application of physical mechanics to living organisms?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Electrical pulse transmission across nerve cell membranes."
+        },
+        {
+          "id": "B",
+          "text": "Analyzing how joint levers and muscular force vectors maintain human posture and movement."
+        },
+        {
+          "id": "C",
+          "text": "Photosynthetic conversion of light waves into chemical bonds."
+        },
+        {
+          "id": "D",
+          "text": "Radiometric half-life decay of carbon isotopes in living tissue."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Biophysics applies mechanical physics to living systems by analyzing muscle forces, bone lever arms, structural balance, and joint equilibrium in human and animal movement.",
+      "sourceReference": "Section 1.3, Page 4"
+    },
+    {
+      "id": "PHY-G09-U01-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Electromagnetism unifies electric and magnetic phenomena. Which sequence accurately describes the historical evolution of electromagnetic technology from discovery to modern infrastructure?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Joule discovered mechanical work → Faraday invented nuclear reactors → Newton developed power grids."
+        },
+        {
+          "id": "B",
+          "text": "Faraday produced mechanical motion using magnets, then discovered electromagnetic induction to create the first electric generator."
+        },
+        {
+          "id": "C",
+          "text": "Newton formulated electromagnetism laws → Celsius converted current into heat → Faraday developed digital computers."
+        },
+        {
+          "id": "D",
+          "text": "Faraday proved light travels in a vacuum → Joule invented the electric motor → Newton defined electric charge."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Michael Faraday produced mechanical motion using permanent magnets and electric current in 1821, and a decade later converted magnetic forces into electricity, inventing the first electric generator.",
+      "sourceReference": "Section 1.4, Page 6"
+    }
+  ]
 }

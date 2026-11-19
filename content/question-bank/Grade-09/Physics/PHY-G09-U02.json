@@ -3,5 +3,411 @@
   "subject": "Physics",
   "unitNumber": 2,
   "unitTitle": "Physical Quantities",
-  "questions": []
+  "questions": [
+    {
+      "id": "PHY-G09-U02-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which of the following physical quantities is categorized as one of the seven fundamental (base) SI physical quantities?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Density"
+        },
+        {
+          "id": "B",
+          "text": "Time"
+        },
+        {
+          "id": "C",
+          "text": "Force"
+        },
+        {
+          "id": "D",
+          "text": "Speed"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Time is one of the seven fundamental SI physical quantities (length, mass, time, temperature, electric current, amount of substance, and luminous intensity). Density, force, and speed are derived physical quantities.",
+      "sourceReference": "Section 2.1, Page 16"
+    },
+    {
+      "id": "PHY-G09-U02-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which measuring instrument is used in physics laboratory activities to measure time intervals precisely during motion experiments?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Micrometer screw gauge"
+        },
+        {
+          "id": "B",
+          "text": "Beam balance"
+        },
+        {
+          "id": "C",
+          "text": "Stopwatch"
+        },
+        {
+          "id": "D",
+          "text": "Vernier caliper"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "A stopwatch is the scientific laboratory instrument designed to measure elapsed time intervals in seconds and fractions of a second during physics experiments.",
+      "sourceReference": "Section 2.2, Page 21"
+    },
+    {
+      "id": "PHY-G09-U02-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which of the following physical quantities requires both a magnitude and a direction to be completely specified?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Mass"
+        },
+        {
+          "id": "B",
+          "text": "Temperature"
+        },
+        {
+          "id": "C",
+          "text": "Displacement"
+        },
+        {
+          "id": "D",
+          "text": "Energy"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Displacement is a vector quantity because it specifies the straight-line change in position including both magnitude and direction. Mass, temperature, and energy are scalar quantities.",
+      "sourceReference": "Section 2.3, Page 28"
+    },
+    {
+      "id": "PHY-G09-U02-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What exponent power of 10 does the metric prefix 'micro-' (μ) represent in SI unit measurements?",
+      "options": [
+        {
+          "id": "A",
+          "text": "10^-3"
+        },
+        {
+          "id": "B",
+          "text": "10^-6"
+        },
+        {
+          "id": "C",
+          "text": "10^-9"
+        },
+        {
+          "id": "D",
+          "text": "10^-12"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The prefix 'micro-' (μ) represents a multiplier of 0.000001, which is written as 10^-6 in scientific notation.",
+      "sourceReference": "Section 2.1, Page 20"
+    },
+    {
+      "id": "PHY-G09-U02-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "How many millimeters (mm) are equal to a length measurement of 0.45 meters (m)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "4.5 mm"
+        },
+        {
+          "id": "B",
+          "text": "45 mm"
+        },
+        {
+          "id": "C",
+          "text": "450 mm"
+        },
+        {
+          "id": "D",
+          "text": "4500 mm"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Since 1 m = 1000 mm, multiplying 0.45 m by 1000 yields 450 mm.",
+      "sourceReference": "Section 2.4, Page 30"
+    },
+    {
+      "id": "PHY-G09-U02-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "A student adds two measured lengths, 9.65 cm and 8.4 cm. According to the rules for significant figures in addition, how should the final sum be recorded?",
+      "options": [
+        {
+          "id": "A",
+          "text": "18.05 cm"
+        },
+        {
+          "id": "B",
+          "text": "18.1 cm"
+        },
+        {
+          "id": "C",
+          "text": "18 cm"
+        },
+        {
+          "id": "D",
+          "text": "18.050 cm"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "When adding measured values, the result must be rounded to match the smallest number of decimal places of any term in the sum. Since 8.4 cm has one decimal place, the calculated sum of 18.05 cm is rounded to 18.1 cm.",
+      "sourceReference": "Section 2.1, Page 19"
+    },
+    {
+      "id": "PHY-G09-U02-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "The SI unit of force is the newton (N). Which combination of fundamental SI base units is equivalent to 1 newton?",
+      "options": [
+        {
+          "id": "A",
+          "text": "kg·m/s"
+        },
+        {
+          "id": "B",
+          "text": "kg·m/s^2"
+        },
+        {
+          "id": "C",
+          "text": "kg·m^2/s^2"
+        },
+        {
+          "id": "D",
+          "text": "kg/m·s^2"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Force is defined as mass times acceleration (F = m·a). Mass is measured in kilograms (kg) and acceleration in meters per second squared (m/s^2), giving 1 N = 1 kg·m/s^2.",
+      "sourceReference": "Section 2.3, Page 28"
+    },
+    {
+      "id": "PHY-G09-U02-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "A vehicle moves along a straight road at a speed of 72 km/h. What is this speed expressed in SI base units (m/s)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "12 m/s"
+        },
+        {
+          "id": "B",
+          "text": "20 m/s"
+        },
+        {
+          "id": "C",
+          "text": "25 m/s"
+        },
+        {
+          "id": "D",
+          "text": "36 m/s"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "To convert km/h to m/s, multiply by 1000 m / 1 km and divide by 3600 s / 1 h: (72 × 1000) / 3600 = 20 m/s.",
+      "sourceReference": "Section 2.4, Page 32"
+    },
+    {
+      "id": "PHY-G09-U02-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "A ruler marked in tenths of a centimeter (0.1 cm) is used to measure a line segment. The end of the line extends halfway between 4.3 cm and 4.4 cm. What is the correct reading to two decimal places?",
+      "options": [
+        {
+          "id": "A",
+          "text": "4.3 cm"
+        },
+        {
+          "id": "B",
+          "text": "4.35 cm"
+        },
+        {
+          "id": "C",
+          "text": "4.4 cm"
+        },
+        {
+          "id": "D",
+          "text": "4.350 cm"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "A measuring device with 0.1 cm markings allows the user to record all certain digits plus one estimated digit (hundredths place). Halfway between 4.3 cm and 4.4 cm is recorded as 4.35 cm.",
+      "sourceReference": "Section 2.1, Page 12"
+    },
+    {
+      "id": "PHY-G09-U02-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Standard balance weights of 1.5 kg, 500 g, 250 g, and 25 g are placed on one pan of a beam balance to balance an unknown mass. What is the total mass of the object in kilograms?",
+      "options": [
+        {
+          "id": "A",
+          "text": "2.275 kg"
+        },
+        {
+          "id": "B",
+          "text": "2.750 kg"
+        },
+        {
+          "id": "C",
+          "text": "22.75 kg"
+        },
+        {
+          "id": "D",
+          "text": "2275 kg"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Convert all gram values to kilograms: 500 g = 0.500 kg, 250 g = 0.250 kg, and 25 g = 0.025 kg. Summing all values gives: 1.5 kg + 0.500 kg + 0.250 kg + 0.025 kg = 2.275 kg.",
+      "sourceReference": "Section 2.4, Page 32"
+    },
+    {
+      "id": "PHY-G09-U02-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "A student multiplies two measured sides of a rectangle, 6.2 cm (2 significant figures) and 3.45 cm (3 significant figures). What is the calculated area rounded to the correct number of significant figures?",
+      "options": [
+        {
+          "id": "A",
+          "text": "21.39 cm^2"
+        },
+        {
+          "id": "B",
+          "text": "21.4 cm^2"
+        },
+        {
+          "id": "C",
+          "text": "21 cm^2"
+        },
+        {
+          "id": "D",
+          "text": "21.0 cm^2"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "In multiplication, the product must be rounded to the same number of significant figures as the term with the fewest significant figures (6.2 cm has 2 significant figures). The calculated value 6.2 × 3.45 = 21.39 cm^2 is rounded to 21 cm^2.",
+      "sourceReference": "Section 2.1, Page 19"
+    },
+    {
+      "id": "PHY-G09-U02-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "The density of aluminum is measured as 2.7 g/cm^3. What is this density value converted into the standard SI derived units of kg/m^3?",
+      "options": [
+        {
+          "id": "A",
+          "text": "27 kg/m^3"
+        },
+        {
+          "id": "B",
+          "text": "270 kg/m^3"
+        },
+        {
+          "id": "C",
+          "text": "2700 kg/m^3"
+        },
+        {
+          "id": "D",
+          "text": "27000 kg/m^3"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "To convert g/cm^3 to kg/m^3: 1 g = 10^-3 kg and 1 cm^3 = 10^-6 m^3. Thus 1 g/cm^3 = 1000 kg/m^3. Therefore, 2.7 g/cm^3 × 1000 = 2700 kg/m^3.",
+      "sourceReference": "Section 2.4, Page 28"
+    },
+    {
+      "id": "PHY-G09-U02-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Mechanical work is defined as the product of force (F = m·a) and displacement (s). Which of the following expresses the derived unit of work (joule) strictly in terms of fundamental SI base units?",
+      "options": [
+        {
+          "id": "A",
+          "text": "kg·m/s^2"
+        },
+        {
+          "id": "B",
+          "text": "kg·m^2/s^2"
+        },
+        {
+          "id": "C",
+          "text": "kg·m^2/s^3"
+        },
+        {
+          "id": "D",
+          "text": "kg^2·m^2/s^2"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Force has base units of kg·m/s^2. Multiplying force by displacement (m) gives work units of (kg·m/s^2) × m = kg·m^2/s^2, which defines 1 joule (J).",
+      "sourceReference": "Section 2.3, Page 28"
+    },
+    {
+      "id": "PHY-G09-U02-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A artificial satellite completes exactly 14 full revolutions around Earth in 1 day (24 hours). What is the time required for one orbit, expressed in seconds?",
+      "options": [
+        {
+          "id": "A",
+          "text": "1440 s"
+        },
+        {
+          "id": "B",
+          "text": "3600 s"
+        },
+        {
+          "id": "C",
+          "text": "6171.4 s"
+        },
+        {
+          "id": "D",
+          "text": "86400 s"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "First convert 24 hours into seconds: 24 h × 3600 s/h = 86,400 s. Dividing the total time by 14 revolutions gives: 86,400 s / 14 = 6171.4 s per orbit.",
+      "sourceReference": "Section 2.4, Page 33"
+    },
+    {
+      "id": "PHY-G09-U02-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "The volume of the Earth is approximately 1.0 × 10^12 km^3. What is this volume expressed in cubic meters (m^3) using scientific notation?",
+      "options": [
+        {
+          "id": "A",
+          "text": "1.0 × 10^15 m^3"
+        },
+        {
+          "id": "B",
+          "text": "1.0 × 10^18 m^3"
+        },
+        {
+          "id": "C",
+          "text": "1.0 × 10^21 m^3"
+        },
+        {
+          "id": "D",
+          "text": "1.0 × 10^24 m^3"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Since 1 km = 10^3 m, cubing both sides gives 1 km^3 = (10^3 m)^3 = 10^9 m^3. Multiplying 1.0 × 10^12 km^3 by 10^9 m^3/km^3 gives 1.0 × 10^21 m^3.",
+      "sourceReference": "Section 2.1, Page 20"
+    }
+  ]
 }
