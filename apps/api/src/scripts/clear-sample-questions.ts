@@ -3,14 +3,18 @@ import { env } from '../config/env';
 import { logger } from '../common/utils/logger';
 
 /**
- * Migration Script: Clear Sample Questions and Answer Keys from Primary 'acedex' Database
+ * Migration Script: Clear Sample Questions, Answer Keys, Assessment Attempts, and Student Progress
  *
  * Requirements:
  * - Target: Strictly the primary database 'acedex' (NOT 'acedex_collector').
- * - Actions: Clear all documents from 'questions' and 'answer_keys' collections.
- * - Safeguard: Assert database name equals 'acedex', preserve users, subjects, units, progress, and audit collections.
+ * - Actions: Clear all documents from:
+ *     1. 'questions'
+ *     2. 'answer_keys'
+ *     3. 'assessment_attempts'
+ *     4. 'student_progress'
+ * - Safeguard: Assert database name strictly equals 'acedex', preserve users, subjects, units, ad_configs, ad_sessions, auditlogs.
  */
-async function clearSampleQuestionsAndAnswerKeys() {
+async function clearAcedexSampleData() {
   const uri = env.MONGODB_URI;
   if (!uri) {
     throw new Error('MONGODB_URI environment variable is not defined.');
@@ -39,59 +43,52 @@ async function clearSampleQuestionsAndAnswerKeys() {
 
   logger.info({ existingCollections: collectionNames }, "Existing collections in 'acedex'");
 
+  const targetsToClear = [
+    'questions',
+    'answer_keys',
+    'assessment_attempts',
+    'student_progress',
+  ];
+
   const summary: Record<string, { before: number; deleted: number; after: number }> = {};
 
-  // 1. Clear 'questions'
-  if (collectionNames.includes('questions')) {
-    const qColl = db.collection('questions');
-    const countBefore = await qColl.countDocuments();
-    const result = await qColl.deleteMany({});
-    const countAfter = await qColl.countDocuments();
-    summary['questions'] = {
-      before: countBefore,
-      deleted: result.deletedCount,
-      after: countAfter,
-    };
-    logger.info({ summary: summary['questions'] }, "Cleared sample documents from 'questions'");
-  } else {
-    logger.warn("'questions' collection does not exist in 'acedex' (already clean)");
-    summary['questions'] = { before: 0, deleted: 0, after: 0 };
+  for (const target of targetsToClear) {
+    if (collectionNames.includes(target)) {
+      const coll = db.collection(target);
+      const countBefore = await coll.countDocuments();
+      const result = await coll.deleteMany({});
+      const countAfter = await coll.countDocuments();
+      summary[target] = {
+        before: countBefore,
+        deleted: result.deletedCount,
+        after: countAfter,
+      };
+      logger.info({ summary: summary[target] }, `Cleared documents from '${target}'`);
+    } else {
+      logger.warn(`'${target}' collection does not exist in 'acedex' (already clean)`);
+      summary[target] = { before: 0, deleted: 0, after: 0 };
+    }
   }
 
-  // 2. Clear 'answer_keys'
-  if (collectionNames.includes('answer_keys')) {
-    const aColl = db.collection('answer_keys');
-    const countBefore = await aColl.countDocuments();
-    const result = await aColl.deleteMany({});
-    const countAfter = await aColl.countDocuments();
-    summary['answer_keys'] = {
-      before: countBefore,
-      deleted: result.deletedCount,
-      after: countAfter,
-    };
-    logger.info({ summary: summary['answer_keys'] }, "Cleared sample documents from 'answer_keys'");
-  } else {
-    logger.warn("'answer_keys' collection does not exist in 'acedex' (already clean)");
-    summary['answer_keys'] = { before: 0, deleted: 0, after: 0 };
-  }
-
-  // 3. Confirm status of core collections
+  // Confirm status of core collections
   const remainingCollections = await db.listCollections().toArray();
   const remainingNames = remainingCollections.map((c) => c.name);
 
   console.log('\n======================================================');
-  console.log('🧹 SAMPLE QUESTIONS & ANSWER KEYS PURGE COMPLETED');
+  console.log('🧹 ACEDEX SAMPLE & TEST DATA PURGE COMPLETED');
   console.log('======================================================');
   console.log(`🎯 Target Database: ${dbName} (Verified Primary Database)`);
-  console.log(`❓ Questions: ${summary['questions'].before} sample items -> ${summary['questions'].deleted} deleted (Remaining: ${summary['questions'].after})`);
-  console.log(`🔑 Answer Keys: ${summary['answer_keys'].before} sample items -> ${summary['answer_keys'].deleted} deleted (Remaining: ${summary['answer_keys'].after})`);
+  for (const target of targetsToClear) {
+    console.log(`🗑️ ${target.padEnd(20)}: ${summary[target].before} items -> ${summary[target].deleted} deleted (Remaining: ${summary[target].after})`);
+  }
+  console.log('------------------------------------------------------');
   console.log(`🛡️ Preserved Collections: ${remainingNames.join(', ')}`);
   console.log('======================================================\n');
 
   await mongoose.disconnect();
 }
 
-clearSampleQuestionsAndAnswerKeys().catch((err) => {
-  logger.error({ err }, 'Failed to clear sample questions and answer keys');
+clearAcedexSampleData().catch((err) => {
+  logger.error({ err }, 'Failed to clear sample data from acedex');
   process.exit(1);
 });
