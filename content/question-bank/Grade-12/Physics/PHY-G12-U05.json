@@ -3,5 +3,411 @@
   "subject": "Physics",
   "unitNumber": 5,
   "unitTitle": "Basics of Electronics",
-  "questions": []
+  "questions": [
+    {
+      "id": "PHY-G12-U05-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What type of semiconductor material is created when pure silicon (a Group IV element) is doped with a small quantity of a trivalent impurity element such as boron or aluminum?",
+      "options": [
+        {
+          "id": "A",
+          "text": "N-type semiconductor, where free electrons are the majority charge carriers."
+        },
+        {
+          "id": "B",
+          "text": "P-type semiconductor, where positive holes are the majority charge carriers."
+        },
+        {
+          "id": "C",
+          "text": "Intrinsic semiconductor, where electron and hole concentrations remain strictly equal."
+        },
+        {
+          "id": "D",
+          "text": "Superconducting material, where electrical resistance drops to zero at room temperature."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Trivalent impurities (Group III elements like boron, aluminum, or gallium) have three valence electrons. When added to silicon, each dopant atom creates a deficiency of one electron, forming a hole. Hence, a P-type semiconductor is produced with holes as the majority charge carriers.",
+      "sourceReference": "Section 5.1, Page 145"
+    },
+    {
+      "id": "PHY-G12-U05-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is the approximate potential barrier voltage established across the depletion layer of a standard silicon P-N junction diode at room temperature?",
+      "options": [
+        {
+          "id": "A",
+          "text": "0.3 V"
+        },
+        {
+          "id": "B",
+          "text": "0.7 V"
+        },
+        {
+          "id": "C",
+          "text": "1.5 V"
+        },
+        {
+          "id": "D",
+          "text": "5.0 V"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The built-in barrier potential across the depletion region of a silicon P-N junction diode at room temperature is approximately 0.7 V (whereas for a germanium diode, it is approximately 0.3 V).",
+      "sourceReference": "Section 5.2, Page 148"
+    },
+    {
+      "id": "PHY-G12-U05-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which electronic process describes the conversion of an alternating current (AC) voltage supply into a unidirectional direct current (DC) voltage signal?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Amplification"
+        },
+        {
+          "id": "B",
+          "text": "Rectification"
+        },
+        {
+          "id": "C",
+          "text": "Modulation"
+        },
+        {
+          "id": "D",
+          "text": "Ionization"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Rectification is the process of converting an alternating current (AC) voltage signal into a unidirectional direct current (DC) signal using non-linear conducting devices such as P-N junction diodes.",
+      "sourceReference": "Section 5.3, Page 150"
+    },
+    {
+      "id": "PHY-G12-U05-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In a properly biased Bipolar Junction Transistor (BJT), what is the correct mathematical relationship between the emitter current (IE), base current (IB), and collector current (IC)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "IE = IC - IB"
+        },
+        {
+          "id": "B",
+          "text": "IB = IE + IC"
+        },
+        {
+          "id": "C",
+          "text": "IE = IB + IC"
+        },
+        {
+          "id": "D",
+          "text": "IC = IE + IB"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "According to Kirchhoff's current law applied to a transistor, the total current entering/leaving the emitter equals the sum of the base current and collector current (IE = IB + IC).",
+      "sourceReference": "Section 5.4, Page 156"
+    },
+    {
+      "id": "PHY-G12-U05-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which basic logic gate produces an output of HIGH (1) if and only if ALL of its input signals are HIGH (1)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "OR gate"
+        },
+        {
+          "id": "B",
+          "text": "AND gate"
+        },
+        {
+          "id": "C",
+          "text": "NOT gate"
+        },
+        {
+          "id": "D",
+          "text": "NOR gate"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "An AND gate performs logical multiplication (Y = A · B). It yields an output of 1 only when all input signals are 1 simultaneously.",
+      "sourceReference": "Section 5.6, Page 166"
+    },
+    {
+      "id": "PHY-G12-U05-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which of the following pentavalent impurity elements can be added to pure germanium to form an N-type semiconductor with free electrons as majority charge carriers?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Boron (B)"
+        },
+        {
+          "id": "B",
+          "text": "Indium (In)"
+        },
+        {
+          "id": "C",
+          "text": "Phosphorus (P)"
+        },
+        {
+          "id": "D",
+          "text": "Aluminum (Al)"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Pentavalent elements (Group V) such as phosphorus (P), arsenic (As), or antimony (Sb) have five valence electrons. Four electrons form covalent bonds with adjacent silicon/germanium atoms, leaving one extra free electron per donor atom to create an N-type semiconductor. Boron, indium, and aluminum are trivalent dopants.",
+      "sourceReference": "Section 5.1, Page 145"
+    },
+    {
+      "id": "PHY-G12-U05-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What happens to the width of the depletion layer and the internal resistance of a P-N junction diode when it is connected under forward bias condition?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The depletion layer widens, and internal resistance becomes extremely high."
+        },
+        {
+          "id": "B",
+          "text": "The depletion layer narrows, and internal resistance becomes very low."
+        },
+        {
+          "id": "C",
+          "text": "The depletion layer remains unchanged, while internal resistance drops to zero."
+        },
+        {
+          "id": "D",
+          "text": "The depletion layer disappears completely, converting the diode into an insulator."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Under forward bias, the positive battery terminal repels holes toward the junction and the negative terminal repels electrons toward the junction. This reduces/narrows the depletion layer width, lowering the junction barrier resistance and permitting high current flow.",
+      "sourceReference": "Section 5.2, Page 148"
+    },
+    {
+      "id": "PHY-G12-U05-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "A full-wave bridge rectifier circuit is powered by a 50 Hz AC supply. What is the fundamental ripple frequency of the output DC voltage before filtering, and what role does a parallel capacitor play when connected across the load resistor?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Ripple frequency is 50 Hz; the capacitor increases voltage fluctuations."
+        },
+        {
+          "id": "B",
+          "text": "Ripple frequency is 100 Hz; the capacitor smooths out output voltage fluctuations by storing and releasing charge."
+        },
+        {
+          "id": "C",
+          "text": "Ripple frequency is 25 Hz; the capacitor converts DC back into AC."
+        },
+        {
+          "id": "D",
+          "text": "Ripple frequency is 200 Hz; the capacitor blocks DC current completely."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "A full-wave rectifier conducts during both half-cycles of the AC input, doubling the output pulse frequency to 2 × 50 Hz = 100 Hz. A filter capacitor placed across the load resistor charges to peak voltage and slowly discharges during voltage drops, smoothing out the pulsating DC output waveform.",
+      "sourceReference": "Section 5.3, Page 152"
+    },
+    {
+      "id": "PHY-G12-U05-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "A common-emitter transistor amplifier has a current gain (β) of 150. If the base current (IB) is measured to be 20 µA (2.0 × 10⁻⁵ A), what is the magnitude of the collector current (IC)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "0.75 mA"
+        },
+        {
+          "id": "B",
+          "text": "1.50 mA"
+        },
+        {
+          "id": "C",
+          "text": "3.00 mA"
+        },
+        {
+          "id": "D",
+          "text": "7.50 mA"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The current gain in common-emitter configuration is given by β = IC / IB. Rearranging gives IC = β × IB = 150 × (20 × 10⁻⁶ A) = 3000 × 10⁻⁶ A = 3.0 × 10⁻³ A = 3.00 mA.",
+      "sourceReference": "Section 5.4, Page 158"
+    },
+    {
+      "id": "PHY-G12-U05-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Consider a logic circuit formed by connecting the inputs of a 2-input NOR gate to signals A and B. What is the output expression Y of this gate, and what is its output value when A = 0 and B = 1?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Y = A + B; Output = 1"
+        },
+        {
+          "id": "B",
+          "text": "Y = NOT(A + B); Output = 0"
+        },
+        {
+          "id": "C",
+          "text": "Y = A · B; Output = 0"
+        },
+        {
+          "id": "D",
+          "text": "Y = NOT(A · B); Output = 1"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "A NOR gate performs an OR operation followed by a NOT operation (Y = NOT(A + B)). For A = 0 and B = 1, A + B = 1, so the inverted output NOT(1) = 0.",
+      "sourceReference": "Section 5.6, Page 168"
+    },
+    {
+      "id": "PHY-G12-U05-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which optoelectronic P-N junction device is specifically designed to operate under reverse bias to convert incident light photons into an electrical current?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Light Emitting Diode (LED)"
+        },
+        {
+          "id": "B",
+          "text": "Photodiode"
+        },
+        {
+          "id": "C",
+          "text": "Zener regulator diode"
+        },
+        {
+          "id": "D",
+          "text": "Bipolar Junction Transistor"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "A photodiode is operated under reverse bias. When light photons strike its P-N junction depletion region, electron-hole pairs are generated, producing a photocurrent proportional to the light intensity. LEDs, in contrast, operate under forward bias to emit light.",
+      "sourceReference": "Section 5.3, Page 153"
+    },
+    {
+      "id": "PHY-G12-U05-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "In an NPN transistor operating in common-emitter configuration, the current gain is β = 100. If the collector current is IC = 10.0 mA, what are the exact values of the base current (IB) and the emitter current (IE)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "IB = 0.10 mA, IE = 10.10 mA"
+        },
+        {
+          "id": "B",
+          "text": "IB = 1.00 mA, IE = 11.00 mA"
+        },
+        {
+          "id": "C",
+          "text": "IB = 0.01 mA, IE = 10.01 mA"
+        },
+        {
+          "id": "D",
+          "text": "IB = 0.50 mA, IE = 10.50 mA"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Current gain β = IC / IB ⇒ IB = IC / β = 10.0 mA / 100 = 0.10 mA. Emitter current IE = IB + IC = 0.10 mA + 10.0 mA = 10.10 mA.",
+      "sourceReference": "Section 5.4, Page 156 & 160"
+    },
+    {
+      "id": "PHY-G12-U05-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A silicon P-N junction diode (barrier potential VD = 0.7 V) is connected in series with a resistor R = 430 Ω across a 5.0 V DC power supply in forward bias. What is the current I flowing through the circuit?",
+      "options": [
+        {
+          "id": "A",
+          "text": "10.0 mA"
+        },
+        {
+          "id": "B",
+          "text": "11.6 mA"
+        },
+        {
+          "id": "C",
+          "text": "1.6 mA"
+        },
+        {
+          "id": "D",
+          "text": "12.3 mA"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Applying Kirchhoff's voltage law to the series circuit: V_supply - V_D - I · R = 0 ⇒ 5.0 V - 0.7 V = I · R ⇒ 4.3 V = I × 430 Ω ⇒ I = 4.3 / 430 = 0.010 A = 10.0 mA.",
+      "sourceReference": "Section 5.2, Page 150"
+    },
+    {
+      "id": "PHY-G12-U05-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "In power electronics, what is the maximum theoretical rectification efficiency (η_max) of an ideal half-wave rectifier versus an ideal full-wave bridge rectifier without filter capacitors?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Half-wave = 50.0%, Full-wave = 100.0%"
+        },
+        {
+          "id": "B",
+          "text": "Half-wave = 40.6%, Full-wave = 81.2%"
+        },
+        {
+          "id": "C",
+          "text": "Half-wave = 25.0%, Full-wave = 50.0%"
+        },
+        {
+          "id": "D",
+          "text": "Half-wave = 81.2%, Full-wave = 98.6%"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The maximum theoretical efficiency of converting AC power to DC power for an ideal half-wave rectifier is η = 40.6% (4/π²). For an ideal full-wave rectifier, because both half-cycles are utilized, the efficiency is doubled to η = 81.2% (8/π²).",
+      "sourceReference": "Section 5.3, Page 151 & 154"
+    },
+    {
+      "id": "PHY-G12-U05-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A digital circuit consists of two inputs A and B fed into a 2-input NAND gate. The output of this NAND gate is then connected to both inputs of a second 2-input NAND gate (acting as an inverter). What single equivalent logic gate does this combination represent?",
+      "options": [
+        {
+          "id": "A",
+          "text": "OR gate"
+        },
+        {
+          "id": "B",
+          "text": "NOR gate"
+        },
+        {
+          "id": "C",
+          "text": "AND gate"
+        },
+        {
+          "id": "D",
+          "text": "XOR gate"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The first NAND gate computes Y1 = NOT(A · B). Connecting both inputs of the second NAND gate together turns it into an inverter (NOT gate). The final output is Y2 = NOT(Y1) = NOT(NOT(A · B)) = A · B. This is the exact Boolean operation of an AND gate.",
+      "sourceReference": "Section 5.6, Page 167"
+    }
+  ]
 }

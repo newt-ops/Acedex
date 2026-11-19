@@ -3,5 +3,411 @@
   "subject": "Physics",
   "unitNumber": 5,
   "unitTitle": "Magnetism",
-  "questions": []
+  "questions": [
+    {
+      "id": "PHY-G10-U05-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What happens to a bar magnet when it is broken into two equal halves along its length?",
+      "options": [
+        {
+          "id": "A",
+          "text": "One half becomes a pure North pole and the other becomes a pure South pole."
+        },
+        {
+          "id": "B",
+          "text": "Each half becomes a complete magnet with its own North and South poles."
+        },
+        {
+          "id": "C",
+          "text": "Both halves lose their magnetic properties completely."
+        },
+        {
+          "id": "D",
+          "text": "The magnetic strength of each half doubles."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Magnetic monopoles do not exist in nature. Breaking a bar magnet creates two smaller magnets, each possessing a paired North and South pole.",
+      "sourceReference": "Section 5.1, Page 118"
+    },
+    {
+      "id": "PHY-G10-U05-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which of the following is a correct property of magnetic field lines outside a bar magnet?",
+      "options": [
+        {
+          "id": "A",
+          "text": "They point from the South pole to the North pole."
+        },
+        {
+          "id": "B",
+          "text": "They cross each other at points of maximum field strength."
+        },
+        {
+          "id": "C",
+          "text": "They point from the North pole to the South pole."
+        },
+        {
+          "id": "D",
+          "text": "They radiate infinitely outwards without forming closed loops."
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Outside a magnet, magnetic field lines emerge from the North pole and enter the South pole, forming continuous closed loops.",
+      "sourceReference": "Section 5.1, Page 120"
+    },
+    {
+      "id": "PHY-G10-U05-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "When using the right-hand grip rule for a straight current-carrying conductor, what does the extended thumb represent?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The direction of the magnetic field lines"
+        },
+        {
+          "id": "B",
+          "text": "The direction of conventional electric current"
+        },
+        {
+          "id": "C",
+          "text": "The direction of the magnetic force on the wire"
+        },
+        {
+          "id": "D",
+          "text": "The direction of electron flow"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In the right-hand rule for a straight wire, the thumb points in the direction of conventional electric current, while the curled fingers indicate the direction of the surrounding magnetic field lines.",
+      "sourceReference": "Section 5.2, Page 124"
+    },
+    {
+      "id": "PHY-G10-U05-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is the standard SI unit used to measure magnetic field strength (magnetic flux density, B)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Weber (Wb)"
+        },
+        {
+          "id": "B",
+          "text": "Tesla (T)"
+        },
+        {
+          "id": "C",
+          "text": "Gauss (G)"
+        },
+        {
+          "id": "D",
+          "text": "Henry (H)"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The SI derived unit of magnetic field strength (magnetic flux density) is the Tesla (T), where 1 T = 1 N / (A·m).",
+      "sourceReference": "Section 5.1, Page 121"
+    },
+    {
+      "id": "PHY-G10-U05-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which of the following substances is classified as a ferromagnetic material that is strongly attracted by a permanent magnet?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Copper"
+        },
+        {
+          "id": "B",
+          "text": "Aluminum"
+        },
+        {
+          "id": "C",
+          "text": "Iron"
+        },
+        {
+          "id": "D",
+          "text": "Wood"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Ferromagnetic materials such as iron, nickel, and cobalt possess aligned atomic magnetic domains and are strongly attracted to permanent magnets.",
+      "sourceReference": "Section 5.1, Page 117"
+    },
+    {
+      "id": "PHY-G10-U05-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "A straight wire of length 0.50 m carrying a current of 4.0 A is placed in a uniform magnetic field of 0.30 T at an angle of 30° to the field lines. What is the magnitude of the magnetic force acting on the wire?",
+      "options": [
+        {
+          "id": "A",
+          "text": "0.15 N"
+        },
+        {
+          "id": "B",
+          "text": "0.30 N"
+        },
+        {
+          "id": "C",
+          "text": "0.60 N"
+        },
+        {
+          "id": "D",
+          "text": "1.20 N"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Using F = I L B sin θ = 4.0 A × 0.50 m × 0.30 T × sin(30°) = 0.60 × 0.5 = 0.30 N.",
+      "sourceReference": "Section 5.3, Page 129"
+    },
+    {
+      "id": "PHY-G10-U05-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "A proton carrying a charge of 1.6 × 10⁻¹⁹ C enters a uniform magnetic field of 0.50 T perpendicularly at a speed of 3.0 × 10⁶ m/s. What is the magnitude of the magnetic force exerted on the proton?",
+      "options": [
+        {
+          "id": "A",
+          "text": "1.2 × 10⁻¹³ N"
+        },
+        {
+          "id": "B",
+          "text": "2.4 × 10⁻¹³ N"
+        },
+        {
+          "id": "C",
+          "text": "4.8 × 10⁻¹³ N"
+        },
+        {
+          "id": "D",
+          "text": "9.6 × 10⁻¹⁴ N"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The magnetic force on a moving charge is F = q v B sin θ. With θ = 90° (sin 90° = 1), F = (1.6 × 10⁻¹⁹ C) × (3.0 × 10⁶ m/s) × 0.50 T = 2.4 × 10⁻¹³ N.",
+      "sourceReference": "Section 5.3, Page 128"
+    },
+    {
+      "id": "PHY-G10-U05-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "A solenoid of length 0.20 m consists of 500 closely wound turns of wire carrying a current of 2.0 A. Taking µ₀ = 4π × 10⁻⁷ T·m/A and π ≈ 3.14, what is the magnetic field strength at the center of the solenoid?",
+      "options": [
+        {
+          "id": "A",
+          "text": "1.26 × 10⁻³ T"
+        },
+        {
+          "id": "B",
+          "text": "3.14 × 10⁻³ T"
+        },
+        {
+          "id": "C",
+          "text": "6.28 × 10⁻³ T"
+        },
+        {
+          "id": "D",
+          "text": "1.26 × 10⁻² T"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Turn density n = N / L = 500 / 0.20 = 2500 turns/m. B = µ₀ n I = (4 × 3.14 × 10⁻⁷) × 2500 × 2.0 = 12.56 × 10⁻⁷ × 5000 = 6.28 × 10⁻³ T.",
+      "sourceReference": "Section 5.2, Page 126"
+    },
+    {
+      "id": "PHY-G10-U05-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "A flat circular loop of wire with radius r = 0.10 m is placed in a uniform magnetic field B = 0.40 T. If the angle between the magnetic field vector and the normal to the plane of the loop is 60°, what is the magnetic flux passing through the loop? (Take π ≈ 3.14)",
+      "options": [
+        {
+          "id": "A",
+          "text": "3.14 × 10⁻³ Wb"
+        },
+        {
+          "id": "B",
+          "text": "6.28 × 10⁻³ Wb"
+        },
+        {
+          "id": "C",
+          "text": "1.26 × 10⁻² Wb"
+        },
+        {
+          "id": "D",
+          "text": "2.51 × 10⁻² Wb"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Area A = π r² = 3.14 × (0.10)² = 0.0314 m². Magnetic flux Φ_B = B A cos θ = 0.40 T × 0.0314 m² × cos(60°) = 0.40 × 0.0314 × 0.5 = 6.28 × 10⁻³ Wb.",
+      "sourceReference": "Section 5.4, Page 133"
+    },
+    {
+      "id": "PHY-G10-U05-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "A coil of 100 turns is placed in a magnetic field. The magnetic flux through the coil changes uniformly from 0.08 Wb to 0.02 Wb in a time interval of 0.20 s. What is the magnitude of the induced electromotive force (emf) across the coil?",
+      "options": [
+        {
+          "id": "A",
+          "text": "3.0 V"
+        },
+        {
+          "id": "B",
+          "text": "12.0 V"
+        },
+        {
+          "id": "C",
+          "text": "30.0 V"
+        },
+        {
+          "id": "D",
+          "text": "300.0 V"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Magnitude of induced emf |E| = N (ΔΦ_B / Δt) = 100 × |0.02 - 0.08| / 0.20 = 100 × (0.06 / 0.20) = 100 × 0.30 = 30.0 V.",
+      "sourceReference": "Section 5.4, Page 135"
+    },
+    {
+      "id": "PHY-G10-U05-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Lenz's law states that the direction of an induced electric current always opposes the change in magnetic flux that produces it. Which fundamental principle of physics is Lenz's law a direct consequence of?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Law of conservation of momentum"
+        },
+        {
+          "id": "B",
+          "text": "Law of conservation of electric charge"
+        },
+        {
+          "id": "C",
+          "text": "Law of conservation of energy"
+        },
+        {
+          "id": "D",
+          "text": "Newton's universal law of gravitation"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Lenz's law is a consequence of the law of conservation of energy. Mechanical work must be done against opposing electromagnetic forces to induce electrical energy in the circuit.",
+      "sourceReference": "Section 5.4, Page 136"
+    },
+    {
+      "id": "PHY-G10-U05-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "An electron (m = 9.1 × 10⁻³¹ kg, q = 1.6 × 10⁻¹⁹ C) moves at a speed of 4.0 × 10⁶ m/s perpendicularly into a uniform magnetic field B = 2.0 × 10⁻³ T. What is the radius of the circular path followed by the electron in the magnetic field?",
+      "options": [
+        {
+          "id": "A",
+          "text": "0.57 cm"
+        },
+        {
+          "id": "B",
+          "text": "1.14 cm"
+        },
+        {
+          "id": "C",
+          "text": "2.28 cm"
+        },
+        {
+          "id": "D",
+          "text": "11.4 cm"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Magnetic force supplies centripetal force: q v B = m v² / r ⇒ r = (m v) / (q B) = (9.1 × 10⁻³¹ × 4.0 × 10⁶) / (1.6 × 10⁻¹⁹ × 2.0 × 10⁻³) = (3.64 × 10⁻²⁴) / (3.2 × 10⁻²²) = 0.011375 m ≈ 1.14 cm.",
+      "sourceReference": "Section 5.3, Page 130"
+    },
+    {
+      "id": "PHY-G10-U05-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Two long, straight parallel wires separated by a distance of 0.10 m carry currents I1 = 5.0 A and I2 = 8.0 A in the same direction. Taking µ₀ = 4π × 10⁻⁷ T·m/A, what is the magnetic force per unit length acting between the wires, and is the force attractive or repulsive?",
+      "options": [
+        {
+          "id": "A",
+          "text": "4.0 × 10⁻⁵ N/m, attractive"
+        },
+        {
+          "id": "B",
+          "text": "8.0 × 10⁻⁵ N/m, attractive"
+        },
+        {
+          "id": "C",
+          "text": "8.0 × 10⁻⁵ N/m, repulsive"
+        },
+        {
+          "id": "D",
+          "text": "1.6 × 10⁻⁴ N/m, repulsive"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Force per unit length F / L = (µ₀ I1 I2) / (2π d) = (4π × 10⁻⁷ × 5.0 × 8.0) / (2π × 0.10) = (2 × 10⁻⁷ × 40) / 0.10 = 8.0 × 10⁻⁵ N/m. Parallel currents flowing in the same direction attract each other.",
+      "sourceReference": "Section 5.3, Page 131"
+    },
+    {
+      "id": "PHY-G10-U05-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "An ideal step-down transformer has a primary voltage Vp = 240 V and a primary turn count Np = 1200. If the secondary coil has Ns = 100 turns and delivers a current of 6.0 A to a resistive load, what are the secondary output voltage Vs and the primary current Ip?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Vs = 20 V; Ip = 0.50 A"
+        },
+        {
+          "id": "B",
+          "text": "Vs = 20 V; Ip = 72.0 A"
+        },
+        {
+          "id": "C",
+          "text": "Vs = 40 V; Ip = 1.0 A"
+        },
+        {
+          "id": "D",
+          "text": "Vs = 2880 V; Ip = 0.50 A"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Secondary voltage Vs = Vp × (Ns / Np) = 240 V × (100 / 1200) = 20 V. Power conservation for an ideal transformer gives Vp Ip = Vs Is ⇒ 240 V × Ip = 20 V × 6.0 A = 120 W ⇒ Ip = 0.50 A.",
+      "sourceReference": "Section 5.5, Page 141"
+    },
+    {
+      "id": "PHY-G10-U05-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A straight conducting rod of length L = 0.40 m moves at a constant speed v = 5.0 m/s perpendicular to a uniform magnetic field B = 0.60 T along frictionless parallel metal rails. If the total electrical resistance of the circuit loop is 3.0 Ω, what are the induced electromotive force (emf) and the required external force to keep the rod moving at constant speed?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Induced emf = 1.20 V; External force = 0.096 N"
+        },
+        {
+          "id": "B",
+          "text": "Induced emf = 1.20 V; External force = 0.240 N"
+        },
+        {
+          "id": "C",
+          "text": "Induced emf = 2.40 V; External force = 0.096 N"
+        },
+        {
+          "id": "D",
+          "text": "Induced emf = 0.60 V; External force = 0.048 N"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Motional emf E = B L v = 0.60 T × 0.40 m × 5.0 m/s = 1.20 V. Induced current I = E / R = 1.20 V / 3.0 Ω = 0.40 A. Opposing magnetic force F_mag = I L B = 0.40 A × 0.40 m × 0.60 T = 0.096 N. Equal external force (0.096 N) is required to maintain constant speed.",
+      "sourceReference": "Section 5.4, Page 137"
+    }
+  ]
 }

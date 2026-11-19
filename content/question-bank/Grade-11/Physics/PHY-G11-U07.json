@@ -3,5 +3,411 @@
   "subject": "Physics",
   "unitNumber": 7,
   "unitTitle": "Nuclear Physics",
-  "questions": []
+  "questions": [
+    {
+      "id": "PHY-G11-U07-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "An atom of Uranium-235 (²³⁵₉₂U) contains how many protons and how many neutrons in its atomic nucleus?",
+      "options": [
+        {
+          "id": "A",
+          "text": "92 protons and 235 neutrons"
+        },
+        {
+          "id": "B",
+          "text": "92 protons and 143 neutrons"
+        },
+        {
+          "id": "C",
+          "text": "143 protons and 92 neutrons"
+        },
+        {
+          "id": "D",
+          "text": "235 protons and 92 neutrons"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The atomic number Z = 92 represents the number of protons. The mass number A = 235 represents the total number of nucleons (protons + neutrons). Number of neutrons N = A - Z = 235 - 92 = 143.",
+      "sourceReference": "Section 7.1, Page 289"
+    },
+    {
+      "id": "PHY-G11-U07-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which of the following types of nuclear radiation has the highest penetrating power and requires dense materials like thick lead or concrete to be significantly attenuated?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Alpha (α) particles"
+        },
+        {
+          "id": "B",
+          "text": "Beta-minus (β⁻) particles"
+        },
+        {
+          "id": "C",
+          "text": "Gamma (γ) rays"
+        },
+        {
+          "id": "D",
+          "text": "Positrons (β⁺)"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Gamma rays are high-energy, uncharged electromagnetic photons. Because they lack electric charge and mass, they interact less frequently with matter, giving them the highest penetration power among nuclear emissions.",
+      "sourceReference": "Section 7.2, Page 301"
+    },
+    {
+      "id": "PHY-G11-U07-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which fundamental force of nature acts at short subatomic distances (~10⁻¹⁵ m) to overcome electrostatic repulsion and hold protons and neutrons together inside an atomic nucleus?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Gravitational force"
+        },
+        {
+          "id": "B",
+          "text": "Electromagnetic force"
+        },
+        {
+          "id": "C",
+          "text": "Strong nuclear force"
+        },
+        {
+          "id": "D",
+          "text": "Weak nuclear force"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The strong nuclear force is a powerful, short-range attractive force operating on the femtometer scale (10⁻¹⁵ m) between nucleons, binding protons and neutrons inside the nucleus against Coulomb repulsion.",
+      "sourceReference": "Section 7.1, Page 294"
+    },
+    {
+      "id": "PHY-G11-U07-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "When a parent nuclide ²³⁸₉₂U undergoes alpha decay (α-emission), what are the atomic number (Z) and mass number (A) of the resulting daughter nuclide?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Z = 90, A = 234"
+        },
+        {
+          "id": "B",
+          "text": "Z = 93, A = 238"
+        },
+        {
+          "id": "C",
+          "text": "Z = 91, A = 236"
+        },
+        {
+          "id": "D",
+          "text": "Z = 90, A = 238"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Alpha decay emits a Helium nucleus (⁴₂He). The daughter nuclide loses 2 units of atomic number (Z = 92 - 2 = 90) and 4 units of mass number (A = 238 - 4 = 234), producing Thorium-234 (²³⁴₉₀Th).",
+      "sourceReference": "Section 7.2, Page 300"
+    },
+    {
+      "id": "PHY-G11-U07-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In a thermal nuclear power reactor, what is the primary function of the moderator (such as heavy water or pure graphite)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To absorb excess neutrons and stop the chain reaction"
+        },
+        {
+          "id": "B",
+          "text": "To slow down fast neutrons so they can effectively induce further fission of U-235"
+        },
+        {
+          "id": "C",
+          "text": "To prevent gamma radiation from escaping into the environment"
+        },
+        {
+          "id": "D",
+          "text": "To store high-level nuclear waste safely inside the reactor core"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "A moderator slows down fast neutrons produced by fission to thermal energies, increasing their probability of capturing and inducing nuclear fission in U-235 fuel rods.",
+      "sourceReference": "Section 7.4, Page 318"
+    },
+    {
+      "id": "PHY-G11-U07-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Using the nuclear radius empirical formula R = R₀ A¹/³ with R₀ = 1.2 × 10⁻¹⁵ m (1.2 fm), what is the estimated nuclear radius of an Iron-56 (⁵⁶₂₆Fe) nucleus? (Given: 56¹/³ ≈ 3.825)",
+      "options": [
+        {
+          "id": "A",
+          "text": "2.40 fm"
+        },
+        {
+          "id": "B",
+          "text": "4.59 fm"
+        },
+        {
+          "id": "C",
+          "text": "6.72 fm"
+        },
+        {
+          "id": "D",
+          "text": "7.44 fm"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Radius R = R₀ A¹/³ = 1.2 fm × (56)¹/³ = 1.2 fm × 3.825 ≈ 4.59 fm (4.59 × 10⁻¹⁵ m).",
+      "sourceReference": "Section 7.1, Page 290"
+    },
+    {
+      "id": "PHY-G11-U07-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "A sample of a radioisotope has an initial activity of 800 Bq. If the half-life of the isotope is 6.0 hours, what will be the activity of the sample after 24.0 hours?",
+      "options": [
+        {
+          "id": "A",
+          "text": "200 Bq"
+        },
+        {
+          "id": "B",
+          "text": "100 Bq"
+        },
+        {
+          "id": "C",
+          "text": "50 Bq"
+        },
+        {
+          "id": "D",
+          "text": "25 Bq"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Number of elapsed half-lives n = t / t₁/₂ = 24.0 / 6.0 = 4. Remaining activity A = A₀ × (1/2)⁴ = 800 Bq / 16 = 50 Bq.",
+      "sourceReference": "Section 7.2, Page 308"
+    },
+    {
+      "id": "PHY-G11-U07-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "The mass defect of a Carbon-12 (¹²₆C) nucleus is Δm = 0.09894 u. Taking 1 u = 931.1 MeV, what is the binding energy per nucleon (BEN) for Carbon-12?",
+      "options": [
+        {
+          "id": "A",
+          "text": "7.68 MeV/nucleon"
+        },
+        {
+          "id": "B",
+          "text": "9.21 MeV/nucleon"
+        },
+        {
+          "id": "C",
+          "text": "92.12 MeV/nucleon"
+        },
+        {
+          "id": "D",
+          "text": "15.35 MeV/nucleon"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Total binding energy BE = Δm × 931.1 MeV = 0.09894 × 931.1 = 92.123 MeV. Binding energy per nucleon BEN = BE / A = 92.123 MeV / 12 = 7.677 ≈ 7.68 MeV/nucleon.",
+      "sourceReference": "Section 7.1, Page 295"
+    },
+    {
+      "id": "PHY-G11-U07-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Consider the neutron-induced nuclear fission reaction equation: ²³⁵₉₂U + ¹₀n → ¹⁴¹₅₆Ba + ˣ₃₆Kr + 3 ¹₀n + energy. What is the mass number X of the Krypton isotope produced?",
+      "options": [
+        {
+          "id": "A",
+          "text": "92"
+        },
+        {
+          "id": "B",
+          "text": "93"
+        },
+        {
+          "id": "C",
+          "text": "94"
+        },
+        {
+          "id": "D",
+          "text": "95"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Conservation of total mass number (A): Left side A = 235 + 1 = 236. Right side A = 141 + X + 3(1) = 144 + X. Equating both sides: 236 = 144 + X ⇒ X = 92.",
+      "sourceReference": "Section 7.4, Page 316"
+    },
+    {
+      "id": "PHY-G11-U07-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which of the following processes correctly describes what occurs inside a radioactive nucleus during β⁻ (beta-minus) decay?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A proton transforms into a neutron, emitting a positron and a neutrino."
+        },
+        {
+          "id": "B",
+          "text": "A neutron transforms into a proton, emitting an electron and an antineutrino."
+        },
+        {
+          "id": "C",
+          "text": "Two protons and two neutrons are ejected together as a clustered fragment."
+        },
+        {
+          "id": "D",
+          "text": "An inner orbital electron is captured by the nucleus, reducing atomic number by one."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In beta-minus decay, a neutron converts into a proton mediated by the weak force, ejecting a high-speed electron (β⁻ particle) and an antineutrino (ν̄). The atomic number Z increases by 1 while A remains unchanged.",
+      "sourceReference": "Section 7.2, Page 300"
+    },
+    {
+      "id": "PHY-G11-U07-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "A radiotracer used in medical diagnosis has a decay constant λ = 3.85 × 10⁻⁶ s⁻¹. What is the half-life (t₁/₂) of this radioisotope in hours?",
+      "options": [
+        {
+          "id": "A",
+          "text": "12.5 hours"
+        },
+        {
+          "id": "B",
+          "text": "50.0 hours"
+        },
+        {
+          "id": "C",
+          "text": "25.0 hours"
+        },
+        {
+          "id": "D",
+          "text": "100.0 hours"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Half-life t₁/₂ = 0.693 / λ = 0.693 / (3.85 × 10⁻⁶ s⁻¹) = 180,000 seconds. Converting to hours: 180,000 s / 3600 s/h = 50.0 hours.",
+      "sourceReference": "Section 7.2, Page 308"
+    },
+    {
+      "id": "PHY-G11-U07-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "In a fusion reaction, two Deuterium nuclei (²₁H, mass = 2.014102 u) fuse to form a Helium-3 nucleus (³₂He, mass = 3.016029 u) and a neutron (¹₀n, mass = 1.008665 u). Taking 1 u = 931.1 MeV, how much energy is released in this reaction?",
+      "options": [
+        {
+          "id": "A",
+          "text": "0.82 MeV"
+        },
+        {
+          "id": "B",
+          "text": "3.27 MeV"
+        },
+        {
+          "id": "C",
+          "text": "4.03 MeV"
+        },
+        {
+          "id": "D",
+          "text": "17.59 MeV"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Initial mass = 2 × 2.014102 u = 4.028204 u. Final mass = 3.016029 u + 1.008665 u = 4.024694 u. Mass defect Δm = 4.028204 - 4.024694 = 0.003510 u. Energy released = 0.003510 u × 931.1 MeV/u ≈ 3.27 MeV.",
+      "sourceReference": "Section 7.4, Page 320"
+    },
+    {
+      "id": "PHY-G11-U07-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A wooden artifact discovered in an archaeological excavation exhibits 25% of the Carbon-14 (¹⁴C) activity found in living trees. If the half-life of Carbon-14 is 5730 years, what is the age of the artifact?",
+      "options": [
+        {
+          "id": "A",
+          "text": "2,865 years"
+        },
+        {
+          "id": "B",
+          "text": "5,730 years"
+        },
+        {
+          "id": "C",
+          "text": "11,460 years"
+        },
+        {
+          "id": "D",
+          "text": "17,190 years"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Remaining fraction N / N₀ = 0.25 = (1/2)². Therefore, n = 2 half-lives have elapsed. Age = n × t₁/₂ = 2 × 5730 years = 11,460 years.",
+      "sourceReference": "Section 7.3, Page 314"
+    },
+    {
+      "id": "PHY-G11-U07-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "The curve of binding energy per nucleon (BEN) versus mass number (A) reaches its maximum at Iron-56 (⁵⁶Fe) (~8.8 MeV/nucleon). Which conclusion regarding nuclear energy release is correctly derived from this curve?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Fission of light nuclei (A < 20) and fusion of heavy nuclei (A > 200) both release net energy."
+        },
+        {
+          "id": "B",
+          "text": "Fusion of light nuclei (A < 56) and fission of heavy nuclei (A > 56) both increase the binding energy per nucleon, releasing net energy."
+        },
+        {
+          "id": "C",
+          "text": "Fission of heavy nuclei decreases total nuclear binding energy, releasing energy as electrostatic potential energy."
+        },
+        {
+          "id": "D",
+          "text": "Spontaneous nuclear reactions are forbidden for all nuclides with mass numbers greater than 56."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Both fusion of light nuclei and fission of heavy nuclei move product nuclides closer to the peak stability region around Iron-56 (⁵⁶Fe), resulting in higher BEN for products than reactants. The net increase in binding energy is released as external energy.",
+      "sourceReference": "Section 7.1, Page 297"
+    },
+    {
+      "id": "PHY-G11-U07-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Cobalt-60 (⁶⁰₂₇Co) has a half-life of 5.27 years (1.66 × 10⁸ s). If a radiotherapy facility receives a sample containing 1.0 × 10⁻⁶ kg (1.0 mg) of pure ⁶⁰Co, what is the initial activity of the sample? (Given: Avogadro's number N_A = 6.02 × 10²³ mol⁻¹, Molar mass of ⁶⁰Co = 60.0 g/mol)",
+      "options": [
+        {
+          "id": "A",
+          "text": "4.18 × 10¹⁰ Bq"
+        },
+        {
+          "id": "B",
+          "text": "1.00 × 10¹⁹ Bq"
+        },
+        {
+          "id": "C",
+          "text": "4.18 × 10¹³ Bq"
+        },
+        {
+          "id": "D",
+          "text": "2.51 × 10¹¹ Bq"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Number of atoms N = (m / M) × N_A = (1.0 × 10⁻³ g / 60.0 g/mol) × (6.02 × 10²³) = 1.0033 × 10¹⁹ atoms. Decay constant λ = 0.693 / (1.66 × 10⁸ s) = 4.1747 × 10⁻⁹ s⁻¹. Activity A = λ N = (4.1747 × 10⁻⁹ s⁻¹) × (1.0033 × 10¹⁹) ≈ 4.18 × 10¹⁰ Bq.",
+      "sourceReference": "Section 7.2, Page 309"
+    }
+  ]
 }

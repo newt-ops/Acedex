@@ -3,5 +3,411 @@
   "subject": "Physics",
   "unitNumber": 4,
   "unitTitle": "Force, Work, Energy and Power",
-  "questions": []
+  "questions": [
+    {
+      "id": "PHY-G09-U04-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which of the following physical forces is classified as a non-contact force?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Normal force"
+        },
+        {
+          "id": "B",
+          "text": "Frictional force"
+        },
+        {
+          "id": "C",
+          "text": "Gravitational force"
+        },
+        {
+          "id": "D",
+          "text": "Applied pushing force"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Non-contact forces act across a distance without physical contact between objects. Gravitational force, magnetic force, and electrostatic force are non-contact forces, whereas normal, friction, and applied forces require physical contact.",
+      "sourceReference": "Section 4.1, Page 65"
+    },
+    {
+      "id": "PHY-G09-U04-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which property of an object serves as a direct quantitative measure of its inertia?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Weight"
+        },
+        {
+          "id": "B",
+          "text": "Mass"
+        },
+        {
+          "id": "C",
+          "text": "Velocity"
+        },
+        {
+          "id": "D",
+          "text": "Acceleration"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Mass is an inherent property of an object that measures its inertia—the resistance to any change in its state of rest or uniform motion.",
+      "sourceReference": "Section 4.2, Page 68"
+    },
+    {
+      "id": "PHY-G09-U04-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is the standard SI unit used to measure mechanical work and energy?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Newton (N)"
+        },
+        {
+          "id": "B",
+          "text": "Watt (W)"
+        },
+        {
+          "id": "C",
+          "text": "Joule (J)"
+        },
+        {
+          "id": "D",
+          "text": "Pascal (Pa)"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The SI unit for both work and energy is the Joule (J), where 1 Joule equals 1 Newton-meter (N·m).",
+      "sourceReference": "Section 4.4, Page 75"
+    },
+    {
+      "id": "PHY-G09-U04-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "An object of mass m moves along a level path at speed v. What form of mechanical energy does it possess purely due to its motion?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Gravitational potential energy"
+        },
+        {
+          "id": "B",
+          "text": "Elastic potential energy"
+        },
+        {
+          "id": "C",
+          "text": "Kinetic energy"
+        },
+        {
+          "id": "D",
+          "text": "Thermal energy"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Kinetic energy (E_k = 1/2 m v^2) is the form of mechanical energy possessed by an object due to its motion.",
+      "sourceReference": "Section 4.5, Page 77"
+    },
+    {
+      "id": "PHY-G09-U04-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Power is defined as the rate at which work is done or energy is transferred. What is its standard SI unit?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Joule (J)"
+        },
+        {
+          "id": "B",
+          "text": "Watt (W)"
+        },
+        {
+          "id": "C",
+          "text": "Newton (N)"
+        },
+        {
+          "id": "D",
+          "text": "Kilogram-meter per second (kg·m/s)"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Power is measured in Watts (W), where 1 Watt represents 1 Joule of energy transferred or work done per second (1 W = 1 J/s).",
+      "sourceReference": "Section 4.6, Page 80"
+    },
+    {
+      "id": "PHY-G09-U04-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "A constant net horizontal force of 25 N acts on a 5.0 kg object resting on a smooth horizontal surface. What is the acceleration produced on the object?",
+      "options": [
+        {
+          "id": "A",
+          "text": "0.2 m/s²"
+        },
+        {
+          "id": "B",
+          "text": "5.0 m/s²"
+        },
+        {
+          "id": "C",
+          "text": "20.0 m/s²"
+        },
+        {
+          "id": "D",
+          "text": "125.0 m/s²"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "According to Newton's second law (F = m·a), the acceleration is given by a = F / m = 25 N / 5.0 kg = 5.0 m/s².",
+      "sourceReference": "Section 4.2, Page 71"
+    },
+    {
+      "id": "PHY-G09-U04-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "An object has a mass of 15 kg on Earth (where g = 9.8 m/s²). What are the mass and weight of the object on the Moon, where gravitational acceleration is 1/6 of Earth's value?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Mass = 2.5 kg; Weight = 147 N"
+        },
+        {
+          "id": "B",
+          "text": "Mass = 15 kg; Weight = 24.5 N"
+        },
+        {
+          "id": "C",
+          "text": "Mass = 15 kg; Weight = 147 N"
+        },
+        {
+          "id": "D",
+          "text": "Mass = 2.5 kg; Weight = 24.5 N"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Mass is an inherent property that remains constant (15 kg). Weight on Earth is W = m·g = 15 × 9.8 = 147 N. On the Moon, weight is 1/6 of Earth's weight: 147 N / 6 = 24.5 N.",
+      "sourceReference": "Section 4.2, Page 68"
+    },
+    {
+      "id": "PHY-G09-U04-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "When a horse pulls forward on a cart with force F_12, the cart exerts an equal and opposite backward force F_21 on the horse. Why do these equal and opposite forces not cancel each other to prevent motion?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Action and reaction forces act on two different bodies rather than on the same body."
+        },
+        {
+          "id": "B",
+          "text": "The forward force of the horse is always slightly larger in magnitude than the reaction force."
+        },
+        {
+          "id": "C",
+          "text": "Reaction forces occur only after a noticeable time delay."
+        },
+        {
+          "id": "D",
+          "text": "Friction completely eliminates the reaction force acting on the horse."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Newton's third law action-reaction pairs act on different objects (one on the cart, one on the horse). Because they act on separate bodies, they cannot be added together to cancel out on a single object.",
+      "sourceReference": "Section 4.2, Page 72"
+    },
+    {
+      "id": "PHY-G09-U04-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "A student pushes a crate across a level floor by applying a horizontal force of 80 N through a displacement of 6.0 m. If a friction force of 20 N opposes the motion, what is the net work done on the crate?",
+      "options": [
+        {
+          "id": "A",
+          "text": "480 J"
+        },
+        {
+          "id": "B",
+          "text": "120 J"
+        },
+        {
+          "id": "C",
+          "text": "360 J"
+        },
+        {
+          "id": "D",
+          "text": "600 J"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The net force acting in the direction of motion is F_net = 80 N - 20 N = 60 N. Net work done is W_net = F_net × S = 60 N × 6.0 m = 360 J.",
+      "sourceReference": "Section 4.4, Page 75"
+    },
+    {
+      "id": "PHY-G09-U04-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "A 0.5 kg stone is thrown vertically upward with an initial speed of 12 m/s. What is the kinetic energy of the stone at the instant it is released?",
+      "options": [
+        {
+          "id": "A",
+          "text": "3.0 J"
+        },
+        {
+          "id": "B",
+          "text": "6.0 J"
+        },
+        {
+          "id": "C",
+          "text": "36.0 J"
+        },
+        {
+          "id": "D",
+          "text": "72.0 J"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Kinetic energy is calculated as E_k = 1/2 m v^2 = 1/2 × 0.5 kg × (12 m/s)^2 = 0.25 × 144 = 36.0 J.",
+      "sourceReference": "Section 4.5, Page 77"
+    },
+    {
+      "id": "PHY-G09-U04-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "An electric pump lifts 400 kg of water through a vertical height of 12 m in a time interval of 8.0 s. Taking g = 9.8 m/s², what is the useful power output developed by the pump?",
+      "options": [
+        {
+          "id": "A",
+          "text": "600 W"
+        },
+        {
+          "id": "B",
+          "text": "470.4 W"
+        },
+        {
+          "id": "C",
+          "text": "588.0 W"
+        },
+        {
+          "id": "D",
+          "text": "4704 W"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Energy transferred is E = mgh = 400 kg × 9.8 m/s² × 12 m = 47,040 J. Useful power output is P = E / t = 47,040 J / 8.0 s = 588.0 W.",
+      "sourceReference": "Section 4.6, Page 81"
+    },
+    {
+      "id": "PHY-G09-U04-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A 2.0 kg block travels at 4.0 m/s along a smooth horizontal surface. A constant horizontal force of 12 N is applied in its direction of motion over a displacement of 3.0 m. Using the work-energy concept, what is the final speed of the block?",
+      "options": [
+        {
+          "id": "A",
+          "text": "5.2 m/s"
+        },
+        {
+          "id": "B",
+          "text": "6.0 m/s"
+        },
+        {
+          "id": "C",
+          "text": "7.2 m/s"
+        },
+        {
+          "id": "D",
+          "text": "8.0 m/s"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Work done W = F × S = 12 N × 3.0 m = 36 J. Initial kinetic energy E_k,i = 1/2 × 2.0 × (4.0)^2 = 16 J. Final kinetic energy E_k,f = 16 J + 36 J = 52 J. Thus 1/2 (2.0) v_f^2 = 52, giving v_f = √52 ≈ 7.2 m/s.",
+      "sourceReference": "Section 4.5, Page 77"
+    },
+    {
+      "id": "PHY-G09-U04-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "An object of mass m is dropped from rest from a height h above the ground. Neglecting air resistance, at what height y above the ground will its kinetic energy equal twice its gravitational potential energy at that location?",
+      "options": [
+        {
+          "id": "A",
+          "text": "y = 1/2 h"
+        },
+        {
+          "id": "B",
+          "text": "y = 1/3 h"
+        },
+        {
+          "id": "C",
+          "text": "y = 2/3 h"
+        },
+        {
+          "id": "D",
+          "text": "y = 1/4 h"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Total mechanical energy is E_total = mgh. At height y, E_k + E_p = mgh. Given E_k = 2 E_p, we substitute: 2 E_p + E_p = mgh, so 3 (mgy) = mgh, which gives y = 1/3 h.",
+      "sourceReference": "Section 4.5, Page 79"
+    },
+    {
+      "id": "PHY-G09-U04-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A 1200 kg car accelerates uniformly from rest to a speed of 20 m/s in 5.0 s along a straight level road. Assuming friction is negligible, what are the average power developed during acceleration and the instantaneous power delivered at t = 5.0 s?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Average Power = 24 kW; Instantaneous Power = 48 kW"
+        },
+        {
+          "id": "B",
+          "text": "Average Power = 48 kW; Instantaneous Power = 96 kW"
+        },
+        {
+          "id": "C",
+          "text": "Average Power = 48 kW; Instantaneous Power = 48 kW"
+        },
+        {
+          "id": "D",
+          "text": "Average Power = 96 kW; Instantaneous Power = 192 kW"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Acceleration a = 20 / 5 = 4.0 m/s². Net force F = m·a = 1200 × 4.0 = 4800 N. Work done = 1/2 × 1200 × 20² = 240,000 J. Average power = 240,000 / 5 = 48,000 W = 48 kW. Instantaneous power at 5 s is P_inst = F × v = 4800 N × 20 m/s = 96,000 W = 96 kW.",
+      "sourceReference": "Section 4.6, Page 81"
+    },
+    {
+      "id": "PHY-G09-U04-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Two blocks of masses m_1 = 3.0 kg and m_2 = 5.0 kg resting on a smooth horizontal surface are connected by a light cord. A horizontal pulling force F = 40.0 N is applied to m_2 to pull both masses to the right. What are the acceleration of the system and the tension T in the connecting cord?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Acceleration = 5.0 m/s²; Tension = 15.0 N"
+        },
+        {
+          "id": "B",
+          "text": "Acceleration = 5.0 m/s²; Tension = 25.0 N"
+        },
+        {
+          "id": "C",
+          "text": "Acceleration = 8.0 m/s²; Tension = 24.0 N"
+        },
+        {
+          "id": "D",
+          "text": "Acceleration = 13.3 m/s²; Tension = 40.0 N"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Total mass M = 3.0 kg + 5.0 kg = 8.0 kg. Acceleration a = F / M = 40.0 N / 8.0 kg = 5.0 m/s². The tension pulling m_1 is T = m_1 · a = 3.0 kg × 5.0 m/s² = 15.0 N.",
+      "sourceReference": "Section 4.2, Page 71"
+    }
+  ]
 }

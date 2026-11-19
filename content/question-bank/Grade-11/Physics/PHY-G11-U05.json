@@ -3,5 +3,411 @@
   "subject": "Physics",
   "unitNumber": 5,
   "unitTitle": "Heat Conduction and Calorimetry",
-  "questions": []
+  "questions": [
+    {
+      "id": "PHY-G11-U05-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "How is heat fundamentally defined in thermodynamics, as distinguished from temperature and internal energy?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Heat is the total kinetic energy stored within a system's molecules."
+        },
+        {
+          "id": "B",
+          "text": "Heat is energy in transit from a hotter body to a cooler body due solely to a temperature difference."
+        },
+        {
+          "id": "C",
+          "text": "Heat is a state function representing the average potential energy of atomic bonds."
+        },
+        {
+          "id": "D",
+          "text": "Heat is the measure of the average translational kinetic energy per particle."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Heat is defined as thermal energy in transit between two bodies or systems in thermal contact as a result of a difference in temperature. It is a process variable, not a property stored within an object.",
+      "sourceReference": "Section 5.1, Page 176"
+    },
+    {
+      "id": "PHY-G11-U05-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which mechanism of heat transfer can occur through a vacuum without requiring any material medium?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Conduction"
+        },
+        {
+          "id": "B",
+          "text": "Convection"
+        },
+        {
+          "id": "C",
+          "text": "Radiation"
+        },
+        {
+          "id": "D",
+          "text": "Advection"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Radiation heat transfer occurs via electromagnetic waves (such as infrared radiation) and does not require a material medium to propagate, unlike conduction and convection.",
+      "sourceReference": "Section 5.2, Page 181"
+    },
+    {
+      "id": "PHY-G11-U05-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is the standard SI unit for specific heat capacity (c)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "J/K"
+        },
+        {
+          "id": "B",
+          "text": "J/(kg·K)"
+        },
+        {
+          "id": "C",
+          "text": "W/(m·K)"
+        },
+        {
+          "id": "D",
+          "text": "J/kg"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Specific heat capacity is defined as heat energy per unit mass per unit temperature change (c = Q / (m ΔT)), carrying the standard SI unit of Joules per kilogram Kelvin (J/(kg·K)) or J/(kg·°C).",
+      "sourceReference": "Section 5.3, Page 184"
+    },
+    {
+      "id": "PHY-G11-U05-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "For an isotropic solid material, how is the volumetric thermal expansion coefficient (γ) related to its linear thermal expansion coefficient (α)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "γ = α / 3"
+        },
+        {
+          "id": "B",
+          "text": "γ = 2 α"
+        },
+        {
+          "id": "C",
+          "text": "γ = 3 α"
+        },
+        {
+          "id": "D",
+          "text": "γ = α²"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "For an isotropic solid, volume expansion occurs equally in three dimensions, making the volumetric expansion coefficient approximately three times the linear expansion coefficient (γ ≈ 3α).",
+      "sourceReference": "Section 5.4, Page 188"
+    },
+    {
+      "id": "PHY-G11-U05-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What happens to the temperature of a pure substance during a physical phase transition (such as melting or boiling) at constant pressure?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It increases continuously as heat is added."
+        },
+        {
+          "id": "B",
+          "text": "It decreases sharply due to energy loss."
+        },
+        {
+          "id": "C",
+          "text": "It remains constant while heat is absorbed or released to break or form molecular bonds."
+        },
+        {
+          "id": "D",
+          "text": "It fluctuates randomly depending on the mass of the sample."
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "During a phase transition, absorbed thermal energy (latent heat) is utilized to change the internal potential energy and molecular arrangement rather than increasing the average molecular kinetic energy, keeping the temperature constant.",
+      "sourceReference": "Section 5.5, Page 196"
+    },
+    {
+      "id": "PHY-G11-U05-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How much heat energy is required to raise the temperature of a 0.60 kg lead block from 20 °C to 100 °C? (Take the specific heat capacity of lead as c_pb = 128 J/(kg·K))",
+      "options": [
+        {
+          "id": "A",
+          "text": "6,144 J"
+        },
+        {
+          "id": "B",
+          "text": "7,680 J"
+        },
+        {
+          "id": "C",
+          "text": "1,536 J"
+        },
+        {
+          "id": "D",
+          "text": "12,288 J"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Using Q = m c ΔT: Q = 0.60 kg × 128 J/(kg·K) × (100 - 20) K = 0.60 × 128 × 80 = 6,144 J.",
+      "sourceReference": "Section 5.3, Page 185"
+    },
+    {
+      "id": "PHY-G11-U05-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "A steel railroad track has a length of 60.0 m at a temperature of 0.0 °C. If the linear expansion coefficient of steel is α = 1.2 × 10⁻⁵ K⁻¹, what is the increase in length (ΔL) of the track when its temperature reaches 40.0 °C?",
+      "options": [
+        {
+          "id": "A",
+          "text": "0.0144 m (1.44 cm)"
+        },
+        {
+          "id": "B",
+          "text": "0.0288 m (2.88 cm)"
+        },
+        {
+          "id": "C",
+          "text": "0.0720 m (7.20 cm)"
+        },
+        {
+          "id": "D",
+          "text": "0.1440 m (14.4 cm)"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Applying ΔL = α L₀ ΔT = (1.2 × 10⁻⁵ K⁻¹) × (60.0 m) × (40.0 K) = 0.0288 m = 2.88 cm.",
+      "sourceReference": "Section 5.4, Page 187"
+    },
+    {
+      "id": "PHY-G11-U05-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How much heat is required to completely melt a 2.0 kg block of ice at its melting point of 0.0 °C into liquid water at 0.0 °C? (Specific latent heat of fusion of ice L_f = 3.36 × 10⁵ J/kg)",
+      "options": [
+        {
+          "id": "A",
+          "text": "1.68 × 10⁵ J"
+        },
+        {
+          "id": "B",
+          "text": "3.36 × 10⁵ J"
+        },
+        {
+          "id": "C",
+          "text": "6.72 × 10⁵ J"
+        },
+        {
+          "id": "D",
+          "text": "1.34 × 10⁶ J"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Heat required for phase change: Q = m L_f = 2.0 kg × 3.36 × 10⁵ J/kg = 6.72 × 10⁵ J.",
+      "sourceReference": "Section 5.5, Page 198"
+    },
+    {
+      "id": "PHY-G11-U05-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "A 0.050 kg piece of unknown metal at 200.0 °C is immersed into an insulated container holding 0.40 kg of water (c_w = 4186 J/(kg·°C)) initially at 20.0 °C. If the final equilibrium temperature of the mixture is 22.4 °C (neglecting container heat capacity), what is the specific heat capacity of the metal?",
+      "options": [
+        {
+          "id": "A",
+          "text": "226 J/(kg·°C)"
+        },
+        {
+          "id": "B",
+          "text": "453 J/(kg·°C)"
+        },
+        {
+          "id": "C",
+          "text": "900 J/(kg·°C)"
+        },
+        {
+          "id": "D",
+          "text": "128 J/(kg·°C)"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Heat gained by water = Heat lost by metal: m_w c_w (T_f - T_cw) = m_m c_m (T_hm - T_f) ⇒ 0.40 × 4186 × (22.4 - 20.0) = 0.050 × c_m × (200.0 - 22.4) ⇒ 4018.56 = 8.88 c_m ⇒ c_m = 452.5 J/(kg·°C) ≈ 453 J/(kg·°C).",
+      "sourceReference": "Section 5.6, Page 204"
+    },
+    {
+      "id": "PHY-G11-U05-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "A 100 W electric heater runs for 5.0 minutes (300 s) to heat a 0.50 kg block of metal. If the block's temperature rises from 20.0 °C to 86.6 °C, what is the specific heat capacity of the metal, and what metal is it?",
+      "options": [
+        {
+          "id": "A",
+          "text": "c = 900 J/(kg·°C), Aluminum"
+        },
+        {
+          "id": "B",
+          "text": "c = 450 J/(kg·°C), Iron"
+        },
+        {
+          "id": "C",
+          "text": "c = 385 J/(kg·°C), Copper"
+        },
+        {
+          "id": "D",
+          "text": "c = 128 J/(kg·°C), Lead"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Electrical energy E = P × t = 100 W × 300 s = 30,000 J. Heat gained Q = m c ΔT ⇒ 30,000 = 0.50 kg × c × (86.6 - 20.0) °C = 33.3 kg·°C × c ⇒ c = 30,000 / 33.3 ≈ 901 J/(kg·°C). From textbook Table 5.1, this value corresponds to Aluminum (c = 900 J/(kg·°C)).",
+      "sourceReference": "Section 5.6, Page 205"
+    },
+    {
+      "id": "PHY-G11-U05-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Mercury of volume V₀ = 10,000 cm³ is filled in a brass container at 10 °C and heated to 80 °C. The real cubic expansion coefficient of mercury is γ_m = 18 × 10⁻⁵ K⁻¹ and the volume expansion coefficient of brass is γ_b = 5.7 × 10⁻⁵ K⁻¹. What is the apparent expansion of mercury (ΔV_apparent) observed in the container?",
+      "options": [
+        {
+          "id": "A",
+          "text": "126 cm³"
+        },
+        {
+          "id": "B",
+          "text": "86.1 cm³"
+        },
+        {
+          "id": "C",
+          "text": "39.9 cm³"
+        },
+        {
+          "id": "D",
+          "text": "165.9 cm³"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "ΔV_real = V₀ γ_m ΔT = 10,000 × 18 × 10⁻⁵ × 70 = 126 cm³. Container expansion ΔV_container = V₀ γ_b ΔT = 10,000 × 5.7 × 10⁻⁵ × 70 = 39.9 cm³. Apparent expansion ΔV_apparent = ΔV_real - ΔV_container = 126 - 39.9 = 86.1 cm³.",
+      "sourceReference": "Section 5.4, Page 192"
+    },
+    {
+      "id": "PHY-G11-U05-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A 50.0 kg steel mass falls from a height of 50.0 m under gravity (g = 9.8 m/s²). If 50% of its initial potential energy is converted into internal thermal energy of the steel mass upon impact, what is the temperature rise (ΔT) of the steel? (Take c_steel = 490 J/(kg·K))",
+      "options": [
+        {
+          "id": "A",
+          "text": "0.25 K"
+        },
+        {
+          "id": "B",
+          "text": "0.50 K"
+        },
+        {
+          "id": "C",
+          "text": "1.00 K"
+        },
+        {
+          "id": "D",
+          "text": "2.00 K"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Potential energy PE = m g h = 50.0 × 9.8 × 50.0 = 24,500 J. Heat converted Q = 0.50 × PE = 12,250 J. Equating heat gained: Q = m c ΔT ⇒ 12,250 = 50.0 × 490 × ΔT ⇒ 12,250 = 24,500 ΔT ⇒ ΔT = 0.50 K.",
+      "sourceReference": "Section 5.3, Page 185"
+    },
+    {
+      "id": "PHY-G11-U05-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "How much total heat energy must be absorbed to convert 4.0 kg of ice initially at -50 °C into steam at 100 °C at standard atmospheric pressure? (Given: c_ice = 2100 J/(kg·K), L_f = 3.36 × 10⁵ J/kg, c_water = 4200 J/(kg·K), L_v = 2.26 × 10⁶ J/kg)",
+      "options": [
+        {
+          "id": "A",
+          "text": "3.444 × 10⁶ J"
+        },
+        {
+          "id": "B",
+          "text": "1.072 × 10⁷ J"
+        },
+        {
+          "id": "C",
+          "text": "1.248 × 10⁷ J"
+        },
+        {
+          "id": "D",
+          "text": "1.324 × 10⁷ J"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Q1 (heating ice to 0 °C) = 4.0 × 2100 × 50 = 0.42 × 10⁶ J. Q2 (melting ice) = 4.0 × 3.36 × 10⁵ = 1.344 × 10⁶ J. Q3 (heating water to 100 °C) = 4.0 × 4200 × 100 = 1.68 × 10⁶ J. Q4 (vaporizing water) = 4.0 × 2.26 × 10⁶ = 9.04 × 10⁶ J. Total Q = Q1 + Q2 + Q3 + Q4 = 12.484 × 10⁶ J ≈ 1.248 × 10⁷ J.",
+      "sourceReference": "Section 5.5, Page 198"
+    },
+    {
+      "id": "PHY-G11-U05-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A copper calorimeter of mass m_c = 0.10 kg (c_c = 400 J/(kg·°C)) contains 0.20 kg of water at 30.0 °C. A piece of ice of mass m_i = 0.050 kg at 0.0 °C is added to the water. Assuming no heat loss to surroundings, what is the final equilibrium temperature T_f of the mixture? (Given: L_f = 3.36 × 10⁵ J/kg, c_water = 4200 J/(kg·°C))",
+      "options": [
+        {
+          "id": "A",
+          "text": "8.8 °C"
+        },
+        {
+          "id": "B",
+          "text": "12.5 °C"
+        },
+        {
+          "id": "C",
+          "text": "15.0 °C"
+        },
+        {
+          "id": "D",
+          "text": "0.0 °C"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Heat required to melt ice: Q_melt = 0.050 × 3.36 × 10⁵ = 16,800 J. Heat released by water and calorimeter cooling to 0 °C: Q_max = (0.20 × 4200 + 0.10 × 400) × 30 = (840 + 40) × 30 = 26,400 J. Heat balance: (26,400 - 880 T_f) = 16,800 + (0.050 × 4200 T_f) ⇒ 9,600 = 1,090 T_f ⇒ T_f ≈ 8.8 °C.",
+      "sourceReference": "Section 5.6, Page 204"
+    },
+    {
+      "id": "PHY-G11-U05-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Two brass rods and one steel rod of equal original length L₀ are joined rigidly together at their ends. The system is initially at 0 °C under zero stress. If the linear expansion coefficients are α_steel and α_brass with α_brass > α_steel, what happens to the internal stress in the rods when the temperature is raised to T?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Both brass and steel rods experience equal tensile stress."
+        },
+        {
+          "id": "B",
+          "text": "The brass rods experience compressive stress while the steel rod experiences tensile stress."
+        },
+        {
+          "id": "C",
+          "text": "The brass rods experience tensile stress while the steel rod experiences compressive stress."
+        },
+        {
+          "id": "D",
+          "text": "All rods remain completely stress-free because they expand together."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Because α_brass > α_steel, the brass rods expand more rapidly than the steel rod. Because they are rigidly joined at the ends, the steel rod resists the expansion of the brass rods (compressing brass), while the brass rods pull the steel rod beyond its natural free expansion (stretching steel under tension).",
+      "sourceReference": "Section 5.4, Page 195"
+    }
+  ]
 }

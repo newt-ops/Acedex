@@ -3,5 +3,411 @@
   "subject": "Physics",
   "unitNumber": 6,
   "unitTitle": "Electromagnetic Waves and Geometrical Optics",
-  "questions": []
+  "questions": [
+    {
+      "id": "PHY-G10-U06-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which of the following is a fundamental characteristic of electromagnetic (EM) waves propagating in a vacuum?",
+      "options": [
+        {
+          "id": "A",
+          "text": "They require a dense material medium for propagation."
+        },
+        {
+          "id": "B",
+          "text": "They travel at a constant speed of c ≈ 3.0 × 10⁸ m/s in a vacuum."
+        },
+        {
+          "id": "C",
+          "text": "They are longitudinal mechanical waves."
+        },
+        {
+          "id": "D",
+          "text": "Their speed increases proportionally as frequency increases."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "All electromagnetic waves are transverse waves that travel at the speed of light (c ≈ 3.0 × 10⁸ m/s) in a vacuum without requiring a physical medium.",
+      "sourceReference": "Section 6.1, Page 148"
+    },
+    {
+      "id": "PHY-G10-U06-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "According to the law of reflection, what is the relationship between the angle of incidence (θi) and the angle of reflection (θr)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "θi = 2 θr"
+        },
+        {
+          "id": "B",
+          "text": "θi = 90° - θr"
+        },
+        {
+          "id": "C",
+          "text": "θi = θr"
+        },
+        {
+          "id": "D",
+          "text": "θi + θr = 180°"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The law of reflection states that the angle of incidence equals the angle of reflection (θi = θr), with both angles measured relative to the normal line perpendicular to the surface.",
+      "sourceReference": "Section 6.2, Page 152"
+    },
+    {
+      "id": "PHY-G10-U06-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "The absolute refractive index (n) of a transparent medium is defined as the ratio of:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Speed of light in the medium to the speed of light in a vacuum (v / c)"
+        },
+        {
+          "id": "B",
+          "text": "Speed of light in a vacuum to the speed of light in the medium (c / v)"
+        },
+        {
+          "id": "C",
+          "text": "Frequency of light in a vacuum to frequency in the medium"
+        },
+        {
+          "id": "D",
+          "text": "Wavelength of light in the medium to wavelength in a vacuum"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The absolute refractive index n = c / v, where c is the speed of light in a vacuum and v is the speed of light in the given medium.",
+      "sourceReference": "Section 6.3, Page 158"
+    },
+    {
+      "id": "PHY-G10-U06-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which type of spherical mirror is used as a side-view mirror in motor vehicles because it always forms an erect, diminished image with a wider field of view?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Concave mirror"
+        },
+        {
+          "id": "B",
+          "text": "Plane mirror"
+        },
+        {
+          "id": "C",
+          "text": "Convex mirror"
+        },
+        {
+          "id": "D",
+          "text": "Parabolic mirror"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Convex mirrors always form virtual, erect, and diminished images regardless of object position, providing drivers with a wider field of view.",
+      "sourceReference": "Section 6.2, Page 155"
+    },
+    {
+      "id": "PHY-G10-U06-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "A thin glass lens that is thicker in the middle than at the edges causes parallel rays of light to converge to a single focal point. This lens is known as a:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Diverging concave lens"
+        },
+        {
+          "id": "B",
+          "text": "Converging convex lens"
+        },
+        {
+          "id": "C",
+          "text": "Flat plane lens"
+        },
+        {
+          "id": "D",
+          "text": "Cylindrical lens"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "A convex (biconvex) lens is thicker at its center than at its edges and converges incident parallel light rays to a real focus.",
+      "sourceReference": "Section 6.4, Page 162"
+    },
+    {
+      "id": "PHY-G10-U06-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "An FM radio station broadcasts electromagnetic waves at a frequency of 100 MHz (1.0 × 10⁸ Hz). Taking c = 3.0 × 10⁸ m/s, what is the wavelength of these radio waves?",
+      "options": [
+        {
+          "id": "A",
+          "text": "0.3 m"
+        },
+        {
+          "id": "B",
+          "text": "3.0 m"
+        },
+        {
+          "id": "C",
+          "text": "30 m"
+        },
+        {
+          "id": "D",
+          "text": "300 m"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Using c = f · λ, wavelength λ = c / f = (3.0 × 10⁸ m/s) / (1.0 × 10⁸ Hz) = 3.0 m.",
+      "sourceReference": "Section 6.1, Page 150"
+    },
+    {
+      "id": "PHY-G10-U06-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "An object is placed 15 cm in front of a concave spherical mirror with a focal length of 10 cm. What is the distance of the image formed by the mirror?",
+      "options": [
+        {
+          "id": "A",
+          "text": "6.0 cm"
+        },
+        {
+          "id": "B",
+          "text": "25.0 cm"
+        },
+        {
+          "id": "C",
+          "text": "30.0 cm"
+        },
+        {
+          "id": "D",
+          "text": "60.0 cm"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Using 1/f = 1/do + 1/di: 1/10 = 1/15 + 1/di ⇒ 1/di = 1/10 - 1/15 = (3 - 2)/30 = 1/30 ⇒ di = 30.0 cm.",
+      "sourceReference": "Section 6.2, Page 156"
+    },
+    {
+      "id": "PHY-G10-U06-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "A beam of light in air (n1 = 1.00) strikes the surface of a glass block (n2 = 1.50) at an angle of incidence of 30°. What is the sine of the angle of refraction (sin θr) inside the glass?",
+      "options": [
+        {
+          "id": "A",
+          "text": "0.333"
+        },
+        {
+          "id": "B",
+          "text": "0.500"
+        },
+        {
+          "id": "C",
+          "text": "0.750"
+        },
+        {
+          "id": "D",
+          "text": "0.866"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "By Snell's law: n1 sin θi = n2 sin θr ⇒ 1.00 × sin 30° = 1.50 × sin θr ⇒ 1.00 × 0.5 = 1.50 × sin θr ⇒ sin θr = 0.5 / 1.50 = 1/3 ≈ 0.333.",
+      "sourceReference": "Section 6.3, Page 159"
+    },
+    {
+      "id": "PHY-G10-U06-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What is the critical angle (θc) for total internal reflection when light travels from crown glass (n1 = 1.50) toward an air interface (n2 = 1.00)? (Given: sin 41.8° ≈ 0.667)",
+      "options": [
+        {
+          "id": "A",
+          "text": "30.0°"
+        },
+        {
+          "id": "B",
+          "text": "41.8°"
+        },
+        {
+          "id": "C",
+          "text": "48.6°"
+        },
+        {
+          "id": "D",
+          "text": "60.0°"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Critical angle sin θc = n2 / n1 = 1.00 / 1.50 = 0.667 ⇒ θc = sin⁻¹(0.667) ≈ 41.8°.",
+      "sourceReference": "Section 6.3, Page 161"
+    },
+    {
+      "id": "PHY-G10-U06-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "An optometrist prescribes a converging spectacle lens with a focal length of +25 cm (+0.25 m) to correct hyperopia (farsightedness). What is the optical power (P) of this lens in diopters (D)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "+0.04 D"
+        },
+        {
+          "id": "B",
+          "text": "+2.5 D"
+        },
+        {
+          "id": "C",
+          "text": "+4.0 D"
+        },
+        {
+          "id": "D",
+          "text": "+25.0 D"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Optical power P = 1 / f (in meters) = 1 / (+0.25 m) = +4.0 Diopters (D).",
+      "sourceReference": "Section 6.4, Page 165"
+    },
+    {
+      "id": "PHY-G10-U06-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which two conditions must be satisfied simultaneously for total internal reflection to occur at an optical boundary?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Light must travel from a rarer medium to a denser medium, and the angle of incidence must equal 0°."
+        },
+        {
+          "id": "B",
+          "text": "Light must travel from an optically denser medium to a rarer medium, and the angle of incidence must exceed the critical angle."
+        },
+        {
+          "id": "C",
+          "text": "Light must travel from a rarer to a denser medium, and the angle of incidence must be less than 45°."
+        },
+        {
+          "id": "D",
+          "text": "Light must travel through a vacuum, and the reflecting surface must be a plane mirror."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Total internal reflection occurs only when: (1) light travels from a medium of higher refractive index to one of lower refractive index (n1 > n2), and (2) the angle of incidence exceeds the critical angle (θi > θc).",
+      "sourceReference": "Section 6.3, Page 160"
+    },
+    {
+      "id": "PHY-G10-U06-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "An object of height 4.0 cm is placed 20.0 cm in front of a concave mirror of focal length 12.0 cm. What are the height and nature of the image formed?",
+      "options": [
+        {
+          "id": "A",
+          "text": "-6.0 cm (real, inverted, magnified)"
+        },
+        {
+          "id": "B",
+          "text": "+6.0 cm (virtual, erect, magnified)"
+        },
+        {
+          "id": "C",
+          "text": "-2.67 cm (real, inverted, diminished)"
+        },
+        {
+          "id": "D",
+          "text": "+2.67 cm (virtual, erect, diminished)"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "1/di = 1/f - 1/do = 1/12 - 1/20 = 2/60 = 1/30 ⇒ di = 30.0 cm (real). Magnification m = -di / do = -30 / 20 = -1.5. Image height hi = m × ho = -1.5 × 4.0 cm = -6.0 cm (inverted, real image).",
+      "sourceReference": "Section 6.2, Page 156"
+    },
+    {
+      "id": "PHY-G10-U06-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A swimming pool has a real depth of 3.6 m when filled with clear water (n = 4/3 ≈ 1.333). When viewed vertically from above, what is the apparent depth of the pool floor?",
+      "options": [
+        {
+          "id": "A",
+          "text": "2.0 m"
+        },
+        {
+          "id": "B",
+          "text": "2.7 m"
+        },
+        {
+          "id": "C",
+          "text": "4.8 m"
+        },
+        {
+          "id": "D",
+          "text": "5.4 m"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Apparent depth d' = real depth d / n = 3.6 m / (4/3) = 3.6 × 3 / 4 = 2.7 m.",
+      "sourceReference": "Section 6.3, Page 159"
+    },
+    {
+      "id": "PHY-G10-U06-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A small candle is placed 10.0 cm in front of a converging thin lens of focal length 15.0 cm. Where is the image located, and what is its magnification?",
+      "options": [
+        {
+          "id": "A",
+          "text": "30.0 cm in front of the lens (same side as object); m = +3.0"
+        },
+        {
+          "id": "B",
+          "text": "30.0 cm behind the lens; m = -3.0"
+        },
+        {
+          "id": "C",
+          "text": "6.0 cm behind the lens; m = -0.6"
+        },
+        {
+          "id": "D",
+          "text": "6.0 cm in front of the lens; m = +0.6"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "1/di = 1/f - 1/do = 1/15 - 1/10 = -1/30 ⇒ di = -30.0 cm (virtual image 30.0 cm in front of lens). Magnification m = -di / do = -(-30.0) / 10.0 = +3.0 (virtual, erect, enlarged).",
+      "sourceReference": "Section 6.4, Page 164"
+    },
+    {
+      "id": "PHY-G10-U06-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Monochromatic light of frequency 5.0 × 10¹⁴ Hz has a wavelength of 400 nm (4.0 × 10⁻⁷ m) inside a transparent liquid. Taking c = 3.0 × 10⁸ m/s in a vacuum, what is the speed of light inside the liquid and its refractive index n?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Speed = 2.0 × 10⁸ m/s; Refractive index n = 1.50"
+        },
+        {
+          "id": "B",
+          "text": "Speed = 1.5 × 10⁸ m/s; Refractive index n = 2.00"
+        },
+        {
+          "id": "C",
+          "text": "Speed = 2.0 × 10⁸ m/s; Refractive index n = 1.33"
+        },
+        {
+          "id": "D",
+          "text": "Speed = 2.5 × 10⁸ m/s; Refractive index n = 1.20"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Speed in liquid v = f × λ = (5.0 × 10¹⁴ Hz) × (4.0 × 10⁻⁷ m) = 2.0 × 10⁸ m/s. Refractive index n = c / v = (3.0 × 10⁸ m/s) / (2.0 × 10⁸ m/s) = 1.50.",
+      "sourceReference": "Section 6.1 & 6.3, Page 158"
+    }
+  ]
 }

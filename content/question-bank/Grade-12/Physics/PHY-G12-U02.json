@@ -3,5 +3,411 @@
   "subject": "Physics",
   "unitNumber": 2,
   "unitTitle": "Two-dimensional Motion",
-  "questions": []
+  "questions": [
+    {
+      "id": "PHY-G12-U02-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In an ideal projectile motion where air resistance is neglected, what characterizes the acceleration components along the horizontal (x) and vertical (y) directions?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Horizontal acceleration is g downward, while vertical acceleration is zero."
+        },
+        {
+          "id": "B",
+          "text": "Horizontal acceleration is zero, while vertical acceleration is a constant g downward."
+        },
+        {
+          "id": "C",
+          "text": "Both horizontal and vertical accelerations are zero throughout the flight."
+        },
+        {
+          "id": "D",
+          "text": "Both horizontal and vertical accelerations equal g downward."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In projectile motion, no force acts horizontally (ax = 0), keeping horizontal velocity constant. Gravity acts vertically downward with constant acceleration (ay = -g).",
+      "sourceReference": "Section 2.1, Page 25"
+    },
+    {
+      "id": "PHY-G12-U02-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "At what launch angle (θ) relative to the horizontal on level ground will a projectile achieve its maximum horizontal range (ignoring air resistance)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "30°"
+        },
+        {
+          "id": "B",
+          "text": "45°"
+        },
+        {
+          "id": "C",
+          "text": "60°"
+        },
+        {
+          "id": "D",
+          "text": "90°"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The horizontal range formula is R = (v₀² sin 2θ) / g. Range R is maximized when sin 2θ = 1, which corresponds to 2θ = 90° or θ = 45°.",
+      "sourceReference": "Section 2.1, Page 32"
+    },
+    {
+      "id": "PHY-G12-U02-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is the standard SI unit for angular acceleration (α) in rotational kinematics?",
+      "options": [
+        {
+          "id": "A",
+          "text": "rad/s"
+        },
+        {
+          "id": "B",
+          "text": "rad/s²"
+        },
+        {
+          "id": "C",
+          "text": "m/s²"
+        },
+        {
+          "id": "D",
+          "text": "rev/min"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Angular acceleration is the rate of change of angular velocity per unit time (α = Δω / Δt), giving standard SI units of radians per second squared (rad/s²).",
+      "sourceReference": "Section 2.2, Page 41"
+    },
+    {
+      "id": "PHY-G12-U02-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "How is the magnitude of torque (τ) produced by a force F acting at a position vector r from an axis of rotation defined?",
+      "options": [
+        {
+          "id": "A",
+          "text": "τ = r F cos θ"
+        },
+        {
+          "id": "B",
+          "text": "τ = r F sin θ"
+        },
+        {
+          "id": "C",
+          "text": "τ = F / r"
+        },
+        {
+          "id": "D",
+          "text": "τ = 1/2 I ω²"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Torque is the rotational effect of a force defined as τ = r F sin θ, where θ is the angle between the position vector r and the force vector F.",
+      "sourceReference": "Section 2.3, Page 50"
+    },
+    {
+      "id": "PHY-G12-U02-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "According to Kepler's First Law of planetary motion, what is the geometric shape of the orbit of each planet around the Sun?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A perfect circle with the Sun at its center"
+        },
+        {
+          "id": "B",
+          "text": "An ellipse with the Sun located at one of the two foci"
+        },
+        {
+          "id": "C",
+          "text": "A parabola with the Sun at its vertex"
+        },
+        {
+          "id": "D",
+          "text": "A hyperbola with the Sun at one focus"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Kepler's First Law (Law of Ellipses) states that all planets move in elliptical orbits with the Sun situated at one focus.",
+      "sourceReference": "Section 2.4, Page 54"
+    },
+    {
+      "id": "PHY-G12-U02-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "A steel ball is rolled horizontally off the edge of a table 20.0 m above the floor with an initial horizontal speed of 15.0 m/s. Taking g = 10.0 m/s², how far from the base of the table does the ball land?",
+      "options": [
+        {
+          "id": "A",
+          "text": "15.0 m"
+        },
+        {
+          "id": "B",
+          "text": "30.0 m"
+        },
+        {
+          "id": "C",
+          "text": "45.0 m"
+        },
+        {
+          "id": "D",
+          "text": "60.0 m"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Time of flight t = √(2h / g) = √(2 × 20.0 / 10.0) = √4.0 = 2.0 s. Horizontal distance Δx = v0x × t = 15.0 m/s × 2.0 s = 30.0 m.",
+      "sourceReference": "Section 2.1, Page 27"
+    },
+    {
+      "id": "PHY-G12-U02-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "A football is kicked from ground level with an initial speed of 20.0 m/s at an angle of 30° above the horizontal. Taking g = 10.0 m/s², what is the maximum height H reached by the ball? (Given: sin 30° = 0.5)",
+      "options": [
+        {
+          "id": "A",
+          "text": "2.5 m"
+        },
+        {
+          "id": "B",
+          "text": "5.0 m"
+        },
+        {
+          "id": "C",
+          "text": "10.0 m"
+        },
+        {
+          "id": "D",
+          "text": "15.0 m"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Initial vertical component v0y = v0 sin 30° = 20.0 × 0.5 = 10.0 m/s. Maximum height H = v0y² / (2g) = (10.0)² / (2 × 10.0) = 100 / 20 = 5.0 m.",
+      "sourceReference": "Section 2.1, Page 33"
+    },
+    {
+      "id": "PHY-G12-U02-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "A heavy flywheel starting from rest accelerates uniformly to an angular velocity of 30.0 rad/s in a time interval of 6.0 s. What is the total angular displacement (Δθ) of the flywheel during these 6.0 seconds?",
+      "options": [
+        {
+          "id": "A",
+          "text": "45.0 rad"
+        },
+        {
+          "id": "B",
+          "text": "90.0 rad"
+        },
+        {
+          "id": "C",
+          "text": "180.0 rad"
+        },
+        {
+          "id": "D",
+          "text": "270.0 rad"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Average angular velocity ω_av = (ω0 + ωf) / 2 = (0 + 30.0) / 2 = 15.0 rad/s. Angular displacement Δθ = ω_av × t = 15.0 rad/s × 6.0 s = 90.0 rad.",
+      "sourceReference": "Section 2.2, Page 43"
+    },
+    {
+      "id": "PHY-G12-U02-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "A net torque of 120.0 N·m applied to a circular grinding wheel produces a constant angular acceleration of 15.0 rad/s². What is the moment of inertia (I) of the grinding wheel?",
+      "options": [
+        {
+          "id": "A",
+          "text": "4.0 kg·m²"
+        },
+        {
+          "id": "B",
+          "text": "8.0 kg·m²"
+        },
+        {
+          "id": "C",
+          "text": "15.0 kg·m²"
+        },
+        {
+          "id": "D",
+          "text": "1800.0 kg·m²"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "By Newton's second law for rotation: τ = I α ⇒ I = τ / α = 120.0 N·m / 15.0 rad/s² = 8.0 kg·m².",
+      "sourceReference": "Section 2.3, Page 53"
+    },
+    {
+      "id": "PHY-G12-U02-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Planet X revolves around a central star in an orbit with a mean radius 4 times larger than the mean radius of Planet Y. If the orbital period of Planet Y is 2 Earth years, what is the orbital period of Planet X?",
+      "options": [
+        {
+          "id": "A",
+          "text": "8 years"
+        },
+        {
+          "id": "B",
+          "text": "16 years"
+        },
+        {
+          "id": "C",
+          "text": "32 years"
+        },
+        {
+          "id": "D",
+          "text": "64 years"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "By Kepler's Third Law (T² ∝ r³): (TX / TY)² = (rX / rY)³ = (4)³ = 64 ⇒ TX / TY = √64 = 8 ⇒ TX = 8 × 2 years = 16 years.",
+      "sourceReference": "Section 2.4, Page 57"
+    },
+    {
+      "id": "PHY-G12-U02-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "The gravitational force of attraction between two point masses separated by a distance r is 200.0 N. If the distance between their centers is increased to 2r, what will be the magnitude of the new gravitational force?",
+      "options": [
+        {
+          "id": "A",
+          "text": "50.0 N"
+        },
+        {
+          "id": "B",
+          "text": "100.0 N"
+        },
+        {
+          "id": "C",
+          "text": "400.0 N"
+        },
+        {
+          "id": "D",
+          "text": "800.0 N"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Newton's law of universal gravitation states F ∝ 1/r². Doubling the distance (2r) reduces the force to F / (2²) = 200.0 N / 4 = 50.0 N.",
+      "sourceReference": "Section 2.5, Page 59"
+    },
+    {
+      "id": "PHY-G12-U02-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A projectile is launched from flat ground with an initial speed of 50.0 m/s at an angle of 53° above the horizontal. Taking g = 10.0 m/s², what is the horizontal range R of the projectile? (Given: sin 53° = 0.8, cos 53° = 0.6)",
+      "options": [
+        {
+          "id": "A",
+          "text": "120.0 m"
+        },
+        {
+          "id": "B",
+          "text": "192.0 m"
+        },
+        {
+          "id": "C",
+          "text": "240.0 m"
+        },
+        {
+          "id": "D",
+          "text": "300.0 m"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Initial components: v0x = 50.0 × 0.6 = 30.0 m/s; v0y = 50.0 × 0.8 = 40.0 m/s. Total time of flight t_total = 2 v0y / g = 2 × 40.0 / 10.0 = 8.0 s. Horizontal range R = v0x × t_total = 30.0 m/s × 8.0 s = 240.0 m.",
+      "sourceReference": "Section 2.1, Page 32"
+    },
+    {
+      "id": "PHY-G12-U02-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Three point masses: m1 = 2.0 kg located at (0, 3.0 m), m2 = 3.0 kg located at (0, -2.0 m), and m3 = 4.0 kg located at (0, -4.0 m) are connected by rigid rods of negligible mass along the y-axis. What is the total moment of inertia I of the system about the x-axis?",
+      "options": [
+        {
+          "id": "A",
+          "text": "46.0 kg·m²"
+        },
+        {
+          "id": "B",
+          "text": "70.0 kg·m²"
+        },
+        {
+          "id": "C",
+          "text": "94.0 kg·m²"
+        },
+        {
+          "id": "D",
+          "text": "118.0 kg·m²"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Moment of inertia about x-axis: Ix = ∑ mi yi² = m1 y1² + m2 y2² + m3 y3² = 2.0 × (3.0)² + 3.0 × (-2.0)² + 4.0 × (-4.0)² = 2.0 × 9 + 3.0 × 4 + 4.0 × 16 = 18 + 12 + 64 = 94.0 kg·m².",
+      "sourceReference": "Section 2.3, Page 52"
+    },
+    {
+      "id": "PHY-G12-U02-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A bicycle wheel of radius r = 0.40 m accelerates uniformly from rest, completing 50.0 revolutions in a time interval of 10.0 s. What is the magnitude of the tangential acceleration (at) of a point located on the outer rim of the wheel?",
+      "options": [
+        {
+          "id": "A",
+          "text": "1.26 m/s²"
+        },
+        {
+          "id": "B",
+          "text": "2.51 m/s²"
+        },
+        {
+          "id": "C",
+          "text": "5.03 m/s²"
+        },
+        {
+          "id": "D",
+          "text": "6.28 m/s²"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Angular displacement Δθ = 50.0 rev = 50.0 × 2π rad = 100π rad ≈ 314.16 rad. Using Δθ = 1/2 α t²: 314.16 = 0.5 × α × (10.0)² ⇒ 50 α = 314.16 ⇒ α ≈ 6.283 rad/s² (2π rad/s²). Tangential acceleration at = α r = 6.283 rad/s² × 0.40 m ≈ 2.51 m/s².",
+      "sourceReference": "Section 2.2, Page 45"
+    },
+    {
+      "id": "PHY-G12-U02-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A satellite moves in a stable circular orbit of radius r around a planet of mass M with an orbital speed v0. If the satellite is moved to a higher stable circular orbit with radius 4r, what is its new orbital speed in terms of v0?",
+      "options": [
+        {
+          "id": "A",
+          "text": "2 v0"
+        },
+        {
+          "id": "B",
+          "text": "v0 / √2"
+        },
+        {
+          "id": "C",
+          "text": "v0 / 2"
+        },
+        {
+          "id": "D",
+          "text": "v0 / 4"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Equating centripetal force and gravitational force: m v² / r = G M m / r² ⇒ v = √(G M / r). For radius 4r: v_new = √(G M / (4r)) = 1/2 √(G M / r) = v0 / 2.",
+      "sourceReference": "Section 2.5, Page 62"
+    }
+  ]
 }

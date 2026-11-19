@@ -3,5 +3,411 @@
   "subject": "Physics",
   "unitNumber": 3,
   "unitTitle": "Motion in a Straight Line",
-  "questions": []
+  "questions": [
+    {
+      "id": "PHY-G09-U03-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which of the following statements correctly distinguishes distance from displacement?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Distance is a vector quantity, whereas displacement is a scalar quantity."
+        },
+        {
+          "id": "B",
+          "text": "Distance is the total path length travelled, while displacement is the shortest change in position in a specified direction."
+        },
+        {
+          "id": "C",
+          "text": "Displacement depends on the complete path followed, whereas distance depends only on initial and final positions."
+        },
+        {
+          "id": "D",
+          "text": "Distance can be zero when an object moves and changes position, but displacement can never be zero."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Distance is a scalar quantity measuring the total path length travelled by a body regardless of direction. Displacement is a vector quantity representing the shortest straight-line change in position from the initial to the final position.",
+      "sourceReference": "Section 3.1, Page 43"
+    },
+    {
+      "id": "PHY-G09-U03-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "A fixed point or system of coordinates used to observe, measure, and describe the position and motion of an object is known as a:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Vector component"
+        },
+        {
+          "id": "B",
+          "text": "Scalar magnitude"
+        },
+        {
+          "id": "C",
+          "text": "Frame of reference"
+        },
+        {
+          "id": "D",
+          "text": "Displacement vector"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "A frame of reference is a fixed point or set of coordinate axes relative to which the position, displacement, and motion of an object are measured and described.",
+      "sourceReference": "Section 3.1, Page 40"
+    },
+    {
+      "id": "PHY-G09-U03-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which physical quantity is directly displayed on a vehicle's speedometer during driving?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Average speed"
+        },
+        {
+          "id": "B",
+          "text": "Instantaneous velocity"
+        },
+        {
+          "id": "C",
+          "text": "Instantaneous speed"
+        },
+        {
+          "id": "D",
+          "text": "Average acceleration"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "A speedometer indicates the speed of a vehicle at a specific moment in time without indicating direction, which is defined as instantaneous speed.",
+      "sourceReference": "Section 3.2, Page 46"
+    },
+    {
+      "id": "PHY-G09-U03-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which of the following is the standard SI unit for measuring acceleration?",
+      "options": [
+        {
+          "id": "A",
+          "text": "m/s"
+        },
+        {
+          "id": "B",
+          "text": "m·s"
+        },
+        {
+          "id": "C",
+          "text": "m/s²"
+        },
+        {
+          "id": "D",
+          "text": "kg·m/s"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Acceleration is defined as the rate of change of velocity per unit time (Δv / Δt), giving it the SI derived unit of meters per second squared (m/s²).",
+      "sourceReference": "Section 3.4, Page 50"
+    },
+    {
+      "id": "PHY-G09-U03-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "An object undergoes uniform rectilinear motion along a straight line. What is the acceleration of the object?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Equal to its speed"
+        },
+        {
+          "id": "B",
+          "text": "Zero"
+        },
+        {
+          "id": "C",
+          "text": "Constantly increasing"
+        },
+        {
+          "id": "D",
+          "text": "Negative"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In uniform motion, an object travels in a straight line at a constant velocity (Δv = 0). Because acceleration is the rate of change of velocity, the acceleration is zero (a = 0).",
+      "sourceReference": "Section 3.5, Page 52"
+    },
+    {
+      "id": "PHY-G09-U03-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "An athlete runs 400 m due East along a straight track and then turns back, walking 150 m due West along the same line. What are the total distance travelled and net displacement of the athlete?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Distance = 550 m; Displacement = 250 m East"
+        },
+        {
+          "id": "B",
+          "text": "Distance = 250 m; Displacement = 550 m East"
+        },
+        {
+          "id": "C",
+          "text": "Distance = 550 m; Displacement = 550 m West"
+        },
+        {
+          "id": "D",
+          "text": "Distance = 250 m; Displacement = 250 m West"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Total distance is the full path length: 400 m + 150 m = 550 m. Net displacement is the vector difference from the starting position: 400 m East - 150 m West = 250 m East.",
+      "sourceReference": "Section 3.1, Page 43"
+    },
+    {
+      "id": "PHY-G09-U03-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "A car travels between two towns separated by a distance of 120 km. It covers the first 60 km at a constant speed of 30 km/h and the remaining 60 km at a constant speed of 60 km/h. What is the average speed of the car for the entire trip?",
+      "options": [
+        {
+          "id": "A",
+          "text": "45 km/h"
+        },
+        {
+          "id": "B",
+          "text": "40 km/h"
+        },
+        {
+          "id": "C",
+          "text": "50 km/h"
+        },
+        {
+          "id": "D",
+          "text": "35 km/h"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Time for the first 60 km: t₁ = 60 / 30 = 2 h. Time for the second 60 km: t₂ = 60 / 60 = 1 h. Total time = 3 h. Total distance = 120 km. Average speed = 120 km / 3 h = 40 km/h.",
+      "sourceReference": "Section 3.2, Page 46"
+    },
+    {
+      "id": "PHY-G09-U03-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "A bus leaves a terminal at 08:00 AM, travels 180 km due North along a straight highway, and arrives at its destination at 11:00 AM. What is the average velocity of the bus in m/s?",
+      "options": [
+        {
+          "id": "A",
+          "text": "60.0 m/s North"
+        },
+        {
+          "id": "B",
+          "text": "16.67 m/s North"
+        },
+        {
+          "id": "C",
+          "text": "20.0 m/s North"
+        },
+        {
+          "id": "D",
+          "text": "50.0 m/s North"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Time elapsed = 3 hours = 10,800 s. Displacement = 180 km = 180,000 m North. Average velocity = 180,000 m / 10,800 s = 16.67 m/s North (or 60 km/h ÷ 3.6 = 16.67 m/s).",
+      "sourceReference": "Section 3.3, Page 48"
+    },
+    {
+      "id": "PHY-G09-U03-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "A vehicle travelling along a straight level road at 15 m/s applies its brakes and slows down uniformly to a complete stop in 5.0 s. What is the acceleration of the vehicle?",
+      "options": [
+        {
+          "id": "A",
+          "text": "3.0 m/s²"
+        },
+        {
+          "id": "B",
+          "text": "-3.0 m/s²"
+        },
+        {
+          "id": "C",
+          "text": "-0.33 m/s²"
+        },
+        {
+          "id": "D",
+          "text": "75.0 m/s²"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Initial velocity vᵢ = 15 m/s, final velocity v_f = 0 m/s, time t = 5.0 s. Acceleration a = (v_f - vᵢ) / t = (0 - 15) / 5.0 = -3.0 m/s². The negative sign represents deceleration.",
+      "sourceReference": "Section 3.4, Page 50"
+    },
+    {
+      "id": "PHY-G09-U03-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In a position-time (s-t) graph of an object moving in a straight line, what does the slope of a straight line represent?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Total distance travelled"
+        },
+        {
+          "id": "B",
+          "text": "Acceleration"
+        },
+        {
+          "id": "C",
+          "text": "Average velocity"
+        },
+        {
+          "id": "D",
+          "text": "Rate of change of acceleration"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The slope of a position-time graph is given by rise/run = Δs / Δt, which is the mathematical definition of average velocity.",
+      "sourceReference": "Section 3.6, Page 54"
+    },
+    {
+      "id": "PHY-G09-U03-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "The area under a velocity-time (v-t) graph for a body moving along a straight line represents which physical quantity?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Acceleration"
+        },
+        {
+          "id": "B",
+          "text": "Average speed"
+        },
+        {
+          "id": "C",
+          "text": "Displacement"
+        },
+        {
+          "id": "D",
+          "text": "Instantaneous power"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The area under a velocity-time graph equals the product of velocity and time (v × t), which represents the displacement covered by the moving object during that time interval.",
+      "sourceReference": "Section 3.6, Page 55"
+    },
+    {
+      "id": "PHY-G09-U03-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A swimmer swims from the North end to the South end of a 50 m pool in 20 s, and then immediately returns to the North end starting position in 30 s. Which of the following correctly pairs the average speed and average velocity of the swimmer for the entire round trip?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Average speed = 2.0 m/s; Average velocity = 0 m/s"
+        },
+        {
+          "id": "B",
+          "text": "Average speed = 2.5 m/s; Average velocity = 2.0 m/s"
+        },
+        {
+          "id": "C",
+          "text": "Average speed = 1.0 m/s; Average velocity = 1.0 m/s"
+        },
+        {
+          "id": "D",
+          "text": "Average speed = 2.0 m/s; Average velocity = 2.0 m/s"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Total distance = 50 m + 50 m = 100 m; total time = 20 s + 30 s = 50 s. Average speed = 100 m / 50 s = 2.0 m/s. Net displacement = 0 m (returns to starting point). Average velocity = 0 m / 50 s = 0 m/s.",
+      "sourceReference": "Section 3.3, Page 49"
+    },
+    {
+      "id": "PHY-G09-U03-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A car accelerates from rest at a constant rate of 2.0 m/s² for 10 s along a straight road. It then maintains its acquired top speed for 20 s. What is the total distance covered by the car during the entire 30 s interval?",
+      "options": [
+        {
+          "id": "A",
+          "text": "300 m"
+        },
+        {
+          "id": "B",
+          "text": "500 m"
+        },
+        {
+          "id": "C",
+          "text": "400 m"
+        },
+        {
+          "id": "D",
+          "text": "600 m"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In the first 10 s: v = a·t = 2.0 × 10 = 20 m/s, distance s₁ = 0.5·a·t² = 0.5 × 2.0 × 100 = 100 m. In the next 20 s: constant speed v = 20 m/s, distance s₂ = v·t = 20 × 20 = 400 m. Total distance = 100 m + 400 m = 500 m.",
+      "sourceReference": "Section 3.4, Page 51"
+    },
+    {
+      "id": "PHY-G09-U03-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A particle starts from rest and moves along a straight line. Its velocity increases linearly from 0 to 20 m/s in 4.0 s, stays constant at 20 m/s for 6.0 s, and then decreases uniformly to zero in 2.0 s. What is the average velocity of the particle for the complete 12.0 s journey?",
+      "options": [
+        {
+          "id": "A",
+          "text": "15.0 m/s"
+        },
+        {
+          "id": "B",
+          "text": "13.33 m/s"
+        },
+        {
+          "id": "C",
+          "text": "10.0 m/s"
+        },
+        {
+          "id": "D",
+          "text": "16.67 m/s"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The v-t graph forms a trapezoid with bottom base = 12.0 s, top base = 6.0 s (from t=4 to t=10), and height = 20 m/s. Total displacement = area under v-t graph = 0.5 × (6.0 s + 12.0 s) × 20 m/s = 180 m. Average velocity = 180 m / 12.0 s = 15.0 m/s.",
+      "sourceReference": "Section 3.6, Page 55"
+    },
+    {
+      "id": "PHY-G09-U03-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "The position-time (s-t) graph of a moving body is a curve that bends upward (a parabolic curve with an increasing positive slope). What type of motion does this graph describe?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Uniform motion with constant non-zero velocity"
+        },
+        {
+          "id": "B",
+          "text": "Motion at rest with zero velocity"
+        },
+        {
+          "id": "C",
+          "text": "Motion with constant positive acceleration (speeding up)"
+        },
+        {
+          "id": "D",
+          "text": "Motion with constant negative acceleration (decelerating)"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The slope of an s-t graph represents velocity. If the curve gets steeper (increasing slope over time), velocity is increasing continuously, which indicates motion with positive acceleration.",
+      "sourceReference": "Section 3.6, Page 54"
+    }
+  ]
 }

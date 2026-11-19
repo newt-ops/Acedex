@@ -3,5 +3,411 @@
   "subject": "Physics",
   "unitNumber": 4,
   "unitTitle": "Electromagnetism",
-  "questions": []
+  "questions": [
+    {
+      "id": "PHY-G12-U04-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which of the following fundamental statements correctly describes a major difference between electric charges and magnetic poles?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Electric charges always exist in positive-negative pairs, whereas isolated magnetic monopoles are common."
+        },
+        {
+          "id": "B",
+          "text": "Electric charges can be isolated as single positive or negative charges, whereas magnetic poles always exist in pairs (dipoles)."
+        },
+        {
+          "id": "C",
+          "text": "Electric forces act over a distance, whereas magnetic forces require direct physical contact."
+        },
+        {
+          "id": "D",
+          "text": "Like electric charges attract each other, whereas like magnetic poles repel each other."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Unlike electric charges which can exist as isolated positive or negative charges, magnetic poles cannot be isolated; breaking a magnet continuously produces smaller magnets, each possessing both a north and a south pole.",
+      "sourceReference": "Section 4.1, Page 118"
+    },
+    {
+      "id": "PHY-G12-U04-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is the standard SI unit of magnetic field strength (B)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Weber (Wb)"
+        },
+        {
+          "id": "B",
+          "text": "Tesla (T)"
+        },
+        {
+          "id": "C",
+          "text": "Henry (H)"
+        },
+        {
+          "id": "D",
+          "text": "Farad (F)"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The SI unit of magnetic field strength (magnetic flux density) B is the Tesla (T), where 1 T = 1 N/(A·m) = 1 Wb/m².",
+      "sourceReference": "Section 4.1, Page 119"
+    },
+    {
+      "id": "PHY-G12-U04-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which of the following is a fundamental property of magnetic field lines?",
+      "options": [
+        {
+          "id": "A",
+          "text": "They originate on north poles and terminate permanently on south poles without forming loops."
+        },
+        {
+          "id": "B",
+          "text": "They intersect each other at right angles near the magnetic poles."
+        },
+        {
+          "id": "C",
+          "text": "They form continuous, closed loops, running from north to south pole outside the magnet and south to north inside."
+        },
+        {
+          "id": "D",
+          "text": "Their spatial density is independent of the strength of the magnetic field."
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Unlike electric field lines which start on positive charges and end on negative charges, magnetic field lines are continuous closed curves that run from the north to south pole externally and south to north internally.",
+      "sourceReference": "Section 4.2, Page 121"
+    },
+    {
+      "id": "PHY-G12-U04-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "The phenomenon in which a changing magnetic flux through a closed conducting circuit induces an electromotive force (emf) is known as:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Electrostatic discharge"
+        },
+        {
+          "id": "B",
+          "text": "Electromagnetic induction"
+        },
+        {
+          "id": "C",
+          "text": "Thermionic emission"
+        },
+        {
+          "id": "D",
+          "text": "Dielectric polarization"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Electromagnetic induction is the process discovered by Michael Faraday wherein a time-varying magnetic field or changing magnetic flux induces an electric current/emf in a conductor.",
+      "sourceReference": "Section 4.4, Page 126"
+    },
+    {
+      "id": "PHY-G12-U04-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What primary function does a step-down transformer perform in an electrical power distribution system?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It converts direct current (DC) into alternating current (AC) at higher frequency."
+        },
+        {
+          "id": "B",
+          "text": "It decreases the input AC voltage to a lower output AC voltage while increasing the available secondary current."
+        },
+        {
+          "id": "C",
+          "text": "It increases the input voltage while keeping electrical current constant."
+        },
+        {
+          "id": "D",
+          "text": "It stores electrostatic charge for emergency backup power."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "A step-down transformer has fewer turns on its secondary coil than its primary coil (Ns < Np), decreasing the output voltage relative to the input voltage while proportionally increasing the available current.",
+      "sourceReference": "Section 4.6, Page 131"
+    },
+    {
+      "id": "PHY-G12-U04-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "A long, straight vertical wire carries a steady electric current I = 20.0 A. What is the magnitude of the magnetic field B produced at a distance r = 0.050 m (5.0 cm) from the center of the wire? (Permeability of free space µ₀ = 4π × 10⁻⁷ T·m/A)",
+      "options": [
+        {
+          "id": "A",
+          "text": "4.0 × 10⁻⁵ T"
+        },
+        {
+          "id": "B",
+          "text": "8.0 × 10⁻⁵ T"
+        },
+        {
+          "id": "C",
+          "text": "1.6 × 10⁻⁴ T"
+        },
+        {
+          "id": "D",
+          "text": "2.5 × 10⁻⁴ T"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Using the formula for a long straight wire B = (µ₀ I) / (2π r): B = (4π × 10⁻⁷ T·m/A × 20.0 A) / (2π × 0.050 m) = (8π × 10⁻⁶) / (0.10π) = 8.0 × 10⁻⁵ T.",
+      "sourceReference": "Section 4.3, Page 123"
+    },
+    {
+      "id": "PHY-G12-U04-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "If a conventional electric current flows vertically upward through a straight conductor, what is the direction of the magnetic field lines surrounding the wire when viewed from directly above?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Clockwise circular loops"
+        },
+        {
+          "id": "B",
+          "text": "Counter-clockwise circular loops"
+        },
+        {
+          "id": "C",
+          "text": "Radially outward away from the wire"
+        },
+        {
+          "id": "D",
+          "text": "Parallel to the direction of current flow"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "According to the Right-Hand Rule (Fleming's rule), pointing the right thumb in the direction of upward current causes the curled fingers to point in a counter-clockwise direction around the wire when viewed from above.",
+      "sourceReference": "Section 4.3, Page 123"
+    },
+    {
+      "id": "PHY-G12-U04-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "A flat surface of area A = 0.050 m² is positioned in a uniform magnetic field B = 0.40 T. If the normal to the surface makes an angle θ = 60° with the magnetic field lines, what is the magnetic flux (Φ_B) passing through the area? (Given: cos 60° = 0.5)",
+      "options": [
+        {
+          "id": "A",
+          "text": "1.0 × 10⁻² Wb"
+        },
+        {
+          "id": "B",
+          "text": "2.0 × 10⁻² Wb"
+        },
+        {
+          "id": "C",
+          "text": "1.73 × 10⁻² Wb"
+        },
+        {
+          "id": "D",
+          "text": "4.0 × 10⁻2 Wb"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Magnetic flux is given by Φ_B = B A cos θ = 0.40 T × 0.050 m² × cos 60° = 0.020 × 0.5 = 0.010 Wb = 1.0 × 10⁻² Wb.",
+      "sourceReference": "Section 4.4, Page 128"
+    },
+    {
+      "id": "PHY-G12-U04-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "A coil consisting of N = 200 turns of wire experiences a uniform change in magnetic flux from 0.025 Wb to 0.010 Wb over a time interval of Δt = 0.30 s. What is the magnitude of the average induced electromotive force (ε) in the coil?",
+      "options": [
+        {
+          "id": "A",
+          "text": "5.0 V"
+        },
+        {
+          "id": "B",
+          "text": "10.0 V"
+        },
+        {
+          "id": "C",
+          "text": "15.0 V"
+        },
+        {
+          "id": "D",
+          "text": "20.0 V"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "By Faraday's law of induction: ε = N |ΔΦ_B / Δt| = 200 × |(0.010 - 0.025) Wb / 0.30 s| = 200 × (0.015 / 0.30) = 200 × 0.050 = 10.0 V.",
+      "sourceReference": "Section 4.5, Page 129"
+    },
+    {
+      "id": "PHY-G12-U04-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "An ideal step-down transformer has Np = 1000 primary turns and Ns = 250 secondary turns. If the primary coil is connected across a Vp = 220 V AC power source, what is the secondary output voltage (Vs)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "44.0 V"
+        },
+        {
+          "id": "B",
+          "text": "55.0 V"
+        },
+        {
+          "id": "C",
+          "text": "110.0 V"
+        },
+        {
+          "id": "D",
+          "text": "880.0 V"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Using the transformer turns ratio equation Vp / Vs = Np / Ns ⇒ Vs = Vp × (Ns / Np) = 220 V × (250 / 1000) = 220 V × 0.25 = 55.0 V.",
+      "sourceReference": "Section 4.6, Page 132"
+    },
+    {
+      "id": "PHY-G12-U04-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In a direct current (DC) electric motor, what component is responsible for reversing the direction of current in the rotating loop every half revolution to maintain continuous unidirectional torque?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The iron core armature"
+        },
+        {
+          "id": "B",
+          "text": "The split-ring commutator"
+        },
+        {
+          "id": "C",
+          "text": "The permanent field poles"
+        },
+        {
+          "id": "D",
+          "text": "The step-up transformer"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The split-ring commutator acts as a rotating interface that reverses the direction of electric current flowing through the motor armature every half rotation (180°), ensuring that magnetic torque continues pushing the loop in the same rotational direction.",
+      "sourceReference": "Section 4.7, Page 136"
+    },
+    {
+      "id": "PHY-G12-U04-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A square conducting loop of side length L = 0.10 m (area A = 0.010 m²) and total resistance R = 0.50 Ω is placed perpendicular to a uniform magnetic field. If the magnetic field decreases uniformly from B1 = 0.60 T to B2 = 0.10 T over a time interval of Δt = 0.20 s, what is the magnitude of the induced current flowing in the loop?",
+      "options": [
+        {
+          "id": "A",
+          "text": "10 mA"
+        },
+        {
+          "id": "B",
+          "text": "25 mA"
+        },
+        {
+          "id": "C",
+          "text": "50 mA"
+        },
+        {
+          "id": "D",
+          "text": "100 mA"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Change in flux ΔΦ = A ΔB = (0.010 m²) × (0.60 - 0.10 T) = 0.0050 Wb. Induced emf ε = ΔΦ / Δt = 0.0050 Wb / 0.20 s = 0.025 V. By Ohm's law, induced current I = ε / R = 0.025 V / 0.50 Ω = 0.050 A = 50 mA.",
+      "sourceReference": "Section 4.5, Page 130"
+    },
+    {
+      "id": "PHY-G12-U04-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "An ideal, 100% efficient step-down transformer has Np = 1000 turns on its primary coil and Ns = 200 turns on its secondary coil. If the primary side is connected to a Vp = 220 V line and the secondary supplies a resistive load drawing a secondary current Is = 5.0 A, what is the primary current (Ip)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "1.0 A"
+        },
+        {
+          "id": "B",
+          "text": "2.5 A"
+        },
+        {
+          "id": "C",
+          "text": "10.0 A"
+        },
+        {
+          "id": "D",
+          "text": "25.0 A"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "For an ideal transformer, input power equals output power (Pp = Ps ⇒ Vp Ip = Vs Is). Using the current turns ratio Ip / Is = Ns / Np ⇒ Ip = Is × (Ns / Np) = 5.0 A × (200 / 1000) = 5.0 A × 0.20 = 1.0 A.",
+      "sourceReference": "Section 4.6, Page 132"
+    },
+    {
+      "id": "PHY-G12-U04-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "According to Lenz's law, when the north pole of a permanent bar magnet is pushed rapidly toward a closed stationary copper ring, what happens regarding the induced magnetic field and mechanical force?",
+      "options": [
+        {
+          "id": "A",
+          "text": "An induced south pole forms on the side facing the magnet, creating an attractive force that pulls the magnet faster."
+        },
+        {
+          "id": "B",
+          "text": "An induced north pole forms on the side facing the magnet, creating a repulsive force that opposes the motion of the approaching magnet."
+        },
+        {
+          "id": "C",
+          "text": "No magnetic poles are formed, but the ring gains electrostatic net positive charge."
+        },
+        {
+          "id": "D",
+          "text": "The induced current produces zero internal magnetic field to maintain equilibrium."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Lenz's law is a consequence of conservation of energy. As a north pole approaches, the increasing magnetic flux induces a current that creates a north pole facing the magnet to resist the approach (repulsive force), requiring external work to be performed.",
+      "sourceReference": "Section 4.5, Page 129"
+    },
+    {
+      "id": "PHY-G12-U04-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A circular wire loop of radius r = 0.20 m (area A ≈ 0.126 m²) with N = 50 turns is placed in a uniform magnetic field B = 0.20 T. If the flat plane of the loop makes an angle of 30° with the magnetic field lines, what is the total magnetic flux linkage (Ψ = N Φ_B) passing through the coil? (Given: cos 60° = 0.5)",
+      "options": [
+        {
+          "id": "A",
+          "text": "0.314 Wb"
+        },
+        {
+          "id": "B",
+          "text": "0.628 Wb"
+        },
+        {
+          "id": "C",
+          "text": "1.088 Wb"
+        },
+        {
+          "id": "D",
+          "text": "1.256 Wb"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The angle θ between the normal to the loop and field lines is θ = 90° - 30° = 60°. Single-loop flux Φ_B = B A cos 60° = 0.20 T × (π × 0.20²) m² × 0.5 = 0.20 × 0.12566 × 0.5 = 0.012566 Wb. Total flux linkage Ψ = N Φ_B = 50 × 0.012566 Wb ≈ 0.628 Wb.",
+      "sourceReference": "Section 4.4, Page 128"
+    }
+  ]
 }

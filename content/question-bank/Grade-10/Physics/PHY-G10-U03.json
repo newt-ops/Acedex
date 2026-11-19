@@ -3,5 +3,411 @@
   "subject": "Physics",
   "unitNumber": 3,
   "unitTitle": "Elasticity and Static Equilibrium of Rigid Bodies",
-  "questions": []
+  "questions": [
+    {
+      "id": "PHY-G10-U03-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is the physical property of a material that enables it to return to its original shape and size after an applied deforming force is removed?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Plasticity"
+        },
+        {
+          "id": "B",
+          "text": "Elasticity"
+        },
+        {
+          "id": "C",
+          "text": "Ductility"
+        },
+        {
+          "id": "D",
+          "text": "Viscosity"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Elasticity is the physical property of a solid material that causes it to regain its original dimensions when external deforming forces are removed.",
+      "sourceReference": "Section 3.1, Page 60"
+    },
+    {
+      "id": "PHY-G10-U03-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which of the following represents the standard SI unit for mass density (ρ)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "g/cm³"
+        },
+        {
+          "id": "B",
+          "text": "kg/m³"
+        },
+        {
+          "id": "C",
+          "text": "N/m²"
+        },
+        {
+          "id": "D",
+          "text": "kg/m²"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Mass density is defined as mass per unit volume (ρ = m/V), which gives it the standard SI derived unit of kilograms per cubic meter (kg/m³).",
+      "sourceReference": "Section 3.2, Page 62"
+    },
+    {
+      "id": "PHY-G10-U03-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which statement correctly describes physical strain produced in a deformed solid object?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It is the deforming force per unit cross-sectional area."
+        },
+        {
+          "id": "B",
+          "text": "It is a dimensionless ratio comparing the change in dimension to the original dimension."
+        },
+        {
+          "id": "C",
+          "text": "It is measured in Newtons per square meter."
+        },
+        {
+          "id": "D",
+          "text": "It is directly proportional to the density of the material."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Strain is defined as the fractional change in dimension (ΔL / L₀). Because it is a ratio of two identical length units, strain is a dimensionless quantity with no physical units.",
+      "sourceReference": "Section 3.3, Page 65"
+    },
+    {
+      "id": "PHY-G10-U03-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is the standard SI unit used for Young's Modulus (Y)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "N·m"
+        },
+        {
+          "id": "B",
+          "text": "N/m²"
+        },
+        {
+          "id": "C",
+          "text": "Joule (J)"
+        },
+        {
+          "id": "D",
+          "text": "Dimensionless"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Young's Modulus is the ratio of tensile stress (N/m²) to tensile strain (dimensionless). Therefore, it carries the unit of stress, which is Newtons per square meter (N/m²) or Pascals (Pa).",
+      "sourceReference": "Section 3.4, Page 67"
+    },
+    {
+      "id": "PHY-G10-U03-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What mathematical condition must be satisfied for a rigid body to satisfy the first condition of static equilibrium?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The net external torque acting on the body must be zero."
+        },
+        {
+          "id": "B",
+          "text": "The vector sum of all external forces acting on the body must be zero (∑F = 0)."
+        },
+        {
+          "id": "C",
+          "text": "The total kinetic energy must equal the gravitational potential energy."
+        },
+        {
+          "id": "D",
+          "text": "The body must move with constant linear acceleration."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The first condition of equilibrium states that for a body to remain at translational rest or uniform motion, the vector sum of all external forces acting upon it must be zero (∑Fx = 0 and ∑Fy = 0).",
+      "sourceReference": "Section 3.5, Page 72"
+    },
+    {
+      "id": "PHY-G10-U03-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "A solid astronomical body has a mass of 5.98 × 10²⁴ kg and a volume of 1.08 × 10²¹ m³. Taking the density of water to be 1.00 × 10³ kg/m³, what is the specific gravity (SG) of the object?",
+      "options": [
+        {
+          "id": "A",
+          "text": "0.55"
+        },
+        {
+          "id": "B",
+          "text": "5.54"
+        },
+        {
+          "id": "C",
+          "text": "55.4"
+        },
+        {
+          "id": "D",
+          "text": "554"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Density ρ = mass / volume = 5.98 × 10²⁴ kg / 1.08 × 10²¹ m³ = 5.537 × 10³ kg/m³. Specific gravity SG = ρ_object / ρ_water = 5.537 × 10³ / 1.00 × 10³ = 5.54.",
+      "sourceReference": "Section 3.2, Page 64"
+    },
+    {
+      "id": "PHY-G10-U03-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "A stretching force of 100 N is applied to a wire of circular cross-section with a radius r = 1.0 mm. Taking π ≈ 3.14, what is the tensile stress in the wire?",
+      "options": [
+        {
+          "id": "A",
+          "text": "3.18 × 10⁴ N/m²"
+        },
+        {
+          "id": "B",
+          "text": "3.18 × 10⁶ N/m²"
+        },
+        {
+          "id": "C",
+          "text": "3.18 × 10⁷ N/m²"
+        },
+        {
+          "id": "D",
+          "text": "1.00 × 10⁸ N/m²"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Cross-sectional area A = π r² = 3.14 × (1.0 × 10⁻³ m)² = 3.14 × 10⁻⁶ m². Tensile stress = F / A = 100 N / (3.14 × 10⁻⁶ m²) = 3.18 × 10⁷ N/m².",
+      "sourceReference": "Section 3.3, Page 66"
+    },
+    {
+      "id": "PHY-G10-U03-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "A metal rod of initial length 4.0 m undergoes an elongation of 0.24 mm under tensile stress. What is the tensile strain of the rod?",
+      "options": [
+        {
+          "id": "A",
+          "text": "6.0 × 10⁻⁵"
+        },
+        {
+          "id": "B",
+          "text": "6.0 × 10⁻⁴"
+        },
+        {
+          "id": "C",
+          "text": "6.0 × 10⁻³"
+        },
+        {
+          "id": "D",
+          "text": "0.06"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Convert change in length to meters: ΔL = 0.24 mm = 0.24 × 10⁻³ m. Tensile strain = ΔL / L₀ = (0.24 × 10⁻³ m) / 4.0 m = 0.06 × 10⁻³ = 6.0 × 10⁻⁵.",
+      "sourceReference": "Section 3.3, Page 66"
+    },
+    {
+      "id": "PHY-G10-U03-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Two children are balanced on a seesaw of negligible mass. Child 1 has a mass of 26.0 kg and sits 1.60 m from the pivot point. If Child 2 has a mass of 32.0 kg, at what distance from the pivot must Child 2 sit to maintain rotational static equilibrium?",
+      "options": [
+        {
+          "id": "A",
+          "text": "1.00 m"
+        },
+        {
+          "id": "B",
+          "text": "1.30 m"
+        },
+        {
+          "id": "C",
+          "text": "1.60 m"
+        },
+        {
+          "id": "D",
+          "text": "1.97 m"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Applying the second condition of equilibrium (∑τ = 0): (m1 · g) · r1 = (m2 · g) · r2. Canceling g: 26.0 kg × 1.60 m = 32.0 kg × r2, which yields r2 = 41.6 / 32.0 = 1.30 m.",
+      "sourceReference": "Section 3.5, Page 74"
+    },
+    {
+      "id": "PHY-G10-U03-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "A diver stands at the end of a 4.0 m long uniform diving board pivoted at its left end. If the diver's weight creates a torque of 1800 N·m about the pivot, what is the mass of the diver? (Take g = 9.8 N/kg)",
+      "options": [
+        {
+          "id": "A",
+          "text": "45.9 kg"
+        },
+        {
+          "id": "B",
+          "text": "50.0 kg"
+        },
+        {
+          "id": "C",
+          "text": "73.5 kg"
+        },
+        {
+          "id": "D",
+          "text": "183.7 kg"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Torque τ = F_perpendicular · r = (m · g) · r. Rearranging gives m = τ / (g · r) = 1800 N·m / (9.8 N/kg × 4.0 m) = 1800 / 39.2 = 45.9 kg.",
+      "sourceReference": "Section 3.5, Page 75"
+    },
+    {
+      "id": "PHY-G10-U03-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "On a stress-versus-strain diagram for a solid wire, what does the elastic limit mark?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The point of complete physical fracture of the specimen."
+        },
+        {
+          "id": "B",
+          "text": "The maximum stress for which the material exhibits elastic recovery before permanent plastic deformation occurs."
+        },
+        {
+          "id": "C",
+          "text": "The region where Hooke's law becomes completely non-linear."
+        },
+        {
+          "id": "D",
+          "text": "The zero-stress reference origin of the graph."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The elastic limit is the maximum value of stress that a material can withstand without undergoing permanent plastic deformation upon unloading.",
+      "sourceReference": "Section 3.4, Page 69"
+    },
+    {
+      "id": "PHY-G10-U03-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A load of mass m = 200 kg is suspended from a 4.0 m long vertical steel wire with a cross-sectional area A = 2.0 × 10⁻⁵ m². If Young's modulus for steel is Y = 8.0 × 10¹⁰ N/m² and g = 9.8 N/kg, what is the elongation (ΔL) of the wire?",
+      "options": [
+        {
+          "id": "A",
+          "text": "4.9 × 10⁻³ m"
+        },
+        {
+          "id": "B",
+          "text": "9.8 × 10⁻³ m"
+        },
+        {
+          "id": "C",
+          "text": "2.45 × 10⁻² m"
+        },
+        {
+          "id": "D",
+          "text": "4.9 × 10⁻¹ m"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Force F = m · g = 200 kg × 9.8 N/kg = 1960 N. Using Y = (F / A) · (L₀ / ΔL), we rearrange for elongation: ΔL = (F · L₀) / (A · Y) = (1960 N × 4.0 m) / (2.0 × 10⁻⁵ m² × 8.0 × 10¹⁰ N/m²) = 7840 / (1.6 × 10⁶) = 4.9 × 10⁻³ m.",
+      "sourceReference": "Section 3.4, Page 70"
+    },
+    {
+      "id": "PHY-G10-U03-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Two wires 1 and 2 made of the same metal have original lengths L2 = 2 L1 and radii r1 = 2 r2. When identical stretching forces F are applied to both wires within their elastic limits, what is the ratio of their elongations (ΔL1 / ΔL2)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "1/8"
+        },
+        {
+          "id": "B",
+          "text": "1/4"
+        },
+        {
+          "id": "C",
+          "text": "1/2"
+        },
+        {
+          "id": "D",
+          "text": "2"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "From ΔL = (F · L₀) / (π r² · Y), for identical F and Y, ΔL ∝ L₀ / r². Thus (ΔL1 / ΔL2) = (L1 / L2) · (r2 / r1)² = (1/2) · (1/2)² = 1/2 · 1/4 = 1/8.",
+      "sourceReference": "Section 3.4, Page 80"
+    },
+    {
+      "id": "PHY-G10-U03-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A cart on a level surface is held in static equilibrium by two pulling forces F1 and F2 acting in opposite horizontal directions. Force F1 = 20 N acts at an angle of 30° above the horizontal, while F2 acts at 60° above the horizontal. If horizontal force equilibrium is maintained (∑Fx = 0), what is the magnitude of force F?",
+      "options": [
+        {
+          "id": "A",
+          "text": "10.0 N"
+        },
+        {
+          "id": "B",
+          "text": "17.2 N"
+        },
+        {
+          "id": "C",
+          "text": "34.4 N"
+        },
+        {
+          "id": "D",
+          "text": "40.0 N"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Horizontal balance requires F1x - F2x = 0 ⇒ F1 cos 30° = F2 cos 60°. Substituting values: 20 N × 0.866 = F2 × 0.5 ⇒ 17.2 N = 0.5 F2 ⇒ F2 = 34.4 N.",
+      "sourceReference": "Section 3.5, Page 78"
+    },
+    {
+      "id": "PHY-G10-U03-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A uniform 1.0 m meter stick is pivoted at the 50 cm mark (its center of mass). A 300 g mass is suspended at the 10 cm mark, and a 200 g mass is suspended at the 60 cm mark. What mass must be suspended at the 75 cm mark to balance the meter stick horizontally in static equilibrium?",
+      "options": [
+        {
+          "id": "A",
+          "text": "250 g"
+        },
+        {
+          "id": "B",
+          "text": "300 g"
+        },
+        {
+          "id": "C",
+          "text": "400 g"
+        },
+        {
+          "id": "D",
+          "text": "500 g"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Torque about pivot (50 cm): Counterclockwise torque = 300 g × (50 - 10) cm = 12,000 g·cm. Clockwise torque = 200 g × (60 - 50) cm + m × (75 - 50) cm = 2000 + 25 m. Setting torques equal: 12,000 = 2000 + 25 m ⇒ 10,000 = 25 m ⇒ m = 400 g.",
+      "sourceReference": "Section 3.5, Page 75"
+    }
+  ]
 }

@@ -3,5 +3,411 @@
   "subject": "Physics",
   "unitNumber": 4,
   "unitTitle": "Static and Current Electricity",
-  "questions": []
+  "questions": [
+    {
+      "id": "PHY-G10-U04-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which of the following statements correctly describes the fundamental principle of quantization of electric charge (q = ±ne)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Electric charge can be created or destroyed during high-energy collisions."
+        },
+        {
+          "id": "B",
+          "text": "Electric charge always exists in discrete integer multiples of the elementary electronic charge e."
+        },
+        {
+          "id": "C",
+          "text": "Electric charge varies continuously depending on the mass of the object."
+        },
+        {
+          "id": "D",
+          "text": "Electric charge can take any arbitrary continuous fractional value."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Quantization of charge means that electric charge is not continuous; any measurable charge q is an integral multiple of the fundamental electron charge e (q = ±ne, where n = 1, 2, 3...).",
+      "sourceReference": "Section 4.1, Page 82"
+    },
+    {
+      "id": "PHY-G10-U04-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is the primary function of an electroscope in electrostatic laboratory experiments?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To measure the rate of flow of electric current in amperes"
+        },
+        {
+          "id": "B",
+          "text": "To generate high-voltage direct current"
+        },
+        {
+          "id": "C",
+          "text": "To detect the presence, magnitude, and sign of electric charge on a body"
+        },
+        {
+          "id": "D",
+          "text": "To measure the internal electrical resistance of conductors"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "An electroscope is a scientific instrument designed to detect the presence of electric charge, determine its relative quantity, and identify its sign (positive or negative) through leaf divergence.",
+      "sourceReference": "Section 4.3, Page 87"
+    },
+    {
+      "id": "PHY-G10-U04-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which statement correctly describes the convention used to map electric field lines around isolated point charges?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Field lines originate on negative charges and terminate on positive charges."
+        },
+        {
+          "id": "B",
+          "text": "Field lines radiate outward from positive charges and point inward toward negative charges."
+        },
+        {
+          "id": "C",
+          "text": "Field lines form closed concentric circles around isolated point charges."
+        },
+        {
+          "id": "D",
+          "text": "Field lines intersect at right angles between like charges."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Electric field lines show the direction of force on a positive test charge; hence, they point radially outward away from positive source charges and radially inward toward negative source charges.",
+      "sourceReference": "Section 4.6, Page 94"
+    },
+    {
+      "id": "PHY-G10-U04-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "How should an ammeter and a voltmeter be connected in an electrical circuit to accurately measure current through and potential difference across a resistor?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Both ammeter and voltmeter must be connected in parallel."
+        },
+        {
+          "id": "B",
+          "text": "Ammeter in parallel with the resistor; voltmeter in series with the resistor."
+        },
+        {
+          "id": "C",
+          "text": "Ammeter in series with the resistor; voltmeter in parallel across the resistor."
+        },
+        {
+          "id": "D",
+          "text": "Both ammeter and voltmeter must be connected in series."
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "An ammeter (low internal resistance) is connected in series so all current flows through it. A voltmeter (high internal resistance) is connected in parallel so it experiences the same potential difference without drawing significant current.",
+      "sourceReference": "Section 4.10, Page 113"
+    },
+    {
+      "id": "PHY-G10-U04-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which physical quantity is defined as the net rate of flow of electric charge per unit time through a cross-sectional area (I = ΔQ / Δt)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Electric potential difference"
+        },
+        {
+          "id": "B",
+          "text": "Electric current"
+        },
+        {
+          "id": "C",
+          "text": "Electrical resistance"
+        },
+        {
+          "id": "D",
+          "text": "Electric power"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Electric current (I) is defined as the time rate of charge flow through a conductor cross-section, measured in Amperes (1 A = 1 C/s).",
+      "sourceReference": "Section 4.8, Page 100"
+    },
+    {
+      "id": "PHY-G10-U04-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Two point charges q1 = +2.0 µC and q2 = -4.0 mC are separated by a distance of 0.30 m in a vacuum. Taking Coulomb's constant k = 9.0 × 10⁹ N·m²/C², what is the magnitude and nature of the electrostatic force between them?",
+      "options": [
+        {
+          "id": "A",
+          "text": "800 N, repulsive"
+        },
+        {
+          "id": "B",
+          "text": "800 N, attractive"
+        },
+        {
+          "id": "C",
+          "text": "240 N, attractive"
+        },
+        {
+          "id": "D",
+          "text": "240 N, repulsive"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Convert charges to Coulombs: q1 = 2.0 × 10⁻⁶ C, q2 = 4.0 × 10⁻³ C. Applying Coulomb's law: F = k |q1||q2| / r² = (9.0 × 10⁹ × 2.0 × 10⁻⁶ × 4.0 × 10⁻³) / (0.30)² = 72 / 0.09 = 800 N. Because the charges have opposite signs, the force is attractive.",
+      "sourceReference": "Section 4.5, Page 92"
+    },
+    {
+      "id": "PHY-G10-U04-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What is the electric field strength E at a distance of 2.0 m from a point charge Q = +5.0 mC? (Take k = 9.0 × 10⁹ N·m²/C²)",
+      "options": [
+        {
+          "id": "A",
+          "text": "1.125 × 10⁶ N/C"
+        },
+        {
+          "id": "B",
+          "text": "1.125 × 10⁷ N/C"
+        },
+        {
+          "id": "C",
+          "text": "2.250 × 10⁷ N/C"
+        },
+        {
+          "id": "D",
+          "text": "4.500 × 10⁶ N/C"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Convert Q = 5.0 × 10⁻³ C. Using E = k Q / r² = (9.0 × 10⁹ N·m²/C² × 5.0 × 10⁻³ C) / (2.0 m)² = (45.0 × 10⁶) / 4.0 = 1.125 × 10⁷ N/C.",
+      "sourceReference": "Section 4.6, Page 96"
+    },
+    {
+      "id": "PHY-G10-U04-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "A cylindrical metallic wire of length L, cross-sectional area A, and uniform resistivity ρ has an initial resistance R. If the wire is uniformly stretched so that its length becomes 2L while its volume remains constant, what is its new resistance?",
+      "options": [
+        {
+          "id": "A",
+          "text": "R / 2"
+        },
+        {
+          "id": "B",
+          "text": "2 R"
+        },
+        {
+          "id": "C",
+          "text": "4 R"
+        },
+        {
+          "id": "D",
+          "text": "8 R"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Volume V = A × L is constant. Doubling length (L' = 2L) halves cross-sectional area (A' = A/2). New resistance R' = ρ L' / A' = ρ (2L) / (A/2) = 4 (ρ L / A) = 4R.",
+      "sourceReference": "Section 4.8, Page 105"
+    },
+    {
+      "id": "PHY-G10-U04-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Three identical 12.0 Ω resistors are connected in parallel across a 24.0 V DC power supply. What is the equivalent resistance of the circuit and the total current supplied by the battery?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Req = 36.0 Ω; I = 0.67 A"
+        },
+        {
+          "id": "B",
+          "text": "Req = 4.0 Ω; I = 6.0 A"
+        },
+        {
+          "id": "C",
+          "text": "Req = 4.0 Ω; I = 2.0 A"
+        },
+        {
+          "id": "D",
+          "text": "Req = 12.0 Ω; I = 2.0 A"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "For 3 identical parallel resistors: Req = R / 3 = 12.0 Ω / 3 = 4.0 Ω. Total current I = V / Req = 24.0 V / 4.0 Ω = 6.0 A.",
+      "sourceReference": "Section 4.9, Page 109"
+    },
+    {
+      "id": "PHY-G10-U04-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "An electrical appliance operating at a potential difference of 220 V draws a steady current of 5.0 A. How much electrical energy does it consume during 10 minutes of continuous operation?",
+      "options": [
+        {
+          "id": "A",
+          "text": "1.10 × 10⁴ J"
+        },
+        {
+          "id": "B",
+          "text": "6.60 × 10⁵ J"
+        },
+        {
+          "id": "C",
+          "text": "1.10 × 10⁶ J"
+        },
+        {
+          "id": "D",
+          "text": "3.96 × 10⁶ J"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Power P = V × I = 220 V × 5.0 A = 1100 W. Time t = 10 min = 600 s. Energy E = P × t = 1100 W × 600 s = 660,000 J = 6.60 × 10⁵ J.",
+      "sourceReference": "Section 4.8, Page 102"
+    },
+    {
+      "id": "PHY-G10-U04-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "A negatively charged rod is brought near an uncharged metallic sphere mounted on an insulating stand without physical contact. The opposite side of the sphere is briefly connected to Earth (grounded) and the ground wire is removed. What type of charge remains on the sphere?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The sphere remains completely neutral."
+        },
+        {
+          "id": "B",
+          "text": "The sphere becomes negatively charged by conduction."
+        },
+        {
+          "id": "C",
+          "text": "The sphere becomes positively charged by induction."
+        },
+        {
+          "id": "D",
+          "text": "The sphere acquires an equal balance of both charges."
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "In charging by induction, free electrons on the sphere are repelled by the negative rod into the ground. When the ground is disconnected, the sphere retains a net positive charge.",
+      "sourceReference": "Section 4.2, Page 85"
+    },
+    {
+      "id": "PHY-G10-U04-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A 5.0 Ω resistor (R1) is connected in series with a parallel combination of two resistors, R2 = 4.0 Ω and R3 = 12.0 Ω. If a 24.0 V DC power supply is connected across the entire circuit, what is the potential difference across the 4.0 Ω resistor?",
+      "options": [
+        {
+          "id": "A",
+          "text": "4.5 V"
+        },
+        {
+          "id": "B",
+          "text": "9.0 V"
+        },
+        {
+          "id": "C",
+          "text": "15.0 V"
+        },
+        {
+          "id": "D",
+          "text": "18.0 V"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Parallel pair R23 = (4 × 12) / (4 + 12) = 48 / 16 = 3.0 Ω. Total Req = R1 + R23 = 5.0 + 3.0 = 8.0 Ω. Total current I = 24.0 V / 8.0 Ω = 3.0 A. Potential difference across the parallel combination (and thus across R2) is V23 = I × R23 = 3.0 A × 3.0 Ω = 9.0 V.",
+      "sourceReference": "Section 4.9, Page 111"
+    },
+    {
+      "id": "PHY-G10-U04-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Two positive point charges q1 = +9.0 µC and q2 = +25.0 µC are fixed at a distance of 40.0 cm apart in a straight line. At what distance from q1 along the line connecting them is the net electric field equal to zero?",
+      "options": [
+        {
+          "id": "A",
+          "text": "10.0 cm"
+        },
+        {
+          "id": "B",
+          "text": "15.0 cm"
+        },
+        {
+          "id": "C",
+          "text": "25.0 cm"
+        },
+        {
+          "id": "D",
+          "text": "30.0 cm"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Let x be the distance from q1. Net field zero implies E1 = E2 ⇒ k q1 / x² = k q2 / (40 - x)². Taking square roots: √9 / x = √25 / (40 - x) ⇒ 3 / x = 5 / (40 - x) ⇒ 3(40 - x) = 5x ⇒ 120 = 8x ⇒ x = 15.0 cm from q1.",
+      "sourceReference": "Section 4.6, Page 95"
+    },
+    {
+      "id": "PHY-G10-U04-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A uniform wire with an initial resistance of 50.0 Ω is cut into five equal pieces. These five pieces are then connected together in parallel. What is the equivalent resistance of this parallel combination?",
+      "options": [
+        {
+          "id": "A",
+          "text": "2.0 Ω"
+        },
+        {
+          "id": "B",
+          "text": "5.0 Ω"
+        },
+        {
+          "id": "C",
+          "text": "10.0 Ω"
+        },
+        {
+          "id": "D",
+          "text": "250.0 Ω"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Each of the 5 pieces has resistance r = 50.0 Ω / 5 = 10.0 Ω. When connected in parallel, 1/Req = 5 / r = 5 / 10.0 Ω ⇒ Req = 10.0 / 5 = 2.0 Ω.",
+      "sourceReference": "Section 4.9, Page 112"
+    },
+    {
+      "id": "PHY-G10-U04-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A battery has an electromotive force (emf ε) and an internal resistance r. When connected to an external 4.0 Ω resistor, the current is 2.0 A. When connected to a 9.0 Ω resistor, the current decreases to 1.0 A. What are the battery's internal resistance r and emf ε?",
+      "options": [
+        {
+          "id": "A",
+          "text": "r = 0.5 Ω, ε = 9.0 V"
+        },
+        {
+          "id": "B",
+          "text": "r = 1.0 Ω, ε = 10.0 V"
+        },
+        {
+          "id": "C",
+          "text": "r = 2.0 Ω, ε = 12.0 V"
+        },
+        {
+          "id": "D",
+          "text": "r = 1.5 Ω, ε = 11.0 V"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Circuit equation ε = I (R + r). Equation 1: ε = 2.0 (4.0 + r) = 8.0 + 2r. Equation 2: ε = 1.0 (9.0 + r) = 9.0 + r. Equating: 8.0 + 2r = 9.0 + r ⇒ r = 1.0 Ω. Substituting r: ε = 8.0 + 2(1.0) = 10.0 V.",
+      "sourceReference": "Section 4.8, Page 102"
+    }
+  ]
 }

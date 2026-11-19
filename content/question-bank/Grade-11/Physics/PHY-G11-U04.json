@@ -3,5 +3,411 @@
   "subject": "Physics",
   "unitNumber": 4,
   "unitTitle": "Dynamics",
-  "questions": []
+  "questions": [
+    {
+      "id": "PHY-G11-U04-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which inherent property of a body describes its natural resistance to any change in its state of rest or uniform motion along a straight line?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Weight"
+        },
+        {
+          "id": "B",
+          "text": "Inertia"
+        },
+        {
+          "id": "C",
+          "text": "Impulse"
+        },
+        {
+          "id": "D",
+          "text": "Momentum"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Inertia is the natural tendency of a body to oppose any change in its state of rest or uniform motion. Mass is the quantitative measure of a body's inertia.",
+      "sourceReference": "Section 4.1, Page 99"
+    },
+    {
+      "id": "PHY-G11-U04-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which of the four fundamental forces in nature operates strictly on the nuclear scale (10⁻¹⁵ m) to overcome electrostatic repulsion and bind protons and neutrons together inside a nucleus?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Gravitational force"
+        },
+        {
+          "id": "B",
+          "text": "Electromagnetic force"
+        },
+        {
+          "id": "C",
+          "text": "Strong nuclear force"
+        },
+        {
+          "id": "D",
+          "text": "Weak nuclear force"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The strong nuclear force is an extremely powerful, short-range attractive force operating at subatomic distances to bind nucleons (protons and neutrons) inside the atomic nucleus.",
+      "sourceReference": "Section 4.1, Page 97"
+    },
+    {
+      "id": "PHY-G11-U04-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "According to the work-energy theorem, the total work done on an object by the resultant external force acting on it is equal to the change in its:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Linear momentum"
+        },
+        {
+          "id": "B",
+          "text": "Gravitational potential energy"
+        },
+        {
+          "id": "C",
+          "text": "Kinetic energy"
+        },
+        {
+          "id": "D",
+          "text": "Instantaneous power"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The work-energy theorem states that net work done by external forces on a particle equals the change in its kinetic energy (W_net = ΔK = 1/2 m vf² - 1/2 m vi²).",
+      "sourceReference": "Section 4.4, Page 137"
+    },
+    {
+      "id": "PHY-G11-U04-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "How is the linear momentum (P) of a moving body of mass m and velocity v mathematically defined?",
+      "options": [
+        {
+          "id": "A",
+          "text": "P = m · v"
+        },
+        {
+          "id": "B",
+          "text": "P = 1/2 m · v²"
+        },
+        {
+          "id": "C",
+          "text": "P = F · Δt"
+        },
+        {
+          "id": "D",
+          "text": "P = m · a"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Linear momentum (P) is a vector quantity defined as the product of an object's mass and its velocity (P = m v), carrying SI units of kg·m/s.",
+      "sourceReference": "Section 4.6, Page 148"
+    },
+    {
+      "id": "PHY-G11-U04-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In which type of collision between two isolated bodies is total linear momentum conserved, while total kinetic energy is NOT conserved?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Elastic collision"
+        },
+        {
+          "id": "B",
+          "text": "Inelastic collision"
+        },
+        {
+          "id": "C",
+          "text": "Conservative collision"
+        },
+        {
+          "id": "D",
+          "text": "Super-elastic collision"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In an inelastic collision, total linear momentum is conserved, but part of the initial kinetic energy is converted into heat, sound, or structural deformation.",
+      "sourceReference": "Section 4.6, Page 156"
+    },
+    {
+      "id": "PHY-G11-U04-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "A constant net force F applied to mass m1 produces an acceleration of 6.0 m/s². The same force applied to mass m2 produces an acceleration of 18.0 m/s². What acceleration will force F produce if m1 and m2 are fastened together?",
+      "options": [
+        {
+          "id": "A",
+          "text": "4.5 m/s²"
+        },
+        {
+          "id": "B",
+          "text": "12.0 m/s²"
+        },
+        {
+          "id": "C",
+          "text": "24.0 m/s²"
+        },
+        {
+          "id": "D",
+          "text": "3.0 m/s²"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "From F = m a: m1 = F / 6 and m2 = F / 18. Total combined mass m = m1 + m2 = F/6 + F/18 = (3F + F)/18 = 4F/18 = 2F/9. Combined acceleration a = F / m = F / (2F/9) = 9/2 = 4.5 m/s².",
+      "sourceReference": "Section 4.1, Page 103"
+    },
+    {
+      "id": "PHY-G11-U04-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "A 6.0 kg block rests on a rough inclined plane making an angle of 30° with the horizontal. If the block remains at rest in limiting static equilibrium, what is the magnitude of the static frictional force supporting the block? (Take g = 9.8 m/s²)",
+      "options": [
+        {
+          "id": "A",
+          "text": "29.4 N"
+        },
+        {
+          "id": "B",
+          "text": "50.9 N"
+        },
+        {
+          "id": "C",
+          "text": "58.8 N"
+        },
+        {
+          "id": "D",
+          "text": "14.7 N"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "For equilibrium along the incline: Fs = W sin θ = m g sin 30° = (6.0 kg) × (9.8 m/s²) × 0.5 = 29.4 N.",
+      "sourceReference": "Section 4.2, Page 117"
+    },
+    {
+      "id": "PHY-G11-U04-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "A crate is pulled along a horizontal floor by a force of 400 N acting at an angle of 30° above the horizontal. If the crate undergoes a horizontal displacement of 10.0 m against a constant frictional force of 100 N, what is the net total work done on the crate? (Given: cos 30° ≈ 0.866)",
+      "options": [
+        {
+          "id": "A",
+          "text": "2464 J"
+        },
+        {
+          "id": "B",
+          "text": "3464 J"
+        },
+        {
+          "id": "C",
+          "text": "4000 J"
+        },
+        {
+          "id": "D",
+          "text": "1464 J"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Work done by applied force WF = F S cos 30° = 400 × 10 × 0.866 = 3464 J. Work done by friction Wf = f_k S cos 180° = 100 × 10 × (-1) = -1000 J. Total net work W_tot = 3464 J - 1000 J = 2464 J.",
+      "sourceReference": "Section 4.4, Page 131"
+    },
+    {
+      "id": "PHY-G11-U04-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "An elevator car of mass 1000 kg carrying an 800 kg load moves vertically upward at a constant speed of 2.5 m/s. If a constant retarding frictional force of 4000 N opposes its motion, what minimum power must the motor deliver? (Take g = 9.8 m/s²)",
+      "options": [
+        {
+          "id": "A",
+          "text": "44.1 kW"
+        },
+        {
+          "id": "B",
+          "text": "54.1 kW"
+        },
+        {
+          "id": "C",
+          "text": "21.6 kW"
+        },
+        {
+          "id": "D",
+          "text": "108.2 kW"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Total downward force = weight + friction = (1000 + 800) kg × 9.8 m/s² + 4000 N = 17640 + 4000 = 21640 N. Motor cable tension T = 21640 N. Power P = T × v = 21640 N × 2.5 m/s = 54100 W = 54.1 kW.",
+      "sourceReference": "Section 4.4, Page 142"
+    },
+    {
+      "id": "PHY-G11-U04-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "A soccer ball of mass 0.40 kg initially at rest on a penalty spot is kicked by a player. The foot remains in contact with the ball for 0.020 s and exerts an average force of 600 N. What is the velocity of the ball as it leaves the player's foot?",
+      "options": [
+        {
+          "id": "A",
+          "text": "15 m/s"
+        },
+        {
+          "id": "B",
+          "text": "30 m/s"
+        },
+        {
+          "id": "C",
+          "text": "60 m/s"
+        },
+        {
+          "id": "D",
+          "text": "120 m/s"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Impulse J = F · Δt = 600 N × 0.020 s = 12 N·s. By impulse-momentum theorem: J = m vf - m vi ⇒ 12 = 0.40 × vf - 0 ⇒ vf = 12 / 0.40 = 30 m/s.",
+      "sourceReference": "Section 4.6, Page 151"
+    },
+    {
+      "id": "PHY-G11-U04-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "A 2.0 kg block sliding along a smooth horizontal surface at a speed of 8.0 m/s strikes a light horizontal spring. If the block compresses the spring by a maximum distance of 0.20 m before coming to rest, what is the spring constant (k)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "1600 N/m"
+        },
+        {
+          "id": "B",
+          "text": "3200 N/m"
+        },
+        {
+          "id": "C",
+          "text": "6400 N/m"
+        },
+        {
+          "id": "D",
+          "text": "800 N/m"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Conservation of mechanical energy: initial kinetic energy = final elastic potential energy ⇒ 1/2 m v² = 1/2 k x² ⇒ 2.0 × (8.0)² = k × (0.20)² ⇒ 128 = 0.04 k ⇒ k = 3200 N/m.",
+      "sourceReference": "Section 4.5, Page 146"
+    },
+    {
+      "id": "PHY-G11-U04-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Two blocks m1 = 4.0 kg and m2 = 8.0 kg on a horizontal level surface are connected by a light string. A horizontal force F = 36 N pulls m1 to the right. If the coefficient of kinetic friction between each block and the surface is µk = 0.25 and g = 9.8 m/s², what is the tension T in the string connecting the two blocks?",
+      "options": [
+        {
+          "id": "A",
+          "text": "12.0 N"
+        },
+        {
+          "id": "B",
+          "text": "18.0 N"
+        },
+        {
+          "id": "C",
+          "text": "24.0 N"
+        },
+        {
+          "id": "D",
+          "text": "30.0 N"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Friction force on m1 is fk1 = µk m1 g = 0.25 × 4.0 × 9.8 = 9.8 N. Friction on m2 is fk2 = 0.25 × 8.0 × 9.8 = 19.6 N. Total friction = 29.4 N. Acceleration a = (F - fk_total) / (m1 + m2) = (36 - 29.4) / 12.0 = 6.6 / 12.0 = 0.55 m/s². Applying Newton's 2nd law to m2: T - fk2 = m2 a ⇒ T = 19.6 + (8.0 × 0.55) = 19.6 + 4.4 = 24.0 N.",
+      "sourceReference": "Section 4.2, Page 120"
+    },
+    {
+      "id": "PHY-G11-U04-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A 10.0 kg block is released from rest at the top of a rough inclined plane of length 10.0 m inclined at 30° to the horizontal. If the coefficient of kinetic friction between the block and incline is µk = 0.20 and g = 9.8 m/s², what is the speed of the block when it reaches the bottom of the incline? (Given: cos 30° ≈ 0.866)",
+      "options": [
+        {
+          "id": "A",
+          "text": "6.4 m/s"
+        },
+        {
+          "id": "B",
+          "text": "8.0 m/s"
+        },
+        {
+          "id": "C",
+          "text": "9.9 m/s"
+        },
+        {
+          "id": "D",
+          "text": "11.2 m/s"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Height h = L sin 30° = 10.0 × 0.5 = 5.0 m. Initial potential energy PEi = m g h = 10.0 × 9.8 × 5.0 = 490 J. Work done by friction Wd = fk L = (µk m g cos 30°) L = 0.20 × 10.0 × 9.8 × 0.866 × 10.0 = 169.74 J. Final kinetic energy KEf = PEi - Wd = 490 - 169.74 = 320.26 J. 1/2 m v² = 320.26 ⇒ 5.0 v² = 320.26 ⇒ v² = 64.05 ⇒ v = 8.0 m/s.",
+      "sourceReference": "Section 4.5, Page 145"
+    },
+    {
+      "id": "PHY-G11-U04-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A bullet of mass 10.0 g (0.010 kg) is fired horizontally into a 4.99 kg wooden block suspended as a ballistic pendulum. The bullet becomes embedded in the block, causing the block-bullet system to swing upward to a maximum vertical height of 0.20 m. Taking g = 9.8 m/s², what was the initial speed of the bullet just before impact?",
+      "options": [
+        {
+          "id": "A",
+          "text": "198 m/s"
+        },
+        {
+          "id": "B",
+          "text": "495 m/s"
+        },
+        {
+          "id": "C",
+          "text": "990 m/s"
+        },
+        {
+          "id": "D",
+          "text": "1250 m/s"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Speed of combined mass just after impact vf = √(2 g h) = √(2 × 9.8 × 0.20) = √3.92 ≈ 1.98 m/s. By conservation of linear momentum: m_bullet v = (m_bullet + m_block) vf ⇒ (0.010 kg) v = (5.00 kg) × 1.98 m/s ⇒ v = (5.00 / 0.010) × 1.98 = 500 × 1.98 = 990 m/s.",
+      "sourceReference": "Section 4.6, Page 162"
+    },
+    {
+      "id": "PHY-G11-U04-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A traffic light weighing 100 N is supported in static equilibrium by three cables tied to a central node. The two upper cables make angles of 37° and 53° with the horizontal ceiling. What are the tension forces T1 and T2 in the two upper cables? (Given: cos 37° = sin 53° = 0.8, sin 37° = cos 53° = 0.6)",
+      "options": [
+        {
+          "id": "A",
+          "text": "T1 = 60 N, T2 = 80 N"
+        },
+        {
+          "id": "B",
+          "text": "T1 = 50 N, T2 = 50 N"
+        },
+        {
+          "id": "C",
+          "text": "T1 = 80 N, T2 = 60 N"
+        },
+        {
+          "id": "D",
+          "text": "T1 = 100 N, T2 = 100 N"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Horizontal balance (∑Fx = 0): T1 cos 37° = T2 cos 53° ⇒ 0.8 T1 = 0.6 T2 ⇒ T2 = (4/3) T1. Vertical balance (∑Fy = 0): T1 sin 37° + T2 sin 53° = 100 ⇒ 0.6 T1 + 0.8 (4/3 T1) = 100 ⇒ 0.6 T1 + 1.067 T1 = 100 ⇒ 1.667 T1 = 100 ⇒ T1 = 60 N. Substituting T1 yields T2 = (4/3) × 60 = 80 N.",
+      "sourceReference": "Section 4.3, Page 126"
+    }
+  ]
 }

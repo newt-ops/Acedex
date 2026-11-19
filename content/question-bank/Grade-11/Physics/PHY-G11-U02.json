@@ -3,5 +3,411 @@
   "subject": "Physics",
   "unitNumber": 2,
   "unitTitle": "Vectors",
-  "questions": []
+  "questions": [
+    {
+      "id": "PHY-G11-U02-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "How is the negative of a vector A (denoted as -A) defined relative to the original vector A?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A vector with the same magnitude as A but pointing in the exact opposite direction"
+        },
+        {
+          "id": "B",
+          "text": "A vector with a magnitude equal to the reciprocal of A pointing in the same direction"
+        },
+        {
+          "id": "C",
+          "text": "A vector perpendicular to A with zero magnitude"
+        },
+        {
+          "id": "D",
+          "text": "A vector with half the magnitude of A pointing in the opposite direction"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The negative of a vector A is defined as a vector that possesses the exact same magnitude as vector A but points in the opposite direction (-A).",
+      "sourceReference": "Section 2.1, Page 19"
+    },
+    {
+      "id": "PHY-G11-U02-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is the defining characteristic of a unit vector in vector algebra?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It has a magnitude of zero and points toward the origin."
+        },
+        {
+          "id": "B",
+          "text": "It has a magnitude of exactly 1 unit with no physical units and specifies direction."
+        },
+        {
+          "id": "C",
+          "text": "It is always parallel to the position vector of an object."
+        },
+        {
+          "id": "D",
+          "text": "It represents the vector sum of two perpendicular forces."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "A unit vector is a dimensionless vector with a magnitude of unit length (exactly 1) used specifically to indicate direction in coordinate space.",
+      "sourceReference": "Section 2.1, Page 20"
+    },
+    {
+      "id": "PHY-G11-U02-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In the Parallelogram Law of vector addition, how are two vectors geometrically arranged to find their resultant?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Head-to-tail, with the resultant connecting the tail of the first to the head of the second"
+        },
+        {
+          "id": "B",
+          "text": "Tail-to-tail, with the diagonal drawn from their common origin representing the resultant"
+        },
+        {
+          "id": "C",
+          "text": "Head-to-head, with the resultant formed by the perpendicular bisector"
+        },
+        {
+          "id": "D",
+          "text": "Parallel to each other, with the resultant equal to their scalar product"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "According to the Parallelogram Law, two vectors are joined tail-to-tail to form adjacent sides of a parallelogram, and the diagonal drawn from their common tail represents their resultant vector.",
+      "sourceReference": "Section 2.2, Page 22"
+    },
+    {
+      "id": "PHY-G11-U02-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "How is the scalar (dot) product of two vectors A and B separated by an angle θ mathematically defined?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A B sin θ"
+        },
+        {
+          "id": "B",
+          "text": "A B cos θ"
+        },
+        {
+          "id": "C",
+          "text": "A B tan θ"
+        },
+        {
+          "id": "D",
+          "text": "(A + B) cos θ"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The dot product of two vectors A and B is a scalar quantity defined by A · B = A B cos θ, where θ is the angle between the vectors when placed tail-to-tail.",
+      "sourceReference": "Section 2.4, Page 41"
+    },
+    {
+      "id": "PHY-G11-U02-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is the value of the scalar product A · B when vectors A and B are perpendicular (orthogonal) to each other?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A B"
+        },
+        {
+          "id": "B",
+          "text": "Zero"
+        },
+        {
+          "id": "C",
+          "text": "-A B"
+        },
+        {
+          "id": "D",
+          "text": "1"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "For orthogonal vectors, the angle between them is θ = 90°. Since cos 90° = 0, the scalar product A · B = A B cos 90° = 0.",
+      "sourceReference": "Section 2.4, Page 41"
+    },
+    {
+      "id": "PHY-G11-U02-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "A displacement vector is given as S = 60 km, 20° South of East. What is the negative of this vector (-S)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "60 km, 20° North of West"
+        },
+        {
+          "id": "B",
+          "text": "60 km, 20° South of West"
+        },
+        {
+          "id": "C",
+          "text": "60 km, 20° North of East"
+        },
+        {
+          "id": "D",
+          "text": "-60 km, 20° South of East"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The negative of a vector keeps the same magnitude (60 km) but reverses its direction completely. The opposite of 20° South of East is 20° North of West.",
+      "sourceReference": "Section 2.1, Page 20"
+    },
+    {
+      "id": "PHY-G11-U02-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "An ant walks 40 cm due South and then 30 cm due West. What is the magnitude and direction of the ant's net displacement from its initial position?",
+      "options": [
+        {
+          "id": "A",
+          "text": "70 cm; 37° West of South"
+        },
+        {
+          "id": "B",
+          "text": "50 cm; 37° West of South"
+        },
+        {
+          "id": "C",
+          "text": "50 cm; 53° West of South"
+        },
+        {
+          "id": "D",
+          "text": "10 cm; 37° South of West"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Using Pythagoras' theorem: S = √(40² + 30²) = √(1600 + 900) = √2500 = 50 cm. The direction angle is tan θ = opposite / adjacent = 30 / 40 = 0.75, which gives θ ≈ 37° West of South.",
+      "sourceReference": "Section 2.3, Page 29"
+    },
+    {
+      "id": "PHY-G11-U02-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "A force vector F of magnitude 50.0 N acts at an angle of 60° above the positive x-axis. What are the horizontal (Fx) and vertical (Fy) components of this force?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Fx = 25.0 N, Fy = 43.3 N"
+        },
+        {
+          "id": "B",
+          "text": "Fx = 43.3 N, Fy = 25.0 N"
+        },
+        {
+          "id": "C",
+          "text": "Fx = 25.0 N, Fy = 25.0 N"
+        },
+        {
+          "id": "D",
+          "text": "Fx = 50.0 N, Fy = 43.3 N"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Horizontal component Fx = F cos 60° = 50.0 N × 0.5 = 25.0 N. Vertical component Fy = F sin 60° = 50.0 N × (√3/2) ≈ 43.3 N.",
+      "sourceReference": "Section 2.3, Page 30"
+    },
+    {
+      "id": "PHY-G11-U02-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Given a force vector F = (6i - 8j) N, what is the unit vector u_F pointing along the direction of F?",
+      "options": [
+        {
+          "id": "A",
+          "text": "0.6i - 0.8j"
+        },
+        {
+          "id": "B",
+          "text": "0.8i - 0.6j"
+        },
+        {
+          "id": "C",
+          "text": "6i - 8j"
+        },
+        {
+          "id": "D",
+          "text": "0.36i - 0.64j"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Magnitude of F is |F| = √(6² + (-8)²) = √(36 + 64) = 10 N. The unit vector along F is u_F = F / |F| = (6i - 8j) / 10 = 0.6i - 0.8j.",
+      "sourceReference": "Section 2.3, Page 36"
+    },
+    {
+      "id": "PHY-G11-U02-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Vector A = 3i - 2j and vector B = 4i + 5j. What is the scalar (dot) product A · B?",
+      "options": [
+        {
+          "id": "A",
+          "text": "2"
+        },
+        {
+          "id": "B",
+          "text": "22"
+        },
+        {
+          "id": "C",
+          "text": "12"
+        },
+        {
+          "id": "D",
+          "text": "-2"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Using component form for dot product: A · B = Ax Bx + Ay By = (3)(4) + (-2)(5) = 12 - 10 = 2.",
+      "sourceReference": "Section 2.4, Page 42"
+    },
+    {
+      "id": "PHY-G11-U02-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "A constant force F = (20i - 15j) N acts on a particle, moving it through a displacement S = (4i + 2j) m. How much work W = F · S is done by the force?",
+      "options": [
+        {
+          "id": "A",
+          "text": "50 J"
+        },
+        {
+          "id": "B",
+          "text": "110 J"
+        },
+        {
+          "id": "C",
+          "text": "80 J"
+        },
+        {
+          "id": "D",
+          "text": "30 J"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Work W = F · S = Fx Sx + Fy Sy = (20 N)(4 m) + (-15 N)(2 m) = 80 J - 30 J = 50 J.",
+      "sourceReference": "Section 2.4, Page 43"
+    },
+    {
+      "id": "PHY-G11-U02-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Two vectors A and B have equal magnitudes of 10.0 units. Vector A lies along the positive x-axis, while vector B makes an angle of 60° above the positive x-axis. What is the magnitude of their resultant vector R = A + B?",
+      "options": [
+        {
+          "id": "A",
+          "text": "10.0 units"
+        },
+        {
+          "id": "B",
+          "text": "14.1 units"
+        },
+        {
+          "id": "C",
+          "text": "17.3 units"
+        },
+        {
+          "id": "D",
+          "text": "20.0 units"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Resolving into components: Ax = 10.0, Ay = 0. Bx = 10.0 cos 60° = 5.0, By = 10.0 sin 60° = 8.66. Summing components: Rx = 10.0 + 5.0 = 15.0, Ry = 8.66. Magnitude R = √(Rx² + Ry²) = √(15.0² + 8.66²) = √(225 + 75) = √300 ≈ 17.3 units (or 10√3).",
+      "sourceReference": "Section 2.3, Page 32"
+    },
+    {
+      "id": "PHY-G11-U02-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "An unknown vector D is added to vector C = -4i + 5j such that the resultant R = C + D has components Rx = -1 and Ry = 1. What is the magnitude of vector D?",
+      "options": [
+        {
+          "id": "A",
+          "text": "5.0 units"
+        },
+        {
+          "id": "B",
+          "text": "7.0 units"
+        },
+        {
+          "id": "C",
+          "text": "1.0 units"
+        },
+        {
+          "id": "D",
+          "text": "9.4 units"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "From R = C + D: Rx = Cx + Dx ⇒ -1 = -4 + Dx ⇒ Dx = 3. Ry = Cy + Dy ⇒ 1 = 5 + Dy ⇒ Dy = -4. Vector D = 3i - 4j. Magnitude |D| = √(3² + (-4)²) = √(9 + 16) = √25 = 5.0 units.",
+      "sourceReference": "Section 2.3, Page 37"
+    },
+    {
+      "id": "PHY-G11-U02-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Vector A = i + j and vector B = -2i + 3j. What is the angle θ between vectors A and B? (Given: cos 78.7° ≈ 0.196)",
+      "options": [
+        {
+          "id": "A",
+          "text": "45.0°"
+        },
+        {
+          "id": "B",
+          "text": "60.0°"
+        },
+        {
+          "id": "C",
+          "text": "78.7°"
+        },
+        {
+          "id": "D",
+          "text": "101.3°"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Dot product A · B = (1)(-2) + (1)(3) = 1. Magnitudes: A = √(1² + 1²) = √2 ≈ 1.414, B = √((-2)² + 3²) = √13 ≈ 3.606. Using A · B = A B cos θ ⇒ 1 = (√2)(√13) cos θ = √26 cos θ ⇒ cos θ = 1 / 5.099 ≈ 0.196 ⇒ θ = cos⁻¹(0.196) ≈ 78.7°.",
+      "sourceReference": "Section 2.4, Page 42"
+    },
+    {
+      "id": "PHY-G11-U02-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A machine applies a force F = (50i + 30j) N to pull a heavy crate, causing it to move with a steady velocity v = (3i + 4j) m/s. What is the instantaneous power P delivered by the machine?",
+      "options": [
+        {
+          "id": "A",
+          "text": "150 W"
+        },
+        {
+          "id": "B",
+          "text": "270 W"
+        },
+        {
+          "id": "C",
+          "text": "350 W"
+        },
+        {
+          "id": "D",
+          "text": "500 W"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Instantaneous power is the dot product of force and velocity: P = F · v = Fx vx + Fy vy = (50 N)(3 m/s) + (30 N)(4 m/s) = 150 W + 120 W = 270 W.",
+      "sourceReference": "Section 2.4, Page 43"
+    }
+  ]
 }

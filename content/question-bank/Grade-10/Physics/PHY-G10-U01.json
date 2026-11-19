@@ -3,5 +3,411 @@
   "subject": "Physics",
   "unitNumber": 1,
   "unitTitle": "Vector Quantities",
-  "questions": []
+  "questions": [
+    {
+      "id": "PHY-G10-U01-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which of the following physical quantities is completely specified by its magnitude and unit alone, without requiring a direction?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Displacement"
+        },
+        {
+          "id": "B",
+          "text": "Force"
+        },
+        {
+          "id": "C",
+          "text": "Mass"
+        },
+        {
+          "id": "D",
+          "text": "Acceleration"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Mass is a scalar quantity because it is fully described by a numerical magnitude and unit (e.g., 5 kg), whereas displacement, force, and acceleration require both magnitude and direction.",
+      "sourceReference": "Section 1.1, Page 6"
+    },
+    {
+      "id": "PHY-G10-U01-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In a graphical vector representation, what feature of the arrow represents the magnitude of the physical vector quantity?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The thickness of the arrow shaft"
+        },
+        {
+          "id": "B",
+          "text": "The length of the arrow drawn to scale"
+        },
+        {
+          "id": "C",
+          "text": "The orientation of the arrowhead"
+        },
+        {
+          "id": "D",
+          "text": "The position of the tail relative to the origin"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Geometrically, a vector is represented by a directed line segment (arrow) where the length of the arrow drawn to a specified scale represents its magnitude, and the arrowhead indicates its direction.",
+      "sourceReference": "Section 1.2, Page 8"
+    },
+    {
+      "id": "PHY-G10-U01-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is the single vector called that produces the exact same physical effect as two or more individual vectors acting together on a body?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Component vector"
+        },
+        {
+          "id": "B",
+          "text": "Unit vector"
+        },
+        {
+          "id": "C",
+          "text": "Resultant vector"
+        },
+        {
+          "id": "D",
+          "text": "Anti-parallel vector"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The resultant vector is the vector sum of two or more vectors that combines their individual physical effects into a single equivalent vector.",
+      "sourceReference": "Section 1.3, Page 12"
+    },
+    {
+      "id": "PHY-G10-U01-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Two force vectors, F1 = 12 N and F2 = 8 N, act on an object in the exact same direction along a straight line. What is the magnitude of their resultant force?",
+      "options": [
+        {
+          "id": "A",
+          "text": "4 N"
+        },
+        {
+          "id": "B",
+          "text": "12 N"
+        },
+        {
+          "id": "C",
+          "text": "20 N"
+        },
+        {
+          "id": "D",
+          "text": "96 N"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "When two vectors act in the same direction (parallel), their magnitudes are directly added to give the resultant magnitude: R = F1 + F2 = 12 N + 8 N = 20 N.",
+      "sourceReference": "Section 1.3, Page 10"
+    },
+    {
+      "id": "PHY-G10-U01-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Under what condition is the magnitude of the resultant of two non-zero vectors equal to zero?",
+      "options": [
+        {
+          "id": "A",
+          "text": "When the vectors have equal magnitudes and act in the same direction"
+        },
+        {
+          "id": "B",
+          "text": "When the vectors are perpendicular to each other"
+        },
+        {
+          "id": "C",
+          "text": "When the vectors have equal magnitudes and act in opposite directions"
+        },
+        {
+          "id": "D",
+          "text": "When the vectors act at an acute angle to each other"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The resultant vector of two non-zero vectors is zero if and only if they have equal magnitudes and point in exactly opposite directions (R = A - A = 0).",
+      "sourceReference": "Section 1.3, Page 12"
+    },
+    {
+      "id": "PHY-G10-U01-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "A car travels 6 km due North and then 8 km due East. What is the magnitude and direction of the car's resultant displacement?",
+      "options": [
+        {
+          "id": "A",
+          "text": "14 km; 53° East of North"
+        },
+        {
+          "id": "B",
+          "text": "10 km; 53° East of North"
+        },
+        {
+          "id": "C",
+          "text": "10 km; 37° East of North"
+        },
+        {
+          "id": "D",
+          "text": "14 km; 37° East of North"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Since North and East directions are perpendicular, magnitude R = √(6² + 8²) = √(36 + 64) = 10 km. The direction angle measured from North toward East is tanθ = East/North = 8/6 = 1.333, which gives θ ≈ 53° East of North.",
+      "sourceReference": "Section 1.4, Page 19"
+    },
+    {
+      "id": "PHY-G10-U01-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "A force vector of magnitude 40 N acts at an angle of 30° above the horizontal positive x-axis. What are the horizontal (Fx) and vertical (Fy) components of this force?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Fx = 20 N, Fy = 34.6 N"
+        },
+        {
+          "id": "B",
+          "text": "Fx = 34.6 N, Fy = 20 N"
+        },
+        {
+          "id": "C",
+          "text": "Fx = 20 N, Fy = 20 N"
+        },
+        {
+          "id": "D",
+          "text": "Fx = 40 N, Fy = 20 N"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The horizontal component is Fx = F cos 30° = 40 × (√3/2) ≈ 34.6 N. The vertical component is Fy = F sin 30° = 40 × 0.5 = 20 N.",
+      "sourceReference": "Section 1.5, Page 21"
+    },
+    {
+      "id": "PHY-G10-U01-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which statement correctly compares the Triangle Law and Parallelogram Law of graphical vector addition?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The Triangle Law joins vectors tail-to-tail, whereas the Parallelogram Law joins vectors head-to-tail."
+        },
+        {
+          "id": "B",
+          "text": "In the Triangle Law, the resultant is represented by the diagonal of a rectangle, whereas in the Parallelogram Law it is the third side."
+        },
+        {
+          "id": "C",
+          "text": "In the Triangle Law, vectors are connected head-to-tail and the third side forms the resultant; in the Parallelogram Law, vectors are joined tail-to-tail and the diagonal from their common tail forms the resultant."
+        },
+        {
+          "id": "D",
+          "text": "The Parallelogram Law can only be used for three or more non-coplanar vectors."
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "In the triangle method, vectors are placed head-to-tail and the resultant connects the tail of the first to the head of the second. In the parallelogram method, two vectors are joined tail-to-tail, forming adjacent sides, and the diagonal drawn from their common origin gives the resultant.",
+      "sourceReference": "Section 1.4, Page 14"
+    },
+    {
+      "id": "PHY-G10-U01-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Under what condition can a non-zero vector in a 2D Cartesian coordinate plane have a component equal to zero along the x-axis?",
+      "options": [
+        {
+          "id": "A",
+          "text": "When the vector lies at an angle of 45° to the x-axis"
+        },
+        {
+          "id": "B",
+          "text": "When the vector is directed purely along the vertical y-axis"
+        },
+        {
+          "id": "C",
+          "text": "When the magnitude of the vector is less than 1 unit"
+        },
+        {
+          "id": "D",
+          "text": "A non-zero vector can never have a zero component along any coordinate axis"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "A non-zero vector directed purely along the y-axis (e.g., 20 N North) has a zero horizontal projection along the x-axis because Fx = F cos 90° = 0.",
+      "sourceReference": "Section 1.5, Page 21"
+    },
+    {
+      "id": "PHY-G10-U01-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Three force vectors acting at a single point have magnitudes of 10 N, 4 N, and 6 N. How must these vectors be oriented relative to each other so that their vector sum equals zero?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The 10 N force acts along +x, while the 4 N and 6 N forces both act along -x"
+        },
+        {
+          "id": "B",
+          "text": "All three forces act in the same positive direction"
+        },
+        {
+          "id": "C",
+          "text": "The 4 N and 6 N forces are perpendicular to the 10 N force"
+        },
+        {
+          "id": "D",
+          "text": "Three unequal forces can never yield a zero resultant"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Three vectors of unequal magnitude can add up to zero if the sum of the magnitudes of the two smaller vectors equals the magnitude of the largest vector and they act in the opposite direction to the largest vector (10 N - 4 N - 6 N = 0 N).",
+      "sourceReference": "Section 1.3, Page 13"
+    },
+    {
+      "id": "PHY-G10-U01-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "A particle is launched with an initial velocity of 10 m/s at an angle of 80° to the horizontal ground. What are the horizontal (vx) and vertical (vy) velocity components at launch? (Given: cos 80° ≈ 0.17, sin 80° ≈ 0.98)",
+      "options": [
+        {
+          "id": "A",
+          "text": "vx = 9.8 m/s, vy = 1.7 m/s"
+        },
+        {
+          "id": "B",
+          "text": "vx = 1.7 m/s, vy = 9.8 m/s"
+        },
+        {
+          "id": "C",
+          "text": "vx = 5.0 m/s, vy = 5.0 m/s"
+        },
+        {
+          "id": "D",
+          "text": "vx = 10 m/s, vy = 0 m/s"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Horizontal component vx = v cos 80° = 10 × 0.17 = 1.7 m/s. Vertical component vy = v sin 80° = 10 × 0.98 = 9.8 m/s.",
+      "sourceReference": "Section 1.5, Page 22"
+    },
+    {
+      "id": "PHY-G10-U01-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A student walks 20 m East, 15 m North, and then 20 m West. What is the net displacement of the student from the starting point?",
+      "options": [
+        {
+          "id": "A",
+          "text": "55 m North"
+        },
+        {
+          "id": "B",
+          "text": "25 m 37° North of East"
+        },
+        {
+          "id": "C",
+          "text": "15 m North"
+        },
+        {
+          "id": "D",
+          "text": "0 m"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Resolving into horizontal and vertical components: Rx = 20 m (East) - 20 m (West) = 0 m. Ry = 15 m (North). The net displacement vector is 15 m due North.",
+      "sourceReference": "Section 1.4, Page 17"
+    },
+    {
+      "id": "PHY-G10-U01-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A vector V has an x-component Vx = 9.80 units and a y-component Vy = -6.40 units. What are the magnitude and direction angle θ of vector V relative to the positive x-axis?",
+      "options": [
+        {
+          "id": "A",
+          "text": "11.70 units; 33.1° below the positive x-axis"
+        },
+        {
+          "id": "B",
+          "text": "16.20 units; 33.1° above the positive x-axis"
+        },
+        {
+          "id": "C",
+          "text": "11.70 units; 56.9° below the positive x-axis"
+        },
+        {
+          "id": "D",
+          "text": "3.40 units; 146.9° from the positive x-axis"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Magnitude V = √(Vx² + Vy²) = √((9.80)² + (-6.40)²) = √(96.04 + 40.96) = √137.0 ≈ 11.70 units. Direction angle θ = tan⁻¹(-6.40 / 9.80) = tan⁻¹(-0.653) ≈ -33.1°, indicating 33.1° below the positive x-axis (in the 4th quadrant).",
+      "sourceReference": "Section 1.5, Page 24"
+    },
+    {
+      "id": "PHY-G10-U01-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Three displacement vectors are joined head-to-tail in a plane: A = 21 cm North, B = 16 cm East, and C = 26 cm South. What is the magnitude and direction of their resultant vector R?",
+      "options": [
+        {
+          "id": "A",
+          "text": "63 cm; 17° North of East"
+        },
+        {
+          "id": "B",
+          "text": "16.8 cm; 17° South of East"
+        },
+        {
+          "id": "C",
+          "text": "16.8 cm; 17° North of East"
+        },
+        {
+          "id": "D",
+          "text": "21.0 cm; 33° South of East"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Combine anti-parallel vertical vectors A and C: Ry = 21 cm (North) - 26 cm (South) = -5 cm (5 cm South). Horizontal component Rx = 16 cm (East). Magnitude R = √((-5)² + 16²) = √(25 + 256) = √281 ≈ 16.8 cm. Direction tanθ = 5/16 = 0.3125, giving θ ≈ 17° South of East.",
+      "sourceReference": "Section 1.5, Page 24"
+    },
+    {
+      "id": "PHY-G10-U01-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Six displacement vectors are connected consecutively head-to-tail such that the head of the sixth vector touches the tail of the first vector. What is the magnitude of the resultant vector of this system?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Equal to the sum of the six vector magnitudes"
+        },
+        {
+          "id": "B",
+          "text": "Equal to the average of the six vector magnitudes"
+        },
+        {
+          "id": "C",
+          "text": "Equal to zero"
+        },
+        {
+          "id": "D",
+          "text": "Equal to twice the magnitude of the largest vector"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "According to the Polygon Law of vector addition, if a series of vectors form a closed polygon when placed head-to-tail, the starting point coincides with the endpoint. Therefore, the net displacement or resultant magnitude is zero.",
+      "sourceReference": "Section 1.4, Page 18"
+    }
+  ]
 }

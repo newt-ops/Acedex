@@ -3,5 +3,411 @@
   "subject": "Physics",
   "unitNumber": 2,
   "unitTitle": "Motion in Two Dimensions",
-  "questions": []
+  "questions": [
+    {
+      "id": "PHY-G10-U02-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is the fundamental difference between the total distance travelled by a body and its displacement?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Distance is a vector quantity, whereas displacement is a scalar quantity."
+        },
+        {
+          "id": "B",
+          "text": "Distance is the actual path length travelled, while displacement is the change in position from initial to final point in a specified direction."
+        },
+        {
+          "id": "C",
+          "text": "Distance depends only on initial and final positions, while displacement depends on the complete path followed."
+        },
+        {
+          "id": "D",
+          "text": "Distance can be negative, while displacement is always a positive quantity."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Distance is a scalar quantity representing the complete length of the path taken during motion. Displacement is a vector quantity defined as the change in position (final position minus initial position) in a specified direction.",
+      "sourceReference": "Section 2.1, Page 28"
+    },
+    {
+      "id": "PHY-G10-U02-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which instrument in a car measures the instantaneous speed of the vehicle at any given moment during travel?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Odometer"
+        },
+        {
+          "id": "B",
+          "text": "Speedometer"
+        },
+        {
+          "id": "C",
+          "text": "Accelerometer"
+        },
+        {
+          "id": "D",
+          "text": "Tachometer"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "A speedometer measures the instantaneous speed of a vehicle—the speed at that precise instant in time. An odometer measures total distance.",
+      "sourceReference": "Section 2.2, Page 32"
+    },
+    {
+      "id": "PHY-G10-U02-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "How is average acceleration defined in one-dimensional kinematics?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The rate of change of position per unit time"
+        },
+        {
+          "id": "B",
+          "text": "The total displacement divided by total time"
+        },
+        {
+          "id": "C",
+          "text": "The rate of change of velocity per unit time"
+        },
+        {
+          "id": "D",
+          "text": "The product of velocity and time elapsed"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Average acceleration is defined as the change in velocity divided by the time interval over which that change occurs (a_av = Δv / Δt).",
+      "sourceReference": "Section 2.3, Page 37"
+    },
+    {
+      "id": "PHY-G10-U02-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In the absence of air resistance, what happens to the acceleration of an object dropped near the Earth's surface during free fall?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It increases steadily as the object falls."
+        },
+        {
+          "id": "B",
+          "text": "It remains constant at approximately 9.8 m/s² directed downwards."
+        },
+        {
+          "id": "C",
+          "text": "It decreases to zero when the object reaches its maximum speed."
+        },
+        {
+          "id": "D",
+          "text": "It depends directly on the mass of the falling object."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In a vacuum or when air resistance is neglected, all objects fall with a constant downward acceleration due to gravity (g ≈ 9.8 m/s²), regardless of their mass.",
+      "sourceReference": "Section 2.4, Page 44"
+    },
+    {
+      "id": "PHY-G10-U02-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In a velocity-time (v-t) graph of a moving object, what physical quantity does the slope of the line represent?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Total displacement"
+        },
+        {
+          "id": "B",
+          "text": "Instantaneous position"
+        },
+        {
+          "id": "C",
+          "text": "Acceleration"
+        },
+        {
+          "id": "D",
+          "text": "Total distance travelled"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The slope of a velocity-time graph represents the acceleration of the object (Slope = Δv / Δt = a).",
+      "sourceReference": "Section 2.5, Page 49"
+    },
+    {
+      "id": "PHY-G10-U02-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "A student walks 12 km North and then 16 km East in 4 hours. What are the magnitude of the average velocity and the average speed of the student for the trip?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Average velocity = 5 km/h; Average speed = 7 km/h"
+        },
+        {
+          "id": "B",
+          "text": "Average velocity = 7 km/h; Average speed = 5 km/h"
+        },
+        {
+          "id": "C",
+          "text": "Average velocity = 20 km/h; Average speed = 28 km/h"
+        },
+        {
+          "id": "D",
+          "text": "Average velocity = 5 km/h; Average speed = 5 km/h"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Total distance = 12 km + 16 km = 28 km. Average speed = 28 km / 4 h = 7 km/h. Resultant displacement = √(12² + 16²) = 20 km. Average velocity magnitude = 20 km / 4 h = 5 km/h.",
+      "sourceReference": "Section 2.1, Page 31"
+    },
+    {
+      "id": "PHY-G10-U02-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "A car travelling along a straight road at an initial velocity of 14 m/s applies its brakes and comes to a complete stop in 5.0 seconds. What is the average acceleration of the car?",
+      "options": [
+        {
+          "id": "A",
+          "text": "2.8 m/s²"
+        },
+        {
+          "id": "B",
+          "text": "-2.8 m/s²"
+        },
+        {
+          "id": "C",
+          "text": "-0.36 m/s²"
+        },
+        {
+          "id": "D",
+          "text": "70.0 m/s²"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Initial velocity v_i = 14 m/s, final velocity v_f = 0 m/s, time t = 5.0 s. Acceleration a = (v_f - v_i) / t = (0 - 14) / 5.0 = -2.8 m/s². The negative sign indicates deceleration.",
+      "sourceReference": "Section 2.3, Page 40"
+    },
+    {
+      "id": "PHY-G10-U02-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "An object starts from rest (v_i = 0) and accelerates uniformly at 0.6 m/s² along a straight line for 4.0 seconds. What distance does it cover during these 4.0 seconds?",
+      "options": [
+        {
+          "id": "A",
+          "text": "2.4 m"
+        },
+        {
+          "id": "B",
+          "text": "4.8 m"
+        },
+        {
+          "id": "C",
+          "text": "9.6 m"
+        },
+        {
+          "id": "D",
+          "text": "22.4 m"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Using s = v_i*t + 0.5*a*t²: with v_i = 0, s = 0.5 * (0.6 m/s²) * (4.0 s)² = 0.3 * 16 = 4.8 m.",
+      "sourceReference": "Section 2.4, Page 44"
+    },
+    {
+      "id": "PHY-G10-U02-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "A ball is dropped from rest from the top of a tower. Taking g = 9.8 m/s², what is the speed of the ball after falling for 8.0 seconds, and how far has it fallen?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Speed = 78.4 m/s; Distance = 313.6 m"
+        },
+        {
+          "id": "B",
+          "text": "Speed = 39.2 m/s; Distance = 156.8 m"
+        },
+        {
+          "id": "C",
+          "text": "Speed = 78.4 m/s; Distance = 627.2 m"
+        },
+        {
+          "id": "D",
+          "text": "Speed = 9.8 m/s; Distance = 78.4 m"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "v = v_i + g*t = 0 + (9.8)(8.0) = 78.4 m/s. Height fallen h = 0.5 * g * t² = 0.5 * 9.8 * 64 = 313.6 m.",
+      "sourceReference": "Section 2.4, Page 45"
+    },
+    {
+      "id": "PHY-G10-U02-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How can the total displacement of a moving body be determined from its velocity-time (v-t) graph?",
+      "options": [
+        {
+          "id": "A",
+          "text": "By calculating the slope of the line"
+        },
+        {
+          "id": "B",
+          "text": "By determining the area bounded between the velocity curve and the time axis"
+        },
+        {
+          "id": "C",
+          "text": "By reading the maximum y-intercept value"
+        },
+        {
+          "id": "D",
+          "text": "By dividing the final velocity by the total time"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The area under the velocity-time graph bounded between the curve and the time axis represents the displacement covered by the moving object during that time interval.",
+      "sourceReference": "Section 2.5, Page 50"
+    },
+    {
+      "id": "PHY-G10-U02-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Motorcycle M travels at 120 km/h East and Car C travels at 90 km/h East on a straight parallel highway. What is the velocity of Motorcycle M relative to Car C (v_mc)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "210 km/h East"
+        },
+        {
+          "id": "B",
+          "text": "30 km/h East"
+        },
+        {
+          "id": "C",
+          "text": "-30 km/h East"
+        },
+        {
+          "id": "D",
+          "text": "30 km/h West"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Relative velocity v_mc = v_m - v_c = 120 km/h - 90 km/h = 30 km/h in the direction of motion (East).",
+      "sourceReference": "Section 2.6, Page 52"
+    },
+    {
+      "id": "PHY-G10-U02-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A car starts from rest (v_0 = 0) and accelerates uniformly at 2 m/s² for 10 s. It then continues at constant velocity for 20 s, and finally decelerates at -4 m/s² until it stops in 5 s. What is the total distance covered by the car during the entire motion?",
+      "options": [
+        {
+          "id": "A",
+          "text": "400 m"
+        },
+        {
+          "id": "B",
+          "text": "500 m"
+        },
+        {
+          "id": "C",
+          "text": "550 m"
+        },
+        {
+          "id": "D",
+          "text": "600 m"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Stage 1 (Acceleration): Top speed reached v_1 = a*t_1 = 2 * 10 = 20 m/s. Distance s_1 = 0.5 * a * t_1² = 0.5 * 2 * 100 = 100 m. Stage 2 (Constant speed): s_2 = v * t_2 = 20 * 20 = 400 m. Stage 3 (Deceleration): s_3 = v_0*t_3 + 0.5*a*t_3² = (20)(5) + 0.5(-4)(25) = 100 - 50 = 50 m. Total distance s_total = 100 + 400 + 50 = 550 m.",
+      "sourceReference": "Section 2.4, Page 55"
+    },
+    {
+      "id": "PHY-G10-U02-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A vehicle decelerates uniformly from an initial velocity of 44 m/s to 22 m/s over a time interval of 11 seconds. What is the stopping distance required for the vehicle if it continues to decelerate at this same uniform rate from 22 m/s to rest?",
+      "options": [
+        {
+          "id": "A",
+          "text": "363 m"
+        },
+        {
+          "id": "B",
+          "text": "121 m"
+        },
+        {
+          "id": "C",
+          "text": "242 m"
+        },
+        {
+          "id": "D",
+          "text": "484 m"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "First, find deceleration rate a = (v - v_0) / t = (22 - 44) / 11 = -2 m/s². To bring the vehicle from 22 m/s to rest (v_f = 0): v_f² = v_i² + 2*a*s => 0² = 22² + 2(-2)s => 4s = 484 => s = 121 m.",
+      "sourceReference": "Section 2.4, Page 55"
+    },
+    {
+      "id": "PHY-G10-U02-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A police officer driving at 10 m/s pursues a thief 100 m ahead who is running away at a constant velocity of 9 m/s along a straight path. How long will it take the police officer to catch the thief?",
+      "options": [
+        {
+          "id": "A",
+          "text": "10 s"
+        },
+        {
+          "id": "B",
+          "text": "50 s"
+        },
+        {
+          "id": "C",
+          "text": "100 s"
+        },
+        {
+          "id": "D",
+          "text": "200 s"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The relative velocity of the police officer with respect to the thief is v_pt = v_p - v_t = 10 m/s - 9 m/s = 1 m/s. Time taken to cover the initial separation of 100 m is Δt = Δs / v_pt = 100 m / 1 m/s = 100 s.",
+      "sourceReference": "Section 2.6, Page 52"
+    },
+    {
+      "id": "PHY-G10-U02-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A jet airplane (A) travels at a speed of 1000 km/h relative to the ground. It ejects hot combustion gases (B) backward at a speed of 800 km/h relative to the jet plane. What is the velocity of the hot air/gas relative to an observer on the ground?",
+      "options": [
+        {
+          "id": "A",
+          "text": "1800 km/h forward"
+        },
+        {
+          "id": "B",
+          "text": "200 km/h in the direction of jet motion"
+        },
+        {
+          "id": "C",
+          "text": "800 km/h backward"
+        },
+        {
+          "id": "D",
+          "text": "200 km/h backward"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Let forward jet motion be positive (+x). Velocity of jet relative to ground v_A = +1000 km/h. Velocity of gas relative to jet v_BA = -800 km/h. Since v_BA = v_B - v_A, we get v_B = v_A + v_BA = 1000 + (-800) = +200 km/h in the direction of the jet's motion.",
+      "sourceReference": "Section 2.6, Page 56"
+    }
+  ]
 }

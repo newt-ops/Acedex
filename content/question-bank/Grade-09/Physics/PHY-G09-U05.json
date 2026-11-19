@@ -3,5 +3,411 @@
   "subject": "Physics",
   "unitNumber": 5,
   "unitTitle": "Simple Machines",
-  "questions": []
+  "questions": [
+    {
+      "id": "PHY-G09-U05-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is the primary purpose of using a single fixed pulley to lift a bucket of water from a deep well?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To multiply the applied effort force"
+        },
+        {
+          "id": "B",
+          "text": "To change the direction of the applied force"
+        },
+        {
+          "id": "C",
+          "text": "To multiply the speed of motion"
+        },
+        {
+          "id": "D",
+          "text": "To reduce the total work done on the load"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "A single fixed pulley has a mechanical advantage and velocity ratio of 1. It does not multiply force or speed; its main function is to change the direction of the effort force (pulling downward instead of lifting upward).",
+      "sourceReference": "Section 5.1, Page 87"
+    },
+    {
+      "id": "PHY-G09-U05-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which of the following simple machines belongs to the inclined plane family?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Pulley"
+        },
+        {
+          "id": "B",
+          "text": "Wheel and axle"
+        },
+        {
+          "id": "C",
+          "text": "Wedge"
+        },
+        {
+          "id": "D",
+          "text": "Lever"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Simple machines are categorized into two primary families: inclined planes (ramp, wedge, screw) and levers (lever, wheel and axle, pulley). A wedge consists of two inclined planes placed back-to-back.",
+      "sourceReference": "Section 5.4, Page 93"
+    },
+    {
+      "id": "PHY-G09-U05-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "How is the Mechanical Advantage (M.A) of a simple machine defined?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The ratio of effort distance to load distance"
+        },
+        {
+          "id": "B",
+          "text": "The ratio of load force to effort force"
+        },
+        {
+          "id": "C",
+          "text": "The ratio of work output to work input"
+        },
+        {
+          "id": "D",
+          "text": "The product of effort force and load force"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Mechanical Advantage (M.A) is defined as the ratio of the output force (load) exerted by the machine to the input force (effort) applied to the machine (M.A = Load / Effort).",
+      "sourceReference": "Section 5.5, Page 96"
+    },
+    {
+      "id": "PHY-G09-U05-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which class of lever has the load situated between the fulcrum and the effort point?",
+      "options": [
+        {
+          "id": "A",
+          "text": "First-class lever"
+        },
+        {
+          "id": "B",
+          "text": "Second-class lever"
+        },
+        {
+          "id": "C",
+          "text": "Third-class lever"
+        },
+        {
+          "id": "D",
+          "text": "Fourth-class lever"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In a second-class lever (such as a wheelbarrow or nutcracker), the load is located between the fulcrum at one end and the effort applied at the other end.",
+      "sourceReference": "Section 5.5, Page 103"
+    },
+    {
+      "id": "PHY-G09-U05-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Why is the efficiency of any real-world simple machine always less than 100%?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because the load force is always smaller than the effort force."
+        },
+        {
+          "id": "B",
+          "text": "Because work input is destroyed by the machine."
+        },
+        {
+          "id": "C",
+          "text": "Because some input energy is converted into non-useful thermal energy due to friction."
+        },
+        {
+          "id": "D",
+          "text": "Because the velocity ratio is always smaller than the mechanical advantage."
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "In real machines, friction between moving parts transforms part of the input work into non-useful thermal energy, making work output less than work input and efficiency less than 100%.",
+      "sourceReference": "Section 5.5, Page 99"
+    },
+    {
+      "id": "PHY-G09-U05-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "A lever is used to lift a 600 N load by applying an effort force of 150 N. What is the Mechanical Advantage (M.A) of the lever?",
+      "options": [
+        {
+          "id": "A",
+          "text": "0.25"
+        },
+        {
+          "id": "B",
+          "text": "4.0"
+        },
+        {
+          "id": "C",
+          "text": "450"
+        },
+        {
+          "id": "D",
+          "text": "750"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Mechanical Advantage (M.A) = Load / Effort = 600 N / 150 N = 4.0.",
+      "sourceReference": "Section 5.5, Page 96"
+    },
+    {
+      "id": "PHY-G09-U05-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "An inclined plane has a length of 12 m along its slope and raises an object to a vertical height of 3 m. Assuming no friction, what is the Velocity Ratio (V.R) of this inclined plane?",
+      "options": [
+        {
+          "id": "A",
+          "text": "0.25"
+        },
+        {
+          "id": "B",
+          "text": "4.0"
+        },
+        {
+          "id": "C",
+          "text": "9.0"
+        },
+        {
+          "id": "D",
+          "text": "36.0"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "For an inclined plane, Velocity Ratio (V.R) = length of slope / height raised = 12 m / 3 m = 4.0.",
+      "sourceReference": "Section 5.5, Page 107"
+    },
+    {
+      "id": "PHY-G09-U05-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "A wheel and axle system has a wheel radius of 40 cm and an axle radius of 8 cm. What is the Velocity Ratio (V.R) of this machine?",
+      "options": [
+        {
+          "id": "A",
+          "text": "0.2"
+        },
+        {
+          "id": "B",
+          "text": "5.0"
+        },
+        {
+          "id": "C",
+          "text": "32.0"
+        },
+        {
+          "id": "D",
+          "text": "320.0"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "For a wheel and axle system, Velocity Ratio (V.R) = radius of wheel / radius of axle = 40 cm / 8 cm = 5.0.",
+      "sourceReference": "Section 5.5, Page 112"
+    },
+    {
+      "id": "PHY-G09-U05-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "A machine has a Mechanical Advantage (M.A) of 3.0 and a Velocity Ratio (V.R) of 4.0. What is the efficiency of this machine expressed as a percentage?",
+      "options": [
+        {
+          "id": "A",
+          "text": "1.33%"
+        },
+        {
+          "id": "B",
+          "text": "75.0%"
+        },
+        {
+          "id": "C",
+          "text": "80.0%"
+        },
+        {
+          "id": "D",
+          "text": "120.0%"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Efficiency η = (M.A / V.R) × 100% = (3.0 / 4.0) × 100% = 75.0%.",
+      "sourceReference": "Section 5.5, Page 100"
+    },
+    {
+      "id": "PHY-G09-U05-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "A 15 cm long wedge with a thickness of 3 cm is driven into a wooden block. What is the Velocity Ratio (V.R) of the wedge?",
+      "options": [
+        {
+          "id": "A",
+          "text": "0.2"
+        },
+        {
+          "id": "B",
+          "text": "5.0"
+        },
+        {
+          "id": "C",
+          "text": "12.0"
+        },
+        {
+          "id": "D",
+          "text": "45.0"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "For a wedge, Velocity Ratio (V.R) = penetration length / thickness = 15 cm / 3 cm = 5.0.",
+      "sourceReference": "Section 5.5, Page 108"
+    },
+    {
+      "id": "PHY-G09-U05-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "A compound pulley system (block and tackle) uses 4 supporting rope segments to hold a movable load. If an effort of 200 N is needed to raise a 640 N load, what is the efficiency of the pulley system?",
+      "options": [
+        {
+          "id": "A",
+          "text": "80.0%"
+        },
+        {
+          "id": "B",
+          "text": "75.0%"
+        },
+        {
+          "id": "C",
+          "text": "64.0%"
+        },
+        {
+          "id": "D",
+          "text": "50.0%"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "V.R = number of supporting rope segments = 4. M.A = Load / Effort = 640 N / 200 N = 3.2. Efficiency η = (M.A / V.R) × 100% = (3.2 / 4) × 100% = 80.0%.",
+      "sourceReference": "Section 5.5, Page 113"
+    },
+    {
+      "id": "PHY-G09-U05-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A second-class lever has a total length of 1.5 m from the fulcrum to the effort handle. A load of 900 N is placed on the lever at a distance of 0.3 m from the fulcrum. Assuming 100% efficiency, what effort force is required to lift the load?",
+      "options": [
+        {
+          "id": "A",
+          "text": "180 N"
+        },
+        {
+          "id": "B",
+          "text": "225 N"
+        },
+        {
+          "id": "C",
+          "text": "450 N"
+        },
+        {
+          "id": "D",
+          "text": "4500 N"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Effort arm d_E = 1.5 m, Load arm d_L = 0.3 m. V.R = d_E / d_L = 1.5 / 0.3 = 5. At 100% efficiency, M.A = V.R = 5. Therefore, Effort = Load / M.A = 900 N / 5 = 180 N.",
+      "sourceReference": "Section 5.5, Page 106"
+    },
+    {
+      "id": "PHY-G09-U05-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "An inclined plane of length 10 m and height 2 m is used to move a 500 N barrel. Due to friction, the efficiency of the slope is 80%. What input effort force is required to push the barrel up the ramp?",
+      "options": [
+        {
+          "id": "A",
+          "text": "100 N"
+        },
+        {
+          "id": "B",
+          "text": "125 N"
+        },
+        {
+          "id": "C",
+          "text": "200 N"
+        },
+        {
+          "id": "D",
+          "text": "250 N"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "V.R = slope length / height = 10 m / 2 m = 5. Efficiency η = 0.80. M.A = η × V.R = 0.80 × 5 = 4.0. Effort = Load / M.A = 500 N / 4.0 = 125 N.",
+      "sourceReference": "Section 5.5, Page 107"
+    },
+    {
+      "id": "PHY-G09-U05-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A screw jack has a pitch of 2.0 mm and is operated using a lever handle of length 28 cm. Taking π ≈ 22/7, what is the Ideal Mechanical Advantage (IMA) of the screw jack?",
+      "options": [
+        {
+          "id": "A",
+          "text": "140"
+        },
+        {
+          "id": "B",
+          "text": "440"
+        },
+        {
+          "id": "C",
+          "text": "880"
+        },
+        {
+          "id": "D",
+          "text": "1760"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "IMA of a screw = (2 × π × r) / pitch. Radius r = 28 cm = 280 mm, pitch p = 2.0 mm. IMA = [2 × (22/7) × 280] / 2.0 = (2 × 22 × 40) / 2 = 880.",
+      "sourceReference": "Section 5.5, Page 109"
+    },
+    {
+      "id": "PHY-G09-U05-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A wheel and axle system with a wheel radius of 50 cm and axle radius of 10 cm is used to draw water from a well. An effort force of 120 N is applied to the wheel to raise a 480 N bucket of water. How much work is lost as thermal energy due to friction when the bucket is raised through a height of 5 m?",
+      "options": [
+        {
+          "id": "A",
+          "text": "300 J"
+        },
+        {
+          "id": "B",
+          "text": "600 J"
+        },
+        {
+          "id": "C",
+          "text": "2400 J"
+        },
+        {
+          "id": "D",
+          "text": "3000 J"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "V.R = R / r = 50 / 10 = 5. To lift load by d_L = 5 m, effort moves d_E = V.R × d_L = 5 × 5 m = 25 m. Work input = Effort × d_E = 120 N × 25 m = 3000 J. Work output = Load × d_L = 480 N × 5 m = 2400 J. Lost work (thermal energy due to friction) = Work input - Work output = 3000 J - 2400 J = 600 J.",
+      "sourceReference": "Section 5.5, Page 112"
+    }
+  ]
 }

@@ -3,5 +3,411 @@
   "subject": "Physics",
   "unitNumber": 3,
   "unitTitle": "Motion in One and Two Dimensions",
-  "questions": []
+  "questions": [
+    {
+      "id": "PHY-G11-U03-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "An object is said to undergo acceleration if its velocity changes in magnitude, direction, or both. What is the standard SI unit of acceleration?",
+      "options": [
+        {
+          "id": "A",
+          "text": "m/s"
+        },
+        {
+          "id": "B",
+          "text": "m/s²"
+        },
+        {
+          "id": "C",
+          "text": "m·s"
+        },
+        {
+          "id": "D",
+          "text": "kg·m/s²"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Acceleration is defined as the time rate of change of velocity (a = Δv / Δt), which yields the standard SI unit of meters per second squared (m/s²).",
+      "sourceReference": "Section 3.1, Page 48"
+    },
+    {
+      "id": "PHY-G11-U03-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Under what condition does a moving object experience deceleration (slowing down)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "When its velocity vector and acceleration vector have opposite algebraic signs"
+        },
+        {
+          "id": "B",
+          "text": "When its velocity vector and acceleration vector both have positive algebraic signs"
+        },
+        {
+          "id": "C",
+          "text": "When its velocity vector and acceleration vector both have negative algebraic signs"
+        },
+        {
+          "id": "D",
+          "text": "Whenever its acceleration vector is equal to zero"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "An object decelerates (speed decreases) whenever its velocity and acceleration vectors point in opposite directions—that is, when they have opposite algebraic signs.",
+      "sourceReference": "Section 3.1, Page 48"
+    },
+    {
+      "id": "PHY-G11-U03-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In the absence of air resistance, what characterizes the motion of a body falling vertically under gravity alone near the surface of the Earth?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Motion with zero velocity throughout"
+        },
+        {
+          "id": "B",
+          "text": "Motion with constant downward acceleration g"
+        },
+        {
+          "id": "C",
+          "text": "Motion with increasing acceleration as height increases"
+        },
+        {
+          "id": "D",
+          "text": "Motion with variable acceleration depending on object mass"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Free fall is a uniformly accelerated vertical motion where all bodies experience a constant downward acceleration due to gravity (g ≈ 9.8 m/s² or 10 m/s²), regardless of mass.",
+      "sourceReference": "Section 3.4, Page 70"
+    },
+    {
+      "id": "PHY-G11-U03-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In uniform circular motion, an object travels along a circular path at a constant speed. Why is this object considered to be accelerating?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because its linear speed increases continuously."
+        },
+        {
+          "id": "B",
+          "text": "Because the direction of its velocity vector changes continuously."
+        },
+        {
+          "id": "C",
+          "text": "Because its angular speed decreases steadily."
+        },
+        {
+          "id": "D",
+          "text": "Because the net centripetal force is zero."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Velocity is a vector quantity. Even if the speed (magnitude) remains constant in uniform circular motion, the continuous change in the direction of the velocity vector generates a centripetal acceleration directed toward the center.",
+      "sourceReference": "Section 3.5, Page 79"
+    },
+    {
+      "id": "PHY-G11-U03-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which physical quantity measures the rate of change of angular displacement per unit time in circular motion?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Tangential acceleration"
+        },
+        {
+          "id": "B",
+          "text": "Angular velocity"
+        },
+        {
+          "id": "C",
+          "text": "Centripetal force"
+        },
+        {
+          "id": "D",
+          "text": "Period of revolution"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Angular velocity (ω) measures how rapidly angular displacement changes over time (ω = Δθ / Δt) and is expressed in radians per second (rad/s).",
+      "sourceReference": "Section 3.5, Page 80"
+    },
+    {
+      "id": "PHY-G11-U03-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "The velocity of a particle moving along a straight line varies with time according to v(t) = (4t² - 6t) m/s. What is the instantaneous acceleration of the particle at t = 3.0 s?",
+      "options": [
+        {
+          "id": "A",
+          "text": "18 m/s²"
+        },
+        {
+          "id": "B",
+          "text": "14 m/s²"
+        },
+        {
+          "id": "C",
+          "text": "30 m/s²"
+        },
+        {
+          "id": "D",
+          "text": "10 m/s²"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Instantaneous acceleration is the derivative of velocity: a(t) = dv/dt = d/dt (4t² - 6t) = 8t - 6. At t = 3.0 s, a(3) = 8(3) - 6 = 24 - 6 = 18 m/s².",
+      "sourceReference": "Section 3.1, Page 49"
+    },
+    {
+      "id": "PHY-G11-U03-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "A car accelerating uniformly from rest covers a displacement of 80 m in 8.0 s. What is the uniform acceleration of the car?",
+      "options": [
+        {
+          "id": "A",
+          "text": "1.25 m/s²"
+        },
+        {
+          "id": "B",
+          "text": "2.50 m/s²"
+        },
+        {
+          "id": "C",
+          "text": "5.00 m/s²"
+        },
+        {
+          "id": "D",
+          "text": "10.0 m/s²"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Using s = v_i t + 0.5 a t² with initial velocity v_i = 0: 80 = 0 + 0.5 × a × (8.0)² ⇒ 80 = 32 a ⇒ a = 80 / 32 = 2.50 m/s².",
+      "sourceReference": "Section 3.2, Page 56"
+    },
+    {
+      "id": "PHY-G11-U03-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "A ball is thrown vertically upward from ground level with an initial velocity of 20 m/s. Taking g = 10 m/s² and neglecting air resistance, what is the maximum height reached by the ball?",
+      "options": [
+        {
+          "id": "A",
+          "text": "10 m"
+        },
+        {
+          "id": "B",
+          "text": "20 m"
+        },
+        {
+          "id": "C",
+          "text": "40 m"
+        },
+        {
+          "id": "D",
+          "text": "80 m"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "At maximum height, vertical velocity v = 0. Using v² = u² - 2gy: 0 = (20)² - 2(10)y ⇒ 20y = 400 ⇒ y = 20 m.",
+      "sourceReference": "Section 3.4, Page 72"
+    },
+    {
+      "id": "PHY-G11-U03-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "An automobile moves at a constant tangential speed of 14 m/s around a circular track of radius 20 m. What is the centripetal acceleration of the automobile?",
+      "options": [
+        {
+          "id": "A",
+          "text": "0.70 m/s²"
+        },
+        {
+          "id": "B",
+          "text": "4.90 m/s²"
+        },
+        {
+          "id": "C",
+          "text": "9.80 m/s²"
+        },
+        {
+          "id": "D",
+          "text": "14.0 m/s²"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Centripetal acceleration is given by a_c = v² / r = (14 m/s)² / 20 m = 196 / 20 = 9.80 m/s².",
+      "sourceReference": "Section 3.5, Page 84"
+    },
+    {
+      "id": "PHY-G11-U03-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "A car traveling along a straight road at a speed of 20 m/s applies its brakes and decelerates uniformly at a rate of 4.0 m/s². What is the braking distance required to bring the car to a complete stop?",
+      "options": [
+        {
+          "id": "A",
+          "text": "25 m"
+        },
+        {
+          "id": "B",
+          "text": "50 m"
+        },
+        {
+          "id": "C",
+          "text": "100 m"
+        },
+        {
+          "id": "D",
+          "text": "200 m"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Using v_f² = v_i² + 2as with final velocity v_f = 0, initial velocity v_i = 20 m/s, and a = -4.0 m/s²: 0 = (20)² + 2(-4.0)s ⇒ 8s = 400 ⇒ s = 50 m.",
+      "sourceReference": "Section 3.2, Page 56"
+    },
+    {
+      "id": "PHY-G11-U03-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "A motion is depicted on a velocity-time graph: an object accelerates uniformly from rest to 10 m/s in 5 s, and then maintains this constant speed for another 4 s. What is the total displacement covered during these 9 seconds?",
+      "options": [
+        {
+          "id": "A",
+          "text": "40 m"
+        },
+        {
+          "id": "B",
+          "text": "65 m"
+        },
+        {
+          "id": "C",
+          "text": "90 m"
+        },
+        {
+          "id": "D",
+          "text": "50 m"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Displacement equals the area under the v-t graph. Acceleration region (triangle): Area1 = 0.5 × 5 s × 10 m/s = 25 m. Constant speed region (rectangle): Area2 = 4 s × 10 m/s = 40 m. Total displacement = 25 + 40 = 65 m.",
+      "sourceReference": "Section 3.3, Page 67"
+    },
+    {
+      "id": "PHY-G11-U03-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A ball is thrown vertically upward with an initial velocity of 10 m/s from the balcony of a tall building 15 m above the ground. Taking g = 10 m/s², how long does it take for the ball to hit the ground?",
+      "options": [
+        {
+          "id": "A",
+          "text": "2.0 s"
+        },
+        {
+          "id": "B",
+          "text": "3.0 s"
+        },
+        {
+          "id": "C",
+          "text": "4.0 s"
+        },
+        {
+          "id": "D",
+          "text": "5.0 s"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Taking upward as positive and balcony as origin y₀ = 0: displacement at ground y = -15 m, u = +10 m/s, g = -10 m/s². Using y = ut - 0.5gt² ⇒ -15 = 10t - 5t² ⇒ 5t² - 10t - 15 = 0 ⇒ t² - 2t - 3 = 0 ⇒ (t - 3)(t + 1) = 0. Since t > 0, t = 3.0 s.",
+      "sourceReference": "Section 3.4, Page 73"
+    },
+    {
+      "id": "PHY-G11-U03-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A car travels around a flat circular curve of radius 40 m. If the coefficient of static friction between the tires and the road is µ = 0.70 and g = 10 m/s², what is the maximum safe speed at which the car can negotiate the curve without skidding?",
+      "options": [
+        {
+          "id": "A",
+          "text": "11.8 m/s"
+        },
+        {
+          "id": "B",
+          "text": "16.7 m/s"
+        },
+        {
+          "id": "C",
+          "text": "28.0 m/s"
+        },
+        {
+          "id": "D",
+          "text": "40.0 m/s"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Static friction provides the required centripetal force: F_f = m v² / r ⇒ µ m g = m v² / r ⇒ v = √(µ g r) = √(0.70 × 10 m/s² × 40 m) = √280 ≈ 16.73 m/s.",
+      "sourceReference": "Section 3.5, Page 88"
+    },
+    {
+      "id": "PHY-G11-U03-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A body of mass 1.0 kg attached to the end of a 1.0 m long string is whirled in a horizontal circle on a smooth, frictionless table. If the maximum tension the string can withstand before breaking is 25 N, what is the maximum speed the body can reach?",
+      "options": [
+        {
+          "id": "A",
+          "text": "2.5 m/s"
+        },
+        {
+          "id": "B",
+          "text": "5.0 m/s"
+        },
+        {
+          "id": "C",
+          "text": "10.0 m/s"
+        },
+        {
+          "id": "D",
+          "text": "25.0 m/s"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Tension supplies the centripetal force: T = m v² / r ⇒ 25 N = (1.0 kg × v²) / 1.0 m ⇒ v² = 25 ⇒ v = 5.0 m/s.",
+      "sourceReference": "Section 3.5, Page 87"
+    },
+    {
+      "id": "PHY-G11-U03-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A particle attached to a string revolves as a conical pendulum in a horizontal circle of radius r = 0.90 m. If the string maintains a constant angle of θ = 45° with the vertical and g = 10 m/s², what is the speed v of the particle? (Given: tan 45° = 1.0)",
+      "options": [
+        {
+          "id": "A",
+          "text": "2.0 m/s"
+        },
+        {
+          "id": "B",
+          "text": "3.0 m/s"
+        },
+        {
+          "id": "C",
+          "text": "4.5 m/s"
+        },
+        {
+          "id": "D",
+          "text": "9.0 m/s"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "For a conical pendulum, tan θ = v² / (r g) ⇒ v = √(r g tan θ). Substituting values: v = √(0.90 m × 10 m/s² × 1.0) = √9.0 = 3.0 m/s.",
+      "sourceReference": "Section 3.5, Page 89"
+    }
+  ]
 }

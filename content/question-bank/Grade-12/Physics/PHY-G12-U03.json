@@ -3,5 +3,411 @@
   "subject": "Physics",
   "unitNumber": 3,
   "unitTitle": "Fluid Mechanics",
-  "questions": []
+  "questions": [
+    {
+      "id": "PHY-G12-U03-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In fluid statics, what is the defining characteristic of the stress acting at a point within a stationary fluid?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The shear stress is maximum while normal stress is zero."
+        },
+        {
+          "id": "B",
+          "text": "The only existing stress is normal stress (pressure), while shear stress is zero."
+        },
+        {
+          "id": "C",
+          "text": "Both normal stress and shear stress are equal and non-zero."
+        },
+        {
+          "id": "D",
+          "text": "Shear stress acts parallel to the container walls to prevent fluid motion."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "For fluids at rest, there is no relative motion between adjacent fluid layers. Consequently, shear (tangential) stress is zero, and the only stress present is normal stress, which is defined as pressure.",
+      "sourceReference": "Section 3.1, Page 72"
+    },
+    {
+      "id": "PHY-G12-U03-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which fundamental physical law states that a change in pressure applied to an enclosed static fluid is transmitted undiminished to every point of the fluid and to the walls of the container?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Bernoulli's principle"
+        },
+        {
+          "id": "B",
+          "text": "Archimedes' principle"
+        },
+        {
+          "id": "C",
+          "text": "Pascal's principle"
+        },
+        {
+          "id": "D",
+          "text": "Hooke's law"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Pascal's principle dictates that any change in pressure applied to a confined static fluid is transmitted equally and undiminished throughout the entire fluid and to the walls of its container.",
+      "sourceReference": "Section 3.2, Page 84"
+    },
+    {
+      "id": "PHY-G12-U03-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "How is absolute pressure (P_abs) related to gauge pressure (P_gauge) and local atmospheric pressure (P_atm)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "P_abs = P_gauge - P_atm"
+        },
+        {
+          "id": "B",
+          "text": "P_abs = P_gauge + P_atm"
+        },
+        {
+          "id": "C",
+          "text": "P_abs = P_atm - P_gauge"
+        },
+        {
+          "id": "D",
+          "text": "P_abs = P_gauge / P_atm"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Absolute pressure is measured relative to absolute zero pressure (absolute vacuum). Therefore, it equals the sum of local atmospheric pressure and gauge pressure (P_abs = P_atm + P_gauge).",
+      "sourceReference": "Section 3.1, Page 76"
+    },
+    {
+      "id": "PHY-G12-U03-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "According to Archimedes' principle, what is the magnitude of the upward buoyant force acting on a body partially or fully submerged in a fluid?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Equal to the total weight of the submerged object"
+        },
+        {
+          "id": "B",
+          "text": "Equal to the weight of the fluid displaced by the object"
+        },
+        {
+          "id": "C",
+          "text": "Equal to the surface area of the object multiplied by atmospheric pressure"
+        },
+        {
+          "id": "D",
+          "text": "Equal to the product of object density and gravitational acceleration"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Archimedes' principle states that any object completely or partially submerged in a fluid experiences an upward buoyant force equal to the weight of the fluid displaced by the object.",
+      "sourceReference": "Section 3.3, Page 97"
+    },
+    {
+      "id": "PHY-G12-U03-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "For an incompressible fluid flowing steadily through a pipe of varying cross-sectional area, what physical conservation law directly yields the equation of continuity (A1 v1 = A2 v2)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Conservation of linear momentum"
+        },
+        {
+          "id": "B",
+          "text": "Conservation of mechanical energy"
+        },
+        {
+          "id": "C",
+          "text": "Conservation of mass"
+        },
+        {
+          "id": "D",
+          "text": "Conservation of angular momentum"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The equation of continuity (A1 v1 = A2 v2) is a direct mathematical expression of the law of conservation of mass, stating that mass flow rate remains constant along a pipe carrying an incompressible fluid.",
+      "sourceReference": "Section 3.4, Page 105"
+    },
+    {
+      "id": "PHY-G12-U03-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What is the gauge pressure experienced by a diver at a depth of 20.0 m in fresh water? (Take density of fresh water ρ = 1000 kg/m³ and g = 9.8 m/s²)",
+      "options": [
+        {
+          "id": "A",
+          "text": "98.0 kPa"
+        },
+        {
+          "id": "B",
+          "text": "196.0 kPa"
+        },
+        {
+          "id": "C",
+          "text": "297.3 kPa"
+        },
+        {
+          "id": "D",
+          "text": "49.0 kPa"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Gauge pressure due to a liquid column of depth h is P_gauge = ρ g h = (1000 kg/m³) × (9.8 m/s²) × (20.0 m) = 196,000 Pa = 196.0 kPa.",
+      "sourceReference": "Section 3.2, Page 88"
+    },
+    {
+      "id": "PHY-G12-U03-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "A hydraulic press has a small piston of area 0.0050 m² and a large piston of area 0.25 m². If a force of 150 N is applied downward on the small piston, what maximum load can be supported on the large piston in static equilibrium?",
+      "options": [
+        {
+          "id": "A",
+          "text": "3.0 kN"
+        },
+        {
+          "id": "B",
+          "text": "7.5 kN"
+        },
+        {
+          "id": "C",
+          "text": "15.0 kN"
+        },
+        {
+          "id": "D",
+          "text": "30.0 kN"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Using Pascal's principle: P1 = P2 ⇒ F1 / A1 = F2 / A2 ⇒ F2 = (A2 / A1) F1 = (0.25 m² / 0.0050 m²) × 150 N = 50 × 150 N = 7500 N = 7.5 kN.",
+      "sourceReference": "Section 3.2, Page 86"
+    },
+    {
+      "id": "PHY-G12-U03-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "An iceberg with a density of 920 kg/m³ floats in seawater of density 1025 kg/m³. What percentage of the total volume of the iceberg remains submerged below the surface of the water?",
+      "options": [
+        {
+          "id": "A",
+          "text": "10.2%"
+        },
+        {
+          "id": "B",
+          "text": "80.0%"
+        },
+        {
+          "id": "C",
+          "text": "89.8%"
+        },
+        {
+          "id": "D",
+          "text": "92.0%"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "For a floating body in static equilibrium, the fraction of volume submerged is given by V_disp / V_obj = ρ_obj / ρ_fluid = (920 kg/m³) / (1025 kg/m³) ≈ 0.8975 = 89.8%.",
+      "sourceReference": "Section 3.3, Page 99"
+    },
+    {
+      "id": "PHY-G12-U03-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Water flows through a horizontal pipe of radius r1 = 4.0 cm at a speed of v1 = 2.0 m/s. If the pipe narrows to a radius r2 = 2.0 cm, what is the speed v2 of the water in the narrow section?",
+      "options": [
+        {
+          "id": "A",
+          "text": "1.0 m/s"
+        },
+        {
+          "id": "B",
+          "text": "4.0 m/s"
+        },
+        {
+          "id": "C",
+          "text": "8.0 m/s"
+        },
+        {
+          "id": "D",
+          "text": "16.0 m/s"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "By the equation of continuity: A1 v1 = A2 v2 ⇒ π r1² v1 = π r2² v2 ⇒ v2 = (r1 / r2)² v1 = (4.0 / 2.0)² × 2.0 m/s = (2)² × 2.0 = 8.0 m/s.",
+      "sourceReference": "Section 3.4, Page 106"
+    },
+    {
+      "id": "PHY-G12-U03-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "A mercury barometer reads a column height of h = 740 mm (0.740 m). Taking the density of mercury as ρ = 13,600 kg/m³ and g = 9.8 m/s², what is the calculated atmospheric pressure?",
+      "options": [
+        {
+          "id": "A",
+          "text": "98.6 kPa"
+        },
+        {
+          "id": "B",
+          "text": "101.3 kPa"
+        },
+        {
+          "id": "C",
+          "text": "108.6 kPa"
+        },
+        {
+          "id": "D",
+          "text": "74.0 kPa"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Atmospheric pressure exerted by a fluid column is P_atm = ρ g h = (13,600 kg/m³) × (9.8 m/s²) × (0.740 m) = 98,627 Pa ≈ 98.6 kPa.",
+      "sourceReference": "Section 3.2, Page 93"
+    },
+    {
+      "id": "PHY-G12-U03-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "A solid metallic object has a mass of 5.0 kg in air. When completely immersed in water (ρ_w = 1000 kg/m³), its apparent mass is measured to be 3.5 kg. What is the volume of the metallic object?",
+      "options": [
+        {
+          "id": "A",
+          "text": "1.5 × 10⁻³ m³"
+        },
+        {
+          "id": "B",
+          "text": "3.5 × 10⁻³ m³"
+        },
+        {
+          "id": "C",
+          "text": "5.0 × 10⁻³ m³"
+        },
+        {
+          "id": "D",
+          "text": "8.5 × 10⁻³ m³"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Apparent mass loss equals the mass of displaced water: m_w = m_air - m_app = 5.0 kg - 3.5 kg = 1.5 kg. Since the object is fully submerged, its volume V = m_w / ρ_w = 1.5 kg / (1000 kg/m³) = 1.5 × 10⁻³ m³.",
+      "sourceReference": "Section 3.3, Page 102"
+    },
+    {
+      "id": "PHY-G12-U03-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "An open U-tube manometer contains mercury (ρ_m = 13,600 kg/m³). Oil (ρ_oil = 850 kg/m³) is poured into the left arm until it forms a column of height h_oil = 0.32 m. What is the difference in height Δh_m of the mercury levels in the two arms?",
+      "options": [
+        {
+          "id": "A",
+          "text": "0.020 m (2.0 cm)"
+        },
+        {
+          "id": "B",
+          "text": "0.040 m (4.0 cm)"
+        },
+        {
+          "id": "C",
+          "text": "0.080 m (8.0 cm)"
+        },
+        {
+          "id": "D",
+          "text": "0.160 m (16.0 cm)"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Equating hydrostatic pressure at the interface level: P_atm + ρ_oil g h_oil = P_atm + ρ_m g Δh_m ⇒ ρ_oil h_oil = ρ_m Δh_m ⇒ Δh_m = (ρ_oil h_oil) / ρ_m = (850 × 0.32) / 13,600 = 272 / 13,600 = 0.020 m = 2.0 cm.",
+      "sourceReference": "Section 3.2, Page 96"
+    },
+    {
+      "id": "PHY-G12-U03-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A sample of air has a density of 1.20 kg/m³ at a pressure of 100 kPa and an absolute temperature of 300 K. If the pressure is increased to 250 kPa and the absolute temperature is raised to 375 K, what is the new density of the air sample (assuming ideal gas behavior)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "1.80 kg/m³"
+        },
+        {
+          "id": "B",
+          "text": "2.40 kg/m³"
+        },
+        {
+          "id": "C",
+          "text": "3.00 kg/m³"
+        },
+        {
+          "id": "D",
+          "text": "3.75 kg/m³"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "From the ideal gas equation P = (ρ / M) R T ⇒ ρ = (P M) / (R T), so density is proportional to P / T. Thus ρ2 / ρ1 = (P2 / P1) × (T1 / T2) = (250 / 100) × (300 / 375) = 2.5 × 0.8 = 2.0. New density ρ2 = 2.0 × 1.20 kg/m³ = 2.40 kg/m³.",
+      "sourceReference": "Section 3.1, Page 81"
+    },
+    {
+      "id": "PHY-G12-U03-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Water (ρ = 1000 kg/m³) flows horizontally through a pipe that constricts from area A1 to A2 = A1 / 3. If the water speed in the wider section is v1 = 3.0 m/s and the static gauge pressure is P1 = 80.0 kPa, what is the static gauge pressure P2 in the constricted section?",
+      "options": [
+        {
+          "id": "A",
+          "text": "8.0 kPa"
+        },
+        {
+          "id": "B",
+          "text": "44.0 kPa"
+        },
+        {
+          "id": "C",
+          "text": "62.0 kPa"
+        },
+        {
+          "id": "D",
+          "text": "71.0 kPa"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "From continuity: A1 v1 = A2 v2 ⇒ A1 (3.0) = (A1 / 3) v2 ⇒ v2 = 9.0 m/s. Applying Bernoulli's equation for horizontal flow: P1 + 1/2 ρ v1² = P2 + 1/2 ρ v2² ⇒ P2 = P1 + 1/2 ρ (v1² - v2²) = 80,000 Pa + 0.5 × 1000 × (3.0² - 9.0²) = 80,000 + 500 × (9 - 81) = 80,000 - 36,000 = 44,000 Pa = 44.0 kPa.",
+      "sourceReference": "Section 3.4, Page 106"
+    },
+    {
+      "id": "PHY-G12-U03-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A flat wooden block of area A = 0.50 m² and thickness t = 0.20 m (total volume V = 0.10 m³) has a density ρ_wood = 600 kg/m³. It floats in fresh water (ρ_w = 1000 kg/m³). What maximum additional mass m_load can be placed on top of the block before it becomes completely submerged?",
+      "options": [
+        {
+          "id": "A",
+          "text": "20.0 kg"
+        },
+        {
+          "id": "B",
+          "text": "40.0 kg"
+        },
+        {
+          "id": "C",
+          "text": "60.0 kg"
+        },
+        {
+          "id": "D",
+          "text": "100.0 kg"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "For complete submersion in static equilibrium: total weight (wood + load) = maximum buoyant force ⇒ (m_wood + m_load) g = ρ_w V_wood g ⇒ m_wood + m_load = ρ_w V_wood. Mass of wood m_wood = 600 kg/m³ × 0.10 m³ = 60 kg. Maximum displaced water mass = 1000 kg/m³ × 0.10 m³ = 100 kg. Therefore, 60 kg + m_load = 100 kg ⇒ m_load = 40.0 kg.",
+      "sourceReference": "Section 3.3, Page 101"
+    }
+  ]
 }

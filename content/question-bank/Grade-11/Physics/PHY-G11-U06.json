@@ -3,5 +3,411 @@
   "subject": "Physics",
   "unitNumber": 6,
   "unitTitle": "Electrostatics and Electric Circuit",
-  "questions": []
+  "questions": [
+    {
+      "id": "PHY-G11-U06-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "According to Coulomb's law, how does the magnitude of the electrostatic force F between two isolated point charges change if the distance r separating them is doubled while keeping their charges constant?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It increases to twice its original value (2F)."
+        },
+        {
+          "id": "B",
+          "text": "It increases to four times its original value (4F)."
+        },
+        {
+          "id": "C",
+          "text": "It decreases to one-half of its original value (F / 2)."
+        },
+        {
+          "id": "D",
+          "text": "It decreases to one-fourth of its original value (F / 4)."
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "Coulomb's law states that electrostatic force is inversely proportional to the square of the distance between charges (F ∝ 1/r²). Doubling the distance (2r) reduces the force by a factor of 2² = 4.",
+      "sourceReference": "Section 6.1, Page 218"
+    },
+    {
+      "id": "PHY-G11-U06-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which of the following pair of units represents the standard SI unit for electric field strength (E)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Newton per Coulomb (N/C) or Volt per meter (V/m)"
+        },
+        {
+          "id": "B",
+          "text": "Joule per Coulomb (J/C) or Volt per second (V/s)"
+        },
+        {
+          "id": "C",
+          "text": "Coulomb per Volt (C/V) or Farad per meter (F/m)"
+        },
+        {
+          "id": "D",
+          "text": "Ampere per square meter (A/m²) or Tesla (T)"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Electric field strength is defined as force per unit charge (E = F/q, measured in N/C) or potential gradient (E = ΔV/d, measured in V/m). Both units are dimensionally equivalent.",
+      "sourceReference": "Section 6.2, Page 225"
+    },
+    {
+      "id": "PHY-G11-U06-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "How is one Volt (1 V) of electric potential difference defined in SI units?",
+      "options": [
+        {
+          "id": "A",
+          "text": "One Newton of force exerted over a displacement of one meter"
+        },
+        {
+          "id": "B",
+          "text": "One Joule of work done in moving a charge of one Coulomb (1 J/C)"
+        },
+        {
+          "id": "C",
+          "text": "One Ampere of current flowing through a resistance of one Ohm"
+        },
+        {
+          "id": "D",
+          "text": "One Coulomb of charge transferred per second"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Electric potential difference is work done per unit test charge (ΔV = W / q). One Volt is equal to one Joule of work done per Coulomb of charge moved.",
+      "sourceReference": "Section 6.3, Page 234"
+    },
+    {
+      "id": "PHY-G11-U06-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "According to Ohm's law, what is the direct mathematical relationship between the steady electric current I flowing through an ohmic metallic conductor and the potential difference V across its ends at constant temperature?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Current is inversely proportional to potential difference."
+        },
+        {
+          "id": "B",
+          "text": "Current is directly proportional to potential difference."
+        },
+        {
+          "id": "C",
+          "text": "Current is proportional to the square of potential difference."
+        },
+        {
+          "id": "D",
+          "text": "Current is independent of potential difference."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Ohm's law states that for a metallic conductor at constant temperature, the electric current I is directly proportional to the potential difference V across its terminals (I ∝ V, or V = IR).",
+      "sourceReference": "Section 6.4, Page 244"
+    },
+    {
+      "id": "PHY-G11-U06-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is the formula for the electrical capacitance C of an ideal parallel-plate capacitor with plate area A and plate separation d in a vacuum (permittivity ε₀)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "C = ε₀ d / A"
+        },
+        {
+          "id": "B",
+          "text": "C = ε₀ A / d"
+        },
+        {
+          "id": "C",
+          "text": "C = A d / ε₀"
+        },
+        {
+          "id": "D",
+          "text": "C = ε₀ A d"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The capacitance of a parallel-plate capacitor in free space is directly proportional to plate area A and inversely proportional to separation distance d (C = ε₀ A / d).",
+      "sourceReference": "Section 6.6, Page 271"
+    },
+    {
+      "id": "PHY-G11-U06-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Two point charges q1 = +4.0 µC and q2 = -3.0 µC are separated by a distance of 0.30 m in a vacuum. Taking Coulomb's constant k = 9.0 × 10⁹ N·m²/C², what is the magnitude of the electrostatic force between them?",
+      "options": [
+        {
+          "id": "A",
+          "text": "0.36 N"
+        },
+        {
+          "id": "B",
+          "text": "1.20 N"
+        },
+        {
+          "id": "C",
+          "text": "3.60 N"
+        },
+        {
+          "id": "D",
+          "text": "12.0 N"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Convert charges: q1 = 4.0 × 10⁻⁶ C, q2 = 3.0 × 10⁻⁶ C. Using F = k |q1||q2| / r² = (9.0 × 10⁹ × 4.0 × 10⁻⁶ × 3.0 × 10⁻⁶) / (0.30)² = 0.108 / 0.09 = 1.20 N.",
+      "sourceReference": "Section 6.1, Page 220"
+    },
+    {
+      "id": "PHY-G11-U06-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What is the magnitude of the electric field strength E at a distance of 0.50 m from an isolated point charge Q = +2.0 µC in a vacuum? (Take k = 9.0 × 10⁹ N·m²/C²)",
+      "options": [
+        {
+          "id": "A",
+          "text": "3.6 × 10⁴ N/C"
+        },
+        {
+          "id": "B",
+          "text": "7.2 × 10⁴ N/C"
+        },
+        {
+          "id": "C",
+          "text": "1.44 × 10⁵ N/C"
+        },
+        {
+          "id": "D",
+          "text": "3.6 × 10⁵ N/C"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Electric field strength E = k Q / r² = (9.0 × 10⁹ N·m²/C² × 2.0 × 10⁻⁶ C) / (0.50 m)² = (1.8 × 10⁴) / 0.25 = 7.2 × 10⁴ N/C.",
+      "sourceReference": "Section 6.2, Page 227"
+    },
+    {
+      "id": "PHY-G11-U06-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Two parallel conducting plates separated by a distance of 4.0 mm (0.0040 m) are connected across a 12.0 V DC power supply. What is the magnitude of the uniform electric field strength E between the plates?",
+      "options": [
+        {
+          "id": "A",
+          "text": "48 N/C"
+        },
+        {
+          "id": "B",
+          "text": "300 N/C"
+        },
+        {
+          "id": "C",
+          "text": "3000 N/C"
+        },
+        {
+          "id": "D",
+          "text": "4800 N/C"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "In a uniform electric field between parallel plates, E = V / d = 12.0 V / 0.0040 m = 3000 V/m = 3000 N/C.",
+      "sourceReference": "Section 6.3, Page 236"
+    },
+    {
+      "id": "PHY-G11-U06-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "A cylindrical copper wire with cross-sectional area A = 2.0 × 10⁻⁶ m² carries a steady current I = 3.4 A. If the free electron concentration is n = 8.5 × 10²⁸ m⁻³ and electron charge e = 1.6 × 10⁻¹⁹ C, what is the drift speed vd of the conduction electrons?",
+      "options": [
+        {
+          "id": "A",
+          "text": "1.25 × 10⁻⁴ m/s"
+        },
+        {
+          "id": "B",
+          "text": "2.50 × 10⁻⁴ m/s"
+        },
+        {
+          "id": "C",
+          "text": "1.25 × 10⁻³ m/s"
+        },
+        {
+          "id": "D",
+          "text": "2.50 × 10⁻³ m/s"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Current I = n A vd e ⇒ vd = I / (n A e) = 3.4 / (8.5 × 10²⁸ × 2.0 × 10⁻⁶ × 1.6 × 10⁻¹⁹) = 3.4 / (27.2 × 10³) = 1.25 × 10⁻⁴ m/s.",
+      "sourceReference": "Section 6.4, Page 243"
+    },
+    {
+      "id": "PHY-G11-U06-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "A parallel-plate air capacitor has an initial capacitance C0 = 8.0 µF. When a dielectric slab completely fills the space between the plates while connected to a 15.0 V battery, the stored charge increases to 360 µC. What is the dielectric constant (κ) of the material?",
+      "options": [
+        {
+          "id": "A",
+          "text": "2.0"
+        },
+        {
+          "id": "B",
+          "text": "3.0"
+        },
+        {
+          "id": "C",
+          "text": "4.5"
+        },
+        {
+          "id": "D",
+          "text": "6.0"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "New capacitance C = Q / V = 360 µC / 15.0 V = 24.0 µF. Dielectric constant κ = C / C0 = 24.0 µF / 8.0 µF = 3.0.",
+      "sourceReference": "Section 6.6, Page 272"
+    },
+    {
+      "id": "PHY-G11-U06-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Three resistors R1 = 6.0 Ω, R2 = 12.0 Ω, and R3 = 4.0 Ω are arranged in a circuit such that R1 and R2 are connected in parallel, and this parallel pair is connected in series with R3 across a 24.0 V DC battery. What is the total equivalent resistance of the circuit?",
+      "options": [
+        {
+          "id": "A",
+          "text": "8.0 Ω"
+        },
+        {
+          "id": "B",
+          "text": "10.0 Ω"
+        },
+        {
+          "id": "C",
+          "text": "16.0 Ω"
+        },
+        {
+          "id": "D",
+          "text": "22.0 Ω"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Parallel pair R12 = (6.0 × 12.0) / (6.0 + 12.0) = 72.0 / 18.0 = 4.0 Ω. Total Req = R12 + R3 = 4.0 Ω + 4.0 Ω = 8.0 Ω.",
+      "sourceReference": "Section 6.4, Page 248"
+    },
+    {
+      "id": "PHY-G11-U06-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Two positive point charges q1 = +9.0 µC and q2 = +16.0 µC are fixed at a distance of 0.70 m apart along a straight line. At what distance from q1 on the line segment joining them is the net electrostatic force on a third positive test charge q3 equal to zero?",
+      "options": [
+        {
+          "id": "A",
+          "text": "0.20 m"
+        },
+        {
+          "id": "B",
+          "text": "0.30 m"
+        },
+        {
+          "id": "C",
+          "text": "0.40 m"
+        },
+        {
+          "id": "D",
+          "text": "0.50 m"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Let x be distance from q1. Net force zero implies k q1 q3 / x² = k q2 q3 / (0.70 - x)². Taking square roots: √9 / x = √16 / (0.70 - x) ⇒ 3 / x = 4 / (0.70 - x) ⇒ 3(0.70 - x) = 4x ⇒ 2.10 = 7x ⇒ x = 0.30 m.",
+      "sourceReference": "Section 6.1, Page 223"
+    },
+    {
+      "id": "PHY-G11-U06-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Two equal and opposite point charges q1 = +6.0 nC and q2 = -6.0 nC are positioned at coordinates (0, +0.30 m) and (0, -0.30 m) respectively. What is the net electric potential V at point P located on the x-axis at (0.40 m, 0)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "0 V"
+        },
+        {
+          "id": "B",
+          "text": "108 V"
+        },
+        {
+          "id": "C",
+          "text": "216 V"
+        },
+        {
+          "id": "D",
+          "text": "-108 V"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Distance from q1 to P is r1 = √(0.40² + 0.30²) = 0.50 m. Distance from q2 to P is r2 = √(0.40² + (-0.30)²) = 0.50 m. Total potential V = k q1 / r1 + k q2 / r2 = k (+6.0 × 10⁻⁹ / 0.50) + k (-6.0 × 10⁻⁹ / 0.50) = 0 V.",
+      "sourceReference": "Section 6.3, Page 238"
+    },
+    {
+      "id": "PHY-G11-U06-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A DC circuit contains two batteries with emfs ε1 = 18.0 V (internal resistance r1 = 1.0 Ω) and ε2 = 6.0 V (internal resistance r2 = 1.0 Ω) connected in series-opposing configuration across an external resistor R = 4.0 Ω. What are the current I in the circuit and the terminal potential difference V1 across the 18.0 V battery?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Current I = 2.0 A; Terminal voltage V1 = 16.0 V"
+        },
+        {
+          "id": "B",
+          "text": "Current I = 3.0 A; Terminal voltage V1 = 15.0 V"
+        },
+        {
+          "id": "C",
+          "text": "Current I = 2.0 A; Terminal voltage V1 = 20.0 V"
+        },
+        {
+          "id": "D",
+          "text": "Current I = 4.0 A; Terminal voltage V1 = 14.0 V"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Net electromotive force ε_net = 18.0 V - 6.0 V = 12.0 V. Total resistance Req = R + r1 + r2 = 4.0 + 1.0 + 1.0 = 6.0 Ω. Circuit current I = 12.0 V / 6.0 Ω = 2.0 A. Terminal voltage across discharging battery V1 = ε1 - I r1 = 18.0 V - (2.0 A × 1.0 Ω) = 16.0 V.",
+      "sourceReference": "Section 6.4, Page 266"
+    },
+    {
+      "id": "PHY-G11-U06-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Two capacitors C1 = 6.0 µF and C2 = 12.0 µF are connected in series across a 36.0 V DC source. What is the electrostatic energy stored in the 6.0 µF capacitor?",
+      "options": [
+        {
+          "id": "A",
+          "text": "0.86 mJ"
+        },
+        {
+          "id": "B",
+          "text": "1.73 mJ"
+        },
+        {
+          "id": "C",
+          "text": "2.59 mJ"
+        },
+        {
+          "id": "D",
+          "text": "5.18 mJ"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Equivalent series capacitance C_eq = (6.0 × 12.0) / (6.0 + 12.0) = 4.0 µF. Total charge Q = C_eq × V = 4.0 µF × 36.0 V = 144.0 µC. Since capacitors are in series, charge on C1 is Q1 = 144.0 µC. Stored energy E1 = Q1² / (2 C1) = (144.0 × 10⁻⁶ C)² / (2 × 6.0 × 10⁻⁶ F) = (2.0736 × 10⁻⁸) / (1.2 × 10⁻⁵) = 1.728 × 10⁻³ J ≈ 1.73 mJ.",
+      "sourceReference": "Section 6.6, Page 278"
+    }
+  ]
 }

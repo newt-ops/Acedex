@@ -3,5 +3,411 @@
   "subject": "Physics",
   "unitNumber": 1,
   "unitTitle": "Application of Physics in Other Fields",
-  "questions": []
+  "questions": [
+    {
+      "id": "PHY-G12-U01-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which fundamental sub-field of physics provides the atomic theory and quantum mechanical principles that ultimately explain chemical bonding and molecular structure?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Fluid Dynamics"
+        },
+        {
+          "id": "B",
+          "text": "Atomic and Subatomic Physics"
+        },
+        {
+          "id": "C",
+          "text": "Geometrical Optics"
+        },
+        {
+          "id": "D",
+          "text": "Classical Thermodynamics"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Atomic and subatomic particle physics explains the rules governing electrons and atomic nuclei, forming the theoretical foundation for chemical bonds and molecular behavior studied in chemistry.",
+      "sourceReference": "Section 1.1, Page 2"
+    },
+    {
+      "id": "PHY-G12-U01-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Human speech is generated when exhaled air from the lungs passes through the vocal cords in the larynx, causing them to vibrate. How is this sound transmitted to the eardrum of a listener?",
+      "options": [
+        {
+          "id": "A",
+          "text": "As transverse electromagnetic waves through a vacuum"
+        },
+        {
+          "id": "B",
+          "text": "As mechanical longitudinal waves causing pressure variations in air molecules"
+        },
+        {
+          "id": "C",
+          "text": "As static electrical charges moving along nerve fibers"
+        },
+        {
+          "id": "D",
+          "text": "As gravitational ripples propagating through the atmosphere"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Sound is a mechanical longitudinal wave. Vibrating vocal cords disturb surrounding air molecules, producing propagating compressions and rarefactions that cause the listener's eardrum to vibrate.",
+      "sourceReference": "Section 1.1, Page 4"
+    },
+    {
+      "id": "PHY-G12-U01-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Civil engineering relies heavily on Newtonian mechanics to ensure structural safety. Which branch of mechanics specifically deals with forces acting on stationary structures like bridges and skyscrapers to keep them in equilibrium?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Hydrodynamics"
+        },
+        {
+          "id": "B",
+          "text": "Statics"
+        },
+        {
+          "id": "C",
+          "text": "Quantum Electrodynamics"
+        },
+        {
+          "id": "D",
+          "text": "Aerodynamics"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Statics is the sub-discipline of mechanics focused on analyzing forces and torques acting on rigid bodies in static equilibrium, ensuring structures like bridges and buildings remain stable without collapsing.",
+      "sourceReference": "Section 1.2, Page 9"
+    },
+    {
+      "id": "PHY-G12-U01-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Conventional X-ray radiography produces shadow images of internal human body structures primarily because X-rays:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Are strongly absorbed by dense structures like bone, while passing more easily through soft tissues"
+        },
+        {
+          "id": "B",
+          "text": "Are reflected completely by muscle tissue back to the detector"
+        },
+        {
+          "id": "C",
+          "text": "Emit visible light that illuminates internal body cavities"
+        },
+        {
+          "id": "D",
+          "text": "Excite water molecules to emit high-frequency radio signals"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "High-density tissues containing heavier elements (such as calcium in bones) absorb X-ray photons significantly more than softer tissues, creating contrasting shadow images on detectors.",
+      "sourceReference": "Section 1.3, Page 13"
+    },
+    {
+      "id": "PHY-G12-U01-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What type of electromagnetic waves are primarily used in RADAR systems to detect the distance, speed, and position of aircraft?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Gamma rays"
+        },
+        {
+          "id": "B",
+          "text": "Ultraviolet rays"
+        },
+        {
+          "id": "C",
+          "text": "Radio waves and microwaves"
+        },
+        {
+          "id": "D",
+          "text": "Visible blue light"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "RADAR (Radio Detection and Ranging) utilizes radio waves or microwaves transmitted into space, which bounce off target objects (like aircraft) and return to a receiver to determine location and speed.",
+      "sourceReference": "Section 1.4, Page 17"
+    },
+    {
+      "id": "PHY-G12-U01-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Magnetic Resonance Imaging (MRI) relies on which fundamental physical property of hydrogen nuclei (protons) in human tissue when exposed to a strong external magnetic field and radiofrequency pulses?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The thermal expansion coefficient of cellular fluid"
+        },
+        {
+          "id": "B",
+          "text": "Nuclear magnetic spin and resonance absorption/emission of radiofrequency energy"
+        },
+        {
+          "id": "C",
+          "text": "The speed of sound waves reflecting off dense bones"
+        },
+        {
+          "id": "D",
+          "text": "Ionization of cellular atoms leading to electrical discharges"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Protons in hydrogen atoms (abundant in tissue water) possess magnetic spin alignment in a strong magnetic field. When radiofrequency pulses match their Larmor frequency, protons resonate and emit detectable RF signals as they relax.",
+      "sourceReference": "Section 1.3, Page 13"
+    },
+    {
+      "id": "PHY-G12-U01-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Astronomers determine the chemical composition of distant stars and interstellar gas clouds without physical sampling primarily by analyzing:",
+      "options": [
+        {
+          "id": "A",
+          "text": "The total gravitational pull exerted by the star on Earth"
+        },
+        {
+          "id": "B",
+          "text": "Emission and absorption line spectra in the star's electromagnetic radiation"
+        },
+        {
+          "id": "C",
+          "text": "The seismic wave velocities recorded by terrestrial seismographs"
+        },
+        {
+          "id": "D",
+          "text": "The mechanical pressure of solar wind particles hitting upper atmosphere"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "According to atomic physics (Bohr model), electrons make discrete energy transitions emitting or absorbing light at specific characteristic wavelengths, creating unique spectral signatures for each element.",
+      "sourceReference": "Section 1.1, Page 7"
+    },
+    {
+      "id": "PHY-G12-U01-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Geophysicists study the deep interior structure of the Earth (such as differentiating the liquid outer core from the solid inner core) using which physical technique?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Measuring the reflection and refraction of seismic body waves (P-waves and S-waves) generated by earthquakes"
+        },
+        {
+          "id": "B",
+          "text": "Direct optical observation using deep infrared lasers"
+        },
+        {
+          "id": "C",
+          "text": "Measuring atmospheric temperature variations during volcanic eruptions"
+        },
+        {
+          "id": "D",
+          "text": "Tracking electrostatic charge build-up on the surface of tectonic plates"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Seismic waves travel through Earth's interior. Primary (P) longitudinal waves pass through solids and liquids, whereas secondary (S) transverse waves cannot propagate through liquid media, revealing Earth's layered internal structure.",
+      "sourceReference": "Section 1.1, Page 8"
+    },
+    {
+      "id": "PHY-G12-U01-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How does Computed Tomography (CT scan) differ fundamentally from a standard two-dimensional planar X-ray radiography image?",
+      "options": [
+        {
+          "id": "A",
+          "text": "CT scans use magnetic fields instead of ionizing radiation."
+        },
+        {
+          "id": "B",
+          "text": "CT scans combine multiple X-ray projections taken from a rotating ring of detectors using computer algorithms to reconstruct 3D cross-sectional slice images."
+        },
+        {
+          "id": "C",
+          "text": "CT scans measure high-frequency ultrasound reflections rather than electromagnetic rays."
+        },
+        {
+          "id": "D",
+          "text": "CT scans inject radioactive gamma emitters to track cellular metabolism."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Unlike flat 2D X-rays, a CT scanner rotates an X-ray source and detectors around the patient to take multiple cross-sectional attenuation profiles, which a computer processes into detailed 3D tomographic slices.",
+      "sourceReference": "Section 1.3, Page 14"
+    },
+    {
+      "id": "PHY-G12-U01-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Optical fiber cables transmit huge volumes of digital data across global telecommunication networks at high speeds using light pulses. What core optical principle ensures light remains trapped inside the fiber core without escaping?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Diffuse reflection from outer metallic shielding"
+        },
+        {
+          "id": "B",
+          "text": "Total internal reflection at the boundary between the core and cladding with a lower refractive index"
+        },
+        {
+          "id": "C",
+          "text": "Complete absorption of light waves by surrounding insulation"
+        },
+        {
+          "id": "D",
+          "text": "Polarization of visible light by magnetic fields"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Total internal reflection occurs when light traveling through an optically denser core strikes the interface with lower-index cladding at an angle of incidence greater than the critical angle, preventing light loss.",
+      "sourceReference": "Section 1.5, Page 20"
+    },
+    {
+      "id": "PHY-G12-U01-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Thermal imaging devices used in military night-vision technology operate by detecting infrared radiation. What physical law dictates that all objects with a temperature above absolute zero emit thermal electromagnetic radiation?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Bernoulli's principle"
+        },
+        {
+          "id": "B",
+          "text": "Stefan-Boltzmann law of blackbody radiation"
+        },
+        {
+          "id": "C",
+          "text": "Coulomb's law of electrostatics"
+        },
+        {
+          "id": "D",
+          "text": "Faraday's law of induction"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Every object above 0 K emits thermal radiation due to thermal motion of charged particles. The Stefan-Boltzmann and Planck blackbody laws relate an object's temperature to the intensity and spectrum of emitted infrared light.",
+      "sourceReference": "Section 1.4, Page 19"
+    },
+    {
+      "id": "PHY-G12-U01-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A defense radar system emits a high-frequency microwave pulse toward an approaching aircraft. The echo pulse reflected from the aircraft is received by the radar antenna exactly 2.0 × 10⁻⁴ seconds after transmission. Taking the speed of electromagnetic waves in air as c = 3.0 × 10⁸ m/s, what is the distance R from the radar station to the aircraft?",
+      "options": [
+        {
+          "id": "A",
+          "text": "15 km"
+        },
+        {
+          "id": "B",
+          "text": "30 km"
+        },
+        {
+          "id": "C",
+          "text": "60 km"
+        },
+        {
+          "id": "D",
+          "text": "300 km"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The total round-trip distance traveled by the pulse is 2R = c × t. Thus, the target distance R = (c × t) / 2 = (3.0 × 10⁸ m/s × 2.0 × 10⁻⁴ s) / 2 = (6.0 × 10⁴ m) / 2 = 3.0 × 10⁴ m = 30 km.",
+      "sourceReference": "Section 1.4, Page 17"
+    },
+    {
+      "id": "PHY-G12-U01-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Doppler ultrasound imaging is widely used in cardiovascular diagnostics to measure blood flow velocity in arteries. If blood flows toward an ultrasound transducer emitting sound of frequency f₀, how is the detected frequency f' of the reflected echo shifted relative to f₀?",
+      "options": [
+        {
+          "id": "A",
+          "text": "f' is equal to f₀ because sound speed remains constant in blood."
+        },
+        {
+          "id": "B",
+          "text": "f' is higher than f₀ (positive Doppler shift) because moving blood cells act as approaching sound reflectors."
+        },
+        {
+          "id": "C",
+          "text": "f' is lower than f₀ (negative Doppler shift) due to viscous attenuation."
+        },
+        {
+          "id": "D",
+          "text": "f' drops to zero because blood completely absorbs ultrasound energy."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "According to the Doppler effect, when a wave reflects off a target moving toward the transducer (like approaching blood cells), the reflected frequency f' is shifted upward (f' > f₀). The magnitude of the shift is directly proportional to blood flow velocity.",
+      "sourceReference": "Section 1.3, Page 15"
+    },
+    {
+      "id": "PHY-G12-U01-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A ballistic missile operates in two distinct flight phases: a powered initial launch phase driven by rocket motors, followed by an unpowered exoatmospheric phase. Which physical laws govern the trajectory of the missile during its unpowered ballistic phase and its directional maneuverability in space?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Hydrostatic buoyancy laws and Archimedes' principle"
+        },
+        {
+          "id": "B",
+          "text": "Newtonian mechanics (gravitational free fall) for trajectory, and conservation of momentum (rocket thrust ejection) for maneuverability"
+        },
+        {
+          "id": "C",
+          "text": "Ohm's law and magnetic levitation"
+        },
+        {
+          "id": "D",
+          "text": "Snell's law of optical refraction and wave interference"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "During the unpowered phase, the missile moves along an elliptical trajectory governed by Newton's law of gravitation (free fall). Course adjustments in space rely on Newton's third law and conservation of momentum via directional gas exhaust thrust.",
+      "sourceReference": "Section 1.4, Page 18"
+    },
+    {
+      "id": "PHY-G12-U01-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "In modern radiation therapy for cancer treatment (Linear Accelerator / LINAC), high-energy Megavoltage X-rays or gamma rays are directed at tumor tissues. How do these ionizing radiations selectively destroy cancerous cells at the cellular level?",
+      "options": [
+        {
+          "id": "A",
+          "text": "By heating cellular water to 100 °C to cause mechanical boiling"
+        },
+        {
+          "id": "B",
+          "text": "By direct and indirect ionization that breaks single- and double-strand DNA bonds, preventing uninhibited malignant cell replication"
+        },
+        {
+          "id": "C",
+          "text": "By magnetizing blood hemoglobin to stop local circulation"
+        },
+        {
+          "id": "D",
+          "text": "By freezing cellular membranes through thermal conduction"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "High-energy ionizing radiation ejects electrons from biological atoms, creating free radicals and directly severing single- and double-strand DNA chemical bonds. Tumor cells, which divide rapidly and lack efficient repair mechanisms, undergo apoptosis.",
+      "sourceReference": "Section 1.3, Page 16"
+    }
+  ]
 }

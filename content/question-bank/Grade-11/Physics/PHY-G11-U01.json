@@ -3,5 +3,411 @@
   "subject": "Physics",
   "unitNumber": 1,
   "unitTitle": "Physics and Human Society",
-  "questions": []
+  "questions": [
+    {
+      "id": "PHY-G11-U01-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which of the following best describes the fundamental mission of physics as a natural science?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To memorize natural phenomena without mathematical formulation"
+        },
+        {
+          "id": "B",
+          "text": "To understand the fundamental principles governing matter, energy, and their interactions to advance technology and benefit society"
+        },
+        {
+          "id": "C",
+          "text": "To invent artificial materials isolated from natural physical laws"
+        },
+        {
+          "id": "D",
+          "text": "To study biological organisms exclusively without considering energy transfers"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Physics is the foundational natural science aimed at discovering the fundamental laws governing matter, energy, space, and time, thereby providing applied knowledge to drive technological innovation and societal benefit.",
+      "sourceReference": "Section 1.1, Page 1"
+    },
+    {
+      "id": "PHY-G11-U01-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is one of the primary objectives of the Ethiopian Physics Society (EPS)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To restrict scientific publications to international researchers only"
+        },
+        {
+          "id": "B",
+          "text": "To promote physics education, research, and scientific awareness across Ethiopia"
+        },
+        {
+          "id": "C",
+          "text": "To replace high school science curricula with non-scientific literature"
+        },
+        {
+          "id": "D",
+          "text": "To manufacture industrial consumer electronics for export"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The Ethiopian Physics Society (EPS) aims to foster physics education and research, organize scientific conferences, popularize physics among Ethiopian students, and support curriculum design.",
+      "sourceReference": "Section 1.2, Page 3"
+    },
+    {
+      "id": "PHY-G11-U01-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In the construction of physics knowledge, what role does a hypothesis play in the scientific method?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It serves as a proven universal law that requires no further testing."
+        },
+        {
+          "id": "B",
+          "text": "It is a testable, tentative explanation based on preliminary observation and existing scientific principles."
+        },
+        {
+          "id": "C",
+          "text": "It is an unchangeable opinion accepted purely on authority."
+        },
+        {
+          "id": "D",
+          "text": "It represents the final step after all experimental conclusions are published."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "A hypothesis is a testable proposal or tentative explanation formulated to guide empirical investigation and experimental testing during the scientific inquiry process.",
+      "sourceReference": "Section 1.3, Page 5"
+    },
+    {
+      "id": "PHY-G11-U01-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which modern career field applies principles of radiation, acoustics, and magnetic fields directly to diagnostic healthcare?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Geophysics"
+        },
+        {
+          "id": "B",
+          "text": "Medical Physics"
+        },
+        {
+          "id": "C",
+          "text": "Astrophysics"
+        },
+        {
+          "id": "D",
+          "text": "Quantum Cryptography"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Medical Physics applies physical principles (such as X-rays, MRI, ultrasonics, and nuclear radiation) to diagnose and treat diseases in healthcare settings.",
+      "sourceReference": "Section 1.4, Page 7"
+    },
+    {
+      "id": "PHY-G11-U01-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which recent advancement in modern physics uses quantum mechanics to create unhackable encryption key transfers for secure communications?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Classical Electrodynamics"
+        },
+        {
+          "id": "B",
+          "text": "Quantum Cryptography"
+        },
+        {
+          "id": "C",
+          "text": "Radiometric Carbon Dating"
+        },
+        {
+          "id": "D",
+          "text": "Thermodynamic Calorimetry"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Quantum cryptography applies quantum mechanics principles (such as state superposition and entanglement) to establish highly secure, tamper-evident cryptographic key exchanges.",
+      "sourceReference": "Section 1.5, Page 11"
+    },
+    {
+      "id": "PHY-G11-U01-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How do physical principles contribute to modern transportation technologies like maglev trains and commercial aircraft?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Maglev trains rely on gravitational waves, while aircraft use nuclear fusion for propulsion."
+        },
+        {
+          "id": "B",
+          "text": "Maglev trains utilize magnetic levitation to eliminate friction, while aircraft apply fluid dynamics and Bernoulli's principle for aerodynamic lift."
+        },
+        {
+          "id": "C",
+          "text": "Both technologies depend solely on electrostatic repulsion between mechanical gears."
+        },
+        {
+          "id": "D",
+          "text": "Aircraft operate without force balance, whereas maglev trains rely on thermal expansion of rails."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Transportation engineering integrates core physics concepts: magnetic levitation (electromagnetism) reduces mechanical friction in maglev trains, and fluid dynamics (aerodynamics and pressure differentials) enables flight in aircraft.",
+      "sourceReference": "Section 1.1, Page 2"
+    },
+    {
+      "id": "PHY-G11-U01-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "The Ethiopian Physics Society in North America (EPSNA) collaborates with local institutions primarily to:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Commercialize agricultural products in international markets"
+        },
+        {
+          "id": "B",
+          "text": "Support Ethiopian physics training by donating equipment, providing computing facilities, and offering academic scholarships"
+        },
+        {
+          "id": "C",
+          "text": "Eliminate laboratory practicals from secondary school physics courses"
+        },
+        {
+          "id": "D",
+          "text": "Standardize non-scientific traditional measurement units"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "EPSNA supports Ethiopian physicists and students by providing educational resources, laboratory/field equipment, computing facilities, and financial scholarships to advance physics education.",
+      "sourceReference": "Section 1.2, Page 3"
+    },
+    {
+      "id": "PHY-G11-U01-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Why is a scientific theory in physics considered a dynamic body of knowledge rather than an absolute, unalterable truth?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Theories are based on arbitrary guesses that change daily."
+        },
+        {
+          "id": "B",
+          "text": "Theories are continually tested, refined, or expanded as new experimental evidence and high-precision measurements emerge."
+        },
+        {
+          "id": "C",
+          "text": "Scientific laws expire automatically after fifty years."
+        },
+        {
+          "id": "D",
+          "text": "Physics knowledge depends entirely on personal belief rather than empirical testing."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Scientific knowledge in physics is dynamic; theories are supported by empirical evidence but remain open to refinement or modification whenever new, verifiable experimental data contradicts existing models.",
+      "sourceReference": "Section 1.3, Page 5"
+    },
+    {
+      "id": "PHY-G11-U01-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which of the following pairs correctly connects a physics discipline with its practical interdisciplinary application?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Thermodynamics → Design of solar energy systems and thermal engines"
+        },
+        {
+          "id": "B",
+          "text": "Quantum Mechanics → Calculation of planetary orbits around the sun"
+        },
+        {
+          "id": "C",
+          "text": "Classical Mechanics → Encryption of internet financial transactions"
+        },
+        {
+          "id": "D",
+          "text": "Optics → Measurement of subsurface tectonic fault lines"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Thermodynamics studies heat, work, and energy conversion, which directly informs the design and efficiency analysis of thermal engines, heat exchangers, and solar energy systems.",
+      "sourceReference": "Section 1.4, Page 8"
+    },
+    {
+      "id": "PHY-G11-U01-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "The detection of gravitational waves by Advanced LIGO opened a new era in astrophysics because it allowed scientists to:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Measure the precise electrical resistance of copper wires at room temperature"
+        },
+        {
+          "id": "B",
+          "text": "Observe cosmic events like merging black holes through ripples in space-time rather than electromagnetic light alone"
+        },
+        {
+          "id": "C",
+          "text": "Eliminate the need for space telescopes in astronomy"
+        },
+        {
+          "id": "D",
+          "text": "Reverse the thermal expansion of industrial metals"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Gravitational waves are ripples in space-time caused by massive accelerating objects (like merging black holes or neutron stars), allowing astrophysicists to observe cosmic phenomena beyond traditional light transmission.",
+      "sourceReference": "Section 1.5, Page 10"
+    },
+    {
+      "id": "PHY-G11-U01-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "During an investigation of heat capacity, a student records temperature using a calibrated digital thermometer rather than relying on touch perception. Why is quantitative measurement essential in physics?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Sensory perception provides more accurate numerical values than digital instruments."
+        },
+        {
+          "id": "B",
+          "text": "Quantitative measurement replaces subjective human perception with precise, reproducible, and verifiable scientific data."
+        },
+        {
+          "id": "C",
+          "text": "Qualitative observations are forbidden in all scientific reports."
+        },
+        {
+          "id": "D",
+          "text": "Digital instruments eliminate the need for error analysis."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Quantitative measurement provides precise numerical data with standard units, enabling scientists to minimize subjective bias, analyze relations mathematically, and reproduce findings independently.",
+      "sourceReference": "Section 1.3, Page 6"
+    },
+    {
+      "id": "PHY-G11-U01-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "The invention of the transistor transformed global electronics and computing. How does this historical milestone illustrate the relationship between basic physics research and technological innovation?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Technology was developed first without any understanding of semiconductor physics."
+        },
+        {
+          "id": "B",
+          "text": "Basic research in quantum mechanics and solid-state physics provided the foundational insight that enabled engineers to invent semiconductor transistors."
+        },
+        {
+          "id": "C",
+          "text": "Transistors were invented purely by trial and error in mechanical engineering without physical models."
+        },
+        {
+          "id": "D",
+          "text": "Theoretical physics played no role in the development of computer microprocessors."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Breakthrough technologies (like transistors and microprocessors) stem from fundamental research in physics (specifically quantum mechanics and solid-state band theory), demonstrating how basic science drives technological revolutions.",
+      "sourceReference": "Section 1.1 & 1.5, Page 2 & 10"
+    },
+    {
+      "id": "PHY-G11-U01-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A researcher formulates a mathematical model predicting a new subatomic particle. Experiments conducted at a particle accelerator reveal data that contradicts the prediction. According to the principles of scientific inquiry, what must the researcher do?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Reject the experimental data and declare the mathematical model universally true."
+        },
+        {
+          "id": "B",
+          "text": "Modify or discard the hypothesis/model to align with the verifiable empirical evidence."
+        },
+        {
+          "id": "C",
+          "text": "Change the mathematical axioms to force agreement with the prediction."
+        },
+        {
+          "id": "D",
+          "text": "Cease all further research in particle physics."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Empirical evidence is the ultimate arbiter in physics. When reproducible experimental results contradict a theoretical model or hypothesis, the model must be revised or rejected.",
+      "sourceReference": "Section 1.3, Page 5"
+    },
+    {
+      "id": "PHY-G11-U01-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Why does quantum cryptography provide greater fundamental security than traditional mathematical encryption algorithms?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It relies on longer passwords that take thousands of years to compute."
+        },
+        {
+          "id": "B",
+          "text": "Any attempt by an eavesdropper to measure or intercept a quantum state irrevocably alters the state, exposing the breach instantly."
+        },
+        {
+          "id": "C",
+          "text": "It uses classical low-frequency radio waves that cannot penetrate physical walls."
+        },
+        {
+          "id": "D",
+          "text": "It completely eliminates the need for transmission cables or optical fibers."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In quantum cryptography (such as Quantum Key Distribution), fundamental quantum mechanics principles ensure that measuring a quantum state alters it, revealing any eavesdropping attempt instantly.",
+      "sourceReference": "Section 1.5, Page 11"
+    },
+    {
+      "id": "PHY-G11-U01-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A high school graduate wishes to pursue a scientific career addressing global climate change and renewable energy development. Which combination of physics sub-fields provides the most direct theoretical foundation for this career?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Acoustics and Classical Geometrical Optics"
+        },
+        {
+          "id": "B",
+          "text": "Thermodynamics, Solid-State Physics (Photovoltaics), and Fluid Dynamics"
+        },
+        {
+          "id": "C",
+          "text": "Geometrical Optics and High-Energy Particle Physics"
+        },
+        {
+          "id": "D",
+          "text": "Quantum Electrodynamics and Nuclear Astrophysics"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Climate science and renewable energy technologies rely heavily on thermodynamics (heat balance and energy conversion efficiency), solid-state physics (photovoltaic solar cells), and fluid dynamics (atmospheric/oceanic circulation and wind energy systems).",
+      "sourceReference": "Section 1.4 & 1.5, Page 8 & 12"
+    }
+  ]
 }
