@@ -48,6 +48,7 @@ export interface IStudentProgressDocument extends Document {
   examAccess: {
     ticketsAvailable: number;
     totalAdsWatched: number;
+    lastDailyTicketDate?: string; // YYYY-MM-DD
   };
   offlineAccess: {
     unlockedUnits: IUnlockedUnitSubdoc[];
@@ -117,8 +118,9 @@ const StudentProgressSchema = new Schema<IStudentProgressDocument>(
       lastRepairedAt: { type: Date },
     },
     examAccess: {
-      ticketsAvailable: { type: Number, default: 1 },
+      ticketsAvailable: { type: Number, default: 2 },
       totalAdsWatched: { type: Number, default: 0 },
+      lastDailyTicketDate: { type: String, default: '' },
     },
     offlineAccess: {
       unlockedUnits: { type: [UnlockedUnitSchema], default: [] },

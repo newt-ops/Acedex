@@ -5,6 +5,7 @@ import {
   PhoneRegisterRequestSchema,
   PhoneLoginRequestSchema,
   ChangePinRequestSchema,
+  UpdateProfileRequestSchema,
 } from '@acedex/contracts';
 import { AuthController } from './auth.controller';
 import { validate } from '../../middleware/validate';
@@ -49,6 +50,20 @@ router.post(
 
 router.post('/logout', asyncHandler(AuthController.logout));
 
-router.get('/me', requireAuth, AuthController.me);
+router.get('/me', requireAuth, asyncHandler(AuthController.me));
+
+router.patch(
+  '/profile',
+  requireAuth,
+  validate({ body: UpdateProfileRequestSchema }),
+  asyncHandler(AuthController.updateProfile)
+);
+
+router.patch(
+  '/me',
+  requireAuth,
+  validate({ body: UpdateProfileRequestSchema }),
+  asyncHandler(AuthController.updateProfile)
+);
 
 export const authRoutes = router;

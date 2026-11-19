@@ -155,6 +155,28 @@ export const ChangePinRequestSchema = z.object({
 });
 export type ChangePinRequest = z.infer<typeof ChangePinRequestSchema>;
 
+export const UpdateProfileRequestSchema = z
+  .object({
+    displayName: z.string().min(2, 'Name must be at least 2 characters').max(100).optional(),
+    avatarUrl: z.string().optional(),
+    gender: StudentGenderSchema.optional(),
+    grade: z.union([z.literal(9), z.literal(10), z.literal(11), z.literal(12)]).optional(),
+    stream: StudentStreamSchema.nullable().optional(),
+  })
+  .refine(
+    (data) => {
+      if ((data.grade === 11 || data.grade === 12) && data.stream === null) {
+        return false;
+      }
+      return true;
+    },
+    {
+      message: 'Stream (natural or social) is required for Grades 11 and 12',
+      path: ['stream'],
+    }
+  );
+export type UpdateProfileRequest = z.infer<typeof UpdateProfileRequestSchema>;
+
 export const GoogleAuthRequestSchema = z.object({
   idToken: z.string().min(1, 'Google ID token is required'),
   platform: z.enum(['web', 'android', 'ios']).optional(),
@@ -246,6 +268,49 @@ export interface PublicQuestionItem {
   difficulty: QuestionDifficulty;
   question: string;
   options: QuestionOption[];
+}
+
+export const CreateBookmarkRequestSchema = z.object({
+  notes: z.string().max(500, 'Notes cannot exceed 500 characters').optional(),
+});
+export type CreateBookmarkRequest = z.infer<typeof CreateBookmarkRequestSchema>;
+
+export interface BookmarkedQuestionItem {
+  bookmarkId: string;
+  questionId: string;
+  externalId: string;
+  unitId: string;
+  unitCode: string;
+  subjectCode: string;
+  grade: number;
+  question: string;
+  difficulty: QuestionDifficulty;
+  options: QuestionOption[];
+  correctOptionId?: 'A' | 'B' | 'C' | 'D';
+  explanation?: string;
+  notes?: string;
+  bookmarkedAt: string;
+}
+
+export interface BookmarkListResponse {
+  total: number;
+  bookmarks: BookmarkedQuestionItem[];
+}
+
+export interface ModelExamQuestionItem extends PublicQuestionItem {
+  unitCode: string;
+  unitTitle: string;
+  unitNumber: number;
+}
+
+export interface ModelExamSessionResponse {
+  examSessionId: string;
+  subjectCode: string;
+  subjectName: string;
+  grade: number;
+  totalQuestions: number;
+  timeLimitMinutes: number;
+  questions: ModelExamQuestionItem[];
 }
 
 // ==========================================
@@ -454,6 +519,13 @@ export interface AdminAdAnalyticsData {
   };
 }
 
+export interface OfflineAnswerKeyItem {
+  questionId: string;
+  externalId: string;
+  correctOptionId: 'A' | 'B' | 'C' | 'D';
+  explanation: string;
+}
+
 export interface OfflinePackBundle {
   unitId: string;
   unitCode: string;
@@ -465,6 +537,7 @@ export interface OfflinePackBundle {
   downloadedAt: string;
   expiresAt: string;
   questions: PublicQuestionItem[];
+  offlineAnswerKeys?: OfflineAnswerKeyItem[];
 }
 
 // ==========================================

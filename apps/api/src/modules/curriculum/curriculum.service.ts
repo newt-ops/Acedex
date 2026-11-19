@@ -3,14 +3,21 @@ import {
   PublicQuestionItem,
   StudentStream,
   OfflinePackBundle,
+  OfflineAnswerKeyItem,
+  BookmarkedQuestionItem,
+  BookmarkListResponse,
+  ModelExamSessionResponse,
+  ModelExamQuestionItem,
 } from '@acedex/contracts';
 import { SubjectModel, ISubject } from './models/subject.model';
 import { UnitModel, IUnit } from './models/unit.model';
 import { QuestionModel } from './models/question.model';
+import { AnswerKeyModel } from './models/answer-key.model';
+import { BookmarkModel } from './models/bookmark.model';
 import { StudentProgressModel } from '../progress/models/student-progress.model';
 import { ProgressService } from '../progress/progress.service';
 import { ContentCacheService } from '../../common/services/cache.service';
-import { NotFoundError, ForbiddenError } from '../../common/errors/app-error';
+import { NotFoundError, ForbiddenError, BadRequestError } from '../../common/errors/app-error';
 
 export class CurriculumService {
   /**
@@ -176,6 +183,15 @@ export class CurriculumService {
 
     const questions = await this.getQuestionsForUnit(unit._id.toString(), true);
 
+    const questionIds = questions.map((q) => q.id);
+    const keys = await AnswerKeyModel.find({ externalId: { $in: questionIds } }).lean();
+    const offlineAnswerKeys: OfflineAnswerKeyItem[] = keys.map((k) => ({
+      questionId: k.questionId ? k.questionId.toString() : k.externalId,
+      externalId: k.externalId,
+      correctOptionId: k.correctOptionId as 'A' | 'B' | 'C' | 'D',
+      explanation: k.explanation,
+    }));
+
     return {
       unitId: unit._id.toString(),
       unitCode: unit.code,
@@ -187,6 +203,211 @@ export class CurriculumService {
       downloadedAt: new Date().toISOString(),
       expiresAt,
       questions,
+      offlineAnswerKeys,
+    };
+  }
+
+  /**
+   * Adds or updates a bookmark for a question
+   */
+  public static async bookmarkQuestion(
+    userId: string,
+    questionIdOrExtId: string,
+    notes?: string
+  ): Promise<BookmarkedQuestionItem> {
+    const userObjectId = new Types.ObjectId(userId);
+
+    const query = Types.ObjectId.isValid(questionIdOrExtId)
+      ? { _id: new Types.ObjectId(questionIdOrExtId) }
+      : { externalId: questionIdOrExtId };
+
+    const question = await QuestionModel.findOne(query);
+    if (!question) {
+      throw new NotFoundError('Question not found');
+    }
+
+    const unit = await UnitModel.findById(question.unitId);
+    if (!unit) {
+      throw new NotFoundError('Associated curriculum unit not found');
+    }
+
+    const bookmark = await BookmarkModel.findOneAndUpdate(
+      { userId: userObjectId, questionId: question._id },
+      {
+        $set: {
+          externalId: question.externalId,
+          unitId: unit._id,
+          unitCode: unit.code,
+          subjectCode: unit.subjectCode,
+          grade: unit.grade,
+          notes: notes?.trim() || undefined,
+        },
+      },
+      { upsert: true, new: true }
+    );
+
+    const key = await AnswerKeyModel.findOne({ externalId: question.externalId });
+
+    return {
+      bookmarkId: bookmark._id.toString(),
+      questionId: question._id.toString(),
+      externalId: question.externalId,
+      unitId: unit._id.toString(),
+      unitCode: unit.code,
+      subjectCode: unit.subjectCode,
+      grade: unit.grade,
+      question: question.question,
+      difficulty: question.difficulty,
+      options: question.options,
+      correctOptionId: key ? (key.correctOptionId as 'A' | 'B' | 'C' | 'D') : undefined,
+      explanation: key ? key.explanation : undefined,
+      notes: bookmark.notes,
+      bookmarkedAt: bookmark.createdAt.toISOString(),
+    };
+  }
+
+  /**
+   * Removes a bookmark for a question
+   */
+  public static async removeBookmark(userId: string, questionIdOrExtId: string): Promise<boolean> {
+    const userObjectId = new Types.ObjectId(userId);
+    const query: Record<string, any> = { userId: userObjectId };
+
+    if (Types.ObjectId.isValid(questionIdOrExtId)) {
+      query.$or = [
+        { questionId: new Types.ObjectId(questionIdOrExtId) },
+        { externalId: questionIdOrExtId },
+        { _id: new Types.ObjectId(questionIdOrExtId) },
+      ];
+    } else {
+      query.externalId = questionIdOrExtId;
+    }
+
+    const result = await BookmarkModel.deleteOne(query);
+    return result.deletedCount > 0;
+  }
+
+  /**
+   * Lists all bookmarked questions for a student with optional filters
+   */
+  public static async listBookmarks(
+    userId: string,
+    filter?: { subjectCode?: string; grade?: number }
+  ): Promise<BookmarkListResponse> {
+    const userObjectId = new Types.ObjectId(userId);
+    const query: Record<string, any> = { userId: userObjectId };
+
+    if (filter?.subjectCode) {
+      query.subjectCode = filter.subjectCode.toUpperCase().trim();
+    }
+    if (filter?.grade) {
+      query.grade = filter.grade;
+    }
+
+    const bookmarks = await BookmarkModel.find(query).sort({ createdAt: -1 });
+    if (bookmarks.length === 0) {
+      return { total: 0, bookmarks: [] };
+    }
+
+    const questionIds = bookmarks.map((b) => b.questionId);
+    const questions = await QuestionModel.find({ _id: { $in: questionIds } }).lean();
+    const qMap = new Map(questions.map((q) => [q._id.toString(), q]));
+
+    const extIds = bookmarks.map((b) => b.externalId);
+    const keys = await AnswerKeyModel.find({ externalId: { $in: extIds } }).lean();
+    const keyMap = new Map(keys.map((k) => [k.externalId, k]));
+
+    const items: BookmarkedQuestionItem[] = [];
+    for (const b of bookmarks) {
+      const q = qMap.get(b.questionId.toString());
+      if (!q) continue;
+      const k = keyMap.get(b.externalId);
+
+      items.push({
+        bookmarkId: b._id.toString(),
+        questionId: q._id.toString(),
+        externalId: q.externalId,
+        unitId: b.unitId.toString(),
+        unitCode: b.unitCode,
+        subjectCode: b.subjectCode,
+        grade: b.grade,
+        question: q.question,
+        difficulty: q.difficulty,
+        options: q.options,
+        correctOptionId: k ? (k.correctOptionId as 'A' | 'B' | 'C' | 'D') : undefined,
+        explanation: k ? k.explanation : undefined,
+        notes: b.notes,
+        bookmarkedAt: b.createdAt.toISOString(),
+      });
+    }
+
+    return { total: items.length, bookmarks: items };
+  }
+
+  /**
+   * Generates a balanced, timed multi-unit Model Exam session
+   */
+  public static async generateModelExam(
+    subjectCode: string,
+    grade = 12,
+    count = 50
+  ): Promise<ModelExamSessionResponse> {
+    const code = subjectCode.toUpperCase().trim();
+    const subject = await SubjectModel.findOne({ code });
+    if (!subject) {
+      throw new NotFoundError(`Subject '${code}' not found`);
+    }
+
+    const targetGrades = grade === 12 ? [11, 12] : [grade];
+    const publishedUnits = await UnitModel.find({
+      subjectCode: code,
+      grade: { $in: targetGrades },
+      isPublished: true,
+    }).sort({ grade: 1, unitNumber: 1 });
+
+    if (publishedUnits.length === 0) {
+      throw new BadRequestError(`No published question curriculum found for ${subject.name} to generate a model exam.`);
+    }
+
+    const unitCodes = publishedUnits.map((u) => u.code);
+    const unitMap = new Map(publishedUnits.map((u) => [u.code, u]));
+
+    const allQuestions = await QuestionModel.find({
+      unitCode: { $in: unitCodes },
+      isPublished: true,
+    }).lean();
+
+    if (allQuestions.length === 0) {
+      throw new BadRequestError(`No active questions available for ${subject.name} model exam.`);
+    }
+
+    const shuffled = [...allQuestions].sort(() => 0.5 - Math.random());
+    const selected = shuffled.slice(0, Math.min(count, allQuestions.length));
+
+    const examQuestions: ModelExamQuestionItem[] = selected.map((q) => {
+      const u = unitMap.get(q.unitCode);
+      return {
+        id: q.externalId,
+        type: 'multiple_choice',
+        difficulty: q.difficulty,
+        question: q.question,
+        options: q.options,
+        unitCode: q.unitCode,
+        unitTitle: u ? u.title : q.unitCode,
+        unitNumber: u ? u.unitNumber : 1,
+      };
+    });
+
+    const examSessionId = `MODEL-${code}-${Date.now().toString(36).toUpperCase()}`;
+
+    return {
+      examSessionId,
+      subjectCode: code,
+      subjectName: subject.name,
+      grade,
+      totalQuestions: examQuestions.length,
+      timeLimitMinutes: Math.round(examQuestions.length * 1.5),
+      questions: examQuestions,
     };
   }
 }

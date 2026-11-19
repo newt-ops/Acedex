@@ -233,6 +233,8 @@ export class ProgressService {
       };
     }
 
+    await this.replenishDailyFreeTickets(progress);
+
     // Format subject mastery with full names
     const subjectMasteryList = progress.subjectMastery.map((sm) => ({
       subjectCode: sm.subjectCode,
@@ -490,6 +492,33 @@ export class ProgressService {
   }
 
   /**
+   * Replenishes daily free exam tickets (minimum 2 tickets per calendar day)
+   */
+  public static async replenishDailyFreeTickets(progress: IStudentProgressDocument): Promise<boolean> {
+    const today = new Date().toISOString().slice(0, 10);
+    if (!progress.examAccess) {
+      progress.examAccess = { ticketsAvailable: 2, totalAdsWatched: 0, lastDailyTicketDate: today };
+      await progress.save();
+      return true;
+    }
+
+    if (progress.examAccess.lastDailyTicketDate !== today) {
+      if (progress.examAccess.ticketsAvailable < 2) {
+        progress.examAccess.ticketsAvailable = 2;
+      }
+      progress.examAccess.lastDailyTicketDate = today;
+      await progress.save();
+      logger.info(
+        { userId: progress.userId.toString(), tickets: progress.examAccess.ticketsAvailable },
+        'Daily free exam tickets replenished'
+      );
+      return true;
+    }
+
+    return false;
+  }
+
+  /**
    * Returns current ad monetization status for student
    */
   public static async getStudentAdStatus(userId: string | Types.ObjectId): Promise<StudentAdStatusData> {
@@ -497,16 +526,19 @@ export class ProgressService {
     let progress = await StudentProgressModel.findOne({ userId: userObjectId });
 
     if (!progress) {
+      const today = new Date().toISOString().slice(0, 10);
       progress = new StudentProgressModel({
         userId: userObjectId,
         overallStats: { totalAssessmentsTaken: 0, totalAssessmentsPassed: 0, averageScore: 0, totalTimeSpentSeconds: 0 },
         streak: { currentStreak: 0, longestStreak: 0, lastActivityDate: '', previousBrokenStreak: 0 },
-        examAccess: { ticketsAvailable: 1, totalAdsWatched: 0 },
+        examAccess: { ticketsAvailable: 2, totalAdsWatched: 0, lastDailyTicketDate: today },
         offlineAccess: { unlockedUnits: [] },
         units: [],
         subjectMastery: [],
       });
       await progress.save();
+    } else {
+      await this.replenishDailyFreeTickets(progress);
     }
 
     const now = Date.now();

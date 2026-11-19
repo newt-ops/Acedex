@@ -20,4 +20,30 @@ router.get(
   asyncHandler(CurriculumController.getOfflinePack)
 );
 
+// EUEE Subject Model Exam Generator
+router.get(
+  '/subjects/:subjectCode/model-exam',
+  optionalAuth,
+  asyncHandler(CurriculumController.getModelExam)
+);
+
+// Question Bookmarks / Saved Questions
+router.post(
+  '/questions/:questionId/bookmark',
+  requireAuth,
+  asyncHandler(CurriculumController.bookmarkQuestion)
+);
+
+router.delete(
+  '/questions/:questionId/bookmark',
+  requireAuth,
+  asyncHandler(CurriculumController.removeBookmark)
+);
+
+router.get(
+  '/bookmarks',
+  requireAuth,
+  asyncHandler(CurriculumController.listBookmarks)
+);
+
 export const curriculumRoutes = router;

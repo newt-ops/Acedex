@@ -5,6 +5,7 @@ import {
   PhoneRegisterRequest,
   PhoneLoginRequest,
   ChangePinRequest,
+  UpdateProfileRequest,
 } from '@acedex/contracts';
 import { AuthService } from './auth.service';
 import { AuthenticatedRequest } from '../../middleware/auth.middleware';
@@ -148,7 +149,22 @@ export class AuthController {
     return sendSuccess(res, { message: 'Logged out successfully' }, 200);
   }
 
-  public static me(req: AuthenticatedRequest, res: Response): Response {
-    return sendSuccess(res, req.user, 200);
+  public static async me(req: AuthenticatedRequest, res: Response): Promise<Response> {
+    const profile = await AuthService.getProfile(req.user!.id);
+    return sendSuccess(res, profile, 200);
+  }
+
+  public static async updateProfile(
+    req: AuthenticatedRequest,
+    res: Response
+  ): Promise<Response> {
+    const body = req.body as UpdateProfileRequest;
+    const profile = await AuthService.updateProfile(
+      req.user!.id,
+      body,
+      req.ip,
+      req.headers['user-agent']
+    );
+    return sendSuccess(res, profile, 200);
   }
 }

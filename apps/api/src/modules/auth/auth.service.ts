@@ -8,6 +8,7 @@ import {
   UserRole,
   PhoneRegisterRequest,
   PhoneLoginRequest,
+  UpdateProfileRequest,
   normalizeEthiopianPhone,
 } from '@acedex/contracts';
 import { UserModel, IUser, generateUniqueAcedexId } from '../users/user.model';
@@ -401,6 +402,51 @@ export class AuthService {
     if (!user) {
       throw new NotFoundError('User profile not found');
     }
+    return this.mapUserToProfile(user);
+  }
+
+  public static async updateProfile(
+    userId: string,
+    payload: UpdateProfileRequest,
+    ipAddress?: string,
+    userAgent?: string
+  ): Promise<AuthUserProfile> {
+    const user = await UserModel.findById(userId);
+    if (!user) {
+      throw new NotFoundError('User profile not found');
+    }
+
+    if (payload.displayName !== undefined) {
+      user.displayName = payload.displayName.trim();
+    }
+    if (payload.avatarUrl !== undefined) {
+      user.avatarUrl = payload.avatarUrl.trim();
+    }
+    if (payload.gender !== undefined) {
+      user.gender = payload.gender;
+    }
+    if (payload.grade !== undefined) {
+      user.grade = payload.grade;
+      if ((payload.grade === 9 || payload.grade === 10) && payload.stream === undefined) {
+        user.stream = null;
+      }
+    }
+    if (payload.stream !== undefined) {
+      user.stream = payload.stream;
+    }
+
+    await user.save();
+
+    await AuditService.record({
+      userId: user._id.toString(),
+      action: 'USER_PROFILE_UPDATE',
+      resource: 'users',
+      resourceId: user._id.toString(),
+      details: { displayName: user.displayName, grade: user.grade, stream: user.stream },
+      ipAddress,
+      userAgent,
+    });
+
     return this.mapUserToProfile(user);
   }
 

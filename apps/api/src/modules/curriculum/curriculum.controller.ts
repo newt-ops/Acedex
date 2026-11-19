@@ -109,4 +109,55 @@ export class CurriculumController {
     const pack = await CurriculumService.getOfflinePack(userId, unitId);
     return sendSuccess(res, pack, 200);
   }
+
+  public static async bookmarkQuestion(
+    req: AuthenticatedRequest,
+    res: Response
+  ): Promise<Response> {
+    const userId = req.user!.id;
+    const questionId = req.params.questionId as string;
+    const notes = req.body?.notes as string | undefined;
+
+    const result = await CurriculumService.bookmarkQuestion(userId, questionId, notes);
+    return sendSuccess(res, result, 201);
+  }
+
+  public static async removeBookmark(
+    req: AuthenticatedRequest,
+    res: Response
+  ): Promise<Response> {
+    const userId = req.user!.id;
+    const questionId = req.params.questionId as string;
+
+    const removed = await CurriculumService.removeBookmark(userId, questionId);
+    return sendSuccess(res, { removed }, 200);
+  }
+
+  public static async listBookmarks(
+    req: AuthenticatedRequest,
+    res: Response
+  ): Promise<Response> {
+    const userId = req.user!.id;
+    const subjectCode = req.query.subject as string | undefined;
+    const gradeStr = req.query.grade as string | undefined;
+    const grade = gradeStr ? parseInt(gradeStr, 10) : undefined;
+
+    const bookmarks = await CurriculumService.listBookmarks(userId, { subjectCode, grade });
+    return sendSuccess(res, bookmarks, 200);
+  }
+
+  public static async getModelExam(
+    req: AuthenticatedRequest,
+    res: Response
+  ): Promise<Response> {
+    const subjectCode = req.params.subjectCode as string;
+    const gradeStr = req.query.grade as string | undefined;
+    const countStr = req.query.count as string | undefined;
+
+    const grade = gradeStr ? parseInt(gradeStr, 10) : 12;
+    const count = countStr ? parseInt(countStr, 10) : 50;
+
+    const session = await CurriculumService.generateModelExam(subjectCode, grade, count);
+    return sendSuccess(res, session, 200);
+  }
 }
