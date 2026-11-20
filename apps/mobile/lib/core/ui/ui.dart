@@ -1,0 +1,16 @@
+/// Acedex Mobile Reusable UI Component System
+///
+/// Apple-Style Elastic Interactions, Bouncy Physics, and Teal Design System
+library;
+
+export 'animations/bounceable.dart';
+export 'animations/scroll_behavior.dart';
+export 'buttons/acedex_button.dart';
+export 'cards/acedex_card.dart';
+export 'feedback/acedex_toast.dart';
+export 'feedback/acedex_dialog.dart';
+export 'feedback/acedex_bottom_sheet.dart';
+export 'feedback/acedex_state_views.dart';
+export 'inputs/acedex_text_field.dart';
+export 'badges/acedex_badge.dart';
+export 'progress/acedex_progress.dart';

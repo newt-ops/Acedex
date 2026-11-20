@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'core/theme/app_colors.dart';
 import 'core/theme/app_theme.dart';
+import 'core/ui/ui.dart';
 
 void main() {
   runApp(const AcedexApp());
@@ -16,6 +17,7 @@ class AcedexApp extends StatelessWidget {
     return MaterialApp(
       title: 'Acedex',
       debugShowCheckedModeBanner: false,
+      scrollBehavior: const AcedexScrollBehavior(),
       theme: AppTheme.lightTheme,
       darkTheme: AppTheme.darkTheme,
       themeMode: ThemeMode.system,
@@ -128,165 +130,371 @@ class _BackendHealthCheckScreenState extends State<BackendHealthCheckScreen> {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             // Target API Card
-            Card(
-              child: Padding(
-                padding: const EdgeInsets.all(16),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      'TARGET BACKEND API',
-                      style: TextStyle(
-                        fontSize: 11,
-                        fontWeight: FontWeight.bold,
-                        color: isDark ? AppColors.darkSubtext : AppColors.lightSubtext,
-                        letterSpacing: 1.1,
-                      ),
+            AcedexCard(
+              variant: AcedexCardVariant.flat,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'TARGET BACKEND API',
+                    style: TextStyle(
+                      fontSize: 11,
+                      fontWeight: FontWeight.bold,
+                      color: isDark
+                          ? AppColors.darkSubtext
+                          : AppColors.lightSubtext,
+                      letterSpacing: 1.1,
                     ),
-                    const SizedBox(height: 6),
-                    Text(
-                      defaultApiUrl,
-                      style: TextStyle(
-                        fontFamily: 'monospace',
-                        color: theme.colorScheme.primary,
-                        fontWeight: FontWeight.w600,
-                        fontSize: 13,
-                      ),
+                  ),
+                  const SizedBox(height: 6),
+                  Text(
+                    defaultApiUrl,
+                    style: TextStyle(
+                      fontFamily: 'monospace',
+                      color: theme.colorScheme.primary,
+                      fontWeight: FontWeight.w600,
+                      fontSize: 13,
                     ),
-                  ],
-                ),
+                  ),
+                ],
               ),
             ),
             const SizedBox(height: 16),
 
             // Health Status Result Card
-            Card(
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(16),
-                side: BorderSide(
-                  color: _healthData != null
-                      ? (dbConnected ? successColor.withValues(alpha: 0.5) : warningColor.withValues(alpha: 0.5))
-                      : theme.colorScheme.outline,
-                  width: 1.2,
-                ),
+            AcedexCard(
+              variant: AcedexCardVariant.flat,
+              customBorderColor: _healthData != null
+                  ? (dbConnected
+                        ? successColor.withValues(alpha: 0.5)
+                        : warningColor.withValues(alpha: 0.5))
+                  : theme.colorScheme.outline,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        'System Health',
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                          color: theme.colorScheme.onSurface,
+                        ),
+                      ),
+                      if (_isLoading)
+                        SizedBox(
+                          width: 18,
+                          height: 18,
+                          child: CircularProgressIndicator(
+                            strokeWidth: 2,
+                            color: theme.colorScheme.primary,
+                          ),
+                        )
+                      else if (_healthData != null)
+                        Container(
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 10,
+                            vertical: 4,
+                          ),
+                          decoration: BoxDecoration(
+                            color: dbConnected
+                                ? successColor.withValues(alpha: 0.15)
+                                : warningColor.withValues(alpha: 0.15),
+                            borderRadius: BorderRadius.circular(20),
+                          ),
+                          child: Text(
+                            status,
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 12,
+                              color: dbConnected
+                                  ? successColor
+                                  : warningColor,
+                            ),
+                          ),
+                        ),
+                    ],
+                  ),
+                  const Divider(height: 28),
+
+                  if (_errorMessage != null)
+                    Text(
+                      'Error: $_errorMessage',
+                      style: TextStyle(color: errorColor, fontSize: 13),
+                    )
+                  else if (_healthData != null) ...[
+                    _buildMetricRow(
+                      context,
+                      'Database',
+                      dbConnected
+                          ? 'Connected (${_healthData!['database']?['name'] ?? 'acedex'})'
+                          : 'Disconnected',
+                      dbConnected ? successColor : errorColor,
+                    ),
+                    const SizedBox(height: 12),
+                    _buildMetricRow(
+                      context,
+                      'Database Host',
+                      _healthData!['database']?['host'] ?? 'N/A',
+                      theme.colorScheme.onSurface,
+                    ),
+                    const SizedBox(height: 12),
+                    _buildMetricRow(
+                      context,
+                      'Environment',
+                      _healthData!['environment'] ?? 'N/A',
+                      theme.colorScheme.onSurface,
+                    ),
+                    const SizedBox(height: 12),
+                    _buildMetricRow(
+                      context,
+                      'Server Uptime',
+                      '${_healthData!['uptimeSeconds'] ?? 0}s',
+                      theme.colorScheme.onSurface,
+                    ),
+                    const SizedBox(height: 12),
+                    _buildMetricRow(
+                      context,
+                      'API Version',
+                      _healthData!['version'] ?? '1.4.0',
+                      theme.colorScheme.onSurface,
+                    ),
+                  ] else
+                    Text(
+                      'Waiting for probe...',
+                      style: TextStyle(
+                        color: isDark
+                            ? AppColors.darkSubtext
+                            : AppColors.lightSubtext,
+                        fontSize: 13,
+                      ),
+                    ),
+                ],
               ),
-              child: Padding(
-                padding: const EdgeInsets.all(20),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            ),
+            const SizedBox(height: 20),
+
+            // Probe Button (AcedexButton)
+            AcedexButton(
+              label: _isLoading ? 'Probing...' : 'Re-probe Backend & Database',
+              leadingIcon: const Icon(Icons.refresh_rounded),
+              isLoading: _isLoading,
+              onPressed: _isLoading ? null : _checkBackendHealth,
+            ),
+
+            const SizedBox(height: 36),
+
+            // --- Apple-Style Component Gallery Showcase ---
+            Row(
+              children: [
+                Icon(
+                  Icons.apple_rounded,
+                  size: 20,
+                  color: theme.colorScheme.primary,
+                ),
+                const SizedBox(width: 8),
+                Text(
+                  'APPLE UI COMPONENT SHOWCASE',
+                  style: TextStyle(
+                    fontSize: 12,
+                    fontWeight: FontWeight.bold,
+                    letterSpacing: 1.2,
+                    color: theme.colorScheme.onSurfaceVariant,
+                  ),
+                ),
+              ],
+            ),
+            const SizedBox(height: 14),
+
+            // Tactile Interactive Card Showcase
+            AcedexCard(
+              variant: AcedexCardVariant.raised,
+              onTap: () {
+                AcedexToast.show(
+                  context,
+                  title: 'Squircle Card',
+                  message: 'Elastic spring depression scale 0.97 triggered!',
+                  type: AcedexToastType.info,
+                );
+              },
+              child: Row(
+                children: [
+                  Container(
+                    width: 44,
+                    height: 44,
+                    decoration: BoxDecoration(
+                      color: theme.colorScheme.primaryContainer,
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                    child: Icon(
+                      Icons.touch_app_rounded,
+                      color: theme.colorScheme.primary,
+                      size: 22,
+                    ),
+                  ),
+                  const SizedBox(width: 14),
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          'System Health',
+                          'Interactive Tactile Card',
                           style: TextStyle(
-                            fontSize: 16,
+                            fontSize: 15,
                             fontWeight: FontWeight.bold,
                             color: theme.colorScheme.onSurface,
                           ),
                         ),
-                        if (_isLoading)
-                          SizedBox(
-                            width: 18,
-                            height: 18,
-                            child: CircularProgressIndicator(
-                              strokeWidth: 2,
-                              color: theme.colorScheme.primary,
-                            ),
-                          )
-                        else if (_healthData != null)
-                          Container(
-                            padding: const EdgeInsets.symmetric(
-                                horizontal: 10, vertical: 4),
-                            decoration: BoxDecoration(
-                              color: dbConnected
-                                  ? successColor.withValues(alpha: 0.15)
-                                  : warningColor.withValues(alpha: 0.15),
-                              borderRadius: BorderRadius.circular(20),
-                            ),
-                            child: Text(
-                              status,
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                fontSize: 12,
-                                color: dbConnected ? successColor : warningColor,
-                              ),
-                            ),
+                        const SizedBox(height: 3),
+                        Text(
+                          'Tap to feel spring haptics & trigger toast',
+                          style: TextStyle(
+                            fontSize: 13,
+                            color: theme.colorScheme.onSurfaceVariant,
                           ),
+                        ),
                       ],
                     ),
-                    const Divider(height: 28),
-
-                    if (_errorMessage != null)
-                      Text(
-                        'Error: $_errorMessage',
-                        style: TextStyle(color: errorColor, fontSize: 13),
-                      )
-                    else if (_healthData != null) ...[
-                      _buildMetricRow(
-                        context,
-                        'Database',
-                        dbConnected
-                            ? 'Connected (${_healthData!['database']?['name'] ?? 'acedex'})'
-                            : 'Disconnected',
-                        dbConnected ? successColor : errorColor,
-                      ),
-                      const SizedBox(height: 12),
-                      _buildMetricRow(
-                        context,
-                        'Database Host',
-                        _healthData!['database']?['host'] ?? 'N/A',
-                        theme.colorScheme.onSurface,
-                      ),
-                      const SizedBox(height: 12),
-                      _buildMetricRow(
-                        context,
-                        'Environment',
-                        _healthData!['environment'] ?? 'N/A',
-                        theme.colorScheme.onSurface,
-                      ),
-                      const SizedBox(height: 12),
-                      _buildMetricRow(
-                        context,
-                        'Server Uptime',
-                        '${_healthData!['uptimeSeconds'] ?? 0}s',
-                        theme.colorScheme.onSurface,
-                      ),
-                      const SizedBox(height: 12),
-                      _buildMetricRow(
-                        context,
-                        'API Version',
-                        _healthData!['version'] ?? '1.4.0',
-                        theme.colorScheme.onSurface,
-                      ),
-                    ] else
-                      Text(
-                        'Waiting for probe...',
-                        style: TextStyle(
-                          color: isDark ? AppColors.darkSubtext : AppColors.lightSubtext,
-                          fontSize: 13,
-                        ),
-                      ),
-                  ],
-                ),
+                  ),
+                  Icon(
+                    Icons.chevron_right_rounded,
+                    color: theme.colorScheme.outline,
+                  ),
+                ],
               ),
             ),
-            const SizedBox(height: 24),
+            const SizedBox(height: 16),
 
-            // Probe Button
-            ElevatedButton.icon(
-              onPressed: _isLoading ? null : _checkBackendHealth,
-              icon: const Icon(Icons.refresh, size: 18),
-              label: Text(_isLoading ? 'Probing...' : 'Re-probe Backend & Database'),
+            // Button Variants Showcase
+            Row(
+              children: [
+                Expanded(
+                  child: AcedexButton(
+                    label: 'Soft Accent',
+                    variant: AcedexButtonVariant.soft,
+                    size: AcedexButtonSize.md,
+                    onPressed: () {
+                      AcedexToast.show(
+                        context,
+                        title: 'Success Toast',
+                        message: 'Dynamic island floating pill with spring bounce',
+                        type: AcedexToastType.success,
+                      );
+                    },
+                  ),
+                ),
+                const SizedBox(width: 12),
+                Expanded(
+                  child: AcedexButton(
+                    label: 'Frosted Dialog',
+                    variant: AcedexButtonVariant.surface,
+                    size: AcedexButtonSize.md,
+                    onPressed: () {
+                      showAcedexDialog(
+                        context,
+                        title: 'Confirm Assessment',
+                        message: 'Are you ready to submit your 15 questions for Grade 10 Physics?',
+                        confirmLabel: 'Submit Now',
+                        cancelLabel: 'Keep Reviewing',
+                        onConfirm: () {
+                          AcedexToast.show(
+                            context,
+                            message: 'Assessment submitted successfully!',
+                            type: AcedexToastType.success,
+                          );
+                        },
+                      );
+                    },
+                  ),
+                ),
+              ],
             ),
+            const SizedBox(height: 12),
+
+            Row(
+              children: [
+                Expanded(
+                  child: AcedexButton(
+                    label: 'Bottom Sheet',
+                    variant: AcedexButtonVariant.outline,
+                    size: AcedexButtonSize.md,
+                    onPressed: () {
+                      showAcedexBottomSheet(
+                        context,
+                        title: 'Subject Curriculum Filter',
+                        child: Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 8.0),
+                          child: Column(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              const Text('Smooth spring drag-to-dismiss presentation with Gaussian backdrop blur.'),
+                              const SizedBox(height: 20),
+                              AcedexButton(
+                                label: 'Done',
+                                onPressed: () => Navigator.of(context).pop(),
+                              ),
+                            ],
+                          ),
+                        ),
+                      );
+                    },
+                  ),
+                ),
+                const SizedBox(width: 12),
+                Expanded(
+                  child: AcedexButton(
+                    label: 'Destructive',
+                    variant: AcedexButtonVariant.destructive,
+                    size: AcedexButtonSize.md,
+                    onPressed: () {
+                      AcedexToast.show(
+                        context,
+                        title: 'Error Notification',
+                        message: 'Network connection interrupted',
+                        type: AcedexToastType.error,
+                      );
+                    },
+                  ),
+                ),
+              ],
+            ),
+            const SizedBox(height: 18),
+
+            // Badges & Progress Showcase
+            Wrap(
+              spacing: 8,
+              runSpacing: 8,
+              children: [
+                const AcedexBadge(label: 'Grade 10', variant: AcedexBadgeVariant.primary),
+                const AcedexBadge(label: 'Natural Science', variant: AcedexBadgeVariant.success),
+                const AcedexBadge(label: '15 Questions', variant: AcedexBadgeVariant.neutral),
+                const AcedexBadge(label: 'High Score', variant: AcedexBadgeVariant.warning),
+              ],
+            ),
+            const SizedBox(height: 18),
+
+            // Progress bar
+            const Text(
+              'Study Completion Progress (82%)',
+              style: TextStyle(fontSize: 12.5, fontWeight: FontWeight.w600),
+            ),
+            const SizedBox(height: 8),
+            const AcedexProgressBar(progress: 0.82, height: 9),
+            const SizedBox(height: 24),
           ],
         ),
       ),
     );
   }
 
-  Widget _buildMetricRow(BuildContext context, String label, String value, Color valueColor) {
+  Widget _buildMetricRow(
+    BuildContext context,
+    String label,
+    String value,
+    Color valueColor,
+  ) {
     final theme = Theme.of(context);
     final isDark = theme.brightness == Brightness.dark;
 
