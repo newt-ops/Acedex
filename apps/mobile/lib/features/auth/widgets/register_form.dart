@@ -86,8 +86,10 @@ class _RegisterFormState extends State<RegisterForm> {
       return;
     }
     if ((_grade == 11 || _grade == 12) && _stream == null) {
-      setState(() =>
-          _errorMessage = 'Please choose your study stream (Natural or Social).');
+      setState(
+        () => _errorMessage =
+            'Please choose your study stream (Natural or Social).',
+      );
       return;
     }
 
@@ -126,8 +128,9 @@ class _RegisterFormState extends State<RegisterForm> {
     final isDark = theme.brightness == Brightness.dark;
 
     final primaryColor = theme.colorScheme.primary;
-    final accentSoft =
-        isDark ? AppColors.darkAccentSoft : AppColors.lightAccentSoft;
+    final accentSoft = isDark
+        ? AppColors.darkAccentSoft
+        : AppColors.lightAccentSoft;
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -137,7 +140,9 @@ class _RegisterFormState extends State<RegisterForm> {
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
             decoration: BoxDecoration(
-              color: isDark ? AppColors.darkErrorSoft : AppColors.lightErrorSoft,
+              color: isDark
+                  ? AppColors.darkErrorSoft
+                  : AppColors.lightErrorSoft,
               borderRadius: BorderRadius.circular(14),
               border: Border.all(
                 color: (isDark ? AppColors.darkError : AppColors.error)
@@ -268,15 +273,15 @@ class _RegisterFormState extends State<RegisterForm> {
                       color: isSelected
                           ? accentSoft
                           : (isDark
-                              ? AppColors.darkSurface
-                              : AppColors.lightSurface),
+                                ? AppColors.darkSurface
+                                : AppColors.lightSurface),
                       borderRadius: BorderRadius.circular(12),
                       border: Border.all(
                         color: isSelected
                             ? primaryColor
                             : (isDark
-                                ? AppColors.darkBorder
-                                : AppColors.lightBorder),
+                                  ? AppColors.darkBorder
+                                  : AppColors.lightBorder),
                         width: isSelected ? 1.6 : 1.0,
                       ),
                     ),
@@ -372,8 +377,9 @@ class _ChoiceChip extends StatelessWidget {
     final isDark = theme.brightness == Brightness.dark;
 
     final primaryColor = theme.colorScheme.primary;
-    final accentSoft =
-        isDark ? AppColors.darkAccentSoft : AppColors.lightAccentSoft;
+    final accentSoft = isDark
+        ? AppColors.darkAccentSoft
+        : AppColors.lightAccentSoft;
 
     return AcedexBounceable(
       onTap: onTap,
@@ -408,9 +414,7 @@ class _ChoiceChip extends StatelessWidget {
               style: TextStyle(
                 fontSize: 13,
                 fontWeight: isSelected ? FontWeight.w700 : FontWeight.w500,
-                color: isSelected
-                    ? primaryColor
-                    : theme.colorScheme.onSurface,
+                color: isSelected ? primaryColor : theme.colorScheme.onSurface,
               ),
             ),
           ],

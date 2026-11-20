@@ -39,7 +39,7 @@ class PhoneNumberInput extends StatelessWidget {
               size: 18,
               color: theme.colorScheme.primary,
             ),
-            const SizedBox(width: 6),
+            SizedBox(width: 6),
             Text(
               '+251',
               style: TextStyle(
@@ -48,7 +48,7 @@ class PhoneNumberInput extends StatelessWidget {
                 color: theme.colorScheme.onSurface,
               ),
             ),
-            const SizedBox(width: 8),
+            SizedBox(width: 8),
             Container(
               width: 1,
               height: 18,

@@ -89,8 +89,9 @@ class _StreamChip extends StatelessWidget {
     final isDark = theme.brightness == Brightness.dark;
 
     final primaryColor = theme.colorScheme.primary;
-    final accentSoft =
-        isDark ? AppColors.darkAccentSoft : AppColors.lightAccentSoft;
+    final accentSoft = isDark
+        ? AppColors.darkAccentSoft
+        : AppColors.lightAccentSoft;
 
     return AcedexBounceable(
       onTap: onTap,

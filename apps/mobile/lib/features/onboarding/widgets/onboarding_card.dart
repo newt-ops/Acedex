@@ -7,18 +7,16 @@ import '../models/onboarding_item.dart';
 class OnboardingCard extends StatelessWidget {
   final OnboardingItem item;
 
-  const OnboardingCard({
-    super.key,
-    required this.item,
-  });
+  const OnboardingCard({super.key, required this.item});
 
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     final isDark = theme.brightness == Brightness.dark;
 
-    final accentSoft =
-        isDark ? AppColors.darkAccentSoft : AppColors.lightAccentSoft;
+    final accentSoft = isDark
+        ? AppColors.darkAccentSoft
+        : AppColors.lightAccentSoft;
     final primaryColor = theme.colorScheme.primary;
 
     return Padding(
@@ -46,11 +44,7 @@ class OnboardingCard extends StatelessWidget {
               ],
             ),
             child: Center(
-              child: HugeIcon(
-                icon: item.icon,
-                size: 60,
-                color: primaryColor,
-              ),
+              child: HugeIcon(icon: item.icon, size: 60, color: primaryColor),
             ),
           ),
           const SizedBox(height: 36),

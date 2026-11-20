@@ -52,10 +52,7 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
             const SizedBox(width: 8),
-            AcedexBadge(
-              label: gradeLabel,
-              variant: AcedexBadgeVariant.primary,
-            ),
+            AcedexBadge(label: gradeLabel, variant: AcedexBadgeVariant.primary),
           ],
         ),
         actions: [
@@ -93,8 +90,9 @@ class HomeScreen extends StatelessWidget {
                 'Ready to master your curriculum questions today?',
                 style: TextStyle(
                   fontSize: 15,
-                  color:
-                      isDark ? AppColors.darkSubtext : AppColors.lightSubtext,
+                  color: isDark
+                      ? AppColors.darkSubtext
+                      : AppColors.lightSubtext,
                 ),
               ),
               const SizedBox(height: 24),
@@ -108,10 +106,9 @@ class HomeScreen extends StatelessWidget {
                       width: 52,
                       height: 52,
                       decoration: BoxDecoration(
-                        color: (isDark
-                                ? AppColors.darkWarning
-                                : AppColors.warning)
-                            .withValues(alpha: 0.15),
+                        color:
+                            (isDark ? AppColors.darkWarning : AppColors.warning)
+                                .withValues(alpha: 0.15),
                         borderRadius: BorderRadius.circular(16),
                       ),
                       child: Center(
