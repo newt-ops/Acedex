@@ -212,7 +212,6 @@ void main() {
 
       // Step 1: Name
       expect(find.text("What's your name?"), findsOneWidget);
-      expect(find.text('01 / 07'), findsOneWidget);
 
       await tester.enterText(find.byType(TextField), 'Dawit Alemayehu');
       await tester.pumpAndSettle();
@@ -222,7 +221,6 @@ void main() {
 
       // Step 2: Phone
       expect(find.text("What's your phone number?"), findsOneWidget);
-      expect(find.text('02 / 07'), findsOneWidget);
 
       await tester.enterText(find.byType(TextField), '911223344');
       await tester.pump(const Duration(milliseconds: 500));
@@ -233,7 +231,6 @@ void main() {
 
       // Step 3: Gender
       expect(find.text('Select your gender'), findsOneWidget);
-      expect(find.text('03 / 07'), findsOneWidget);
 
       await tester.tap(find.text('Male'));
       await tester.pumpAndSettle();
@@ -243,7 +240,6 @@ void main() {
 
       // Step 4: Grade
       expect(find.text('Which grade are you in?'), findsOneWidget);
-      expect(find.text('04 / 07'), findsOneWidget);
 
       await tester.tap(find.text('G12'));
       await tester.pumpAndSettle();
@@ -253,7 +249,6 @@ void main() {
 
       // Step 5: Stream (G12 requires stream)
       expect(find.text('Choose your stream'), findsOneWidget);
-      expect(find.text('05 / 07'), findsOneWidget);
 
       await tester.tap(find.text('Natural Science'));
       await tester.pumpAndSettle();
@@ -285,7 +280,6 @@ void main() {
 
       // Step 7: Final Review & Student ID Card
       expect(find.text('Review your details'), findsOneWidget);
-      expect(find.text('07 / 07'), findsOneWidget);
       expect(find.byType(StudentIdCard), findsOneWidget);
       expect(find.text('Dawit Alemayehu'), findsOneWidget);
       expect(find.text('+251911223344'), findsOneWidget);

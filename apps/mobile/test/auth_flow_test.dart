@@ -80,7 +80,6 @@ void main() {
       await tester.pumpAndSettle();
 
       expect(find.text("What's your name?"), findsOneWidget);
-      expect(find.text('01 / 07'), findsOneWidget);
 
       // Enter valid student name
       await tester.enterText(find.byType(TextField), 'Abebe Kebede');
@@ -91,7 +90,6 @@ void main() {
       await tester.pumpAndSettle();
 
       expect(find.text("What's your phone number?"), findsOneWidget);
-      expect(find.text('02 / 07'), findsOneWidget);
     });
 
     testWidgets('AuthScreen renders login gateway and navigates to Onboarding on Create Account tap',

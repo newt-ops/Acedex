@@ -24,10 +24,6 @@ class OnboardingHeader extends StatelessWidget {
     final isDark = theme.brightness == Brightness.dark;
     final accent = isDark ? AppColors.darkAccent : AppColors.lightAccent;
     final line = isDark ? AppColors.darkLine : AppColors.lightLine;
-    final subtext = isDark ? AppColors.darkSubtext : AppColors.lightSubtext;
-
-    final stepFormatted = (currentStep + 1).toString().padLeft(2, '0');
-    final totalFormatted = totalSteps.toString().padLeft(2, '0');
 
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 8),
@@ -79,7 +75,7 @@ class OnboardingHeader extends StatelessWidget {
                   ],
                 ),
 
-              // Right: Step Counter "01 / 07" + Flexible 3-Mode Theme Toggle
+              // Right: Sign In Link (if step 0) + Flexible 3-Mode Theme Toggle
               Row(
                 mainAxisSize: MainAxisSize.min,
                 children: [
@@ -97,16 +93,6 @@ class OnboardingHeader extends StatelessWidget {
                     ),
                     const SizedBox(width: 12),
                   ],
-                  Text(
-                    '$stepFormatted / $totalFormatted',
-                    style: TextStyle(
-                      fontSize: 13,
-                      fontWeight: FontWeight.w700,
-                      letterSpacing: 0.5,
-                      color: subtext,
-                    ),
-                  ),
-                  const SizedBox(width: 12),
                   // Flexible 3-Mode Theme Segmented Toggle
                   const AcedexThemeToggle(compact: true),
                 ],

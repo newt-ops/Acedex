@@ -89,7 +89,7 @@ class _StepPhoneState extends State<StepPhone> {
       _detectorState = PhoneDetectorState.checking;
     });
 
-    _debounceTimer = Timer(const Duration(milliseconds: 400), () async {
+    _debounceTimer = Timer(const Duration(milliseconds: 350), () async {
       final clean = AuthService.normalizePhone(raw);
       final isRegistered = await _authService.checkPhoneRegistered(clean);
       if (!mounted) return;
@@ -102,18 +102,38 @@ class _StepPhoneState extends State<StepPhone> {
     });
   }
 
+  // Continue button is ONLY active when validation has completed and returned available
   bool get _isValid {
     final raw = _controller.text.trim();
     return AuthService.isValidPhone(raw) &&
-        _detectorState != PhoneDetectorState.alreadyRegistered;
+        _detectorState == PhoneDetectorState.available;
   }
 
-  void _submit() {
-    if (_isValid) {
-      final clean = AuthService.normalizePhone(_controller.text.trim());
-      widget.onPhoneChanged(clean);
-      widget.onContinue();
+  Future<void> _submit() async {
+    final raw = _controller.text.trim();
+    if (!AuthService.isValidPhone(raw)) return;
+
+    // If currently checking, wait and do not bypass
+    if (_detectorState == PhoneDetectorState.checking) return;
+
+    // If not verified available yet, run check immediately
+    if (_detectorState != PhoneDetectorState.available) {
+      final clean = AuthService.normalizePhone(raw);
+      setState(() => _detectorState = PhoneDetectorState.checking);
+      final isRegistered = await _authService.checkPhoneRegistered(clean);
+      if (!mounted) return;
+
+      if (isRegistered) {
+        setState(() => _detectorState = PhoneDetectorState.alreadyRegistered);
+        return;
+      } else {
+        setState(() => _detectorState = PhoneDetectorState.available);
+      }
     }
+
+    final clean = AuthService.normalizePhone(_controller.text.trim());
+    widget.onPhoneChanged(clean);
+    widget.onContinue();
   }
 
   void _goToLogin(String cleanPhone) {
@@ -266,7 +286,7 @@ class _StepPhoneState extends State<StepPhone> {
                         ),
                         const SizedBox(width: 8),
                         Text(
-                          'Verifying phone availability...',
+                          'Checking registration status with database...',
                           style: TextStyle(
                             fontSize: 12,
                             fontWeight: FontWeight.w500,
@@ -381,9 +401,12 @@ class _StepPhoneState extends State<StepPhone> {
 
           const Spacer(),
 
-          // Continue Button
+          // Continue Button (Only active when database verification returns available)
           AcedexButton(
-            label: 'Continue',
+            label: _detectorState == PhoneDetectorState.checking
+                ? 'Verifying phone...'
+                : 'Continue',
+            isLoading: _detectorState == PhoneDetectorState.checking,
             variant: AcedexButtonVariant.primary,
             size: AcedexButtonSize.lg,
             isFullWidth: true,
