@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'app_colors.dart';
 
-/// Central Material 3 Theme Configuration for Acedex Mobile (Teal System)
+/// Central Material 3 Theme Configuration for Acedex Mobile (Purple System)
 abstract class AppTheme {
   /// --- Light Theme ---
   static ThemeData get lightTheme {

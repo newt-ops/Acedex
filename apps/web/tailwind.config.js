@@ -72,11 +72,13 @@ module.exports = {
           success: 'var(--success)',
           warning: 'var(--warning)',
           danger: 'var(--destructive)',
-          // Canonical Brand Palette (Teal System)
-          teal: '#0F766E',
-          tealLight: '#2DD4BF',
-          accentSoft: '#DDECEB',
-          accentSoftDark: '#122A29',
+          // Canonical Brand Palette (Royal Purple System)
+          purple: '#8A2BA3',
+          purpleLight: '#B866CF',
+          accent: '#8A2BA3',
+          accentLight: '#B866CF',
+          accentSoft: '#EFE1F2',
+          accentSoftDark: '#271A2C',
           surface: '#F4F4F6',
           surfaceDark: '#1B1B1F',
           raised: '#FFFFFF',

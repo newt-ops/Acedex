@@ -10,16 +10,16 @@
   --card-raised: #FFFFFF;
   --popover: #FFFFFF;
   --popover-foreground: #1C1C1E;
-  --primary: #0F766E;
-  --primary-hover: #0D655E;
+  --primary: #8A2BA3;
+  --primary-hover: #782390;
   --primary-foreground: #FFFFFF;
-  --secondary: #DDECEB;
-  --secondary-foreground: #0F766E;
+  --secondary: #EFE1F2;
+  --secondary-foreground: #8A2BA3;
   --muted: #F4F4F6;
   --muted-foreground: #6C6C72;
-  --accent: #0F766E;
-  --accent-soft: #DDECEB;
-  --accent-hover: #0D655E;
+  --accent: #8A2BA3;
+  --accent-soft: #EFE1F2;
+  --accent-hover: #782390;
   --accent-foreground: #FFFFFF;
   --destructive: #DC2626;
   --destructive-foreground: #FFFFFF;
@@ -27,11 +27,11 @@
   --success-foreground: #FFFFFF;
   --warning: #D97706;
   --warning-foreground: #FFFFFF;
-  --info: #0F766E;
+  --info: #8A2BA3;
   --info-foreground: #FFFFFF;
   --border: #E4E4E8;
   --input: #E4E4E8;
-  --ring: #0F766E;
+  --ring: #8A2BA3;
 
   /* Acedex design system aliases */
   --acedex-bg: var(--background);
@@ -60,16 +60,16 @@
   --card-raised: #2B2B31;
   --popover: #1B1B1F;
   --popover-foreground: #F5F5F7;
-  --primary: #2DD4BF;
-  --primary-hover: #14B8A6;
+  --primary: #B866CF;
+  --primary-hover: #C478D8;
   --primary-foreground: #0B0B0F;
-  --secondary: #122A29;
-  --secondary-foreground: #2DD4BF;
+  --secondary: #271A2C;
+  --secondary-foreground: #B866CF;
   --muted: #1B1B1F;
   --muted-foreground: #9A9AA2;
-  --accent: #2DD4BF;
-  --accent-soft: #122A29;
-  --accent-hover: #14B8A6;
+  --accent: #B866CF;
+  --accent-soft: #271A2C;
+  --accent-hover: #C478D8;
   --accent-foreground: #0B0B0F;
   --destructive: #F87171;
   --destructive-foreground: #0B0B0F;
@@ -77,11 +77,11 @@
   --success-foreground: #0B0B0F;
   --warning: #FBBF24;
   --warning-foreground: #0B0B0F;
-  --info: #2DD4BF;
+  --info: #B866CF;
   --info-foreground: #0B0B0F;
   --border: #2B2B31;
   --input: #2B2B31;
-  --ring: #2DD4BF;
+  --ring: #B866CF;
 
   /* Acedex design system aliases */
   --acedex-bg: var(--background);
@@ -102,26 +102,28 @@
   --acedex-danger: var(--destructive);
 }
 
-* {
-  box-sizing: border-box;
-}
-
 body {
-  background-color: var(--background);
   color: var(--foreground);
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-  min-height: 100vh;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background: var(--background);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  overflow-x: hidden;
 }
 
-/* Hide scrollbar for Chrome, Safari and Opera */
-.no-scrollbar::-webkit-scrollbar {
-  display: none;
+/* Custom scrollbar to match sleek theme */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
 }
 
-/* Hide scrollbar for IE, Edge and Firefox */
-.no-scrollbar {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--muted-foreground);
 }

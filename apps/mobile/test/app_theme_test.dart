@@ -4,12 +4,12 @@ import 'package:acedex/core/theme/app_colors.dart';
 import 'package:acedex/core/theme/app_theme.dart';
 
 void main() {
-  group('Acedex AppTheme & AppColors Tests (Teal Palette)', () {
-    test('Core Brand Swatches have exact Teal hex definitions', () {
-      expect(AppColors.accentLight, const Color(0xFF0F766E));
-      expect(AppColors.accentDark, const Color(0xFF2DD4BF));
-      expect(AppColors.accentSoftLight, const Color(0xFFDDECEB));
-      expect(AppColors.accentSoftDark, const Color(0xFF122A29));
+  group('Acedex AppTheme & AppColors Tests (Purple Palette)', () {
+    test('Core Brand Swatches have exact Purple hex definitions', () {
+      expect(AppColors.accentLight, const Color(0xFF8A2BA3));
+      expect(AppColors.accentDark, const Color(0xFFB866CF));
+      expect(AppColors.accentSoftLight, const Color(0xFFEFE1F2));
+      expect(AppColors.accentSoftDark, const Color(0xFF271A2C));
       expect(AppColors.onAccentLight, const Color(0xFFFFFFFF));
       expect(AppColors.onAccentDark, const Color(0xFF0B0B0F));
 
@@ -34,26 +34,26 @@ void main() {
       expect(AppColors.darkError, const Color(0xFFF87171));
     });
 
-    test('Light Theme has correct Teal palette and Material 3 structure', () {
+    test('Light Theme has correct Purple palette and Material 3 structure', () {
       final theme = AppTheme.lightTheme;
       expect(theme.useMaterial3, isTrue);
       expect(theme.brightness, Brightness.light);
-      expect(theme.colorScheme.primary, const Color(0xFF0F766E));
+      expect(theme.colorScheme.primary, const Color(0xFF8A2BA3));
       expect(theme.colorScheme.onPrimary, const Color(0xFFFFFFFF));
-      expect(theme.colorScheme.primaryContainer, const Color(0xFFDDECEB));
+      expect(theme.colorScheme.primaryContainer, const Color(0xFFEFE1F2));
       expect(theme.colorScheme.tertiary, AppColors.lightAccent);
       expect(theme.scaffoldBackgroundColor, const Color(0xFFFFFFFF));
       expect(theme.cardTheme.color, const Color(0xFFF4F4F6));
       expect(theme.colorScheme.onSurface, const Color(0xFF1C1C1E));
     });
 
-    test('Dark Theme has correct Teal palette and Material 3 structure', () {
+    test('Dark Theme has correct Purple palette and Material 3 structure', () {
       final theme = AppTheme.darkTheme;
       expect(theme.useMaterial3, isTrue);
       expect(theme.brightness, Brightness.dark);
-      expect(theme.colorScheme.primary, const Color(0xFF2DD4BF));
+      expect(theme.colorScheme.primary, const Color(0xFFB866CF));
       expect(theme.colorScheme.onPrimary, const Color(0xFF0B0B0F));
-      expect(theme.colorScheme.primaryContainer, const Color(0xFF122A29));
+      expect(theme.colorScheme.primaryContainer, const Color(0xFF271A2C));
       expect(theme.colorScheme.tertiary, AppColors.darkAccent);
       expect(theme.scaffoldBackgroundColor, const Color(0xFF0E0E11));
       expect(theme.cardTheme.color, const Color(0xFF1B1B1F));
