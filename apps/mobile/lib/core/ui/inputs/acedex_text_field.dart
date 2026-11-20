@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:hugeicons/hugeicons.dart';
+import '../../theme/app_colors.dart';
 
-/// Apple-Style Squircle Text Field
+/// Apple-Style Smooth Squircle Text Field
 ///
-/// Features smooth focus transition, clean neutral background,
-/// integrated prefix/suffix icons, clear button, and obscure toggle for PIN/password.
+/// Implemented directly via [OutlineInputBorder] and Material 3 [InputDecoration]
+/// so the fill, border curvature, and prefix/suffix icons are unified in a single
+/// render pass with zero clipping artifacts or sharp inner fills.
 class AcedexTextField extends StatefulWidget {
   final TextEditingController? controller;
   final String? label;
@@ -69,10 +71,20 @@ class _AcedexTextFieldState extends State<AcedexTextField> {
     final theme = Theme.of(context);
     final isDark = theme.brightness == Brightness.dark;
 
-    final Color surfaceColor = isDark ? const Color(0xFF1B1B1F) : const Color(0xFFF4F4F6);
-    final Color borderColor = widget.errorText != null
-        ? theme.colorScheme.error
-        : (_isFocused ? theme.colorScheme.primary : theme.colorScheme.outline);
+    final Color surfaceColor =
+        isDark ? AppColors.darkSurface : AppColors.lightSurface;
+    final Color line = isDark ? AppColors.darkLine : AppColors.lightLine;
+    final Color accent =
+        isDark ? AppColors.darkAccent : AppColors.lightAccent;
+    final Color errorColor = isDark ? AppColors.darkError : AppColors.error;
+    final Color textColor = isDark ? AppColors.darkText : AppColors.lightText;
+    final Color subtextColor =
+        isDark ? AppColors.darkSubtext : AppColors.lightSubtext;
+
+    final squircleBorder = OutlineInputBorder(
+      borderRadius: BorderRadius.circular(widget.borderRadius),
+      borderSide: BorderSide(color: line, width: 1.2),
+    );
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -84,78 +96,86 @@ class _AcedexTextFieldState extends State<AcedexTextField> {
             style: TextStyle(
               fontSize: 13.5,
               fontWeight: FontWeight.w600,
-              color: theme.colorScheme.onSurface,
+              color: textColor,
             ),
           ),
           const SizedBox(height: 6),
         ],
-        AnimatedContainer(
-          duration: const Duration(milliseconds: 200),
-          curve: Curves.easeOutCubic,
-          decoration: BoxDecoration(
-            color: surfaceColor,
-            borderRadius: BorderRadius.circular(widget.borderRadius),
-            border: Border.all(
-              color: borderColor,
-              width: _isFocused ? 1.8 : 1.2,
-            ),
+        TextField(
+          controller: widget.controller,
+          focusNode: _focusNode,
+          obscureText: _obscureText,
+          keyboardType: widget.keyboardType,
+          textInputAction: widget.textInputAction,
+          enabled: widget.enabled,
+          autofocus: widget.autofocus,
+          onChanged: widget.onChanged,
+          onSubmitted: widget.onSubmitted,
+          style: TextStyle(
+            fontSize: 15,
+            fontWeight: FontWeight.w500,
+            color: textColor,
           ),
-          child: TextField(
-            controller: widget.controller,
-            focusNode: _focusNode,
-            obscureText: _obscureText,
-            keyboardType: widget.keyboardType,
-            textInputAction: widget.textInputAction,
-            enabled: widget.enabled,
-            autofocus: widget.autofocus,
-            onChanged: widget.onChanged,
-            onSubmitted: widget.onSubmitted,
-            style: TextStyle(
-              fontSize: 15,
-              color: theme.colorScheme.onSurface,
+          decoration: InputDecoration(
+            isDense: false,
+            filled: true,
+            fillColor: surfaceColor,
+            contentPadding: const EdgeInsets.symmetric(
+              horizontal: 18.0,
+              vertical: 16.0,
             ),
-            decoration: InputDecoration(
-              isDense: true,
-              border: InputBorder.none,
-              enabledBorder: InputBorder.none,
-              focusedBorder: InputBorder.none,
-              contentPadding: const EdgeInsets.symmetric(
-                horizontal: 18.0,
-                vertical: 15.0,
-              ),
-              hintText: widget.hint,
-              hintStyle: TextStyle(
-                fontSize: 14.5,
-                color: theme.colorScheme.onSurfaceVariant.withValues(alpha: 0.7),
-              ),
-              prefixIcon: widget.prefixIcon != null
-                  ? IconTheme(
-                      data: IconThemeData(
-                        color: _isFocused
-                            ? theme.colorScheme.primary
-                            : theme.colorScheme.onSurfaceVariant,
-                        size: 20,
-                      ),
-                      child: widget.prefixIcon!,
-                    )
-                  : null,
-              suffixIcon: widget.isPassword
-                  ? IconButton(
-                      icon: HugeIcon(
-                        icon: _obscureText
-                            ? HugeIcons.strokeRoundedViewOffSlash
-                            : HugeIcons.strokeRoundedView,
-                        size: 20,
-                        color: theme.colorScheme.onSurfaceVariant,
-                      ),
-                      onPressed: () {
-                        setState(() {
-                          _obscureText = !_obscureText;
-                        });
-                      },
-                    )
-                  : null,
+            hintText: widget.hint,
+            hintStyle: TextStyle(
+              fontSize: 14.5,
+              fontWeight: FontWeight.w400,
+              color: subtextColor.withValues(alpha: 0.7),
             ),
+            border: squircleBorder,
+            enabledBorder: squircleBorder,
+            focusedBorder: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(widget.borderRadius),
+              borderSide: BorderSide(color: accent, width: 1.8),
+            ),
+            errorBorder: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(widget.borderRadius),
+              borderSide: BorderSide(color: errorColor, width: 1.4),
+            ),
+            focusedErrorBorder: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(widget.borderRadius),
+              borderSide: BorderSide(color: errorColor, width: 1.8),
+            ),
+            prefixIcon: widget.prefixIcon != null
+                ? IconTheme(
+                    data: IconThemeData(
+                      color: _isFocused ? accent : subtextColor,
+                      size: 20,
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.only(left: 16.0, right: 12.0),
+                      child: widget.prefixIcon,
+                    ),
+                  )
+                : null,
+            prefixIconConstraints: const BoxConstraints(
+              minWidth: 48,
+              minHeight: 48,
+            ),
+            suffixIcon: widget.isPassword
+                ? IconButton(
+                    icon: HugeIcon(
+                      icon: _obscureText
+                          ? HugeIcons.strokeRoundedViewOffSlash
+                          : HugeIcons.strokeRoundedView,
+                      size: 20,
+                      color: subtextColor,
+                    ),
+                    onPressed: () {
+                      setState(() {
+                        _obscureText = !_obscureText;
+                      });
+                    },
+                  )
+                : null,
           ),
         ),
         if (widget.errorText != null) ...[
@@ -166,7 +186,7 @@ class _AcedexTextFieldState extends State<AcedexTextField> {
               widget.errorText!,
               style: TextStyle(
                 fontSize: 12,
-                color: theme.colorScheme.error,
+                color: errorColor,
                 fontWeight: FontWeight.w500,
               ),
             ),
