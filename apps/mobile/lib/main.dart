@@ -6,6 +6,7 @@ import 'core/ui/ui.dart';
 import 'features/auth/screens/auth_screen.dart';
 import 'features/home/screens/home_screen.dart';
 import 'features/onboarding/screens/onboarding_screen.dart';
+import 'features/splash/screens/loading_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -55,17 +56,16 @@ class AcedexApp extends StatelessWidget {
           theme: AppTheme.lightTheme,
           darkTheme: AppTheme.darkTheme,
           themeMode: themeMode,
-          initialRoute: initialUser != null
-              ? '/home'
-              : (hasSeenOnboarding ? '/auth' : '/onboarding'),
+          initialRoute: initialUser != null ? '/home' : '/loading',
           routes: {
-            '/onboarding': (context) => const OnboardingScreen(),
+            '/loading': (context) => const LoadingScreen(),
             '/auth': (context) {
               final args = ModalRoute.of(context)?.settings.arguments
                   as Map<String, dynamic>?;
-              final initialTab = (args?['initialTab'] as int?) ?? 0;
-              return AuthScreen(initialTab: initialTab);
+              final prefilledPhone = args?['prefilledPhone'] as String?;
+              return AuthScreen(initialPhone: prefilledPhone);
             },
+            '/onboarding': (context) => const OnboardingScreen(),
             '/home': (context) {
               final user = ModalRoute.of(context)?.settings.arguments
                       as UserProfile? ??

@@ -129,6 +129,10 @@ void main() {
 
       await tester.pumpWidget(
         MaterialApp(
+          routes: {
+            '/auth': (context) =>
+                const Scaffold(body: Text('Login Gateway Screen Mock')),
+          },
           home: OnboardingScreen(authService: mockAuth),
         ),
       );
@@ -224,10 +228,16 @@ void main() {
       expect(mockAuth.registeredPhone, '+251911223344');
       expect(mockAuth.registeredPin, '123456');
 
-      // Advance past toast duration to clean up timer
-      await tester.pump(const Duration(seconds: 4));
+      // Celebratory Congratulatory Modal Dialog is presented!
+      expect(find.text('Account Created!'), findsOneWidget);
+      expect(find.text('Welcome to Acedex, Dawit Alemayehu!'), findsOneWidget);
+      expect(find.text('Continue to Sign In'), findsOneWidget);
+
+      // Tap Continue to Sign In to redirect to Login
+      await tester.tap(find.text('Continue to Sign In'));
       await tester.pumpAndSettle();
-      AcedexToast.dismiss();
+
+      expect(find.text('Login Gateway Screen Mock'), findsOneWidget);
     });
   });
 }

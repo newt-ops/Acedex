@@ -55,7 +55,7 @@ void main() {
       expect(find.text('02 / 07'), findsOneWidget);
     });
 
-    testWidgets('AuthScreen switches between Sign In and Create Account',
+    testWidgets('AuthScreen renders login gateway and navigates to Onboarding',
         (WidgetTester tester) async {
       tester.view.physicalSize = const Size(800, 1200);
       tester.view.devicePixelRatio = 1.0;
@@ -64,45 +64,49 @@ void main() {
         tester.view.resetDevicePixelRatio();
       });
 
+      bool navigatedToOnboarding = false;
+
       await tester.pumpWidget(
         MaterialApp(
           theme: AppTheme.lightTheme,
+          routes: {
+            '/onboarding': (context) {
+              navigatedToOnboarding = true;
+              return const Scaffold(body: Text('Onboarding Screen Mock'));
+            },
+          },
           home: const AuthScreen(),
         ),
       );
       await tester.pumpAndSettle();
 
-      // Starts in Sign In
+      // Starts in Sign In / Login Gateway
       expect(find.text('Welcome Back'), findsOneWidget);
       expect(find.text('Sign In'), findsWidgets);
+      expect(find.text('Phone Number'), findsOneWidget);
+      expect(find.text('6-Digit Security PIN'), findsOneWidget);
+      expect(find.text('Create Account'), findsWidgets);
 
-      // Tap Create Account tab
+      // Tap Create Account button
       await tester.tap(find.text('Create Account').first);
       await tester.pumpAndSettle();
 
-      expect(find.text('Create Student Account'), findsWidgets);
-      expect(find.text('Full Name'), findsOneWidget);
-      expect(find.text('GENDER'), findsOneWidget);
-      expect(find.text('GRADE LEVEL'), findsOneWidget);
-      // Grade 12 is selected by default, so stream selector is visible
-      expect(find.text('Natural Science'), findsOneWidget);
-      expect(find.text('Social Science'), findsOneWidget);
+      expect(navigatedToOnboarding, isTrue);
+      expect(find.text('Onboarding Screen Mock'), findsOneWidget);
+    });
 
-      // Tap Grade 9 chip -> stream selector hides
-      await tester.ensureVisible(find.text('G 9'));
-      await tester.tap(find.text('G 9'));
+    testWidgets('AuthScreen pre-fills phone number from initialPhone',
+        (WidgetTester tester) async {
+      await tester.pumpWidget(
+        MaterialApp(
+          theme: AppTheme.lightTheme,
+          home: const AuthScreen(initialPhone: '+251912345678'),
+        ),
+      );
       await tester.pumpAndSettle();
 
-      expect(find.text('Natural Science'), findsNothing);
-      expect(find.text('Social Science'), findsNothing);
-
-      // Tap Grade 11 chip -> stream selector reappears
-      await tester.ensureVisible(find.text('G 11'));
-      await tester.tap(find.text('G 11'));
-      await tester.pumpAndSettle();
-
-      expect(find.text('Natural Science'), findsOneWidget);
-      expect(find.text('Social Science'), findsOneWidget);
+      expect(find.text('912345678'), findsOneWidget);
+      expect(find.text('+251'), findsOneWidget);
     });
   });
 }

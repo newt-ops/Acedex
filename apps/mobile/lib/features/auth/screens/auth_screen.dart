@@ -1,19 +1,26 @@
 import 'package:flutter/material.dart';
+import 'package:hugeicons/hugeicons.dart';
 import '../../../core/models/user_profile.dart';
 import '../../../core/theme/app_colors.dart';
-import '../../../core/ui/ui.dart';
+import '../../../core/ui/animations/bounceable.dart';
+import '../../../core/ui/cards/acedex_card.dart';
+import '../../../main.dart';
 import '../services/auth_service.dart';
 import '../widgets/login_form.dart';
-import '../widgets/register_form.dart';
 
+/// Apple-Style Login Screen & Authentication Gateway
+///
+/// Serves as the primary entrypoint for returning candidates to sign in,
+/// and provides a direct path to the guided 7-step Onboarding registration.
 class AuthScreen extends StatefulWidget {
-  final int initialTab;
+  final String? initialPhone;
   final AuthService? authService;
 
   const AuthScreen({
     super.key,
-    this.initialTab = 0,
+    this.initialPhone,
     this.authService,
+    int initialTab = 0, // preserved for backwards compatibility with tests
   });
 
   @override
@@ -21,26 +28,27 @@ class AuthScreen extends StatefulWidget {
 }
 
 class _AuthScreenState extends State<AuthScreen> {
-  late int _selectedTab; // 0: Sign In, 1: Create Account
-
-  @override
-  void initState() {
-    super.initState();
-    _selectedTab = widget.initialTab;
-  }
-
   void _onAuthSuccess(UserProfile user) {
     Navigator.of(context).pushReplacementNamed('/home', arguments: user);
+  }
+
+  void _goToOnboarding() {
+    Navigator.of(context).pushNamed('/onboarding');
   }
 
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     final isDark = theme.brightness == Brightness.dark;
-
     final primaryColor = theme.colorScheme.primary;
-    final surfaceColor =
-        isDark ? AppColors.darkSurface : AppColors.lightSurface;
+    final accent = isDark ? AppColors.darkAccent : AppColors.lightAccent;
+    final line = isDark ? AppColors.darkLine : AppColors.lightLine;
+
+    // Check for prefilled phone from route arguments (e.g. post-registration)
+    final routeArgs = ModalRoute.of(context)?.settings.arguments
+        as Map<String, dynamic>?;
+    final prefilledPhone =
+        widget.initialPhone ?? routeArgs?['prefilledPhone'] as String?;
 
     return Scaffold(
       backgroundColor: theme.scaffoldBackgroundColor,
@@ -48,6 +56,40 @@ class _AuthScreenState extends State<AuthScreen> {
         backgroundColor: Colors.transparent,
         elevation: 0,
         automaticallyImplyLeading: false,
+        title: Text(
+          'Acedex',
+          style: TextStyle(
+            fontSize: 18,
+            fontWeight: FontWeight.w800,
+            letterSpacing: -0.4,
+            color: accent,
+          ),
+        ),
+        actions: [
+          // Theme Toggle Button
+          Padding(
+            padding: const EdgeInsets.only(right: 20),
+            child: AcedexBounceable(
+              onTap: () => AcedexApp.toggleTheme(context),
+              child: Container(
+                padding: const EdgeInsets.all(6),
+                decoration: BoxDecoration(
+                  color:
+                      isDark ? AppColors.darkSurface : AppColors.lightSurface,
+                  borderRadius: BorderRadius.circular(10),
+                  border: Border.all(color: line, width: 1),
+                ),
+                child: HugeIcon(
+                  icon: isDark
+                      ? HugeIcons.strokeRoundedSun02
+                      : HugeIcons.strokeRoundedMoon02,
+                  color: accent,
+                  size: 16,
+                ),
+              ),
+            ),
+          ),
+        ],
       ),
       body: SafeArea(
         child: SingleChildScrollView(
@@ -56,23 +98,25 @@ class _AuthScreenState extends State<AuthScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              // Product Branding Header
+              const SizedBox(height: 12),
+
+              // Product Branding Crest Header
               Center(
                 child: Column(
                   children: [
                     Container(
-                      width: 58,
-                      height: 58,
+                      width: 64,
+                      height: 64,
                       decoration: BoxDecoration(
                         color: primaryColor,
-                        borderRadius: BorderRadius.circular(18),
+                        borderRadius: BorderRadius.circular(20),
                         boxShadow: [
                           BoxShadow(
                             color: primaryColor.withValues(
-                              alpha: isDark ? 0.35 : 0.2,
+                              alpha: isDark ? 0.38 : 0.22,
                             ),
-                            blurRadius: 18,
-                            offset: const Offset(0, 6),
+                            blurRadius: 22,
+                            offset: const Offset(0, 8),
                           ),
                         ],
                       ),
@@ -80,7 +124,7 @@ class _AuthScreenState extends State<AuthScreen> {
                         child: Text(
                           'A',
                           style: TextStyle(
-                            fontSize: 30,
+                            fontSize: 34,
                             fontWeight: FontWeight.w900,
                             color: Colors.white,
                             letterSpacing: -1,
@@ -88,26 +132,23 @@ class _AuthScreenState extends State<AuthScreen> {
                         ),
                       ),
                     ),
-                    const SizedBox(height: 16),
+                    const SizedBox(height: 18),
                     Text(
-                      _selectedTab == 0
-                          ? 'Welcome Back'
-                          : 'Create Student Account',
+                      'Welcome Back',
                       style: TextStyle(
-                        fontSize: 24,
+                        fontSize: 26,
                         fontWeight: FontWeight.w800,
-                        letterSpacing: -0.4,
+                        letterSpacing: -0.5,
                         color: theme.colorScheme.onSurface,
                       ),
                     ),
                     const SizedBox(height: 6),
                     Text(
-                      _selectedTab == 0
-                          ? 'Sign in with your phone number and PIN'
-                          : 'Join thousands of Ethiopian students preparing for success',
+                      'Sign in with your phone number and PIN',
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         fontSize: 14,
+                        fontWeight: FontWeight.w400,
                         color: isDark
                             ? AppColors.darkSubtext
                             : AppColors.lightSubtext,
@@ -116,130 +157,21 @@ class _AuthScreenState extends State<AuthScreen> {
                   ],
                 ),
               ),
-              const SizedBox(height: 28),
+              const SizedBox(height: 32),
 
-              // Apple-Style Segmented Control
-              Container(
-                height: 44,
-                padding: const EdgeInsets.all(4),
-                decoration: BoxDecoration(
-                  color: surfaceColor,
-                  borderRadius: BorderRadius.circular(14),
-                  border: Border.all(
-                    color: isDark ? AppColors.darkBorder : AppColors.lightBorder,
-                  ),
-                ),
-                child: Row(
-                  children: [
-                    Expanded(
-                      child: _SegmentTab(
-                        title: 'Sign In',
-                        isSelected: _selectedTab == 0,
-                        onTap: () => setState(() => _selectedTab = 0),
-                      ),
-                    ),
-                    Expanded(
-                      child: _SegmentTab(
-                        title: 'Create Account',
-                        isSelected: _selectedTab == 1,
-                        onTap: () => setState(() => _selectedTab = 1),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              const SizedBox(height: 24),
-
-              // Card Container for Form
+              // Login Form Card
               AcedexCard(
                 variant: AcedexCardVariant.raised,
-                child: AnimatedSwitcher(
-                  duration: const Duration(milliseconds: 260),
-                  switchInCurve: Curves.easeOutCubic,
-                  switchOutCurve: Curves.easeInCubic,
-                  transitionBuilder: (child, animation) {
-                    return FadeTransition(
-                      opacity: animation,
-                      child: SlideTransition(
-                        position: Tween<Offset>(
-                          begin: const Offset(0, 0.04),
-                          end: Offset.zero,
-                        ).animate(animation),
-                        child: child,
-                      ),
-                    );
-                  },
-                  child: _selectedTab == 0
-                      ? LoginForm(
-                          key: const ValueKey('login_form'),
-                          authService: widget.authService,
-                          onSuccess: _onAuthSuccess,
-                          onSwitchToRegister: () =>
-                              setState(() => _selectedTab = 1),
-                        )
-                      : RegisterForm(
-                          key: const ValueKey('register_form'),
-                          authService: widget.authService,
-                          onSuccess: _onAuthSuccess,
-                          onSwitchToLogin: () =>
-                              setState(() => _selectedTab = 0),
-                        ),
+                child: LoginForm(
+                  key: const ValueKey('login_form'),
+                  initialPhone: prefilledPhone,
+                  authService: widget.authService,
+                  onSuccess: _onAuthSuccess,
+                  onSwitchToRegister: _goToOnboarding,
                 ),
               ),
               const SizedBox(height: 32),
             ],
-          ),
-        ),
-      ),
-    );
-  }
-}
-
-class _SegmentTab extends StatelessWidget {
-  final String title;
-  final bool isSelected;
-  final VoidCallback onTap;
-
-  const _SegmentTab({
-    required this.title,
-    required this.isSelected,
-    required this.onTap,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    final theme = Theme.of(context);
-    final isDark = theme.brightness == Brightness.dark;
-
-    final raisedColor = isDark ? AppColors.darkRaised : AppColors.lightRaised;
-
-    return AcedexBounceable(
-      onTap: onTap,
-      child: AnimatedContainer(
-        duration: const Duration(milliseconds: 200),
-        decoration: BoxDecoration(
-          color: isSelected ? raisedColor : Colors.transparent,
-          borderRadius: BorderRadius.circular(10),
-          boxShadow: isSelected
-              ? [
-                  BoxShadow(
-                    color: Colors.black.withValues(alpha: isDark ? 0.3 : 0.06),
-                    blurRadius: 4,
-                    offset: const Offset(0, 2),
-                  ),
-                ]
-              : null,
-        ),
-        child: Center(
-          child: Text(
-            title,
-            style: TextStyle(
-              fontSize: 13.5,
-              fontWeight: isSelected ? FontWeight.w700 : FontWeight.w500,
-              color: isSelected
-                  ? theme.colorScheme.onSurface
-                  : (isDark ? AppColors.darkSubtext : AppColors.lightSubtext),
-            ),
           ),
         ),
       ),

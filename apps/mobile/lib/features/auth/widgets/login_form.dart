@@ -12,12 +12,14 @@ class LoginForm extends StatefulWidget {
   final ValueChanged<UserProfile> onSuccess;
   final VoidCallback onSwitchToRegister;
   final AuthService? authService;
+  final String? initialPhone;
 
   const LoginForm({
     super.key,
     required this.onSuccess,
     required this.onSwitchToRegister,
     this.authService,
+    this.initialPhone,
   });
 
   @override
@@ -36,6 +38,17 @@ class _LoginFormState extends State<LoginForm> {
   void initState() {
     super.initState();
     _authService = widget.authService ?? AuthService();
+    if (widget.initialPhone != null && widget.initialPhone!.isNotEmpty) {
+      var phone = widget.initialPhone!;
+      if (phone.startsWith('+251')) {
+        phone = phone.substring(4);
+      } else if (phone.startsWith('251')) {
+        phone = phone.substring(3);
+      } else if (phone.startsWith('0')) {
+        phone = phone.substring(1);
+      }
+      _phoneController.text = phone;
+    }
   }
 
   @override
@@ -69,7 +82,10 @@ class _LoginFormState extends State<LoginForm> {
     setState(() => _isLoading = true);
 
     try {
-      final user = await _authService.login(phone: phone, pin: pin);
+      final cleanPhone = AuthService.normalizePhone(
+        phone.startsWith('+251') ? phone : '+251$phone',
+      );
+      final user = await _authService.login(phone: cleanPhone, pin: pin);
       if (!mounted) return;
       widget.onSuccess(user);
     } on ApiException catch (e) {

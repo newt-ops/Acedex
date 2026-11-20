@@ -5,6 +5,7 @@ import '../../../core/ui/feedback/acedex_toast.dart';
 import '../../auth/services/auth_service.dart';
 import '../models/student_registration_draft.dart';
 import '../widgets/onboarding_header.dart';
+import '../widgets/registration_success_dialog.dart';
 import '../widgets/steps/step_gender.dart';
 import '../widgets/steps/step_grade.dart';
 import '../widgets/steps/step_name.dart';
@@ -95,8 +96,10 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
     });
 
     try {
-      final user = await _authService.register(
-        phone: _draft.phoneNumber,
+      final normalizedPhone = AuthService.normalizePhone(_draft.phoneNumber);
+
+      await _authService.register(
+        phone: normalizedPhone,
         pin: _draft.pin,
         fullName: _draft.fullName,
         gender: _draft.gender,
@@ -108,21 +111,27 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
 
       if (!mounted) return;
 
-      AcedexToast.show(
-        context,
-        title: 'Welcome to Acedex!',
-        message: 'Your student account has been created.',
-        type: AcedexToastType.success,
-      );
+      setState(() {
+        _isSubmitting = false;
+      });
 
-      if (widget.onComplete != null) {
-        widget.onComplete!();
-      } else {
-        Navigator.of(context).pushReplacementNamed(
-          '/home',
-          arguments: user,
-        );
-      }
+      // Show celebratory Congratulatory Success Modal Dialog
+      await RegistrationSuccessDialog.show(
+        context,
+        draft: _draft.copyWith(phoneNumber: normalizedPhone),
+        onContinueToLogin: () {
+          Navigator.of(context).pop(); // dismiss modal
+          if (widget.onComplete != null) {
+            widget.onComplete!();
+          } else {
+            Navigator.of(context).pushNamedAndRemoveUntil(
+              '/auth',
+              (route) => false,
+              arguments: {'prefilledPhone': normalizedPhone},
+            );
+          }
+        },
+      );
     } on ApiException catch (e) {
       if (!mounted) return;
       AcedexToast.show(
