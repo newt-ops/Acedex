@@ -4,33 +4,60 @@ import 'package:acedex/core/theme/app_colors.dart';
 import 'package:acedex/core/theme/app_theme.dart';
 
 void main() {
-  group('Acedex AppTheme & AppColors Tests', () {
-    test('Core Brand Swatches have exact hex definitions', () {
-      expect(AppColors.techBlue, const Color(0xFF005A9C));
-      expect(AppColors.charcoal, const Color(0xFF2C2C2C));
-      expect(AppColors.mist, const Color(0xFFF3F4F4));
+  group('Acedex AppTheme & AppColors Tests (Teal Palette)', () {
+    test('Core Brand Swatches have exact Teal hex definitions', () {
+      expect(AppColors.accentLight, const Color(0xFF0F766E));
+      expect(AppColors.accentDark, const Color(0xFF2DD4BF));
+      expect(AppColors.accentSoftLight, const Color(0xFFDDECEB));
+      expect(AppColors.accentSoftDark, const Color(0xFF122A29));
+      expect(AppColors.onAccentLight, const Color(0xFFFFFFFF));
+      expect(AppColors.onAccentDark, const Color(0xFF0B0B0F));
+
+      expect(AppColors.lightBackground, const Color(0xFFFFFFFF));
+      expect(AppColors.darkBackground, const Color(0xFF0E0E11));
+      expect(AppColors.lightSurface, const Color(0xFFF4F4F6));
+      expect(AppColors.darkSurface, const Color(0xFF1B1B1F));
+      expect(AppColors.lightRaised, const Color(0xFFFFFFFF));
+      expect(AppColors.darkRaised, const Color(0xFF2B2B31));
+      expect(AppColors.lightText, const Color(0xFF1C1C1E));
+      expect(AppColors.darkText, const Color(0xFFF5F5F7));
+      expect(AppColors.lightSecondaryText, const Color(0xFF6C6C72));
+      expect(AppColors.darkSecondaryText, const Color(0xFF9A9AA2));
+      expect(AppColors.lightLine, const Color(0xFFE4E4E8));
+      expect(AppColors.darkLine, const Color(0xFF2B2B31));
+
+      expect(AppColors.success, const Color(0xFF16A34A));
+      expect(AppColors.darkSuccess, const Color(0xFF4ADE80));
+      expect(AppColors.warning, const Color(0xFFD97706));
+      expect(AppColors.darkWarning, const Color(0xFFFBBF24));
+      expect(AppColors.error, const Color(0xFFDC2626));
+      expect(AppColors.darkError, const Color(0xFFF87171));
     });
 
-    test('Light Theme has correct palette and Material 3 structure', () {
+    test('Light Theme has correct Teal palette and Material 3 structure', () {
       final theme = AppTheme.lightTheme;
       expect(theme.useMaterial3, isTrue);
       expect(theme.brightness, Brightness.light);
-      expect(theme.colorScheme.primary, const Color(0xFF005A9C));
+      expect(theme.colorScheme.primary, const Color(0xFF0F766E));
+      expect(theme.colorScheme.onPrimary, const Color(0xFFFFFFFF));
+      expect(theme.colorScheme.primaryContainer, const Color(0xFFDDECEB));
       expect(theme.colorScheme.tertiary, AppColors.lightAccent);
-      expect(theme.scaffoldBackgroundColor, AppColors.lightBackground);
-      expect(theme.cardTheme.color, AppColors.lightSurface);
-      expect(theme.colorScheme.onSurface, AppColors.lightText);
+      expect(theme.scaffoldBackgroundColor, const Color(0xFFFFFFFF));
+      expect(theme.cardTheme.color, const Color(0xFFF4F4F6));
+      expect(theme.colorScheme.onSurface, const Color(0xFF1C1C1E));
     });
 
-    test('Dark Theme has correct palette and Material 3 structure', () {
+    test('Dark Theme has correct Teal palette and Material 3 structure', () {
       final theme = AppTheme.darkTheme;
       expect(theme.useMaterial3, isTrue);
       expect(theme.brightness, Brightness.dark);
-      expect(theme.colorScheme.primary, AppColors.darkPrimary);
+      expect(theme.colorScheme.primary, const Color(0xFF2DD4BF));
+      expect(theme.colorScheme.onPrimary, const Color(0xFF0B0B0F));
+      expect(theme.colorScheme.primaryContainer, const Color(0xFF122A29));
       expect(theme.colorScheme.tertiary, AppColors.darkAccent);
-      expect(theme.scaffoldBackgroundColor, AppColors.darkBackground);
-      expect(theme.cardTheme.color, AppColors.darkSurface);
-      expect(theme.colorScheme.onSurface, AppColors.darkText);
+      expect(theme.scaffoldBackgroundColor, const Color(0xFF0E0E11));
+      expect(theme.cardTheme.color, const Color(0xFF1B1B1F));
+      expect(theme.colorScheme.onSurface, const Color(0xFFF5F5F7));
     });
   });
 }

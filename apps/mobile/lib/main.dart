@@ -100,12 +100,12 @@ class _BackendHealthCheckScreenState extends State<BackendHealthCheckScreen> {
                 color: theme.colorScheme.primary,
                 borderRadius: BorderRadius.circular(8),
               ),
-              child: const Text(
+              child: Text(
                 'ACEDEX',
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 15,
-                  color: Colors.white,
+                  color: theme.colorScheme.onPrimary,
                   letterSpacing: 0.5,
                 ),
               ),

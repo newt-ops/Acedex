@@ -34,7 +34,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 
     const variants = {
       primary:
-        'bg-acedex-primary hover:bg-acedex-primary-hover text-white shadow-sm shadow-blue-500/20',
+        'bg-acedex-primary hover:bg-acedex-primary-hover text-primary-foreground shadow-sm shadow-teal-500/20',
       secondary:
         'bg-acedex-card hover:bg-acedex-card-hover text-acedex-text border border-acedex-border',
       success:

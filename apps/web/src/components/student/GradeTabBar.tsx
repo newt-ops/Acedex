@@ -29,14 +29,14 @@ export function GradeTabBar({
               onClick={() => onSelectGrade(grade)}
               className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm font-semibold transition-all whitespace-nowrap min-h-[44px] shrink-0 ${
                 isActive
-                  ? 'bg-acedex-primary text-white shadow-md shadow-blue-500/20'
+                  ? 'bg-acedex-primary text-primary-foreground shadow-md shadow-teal-500/20'
                   : 'bg-acedex-card hover:bg-acedex-card-hover text-acedex-muted hover:text-acedex-text border border-acedex-border/80'
               }`}
             >
               <HugeiconsIcon
                 icon={GraduationCapIcon}
                 size={16}
-                className={isActive ? 'text-white' : 'text-acedex-muted'}
+                className={isActive ? 'text-primary-foreground' : 'text-acedex-muted'}
                 strokeWidth={1.5}
               />
               <span>Grade {grade}</span>
@@ -44,7 +44,7 @@ export function GradeTabBar({
                 <span
                   className={`text-xs px-2 py-0.5 rounded-full font-mono ${
                     isActive
-                      ? 'bg-white/20 text-white'
+                      ? 'bg-white/20 text-primary-foreground'
                       : 'bg-acedex-bg text-acedex-muted border border-acedex-border/60'
                   }`}
                 >

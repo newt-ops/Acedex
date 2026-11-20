@@ -2,32 +2,32 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'app_colors.dart';
 
-/// Central Material 3 Theme Configuration for Acedex Mobile
+/// Central Material 3 Theme Configuration for Acedex Mobile (Teal System)
 abstract class AppTheme {
   /// --- Light Theme ---
   static ThemeData get lightTheme {
     final colorScheme = ColorScheme(
       brightness: Brightness.light,
       primary: AppColors.lightPrimary,
-      onPrimary: Colors.white,
-      primaryContainer: AppColors.lightSecondaryContainer,
+      onPrimary: AppColors.lightOnAccent,
+      primaryContainer: AppColors.lightAccentSoft,
       onPrimaryContainer: AppColors.lightPrimary,
-      secondary: AppColors.lightSecondary,
+      secondary: AppColors.lightSecondaryText,
       onSecondary: Colors.white,
-      secondaryContainer: AppColors.lightSecondaryContainer,
-      onSecondaryContainer: AppColors.lightSecondary,
+      secondaryContainer: AppColors.lightAccentSoft,
+      onSecondaryContainer: AppColors.lightPrimary,
       tertiary: AppColors.lightAccent,
-      onTertiary: Colors.white,
+      onTertiary: AppColors.lightOnAccent,
       surface: AppColors.lightSurface,
       onSurface: AppColors.lightText,
-      surfaceContainerHighest: AppColors.mist,
-      onSurfaceVariant: AppColors.lightSubtext,
+      surfaceContainerHighest: AppColors.lightRaised,
+      onSurfaceVariant: AppColors.lightSecondaryText,
       error: AppColors.error,
       onError: Colors.white,
       errorContainer: AppColors.errorContainer,
       onErrorContainer: AppColors.error,
-      outline: AppColors.lightBorder,
-      outlineVariant: AppColors.lightBorder.withValues(alpha: 0.5),
+      outline: AppColors.lightLine,
+      outlineVariant: AppColors.lightLine.withValues(alpha: 0.5),
     );
 
     return ThemeData(
@@ -36,7 +36,7 @@ abstract class AppTheme {
       colorScheme: colorScheme,
       scaffoldBackgroundColor: AppColors.lightBackground,
       appBarTheme: const AppBarTheme(
-        backgroundColor: AppColors.lightSurface,
+        backgroundColor: AppColors.lightBackground,
         foregroundColor: AppColors.lightText,
         elevation: 0,
         scrolledUnderElevation: 1,
@@ -55,13 +55,13 @@ abstract class AppTheme {
         margin: EdgeInsets.zero,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(16),
-          side: const BorderSide(color: AppColors.lightBorder, width: 1),
+          side: const BorderSide(color: AppColors.lightLine, width: 1),
         ),
       ),
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
           backgroundColor: AppColors.lightPrimary,
-          foregroundColor: Colors.white,
+          foregroundColor: AppColors.lightOnAccent,
           elevation: 0,
           minimumSize: const Size.fromHeight(48),
           padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 14),
@@ -71,7 +71,7 @@ abstract class AppTheme {
           textStyle: const TextStyle(
             fontSize: 15,
             fontWeight: FontWeight.w600,
-            letterSpacing: -0.1,
+            letterSpacing: 0.2,
           ),
         ),
       ),
@@ -80,55 +80,66 @@ abstract class AppTheme {
           foregroundColor: AppColors.lightPrimary,
           minimumSize: const Size.fromHeight(48),
           padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 14),
-          side: const BorderSide(color: AppColors.lightBorder, width: 1),
+          side: const BorderSide(color: AppColors.lightPrimary, width: 1.5),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(12),
           ),
           textStyle: const TextStyle(
             fontSize: 15,
             fontWeight: FontWeight.w600,
-            letterSpacing: -0.1,
           ),
         ),
       ),
       inputDecorationTheme: InputDecorationTheme(
         filled: true,
-        fillColor: AppColors.lightSurface,
+        fillColor: AppColors.lightBackground,
         contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
-        hintStyle: const TextStyle(color: AppColors.lightSubtext, fontSize: 14),
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(12),
-          borderSide: const BorderSide(color: AppColors.lightBorder),
+          borderSide: const BorderSide(color: AppColors.lightLine, width: 1),
         ),
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(12),
-          borderSide: const BorderSide(color: AppColors.lightBorder),
+          borderSide: const BorderSide(color: AppColors.lightLine, width: 1),
         ),
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(12),
-          borderSide: const BorderSide(color: AppColors.lightPrimary, width: 1.5),
+          borderSide: const BorderSide(color: AppColors.lightPrimary, width: 1.8),
         ),
         errorBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(12),
-          borderSide: const BorderSide(color: AppColors.error),
+          borderSide: const BorderSide(color: AppColors.error, width: 1.5),
         ),
+        labelStyle: const TextStyle(color: AppColors.lightSecondaryText, fontSize: 14),
+        hintStyle: TextStyle(color: AppColors.lightSecondaryText.withValues(alpha: 0.7), fontSize: 14),
       ),
       navigationBarTheme: NavigationBarThemeData(
-        backgroundColor: AppColors.lightSurface,
-        indicatorColor: AppColors.lightSecondaryContainer,
+        backgroundColor: AppColors.lightBackground,
+        indicatorColor: AppColors.lightAccentSoft,
+        elevation: 2,
         labelTextStyle: WidgetStateProperty.resolveWith((states) {
           if (states.contains(WidgetState.selected)) {
             return const TextStyle(
               fontSize: 12,
-              fontWeight: FontWeight.w600,
+              fontWeight: FontWeight.bold,
               color: AppColors.lightPrimary,
             );
           }
-          return const TextStyle(fontSize: 12, color: AppColors.lightSubtext);
+          return const TextStyle(
+            fontSize: 12,
+            fontWeight: FontWeight.normal,
+            color: AppColors.lightSecondaryText,
+          );
+        }),
+        iconTheme: WidgetStateProperty.resolveWith((states) {
+          if (states.contains(WidgetState.selected)) {
+            return const IconThemeData(color: AppColors.lightPrimary, size: 24);
+          }
+          return const IconThemeData(color: AppColors.lightSecondaryText, size: 24);
         }),
       ),
       dividerTheme: const DividerThemeData(
-        color: AppColors.lightBorder,
+        color: AppColors.lightLine,
         thickness: 1,
         space: 1,
       ),
@@ -140,25 +151,25 @@ abstract class AppTheme {
     final colorScheme = ColorScheme(
       brightness: Brightness.dark,
       primary: AppColors.darkPrimary,
-      onPrimary: Colors.white,
-      primaryContainer: AppColors.darkSecondaryContainer,
+      onPrimary: AppColors.darkOnAccent,
+      primaryContainer: AppColors.darkAccentSoft,
       onPrimaryContainer: AppColors.darkPrimary,
-      secondary: AppColors.darkSecondary,
-      onSecondary: Colors.white,
-      secondaryContainer: AppColors.darkSecondaryContainer,
-      onSecondaryContainer: AppColors.darkText,
+      secondary: AppColors.darkSecondaryText,
+      onSecondary: AppColors.darkBackground,
+      secondaryContainer: AppColors.darkAccentSoft,
+      onSecondaryContainer: AppColors.darkPrimary,
       tertiary: AppColors.darkAccent,
-      onTertiary: Colors.white,
+      onTertiary: AppColors.darkOnAccent,
       surface: AppColors.darkSurface,
       onSurface: AppColors.darkText,
-      surfaceContainerHighest: AppColors.darkSurfaceElevated,
-      onSurfaceVariant: AppColors.darkSubtext,
+      surfaceContainerHighest: AppColors.darkRaised,
+      onSurfaceVariant: AppColors.darkSecondaryText,
       error: AppColors.darkError,
-      onError: Colors.black,
-      errorContainer: AppColors.darkSecondaryContainer,
+      onError: AppColors.darkOnAccent,
+      errorContainer: AppColors.darkAccentSoft,
       onErrorContainer: AppColors.darkError,
-      outline: AppColors.darkBorder,
-      outlineVariant: AppColors.darkBorder.withValues(alpha: 0.5),
+      outline: AppColors.darkLine,
+      outlineVariant: AppColors.darkLine.withValues(alpha: 0.5),
     );
 
     return ThemeData(
@@ -186,13 +197,13 @@ abstract class AppTheme {
         margin: EdgeInsets.zero,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(16),
-          side: const BorderSide(color: AppColors.darkBorder, width: 1),
+          side: const BorderSide(color: AppColors.darkLine, width: 1),
         ),
       ),
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
           backgroundColor: AppColors.darkPrimary,
-          foregroundColor: Colors.white,
+          foregroundColor: AppColors.darkOnAccent,
           elevation: 0,
           minimumSize: const Size.fromHeight(48),
           padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 14),
@@ -202,7 +213,7 @@ abstract class AppTheme {
           textStyle: const TextStyle(
             fontSize: 15,
             fontWeight: FontWeight.w600,
-            letterSpacing: -0.1,
+            letterSpacing: 0.2,
           ),
         ),
       ),
@@ -211,14 +222,13 @@ abstract class AppTheme {
           foregroundColor: AppColors.darkPrimary,
           minimumSize: const Size.fromHeight(48),
           padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 14),
-          side: const BorderSide(color: AppColors.darkBorder, width: 1),
+          side: const BorderSide(color: AppColors.darkPrimary, width: 1.5),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(12),
           ),
           textStyle: const TextStyle(
             fontSize: 15,
             fontWeight: FontWeight.w600,
-            letterSpacing: -0.1,
           ),
         ),
       ),
@@ -226,40 +236,52 @@ abstract class AppTheme {
         filled: true,
         fillColor: AppColors.darkSurface,
         contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
-        hintStyle: const TextStyle(color: AppColors.darkSubtext, fontSize: 14),
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(12),
-          borderSide: const BorderSide(color: AppColors.darkBorder),
+          borderSide: const BorderSide(color: AppColors.darkLine, width: 1),
         ),
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(12),
-          borderSide: const BorderSide(color: AppColors.darkBorder),
+          borderSide: const BorderSide(color: AppColors.darkLine, width: 1),
         ),
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(12),
-          borderSide: const BorderSide(color: AppColors.darkPrimary, width: 1.5),
+          borderSide: const BorderSide(color: AppColors.darkPrimary, width: 1.8),
         ),
         errorBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(12),
-          borderSide: const BorderSide(color: AppColors.darkError),
+          borderSide: const BorderSide(color: AppColors.darkError, width: 1.5),
         ),
+        labelStyle: const TextStyle(color: AppColors.darkSecondaryText, fontSize: 14),
+        hintStyle: TextStyle(color: AppColors.darkSecondaryText.withValues(alpha: 0.7), fontSize: 14),
       ),
       navigationBarTheme: NavigationBarThemeData(
-        backgroundColor: AppColors.darkSurface,
-        indicatorColor: AppColors.darkSecondaryContainer,
+        backgroundColor: AppColors.darkBackground,
+        indicatorColor: AppColors.darkAccentSoft,
+        elevation: 2,
         labelTextStyle: WidgetStateProperty.resolveWith((states) {
           if (states.contains(WidgetState.selected)) {
             return const TextStyle(
               fontSize: 12,
-              fontWeight: FontWeight.w600,
+              fontWeight: FontWeight.bold,
               color: AppColors.darkPrimary,
             );
           }
-          return const TextStyle(fontSize: 12, color: AppColors.darkSubtext);
+          return const TextStyle(
+            fontSize: 12,
+            fontWeight: FontWeight.normal,
+            color: AppColors.darkSecondaryText,
+          );
+        }),
+        iconTheme: WidgetStateProperty.resolveWith((states) {
+          if (states.contains(WidgetState.selected)) {
+            return const IconThemeData(color: AppColors.darkPrimary, size: 24);
+          }
+          return const IconThemeData(color: AppColors.darkSecondaryText, size: 24);
         }),
       ),
       dividerTheme: const DividerThemeData(
-        color: AppColors.darkBorder,
+        color: AppColors.darkLine,
         thickness: 1,
         space: 1,
       ),
