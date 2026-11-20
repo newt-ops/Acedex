@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hugeicons/hugeicons.dart';
 import '../../../core/models/user_profile.dart';
 import '../../../core/network/api_exception.dart';
 import '../../../core/theme/app_colors.dart';
@@ -145,8 +146,8 @@ class _RegisterFormState extends State<RegisterForm> {
             ),
             child: Row(
               children: [
-                Icon(
-                  Icons.info_outline_rounded,
+                HugeIcon(
+                  icon: HugeIcons.strokeRoundedAlertCircle,
                   size: 20,
                   color: isDark ? AppColors.darkError : AppColors.error,
                 ),
@@ -174,8 +175,8 @@ class _RegisterFormState extends State<RegisterForm> {
           hint: 'Abebe Kebede',
           keyboardType: TextInputType.name,
           enabled: !_isLoading,
-          prefixIcon: Icon(
-            Icons.person_outline_rounded,
+          prefixIcon: HugeIcon(
+            icon: HugeIcons.strokeRoundedUser,
             size: 20,
             color: primaryColor,
           ),
@@ -223,7 +224,7 @@ class _RegisterFormState extends State<RegisterForm> {
             Expanded(
               child: _ChoiceChip(
                 label: 'Male',
-                icon: Icons.male_rounded,
+                icon: HugeIcons.strokeRoundedMale02,
                 isSelected: _gender == 'male',
                 onTap: () => setState(() => _gender = 'male'),
               ),
@@ -232,7 +233,7 @@ class _RegisterFormState extends State<RegisterForm> {
             Expanded(
               child: _ChoiceChip(
                 label: 'Female',
-                icon: Icons.female_rounded,
+                icon: HugeIcons.strokeRoundedFemale02,
                 isSelected: _gender == 'female',
                 onTap: () => setState(() => _gender = 'female'),
               ),
@@ -354,7 +355,7 @@ class _RegisterFormState extends State<RegisterForm> {
 
 class _ChoiceChip extends StatelessWidget {
   final String label;
-  final IconData icon;
+  final List<List<dynamic>> icon;
   final bool isSelected;
   final VoidCallback onTap;
 
@@ -394,8 +395,8 @@ class _ChoiceChip extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Icon(
-              icon,
+            HugeIcon(
+              icon: icon,
               size: 16,
               color: isSelected
                   ? primaryColor

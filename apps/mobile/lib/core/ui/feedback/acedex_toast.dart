@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:hugeicons/hugeicons.dart';
 
 enum AcedexToastType {
   success,
@@ -142,24 +143,24 @@ class _AcedexToastWidgetState extends State<_AcedexToastWidget>
     final isDark = theme.brightness == Brightness.dark;
 
     Color iconColor;
-    IconData iconData;
+    List<List<dynamic>> iconData;
 
     switch (widget.type) {
       case AcedexToastType.success:
         iconColor = isDark ? const Color(0xFF4ADE80) : const Color(0xFF16A34A);
-        iconData = Icons.check_circle_rounded;
+        iconData = HugeIcons.strokeRoundedCheckmarkCircle02;
         break;
       case AcedexToastType.warning:
         iconColor = isDark ? const Color(0xFFFBBF24) : const Color(0xFFD97706);
-        iconData = Icons.warning_rounded;
+        iconData = HugeIcons.strokeRoundedAlert02;
         break;
       case AcedexToastType.error:
         iconColor = isDark ? const Color(0xFFF87171) : const Color(0xFFDC2626);
-        iconData = Icons.error_rounded;
+        iconData = HugeIcons.strokeRoundedCancelCircle;
         break;
       case AcedexToastType.info:
         iconColor = theme.colorScheme.primary;
-        iconData = Icons.info_rounded;
+        iconData = HugeIcons.strokeRoundedInformationCircle;
         break;
     }
 
@@ -217,7 +218,13 @@ class _AcedexToastWidgetState extends State<_AcedexToastWidget>
                                 color: iconColor.withValues(alpha: 0.15),
                                 shape: BoxShape.circle,
                               ),
-                              child: Icon(iconData, color: iconColor, size: 20),
+                              child: Center(
+                                child: HugeIcon(
+                                  icon: iconData,
+                                  color: iconColor,
+                                  size: 18,
+                                ),
+                              ),
                             ),
                             const SizedBox(width: 12),
                             Flexible(

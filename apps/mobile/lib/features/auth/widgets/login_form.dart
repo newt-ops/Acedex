@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hugeicons/hugeicons.dart';
 import '../../../core/models/user_profile.dart';
 import '../../../core/network/api_exception.dart';
 import '../../../core/theme/app_colors.dart';
@@ -109,8 +110,8 @@ class _LoginFormState extends State<LoginForm> {
             ),
             child: Row(
               children: [
-                Icon(
-                  Icons.info_outline_rounded,
+                HugeIcon(
+                  icon: HugeIcons.strokeRoundedAlertCircle,
                   size: 20,
                   color: isDark ? AppColors.darkError : AppColors.error,
                 ),

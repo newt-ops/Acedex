@@ -9,7 +9,7 @@ class ApiClient {
   final String baseUrl;
 
   ApiClient({http.Client? client, this.baseUrl = ApiEndpoints.baseUrl})
-      : _client = client ?? http.Client();
+    : _client = client ?? http.Client();
 
   Future<Map<String, dynamic>> post(
     String path, {
@@ -53,9 +53,7 @@ class ApiClient {
     bool requiresAuth = true,
   }) async {
     final uri = Uri.parse('$baseUrl$path');
-    final headers = <String, String>{
-      'Accept': 'application/json',
-    };
+    final headers = <String, String>{'Accept': 'application/json'};
 
     if (requiresAuth) {
       final token = await AuthStorage.instance.getToken();

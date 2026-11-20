@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hugeicons/hugeicons.dart';
 import '../../../core/ui/ui.dart';
 
 class PinInputField extends StatelessWidget {
@@ -31,8 +32,8 @@ class PinInputField extends StatelessWidget {
       isPassword: true,
       enabled: enabled,
       errorText: errorText,
-      prefixIcon: Icon(
-        Icons.lock_outline_rounded,
+      prefixIcon: HugeIcon(
+        icon: HugeIcons.strokeRoundedSquareLock02,
         size: 20,
         color: theme.colorScheme.primary,
       ),

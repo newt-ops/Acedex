@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hugeicons/hugeicons.dart';
 import '../../../core/models/user_profile.dart';
 import '../../../core/storage/auth_storage.dart';
 import '../../../core/theme/app_colors.dart';
@@ -60,8 +61,8 @@ class HomeScreen extends StatelessWidget {
         actions: [
           IconButton(
             tooltip: 'Sign Out',
-            icon: Icon(
-              Icons.logout_rounded,
+            icon: HugeIcon(
+              icon: HugeIcons.strokeRoundedLogout01,
               color: isDark ? AppColors.darkSubtext : AppColors.lightSubtext,
               size: 20,
             ),
@@ -79,7 +80,7 @@ class HomeScreen extends StatelessWidget {
             children: [
               // Welcome Header
               Text(
-                'Hello, $displayName 👋',
+                'Hello, $displayName',
                 style: TextStyle(
                   fontSize: 26,
                   fontWeight: FontWeight.w800,
@@ -114,12 +115,12 @@ class HomeScreen extends StatelessWidget {
                         borderRadius: BorderRadius.circular(16),
                       ),
                       child: Center(
-                        child: Icon(
-                          Icons.local_fire_department_rounded,
+                        child: HugeIcon(
+                          icon: HugeIcons.strokeRoundedFire,
                           color: isDark
                               ? AppColors.darkWarning
                               : AppColors.warning,
-                          size: 30,
+                          size: 28,
                         ),
                       ),
                     ),
@@ -169,8 +170,8 @@ class HomeScreen extends StatelessWidget {
                   children: [
                     Row(
                       children: [
-                        Icon(
-                          Icons.verified_rounded,
+                        HugeIcon(
+                          icon: HugeIcons.strokeRoundedShieldCheck,
                           size: 20,
                           color: primaryColor,
                         ),

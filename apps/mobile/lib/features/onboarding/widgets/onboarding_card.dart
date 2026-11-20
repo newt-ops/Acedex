@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hugeicons/hugeicons.dart';
 import '../../../core/theme/app_colors.dart';
 import '../../../core/ui/ui.dart';
 import '../models/onboarding_item.dart';
@@ -45,9 +46,9 @@ class OnboardingCard extends StatelessWidget {
               ],
             ),
             child: Center(
-              child: Icon(
-                item.icon,
-                size: 64,
+              child: HugeIcon(
+                icon: item.icon,
+                size: 60,
                 color: primaryColor,
               ),
             ),

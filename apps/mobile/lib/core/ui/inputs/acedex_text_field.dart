@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hugeicons/hugeicons.dart';
 
 /// Apple-Style Squircle Text Field
 ///
@@ -138,10 +139,10 @@ class _AcedexTextFieldState extends State<AcedexTextField> {
                   : null,
               suffixIcon: widget.isPassword
                   ? IconButton(
-                      icon: Icon(
-                        _obscureText
-                            ? Icons.visibility_off_outlined
-                            : Icons.visibility_outlined,
+                      icon: HugeIcon(
+                        icon: _obscureText
+                            ? HugeIcons.strokeRoundedViewOffSlash
+                            : HugeIcons.strokeRoundedView,
                         size: 20,
                         color: theme.colorScheme.onSurfaceVariant,
                       ),

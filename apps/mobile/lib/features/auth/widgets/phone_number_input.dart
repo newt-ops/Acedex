@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hugeicons/hugeicons.dart';
 import '../../../core/theme/app_colors.dart';
 import '../../../core/ui/ui.dart';
 
@@ -33,9 +34,10 @@ class PhoneNumberInput extends StatelessWidget {
         child: Row(
           mainAxisSize: MainAxisSize.min,
           children: [
-            const Text(
-              '🇪🇹',
-              style: TextStyle(fontSize: 18),
+            HugeIcon(
+              icon: HugeIcons.strokeRoundedSmartPhone01,
+              size: 18,
+              color: theme.colorScheme.primary,
             ),
             const SizedBox(width: 6),
             Text(

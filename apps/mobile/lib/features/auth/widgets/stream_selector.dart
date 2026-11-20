@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hugeicons/hugeicons.dart';
 import '../../../core/theme/app_colors.dart';
 import '../../../core/ui/ui.dart';
 
@@ -45,7 +46,7 @@ class StreamSelector extends StatelessWidget {
                       Expanded(
                         child: _StreamChip(
                           title: 'Natural Science',
-                          icon: Icons.science_outlined,
+                          icon: HugeIcons.strokeRoundedAtom02,
                           isSelected: selectedStream == 'natural',
                           onTap: () => onSelected('natural'),
                         ),
@@ -54,7 +55,7 @@ class StreamSelector extends StatelessWidget {
                       Expanded(
                         child: _StreamChip(
                           title: 'Social Science',
-                          icon: Icons.public_rounded,
+                          icon: HugeIcons.strokeRoundedGlobe02,
                           isSelected: selectedStream == 'social',
                           onTap: () => onSelected('social'),
                         ),
@@ -71,7 +72,7 @@ class StreamSelector extends StatelessWidget {
 
 class _StreamChip extends StatelessWidget {
   final String title;
-  final IconData icon;
+  final List<List<dynamic>> icon;
   final bool isSelected;
   final VoidCallback onTap;
 
@@ -111,8 +112,8 @@ class _StreamChip extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Icon(
-              icon,
+            HugeIcon(
+              icon: icon,
               size: 16,
               color: isSelected
                   ? primaryColor
