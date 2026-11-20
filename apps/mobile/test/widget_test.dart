@@ -15,10 +15,10 @@ void main() {
     await tester.pumpAndSettle();
 
     expect(find.byType(OnboardingScreen), findsOneWidget);
-    expect(find.text('Master Every Subject'), findsOneWidget);
-    expect(find.text('Grades 9 – 12'), findsOneWidget);
+    expect(find.text("What's your name?"), findsOneWidget);
+    expect(find.text('ABOUT YOU'), findsOneWidget);
     expect(find.text('Continue'), findsOneWidget);
-    expect(find.text('Skip'), findsOneWidget);
+    expect(find.text('01 / 07'), findsOneWidget);
   });
 
   testWidgets('AcedexApp with onboarding completed displays AuthScreen',

@@ -30,7 +30,7 @@ void main() {
   });
 
   group('Onboarding and Auth UI Widgets', () {
-    testWidgets('Onboarding advances slides on Continue tap',
+    testWidgets('Onboarding renders initial step and advances on valid input',
         (WidgetTester tester) async {
       await tester.pumpWidget(
         MaterialApp(
@@ -40,21 +40,19 @@ void main() {
       );
       await tester.pumpAndSettle();
 
-      expect(find.text('Master Every Subject'), findsOneWidget);
+      expect(find.text("What's your name?"), findsOneWidget);
+      expect(find.text('01 / 07'), findsOneWidget);
 
-      // Tap Continue to advance to slide 2
+      // Enter valid student name
+      await tester.enterText(find.byType(TextField), 'Abebe Kebede');
+      await tester.pumpAndSettle();
+
+      // Tap Continue to advance to Step 2
       await tester.tap(find.text('Continue'));
       await tester.pumpAndSettle();
 
-      expect(find.text('Simulate the EUEE'), findsOneWidget);
-
-      // Tap Continue to advance to slide 3
-      await tester.tap(find.text('Continue'));
-      await tester.pumpAndSettle();
-
-      expect(find.text('Track Your Growth'), findsOneWidget);
-      expect(find.text('Get Started'), findsOneWidget);
-      expect(find.text('I already have an account'), findsOneWidget);
+      expect(find.text("What's your phone number?"), findsOneWidget);
+      expect(find.text('02 / 07'), findsOneWidget);
     });
 
     testWidgets('AuthScreen switches between Sign In and Create Account',

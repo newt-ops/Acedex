@@ -1,15 +1,27 @@
 import 'package:flutter/material.dart';
+import '../../../core/network/api_exception.dart';
 import '../../../core/storage/auth_storage.dart';
-import '../../../core/theme/app_colors.dart';
-import '../../../core/ui/ui.dart';
-import '../models/onboarding_item.dart';
-import '../widgets/onboarding_card.dart';
-import '../widgets/onboarding_dots.dart';
+import '../../../core/ui/feedback/acedex_toast.dart';
+import '../../auth/services/auth_service.dart';
+import '../models/student_registration_draft.dart';
+import '../widgets/onboarding_header.dart';
+import '../widgets/steps/step_gender.dart';
+import '../widgets/steps/step_grade.dart';
+import '../widgets/steps/step_name.dart';
+import '../widgets/steps/step_phone.dart';
+import '../widgets/steps/step_pin_keypad.dart';
+import '../widgets/steps/step_review.dart';
+import '../widgets/steps/step_stream.dart';
 
 class OnboardingScreen extends StatefulWidget {
   final VoidCallback? onComplete;
+  final AuthService? authService;
 
-  const OnboardingScreen({super.key, this.onComplete});
+  const OnboardingScreen({
+    super.key,
+    this.onComplete,
+    this.authService,
+  });
 
   @override
   State<OnboardingScreen> createState() => _OnboardingScreenState();
@@ -17,7 +29,17 @@ class OnboardingScreen extends StatefulWidget {
 
 class _OnboardingScreenState extends State<OnboardingScreen> {
   final PageController _pageController = PageController();
-  int _currentIndex = 0;
+  late final AuthService _authService;
+
+  StudentRegistrationDraft _draft = const StudentRegistrationDraft();
+  int _currentPage = 0;
+  bool _isSubmitting = false;
+
+  @override
+  void initState() {
+    super.initState();
+    _authService = widget.authService ?? AuthService();
+  }
 
   @override
   void dispose() {
@@ -27,116 +49,206 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
 
   void _onPageChanged(int index) {
     setState(() {
-      _currentIndex = index;
+      _currentPage = index;
     });
   }
 
-  Future<void> _handleComplete({bool goToLogin = false}) async {
-    await AuthStorage.instance.setSeenOnboarding(true);
-    if (!mounted) return;
-
-    if (widget.onComplete != null) {
-      widget.onComplete!();
-    } else {
-      Navigator.of(context).pushReplacementNamed(
-        '/auth',
-        arguments: {'initialTab': goToLogin ? 0 : 1},
+  void _nextPage() {
+    final total = _draft.totalSteps;
+    if (_currentPage < total - 1) {
+      _pageController.nextPage(
+        duration: const Duration(milliseconds: 320),
+        curve: Curves.easeOutCubic,
       );
     }
   }
 
-  void _nextPage() {
-    if (_currentIndex < OnboardingItem.items.length - 1) {
-      _pageController.nextPage(
-        duration: const Duration(milliseconds: 380),
+  void _previousPage() {
+    if (_currentPage > 0) {
+      _pageController.previousPage(
+        duration: const Duration(milliseconds: 320),
         curve: Curves.easeOutCubic,
       );
-    } else {
-      _handleComplete();
     }
+  }
+
+  void _jumpToStep(int targetIndex) {
+    // Clamp to valid range
+    final target = targetIndex.clamp(0, _draft.totalSteps - 1);
+    _pageController.animateToPage(
+      target,
+      duration: const Duration(milliseconds: 380),
+      curve: Curves.easeInOutCubic,
+    );
+  }
+
+  void _goToSignIn() {
+    Navigator.of(context).pushReplacementNamed(
+      '/auth',
+      arguments: {'initialTab': 0},
+    );
+  }
+
+  Future<void> _handleRegistration() async {
+    setState(() {
+      _isSubmitting = true;
+    });
+
+    try {
+      final user = await _authService.register(
+        phone: _draft.phoneNumber,
+        pin: _draft.pin,
+        fullName: _draft.fullName,
+        gender: _draft.gender,
+        grade: _draft.grade,
+        stream: _draft.stream,
+      );
+
+      await AuthStorage.instance.setSeenOnboarding(true);
+
+      if (!mounted) return;
+
+      AcedexToast.show(
+        context,
+        title: 'Welcome to Acedex!',
+        message: 'Your student account has been created.',
+        type: AcedexToastType.success,
+      );
+
+      if (widget.onComplete != null) {
+        widget.onComplete!();
+      } else {
+        Navigator.of(context).pushReplacementNamed(
+          '/home',
+          arguments: user,
+        );
+      }
+    } on ApiException catch (e) {
+      if (!mounted) return;
+      AcedexToast.show(
+        context,
+        message: e.message,
+        type: AcedexToastType.error,
+      );
+    } catch (_) {
+      if (!mounted) return;
+      AcedexToast.show(
+        context,
+        message: 'Something went wrong. Please check your connection.',
+        type: AcedexToastType.error,
+      );
+    } finally {
+      if (mounted) {
+        setState(() {
+          _isSubmitting = false;
+        });
+      }
+    }
+  }
+
+  List<Widget> _buildSteps() {
+    return [
+      // Step 1: Name
+      StepName(
+        initialName: _draft.fullName,
+        onNameChanged: (val) {
+          _draft = _draft.copyWith(fullName: val);
+        },
+        onContinue: _nextPage,
+      ),
+
+      // Step 2: Phone
+      StepPhone(
+        initialPhone: _draft.phoneNumber,
+        onPhoneChanged: (val) {
+          _draft = _draft.copyWith(phoneNumber: val);
+        },
+        onContinue: _nextPage,
+        onBack: _previousPage,
+      ),
+
+      // Step 3: Gender
+      StepGender(
+        selectedGender: _draft.gender,
+        onGenderChanged: (val) {
+          setState(() {
+            _draft = _draft.copyWith(gender: val);
+          });
+        },
+        onContinue: _nextPage,
+        onBack: _previousPage,
+      ),
+
+      // Step 4: Grade
+      StepGrade(
+        selectedGrade: _draft.grade,
+        onGradeChanged: (val) {
+          setState(() {
+            _draft = _draft.copyWith(grade: val);
+          });
+        },
+        onContinue: _nextPage,
+        onBack: _previousPage,
+      ),
+
+      // Step 5: Stream (bypassed if Grade 9/10)
+      if (_draft.requiresStream)
+        StepStream(
+          selectedStream: _draft.stream ?? 'natural',
+          onStreamChanged: (val) {
+            setState(() {
+              _draft = _draft.copyWith(stream: val);
+            });
+          },
+          onContinue: _nextPage,
+          onBack: _previousPage,
+        ),
+
+      // Step 6: Security PIN Keypad (Two-pass confirmation, no continue button)
+      StepPinKeypad(
+        onPinConfirmed: (pin) {
+          _draft = _draft.copyWith(pin: pin);
+          _nextPage();
+        },
+        onBack: _previousPage,
+      ),
+
+      // Step 7: Final Review & Student ID Card
+      StepReview(
+        draft: _draft,
+        isSubmitting: _isSubmitting,
+        onSubmit: _handleRegistration,
+        onEditStep: _jumpToStep,
+        onBack: _previousPage,
+      ),
+    ];
   }
 
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
-    final isDark = theme.brightness == Brightness.dark;
-    final isLastPage = _currentIndex == OnboardingItem.items.length - 1;
+    final steps = _buildSteps();
 
     return Scaffold(
       backgroundColor: theme.scaffoldBackgroundColor,
-      appBar: AppBar(
-        backgroundColor: Colors.transparent,
-        elevation: 0,
-        automaticallyImplyLeading: false,
-        actions: [
-          AnimatedOpacity(
-            opacity: isLastPage ? 0.0 : 1.0,
-            duration: const Duration(milliseconds: 200),
-            child: IgnorePointer(
-              ignoring: isLastPage,
-              child: TextButton(
-                onPressed: () => _handleComplete(goToLogin: true),
-                child: Text(
-                  'Skip',
-                  style: TextStyle(
-                    fontSize: 15,
-                    fontWeight: FontWeight.w600,
-                    color: isDark
-                        ? AppColors.darkSubtext
-                        : AppColors.lightSubtext,
-                  ),
-                ),
-              ),
-            ),
-          ),
-          const SizedBox(width: 8),
-        ],
-      ),
       body: SafeArea(
         child: Column(
           children: [
-            // Slide Carousel
-            Expanded(
-              child: PageView.builder(
-                controller: _pageController,
-                physics: const BouncingScrollPhysics(),
-                onPageChanged: _onPageChanged,
-                itemCount: OnboardingItem.items.length,
-                itemBuilder: (context, index) {
-                  return OnboardingCard(item: OnboardingItem.items[index]);
-                },
-              ),
+            // Top Header: Brand/Back + Step Indicator + Segmented Progress Bar
+            OnboardingHeader(
+              currentStep: _currentPage,
+              totalSteps: _draft.totalSteps,
+              onBack: _previousPage,
+              onSignInTap: _goToSignIn,
             ),
 
-            // Bottom Control Area: Dots + Tactile Buttons
-            Padding(
-              padding: const EdgeInsets.fromLTRB(24, 16, 24, 28),
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  OnboardingDots(
-                    count: OnboardingItem.items.length,
-                    currentIndex: _currentIndex,
-                  ),
-                  const SizedBox(height: 28),
-                  AcedexButton(
-                    label: isLastPage ? 'Get Started' : 'Continue',
-                    variant: AcedexButtonVariant.primary,
-                    size: AcedexButtonSize.lg,
-                    isFullWidth: true,
-                    onPressed: _nextPage,
-                  ),
-                  if (isLastPage) ...[
-                    const SizedBox(height: 10),
-                    AcedexButton(
-                      label: 'I already have an account',
-                      variant: AcedexButtonVariant.ghost,
-                      size: AcedexButtonSize.md,
-                      isFullWidth: true,
-                      onPressed: () => _handleComplete(goToLogin: true),
-                    ),
-                  ],
-                ],
+            // Step Content PageView (Swiping disabled: guided via button/keypad)
+            Expanded(
+              child: PageView(
+                controller: _pageController,
+                physics: const NeverScrollableScrollPhysics(),
+                onPageChanged: _onPageChanged,
+                children: steps,
               ),
             ),
           ],

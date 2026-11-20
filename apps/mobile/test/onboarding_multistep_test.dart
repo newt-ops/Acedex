@@ -1,0 +1,233 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_test/flutter_test.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import 'package:acedex/core/models/user_profile.dart';
+import 'package:acedex/core/ui/feedback/acedex_toast.dart';
+import 'package:acedex/features/auth/services/auth_service.dart';
+import 'package:acedex/features/onboarding/models/student_registration_draft.dart';
+import 'package:acedex/features/onboarding/screens/onboarding_screen.dart';
+import 'package:acedex/features/onboarding/widgets/numeric_keypad.dart';
+import 'package:acedex/features/onboarding/widgets/student_id_card.dart';
+
+class MockAuthService extends AuthService {
+  bool registerCalled = false;
+  String? registeredPhone;
+  String? registeredPin;
+  String? registeredName;
+
+  @override
+  Future<UserProfile> register({
+    required String phone,
+    required String pin,
+    required String fullName,
+    required String gender,
+    required int grade,
+    String? stream,
+  }) async {
+    registerCalled = true;
+    registeredPhone = phone;
+    registeredPin = pin;
+    registeredName = fullName;
+
+    return UserProfile(
+      id: 'test_user_id',
+      acedexId: 'ACX-26-8941',
+      displayName: fullName,
+      phone: phone,
+      gender: gender,
+      grade: grade,
+      stream: stream,
+      role: 'student',
+      status: 'active',
+    );
+  }
+}
+
+void main() {
+  setUp(() {
+    SharedPreferences.setMockInitialValues({});
+  });
+
+  tearDown(() {
+    AcedexToast.dismiss();
+  });
+
+  group('StudentRegistrationDraft State Model', () {
+    test('Default draft requires stream for Grade 12 (7 total steps)', () {
+      const draft = StudentRegistrationDraft();
+      expect(draft.grade, 12);
+      expect(draft.requiresStream, isTrue);
+      expect(draft.totalSteps, 7);
+      expect(draft.candidateId.startsWith('ACX-26-'), isTrue);
+    });
+
+    test('Draft for Grade 9/10 bypasses stream (6 total steps)', () {
+      final draft = const StudentRegistrationDraft().copyWith(grade: 9);
+      expect(draft.grade, 9);
+      expect(draft.requiresStream, isFalse);
+      expect(draft.totalSteps, 6);
+      expect(draft.stream, isNull);
+      expect(draft.academicSummary, 'Grade 9 • General Curriculum');
+    });
+
+    test('Academic summary accurately reflects stream specialization', () {
+      final naturalDraft = const StudentRegistrationDraft(
+        grade: 11,
+        stream: 'natural',
+      );
+      expect(naturalDraft.academicSummary, 'Grade 11 • Natural Science');
+
+      final socialDraft = const StudentRegistrationDraft(
+        grade: 12,
+        stream: 'social',
+      );
+      expect(socialDraft.academicSummary, 'Grade 12 • Social Science');
+    });
+  });
+
+  group('StudentIdCard Widget', () {
+    testWidgets('renders official credentials, candidate ID, and verified chip',
+        (WidgetTester tester) async {
+      const draft = StudentRegistrationDraft(
+        fullName: 'Abebe Kebede',
+        phoneNumber: '+251912345678',
+        gender: 'male',
+        grade: 12,
+        stream: 'natural',
+      );
+
+      await tester.pumpWidget(
+        const MaterialApp(
+          home: Scaffold(
+            body: SingleChildScrollView(
+              child: StudentIdCard(draft: draft),
+            ),
+          ),
+        ),
+      );
+      await tester.pumpAndSettle();
+
+      expect(find.text('ACEDEX NATIONAL EDUCATION'), findsOneWidget);
+      expect(find.text('OFFICIAL CANDIDATE PASS'), findsOneWidget);
+      expect(find.text('VERIFIED'), findsOneWidget);
+      expect(find.text('Abebe Kebede'), findsOneWidget);
+      expect(find.text('+251912345678'), findsOneWidget);
+      expect(find.text('Grade 12'), findsOneWidget);
+      expect(find.text('Grade 12 • Natural Science'), findsOneWidget);
+      expect(find.text(draft.candidateId), findsOneWidget);
+    });
+  });
+
+  group('Multi-Step Guided Onboarding Flow', () {
+    testWidgets('Walks through multi-step onboarding and auto-advances PIN without button',
+        (WidgetTester tester) async {
+      tester.view.physicalSize = const Size(800, 1400);
+      tester.view.devicePixelRatio = 1.0;
+      addTearDown(() => tester.view.resetPhysicalSize());
+
+      final mockAuth = MockAuthService();
+
+      await tester.pumpWidget(
+        MaterialApp(
+          home: OnboardingScreen(authService: mockAuth),
+        ),
+      );
+      await tester.pumpAndSettle();
+
+      // Step 1: Name
+      expect(find.text("What's your name?"), findsOneWidget);
+      expect(find.text('01 / 07'), findsOneWidget);
+
+      await tester.enterText(find.byType(TextField), 'Dawit Alemayehu');
+      await tester.pumpAndSettle();
+
+      await tester.tap(find.text('Continue'));
+      await tester.pumpAndSettle();
+
+      // Step 2: Phone
+      expect(find.text("What's your phone number?"), findsOneWidget);
+      expect(find.text('02 / 07'), findsOneWidget);
+
+      await tester.enterText(find.byType(TextField), '911223344');
+      await tester.pumpAndSettle();
+
+      await tester.tap(find.text('Continue'));
+      await tester.pumpAndSettle();
+
+      // Step 3: Gender
+      expect(find.text('Select your gender'), findsOneWidget);
+      expect(find.text('03 / 07'), findsOneWidget);
+
+      await tester.tap(find.text('Male'));
+      await tester.pumpAndSettle();
+
+      await tester.tap(find.text('Continue'));
+      await tester.pumpAndSettle();
+
+      // Step 4: Grade
+      expect(find.text('Which grade are you in?'), findsOneWidget);
+      expect(find.text('04 / 07'), findsOneWidget);
+
+      await tester.tap(find.text('G12'));
+      await tester.pumpAndSettle();
+
+      await tester.tap(find.text('Continue'));
+      await tester.pumpAndSettle();
+
+      // Step 5: Stream (G12 requires stream)
+      expect(find.text('Choose your stream'), findsOneWidget);
+      expect(find.text('05 / 07'), findsOneWidget);
+
+      await tester.tap(find.text('Natural Science'));
+      await tester.pumpAndSettle();
+
+      await tester.tap(find.text('Continue'));
+      await tester.pumpAndSettle();
+
+      // Step 6: PIN Keypad (NO continue button!)
+      expect(find.text('Create your PIN'), findsOneWidget);
+      expect(find.text('06 / 07'), findsOneWidget);
+      expect(find.byType(NumericKeypad), findsOneWidget);
+      expect(find.text('Continue'), findsNothing); // STRICT REQUIREMENT: No continue button
+
+      // Type 6 digits on the on-screen keypad: 1 2 3 4 5 6
+      for (final digit in ['1', '2', '3', '4', '5', '6']) {
+        await tester.tap(find.text(digit));
+        await tester.pump(const Duration(milliseconds: 30));
+      }
+      await tester.pumpAndSettle(const Duration(milliseconds: 300));
+
+      // Title automatically transitions to "Confirm your PIN"
+      expect(find.text('Confirm your PIN'), findsOneWidget);
+
+      // Re-enter the same 6 digits to verify
+      for (final digit in ['1', '2', '3', '4', '5', '6']) {
+        await tester.tap(find.text(digit));
+        await tester.pump(const Duration(milliseconds: 30));
+      }
+      await tester.pumpAndSettle(const Duration(milliseconds: 300));
+
+      // Step 7: Final Review & Student ID Card
+      expect(find.text('Review your details'), findsOneWidget);
+      expect(find.text('07 / 07'), findsOneWidget);
+      expect(find.byType(StudentIdCard), findsOneWidget);
+      expect(find.text('Dawit Alemayehu'), findsOneWidget);
+      expect(find.text('+251911223344'), findsOneWidget);
+      expect(find.text('Create account'), findsOneWidget);
+
+      // Tap Create account
+      await tester.tap(find.text('Create account'));
+      await tester.pumpAndSettle();
+
+      expect(mockAuth.registerCalled, isTrue);
+      expect(mockAuth.registeredName, 'Dawit Alemayehu');
+      expect(mockAuth.registeredPhone, '+251911223344');
+      expect(mockAuth.registeredPin, '123456');
+
+      // Advance past toast duration to clean up timer
+      await tester.pump(const Duration(seconds: 4));
+      await tester.pumpAndSettle();
+      AcedexToast.dismiss();
+    });
+  });
+}
