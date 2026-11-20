@@ -18,6 +18,7 @@ class AcedexTextField extends StatefulWidget {
   final ValueChanged<String>? onSubmitted;
   final bool enabled;
   final bool autofocus;
+  final double borderRadius;
 
   const AcedexTextField({
     super.key,
@@ -33,6 +34,7 @@ class AcedexTextField extends StatefulWidget {
     this.onSubmitted,
     this.enabled = true,
     this.autofocus = false,
+    this.borderRadius = 20.0,
   });
 
   @override
@@ -92,10 +94,10 @@ class _AcedexTextFieldState extends State<AcedexTextField> {
           curve: Curves.easeOutCubic,
           decoration: BoxDecoration(
             color: surfaceColor,
-            borderRadius: BorderRadius.circular(14.0),
+            borderRadius: BorderRadius.circular(widget.borderRadius),
             border: Border.all(
               color: borderColor,
-              width: _isFocused ? 1.6 : 1.0,
+              width: _isFocused ? 1.8 : 1.2,
             ),
           ),
           child: TextField(
@@ -118,8 +120,8 @@ class _AcedexTextFieldState extends State<AcedexTextField> {
               enabledBorder: InputBorder.none,
               focusedBorder: InputBorder.none,
               contentPadding: const EdgeInsets.symmetric(
-                horizontal: 16.0,
-                vertical: 14.0,
+                horizontal: 18.0,
+                vertical: 15.0,
               ),
               hintText: widget.hint,
               hintStyle: TextStyle(

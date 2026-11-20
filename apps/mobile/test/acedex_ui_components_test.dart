@@ -163,5 +163,75 @@ void main() {
       expect(find.byType(AcedexProgressBar), findsOneWidget);
       await tester.pumpAndSettle();
     });
+
+    testWidgets('AcedexToggle animates and fires onChanged callback',
+        (WidgetTester tester) async {
+      bool toggleValue = false;
+
+      await tester.pumpWidget(
+        MaterialApp(
+          home: Scaffold(
+            body: StatefulBuilder(
+              builder: (context, setState) {
+                return Center(
+                  child: AcedexToggle(
+                    value: toggleValue,
+                    onChanged: (val) {
+                      setState(() {
+                        toggleValue = val;
+                      });
+                    },
+                  ),
+                );
+              },
+            ),
+          ),
+        ),
+      );
+
+      expect(find.byType(AcedexToggle), findsOneWidget);
+      expect(toggleValue, isFalse);
+
+      await tester.tap(find.byType(AcedexToggle));
+      await tester.pumpAndSettle();
+
+      expect(toggleValue, isTrue);
+    });
+
+    testWidgets('AcedexToggleTile renders title and toggles on tap',
+        (WidgetTester tester) async {
+      bool tileValue = true;
+
+      await tester.pumpWidget(
+        MaterialApp(
+          home: Scaffold(
+            body: StatefulBuilder(
+              builder: (context, setState) {
+                return Center(
+                  child: AcedexToggleTile(
+                    title: 'Dark Mode',
+                    subtitle: 'Switch application appearance',
+                    value: tileValue,
+                    onChanged: (val) {
+                      setState(() {
+                        tileValue = val;
+                      });
+                    },
+                  ),
+                );
+              },
+            ),
+          ),
+        ),
+      );
+
+      expect(find.text('Dark Mode'), findsOneWidget);
+      expect(find.text('Switch application appearance'), findsOneWidget);
+
+      await tester.tap(find.text('Dark Mode'));
+      await tester.pumpAndSettle();
+
+      expect(tileValue, isFalse);
+    });
   });
 }

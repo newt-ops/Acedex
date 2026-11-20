@@ -119,11 +119,11 @@ class _StepPhoneState extends State<StepPhone> {
             children: [
               // +251 Prefix Box
               Container(
-                height: 52,
+                height: 54,
                 padding: const EdgeInsets.symmetric(horizontal: 14),
                 decoration: BoxDecoration(
                   color: surface,
-                  borderRadius: BorderRadius.circular(16),
+                  borderRadius: BorderRadius.circular(20),
                   border: Border.all(color: line, width: 1.2),
                 ),
                 alignment: Alignment.center,

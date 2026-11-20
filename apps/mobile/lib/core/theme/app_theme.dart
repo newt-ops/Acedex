@@ -93,21 +93,21 @@ abstract class AppTheme {
       inputDecorationTheme: InputDecorationTheme(
         filled: true,
         fillColor: AppColors.lightBackground,
-        contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+        contentPadding: const EdgeInsets.symmetric(horizontal: 18, vertical: 15),
         border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(12),
-          borderSide: const BorderSide(color: AppColors.lightLine, width: 1),
+          borderRadius: BorderRadius.circular(20),
+          borderSide: const BorderSide(color: AppColors.lightLine, width: 1.2),
         ),
         enabledBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(12),
-          borderSide: const BorderSide(color: AppColors.lightLine, width: 1),
+          borderRadius: BorderRadius.circular(20),
+          borderSide: const BorderSide(color: AppColors.lightLine, width: 1.2),
         ),
         focusedBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(12),
+          borderRadius: BorderRadius.circular(20),
           borderSide: const BorderSide(color: AppColors.lightPrimary, width: 1.8),
         ),
         errorBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(12),
+          borderRadius: BorderRadius.circular(20),
           borderSide: const BorderSide(color: AppColors.error, width: 1.5),
         ),
         labelStyle: const TextStyle(color: AppColors.lightSecondaryText, fontSize: 14),
@@ -235,21 +235,21 @@ abstract class AppTheme {
       inputDecorationTheme: InputDecorationTheme(
         filled: true,
         fillColor: AppColors.darkSurface,
-        contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+        contentPadding: const EdgeInsets.symmetric(horizontal: 18, vertical: 15),
         border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(12),
-          borderSide: const BorderSide(color: AppColors.darkLine, width: 1),
+          borderRadius: BorderRadius.circular(20),
+          borderSide: const BorderSide(color: AppColors.darkLine, width: 1.2),
         ),
         enabledBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(12),
-          borderSide: const BorderSide(color: AppColors.darkLine, width: 1),
+          borderRadius: BorderRadius.circular(20),
+          borderSide: const BorderSide(color: AppColors.darkLine, width: 1.2),
         ),
         focusedBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(12),
+          borderRadius: BorderRadius.circular(20),
           borderSide: const BorderSide(color: AppColors.darkPrimary, width: 1.8),
         ),
         errorBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(12),
+          borderRadius: BorderRadius.circular(20),
           borderSide: const BorderSide(color: AppColors.darkError, width: 1.5),
         ),
         labelStyle: const TextStyle(color: AppColors.darkSecondaryText, fontSize: 14),

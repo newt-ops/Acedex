@@ -12,5 +12,6 @@ export 'feedback/acedex_dialog.dart';
 export 'feedback/acedex_bottom_sheet.dart';
 export 'feedback/acedex_state_views.dart';
 export 'inputs/acedex_text_field.dart';
+export 'inputs/acedex_toggle.dart';
 export 'badges/acedex_badge.dart';
 export 'progress/acedex_progress.dart';

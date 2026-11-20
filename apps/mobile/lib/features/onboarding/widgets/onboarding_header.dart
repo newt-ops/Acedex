@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:hugeicons/hugeicons.dart';
 import '../../../core/theme/app_colors.dart';
 import '../../../core/ui/animations/bounceable.dart';
+import '../../../main.dart';
 
 class OnboardingHeader extends StatelessWidget {
   final int currentStep; // 0-indexed (0 to totalSteps - 1)
@@ -103,6 +104,28 @@ class OnboardingHeader extends StatelessWidget {
                       fontWeight: FontWeight.w700,
                       letterSpacing: 0.5,
                       color: subtext,
+                    ),
+                  ),
+                  const SizedBox(width: 10),
+                  // Tactile Theme Toggle Button
+                  AcedexBounceable(
+                    onTap: () => AcedexApp.toggleTheme(context),
+                    child: Container(
+                      padding: const EdgeInsets.all(5.5),
+                      decoration: BoxDecoration(
+                        color: isDark
+                            ? AppColors.darkSurface
+                            : AppColors.lightSurface,
+                        borderRadius: BorderRadius.circular(10),
+                        border: Border.all(color: line, width: 1),
+                      ),
+                      child: HugeIcon(
+                        icon: isDark
+                            ? HugeIcons.strokeRoundedSun02
+                            : HugeIcons.strokeRoundedMoon02,
+                        color: accent,
+                        size: 15,
+                      ),
                     ),
                   ),
                 ],

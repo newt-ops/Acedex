@@ -22,6 +22,18 @@ void main() async {
 }
 
 class AcedexApp extends StatelessWidget {
+  static final ValueNotifier<ThemeMode> themeModeNotifier =
+      ValueNotifier<ThemeMode>(ThemeMode.system);
+
+  static void toggleTheme(BuildContext context) {
+    final currentBrightness = Theme.of(context).brightness;
+    if (currentBrightness == Brightness.dark) {
+      themeModeNotifier.value = ThemeMode.light;
+    } else {
+      themeModeNotifier.value = ThemeMode.dark;
+    }
+  }
+
   final UserProfile? initialUser;
   final bool hasSeenOnboarding;
 
@@ -33,30 +45,35 @@ class AcedexApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Acedex',
-      debugShowCheckedModeBanner: false,
-      scrollBehavior: const AcedexScrollBehavior(),
-      theme: AppTheme.lightTheme,
-      darkTheme: AppTheme.darkTheme,
-      themeMode: ThemeMode.system,
-      initialRoute: initialUser != null
-          ? '/home'
-          : (hasSeenOnboarding ? '/auth' : '/onboarding'),
-      routes: {
-        '/onboarding': (context) => const OnboardingScreen(),
-        '/auth': (context) {
-          final args = ModalRoute.of(context)?.settings.arguments
-              as Map<String, dynamic>?;
-          final initialTab = (args?['initialTab'] as int?) ?? 0;
-          return AuthScreen(initialTab: initialTab);
-        },
-        '/home': (context) {
-          final user = ModalRoute.of(context)?.settings.arguments
-                  as UserProfile? ??
-              initialUser;
-          return HomeScreen(user: user);
-        },
+    return ValueListenableBuilder<ThemeMode>(
+      valueListenable: themeModeNotifier,
+      builder: (context, themeMode, _) {
+        return MaterialApp(
+          title: 'Acedex',
+          debugShowCheckedModeBanner: false,
+          scrollBehavior: const AcedexScrollBehavior(),
+          theme: AppTheme.lightTheme,
+          darkTheme: AppTheme.darkTheme,
+          themeMode: themeMode,
+          initialRoute: initialUser != null
+              ? '/home'
+              : (hasSeenOnboarding ? '/auth' : '/onboarding'),
+          routes: {
+            '/onboarding': (context) => const OnboardingScreen(),
+            '/auth': (context) {
+              final args = ModalRoute.of(context)?.settings.arguments
+                  as Map<String, dynamic>?;
+              final initialTab = (args?['initialTab'] as int?) ?? 0;
+              return AuthScreen(initialTab: initialTab);
+            },
+            '/home': (context) {
+              final user = ModalRoute.of(context)?.settings.arguments
+                      as UserProfile? ??
+                  initialUser;
+              return HomeScreen(user: user);
+            },
+          },
+        );
       },
     );
   }
