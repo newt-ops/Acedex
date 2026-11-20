@@ -71,7 +71,9 @@ abstract class AppColors {
 
   static const Color error = Color(0xFFDC2626);
   static const Color errorContainer = Color(0xFFFEE2E2);
+  static const Color lightErrorSoft = Color(0xFFFEE2E2);
   static const Color darkError = Color(0xFFF87171);
+  static const Color darkErrorSoft = Color(0xFF351515);
 
   static const Color info = Color(0xFF0F766E);
   static const Color infoContainer = Color(0xFFDDECEB);
