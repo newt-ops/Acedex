@@ -66,6 +66,15 @@ export class AuthService {
   }
 
   /**
+   * Checks if an Ethiopian phone number is already registered in the system.
+   */
+  public static async isPhoneRegistered(phone: string): Promise<boolean> {
+    const normalizedPhone = normalizeEthiopianPhone(phone);
+    const existing = await UserModel.exists({ phone: normalizedPhone });
+    return !!existing;
+  }
+
+  /**
    * Registers a new student using phone number, PIN, name, gender, grade, and stream.
    * Instant onboarding without SMS OTP cost.
    */

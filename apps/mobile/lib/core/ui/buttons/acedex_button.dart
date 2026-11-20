@@ -132,9 +132,12 @@ class AcedexButton extends StatelessWidget {
           )
         else ...[
           if (leadingIcon != null) ...[
-            IconTheme(
-              data: IconThemeData(color: foregroundColor, size: fontSize + 3),
-              child: leadingIcon!,
+            ColorFiltered(
+              colorFilter: ColorFilter.mode(foregroundColor, BlendMode.srcIn),
+              child: IconTheme(
+                data: IconThemeData(color: foregroundColor, size: fontSize + 3),
+                child: leadingIcon!,
+              ),
             ),
             SizedBox(width: iconSpacing),
           ],
@@ -153,9 +156,12 @@ class AcedexButton extends StatelessWidget {
           ),
           if (trailingIcon != null) ...[
             SizedBox(width: iconSpacing),
-            IconTheme(
-              data: IconThemeData(color: foregroundColor, size: fontSize + 3),
-              child: trailingIcon!,
+            ColorFiltered(
+              colorFilter: ColorFilter.mode(foregroundColor, BlendMode.srcIn),
+              child: IconTheme(
+                data: IconThemeData(color: foregroundColor, size: fontSize + 3),
+                child: trailingIcon!,
+              ),
             ),
           ],
         ],

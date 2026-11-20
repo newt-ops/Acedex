@@ -1,17 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:hugeicons/hugeicons.dart';
 import '../../../core/models/user_profile.dart';
 import '../../../core/theme/app_colors.dart';
-import '../../../core/ui/animations/bounceable.dart';
 import '../../../core/ui/cards/acedex_card.dart';
-import '../../../main.dart';
+import '../../../core/ui/inputs/acedex_theme_toggle.dart';
 import '../services/auth_service.dart';
 import '../widgets/login_form.dart';
 
-/// Apple-Style Login Screen & Authentication Gateway
+/// Apple-Style Login Screen & Authentication Gateway (Step 1: Phone Entry)
 ///
-/// Serves as the primary entrypoint for returning candidates to sign in,
-/// and provides a direct path to the guided 7-step Onboarding registration.
+/// Serves as the primary entrypoint for candidates to initiate sign-in via phone,
+/// and seamlessly transitions to the full-screen PIN screen (/auth/pin).
 class AuthScreen extends StatefulWidget {
   final String? initialPhone;
   final AuthService? authService;
@@ -42,7 +40,6 @@ class _AuthScreenState extends State<AuthScreen> {
     final isDark = theme.brightness == Brightness.dark;
     final primaryColor = theme.colorScheme.primary;
     final accent = isDark ? AppColors.darkAccent : AppColors.lightAccent;
-    final line = isDark ? AppColors.darkLine : AppColors.lightLine;
 
     // Check for prefilled phone from route arguments (e.g. post-registration)
     final routeArgs = ModalRoute.of(context)?.settings.arguments
@@ -65,29 +62,11 @@ class _AuthScreenState extends State<AuthScreen> {
             color: accent,
           ),
         ),
-        actions: [
-          // Theme Toggle Button
+        actions: const [
+          // Flexible 3-Mode Theme Toggle (System / Light / Dark)
           Padding(
-            padding: const EdgeInsets.only(right: 20),
-            child: AcedexBounceable(
-              onTap: () => AcedexApp.toggleTheme(context),
-              child: Container(
-                padding: const EdgeInsets.all(6),
-                decoration: BoxDecoration(
-                  color:
-                      isDark ? AppColors.darkSurface : AppColors.lightSurface,
-                  borderRadius: BorderRadius.circular(10),
-                  border: Border.all(color: line, width: 1),
-                ),
-                child: HugeIcon(
-                  icon: isDark
-                      ? HugeIcons.strokeRoundedSun02
-                      : HugeIcons.strokeRoundedMoon02,
-                  color: accent,
-                  size: 16,
-                ),
-              ),
-            ),
+            padding: EdgeInsets.only(right: 18),
+            child: AcedexThemeToggle(compact: true),
           ),
         ],
       ),
@@ -144,7 +123,7 @@ class _AuthScreenState extends State<AuthScreen> {
                     ),
                     const SizedBox(height: 6),
                     Text(
-                      'Sign in with your phone number and PIN',
+                      'Sign in with your registered phone number',
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         fontSize: 14,

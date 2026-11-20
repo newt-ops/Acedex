@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:hugeicons/hugeicons.dart';
 import '../../../../core/theme/app_colors.dart';
 import '../numeric_keypad.dart';
 
+/// Distraction-Free Full-Page PIN Keypad Step
+///
+/// Removes distracting labels and category badges, immersing the student
+/// in an Apple-grade, focused 6-digit PIN creation and auto-confirmation flow.
 class StepPinKeypad extends StatefulWidget {
   final ValueChanged<String> onPinConfirmed;
   final VoidCallback onBack;
@@ -109,7 +114,8 @@ class _StepPinKeypadState extends State<StepPinKeypad>
     final theme = Theme.of(context);
     final isDark = theme.brightness == Brightness.dark;
     final accent = isDark ? AppColors.darkAccent : AppColors.lightAccent;
-    final subtext = isDark ? AppColors.darkSubtext : AppColors.lightSubtext;
+    final softAccent =
+        isDark ? AppColors.darkAccentSoft : AppColors.lightAccentSoft;
     final surface = isDark ? AppColors.darkSurface : AppColors.lightSurface;
     final line = isDark ? AppColors.darkLine : AppColors.lightLine;
     final errorColor = isDark ? AppColors.darkError : AppColors.error;
@@ -117,165 +123,137 @@ class _StepPinKeypadState extends State<StepPinKeypad>
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 24),
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          const SizedBox(height: 8),
+          const Spacer(flex: 1),
 
-          // Category Badge
-          Text(
-            'ACCOUNT SECURITY',
-            style: TextStyle(
-              fontSize: 11,
-              fontWeight: FontWeight.w800,
-              letterSpacing: 1.2,
+          // Central Security Lock Badge
+          Container(
+            width: 58,
+            height: 58,
+            decoration: BoxDecoration(
+              color: softAccent,
+              shape: BoxShape.circle,
+              border: Border.all(
+                color: accent.withValues(alpha: 0.35),
+                width: 1.2,
+              ),
+            ),
+            alignment: Alignment.center,
+            child: HugeIcon(
+              icon: HugeIcons.strokeRoundedSquareLock02,
               color: accent,
+              size: 26,
             ),
           ),
-          const SizedBox(height: 8),
+          const SizedBox(height: 16),
 
-          // Title with Smooth Cross-Fade
+          // Dynamic Focused Title
           AnimatedSwitcher(
             duration: const Duration(milliseconds: 250),
-            transitionBuilder: (child, animation) =>
-                FadeTransition(opacity: animation, child: child),
             child: Text(
               _isConfirming ? 'Confirm your PIN' : 'Create your PIN',
-              key: ValueKey<bool>(_isConfirming),
+              key: ValueKey(_isConfirming),
               style: TextStyle(
-                fontSize: 28,
+                fontSize: 26,
                 fontWeight: FontWeight.w800,
-                letterSpacing: -0.6,
+                letterSpacing: -0.5,
                 color: isDark ? AppColors.darkText : AppColors.lightText,
               ),
             ),
           ),
           const SizedBox(height: 6),
 
-          // Subtitle
-          AnimatedSwitcher(
-            duration: const Duration(milliseconds: 250),
-            child: Text(
-              _isConfirming
-                  ? 'Re-enter your 6-digit PIN to confirm.'
-                  : 'Enter six digits using the keypad below.',
-              key: ValueKey<bool>(_isConfirming),
-              style: TextStyle(
-                fontSize: 14.5,
-                fontWeight: FontWeight.w500,
-                color: subtext,
-                height: 1.35,
-              ),
+          // Minimal Subtitle
+          Text(
+            _isConfirming
+                ? 'Re-enter your 6 digits to verify'
+                : 'Your 6-digit PIN keeps your account secure',
+            style: TextStyle(
+              fontSize: 13.5,
+              fontWeight: FontWeight.w500,
+              color: isDark ? AppColors.darkSubtext : AppColors.lightSubtext,
             ),
           ),
-          const SizedBox(height: 28),
 
-          // 6 PIN Squircle Indicator Cells (with horizontal shake on error)
-          Center(
-            child: AnimatedBuilder(
-              animation: _shakeAnimation,
-              builder: (context, child) {
-                final offset = _shakeController.isAnimating
-                    ? (1 - _shakeController.value) *
-                        10 *
-                        ((_shakeController.value * 20).toInt() % 2 == 0 ? 1 : -1)
-                    : 0.0;
-                return Transform.translate(
-                  offset: Offset(offset.toDouble(), 0),
-                  child: child,
-                );
-              },
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: List.generate(6, (index) {
-                  final isFilled = index < _currentPin.length;
-                  final isCurrent = index == _currentPin.length;
-                  final hasError = _errorMessage != null;
+          const SizedBox(height: 32),
 
-                  return Container(
-                    width: 44,
-                    height: 52,
-                    margin: const EdgeInsets.symmetric(horizontal: 5),
-                    decoration: BoxDecoration(
-                      color: surface,
-                      borderRadius: BorderRadius.circular(14),
-                      border: Border.all(
-                        color: hasError
-                            ? errorColor
-                            : (isCurrent
-                                ? accent
-                                : (isFilled
-                                    ? accent.withValues(alpha: 0.6)
-                                    : line)),
-                        width: (isCurrent || isFilled) ? 2.0 : 1.2,
-                      ),
-                      boxShadow: isCurrent
-                          ? [
-                              BoxShadow(
-                                color: accent.withValues(alpha: 0.2),
-                                blurRadius: 10,
-                                offset: const Offset(0, 2),
-                              ),
-                            ]
-                          : [],
+          // 6-Digit PIN Squircle Cells with Shake Animation
+          AnimatedBuilder(
+            animation: _shakeAnimation,
+            builder: (context, child) {
+              return Transform.translate(
+                offset: Offset(_shakeAnimation.value, 0),
+                child: child,
+              );
+            },
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: List.generate(6, (index) {
+                final isFilled = index < _currentPin.length;
+                final isCurrent = index == _currentPin.length;
+
+                return Container(
+                  width: 44,
+                  height: 52,
+                  margin: const EdgeInsets.symmetric(horizontal: 5),
+                  decoration: BoxDecoration(
+                    color: isFilled ? softAccent : surface,
+                    borderRadius: BorderRadius.circular(14),
+                    border: Border.all(
+                      color: _errorMessage != null
+                          ? errorColor
+                          : isCurrent
+                              ? accent
+                              : isFilled
+                                  ? accent.withValues(alpha: 0.6)
+                                  : line,
+                      width: (isCurrent || isFilled) ? 1.8 : 1.0,
                     ),
-                    alignment: Alignment.center,
-                    child: isFilled
-                        ? Container(
-                            width: 12,
-                            height: 12,
-                            decoration: BoxDecoration(
-                              shape: BoxShape.circle,
-                              color: isDark
-                                  ? AppColors.darkText
-                                  : AppColors.lightText,
-                            ),
-                          )
-                        : null,
-                  );
-                }),
-              ),
+                  ),
+                  alignment: Alignment.center,
+                  child: isFilled
+                      ? Container(
+                          width: 12,
+                          height: 12,
+                          decoration: BoxDecoration(
+                            color: accent,
+                            shape: BoxShape.circle,
+                          ),
+                        )
+                      : null,
+                );
+              }),
             ),
           ),
 
-          // Error Message or Helper
-          const SizedBox(height: 12),
-          Center(
-            child: AnimatedOpacity(
-              duration: const Duration(milliseconds: 200),
-              opacity: _errorMessage != null ? 1.0 : 0.0,
-              child: Text(
-                _errorMessage ?? '',
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  fontSize: 12.5,
-                  fontWeight: FontWeight.w600,
-                  color: errorColor,
-                ),
-              ),
-            ),
+          const SizedBox(height: 14),
+
+          // Error Message Area
+          SizedBox(
+            height: 24,
+            child: _errorMessage != null
+                ? Text(
+                    _errorMessage!,
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontSize: 12.5,
+                      fontWeight: FontWeight.w600,
+                      color: errorColor,
+                    ),
+                  )
+                : null,
           ),
 
-          const Spacer(),
+          const Spacer(flex: 2),
 
-          // Tactile On-Screen Numeric Keypad (NO Continue Button!)
+          // Full Custom Numeric Keypad
           NumericKeypad(
             onDigit: _onDigit,
             onDelete: _onDelete,
           ),
-          const SizedBox(height: 12),
 
-          // Footnote
-          Center(
-            child: Text(
-              'Your PIN keeps your student account secure.',
-              style: TextStyle(
-                fontSize: 11.5,
-                fontWeight: FontWeight.w500,
-                color: subtext.withValues(alpha: 0.7),
-              ),
-            ),
-          ),
-          const SizedBox(height: 18),
+          const SizedBox(height: 16),
         ],
       ),
     );

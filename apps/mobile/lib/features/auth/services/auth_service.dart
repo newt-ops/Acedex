@@ -15,29 +15,49 @@ class AuthService {
   })  : _client = client ?? ApiClient(),
         _storage = storage ?? AuthStorage.instance;
 
-  static final RegExp ethiopianPhoneRegex = RegExp(r'^(\+251|0)?[79]\d{8}$');
+  static final RegExp ethiopianPhoneRegex = RegExp(r'^\+251[79]\d{8}$');
 
   /// Normalizes any valid Ethiopian phone string into standard E.164: +2519XXXXXXXX or +2517XXXXXXXX
+  /// Supports raw inputs like 09..., 07..., 9..., 7..., +2510..., +251...
   static String normalizePhone(String input) {
-    final cleaned = input.replaceAll(RegExp(r'[\s\-\(\)]'), '');
-    if (cleaned.startsWith('+251')) {
-      return cleaned;
-    }
-    if (cleaned.startsWith('251')) {
-      return '+$cleaned';
-    }
-    if (cleaned.startsWith('0')) {
-      return '+251${cleaned.substring(1)}';
-    }
-    if (cleaned.startsWith('9') || cleaned.startsWith('7')) {
-      return '+251$cleaned';
+    var cleaned = input.replaceAll(RegExp(r'[\s\-\(\)\.]'), '');
+    if (cleaned.startsWith('+2510')) {
+      cleaned = '+251${cleaned.substring(5)}';
+    } else if (cleaned.startsWith('2510')) {
+      cleaned = '+251${cleaned.substring(4)}';
+    } else if (cleaned.startsWith('+251')) {
+      // kept as is
+    } else if (cleaned.startsWith('251')) {
+      cleaned = '+$cleaned';
+    } else if (cleaned.startsWith('0')) {
+      cleaned = '+251${cleaned.substring(1)}';
+    } else if (cleaned.startsWith('9') || cleaned.startsWith('7')) {
+      cleaned = '+251$cleaned';
     }
     return cleaned;
   }
 
   static bool isValidPhone(String input) {
-    final cleaned = input.replaceAll(RegExp(r'[\s\-\(\)]'), '');
-    return ethiopianPhoneRegex.hasMatch(cleaned);
+    if (input.trim().isEmpty) return false;
+    final normalized = normalizePhone(input);
+    return ethiopianPhoneRegex.hasMatch(normalized);
+  }
+
+  /// Checks if a phone number is already registered in Acedex
+  Future<bool> checkPhoneRegistered(String phone) async {
+    try {
+      final cleanPhone = normalizePhone(phone);
+      if (!isValidPhone(cleanPhone)) return false;
+
+      final response = await _client.get(
+        '${ApiEndpoints.checkPhone}?phone=${Uri.encodeComponent(cleanPhone)}',
+      );
+      final data = response['data'] as Map<String, dynamic>;
+      return data['registered'] == true;
+    } catch (_) {
+      // Graceful degradation when network/backend check is unavailable
+      return false;
+    }
   }
 
   Future<UserProfile> login({

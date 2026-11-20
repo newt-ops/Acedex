@@ -28,10 +28,9 @@ void main() {
     // After loading, user is on AuthScreen (Login Gateway)
     expect(find.byType(AuthScreen), findsOneWidget);
     expect(find.text('Welcome Back'), findsOneWidget);
-    expect(find.text('Sign In'), findsWidgets);
+    expect(find.text('Continue'), findsOneWidget);
     expect(find.text('Create Account'), findsWidgets);
     expect(find.text('Phone Number'), findsOneWidget);
-    expect(find.text('6-Digit Security PIN'), findsOneWidget);
   });
 
   testWidgets('AcedexApp with authenticated user directly launches HomeScreen',

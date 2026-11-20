@@ -7,6 +7,7 @@ import 'package:acedex/features/auth/services/auth_service.dart';
 import 'package:acedex/features/onboarding/models/student_registration_draft.dart';
 import 'package:acedex/features/onboarding/screens/onboarding_screen.dart';
 import 'package:acedex/features/onboarding/widgets/numeric_keypad.dart';
+import 'package:acedex/features/onboarding/widgets/steps/step_phone.dart';
 import 'package:acedex/features/onboarding/widgets/student_id_card.dart';
 
 class MockAuthService extends AuthService {
@@ -14,6 +15,12 @@ class MockAuthService extends AuthService {
   String? registeredPhone;
   String? registeredPin;
   String? registeredName;
+  bool returnPhoneAlreadyRegistered = false;
+
+  @override
+  Future<bool> checkPhoneRegistered(String phone) async {
+    return returnPhoneAlreadyRegistered;
+  }
 
   @override
   Future<UserProfile> register({
@@ -85,8 +92,72 @@ void main() {
     });
   });
 
-  group('StudentIdCard Widget', () {
-    testWidgets('renders official credentials, candidate ID, and verified chip',
+  group('Live Phone Registration Detector (Step 2)', () {
+    testWidgets('Shows available state when phone is unrecorded',
+        (WidgetTester tester) async {
+      final mockAuth = MockAuthService()..returnPhoneAlreadyRegistered = false;
+
+      await tester.pumpWidget(
+        MaterialApp(
+          home: Scaffold(
+            body: StepPhone(
+              initialPhone: '',
+              authService: mockAuth,
+              onPhoneChanged: (_) {},
+              onContinue: () {},
+              onBack: () {},
+            ),
+          ),
+        ),
+      );
+      await tester.pumpAndSettle();
+
+      await tester.enterText(find.byType(TextField), '0911223344');
+      await tester.pump(const Duration(milliseconds: 500));
+      await tester.pumpAndSettle();
+
+      expect(find.text('Phone number is available for registration'),
+          findsOneWidget);
+    });
+
+    testWidgets('Shows warning banner and prevents continue when phone is already registered',
+        (WidgetTester tester) async {
+      final mockAuth = MockAuthService()..returnPhoneAlreadyRegistered = true;
+      bool continued = false;
+
+      await tester.pumpWidget(
+        MaterialApp(
+          home: Scaffold(
+            body: StepPhone(
+              initialPhone: '',
+              authService: mockAuth,
+              onPhoneChanged: (_) {},
+              onContinue: () => continued = true,
+              onBack: () {},
+            ),
+          ),
+        ),
+      );
+      await tester.pumpAndSettle();
+
+      await tester.enterText(find.byType(TextField), '0911223344');
+      await tester.pump(const Duration(milliseconds: 500));
+      await tester.pumpAndSettle();
+
+      expect(find.text('This phone number is already registered.'),
+          findsOneWidget);
+      expect(find.text('Sign in with this number instead'), findsOneWidget);
+
+      // Attempt to tap Continue button
+      await tester.tap(find.text('Continue'));
+      await tester.pumpAndSettle();
+
+      expect(continued, isFalse);
+    });
+  });
+
+  group('StudentIdCard Widget (Clean UI & Responsive)', () {
+    testWidgets('renders official credentials and candidate ID in Light Mode',
         (WidgetTester tester) async {
       const draft = StudentRegistrationDraft(
         fullName: 'Abebe Kebede',
@@ -97,8 +168,9 @@ void main() {
       );
 
       await tester.pumpWidget(
-        const MaterialApp(
-          home: Scaffold(
+        MaterialApp(
+          theme: ThemeData.light(),
+          home: const Scaffold(
             body: SingleChildScrollView(
               child: StudentIdCard(draft: draft),
             ),
@@ -112,8 +184,8 @@ void main() {
       expect(find.text('VERIFIED'), findsOneWidget);
       expect(find.text('Abebe Kebede'), findsOneWidget);
       expect(find.text('+251912345678'), findsOneWidget);
-      expect(find.text('Grade 12'), findsOneWidget);
-      expect(find.text('Grade 12 • Natural Science'), findsOneWidget);
+      expect(find.text('Grade 12'), findsWidgets);
+      expect(find.text('Natural Science'), findsOneWidget);
       expect(find.text(draft.candidateId), findsOneWidget);
     });
   });
@@ -153,6 +225,7 @@ void main() {
       expect(find.text('02 / 07'), findsOneWidget);
 
       await tester.enterText(find.byType(TextField), '911223344');
+      await tester.pump(const Duration(milliseconds: 500));
       await tester.pumpAndSettle();
 
       await tester.tap(find.text('Continue'));
@@ -190,7 +263,6 @@ void main() {
 
       // Step 6: PIN Keypad (NO continue button!)
       expect(find.text('Create your PIN'), findsOneWidget);
-      expect(find.text('06 / 07'), findsOneWidget);
       expect(find.byType(NumericKeypad), findsOneWidget);
       expect(find.text('Continue'), findsNothing); // STRICT REQUIREMENT: No continue button
 

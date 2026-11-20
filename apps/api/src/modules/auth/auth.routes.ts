@@ -15,6 +15,8 @@ import { asyncHandler } from '../../common/utils/async-handler';
 const router = Router();
 
 // Student Phone & PIN Authentication
+router.get('/check-phone', asyncHandler(AuthController.checkPhone));
+
 router.post(
   '/register-phone',
   validate({ body: PhoneRegisterRequestSchema }),

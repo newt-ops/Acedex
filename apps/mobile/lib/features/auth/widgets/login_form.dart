@@ -1,25 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:hugeicons/hugeicons.dart';
 import '../../../core/models/user_profile.dart';
-import '../../../core/network/api_exception.dart';
 import '../../../core/theme/app_colors.dart';
 import '../../../core/ui/ui.dart';
 import '../services/auth_service.dart';
-import 'phone_number_input.dart';
-import 'pin_input_field.dart';
 
 class LoginForm extends StatefulWidget {
-  final ValueChanged<UserProfile> onSuccess;
+  final ValueChanged<UserProfile>? onSuccess;
   final VoidCallback onSwitchToRegister;
   final AuthService? authService;
   final String? initialPhone;
+  final ValueChanged<String>? onPhoneSubmitted;
 
   const LoginForm({
     super.key,
-    required this.onSuccess,
+    this.onSuccess,
     required this.onSwitchToRegister,
     this.authService,
     this.initialPhone,
+    this.onPhoneSubmitted,
   });
 
   @override
@@ -28,16 +27,11 @@ class LoginForm extends StatefulWidget {
 
 class _LoginFormState extends State<LoginForm> {
   final _phoneController = TextEditingController();
-  final _pinController = TextEditingController();
-
-  late final AuthService _authService;
-  bool _isLoading = false;
   String? _errorMessage;
 
   @override
   void initState() {
     super.initState();
-    _authService = widget.authService ?? AuthService();
     if (widget.initialPhone != null && widget.initialPhone!.isNotEmpty) {
       var phone = widget.initialPhone!;
       if (phone.startsWith('+251')) {
@@ -54,53 +48,34 @@ class _LoginFormState extends State<LoginForm> {
   @override
   void dispose() {
     _phoneController.dispose();
-    _pinController.dispose();
     super.dispose();
   }
 
-  Future<void> _submit() async {
+  void _submit() {
     setState(() {
       _errorMessage = null;
     });
 
-    final phone = _phoneController.text.trim();
-    final pin = _pinController.text.trim();
-
-    if (phone.isEmpty) {
+    final raw = _phoneController.text.trim();
+    if (raw.isEmpty) {
       setState(() => _errorMessage = 'Please enter your phone number.');
       return;
     }
-    if (pin.isEmpty) {
-      setState(() => _errorMessage = 'Please enter your 6-digit security PIN.');
-      return;
-    }
-    if (pin.length < 6) {
-      setState(() => _errorMessage = 'PIN must be at least 6 digits.');
+
+    final cleanPhone = AuthService.normalizePhone(raw);
+    if (!AuthService.isValidPhone(cleanPhone)) {
+      setState(() => _errorMessage =
+          'Please enter a valid Ethiopian mobile number (e.g. 09... or 07...).');
       return;
     }
 
-    setState(() => _isLoading = true);
-
-    try {
-      final cleanPhone = AuthService.normalizePhone(
-        phone.startsWith('+251') ? phone : '+251$phone',
+    if (widget.onPhoneSubmitted != null) {
+      widget.onPhoneSubmitted!(cleanPhone);
+    } else {
+      Navigator.of(context).pushNamed(
+        '/auth/pin',
+        arguments: {'phone': cleanPhone},
       );
-      final user = await _authService.login(phone: cleanPhone, pin: pin);
-      if (!mounted) return;
-      widget.onSuccess(user);
-    } on ApiException catch (e) {
-      if (!mounted) return;
-      setState(() {
-        _errorMessage = e.message;
-        _isLoading = false;
-      });
-    } catch (_) {
-      if (!mounted) return;
-      setState(() {
-        _errorMessage =
-            'Unable to connect to Acedex. Please check your internet connection.';
-        _isLoading = false;
-      });
     }
   }
 
@@ -108,6 +83,10 @@ class _LoginFormState extends State<LoginForm> {
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     final isDark = theme.brightness == Brightness.dark;
+    final accent = isDark ? AppColors.darkAccent : AppColors.lightAccent;
+    final line = isDark ? AppColors.darkLine : AppColors.lightLine;
+    final surface = isDark ? AppColors.darkSurface : AppColors.lightSurface;
+    final subtext = isDark ? AppColors.darkSubtext : AppColors.lightSubtext;
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -148,64 +127,122 @@ class _LoginFormState extends State<LoginForm> {
           const SizedBox(height: 16),
         ],
 
-        // Phone Input
-        PhoneNumberInput(
-          controller: _phoneController,
-          enabled: !_isLoading,
-          onChanged: (_) {
-            if (_errorMessage != null) setState(() => _errorMessage = null);
-          },
+        // Phone Input Label
+        Text(
+          'Phone Number',
+          style: TextStyle(
+            fontSize: 13,
+            fontWeight: FontWeight.w600,
+            color: theme.colorScheme.onSurface,
+          ),
         ),
-        const SizedBox(height: 14),
+        const SizedBox(height: 8),
 
-        // PIN Input
-        PinInputField(
-          controller: _pinController,
-          enabled: !_isLoading,
-          onChanged: (_) {
-            if (_errorMessage != null) setState(() => _errorMessage = null);
-          },
-        ),
-        const SizedBox(height: 24),
-
-        // Sign In Button
-        AcedexButton(
-          label: 'Sign In',
-          variant: AcedexButtonVariant.primary,
-          size: AcedexButtonSize.lg,
-          isFullWidth: true,
-          isLoading: _isLoading,
-          onPressed: _submit,
-        ),
-        const SizedBox(height: 16),
-
-        // Switch to Register
+        // Phone Input Field with Ethiopian Country Code Container
         Row(
-          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
-              "Don't have an account?",
-              style: TextStyle(
-                fontSize: 13.5,
-                color: isDark ? AppColors.darkSubtext : AppColors.lightSubtext,
+            Container(
+              height: 52,
+              padding: const EdgeInsets.symmetric(horizontal: 14),
+              decoration: BoxDecoration(
+                color: surface,
+                borderRadius: BorderRadius.circular(16),
+                border: Border.all(color: line, width: 1.2),
+              ),
+              alignment: Alignment.center,
+              child: Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  HugeIcon(
+                    icon: HugeIcons.strokeRoundedCall02,
+                    color: accent,
+                    size: 16,
+                  ),
+                  const SizedBox(width: 6),
+                  Text(
+                    '+251',
+                    style: TextStyle(
+                      fontSize: 14,
+                      fontWeight: FontWeight.w700,
+                      letterSpacing: 0.2,
+                      color: theme.colorScheme.onSurface,
+                    ),
+                  ),
+                ],
               ),
             ),
-            const SizedBox(width: 4),
-            AcedexBounceable(
-              onTap: widget.onSwitchToRegister,
-              child: Padding(
-                padding: const EdgeInsets.symmetric(vertical: 4, horizontal: 4),
-                child: Text(
-                  'Create Account',
-                  style: TextStyle(
-                    fontSize: 13.5,
-                    fontWeight: FontWeight.w700,
-                    color: theme.colorScheme.primary,
-                  ),
-                ),
+            const SizedBox(width: 10),
+            Expanded(
+              child: AcedexTextField(
+                controller: _phoneController,
+                hint: '912 345 678',
+                keyboardType: TextInputType.phone,
+                textInputAction: TextInputAction.done,
+                onSubmitted: (_) => _submit(),
               ),
             ),
           ],
+        ),
+        const SizedBox(height: 6),
+        Text(
+          'Supports formats: 09..., 07..., 9..., or 7...',
+          style: TextStyle(
+            fontSize: 11.5,
+            fontWeight: FontWeight.w400,
+            color: subtext,
+          ),
+        ),
+        const SizedBox(height: 24),
+
+        // Continue to PIN Button
+        AcedexButton(
+          label: 'Continue',
+          variant: AcedexButtonVariant.primary,
+          size: AcedexButtonSize.lg,
+          isFullWidth: true,
+          trailingIcon: const HugeIcon(
+            icon: HugeIcons.strokeRoundedArrowRight01,
+            size: 18,
+            color: Colors.white,
+          ),
+          onPressed: _submit,
+        ),
+        const SizedBox(height: 20),
+
+        // Divider
+        Row(
+          children: [
+            Expanded(child: Container(height: 1, color: line)),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 12),
+              child: Text(
+                'NEW TO ACEDEX?',
+                style: TextStyle(
+                  fontSize: 10.5,
+                  fontWeight: FontWeight.w700,
+                  letterSpacing: 1.2,
+                  color: subtext,
+                ),
+              ),
+            ),
+            Expanded(child: Container(height: 1, color: line)),
+          ],
+        ),
+        const SizedBox(height: 16),
+
+        // Create Account Action
+        AcedexButton(
+          label: 'Create Account',
+          variant: AcedexButtonVariant.surface,
+          size: AcedexButtonSize.md,
+          isFullWidth: true,
+          leadingIcon: HugeIcon(
+            icon: HugeIcons.strokeRoundedUserAdd01,
+            size: 17,
+            color: accent,
+          ),
+          onPressed: widget.onSwitchToRegister,
         ),
       ],
     );

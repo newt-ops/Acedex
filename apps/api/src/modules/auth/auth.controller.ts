@@ -29,6 +29,21 @@ export class AuthController {
   }
 
   /**
+   * Check if a phone number is already registered.
+   */
+  public static async checkPhone(
+    req: AuthenticatedRequest,
+    res: Response
+  ): Promise<Response> {
+    const rawPhone = (req.query.phone as string) || '';
+    if (!rawPhone) {
+      return sendSuccess(res, { registered: false }, 200);
+    }
+    const exists = await AuthService.isPhoneRegistered(rawPhone);
+    return sendSuccess(res, { registered: exists }, 200);
+  }
+
+  /**
    * Student registration with phone, PIN, name, gender, grade, and stream.
    */
   public static async registerPhone(

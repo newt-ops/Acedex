@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:hugeicons/hugeicons.dart';
 import '../../../../core/theme/app_colors.dart';
@@ -5,11 +6,19 @@ import '../../../../core/ui/buttons/acedex_button.dart';
 import '../../../../core/ui/inputs/acedex_text_field.dart';
 import '../../../auth/services/auth_service.dart';
 
+enum PhoneDetectorState {
+  idle,
+  checking,
+  available,
+  alreadyRegistered,
+}
+
 class StepPhone extends StatefulWidget {
   final String initialPhone;
   final ValueChanged<String> onPhoneChanged;
   final VoidCallback onContinue;
   final VoidCallback onBack;
+  final AuthService? authService;
 
   const StepPhone({
     super.key,
@@ -17,6 +26,7 @@ class StepPhone extends StatefulWidget {
     required this.onPhoneChanged,
     required this.onContinue,
     required this.onBack,
+    this.authService,
   });
 
   @override
@@ -25,11 +35,15 @@ class StepPhone extends StatefulWidget {
 
 class _StepPhoneState extends State<StepPhone> {
   late final TextEditingController _controller;
+  late final AuthService _authService;
+  Timer? _debounceTimer;
+  PhoneDetectorState _detectorState = PhoneDetectorState.idle;
 
   @override
   void initState() {
     super.initState();
-    // Strip +251 prefix if present for clean local display in field
+    _authService = widget.authService ?? AuthService();
+
     var display = widget.initialPhone;
     if (display.startsWith('+251')) {
       display = display.substring(4);
@@ -39,26 +53,75 @@ class _StepPhoneState extends State<StepPhone> {
       display = display.substring(1);
     }
     _controller = TextEditingController(text: display);
+
+    _controller.addListener(_onInputChanged);
+    if (display.isNotEmpty) {
+      _triggerDetector();
+    }
   }
 
   @override
   void dispose() {
+    _debounceTimer?.cancel();
+    _controller.removeListener(_onInputChanged);
     _controller.dispose();
     super.dispose();
   }
 
+  void _onInputChanged() {
+    setState(() {});
+    _triggerDetector();
+  }
+
+  void _triggerDetector() {
+    _debounceTimer?.cancel();
+    final raw = _controller.text.trim();
+    if (!AuthService.isValidPhone(raw)) {
+      if (_detectorState != PhoneDetectorState.idle) {
+        setState(() {
+          _detectorState = PhoneDetectorState.idle;
+        });
+      }
+      return;
+    }
+
+    setState(() {
+      _detectorState = PhoneDetectorState.checking;
+    });
+
+    _debounceTimer = Timer(const Duration(milliseconds: 400), () async {
+      final clean = AuthService.normalizePhone(raw);
+      final isRegistered = await _authService.checkPhoneRegistered(clean);
+      if (!mounted) return;
+
+      setState(() {
+        _detectorState = isRegistered
+            ? PhoneDetectorState.alreadyRegistered
+            : PhoneDetectorState.available;
+      });
+    });
+  }
+
   bool get _isValid {
     final raw = _controller.text.trim();
-    return AuthService.isValidPhone('+251$raw') ||
-        AuthService.isValidPhone(raw);
+    return AuthService.isValidPhone(raw) &&
+        _detectorState != PhoneDetectorState.alreadyRegistered;
   }
 
   void _submit() {
     if (_isValid) {
-      final clean = AuthService.normalizePhone('+251${_controller.text.trim()}');
+      final clean = AuthService.normalizePhone(_controller.text.trim());
       widget.onPhoneChanged(clean);
       widget.onContinue();
     }
+  }
+
+  void _goToLogin(String cleanPhone) {
+    Navigator.of(context).pushNamedAndRemoveUntil(
+      '/auth',
+      (route) => false,
+      arguments: {'prefilledPhone': cleanPhone},
+    );
   }
 
   @override
@@ -69,6 +132,9 @@ class _StepPhoneState extends State<StepPhone> {
     final subtext = isDark ? AppColors.darkSubtext : AppColors.lightSubtext;
     final surface = isDark ? AppColors.darkSurface : AppColors.lightSurface;
     final line = isDark ? AppColors.darkLine : AppColors.lightLine;
+    final errorColor = isDark ? AppColors.darkError : AppColors.error;
+
+    final cleanPhone = AuthService.normalizePhone(_controller.text.trim());
 
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 24),
@@ -119,30 +185,36 @@ class _StepPhoneState extends State<StepPhone> {
             children: [
               // +251 Prefix Box
               Container(
-                height: 54,
+                height: 52,
                 padding: const EdgeInsets.symmetric(horizontal: 14),
                 decoration: BoxDecoration(
                   color: surface,
-                  borderRadius: BorderRadius.circular(20),
-                  border: Border.all(color: line, width: 1.2),
+                  borderRadius: BorderRadius.circular(16),
+                  border: Border.all(
+                    color: _detectorState ==
+                            PhoneDetectorState.alreadyRegistered
+                        ? errorColor
+                        : line,
+                    width: 1.2,
+                  ),
                 ),
                 alignment: Alignment.center,
                 child: Row(
                   mainAxisSize: MainAxisSize.min,
                   children: [
                     HugeIcon(
-                      icon: HugeIcons.strokeRoundedSmartPhone01,
+                      icon: HugeIcons.strokeRoundedCall02,
                       color: accent,
-                      size: 18,
+                      size: 16,
                     ),
                     const SizedBox(width: 6),
                     Text(
                       '+251',
                       style: TextStyle(
-                        fontSize: 15,
+                        fontSize: 14,
                         fontWeight: FontWeight.w700,
                         letterSpacing: 0.2,
-                        color: isDark ? AppColors.darkText : AppColors.lightText,
+                        color: theme.colorScheme.onSurface,
                       ),
                     ),
                   ],
@@ -150,18 +222,13 @@ class _StepPhoneState extends State<StepPhone> {
               ),
               const SizedBox(width: 10),
 
-              // Phone digits
+              // Squircle Input Field
               Expanded(
                 child: AcedexTextField(
                   controller: _controller,
-                  hint: '9XXXXXXXX',
+                  hint: '912 345 678',
                   keyboardType: TextInputType.phone,
-                  autofocus: true,
-                  onChanged: (val) {
-                    final normalized = AuthService.normalizePhone('+251$val');
-                    widget.onPhoneChanged(normalized);
-                    setState(() {});
-                  },
+                  textInputAction: TextInputAction.done,
                   onSubmitted: (_) => _submit(),
                 ),
               ),
@@ -169,13 +236,146 @@ class _StepPhoneState extends State<StepPhone> {
           ),
           const SizedBox(height: 10),
 
-          // Helper Example
-          Text(
-            'Enter the number you use most.',
-            style: TextStyle(
-              fontSize: 12.5,
-              fontWeight: FontWeight.w500,
-              color: subtext.withValues(alpha: 0.8),
+          // Live Animated Detector Status
+          AnimatedCrossFade(
+            duration: const Duration(milliseconds: 250),
+            crossFadeState: _detectorState == PhoneDetectorState.idle
+                ? CrossFadeState.showFirst
+                : CrossFadeState.showSecond,
+            firstChild: Text(
+              'Supports formats: 09..., 07..., 9..., or 7...',
+              style: TextStyle(
+                fontSize: 12,
+                fontWeight: FontWeight.w400,
+                color: subtext,
+              ),
+            ),
+            secondChild: Builder(
+              builder: (context) {
+                switch (_detectorState) {
+                  case PhoneDetectorState.checking:
+                    return Row(
+                      children: [
+                        SizedBox(
+                          width: 14,
+                          height: 14,
+                          child: CircularProgressIndicator(
+                            strokeWidth: 2,
+                            valueColor: AlwaysStoppedAnimation<Color>(accent),
+                          ),
+                        ),
+                        const SizedBox(width: 8),
+                        Text(
+                          'Verifying phone availability...',
+                          style: TextStyle(
+                            fontSize: 12,
+                            fontWeight: FontWeight.w500,
+                            color: subtext,
+                          ),
+                        ),
+                      ],
+                    );
+                  case PhoneDetectorState.available:
+                    return Container(
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 10,
+                        vertical: 5,
+                      ),
+                      decoration: BoxDecoration(
+                        color: const Color(0xFF16A34A).withValues(alpha: 0.12),
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: const Row(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          HugeIcon(
+                            icon: HugeIcons.strokeRoundedCheckmarkCircle02,
+                            size: 14,
+                            color: Color(0xFF16A34A),
+                          ),
+                          SizedBox(width: 6),
+                          Text(
+                            'Phone number is available for registration',
+                            style: TextStyle(
+                              fontSize: 12,
+                              fontWeight: FontWeight.w600,
+                              color: Color(0xFF16A34A),
+                            ),
+                          ),
+                        ],
+                      ),
+                    );
+                  case PhoneDetectorState.alreadyRegistered:
+                    return Container(
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 12,
+                        vertical: 10,
+                      ),
+                      decoration: BoxDecoration(
+                        color: isDark
+                            ? AppColors.darkErrorSoft
+                            : AppColors.lightErrorSoft,
+                        borderRadius: BorderRadius.circular(14),
+                        border: Border.all(
+                          color: errorColor.withValues(alpha: 0.35),
+                          width: 1,
+                        ),
+                      ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Row(
+                            children: [
+                              HugeIcon(
+                                icon: HugeIcons.strokeRoundedAlertCircle,
+                                size: 16,
+                                color: errorColor,
+                              ),
+                              const SizedBox(width: 8),
+                              Expanded(
+                                child: Text(
+                                  'This phone number is already registered.',
+                                  style: TextStyle(
+                                    fontSize: 12.5,
+                                    fontWeight: FontWeight.w600,
+                                    color: errorColor,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                          const SizedBox(height: 6),
+                          GestureDetector(
+                            onTap: () => _goToLogin(cleanPhone),
+                            child: Row(
+                              mainAxisSize: MainAxisSize.min,
+                              children: [
+                                Text(
+                                  'Sign in with this number instead',
+                                  style: TextStyle(
+                                    fontSize: 12.5,
+                                    fontWeight: FontWeight.w700,
+                                    color: accent,
+                                    decoration: TextDecoration.underline,
+                                    decorationColor: accent,
+                                  ),
+                                ),
+                                const SizedBox(width: 4),
+                                HugeIcon(
+                                  icon: HugeIcons.strokeRoundedArrowRight01,
+                                  size: 14,
+                                  color: accent,
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    );
+                  case PhoneDetectorState.idle:
+                    return const SizedBox.shrink();
+                }
+              },
             ),
           ),
 
@@ -189,12 +389,12 @@ class _StepPhoneState extends State<StepPhone> {
             isFullWidth: true,
             trailingIcon: const HugeIcon(
               icon: HugeIcons.strokeRoundedArrowRight01,
-              color: Colors.white,
               size: 18,
+              color: Colors.white,
             ),
             onPressed: _isValid ? _submit : null,
           ),
-          const SizedBox(height: 24),
+          const SizedBox(height: 16),
         ],
       ),
     );

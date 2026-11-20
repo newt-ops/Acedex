@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:hugeicons/hugeicons.dart';
 import '../../../core/theme/app_colors.dart';
 import '../../../core/ui/animations/bounceable.dart';
-import '../../../main.dart';
+import '../../../core/ui/inputs/acedex_theme_toggle.dart';
 
 class OnboardingHeader extends StatelessWidget {
   final int currentStep; // 0-indexed (0 to totalSteps - 1)
@@ -34,7 +34,7 @@ class OnboardingHeader extends StatelessWidget {
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          // Top Row: Brand / Back + Step Counter / Sign In Link
+          // Top Row: Brand / Back + Step Counter / Sign In Link + Flexible Theme Toggle
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -79,7 +79,7 @@ class OnboardingHeader extends StatelessWidget {
                   ],
                 ),
 
-              // Right: Step Counter "01 / 07" + Optional Sign In link on first step
+              // Right: Step Counter "01 / 07" + Flexible 3-Mode Theme Toggle
               Row(
                 mainAxisSize: MainAxisSize.min,
                 children: [
@@ -95,7 +95,7 @@ class OnboardingHeader extends StatelessWidget {
                         ),
                       ),
                     ),
-                    const SizedBox(width: 14),
+                    const SizedBox(width: 12),
                   ],
                   Text(
                     '$stepFormatted / $totalFormatted',
@@ -106,28 +106,9 @@ class OnboardingHeader extends StatelessWidget {
                       color: subtext,
                     ),
                   ),
-                  const SizedBox(width: 10),
-                  // Tactile Theme Toggle Button
-                  AcedexBounceable(
-                    onTap: () => AcedexApp.toggleTheme(context),
-                    child: Container(
-                      padding: const EdgeInsets.all(5.5),
-                      decoration: BoxDecoration(
-                        color: isDark
-                            ? AppColors.darkSurface
-                            : AppColors.lightSurface,
-                        borderRadius: BorderRadius.circular(10),
-                        border: Border.all(color: line, width: 1),
-                      ),
-                      child: HugeIcon(
-                        icon: isDark
-                            ? HugeIcons.strokeRoundedSun02
-                            : HugeIcons.strokeRoundedMoon02,
-                        color: accent,
-                        size: 15,
-                      ),
-                    ),
-                  ),
+                  const SizedBox(width: 12),
+                  // Flexible 3-Mode Theme Segmented Toggle
+                  const AcedexThemeToggle(compact: true),
                 ],
               ),
             ],

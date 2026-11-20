@@ -169,6 +169,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
       // Step 2: Phone
       StepPhone(
         initialPhone: _draft.phoneNumber,
+        authService: _authService,
         onPhoneChanged: (val) {
           _draft = _draft.copyWith(phoneNumber: val);
         },

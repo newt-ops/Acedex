@@ -26,9 +26,41 @@ class StepGrade extends StatelessWidget {
     final subtext = isDark ? AppColors.darkSubtext : AppColors.lightSubtext;
     final surface = isDark ? AppColors.darkSurface : AppColors.lightSurface;
     final line = isDark ? AppColors.darkLine : AppColors.lightLine;
-    final softAccent = isDark ? AppColors.darkAccentSoft : AppColors.lightAccentSoft;
+    final softAccent =
+        isDark ? AppColors.darkAccentSoft : AppColors.lightAccentSoft;
 
     final isSenior = selectedGrade >= 11;
+
+    final gradeDetails = [
+      (
+        grade: 9,
+        label: 'G9',
+        title: 'Grade 9',
+        track: 'General Curriculum',
+        icon: HugeIcons.strokeRoundedBook02,
+      ),
+      (
+        grade: 10,
+        label: 'G10',
+        title: 'Grade 10',
+        track: 'General Curriculum',
+        icon: HugeIcons.strokeRoundedMortarboard02,
+      ),
+      (
+        grade: 11,
+        label: 'G11',
+        title: 'Grade 11',
+        track: 'Stream Specialization',
+        icon: HugeIcons.strokeRoundedAtom02,
+      ),
+      (
+        grade: 12,
+        label: 'G12',
+        title: 'Grade 12',
+        track: 'National Exam Track',
+        icon: HugeIcons.strokeRoundedGlobalEducation,
+      ),
+    ];
 
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 24),
@@ -71,107 +103,112 @@ class StepGrade extends StatelessWidget {
               height: 1.35,
             ),
           ),
-          const SizedBox(height: 36),
-
-          // 4 Squircle Grade Boxes: G9, G10, G11, G12
-          Row(
-            children: [9, 10, 11, 12].map((grade) {
-              final isSelected = selectedGrade == grade;
-              return Expanded(
-                child: Padding(
-                  padding: EdgeInsets.only(
-                    right: grade < 12 ? 10 : 0,
-                  ),
-                  child: AcedexBounceable(
-                    scaleFactor: 0.94,
-                    onTap: () => onGradeChanged(grade),
-                    child: AnimatedContainer(
-                      duration: const Duration(milliseconds: 220),
-                      curve: Curves.easeOutCubic,
-                      height: 82,
-                      decoration: BoxDecoration(
-                        color: isSelected ? softAccent : surface,
-                        borderRadius: BorderRadius.circular(18),
-                        border: Border.all(
-                          color: isSelected ? accent : line,
-                          width: isSelected ? 2.0 : 1.2,
-                        ),
-                        boxShadow: isSelected
-                            ? [
-                                BoxShadow(
-                                  color: accent.withValues(alpha: 0.16),
-                                  blurRadius: 14,
-                                  offset: const Offset(0, 4),
-                                ),
-                              ]
-                            : [],
-                      ),
-                      alignment: Alignment.center,
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text(
-                            'G$grade',
-                            style: TextStyle(
-                              fontSize: 20,
-                              fontWeight: FontWeight.w800,
-                              letterSpacing: -0.5,
-                              color: isSelected
-                                  ? accent
-                                  : (isDark
-                                      ? AppColors.darkText
-                                      : AppColors.lightText),
-                            ),
-                          ),
-                          const SizedBox(height: 2),
-                          Text(
-                            'Grade $grade',
-                            style: TextStyle(
-                              fontSize: 10.5,
-                              fontWeight: FontWeight.w600,
-                              color: isSelected ? accent : subtext,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                ),
-              );
-            }).toList(),
-          ),
-
           const SizedBox(height: 24),
 
-          // Dynamic Curriculum Hint Banner
+          // Flexible Interactive 2x2 Grade Cards
+          Expanded(
+            child: Column(
+              children: [
+                // Row 1: G9 & G10
+                Expanded(
+                  child: Row(
+                    children: [
+                      Expanded(
+                        child: _buildGradeCard(
+                          detail: gradeDetails[0],
+                          isSelected: selectedGrade == 9,
+                          accent: accent,
+                          softAccent: softAccent,
+                          surface: surface,
+                          line: line,
+                          isDark: isDark,
+                          onTap: () => onGradeChanged(9),
+                        ),
+                      ),
+                      const SizedBox(width: 12),
+                      Expanded(
+                        child: _buildGradeCard(
+                          detail: gradeDetails[1],
+                          isSelected: selectedGrade == 10,
+                          accent: accent,
+                          softAccent: softAccent,
+                          surface: surface,
+                          line: line,
+                          isDark: isDark,
+                          onTap: () => onGradeChanged(10),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                const SizedBox(height: 12),
+
+                // Row 2: G11 & G12
+                Expanded(
+                  child: Row(
+                    children: [
+                      Expanded(
+                        child: _buildGradeCard(
+                          detail: gradeDetails[2],
+                          isSelected: selectedGrade == 11,
+                          accent: accent,
+                          softAccent: softAccent,
+                          surface: surface,
+                          line: line,
+                          isDark: isDark,
+                          onTap: () => onGradeChanged(11),
+                        ),
+                      ),
+                      const SizedBox(width: 12),
+                      Expanded(
+                        child: _buildGradeCard(
+                          detail: gradeDetails[3],
+                          isSelected: selectedGrade == 12,
+                          accent: accent,
+                          softAccent: softAccent,
+                          surface: surface,
+                          line: line,
+                          isDark: isDark,
+                          onTap: () => onGradeChanged(12),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ),
+
+          const SizedBox(height: 16),
+
+          // Hint banner based on grade level
           AnimatedContainer(
-            duration: const Duration(milliseconds: 240),
-            padding: const EdgeInsets.all(14),
+            duration: const Duration(milliseconds: 250),
+            padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
             decoration: BoxDecoration(
-              color: isDark ? AppColors.darkSurface : AppColors.lightSurface,
-              borderRadius: BorderRadius.circular(16),
+              color: surface,
+              borderRadius: BorderRadius.circular(14),
               border: Border.all(color: line, width: 1),
             ),
             child: Row(
               children: [
                 HugeIcon(
                   icon: isSenior
-                      ? HugeIcons.strokeRoundedGraduationScroll
-                      : HugeIcons.strokeRoundedBookOpen01,
+                      ? HugeIcons.strokeRoundedHierarchy
+                      : HugeIcons.strokeRoundedCheckmarkBadge01,
                   color: accent,
-                  size: 20,
+                  size: 18,
                 ),
                 const SizedBox(width: 10),
                 Expanded(
                   child: Text(
                     isSenior
-                        ? 'Grade $selectedGrade includes Natural & Social Science streams.'
-                        : 'Grade $selectedGrade follows the unified general Ethiopian curriculum.',
+                        ? 'Grades 11 & 12 feature Natural or Social Science stream tracks.'
+                        : 'Grades 9 & 10 follow the Ethiopian National Unified Curriculum.',
                     style: TextStyle(
                       fontSize: 12.5,
                       fontWeight: FontWeight.w500,
-                      color: subtext,
-                      height: 1.3,
+                      color: isDark ? AppColors.darkSubtext : AppColors.lightSubtext,
                     ),
                   ),
                 ),
@@ -179,7 +216,7 @@ class StepGrade extends StatelessWidget {
             ),
           ),
 
-          const Spacer(),
+          const SizedBox(height: 20),
 
           // Continue Button
           AcedexButton(
@@ -189,13 +226,151 @@ class StepGrade extends StatelessWidget {
             isFullWidth: true,
             trailingIcon: const HugeIcon(
               icon: HugeIcons.strokeRoundedArrowRight01,
-              color: Colors.white,
               size: 18,
+              color: Colors.white,
             ),
             onPressed: onContinue,
           ),
-          const SizedBox(height: 24),
+          const SizedBox(height: 16),
         ],
+      ),
+    );
+  }
+
+  Widget _buildGradeCard({
+    required ({int grade, String label, String title, String track, List<List<dynamic>> icon})
+        detail,
+    required bool isSelected,
+    required Color accent,
+    required Color softAccent,
+    required Color surface,
+    required Color line,
+    required bool isDark,
+    required VoidCallback onTap,
+  }) {
+    return AcedexBounceable(
+      scaleFactor: 0.94,
+      onTap: onTap,
+      child: AnimatedContainer(
+        duration: const Duration(milliseconds: 250),
+        curve: Curves.easeOutCubic,
+        padding: const EdgeInsets.all(14),
+        decoration: BoxDecoration(
+          color: isSelected ? softAccent : surface,
+          borderRadius: BorderRadius.circular(20),
+          border: Border.all(
+            color: isSelected ? accent : line,
+            width: isSelected ? 2.0 : 1.2,
+          ),
+          boxShadow: isSelected
+              ? [
+                  BoxShadow(
+                    color: accent.withValues(alpha: 0.18),
+                    blurRadius: 14,
+                    offset: const Offset(0, 4),
+                  ),
+                ]
+              : [],
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            // Top Row: Icon + Selection Indicator
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Container(
+                  width: 38,
+                  height: 38,
+                  decoration: BoxDecoration(
+                    color: isSelected
+                        ? accent.withValues(alpha: 0.2)
+                        : (isDark
+                            ? Colors.white.withValues(alpha: 0.05)
+                            : Colors.black.withValues(alpha: 0.04)),
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  alignment: Alignment.center,
+                  child: HugeIcon(
+                    icon: detail.icon,
+                    size: 20,
+                    color: isSelected ? accent : (isDark ? Colors.white70 : Colors.black54),
+                  ),
+                ),
+                AnimatedContainer(
+                  duration: const Duration(milliseconds: 200),
+                  width: 20,
+                  height: 20,
+                  decoration: BoxDecoration(
+                    color: isSelected ? accent : Colors.transparent,
+                    shape: BoxShape.circle,
+                    border: Border.all(
+                      color: isSelected ? accent : line,
+                      width: 1.5,
+                    ),
+                  ),
+                  child: isSelected
+                      ? const Center(
+                          child: Icon(
+                            Icons.check,
+                            size: 13,
+                            color: Colors.white,
+                          ),
+                        )
+                      : null,
+                ),
+              ],
+            ),
+
+            // Middle & Bottom: Code + Full Title + Track
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.baseline,
+                  textBaseline: TextBaseline.alphabetic,
+                  children: [
+                    Text(
+                      detail.label,
+                      style: TextStyle(
+                        fontSize: 22,
+                        fontWeight: FontWeight.w900,
+                        letterSpacing: -0.6,
+                        color: isSelected
+                            ? accent
+                            : (isDark ? AppColors.darkText : AppColors.lightText),
+                      ),
+                    ),
+                    const SizedBox(width: 6),
+                    Text(
+                      detail.title,
+                      style: TextStyle(
+                        fontSize: 13,
+                        fontWeight: FontWeight.w700,
+                        color: isSelected
+                            ? accent
+                            : (isDark ? AppColors.darkText : AppColors.lightText),
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 3),
+                Text(
+                  detail.track,
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                  style: TextStyle(
+                    fontSize: 11,
+                    fontWeight: FontWeight.w500,
+                    color: isDark ? AppColors.darkSubtext : AppColors.lightSubtext,
+                  ),
+                ),
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }

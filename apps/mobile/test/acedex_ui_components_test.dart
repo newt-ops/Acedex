@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:acedex/core/ui/ui.dart';
+import 'package:acedex/main.dart';
 
 void main() {
   group('Acedex Apple-Style UI Components Tests', () {
@@ -232,6 +233,29 @@ void main() {
       await tester.pumpAndSettle();
 
       expect(tileValue, isFalse);
+    });
+
+    testWidgets('AcedexThemeToggle renders 3 modes and allows selection',
+        (WidgetTester tester) async {
+      await tester.pumpWidget(
+        const MaterialApp(
+          home: Scaffold(
+            body: Center(
+              child: AcedexThemeToggle(compact: false),
+            ),
+          ),
+        ),
+      );
+      await tester.pumpAndSettle();
+
+      expect(find.text('System'), findsOneWidget);
+      expect(find.text('Light'), findsOneWidget);
+      expect(find.text('Dark'), findsOneWidget);
+
+      await tester.tap(find.text('Dark'));
+      await tester.pumpAndSettle();
+
+      expect(AcedexApp.themeModeNotifier.value, ThemeMode.dark);
     });
   });
 }
