@@ -47,26 +47,28 @@ class AcedexBottomNavBar extends StatefulWidget {
     this.autoTriggerActionOnCircleTap = true,
   });
 
-  /// Default 5 study navigation items matching canonical specification
+  /// Canonical 5 study navigation items for Acedex platform
+  /// 0: Home (Dashboard & daily streak)
+  /// 1: Study (Curriculum units & notes)
+  /// 2: Practice (Elevated center action: Unit assessments & national exams)
+  /// 3: Progress (Performance analytics & mastery)
+  /// 4: Profile (Verified Student ID pass & settings)
   static List<AcedexNavItem> get defaultItems => [
         const AcedexNavItem(
           label: 'Home',
           icon: HugeIcons.strokeRoundedHome01,
         ),
         const AcedexNavItem(
-          label: 'Search',
-          icon: HugeIcons.strokeRoundedSearch01,
-        ),
-        AcedexNavItem(
-          label: 'AI Scan',
-          customIconBuilder: (context, color, size) => AcedexAiScanIcon(
-            color: color,
-            size: size,
-          ),
+          label: 'Study',
+          icon: HugeIcons.strokeRoundedBookOpen01,
         ),
         const AcedexNavItem(
-          label: 'Saved',
-          icon: HugeIcons.strokeRoundedBookmark02,
+          label: 'Practice',
+          icon: HugeIcons.strokeRoundedPencilEdit02,
+        ),
+        const AcedexNavItem(
+          label: 'Progress',
+          icon: HugeIcons.strokeRoundedAnalytics01,
         ),
         const AcedexNavItem(
           label: 'Profile',
@@ -99,7 +101,7 @@ class AcedexBottomNavBarState extends State<AcedexBottomNavBar>
   late AnimationController _bounceController;
   late Animation<double> _bounceScaleAnimation;
 
-  double _currentX = slotCenters[2];
+  double _currentX = slotCenters[0];
   bool _isScrubbing = false;
   double _scrubStartX = 0.0;
   bool _hasDraggedFar = false;

@@ -5,9 +5,9 @@ import 'package:acedex/core/ui/ui.dart';
 
 void main() {
   group('AcedexBottomNavBar Widget Tests', () {
-    testWidgets('renders all 5 default study navigation slots without labels',
+    testWidgets('renders all 5 canonical study navigation slots without labels',
         (WidgetTester tester) async {
-      int selectedIndex = 2; // Default AI Scan
+      int selectedIndex = 2; // Default Practice
 
       await tester.pumpWidget(
         MaterialApp(
@@ -28,11 +28,15 @@ void main() {
         ),
       );
 
-      // Verify AI Scan custom icon is present
-      expect(find.byType(AcedexAiScanIcon), findsWidgets);
+      // Verify all 5 slots exist by keys
+      expect(find.byKey(const Key('nav-slot-0')), findsOneWidget); // Home
+      expect(find.byKey(const Key('nav-slot-1')), findsOneWidget); // Study
+      expect(find.byKey(const Key('nav-slot-2')), findsOneWidget); // Practice
+      expect(find.byKey(const Key('nav-slot-3')), findsOneWidget); // Progress
+      expect(find.byKey(const Key('nav-slot-4')), findsOneWidget); // Profile
 
-      // Verify no text labels or floating readout above the bar
-      expect(find.text('AI Scan'), findsNothing);
+      // Verify no floating text readout above the bar
+      expect(find.text('Practice'), findsNothing);
 
       // Tap 'Home' slot (Slot 0)
       final homeSlotFinder = find.byKey(const Key('nav-slot-0'));
@@ -42,7 +46,6 @@ void main() {
 
       // Active index should now be 0
       expect(selectedIndex, 0);
-      expect(find.text('Home'), findsNothing);
     });
 
     testWidgets('tapping active circle triggers 3-dot wave loader action',

@@ -82,9 +82,9 @@ class _HomeScreenState extends State<HomeScreen> {
         index: _currentIndex,
         children: [
           _HomeDashboardView(user: widget.user, displayName: displayName),
-          const _SearchQuestionsView(),
-          const _AiScanView(),
-          const _SavedQuestionsView(),
+          _StudyCurriculumView(gradeLabel: gradeLabel),
+          const _PracticeExamView(),
+          const _ProgressAnalyticsView(),
           _ProfileView(
             user: widget.user,
             displayName: displayName,
@@ -209,7 +209,7 @@ class _HomeDashboardView extends StatelessWidget {
             onTap: () {
               AcedexToast.show(
                 context,
-                message: 'Practice engine starting up...',
+                message: 'Opening Practice Exam Engine...',
                 type: AcedexToastType.success,
               );
             },
@@ -252,7 +252,7 @@ class _HomeDashboardView extends StatelessWidget {
                   onPressed: () {
                     AcedexToast.show(
                       context,
-                      message: 'Practice engine starting up...',
+                      message: 'Opening Practice Exam Engine...',
                       type: AcedexToastType.success,
                     );
                   },
@@ -293,14 +293,24 @@ class _HomeDashboardView extends StatelessWidget {
   }
 }
 
-/// Tab 1: Search Questions & Topics
-class _SearchQuestionsView extends StatelessWidget {
-  const _SearchQuestionsView();
+/// Tab 1: Study & Curriculum Journey
+class _StudyCurriculumView extends StatelessWidget {
+  final String gradeLabel;
+
+  const _StudyCurriculumView({required this.gradeLabel});
 
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     final isDark = theme.brightness == Brightness.dark;
+
+    final subjects = [
+      {'name': 'Biology', 'units': '6 Units • 90 Questions', 'progress': '4/6 Completed'},
+      {'name': 'Chemistry', 'units': '6 Units • 90 Questions', 'progress': '5/6 Completed'},
+      {'name': 'Mathematics', 'units': '7 Units • 105 Questions', 'progress': '6/7 Completed'},
+      {'name': 'Physics', 'units': '6 Units • 90 Questions', 'progress': '6/6 Completed'},
+      {'name': 'English', 'units': '10 Units • 150 Questions', 'progress': '8/10 Completed'},
+    ];
 
     return SingleChildScrollView(
       physics: const BouncingScrollPhysics(),
@@ -309,7 +319,7 @@ class _SearchQuestionsView extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           Text(
-            'Search Curriculum',
+            'Study Curriculum',
             style: TextStyle(
               fontSize: 26,
               fontWeight: FontWeight.w800,
@@ -319,7 +329,7 @@ class _SearchQuestionsView extends StatelessWidget {
           ),
           const SizedBox(height: 6),
           Text(
-            'Find questions by topic, subject, or national exam year.',
+            'Track your unit study notes. Mark units finished to unlock exams.',
             style: TextStyle(
               fontSize: 15,
               color: isDark ? AppColors.darkSubtext : AppColors.lightSubtext,
@@ -327,19 +337,19 @@ class _SearchQuestionsView extends StatelessWidget {
           ),
           const SizedBox(height: 20),
 
-          // Search Input Bar
+          // Search / Filter
           AcedexTextField(
-            hint: 'Search questions, formulas, or concepts...',
+            hint: 'Search subjects, units, or definitions...',
             prefixIcon: HugeIcon(
               icon: HugeIcons.strokeRoundedSearch01,
               color: isDark ? AppColors.darkSubtext : AppColors.lightSubtext,
               size: 20,
             ),
           ),
-          const SizedBox(height: 24),
+          const SizedBox(height: 20),
 
           Text(
-            'POPULAR SUBJECTS',
+            'ENROLLED SUBJECTS ($gradeLabel)',
             style: TextStyle(
               fontSize: 11,
               fontWeight: FontWeight.w700,
@@ -349,76 +359,75 @@ class _SearchQuestionsView extends StatelessWidget {
           ),
           const SizedBox(height: 12),
 
-          Wrap(
-            spacing: 8,
-            runSpacing: 8,
-            children: [
-              'Mathematics',
-              'Physics',
-              'Chemistry',
-              'Biology',
-              'English',
-              'Aptitude',
-            ].map((subject) {
-              return AcedexBadge(
-                label: subject,
-                variant: AcedexBadgeVariant.neutral,
-                onTap: () {
-                  AcedexToast.show(
-                    context,
-                    message: 'Browsing $subject questions...',
-                    type: AcedexToastType.info,
-                  );
-                },
-              );
-            }).toList(),
-          ),
-          const SizedBox(height: 24),
-
-          AcedexCard(
-            variant: AcedexCardVariant.raised,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Row(
-                  children: [
-                    HugeIcon(
-                      icon: HugeIcons.strokeRoundedBookOpen01,
-                      size: 20,
-                      color: theme.colorScheme.primary,
+          for (final sub in subjects) ...[
+            AcedexCard(
+              variant: AcedexCardVariant.raised,
+              onTap: () {
+                AcedexToast.show(
+                  context,
+                  message: 'Opening ${sub['name']} study units...',
+                  type: AcedexToastType.info,
+                );
+              },
+              child: Row(
+                children: [
+                  Container(
+                    width: 44,
+                    height: 44,
+                    decoration: BoxDecoration(
+                      color: theme.colorScheme.primary.withValues(alpha: 0.12),
+                      borderRadius: BorderRadius.circular(14),
                     ),
-                    const SizedBox(width: 8),
-                    Text(
-                      'Recent Exam Papers',
-                      style: TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.w700,
-                        color: theme.colorScheme.onSurface,
+                    child: Center(
+                      child: HugeIcon(
+                        icon: HugeIcons.strokeRoundedBookOpen01,
+                        color: theme.colorScheme.primary,
+                        size: 22,
                       ),
                     ),
-                  ],
-                ),
-                const SizedBox(height: 8),
-                Text(
-                  'Browse past Ethiopian University Entrance Examinations (EUEE) categorized by subject.',
-                  style: TextStyle(
-                    fontSize: 13.5,
-                    color: isDark ? AppColors.darkSubtext : AppColors.lightSubtext,
-                    height: 1.4,
                   ),
-                ),
-              ],
+                  const SizedBox(width: 14),
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          sub['name']!,
+                          style: TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.w700,
+                            color: theme.colorScheme.onSurface,
+                          ),
+                        ),
+                        const SizedBox(height: 3),
+                        Text(
+                          sub['units']!,
+                          style: TextStyle(
+                            fontSize: 12.5,
+                            color: isDark ? AppColors.darkSubtext : AppColors.lightSubtext,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  AcedexBadge(
+                    label: sub['progress']!,
+                    variant: AcedexBadgeVariant.neutral,
+                  ),
+                ],
+              ),
             ),
-          ),
+            const SizedBox(height: 12),
+          ],
         ],
       ),
     );
   }
 }
 
-/// Tab 2: AI Scan & Problem Solver
-class _AiScanView extends StatelessWidget {
-  const _AiScanView();
+/// Tab 2: Practice & Exam Assessments (Elevated Center Action)
+class _PracticeExamView extends StatelessWidget {
+  const _PracticeExamView();
 
   @override
   Widget build(BuildContext context) {
@@ -430,111 +439,10 @@ class _AiScanView extends StatelessWidget {
       physics: const BouncingScrollPhysics(),
       padding: const EdgeInsets.only(left: 20, right: 20, top: 12, bottom: 130),
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          Align(
-            alignment: Alignment.centerLeft,
-            child: Text(
-              'AI Question Scanner',
-              style: TextStyle(
-                fontSize: 26,
-                fontWeight: FontWeight.w800,
-                letterSpacing: -0.4,
-                color: theme.colorScheme.onSurface,
-              ),
-            ),
-          ),
-          const SizedBox(height: 6),
-          Align(
-            alignment: Alignment.centerLeft,
-            child: Text(
-              'Point your camera at any question to get step-by-step explanations.',
-              style: TextStyle(
-                fontSize: 15,
-                color: isDark ? AppColors.darkSubtext : AppColors.lightSubtext,
-              ),
-            ),
-          ),
-          const SizedBox(height: 32),
-
-          // Camera Viewfinder Simulation
-          Container(
-            width: double.infinity,
-            height: 240,
-            decoration: BoxDecoration(
-              color: isDark ? const Color(0xFF1B1B1F) : const Color(0xFFF4F4F6),
-              borderRadius: BorderRadius.circular(24),
-              border: Border.all(
-                color: primaryAccent.withValues(alpha: 0.4),
-                width: 1.5,
-              ),
-            ),
-            child: Stack(
-              alignment: Alignment.center,
-              children: [
-                Center(
-                  child: Column(
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      AcedexAiScanIcon(color: primaryAccent, size: 54),
-                      const SizedBox(height: 12),
-                      Text(
-                        'Align question in viewfinder',
-                        style: TextStyle(
-                          fontSize: 14,
-                          fontWeight: FontWeight.w600,
-                          color: isDark ? AppColors.darkSubtext : AppColors.lightSubtext,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ],
-            ),
-          ),
-          const SizedBox(height: 24),
-
-          AcedexButton(
-            label: 'Scan & Solve with AI',
-            variant: AcedexButtonVariant.primary,
-            size: AcedexButtonSize.lg,
-            isFullWidth: true,
-            leadingIcon: const HugeIcon(
-              icon: HugeIcons.strokeRoundedScan,
-              color: Colors.white,
-              size: 22,
-            ),
-            onPressed: () {
-              AcedexToast.show(
-                context,
-                message: 'AI Question Scanner launching...',
-                type: AcedexToastType.info,
-              );
-            },
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-/// Tab 3: Saved Questions
-class _SavedQuestionsView extends StatelessWidget {
-  const _SavedQuestionsView();
-
-  @override
-  Widget build(BuildContext context) {
-    final theme = Theme.of(context);
-    final isDark = theme.brightness == Brightness.dark;
-
-    return SingleChildScrollView(
-      physics: const BouncingScrollPhysics(),
-      padding: const EdgeInsets.only(left: 20, right: 20, top: 12, bottom: 130),
-      child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           Text(
-            'Saved Questions',
+            'Practice & Assessments',
             style: TextStyle(
               fontSize: 26,
               fontWeight: FontWeight.w800,
@@ -544,7 +452,7 @@ class _SavedQuestionsView extends StatelessWidget {
           ),
           const SizedBox(height: 6),
           Text(
-            'Review flagged questions and bookmarked explanations.',
+            'Test your mastery with 15-question unit exams and national past papers.',
             style: TextStyle(
               fontSize: 15,
               color: isDark ? AppColors.darkSubtext : AppColors.lightSubtext,
@@ -552,40 +460,365 @@ class _SavedQuestionsView extends StatelessWidget {
           ),
           const SizedBox(height: 24),
 
-          AcedexCard(
-            variant: AcedexCardVariant.raised,
-            child: Row(
-              children: [
-                HugeIcon(
-                  icon: HugeIcons.strokeRoundedBookmark02,
-                  size: 28,
-                  color: theme.colorScheme.primary,
+          // Big Exam Start Card
+          Container(
+            padding: const EdgeInsets.all(22),
+            decoration: BoxDecoration(
+              gradient: LinearGradient(
+                colors: [
+                  primaryAccent,
+                  isDark ? const Color(0xFF6A1B82) : const Color(0xFF782390),
+                ],
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
+              ),
+              borderRadius: BorderRadius.circular(24),
+              boxShadow: [
+                BoxShadow(
+                  color: primaryAccent.withValues(alpha: 0.35),
+                  blurRadius: 20,
+                  offset: const Offset(0, 8),
                 ),
-                const SizedBox(width: 16),
-                Expanded(
+              ],
+            ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Container(
+                      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+                      decoration: BoxDecoration(
+                        color: Colors.white.withValues(alpha: 0.2),
+                        borderRadius: BorderRadius.circular(999),
+                      ),
+                      child: const Text(
+                        'TIMED ASSESSMENT',
+                        style: TextStyle(
+                          fontSize: 11,
+                          fontWeight: FontWeight.w800,
+                          color: Colors.white,
+                          letterSpacing: 0.8,
+                        ),
+                      ),
+                    ),
+                    const HugeIcon(
+                      icon: HugeIcons.strokeRoundedShieldCheck,
+                      color: Colors.white,
+                      size: 24,
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 16),
+                const Text(
+                  'Full 15-Question Unit Test',
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.w900,
+                    color: Colors.white,
+                  ),
+                ),
+                const SizedBox(height: 6),
+                Text(
+                  'Timed delivery, server-side authoritative grading, and instant step-by-step explanations.',
+                  style: TextStyle(
+                    fontSize: 13.5,
+                    color: Colors.white.withValues(alpha: 0.9),
+                    height: 1.4,
+                  ),
+                ),
+                const SizedBox(height: 20),
+                AcedexButton(
+                  label: 'Launch Assessment',
+                  variant: AcedexButtonVariant.surface,
+                  size: AcedexButtonSize.md,
+                  isFullWidth: true,
+                  leadingIcon: HugeIcon(
+                    icon: HugeIcons.strokeRoundedPencilEdit02,
+                    color: primaryAccent,
+                    size: 18,
+                  ),
+                  onPressed: () {
+                    AcedexToast.show(
+                      context,
+                      message: 'Starting 15-question unit test...',
+                      type: AcedexToastType.success,
+                    );
+                  },
+                ),
+              ],
+            ),
+          ),
+          const SizedBox(height: 24),
+
+          Text(
+            'QUICK EXAM MODES',
+            style: TextStyle(
+              fontSize: 11,
+              fontWeight: FontWeight.w700,
+              letterSpacing: 0.8,
+              color: isDark ? AppColors.darkSubtext : AppColors.lightSubtext,
+            ),
+          ),
+          const SizedBox(height: 12),
+
+          Row(
+            children: [
+              Expanded(
+                child: AcedexCard(
+                  variant: AcedexCardVariant.raised,
+                  onTap: () {
+                    AcedexToast.show(
+                      context,
+                      message: 'Opening National Exam Drills...',
+                      type: AcedexToastType.info,
+                    );
+                  },
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
+                      HugeIcon(
+                        icon: HugeIcons.strokeRoundedNoteEdit,
+                        color: theme.colorScheme.primary,
+                        size: 24,
+                      ),
+                      const SizedBox(height: 12),
                       Text(
-                        'Bookmarks Collection',
+                        'EUEE Drills',
                         style: TextStyle(
-                          fontSize: 16,
+                          fontSize: 15,
                           fontWeight: FontWeight.w700,
                           color: theme.colorScheme.onSurface,
                         ),
                       ),
                       const SizedBox(height: 4),
                       Text(
-                        'Questions you bookmark during practice will appear here.',
+                        'Past national exams',
                         style: TextStyle(
-                          fontSize: 13,
+                          fontSize: 12,
                           color: isDark ? AppColors.darkSubtext : AppColors.lightSubtext,
                         ),
                       ),
                     ],
                   ),
                 ),
+              ),
+              const SizedBox(width: 12),
+              Expanded(
+                child: AcedexCard(
+                  variant: AcedexCardVariant.raised,
+                  onTap: () {
+                    AcedexToast.show(
+                      context,
+                      message: 'Opening Weakness Review...',
+                      type: AcedexToastType.info,
+                    );
+                  },
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      HugeIcon(
+                        icon: HugeIcons.strokeRoundedFire,
+                        color: AppColors.warning,
+                        size: 24,
+                      ),
+                      const SizedBox(height: 12),
+                      Text(
+                        'Missed Bank',
+                        style: TextStyle(
+                          fontSize: 15,
+                          fontWeight: FontWeight.w700,
+                          color: theme.colorScheme.onSurface,
+                        ),
+                      ),
+                      const SizedBox(height: 4),
+                      Text(
+                        'Retry mistakes',
+                        style: TextStyle(
+                          fontSize: 12,
+                          color: isDark ? AppColors.darkSubtext : AppColors.lightSubtext,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+/// Tab 3: Progress & Performance Analytics
+class _ProgressAnalyticsView extends StatelessWidget {
+  const _ProgressAnalyticsView();
+
+  @override
+  Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+    final isDark = theme.brightness == Brightness.dark;
+
+    final stats = [
+      {'title': 'Curriculum Mastery', 'value': '84%', 'detail': '29 of 35 Units Passed'},
+      {'title': 'Average Score', 'value': '82.5%', 'detail': 'Benchmark: >=70%'},
+      {'title': 'Questions Solved', 'value': '435', 'detail': 'Across all 5 subjects'},
+      {'title': 'Current Streak', 'value': '1 Day', 'detail': 'Best: 14 Days'},
+    ];
+
+    return SingleChildScrollView(
+      physics: const BouncingScrollPhysics(),
+      padding: const EdgeInsets.only(left: 20, right: 20, top: 12, bottom: 130),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          Text(
+            'Performance Analytics',
+            style: TextStyle(
+              fontSize: 26,
+              fontWeight: FontWeight.w800,
+              letterSpacing: -0.4,
+              color: theme.colorScheme.onSurface,
+            ),
+          ),
+          const SizedBox(height: 6),
+          Text(
+            'Diagnostic metrics across curriculum subjects and exam readiness.',
+            style: TextStyle(
+              fontSize: 15,
+              color: isDark ? AppColors.darkSubtext : AppColors.lightSubtext,
+            ),
+          ),
+          const SizedBox(height: 24),
+
+          // 2x2 Metric Grid
+          GridView.count(
+            crossAxisCount: 2,
+            shrinkWrap: true,
+            physics: const NeverScrollableScrollPhysics(),
+            crossAxisSpacing: 12,
+            mainAxisSpacing: 12,
+            childAspectRatio: 1.3,
+            children: stats.map((s) {
+              return AcedexCard(
+                variant: AcedexCardVariant.raised,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      s['title']!,
+                      style: TextStyle(
+                        fontSize: 12,
+                        fontWeight: FontWeight.w600,
+                        color: isDark ? AppColors.darkSubtext : AppColors.lightSubtext,
+                      ),
+                    ),
+                    Text(
+                      s['value']!,
+                      style: TextStyle(
+                        fontSize: 26,
+                        fontWeight: FontWeight.w900,
+                        letterSpacing: -0.5,
+                        color: theme.colorScheme.primary,
+                      ),
+                    ),
+                    Text(
+                      s['detail']!,
+                      style: TextStyle(
+                        fontSize: 11,
+                        color: isDark ? AppColors.darkSubtext : AppColors.lightSubtext,
+                      ),
+                    ),
+                  ],
+                ),
+              );
+            }).toList(),
+          ),
+          const SizedBox(height: 24),
+
+          // Subject Mastery Breakdown
+          AcedexCard(
+            variant: AcedexCardVariant.flat,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  'SUBJECT MASTERY BREAKDOWN',
+                  style: TextStyle(
+                    fontSize: 11,
+                    fontWeight: FontWeight.w700,
+                    letterSpacing: 0.8,
+                    color: isDark ? AppColors.darkSubtext : AppColors.lightSubtext,
+                  ),
+                ),
+                const SizedBox(height: 16),
+                _MasteryRow(subject: 'Physics', percent: 1.0, color: AppColors.success),
+                _MasteryRow(subject: 'Mathematics', percent: 0.85, color: theme.colorScheme.primary),
+                _MasteryRow(subject: 'Chemistry', percent: 0.83, color: theme.colorScheme.primary),
+                _MasteryRow(subject: 'English', percent: 0.80, color: theme.colorScheme.primary),
+                _MasteryRow(subject: 'Biology', percent: 0.67, color: AppColors.warning),
               ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class _MasteryRow extends StatelessWidget {
+  final String subject;
+  final double percent;
+  final Color color;
+
+  const _MasteryRow({
+    required this.subject,
+    required this.percent,
+    required this.color,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+    final isDark = theme.brightness == Brightness.dark;
+
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 8),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                subject,
+                style: TextStyle(
+                  fontSize: 14,
+                  fontWeight: FontWeight.w600,
+                  color: theme.colorScheme.onSurface,
+                ),
+              ),
+              Text(
+                '${(percent * 100).toInt()}%',
+                style: TextStyle(
+                  fontSize: 13,
+                  fontWeight: FontWeight.w700,
+                  color: color,
+                ),
+              ),
+            ],
+          ),
+          const SizedBox(height: 6),
+          ClipRRect(
+            borderRadius: BorderRadius.circular(999),
+            child: LinearProgressIndicator(
+              value: percent,
+              minHeight: 6,
+              backgroundColor: isDark ? const Color(0xFF2B2B31) : const Color(0xFFE4E4E8),
+              valueColor: AlwaysStoppedAnimation<Color>(color),
             ),
           ),
         ],
