@@ -30,7 +30,7 @@ void main() {
   Widget buildTestableWidget(Widget child) {
     return MaterialApp(
       home: Scaffold(
-        appBar: child is PreferredSizeWidget ? child as PreferredSizeWidget : null,
+        appBar: child is PreferredSizeWidget ? child : null,
         body: child is! PreferredSizeWidget ? child : const SizedBox.shrink(),
       ),
     );
