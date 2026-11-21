@@ -41,23 +41,24 @@ class _LoadingScreenState extends State<LoadingScreen>
   late final AnimationController _controller;
   Timer? _fallbackTimer;
 
-  // Total normal timeline length in seconds
-  static const double _kTotalTimeline = 7.0;
+  // Total normal timeline length in seconds matching HTML specification
+  static const double _kTotalTimeline = 9.2;
+
+  DateTime? _lastTick;
+  double _waveTime = 0.0;
 
   @override
   void initState() {
     super.initState();
 
-    final animDuration = widget.duration ?? const Duration(milliseconds: 7000);
+    final animDuration = widget.duration ?? const Duration(milliseconds: 9200);
 
     _controller = AnimationController(
       vsync: this,
       duration: animDuration,
     );
 
-    _controller.addListener(() {
-      setState(() {});
-    });
+    _controller.addListener(_onTick);
 
     _controller.addStatusListener((status) {
       if (status == AnimationStatus.completed) {
@@ -65,15 +66,31 @@ class _LoadingScreenState extends State<LoadingScreen>
       }
     });
 
-    _controller.forward();
-
-    // If explicit duration is supplied with onLoaded (e.g. tests), ensure callback fires
-    if (widget.duration != null && widget.onLoaded != null) {
-      _fallbackTimer = Timer(widget.duration!, () {
+    if (widget.onLoaded != null) {
+      // In fast-path test environments with an onLoaded callback
+      _controller.forward();
+      _fallbackTimer = Timer(widget.duration ?? const Duration(milliseconds: 100), () {
         if (mounted && widget.onLoaded != null) {
           widget.onLoaded!();
         }
       });
+    } else {
+      // Production runtime: continuously runs the full 9.2s multi-stage auto-loop
+      _controller.repeat();
+    }
+  }
+
+  void _onTick() {
+    final now = DateTime.now();
+    if (_lastTick != null) {
+      final dt = (now.difference(_lastTick!).inMicroseconds) / 1000000.0;
+      _waveTime += dt.clamp(0.0, 0.05) * 1.75;
+    } else {
+      _waveTime += 0.016 * 1.75;
+    }
+    _lastTick = now;
+    if (mounted) {
+      setState(() {});
     }
   }
 
@@ -98,11 +115,21 @@ class _LoadingScreenState extends State<LoadingScreen>
     final t = _controller.value * _kTotalTimeline;
     if (t < 2.2) {
       // Advance immediately into Stage 2 (Focus deeply)
-      _controller.value = 3.5 / _kTotalTimeline;
-      _controller.forward();
+      _jumpTo(3.4 / _kTotalTimeline);
     } else if (t < 5.6) {
-      // Advance immediately into Stage 3 (Ready / Ace every exam)
-      _controller.value = 6.6 / _kTotalTimeline;
+      // Advance immediately into Stage 3 (Ready / Dome Settle & CTA)
+      _jumpTo(6.8 / _kTotalTimeline);
+    } else {
+      // In Stage 3, tapping the screen replays smoothly from Splash
+      _jumpTo(0.0);
+    }
+  }
+
+  void _jumpTo(double value) {
+    _controller.value = value;
+    if (widget.onLoaded == null) {
+      _controller.repeat();
+    } else {
       _controller.forward();
     }
   }
@@ -133,7 +160,7 @@ class _LoadingScreenState extends State<LoadingScreen>
 
     // Timeline evaluation
     final currentTime = _controller.value * _kTotalTimeline;
-    final waveTime = currentTime * 1.75;
+    final waveTime = _waveTime > 0 ? _waveTime : (currentTime * 1.75);
     final visualState = _evaluateChoreography(currentTime, waveTime, size);
 
     return Scaffold(
@@ -618,26 +645,36 @@ class _LoadingScreenState extends State<LoadingScreen>
       );
     }
 
-    // Stage 3: Ready / Dome Settle & CTA (5.6s -> 7.0s+)
+    // Stage 3: Ready / Dome Settle & CTA (5.6s -> 9.2s)
     final localT = time - 5.6;
 
     // Dome glides down smoothly to ~33% lower fill
     final settleProgress = _easeInOutSine((localT / 1.25).clamp(0.0, 1.0));
     final yApex = _lerp(yApexFocus, yApexReady, settleProgress);
 
-    // Stage 2 copy fades out cleanly
+    // Stage 2 copy fades out cleanly during first 0.42s
     final focusExit = 1.0 - _smoothstep(0.0, 0.42, localT);
 
-    // Stage 3 copy + CTA enters smoothly
+    // Stage 3 copy + CTA enters smoothly (0.42s -> 0.98s)
     final readyEnter = _smoothstep(0.42, 0.98, localT);
     final readySpring =
         _iosSpring(math.max(0.0, localT - 0.42), stiffness: 230, damping: 23);
 
+    // Floating emblem glides smoothly down inside the lower dome
     final floatBob = math.sin(waveTime * 1.5) * 3.2;
     final emblemY = _lerp(screenSize.height * (518.0 / 812.0),
             screenSize.height * (678.0 / 812.0), settleProgress) +
         floatBob;
     final emblemScale = _lerp(1.0, 0.72, settleProgress);
+
+    // Gentle fade out right at the end (3.22s -> 3.60s) so loop back to Splash is seamless
+    final loopResetFade = 1.0 - _smoothstep(3.22, 3.60, localT);
+
+    final morphT = _lerp(1.0, 0.0, _smoothstep(3.25, 3.60, localT));
+    final orbX = splashOrbOriginX;
+    final orbY = _lerp(screenSize.height * (610.0 / 812.0), splashOrbOriginY,
+        _smoothstep(3.25, 3.60, localT));
+    final orbR = _lerp(34.0, splashOrbOriginR, _smoothstep(3.25, 3.60, localT));
 
     return _VisualState(
       splashOpacity: 0.0,
@@ -646,18 +683,18 @@ class _LoadingScreenState extends State<LoadingScreen>
       orbSpring: 1.0,
       wordmarkSpring: 1.0,
       svgOrbOpacity: 0.0,
-      morph: 1.0,
-      orbX: screenSize.width / 2,
-      orbY: screenSize.height * (610.0 / 812.0),
-      orbR: 34.0,
+      morph: morphT,
+      orbX: orbX,
+      orbY: orbY,
+      orbR: orbR,
       yApex: yApex,
-      rippleAmp: 1.0,
+      rippleAmp: loopResetFade,
       focusOpacity: focusExit,
       focusSlideY: _lerp(0.0, -12.0, 1.0 - focusExit),
-      emblemOpacity: 1.0,
+      emblemOpacity: loopResetFade,
       emblemY: emblemY,
       emblemScale: emblemScale,
-      readyOpacity: readyEnter,
+      readyOpacity: readyEnter * loopResetFade,
       readySlideY: _lerp(18.0, 0.0, readySpring.clamp(0.0, 1.05)),
     );
   }

@@ -10,7 +10,7 @@ void main() {
       MaterialApp(
         theme: AppTheme.lightTheme,
         home: const LoadingScreen(
-          duration: Duration(milliseconds: 7000),
+          duration: Duration(milliseconds: 9200),
         ),
       ),
     );
@@ -26,7 +26,7 @@ void main() {
       MaterialApp(
         theme: AppTheme.lightTheme,
         home: const LoadingScreen(
-          duration: Duration(milliseconds: 7000),
+          duration: Duration(milliseconds: 9200),
         ),
       ),
     );
@@ -65,7 +65,7 @@ void main() {
         initialRoute: '/',
         routes: {
           '/': (context) => const LoadingScreen(
-                duration: Duration(milliseconds: 7000),
+                duration: Duration(milliseconds: 9200),
               ),
           '/onboarding': (context) {
             navigatedToOnboarding = true;
@@ -101,7 +101,7 @@ void main() {
         initialRoute: '/',
         routes: {
           '/': (context) => const LoadingScreen(
-                duration: Duration(milliseconds: 7000),
+                duration: Duration(milliseconds: 9200),
               ),
           '/auth': (context) {
             navigatedToAuth = true;
