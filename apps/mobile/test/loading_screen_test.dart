@@ -10,7 +10,7 @@ void main() {
       MaterialApp(
         theme: AppTheme.lightTheme,
         home: const LoadingScreen(
-          duration: Duration(milliseconds: 9200),
+          duration: Duration(milliseconds: 7000),
         ),
       ),
     );
@@ -26,14 +26,14 @@ void main() {
       MaterialApp(
         theme: AppTheme.lightTheme,
         home: const LoadingScreen(
-          duration: Duration(milliseconds: 9200),
+          duration: Duration(milliseconds: 7000),
         ),
       ),
     );
     await tester.pump(const Duration(milliseconds: 200));
 
     // Advance naturally past Stage 1 (2.2s) into Stage 2 (Focus deeply)
-    await tester.pump(const Duration(milliseconds: 3200));
+    await tester.pump(const Duration(milliseconds: 3000));
 
     expect(find.text('STUDY FLOW'), findsOneWidget);
     expect(find.text('Focus deeply'), findsOneWidget);
@@ -42,8 +42,8 @@ void main() {
             'Distraction-free study sessions engineered for deep retention.'),
         findsOneWidget);
 
-    // Advance naturally past Stage 2 (5.2s) into Stage 3 (Ace every exam)
-    await tester.pump(const Duration(milliseconds: 3500));
+    // Advance naturally past Stage 2 (5.6s) into Stage 3 (Ace every exam)
+    await tester.pump(const Duration(milliseconds: 3200));
 
     expect(find.text('READY TO MASTER'), findsOneWidget);
     expect(find.text('Ace every exam'), findsOneWidget);
@@ -52,6 +52,33 @@ void main() {
         findsOneWidget);
     expect(find.text('Get Started'), findsOneWidget);
     expect(find.text('I already have an account'), findsOneWidget);
+  });
+
+  testWidgets('LoadingScreen stops in Stage 3 without looping, waiting for user action',
+      (WidgetTester tester) async {
+    await tester.pumpWidget(
+      MaterialApp(
+        theme: AppTheme.lightTheme,
+        home: const LoadingScreen(
+          duration: Duration(milliseconds: 7000),
+        ),
+      ),
+    );
+    await tester.pump(const Duration(milliseconds: 200));
+
+    // Advance to Stage 3
+    await tester.pump(const Duration(milliseconds: 6600));
+
+    expect(find.text('Get Started'), findsOneWidget);
+    expect(find.text('I already have an account'), findsOneWidget);
+
+    // Advance further by 10 seconds: must NOT loop back to Splash
+    await tester.pump(const Duration(seconds: 5));
+    await tester.pump(const Duration(seconds: 5));
+
+    expect(find.text('Get Started'), findsOneWidget);
+    expect(find.text('I already have an account'), findsOneWidget);
+    expect(find.text('READY TO MASTER'), findsOneWidget);
   });
 
   testWidgets('LoadingScreen tapping "Get Started" navigates to /onboarding',
@@ -64,7 +91,7 @@ void main() {
         initialRoute: '/',
         routes: {
           '/': (context) => const LoadingScreen(
-                duration: Duration(milliseconds: 9200),
+                duration: Duration(milliseconds: 7000),
               ),
           '/onboarding': (context) {
             navigatedToOnboarding = true;
@@ -76,7 +103,7 @@ void main() {
     await tester.pump(const Duration(milliseconds: 200));
 
     // Advance naturally into Stage 3
-    await tester.pump(const Duration(milliseconds: 6700));
+    await tester.pump(const Duration(milliseconds: 6600));
 
     expect(find.text('Get Started'), findsOneWidget);
     await tester.tap(find.text('Get Started'));
@@ -96,7 +123,7 @@ void main() {
         initialRoute: '/',
         routes: {
           '/': (context) => const LoadingScreen(
-                duration: Duration(milliseconds: 9200),
+                duration: Duration(milliseconds: 7000),
               ),
           '/auth': (context) {
             navigatedToAuth = true;
@@ -108,7 +135,7 @@ void main() {
     await tester.pump(const Duration(milliseconds: 200));
 
     // Advance naturally into Stage 3
-    await tester.pump(const Duration(milliseconds: 6700));
+    await tester.pump(const Duration(milliseconds: 6600));
 
     expect(find.text('I already have an account'), findsOneWidget);
     await tester.tap(find.text('I already have an account'));

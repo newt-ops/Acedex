@@ -37,12 +37,13 @@ class LoadingScreen extends StatefulWidget {
 }
 
 class _LoadingScreenState extends State<LoadingScreen>
-    with SingleTickerProviderStateMixin {
+    with TickerProviderStateMixin {
   late final AnimationController _controller;
+  late final AnimationController _waveController;
   Timer? _fallbackTimer;
 
-  // Total normal timeline length in seconds matching HTML specification
-  static const double _kTotalTimeline = 9.2;
+  // Total normal timeline length in seconds to complete transition to Stage 3
+  static const double _kTotalTimeline = 7.0;
 
   DateTime? _lastTick;
   double _waveTime = 0.0;
@@ -51,14 +52,20 @@ class _LoadingScreenState extends State<LoadingScreen>
   void initState() {
     super.initState();
 
-    final animDuration = widget.duration ?? const Duration(milliseconds: 9200);
+    final animDuration = widget.duration ?? const Duration(milliseconds: 7000);
 
     _controller = AnimationController(
       vsync: this,
       duration: animDuration,
     );
 
-    _controller.addListener(_onTick);
+    // Continuous wave ticker for continuous live liquid ripples that never halts
+    _waveController = AnimationController(
+      vsync: this,
+      duration: const Duration(seconds: 10),
+    )..repeat();
+
+    _waveController.addListener(_onWaveTick);
 
     _controller.addStatusListener((status) {
       if (status == AnimationStatus.completed) {
@@ -66,21 +73,21 @@ class _LoadingScreenState extends State<LoadingScreen>
       }
     });
 
+    // Run timeline forward once: Stage 1 (Splash) -> Stage 2 (Focus) -> Stage 3 (Ready & CTA)
+    // Stops at Stage 3 waiting for user action (NO MORE LOOP)
+    _controller.forward();
+
     if (widget.onLoaded != null) {
       // In fast-path test environments with an onLoaded callback
-      _controller.forward();
       _fallbackTimer = Timer(widget.duration ?? const Duration(milliseconds: 100), () {
         if (mounted && widget.onLoaded != null) {
           widget.onLoaded!();
         }
       });
-    } else {
-      // Production runtime: continuously runs the full 9.2s multi-stage auto-loop
-      _controller.repeat();
     }
   }
 
-  void _onTick() {
+  void _onWaveTick() {
     final now = DateTime.now();
     if (_lastTick != null) {
       final dt = (now.difference(_lastTick!).inMicroseconds) / 1000000.0;
@@ -98,6 +105,7 @@ class _LoadingScreenState extends State<LoadingScreen>
   void dispose() {
     _fallbackTimer?.cancel();
     _controller.dispose();
+    _waveController.dispose();
     super.dispose();
   }
 
@@ -618,7 +626,8 @@ class _LoadingScreenState extends State<LoadingScreen>
       );
     }
 
-    // Stage 3: Ready / Dome Settle & CTA (5.6s -> 9.2s)
+    // Stage 3: Ready / Dome Settle & CTA (5.6s -> settled state)
+    // Sits permanently in this state waiting for user interaction (NO MORE LOOP)
     final localT = time - 5.6;
 
     // Dome glides down smoothly to ~33% lower fill
@@ -640,15 +649,6 @@ class _LoadingScreenState extends State<LoadingScreen>
         floatBob;
     final emblemScale = _lerp(1.0, 0.72, settleProgress);
 
-    // Gentle fade out right at the end (3.22s -> 3.60s) so loop back to Splash is seamless
-    final loopResetFade = 1.0 - _smoothstep(3.22, 3.60, localT);
-
-    final morphT = _lerp(1.0, 0.0, _smoothstep(3.25, 3.60, localT));
-    final orbX = splashOrbOriginX;
-    final orbY = _lerp(screenSize.height * (610.0 / 812.0), splashOrbOriginY,
-        _smoothstep(3.25, 3.60, localT));
-    final orbR = _lerp(34.0, splashOrbOriginR, _smoothstep(3.25, 3.60, localT));
-
     return _VisualState(
       splashOpacity: 0.0,
       archSpring: 1.0,
@@ -656,18 +656,18 @@ class _LoadingScreenState extends State<LoadingScreen>
       orbSpring: 1.0,
       wordmarkSpring: 1.0,
       svgOrbOpacity: 0.0,
-      morph: morphT,
-      orbX: orbX,
-      orbY: orbY,
-      orbR: orbR,
+      morph: 1.0,
+      orbX: splashOrbOriginX,
+      orbY: screenSize.height * (610.0 / 812.0),
+      orbR: 34.0,
       yApex: yApex,
-      rippleAmp: loopResetFade,
+      rippleAmp: 1.0,
       focusOpacity: focusExit,
       focusSlideY: _lerp(0.0, -12.0, 1.0 - focusExit),
-      emblemOpacity: loopResetFade,
+      emblemOpacity: 1.0,
       emblemY: emblemY,
       emblemScale: emblemScale,
-      readyOpacity: readyEnter * loopResetFade,
+      readyOpacity: readyEnter,
       readySlideY: _lerp(18.0, 0.0, readySpring.clamp(0.0, 1.05)),
     );
   }
