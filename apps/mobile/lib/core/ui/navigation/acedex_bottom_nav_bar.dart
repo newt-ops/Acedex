@@ -26,8 +26,7 @@ class AcedexNavItem {
 /// - Real-time smoothstep icon elevation (-38px into the circle) and color interpolation
 /// - Interactive tap selection and smooth horizontal drag scrubbing
 /// - 3-Dots wave loader action inside the elevated active circle with expanding pulse ring
-/// - Quiet floating active tab readout pill above the bar
-/// - Centered iOS home indicator at bottom
+/// - Pure minimalist floating bar with zero redundant gesture mockup lines or floating labels
 class AcedexBottomNavBar extends StatefulWidget {
   final int currentIndex;
   final ValueChanged<int> onTap;
@@ -43,8 +42,8 @@ class AcedexBottomNavBar extends StatefulWidget {
     required this.onTap,
     this.items,
     this.onActiveCircleTap,
-    this.showReadout = true,
-    this.showHomeIndicator = true,
+    this.showReadout = false,
+    this.showHomeIndicator = false,
     this.autoTriggerActionOnCircleTap = true,
   });
 
@@ -285,7 +284,6 @@ class AcedexBottomNavBarState extends State<AcedexBottomNavBar>
     final onAccentColor = isDark ? AppColors.onAccentDark : AppColors.onAccentLight;
     final barSurfaceColor = isDark ? AppColors.darkSurface : AppColors.lightRaised;
     final inactiveIconColor = isDark ? const Color(0xFF585862) : const Color(0xFFC2C2C8);
-    final homeIndicatorColor = isDark ? const Color(0xFF3A3A42) : const Color(0xFFC7C7CC);
 
     final shadowColor1 = isDark
         ? const Color(0x94000000)
@@ -324,240 +322,152 @@ class AcedexBottomNavBarState extends State<AcedexBottomNavBar>
             ),
           ];
 
-    final currentItem = _items[widget.currentIndex.clamp(0, _items.length - 1)];
-
     return Semantics(
       container: true,
       label: 'Acedex Bottom Navigation Bar',
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          // 1. Quiet Active Tab Readout Pill Above Floating Bar
-          if (widget.showReadout) ...[
-            AnimatedSwitcher(
-              duration: const Duration(milliseconds: 260),
-              transitionBuilder: (child, animation) {
-                return FadeTransition(
-                  opacity: animation,
-                  child: SlideTransition(
-                    position: Tween<Offset>(
-                      begin: const Offset(0, 0.15),
-                      end: Offset.zero,
-                    ).animate(CurvedAnimation(
-                      parent: animation,
-                      curve: Curves.easeOutCubic,
-                    )),
-                    child: child,
+      child: FittedBox(
+        fit: BoxFit.scaleDown,
+        child: SizedBox(
+          width: barWidth,
+          height: barHeight + 35.0, // 103px total height: 35px above bar + 68px bar
+          child: Stack(
+            clipBehavior: Clip.none,
+            alignment: Alignment.bottomCenter,
+            children: [
+              // A. Concave Notch SVG Path Painter
+              Positioned(
+                bottom: 0,
+                left: 0,
+                right: 0,
+                height: barHeight,
+                child: CustomPaint(
+                  size: const Size(barWidth, barHeight),
+                  painter: _ConcavePillPainter(
+                    cx: _currentX,
+                    surfaceColor: barSurfaceColor,
+                    shadowColor1: shadowColor1,
+                    shadowColor2: shadowColor2,
                   ),
-                );
-              },
-              child: Container(
-                key: ValueKey<String>(currentItem.label),
-                margin: const EdgeInsets.only(bottom: 8.0),
-                padding: const EdgeInsets.symmetric(horizontal: 14.0, vertical: 4.5),
-                decoration: BoxDecoration(
-                  color: barSurfaceColor,
-                  borderRadius: BorderRadius.circular(999),
-                  border: Border.all(
-                    color: isDark ? AppColors.darkBorder : AppColors.lightBorder,
-                    width: 1.0,
-                  ),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.black.withValues(alpha: isDark ? 0.25 : 0.05),
-                      blurRadius: 10,
-                      offset: const Offset(0, 3),
-                    ),
-                  ],
-                ),
-                child: Row(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    Container(
-                      width: 6,
-                      height: 6,
-                      decoration: BoxDecoration(
-                        color: primaryAccent,
-                        shape: BoxShape.circle,
-                      ),
-                    ),
-                    const SizedBox(width: 6),
-                    Text(
-                      currentItem.label,
-                      style: TextStyle(
-                        fontSize: 12,
-                        fontWeight: FontWeight.w700,
-                        letterSpacing: -0.2,
-                        color: isDark ? AppColors.darkText : AppColors.lightText,
-                      ),
-                    ),
-                  ],
                 ),
               ),
-            ),
-          ],
 
-          // 2. Floating Concave Notch Navigation Bar
-          FittedBox(
-            fit: BoxFit.scaleDown,
-            child: SizedBox(
-              width: barWidth,
-              height: barHeight + 35.0, // 103px total height: 35px above bar + 68px bar
-              child: Stack(
-                clipBehavior: Clip.none,
-                alignment: Alignment.bottomCenter,
-                children: [
-                  // A. Concave Notch SVG Path Painter
-                  Positioned(
-                    bottom: 0,
-                    left: 0,
-                    right: 0,
-                    height: barHeight,
-                    child: CustomPaint(
-                      size: const Size(barWidth, barHeight),
-                      painter: _ConcavePillPainter(
-                        cx: _currentX,
-                        surfaceColor: barSurfaceColor,
-                        shadowColor1: shadowColor1,
-                        shadowColor2: shadowColor2,
-                      ),
-                    ),
-                  ),
-
-                  // B. Expanding Pulse Ring Behind Elevated Circle (Active during 3-dot action)
-                  if (_isLoadingAction)
-                    AnimatedBuilder(
-                      animation: _pulseController,
-                      builder: (context, _) {
-                        final ringSize = circleDiameter * _pulseScaleAnimation.value;
-                        return Positioned(
-                          top: 31.0 - (ringSize / 2),
-                          left: _currentX - (ringSize / 2),
-                          width: ringSize,
-                          height: ringSize,
-                          child: Opacity(
-                            opacity: _pulseOpacityAnimation.value.clamp(0.0, 1.0),
-                            child: Container(
-                              decoration: BoxDecoration(
-                                shape: BoxShape.circle,
-                                color: primaryAccentSoft.withValues(alpha: 0.35),
-                                border: Border.all(
-                                  color: primaryAccent,
-                                  width: 2.5,
-                                ),
-                              ),
-                            ),
-                          ),
-                        );
-                      },
-                    ),
-
-                  // C. Elevated 50px x 50px Royal Purple Active Brand Circle
-                  // Center is at y=31px (4px above bar top, delta from bar center = -38px)
-                  Positioned(
-                    top: 6.0,
-                    left: _currentX - (circleDiameter / 2),
-                    width: circleDiameter,
-                    height: circleDiameter,
-                    child: AnimatedBuilder(
-                      animation: _bounceController,
-                      builder: (context, child) {
-                        return Transform.scale(
-                          scale: _bounceScaleAnimation.value,
-                          child: child,
-                        );
-                      },
-                      child: GestureDetector(
-                        behavior: HitTestBehavior.opaque,
-                        onTap: () => _onSlotTapped(widget.currentIndex),
+              // B. Expanding Pulse Ring Behind Elevated Circle (Active during 3-dot action)
+              if (_isLoadingAction)
+                AnimatedBuilder(
+                  animation: _pulseController,
+                  builder: (context, _) {
+                    final ringSize = circleDiameter * _pulseScaleAnimation.value;
+                    return Positioned(
+                      top: 31.0 - (ringSize / 2),
+                      left: _currentX - (ringSize / 2),
+                      width: ringSize,
+                      height: ringSize,
+                      child: Opacity(
+                        opacity: _pulseOpacityAnimation.value.clamp(0.0, 1.0),
                         child: Container(
-                          width: circleDiameter,
-                          height: circleDiameter,
                           decoration: BoxDecoration(
                             shape: BoxShape.circle,
-                            color: primaryAccent,
-                            boxShadow: fabShadows,
-                          ),
-                          child: Center(
-                            child: _isLoadingAction
-                                ? AcedexDotsLoader(
-                                    dotSize: 6.0,
-                                    gap: 4.5,
-                                    color: onAccentColor,
-                                    duration: const Duration(milliseconds: 820),
-                                  )
-                                : const SizedBox.shrink(),
+                            color: primaryAccentSoft.withValues(alpha: 0.35),
+                            border: Border.all(
+                              color: primaryAccent,
+                              width: 2.5,
+                            ),
                           ),
                         ),
                       ),
-                    ),
-                  ),
+                    );
+                  },
+                ),
 
-                  // D. Crisp 6px x 6px Active Indicator Dot at y=51px from bar top
-                  // Bar top is at y=35, so y=35+51-3 = 83px from top
-                  Positioned(
-                    top: 35.0 + 51.0 - 3.0,
-                    left: _currentX - 3.0,
-                    width: 6,
-                    height: 6,
+              // C. Elevated 50px x 50px Royal Purple Active Brand Circle
+              // Center is at y=31px (4px above bar top, delta from bar center = -38px)
+              Positioned(
+                top: 6.0,
+                left: _currentX - (circleDiameter / 2),
+                width: circleDiameter,
+                height: circleDiameter,
+                child: AnimatedBuilder(
+                  animation: _bounceController,
+                  builder: (context, child) {
+                    return Transform.scale(
+                      scale: _bounceScaleAnimation.value,
+                      child: child,
+                    );
+                  },
+                  child: GestureDetector(
+                    behavior: HitTestBehavior.opaque,
+                    onTap: () => _onSlotTapped(widget.currentIndex),
                     child: Container(
+                      width: circleDiameter,
+                      height: circleDiameter,
                       decoration: BoxDecoration(
-                        color: primaryAccent,
                         shape: BoxShape.circle,
+                        color: primaryAccent,
+                        boxShadow: fabShadows,
+                      ),
+                      child: Center(
+                        child: _isLoadingAction
+                            ? AcedexDotsLoader(
+                                dotSize: 6.0,
+                                gap: 4.5,
+                                color: onAccentColor,
+                                duration: const Duration(milliseconds: 820),
+                              )
+                            : const SizedBox.shrink(),
                       ),
                     ),
                   ),
-
-                  // E. Five Evenly Spaced Icon Slots with Dynamic Smoothstep Lift
-                  Positioned(
-                    bottom: 0,
-                    left: 0,
-                    width: barWidth,
-                    height: barHeight,
-                    child: GestureDetector(
-                      behavior: HitTestBehavior.translucent,
-                      onHorizontalDragStart: _handleHorizontalDragStart,
-                      onHorizontalDragUpdate: _handleHorizontalDragUpdate,
-                      onHorizontalDragEnd: _handleHorizontalDragEnd,
-                      child: Row(
-                        children: [
-                          const SizedBox(width: 24.0), // Horizontal padding
-                          for (int i = 0; i < _items.length && i < 5; i++) ...[
-                            _buildSlotButton(
-                              context: context,
-                              index: i,
-                              item: _items[i],
-                              isDark: isDark,
-                              primaryAccent: primaryAccent,
-                              onAccentColor: onAccentColor,
-                              inactiveColor: inactiveIconColor,
-                            ),
-                          ],
-                          const SizedBox(width: 24.0),
-                        ],
-                      ),
-                    ),
-                  ),
-                ],
+                ),
               ),
-            ),
+
+              // D. Crisp 6px x 6px Active Indicator Dot at y=51px from bar top
+              // Bar top is at y=35, so y=35+51-3 = 83px from top
+              Positioned(
+                top: 35.0 + 51.0 - 3.0,
+                left: _currentX - 3.0,
+                width: 6,
+                height: 6,
+                child: Container(
+                  decoration: BoxDecoration(
+                    color: primaryAccent,
+                    shape: BoxShape.circle,
+                  ),
+                ),
+              ),
+
+              // E. Five Evenly Spaced Icon Slots with Dynamic Smoothstep Lift
+              Positioned(
+                bottom: 0,
+                left: 0,
+                width: barWidth,
+                height: barHeight,
+                child: GestureDetector(
+                  behavior: HitTestBehavior.translucent,
+                  onHorizontalDragStart: _handleHorizontalDragStart,
+                  onHorizontalDragUpdate: _handleHorizontalDragUpdate,
+                  onHorizontalDragEnd: _handleHorizontalDragEnd,
+                  child: Row(
+                    children: [
+                      const SizedBox(width: 24.0), // Horizontal padding
+                      for (int i = 0; i < _items.length && i < 5; i++) ...[
+                        _buildSlotButton(
+                          context: context,
+                          index: i,
+                          item: _items[i],
+                          isDark: isDark,
+                          primaryAccent: primaryAccent,
+                          onAccentColor: onAccentColor,
+                          inactiveColor: inactiveIconColor,
+                        ),
+                      ],
+                      const SizedBox(width: 24.0),
+                    ],
+                  ),
+                ),
+              ),
+            ],
           ),
-
-          // 3. Apple iOS Home Indicator Pill at bottom
-          if (widget.showHomeIndicator) ...[
-            const SizedBox(height: 10),
-            Container(
-              width: 134,
-              height: 5,
-              decoration: BoxDecoration(
-                color: homeIndicatorColor,
-                borderRadius: BorderRadius.circular(999),
-              ),
-            ),
-            const SizedBox(height: 6),
-          ],
-        ],
+        ),
       ),
     );
   }

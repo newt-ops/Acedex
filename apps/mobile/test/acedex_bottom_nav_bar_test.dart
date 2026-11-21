@@ -5,7 +5,7 @@ import 'package:acedex/core/ui/ui.dart';
 
 void main() {
   group('AcedexBottomNavBar Widget Tests', () {
-    testWidgets('renders all 5 default study navigation slots and quiet readout pill',
+    testWidgets('renders all 5 default study navigation slots without labels',
         (WidgetTester tester) async {
       int selectedIndex = 2; // Default AI Scan
 
@@ -28,11 +28,11 @@ void main() {
         ),
       );
 
-      // Verify active tab readout shows 'AI Scan'
-      expect(find.text('AI Scan'), findsOneWidget);
-
       // Verify AI Scan custom icon is present
       expect(find.byType(AcedexAiScanIcon), findsWidgets);
+
+      // Verify no text labels or floating readout above the bar
+      expect(find.text('AI Scan'), findsNothing);
 
       // Tap 'Home' slot (Slot 0)
       final homeSlotFinder = find.byKey(const Key('nav-slot-0'));
@@ -40,9 +40,9 @@ void main() {
       await tester.pump();
       await tester.pump(const Duration(milliseconds: 400));
 
-      // Active index should now be 0, readout shows 'Home'
+      // Active index should now be 0
       expect(selectedIndex, 0);
-      expect(find.text('Home'), findsOneWidget);
+      expect(find.text('Home'), findsNothing);
     });
 
     testWidgets('tapping active circle triggers 3-dot wave loader action',
@@ -118,7 +118,6 @@ void main() {
 
       // Should have navigated to Profile (Slot 4)
       expect(selectedIndex, 4);
-      expect(find.text('Profile'), findsOneWidget);
     });
 
     testWidgets('works with custom navigation items',
@@ -152,7 +151,7 @@ void main() {
         ),
       );
 
-      expect(find.text('Dashboard'), findsOneWidget);
+      expect(find.byType(AcedexBottomNavBar), findsOneWidget);
     });
   });
 }
