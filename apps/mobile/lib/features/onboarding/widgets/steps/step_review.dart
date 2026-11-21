@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:hugeicons/hugeicons.dart';
 import '../../../../core/theme/app_colors.dart';
+import '../../../../core/ui/animations/bounceable.dart';
 import '../../../../core/ui/buttons/acedex_button.dart';
 import '../../models/student_registration_draft.dart';
 import '../student_id_card.dart';
 
-class StepReview extends StatelessWidget {
+class StepReview extends StatefulWidget {
   final StudentRegistrationDraft draft;
   final bool isSubmitting;
   final VoidCallback onSubmit;
@@ -22,10 +23,20 @@ class StepReview extends StatelessWidget {
   });
 
   @override
+  State<StepReview> createState() => _StepReviewState();
+}
+
+class _StepReviewState extends State<StepReview> {
+  final GlobalKey<StudentIdCardState> _cardKey = GlobalKey<StudentIdCardState>();
+  bool _isBack = false;
+
+  @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     final isDark = theme.brightness == Brightness.dark;
     final accent = isDark ? AppColors.darkAccent : AppColors.lightAccent;
+    final softAccent =
+        isDark ? AppColors.darkAccentSoft : AppColors.lightAccentSoft;
     final subtext = isDark ? AppColors.darkSubtext : AppColors.lightSubtext;
 
     return LayoutBuilder(
@@ -56,57 +67,119 @@ class StepReview extends StatelessWidget {
                     ),
                     const SizedBox(height: 8),
 
-                    // Main Title
-                    Text(
-                      'Review your details',
-                      style: TextStyle(
-                        fontSize: 28,
-                        fontWeight: FontWeight.w800,
-                        letterSpacing: -0.6,
-                        color: isDark ? AppColors.darkText : AppColors.lightText,
-                      ),
-                    ),
-                    const SizedBox(height: 6),
-
-                    // Subtitle
-                    Text(
-                      'Make sure everything looks right.',
-                      style: TextStyle(
-                        fontSize: 14.5,
-                        fontWeight: FontWeight.w500,
-                        color: subtext,
-                        height: 1.35,
-                      ),
-                    ),
-                    const SizedBox(height: 20),
-
-                    // Digital Student ID Card
-                    StudentIdCard(
-                      draft: draft,
-                      onEditStep: onEditStep,
-                    ),
-
-                    const SizedBox(height: 12),
-
-                    // Tap to Edit Helper Note
+                    // Main Title + Flip Pass Pill Button Row
                     Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        HugeIcon(
-                          icon: HugeIcons.strokeRoundedEdit02,
-                          color: subtext,
-                          size: 14,
+                        Expanded(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                'Review your details',
+                                style: TextStyle(
+                                  fontSize: 28,
+                                  fontWeight: FontWeight.w800,
+                                  letterSpacing: -0.6,
+                                  color: isDark ? AppColors.darkText : AppColors.lightText,
+                                ),
+                              ),
+                              const SizedBox(height: 6),
+                              Text(
+                                'Tap any field to edit, or tap card to flip.',
+                                style: TextStyle(
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.w500,
+                                  color: subtext,
+                                  height: 1.35,
+                                ),
+                              ),
+                            ],
+                          ),
                         ),
-                        const SizedBox(width: 6),
-                        Text(
-                          'Tap any field on your pass to edit before creating account',
-                          style: TextStyle(
-                            fontSize: 11.5,
-                            fontWeight: FontWeight.w500,
-                            color: subtext,
+                        const SizedBox(width: 8),
+
+                        // Interactive Flip Pass Button Pill
+                        AcedexBounceable(
+                          scaleFactor: 0.94,
+                          onTap: () {
+                            _cardKey.currentState?.toggleFlip();
+                          },
+                          child: Container(
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 10, vertical: 6),
+                            decoration: BoxDecoration(
+                              color: softAccent,
+                              borderRadius: BorderRadius.circular(999),
+                              border: Border.all(
+                                color: accent.withValues(alpha: 0.35),
+                                width: 1,
+                              ),
+                            ),
+                            child: Row(
+                              mainAxisSize: MainAxisSize.min,
+                              children: [
+                                HugeIcon(
+                                  icon: HugeIcons.strokeRoundedRotateRight01,
+                                  color: accent,
+                                  size: 13,
+                                ),
+                                const SizedBox(width: 4),
+                                Text(
+                                  _isBack ? 'Show Front' : 'Flip Pass',
+                                  style: TextStyle(
+                                    fontSize: 11,
+                                    fontWeight: FontWeight.w700,
+                                    color: accent,
+                                  ),
+                                ),
+                              ],
+                            ),
                           ),
                         ),
                       ],
+                    ),
+
+                    const SizedBox(height: 20),
+
+                    // 180° Flippable Student Candidate Pass
+                    StudentIdCard(
+                      key: _cardKey,
+                      draft: widget.draft,
+                      onEditStep: widget.onEditStep,
+                      onFlipChanged: (flipped) {
+                        setState(() {
+                          _isBack = flipped;
+                        });
+                      },
+                    ),
+
+                    const SizedBox(height: 14),
+
+                    // Helper Note with Rotate Icon
+                    Center(
+                      child: Row(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          HugeIcon(
+                            icon: HugeIcons.strokeRoundedRotateRight01,
+                            color: subtext,
+                            size: 13,
+                          ),
+                          const SizedBox(width: 5),
+                          Text(
+                            _isBack
+                                ? 'Showing Digital Credential Back & Official QR Code'
+                                : 'Tap card to flip & view your digital credential QR',
+                            style: TextStyle(
+                              fontSize: 11.5,
+                              fontWeight: FontWeight.w500,
+                              color: subtext,
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
 
                     const Spacer(),
@@ -117,14 +190,14 @@ class StepReview extends StatelessWidget {
                       label: 'Create account',
                       variant: AcedexButtonVariant.primary,
                       size: AcedexButtonSize.lg,
-                      isLoading: isSubmitting,
+                      isLoading: widget.isSubmitting,
                       isFullWidth: true,
                       trailingIcon: const HugeIcon(
                         icon: HugeIcons.strokeRoundedArrowRight01,
                         color: Colors.white,
                         size: 18,
                       ),
-                      onPressed: isSubmitting ? null : onSubmit,
+                      onPressed: widget.isSubmitting ? null : widget.onSubmit,
                     ),
                     const SizedBox(height: 16),
                   ],

@@ -4,6 +4,7 @@ import 'package:hugeicons/hugeicons.dart';
 import '../../../../core/theme/app_colors.dart';
 import '../../../../core/ui/buttons/acedex_button.dart';
 import '../../../../core/ui/inputs/acedex_text_field.dart';
+import '../../../../core/ui/progress/acedex_dots_loader.dart';
 import '../../../auth/services/auth_service.dart';
 
 enum PhoneDetectorState {
@@ -269,13 +270,10 @@ class _StepPhoneState extends State<StepPhone> {
                   case PhoneDetectorState.checking:
                     return Row(
                       children: [
-                        SizedBox(
-                          width: 14,
-                          height: 14,
-                          child: CircularProgressIndicator(
-                            strokeWidth: 2,
-                            valueColor: AlwaysStoppedAnimation<Color>(accent),
-                          ),
+                        AcedexDotsLoader(
+                          color: accent,
+                          dotSize: 5.5,
+                          gap: 3.5,
                         ),
                         const SizedBox(width: 8),
                         Text(

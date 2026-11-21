@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../animations/bounceable.dart';
+import '../progress/acedex_dots_loader.dart';
 
 enum AcedexButtonVariant {
   primary,
@@ -122,13 +123,10 @@ class AcedexButton extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         if (isLoading)
-          SizedBox(
-            width: fontSize + 2,
-            height: fontSize + 2,
-            child: CircularProgressIndicator(
-              strokeWidth: 2.2,
-              valueColor: AlwaysStoppedAnimation<Color>(foregroundColor),
-            ),
+          AcedexDotsLoader(
+            color: foregroundColor,
+            dotSize: fontSize * 0.42,
+            gap: 4.0,
           )
         else ...[
           if (leadingIcon != null) ...[

@@ -68,7 +68,7 @@ void main() {
         ),
       );
 
-      expect(find.byType(CircularProgressIndicator), findsOneWidget);
+      expect(find.byType(AcedexDotsLoader), findsOneWidget);
     });
 
     testWidgets('AcedexCard renders content and handles tap interactions',
@@ -248,11 +248,11 @@ void main() {
       );
       await tester.pumpAndSettle();
 
-      expect(find.text('System'), findsOneWidget);
-      expect(find.text('Light'), findsOneWidget);
-      expect(find.text('Dark'), findsOneWidget);
+      expect(find.byTooltip('System'), findsOneWidget);
+      expect(find.byTooltip('Light'), findsOneWidget);
+      expect(find.byTooltip('Dark'), findsOneWidget);
 
-      await tester.tap(find.text('Dark'));
+      await tester.tap(find.byTooltip('Dark'));
       await tester.pumpAndSettle();
 
       expect(AcedexApp.themeModeNotifier.value, ThemeMode.dark);

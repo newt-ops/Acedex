@@ -111,29 +111,6 @@ class _LoadingScreenState extends State<LoadingScreen>
     }
   }
 
-  void _onScreenTapped() {
-    final t = _controller.value * _kTotalTimeline;
-    if (t < 2.2) {
-      // Advance immediately into Stage 2 (Focus deeply)
-      _jumpTo(3.4 / _kTotalTimeline);
-    } else if (t < 5.6) {
-      // Advance immediately into Stage 3 (Ready / Dome Settle & CTA)
-      _jumpTo(6.8 / _kTotalTimeline);
-    } else {
-      // In Stage 3, tapping the screen replays smoothly from Splash
-      _jumpTo(0.0);
-    }
-  }
-
-  void _jumpTo(double value) {
-    _controller.value = value;
-    if (widget.onLoaded == null) {
-      _controller.repeat();
-    } else {
-      _controller.forward();
-    }
-  }
-
   void _navigateToOnboarding() {
     Navigator.of(context).pushReplacementNamed('/onboarding');
   }
@@ -165,12 +142,9 @@ class _LoadingScreenState extends State<LoadingScreen>
 
     return Scaffold(
       backgroundColor: theme.scaffoldBackgroundColor,
-      body: GestureDetector(
-        behavior: HitTestBehavior.translucent,
-        onTap: _onScreenTapped,
-        child: Stack(
-          fit: StackFit.expand,
-          children: [
+      body: Stack(
+        fit: StackFit.expand,
+        children: [
             // 1. High-DPI Canvas for Continuous Liquid Morphing Dome
             CustomPaint(
               size: size,
@@ -513,7 +487,6 @@ class _LoadingScreenState extends State<LoadingScreen>
               ),
           ],
         ),
-      ),
     );
   }
 

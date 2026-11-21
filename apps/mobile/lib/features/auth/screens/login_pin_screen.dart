@@ -5,6 +5,7 @@ import '../../../core/network/api_exception.dart';
 import '../../../core/theme/app_colors.dart';
 import '../../../core/ui/animations/bounceable.dart';
 import '../../../core/ui/inputs/acedex_theme_toggle.dart';
+import '../../../core/ui/progress/acedex_dots_loader.dart';
 import '../../onboarding/widgets/numeric_keypad.dart';
 import '../services/auth_service.dart';
 
@@ -306,14 +307,10 @@ class _LoginPinScreenState extends State<LoginPinScreen>
                         height: 26,
                         child: _isLoading
                             ? Center(
-                                child: SizedBox(
-                                  width: 18,
-                                  height: 18,
-                                  child: CircularProgressIndicator(
-                                    strokeWidth: 2.2,
-                                    valueColor:
-                                        AlwaysStoppedAnimation<Color>(accent),
-                                  ),
+                                child: AcedexDotsLoader(
+                                  color: accent,
+                                  dotSize: 6.0,
+                                  gap: 4.0,
                                 ),
                               )
                             : _errorMessage != null

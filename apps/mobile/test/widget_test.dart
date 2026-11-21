@@ -20,12 +20,8 @@ void main() {
     expect(find.byType(LoadingScreen), findsOneWidget);
     expect(find.text('Acedex'), findsOneWidget);
 
-    // Skip to Stage 3 and tap "I already have an account"
-    await tester.tap(find.byType(LoadingScreen));
-    await tester.pump();
-    await tester.tap(find.byType(LoadingScreen));
-    await tester.pump();
-    await tester.pump(const Duration(milliseconds: 100));
+    // Advance timeline into Stage 3 and tap "I already have an account"
+    await tester.pump(const Duration(milliseconds: 6700));
 
     expect(find.text('Ace every exam'), findsOneWidget);
     expect(find.text('I already have an account'), findsOneWidget);

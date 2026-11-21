@@ -277,13 +277,10 @@ class _LoginFormState extends State<LoginForm> {
               if (_detectorState == LoginPhoneDetectorState.checking) {
                 return Row(
                   children: [
-                    SizedBox(
-                      width: 14,
-                      height: 14,
-                      child: CircularProgressIndicator(
-                        strokeWidth: 2,
-                        valueColor: AlwaysStoppedAnimation<Color>(accent),
-                      ),
+                    AcedexDotsLoader(
+                      color: accent,
+                      dotSize: 5.5,
+                      gap: 3.5,
                     ),
                     const SizedBox(width: 8),
                     Text(

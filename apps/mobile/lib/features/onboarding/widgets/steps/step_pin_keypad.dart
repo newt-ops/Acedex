@@ -2,12 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:hugeicons/hugeicons.dart';
 import '../../../../core/theme/app_colors.dart';
+import '../../../../core/ui/progress/acedex_dots_loader.dart';
 import '../numeric_keypad.dart';
 
-/// Distraction-Free Full-Page PIN Keypad Step
+/// Distraction-Free Full-Page Apple-Style PIN Keypad Step
 ///
-/// Removes distracting labels and category badges, immersing the student
-/// in an Apple-grade, focused 6-digit PIN creation and auto-confirmation flow.
+/// Features a centered padlock emblem, 6 spring-popping PIN slots with focus rings,
+/// canonical 3-dots wave loader with "Securing your PIN..." upon completion,
+/// and a tactile numeric keypad with haptic feedback.
 class StepPinKeypad extends StatefulWidget {
   final ValueChanged<String> onPinConfirmed;
   final VoidCallback onBack;
@@ -27,6 +29,8 @@ class _StepPinKeypadState extends State<StepPinKeypad>
   String _currentPin = '';
   String _firstPin = '';
   bool _isConfirming = false;
+  bool _isSecuring = false;
+  String _securingStatus = 'Securing your PIN...';
   String? _errorMessage;
 
   late final AnimationController _shakeController;
@@ -51,7 +55,7 @@ class _StepPinKeypadState extends State<StepPinKeypad>
   }
 
   void _onDigit(String digit) {
-    if (_currentPin.length >= 6) return;
+    if (_isSecuring || _currentPin.length >= 6) return;
 
     HapticFeedback.selectionClick();
 
@@ -66,7 +70,7 @@ class _StepPinKeypadState extends State<StepPinKeypad>
   }
 
   void _onDelete() {
-    if (_currentPin.isEmpty) return;
+    if (_isSecuring || _currentPin.isEmpty) return;
 
     HapticFeedback.selectionClick();
 
@@ -78,11 +82,17 @@ class _StepPinKeypadState extends State<StepPinKeypad>
 
   Future<void> _handleCompleteSixDigits() async {
     if (!_isConfirming) {
-      // Pass 1 Complete: Transition to Pass 2
-      await Future.delayed(const Duration(milliseconds: 180));
+      // Pass 1 Complete: Show wave loader status then transition to Pass 2
+      setState(() {
+        _isSecuring = true;
+        _securingStatus = 'Securing your PIN...';
+      });
+
+      await Future.delayed(const Duration(milliseconds: 700));
       if (!mounted) return;
 
       setState(() {
+        _isSecuring = false;
         _firstPin = _currentPin;
         _currentPin = '';
         _isConfirming = true;
@@ -90,10 +100,15 @@ class _StepPinKeypadState extends State<StepPinKeypad>
     } else {
       // Pass 2 Complete: Verification
       if (_currentPin == _firstPin) {
-        // Match! Haptic impact and auto-advance
+        setState(() {
+          _isSecuring = true;
+          _securingStatus = 'Verifying your PIN...';
+        });
+
         HapticFeedback.mediumImpact();
-        await Future.delayed(const Duration(milliseconds: 180));
+        await Future.delayed(const Duration(milliseconds: 650));
         if (!mounted) return;
+
         widget.onPinConfirmed(_currentPin);
       } else {
         // Mismatch! Shake boxes and reset
@@ -104,6 +119,7 @@ class _StepPinKeypadState extends State<StepPinKeypad>
           _currentPin = '';
           _firstPin = '';
           _isConfirming = false;
+          _isSecuring = false;
         });
       }
     }
@@ -127,7 +143,7 @@ class _StepPinKeypadState extends State<StepPinKeypad>
         children: [
           const Spacer(flex: 1),
 
-          // Central Security Lock Badge
+          // Central Padlock Security Badge
           Container(
             width: 58,
             height: 58,
@@ -178,7 +194,7 @@ class _StepPinKeypadState extends State<StepPinKeypad>
 
           const SizedBox(height: 32),
 
-          // 6-Digit PIN Squircle Cells with Shake Animation
+          // 6-Digit PIN Squircle Cells with Shake Animation & Focus Ring
           AnimatedBuilder(
             animation: _shakeAnimation,
             builder: (context, child) {
@@ -191,9 +207,11 @@ class _StepPinKeypadState extends State<StepPinKeypad>
               mainAxisAlignment: MainAxisAlignment.center,
               children: List.generate(6, (index) {
                 final isFilled = index < _currentPin.length;
-                final isCurrent = index == _currentPin.length;
+                final isCurrent = index == _currentPin.length && !_isSecuring;
 
-                return Container(
+                return AnimatedContainer(
+                  duration: const Duration(milliseconds: 180),
+                  curve: Curves.easeOutCubic,
                   width: 44,
                   height: 52,
                   margin: const EdgeInsets.symmetric(horizontal: 5),
@@ -210,39 +228,76 @@ class _StepPinKeypadState extends State<StepPinKeypad>
                                   : line,
                       width: (isCurrent || isFilled) ? 1.8 : 1.0,
                     ),
+                    boxShadow: isCurrent
+                        ? [
+                            BoxShadow(
+                              color: accent.withValues(alpha: isDark ? 0.25 : 0.14),
+                              blurRadius: 8,
+                              offset: const Offset(0, 2),
+                            ),
+                          ]
+                        : null,
                   ),
                   alignment: Alignment.center,
-                  child: isFilled
-                      ? Container(
-                          width: 12,
-                          height: 12,
-                          decoration: BoxDecoration(
-                            color: accent,
-                            shape: BoxShape.circle,
-                          ),
-                        )
-                      : null,
+                  child: AnimatedScale(
+                    scale: isFilled ? 1.0 : 0.0,
+                    duration: const Duration(milliseconds: 180),
+                    curve: Curves.easeOutBack,
+                    child: Container(
+                      width: 12,
+                      height: 12,
+                      decoration: BoxDecoration(
+                        color: accent,
+                        shape: BoxShape.circle,
+                      ),
+                    ),
+                  ),
                 );
               }),
             ),
           ),
 
-          const SizedBox(height: 14),
+          const SizedBox(height: 16),
 
-          // Error Message Area
+          // Status & 3-Dots Wave Securing Area
           SizedBox(
-            height: 24,
-            child: _errorMessage != null
-                ? Text(
-                    _errorMessage!,
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      fontSize: 12.5,
-                      fontWeight: FontWeight.w600,
-                      color: errorColor,
-                    ),
-                  )
-                : null,
+            height: 36,
+            child: Center(
+              child: AnimatedSwitcher(
+                duration: const Duration(milliseconds: 200),
+                child: _isSecuring
+                    ? Column(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          AcedexDotsLoader(
+                            color: accent,
+                            dotSize: 6.0,
+                            gap: 4.5,
+                          ),
+                          const SizedBox(height: 4),
+                          Text(
+                            _securingStatus,
+                            style: TextStyle(
+                              fontSize: 12,
+                              fontWeight: FontWeight.w600,
+                              color: isDark ? AppColors.darkSubtext : AppColors.lightSubtext,
+                            ),
+                          ),
+                        ],
+                      )
+                    : _errorMessage != null
+                        ? Text(
+                            _errorMessage!,
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              fontSize: 12.5,
+                              fontWeight: FontWeight.w600,
+                              color: errorColor,
+                            ),
+                          )
+                        : const SizedBox.shrink(),
+              ),
+            ),
           ),
 
           const Spacer(flex: 2),

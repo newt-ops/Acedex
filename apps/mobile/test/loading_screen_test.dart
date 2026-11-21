@@ -32,24 +32,23 @@ void main() {
     );
     await tester.pump(const Duration(milliseconds: 200));
 
-    // Tap screen to advance into Stage 2 (Focus)
-    await tester.tap(find.byType(LoadingScreen));
-    await tester.pump();
-    await tester.pump(const Duration(milliseconds: 100));
+    // Advance naturally past Stage 1 (2.2s) into Stage 2 (Focus deeply)
+    await tester.pump(const Duration(milliseconds: 3200));
 
     expect(find.text('STUDY FLOW'), findsOneWidget);
     expect(find.text('Focus deeply'), findsOneWidget);
-    expect(find.text('Distraction-free study sessions engineered for deep retention.'),
+    expect(
+        find.text(
+            'Distraction-free study sessions engineered for deep retention.'),
         findsOneWidget);
 
-    // Tap screen again to advance into Stage 3 (Ready)
-    await tester.tap(find.byType(LoadingScreen));
-    await tester.pump();
-    await tester.pump(const Duration(milliseconds: 100));
+    // Advance naturally past Stage 2 (5.2s) into Stage 3 (Ace every exam)
+    await tester.pump(const Duration(milliseconds: 3500));
 
     expect(find.text('READY TO MASTER'), findsOneWidget);
     expect(find.text('Ace every exam'), findsOneWidget);
-    expect(find.text('Smart flashcards, active recall & daily study streaks.'),
+    expect(
+        find.text('Smart flashcards, active recall & daily study streaks.'),
         findsOneWidget);
     expect(find.text('Get Started'), findsOneWidget);
     expect(find.text('I already have an account'), findsOneWidget);
@@ -76,12 +75,8 @@ void main() {
     );
     await tester.pump(const Duration(milliseconds: 200));
 
-    // Skip to Stage 3
-    await tester.tap(find.byType(LoadingScreen));
-    await tester.pump();
-    await tester.tap(find.byType(LoadingScreen));
-    await tester.pump();
-    await tester.pump(const Duration(milliseconds: 100));
+    // Advance naturally into Stage 3
+    await tester.pump(const Duration(milliseconds: 6700));
 
     expect(find.text('Get Started'), findsOneWidget);
     await tester.tap(find.text('Get Started'));
@@ -112,12 +107,8 @@ void main() {
     );
     await tester.pump(const Duration(milliseconds: 200));
 
-    // Skip to Stage 3
-    await tester.tap(find.byType(LoadingScreen));
-    await tester.pump();
-    await tester.tap(find.byType(LoadingScreen));
-    await tester.pump();
-    await tester.pump(const Duration(milliseconds: 100));
+    // Advance naturally into Stage 3
+    await tester.pump(const Duration(milliseconds: 6700));
 
     expect(find.text('I already have an account'), findsOneWidget);
     await tester.tap(find.text('I already have an account'));
