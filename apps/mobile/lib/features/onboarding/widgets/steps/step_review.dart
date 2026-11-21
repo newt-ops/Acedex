@@ -47,146 +47,154 @@ class _StepReviewState extends State<StepReview> {
             constraints: BoxConstraints(
               minHeight: constraints.maxHeight,
             ),
-            child: IntrinsicHeight(
-              child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 24),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    const SizedBox(height: 8),
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 24),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const SizedBox(height: 8),
 
-                    // Category Badge
-                    Text(
-                      'FINAL CHECK',
-                      style: TextStyle(
-                        fontSize: 11,
-                        fontWeight: FontWeight.w800,
-                        letterSpacing: 1.2,
-                        color: accent,
-                      ),
-                    ),
-                    const SizedBox(height: 8),
-
-                    // Main Title + Flip Pass Pill Button Row
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Expanded(
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                'Review your details',
-                                style: TextStyle(
-                                  fontSize: 28,
-                                  fontWeight: FontWeight.w800,
-                                  letterSpacing: -0.6,
-                                  color: isDark ? AppColors.darkText : AppColors.lightText,
-                                ),
-                              ),
-                              const SizedBox(height: 6),
-                              Text(
-                                'Tap any field to edit, or tap card to flip.',
-                                style: TextStyle(
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w500,
-                                  color: subtext,
-                                  height: 1.35,
-                                ),
-                              ),
-                            ],
-                          ),
+                      // Category Badge
+                      Text(
+                        'FINAL CHECK',
+                        style: TextStyle(
+                          fontSize: 11,
+                          fontWeight: FontWeight.w800,
+                          letterSpacing: 1.2,
+                          color: accent,
                         ),
-                        const SizedBox(width: 8),
+                      ),
+                      const SizedBox(height: 8),
 
-                        // Interactive Flip Pass Button Pill
-                        AcedexBounceable(
-                          scaleFactor: 0.94,
-                          onTap: () {
-                            _cardKey.currentState?.toggleFlip();
-                          },
-                          child: Container(
-                            padding: const EdgeInsets.symmetric(
-                                horizontal: 10, vertical: 6),
-                            decoration: BoxDecoration(
-                              color: softAccent,
-                              borderRadius: BorderRadius.circular(999),
-                              border: Border.all(
-                                color: accent.withValues(alpha: 0.35),
-                                width: 1,
-                              ),
-                            ),
-                            child: Row(
-                              mainAxisSize: MainAxisSize.min,
+                      // Main Title + Flip Pass Pill Button Row
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Expanded(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                HugeIcon(
-                                  icon: HugeIcons.strokeRoundedRotateRight01,
-                                  color: accent,
-                                  size: 13,
-                                ),
-                                const SizedBox(width: 4),
                                 Text(
-                                  _isBack ? 'Show Front' : 'Flip Pass',
+                                  'Review your details',
                                   style: TextStyle(
-                                    fontSize: 11,
-                                    fontWeight: FontWeight.w700,
-                                    color: accent,
+                                    fontSize: 28,
+                                    fontWeight: FontWeight.w800,
+                                    letterSpacing: -0.6,
+                                    color: isDark ? AppColors.darkText : AppColors.lightText,
+                                  ),
+                                ),
+                                const SizedBox(height: 6),
+                                Text(
+                                  'Tap any field to edit, or tap card to flip.',
+                                  style: TextStyle(
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.w500,
+                                    color: subtext,
+                                    height: 1.35,
                                   ),
                                 ),
                               ],
                             ),
                           ),
-                        ),
-                      ],
-                    ),
+                          const SizedBox(width: 8),
 
-                    const SizedBox(height: 20),
-
-                    // 180° Flippable Student Candidate Pass
-                    StudentIdCard(
-                      key: _cardKey,
-                      draft: widget.draft,
-                      onEditStep: widget.onEditStep,
-                      onFlipChanged: (flipped) {
-                        setState(() {
-                          _isBack = flipped;
-                        });
-                      },
-                    ),
-
-                    const SizedBox(height: 14),
-
-                    // Helper Note with Rotate Icon
-                    Center(
-                      child: Row(
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          HugeIcon(
-                            icon: HugeIcons.strokeRoundedRotateRight01,
-                            color: subtext,
-                            size: 13,
-                          ),
-                          const SizedBox(width: 5),
-                          Text(
-                            _isBack
-                                ? 'Showing Digital Credential Back & Official QR Code'
-                                : 'Tap card to flip & view your digital credential QR',
-                            style: TextStyle(
-                              fontSize: 11.5,
-                              fontWeight: FontWeight.w500,
-                              color: subtext,
+                          // Interactive Flip Pass Button Pill
+                          AcedexBounceable(
+                            scaleFactor: 0.94,
+                            onTap: () {
+                              _cardKey.currentState?.toggleFlip();
+                            },
+                            child: Container(
+                              padding: const EdgeInsets.symmetric(
+                                  horizontal: 10, vertical: 6),
+                              decoration: BoxDecoration(
+                                color: softAccent,
+                                borderRadius: BorderRadius.circular(999),
+                                border: Border.all(
+                                  color: accent.withValues(alpha: 0.35),
+                                  width: 1,
+                                ),
+                              ),
+                              child: Row(
+                                mainAxisSize: MainAxisSize.min,
+                                children: [
+                                  HugeIcon(
+                                    icon: HugeIcons.strokeRoundedRotateRight01,
+                                    color: accent,
+                                    size: 13,
+                                  ),
+                                  const SizedBox(width: 4),
+                                  Text(
+                                    _isBack ? 'Show Front' : 'Flip Pass',
+                                    style: TextStyle(
+                                      fontSize: 11,
+                                      fontWeight: FontWeight.w700,
+                                      color: accent,
+                                    ),
+                                  ),
+                                ],
+                              ),
                             ),
                           ),
                         ],
                       ),
-                    ),
 
-                    const Spacer(),
-                    const SizedBox(height: 16),
+                      const SizedBox(height: 20),
 
-                    // Create Account Action Button
-                    AcedexButton(
+                      // 180° Flippable Student Candidate Pass
+                      StudentIdCard(
+                        key: _cardKey,
+                        draft: widget.draft,
+                        onEditStep: widget.onEditStep,
+                        onFlipChanged: (flipped) {
+                          setState(() {
+                            _isBack = flipped;
+                          });
+                        },
+                      ),
+
+                      const SizedBox(height: 14),
+
+                      // Helper Note with Rotate Icon (Defensively wrapped to avoid overflow)
+                      Center(
+                        child: Row(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            HugeIcon(
+                              icon: HugeIcons.strokeRoundedRotateRight01,
+                              color: subtext,
+                              size: 13,
+                            ),
+                            const SizedBox(width: 5),
+                            Flexible(
+                              child: Text(
+                                _isBack
+                                    ? 'Showing Digital Credential Back & Official QR Code'
+                                    : 'Tap card to flip & view your digital credential QR',
+                                maxLines: 1,
+                                overflow: TextOverflow.ellipsis,
+                                style: TextStyle(
+                                  fontSize: 11.5,
+                                  fontWeight: FontWeight.w500,
+                                  color: subtext,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+
+                  // Create Account Action Button (Positioned at bottom with clean padding)
+                  Padding(
+                    padding: const EdgeInsets.only(top: 20, bottom: 16),
+                    child: AcedexButton(
                       label: 'Create account',
                       variant: AcedexButtonVariant.primary,
                       size: AcedexButtonSize.lg,
@@ -199,9 +207,8 @@ class _StepReviewState extends State<StepReview> {
                       ),
                       onPressed: widget.isSubmitting ? null : widget.onSubmit,
                     ),
-                    const SizedBox(height: 16),
-                  ],
-                ),
+                  ),
+                ],
               ),
             ),
           ),
