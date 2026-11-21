@@ -11,17 +11,20 @@ import '../models/student_registration_draft.dart';
 /// redirecting the candidate to the Login screen with their normalized credentials.
 class RegistrationSuccessDialog extends StatelessWidget {
   final StudentRegistrationDraft draft;
+  final String? registeredId;
   final VoidCallback onContinueToLogin;
 
   const RegistrationSuccessDialog({
     super.key,
     required this.draft,
+    this.registeredId,
     required this.onContinueToLogin,
   });
 
   static Future<void> show(
     BuildContext context, {
     required StudentRegistrationDraft draft,
+    String? registeredId,
     required VoidCallback onContinueToLogin,
   }) {
     return showGeneralDialog(
@@ -46,6 +49,7 @@ class RegistrationSuccessDialog extends StatelessWidget {
       pageBuilder: (context, anim1, anim2) {
         return RegistrationSuccessDialog(
           draft: draft,
+          registeredId: registeredId,
           onContinueToLogin: onContinueToLogin,
         );
       },
@@ -170,7 +174,7 @@ class RegistrationSuccessDialog extends StatelessWidget {
                         ),
                         const SizedBox(width: 8),
                         Text(
-                          draft.candidateId,
+                          registeredId ?? draft.candidateId,
                           style: TextStyle(
                             fontFamily: 'monospace',
                             fontSize: 13,

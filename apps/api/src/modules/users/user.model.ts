@@ -125,21 +125,32 @@ UserSchema.pre('validate', async function () {
 });
 
 /**
- * Generates a unique branded ACEDEX Student ID (e.g. ACEDEX-839201)
+ * Generates a unique branded ACEDEX Student Candidate ID in format ACX-YY-XXXX (e.g. ACX-26-5480)
  */
-export async function generateUniqueAcedexId(): Promise<string> {
+export async function generateUniqueAcedexId(preferredId?: string): Promise<string> {
+  const currentYear = new Date().getFullYear().toString().slice(-2); // e.g. '26'
+
+  // If a valid preferred candidate ID was provided from onboarding draft (e.g. ACX-26-5480)
+  if (preferredId && /^ACX-\d{2}-\d{4}$/.test(preferredId)) {
+    const exists = await UserModel.exists({ acedexId: preferredId });
+    if (!exists) {
+      return preferredId;
+    }
+  }
+
   let attempts = 0;
   while (attempts < 10) {
-    const randomSuffix = Math.floor(100000 + Math.random() * 900000);
-    const candidateId = `ACEDEX-${randomSuffix}`;
+    const randomSuffix = Math.floor(1000 + Math.random() * 9000); // 4 digits (1000-9999)
+    const candidateId = `ACX-${currentYear}-${randomSuffix}`;
     const exists = await UserModel.exists({ acedexId: candidateId });
     if (!exists) {
       return candidateId;
     }
     attempts++;
   }
-  // Fallback to timestamp suffix if multiple collisions occur
-  return `ACEDEX-${Date.now().toString().slice(-6)}`;
+  // Fallback to padded timestamp slice if multiple collisions occur
+  const timestampSuffix = (Date.now() % 10000).toString().padStart(4, '0');
+  return `ACX-${currentYear}-${timestampSuffix}`;
 }
 
 export const UserModel: Model<IUser> =

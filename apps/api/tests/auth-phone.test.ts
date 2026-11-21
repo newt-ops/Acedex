@@ -91,7 +91,7 @@ describe('Student Phone & PIN Authentication with Onboarding Data', () => {
     expect(res.body.data.user).toBeDefined();
 
     const user = res.body.data.user;
-    expect(user.acedexId).toMatch(/^ACEDEX-\d{6}$/);
+    expect(user.acedexId).toMatch(/^ACX-\d{2}-\d{4}$/);
     expect(user.phone).toBe('+251911223344');
     expect(user.displayName).toBe('Abebe Bikila');
     expect(user.gender).toBe('male');
@@ -124,7 +124,7 @@ describe('Student Phone & PIN Authentication with Onboarding Data', () => {
     expect(res.body.data.user.grade).toBe(11);
     expect(res.body.data.user.stream).toBe('natural');
     expect(res.body.data.user.gender).toBe('female');
-    expect(res.body.data.user.acedexId).toMatch(/^ACEDEX-\d{6}$/);
+    expect(res.body.data.user.acedexId).toMatch(/^ACX-\d{2}-\d{4}$/);
   });
 
   it('POST /api/v1/auth/register-phone should register Grade 12 Social Science student', async () => {
@@ -141,7 +141,22 @@ describe('Student Phone & PIN Authentication with Onboarding Data', () => {
     expect(res.body.success).toBe(true);
     expect(res.body.data.user.grade).toBe(12);
     expect(res.body.data.user.stream).toBe('social');
-    expect(res.body.data.user.acedexId).toMatch(/^ACEDEX-\d{6}$/);
+    expect(res.body.data.user.acedexId).toMatch(/^ACX-\d{2}-\d{4}$/);
+  });
+
+  it('POST /api/v1/auth/register-phone should honor registration card candidateId (e.g. ACX-26-5480)', async () => {
+    const res = await request(app).post('/api/v1/auth/register-phone').send({
+      phone: '+251977112233',
+      pin: testPin,
+      fullName: 'Betelehem Tadesse',
+      gender: 'female',
+      grade: 10,
+      candidateId: 'ACX-26-5480',
+    });
+
+    expect(res.status).toBe(201);
+    expect(res.body.success).toBe(true);
+    expect(res.body.data.user.acedexId).toBe('ACX-26-5480');
   });
 
   it('POST /api/v1/auth/register-phone should reject duplicate phone with 409 Conflict', async () => {

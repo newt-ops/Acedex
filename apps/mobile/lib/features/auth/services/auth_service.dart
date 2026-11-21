@@ -97,6 +97,7 @@ class AuthService {
     required String gender,
     required int grade,
     String? stream,
+    String? candidateId,
   }) async {
     final cleanPhone = normalizePhone(phone);
     if (!isValidPhone(cleanPhone)) {
@@ -121,6 +122,9 @@ class AuthService {
     };
     if (grade >= 11 && stream != null) {
       body['stream'] = stream.toLowerCase();
+    }
+    if (candidateId != null && candidateId.trim().isNotEmpty) {
+      body['candidateId'] = candidateId.trim();
     }
 
     final response = await _client.post(

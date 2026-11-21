@@ -94,8 +94,8 @@ export class AuthService {
     // 2. Hash PIN securely (10 rounds)
     const pinHash = await bcrypt.hash(payload.pin, 10);
 
-    // 3. Generate unique branded ACEDEX Student ID
-    const acedexId = await generateUniqueAcedexId();
+    // 3. Generate unique branded ACEDEX Student Candidate ID (e.g. ACX-26-5480)
+    const acedexId = await generateUniqueAcedexId(payload.candidateId);
 
     // 4. Save user document
     const user = await UserModel.create({

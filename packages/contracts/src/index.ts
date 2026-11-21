@@ -128,6 +128,7 @@ export const PhoneRegisterRequestSchema = z
     gender: StudentGenderSchema,
     grade: z.union([z.literal(9), z.literal(10), z.literal(11), z.literal(12)]),
     stream: StudentStreamSchema.nullable().optional(),
+    candidateId: z.string().max(30).optional(),
   })
   .refine(
     (data) => {

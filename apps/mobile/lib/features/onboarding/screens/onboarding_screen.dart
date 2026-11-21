@@ -98,13 +98,14 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
     try {
       final normalizedPhone = AuthService.normalizePhone(_draft.phoneNumber);
 
-      await _authService.register(
+      final user = await _authService.register(
         phone: normalizedPhone,
         pin: _draft.pin,
         fullName: _draft.fullName,
         gender: _draft.gender,
         grade: _draft.grade,
         stream: _draft.stream,
+        candidateId: _draft.candidateId,
       );
 
       await AuthStorage.instance.setSeenOnboarding(true);
@@ -115,10 +116,14 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
         _isSubmitting = false;
       });
 
-      // Show celebratory Congratulatory Success Modal Dialog
+      // Show celebratory Congratulatory Success Modal Dialog with confirmed backend ID
       await RegistrationSuccessDialog.show(
         context,
-        draft: _draft.copyWith(phoneNumber: normalizedPhone),
+        draft: _draft.copyWith(
+          phoneNumber: normalizedPhone,
+          customCandidateId: user.acedexId,
+        ),
+        registeredId: user.acedexId,
         onContinueToLogin: () {
           Navigator.of(context).pop(); // dismiss modal
           if (widget.onComplete != null) {

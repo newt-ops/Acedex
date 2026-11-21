@@ -30,6 +30,7 @@ class MockAuthService extends AuthService {
     required String gender,
     required int grade,
     String? stream,
+    String? candidateId,
   }) async {
     registerCalled = true;
     registeredPhone = phone;
@@ -38,7 +39,7 @@ class MockAuthService extends AuthService {
 
     return UserProfile(
       id: 'test_user_id',
-      acedexId: 'ACX-26-8941',
+      acedexId: candidateId ?? 'ACX-26-8941',
       displayName: fullName,
       phone: phone,
       gender: gender,

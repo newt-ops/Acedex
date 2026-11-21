@@ -6,6 +6,7 @@ class StudentRegistrationDraft {
   final int grade; // 9, 10, 11, 12
   final String? stream; // 'natural' | 'social' | null
   final String pin; // 6 digits
+  final String? customCandidateId;
 
   const StudentRegistrationDraft({
     this.fullName = '',
@@ -14,6 +15,7 @@ class StudentRegistrationDraft {
     this.grade = 12,
     this.stream = 'natural',
     this.pin = '',
+    this.customCandidateId,
   });
 
   /// Ethiopian curriculum: Grade 9 and 10 follow a unified curriculum.
@@ -23,8 +25,11 @@ class StudentRegistrationDraft {
   /// Total steps dynamically adjusts to 6 if Grade 9/10, or 7 if Grade 11/12.
   int get totalSteps => requiresStream ? 7 : 6;
 
-  /// Deterministic preview candidate ID e.g. "ACX-26-8941"
+  /// Official candidate ID e.g. "ACX-26-5480"
   String get candidateId {
+    if (customCandidateId != null && customCandidateId!.isNotEmpty) {
+      return customCandidateId!;
+    }
     final rawSeed = '$fullName$phoneNumber$grade${stream ?? ''}';
     final hash = rawSeed.hashCode.abs() % 10000;
     return 'ACX-26-${hash.toString().padLeft(4, '0')}';
@@ -47,6 +52,7 @@ class StudentRegistrationDraft {
     int? grade,
     String? stream,
     String? pin,
+    String? customCandidateId,
   }) {
     final newGrade = grade ?? this.grade;
     final newRequiresStream = newGrade >= 11;
@@ -58,6 +64,7 @@ class StudentRegistrationDraft {
       grade: newGrade,
       stream: newRequiresStream ? (stream ?? this.stream ?? 'natural') : null,
       pin: pin ?? this.pin,
+      customCandidateId: customCandidateId ?? this.customCandidateId,
     );
   }
 }

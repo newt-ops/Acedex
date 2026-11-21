@@ -236,7 +236,7 @@ class HomeScreen extends StatelessWidget {
                       _ProfileRow(label: 'Phone', value: user!.phone!),
                     _ProfileRow(label: 'Curriculum', value: gradeLabel),
                     if (user?.acedexId != null && user!.acedexId.isNotEmpty)
-                      _ProfileRow(label: 'Acedex ID', value: user!.acedexId),
+                      _ProfileRow(label: 'Candidate ID', value: user!.acedexId),
                   ],
                 ),
               ),
