@@ -31,101 +31,118 @@ class StepStream extends StatelessWidget {
 
     final isNatural = selectedStream.toLowerCase() == 'natural';
 
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 24),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          const SizedBox(height: 8),
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        return SingleChildScrollView(
+          physics: const ClampingScrollPhysics(),
+          child: ConstrainedBox(
+            constraints: BoxConstraints(
+              minHeight: constraints.maxHeight,
+            ),
+            child: IntrinsicHeight(
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 24),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const SizedBox(height: 8),
 
-          // Category Badge
-          Text(
-            'YOUR STUDIES',
-            style: TextStyle(
-              fontSize: 11,
-              fontWeight: FontWeight.w800,
-              letterSpacing: 1.2,
-              color: accent,
+                    // Category Badge
+                    Text(
+                      'YOUR STUDIES',
+                      style: TextStyle(
+                        fontSize: 11,
+                        fontWeight: FontWeight.w800,
+                        letterSpacing: 1.2,
+                        color: accent,
+                      ),
+                    ),
+                    const SizedBox(height: 8),
+
+                    // Main Title
+                    Text(
+                      'Choose your stream',
+                      style: TextStyle(
+                        fontSize: 28,
+                        fontWeight: FontWeight.w800,
+                        letterSpacing: -0.6,
+                        color: isDark ? AppColors.darkText : AppColors.lightText,
+                      ),
+                    ),
+                    const SizedBox(height: 6),
+
+                    // Subtitle
+                    Text(
+                      "Pick the subjects you're focused on.",
+                      style: TextStyle(
+                        fontSize: 14.5,
+                        fontWeight: FontWeight.w500,
+                        color: subtext,
+                        height: 1.35,
+                      ),
+                    ),
+                    const SizedBox(height: 20),
+
+                    // Natural Science Card (Zooms & tilts slightly when selected)
+                    _AnimatedStreamCard(
+                      title: 'Natural Science',
+                      subtitle:
+                          'Physics, Chemistry, Biology, Technical Mathematics',
+                      badge: 'Engineering & Medicine Track',
+                      icon: HugeIcons.strokeRoundedAtom02,
+                      isSelected: isNatural,
+                      tiltTurns: -0.007, // ~2.5 degrees counterclockwise tilt
+                      accent: accent,
+                      softAccent: softAccent,
+                      surface: surface,
+                      line: line,
+                      isDark: isDark,
+                      onTap: () => onStreamChanged('natural'),
+                    ),
+
+                    const SizedBox(height: 14),
+
+                    // Social Science Card (Zooms & tilts slightly when selected)
+                    _AnimatedStreamCard(
+                      title: 'Social Science',
+                      subtitle:
+                          'History, Geography, Economics, Social Mathematics',
+                      badge: 'Business, Law & Humanities Track',
+                      icon: HugeIcons.strokeRoundedGlobe02,
+                      isSelected: !isNatural,
+                      tiltTurns: 0.007, // ~2.5 degrees clockwise tilt
+                      accent: accent,
+                      softAccent: softAccent,
+                      surface: surface,
+                      line: line,
+                      isDark: isDark,
+                      onTap: () => onStreamChanged('social'),
+                    ),
+
+                    const Spacer(),
+                    const SizedBox(height: 16),
+
+                    // Continue Button
+                    AcedexButton(
+                      label: 'Continue',
+                      variant: AcedexButtonVariant.primary,
+                      size: AcedexButtonSize.lg,
+                      isFullWidth: true,
+                      trailingIcon: const HugeIcon(
+                        icon: HugeIcons.strokeRoundedArrowRight01,
+                        size: 18,
+                        color: Colors.white,
+                      ),
+                      onPressed: onContinue,
+                    ),
+                    const SizedBox(height: 16),
+                  ],
+                ),
+              ),
             ),
           ),
-          const SizedBox(height: 8),
-
-          // Main Title
-          Text(
-            'Choose your stream',
-            style: TextStyle(
-              fontSize: 28,
-              fontWeight: FontWeight.w800,
-              letterSpacing: -0.6,
-              color: isDark ? AppColors.darkText : AppColors.lightText,
-            ),
-          ),
-          const SizedBox(height: 6),
-
-          // Subtitle
-          Text(
-            "Pick the subjects you're focused on.",
-            style: TextStyle(
-              fontSize: 14.5,
-              fontWeight: FontWeight.w500,
-              color: subtext,
-              height: 1.35,
-            ),
-          ),
-          const SizedBox(height: 32),
-
-          // Natural Science Card (Zooms & tilts slightly when selected)
-          _AnimatedStreamCard(
-            title: 'Natural Science',
-            subtitle: 'Physics, Chemistry, Biology, Technical Mathematics',
-            badge: 'Engineering & Medicine Track',
-            icon: HugeIcons.strokeRoundedAtom02,
-            isSelected: isNatural,
-            tiltTurns: -0.007, // ~2.5 degrees counterclockwise tilt
-            accent: accent,
-            softAccent: softAccent,
-            surface: surface,
-            line: line,
-            isDark: isDark,
-            onTap: () => onStreamChanged('natural'),
-          ),
-
-          const SizedBox(height: 20),
-
-          // Social Science Card (Zooms & tilts slightly when selected)
-          _AnimatedStreamCard(
-            title: 'Social Science',
-            subtitle: 'History, Geography, Economics, Social Mathematics',
-            badge: 'Business, Law & Humanities Track',
-            icon: HugeIcons.strokeRoundedGlobe02,
-            isSelected: !isNatural,
-            tiltTurns: 0.007, // ~2.5 degrees clockwise tilt
-            accent: accent,
-            softAccent: softAccent,
-            surface: surface,
-            line: line,
-            isDark: isDark,
-            onTap: () => onStreamChanged('social'),
-          ),
-
-          const Spacer(),
-
-          // Continue Button
-          AcedexButton(
-            label: 'Continue',
-            variant: AcedexButtonVariant.primary,
-            size: AcedexButtonSize.lg,
-            isFullWidth: true,
-            trailingIcon: const HugeIcon(
-              icon: HugeIcons.strokeRoundedArrowRight01,
-              size: 18,
-              color: Colors.white,
-            ),
-            onPressed: onContinue,
-          ),
-          const SizedBox(height: 16),
-        ],
-      ),
+        );
+      },
     );
   }
 }
@@ -178,7 +195,7 @@ class _AnimatedStreamCard extends StatelessWidget {
             child: AnimatedContainer(
               duration: const Duration(milliseconds: 280),
               curve: Curves.easeOutCubic,
-              padding: const EdgeInsets.all(18),
+              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
               decoration: BoxDecoration(
                 color: isSelected ? softAccent : surface,
                 borderRadius: BorderRadius.circular(22),

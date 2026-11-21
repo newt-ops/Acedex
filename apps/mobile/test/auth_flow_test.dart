@@ -13,6 +13,12 @@ class MockLoginAuthService extends AuthService {
   bool loginCalled = false;
   String? loginPhone;
   String? loginPin;
+  bool phoneRegistered = true;
+
+  @override
+  Future<bool> checkPhoneRegistered(String phone) async {
+    return phoneRegistered;
+  }
 
   @override
   Future<UserProfile> login({
@@ -134,6 +140,7 @@ void main() {
     testWidgets('AuthScreen phone submission navigates to /auth/pin',
         (WidgetTester tester) async {
       String? routedPhone;
+      final mockAuth = MockLoginAuthService()..phoneRegistered = true;
 
       await tester.pumpWidget(
         MaterialApp(
@@ -146,12 +153,14 @@ void main() {
               return const Scaffold(body: Text('Login PIN Screen Mock'));
             },
           },
-          home: const AuthScreen(),
+          home: AuthScreen(authService: mockAuth),
         ),
       );
       await tester.pumpAndSettle();
 
       await tester.enterText(find.byType(TextField), '0912345678');
+      // Await debounce timer
+      await tester.pump(const Duration(milliseconds: 400));
       await tester.pumpAndSettle();
 
       await tester.tap(find.text('Continue'));
@@ -159,6 +168,41 @@ void main() {
 
       expect(routedPhone, '+251912345678');
       expect(find.text('Login PIN Screen Mock'), findsOneWidget);
+    });
+
+    testWidgets('LoginForm disables continue and shows alert when phone is not registered',
+        (WidgetTester tester) async {
+      final mockAuth = MockLoginAuthService()..phoneRegistered = false;
+      bool registerSwitched = false;
+
+      await tester.pumpWidget(
+        MaterialApp(
+          theme: AppTheme.lightTheme,
+          routes: {
+            '/onboarding': (context) {
+              registerSwitched = true;
+              return const Scaffold(body: Text('Onboarding Screen Mock'));
+            },
+          },
+          home: AuthScreen(authService: mockAuth),
+        ),
+      );
+      await tester.pumpAndSettle();
+
+      // Enter unregistered phone
+      await tester.enterText(find.byType(TextField), '0912345678');
+      await tester.pump(const Duration(milliseconds: 400));
+      await tester.pumpAndSettle();
+
+      // Should show the unregistered alert
+      expect(find.text('This phone number is not registered yet.'), findsOneWidget);
+      expect(find.text('Tap here to create an account'), findsOneWidget);
+
+      // Tap the create account link in the alert
+      await tester.tap(find.text('Tap here to create an account'));
+      await tester.pumpAndSettle();
+
+      expect(registerSwitched, isTrue);
     });
 
     testWidgets('LoginPinScreen executes login via custom NumericKeypad without virtual keyboard',

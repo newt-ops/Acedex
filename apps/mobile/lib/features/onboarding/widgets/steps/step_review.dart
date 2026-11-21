@@ -28,97 +28,112 @@ class StepReview extends StatelessWidget {
     final accent = isDark ? AppColors.darkAccent : AppColors.lightAccent;
     final subtext = isDark ? AppColors.darkSubtext : AppColors.lightSubtext;
 
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 24),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          const SizedBox(height: 8),
-
-          // Category Badge
-          Text(
-            'FINAL CHECK',
-            style: TextStyle(
-              fontSize: 11,
-              fontWeight: FontWeight.w800,
-              letterSpacing: 1.2,
-              color: accent,
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        return SingleChildScrollView(
+          physics: const ClampingScrollPhysics(),
+          child: ConstrainedBox(
+            constraints: BoxConstraints(
+              minHeight: constraints.maxHeight,
             ),
-          ),
-          const SizedBox(height: 8),
+            child: IntrinsicHeight(
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 24),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const SizedBox(height: 8),
 
-          // Main Title
-          Text(
-            'Review your details',
-            style: TextStyle(
-              fontSize: 28,
-              fontWeight: FontWeight.w800,
-              letterSpacing: -0.6,
-              color: isDark ? AppColors.darkText : AppColors.lightText,
-            ),
-          ),
-          const SizedBox(height: 6),
+                    // Category Badge
+                    Text(
+                      'FINAL CHECK',
+                      style: TextStyle(
+                        fontSize: 11,
+                        fontWeight: FontWeight.w800,
+                        letterSpacing: 1.2,
+                        color: accent,
+                      ),
+                    ),
+                    const SizedBox(height: 8),
 
-          // Subtitle
-          Text(
-            'Make sure everything looks right.',
-            style: TextStyle(
-              fontSize: 14.5,
-              fontWeight: FontWeight.w500,
-              color: subtext,
-              height: 1.35,
-            ),
-          ),
-          const SizedBox(height: 24),
+                    // Main Title
+                    Text(
+                      'Review your details',
+                      style: TextStyle(
+                        fontSize: 28,
+                        fontWeight: FontWeight.w800,
+                        letterSpacing: -0.6,
+                        color: isDark ? AppColors.darkText : AppColors.lightText,
+                      ),
+                    ),
+                    const SizedBox(height: 6),
 
-          // Digital Student ID Card
-          StudentIdCard(
-            draft: draft,
-            onEditStep: onEditStep,
-          ),
+                    // Subtitle
+                    Text(
+                      'Make sure everything looks right.',
+                      style: TextStyle(
+                        fontSize: 14.5,
+                        fontWeight: FontWeight.w500,
+                        color: subtext,
+                        height: 1.35,
+                      ),
+                    ),
+                    const SizedBox(height: 20),
 
-          const SizedBox(height: 14),
+                    // Digital Student ID Card
+                    StudentIdCard(
+                      draft: draft,
+                      onEditStep: onEditStep,
+                    ),
 
-          // Tap to Edit Helper Note
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              HugeIcon(
-                icon: HugeIcons.strokeRoundedEdit02,
-                color: subtext,
-                size: 14,
-              ),
-              const SizedBox(width: 6),
-              Text(
-                'Tap any field on your pass to edit before creating account',
-                style: TextStyle(
-                  fontSize: 11.5,
-                  fontWeight: FontWeight.w500,
-                  color: subtext,
+                    const SizedBox(height: 12),
+
+                    // Tap to Edit Helper Note
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        HugeIcon(
+                          icon: HugeIcons.strokeRoundedEdit02,
+                          color: subtext,
+                          size: 14,
+                        ),
+                        const SizedBox(width: 6),
+                        Text(
+                          'Tap any field on your pass to edit before creating account',
+                          style: TextStyle(
+                            fontSize: 11.5,
+                            fontWeight: FontWeight.w500,
+                            color: subtext,
+                          ),
+                        ),
+                      ],
+                    ),
+
+                    const Spacer(),
+                    const SizedBox(height: 16),
+
+                    // Create Account Action Button
+                    AcedexButton(
+                      label: 'Create account',
+                      variant: AcedexButtonVariant.primary,
+                      size: AcedexButtonSize.lg,
+                      isLoading: isSubmitting,
+                      isFullWidth: true,
+                      trailingIcon: const HugeIcon(
+                        icon: HugeIcons.strokeRoundedArrowRight01,
+                        color: Colors.white,
+                        size: 18,
+                      ),
+                      onPressed: isSubmitting ? null : onSubmit,
+                    ),
+                    const SizedBox(height: 16),
+                  ],
                 ),
               ),
-            ],
-          ),
-
-          const Spacer(),
-
-          // Create Account Action Button
-          AcedexButton(
-            label: 'Create account',
-            variant: AcedexButtonVariant.primary,
-            size: AcedexButtonSize.lg,
-            isLoading: isSubmitting,
-            isFullWidth: true,
-            trailingIcon: const HugeIcon(
-              icon: HugeIcons.strokeRoundedArrowRight01,
-              color: Colors.white,
-              size: 18,
             ),
-            onPressed: isSubmitting ? null : onSubmit,
           ),
-          const SizedBox(height: 24),
-        ],
-      ),
+        );
+      },
     );
   }
 }

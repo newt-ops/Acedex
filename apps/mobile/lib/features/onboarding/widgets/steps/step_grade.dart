@@ -62,178 +62,184 @@ class StepGrade extends StatelessWidget {
       ),
     ];
 
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 24),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          const SizedBox(height: 8),
-
-          // Category Badge
-          Text(
-            'YOUR STUDIES',
-            style: TextStyle(
-              fontSize: 11,
-              fontWeight: FontWeight.w800,
-              letterSpacing: 1.2,
-              color: accent,
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        return SingleChildScrollView(
+          physics: const ClampingScrollPhysics(),
+          child: ConstrainedBox(
+            constraints: BoxConstraints(
+              minHeight: constraints.maxHeight,
             ),
-          ),
-          const SizedBox(height: 8),
+            child: IntrinsicHeight(
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 24),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const SizedBox(height: 8),
 
-          // Main Title
-          Text(
-            'Which grade are you in?',
-            style: TextStyle(
-              fontSize: 28,
-              fontWeight: FontWeight.w800,
-              letterSpacing: -0.6,
-              color: isDark ? AppColors.darkText : AppColors.lightText,
-            ),
-          ),
-          const SizedBox(height: 6),
-
-          // Subtitle
-          Text(
-            'This helps us tailor your learning experience.',
-            style: TextStyle(
-              fontSize: 14.5,
-              fontWeight: FontWeight.w500,
-              color: subtext,
-              height: 1.35,
-            ),
-          ),
-          const SizedBox(height: 24),
-
-          // Flexible Interactive 2x2 Grade Cards
-          Expanded(
-            child: Column(
-              children: [
-                // Row 1: G9 & G10
-                Expanded(
-                  child: Row(
-                    children: [
-                      Expanded(
-                        child: _buildGradeCard(
-                          detail: gradeDetails[0],
-                          isSelected: selectedGrade == 9,
-                          accent: accent,
-                          softAccent: softAccent,
-                          surface: surface,
-                          line: line,
-                          isDark: isDark,
-                          onTap: () => onGradeChanged(9),
-                        ),
+                    // Category Badge
+                    Text(
+                      'YOUR STUDIES',
+                      style: TextStyle(
+                        fontSize: 11,
+                        fontWeight: FontWeight.w800,
+                        letterSpacing: 1.2,
+                        color: accent,
                       ),
-                      const SizedBox(width: 12),
-                      Expanded(
-                        child: _buildGradeCard(
-                          detail: gradeDetails[1],
-                          isSelected: selectedGrade == 10,
-                          accent: accent,
-                          softAccent: softAccent,
-                          surface: surface,
-                          line: line,
-                          isDark: isDark,
-                          onTap: () => onGradeChanged(10),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                const SizedBox(height: 12),
-
-                // Row 2: G11 & G12
-                Expanded(
-                  child: Row(
-                    children: [
-                      Expanded(
-                        child: _buildGradeCard(
-                          detail: gradeDetails[2],
-                          isSelected: selectedGrade == 11,
-                          accent: accent,
-                          softAccent: softAccent,
-                          surface: surface,
-                          line: line,
-                          isDark: isDark,
-                          onTap: () => onGradeChanged(11),
-                        ),
-                      ),
-                      const SizedBox(width: 12),
-                      Expanded(
-                        child: _buildGradeCard(
-                          detail: gradeDetails[3],
-                          isSelected: selectedGrade == 12,
-                          accent: accent,
-                          softAccent: softAccent,
-                          surface: surface,
-                          line: line,
-                          isDark: isDark,
-                          onTap: () => onGradeChanged(12),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ],
-            ),
-          ),
-
-          const SizedBox(height: 16),
-
-          // Hint banner based on grade level
-          AnimatedContainer(
-            duration: const Duration(milliseconds: 250),
-            padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
-            decoration: BoxDecoration(
-              color: surface,
-              borderRadius: BorderRadius.circular(14),
-              border: Border.all(color: line, width: 1),
-            ),
-            child: Row(
-              children: [
-                HugeIcon(
-                  icon: isSenior
-                      ? HugeIcons.strokeRoundedHierarchy
-                      : HugeIcons.strokeRoundedCheckmarkBadge01,
-                  color: accent,
-                  size: 18,
-                ),
-                const SizedBox(width: 10),
-                Expanded(
-                  child: Text(
-                    isSenior
-                        ? 'Grades 11 & 12 feature Natural or Social Science stream tracks.'
-                        : 'Grades 9 & 10 follow the Ethiopian National Unified Curriculum.',
-                    style: TextStyle(
-                      fontSize: 12.5,
-                      fontWeight: FontWeight.w500,
-                      color: isDark ? AppColors.darkSubtext : AppColors.lightSubtext,
                     ),
-                  ),
+                    const SizedBox(height: 8),
+
+                    // Main Title
+                    Text(
+                      'Which grade are you in?',
+                      style: TextStyle(
+                        fontSize: 28,
+                        fontWeight: FontWeight.w800,
+                        letterSpacing: -0.6,
+                        color: isDark ? AppColors.darkText : AppColors.lightText,
+                      ),
+                    ),
+                    const SizedBox(height: 6),
+
+                    // Subtitle
+                    Text(
+                      'This helps us tailor your learning experience.',
+                      style: TextStyle(
+                        fontSize: 14.5,
+                        fontWeight: FontWeight.w500,
+                        color: subtext,
+                        height: 1.35,
+                      ),
+                    ),
+                    const SizedBox(height: 20),
+
+                    // Flexible Interactive 2x2 Grade Cards
+                    Row(
+                      children: [
+                        Expanded(
+                          child: _buildGradeCard(
+                            detail: gradeDetails[0],
+                            isSelected: selectedGrade == 9,
+                            accent: accent,
+                            softAccent: softAccent,
+                            surface: surface,
+                            line: line,
+                            isDark: isDark,
+                            onTap: () => onGradeChanged(9),
+                          ),
+                        ),
+                        const SizedBox(width: 12),
+                        Expanded(
+                          child: _buildGradeCard(
+                            detail: gradeDetails[1],
+                            isSelected: selectedGrade == 10,
+                            accent: accent,
+                            softAccent: softAccent,
+                            surface: surface,
+                            line: line,
+                            isDark: isDark,
+                            onTap: () => onGradeChanged(10),
+                          ),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 12),
+
+                    Row(
+                      children: [
+                        Expanded(
+                          child: _buildGradeCard(
+                            detail: gradeDetails[2],
+                            isSelected: selectedGrade == 11,
+                            accent: accent,
+                            softAccent: softAccent,
+                            surface: surface,
+                            line: line,
+                            isDark: isDark,
+                            onTap: () => onGradeChanged(11),
+                          ),
+                        ),
+                        const SizedBox(width: 12),
+                        Expanded(
+                          child: _buildGradeCard(
+                            detail: gradeDetails[3],
+                            isSelected: selectedGrade == 12,
+                            accent: accent,
+                            softAccent: softAccent,
+                            surface: surface,
+                            line: line,
+                            isDark: isDark,
+                            onTap: () => onGradeChanged(12),
+                          ),
+                        ),
+                      ],
+                    ),
+
+                    const SizedBox(height: 14),
+
+                    // Hint banner based on grade level
+                    AnimatedContainer(
+                      duration: const Duration(milliseconds: 250),
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 14, vertical: 10),
+                      decoration: BoxDecoration(
+                        color: surface,
+                        borderRadius: BorderRadius.circular(14),
+                        border: Border.all(color: line, width: 1),
+                      ),
+                      child: Row(
+                        children: [
+                          HugeIcon(
+                            icon: isSenior
+                                ? HugeIcons.strokeRoundedHierarchy
+                                : HugeIcons.strokeRoundedCheckmarkBadge01,
+                            color: accent,
+                            size: 18,
+                          ),
+                          const SizedBox(width: 10),
+                          Expanded(
+                            child: Text(
+                              isSenior
+                                  ? 'Grades 11 & 12 feature Natural or Social Science stream tracks.'
+                                  : 'Grades 9 & 10 follow the Ethiopian National Unified Curriculum.',
+                              style: TextStyle(
+                                fontSize: 12.5,
+                                fontWeight: FontWeight.w500,
+                                color: isDark
+                                    ? AppColors.darkSubtext
+                                    : AppColors.lightSubtext,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+
+                    const Spacer(),
+                    const SizedBox(height: 16),
+
+                    // Continue Button
+                    AcedexButton(
+                      label: 'Continue',
+                      variant: AcedexButtonVariant.primary,
+                      size: AcedexButtonSize.lg,
+                      isFullWidth: true,
+                      trailingIcon: const HugeIcon(
+                        icon: HugeIcons.strokeRoundedArrowRight01,
+                        size: 18,
+                        color: Colors.white,
+                      ),
+                      onPressed: onContinue,
+                    ),
+                    const SizedBox(height: 16),
+                  ],
                 ),
-              ],
+              ),
             ),
           ),
-
-          const SizedBox(height: 20),
-
-          // Continue Button
-          AcedexButton(
-            label: 'Continue',
-            variant: AcedexButtonVariant.primary,
-            size: AcedexButtonSize.lg,
-            isFullWidth: true,
-            trailingIcon: const HugeIcon(
-              icon: HugeIcons.strokeRoundedArrowRight01,
-              size: 18,
-              color: Colors.white,
-            ),
-            onPressed: onContinue,
-          ),
-          const SizedBox(height: 16),
-        ],
-      ),
+        );
+      },
     );
   }
 
@@ -274,15 +280,15 @@ class StepGrade extends StatelessWidget {
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          mainAxisSize: MainAxisSize.min,
           children: [
             // Top Row: Icon + Selection Indicator
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Container(
-                  width: 38,
-                  height: 38,
+                  width: 36,
+                  height: 36,
                   decoration: BoxDecoration(
                     color: isSelected
                         ? accent.withValues(alpha: 0.2)
@@ -294,7 +300,7 @@ class StepGrade extends StatelessWidget {
                   alignment: Alignment.center,
                   child: HugeIcon(
                     icon: detail.icon,
-                    size: 20,
+                    size: 19,
                     color: isSelected ? accent : (isDark ? Colors.white70 : Colors.black54),
                   ),
                 ),
@@ -312,9 +318,9 @@ class StepGrade extends StatelessWidget {
                   ),
                   child: isSelected
                       ? const Center(
-                          child: Icon(
-                            Icons.check,
-                            size: 13,
+                          child: HugeIcon(
+                            icon: HugeIcons.strokeRoundedTick02,
+                            size: 12,
                             color: Colors.white,
                           ),
                         )
@@ -322,52 +328,51 @@ class StepGrade extends StatelessWidget {
                 ),
               ],
             ),
+            const SizedBox(height: 12),
 
             // Middle & Bottom: Code + Full Title + Track
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisSize: MainAxisSize.min,
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.baseline,
+              textBaseline: TextBaseline.alphabetic,
               children: [
-                Row(
-                  crossAxisAlignment: CrossAxisAlignment.baseline,
-                  textBaseline: TextBaseline.alphabetic,
-                  children: [
-                    Text(
-                      detail.label,
-                      style: TextStyle(
-                        fontSize: 22,
-                        fontWeight: FontWeight.w900,
-                        letterSpacing: -0.6,
-                        color: isSelected
-                            ? accent
-                            : (isDark ? AppColors.darkText : AppColors.lightText),
-                      ),
-                    ),
-                    const SizedBox(width: 6),
-                    Text(
-                      detail.title,
-                      style: TextStyle(
-                        fontSize: 13,
-                        fontWeight: FontWeight.w700,
-                        color: isSelected
-                            ? accent
-                            : (isDark ? AppColors.darkText : AppColors.lightText),
-                      ),
-                    ),
-                  ],
-                ),
-                const SizedBox(height: 3),
                 Text(
-                  detail.track,
-                  maxLines: 1,
-                  overflow: TextOverflow.ellipsis,
+                  detail.label,
                   style: TextStyle(
-                    fontSize: 11,
-                    fontWeight: FontWeight.w500,
-                    color: isDark ? AppColors.darkSubtext : AppColors.lightSubtext,
+                    fontSize: 20,
+                    fontWeight: FontWeight.w900,
+                    letterSpacing: -0.6,
+                    color: isSelected
+                        ? accent
+                        : (isDark ? AppColors.darkText : AppColors.lightText),
+                  ),
+                ),
+                const SizedBox(width: 6),
+                Expanded(
+                  child: Text(
+                    detail.title,
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    style: TextStyle(
+                      fontSize: 12.5,
+                      fontWeight: FontWeight.w700,
+                      color: isSelected
+                          ? accent
+                          : (isDark ? AppColors.darkText : AppColors.lightText),
+                    ),
                   ),
                 ),
               ],
+            ),
+            const SizedBox(height: 2),
+            Text(
+              detail.track,
+              maxLines: 1,
+              overflow: TextOverflow.ellipsis,
+              style: TextStyle(
+                fontSize: 11,
+                fontWeight: FontWeight.w500,
+                color: isDark ? AppColors.darkSubtext : AppColors.lightSubtext,
+              ),
             ),
           ],
         ),

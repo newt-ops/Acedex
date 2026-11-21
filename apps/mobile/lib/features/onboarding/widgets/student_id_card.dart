@@ -159,8 +159,8 @@ class _StudentIdCardState extends State<StudentIdCard> {
                         child: const Row(
                           mainAxisSize: MainAxisSize.min,
                           children: [
-                            Icon(
-                              Icons.verified,
+                            HugeIcon(
+                              icon: HugeIcons.strokeRoundedCheckmarkBadge01,
                               color: Color(0xFF16A34A),
                               size: 13,
                             ),

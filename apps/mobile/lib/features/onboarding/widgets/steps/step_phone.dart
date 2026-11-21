@@ -262,14 +262,7 @@ class _StepPhoneState extends State<StepPhone> {
             crossFadeState: _detectorState == PhoneDetectorState.idle
                 ? CrossFadeState.showFirst
                 : CrossFadeState.showSecond,
-            firstChild: Text(
-              'Supports formats: 09..., 07..., 9..., or 7...',
-              style: TextStyle(
-                fontSize: 12,
-                fontWeight: FontWeight.w400,
-                color: subtext,
-              ),
-            ),
+            firstChild: const SizedBox.shrink(),
             secondChild: Builder(
               builder: (context) {
                 switch (_detectorState) {
