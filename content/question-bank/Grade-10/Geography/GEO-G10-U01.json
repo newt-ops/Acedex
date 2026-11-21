@@ -3,5 +3,411 @@
   "subject": "Geography",
   "unitNumber": 1,
   "unitTitle": "Landforms of Africa",
-  "questions": []
+  "questions": [
+    {
+      "id": "GEO-G10-U01-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which of the following processes are classified as internal (endogenic) earth forces responsible for pushing up major landforms like mountains and plateaus?",
+      "options": [
+        {
+          "id": "A",
+          "text": "River erosion and wind deflation"
+        },
+        {
+          "id": "B",
+          "text": "Tectonic plate movements and volcanic activities"
+        },
+        {
+          "id": "C",
+          "text": "Glacial abrasion and soil leaching"
+        },
+        {
+          "id": "D",
+          "text": "Chemical weathering and frost action"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Internal processes originating from within the Earth's interior include tectonic plate movement and volcanic activity, which push up mountains, hills, and plateaus. In contrast, running water, wind, and ice are external (exogenic) forces of erosion.",
+      "sourceReference": "Grade 10 Geography Textbook, Section 1.1, Page 2"
+    },
+    {
+      "id": "GEO-G10-U01-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What percentage of the Earth's total land area is covered by the continent of Africa, and what is its areal size?",
+      "options": [
+        {
+          "id": "A",
+          "text": "10% of total land area; 17.5 million km²"
+        },
+        {
+          "id": "B",
+          "text": "20% of total land area; 30.37 million km²"
+        },
+        {
+          "id": "C",
+          "text": "30% of total land area; 44.5 million km²"
+        },
+        {
+          "id": "D",
+          "text": "16% of total land area; 24.2 million km²"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Africa is the second largest continent on Earth, covering an areal size of 30.37 million km². It accounts for approximately 6% of the Earth's total surface area and 20% of its total land area.",
+      "sourceReference": "Grade 10 Geography Textbook, Section 1.2, Page 7"
+    },
+    {
+      "id": "GEO-G10-U01-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which two geographical features hold the record as the highest mountain peak above sea level and the deepest ocean trench on Earth, respectively?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Mount Kilimanjaro (5,895 m) and Puerto Rico Trench"
+        },
+        {
+          "id": "B",
+          "text": "Mount Everest (8,849 m) and Mariana Trench"
+        },
+        {
+          "id": "C",
+          "text": "Mount K2 (8,611 m) and Java Trench"
+        },
+        {
+          "id": "D",
+          "text": "Ras Dashen (4,620 m) and Aleutian Trench"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Mount Everest in the Himalayas (between Nepal and Tibet) is the highest elevation on Earth at 8,849 m above sea level, while the Mariana Trench in the South Pacific Ocean is the deepest landform depression on Earth.",
+      "sourceReference": "Grade 9 Geography Textbook, Section 1.1, Page 6"
+    },
+    {
+      "id": "GEO-G10-U01-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "How do cartographers distinguish an 'Erg' from a 'Reg' landscape in the Sahara Desert?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Erg is a steep rock cliff, while Reg is a fertile oasis lake."
+        },
+        {
+          "id": "B",
+          "text": "Erg is a vast sea of mobile reddish sand dunes, while Reg is a desert pavement covered with pebbles and gravel."
+        },
+        {
+          "id": "C",
+          "text": "Erg is a salt-crusted dry lakebed, while Reg is a high volcanic peak."
+        },
+        {
+          "id": "D",
+          "text": "Erg is a coastal delta, while Reg is an underground aquifer."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In the Sahara Desert, an Erg refers to a vast area covered with reddish sand dunes (a great sand sea), whereas a Reg refers to a desert pavement composed of gravel and pebbles resting on top of flat sand sheets.",
+      "sourceReference": "Grade 10 Geography Textbook, Section 1.3, Page 11"
+    },
+    {
+      "id": "GEO-G10-U01-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What structural process was responsible for forming the East African Rift Valley System, and what is its approximate total length in Africa?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Compressional folding during the Alpine orogeny; 2,000 km"
+        },
+        {
+          "id": "B",
+          "text": "Normal faulting creating down-dropped graben blocks; 5,600 km"
+        },
+        {
+          "id": "C",
+          "text": "Glacial scour erosion; 8,000 km"
+        },
+        {
+          "id": "D",
+          "text": "Submarine trenching along transform faults; 3,500 km"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The East African Rift Valley was formed by normal faulting as crustal tensional forces pulled the land apart in opposite directions, creating down-faulted blocks called graben. Its total length extends for roughly 5,600 km.",
+      "sourceReference": "Grade 10 Geography Textbook, Section 1.3, Page 16–17"
+    },
+    {
+      "id": "GEO-G10-U01-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Around 40 to 50 million years ago, which specific tectonic event led to the formation of the Himalayan Mountain Range?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Subduction of the Pacific oceanic plate beneath the North American continental plate."
+        },
+        {
+          "id": "B",
+          "text": "Collision of the Indian continental plate with the Eurasian continental plate."
+        },
+        {
+          "id": "C",
+          "text": "Divergence between the African plate and the South American plate."
+        },
+        {
+          "id": "D",
+          "text": "Transform lateral sliding along the San Andreas fault zone."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The Himalayan Mountain Range formed when the Indian tectonic plate collided directly with the Eurasian plate. Because both plates consist of continental crust of similar density, neither subducted; instead, intense crustal compression forced the rock layers upward.",
+      "sourceReference": "Grade 10 Geography Textbook, Section 1.1, Page 6"
+    },
+    {
+      "id": "GEO-G10-U01-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which range of fold mountains in North Africa forms part of the African Alpine System, stretching over 2,000 km across Morocco, Algeria, and Tunisia?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Drakensberg Mountains"
+        },
+        {
+          "id": "B",
+          "text": "Atlas Mountains"
+        },
+        {
+          "id": "C",
+          "text": "Cape Fold Mountains"
+        },
+        {
+          "id": "D",
+          "text": "Ahaggar Mountains"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The Atlas Mountains represent the African Alpine System in Northwest Africa (the Maghrib region), extending for over 2,000 km across Morocco, Algeria, and Tunisia, separating the Mediterranean Sea from the Sahara Desert.",
+      "sourceReference": "Grade 10 Geography Textbook, Section 1.3, Page 9–10"
+    },
+    {
+      "id": "GEO-G10-U01-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What is the meaning of the Arabic word 'Sahel' (Sahil), and what geographic zone does it describe in Northern Africa?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It means 'High Peak' and describes the Afroalpine mountain belts of East Africa."
+        },
+        {
+          "id": "B",
+          "text": "It means 'Shore' or 'Edge' and describes a 5,000 km narrow semi-arid transitional savanna belt along the southern border of the Sahara Desert."
+        },
+        {
+          "id": "C",
+          "text": "It means 'River Valley' and describes the fertile alluvial basin of the Congo River."
+        },
+        {
+          "id": "D",
+          "text": "It means 'Salt Basin' and describes the hyper-arid Danakil depression."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Sahel comes from the Arabic word 'sahil', meaning shore or edge. It refers to the 5,000 km stretch of semi-arid transitional savanna that forms the southern boundary or 'shore' of the Sahara Desert.",
+      "sourceReference": "Grade 10 Geography Textbook, Section 1.3, Page 12"
+    },
+    {
+      "id": "GEO-G10-U01-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Why do tree and shrub species inhabiting the African Savanna woodland shed their leaves during the dry season?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To absorb toxic gases released by seasonal bushfires."
+        },
+        {
+          "id": "B",
+          "text": "As an adaptation mechanism to minimize water loss (transpiration) during high-temperature dry months."
+        },
+        {
+          "id": "C",
+          "text": "To allow sunlight to reach underground root systems for photosynthesis."
+        },
+        {
+          "id": "D",
+          "text": "To prevent heavy winter snowpack from breaking tree branches."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In the tropical Savanna woodland, trees shed their leaves during the dry season as a drought-adaptation mechanism. Deciduous shedding suppresses transpiration, allowing plants to survive prolonged dry spells under high temperatures.",
+      "sourceReference": "Grade 10 Geography Textbook, Section 1.3, Page 13–14"
+    },
+    {
+      "id": "GEO-G10-U01-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which structural vegetation feature allows tall emergent trees (up to 40 meters) in the dense tropical rainforest of Africa to maintain stability in shallow soils?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Deep taproots penetrating unweathered granite rock"
+        },
+        {
+          "id": "B",
+          "text": "Wide buttress bases at the bottom of trunks for structural support"
+        },
+        {
+          "id": "C",
+          "text": "Needle-shaped leaves that reduce wind drag during storms"
+        },
+        {
+          "id": "D",
+          "text": "Hollow trunks filled with buoyant water reservoirs"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In tropical rainforests (such as the Congo Basin), tall emergent trees reaching 35 to 40 meters develop wide buttress bases. These flanged, supportive root structures anchor the massive trees against high winds in shallow, leached rainforest soils.",
+      "sourceReference": "Grade 10 Geography Textbook, Section 1.3, Page 15"
+    },
+    {
+      "id": "GEO-G10-U01-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Why is Lake Victoria (68,800 km²) unique among the major lakes of East Africa regarding its structural formation?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It is a crater lake formed inside an extinct active volcano caldera."
+        },
+        {
+          "id": "B",
+          "text": "It does not sit on a fault floor inside the Rift Valley, but occupies a shallow crustal depression between the eastern and western rift branches created by surrounding crustal uplift."
+        },
+        {
+          "id": "C",
+          "text": "It is the deepest rift valley lake in Africa, reaching a depth of over 1,400 meters."
+        },
+        {
+          "id": "D",
+          "text": "It is an artificial lake impounded by modern hydroelectric dams."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Unlike Lakes Tanganyika or Nyasa/Malawi which lie directly within deep tectonic grabens on the Rift Valley floor, Lake Victoria occupies a broad, shallow saucer-like depression between the Eastern and Western Rift arms formed by regional tectonic warping.",
+      "sourceReference": "Grade 10 Geography Textbook, Section 1.3, Page 17"
+    },
+    {
+      "id": "GEO-G10-U01-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Which of the following statements correctly summarizes the four ways landforms influence ecological patterns and environmental processes according to physical geography?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Landforms control absolute planetary rotation, regulate ocean tides, create fossil fuels, and eliminate atmospheric winds."
+        },
+        {
+          "id": "B",
+          "text": "Landform attributes determine ecological potential; landform regions govern organism/energy flows, shape non-geomorphic disturbance patterns (fire/wind), and resist geomorphic changes to protect biotic features."
+        },
+        {
+          "id": "C",
+          "text": "Landforms prevent natural plant succession, cause universal soil erosion, absorb all solar radiation, and stop continental drift."
+        },
+        {
+          "id": "D",
+          "text": "Landforms turn tropical rainforests into polar ice sheets and eliminate diurnal temperature ranges."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "As detailed in Section 1.3, landforms affect ecosystems in four ways: (1) slope, elevation, and aspect determine ecological potential, (2) landform boundaries direct material/organism flows, (3) landform patterns control fire/wind disturbance spread, and (4) stable landforms resist geomorphic change, preserving ecological habitats.",
+      "sourceReference": "Grade 9 Geography Textbook, Section 1.3, Page 9"
+    },
+    {
+      "id": "GEO-G10-U01-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "In Southern Africa, how does the Highveld plateau region structurally connect with the Drakensberg (Ukhahlamba) escarpment and the Great Karoo?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The Highveld is a deep ocean trench bounded by active rift volcanoes."
+        },
+        {
+          "id": "B",
+          "text": "The Highveld is an elevated inland plateau bounded by the Great Karoo to the south, Kalahari to the west, and the massive Ukhahlamba (Drakensberg) Great Escarpment (~3,000 m) to the east."
+        },
+        {
+          "id": "C",
+          "text": "The Highveld is a coastal sand spit separating the Atlantic Ocean from the Indian Ocean."
+        },
+        {
+          "id": "D",
+          "text": "The Highveld consists entirely of Quaternary glacial moraines along the Equator."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The Highveld is the high inland plateau of South Africa. It slopes gently downward and is bounded by the Great Karoo to the south, the Kalahari to the west, and the sharp Ukhahlamba (Drakensberg) Great Escarpment to the east, accommodating major metropolitan centers like Gauteng.",
+      "sourceReference": "Grade 10 Geography Textbook, Section 1.3, Page 19–20"
+    },
+    {
+      "id": "GEO-G10-U01-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "What is the distinction between a peninsula and an isthmus as coastal landform features?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A peninsula is surrounded by water on all four sides, whereas an isthmus has no water around it."
+        },
+        {
+          "id": "B",
+          "text": "A peninsula is a piece of land surrounded by water on three sides but connected to the mainland (e.g., Italy), whereas an isthmus is a narrow strip of land bounded by water on two sides that connects two larger landmasses (e.g., Panama)."
+        },
+        {
+          "id": "C",
+          "text": "A peninsula is formed by river silt, whereas an isthmus is formed by ocean coral."
+        },
+        {
+          "id": "D",
+          "text": "A peninsula connects two oceans, whereas an isthmus is a circular island."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "A peninsula projects into water so that it is surrounded by water on three sides while remaining attached to a continent on the fourth (e.g., Florida, Italy). An isthmus is a narrow land bridge flanked by water on two sides connecting two larger continental areas (e.g., Isthmus of Panama).",
+      "sourceReference": "Grade 10 Geography Textbook, Section 1.1, Page 5"
+    },
+    {
+      "id": "GEO-G10-U01-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "How does the Ethiopian and Eritrean Highland complex physically relate to the Northwestern Highlands and the Main Ethiopian Rift Valley?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The Ethiopian Highlands lie completely below sea level inside the Danakil depression."
+        },
+        {
+          "id": "B",
+          "text": "The Northwestern High Plateau projects northward from Addis Ababa through northern Ethiopia into Eritrea above 2,000 meters, abruptly rising on the western scarp of the Great Rift Valley which diagonally divides the entire Ethiopian highland block into two."
+        },
+        {
+          "id": "C",
+          "text": "The Eritrean highlands are isolated coral reefs completely detached from the African continent."
+        },
+        {
+          "id": "D",
+          "text": "The entire highland mass was created by sand dune accumulation during the Quaternary period."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The Ethiopian and Eritrean Highlands form a massive high plateau complex. The Northwestern Highlands extend north from Shewa into central and northern Eritrea at elevations above 2,000 meters. The Main Ethiopian Rift bisects this massive plateau diagonally into northwestern and southeastern halves.",
+      "sourceReference": "Grade 10 Geography Textbook, Section 1.3, Page 17–18"
+    }
+  ]
 }

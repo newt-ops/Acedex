@@ -3,5 +3,411 @@
   "subject": "Chemistry",
   "unitNumber": 2,
   "unitTitle": "Chemical Bonding",
-  "questions": []
+  "questions": [
+    {
+      "id": "CHE-G11-U02-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What fundamental principle forms the primary basis of the octet rule in chemical bonding?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Atoms gain, lose, or share electrons to attain a stable outer shell containing eight electrons, matching noble gas configurations."
+        },
+        {
+          "id": "B",
+          "text": "Atoms combine so that their total nuclear mass number quadruples during reaction."
+        },
+        {
+          "id": "C",
+          "text": "Metal atoms attract non-metal nuclei by transferring protons across outer shells."
+        },
+        {
+          "id": "D",
+          "text": "Molecules rearrange to equalize the total number of occupied subshells across all combined elements."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The octet rule states that main-group elements tend to react by gaining, losing, or sharing electrons until their valence shell achieves an 8-electron noble gas configuration (ns² np⁶).",
+      "sourceReference": "Section 2.1, Page 68"
+    },
+    {
+      "id": "CHE-G11-U02-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "An ionic bond is formed by which primary interaction between combining atoms?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Overlap of unhybridized p orbitals along the internuclear axis."
+        },
+        {
+          "id": "B",
+          "text": "Electrostatic force of attraction between oppositely charged ions formed by electron transfer."
+        },
+        {
+          "id": "C",
+          "text": "Delocalization of electron clouds across a network of non-metal nuclei."
+        },
+        {
+          "id": "D",
+          "text": "Mutual sharing of a single pair of valence electrons between identical non-metal atoms."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "An ionic bond results from the complete transfer of one or more valence electrons from an electropositive metal to an electronegative non-metal, forming cations and anions held together by strong electrostatic forces.",
+      "sourceReference": "Section 2.2, Page 69"
+    },
+    {
+      "id": "CHE-G11-U02-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which type of intermolecular force is present in ALL atoms and molecules, regardless of whether they are polar or non-polar?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Hydrogen bonding"
+        },
+        {
+          "id": "B",
+          "text": "Dipole-dipole interactions"
+        },
+        {
+          "id": "C",
+          "text": "London dispersion forces"
+        },
+        {
+          "id": "D",
+          "text": "Ionic lattice attraction"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "London dispersion forces arise from instantaneous, temporary dipoles created by electron movement around nuclei and are present between all atoms, ions, and molecules.",
+      "sourceReference": "Section 2.3, Page 109"
+    },
+    {
+      "id": "CHE-G11-U02-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "According to the electron-sea model of metallic bonding, solid metals conduct electricity efficiently because:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Metal atoms continuously lose protons to the external circuit."
+        },
+        {
+          "id": "B",
+          "text": "Valence electrons are delocalized and free to move throughout the metallic crystal lattice."
+        },
+        {
+          "id": "C",
+          "text": "Metal cations undergo rapid electrolysis inside the solid matrix."
+        },
+        {
+          "id": "D",
+          "text": "Covalent sigma bonds between adjacent metal atoms rotate rapidly."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Metallic bonding consists of fixed positive metal ions surrounded by a mobile 'sea' of delocalized valence electrons that can move freely under an applied electrical potential.",
+      "sourceReference": "Section 2.4, Page 112"
+    },
+    {
+      "id": "CHE-G11-U02-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Diamond and quartz (SiO₂) are extremely hard solids with exceptionally high melting points. Under which crystal category are they classified?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Ionic crystals"
+        },
+        {
+          "id": "B",
+          "text": "Molecular crystals"
+        },
+        {
+          "id": "C",
+          "text": "Covalent network crystals"
+        },
+        {
+          "id": "D",
+          "text": "Metallic crystals"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "In network covalent solids (like diamond and quartz), constituent atoms are bound into a continuous three-dimensional network by strong covalent bonds, conferring high hardness and elevated melting points.",
+      "sourceReference": "Section 2.6, Page 137"
+    },
+    {
+      "id": "CHE-G11-U02-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which sequence correctly arranges the given ionic compounds in order of INCREASING lattice energy magnitude (lowest to highest)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "MgO < NaCl < LiF"
+        },
+        {
+          "id": "B",
+          "text": "CsCl < NaCl < MgO"
+        },
+        {
+          "id": "C",
+          "text": "MgO < BaS < NaCl"
+        },
+        {
+          "id": "D",
+          "text": "NaF < CsCl < LiF"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Lattice energy (U) is directly proportional to the product of ionic charges (|q₁q₂|) and inversely proportional to internuclear distance. CsCl (+1,-1, larger radii) < NaCl (+1,-1, smaller radii) < MgO (+2,-2, fourfold higher charge product).",
+      "sourceReference": "Section 2.2, Page 75"
+    },
+    {
+      "id": "CHE-G11-U02-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Methane (CH₄), Ammonia (NH₃), and Water (H₂O) all have central atoms with sp³ hybridization. Why does the H-O-H bond angle in water (104.5°) contract compared to the ideal tetrahedral angle (109.5°)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Water contains two double bonds that repel single bonds more strongly."
+        },
+        {
+          "id": "B",
+          "text": "Two unshared lone pairs on oxygen exert greater repulsive forces than bonding pairs, compressing the H-O-H bond angle."
+        },
+        {
+          "id": "C",
+          "text": "Hydrogen atoms in water carry full negative formal charges."
+        },
+        {
+          "id": "D",
+          "text": "Oxygen uses d-orbitals to form pi bonds with hydrogen."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "According to VSEPR theory, lone pair-lone pair repulsions exceed lone pair-bonding pair and bonding pair-bonding pair repulsions. Water's two lone pairs push the H-O-H bonding pairs closer together, reducing the angle to 104.5°.",
+      "sourceReference": "Section 2.3, Page 101"
+    },
+    {
+      "id": "CHE-G11-U02-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In an ethene molecule (C₂H₄), what is the hybridization of each carbon atom, and what covalent bonds link the two carbon atoms?",
+      "options": [
+        {
+          "id": "A",
+          "text": "sp³ hybridized; 2 sigma (σ) bonds"
+        },
+        {
+          "id": "B",
+          "text": "sp² hybridized; 1 sigma (σ) bond and 1 pi (π) bond"
+        },
+        {
+          "id": "C",
+          "text": "sp hybridized; 1 sigma (σ) bond and 2 pi (π) bonds"
+        },
+        {
+          "id": "D",
+          "text": "sp³d hybridized; 2 pi (π) bonds"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In ethene (H₂C=CH₂), each carbon forms three sp² hybrid orbitals (trigonal planar, 120°) for σ bonding. The unhybridized 2p orbital on each carbon overlaps sideways to form one C=C π bond.",
+      "sourceReference": "Section 2.5, Page 128"
+    },
+    {
+      "id": "CHE-G11-U02-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Consider cis-1,2-dichloroethene and trans-1,2-dichloroethene. Which statement accurately describes their molecular dipoles and physical properties?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Both isomers are non-polar with zero net dipole moment."
+        },
+        {
+          "id": "B",
+          "text": "Trans-1,2-dichloroethene has a non-zero dipole moment, whereas cis-1,2-dichloroethene has zero dipole moment."
+        },
+        {
+          "id": "C",
+          "text": "Cis-1,2-dichloroethene is polar (μ = 1.89 D) because C-Cl bond dipoles reinforce each other, whereas trans-1,2-dichloroethene is non-polar (μ = 0 D) due to dipole cancellation."
+        },
+        {
+          "id": "D",
+          "text": "Cis-1,2-dichloroethene has a lower boiling point than trans-1,2-dichloroethene because it lacks London dispersion forces."
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "In trans-1,2-dichloroethene, equal C-Cl bond dipoles point in opposite directions and cancel out (μ = 0 D). In cis-1,2-dichloroethene, dipoles reinforce on one side, giving a net dipole moment (μ = 1.89 D) and a higher boiling point.",
+      "sourceReference": "Section 2.3, Page 105"
+    },
+    {
+      "id": "CHE-G11-U02-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "According to Molecular Orbital Theory (MOT), the diatomic oxygen molecule (O₂, 16 total electrons) has a bond order of 2 and is paramagnetic. What MO feature explains its paramagnetic behavior?",
+      "options": [
+        {
+          "id": "A",
+          "text": "All electrons are paired in bonding sigma orbitals."
+        },
+        {
+          "id": "B",
+          "text": "It contains two unpaired electrons with parallel spins in degenerate anti-bonding π*₂p orbitals."
+        },
+        {
+          "id": "C",
+          "text": "It possesses an odd total number of valence electrons."
+        },
+        {
+          "id": "D",
+          "text": "Electrons occupy non-bonding d-orbitals outside the molecular core."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The valence MO electron configuration for O₂ places two electrons into the degenerate π*₂p_x and π*₂p_y antibonding orbitals singly with parallel spins (Hund's rule), imparting paramagnetic properties.",
+      "sourceReference": "Section 2.5, Page 133"
+    },
+    {
+      "id": "CHE-G11-U02-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In Boron Trifluoride (BF₃), the central boron atom is surrounded by only 6 valence electrons in its Lewis structure. How does this exception to the octet rule dictate BF₃'s chemical reactivity?",
+      "options": [
+        {
+          "id": "A",
+          "text": "BF₃ acts as a strong Lewis acid by readily accepting an unshared electron pair from a donor molecule."
+        },
+        {
+          "id": "B",
+          "text": "BF₃ spontaneously releases fluorine gas to achieve a duet configuration."
+        },
+        {
+          "id": "C",
+          "text": "BF₃ forms metallic bonds with noble gases."
+        },
+        {
+          "id": "D",
+          "text": "BF₃ behaves as an electron pair donor (Lewis base)."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Boron in BF₃ has an incomplete octet (electron-deficient with 6 valence electrons). It readily accepts an unshared electron pair from a Lewis base (such as NH₃) to form a coordinate covalent bond and complete its octet.",
+      "sourceReference": "Section 2.3 & 2.5, Page 92 & Page 121"
+    },
+    {
+      "id": "CHE-G11-U02-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Calculate the lattice energy (U) of solid sodium chloride (NaCl) using the following thermochemical data from a Born-Haber cycle:\n• Enthalpy of sublimation of Na(s) = +108 kJ/mol\n• First ionization energy of Na(g) = +496 kJ/mol\n• Bond dissociation energy of ½ Cl₂(g) = +120 kJ/mol\n• Electron affinity of Cl(g) = -349 kJ/mol\n• Standard enthalpy of formation ΔH°f of NaCl(s) = -411 kJ/mol",
+      "options": [
+        {
+          "id": "A",
+          "text": "-786 kJ/mol"
+        },
+        {
+          "id": "B",
+          "text": "-364 kJ/mol"
+        },
+        {
+          "id": "C",
+          "text": "+786 kJ/mol"
+        },
+        {
+          "id": "D",
+          "text": "-1184 kJ/mol"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Using Hess's Law for the Born-Haber cycle: ΔH°f = ΔH_sub + IE₁ + ½ D_Cl-Cl + EA₁ + U. Substituting: -411 = +108 + 496 + 120 - 349 + U => -411 = +375 + U => U = -786 kJ/mol.",
+      "sourceReference": "Section 2.2, Page 73"
+    },
+    {
+      "id": "CHE-G11-U02-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Xenon tetrafluoride (XeF₄) contains 36 total valence electrons. According to VSEPR and hybridization theories, what are the electron-pair arrangement, molecular geometry, and central atom hybridization of XeF₄?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Tetrahedral arrangement, Tetrahedral geometry, sp³"
+        },
+        {
+          "id": "B",
+          "text": "Trigonal bipyramidal arrangement, See-saw geometry, sp³d"
+        },
+        {
+          "id": "C",
+          "text": "Octahedral arrangement, Square planar geometry, sp³d²"
+        },
+        {
+          "id": "D",
+          "text": "Octahedral arrangement, Square pyramidal geometry, sp³d²"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Xe has 8 valence electrons + 4 from F = 12 valence electrons = 6 electron pairs around Xe (4 bonding, 2 lone pairs). 6 electron pairs yield an octahedral electron-pair arrangement with sp³d² hybridization. Positioning lone pairs in opposite axial spots yields a Square Planar molecular geometry.",
+      "sourceReference": "Section 2.3 & 2.5, Page 104 & Page 125"
+    },
+    {
+      "id": "CHE-G11-U02-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Using Molecular Orbital Theory, compare the species CN⁺, CN, and CN⁻ (containing 12, 13, and 14 total electrons respectively). Which sequence correctly arranges these species in order of INCREASING bond order and chemical stability?",
+      "options": [
+        {
+          "id": "A",
+          "text": "CN⁻ < CN < CN⁺"
+        },
+        {
+          "id": "B",
+          "text": "CN⁺ < CN < CN⁻"
+        },
+        {
+          "id": "C",
+          "text": "CN < CN⁺ < CN⁻"
+        },
+        {
+          "id": "D",
+          "text": "CN⁻ < CN⁺ < CN"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Calculating bond orders: CN⁺ (12 e⁻) BO = ½(8 - 4) = 2.0; CN (13 e⁻) BO = ½(9 - 4) = 2.5; CN⁻ (14 e⁻) BO = ½(10 - 4) = 3.0. Increasing bond order and stability sequence is CN⁺ (2.0) < CN (2.5) < CN⁻ (3.0).",
+      "sourceReference": "Section 2.5, Page 133"
+    },
+    {
+      "id": "CHE-G11-U02-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Liquid water (H₂O) reaches maximum density at 4 °C, causing solid ice to float on liquid water. Which detailed structural phenomenon explains why ice is less dense than liquid water?",
+      "options": [
+        {
+          "id": "A",
+          "text": "In ice, hydrogen bonds break completely, trapping heavy gaseous water molecules in micro-cavities."
+        },
+        {
+          "id": "B",
+          "text": "Each water molecule in ice forms four rigid, directional hydrogen bonds in an open three-dimensional cage-like crystal structure that holds molecules further apart than in liquid water."
+        },
+        {
+          "id": "C",
+          "text": "Liquid water consists of ionic Na⁺ and Cl⁻ hydration shells that compress its volume."
+        },
+        {
+          "id": "D",
+          "text": "Ice undergoes sp³d² hybridization that expands the oxygen atomic radius."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In solid ice, each water molecule forms a maximum of 4 hydrogen bonds arranged in an open, tetrahedral/hexagonal crystal lattice containing open channels. Upon melting, some hydrogen bonds break, allowing water molecules to pack closer together, making liquid water denser than ice.",
+      "sourceReference": "Section 2.3 & 2.6, Page 108 & Page 136"
+    }
+  ]
 }

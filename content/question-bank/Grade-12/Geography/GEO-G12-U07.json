@@ -3,5 +3,411 @@
   "subject": "Geography",
   "unitNumber": 7,
   "unitTitle": "Contemporary Global Geographic Issues and Public Concerns",
-  "questions": []
+  "questions": [
+    {
+      "id": "GEO-G12-U07-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "According to the United Nations Convention to Combat Desertification (UNCCD), how is desertification formally defined?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The natural expansion of sand dunes into humid tropical rainforests."
+        },
+        {
+          "id": "B",
+          "text": "Human-induced land degradation in drylands, including arid, semi-arid, and dry sub-humid regions."
+        },
+        {
+          "id": "C",
+          "text": "The seasonal flooding of coastal lowlands caused by global sea-level rise."
+        },
+        {
+          "id": "D",
+          "text": "The conversion of agricultural land into urban residential settlements."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The UNCCD defines desertification as human-induced land degradation occurring in drylands—which comprise arid, semi-arid, and dry sub-humid areas—resulting from various factors including human activities and climatic variations.",
+      "sourceReference": "Grade 12 Geography Textbook, Section 7.2.1, Page 189–190"
+    },
+    {
+      "id": "GEO-G12-U07-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "According to the IPCC special report on climate change and land, drylands (arid, semi-arid, and dry sub-humid areas) cover approximately what percentage of the Earth's total land area?",
+      "options": [
+        {
+          "id": "A",
+          "text": "12.5%"
+        },
+        {
+          "id": "B",
+          "text": "25.0%"
+        },
+        {
+          "id": "C",
+          "text": "46.2%"
+        },
+        {
+          "id": "D",
+          "text": "75.0%"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Drylands cover approximately 46.2% of the global terrestrial land area and are home to over 3 billion people, making dryland degradation a major global environmental issue.",
+      "sourceReference": "Grade 12 Geography Textbook, Section 7.2.1, Page 190"
+    },
+    {
+      "id": "GEO-G12-U07-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which type of drought is defined strictly in terms of a prolonged shortfall in precipitation compared to the long-term historical average for a given location?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Hydrological drought"
+        },
+        {
+          "id": "B",
+          "text": "Agricultural drought"
+        },
+        {
+          "id": "C",
+          "text": "Meteorological drought"
+        },
+        {
+          "id": "D",
+          "text": "Socioeconomic drought"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Meteorological drought is defined on the basis of dryness relative to normal or average precipitation amounts over a specified duration in a given region.",
+      "sourceReference": "Grade 12 Geography Textbook, Section 7.3.1, Page 202–203"
+    },
+    {
+      "id": "GEO-G12-U07-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which human activity accounts for the largest individual share (roughly 35%) of worldwide land degradation and desertification?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Industrial mining"
+        },
+        {
+          "id": "B",
+          "text": "Overgrazing by livestock"
+        },
+        {
+          "id": "C",
+          "text": "Urban infrastructure construction"
+        },
+        {
+          "id": "D",
+          "text": "Commercial timber logging"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Global estimates show that overgrazing accounts for the largest proportion of human-induced land degradation (approximately 35%), followed by deforestation (30%) and over-cultivation (28%).",
+      "sourceReference": "Grade 12 Geography Textbook, Section 7.2.3, Page 194 (Figure 7.3)"
+    },
+    {
+      "id": "GEO-G12-U07-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "How is 'famine' distinguished from general food insecurity or temporary hunger?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Famine affects only high-income urban populations during winter months."
+        },
+        {
+          "id": "B",
+          "text": "Famine is a severe and extreme shortfall of food access leading to widespread starvation, acute malnutrition, and elevated mortality across affected communities."
+        },
+        {
+          "id": "C",
+          "text": "Famine refers exclusively to livestock death caused by animal diseases."
+        },
+        {
+          "id": "D",
+          "text": "Famine occurs whenever local food market prices rise by 5%."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Famine represents an extreme collapse in food access and security, resulting in widespread starvation, acute malnutrition, disease outbreaks, and severe mortality across entire affected communities.",
+      "sourceReference": "Grade 12 Geography Textbook, Section 7.4.1, Page 208–209"
+    },
+    {
+      "id": "GEO-G12-U07-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How does agricultural drought differ fundamentally from hydrological drought?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Agricultural drought is caused by volcanic ash, whereas hydrological drought is caused by tectonic faulting."
+        },
+        {
+          "id": "B",
+          "text": "Agricultural drought is defined by topsoil moisture deficits that impair crop growth, whereas hydrological drought involves below-normal water levels in rivers, lakes, reservoirs, and aquifers."
+        },
+        {
+          "id": "C",
+          "text": "Agricultural drought affects only urban industrial centers, whereas hydrological drought affects only rain-fed wheat fields."
+        },
+        {
+          "id": "D",
+          "text": "Agricultural drought measures atmospheric carbon emissions, whereas hydrological drought measures ocean salinity."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Agricultural drought specifically focuses on topsoil moisture deficits that create stress on crop life during the growing season. Hydrological drought, by contrast, pertains to surface and subsurface water shortages in streams, lakes, reservoirs, and groundwater aquifers.",
+      "sourceReference": "Grade 12 Geography Textbook, Section 7.3.2, Page 203"
+    },
+    {
+      "id": "GEO-G12-U07-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which drought index uses a comprehensive soil-water balance algorithm incorporating precipitation, temperature, and local available soil water capacity to evaluate long-term drought conditions?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Percent of Normal Precipitation (PNP)"
+        },
+        {
+          "id": "B",
+          "text": "Palmer Drought Severity Index (PDSI)"
+        },
+        {
+          "id": "C",
+          "text": "Crop Moisture Index (CMI)"
+        },
+        {
+          "id": "D",
+          "text": "Standardized Precipitation Index (SPI)"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The Palmer Drought Severity Index (PDSI) is a comprehensive water-balance algorithm that incorporates precipitation, temperature, and local soil moisture data to assess long-term drought severity. Negative values indicate drought conditions.",
+      "sourceReference": "Grade 12 Geography Textbook, Section 7.3.4, Page 204"
+    },
+    {
+      "id": "GEO-G12-U07-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Why are the semi-arid and arid regions of East Africa (such as the Horn of Africa) particularly vulnerable to accelerating desertification?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because the region receives continuous year-round snowfall that blocks vegetation growth."
+        },
+        {
+          "id": "B",
+          "text": "Because over 65% of the region consists of drylands where high population pressure, deforestation for fuelwood, and overgrazing combine with rainfall unpredictability."
+        },
+        {
+          "id": "C",
+          "text": "Because local farmers use excessive industrial fertilizers that convert topsoil into sea salt."
+        },
+        {
+          "id": "D",
+          "text": "Because the region is covered entirely by dense tropical rainforests that block solar radiation."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Drylands represent roughly 65% of East Africa's land area. High rural population growth, heavy reliance on wood for domestic energy, overgrazing on fragile pastures, and erratic rainfall make the region highly susceptible to desertification.",
+      "sourceReference": "Grade 12 Geography Textbook, Section 7.2.4, Page 197–198"
+    },
+    {
+      "id": "GEO-G12-U07-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which observed ecological impact is directly attributed to global climate change in contemporary geographic studies?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Complete cessation of all ocean current circulations worldwide."
+        },
+        {
+          "id": "B",
+          "text": "Poleward and upward elevation shifts in plant and animal species distributions."
+        },
+        {
+          "id": "C",
+          "text": "Permanent cooling of tropical sea surface temperatures below freezing."
+        },
+        {
+          "id": "D",
+          "text": "Rapid decrease in global atmospheric carbon dioxide concentrations."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "As temperatures rise, many terrestrial and aquatic species are shifting their geographic ranges poleward (toward higher latitudes) and upward (toward higher elevations) to remain within their thermal tolerance zones.",
+      "sourceReference": "Grade 12 Geography Textbook, Section 7.1, Page 188–189"
+    },
+    {
+      "id": "GEO-G12-U07-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "According to Amartya Sen's food entitlement framework cited in the textbook, why is the creation of labor-intensive public employment programs an effective policy intervention during severe drought?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because public work programs prevent rivers from evaporating during dry seasons."
+        },
+        {
+          "id": "B",
+          "text": "Because generating wage income restores purchasing power (entitlement to buy food) for vulnerable households who have suffered crop failure or livestock loss."
+        },
+        {
+          "id": "C",
+          "text": "Because public work programs automatically double national grain harvest yields overnight."
+        },
+        {
+          "id": "D",
+          "text": "Because public work programs force rural populations to permanently emigrate abroad."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Famines often occur not merely from food unavailability, but from a collapse in household purchasing power (entitlement failure). Public employment creation programs provide cash or food wages to landless and drought-affected families, restoring their ability to purchase food in local markets.",
+      "sourceReference": "Grade 12 Geography Textbook, Section 7.4.2, Page 211–212"
+    },
+    {
+      "id": "GEO-G12-U07-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which set of sustainable land management practices utilizes indigenous and site-specific knowledge to combat soil erosion and desertification in dryland farming?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Monocropping, deep mechanical tractor ploughing down steep slopes, and complete forest clearing."
+        },
+        {
+          "id": "B",
+          "text": "Water harvesting (micro-basins), stone terracing, relay cropping, and cultivation of drought-resilient crops."
+        },
+        {
+          "id": "C",
+          "text": "Burning pasture crop residue and expanding flood irrigation using salty groundwater."
+        },
+        {
+          "id": "D",
+          "text": "Privatizing all communal forests and converting drylands into asphalt parking lots."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Combating desertification effectively requires sustainable land management strategies, including rainwater harvesting (micro-ponds, planting pits), stone/soil terracing, intercropping/relay cropping, and planting short-maturing, drought-tolerant crop varieties.",
+      "sourceReference": "Grade 12 Geography Textbook, Section 7.2.5, Page 201"
+    },
+    {
+      "id": "GEO-G12-U07-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Consider two semi-arid nations: Country X (where agriculture contributes 10% of GDP and relies on deep underground aquifers) and Country Y (where agriculture contributes 50% of GDP and relies almost entirely on rain-fed farming). If both countries experience a 50% reduction in annual rainfall, why will Country Y suffer a catastrophic economic collapse while Country X experiences minimal immediate impact?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Country X has higher industrial greenhouse gas emissions that neutralize drought conditions."
+        },
+        {
+          "id": "B",
+          "text": "Country Y's high structural dependency on rain-fed agriculture means a rainfall deficit directly collapses national crop production, rural incomes, food security, and overall GDP."
+        },
+        {
+          "id": "C",
+          "text": "Country X is located in a polar biome where rainfall deficits increase agricultural output."
+        },
+        {
+          "id": "D",
+          "text": "Country Y experiences higher ocean tidal drag that prevents groundwater recharge."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The economic severity of a drought depends on a country's economic structure. In Country Y, where 50% of GDP comes from rain-fed farming, a 50% drop in rainfall causes widespread crop failure, income loss, and economic contraction. In Country X, agriculture is a minor share of GDP (10%) and relies on resilient underground aquifers, buffering it from immediate collapse.",
+      "sourceReference": "Grade 12 Geography Textbook, Section 7.3.5, Page 206–207"
+    },
+    {
+      "id": "GEO-G12-U07-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "What distinct operational advantage does the Standardized Precipitation Index (SPI) offer over the Palmer Drought Severity Index (PDSI) in multi-scale drought monitoring?",
+      "options": [
+        {
+          "id": "A",
+          "text": "SPI requires complex input data including soil moisture, solar radiation, and evapotranspiration rates."
+        },
+        {
+          "id": "B",
+          "text": "SPI relies solely on long-term precipitation records, can be calculated across multiple time scales (e.g., 1, 3, 6, 12, or 24 months), and provides early warnings for both drought onset and recovery."
+        },
+        {
+          "id": "C",
+          "text": "SPI applies exclusively to marine ocean ecosystems and ignores continental landmasses."
+        },
+        {
+          "id": "D",
+          "text": "SPI values are always positive integers ranging from +10 to +100."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Unlike the PDSI which requires complex water-balance inputs (temperature, soil moisture), the SPI requires only long-term rainfall data. It can be computed for multiple time intervals (1 to 24 months), making it highly versatile for detecting short-term agricultural stress as well as long-term hydrological deficits.",
+      "sourceReference": "Grade 12 Geography Textbook, Section 7.3.4, Page 205"
+    },
+    {
+      "id": "GEO-G12-U07-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "How can extensive deforestation and land-use change in semi-arid regions (such as the Sahel) create a positive feedback loop that intensifies regional meteorological drought?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Forest clearing increases surface roughness, which stops atmospheric wind movement entirely."
+        },
+        {
+          "id": "B",
+          "text": "Removing vegetation increases surface albedo and reduces evapotranspiration, leading to reduced atmospheric moisture recycling, suppressed convection, and decreased local rainfall."
+        },
+        {
+          "id": "C",
+          "text": "Deforestation causes rapid stratospheric ozone accumulation that reflects all solar radiation."
+        },
+        {
+          "id": "D",
+          "text": "Tree removal converts atmospheric nitrogen into liquid water that floods lowlands."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Land-atmosphere feedbacks exacerbate drought when deforestation reduces vegetation cover. Less vegetation means reduced evapotranspiration (less moisture returned to the atmosphere) and higher surface albedo (more solar energy reflected). This combination suppresses convective cloud formation and rainfall, reinforcing dry conditions in a self-perpetuating feedback cycle.",
+      "sourceReference": "Grade 12 Geography Textbook, Section 7.3.5, Page 206"
+    },
+    {
+      "id": "GEO-G12-U07-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "How do climate change, desertification, drought, and famine interact as a complex system of cause-and-effect in vulnerable dryland environments?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Desertification causes climate change, which eliminates drought and permanently prevents famine."
+        },
+        {
+          "id": "B",
+          "text": "Anthropogenic climate change alters rainfall patterns and elevates temperatures, exacerbating meteorological drought; prolonged drought degrades dryland soils (desertification), collapsing agricultural output and triggering food entitlement failures that culminate in famine."
+        },
+        {
+          "id": "C",
+          "text": "Famine causes volcanic eruptions that induce desertification, which lowers global sea levels."
+        },
+        {
+          "id": "D",
+          "text": "Desertification occurs only after famine leads to complete human depopulation of urban centers."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "These contemporary issues form a cascading system: Global climate change increases temperature and rainfall variability, intensifying drought frequency. Prolonged drought combined with land overexploitation degrades fragile drylands (desertification). Reduced land productivity causes agricultural failure, which, without timely intervention or entitlement protection, leads to severe famine.",
+      "sourceReference": "Grade 12 Geography Textbook, Section 7.1–7.4, Page 187–213"
+    }
+  ]
 }

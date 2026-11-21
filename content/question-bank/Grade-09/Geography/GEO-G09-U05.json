@@ -3,5 +3,411 @@
   "subject": "Geography",
   "unitNumber": 5,
   "unitTitle": "Major Economic Activities in Ethiopia",
-  "questions": []
+  "questions": [
+    {
+      "id": "GEO-G09-U05-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which of the following economic activities is categorized under primary economic activities?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Textile manufacturing and steel smelting"
+        },
+        {
+          "id": "B",
+          "text": "Agriculture, fishing, forestry, and mining"
+        },
+        {
+          "id": "C",
+          "text": "Banking, insurance, and wholesale trade"
+        },
+        {
+          "id": "D",
+          "text": "Scientific research and software engineering"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Primary economic activities focus directly on extracting or harvesting raw materials directly from the earth's natural environment. Examples include agriculture, fishing, forestry, and mining.",
+      "sourceReference": "Grade 9 Geography Textbook, Section 5.1, Page 124"
+    },
+    {
+      "id": "GEO-G09-U05-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is Ethiopia's ranking in livestock (cattle) population in Africa and globally?",
+      "options": [
+        {
+          "id": "A",
+          "text": "First in Africa and tenth in the world"
+        },
+        {
+          "id": "B",
+          "text": "Second in Africa and fifth in the world"
+        },
+        {
+          "id": "C",
+          "text": "Fifth in Africa and fifteenth in the world"
+        },
+        {
+          "id": "D",
+          "text": "Tenth in Africa and twentieth in the world"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Ethiopia possesses the largest livestock herd in Africa, holding 1st place on the continent and ranking 10th globally in total cattle population.",
+      "sourceReference": "Grade 9 Geography Textbook, Section 5.1, Page 126"
+    },
+    {
+      "id": "GEO-G09-U05-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which river in Ethiopia is unique because it is the only river in the country navigable by water vessels?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Abbay River"
+        },
+        {
+          "id": "B",
+          "text": "Awash River"
+        },
+        {
+          "id": "C",
+          "text": "Baro River"
+        },
+        {
+          "id": "D",
+          "text": "Wabe Shebelle River"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The Baro River in Gambella is the only navigable river in Ethiopia because it flows over a gentle, flat lowland plain with sufficient water volume.",
+      "sourceReference": "Grade 9 Geography Textbook, Section 5.3, Page 140"
+    },
+    {
+      "id": "GEO-G09-U05-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which agricultural commodity stands as Ethiopia's leading cash crop export, contributing roughly 28.6% of total national export earnings in 2019/20?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Oilseeds"
+        },
+        {
+          "id": "B",
+          "text": "Coffee"
+        },
+        {
+          "id": "C",
+          "text": "Chat"
+        },
+        {
+          "id": "D",
+          "text": "Pulses"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Coffee is Ethiopia's single most critical export commodity, accounting for approximately 28.6% of the country's total foreign exchange export earnings in 2019/20.",
+      "sourceReference": "Grade 9 Geography Textbook, Section 5.2, Page 133 & Section 5.3, Page 136 (Table 5.3)"
+    },
+    {
+      "id": "GEO-G09-U05-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which UNESCO World Heritage site in southern Ethiopia is famous for its extensive stone-walled dry terraces built for agricultural soil and water conservation?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Tiya Stelae"
+        },
+        {
+          "id": "B",
+          "text": "Fasil Ghebbi Castles"
+        },
+        {
+          "id": "C",
+          "text": "Axum Obelisks"
+        },
+        {
+          "id": "D",
+          "text": "Konso Cultural Landscape"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "The Konso Cultural Landscape in southern Ethiopia was inscribed by UNESCO in 2011 as a cultural landscape featuring stone-walled terraces adapted for agricultural soil conservation over centuries.",
+      "sourceReference": "Grade 9 Geography Textbook, Section 5.5, Page 146–147"
+    },
+    {
+      "id": "GEO-G09-U05-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How do quinary economic activities differ from quaternary economic activities within the advanced service sector classification?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Quaternary activities involve manual labor in factories, whereas quinary activities involve subsistence farming."
+        },
+        {
+          "id": "B",
+          "text": "Quaternary activities involve specialized knowledge and technical skill, whereas quinary activities involve high-level executive decision-making and policy formulation."
+        },
+        {
+          "id": "C",
+          "text": "Quaternary activities are restricted to rural villages, whereas quinary activities take place at sea."
+        },
+        {
+          "id": "D",
+          "text": "Quaternary activities generate agricultural commodities, whereas quinary activities process heavy metals."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Quaternary activities focus on information processing, technical skills, and research, whereas quinary activities represent a subset of top-level decision-makers (government leaders, corporate executives, legal consultants) who shape policies and strategic directions.",
+      "sourceReference": "Grade 9 Geography Textbook, Section 5.1, Page 129–130"
+    },
+    {
+      "id": "GEO-G09-U05-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In which regions of Ethiopia is shifting cultivation (cut-and-burn farming) predominantly practiced?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Densely populated highlands of Shewa and Gojjam"
+        },
+        {
+          "id": "B",
+          "text": "Sparsely populated western lowlands such as Benishangul-Gumuz and Gambella"
+        },
+        {
+          "id": "C",
+          "text": "Urban municipalities along the Main Ethiopian Rift Valley"
+        },
+        {
+          "id": "D",
+          "text": "Cold Afroalpine peaks of the Bale and Semein mountains"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Shifting cultivation (cut-and-burn) requires low population density and ample forest cover. In Ethiopia, it is practiced along the western and southwestern lowland fringes like Benishangul-Gumuz and Gambella.",
+      "sourceReference": "Grade 9 Geography Textbook, Section 5.1, Page 126"
+    },
+    {
+      "id": "GEO-G09-U05-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Why does Ethiopia persistently experience a negative foreign trade balance (trade deficit)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The value of domestic agricultural exports exceeds the cost of imported industrial goods."
+        },
+        {
+          "id": "B",
+          "text": "The total annual value of merchandise imports consistently exceeds the total annual value of merchandise exports."
+        },
+        {
+          "id": "C",
+          "text": "The government restricts all foreign currency exchanges for export items."
+        },
+        {
+          "id": "D",
+          "text": "Service sector income completely offsets all physical commodity transactions."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "A trade deficit occurs when a nation's import expenditure exceeds its export earnings. Ethiopia imports costly capital goods, fuel, and consumer items while exporting mostly raw agricultural goods, resulting in a persistent negative trade balance.",
+      "sourceReference": "Grade 9 Geography Textbook, Section 5.3, Page 138"
+    },
+    {
+      "id": "GEO-G09-U05-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What historical factor contributed significantly to the slow technological transformation of traditional cottage industries (e.g., weaving, pottery, tanning, blacksmithing) in Ethiopia?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Complete absence of clay and iron ore deposits across the entire Ethiopian landmass."
+        },
+        {
+          "id": "B",
+          "text": "Prevalent negative traditional social attitudes that marginalized artisans and assigned them low social status."
+        },
+        {
+          "id": "C",
+          "text": "Government laws banning the local production of handwoven fabrics and pottery."
+        },
+        {
+          "id": "D",
+          "text": "Overabundance of cheap imported industrial machinery during the 18th century."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Historically, artisans engaged in traditional craft industries (potters, weavers, tanners, metalworkers) faced social prejudice and low social status, which hindered capital accumulation and technological innovation in cottage industries.",
+      "sourceReference": "Grade 9 Geography Textbook, Section 5.1, Page 128"
+    },
+    {
+      "id": "GEO-G09-U05-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Based on official distribution data for Ethiopian farm sizes (Table 5.2), what percentage of rural agricultural households operate on farm plots smaller than 1.0 hectare?",
+      "options": [
+        {
+          "id": "A",
+          "text": "14.31%"
+        },
+        {
+          "id": "B",
+          "text": "61.65%"
+        },
+        {
+          "id": "C",
+          "text": "85.00%"
+        },
+        {
+          "id": "D",
+          "text": "98.80%"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "According to Table 5.2, households with < 0.10 ha (7.71%), 0.10–0.5 ha (30.29%), and 0.51–1.00 ha (23.65%) sum up to 61.65% of all farming households in Ethiopia.",
+      "sourceReference": "Grade 9 Geography Textbook, Section 5.2, Page 134 (Table 5.2)"
+    },
+    {
+      "id": "GEO-G09-U05-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "According to road transport fleet records (Table 5.6), which administrative area accounts for over 55% of all registered vehicles in Ethiopia?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Addis Ababa City Administration"
+        },
+        {
+          "id": "B",
+          "text": "Oromia Region"
+        },
+        {
+          "id": "C",
+          "text": "Amhara Region"
+        },
+        {
+          "id": "D",
+          "text": "Sidama Region"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Addis Ababa City Administration accounted for 596,084 vehicles out of 1,071,345 total registered vehicles in Ethiopia (~55.6%), reflecting urban concentration in motor transport.",
+      "sourceReference": "Grade 9 Geography Textbook, Section 5.4, Page 143 (Table 5.6)"
+    },
+    {
+      "id": "GEO-G09-U05-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Which major structural trend characterized the percentage contribution of economic sectors to Ethiopia's Gross Domestic Product (GDP) between 2014/15 and 2019/20 (Table 5.1)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Agriculture increased its share from 32% to 60%, replacing services entirely."
+        },
+        {
+          "id": "B",
+          "text": "The industrial sector dropped to under 5%, while agriculture became 80% of GDP."
+        },
+        {
+          "id": "C",
+          "text": "Agriculture's GDP share gradually declined from 39.6% to 32.7%, while service (39.5%) and industry (29.0%) expanded their shares."
+        },
+        {
+          "id": "D",
+          "text": "All three sectors maintained identical 33.3% equal shares across all six years."
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Table 5.1 shows that agriculture's share of GDP fell from 39.6% in 2014/15 to 32.7% in 2019/20, while the service sector emerged as the leading sector (39.5%) and industry expanded from 21.0% to 29.0%.",
+      "sourceReference": "Grade 9 Geography Textbook, Section 5.2, Page 131 (Table 5.1)"
+    },
+    {
+      "id": "GEO-G09-U05-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Why does smallholder subsistence farming in Ethiopia remain exceptionally vulnerable to recurrent food insecurity during years with anomalous climate patterns?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Peasant farmers rely exclusively on heavy greenhouse drip irrigation that depletes groundwater."
+        },
+        {
+          "id": "B",
+          "text": "Smallholder agriculture relies predominantly on rain-fed crop production using traditional hand tools, with minimal technological inputs and poor rural market infrastructure."
+        },
+        {
+          "id": "C",
+          "text": "All agricultural soils in Ethiopia are composed of infertile Quaternary desert sand."
+        },
+        {
+          "id": "D",
+          "text": "Export taxes force farmers to give 90% of their cereal harvest to foreign nations."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Ethiopian smallholder agriculture relies overwhelmingly on natural rainfall and traditional tools (oxen-drawn ploughs, hand tools). Consequently, erratic or delayed rains cause immediate yield losses and household food insecurity.",
+      "sourceReference": "Grade 9 Geography Textbook, Section 5.2, Page 132 & Page 134"
+    },
+    {
+      "id": "GEO-G09-U05-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "How does the structural composition of Ethiopia's merchandise export trade compare to its merchandise import trade regarding processing levels?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Exports consist mainly of unprocessed primary agricultural items, whereas imports consist mainly of processed industrial capital goods, semi-finished items, and refined fuel."
+        },
+        {
+          "id": "B",
+          "text": "Exports consist mainly of heavy electronic aircraft, whereas imports consist mainly of raw unrefined sugar."
+        },
+        {
+          "id": "C",
+          "text": "Exports consist exclusively of refined petroleum, whereas imports consist exclusively of coffee beans."
+        },
+        {
+          "id": "D",
+          "text": "Both exports and imports consist of identical proportions of raw timber."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Ethiopia's export trade is dominated by raw or primary agricultural goods (coffee, oilseeds, pulses, chat, live animals), whereas import trade is dominated by high-value capital goods, machinery, semi-finished goods, consumer items, and fuel.",
+      "sourceReference": "Grade 9 Geography Textbook, Section 5.3, Page 136–137 (Tables 5.3 & 5.4)"
+    },
+    {
+      "id": "GEO-G09-U05-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "What is the primary function of the specialized 'Pharma Wing' facility developed by Ethiopian Cargo and Logistics Services within the national air transport sector?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Manufacturing generic pharmaceutical tablets inside cargo airplanes during flight."
+        },
+        {
+          "id": "B",
+          "text": "Providing specialized temperature-controlled cold-chain logistics for storing and distributing temperature-sensitive vaccines and medical supplies across Africa."
+        },
+        {
+          "id": "C",
+          "text": "Training commercial pilots to perform surgical interventions in flight."
+        },
+        {
+          "id": "D",
+          "text": "Exporting raw medical herbs exclusively to North American research centers."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Ethiopian Cargo's 'Pharma Wing' is a state-of-the-art temperature-controlled cold-chain facility designed to store, handle, and transport temperature-sensitive pharmaceuticals and vaccines (e.g. COVID-19 vaccines) across global and African destinations.",
+      "sourceReference": "Grade 9 Geography Textbook, Section 5.3, Page 141"
+    }
+  ]
 }

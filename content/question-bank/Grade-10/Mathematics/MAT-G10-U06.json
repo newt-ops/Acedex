@@ -3,5 +3,411 @@
   "subject": "Mathematics",
   "unitNumber": 6,
   "unitTitle": "Solid Figures",
-  "questions": []
+  "questions": [
+    {
+      "id": "MAT-G10-U06-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In a right circular cone with base radius r, vertical altitude h, and slant height l, which of the following equations correctly relates these three dimensions?",
+      "options": [
+        {
+          "id": "A",
+          "text": "l = √(h² + r²)"
+        },
+        {
+          "id": "B",
+          "text": "h = √(l² + r²)"
+        },
+        {
+          "id": "C",
+          "text": "r = √(h² + l²)"
+        },
+        {
+          "id": "D",
+          "text": "l = h + r"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "In a right circular cone, the altitude connects the vertex perpendicularly to the center of the base circle. The altitude h, the base radius r, and the slant height l form a right-angled triangle with the slant height as the hypotenuse. By the Pythagorean theorem, l² = h² + r², which yields l = √(h² + r²).",
+      "sourceReference": "Section 6.2 & Section 6.2.1, Page 297, 305"
+    },
+    {
+      "id": "MAT-G10-U06-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "A right circular cylinder has a base radius of 3 cm and an altitude of 10 cm. What is the volume of this cylinder?",
+      "options": [
+        {
+          "id": "A",
+          "text": "30π cm³"
+        },
+        {
+          "id": "B",
+          "text": "60π cm³"
+        },
+        {
+          "id": "C",
+          "text": "90π cm³"
+        },
+        {
+          "id": "D",
+          "text": "180π cm³"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The volume V of a circular cylinder is the product of its base area and altitude: V = BA · h = πr²h. Substituting r = 3 cm and h = 10 cm gives V = π(3²)(10) = π(9)(10) = 90π cm³.",
+      "sourceReference": "Section 6.1, Page 292-293"
+    },
+    {
+      "id": "MAT-G10-U06-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is the total surface area of a solid sphere whose radius is 5 cm?",
+      "options": [
+        {
+          "id": "A",
+          "text": "25π cm²"
+        },
+        {
+          "id": "B",
+          "text": "50π cm²"
+        },
+        {
+          "id": "C",
+          "text": "100π cm²"
+        },
+        {
+          "id": "D",
+          "text": "500/3 π cm²"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The surface area SA of a sphere of radius r is given by the formula SA = 4πr². For r = 5 cm: SA = 4π(5)² = 4π(25) = 100π cm².",
+      "sourceReference": "Section 6.2.4, Page 320"
+    },
+    {
+      "id": "MAT-G10-U06-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "A regular pyramid has a square base of side length 6 cm and a slant height of 8 cm. What is the lateral surface area (LSA) of the pyramid?",
+      "options": [
+        {
+          "id": "A",
+          "text": "48 cm²"
+        },
+        {
+          "id": "B",
+          "text": "96 cm²"
+        },
+        {
+          "id": "C",
+          "text": "132 cm²"
+        },
+        {
+          "id": "D",
+          "text": "192 cm²"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The lateral surface area of a regular pyramid is LSA = (1/2) · p · l, where p is the perimeter of the base and l is the slant height. For a square base with side s = 6 cm, p = 4s = 4(6) = 24 cm. Thus, LSA = (1/2)(24)(8) = 96 cm².",
+      "sourceReference": "Section 6.2.1, Page 299-300"
+    },
+    {
+      "id": "MAT-G10-U06-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "When a pyramid is cut by a plane parallel to its base, what is the geometric shape of each lateral face of the resulting frustum?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Parallelogram"
+        },
+        {
+          "id": "B",
+          "text": "Rectangle"
+        },
+        {
+          "id": "C",
+          "text": "Trapezium"
+        },
+        {
+          "id": "D",
+          "text": "Triangle"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "By Definition 6.6 and Observation 1, the lateral faces of a frustum of any pyramid are trapeziums (specifically, congruent isosceles trapeziums if the pyramid is regular), formed between the parallel edges of the lower and upper bases.",
+      "sourceReference": "Section 6.3, Page 321-322"
+    },
+    {
+      "id": "MAT-G10-U06-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "The circumference of the base of a right circular cone is 12π cm and its slant height is 10 cm. What is the volume of the cone?",
+      "options": [
+        {
+          "id": "A",
+          "text": "72π cm³"
+        },
+        {
+          "id": "B",
+          "text": "96π cm³"
+        },
+        {
+          "id": "C",
+          "text": "120π cm³"
+        },
+        {
+          "id": "D",
+          "text": "288π cm³"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "From the circumference: 2πr = 12π => r = 6 cm. Using the right triangle formed by altitude h, radius r, and slant height l = 10 cm: h = √(l² - r²) = √(10² - 6²) = √(100 - 36) = √64 = 8 cm. The volume of the cone is V = (1/3)πr²h = (1/3)π(6²)(8) = (1/3)π(36)(8) = 96π cm³.",
+      "sourceReference": "Section 6.2.1 & Section 6.2.3, Page 305, 317-318"
+    },
+    {
+      "id": "MAT-G10-U06-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "The altitude of a pyramid is 15 cm and its base area is 180 cm². What is the area of a horizontal cross-section located at a distance of 5 cm from the vertex?",
+      "options": [
+        {
+          "id": "A",
+          "text": "20 cm²"
+        },
+        {
+          "id": "B",
+          "text": "36 cm²"
+        },
+        {
+          "id": "C",
+          "text": "45 cm²"
+        },
+        {
+          "id": "D",
+          "text": "60 cm²"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "By Theorem 6.3, the ratio of the area of a horizontal cross-section to the area of the base is (k / h)², where h is the altitude and k is the distance from the vertex to the cross-section. Here, k = 5 cm and h = 15 cm: (Area of cross-section) / 180 = (5 / 15)² = (1/3)² = 1/9. Therefore, Area of cross-section = 180 × (1/9) = 20 cm².",
+      "sourceReference": "Section 6.2.2, Page 308-311"
+    },
+    {
+      "id": "MAT-G10-U06-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "The base of a right prism is a right-angled triangle with legs of lengths 6 cm and 8 cm. If the height of the prism is 12 cm, what is the total surface area (TSA) of the prism?",
+      "options": [
+        {
+          "id": "A",
+          "text": "312 cm²"
+        },
+        {
+          "id": "B",
+          "text": "336 cm²"
+        },
+        {
+          "id": "C",
+          "text": "360 cm²"
+        },
+        {
+          "id": "D",
+          "text": "288 cm²"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The hypotenuse of the right-angled triangular base is √(6² + 8²) = 10 cm. The perimeter of the base is p = 6 + 8 + 10 = 24 cm. The lateral surface area is LSA = ph = 24 × 12 = 288 cm². The base area is BA = (1/2)(6)(8) = 24 cm². The total surface area is TSA = LSA + 2(BA) = 288 + 2(24) = 288 + 48 = 336 cm².",
+      "sourceReference": "Section 6.1, Page 289-290"
+    },
+    {
+      "id": "MAT-G10-U06-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "A frustum of a right circular cone has a lower base radius of 5 cm, an upper base radius of 2 cm, and a slant height of 5 cm. What is the total surface area (TSA) of the frustum?",
+      "options": [
+        {
+          "id": "A",
+          "text": "54π cm²"
+        },
+        {
+          "id": "B",
+          "text": "64π cm²"
+        },
+        {
+          "id": "C",
+          "text": "70π cm²"
+        },
+        {
+          "id": "D",
+          "text": "74π cm²"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "For a frustum of a right circular cone, LSA = πl(r + r') = π(5)(5 + 2) = 35π cm². The area of the lower base is A = πr² = π(5²) = 25π cm², and the area of the upper base is A' = π(r')² = π(2²) = 4π cm². Thus, TSA = LSA + A + A' = 35π + 25π + 4π = 64π cm².",
+      "sourceReference": "Section 6.3, Page 326-327"
+    },
+    {
+      "id": "MAT-G10-U06-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "A right circular cone with an altitude of 18 cm has a base radius of 6 cm. At what distance from the base must a cutting plane parallel to the base be passed so that the radius of the resulting circular cross-section is 2 cm?",
+      "options": [
+        {
+          "id": "A",
+          "text": "6 cm"
+        },
+        {
+          "id": "B",
+          "text": "9 cm"
+        },
+        {
+          "id": "C",
+          "text": "12 cm"
+        },
+        {
+          "id": "D",
+          "text": "14 cm"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Let k be the distance from the vertex of the cone to the cross-section plane. By similar triangles: k / h = r' / r => k / 18 = 2 / 6 = 1/3 => k = 6 cm from the vertex. Since the total altitude of the cone is 18 cm, the distance of the cutting plane from the base is h - k = 18 - 6 = 12 cm.",
+      "sourceReference": "Section 6.2.2, Page 307-312"
+    },
+    {
+      "id": "MAT-G10-U06-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "A storage silo is constructed in the shape of a right circular cylinder of radius 3 meters and height 8 meters, surmounted by a hemisphere of the same radius on top. What is the total volume of the silo?",
+      "options": [
+        {
+          "id": "A",
+          "text": "81π m³"
+        },
+        {
+          "id": "B",
+          "text": "90π m³"
+        },
+        {
+          "id": "C",
+          "text": "108π m³"
+        },
+        {
+          "id": "D",
+          "text": "126π m³"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The composed solid consists of a cylinder and a hemisphere. Volume of cylinder = πr²h = π(3²)(8) = 72π m³. Volume of hemisphere = (1/2)(4/3 πr³) = (2/3)π(3³) = 18π m³. Total volume = 72π + 18π = 90π m³.",
+      "sourceReference": "Section 6.4, Page 331-333"
+    },
+    {
+      "id": "MAT-G10-U06-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A frustum of a regular square pyramid has a height of 6 cm. The lower base edge is 8 cm and the upper base edge is 4 cm. What is the volume of the frustum?",
+      "options": [
+        {
+          "id": "A",
+          "text": "192 cm³"
+        },
+        {
+          "id": "B",
+          "text": "208 cm³"
+        },
+        {
+          "id": "C",
+          "text": "224 cm³"
+        },
+        {
+          "id": "D",
+          "text": "240 cm³"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The volume of a frustum of a pyramid is V = (1/3)h(A + A' + √(AA')), where A and A' are the base areas. Here, lower base area A = 8² = 64 cm² and upper base area A' = 4² = 16 cm². √(AA') = √(64 × 16) = 8 × 4 = 32 cm². Thus, V = (1/3)(6)(64 + 16 + 32) = 2(112) = 224 cm³.",
+      "sourceReference": "Section 6.3, Page 330, 341"
+    },
+    {
+      "id": "MAT-G10-U06-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A hollow cylindrical metal pipe of length 70 cm has an outer diameter of 14 cm and an inner diameter of 10 cm. If the metal has a density of 8 g/cm³, what is the mass of the pipe in kilograms? (Use π ≈ 22/7)",
+      "options": [
+        {
+          "id": "A",
+          "text": "38.40 kg"
+        },
+        {
+          "id": "B",
+          "text": "42.24 kg"
+        },
+        {
+          "id": "C",
+          "text": "46.80 kg"
+        },
+        {
+          "id": "D",
+          "text": "52.80 kg"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Outer radius R = 14 / 2 = 7 cm, inner radius r = 10 / 2 = 5 cm. The cross-sectional area of the metal annulus is BA = π(R² - r²) = π(7² - 5²) = 24π cm². Using π ≈ 22/7, volume of metal V = BA · h = 24 × (22/7) × 70 = 24 × 22 × 10 = 5,280 cm³. Mass = Volume × Density = 5,280 cm³ × 8 g/cm³ = 42,240 grams = 42.24 kg.",
+      "sourceReference": "Section 6.1 & Section 6.5, Page 293, 339"
+    },
+    {
+      "id": "MAT-G10-U06-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A solid lead sphere of radius 6 cm is completely melted down and recast into a solid right circular cone of base radius 6 cm. What is the altitude (height) of the recast cone?",
+      "options": [
+        {
+          "id": "A",
+          "text": "12 cm"
+        },
+        {
+          "id": "B",
+          "text": "18 cm"
+        },
+        {
+          "id": "C",
+          "text": "24 cm"
+        },
+        {
+          "id": "D",
+          "text": "36 cm"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Volume of the sphere = (4/3)πr_s³ = (4/3)π(6³) = (4/3)π(216) = 288π cm³. Volume of the cone = (1/3)πr_c²h = (1/3)π(6²)h = 12πh. Equating the volumes: 12πh = 288π => h = 288 / 12 = 24 cm.",
+      "sourceReference": "Section 6.2.3, Section 6.2.4 & Section 6.5, Page 317, 320, 339"
+    },
+    {
+      "id": "MAT-G10-U06-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A solid wooden cylinder has a base radius of 6 cm and a height of 15 cm. A conical cavity of the same base radius and a depth of 8 cm is hollowed out from one of its circular ends. What is the total surface area of the remaining solid?",
+      "options": [
+        {
+          "id": "A",
+          "text": "240π cm²"
+        },
+        {
+          "id": "B",
+          "text": "252π cm²"
+        },
+        {
+          "id": "C",
+          "text": "276π cm²"
+        },
+        {
+          "id": "D",
+          "text": "312π cm²"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The total surface area consists of: (1) One intact circular base of the cylinder: πr² = π(6²) = 36π cm²; (2) The lateral surface of the cylinder: 2πrh = 2π(6)(15) = 180π cm²; (3) The interior lateral surface of the conical cavity: πrl_cone. For the cone, slant height l = √(r² + h_cone²) = √(6² + 8²) = 10 cm, so LSA_cone = π(6)(10) = 60π cm². Total surface area = 36π + 180π + 60π = 276π cm².",
+      "sourceReference": "Section 6.4 & Exercise 6.16, Page 334-335"
+    }
+  ]
 }

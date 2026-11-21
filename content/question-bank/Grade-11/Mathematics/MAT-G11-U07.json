@@ -3,5 +3,411 @@
   "subject": "Mathematics",
   "unitNumber": 7,
   "unitTitle": "Statistics",
-  "questions": []
+  "questions": [
+    {
+      "id": "MAT-G11-U07-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which of the following variables represents discrete quantitative data?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The volume of water stored in a school reservoir"
+        },
+        {
+          "id": "B",
+          "text": "The temperature of a classroom recorded at noon"
+        },
+        {
+          "id": "C",
+          "text": "The number of defective assembled components in an inventory batch"
+        },
+        {
+          "id": "D",
+          "text": "The time it takes a student to travel from home to school"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "By Definition 7.2, discrete data is a numerical type of data that consists of whole numbers obtained by counting with distinct gaps between values. The number of defective components is obtained by counting whole units. Volume, temperature, and travel time are measurable along continuous intervals and thus represent continuous data.",
+      "sourceReference": "Section 7.1, Page 358-359"
+    },
+    {
+      "id": "MAT-G11-U07-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "For a grouped continuous frequency distribution, what is the class mark (midpoint) of the class interval 160 ≤ x < 180?",
+      "options": [
+        {
+          "id": "A",
+          "text": "165"
+        },
+        {
+          "id": "B",
+          "text": "170"
+        },
+        {
+          "id": "C",
+          "text": "175"
+        },
+        {
+          "id": "D",
+          "text": "20"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "By Definition 7.7, the class mark (midpoint m) is calculated as the average of the lower and upper class limits/boundaries: m = (lower limit + upper limit) / 2. Here, m = (160 + 180) / 2 = 340 / 2 = 170.",
+      "sourceReference": "Section 7.2.2, Page 366, 369"
+    },
+    {
+      "id": "MAT-G11-U07-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is the median of the following ungrouped data set representing daily car accidents: 4, 6, 7, 7, 7, 8, 9, 11, 11?",
+      "options": [
+        {
+          "id": "A",
+          "text": "6"
+        },
+        {
+          "id": "B",
+          "text": "7"
+        },
+        {
+          "id": "C",
+          "text": "8"
+        },
+        {
+          "id": "D",
+          "text": "9"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The data is already ordered with n = 9 observations (an odd number). The median is the ((n + 1)/2)-th item = ((9 + 1)/2)-th = 5th item. Counting to the 5th observation in {4, 6, 7, 7, 7, 8, 9, 11, 11} yields 7.",
+      "sourceReference": "Section 7.4.2, Page 377-378"
+    },
+    {
+      "id": "MAT-G11-U07-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which of the following measures of location corresponds exactly to the 50th percentile (P₅₀) and the 5th decile (D₅) of any distribution?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The arithmetic mean"
+        },
+        {
+          "id": "B",
+          "text": "The mode"
+        },
+        {
+          "id": "C",
+          "text": "The median (second quartile, Q₂)"
+        },
+        {
+          "id": "D",
+          "text": "The interquartile range (IQR)"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "By definition of partition values in Section 7.4.3, the second quartile Q₂, the 5th decile D₅, and the 50th percentile P₅₀ all divide the distribution into two equal halves, making each identical to the median.",
+      "sourceReference": "Section 7.4.3, Page 383, 387, 394, 406"
+    },
+    {
+      "id": "MAT-G11-U07-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "If the third quartile of an exam score distribution is Q₃ = 85.5 and the first quartile is Q₁ = 68.5, what is the interquartile range (IQR)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "8.5"
+        },
+        {
+          "id": "B",
+          "text": "17.0"
+        },
+        {
+          "id": "C",
+          "text": "77.0"
+        },
+        {
+          "id": "D",
+          "text": "154.0"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "By Definition 7.10, the interquartile range is the difference between the upper quartile and the lower quartile: IQR = Q₃ - Q₁ = 85.5 - 68.5 = 17.0.",
+      "sourceReference": "Section 7.4.3.1, Page 384"
+    },
+    {
+      "id": "MAT-G11-U07-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What is the arithmetic mean of the test marks given in the following frequency table?\nMarks: 5, 9, 10, 12, 13, 19\nFrequency: 2, 10, 5, 5, 7, 1",
+      "options": [
+        {
+          "id": "A",
+          "text": "10.0"
+        },
+        {
+          "id": "B",
+          "text": "10.5"
+        },
+        {
+          "id": "C",
+          "text": "11.0"
+        },
+        {
+          "id": "D",
+          "text": "11.5"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Using x̄ = (∑ f_i x_i) / (∑ f_i) for data points x = {6, 8, 10, 12, 14, 16} with frequencies f = {2, 5, 8, 8, 5, 2}: ∑ f_i = 2 + 5 + 8 + 8 + 5 + 2 = 30. ∑ f_i x_i = 2(6) + 5(8) + 8(10) + 8(12) + 5(14) + 2(16) = 12 + 40 + 80 + 96 + 70 + 32 = 330. Therefore, x̄ = 330 / 30 = 11.0.",
+      "sourceReference": "Section 7.4, Page 371-372"
+    },
+    {
+      "id": "MAT-G11-U07-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What is the mean of the grouped frequency distribution shown below?\nClass Interval: 10–20, 20–30, 30–40, 40–50\nFrequency (f): 4, 12, 20, 14",
+      "options": [
+        {
+          "id": "A",
+          "text": "31.8"
+        },
+        {
+          "id": "B",
+          "text": "33.8"
+        },
+        {
+          "id": "C",
+          "text": "34.5"
+        },
+        {
+          "id": "D",
+          "text": "35.0"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "First, find the class midpoints (m_i): 10–20 has m₁ = 15; 20–30 has m₂ = 25; 30–40 has m₃ = 35; 40–50 has m₄ = 45. Next, calculate the sum of products ∑ f_i m_i: (4)(15) + (12)(25) + (20)(35) + (14)(45) = 60 + 300 + 700 + 630 = 1690. Total frequency ∑ f_i = 4 + 12 + 20 + 14 = 50. Thus, x̄ = 1690 / 50 = 33.8.",
+      "sourceReference": "Section 7.4.1, Page 374-375"
+    },
+    {
+      "id": "MAT-G11-U07-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Consider the following grouped frequency distribution of travel times (in minutes) for 50 students:\nClass Interval: 1 ≤ t < 10 (f = 8), 10 ≤ t < 20 (f = 14), 20 ≤ t < 30 (f = 12), 30 ≤ t < 40 (f = 9), 40 ≤ t < 50 (f = 7).\nWhat is the median travel time?",
+      "options": [
+        {
+          "id": "A",
+          "text": "21.5 minutes"
+        },
+        {
+          "id": "B",
+          "text": "22.5 minutes"
+        },
+        {
+          "id": "C",
+          "text": "23.0 minutes"
+        },
+        {
+          "id": "D",
+          "text": "24.5 minutes"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Total observations n = 50, so n/2 = 25. Cumulative frequencies: 8, 22, 34, 43, 50. The median class is 20 ≤ t < 30 because its cumulative frequency (34) first equals or exceeds 25. Lower limit B_L = 20, frequency of median class f_c = 12, cumulative frequency preceding median class cf_B = 22, class width i = 10. Using the median formula: Median = B_L + ((n/2 - cf_B) / f_c) × i = 20 + ((25 - 22) / 12) × 10 = 20 + (3/12) × 10 = 20 + 2.5 = 22.5 minutes.",
+      "sourceReference": "Section 7.4.2, Page 380-381"
+    },
+    {
+      "id": "MAT-G11-U07-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "For the ordered data set: 5, 7, 11, 14, 26, 30, 34, 36, 43, 47, 51, 54, 57 (n = 13), what is the value of the first quartile (Q₁)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "11.0"
+        },
+        {
+          "id": "B",
+          "text": "12.5"
+        },
+        {
+          "id": "C",
+          "text": "14.0"
+        },
+        {
+          "id": "D",
+          "text": "20.0"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Since n = 13 is odd, the position of Q₁ is given by (1(n + 1)/4)-th item = (14/4)-th item = 3.5th item. The 3.5th item lies halfway between the 3rd item (11) and the 4th item (14): Q₁ = x₃ + 0.5(x₄ - x₃) = 11 + 0.5(14 - 11) = 11 + 1.5 = 12.5.",
+      "sourceReference": "Section 7.4.3.1, Page 385"
+    },
+    {
+      "id": "MAT-G11-U07-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What is the mode of the following grouped frequency distribution?\nClass Interval: 10–20 (f = 4), 20–30 (f = 12), 30–40 (f = 20), 40–50 (f = 14)\n(Assume class boundaries are continuous with width i = 10)",
+      "options": [
+        {
+          "id": "A",
+          "text": "34.0"
+        },
+        {
+          "id": "B",
+          "text": "35.7"
+        },
+        {
+          "id": "C",
+          "text": "36.2"
+        },
+        {
+          "id": "D",
+          "text": "37.5"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The modal class is 30–40 since it has the maximum frequency (f_mo = 20). Lower limit B_L = 30. d₁ = f_mo - f_preceding = 20 - 12 = 8. d₂ = f_mo - f_subsequent = 20 - 14 = 6. Class width i = 10. Using Mode = B_L + (d₁ / (d₁ + d₂)) × i = 30 + (8 / (8 + 6)) × 10 = 30 + (8 / 14) × 10 = 30 + 5.71 = 35.71 (approx 35.7).",
+      "sourceReference": "Section 7.4.4, Page 403-404"
+    },
+    {
+      "id": "MAT-G11-U07-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In a symmetric frequency distribution, which of the following relationships between the measures of central tendency is always TRUE?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Mean > Median > Mode"
+        },
+        {
+          "id": "B",
+          "text": "Mode > Median > Mean"
+        },
+        {
+          "id": "C",
+          "text": "Mean = Median = Mode"
+        },
+        {
+          "id": "D",
+          "text": "Mean + Mode = 2 × Median"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "In a perfectly symmetrical distribution, the data values are evenly balanced on both sides of the center, causing the mean, median, and mode to coincide at the exact center (Mean = Median = Mode).",
+      "sourceReference": "Section 7.4 & 2018 EUEE Paper, Page 371-372, 406"
+    },
+    {
+      "id": "MAT-G11-U07-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A grouped frequency distribution of weekly wages (in Birr) for 100 workers has the following cumulative frequencies:\n140 ≤ x < 160: cf = 7\n160 ≤ x < 180: cf = 27\n180 ≤ x < 200: cf = 60\n200 ≤ x < 220: cf = 85\n220 ≤ x < 240: cf = 96\n240 ≤ x < 260: cf = 100\nWhat is the 70th percentile (P₇₀) of the weekly wages?",
+      "options": [
+        {
+          "id": "A",
+          "text": "204.8 Birr"
+        },
+        {
+          "id": "B",
+          "text": "206.5 Birr"
+        },
+        {
+          "id": "C",
+          "text": "208.0 Birr"
+        },
+        {
+          "id": "D",
+          "text": "210.4 Birr"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "For P₇₀ with n = 100: (70 × 100)/100 = 70th item. Looking at cumulative frequencies (7, 27, 60, 85, 96, 100), the 70th item falls in the class 200 ≤ x < 220. Lower class boundary B_L = 200. Preceding cumulative frequency cf_B = 60. Class frequency f_c = 85 - 60 = 25. Class width i = 20. Using P_j = B_L + (((jn/100) - cf_B) / f_c) × i: P₇₀ = 200 + ((70 - 60) / 25) × 20 = 200 + (10 / 25) × 20 = 200 + 8 = 208 Birr.",
+      "sourceReference": "Section 7.4.3.2, Page 398-399"
+    },
+    {
+      "id": "MAT-G11-U07-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A distribution of exam marks has lower quartile Q₁ = 35 and upper quartile Q₃ = 50. What is the coefficient of quartile deviation, defined as (Q₃ - Q₁) / (Q₃ + Q₁)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "3/17"
+        },
+        {
+          "id": "B",
+          "text": "5/17"
+        },
+        {
+          "id": "C",
+          "text": "15/2"
+        },
+        {
+          "id": "D",
+          "text": "17/3"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The coefficient of quartile deviation is given by (Q₃ - Q₁) / (Q₃ + Q₁). Substituting Q₁ = 35 and Q₃ = 50: (50 - 35) / (50 + 35) = 15 / 85. Dividing the numerator and denominator by 5 gives 3 / 17. (Matches EUEE 2018 Version 3, Question 32).",
+      "sourceReference": "Section 7.4.3, Page 384, 386 & EUEE 2018 V3 Q32"
+    },
+    {
+      "id": "MAT-G11-U07-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "The mean age of three people is 22 years, their median age is 20 years, and the range of their ages is 16 years. What is the age of the oldest person?",
+      "options": [
+        {
+          "id": "A",
+          "text": "28 years"
+        },
+        {
+          "id": "B",
+          "text": "30 years"
+        },
+        {
+          "id": "C",
+          "text": "31 years"
+        },
+        {
+          "id": "D",
+          "text": "34 years"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Let the three ages in ascending order be a, b, and c. Since n = 3, the median is the middle value: b = 20. The mean is 22, so the sum of ages is a + b + c = 3 × 22 = 66 => a + 20 + c = 66 => a + c = 46. The range is c - a = 16. Adding the two linear equations: (a + c) + (c - a) = 46 + 16 => 2c = 62 => c = 31 years (and the youngest is a = 46 - 31 = 15 years). Thus, the oldest person is 31 years old.",
+      "sourceReference": "Section 7.5, Problem Solving 4, Page 408"
+    },
+    {
+      "id": "MAT-G11-U07-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "For a unimodal frequency distribution, the mean is 32, the median is 30.5, and the mode is 29.5. Which of the following statements correctly describes the skewness of this distribution?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The distribution is negatively skewed because Mean < Median < Mode."
+        },
+        {
+          "id": "B",
+          "text": "The distribution is positively skewed because Mean > Median > Mode."
+        },
+        {
+          "id": "C",
+          "text": "The distribution is perfectly symmetrical."
+        },
+        {
+          "id": "D",
+          "text": "Karl Pearson's coefficient of skewness is negative."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "When Mean > Median > Mode (here 32 > 30.5 > 29.5), the longer tail of the distribution extends toward the higher values on the right, which characterizes a positively skewed (right-skewed) distribution. (Directly reflects EUEE 2018 Version 3, Question 25).",
+      "sourceReference": "Section 7.4 & EUEE 2018 V3 Q25, Page 371-372, 406"
+    }
+  ]
 }

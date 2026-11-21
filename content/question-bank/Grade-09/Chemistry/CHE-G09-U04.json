@@ -3,5 +3,411 @@
   "subject": "Chemistry",
   "unitNumber": 4,
   "unitTitle": "Periodic Classification of Elements",
-  "questions": []
+  "questions": [
+    {
+      "id": "CHE-G09-U04-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "According to the Modern Periodic Law, the physical and chemical properties of the elements are periodic functions of their:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Atomic masses"
+        },
+        {
+          "id": "B",
+          "text": "Atomic numbers"
+        },
+        {
+          "id": "C",
+          "text": "Mass numbers"
+        },
+        {
+          "id": "D",
+          "text": "Number of neutrons"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The Modern Periodic Law, established by Henry Moseley, states that the properties of elements repeat periodically when arranged in order of increasing atomic number.",
+      "sourceReference": "Section 4.3, Page 118"
+    },
+    {
+      "id": "CHE-G09-U04-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which early classification scheme stated that when elements are arranged in increasing order of atomic weight, the properties of every eighth element are similar to those of the first?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Dobereiner's Triads"
+        },
+        {
+          "id": "B",
+          "text": "Newlands' Law of Octaves"
+        },
+        {
+          "id": "C",
+          "text": "Mendeleev's Periodic Law"
+        },
+        {
+          "id": "D",
+          "text": "Moseley's Atomic Rule"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "John Newlands formulated the Law of Octaves, observing that elemental properties repeated every eighth element, drawing an analogy to octaves in music.",
+      "sourceReference": "Section 4.1, Page 112"
+    },
+    {
+      "id": "CHE-G09-U04-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "The elements belonging to Group VIIA (Group 17) of the modern periodic table are collectively known by what family name?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Alkali metals"
+        },
+        {
+          "id": "B",
+          "text": "Alkaline earth metals"
+        },
+        {
+          "id": "C",
+          "text": "Halogens"
+        },
+        {
+          "id": "D",
+          "text": "Chalcogens"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Group VIIA elements (fluorine, chlorine, bromine, iodine, and astatine) are called halogens, which literally means 'salt-formers'.",
+      "sourceReference": "Section 4.3, Page 123"
+    },
+    {
+      "id": "CHE-G09-U04-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In the modern periodic table, an element whose differentiating (last) electron enters a p-subshell is classified under which block?",
+      "options": [
+        {
+          "id": "A",
+          "text": "s-block"
+        },
+        {
+          "id": "B",
+          "text": "p-block"
+        },
+        {
+          "id": "C",
+          "text": "d-block"
+        },
+        {
+          "id": "D",
+          "text": "f-block"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Elements are divided into s, p, d, and f blocks based on the subshell in which the outermost (differentiating) electron resides. If it enters a p-orbital, the element is in the p-block.",
+      "sourceReference": "Section 4.3, Page 121"
+    },
+    {
+      "id": "CHE-G09-U04-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is the general trend of atomic radius across a period from left to right and down a group in the periodic table?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Increases across a period, increases down a group"
+        },
+        {
+          "id": "B",
+          "text": "Decreases across a period, decreases down a group"
+        },
+        {
+          "id": "C",
+          "text": "Decreases across a period, increases down a group"
+        },
+        {
+          "id": "D",
+          "text": "Increases across a period, decreases down a group"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Atomic radius decreases across a period from left to right due to increasing effective nuclear charge, and increases down a group due to the addition of principal energy shells.",
+      "sourceReference": "Section 4.4, Page 126"
+    },
+    {
+      "id": "CHE-G09-U04-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Johann Wolfgang Döbereiner grouped elements into triads based on chemical similarities. If the atomic mass of Lithium is 7.0 amu and Potassium is 39.0 amu in the alkali metal triad (Li, Na, K), what is the estimated atomic mass of Sodium (Na)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "23.0 amu"
+        },
+        {
+          "id": "B",
+          "text": "46.0 amu"
+        },
+        {
+          "id": "C",
+          "text": "16.0 amu"
+        },
+        {
+          "id": "D",
+          "text": "32.0 amu"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "According to Döbereiner's Law of Triads, the atomic mass of the middle element is approximately equal to the arithmetic average of the first and third elements: (7.0 + 39.0) / 2 = 23.0 amu.",
+      "sourceReference": "Section 4.1, Page 111"
+    },
+    {
+      "id": "CHE-G09-U04-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "An atom of an element has a ground-state electron configuration of 2, 8, 7 across its principal energy shells. What are the period number and group number of this element in the periodic table?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Period 7, Group IIA"
+        },
+        {
+          "id": "B",
+          "text": "Period 3, Group VIIA"
+        },
+        {
+          "id": "C",
+          "text": "Period 2, Group VIIA"
+        },
+        {
+          "id": "D",
+          "text": "Period 3, Group IIA"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The number of occupied main shells determines the period (3 shells = Period 3), and the number of valence electrons determines the main group number (7 valence electrons = Group VIIA / Group 17).",
+      "sourceReference": "Section 4.3, Page 119"
+    },
+    {
+      "id": "CHE-G09-U04-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which factor primarily causes the first ionization energy of main-group elements to increase across a period from left to right?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Increase in atomic radius"
+        },
+        {
+          "id": "B",
+          "text": "Increase in effective nuclear charge paired with decreasing atomic size"
+        },
+        {
+          "id": "C",
+          "text": "Addition of new electron shells shielding the nucleus"
+        },
+        {
+          "id": "D",
+          "text": "Decrease in nuclear charge"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Across a period, nuclear charge increases while electrons are added to the same main energy level. This increases the effective nuclear charge and pulls valence electrons closer, requiring more energy to remove an electron.",
+      "sourceReference": "Section 4.4, Page 128"
+    },
+    {
+      "id": "CHE-G09-U04-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "On Linus Pauling's electronegativity scale, Fluorine is assigned the maximum value of 4.0. Why does Fluorine possess the highest electronegativity of all elements?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It has the largest atomic radius and lowest nuclear charge."
+        },
+        {
+          "id": "B",
+          "text": "It has a small atomic radius, high effective nuclear charge, and requires only one electron to complete its octet."
+        },
+        {
+          "id": "C",
+          "text": "It has a fully filled valence shell and zero electron affinity."
+        },
+        {
+          "id": "D",
+          "text": "It is a metallic element located in Group IA."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Fluorine has a very small atomic radius and high effective nuclear charge, giving its nucleus a powerful attraction for shared bonding electron pairs.",
+      "sourceReference": "Section 4.4, Page 135"
+    },
+    {
+      "id": "CHE-G09-U04-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In his 1869 periodic table, Dmitri Mendeleev placed Tellurium (atomic mass = 127.6) before Iodine (atomic mass = 126.9). What was his justification for this anomaly?",
+      "options": [
+        {
+          "id": "A",
+          "text": "He prioritized grouping elements with similar chemical properties over strict adherence to increasing atomic mass."
+        },
+        {
+          "id": "B",
+          "text": "He proved that Iodine was an isotope of Tellurium."
+        },
+        {
+          "id": "C",
+          "text": "He assumed the atomic masses of all halogens were identical."
+        },
+        {
+          "id": "D",
+          "text": "He arranged elements alphabetically when atomic masses were close."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Mendeleev placed chemical similarity ahead of atomic mass order. Putting Iodine after Tellurium ensured Iodine aligned with fluorine, chlorine, and bromine in Group VII.",
+      "sourceReference": "Section 4.2, Page 115"
+    },
+    {
+      "id": "CHE-G09-U04-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which group of elements in the periodic table generally exhibits the most negative (exothermic) first electron affinities?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Group IA (Alkali metals)"
+        },
+        {
+          "id": "B",
+          "text": "Group IIA (Alkaline earth metals)"
+        },
+        {
+          "id": "C",
+          "text": "Group VIIA (Halogens)"
+        },
+        {
+          "id": "D",
+          "text": "Group VIIIA (Noble gases)"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Halogens (Group VIIA) have high effective nuclear charges and require only one additional electron to achieve a stable noble gas electron configuration, releasing significant energy when an electron is added.",
+      "sourceReference": "Section 4.4, Page 132"
+    },
+    {
+      "id": "CHE-G09-U04-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Experimental measurements show that Chlorine has a more negative electron affinity (-349 kJ/mol) than Fluorine (-328 kJ/mol), violating the simple top-to-bottom group trend. What is the main cause of this anomaly?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Fluorine has a smaller nuclear charge than Chlorine."
+        },
+        {
+          "id": "B",
+          "text": "The extremely compact volume of Fluorine's 2p subshell creates strong electron-electron repulsions when an incoming electron is added."
+        },
+        {
+          "id": "C",
+          "text": "Chlorine is more metallic than Fluorine."
+        },
+        {
+          "id": "D",
+          "text": "Fluorine's added electron enters a d-orbital rather than a p-orbital."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Due to Fluorine's exceptionally small atomic size, adding an electron to its crowded 2p subshell results in significant electron-electron repulsion, making the process slightly less exothermic than adding an electron to Chlorine's larger 3p subshell.",
+      "sourceReference": "Section 4.4, Page 132"
+    },
+    {
+      "id": "CHE-G09-U04-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "An element has an atomic number of Z = 35. To which block, period, and group does this element belong, and what is its chemical nature?",
+      "options": [
+        {
+          "id": "A",
+          "text": "s-block, Period 3, Group IIA, Metal"
+        },
+        {
+          "id": "B",
+          "text": "p-block, Period 4, Group VIIA (Group 17), Nonmetal"
+        },
+        {
+          "id": "C",
+          "text": "d-block, Period 4, Group VIIB, Transition Metal"
+        },
+        {
+          "id": "D",
+          "text": "p-block, Period 3, Group VIA, Nonmetal"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The subshell configuration for Z = 35 is [Ar] 4s² 3d¹⁰ 4p⁵. The highest principal quantum number n = 4 (Period 4), valence electrons = 2 + 5 = 7 (Group VIIA/17), differentiating electron in p-subshell (p-block). It is Bromine, a reactive nonmetal.",
+      "sourceReference": "Section 4.3, Page 120"
+    },
+    {
+      "id": "CHE-G09-U04-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "The first ionization energy of Sodium (Na, Z = 11) is 496 kJ/mol, whereas its second ionization energy jumps dramatically to 4560 kJ/mol. Why is there such an exceptionally large difference between IE1 and IE2 for Sodium?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The second electron is removed from a stable, core noble gas electron configuration ([Ne])."
+        },
+        {
+          "id": "B",
+          "text": "The second electron is removed from a higher energy shell farther from the nucleus."
+        },
+        {
+          "id": "C",
+          "text": "Sodium becomes a negatively charged ion after the first ionization."
+        },
+        {
+          "id": "D",
+          "text": "Removing the second electron causes the atom to lose all its protons."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Sodium has one valence electron (3s¹). Removing the first electron gives Na⁺ with a stable noble gas core ([Ne] = 2s² 2p⁶). Removing the second electron requires breaking into this tightly bound, low-energy core, demanding enormous energy.",
+      "sourceReference": "Section 4.4, Page 129"
+    },
+    {
+      "id": "CHE-G09-U04-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Lithium (Group IA, Period 2) exhibits chemical similarities to Magnesium (Group IIA, Period 3) rather than its own group members in certain reactions. What periodic phenomenon explains this relationship?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Isoelectronic pairing due to identical mass numbers"
+        },
+        {
+          "id": "B",
+          "text": "Diagonal relationship arising from similar ionic sizes and charge densities"
+        },
+        {
+          "id": "C",
+          "text": "Allotropic transformation in solid states"
+        },
+        {
+          "id": "D",
+          "text": "Inert pair effect in heavy metals"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Elements in Period 2 often show diagonal relationships with elements located diagonally below them in Period 3 (such as Li and Mg, Be and Al) because moving right across a period decreases atomic size while moving down a group increases it, resulting in similar ionic radii and charge densities.",
+      "sourceReference": "Section 4.4, Page 136"
+    }
+  ]
 }

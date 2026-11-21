@@ -3,5 +3,411 @@
   "subject": "Mathematics",
   "unitNumber": 3,
   "unitTitle": "Matrices",
-  "questions": []
+  "questions": [
+    {
+      "id": "MAT-G11-U03-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is the order (dimension) of a matrix that has 4 rows and 3 columns?",
+      "options": [
+        {
+          "id": "A",
+          "text": "3 × 4"
+        },
+        {
+          "id": "B",
+          "text": "4 × 3"
+        },
+        {
+          "id": "C",
+          "text": "12"
+        },
+        {
+          "id": "D",
+          "text": "4 × 4"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "By Definition 3.1, a matrix with m rows and n columns is said to have order (or dimension) m × n (read 'm by n'). Since this matrix has 4 rows and 3 columns, its order is 4 × 3.",
+      "sourceReference": "Section 3.1.1, Page 130-132"
+    },
+    {
+      "id": "MAT-G11-U03-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "If matrix A = [[2, -1]] and matrix B = [[-1, 5]], what is the matrix result of 2A - B?",
+      "options": [
+        {
+          "id": "A",
+          "text": "[[5, -7]]"
+        },
+        {
+          "id": "B",
+          "text": "[[3, -7]]"
+        },
+        {
+          "id": "C",
+          "text": "[]"
+        },
+        {
+          "id": "D",
+          "text": "[]"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Scalar multiplication gives 2A = [[4, -2]]. Subtracting matrix B: 2A - B = [[4 - (-1), -2 - 5], [8 - 0, 6 - 2]] = [[5, -7]].",
+      "sourceReference": "Section 3.1.2, Page 135-137"
+    },
+    {
+      "id": "MAT-G11-U03-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is the determinant of the 2 × 2 matrix A = [[5, -2]]?",
+      "options": [
+        {
+          "id": "A",
+          "text": "14"
+        },
+        {
+          "id": "B",
+          "text": "26"
+        },
+        {
+          "id": "C",
+          "text": "-14"
+        },
+        {
+          "id": "D",
+          "text": "20"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "For any 2 × 2 matrix A = [[a, b], [c, d]], the determinant is given by det(A) = ad - bc. Here, det(A) = (5)(4) - (-2)(3) = 20 - (-6) = 20 + 6 = 26.",
+      "sourceReference": "Section 3.2.1, Page 150-151"
+    },
+    {
+      "id": "MAT-G11-U03-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "A square matrix A is called a singular matrix if and only if which of the following statements holds?",
+      "options": [
+        {
+          "id": "A",
+          "text": "det(A) = 1"
+        },
+        {
+          "id": "B",
+          "text": "det(A) = 0"
+        },
+        {
+          "id": "C",
+          "text": "det(A) < 0"
+        },
+        {
+          "id": "D",
+          "text": "A is an identity matrix"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "By definition, a square matrix A is singular if its determinant equals zero (det(A) = 0). A non-singular matrix is one whose determinant is non-zero, which also guarantees that its inverse exists.",
+      "sourceReference": "Section 3.2.1 & Section 3.3.1, Page 153, 168"
+    },
+    {
+      "id": "MAT-G11-U03-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "If matrix A has order 2 × 3 and matrix B has order 3 × 4, what is the order of the product matrix AB?",
+      "options": [
+        {
+          "id": "A",
+          "text": "3 × 3"
+        },
+        {
+          "id": "B",
+          "text": "2 × 3"
+        },
+        {
+          "id": "C",
+          "text": "2 × 4"
+        },
+        {
+          "id": "D",
+          "text": "The product AB is undefined"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "By Definition 3.4, matrix multiplication AB is defined when the number of columns of A equals the number of rows of B (both equal 3). The resulting product matrix AB has dimensions equal to the number of rows of A by the number of columns of B, which is 2 × 4.",
+      "sourceReference": "Section 3.1.2, Page 139-141"
+    },
+    {
+      "id": "MAT-G11-U03-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Given the matrices A = [] and B = [[-1, 4]], what is the product matrix AB?",
+      "options": [
+        {
+          "id": "A",
+          "text": "[, [-3, 12]]"
+        },
+        {
+          "id": "B",
+          "text": "[[-3, 12]]"
+        },
+        {
+          "id": "C",
+          "text": "[, [-3, 0]]"
+        },
+        {
+          "id": "D",
+          "text": "[, [-3, 12]]"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Multiplying rows of A by columns of B: row 1 × col 1 = (1)(-1) + (2)(2) = -1 + 4 = 3; row 1 × col 2 = (1)(4) + (2)(1) = 4 + 2 = 6; row 2 × col 1 = (3)(-1) + (0)(2) = -3 + 0 = -3; row 2 × col 2 = (3)(4) + (0)(1) = 12 + 0 = 12. Thus, AB = [, [-3, 12]].",
+      "sourceReference": "Section 3.1.2, Page 141-143"
+    },
+    {
+      "id": "MAT-G11-U03-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "For what value of the constant k is the matrix M = [[k + 2, 4], [3, k - 2]] a singular matrix?",
+      "options": [
+        {
+          "id": "A",
+          "text": "k = ±2"
+        },
+        {
+          "id": "B",
+          "text": "k = ±4"
+        },
+        {
+          "id": "C",
+          "text": "k = ±16"
+        },
+        {
+          "id": "D",
+          "text": "k = 0"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "A matrix is singular if its determinant is zero: det(M) = (k + 2)(k - 2) - (4)(3) = 0 => (k² - 4) - 12 = 0 => k² - 16 = 0 => k² = 16 => k = ±4.",
+      "sourceReference": "Section 3.2.1 & Section 3.3.1, Page 151, 168"
+    },
+    {
+      "id": "MAT-G11-U03-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What is the determinant of the 3 × 3 matrix A = [, [3, -1, 4], [1, 2, -2]]?",
+      "options": [
+        {
+          "id": "A",
+          "text": "-5"
+        },
+        {
+          "id": "B",
+          "text": "5"
+        },
+        {
+          "id": "C",
+          "text": "-15"
+        },
+        {
+          "id": "D",
+          "text": "11"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Expanding along the first row: det(A) = 2 · det([[-1, 4], [2, -2]]) - 0 + 1 · det([[3, -1]]). The first 2 × 2 minor is (-1)(-2) - (4)(2) = 2 - 8 = -6. The second 2 × 2 minor is (3)(2) - (-1)(1) = 6 - (-1) = 7. Thus, det(A) = 2(-6) + 1(7) = -12 + 7 = -5.",
+      "sourceReference": "Section 3.2.2, Page 155-158"
+    },
+    {
+      "id": "MAT-G11-U03-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What is the inverse matrix A⁻¹ of the 2 × 2 matrix A = []?",
+      "options": [
+        {
+          "id": "A",
+          "text": "[[2, -5], [-1, 3]]"
+        },
+        {
+          "id": "B",
+          "text": "[[-2, 5], [1, -3]]"
+        },
+        {
+          "id": "C",
+          "text": "[[3, -5], [-1, 2]]"
+        },
+        {
+          "id": "D",
+          "text": "[]"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "For A = [[a, b], [c, d]], the inverse is A⁻¹ = (1 / det(A)) [[d, -b], [-c, a]]. The determinant is det(A) = (3)(2) - (5)(1) = 6 - 5 = 1. Therefore, A⁻¹ = (1/1) [[2, -5], [-1, 3]] = [[2, -5], [-1, 3]].",
+      "sourceReference": "Section 3.3.1, Page 167-169"
+    },
+    {
+      "id": "MAT-G11-U03-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Using Cramer's Rule to solve the system of linear equations:\n  2x - 3y = 7\n  3x + 5y = 1\nwhat is the value of Dx (the determinant obtained by replacing the x-coefficients with the constant terms)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "19"
+        },
+        {
+          "id": "B",
+          "text": "38"
+        },
+        {
+          "id": "C",
+          "text": "-19"
+        },
+        {
+          "id": "D",
+          "text": "32"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Replacing the first column of the coefficient matrix with the column of constants gives matrix D_x = [[7, -3]]. Evaluating the determinant: D_x = (7)(5) - (-3)(1) = 35 - (-3) = 35 + 3 = 38.",
+      "sourceReference": "Section 3.4.1, Page 174-176"
+    },
+    {
+      "id": "MAT-G11-U03-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "If A is a 3 × 3 square matrix such that det(A) = 4, what is the value of det(2A)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "8"
+        },
+        {
+          "id": "B",
+          "text": "16"
+        },
+        {
+          "id": "C",
+          "text": "32"
+        },
+        {
+          "id": "D",
+          "text": "64"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "By Theorem 3.4 on properties of determinants, if A is an n × n square matrix and c is a scalar, then det(cA) = cⁿ · det(A). For n = 3 and c = 2: det(2A) = 2³ · det(A) = 8 · 4 = 32.",
+      "sourceReference": "Section 3.2.3, Page 162-164"
+    },
+    {
+      "id": "MAT-G11-U03-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "If A and B are 3 × 3 invertible matrices such that det(A) = 3 and det(B) = -2, what is the value of det(3 A⁻¹ Bᵀ)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "-18"
+        },
+        {
+          "id": "B",
+          "text": "-2"
+        },
+        {
+          "id": "C",
+          "text": "18"
+        },
+        {
+          "id": "D",
+          "text": "-54"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Using properties of determinants: (1) det(cM) = c³ det(M) for a 3 × 3 matrix, so det(3 A⁻¹ Bᵀ) = 3³ det(A⁻¹ Bᵀ) = 27 det(A⁻¹ Bᵀ); (2) det(MN) = det(M)det(N); (3) det(A⁻¹) = 1 / det(A) = 1/3; (4) det(Bᵀ) = det(B) = -2. Combining these yields 27 · (1 / det(A)) · det(B) = 27 · (1/3) · (-2) = 9 · (-2) = -18.",
+      "sourceReference": "Section 3.2.3 & Section 3.3.1, Page 162-164, 169"
+    },
+    {
+      "id": "MAT-G11-U03-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "What is the adjugate matrix, adj(A), of the 2 × 2 matrix A = [[4, -3], [2, -1]]?",
+      "options": [
+        {
+          "id": "A",
+          "text": "[[-1, 3], [-2, 4]]"
+        },
+        {
+          "id": "B",
+          "text": "[[-1, -2]]"
+        },
+        {
+          "id": "C",
+          "text": "[[1, -3], [2, -4]]"
+        },
+        {
+          "id": "D",
+          "text": "[[-1, 2], [-3, 4]]"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "For any 2 × 2 matrix A = [[a, b], [c, d]], the adjugate matrix is obtained by swapping the main diagonal entries and negating the off-diagonal entries: adj(A) = [[d, -b], [-c, a]]. Here a = 4, b = -3, c = 2, and d = -1. Thus, adj(A) = [[-1, -(-3)], [-2, 4]] = [[-1, 3], [-2, 4]].",
+      "sourceReference": "Section 3.3.1, Page 167-168"
+    },
+    {
+      "id": "MAT-G11-U03-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Consider the system of linear equations:\n  x + y + z = 6\n  2x + y - z = 1\n  3x + 2y + kz = 7\nFor what value of the constant k does this system fail to have a unique solution?",
+      "options": [
+        {
+          "id": "A",
+          "text": "k = 0"
+        },
+        {
+          "id": "B",
+          "text": "k = 1"
+        },
+        {
+          "id": "C",
+          "text": "k = -1"
+        },
+        {
+          "id": "D",
+          "text": "k = 2"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "A square linear system fails to have a unique solution when the determinant of its coefficient matrix equals 0. The coefficient matrix is A = [, [2, 1, -1], [3, 2, k]]. Expanding along row 1: det(A) = 1(k - (-2)) - 1(2k - (-3)) + 1(4 - 3) = (k + 2) - (2k + 3) + 1 = k + 2 - 2k - 3 + 1 = -k. Setting det(A) = 0 gives -k = 0 => k = 0.",
+      "sourceReference": "Section 3.4.1 & Review Exercise, Page 175-177, 185"
+    },
+    {
+      "id": "MAT-G11-U03-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A merchant sells two types of coffee blends, Blend A and Blend B. Selling 3 bags of Blend A and 2 bags of Blend B generates 1,900 Birr. Selling 2 bags of Blend A and 4 bags of Blend B generates 2,200 Birr. If this system is expressed as the matrix equation AX = B, what is the price of one bag of Blend A?",
+      "options": [
+        {
+          "id": "A",
+          "text": "350 Birr"
+        },
+        {
+          "id": "B",
+          "text": "400 Birr"
+        },
+        {
+          "id": "C",
+          "text": "450 Birr"
+        },
+        {
+          "id": "D",
+          "text": "500 Birr"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Let x be the price of Blend A and y be the price of Blend B. The matrix equation is [] [[x], [y]] = []. The coefficient determinant is D = (3)(4) - (2)(2) = 12 - 4 = 8. For x, D_x = det([]) = (1900)(4) - (2)(2200) = 7600 - 4400 = 3200. By Cramer's Rule, x = D_x / D = 3200 / 8 = 400 Birr.",
+      "sourceReference": "Section 3.4.2 & Review Exercise, Page 178-180, 187"
+    }
+  ]
 }

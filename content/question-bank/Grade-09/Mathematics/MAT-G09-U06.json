@@ -3,5 +3,411 @@
   "subject": "Mathematics",
   "unitNumber": 6,
   "unitTitle": "Regular Polygons",
-  "questions": []
+  "questions": [
+    {
+      "id": "MAT-G09-U06-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which of the following statements correctly distinguishes a convex polygon from a concave polygon?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A polygon is convex if each interior angle is less than 180°, and concave if at least one interior angle is greater than 180°."
+        },
+        {
+          "id": "B",
+          "text": "A polygon is convex if all of its sides are equal, and concave if its sides have unequal lengths."
+        },
+        {
+          "id": "C",
+          "text": "A polygon is convex if it has an even number of sides, and concave if it has an odd number of sides."
+        },
+        {
+          "id": "D",
+          "text": "A polygon is convex if the sum of its interior angles equals 360°, and concave if the sum exceeds 360°."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "By definition, a polygon is convex when the measure of every interior angle is strictly less than 180 degrees (vertices point outward). A polygon is concave if there is at least one interior angle whose measure is greater than 180 degrees (at least one vertex points inward).",
+      "sourceReference": "Section 6.1, Page 210"
+    },
+    {
+      "id": "MAT-G09-U06-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is the sum of the measures of the interior angles of a convex decagon (10-sided polygon)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "1,080°"
+        },
+        {
+          "id": "B",
+          "text": "1,260°"
+        },
+        {
+          "id": "C",
+          "text": "1,440°"
+        },
+        {
+          "id": "D",
+          "text": "1,800°"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The sum of the interior angles of an n-sided convex polygon is given by the formula (n - 2) × 180°. For a decagon, n = 10: Sum = (10 - 2) × 180° = 8 × 180° = 1,440°.",
+      "sourceReference": "Section 6.1, Page 214"
+    },
+    {
+      "id": "MAT-G09-U06-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is the sum of the measures of the exterior angles of any convex polygon with 15 sides?",
+      "options": [
+        {
+          "id": "A",
+          "text": "180°"
+        },
+        {
+          "id": "B",
+          "text": "360°"
+        },
+        {
+          "id": "C",
+          "text": "540°"
+        },
+        {
+          "id": "D",
+          "text": "2,340°"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "For any convex polygon, regardless of the number of sides n, the sum of the exterior angles (taking one exterior angle at each vertex) is always constant and equal to 360°.",
+      "sourceReference": "Section 6.2, Page 219"
+    },
+    {
+      "id": "MAT-G09-U06-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "How many lines of symmetry does a regular octagon have?",
+      "options": [
+        {
+          "id": "A",
+          "text": "4"
+        },
+        {
+          "id": "B",
+          "text": "6"
+        },
+        {
+          "id": "C",
+          "text": "8"
+        },
+        {
+          "id": "D",
+          "text": "16"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Every regular polygon with n sides has exactly n lines of symmetry. For an octagon, n = 8, so it has exactly 8 lines of symmetry (4 lines connecting opposite vertices and 4 lines connecting midpoints of opposite sides).",
+      "sourceReference": "Section 6.4 & Summary, Page 226, 233"
+    },
+    {
+      "id": "MAT-G09-U06-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is the measure of each central angle of a regular nonagon (9-sided regular polygon) inscribed in a circle?",
+      "options": [
+        {
+          "id": "A",
+          "text": "20°"
+        },
+        {
+          "id": "B",
+          "text": "36°"
+        },
+        {
+          "id": "C",
+          "text": "40°"
+        },
+        {
+          "id": "D",
+          "text": "45°"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The measure of each central angle of an n-sided regular polygon inscribed in a circle is given by 360° / n. For a nonagon (n = 9), the central angle is 360° / 9 = 40°.",
+      "sourceReference": "Section 6.4, Page 228"
+    },
+    {
+      "id": "MAT-G09-U06-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "The sum of the interior angles of a convex polygon is 1,980°. How many sides does this polygon have?",
+      "options": [
+        {
+          "id": "A",
+          "text": "11"
+        },
+        {
+          "id": "B",
+          "text": "12"
+        },
+        {
+          "id": "C",
+          "text": "13"
+        },
+        {
+          "id": "D",
+          "text": "14"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Using the formula (n - 2) × 180° = 1,980°, we divide both sides by 180° to obtain n - 2 = 11. Adding 2 to both sides yields n = 13. The polygon has 13 sides.",
+      "sourceReference": "Section 6.1, Page 214-215"
+    },
+    {
+      "id": "MAT-G09-U06-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Five of the interior angles of a convex hexagon measure 110°, 130°, 125°, 95°, and 140°. What is the measure of the sixth interior angle?",
+      "options": [
+        {
+          "id": "A",
+          "text": "115°"
+        },
+        {
+          "id": "B",
+          "text": "120°"
+        },
+        {
+          "id": "C",
+          "text": "125°"
+        },
+        {
+          "id": "D",
+          "text": "130°"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The sum of the interior angles of a hexagon (n = 6) is (6 - 2) × 180° = 4 × 180° = 720°. The sum of the five given angles is 110° + 130° + 125° + 95° + 140° = 600°. Therefore, the sixth angle is 720° - 600° = 120°.",
+      "sourceReference": "Section 6.1, Page 214-215"
+    },
+    {
+      "id": "MAT-G09-U06-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "If each interior angle of a regular polygon measures 150°, what is the total number of sides of the polygon?",
+      "options": [
+        {
+          "id": "A",
+          "text": "10"
+        },
+        {
+          "id": "B",
+          "text": "12"
+        },
+        {
+          "id": "C",
+          "text": "14"
+        },
+        {
+          "id": "D",
+          "text": "15"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "At each vertex of a regular polygon, the interior angle and exterior angle are supplementary: Exterior angle = 180° - 150° = 30°. The number of sides is n = 360° / (Exterior angle) = 360° / 30° = 12 sides.",
+      "sourceReference": "Section 6.3, Page 222-223"
+    },
+    {
+      "id": "MAT-G09-U06-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In a regular polygon, the ratio of the measure of each interior angle to each exterior angle is 7:2. How many sides does this regular polygon have?",
+      "options": [
+        {
+          "id": "A",
+          "text": "7"
+        },
+        {
+          "id": "B",
+          "text": "8"
+        },
+        {
+          "id": "C",
+          "text": "9"
+        },
+        {
+          "id": "D",
+          "text": "10"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Let the interior angle be 7k and the exterior angle be 2k. Since they are supplementary, 7k + 2k = 180° => 9k = 180° => k = 20°. The exterior angle is 2(20°) = 40°. Therefore, the number of sides is n = 360° / 40° = 9 sides (a nonagon).",
+      "sourceReference": "Section 6.3 & Review Exercise, Page 223, 236"
+    },
+    {
+      "id": "MAT-G09-U06-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "The perimeter of a regular hexagon is 48 cm. What is the area of this regular hexagon?",
+      "options": [
+        {
+          "id": "A",
+          "text": "96√3 cm²"
+        },
+        {
+          "id": "B",
+          "text": "48√3 cm²"
+        },
+        {
+          "id": "C",
+          "text": "144√3 cm²"
+        },
+        {
+          "id": "D",
+          "text": "192√3 cm²"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Since the hexagon is regular, side length s = 48 / 6 = 8 cm. A regular hexagon is composed of 6 congruent equilateral triangles of side length 8 cm. Area = 6 × ((√3 / 4) × s²) = 6 × ((√3 / 4) × 64) = 6 × 16√3 = 96√3 cm².",
+      "sourceReference": "Section 6.4 & Review Exercise, Page 229, 237"
+    },
+    {
+      "id": "MAT-G09-U06-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "A square is inscribed in a circle of radius 6 cm. What are the lengths of its side and apothem, respectively?",
+      "options": [
+        {
+          "id": "A",
+          "text": "6√2 cm and 3√2 cm"
+        },
+        {
+          "id": "B",
+          "text": "6 cm and 3√3 cm"
+        },
+        {
+          "id": "C",
+          "text": "12 cm and 6 cm"
+        },
+        {
+          "id": "D",
+          "text": "3√2 cm and 6√2 cm"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "For an n-sided regular polygon inscribed in a circle of radius r, side s = 2r sin(180°/n) and apothem a = r cos(180°/n). For a square (n = 4, r = 6 cm): s = 2(6) sin(45°) = 12 × (1/√2) = 6√2 cm, and a = 6 cos(45°) = 6 × (1/√2) = 3√2 cm.",
+      "sourceReference": "Section 6.4, Page 230-231"
+    },
+    {
+      "id": "MAT-G09-U06-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A regular hexagon and a regular octagon are positioned on a plane such that they share a common side. What is the measure of the interior angle between the two non-shared adjacent sides meeting at a shared vertex?",
+      "options": [
+        {
+          "id": "A",
+          "text": "95°"
+        },
+        {
+          "id": "B",
+          "text": "105°"
+        },
+        {
+          "id": "C",
+          "text": "115°"
+        },
+        {
+          "id": "D",
+          "text": "125°"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Each interior angle of a regular hexagon is ((6 - 2) × 180°) / 6 = 720° / 6 = 120°. Each interior angle of a regular octagon is ((8 - 2) × 180°) / 8 = 1,080° / 8 = 135°. At the shared vertex, the angles meeting around the point sum to 360°. The angle between the adjacent sides outside both polygons is 360° - (120° + 135°) = 360° - 255° = 105°.",
+      "sourceReference": "Section 6.3 & Exercise 6.8, Page 223"
+    },
+    {
+      "id": "MAT-G09-U06-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Two regular polygons have (n - 1) and (n + 2) sides respectively. If their exterior angles differ by 6°, what are the number of sides of the two polygons?",
+      "options": [
+        {
+          "id": "A",
+          "text": "8 and 11"
+        },
+        {
+          "id": "B",
+          "text": "10 and 13"
+        },
+        {
+          "id": "C",
+          "text": "12 and 15"
+        },
+        {
+          "id": "D",
+          "text": "14 and 17"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The exterior angles are 360° / (n - 1) and 360° / (n + 2). Setting their difference equal to 6°: 360/(n - 1) - 360/(n + 2) = 6. Dividing by 6 gives 60/(n - 1) - 60/(n + 2) = 1 => 60[(n + 2) - (n - 1)] = (n - 1)(n + 2) => 180 = n² + n - 2 => n² + n - 182 = 0. Factoring gives (n - 13)(n + 14) = 0. Since n > 0, n = 13. The sides are n - 1 = 12 and n + 2 = 15.",
+      "sourceReference": "Section 6.3 & Review Exercise, Page 237"
+    },
+    {
+      "id": "MAT-G09-U06-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "An equilateral triangle is inscribed in a circle of radius 6 cm. What is the area of the region inside the circle but outside the equilateral triangle? (Use π ≈ 3.14 and √3 ≈ 1.73)",
+      "options": [
+        {
+          "id": "A",
+          "text": "66.33 cm²"
+        },
+        {
+          "id": "B",
+          "text": "72.45 cm²"
+        },
+        {
+          "id": "C",
+          "text": "58.20 cm²"
+        },
+        {
+          "id": "D",
+          "text": "81.12 cm²"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Area of the circle = πr² = 3.14 × 6² = 113.04 cm². For an equilateral triangle inscribed in a circle of radius r = 6 cm, side s = 2r sin(60°) = 2(6)(√3 / 2) = 6√3 cm. Area of triangle = (√3 / 4)s² = (√3 / 4)(6√3)² = (√3 / 4)(108) = 27√3 ≈ 27 × 1.73 = 46.71 cm². Shaded region area = Area of circle - Area of triangle = 113.04 - 46.71 = 66.33 cm².",
+      "sourceReference": "Section 6.4 & Review Exercise, Page 230-231, 237"
+    },
+    {
+      "id": "MAT-G09-U06-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "The interior angles of a convex octagon form an arithmetic progression where each angle exceeds the previous one by 10°. What is the measure of the smallest interior angle of this octagon?",
+      "options": [
+        {
+          "id": "A",
+          "text": "95°"
+        },
+        {
+          "id": "B",
+          "text": "100°"
+        },
+        {
+          "id": "C",
+          "text": "105°"
+        },
+        {
+          "id": "D",
+          "text": "110°"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The sum of the interior angles of an octagon is (8 - 2) × 180° = 1,080°. Let the 8 angles be a, a + 10°, a + 20°, ..., a + 70°. Their sum is 8a + 10°(1 + 2 + ... + 7) = 8a + 280°. Setting 8a + 280° = 1,080° gives 8a = 800°, so the smallest angle is a = 100°.",
+      "sourceReference": "Section 6.1 & Exercise 6.4, Page 215-216"
+    }
+  ]
 }

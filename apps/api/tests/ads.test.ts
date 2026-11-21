@@ -103,14 +103,14 @@ describe('Unity Ads Rewarded Engine & Monetization APIs', () => {
     expect(policies.offlinePack.durationHours).toBe(24); // Strictly 24 hours per user specification
   });
 
-  it('GET /api/v1/ads/status should report initial status (1 free ticket, no broken streak)', async () => {
+  it('GET /api/v1/ads/status should report initial status (2 free tickets, no broken streak)', async () => {
     const res = await request(app)
       .get('/api/v1/ads/status')
       .set('Authorization', `Bearer ${studentToken}`);
 
     expect(res.status).toBe(200);
     expect(res.body.success).toBe(true);
-    expect(res.body.data.examAccess.ticketsAvailable).toBe(1);
+    expect(res.body.data.examAccess.ticketsAvailable).toBe(2);
     expect(res.body.data.examAccess.canTakeExam).toBe(true);
     expect(res.body.data.streak.canRepair).toBe(false);
     expect(res.body.data.offlineAccess.unlockedUnits).toHaveLength(0);
@@ -208,7 +208,7 @@ describe('Unity Ads Rewarded Engine & Monetization APIs', () => {
     expect(claimRes.status).toBe(200);
     expect(claimRes.body.success).toBe(true);
     expect(claimRes.body.data.rewardType).toBe('exam_access');
-    expect(claimRes.body.data.examTicketsAvailable).toBe(2); // Initial 1 + 1 granted
+    expect(claimRes.body.data.examTicketsAvailable).toBe(3); // Initial 2 + 1 granted
 
     // 3. Double-claim rejection
     const doubleClaimRes = await request(app)

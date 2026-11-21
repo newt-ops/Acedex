@@ -3,5 +3,411 @@
   "subject": "Chemistry",
   "unitNumber": 6,
   "unitTitle": "Some Important Oxygen-Containing Organic Compounds",
-  "questions": []
+  "questions": [
+    {
+      "id": "CHE-G11-U06-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is the functional group present in all monohydric alcohols?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Carbonyl group (-C=O)"
+        },
+        {
+          "id": "B",
+          "text": "Hydroxyl group (-OH)"
+        },
+        {
+          "id": "C",
+          "text": "Carboxyl group (-COOH)"
+        },
+        {
+          "id": "D",
+          "text": "Ether linkage (-O-)"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Alcohols are organic compounds containing one or more hydroxyl groups (-OH) attached directly to a carbon atom of an aliphatic hydrocarbon chain.",
+      "sourceReference": "Section 6.2, Page 266"
+    },
+    {
+      "id": "CHE-G11-U06-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which general structural formula characterizes an ether compound?",
+      "options": [
+        {
+          "id": "A",
+          "text": "R-CO-R'"
+        },
+        {
+          "id": "B",
+          "text": "R-O-R'"
+        },
+        {
+          "id": "C",
+          "text": "R-COOH"
+        },
+        {
+          "id": "D",
+          "text": "R-COOR'"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Ethers are organic compounds in which an oxygen atom is bonded to two organic alkyl or aryl substituents, represented by the general formula R-O-R'.",
+      "sourceReference": "Section 6.2, Page 284"
+    },
+    {
+      "id": "CHE-G11-U06-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "How does the functional group of an aldehyde differ structurally from that of a ketone?",
+      "options": [
+        {
+          "id": "A",
+          "text": "An aldehyde contains a carbonyl group bonded to at least one hydrogen atom, whereas a ketone has its carbonyl group bonded to two carbon atoms."
+        },
+        {
+          "id": "B",
+          "text": "An aldehyde contains a hydroxyl group, whereas a ketone contains an alkoxy group."
+        },
+        {
+          "id": "C",
+          "text": "An aldehyde has an internal carbonyl group, whereas a ketone has a terminal carbonyl group."
+        },
+        {
+          "id": "D",
+          "text": "An aldehyde contains a carbon-carbon double bond, whereas a ketone contains a carbon-carbon triple bond."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Both aldehydes and ketones contain the carbonyl group (C=O). In aldehydes, the carbonyl carbon is bonded to at least one hydrogen atom (R-CHO, terminal), whereas in ketones, it is bonded to two carbon atoms (R-CO-R', internal).",
+      "sourceReference": "Section 6.3, Page 288"
+    },
+    {
+      "id": "CHE-G11-U06-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What organic products are formed when a carboxylic acid reacts with an alcohol in the presence of an acid catalyst (Esterification)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Ether and hydrogen gas"
+        },
+        {
+          "id": "B",
+          "text": "Ester and water"
+        },
+        {
+          "id": "C",
+          "text": "Aldehyde and carbon dioxide"
+        },
+        {
+          "id": "D",
+          "text": "Alkane and sodium hydroxide"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Esterification is the acid-catalyzed condensation reaction between a carboxylic acid and an alcohol to produce an ester and water (RCOOH + R'OH → RCOOR' + H₂O).",
+      "sourceReference": "Section 6.5, Page 318"
+    },
+    {
+      "id": "CHE-G11-U06-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which functional group defines the carboxylic acid family of organic compounds?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Hydroxyl group (-OH)"
+        },
+        {
+          "id": "B",
+          "text": "Carbonyl group (C=O)"
+        },
+        {
+          "id": "C",
+          "text": "Carboxyl group (-COOH)"
+        },
+        {
+          "id": "D",
+          "text": "Ester group (-COOR)"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Carboxylic acids are defined by the carboxyl group (-COOH), which consists of a carbonyl group (C=O) bonded directly to a hydroxyl group (-OH).",
+      "sourceReference": "Section 6.4, Page 294"
+    },
+    {
+      "id": "CHE-G11-U06-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How is 2-methyl-2-propanol (tert-butyl alcohol) classified based on the structure of its alcohol carbon atom?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Primary (1°) alcohol"
+        },
+        {
+          "id": "B",
+          "text": "Secondary (2°) alcohol"
+        },
+        {
+          "id": "C",
+          "text": "Tertiary (3°) alcohol"
+        },
+        {
+          "id": "D",
+          "text": "Dihydric alcohol"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "In 2-methyl-2-propanol, (CH₃)₃C-OH, the carbon atom carrying the hydroxyl group (-OH) is bonded directly to three other carbon atoms (alkyl groups), making it a tertiary (3°) alcohol.",
+      "sourceReference": "Section 6.2, Page 269"
+    },
+    {
+      "id": "CHE-G11-U06-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Ethanol (CH₃CH₂OH, molar mass = 46 g/mol) has a much higher boiling point (78.3 °C) than its structural isomer dimethyl ether (CH₃OCH₃, molar mass = 46 g/mol, boiling point = -24 °C). What accounts for this difference?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Dimethyl ether forms strong ionic crystals in the liquid state."
+        },
+        {
+          "id": "B",
+          "text": "Ethanol molecules form strong intermolecular hydrogen bonds, whereas dimethyl ether molecules interact only through weaker dipole-dipole forces."
+        },
+        {
+          "id": "C",
+          "text": "Ethanol has a lower density than dimethyl ether."
+        },
+        {
+          "id": "D",
+          "text": "Dimethyl ether contains unsaturated double bonds."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Ethanol possesses a polar O-H bond capable of forming extensive intermolecular hydrogen bonding. Dimethyl ether lacks an O-H bond, so its molecules interact only via weaker dipole-dipole and dispersion forces, resulting in a much lower boiling point.",
+      "sourceReference": "Section 6.2, Page 285"
+    },
+    {
+      "id": "CHE-G11-U06-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What organic product is obtained when a secondary alcohol like 2-propanol is oxidized with potassium permanganate (KMnO₄/H⁺)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Propanal (an aldehyde)"
+        },
+        {
+          "id": "B",
+          "text": "Propanoic acid (a carboxylic acid)"
+        },
+        {
+          "id": "C",
+          "text": "Propanone (a ketone)"
+        },
+        {
+          "id": "D",
+          "text": "Diethyl ether (an ether)"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Controlled oxidation of a secondary (2°) alcohol yields a ketone. Oxidizing 2-propanol (CH₃-CH(OH)-CH₃) yields propanone (acetone, CH₃-CO-CH₃).",
+      "sourceReference": "Section 6.2, Page 280"
+    },
+    {
+      "id": "CHE-G11-U06-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What is the systematic IUPAC name for the carboxylic acid with the structural formula CH₃-CH(Cl)-CH₂-COOH?",
+      "options": [
+        {
+          "id": "A",
+          "text": "2-Chlorobutanoic acid"
+        },
+        {
+          "id": "B",
+          "text": "3-Chlorobutanoic acid"
+        },
+        {
+          "id": "C",
+          "text": "beta-Chlorobutyric acid"
+        },
+        {
+          "id": "D",
+          "text": "4-Chlorobutanoic acid"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In IUPAC nomenclature for carboxylic acids, numbering begins at the carboxyl carbon (C-1). The chlorine substituent is on carbon-3 of a four-carbon chain (butanoic acid), giving 3-chlorobutanoic acid.",
+      "sourceReference": "Section 6.4, Page 299"
+    },
+    {
+      "id": "CHE-G11-U06-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Base-catalyzed hydrolysis of an ester like ethyl ethanoate (CH₃COOCH₂CH₃) with aqueous sodium hydroxide (saponification) produces:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Ethanoic acid and ethanol"
+        },
+        {
+          "id": "B",
+          "text": "Sodium ethanoate and ethanol"
+        },
+        {
+          "id": "C",
+          "text": "Ethene and water"
+        },
+        {
+          "id": "D",
+          "text": "Sodium methanoate and methanol"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Saponification is the base-catalyzed hydrolysis of an ester. Reacting ethyl ethanoate with NaOH yields the carboxylate salt (sodium ethanoate, CH₃COONa) and an alcohol (ethanol, CH₃CH₂OH).",
+      "sourceReference": "Section 6.5, Page 318"
+    },
+    {
+      "id": "CHE-G11-U06-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "The industrial process known as 'hardening of oils' converts liquid vegetable oils into solid fats (such as margarine) through which chemical reaction?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Esterification with glycerol"
+        },
+        {
+          "id": "B",
+          "text": "Catalytic hydrogenation of carbon-carbon double bonds in unsaturated fatty acid chains"
+        },
+        {
+          "id": "C",
+          "text": "Acid-catalyzed dehydration of hydroxyl groups"
+        },
+        {
+          "id": "D",
+          "text": "Saponification with strong sodium hydroxide"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Hardening of oils involves passing hydrogen gas (H₂) under pressure over liquid vegetable oils in the presence of a Nickel catalyst to reduce C=C double bonds to C-C single bonds, converting liquid unsaturated triglycerides into solid saturated fats.",
+      "sourceReference": "Section 6.6, Page 323"
+    },
+    {
+      "id": "CHE-G11-U06-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "In the Williamson Ether Synthesis, ethyl methyl ether (CH₃-O-CH₂CH₃) can be prepared cleanly by reacting sodium methoxide with bromoethane. Why does attempting to synthesize tert-butyl methyl ether using tert-butyl bromide and sodium methoxide fail?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Tert-butyl bromide is completely non-reactive toward all nucleophiles."
+        },
+        {
+          "id": "B",
+          "text": "Tertiary alkyl halides undergo predominant elimination (E2) rather than substitution (SN2) when treated with strong alkoxide bases, yielding an alkene instead of an ether."
+        },
+        {
+          "id": "C",
+          "text": "Methoxide ions cannot form hydrogen bonds with tertiary carbon centers."
+        },
+        {
+          "id": "D",
+          "text": "Sodium ethoxide decomposes spontaneously in the presence of bromomethane."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Williamson ether synthesis occurs via an SN2 mechanism. Primary alkyl halides undergo SN2 substitution cleanly. However, tertiary alkyl halides like tert-butyl bromide undergo predominant E2 elimination when treated with strong alkoxide bases, yielding 2-methylpropene gas rather than the desired ether.",
+      "sourceReference": "Section 6.2, Page 287"
+    },
+    {
+      "id": "CHE-G11-U06-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Which chemical test effectively distinguishes an aldehyde (such as propanal) from an isomeric ketone (such as propanone)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Addition of bromine water; aldehydes decolorize bromine water while ketones do not."
+        },
+        {
+          "id": "B",
+          "text": "Tollens' test (ammoniacal silver nitrate); aldehydes are oxidized to form a metallic silver mirror, while ketones give no reaction."
+        },
+        {
+          "id": "C",
+          "text": "Flame test; aldehydes burn with a green flame while ketones burn with a yellow flame."
+        },
+        {
+          "id": "D",
+          "text": "Reaction with active sodium metal; ketones evolve hydrogen gas while aldehydes do not."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Aldehydes are easily oxidized by mild oxidizing agents such as Tollens' reagent [Ag(NH₃)₂]⁺, forming a characteristic silver mirror (Ag(s)). Ketones lack a hydrogen atom directly attached to the carbonyl carbon and resist mild oxidation, giving a negative Tollens' test.",
+      "sourceReference": "Section 6.3, Page 291"
+    },
+    {
+      "id": "CHE-G11-U06-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Propanoic acid (CH₃CH₂COOH, molar mass = 74 g/mol) boils at 141 °C, whereas 1-butanol (CH₃CH₂CH₂CH₂OH, molar mass = 74 g/mol) boils at 117.7 °C. What structural feature causes carboxylic acids to have higher boiling points than alcohols of identical molar mass?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Carboxylic acids contain delocalized metallic bonds within their alkyl chains."
+        },
+        {
+          "id": "B",
+          "text": "Carboxylic acid molecules form stable dimeric pairs held together by two reciprocal hydrogen bonds."
+        },
+        {
+          "id": "C",
+          "text": "Alcohols undergo rapid intramolecular dehydration at room temperature."
+        },
+        {
+          "id": "D",
+          "text": "Carboxylic acids are non-polar molecules with high dispersion forces."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Carboxylic acids exist in liquid and vapor phases as stable dimers held together by two strong, interlocking hydrogen bonds between the carboxyl O-H of one molecule and C=O of another. This double hydrogen bonding requires more thermal energy to disrupt than the single hydrogen bonds formed between alcohol molecules.",
+      "sourceReference": "Section 6.4, Page 302"
+    },
+    {
+      "id": "CHE-G11-U06-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Consider three 18-carbon fatty acids: Stearic acid (saturated), Oleic acid (one C=C double bond), and Linoleic acid (two C=C double bonds). Which sequence correctly lists these fatty acids in order of DECREASING melting point (highest to lowest)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Linoleic acid > Oleic acid > Stearic acid"
+        },
+        {
+          "id": "B",
+          "text": "Stearic acid > Oleic acid > Linoleic acid"
+        },
+        {
+          "id": "C",
+          "text": "Oleic acid > Stearic acid > Linoleic acid"
+        },
+        {
+          "id": "D",
+          "text": "Stearic acid > Linoleic acid > Oleic acid"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Saturated fatty acids like stearic acid have straight hydrocarbon chains that pack tightly together in a crystal lattice, yielding high melting points (69 °C). Cis-double bonds in unsaturated fatty acids introduce rigid kinks in the carbon chain, preventing tight packing. As unsaturation increases (oleic acid = 13 °C, linoleic acid = -5 °C), melting points decrease significantly.",
+      "sourceReference": "Section 6.4 & 6.6, Page 312 & Page 324"
+    }
+  ]
 }

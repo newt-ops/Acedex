@@ -3,5 +3,411 @@
   "subject": "Geography",
   "unitNumber": 6,
   "unitTitle": "Human - Environment Interaction in Ethiopia",
-  "questions": []
+  "questions": [
+    {
+      "id": "GEO-G09-U06-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What are the three fundamental modes of human–environment interaction recognized in geography?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Exploration, Exploitation, and Exterminating"
+        },
+        {
+          "id": "B",
+          "text": "Dependence, Modification, and Adaptation"
+        },
+        {
+          "id": "C",
+          "text": "Industrialization, Urbanization, and Migration"
+        },
+        {
+          "id": "D",
+          "text": "Conservation, Preservation, and Afforestation"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Human–environment interaction is categorized into three primary modes: dependence (relying on nature for basic needs like air, water, and food), modification (altering the environment to suit needs), and adaptation (adjusting human behaviors to fit environmental conditions).",
+      "sourceReference": "Grade 9 Geography Textbook, Section 6.1, Page 154–155"
+    },
+    {
+      "id": "GEO-G09-U06-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which of the following conditions defines an 'optimum population' for a given country?",
+      "options": [
+        {
+          "id": "A",
+          "text": "When the total number of inhabitants exceeds the maximum food production capacity of the land."
+        },
+        {
+          "id": "B",
+          "text": "When the available natural resources and technology balance perfectly with population size to produce the highest per capita income and standard of living."
+        },
+        {
+          "id": "C",
+          "text": "When a country's workforce is too small to exploit its vast untapped mineral deposits."
+        },
+        {
+          "id": "D",
+          "text": "When the birth rate drops to zero and the population experiences rapid aging."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "An optimum population represents the ideal population size where available natural resources and existing technology yield the maximum income per capita, full employment, and the highest quality of life.",
+      "sourceReference": "Grade 9 Geography Textbook, Section 6.2, Page 161–162"
+    },
+    {
+      "id": "GEO-G09-U06-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "When does 'overpopulation' occur in a region?",
+      "options": [
+        {
+          "id": "A",
+          "text": "When the size of the human population exceeds the carrying capacity and available resources of its supporting ecosystem."
+        },
+        {
+          "id": "B",
+          "text": "When the number of elderly citizens exceeds the number of school-age children."
+        },
+        {
+          "id": "C",
+          "text": "When more than 80% of a nation's population resides in permanent rural villages."
+        },
+        {
+          "id": "D",
+          "text": "When a country exports more raw agricultural goods than it imports."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Overpopulation occurs when population numbers exceed the carrying capacity of the environment, meaning available resources cannot sustain the population at an adequate standard of living.",
+      "sourceReference": "Grade 9 Geography Textbook, Section 6.3, Page 163"
+    },
+    {
+      "id": "GEO-G09-U06-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is deforestation?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The systematic planting of seedling trees on previously uncultivated barren lands."
+        },
+        {
+          "id": "B",
+          "text": "The indiscriminate removal or clearing of forest cover without adequate replanting or natural regeneration."
+        },
+        {
+          "id": "C",
+          "text": "The natural death of old trees due to extreme high-altitude frost."
+        },
+        {
+          "id": "D",
+          "text": "The seasonal shedding of leaves by deciduous trees during the dry winter."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Deforestation is the clearance or destruction of natural forest vegetation over an area without adequate replanting or natural regrowth, primarily driven by demands for farmland, settlement space, and fuelwood.",
+      "sourceReference": "Grade 9 Geography Textbook, Section 6.5, Page 168"
+    },
+    {
+      "id": "GEO-G09-U06-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which scenario best illustrates a situation of 'underpopulation'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A region where cropland is severely fragmented into 0.1-hectare plots per family."
+        },
+        {
+          "id": "B",
+          "text": "A region containing vast arable land and rich natural resources, but having too few inhabitants to fully exploit them effectively."
+        },
+        {
+          "id": "C",
+          "text": "A urban city suffering from severe water pollution, slums, and traffic congestion."
+        },
+        {
+          "id": "D",
+          "text": "A highland zone experiencing severe gully erosion due to overgrazing."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Underpopulation occurs when a region or country has an insufficient population or labor force to fully and efficiently develop its abundant natural resources.",
+      "sourceReference": "Grade 9 Geography Textbook, Section 6.4, Page 165–166"
+    },
+    {
+      "id": "GEO-G09-U06-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which of the following activities is an example of human 'adaptation' to the physical environment rather than environmental 'modification'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Clearing mountain slope forests to expand rain-fed cereal farming."
+        },
+        {
+          "id": "B",
+          "text": "Constructing the Grand Ethiopian Renaissance Dam to store water and produce hydroelectric power."
+        },
+        {
+          "id": "C",
+          "text": "Wearing heavy woolen clothing and building insulated homes in cold high-altitude Wurch zones."
+        },
+        {
+          "id": "D",
+          "text": "Drilling deep groundwater wells to extract oil and gas reserves."
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Wearing heavy clothing and insulating dwellings in cold climates are classic examples of human adaptation (adjusting clothing and lifestyle to climate), whereas clearing forests, dam building, and drilling are environmental modifications (changing physical nature).",
+      "sourceReference": "Grade 9 Geography Textbook, Section 6.1, Page 155"
+    },
+    {
+      "id": "GEO-G09-U06-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In Ethiopia, biomass energy accounts for over 99% of total domestic energy consumption. What is the single largest contributor to this woody biomass energy supply?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Kerosene and liquefied petroleum gas (LPG)"
+        },
+        {
+          "id": "B",
+          "text": "Woody biomass / fuelwood (accounting for ~78%)"
+        },
+        {
+          "id": "C",
+          "text": "Hydroelectric power grid lines"
+        },
+        {
+          "id": "D",
+          "text": "Solar photovoltaic panels"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Biomass energy supplies over 99% of domestic household energy in Ethiopia, with woody biomass (fuelwood and charcoal) contributing about 78%, followed by cattle dung (12%) and crop residues (9%).",
+      "sourceReference": "Grade 9 Geography Textbook, Section 6.5, Page 171"
+    },
+    {
+      "id": "GEO-G09-U06-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How does technological advancement in commercial resource extraction (e.g., modern industrial deep-sea fishing fleets or heavy logging machinery) impact natural ecosystems when mismanaged?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It automatically stabilizes the carrying capacity and prevents soil compaction."
+        },
+        {
+          "id": "B",
+          "text": "It accelerates resource depletion beyond natural regeneration rates, leading to overexploitation and ecosystem collapse."
+        },
+        {
+          "id": "C",
+          "text": "It converts non-renewable fossil fuels into infinite renewable resources."
+        },
+        {
+          "id": "D",
+          "text": "It eliminates air and water pollution in overpopulated urban centers."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Advanced extraction technologies allow humans to harvest natural resources at exponentially faster rates than traditional tools. Without sustainable controls, this leads to overexploitation (such as overfishing and deforestation) faster than nature can replenish.",
+      "sourceReference": "Grade 9 Geography Textbook, Section 6.1, Page 156–157"
+    },
+    {
+      "id": "GEO-G09-U06-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Why is overgrazing in high-density livestock farming areas considered a major catalyst for land degradation in Ethiopia?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Livestock manure releases excess nitrogen that destroys the ozone layer."
+        },
+        {
+          "id": "B",
+          "text": "Cattle remove protective vegetative cover and compact the soil with their hooves, reducing water infiltration and accelerating water and wind erosion."
+        },
+        {
+          "id": "C",
+          "text": "Livestock convert arable farmland into deep saline lakes."
+        },
+        {
+          "id": "D",
+          "text": "Herding livestock decreases the ambient air temperature below freezing point."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Overgrazing strips pasturelands of plant cover while animal hooves compact topsoil, destroying soil structure. This reduces rainwater absorption (infiltration), increases surface runoff, and causes severe topsoil erosion.",
+      "sourceReference": "Grade 9 Geography Textbook, Section 6.5, Page 171 & Page 174"
+    },
+    {
+      "id": "GEO-G09-U06-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In rapidly growing urban centers in Ethiopia like Addis Ababa, what primary factors drive severe local water and air pollution?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The natural eruption of active rift volcanoes."
+        },
+        {
+          "id": "B",
+          "text": "Uncontrolled discharge of untreated household sewage, solid municipal garbage, industrial effluents, and automobile exhaust emissions."
+        },
+        {
+          "id": "C",
+          "text": "Extensive use of solar-powered electric mass transit systems."
+        },
+        {
+          "id": "D",
+          "text": "Excessive forest planting along urban riverbanks."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Urban environmental pollution in overcrowded cities stems from human and economic activities: household waste, untreated industrial liquid waste, improper solid garbage dumping, and vehicular exhaust emissions.",
+      "sourceReference": "Grade 9 Geography Textbook, Section 6.5, Page 172–173"
+    },
+    {
+      "id": "GEO-G09-U06-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which of the following is a direct environmental consequence of extensive forest clearing on the local water cycle in the Ethiopian highlands?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It increases groundwater recharge by allowing rain to hit bare ground directly."
+        },
+        {
+          "id": "B",
+          "text": "It reduces evapotranspiration, decreases soil permeability, and promotes rapid surface runoff, leading to dried-up springs and water table decline."
+        },
+        {
+          "id": "C",
+          "text": "It raises the water volume of highland lakes without seasonal fluctuation."
+        },
+        {
+          "id": "D",
+          "text": "It eliminates soil erosion completely across steep mountain slopes."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Trees increase soil permeability through root channels and release water vapor into the air via transpiration. Deforestation destroys these root spaces, reducing rainwater infiltration into aquifers and reducing local evapotranspiration, causing groundwater tables and local springs to dry up.",
+      "sourceReference": "Grade 9 Geography Textbook, Section 6.5, Page 158 & Page 169"
+    },
+    {
+      "id": "GEO-G09-U06-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "How does 'relative overpopulation' differ from 'absolute overpopulation' in agricultural geographic studies?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Absolute overpopulation occurs only in developed nations, while relative overpopulation occurs only in uninhabited islands."
+        },
+        {
+          "id": "B",
+          "text": "Absolute overpopulation means the maximum physical limit of land production has been reached, whereas relative overpopulation means present output is inadequate for the population even though potential exists to increase production through technological development."
+        },
+        {
+          "id": "C",
+          "text": "Absolute overpopulation is caused by low birth rates, while relative overpopulation is caused by high immigration."
+        },
+        {
+          "id": "D",
+          "text": "Both terms are completely identical and describe zero population growth."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Absolute overpopulation is where production has reached its ultimate physical limit yet living standards remain low. Relative overpopulation (more common in LDCs like Ethiopia) occurs where current agricultural output is insufficient due to traditional technology, even though unexploited potential exists to boost yields.",
+      "sourceReference": "Grade 9 Geography Textbook, Section 6.3, Page 163–164"
+    },
+    {
+      "id": "GEO-G09-U06-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "In many densely populated, deforested rural districts of northern and eastern Ethiopia, severe fuelwood scarcity triggers a negative ecological feedback loop affecting crop agriculture. What is the mechanism of this feedback loop?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Farmers switch to solar cookers, which emit reflection heat that dries out standing cereal crops."
+        },
+        {
+          "id": "B",
+          "text": "Wood scarcity forces households to burn cattle dung and crop residues as primary cooking fuels, preventing these organic materials from being recycled into fields and degrading soil fertility and crop yields."
+        },
+        {
+          "id": "C",
+          "text": "Fuelwood shortage forces farmers to purchase expensive imported coal, leading to personal bankruptcy."
+        },
+        {
+          "id": "D",
+          "text": "Burning crop residues causes immediate acid rain that corrodes metal ploughshares."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "When wood becomes scarce, households substitute dried cattle dung and crop stalks for cooking fuel. Diverting dung and stalks away from agricultural fields deprives the soil of organic matter, leading to nutrient depletion, structure loss, and declining crop yields.",
+      "sourceReference": "Grade 9 Geography Textbook, Section 6.5, Page 174–175"
+    },
+    {
+      "id": "GEO-G09-U06-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "While underpopulation reduces total natural resource consumption, what structural economic challenge does it pose to a developing country attempting to build public infrastructure?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It creates immediate hyperinflation in food prices due to crop surpluses."
+        },
+        {
+          "id": "B",
+          "text": "It results in a small labor force, a limited domestic tax base, and high per capita costs for developing national transport, health, and education networks."
+        },
+        {
+          "id": "C",
+          "text": "It forces the government to ban all agricultural exports to neighboring states."
+        },
+        {
+          "id": "D",
+          "text": "It causes rapid expansion of urban squatter settlements and city slums."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Underpopulation means a country has a small total population and workforce spread across a landmass. This leads to a small domestic tax base and high per capita infrastructure costs (building roads, schools, hospitals per person is very expensive).",
+      "sourceReference": "Grade 9 Geography Textbook, Section 6.4, Page 166"
+    },
+    {
+      "id": "GEO-G09-U06-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "According to historical estimates cited in the Grade 9 Geography textbook, Ethiopia's high forest cover declined dramatically from ~16% in the early 1950s to less than 2.7% by 1989. What was the primary driver behind this rapid historical deforestation?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Commercial timber export contracts signed with foreign European nations."
+        },
+        {
+          "id": "B",
+          "text": "Rapid population growth driving agricultural land clearance, demand for construction timber, overgrazing, and household fuelwood consumption."
+        },
+        {
+          "id": "C",
+          "text": "Widespread volcanic eruptions covering forests in Quaternary lava."
+        },
+        {
+          "id": "D",
+          "text": "State laws forcing rural farmers to burn forests to eliminate wildlife."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The primary historical driver of deforestation in Ethiopia from 16% down to < 2.7% was rapid population expansion, which increased the demand for agricultural cropland, fuelwood energy, timber, and livestock grazing space.",
+      "sourceReference": "Grade 9 Geography Textbook, Section 6.5, Page 169–171"
+    }
+  ]
 }

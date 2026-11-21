@@ -3,5 +3,411 @@
   "subject": "Geography",
   "unitNumber": 7,
   "unitTitle": "Contemporary Geographic Issues and Public Concerns in Ethiopia",
-  "questions": []
+  "questions": [
+    {
+      "id": "GEO-G09-U07-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is the most severe and widespread form of soil resource degradation affecting the agricultural plateaus and steep highlands of Ethiopia?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Wind deflation in arid lowland basins"
+        },
+        {
+          "id": "B",
+          "text": "Soil erosion caused by running surface water"
+        },
+        {
+          "id": "C",
+          "text": "Chemical salinization due to excessive drip irrigation"
+        },
+        {
+          "id": "D",
+          "text": "Soil compaction caused by heavy industrial farming machinery"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Running water erosion is recognized as the most severe and damaging form of soil degradation in Ethiopia, stripping millions of tons of topsoil annually from highland slopes.",
+      "sourceReference": "Grade 9 Geography Textbook, Section 7.1, Page 181"
+    },
+    {
+      "id": "GEO-G09-U07-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "How does 'afforestation' differ from 'reforestation' in natural resource conservation?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Afforestation is the commercial harvesting of old-growth forests, while reforestation is clear-cutting."
+        },
+        {
+          "id": "B",
+          "text": "Afforestation involves planting trees on land not previously covered by forest, whereas reforestation is planting trees on previously forested land where trees were removed."
+        },
+        {
+          "id": "C",
+          "text": "Afforestation applies exclusively to fruit trees, while reforestation applies only to bamboo plantations."
+        },
+        {
+          "id": "D",
+          "text": "Afforestation is practiced only in urban municipalities, while reforestation is restricted to desert lowlands."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Afforestation refers to establishing a forest on land that was not formerly forested, while reforestation refers to re-establishing forest cover on lands from which trees were previously removed.",
+      "sourceReference": "Grade 9 Geography Textbook, Section 7.1, Page 182–183"
+    },
+    {
+      "id": "GEO-G09-U07-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In which year was the national 'Green Legacy' movement officially launched in Ethiopia to combat climate change, soil erosion, and deforestation?",
+      "options": [
+        {
+          "id": "A",
+          "text": "2005"
+        },
+        {
+          "id": "B",
+          "text": "2010"
+        },
+        {
+          "id": "C",
+          "text": "2015"
+        },
+        {
+          "id": "D",
+          "text": "2019"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "The Green Legacy Initiative was launched in 2019 under the leadership of Prime Minister Abiy Ahmed as a massive national tree-planting movement to build a climate-resilient green economy.",
+      "sourceReference": "Grade 9 Geography Textbook, Section 7.2, Page 189–190"
+    },
+    {
+      "id": "GEO-G09-U07-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which soil conservation technique involves constructing level, step-like earth or stone platforms at right angles to steep slopes to reduce surface runoff velocity and retain water?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Contour ploughing"
+        },
+        {
+          "id": "B",
+          "text": "Terracing"
+        },
+        {
+          "id": "C",
+          "text": "Strip cultivation"
+        },
+        {
+          "id": "D",
+          "text": "Fallowing"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Terracing involves constructing level surfaces/steps across steep hillsides at right angles to the slope to retain water and significantly reduce soil erosion, famously practiced in Konso.",
+      "sourceReference": "Grade 9 Geography Textbook, Section 7.1, Page 182–183"
+    },
+    {
+      "id": "GEO-G09-U07-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What are the two primary direct drivers of rapid deforestation in rural Ethiopia?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Industrial mining expansions and commercial timber exports"
+        },
+        {
+          "id": "B",
+          "text": "High domestic demand for fuelwood energy and agricultural land expansion for crop production"
+        },
+        {
+          "id": "C",
+          "text": "Forest fires caused by active rift volcanoes and lightning strikes"
+        },
+        {
+          "id": "D",
+          "text": "Construction of artificial lakes and urban recreational parks"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Deforestation in Ethiopia is primarily driven by the immediate necessity for household fuelwood energy and the clearing of forest cover for agricultural cultivation to feed a growing population.",
+      "sourceReference": "Grade 9 Geography Textbook, Section 7.1, Page 184–185"
+    },
+    {
+      "id": "GEO-G09-U07-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How does the agricultural practice of 'contour ploughing' protect mountain farm plots from water erosion?",
+      "options": [
+        {
+          "id": "A",
+          "text": "By planting deep-rooted eucalyptus trees inside crop rows to absorb excess soil moisture."
+        },
+        {
+          "id": "B",
+          "text": "By ploughing furrows across the slope following elevation contour lines, creating barriers that slow down water runoff."
+        },
+        {
+          "id": "C",
+          "text": "By flooding farm plots continuously during dry seasons to compact loose soil particles."
+        },
+        {
+          "id": "D",
+          "text": "By burning crop stalks after harvest to harden topsoil against wind action."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Contour ploughing means ploughing across slopes along elevation lines rather than up and down. This creates ridges that act as barriers to surface runoff, reducing soil erosion.",
+      "sourceReference": "Grade 9 Geography Textbook, Section 7.1, Page 183–184"
+    },
+    {
+      "id": "GEO-G09-U07-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What is a major direct impact of extensive forest clearing on local atmospheric and hydrological conditions in the Ethiopian highlands?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It increases local relative humidity and doubles annual rainfall volume."
+        },
+        {
+          "id": "B",
+          "text": "It reduces evapotranspiration, decreases rainwater infiltration, and causes local springs and streams to dry up."
+        },
+        {
+          "id": "C",
+          "text": "It lowers daytime surface temperatures by exposing light-colored basement rocks."
+        },
+        {
+          "id": "D",
+          "text": "It eliminates soil erosion by allowing direct sunlight onto bare ground."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Trees release water vapor into the atmosphere via evapotranspiration and facilitate soil permeability for groundwater recharge. Deforestation disrupts moisture recycling and increases runoff, leading to dried-up water sources.",
+      "sourceReference": "Grade 9 Geography Textbook, Section 7.1, Page 185 & Section 6.5, Page 169"
+    },
+    {
+      "id": "GEO-G09-U07-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which national policy document serves as the strategic roadmap guiding Ethiopia's Green Legacy Initiative toward achieving economic development without increasing greenhouse gas emissions?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The Structural Adjustment Program (SAP)"
+        },
+        {
+          "id": "B",
+          "text": "The Climate Resilient Green Economy (CRGE) Strategy"
+        },
+        {
+          "id": "C",
+          "text": "The National Disaster Risk Management Policy"
+        },
+        {
+          "id": "D",
+          "text": "The Agricultural Sample Survey Strategy"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The Climate Resilient Green Economy (CRGE) strategy guides Ethiopia's sustainable development goals, focusing on afforestation, renewable energy expansion, and sustainable agricultural practices.",
+      "sourceReference": "Grade 9 Geography Textbook, Section 7.2, Page 189–190"
+    },
+    {
+      "id": "GEO-G09-U07-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which water management strategy is essential for protecting major river basins and hydroelectric reservoirs (such as GERD) from rapid siltation and storage capacity loss?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Diverting all river tributaries into underground concrete pipes."
+        },
+        {
+          "id": "B",
+          "text": "Comprehensive upper-watershed management, including afforestation, terracing, and soil conservation along river catchments."
+        },
+        {
+          "id": "C",
+          "text": "Draining natural wetlands along riverbanks to speed up water flow."
+        },
+        {
+          "id": "D",
+          "text": "Applying chemical coagulants directly into river channels to dissolve sediment."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Upper-watershed conservation (planting trees and terracing catchment slopes) prevents topsoil erosion, thereby reducing the sediment load transported into downstream river beds and dam reservoirs.",
+      "sourceReference": "Grade 9 Geography Textbook, Section 7.1, Page 187–188"
+    },
+    {
+      "id": "GEO-G09-U07-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How does high livestock density in pastoral lowlands and mixed highland farming areas contribute to soil resource degradation?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Livestock consume carbon dioxide in the air, preventing crop photosynthesis."
+        },
+        {
+          "id": "B",
+          "text": "Overgrazing removes protective vegetative ground cover while animal hooves compact topsoil, destroying soil structure and accelerating runoff erosion."
+        },
+        {
+          "id": "C",
+          "text": "Cattle urine increases soil acidity to levels where no grass can grow."
+        },
+        {
+          "id": "D",
+          "text": "Livestock herds convert natural freshwater lakes into saline brine pools."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Overgrazing strips protective grass cover, while heavy hoof traffic compacts topsoil. This reduces water infiltration into the ground, increases surface runoff, and triggers severe soil erosion.",
+      "sourceReference": "Grade 9 Geography Textbook, Section 7.1, Page 184 & Section 6.5, Page 171"
+    },
+    {
+      "id": "GEO-G09-U07-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How does 'intercropping' enhance soil fertility and soil protection compared to continuous 'overcropping' (monoculture)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Intercropping involves leaving land completely uncultivated for ten consecutive years."
+        },
+        {
+          "id": "B",
+          "text": "Intercropping grows two or more complementary crops simultaneously on the same field, maximizing ground cover and optimizing soil nutrient usage."
+        },
+        {
+          "id": "C",
+          "text": "Intercropping replaces food crops with fast-growing eucalyptus timber trees."
+        },
+        {
+          "id": "D",
+          "text": "Intercropping relies entirely on synthetic chemical pesticides to fertilize topsoil."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Intercropping involves cultivating two or more crops concurrently on the same plot (such as legumes with cereals), providing continuous canopy cover against raindrops and improving nitrogen fixation in the soil.",
+      "sourceReference": "Grade 9 Geography Textbook, Section 7.1, Page 183"
+    },
+    {
+      "id": "GEO-G09-U07-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "On steep highland farm plots, how does soil leaching combine with water erosion to create a severe decline in agricultural crop productivity?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Water erosion physically removes topsoil while rainwater leaching percolates water-soluble mineral nutrients down beyond root depth, leaving infertile, thin soil."
+        },
+        {
+          "id": "B",
+          "text": "Leaching hardens the soil into solid granite rock while erosion floods the field with ocean saltwater."
+        },
+        {
+          "id": "C",
+          "text": "Erosion increases organic humus while leaching elevates soil nitrogen to toxic levels."
+        },
+        {
+          "id": "D",
+          "text": "Both processes freeze the soil during the summer Kiremt season."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Water erosion physically strips away the fertile topsoil layer containing organic humus, while leaching washes soluble plant nutrients (like nitrates and potassium) deeper down through the soil profile beyond the reach of crop roots.",
+      "sourceReference": "Grade 9 Geography Textbook, Section 7.1, Page 181"
+    },
+    {
+      "id": "GEO-G09-U07-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "How does Ethiopia's 'Green Legacy' movement directly contribute to fulfilling the country's international environmental commitments?",
+      "options": [
+        {
+          "id": "A",
+          "text": "By privatizing all national parks and selling wild animals to foreign zoos."
+        },
+        {
+          "id": "B",
+          "text": "By advancing carbon sequestration through massive afforestation, aligning with the Paris Climate Agreement, UN SDGs (Goal 13), and AU Agenda 2063."
+        },
+        {
+          "id": "C",
+          "text": "By banning all agricultural food exports to neighboring countries."
+        },
+        {
+          "id": "D",
+          "text": "By converting natural forest reserves into industrial coal mines."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "By restoring forest cover and expanding carbon sinks through tree planting, the Green Legacy Initiative supports global climate goals under the Paris Climate Agreement, UN SDG 13 (Climate Action), and AU Agenda 2063.",
+      "sourceReference": "Grade 9 Geography Textbook, Section 7.2, Page 189–190"
+    },
+    {
+      "id": "GEO-G09-U07-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "As urban centers expand rapidly across Ethiopia, what ecological trade-off occurs when forestlands and peri-urban green spaces are converted into built-up infrastructure?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Groundwater recharge rates increase while city air temperatures drop significantly."
+        },
+        {
+          "id": "B",
+          "text": "Natural vegetation cover is permanently lost, surface runoff and urban flooding increase, and local biodiversity habitats are destroyed."
+        },
+        {
+          "id": "C",
+          "text": "Agricultural yields on urban roofs replace the need for rural farming entirely."
+        },
+        {
+          "id": "D",
+          "text": "Atmospheric carbon dioxide drops to zero due to concrete absorption."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Converting natural green spaces into impervious built-up surfaces (roads, buildings) eliminates natural vegetation, destroys wildlife habitats, prevents rainwater infiltration into aquifers, and increases urban surface runoff and flooding.",
+      "sourceReference": "Grade 9 Geography Textbook, Section 7.1, Page 185"
+    },
+    {
+      "id": "GEO-G09-U07-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "In highland districts suffering from acute fuelwood shortages, rural households frequently burn dried cattle dung and crop stalks for cooking. What negative environmental loop does this fuel substitution trigger?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It causes sudden frost formation over standing cereal crops during the Kiremt season."
+        },
+        {
+          "id": "B",
+          "text": "It deprives agricultural soils of organic matter and nutrient recycling, causing rapid loss of soil structure, lower crop yields, and further expansion into remaining forests."
+        },
+        {
+          "id": "C",
+          "text": "It releases sulfur gas that turns local rainfall into concentrated acid rain."
+        },
+        {
+          "id": "D",
+          "text": "It forces farmers to abandon ox-ploughing in favor of nuclear tractors."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Diverting cattle dung and crop stalks away from agricultural fields for domestic fuel deprives topsoil of organic manure and humus. This degrades soil structure and lowers crop yields, forcing households to clear remaining forest patches for new cropland.",
+      "sourceReference": "Grade 9 Geography Textbook, Section 7.1, Page 181 & Section 6.5, Page 174–175"
+    }
+  ]
 }

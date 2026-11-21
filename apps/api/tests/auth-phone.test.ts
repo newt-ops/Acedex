@@ -22,13 +22,19 @@ describe('Student Phone & PIN Authentication with Onboarding Data', () => {
     await connectDatabase();
     // Clean up test phone records
     await UserModel.deleteMany({
-      phone: { $in: ['+251911223344', '+251922334455', '+251733445566'] },
+      $or: [
+        { phone: { $in: ['+251911223344', '+251922334455', '+251733445566', '+251977112233'] } },
+        { acedexId: 'ACX-26-5480' },
+      ],
     });
   });
 
   afterAll(async () => {
     await UserModel.deleteMany({
-      phone: { $in: ['+251911223344', '+251922334455', '+251733445566'] },
+      $or: [
+        { phone: { $in: ['+251911223344', '+251922334455', '+251733445566', '+251977112233'] } },
+        { acedexId: 'ACX-26-5480' },
+      ],
     });
     await RefreshTokenModel.deleteMany({});
     await disconnectDatabase();

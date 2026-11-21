@@ -107,16 +107,6 @@ class _StepNameState extends State<StepName> {
           ),
           const SizedBox(height: 10),
 
-          // Helper Example
-          Text(
-            'For example, Abebe Kebede',
-            style: TextStyle(
-              fontSize: 12.5,
-              fontWeight: FontWeight.w500,
-              color: subtext.withValues(alpha: 0.8),
-            ),
-          ),
-
           const Spacer(),
 
           // Continue Button

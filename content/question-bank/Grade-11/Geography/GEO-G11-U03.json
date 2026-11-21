@@ -3,5 +3,411 @@
   "subject": "Geography",
   "unitNumber": 3,
   "unitTitle": "Natural Resources and Conflicts Over Resources",
-  "questions": []
+  "questions": [
+    {
+      "id": "GEO-G11-U03-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Under which functional perspective is land evaluated when it serves as a site for traditional, historical, and religious sacred amenities?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Production function"
+        },
+        {
+          "id": "B",
+          "text": "Waste disposal sink"
+        },
+        {
+          "id": "C",
+          "text": "Cultural asset"
+        },
+        {
+          "id": "D",
+          "text": "Economic capital asset"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Land viewed as a cultural asset serves as a host of traditional, historical, and religious sacred amenities, reflecting cultural heritage and symbolic value for human communities.",
+      "sourceReference": "Grade 11 Geography Textbook, Section 3.1.2, Page 61"
+    },
+    {
+      "id": "GEO-G11-U03-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Approximately how many international transboundary river and lake basins exist worldwide, crossing the political boundaries of 145 sovereign nations?",
+      "options": [
+        {
+          "id": "A",
+          "text": "54"
+        },
+        {
+          "id": "B",
+          "text": "112"
+        },
+        {
+          "id": "C",
+          "text": "263"
+        },
+        {
+          "id": "D",
+          "text": "520"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Worldwide, there are 263 recognized transboundary river and lake basins that cross international political borders of 145 countries, supporting roughly 40% of the global human population.",
+      "sourceReference": "Grade 11 Geography Textbook, Section 3.4.1, Page 74"
+    },
+    {
+      "id": "GEO-G11-U03-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which international river flows through the highest number of sovereign nations (19 countries) in the world?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The Nile River"
+        },
+        {
+          "id": "B",
+          "text": "The Danube River"
+        },
+        {
+          "id": "C",
+          "text": "The Amazon River"
+        },
+        {
+          "id": "D",
+          "text": "The Rhine River"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The Danube River in Europe travels within the territories of 19 nations, making it the international river shared by the largest number of countries worldwide.",
+      "sourceReference": "Grade 11 Geography Textbook, Section 3.4.3, Page 76–77 (Table 3.2)"
+    },
+    {
+      "id": "GEO-G11-U03-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is the primary objective of constructing check dams across eroded waterways in soil and water conservation?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To increase ocean salinity in coastal river deltas"
+        },
+        {
+          "id": "B",
+          "text": "To reduce water flow velocity and trap moving sediment to restore gullied areas"
+        },
+        {
+          "id": "C",
+          "text": "To divert river water into deep underground fossil aquifers"
+        },
+        {
+          "id": "D",
+          "text": "To clear natural forest cover for monoculture farming"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "A check dam is a small, temporary structure constructed across a gully or waterway to reduce running water velocity, prevent channel bed erosion, and trap moving soil sediments.",
+      "sourceReference": "Grade 11 Geography Textbook, Section 3.3.2, Page 72"
+    },
+    {
+      "id": "GEO-G11-U03-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Under the 1959 bilateral Nile Waters Agreement signed between Egypt and Sudan, how was the net annual flow volume of the Nile River at Aswan (84 BCM) allocated?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Divided equally among all 11 Nile riparian states"
+        },
+        {
+          "id": "B",
+          "text": "Allocated 55.5 BCM to Egypt and 18.5 BCM to Sudan, completely excluding upstream countries like Ethiopia"
+        },
+        {
+          "id": "C",
+          "text": "Granted 100% of water rights to Ethiopia as the origin of 86% of Nile waters"
+        },
+        {
+          "id": "D",
+          "text": "Allocated exclusively to international mining corporations"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The 1959 bilateral agreement allocated 55.5 BCM to Egypt and 18.5 BCM to Sudan (with 10 BCM accounted for evaporation losses at Aswan), completely ignoring the water rights of upstream riparian countries such as Ethiopia.",
+      "sourceReference": "Grade 11 Geography Textbook, Section 3.6, Page 84–85 (Table 3.3)"
+    },
+    {
+      "id": "GEO-G11-U03-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In land degradation analysis, how are 'underlying causes' distinguished from 'proximate causes'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Underlying causes are physical soil features, whereas proximate causes are astronomical orbit changes."
+        },
+        {
+          "id": "B",
+          "text": "Underlying causes are primary structural drivers (such as rapid population growth, policy failures, and climate change) that induce secondary proximate actions (such as deforestation, overgrazing, and improper ploughing)."
+        },
+        {
+          "id": "C",
+          "text": "Underlying causes occur only in coastal marine zones, whereas proximate causes occur only on high mountain peaks."
+        },
+        {
+          "id": "D",
+          "text": "Underlying causes refer to volcanic eruptions, whereas proximate causes refer to seismic P-waves."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Underlying causes represent primary structural forces (e.g., rapid population growth, insecure land tenure policies, climate change) that trigger secondary proximate actions by humans (e.g., forest clearing, overstocking, up-and-down slope ploughing).",
+      "sourceReference": "Grade 11 Geography Textbook, Section 3.3.1, Page 70 (Table 3.1)"
+    },
+    {
+      "id": "GEO-G11-U03-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which type of resource scarcity occurs when discriminatory laws, concentrated land ownership, or weak governance prevent specific social groups from accessing available natural resources?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Demand-induced scarcity"
+        },
+        {
+          "id": "B",
+          "text": "Supply-induced scarcity"
+        },
+        {
+          "id": "C",
+          "text": "Structurally induced scarcity"
+        },
+        {
+          "id": "D",
+          "text": "Atmospheric-induced scarcity"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Structurally induced scarcity occurs when legal, political, or economic structures result in unequal resource distribution, concentrating resources in the hands of a few while marginalizing vulnerable groups.",
+      "sourceReference": "Grade 11 Geography Textbook, Section 3.2 & 3.7, Page 71 & 89"
+    },
+    {
+      "id": "GEO-G11-U03-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Why does afforestation differ technically from reforestation in sustainable land management?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Afforestation involves planting trees on barren land that was not previously under forest cover, whereas reforestation involves replanting trees in deforested areas."
+        },
+        {
+          "id": "B",
+          "text": "Afforestation applies only to eucalyptus trees, whereas reforestation applies only to native Enset crops."
+        },
+        {
+          "id": "C",
+          "text": "Afforestation requires heavy chemical fertilizers, whereas reforestation requires zero water."
+        },
+        {
+          "id": "D",
+          "text": "Afforestation is practiced exclusively in urban industrial parks, whereas reforestation is practiced exclusively in marine oceans."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Afforestation refers to establishing a forest on barren or degraded land that historically did not carry tree cover. Reforestation refers to re-establishing tree cover on land that was previously forested but cleared by human logging or natural forces.",
+      "sourceReference": "Grade 11 Geography Textbook, Section 3.3.2, Page 72"
+    },
+    {
+      "id": "GEO-G11-U03-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What fundamental legal and hydrological principles guide upper-riparian countries like Ethiopia in developing transboundary water resources such as the Grand Ethiopian Renaissance Dam (GERD)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The doctrine of absolute historic rights favoring downstream states exclusively."
+        },
+        {
+          "id": "B",
+          "text": "Principles of equitable and reasonable utilization and the obligation to cause no significant harm to downstream states."
+        },
+        {
+          "id": "C",
+          "text": "Complete prohibition of all hydroelectric power construction on shared rivers."
+        },
+        {
+          "id": "D",
+          "text": "Mandatory diversion of 100% of river flow into desert evaporation basins."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "International water law and cooperative frameworks (such as the Nile Basin Initiative) are built on the principles of equitable and reasonable utilization of shared water resources while taking appropriate measures to avoid causing significant harm to co-riparian states.",
+      "sourceReference": "Grade 11 Geography Textbook, Section 3.5 & 3.6, Page 79–85"
+    },
+    {
+      "id": "GEO-G11-U03-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In soil degradation classification, how is chemical soil degradation distinguished from physical soil degradation?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Chemical degradation involves crusting and compaction, whereas physical degradation involves loss of topsoil color."
+        },
+        {
+          "id": "B",
+          "text": "Chemical degradation alters the mineral and nutrient composition of the soil (such as salinization, alkalinization, or nutrient leaching), whereas physical degradation involves structural deterioration like crusting, compaction, and loss of soil depth."
+        },
+        {
+          "id": "C",
+          "text": "Chemical degradation occurs only during volcanic eruptions, whereas physical degradation occurs only during river floods."
+        },
+        {
+          "id": "D",
+          "text": "Chemical degradation increases soil organic carbon, whereas physical degradation increases earthworm populations."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Physical soil degradation changes the mechanical structure of soil (crusting, compaction, erosion of depth). Chemical soil degradation alters chemical properties and nutrient availability (salinization, alkalinization, acidification, and nutrient leaching).",
+      "sourceReference": "Grade 11 Geography Textbook, Section 3.2.1, Page 64"
+    },
+    {
+      "id": "GEO-G11-U03-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which land management practice involves covering the soil surface with plant residues or organic matter to retain soil moisture and reduce evaporation loss?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Terracing"
+        },
+        {
+          "id": "B",
+          "text": "Mulching"
+        },
+        {
+          "id": "C",
+          "text": "Check-damming"
+        },
+        {
+          "id": "D",
+          "text": "Fallowing"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Mulching is the agricultural practice of spreading organic plant residues over the soil surface to conserve moisture, reduce evaporation loss, suppress weed growth, and replenish organic matter as it decays.",
+      "sourceReference": "Grade 11 Geography Textbook, Section 3.3.2, Page 72"
+    },
+    {
+      "id": "GEO-G11-U03-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "According to the Global Assessment of Human-induced Soil Degradation (GLASOD) data cited in the textbook, what human activities account for the primary share of global land degradation across pasture and croplands?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Industrial chemical spills in polar regions"
+        },
+        {
+          "id": "B",
+          "text": "Overgrazing by livestock, agricultural over-cultivation, and deforestation"
+        },
+        {
+          "id": "C",
+          "text": "Excessive rainfall in hyper-arid deserts"
+        },
+        {
+          "id": "D",
+          "text": "Submarine tectonic plate movements"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "GLASOD mapping identifies overgrazing, agricultural over-cultivation, and deforestation as the primary human activities driving widespread topsoil degradation and land impairment across global rangelands and croplands.",
+      "sourceReference": "Grade 11 Geography Textbook, Section 3.2.1, Page 63–64 (Figure 3.1)"
+    },
+    {
+      "id": "GEO-G11-U03-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "In evaluating transboundary water governance, why do bilateral water treaties signed between a subgroup of riparian states often fail to prevent regional resource conflicts across an entire river basin?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because bilateral treaties automatically freeze all river water flow."
+        },
+        {
+          "id": "B",
+          "text": "Because bilateral agreements frequently exclude upstream co-riparian nations, denying their legitimate rights to water utilization and creating structural hydro-political inequities across the basin."
+        },
+        {
+          "id": "C",
+          "text": "Because international law forbids two nations from signing any agreements."
+        },
+        {
+          "id": "D",
+          "text": "Because bilateral treaties apply exclusively to non-renewable petroleum deposits."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Multilateral river basins (such as the Nile with 11 states) cannot be sustainably governed by partial bilateral agreements (such as the 1959 Egypt-Sudan treaty) that exclude upstream riparians like Ethiopia, as non-inclusive treaties spark conflict by ignoring upstream development needs.",
+      "sourceReference": "Grade 11 Geography Textbook, Section 3.5 & 3.6, Page 79–85"
+    },
+    {
+      "id": "GEO-G11-U03-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "How can the 'Tragedy of the Commons' model explain the rapid depletion of communal pastures, open-access forests, and unmanaged groundwater aquifers in rural societies?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Individual resource users act independently according to their short-term self-interest to maximize personal gain from an open-access resource, collectively overexploiting and depleting the shared resource pool."
+        },
+        {
+          "id": "B",
+          "text": "State governments impose heavy taxes on private land holdings, forcing farmers to migrate into desert areas."
+        },
+        {
+          "id": "C",
+          "text": "Renewable resources automatically regenerate faster when overused by large populations."
+        },
+        {
+          "id": "D",
+          "text": "Common resources are managed exclusively by international financial institutions."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The Tragedy of the Commons occurs when individuals have open access to a shared communal resource. Driven by short-term self-interest, each user extracts maximum benefit while sharing the costs of degradation with all users, ultimately leading to collective overexploitation and resource collapse.",
+      "sourceReference": "Grade 11 Geography Textbook, Section 3.2, Page 63"
+    },
+    {
+      "id": "GEO-G11-U03-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "In integrated watershed management, how does combining physical soil conservation structures (such as stone bunds and terracing) with biological measures (such as agroforestry and legume crop rotation) produce a synergistic effect on land restoration?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Physical structures immediately eliminate the need for atmospheric rainfall, while biological measures cool the mantle."
+        },
+        {
+          "id": "B",
+          "text": "Physical structures mechanically reduce runoff velocity and trap moving sediment, while biological measures restore soil organic matter, fix atmospheric nitrogen, and stabilize soil aggregates."
+        },
+        {
+          "id": "C",
+          "text": "Physical structures increase soil acidity, while biological measures convert topsoil into heavy basaltic bedrock."
+        },
+        {
+          "id": "D",
+          "text": "Physical structures apply only to urban housing, while biological measures apply only to ocean fisheries."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Integrated watershed management combines mechanical/physical measures (terraces, stone bunds) that mechanically break slope length and retard runoff with biological measures (legumes, tree planting, mulching) that enhance soil structure, replenish soil nutrients via organic matter and nitrogen fixation, and provide sustainable vegetation cover.",
+      "sourceReference": "Grade 11 Geography Textbook, Section 3.1.3, 3.2.1 & 3.3.2, Page 61–73"
+    }
+  ]
 }

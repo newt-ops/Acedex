@@ -3,5 +3,411 @@
   "subject": "Chemistry",
   "unitNumber": 2,
   "unitTitle": "Solutions",
-  "questions": []
+  "questions": [
+    {
+      "id": "CHE-G10-U02-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which of the following is a heterogeneous mixture in which solid particles are dispersed throughout a liquid without dissolving and will settle out over time if left undisturbed?",
+      "options": [
+        {
+          "id": "A",
+          "text": "True solution"
+        },
+        {
+          "id": "B",
+          "text": "Suspension"
+        },
+        {
+          "id": "C",
+          "text": "Gaseous solution"
+        },
+        {
+          "id": "D",
+          "text": "Solid alloy"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "A suspension is a heterogeneous mixture containing solid particles that are sufficiently large for sedimentation and can be separated from the liquid medium by filtration.",
+      "sourceReference": "Section 2.1, Page 54"
+    },
+    {
+      "id": "CHE-G10-U02-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "The scattering of a beam of visible light as it passes through a colloidal dispersion, making the light path visible, is known as the:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Brownian movement"
+        },
+        {
+          "id": "B",
+          "text": "Tyndall effect"
+        },
+        {
+          "id": "C",
+          "text": "Common ion effect"
+        },
+        {
+          "id": "D",
+          "text": "Henry's law effect"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The Tyndall effect is the scattering of light by colloidal particles, which distinguishes colloids from true solutions whose particles are too small to scatter light.",
+      "sourceReference": "Section 2.1, Page 103"
+    },
+    {
+      "id": "CHE-G10-U02-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "According to the general solubility principle 'like dissolves like', which type of solvent is most suitable for dissolving non-polar solutes such as iodine (I₂) or oil?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Polar solvents like water"
+        },
+        {
+          "id": "B",
+          "text": "Non-polar solvents like hexane or carbon tetrachloride"
+        },
+        {
+          "id": "C",
+          "text": "Highly ionic aqueous salt solutions"
+        },
+        {
+          "id": "D",
+          "text": "Concentrated aqueous mineral acids"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The 'like dissolves like' rule dictates that non-polar solutes dissolve in non-polar solvents because their inter-particle London dispersion forces are comparable in strength.",
+      "sourceReference": "Section 2.2, Page 60"
+    },
+    {
+      "id": "CHE-G10-U02-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "A solution that contains the maximum concentration of dissolved solute at a specified temperature in dynamic equilibrium with undissolved solute is classified as:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Unsaturated"
+        },
+        {
+          "id": "B",
+          "text": "Saturated"
+        },
+        {
+          "id": "C",
+          "text": "Supersaturated"
+        },
+        {
+          "id": "D",
+          "text": "Dilute"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "A saturated solution is at physical equilibrium where the rate of solute dissolution equals the rate of crystallization in the presence of excess solute.",
+      "sourceReference": "Section 2.3, Page 73"
+    },
+    {
+      "id": "CHE-G10-U02-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Molarity (M) is defined as a concentration unit expressing:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Grams of solute per kilogram of solvent"
+        },
+        {
+          "id": "B",
+          "text": "Moles of solute per liter of solution"
+        },
+        {
+          "id": "C",
+          "text": "Moles of solute per kilogram of solvent"
+        },
+        {
+          "id": "D",
+          "text": "Gram equivalents of solute per liter of solution"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Molarity (M) is the number of moles of solute dissolved in exactly one liter (1 L) of total solution volume.",
+      "sourceReference": "Section 2.4, Page 85"
+    },
+    {
+      "id": "CHE-G10-U02-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Soap cleanses oily dirt from skin or clothing because individual soap molecules possess:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Two non-polar ends that interact exclusively with water molecules."
+        },
+        {
+          "id": "B",
+          "text": "A non-polar hydrocarbon tail that dissolves in grease and a polar ionic head that dissolves in water."
+        },
+        {
+          "id": "C",
+          "text": "An ionic tail that dissolves in oil and a non-polar head that repels water."
+        },
+        {
+          "id": "D",
+          "text": "Metallic cations that chemically decompose lipid molecules into gases."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Soap acts as an emulsifying agent because its non-polar hydrocarbon tail dissolves in non-polar grease spots, while its polar/ionic head stays in water, forming soluble colloidal micelles.",
+      "sourceReference": "Section 2.1, Page 58"
+    },
+    {
+      "id": "CHE-G10-U02-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "When solid ammonium nitrate (NH₄NO₃) dissolves in water in an instant cold pack, the solution temperature drops significantly. What does this indicate about the dissolution process?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The process is exothermic because hydration energy exceeds lattice energy."
+        },
+        {
+          "id": "B",
+          "text": "The process is endothermic because the energy required to break solute and solvent interactions is greater than the solvation energy released."
+        },
+        {
+          "id": "C",
+          "text": "The salt reacts chemically with water to release nitrogen gas."
+        },
+        {
+          "id": "D",
+          "text": "The molar enthalpy of solution (ΔH_soln) is equal to zero."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "An endothermic dissolution process absorbs heat from the surrounding water (causing cooling) because the lattice energy and solvent separation energy together exceed the hydration energy.",
+      "sourceReference": "Section 2.2, Page 66"
+    },
+    {
+      "id": "CHE-G10-U02-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "The solubility of a gas in water at 25 °C is 0.032 M under a partial pressure of 3.0 atm. According to Henry's Law, what will be the concentration of the gas in water if the partial pressure is increased to 6.0 atm at the same temperature?",
+      "options": [
+        {
+          "id": "A",
+          "text": "0.016 M"
+        },
+        {
+          "id": "B",
+          "text": "0.032 M"
+        },
+        {
+          "id": "C",
+          "text": "0.064 M"
+        },
+        {
+          "id": "D",
+          "text": "0.096 M"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Henry's Law states C = k × P (or C₁/P₁ = C₂/P₂). Thus, C₂ = (0.032 M / 3.0 atm) × 6.0 atm = 0.064 M.",
+      "sourceReference": "Section 2.3, Page 80"
+    },
+    {
+      "id": "CHE-G10-U02-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "A student dissolves 25.0 g of glucose (C₆H₁₂O₆) in 225.0 g of distilled water. What is the mass percentage (% w/w) of glucose in this solution?",
+      "options": [
+        {
+          "id": "A",
+          "text": "10.0%"
+        },
+        {
+          "id": "B",
+          "text": "11.1%"
+        },
+        {
+          "id": "C",
+          "text": "9.00%"
+        },
+        {
+          "id": "D",
+          "text": "25.0%"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Mass of solution = mass of solute + mass of solvent = 25.0 g + 225.0 g = 250.0 g. Mass % = (25.0 g / 250.0 g) × 100% = 10.0%.",
+      "sourceReference": "Section 2.4, Page 81"
+    },
+    {
+      "id": "CHE-G10-U02-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What is the molarity of a solution prepared by dissolving 4.00 g of sodium hydroxide (NaOH, molar mass = 40.0 g/mol) in enough water to make 250 mL of solution?",
+      "options": [
+        {
+          "id": "A",
+          "text": "0.100 M"
+        },
+        {
+          "id": "B",
+          "text": "0.400 M"
+        },
+        {
+          "id": "C",
+          "text": "0.250 M"
+        },
+        {
+          "id": "D",
+          "text": "1.00 M"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Moles of NaOH = 4.00 g / 40.0 g/mol = 0.100 mol. Volume = 250 mL = 0.250 L. Molarity = 0.100 mol / 0.250 L = 0.400 M.",
+      "sourceReference": "Section 2.4, Page 85"
+    },
+    {
+      "id": "CHE-G10-U02-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What volume of a 6.00 M stock hydrochloric acid (HCl) solution is required to prepare 500 mL of a 0.300 M HCl solution by dilution?",
+      "options": [
+        {
+          "id": "A",
+          "text": "25.0 mL"
+        },
+        {
+          "id": "B",
+          "text": "50.0 mL"
+        },
+        {
+          "id": "C",
+          "text": "100 mL"
+        },
+        {
+          "id": "D",
+          "text": "10.0 mL"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Using the dilution equation M₁V₁ = M₂V₂: (6.00 M) × V₁ = (0.300 M) × (500 mL). V₁ = (0.300 × 500) / 6.00 = 25.0 mL.",
+      "sourceReference": "Section 2.5, Page 96"
+    },
+    {
+      "id": "CHE-G10-U02-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "An aqueous laboratory solution of sulfuric acid is 49.0% H₂SO₄ by mass (% w/w). What is the molality (m) of H₂SO₄ in this solution? (Molar mass of H₂SO₄ = 98.0 g/mol)",
+      "options": [
+        {
+          "id": "A",
+          "text": "5.00 m"
+        },
+        {
+          "id": "B",
+          "text": "9.80 m"
+        },
+        {
+          "id": "C",
+          "text": "6.50 m"
+        },
+        {
+          "id": "D",
+          "text": "3.77 m"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In 100 g of solution, there are 49.0 g H₂SO₄ and 51.0 g H₂O (0.0510 kg). Moles H₂SO₄ = 49.0 g / 98.0 g/mol = 0.500 mol. Molality = 0.500 mol / 0.0510 kg = 9.80 m.",
+      "sourceReference": "Section 2.4, Page 87"
+    },
+    {
+      "id": "CHE-G10-U02-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "What is the normality (N) of a 0.250 M phosphoric acid (H₃PO₄) solution when it reacts in a neutralization process that converts H₃PO₄ into hydrogen phosphate ions (HPO₄²⁻)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "0.125 N"
+        },
+        {
+          "id": "B",
+          "text": "0.250 N"
+        },
+        {
+          "id": "C",
+          "text": "0.500 N"
+        },
+        {
+          "id": "D",
+          "text": "0.750 N"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The equivalence factor z is the number of reactive H⁺ ions released per molecule. Converting H₃PO₄ to HPO₄²⁻ releases 2 H⁺ ions (z = 2). Normality N = M × z = 0.250 M × 2 = 0.500 N.",
+      "sourceReference": "Section 2.4, Page 89"
+    },
+    {
+      "id": "CHE-G10-U02-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "What volume of 0.200 M AgNO₃ solution is required to react completely with 1.17 g of solid sodium chloride (NaCl, molar mass = 58.5 g/mol) in the reaction: NaCl(s) + AgNO₃(aq) → AgCl(s) + NaNO₃(aq)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "100 mL"
+        },
+        {
+          "id": "B",
+          "text": "50.0 mL"
+        },
+        {
+          "id": "C",
+          "text": "200 mL"
+        },
+        {
+          "id": "D",
+          "text": "25.0 mL"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Moles NaCl = 1.17 g / 58.5 g/mol = 0.0200 mol. Stoichiometric ratio NaCl:AgNO₃ is 1:1, so moles AgNO₃ needed = 0.0200 mol. Volume of AgNO₃ = 0.0200 mol / 0.200 M = 0.100 L = 100 mL.",
+      "sourceReference": "Section 2.6, Page 99"
+    },
+    {
+      "id": "CHE-G10-U02-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A liquid solution is prepared by mixing 46.0 g of ethanol (C₂H₅OH, molar mass = 46.0 g/mol), 32.0 g of methanol (CH₃OH, molar mass = 32.0 g/mol), and 54.0 g of water (H₂O, molar mass = 18.0 g/mol). What is the mole fraction of ethanol (X_ethanol) in this ternary mixture?",
+      "options": [
+        {
+          "id": "A",
+          "text": "0.200"
+        },
+        {
+          "id": "B",
+          "text": "0.250"
+        },
+        {
+          "id": "C",
+          "text": "0.400"
+        },
+        {
+          "id": "D",
+          "text": "0.500"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Moles ethanol = 46.0 / 46.0 = 1.0 mol; Moles methanol = 32.0 / 32.0 = 1.0 mol; Moles water = 54.0 / 18.0 = 3.0 mol. Total moles = 1.0 + 1.0 + 3.0 = 5.0 mol. Mole fraction X_ethanol = 1.0 / 5.0 = 0.200.",
+      "sourceReference": "Section 2.4, Page 84"
+    }
+  ]
 }

@@ -1,6 +1,6 @@
 {
   "name": "@acedex/api",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "description": "Acedex Express & TypeScript backend API",
   "main": "dist/server.js",
   "scripts": {
@@ -30,7 +30,6 @@
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
-    "google-auth-library": "^11.3.4",
     "helmet": "^8.0.0",
     "jsonwebtoken": "^9.0.3",
     "mongoose": "^8.8.4",

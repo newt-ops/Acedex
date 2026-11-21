@@ -3,5 +3,411 @@
   "subject": "Geography",
   "unitNumber": 2,
   "unitTitle": "Weather and Climate of Ethiopia",
-  "questions": []
+  "questions": [
+    {
+      "id": "GEO-G09-U02-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which of the following statements correctly distinguishes weather from climate?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Weather refers to long-term atmospheric patterns over 30 years, whereas climate describes daily changes."
+        },
+        {
+          "id": "B",
+          "text": "Weather is observed over a short period of time in a specific place, while climate represents long-term atmospheric patterns over a prolonged period."
+        },
+        {
+          "id": "C",
+          "text": "Climate changes from hour to hour, while weather remains stable for decades over large continents."
+        },
+        {
+          "id": "D",
+          "text": "Weather is controlled only by latitude, whereas climate depends solely on local wind direction."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Weather describes short-term atmospheric conditions (temperature, humidity, precipitation) at a specific time and place, whereas climate represents the long-term pattern of weather conditions recorded over a long period (typically 30 years or more).",
+      "sourceReference": "Grade 9 Geography Textbook, Section 2.1, Page 38"
+    },
+    {
+      "id": "GEO-G09-U02-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which two physical factors are recognized as the most dominant controls of weather and climate across Ethiopia?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Ocean currents and distance from the Atlantic Ocean"
+        },
+        {
+          "id": "B",
+          "text": "Latitude and altitude"
+        },
+        {
+          "id": "C",
+          "text": "Longitude and continental drift"
+        },
+        {
+          "id": "D",
+          "text": "Soil composition and vegetation cover"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Although several factors influence climate, latitude and altitude are the strongest and most dominant controls of weather and climate in Ethiopia, with altitude creating notable temperature modifications across short distances.",
+      "sourceReference": "Grade 9 Geography Textbook, Section 2.3, Page 40–44"
+    },
+    {
+      "id": "GEO-G09-U02-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which traditional agro-climatic zone in Ethiopia is located at elevations below 500 meters above sea level and experiences mean annual temperatures exceeding 30°C?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Woina Dega"
+        },
+        {
+          "id": "B",
+          "text": "Dega"
+        },
+        {
+          "id": "C",
+          "text": "Kolla"
+        },
+        {
+          "id": "D",
+          "text": "Bereha"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "The Bereha (desert) agro-climatic zone corresponds to lowlands below 500 m.a.m.s.l. characterized by extreme aridity, high daily temperatures, and mean annual temperatures above 30°C (such as in the Danakil Depression).",
+      "sourceReference": "Grade 9 Geography Textbook, Section 2.4, Page 45 & Page 47"
+    },
+    {
+      "id": "GEO-G09-U02-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is the Inter-Tropical Convergence Zone (ITCZ)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A high-pressure belt at the North Pole where polar easterlies converge."
+        },
+        {
+          "id": "B",
+          "text": "A low atmospheric pressure zone formed by the convergence of northeasterly and southeasterly trade winds that shifts north and south with the sun."
+        },
+        {
+          "id": "C",
+          "text": "A permanent oceanic ridge that diverts warm currents away from the Horn of Africa."
+        },
+        {
+          "id": "D",
+          "text": "A mountain barrier in central Ethiopia that prevents moisture from reaching the Rift Valley."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The ITCZ is a low atmospheric pressure zone where trade winds converge; its seasonal migration north and south following the apparent movement of the overhead sun governs rainfall distribution across Ethiopia.",
+      "sourceReference": "Grade 9 Geography Textbook, Section 2.4, Page 49"
+    },
+    {
+      "id": "GEO-G09-U02-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which meteorological instrument is specifically used to measure atmospheric pressure?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Anemometer"
+        },
+        {
+          "id": "B",
+          "text": "Hygrometer"
+        },
+        {
+          "id": "C",
+          "text": "Barometer"
+        },
+        {
+          "id": "D",
+          "text": "Wind vane"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "A barometer is used to measure atmospheric pressure, usually calibrated in millibars (mb) or millimeters of mercury (mmHg).",
+      "sourceReference": "Grade 9 Geography Textbook, Section 2.5, Page 54"
+    },
+    {
+      "id": "GEO-G09-U02-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Town A (Addis Ababa) and Town B (Awash) lie along the exact same latitude (9°N). However, Addis Ababa has a mean annual temperature of 16°C, whereas Awash records 25°C. What explains this marked thermal contrast?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Awash is closer to the Atlantic Ocean than Addis Ababa."
+        },
+        {
+          "id": "B",
+          "text": "Addis Ababa is situated at a much higher altitude (2,200 m) than Awash (916 m), causing temperature to decrease with ascending elevation."
+        },
+        {
+          "id": "C",
+          "text": "Awash receives direct overhead sun rays for nine months of the year, while Addis Ababa receives only slanting rays."
+        },
+        {
+          "id": "D",
+          "text": "Addis Ababa is shaded by dense tropical rainforests that block all solar radiation."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Due to the environmental lapse rate, temperature decreases as altitude increases. Despite sharing the 9°N latitude, Addis Ababa's higher elevation (2,200 m) makes it significantly cooler than Awash (916 m).",
+      "sourceReference": "Grade 9 Geography Textbook, Section 2.3, Page 42 (Table 2.1)"
+    },
+    {
+      "id": "GEO-G09-U02-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What microclimatic phenomenon occurs on the leeward slope of a mountain range when moisture-laden winds blow against it?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Heavy convectional thunderstorms occur continuously on the leeward side."
+        },
+        {
+          "id": "B",
+          "text": "The ascending air on the leeward slope cools rapidly and forms dense snowpack."
+        },
+        {
+          "id": "C",
+          "text": "Descending dry air creates a rain shadow effect, resulting in significantly lower rainfall on the leeward slope compared to the windward slope."
+        },
+        {
+          "id": "D",
+          "text": "The leeward slope experiences higher relative humidity and frequent fog formation."
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Moisture-laden winds drop most of their precipitation on the windward slope. As the air crosses the ridge and descends along the leeward slope, it warms up and loses relative humidity, creating a dry rain shadow zone.",
+      "sourceReference": "Grade 9 Geography Textbook, Section 2.3, Page 42"
+    },
+    {
+      "id": "GEO-G09-U02-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which agro-climatic zone in Ethiopia spans altitudes between 1,500 and 2,300 meters, has mean annual temperatures of 15°C–20°C, and serves as the primary agricultural belt for cereal grains and enset?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Wurch"
+        },
+        {
+          "id": "B",
+          "text": "Woina Dega"
+        },
+        {
+          "id": "C",
+          "text": "Dega"
+        },
+        {
+          "id": "D",
+          "text": "Kolla"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Woina Dega (subtropical zone, 1,500–2,300 m.a.m.s.l.) contains most of Ethiopia's cultivable land and rural population, supporting surplus cereal grains (teff, maize, wheat) and enset cultivation.",
+      "sourceReference": "Grade 9 Geography Textbook, Section 2.4, Page 45–46"
+    },
+    {
+      "id": "GEO-G09-U02-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "During the main summer rainy season (Kiremt, June–August), which air masses are primarily responsible for bringing heavy rainfall to the Northwestern Highlands of Ethiopia?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Dry Northeast Trade Winds blowing from the Arabian landmass."
+        },
+        {
+          "id": "B",
+          "text": "Moist Equatorial Westerlies blowing from the Atlantic Ocean and South-East Trade Winds from the Indian Ocean."
+        },
+        {
+          "id": "C",
+          "text": "Cold polar winds originating from the Antarctic continent."
+        },
+        {
+          "id": "D",
+          "text": "Dry continental winds blowing from the Sahara Desert."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In summer (Kiremt), when the overhead sun moves north to the Tropic of Cancer, the ITCZ shifts northward, drawing moist Equatorial Westerlies from the Atlantic Ocean and South-East winds from the Indian Ocean over the Ethiopian highlands.",
+      "sourceReference": "Grade 9 Geography Textbook, Section 2.4, Page 49–50"
+    },
+    {
+      "id": "GEO-G09-U02-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "The Southeastern Highlands and Lowlands of Ethiopia (such as Ogaden and Bale lowlands) experience a bimodal rainfall pattern with peak rains occurring during which seasons?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Summer (Kiremt) and Winter (Bega)"
+        },
+        {
+          "id": "B",
+          "text": "Autumn (September–November) and Spring (March–May)"
+        },
+        {
+          "id": "C",
+          "text": "Winter (December–February) only"
+        },
+        {
+          "id": "D",
+          "text": "Continuous year-round rainfall with no dry month"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The southeastern region lies in the Autumn-and-Spring rainfall zone, receiving bimodal rainfall driven by Equatorial Easterlies from the Indian Ocean during spring (Belg) and autumn (Meher).",
+      "sourceReference": "Grade 9 Geography Textbook, Section 2.4, Page 50"
+    },
+    {
+      "id": "GEO-G09-U02-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "A weather station on a high mountain peak in Semien Gondar measures an ambient temperature of 50°F. What is the equivalent temperature in degrees Celsius (°C)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "5°C"
+        },
+        {
+          "id": "B",
+          "text": "10°C"
+        },
+        {
+          "id": "C",
+          "text": "15°C"
+        },
+        {
+          "id": "D",
+          "text": "18°C"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Using the formula C = (F - 32) * 5/9: C = (50 - 32) * 5/9 = 18 * 5/9 = 10°C.",
+      "sourceReference": "Grade 9 Geography Textbook, Section 2.5, Page 53"
+    },
+    {
+      "id": "GEO-G09-U02-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "The Southwestern Highlands of Ethiopia (such as Kafa and Bench Maji) receive the highest annual rainfall in the country with year-round precipitation. Which factor best explains this unique rainfall pattern?",
+      "options": [
+        {
+          "id": "A",
+          "text": "They are located along the coast of the Red Sea where maritime polar fronts meet year-round."
+        },
+        {
+          "id": "B",
+          "text": "They are continuously influenced by moisture-bearing Equatorial Westerlies and South-East Trade Winds for nearly all months of the year, lacking a pronounced dry season."
+        },
+        {
+          "id": "C",
+          "text": "They lie in the deep rain shadow of the Arsi-Bale Massif which traps moisture permanently over Kafa."
+        },
+        {
+          "id": "D",
+          "text": "High atmospheric pressure systems over the Southwestern highlands force subsiding dry air to condense into continuous rain."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Southwestern Ethiopia experiences year-round rainfall because moisture-bearing winds (Equatorial Westerlies from the Atlantic and South-East winds from the Indian Ocean) persist over the region for almost the entire year, giving it the longest rainy season and lowest rainfall variability in Ethiopia.",
+      "sourceReference": "Grade 9 Geography Textbook, Section 2.4, Page 49–51"
+    },
+    {
+      "id": "GEO-G09-U02-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "During the Bega (winter) season (December to February), why does the majority of the Ethiopian landmass experience dry, sunny, and cloudless weather?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The ITCZ moves to the Tropic of Capricorn in the Southern Hemisphere, causing dry Northeasterly trade winds from the Asian continent to blow across Ethiopia."
+        },
+        {
+          "id": "B",
+          "text": "The overhead sun is positioned directly over 15°N latitude, creating low pressure and preventing clouds from forming."
+        },
+        {
+          "id": "C",
+          "text": "Warm ocean currents from the Atlantic Ocean block all moisture-bearing winds from entering North Africa."
+        },
+        {
+          "id": "D",
+          "text": "Equatorial Westerlies intensify over the Horn of Africa, creating high relative humidity that suppresses cloud development."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "During Bega (winter in the Northern Hemisphere), the sun is overhead at the Tropic of Capricorn. The ITCZ shifts southward, allowing cool, dry Northeasterly trade winds blowing from continental Eurasia to dominate Ethiopia, resulting in dry and clear weather.",
+      "sourceReference": "Grade 9 Geography Textbook, Section 2.4, Page 49"
+    },
+    {
+      "id": "GEO-G09-U02-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A meteorological station in Jimma records daily maximum and minimum temperatures over a 5-day period as follows: Day 1 (26°C / 10°C), Day 2 (24°C / 12°C), Day 3 (28°C / 8°C), Day 4 (25°C / 11°C), Day 5 (27°C / 9°C). What is the mean temperature of the 5-day period, and what was the maximum daily diurnal range observed?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Mean = 18°C; Maximum Diurnal Range = 20°C"
+        },
+        {
+          "id": "B",
+          "text": "Mean = 16°C; Maximum Diurnal Range = 14°C"
+        },
+        {
+          "id": "C",
+          "text": "Mean = 18.5°C; Maximum Diurnal Range = 12°C"
+        },
+        {
+          "id": "D",
+          "text": "Mean = 19°C; Maximum Diurnal Range = 16°C"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Daily means for each day: Day 1 = (26+10)/2 = 18°C; Day 2 = (24+12)/2 = 18°C; Day 3 = (28+8)/2 = 18°C; Day 4 = (25+11)/2 = 18°C; Day 5 = (27+9)/2 = 18°C. The overall mean is 18°C. Daily diurnal ranges: Day 1 = 16°C; Day 2 = 12°C; Day 3 = 28 - 8 = 20°C; Day 4 = 14°C; Day 5 = 18°C. The maximum diurnal range is 20°C on Day 3.",
+      "sourceReference": "Grade 9 Geography Textbook, Section 2.5, Page 53–54"
+    },
+    {
+      "id": "GEO-G09-U02-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Ethiopia is located between 3°N and 15°N latitudes. Because it lies entirely within the tropical zone, how many times in a single year does any given location in Ethiopia experience the overhead sun (vertical sun rays)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Once per year, during the summer solstice on June 21."
+        },
+        {
+          "id": "B",
+          "text": "Twice per year, as the overhead sun moves northward toward the Tropic of Cancer and southward back toward the Equator."
+        },
+        {
+          "id": "C",
+          "text": "Three times per year, coinciding with Kiremt, Belg, and Bega rainy seasons."
+        },
+        {
+          "id": "D",
+          "text": "Never, because the overhead sun only occurs at the Equator (0°)."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Since Ethiopia lies between 3°N and 15°N (between the Equator and Tropic of Cancer at 23.5°N), all places in Ethiopia experience the overhead sun twice a year: once during its northward march toward the Tropic of Cancer (spring/early summer) and once during its southward return toward the Equator (late summer/autumn).",
+      "sourceReference": "Grade 9 Geography Textbook, Section 2.3, Page 41 & Page 44"
+    }
+  ]
 }

@@ -3,5 +3,411 @@
   "subject": "Geography",
   "unitNumber": 8,
   "unitTitle": "Geographic Enquiry, Skills and Techniques",
-  "questions": []
+  "questions": [
+    {
+      "id": "GEO-G09-U08-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which of the following statements correctly defines a map in geography?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A three-dimensional spherical model showing the exact physical curvature of the Earth."
+        },
+        {
+          "id": "B",
+          "text": "A simplified, two-dimensional plain representation of all or part of the Earth's surface as viewed vertically from above."
+        },
+        {
+          "id": "C",
+          "text": "An unscaled satellite photograph displaying real-time atmospheric changes."
+        },
+        {
+          "id": "D",
+          "text": "A pictorial sketch drawn without mathematical scale or conventional symbols."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "A map is defined as a simplified, diminished, two-dimensional (plane) representation of all or part of the Earth's surface as viewed vertically from directly above (bird's-eye view) drawn to scale.",
+      "sourceReference": "Grade 9 Geography Textbook, Section 8.1, Page 197"
+    },
+    {
+      "id": "GEO-G09-U08-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which basic component of a map explains the meaning of the various colors, signs, and conventional symbols used by the cartographer?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Title"
+        },
+        {
+          "id": "B",
+          "text": "Grid reference"
+        },
+        {
+          "id": "C",
+          "text": "Legend (Key)"
+        },
+        {
+          "id": "D",
+          "text": "Scale statement"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The legend or key is an essential map component that decodes and explains the meaning of all conventional signs, colors, and symbols used on a map.",
+      "sourceReference": "Grade 9 Geography Textbook, Section 8.1, Page 200"
+    },
+    {
+      "id": "GEO-G09-U08-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which of the following scale values represents a large-scale map, which covers a small geographic area in high detail?",
+      "options": [
+        {
+          "id": "A",
+          "text": "1:500,000"
+        },
+        {
+          "id": "B",
+          "text": "1:1,000,000"
+        },
+        {
+          "id": "C",
+          "text": "1:250,000"
+        },
+        {
+          "id": "D",
+          "text": "1:25,000"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "Large-scale maps are defined as those with scales greater than or equal to 1:50,000 (such as 1:25,000 or 1:10,000). They depict smaller areas with a high level of detail compared to small-scale maps (≤ 1:250,000).",
+      "sourceReference": "Grade 9 Geography Textbook, Section 8.2, Page 201–202"
+    },
+    {
+      "id": "GEO-G09-U08-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What term describes the horizontal angular difference between True North (geographic North Pole) and Magnetic North (indicated by a magnetic compass)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Grid convergence"
+        },
+        {
+          "id": "B",
+          "text": "Magnetic declination"
+        },
+        {
+          "id": "C",
+          "text": "Compass bearing"
+        },
+        {
+          "id": "D",
+          "text": "Azimuth angle"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Magnetic declination (or variation) is the horizontal angular difference between True North (the direction towards the geographic North Pole) and Magnetic North (the direction pointed to by a magnetic compass needle).",
+      "sourceReference": "Grade 9 Geography Textbook, Section 8.3, Page 217"
+    },
+    {
+      "id": "GEO-G09-U08-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "If a traveler moves in the direction halfway between South and East, what subsidiary compass point and compass bearing does this direction represent?",
+      "options": [
+        {
+          "id": "A",
+          "text": "South-East (SE) at 135°"
+        },
+        {
+          "id": "B",
+          "text": "North-East (NE) at 45°"
+        },
+        {
+          "id": "C",
+          "text": "South-West (SW) at 225°"
+        },
+        {
+          "id": "D",
+          "text": "East-South-East (ESE) at 112.5°"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "South-East (SE) is the subsidiary compass point located midway between South (180°) and East (90°), corresponding to a compass bearing of 135°.",
+      "sourceReference": "Grade 9 Geography Textbook, Section 8.3, Page 216"
+    },
+    {
+      "id": "GEO-G09-U08-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "A map scale is expressed as a Representative Fraction (RF) of 1:250,000. What is the equivalent scale expressed as a Scale Statement?",
+      "options": [
+        {
+          "id": "A",
+          "text": "1 cm represents 25 km"
+        },
+        {
+          "id": "B",
+          "text": "1 cm represents 2.5 km"
+        },
+        {
+          "id": "C",
+          "text": "1 cm represents 250 m"
+        },
+        {
+          "id": "D",
+          "text": "1 cm represents 250 km"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "RF 1:250,000 means 1 cm on the map equals 250,000 cm on the ground. Dividing 250,000 cm by 100,000 converts it to 2.5 km (1 cm to 2.5 km).",
+      "sourceReference": "Grade 9 Geography Textbook, Section 8.2, Page 204"
+    },
+    {
+      "id": "GEO-G09-U08-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "When measuring the distance of a winding, curved river or road on a topographic map, which method provides an accurate measurement before applying the map scale?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Using a rigid plastic ruler directly in a straight line between the start and end points."
+        },
+        {
+          "id": "B",
+          "text": "Laying a wet thread or pair of dividers carefully along each small curve of the feature, then measuring the straightened length against a ruler."
+        },
+        {
+          "id": "C",
+          "text": "Counting the total number of full grid squares enclosed by the river basin."
+        },
+        {
+          "id": "D",
+          "text": "Multiplying the map width by the magnetic declination angle."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Measuring curved line features (rivers, roads, coastlines) requires dividing the curve into small segments using a thread, string, or dividers, then measuring the total extended length against a ruler.",
+      "sourceReference": "Grade 9 Geography Textbook, Section 8.2, Page 206"
+    },
+    {
+      "id": "GEO-G09-U08-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In the National Grid Reference system used on topographic maps, how are Eastings and Northings defined?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Eastings are horizontal lines numbered southward; Northings are vertical lines numbered westward."
+        },
+        {
+          "id": "B",
+          "text": "Eastings are vertical grid lines numbered eastward from the origin; Northings are horizontal grid lines numbered northward."
+        },
+        {
+          "id": "C",
+          "text": "Eastings measure angular distance in degrees; Northings measure elevation in meters."
+        },
+        {
+          "id": "D",
+          "text": "Eastings point to magnetic north; Northings point to true north."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In national grid systems, vertical lines are called Eastings because their numbers increase towards the East. Horizontal lines are called Northings because their numbers increase towards the North.",
+      "sourceReference": "Grade 9 Geography Textbook, Section 8.3, Page 212"
+    },
+    {
+      "id": "GEO-G09-U08-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which drafting instrument is specifically designed to measure the surface area of both regular and irregularly shaped landform features directly from a map?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Anemometer"
+        },
+        {
+          "id": "B",
+          "text": "Barometer"
+        },
+        {
+          "id": "C",
+          "text": "Planimeter"
+        },
+        {
+          "id": "D",
+          "text": "Clinometer"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "A planimeter is a specialized mechanical or digital drafting instrument used to measure the surface area of plane figures (both regular and irregular features like lakes and forests) on a map.",
+      "sourceReference": "Grade 9 Geography Textbook, Section 8.2, Page 208"
+    },
+    {
+      "id": "GEO-G09-U08-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How does a four-digit grid reference differ from a six-digit grid reference on a national grid map?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A 4-digit reference identifies a 10 km square, whereas a 6-digit reference identifies a point within 10 meters."
+        },
+        {
+          "id": "B",
+          "text": "A 4-digit reference locates a feature to the nearest 1 km square (1,000 m accuracy), whereas a 6-digit reference locates a point to within 100 m accuracy."
+        },
+        {
+          "id": "C",
+          "text": "A 4-digit reference gives latitude and longitude, whereas a 6-digit reference gives elevation and temperature."
+        },
+        {
+          "id": "D",
+          "text": "A 4-digit reference is used only for large-scale maps, whereas a 6-digit reference is used only for global atlases."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "A 4-digit grid reference identifies a 1 km × 1 km grid square (1,000 m precision), whereas a 6-digit grid reference divides the square into tenths, providing a point location with 100 m precision.",
+      "sourceReference": "Grade 9 Geography Textbook, Section 8.3, Page 212–215"
+    },
+    {
+      "id": "GEO-G09-U08-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "A pie chart is drawn to illustrate Ethiopia's export destinations. If Asia accounts for 36.4% of total exports, what angle must the segment for Asia subtend at the center of the pie chart?",
+      "options": [
+        {
+          "id": "A",
+          "text": "36.4°"
+        },
+        {
+          "id": "B",
+          "text": "72.8°"
+        },
+        {
+          "id": "C",
+          "text": "131.0°"
+        },
+        {
+          "id": "D",
+          "text": "180.0°"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "A complete pie chart represents 100%, which equals 360 degrees (1% = 3.6°). For 36.4%, the central angle is calculated as 36.4 × 3.6° = 131.04° (approx. 131.0°).",
+      "sourceReference": "Grade 9 Geography Textbook, Section 8.5, Page 225"
+    },
+    {
+      "id": "GEO-G09-U08-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A rectangular state farm measures 4 cm in length and 3 cm in width on a map drawn at a scale of 1:200,000. What is the actual ground area of the farm in square kilometers (km²)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "24 km²"
+        },
+        {
+          "id": "B",
+          "text": "48 km²"
+        },
+        {
+          "id": "C",
+          "text": "96 km²"
+        },
+        {
+          "id": "D",
+          "text": "192 km²"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Scale 1:200,000 means 1 cm on map = 2 km on ground. Ground length = 4 cm × 2 km = 8 km. Ground width = 3 cm × 2 km = 6 km. Ground area = length × width = 8 km × 6 km = 48 km².",
+      "sourceReference": "Grade 9 Geography Textbook, Section 8.2, Page 207"
+    },
+    {
+      "id": "GEO-G09-U08-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "An analyst uses the Grid Square Method to estimate the area of an irregular lake on a map with a scale of 1 cm to 2 km (1:200,000). Overlaying 1 cm × 1 cm grid lines, the analyst counts 6 full squares, 4 three-quarter (3/4) squares, 4 half (1/2) squares, and 2 one-quarter (1/4) squares inside the lake boundary. What is the estimated total ground area of the lake?",
+      "options": [
+        {
+          "id": "A",
+          "text": "23 km²"
+        },
+        {
+          "id": "B",
+          "text": "46 km²"
+        },
+        {
+          "id": "C",
+          "text": "52 km²"
+        },
+        {
+          "id": "D",
+          "text": "92 km²"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Total grid squares = 6 + 4*(0.75) + 4*(0.5) + 2*(0.25) = 6 + 3 + 2 + 0.5 = 11.5 grid squares. Since 1 cm = 2 km, 1 grid square (1 cm × 1 cm) represents 2 km × 2 km = 4 km². Total ground area = 11.5 × 4 km² = 46 km².",
+      "sourceReference": "Grade 9 Geography Textbook, Section 8.2, Page 208"
+    },
+    {
+      "id": "GEO-G09-U08-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "On a topographic map, a mountain peak has a True Bearing of 065° from a station. If the local magnetic declination stated on the map margin is 5° West of True North, what is the Magnetic Bearing of the mountain peak from the station?",
+      "options": [
+        {
+          "id": "A",
+          "text": "060°"
+        },
+        {
+          "id": "B",
+          "text": "065°"
+        },
+        {
+          "id": "C",
+          "text": "070°"
+        },
+        {
+          "id": "D",
+          "text": "125°"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "When Magnetic Declination is West, Magnetic North lies to the west (left) of True North by 5°. Therefore, Magnetic Bearing = True Bearing + West Declination = 065° + 5° = 070°.",
+      "sourceReference": "Grade 9 Geography Textbook, Section 8.3, Page 217"
+    },
+    {
+      "id": "GEO-G09-U08-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "On a 1:50,000 topographic map, point 'P' lies inside grid square 36 10 (Easting 36, Northing 10). Measuring from Easting 36 to the right, point 'P' is 7 tenths across. Measuring from Northing 10 upwards, point 'P' is 4 tenths up. If the 100 km square code is 'CA', what is the complete 6-digit National Grid Reference for point 'P'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "CA 104367"
+        },
+        {
+          "id": "B",
+          "text": "CA 367104"
+        },
+        {
+          "id": "C",
+          "text": "CA 364107"
+        },
+        {
+          "id": "D",
+          "text": "CA 107364"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "National Grid Reference places Eastings first (Easting 36 + 7 tenths = 367), followed by Northings (Northing 10 + 4 tenths = 104). Combining with 100 km code 'CA' gives CA 367104.",
+      "sourceReference": "Grade 9 Geography Textbook, Section 8.3, Page 213–214"
+    }
+  ]
 }

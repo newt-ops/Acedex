@@ -3,5 +3,411 @@
   "subject": "Geography",
   "unitNumber": 8,
   "unitTitle": "Geospatial Information and Data Processing",
-  "questions": []
+  "questions": [
+    {
+      "id": "GEO-G10-U08-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which of the following statements accurately distinguishes 'data' from 'information' in geospatial processing?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Data is the final decision-making output, whereas information consists of raw, unorganized numbers."
+        },
+        {
+          "id": "B",
+          "text": "Data refers to unprocessed observations and facts stored as numbers, images, or symbols, whereas information is the processed, organized result that adds context and meaning."
+        },
+        {
+          "id": "C",
+          "text": "Data depends on information to exist, whereas information operates independently of data."
+        },
+        {
+          "id": "D",
+          "text": "Data is used exclusively in physical geography, while information is used only in human geography."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Data represents unorganized observations, raw figures, facts, or symbols collected about phenomena. Information is the result of processing, structuring, and organizing that data within a meaningful context for users.",
+      "sourceReference": "Grade 10 Geography Textbook, Section 8.1, Page 176–177 (Table 8.1)"
+    },
+    {
+      "id": "GEO-G10-U08-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In visualizing geographic phenomena, which feature is an example of a 'discrete object' rather than 'continuous data'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Atmospheric pressure"
+        },
+        {
+          "id": "B",
+          "text": "Elevation above sea level"
+        },
+        {
+          "id": "C",
+          "text": "A natural freshwater lake with defined boundaries"
+        },
+        {
+          "id": "D",
+          "text": "Air temperature"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Discrete objects represent geographic entities with clear, well-defined boundaries in open space (e.g., a lake, a building, a road). Continuous data (such as elevation, temperature, or atmospheric pressure) varies progressively across a surface without fixed boundaries.",
+      "sourceReference": "Grade 10 Geography Textbook, Section 8.1, Page 179"
+    },
+    {
+      "id": "GEO-G10-U08-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "To calculate a precise three-dimensional position (latitude, longitude, and elevation) on Earth's surface, a Global Positioning System (GPS) receiver must connect with a minimum of how many orbiting satellites?",
+      "options": [
+        {
+          "id": "A",
+          "text": "1"
+        },
+        {
+          "id": "B",
+          "text": "2"
+        },
+        {
+          "id": "C",
+          "text": "4"
+        },
+        {
+          "id": "D",
+          "text": "12"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "A GPS receiver requires signals from at least four orbiting satellites simultaneously to triangulate its precise location, including latitudinal, longitudinal, and elevation coordinates.",
+      "sourceReference": "Grade 10 Geography Textbook, Section 8.2, Page 182"
+    },
+    {
+      "id": "GEO-G10-U08-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In vector spatial data models, what geometric element terminates a vector line segment (arc)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Grid cell"
+        },
+        {
+          "id": "B",
+          "text": "Node"
+        },
+        {
+          "id": "C",
+          "text": "Pixel"
+        },
+        {
+          "id": "D",
+          "text": "Polygon"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In vector data structures, linear features (arcs) are formed by a sequence of intermediate vertices and are terminated at both ends by starting and ending points called nodes.",
+      "sourceReference": "Grade 10 Geography Textbook, Section 8.3, Page 185–186"
+    },
+    {
+      "id": "GEO-G10-U08-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which type of statistical graphic is specifically designed to illustrate how a total phenomenon (100%) is divided into proportional category slices?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Line graph"
+        },
+        {
+          "id": "B",
+          "text": "Histogram"
+        },
+        {
+          "id": "C",
+          "text": "Pie chart"
+        },
+        {
+          "id": "D",
+          "text": "Scatter plot"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "A pie chart is a circular statistical diagram divided into segments (slices) to show the proportion or percentage distribution of individual categories relative to the whole (100%).",
+      "sourceReference": "Grade 10 Geography Textbook, Section 8.5, Page 199–200"
+    },
+    {
+      "id": "GEO-G10-U08-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which of the following dataset examples represents a 'remotely sensed' geographic data source?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Hand-recorded temperature measurements taken at a local weather station"
+        },
+        {
+          "id": "B",
+          "text": "Satellite imagery captured by orbiting sensors"
+        },
+        {
+          "id": "C",
+          "text": "Household questionnaire responses gathered during a population census"
+        },
+        {
+          "id": "D",
+          "text": "Field observations of tree counts recorded by foresters on site"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Remotely sensed data refers to information acquired from a distance without direct physical contact with the object or area being measured, such as satellite images and aerial photographs.",
+      "sourceReference": "Grade 10 Geography Textbook, Section 8.2, Page 180–181"
+    },
+    {
+      "id": "GEO-G10-U08-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What is the primary purpose of 'georeferencing' when converting an analog map image or photograph into a digital GIS database?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To convert vector polygons into raster pixels automatically."
+        },
+        {
+          "id": "B",
+          "text": "To align the internal pixel coordinate system of the scanned image with a real-world geographic coordinate system."
+        },
+        {
+          "id": "C",
+          "text": "To compress the digital file size so it can be emailed."
+        },
+        {
+          "id": "D",
+          "text": "To change the language of the map legend."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Georeferencing assigns real-world spatial coordinates (e.g., latitude/longitude or UTM meters) to the internal pixel rows and columns of a scanned image or aerial photograph so it aligns accurately in space.",
+      "sourceReference": "Grade 10 Geography Textbook, Section 8.2, Page 183"
+    },
+    {
+      "id": "GEO-G10-U08-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In a raster spatial data model, how are geographical features and their attributes stored in a computer system?",
+      "options": [
+        {
+          "id": "A",
+          "text": "As mathematical equations linking X and Y coordinate pairs"
+        },
+        {
+          "id": "B",
+          "text": "As a grid-cell matrix organized by rows and columns where each cell holds an attribute value"
+        },
+        {
+          "id": "C",
+          "text": "As text descriptions stored inside a word processor document"
+        },
+        {
+          "id": "D",
+          "text": "As physical ink drawings stored on paper sheets"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Raster data models use a grid-cell structure (a regular matrix of rows and columns) where each individual square cell represents a ground area and stores a specific value (e.g., elevation, land cover type).",
+      "sourceReference": "Grade 10 Geography Textbook, Section 8.3, Page 186–187"
+    },
+    {
+      "id": "GEO-G10-U08-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Why are 'People' considered an indispensable component of a functional Geographic Information System (GIS)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because computer hardware cannot operate electric power without human physical touch."
+        },
+        {
+          "id": "B",
+          "text": "Because GIS technology is of limited value without skilled administrators, technicians, and domain experts to manage the system, analyze data, and apply results to solve problems."
+        },
+        {
+          "id": "C",
+          "text": "Because satellite sensors require human pilots inside orbit."
+        },
+        {
+          "id": "D",
+          "text": "Because vector data models can only be drawn by hand."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "While hardware, software, data, and methods are vital technical components, GIS technology requires people (skilled specialists, analysts, managers, and end-users) to formulate queries, interpret results, and guide decision-making.",
+      "sourceReference": "Grade 10 Geography Textbook, Section 8.4, Page 190–191"
+    },
+    {
+      "id": "GEO-G10-U08-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "When constructing a line graph to illustrate mean monthly temperature changes across a twelve-month calendar year, which variable should be placed on the horizontal (X) axis?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Monthly temperature values in °C (dependent variable)"
+        },
+        {
+          "id": "B",
+          "text": "Time sequence of months (independent variable)"
+        },
+        {
+          "id": "C",
+          "text": "Total annual precipitation in mm"
+        },
+        {
+          "id": "D",
+          "text": "Elevation above sea level in meters"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In standard cartographic and statistical charting, the independent variable (time sequence, such as months or years) is plotted along the horizontal X-axis, while the dependent variable (temperature values) is plotted along the vertical Y-axis.",
+      "sourceReference": "Grade 10 Geography Textbook, Section 8.5, Page 198–199"
+    },
+    {
+      "id": "GEO-G10-U08-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which of the following points highlights a major practical advantage of digital spatial data representation over traditional paper (analogue) maps?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Digital data requires large physical warehouse spaces for storage."
+        },
+        {
+          "id": "B",
+          "text": "Digital data is easier to update, copy, transmit at high speeds, analyze, and store in high density without physical deterioration."
+        },
+        {
+          "id": "C",
+          "text": "Digital data cannot be viewed on computer screens."
+        },
+        {
+          "id": "D",
+          "text": "Digital data eliminates the need for map scales or legends."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Digital GIS data offers key advantages over paper maps: high storage density in small hardware spaces, resistance to physical tearing/fading, ease of editing, rapid electronic transmission, and powerful computer analysis capabilities.",
+      "sourceReference": "Grade 10 Geography Textbook, Section 8.3, Page 184"
+    },
+    {
+      "id": "GEO-G10-U08-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "An analyst prepares a pie chart to display the sectorial breakdown of Ethiopia's gross domestic product (GDP). If the agriculture sector accounts for 37.5% of total output, what exact central angle must its pie segment subtend at the center of the chart?",
+      "options": [
+        {
+          "id": "A",
+          "text": "37.5°"
+        },
+        {
+          "id": "B",
+          "text": "112.5°"
+        },
+        {
+          "id": "C",
+          "text": "135.0°"
+        },
+        {
+          "id": "D",
+          "text": "180.0°"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "A complete pie chart circle is 360°, corresponding to 100% (1% = 3.6°). For 37.5%, the central angle = 37.5 × 3.6° = 135.0°.",
+      "sourceReference": "Grade 10 Geography Textbook, Section 8.5, Page 199–200"
+    },
+    {
+      "id": "GEO-G10-U08-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "When comparing spatial data storage formats in GIS, why is the vector data model preferred over the raster model for representing discrete administrative boundaries and road networks?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Vector models store data as coarse grid cells that reduce computer processing memory."
+        },
+        {
+          "id": "B",
+          "text": "Vector models represent sharp linear segments and exact point locations with precise X, Y coordinates, avoiding the stair-step grid pixel approximation of rasters."
+        },
+        {
+          "id": "C",
+          "text": "Vector models cannot store attribute information in database tables."
+        },
+        {
+          "id": "D",
+          "text": "Vector models are limited exclusively to aerial photographs."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Vector data models store features using precise coordinate pairs (X, Y) to define exact points, crisp linear arcs, and defined polygon boundaries. Rasters represent features as grid cells, which can create a jagged 'stair-step' appearance for linear boundaries depending on cell resolution.",
+      "sourceReference": "Grade 10 Geography Textbook, Section 8.3, Page 185–187"
+    },
+    {
+      "id": "GEO-G10-U08-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "In the GIS workflow for creating an administrative map (e.g., of Oromia National Regional State in ArcMap), what is the correct sequence of fundamental operational steps?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Print paper map → Edit legend → Add shapefiles → Start computer"
+        },
+        {
+          "id": "B",
+          "text": "Open ArcMap → Connect to folder and add regional shapefiles → Select target feature from Attribute Table → Export selected data → Switch to Layout View to add marginal map elements"
+        },
+        {
+          "id": "C",
+          "text": "Digitize paper map → Delete attribute table → Close ArcMap → Save as JPEG"
+        },
+        {
+          "id": "D",
+          "text": "Add scale bar → Draw map by hand → Connect to GPS → Open ArcCatalog"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The standard GIS mapmaking sequence in ArcMap involves: starting the application, connecting to data folders, adding shapefile layers, querying/selecting specific features from attribute tables, exporting the target layer, and organizing layout elements (title, legend, north arrow, scale bar, gridlines) in Layout View.",
+      "sourceReference": "Grade 10 Geography Textbook, Section 8.4, Page 191–195"
+    },
+    {
+      "id": "GEO-G10-U08-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "How do spatial data and attribute data interact within a Geographic Information System (GIS) to enable spatial queries?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Spatial data stores non-geographic text descriptions, while attribute data stores satellite images."
+        },
+        {
+          "id": "B",
+          "text": "Spatial data defines the location, geometry, and shape of features (points, lines, polygons), while attribute data stores tabular descriptive characteristics linked directly to those spatial features."
+        },
+        {
+          "id": "C",
+          "text": "Spatial data operates only on paper maps, while attribute data operates only in GPS receivers."
+        },
+        {
+          "id": "D",
+          "text": "Spatial data and attribute data are completely unlinked and stored in separate incompatible software."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "A GIS uniquely combines spatial data (where features are located in coordinate space: points, lines, polygons) with attribute data (what features are: tabular records of properties, names, populations, or measurements linked to those features). This connection enables spatial analysis and database queries.",
+      "sourceReference": "Grade 10 Geography Textbook, Section 8.1, Page 177 & Section 8.3, Page 184"
+    }
+  ]
 }

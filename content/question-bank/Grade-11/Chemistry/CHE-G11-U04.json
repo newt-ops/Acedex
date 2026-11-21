@@ -3,5 +3,411 @@
   "subject": "Chemistry",
   "unitNumber": 4,
   "unitTitle": "Chemical Kinetics",
-  "questions": []
+  "questions": [
+    {
+      "id": "CHE-G11-U04-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is the fundamental definition of the rate of a chemical reaction?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The total quantity of heat energy released or absorbed during a chemical process."
+        },
+        {
+          "id": "B",
+          "text": "The change in concentration of a reactant or product per unit time."
+        },
+        {
+          "id": "C",
+          "text": "The ratio of the mass of products to the mass of reactants at equilibrium."
+        },
+        {
+          "id": "D",
+          "text": "The minimum kinetic energy required to break chemical bonds in reactants."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The rate of a chemical reaction measures how fast reactants are consumed or products are formed, defined mathematically as the change in concentration per unit time (Δc/Δt).",
+      "sourceReference": "Section 4.2, Page 194"
+    },
+    {
+      "id": "CHE-G11-U04-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "According to the collision theory, what is a necessary pre-condition for a chemical reaction to occur between reacting species?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Reacting species must collide with proper molecular orientation and energy equal to or exceeding the activation energy."
+        },
+        {
+          "id": "B",
+          "text": "Reacting species must be in the gaseous state at high pressure."
+        },
+        {
+          "id": "C",
+          "text": "All collisions between reacting molecules must result in product formation regardless of energy."
+        },
+        {
+          "id": "D",
+          "text": "The reaction mixture must absorb light energy from the surroundings."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Collision theory establishes that for a collision to be effective and produce chemical change, the colliding particles must possess correct spatial orientation and kinetic energy greater than or equal to the activation energy (Ea).",
+      "sourceReference": "Section 4.2, Page 206"
+    },
+    {
+      "id": "CHE-G11-U04-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "The minimum amount of energy required by colliding reactant molecules to break existing bonds and initiate a chemical reaction is called the:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Enthalpy of reaction (ΔH)"
+        },
+        {
+          "id": "B",
+          "text": "Activation energy (Ea)"
+        },
+        {
+          "id": "C",
+          "text": "Kinetic energy of motion"
+        },
+        {
+          "id": "D",
+          "text": "Free energy of formation"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Activation energy (Ea) is defined as the minimum energy barrier that colliding reactant particles must possess to form an activated complex and proceed to products.",
+      "sourceReference": "Section 4.2, Page 206"
+    },
+    {
+      "id": "CHE-G11-U04-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "How does a positive catalyst increase the rate of a chemical reaction?",
+      "options": [
+        {
+          "id": "A",
+          "text": "By increasing the average kinetic energy of the reactant molecules."
+        },
+        {
+          "id": "B",
+          "text": "By providing an alternative reaction pathway with a lower activation energy."
+        },
+        {
+          "id": "C",
+          "text": "By increasing the overall enthalpy change (ΔH) of the reaction."
+        },
+        {
+          "id": "D",
+          "text": "By shifting the position of chemical equilibrium toward the products."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "A positive catalyst accelerates a reaction by offering a different reaction mechanism with a lower activation energy (Ea), allowing a larger fraction of colliding molecules to react effectively.",
+      "sourceReference": "Section 4.3, Page 216"
+    },
+    {
+      "id": "CHE-G11-U04-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Why does finely powdered calcium carbonate react much faster with dilute hydrochloric acid than an equal mass of large marble chips?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Powdered calcium carbonate has a lower activation energy."
+        },
+        {
+          "id": "B",
+          "text": "Powdered calcium carbonate provides a larger total surface area exposed to acid collisions."
+        },
+        {
+          "id": "C",
+          "text": "The powdered form acts as a positive chemical catalyst."
+        },
+        {
+          "id": "D",
+          "text": "The concentration of calcium carbonate is higher in the powdered form."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In heterogeneous solid-liquid reactions, subdividing a solid increases its exposed total surface area, resulting in a higher collision frequency between reactant particles and a faster reaction rate.",
+      "sourceReference": "Section 4.3, Page 210"
+    },
+    {
+      "id": "CHE-G11-U04-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "For the general gas-phase reaction 2A + 3B → 4C + D, which mathematical expression correctly relates the rates of change in concentration of reactants and products?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Rate = -½(Δ[A]/Δt) = -⅓(Δ[B]/Δt) = ¼(Δ[C]/Δt) = Δ[D]/Δt"
+        },
+        {
+          "id": "B",
+          "text": "Rate = -2(Δ[A]/Δt) = -3(Δ[B]/Δt) = 4(Δ[C]/Δt) = Δ[D]/Δt"
+        },
+        {
+          "id": "C",
+          "text": "Rate = ½(Δ[A]/Δt) = ⅓(Δ[B]/Δt) = -¼(Δ[C]/Δt) = -Δ[D]/Δt"
+        },
+        {
+          "id": "D",
+          "text": "Rate = -(Δ[A]/Δt) = -(Δ[B]/Δt) = (Δ[C]/Δt) = Δ[D]/Δt"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "For a general reaction aA + bB → cC + dD, the rate of reaction expressed in terms of stoichiometric coefficients is Rate = -(1/a)(Δ[A]/Δt) = -(1/b)(Δ[B]/Δt) = (1/c)(Δ[C]/Δt) = (1/d)(Δ[D]/Δt).",
+      "sourceReference": "Section 4.2, Page 195"
+    },
+    {
+      "id": "CHE-G11-U04-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In the synthesis of ammonia, N₂(g) + 3H₂(g) → 2NH₃(g), if molecular hydrogen (H₂) is reacting at a rate of 0.060 mol·L⁻¹·s⁻¹, what is the rate of formation of ammonia (NH₃) at that instant?",
+      "options": [
+        {
+          "id": "A",
+          "text": "0.060 mol·L⁻¹·s⁻¹"
+        },
+        {
+          "id": "B",
+          "text": "0.040 mol·L⁻¹·s⁻¹"
+        },
+        {
+          "id": "C",
+          "text": "0.090 mol·L⁻¹·s⁻¹"
+        },
+        {
+          "id": "D",
+          "text": "0.020 mol·L⁻¹·s⁻¹"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "From stoichiometry, Rate = -⅓(Δ[H₂]/Δt) = ½(Δ[NH₃]/Δt). Therefore, Δ[NH₃]/Δt = ⅔ × (-Δ[H₂]/Δt) = ⅔ × (0.060 mol·L⁻¹·s⁻¹) = 0.040 mol·L⁻¹·s⁻¹.",
+      "sourceReference": "Section 4.2, Page 196"
+    },
+    {
+      "id": "CHE-G11-U04-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "For many common homogeneous chemical reactions near room temperature, raising the reaction temperature by 10 °C causes the reaction rate to approximately:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Remain completely unchanged"
+        },
+        {
+          "id": "B",
+          "text": "Double (increase by ~100%)"
+        },
+        {
+          "id": "C",
+          "text": "Increase by exactly 10%"
+        },
+        {
+          "id": "D",
+          "text": "Decrease by half"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "A general empirical rule in chemical kinetics states that for many homogeneous reactions around room temperature, a 10 °C rise in temperature approximately doubles the reaction rate because the fraction of molecules with E ≥ Ea increases significantly.",
+      "sourceReference": "Section 4.3, Page 214"
+    },
+    {
+      "id": "CHE-G11-U04-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How is the instantaneous rate of a chemical reaction at a specific time t determined experimentally from a plot of concentration versus time?",
+      "options": [
+        {
+          "id": "A",
+          "text": "By calculating the ratio of total concentration change to total elapsed time from t = 0."
+        },
+        {
+          "id": "B",
+          "text": "By measuring the magnitude of the slope of the tangent line drawn to the concentration-time curve at time t."
+        },
+        {
+          "id": "C",
+          "text": "By determining the area under the concentration-time curve up to time t."
+        },
+        {
+          "id": "D",
+          "text": "By finding the value of the equilibrium constant at that temperature."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The instantaneous rate of a reaction at any given time t is equal to the negative of the slope of the tangent line drawn to the reactant concentration-time curve (or positive slope for a product curve) at time t.",
+      "sourceReference": "Section 4.2, Page 201"
+    },
+    {
+      "id": "CHE-G11-U04-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which of the following is an example of a homogeneous catalytic reaction?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Synthesis of ammonia from N₂ and H₂ gases using solid iron granules in the Haber process."
+        },
+        {
+          "id": "B",
+          "text": "Oxidation of sulfur dioxide gas (SO₂) to sulfur trioxide (SO₃) over solid vanadium(V) oxide (V₂O₅)."
+        },
+        {
+          "id": "C",
+          "text": "Oxidation of aqueous iodide ions (I⁻) by hypochlorite ions (OCl⁻) catalyzed by aqueous hydroxide ions (OH⁻)."
+        },
+        {
+          "id": "D",
+          "text": "Decomposition of aqueous hydrogen peroxide (H₂O₂) solution catalyzed by solid manganese dioxide (MnO₂)."
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "A homogeneous catalyst is present in the same physical phase as the reacting species. In option C, both the catalyst (OH⁻) and reactants (I⁻, OCl⁻) exist together in aqueous solution.",
+      "sourceReference": "Section 4.3, Page 216"
+    },
+    {
+      "id": "CHE-G11-U04-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which of the following chemical reactions occurs most rapidly at room temperature because it involves oppositely charged ions in aqueous solution without requiring the cleavage of strong covalent bonds?",
+      "options": [
+        {
+          "id": "A",
+          "text": "CH₄(g) + 2O₂(g) → CO₂(g) + 2H₂O(g)"
+        },
+        {
+          "id": "B",
+          "text": "2H₂O₂(aq) → 2H₂O(l) + O₂(g)"
+        },
+        {
+          "id": "C",
+          "text": "Ag⁺(aq) + Cl⁻(aq) → AgCl(s)"
+        },
+        {
+          "id": "D",
+          "text": "N₂(g) + 3H₂(g) → 2NH₃(g)"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Ionic precipitation reactions between aqueous ions occur almost instantaneously because no covalent bonds need to be broken before product formation, unlike molecular reactions which require bond rearrangement.",
+      "sourceReference": "Section 4.3, Page 209"
+    },
+    {
+      "id": "CHE-G11-U04-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "In the thermal decomposition of dinitrogen pentoxide, 2N₂O₅(g) → 4NO₂(g) + O₂(g), the concentration of N₂O₅ drops from 0.0200 M to 0.0120 M in 300 seconds. What is the average rate of formation of oxygen gas (O₂) during this time interval?",
+      "options": [
+        {
+          "id": "A",
+          "text": "1.33 × 10⁻⁵ mol·L⁻¹·s⁻¹"
+        },
+        {
+          "id": "B",
+          "text": "2.67 × 10⁻⁵ mol·L⁻¹·s⁻¹"
+        },
+        {
+          "id": "C",
+          "text": "5.33 × 10⁻⁵ mol·L⁻¹·s⁻¹"
+        },
+        {
+          "id": "D",
+          "text": "8.00 × 10⁻⁶ mol·L⁻¹·s⁻¹"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Rate of N₂O₅ decomposition = -(0.0120 M - 0.0200 M) / 300 s = 2.67 × 10⁻⁵ M/s. From the stoichiometry 2N₂O₅ → O₂, rate of O₂ formation = ½ × (rate of N₂O₅ decomposition) = ½ × 2.67 × 10⁻⁵ = 1.33 × 10⁻⁵ mol·L⁻¹·s⁻¹.",
+      "sourceReference": "Section 4.2, Page 199"
+    },
+    {
+      "id": "CHE-G11-U04-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "An exothermic chemical reaction has a forward activation energy (Ea, fwd) of 45 kJ/mol and releases 75 kJ/mol of heat (ΔH = -75 kJ/mol). What is the activation energy for the reverse reaction (Ea, rev)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "30 kJ/mol"
+        },
+        {
+          "id": "B",
+          "text": "45 kJ/mol"
+        },
+        {
+          "id": "C",
+          "text": "120 kJ/mol"
+        },
+        {
+          "id": "D",
+          "text": "75 kJ/mol"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "For any chemical reaction, ΔH = Ea(fwd) - Ea(rev). Substituting: -75 kJ/mol = 45 kJ/mol - Ea(rev), which gives Ea(rev) = 45 + 75 = 120 kJ/mol.",
+      "sourceReference": "Section 4.2 & 4.3, Page 206 & Page 216"
+    },
+    {
+      "id": "CHE-G11-U04-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "During the catalytic decomposition of hydrogen peroxide, 2H₂O₂(aq) → 2H₂O(l) + O₂(g), 48.0 g of oxygen gas (O₂, molar mass = 32.0 g/mol) is produced in a 1.0-minute interval. What is the average rate of consumption of H₂O₂ in mol/min?",
+      "options": [
+        {
+          "id": "A",
+          "text": "0.75 mol/min"
+        },
+        {
+          "id": "B",
+          "text": "1.50 mol/min"
+        },
+        {
+          "id": "C",
+          "text": "3.00 mol/min"
+        },
+        {
+          "id": "D",
+          "text": "6.00 mol/min"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Moles of O₂ produced = 48.0 g / 32.0 g/mol = 1.50 mol O₂ in 1 minute. From reaction stoichiometry, 2 moles of H₂O₂ decompose for every 1 mole of O₂ formed. Therefore, rate of H₂O₂ consumption = 2 × 1.50 mol/min = 3.00 mol/min.",
+      "sourceReference": "Section 4.2, Page 196"
+    },
+    {
+      "id": "CHE-G11-U04-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "In an experiment measuring the volume of H₂ gas evolved from 0.10 g of Zn reacting with excess 2M HCl, curve X represents the volume-time plot at 25 °C. Which modification of experimental conditions will yield curve Y, having a steeper initial slope but reaching the exact same final volume of H₂ gas?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Using 0.20 g of Zn granules with excess 2M HCl at 25 °C."
+        },
+        {
+          "id": "B",
+          "text": "Using 0.10 g of powdered Zn with excess 2M HCl at 25 °C."
+        },
+        {
+          "id": "C",
+          "text": "Using 0.10 g of Zn granules with excess 1M HCl at 25 °C."
+        },
+        {
+          "id": "D",
+          "text": "Using 0.10 g of Zn granules with excess 2M HCl at 15 °C."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Using powdered Zn increases the surface area, increasing the initial reaction rate (steeper slope). Since the mass of the limiting reactant (Zn = 0.10 g) is unchanged, the total volume of H₂ gas produced upon completion remains identical.",
+      "sourceReference": "Section 4.3, Page 210"
+    }
+  ]
 }

@@ -3,5 +3,411 @@
   "subject": "Chemistry",
   "unitNumber": 1,
   "unitTitle": "Chemistry and Its Importance",
-  "questions": []
+  "questions": [
+    {
+      "id": "CHE-G09-U01-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Chemistry is fundamentally defined as the branch of natural science that studies:",
+      "options": [
+        {
+          "id": "A",
+          "text": "The physical forces, planetary motion, and gravitational interactions of celestial bodies."
+        },
+        {
+          "id": "B",
+          "text": "The composition, structure, properties, and transformations of matter and associated energy changes."
+        },
+        {
+          "id": "C",
+          "text": "The origin, evolution, and classification of rock strata and fossil formations in Earth's crust."
+        },
+        {
+          "id": "D",
+          "text": "The anatomy, heredity, and cellular functions of living biological organisms."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Chemistry is the science dealing with the composition, structure, properties, and transformations of matter, along with the energy changes accompanying these processes.",
+      "sourceReference": "Section 1.1, Page 2"
+    },
+    {
+      "id": "CHE-G09-U01-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which major branch of chemistry focuses primarily on the study of elements and compounds that do not contain carbon-hydrogen bonds, such as minerals, metals, and salts?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Organic chemistry"
+        },
+        {
+          "id": "B",
+          "text": "Biochemistry"
+        },
+        {
+          "id": "C",
+          "text": "Inorganic chemistry"
+        },
+        {
+          "id": "D",
+          "text": "Environmental chemistry"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Inorganic chemistry is concerned with the study of all elements and non-organic compounds, primarily minerals, metals, organometallics, and inorganic salts.",
+      "sourceReference": "Section 1.1, Page 3"
+    },
+    {
+      "id": "CHE-G09-U01-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Pain-relieving pharmaceutical drugs such as aspirin and paracetamol belong to which class of medicinal chemical substances?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Anesthetics"
+        },
+        {
+          "id": "B",
+          "text": "Analgesics"
+        },
+        {
+          "id": "C",
+          "text": "Antibiotics"
+        },
+        {
+          "id": "D",
+          "text": "Vaccines"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Analgesics are medicines specifically formulated to relieve pain without causing loss of consciousness (e.g., aspirin and paracetamol).",
+      "sourceReference": "Section 1.3, Page 9"
+    },
+    {
+      "id": "CHE-G09-U01-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which of the following Ethiopian chemical industrial plants is established primarily for the large-scale extraction and refining of sugar from sugarcane?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Horizon Addis"
+        },
+        {
+          "id": "B",
+          "text": "Wonji-Shoa"
+        },
+        {
+          "id": "C",
+          "text": "Abijata"
+        },
+        {
+          "id": "D",
+          "text": "Mugher"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Wonji-Shoa (alongside Metehara, Finchaa, and Omokuraz) is a major Ethiopian agro-industrial enterprise engaged in sugar production from sugarcane.",
+      "sourceReference": "Section 1.4, Page 14"
+    },
+    {
+      "id": "CHE-G09-U01-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "The interdisciplinary science that investigates chemical substances and metabolic processes occurring within living organisms is known as:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Geochemistry"
+        },
+        {
+          "id": "B",
+          "text": "Biochemistry"
+        },
+        {
+          "id": "C",
+          "text": "Physical chemistry"
+        },
+        {
+          "id": "D",
+          "text": "Nuclear chemistry"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Biochemistry merges biology and chemistry to study the chemical components, reactions, and molecular processes inside biological systems.",
+      "sourceReference": "Section 1.2, Page 6"
+    },
+    {
+      "id": "CHE-G09-U01-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "A researcher is investigating the rate of a chemical reaction and how temperature changes affect the movement of molecules during the reaction. Which branch of chemistry is directly responsible for studying such physical principles and chemical kinetics?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Physical chemistry"
+        },
+        {
+          "id": "B",
+          "text": "Analytical chemistry"
+        },
+        {
+          "id": "C",
+          "text": "Organic chemistry"
+        },
+        {
+          "id": "D",
+          "text": "Synthetic chemistry"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Physical chemistry applies physical theories and measurements (kinetics, thermodynamics, and molecular dynamics) to explain chemical transformations.",
+      "sourceReference": "Section 1.1, Page 3"
+    },
+    {
+      "id": "CHE-G09-U01-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Synthetic nitrogenous and phosphatic fertilizers such as Urea and DAP (Diammonium Phosphate) are supplied to agricultural soils primarily to:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Neutralize basic soils by raising hydrogen ion concentration infinitely."
+        },
+        {
+          "id": "B",
+          "text": "Provide essential plant nutrients (nitrogen and phosphorus) required for optimal crop growth and enhanced yield."
+        },
+        {
+          "id": "C",
+          "text": "Replace organic photosynthesis by directly supplying glucose to plant roots."
+        },
+        {
+          "id": "D",
+          "text": "Prevent soil erosion by solidifying topsoil into mineral rocks."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Fertilizers like Urea and DAP deliver essential macronutrients (nitrogen and phosphorus) that replenish soil fertility and optimize agricultural productivity.",
+      "sourceReference": "Section 1.3, Page 8"
+    },
+    {
+      "id": "CHE-G09-U01-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Synthetic non-biodegradable plastics present a major environmental challenge primarily because they:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Dissolve rapidly in rainwater, making drinking water excessively acidic."
+        },
+        {
+          "id": "B",
+          "text": "Resist natural biological decomposition, leading to persistent waste accumulation and soil/aquatic pollution."
+        },
+        {
+          "id": "C",
+          "text": "React violently with atmospheric oxygen to release toxic ozone gas at ground level."
+        },
+        {
+          "id": "D",
+          "text": "Spontaneously absorb nitrogen gas from the atmosphere and deplete air pressure."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Non-biodegradable plastics are resistant to microbial breakdown, causing long-term waste accumulation and environmental degradation in terrestrial and aquatic ecosystems.",
+      "sourceReference": "Section 1.3, Page 10"
+    },
+    {
+      "id": "CHE-G09-U01-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Horizon Addis Tyre Share Company in Ethiopia is a major chemical industry that utilizes natural and synthetic elastomers. What primary raw material modification (vulcanization) process does this industry rely on to produce durable vehicle tyres?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Treatment of raw rubber with sulfur to form cross-links that improve elasticity and mechanical strength."
+        },
+        {
+          "id": "B",
+          "text": "Dissolving rubber in ethanol to produce liquid fuel."
+        },
+        {
+          "id": "C",
+          "text": "Heating limestone with clay to form clinker cement."
+        },
+        {
+          "id": "D",
+          "text": "Fermenting molasses to generate alcohol."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Tyre manufacturing involves vulcanization—heating rubber with sulfur to create cross-links between polymer chains, significantly improving strength, durability, and heat resistance.",
+      "sourceReference": "Section 1.4, Page 14"
+    },
+    {
+      "id": "CHE-G09-U01-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "An analytical chemist performs a test on an unknown sample and reports two findings: (1) Calcium and chlorine ions are present, and (2) Calcium constitutes 36.1% of the total mass. Which statement correctly categorizes these two findings?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Both (1) and (2) are qualitative analyses."
+        },
+        {
+          "id": "B",
+          "text": "(1) is quantitative analysis, while (2) is qualitative analysis."
+        },
+        {
+          "id": "C",
+          "text": "(1) is qualitative analysis, while (2) is quantitative analysis."
+        },
+        {
+          "id": "D",
+          "text": "Both (1) and (2) are physical measurements unrelated to analytical chemistry."
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Qualitative analysis determines the identity of components present in a sample (finding 1), whereas quantitative analysis determines the exact numerical amount or percentage of those components (finding 2).",
+      "sourceReference": "Section 1.1, Page 4"
+    },
+    {
+      "id": "CHE-G09-U01-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Why is chemistry frequently referred to as the 'Central Science'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because it is the oldest branch of natural science discovered by ancient philosophers."
+        },
+        {
+          "id": "B",
+          "text": "Because a foundational understanding of chemical principles is essential for connecting and explaining phenomena across physics, biology, geology, medicine, and environmental science."
+        },
+        {
+          "id": "C",
+          "text": "Because all chemical reactions take place exclusively at the geographic center of the Earth."
+        },
+        {
+          "id": "D",
+          "text": "Because it relies solely on mathematical equations without requiring experimental observation."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Chemistry is called the central science because it links physical sciences with life sciences and applied disciplines like geology, medicine, agriculture, and materials science.",
+      "sourceReference": "Section 1.2, Page 5"
+    },
+    {
+      "id": "CHE-G09-U01-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Penicillin and amoxicillin are life-saving antibacterial medicines that selectively destroy or inhibit the growth of disease-causing bacteria inside the human body. How are these systemic antibiotics classified differently from topical disinfectants?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Antibiotics are broad-spectrum toxic chemicals used only on inanimate surfaces like medical instruments."
+        },
+        {
+          "id": "B",
+          "text": "Antibiotics are internal antimicrobial agents with selective toxicity to pathogens without damaging host human cells, whereas disinfectants are non-selective toxic chemicals applied to inanimate objects."
+        },
+        {
+          "id": "C",
+          "text": "Antibiotics enhance viral replication, whereas disinfectants neutralize synthetic polymers."
+        },
+        {
+          "id": "D",
+          "text": "Antibiotics are inorganic salts, whereas disinfectants are pure gaseous elements."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Antibiotics exhibit selective toxicity, destroying microorganisms inside the host body without harming living host tissue, whereas disinfectants are harsh non-selective chemical agents used to sterilize inanimate objects.",
+      "sourceReference": "Section 1.3, Page 8"
+    },
+    {
+      "id": "CHE-G09-U01-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Ethiopia possesses abundant natural deposits of limestone (CaCO3), clay, gypsum, and silica. Which combination of Ethiopian chemical manufacturing industries directly depends on these specific mineral raw materials for their core production processes?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Cement industries (e.g., Mugher, Derba, Dangote) and Glass manufacturing industries"
+        },
+        {
+          "id": "B",
+          "text": "Sugar refining factories (e.g., Metehara, Finchaa) and Pharmaceutical plants"
+        },
+        {
+          "id": "C",
+          "text": "Textile processing mills and Soap/Detergent factories"
+        },
+        {
+          "id": "D",
+          "text": "Soda Ash enterprise and Tyre manufacturing plants"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Limestone, clay, and gypsum are primary raw materials for cement manufacturing, while silica sand combined with soda ash and limestone forms the foundation of glass manufacturing.",
+      "sourceReference": "Section 1.4, Page 13"
+    },
+    {
+      "id": "CHE-G09-U01-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Consider the following three material evaluation processes in an industrial laboratory:\n(I) Measuring the melting point and electrical conductivity of an alloy.\n(II) Testing the resistance of an alloy to rusting when exposed to moist air.\n(III) Heating iron and sulfur powders together to form a non-magnetic solid (iron(II) sulfide).\nWhich of these processes evaluate or demonstrate chemical properties and transformations?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(I) only"
+        },
+        {
+          "id": "B",
+          "text": "(II) and (III) only"
+        },
+        {
+          "id": "C",
+          "text": "(I) and (III) only"
+        },
+        {
+          "id": "D",
+          "text": "(I), (II), and (III)"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Rust resistance (II) measures chemical reactivity (a chemical property), and synthesizing iron(II) sulfide from iron and sulfur (III) creates a new substance (a chemical change). Melting point and conductivity (I) are physical properties.",
+      "sourceReference": "Section 1.1, Page 2"
+    },
+    {
+      "id": "CHE-G09-U01-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Green chemistry is a modern scientific approach aimed at minimizing the negative environmental impact of chemical processes. Which of the following practices represents a core principle of green chemistry in chemical manufacturing?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Designing synthetic chemical pathways that maximize the incorporation of all starting materials into the final product and minimize toxic waste generation."
+        },
+        {
+          "id": "B",
+          "text": "Increasing the combustion of non-renewable fossil fuels to accelerate reaction rates."
+        },
+        {
+          "id": "C",
+          "text": "Replacing biodegradable natural solvents with persistent chlorofluorocarbons (CFCs)."
+        },
+        {
+          "id": "D",
+          "text": "Discharging untreated industrial chemical effluents into natural water bodies during nighttime."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Green chemistry emphasizes atom economy, waste prevention, energy efficiency, safer solvents, and designing chemical products and processes that reduce or eliminate hazardous substances.",
+      "sourceReference": "Section 1.3, Page 11"
+    }
+  ]
 }

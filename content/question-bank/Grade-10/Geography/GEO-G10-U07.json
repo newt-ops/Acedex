@@ -3,5 +3,411 @@
   "subject": "Geography",
   "unitNumber": 7,
   "unitTitle": "Geographic Issues and Public Concerns in Africa",
-  "questions": []
+  "questions": [
+    {
+      "id": "GEO-G10-U07-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which process is defined as the population shift from rural to urban areas, accompanied by a corresponding decrease in the proportion of people living in rural communities?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Suburbanization"
+        },
+        {
+          "id": "B",
+          "text": "Urbanization"
+        },
+        {
+          "id": "C",
+          "text": "Transhumance"
+        },
+        {
+          "id": "D",
+          "text": "Counter-urbanization"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Urbanization refers to the population shift from rural to urban areas and the decrease in the proportion of people living in rural areas, predominantly through the growth and expansion of towns and cities.",
+      "sourceReference": "Grade 10 Geography Textbook, Section 7.1, Page 161"
+    },
+    {
+      "id": "GEO-G10-U07-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "According to the Grade 10 Geography textbook, how many megacities (urban agglomerations with populations exceeding 10 million inhabitants) are currently identified in Africa?",
+      "options": [
+        {
+          "id": "A",
+          "text": "3"
+        },
+        {
+          "id": "B",
+          "text": "7"
+        },
+        {
+          "id": "C",
+          "text": "12"
+        },
+        {
+          "id": "D",
+          "text": "15"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Africa currently has seven megacities with populations over 10 million: Cairo, Kinshasa, Lagos, Accra, Johannesburg-Pretoria, Khartoum, and Nairobi.",
+      "sourceReference": "Grade 10 Geography Textbook, Section 7.1, Page 161"
+    },
+    {
+      "id": "GEO-G10-U07-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which geographic term describes the physical movement of individuals or groups from an area of origin to a new destination to establish permanent or semi-permanent residence?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Migration"
+        },
+        {
+          "id": "B",
+          "text": "Commuting"
+        },
+        {
+          "id": "C",
+          "text": "Urban sprawl"
+        },
+        {
+          "id": "D",
+          "text": "Nomadism"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Migration is defined as the movement of people from one place to another with the intention of establishing a permanent or semi-permanent residence at the destination.",
+      "sourceReference": "Grade 10 Geography Textbook, Section 7.2, Page 167 (and Introduction, Page 160)"
+    },
+    {
+      "id": "GEO-G10-U07-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is the single most frequent cause of coastal pollution problems along African sea coasts and estuaries?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Offshore oil platform explosions"
+        },
+        {
+          "id": "B",
+          "text": "Discharge of municipal sewage and untreated industrial waste"
+        },
+        {
+          "id": "C",
+          "text": "Accidental collisions of commercial cargo ships"
+        },
+        {
+          "id": "D",
+          "text": "Natural submarine volcanic eruptions"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Undoubtedly the most frequent cause of coastal pollution problems in Africa is the discharge of municipal sewage and industrial wastes into coastal waters or estuaries through low-quality disposal facilities.",
+      "sourceReference": "Grade 10 Geography Textbook, Section 7.3, Page 168"
+    },
+    {
+      "id": "GEO-G10-U07-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What vital ecological function do coastal wetlands and mangrove forests perform to protect African marine ecosystems from land-based runoff?",
+      "options": [
+        {
+          "id": "A",
+          "text": "They increase seawater salinity to sterilize bacterial pathogens."
+        },
+        {
+          "id": "B",
+          "text": "They act as natural filters for trapping sediment, absorbing excess nitrogen, and filtering organic waste."
+        },
+        {
+          "id": "C",
+          "text": "They create artificial ocean currents that push pollutants into deep oceanic waters."
+        },
+        {
+          "id": "D",
+          "text": "They neutralize chemical industrial toxins into pure drinking water."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Wetlands and mangroves act as natural filters for sediment, excessive nitrogen, and organic waste, preventing nutrient buildup and heavy contamination in marine waters.",
+      "sourceReference": "Grade 10 Geography Textbook, Section 7.3, Page 169"
+    },
+    {
+      "id": "GEO-G10-U07-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which combination of structural factors serves as a primary driver of rapid, unplanned urbanization across many African countries?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Over-investment in rural agricultural modern machinery"
+        },
+        {
+          "id": "B",
+          "text": "Unregulated urban growth, historical legacy of colonial urban planning, and weak municipal planning institutions"
+        },
+        {
+          "id": "C",
+          "text": "Strict municipal enforcement of urban zoning laws"
+        },
+        {
+          "id": "D",
+          "text": "Zero population growth rates in rural provinces"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Unplanned urbanization in Africa results from unplanned and unregulated growth, the legacy of colonial planning frameworks, structural adjustment policy pressures, and weak urban planning institutions.",
+      "sourceReference": "Grade 10 Geography Textbook, Section 7.1, Page 162"
+    },
+    {
+      "id": "GEO-G10-U07-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "According to United Nations Environment Program (UNEP) estimates cited in the textbook, what was Africa's per capita plastic consumption in 2015 compared to the global average?",
+      "options": [
+        {
+          "id": "A",
+          "text": "16 kg per person in Africa vs. 45 kg global average"
+        },
+        {
+          "id": "B",
+          "text": "45 kg per person in Africa vs. 136 kg global average"
+        },
+        {
+          "id": "C",
+          "text": "5 kg per person in Africa vs. 16 kg global average"
+        },
+        {
+          "id": "D",
+          "text": "80 kg per person in Africa vs. 200 kg global average"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "In 2015, plastic consumption in Africa was 16 kg per person, compared to the global average of 45 kg per person and 136 kg per person in Western Europe.",
+      "sourceReference": "Grade 10 Geography Textbook, Section 7.3, Page 169"
+    },
+    {
+      "id": "GEO-G10-U07-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How does rapid unplanned urbanization combined with high population density and infrastructure deficits directly impact public health in African cities?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It eliminates communicable diseases by increasing urban heat retention."
+        },
+        {
+          "id": "B",
+          "text": "It fosters overcrowding and poor sanitary conditions that facilitate the rapid spread of communicable and respiratory diseases."
+        },
+        {
+          "id": "C",
+          "text": "It lowers the prevalence of water-borne infections."
+        },
+        {
+          "id": "D",
+          "text": "It guarantees universal access to clean municipal tap water."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Unplanned urbanization combined with high population density, poverty, and lack of basic sanitation/water infrastructure fosters poor sanitary conditions that trigger and spread communicable diseases.",
+      "sourceReference": "Grade 10 Geography Textbook, Section 7.1, Page 161 & Page 163"
+    },
+    {
+      "id": "GEO-G10-U07-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which of the following scenarios represents a classic 'push factor' driving rural-to-urban migration in Sub-Saharan Africa?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Availability of advanced tertiary hospitals and universities in capital cities"
+        },
+        {
+          "id": "B",
+          "text": "Recurrent drought, severe land degradation, and lack of employment opportunities in rural villages"
+        },
+        {
+          "id": "C",
+          "text": "Prospects of higher wages and modern entertainment amenities in urban centers"
+        },
+        {
+          "id": "D",
+          "text": "Better housing and municipal electricity grids in major coastal ports"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Push factors are negative conditions at the place of origin that force people to migrate, such as recurrent drought, land degradation, rural poverty, and lack of job opportunities.",
+      "sourceReference": "Grade 9 Geography Textbook, Section 7.2, Page 167"
+    },
+    {
+      "id": "GEO-G10-U07-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In the case study of Addis Ababa, what negative spatial outcome has resulted from the spontaneous emergence and rapid growth of informal (squatter) settlements?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It has accelerated the construction of planned underground transit lines."
+        },
+        {
+          "id": "B",
+          "text": "It has negatively affected proper land use and municipal service delivery, causing urban sprawl, congestion, and housing shortages."
+        },
+        {
+          "id": "C",
+          "text": "It has eliminated industrial air pollution across all municipal districts."
+        },
+        {
+          "id": "D",
+          "text": "It has doubled the area of urban agricultural farmlands inside the city boundaries."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Spontaneous informal settlements in Addis Ababa have negatively affected proper urban land use, promoted unplanned horizontal expansion, and overburdened municipal services, leading to severe housing deficits and congestion.",
+      "sourceReference": "Grade 10 Geography Textbook, Section 7.1, Page 164–165"
+    },
+    {
+      "id": "GEO-G10-U07-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "According to World Wildlife Fund (WWF) data cited in the case study of South Africa, what percentage of marine plastic pollution in the country originates from land-based sources?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Less than 20%"
+        },
+        {
+          "id": "B",
+          "text": "Exactly 50%"
+        },
+        {
+          "id": "C",
+          "text": "Over 80%"
+        },
+        {
+          "id": "D",
+          "text": "100%"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "According to the World Wildlife Fund (WWF), over 80 percent of marine pollution in South Africa originates from land-based sources due to littering, wind, overflowing landfills, and improper waste management entering rivers.",
+      "sourceReference": "Grade 10 Geography Textbook, Section 7.3, Page 169–170"
+    },
+    {
+      "id": "GEO-G10-U07-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Why are rapidly expanding coastal megacities and towns in Africa (such as Lagos, Accra, and Alexandria) exceptionally vulnerable to extreme climate change impacts?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because coastal cities have zero population growth and high mountain relief."
+        },
+        {
+          "id": "B",
+          "text": "Because rapid, poorly planned urban expansion near sea level leaves large informal settlements highly exposed to sea-level rise, storm surges, and severe flooding while lacking resilient infrastructure."
+        },
+        {
+          "id": "C",
+          "text": "Because ocean breezes prevent all rainstorms from reaching coastal municipalities."
+        },
+        {
+          "id": "D",
+          "text": "Because constructing sea walls automatically eliminates all urban poverty."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Rapid, inadequate, and poorly planned urban expansion leaves large numbers of people in low-lying coastal settlements highly exposed to climate change hazards like flooding, sea-level rise, and storm surges without resilient municipal infrastructure.",
+      "sourceReference": "Grade 10 Geography Textbook, Section 7.1, Page 164 & Section 7.3, Page 168–169"
+    },
+    {
+      "id": "GEO-G10-U07-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "How does the phenomenon of 'unplanned urbanization' exacerbate socio-economic disparities and social instability in African primate cities?",
+      "options": [
+        {
+          "id": "A",
+          "text": "By lowering land prices so that rural migrants can buy houses easily."
+        },
+        {
+          "id": "B",
+          "text": "By driving up land and housing prices, expanding informal slums, and creating fierce competition for scarce basic resources that fosters urban violence and crime."
+        },
+        {
+          "id": "C",
+          "text": "By distributing municipal tax revenues equally among all city residents."
+        },
+        {
+          "id": "D",
+          "text": "By stopping all rural-to-urban migration flows into capital cities."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "High urban population density fuels housing prices, forcing low-income migrants into squatter slums. The resulting inequality, combined with competition for scarce resources (housing, water, jobs) and weak city governance, increases social instability and crime.",
+      "sourceReference": "Grade 10 Geography Textbook, Section 7.1, Page 161 & Page 164"
+    },
+    {
+      "id": "GEO-G10-U07-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "According to UNEP estimates cited in the textbook, while Africa accounts for 16% of the global population (~1.3 billion in 2020), what are its respective percentage shares of global plastic production and global plastic consumption?",
+      "options": [
+        {
+          "id": "A",
+          "text": "16% of global production and 16% of global consumption"
+        },
+        {
+          "id": "B",
+          "text": "28% of global production and 20% of global consumption"
+        },
+        {
+          "id": "C",
+          "text": "5% of global production and 4% of global consumption"
+        },
+        {
+          "id": "D",
+          "text": "1% of global production and 10% of global consumption"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Despite hosting 16% of the world's population, Africa produces only 5% and consumes 4% of global plastic volumes, reflecting a lower per capita consumption (16 kg/person) relative to North America and Western Europe.",
+      "sourceReference": "Grade 10 Geography Textbook, Section 7.3, Page 169"
+    },
+    {
+      "id": "GEO-G10-U07-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Why is the natural self-purification capacity of coastal marine waters in Africa frequently overwhelmed near large coastal cities?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because ocean waters freeze permanently during high-tide cycles."
+        },
+        {
+          "id": "B",
+          "text": "Because high volumes of decomposable organic waste, toxic heavy metals, and persistent pathogens exceed natural ocean dilution, sedimentation, and adsorption capacities."
+        },
+        {
+          "id": "C",
+          "text": "Because saltwater converts non-toxic sediments into radioactive elements."
+        },
+        {
+          "id": "D",
+          "text": "Because surface sea waves prevent oxygen from dissolving in ocean water."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Natural self-purification processes (dilution, adsorption, sedimentation) are negatively affected when massive volumes of municipal sewage, decomposable organic matter, toxic heavy metals, and pathogenic microbes are continuously discharged into warm coastal waters.",
+      "sourceReference": "Grade 10 Geography Textbook, Section 7.3, Page 168"
+    }
+  ]
 }

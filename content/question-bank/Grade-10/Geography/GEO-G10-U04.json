@@ -3,5 +3,411 @@
   "subject": "Geography",
   "unitNumber": 4,
   "unitTitle": "Population of Africa",
-  "questions": []
+  "questions": [
+    {
+      "id": "GEO-G10-U04-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "According to United Nations demographic data, which continent ranks second (after Asia) in total population size, accounting for approximately 17.5% of the global population?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Europe"
+        },
+        {
+          "id": "B",
+          "text": "Africa"
+        },
+        {
+          "id": "C",
+          "text": "Latin America and the Caribbean"
+        },
+        {
+          "id": "D",
+          "text": "North America"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Africa is the second most populous continent on Earth after Asia, with a total population exceeding 1.3 billion inhabitants, representing about 17.5% of the world's total population.",
+      "sourceReference": "Grade 10 Geography Textbook, Section 4.1, Page 88–90 (Table 4.2)"
+    },
+    {
+      "id": "GEO-G10-U04-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In demography, what mathematical formula is used to calculate the approximate population doubling time (dt) when the annual growth rate (r) is known?",
+      "options": [
+        {
+          "id": "A",
+          "text": "dt = r / 70"
+        },
+        {
+          "id": "B",
+          "text": "dt = 70 / r"
+        },
+        {
+          "id": "C",
+          "text": "dt = 70 × r"
+        },
+        {
+          "id": "D",
+          "text": "dt = (CBR - CDR) / 70"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The 'Rule of 70' states that population doubling time (dt) in years is calculated by dividing 70 by the annual population growth rate percentage (r): dt = 70 / r.",
+      "sourceReference": "Grade 10 Geography Textbook, Section 4.1, Page 92"
+    },
+    {
+      "id": "GEO-G10-U04-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What general shape characterizes the population pyramid of most Sub-Saharan African countries, and what does its broad base signify?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Rectangular column; equal birth and death rates across all age groups."
+        },
+        {
+          "id": "B",
+          "text": "Barrel shape; an aging population with zero or negative growth."
+        },
+        {
+          "id": "C",
+          "text": "Triangular (expansive) shape; high birth rates and a large percentage of young dependents."
+        },
+        {
+          "id": "D",
+          "text": "Inverted triangle; low fertility rates and high life expectancy."
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Developing countries in Sub-Saharan Africa feature triangular (expansive) population pyramids with broad bases and tapering tops, reflecting high birth rates, a large youth dependent cohort (0–14 years), and short life expectancy.",
+      "sourceReference": "Grade 10 Geography Textbook, Section 4.3, Page 109–111"
+    },
+    {
+      "id": "GEO-G10-U04-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which small island nation holds the record as the most densely populated country in Africa?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Madagascar"
+        },
+        {
+          "id": "B",
+          "text": "Mauritius"
+        },
+        {
+          "id": "C",
+          "text": "Comoros"
+        },
+        {
+          "id": "D",
+          "text": "Seychelles"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Mauritius is an island state in the Indian Ocean that holds the highest crude population density in Africa (over 600 persons/km²), followed by mainland countries like Rwanda and Burundi.",
+      "sourceReference": "Grade 10 Geography Textbook, Section 4.4, Page 112–113"
+    },
+    {
+      "id": "GEO-G10-U04-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "According to regional demographic statistics, which major sub-region of Africa is the least urbanized, with only about 26% of its population living in urban areas?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Southern Africa"
+        },
+        {
+          "id": "B",
+          "text": "Northern Africa"
+        },
+        {
+          "id": "C",
+          "text": "Eastern Africa"
+        },
+        {
+          "id": "D",
+          "text": "Central Africa"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Eastern Africa is the least urbanized sub-region in Africa, having approximately 26% of its total population residing in urban settlements, in contrast to Southern Africa which is the most urbanized (~62%).",
+      "sourceReference": "Grade 10 Geography Textbook, Section 4.5, Page 114 (Table 4.10)"
+    },
+    {
+      "id": "GEO-G10-U04-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "If a hypothetical African country with a mid-year total population of 40,000,000 records 1,320,000 live births in a single year, what is its Crude Birth Rate (CBR)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "26.5 per 1,000"
+        },
+        {
+          "id": "B",
+          "text": "33.0 per 1,000"
+        },
+        {
+          "id": "C",
+          "text": "42.0 per 1,000"
+        },
+        {
+          "id": "D",
+          "text": "13.2 per 1,000"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Crude Birth Rate (CBR) = (Total Annual Live Births / Total Mid-Year Population) × 1,000 = (1,320,000 / 40,000,000) × 1,000 = 33.0 per 1,000.",
+      "sourceReference": "Grade 10 Geography Textbook, Section 4.2, Page 96–97"
+    },
+    {
+      "id": "GEO-G10-U04-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "A regional district in Western Africa has a total male population of 480,000 and a total female population of 500,000. What is the Sex Ratio of this district, and how is it interpreted?",
+      "options": [
+        {
+          "id": "A",
+          "text": "104.2; meaning 104.2 males per 100 females"
+        },
+        {
+          "id": "B",
+          "text": "96.0; meaning 96 males per 100 females"
+        },
+        {
+          "id": "C",
+          "text": "52.0; meaning 52% of the population is male"
+        },
+        {
+          "id": "D",
+          "text": "90.0; meaning 90 males per 100 females"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Sex Ratio = (Number of Males / Number of Females) × 100 = (480,000 / 500,000) × 100 = 96.0. This indicates there are 96 males for every 100 females in the population.",
+      "sourceReference": "Grade 10 Geography Textbook, Section 4.3, Page 108–109"
+    },
+    {
+      "id": "GEO-G10-U04-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which demographic measure represents the number of infant deaths under one year of age per 1,000 live births in a given year, and which African region has the highest IMR (~62/1,000)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Child Mortality Rate; Southern Africa"
+        },
+        {
+          "id": "B",
+          "text": "Infant Mortality Rate; Central Africa"
+        },
+        {
+          "id": "C",
+          "text": "Crude Death Rate; Northern Africa"
+        },
+        {
+          "id": "D",
+          "text": "Maternal Mortality Ratio; Eastern Africa"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Infant Mortality Rate (IMR) measures deaths of infants under age one per 1,000 live births. Central Africa records the highest IMR in Africa at 62 per 1,000 live births.",
+      "sourceReference": "Grade 10 Geography Textbook, Section 4.2, Page 101 & Page 104 (Table 4.6)"
+    },
+    {
+      "id": "GEO-G10-U04-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In 2020, Africa's median age was 19.7 years compared to Europe's median age of 42.5 years. What does a low median age signify regarding a continent's demographic characteristics?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Low fertility rates and rapid population aging"
+        },
+        {
+          "id": "B",
+          "text": "High fertility rates, a youthful age structure, and rapid population growth potential"
+        },
+        {
+          "id": "C",
+          "text": "High life expectancy and zero population growth"
+        },
+        {
+          "id": "D",
+          "text": "Low dependency ratio and high proportion of elderly citizens"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "A low median age (such as 19.7 years in Africa) reflects a young population structure driven by high birth rates, indicating that a large proportion of the population is entering reproductive age, driving future growth.",
+      "sourceReference": "Grade 10 Geography Textbook, Section 4.3, Page 107"
+    },
+    {
+      "id": "GEO-G10-U04-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Why do the Nile River Valley of Egypt and the coastal regions of Western Africa support extremely high crude population densities compared to the adjacent Sahara and Kalahari regions?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Presence of active volcanic rift zones and high annual snowfall."
+        },
+        {
+          "id": "B",
+          "text": "Availability of reliable water supplies, fertile alluvial soils, favorable agricultural conditions, and coastal trade infrastructure."
+        },
+        {
+          "id": "C",
+          "text": "Government policies prohibiting rural-to-urban migration in desert zones."
+        },
+        {
+          "id": "D",
+          "text": "Cold temperate climates and dense coniferous forests."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "High population densities in areas like the Nile Valley and West African coasts stem from physical and human advantages: perennial water supplies, fertile soils for agriculture, moderate climate, and commercial seaports.",
+      "sourceReference": "Grade 10 Geography Textbook, Section 4.4, Page 112"
+    },
+    {
+      "id": "GEO-G10-U04-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which African region is the most urbanized (~62% urban population), and which individual country in Africa holds the highest urbanization level approaching 90%?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Eastern Africa; Ethiopia"
+        },
+        {
+          "id": "B",
+          "text": "Central Africa; Democratic Republic of Congo"
+        },
+        {
+          "id": "C",
+          "text": "Southern Africa; Gabon"
+        },
+        {
+          "id": "D",
+          "text": "Northern Africa; Sudan"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Southern Africa is the most urbanized sub-region in Africa (~62% urban). On an individual national level, Gabon leads Africa with nearly 90% of its population living in urban centers.",
+      "sourceReference": "Grade 10 Geography Textbook, Section 4.5, Page 114 (Table 4.10)"
+    },
+    {
+      "id": "GEO-G10-U04-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "In a region of Sub-Saharan Africa, 44% of the population is under 15 years old (young age), 53% is between 15 and 64 years old (working age), and 3% is 65 years and older (old age). What is the Age Dependency Ratio (ADR) of this region, and what primary socio-economic challenge does it create?",
+      "options": [
+        {
+          "id": "A",
+          "text": "ADR = 47.0%; high old-age pension burden."
+        },
+        {
+          "id": "B",
+          "text": "ADR = 88.7%; heavy youth dependency burden diverting capital from productive investment to basic social services like primary schooling and maternal healthcare."
+        },
+        {
+          "id": "C",
+          "text": "ADR = 53.0%; rapid expansion of domestic financial savings."
+        },
+        {
+          "id": "D",
+          "text": "ADR = 113.2%; oversupply of skilled labor in industrial sectors."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "ADR = [(Population 0–14 + Population 65+) / Population 15–64] × 100 = [(44 + 3) / 53] × 100 = (47 / 53) × 100 = 88.68% (approx. 88.7%). A high youth dependency ratio forces governments and households to allocate scarce resources toward consumption (education, health) rather than capital savings.",
+      "sourceReference": "Grade 10 Geography Textbook, Section 4.3, Page 108 (Table 4.8)"
+    },
+    {
+      "id": "GEO-G10-U04-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A country starts a calendar year with a total population of 50,000,000. During the year, it records 1,600,000 live births, 400,000 deaths, 150,000 immigrants, and 50,000 emigrants. Using the demographic Balancing Equation (Pt - P0 = B - D + I - O), what is the total population at the end of the year and its annual growth rate?",
+      "options": [
+        {
+          "id": "A",
+          "text": "51,200,000 population; 2.4% annual growth rate"
+        },
+        {
+          "id": "B",
+          "text": "51,300,000 population; 2.6% annual growth rate"
+        },
+        {
+          "id": "C",
+          "text": "52,000,000 population; 4.0% annual growth rate"
+        },
+        {
+          "id": "D",
+          "text": "50,800,000 population; 1.6% annual growth rate"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Pt = P0 + (B - D) + (I - O) = 50,000,000 + (1,600,000 - 400,000) + (150,000 - 50,000) = 50,000,000 + 1,200,000 + 100,000 = 51,300,000. Annual Population Increase = 1,300,000. Growth Rate = (1,300,000 / 50,000,000) × 100 = 2.6%.",
+      "sourceReference": "Grade 10 Geography Textbook, Section 4.1, Page 94–95 (Figure 4.3)"
+    },
+    {
+      "id": "GEO-G10-U04-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "In a specific province in Central Africa, 2,500,000 live births were recorded in 2020. During the same year, 12,500 women died due to pregnancy and childbirth-related causes. What is the Maternal Mortality Ratio (MMR) per 100,000 live births for this province?",
+      "options": [
+        {
+          "id": "A",
+          "text": "50 per 100,000"
+        },
+        {
+          "id": "B",
+          "text": "200 per 100,000"
+        },
+        {
+          "id": "C",
+          "text": "500 per 100,000"
+        },
+        {
+          "id": "D",
+          "text": "1,250 per 100,000"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Maternal Mortality Ratio (MMR) = (Total Deaths due to Maternal Causes / Total Annual Live Births) × 100,000 = (12,500 / 2,500,000) × 100,000 = 0.005 × 100,000 = 500 deaths per 100,000 live births.",
+      "sourceReference": "Grade 10 Geography Textbook, Section 4.2, Page 102"
+    },
+    {
+      "id": "GEO-G10-U04-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "What is meant by 'urban primacy' in African urban settlement geography, and how does rapid unplanned urbanization in primacy cities impact social and municipal infrastructure?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Urban primacy means towns are evenly distributed across all provinces; it leads to excess municipal budget surpluses."
+        },
+        {
+          "id": "B",
+          "text": "Urban primacy refers to a situation where the largest city (usually the capital) is several times larger in population, economic, and political power than the second-largest city; rapid growth strains housing, transport, sanitation, and spawns squatter settlements."
+        },
+        {
+          "id": "C",
+          "text": "Urban primacy describes rural villages taking over urban municipal charters; it eliminates urban poverty entirely."
+        },
+        {
+          "id": "D",
+          "text": "Urban primacy occurs when 100% of a country's population lives in rural agricultural hamlets; it prevents rural-to-urban migration flows."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Urban primacy occurs when a single dominant city (usually the primate capital city like Cairo, Luanda, or Addis Ababa) disproportionately concentrates population, economic activity, and services. Rapid, unplanned migration to primate cities outpaces municipal investment, causing housing deficits, traffic congestion, and squatter/slum expansion.",
+      "sourceReference": "Grade 10 Geography Textbook, Section 4.5, Page 113–115 & Section 7.1, Page 161–162"
+    }
+  ]
 }

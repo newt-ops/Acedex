@@ -3,5 +3,411 @@
   "subject": "Chemistry",
   "unitNumber": 5,
   "unitTitle": "Introduction to Environmental Chemistry",
-  "questions": []
+  "questions": [
+    {
+      "id": "CHE-G12-U05-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is the definition of a pollutant in environmental chemistry?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A substance present in nature that promotes plant growth."
+        },
+        {
+          "id": "B",
+          "text": "A substance whose concentration increases due to human activity, resulting in harmful effects on the environment."
+        },
+        {
+          "id": "C",
+          "text": "Any naturally occurring inert gas present in the atmosphere."
+        },
+        {
+          "id": "D",
+          "text": "A non-reactive compound that dissolves completely in oceans without altering water chemistry."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "A pollutant is defined as any substance whose concentration has increased as a result of human activities, ultimately exerting detrimental effects on human health, living organisms, or the natural environment.",
+      "sourceReference": "Section 5.1.3, Page 253"
+    },
+    {
+      "id": "CHE-G12-U05-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In Earth's atmospheric solution, which gas is present in the greatest volume percentage (~78%) and acts as the solvent?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Oxygen gas (O₂)"
+        },
+        {
+          "id": "B",
+          "text": "Carbon dioxide gas (CO₂)"
+        },
+        {
+          "id": "C",
+          "text": "Nitrogen gas (N₂)"
+        },
+        {
+          "id": "D",
+          "text": "Argon gas (Ar)"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Nitrogen gas (N₂) makes up approximately 78% of the atmosphere by volume. Because it is present in the largest quantity, atmospheric chemistry views N₂ as the gaseous 'solvent' in which other trace gases act as solutes.",
+      "sourceReference": "Section 5.1.1 & 5.2.1, Page 242 & Page 256"
+    },
+    {
+      "id": "CHE-G12-U05-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "The excessive growth of surface-water algae caused by nutrient runoff (nitrates and phosphates), which depletes dissolved oxygen upon bacterial decay, is known as:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Plasmolysis"
+        },
+        {
+          "id": "B",
+          "text": "Eutrophication"
+        },
+        {
+          "id": "C",
+          "text": "Biomagnification"
+        },
+        {
+          "id": "D",
+          "text": "Nitrification"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Eutrophication is the process whereby bodies of water receive excess nutrients (nitrates/phosphates), stimulating rapid algal growth ('algal bloom'). When algae die, bacterial decomposition consumes dissolved oxygen rapidly, leading to fish kills.",
+      "sourceReference": "Section 5.2.2, Page 260"
+    },
+    {
+      "id": "CHE-G12-U05-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which of the following gases emitted by human activities is a primary greenhouse gas responsible for trapping re-radiated infrared radiation?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Oxygen (O₂)"
+        },
+        {
+          "id": "B",
+          "text": "Nitrogen (N₂)"
+        },
+        {
+          "id": "C",
+          "text": "Carbon dioxide (CO₂)"
+        },
+        {
+          "id": "D",
+          "text": "Argon (Ar)"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Carbon dioxide (CO₂), along with water vapor, methane, and nitrous oxide, absorbs infrared radiation re-emitted by the Earth's surface, trapping heat and contributing to the natural and enhanced greenhouse effect.",
+      "sourceReference": "Section 5.3.2, Page 266"
+    },
+    {
+      "id": "CHE-G12-U05-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is the primary objective of the first principle ('Prevention') of Green Chemistry?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To treat and clean up chemical waste after it has been created."
+        },
+        {
+          "id": "B",
+          "text": "To prevent the generation of waste rather than treating or cleaning up waste after it is formed."
+        },
+        {
+          "id": "C",
+          "text": "To store chemical waste in deep underground wells permanently."
+        },
+        {
+          "id": "D",
+          "text": "To incinerate all organic waste products at high temperatures."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The first principle of Green Chemistry states that it is far better to design chemical syntheses to prevent waste generation initially than to clean up or treat waste after it has been produced.",
+      "sourceReference": "Section 5.4.1, Page 271"
+    },
+    {
+      "id": "CHE-G12-U05-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In water quality analysis, what does a high Biological Oxygen Demand (BOD) value indicate about a water sample?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The water is pristine and free of organic matter."
+        },
+        {
+          "id": "B",
+          "text": "The water contains high levels of dissolved organic matter that consumes large amounts of oxygen during bacterial decomposition."
+        },
+        {
+          "id": "C",
+          "text": "The water has a high concentration of dissolved oxygen available for aquatic life."
+        },
+        {
+          "id": "D",
+          "text": "The water is sterile and lacks microbial organisms."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Biological Oxygen Demand (BOD) measures the amount of dissolved oxygen needed by aerobic microorganisms to break down organic matter in a water sample. A high BOD value indicates significant organic pollution and oxygen depletion.",
+      "sourceReference": "Section 5.1.3, Page 253"
+    },
+    {
+      "id": "CHE-G12-U05-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Acid rain is primarily formed when atmospheric moisture reacts with which gaseous industrial emissions?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Methane (CH₄) and Carbon monoxide (CO)"
+        },
+        {
+          "id": "B",
+          "text": "Sulfur dioxide (SO₂) and Nitrogen dioxide (NO₂)"
+        },
+        {
+          "id": "C",
+          "text": "Chlorofluorocarbons (CFCs) and Argon (Ar)"
+        },
+        {
+          "id": "D",
+          "text": "Ozone (O₃) and Oxygen (O₂)"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Sulfur dioxide (SO₂) and nitrogen dioxide (NO₂) emitted from burning fossil fuels react with atmospheric water vapor and oxygen to form droplets of sulfurous acid (H₂SO₃), sulfuric acid (H₂SO₄), and nitric acid (HNO₃), causing acid rain.",
+      "sourceReference": "Section 5.1.1 & 5.2.1, Page 243 & Page 256"
+    },
+    {
+      "id": "CHE-G12-U05-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Chlorofluorocarbons (CFCs) released into the stratosphere undergo photolysis by ultraviolet (UV) light to release free chlorine radicals (Cl•). How do chlorine radicals catalyze ozone depletion?",
+      "options": [
+        {
+          "id": "A",
+          "text": "By oxidizing nitrogen gas into nitrate ions."
+        },
+        {
+          "id": "B",
+          "text": "By reacting with ozone (O₃) to form chlorine monoxide radicals (ClO•) and oxygen (O₂), breaking down the protective ozone layer."
+        },
+        {
+          "id": "C",
+          "text": "By absorbing infrared radiation and cooling the upper atmosphere."
+        },
+        {
+          "id": "D",
+          "text": "By precipitating ozone as solid particulate matter."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Free chlorine radicals (Cl•) from CFCs react catalytically with stratospheric ozone molecules: Cl• + O₃ → ClO• + O₂. A single chlorine radical can destroy thousands of ozone molecules before being deactivated.",
+      "sourceReference": "Section 5.1.1 & 5.2.1, Page 243 & Page 257"
+    },
+    {
+      "id": "CHE-G12-U05-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In the natural carbon cycle, which biochemical process converts atmospheric carbon dioxide (CO₂) into organic carbohydrates using solar energy?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Cellular respiration"
+        },
+        {
+          "id": "B",
+          "text": "Nitrification"
+        },
+        {
+          "id": "C",
+          "text": "Photosynthesis"
+        },
+        {
+          "id": "D",
+          "text": "Transpiration"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Photosynthesis is the endothermic process in which green plants absorb solar energy to convert atmospheric CO₂ and water into glucose (C₆H₁₂O₆) and oxygen gas (6CO₂ + 6H₂O → C₆H₁₂O₆ + 6O₂).",
+      "sourceReference": "Section 5.1.2, Page 251"
+    },
+    {
+      "id": "CHE-G12-U05-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "According to the 12 Principles of Green Chemistry, why is carrying out synthetic reactions at ambient temperature and pressure preferred?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It eliminates the need for balancing chemical equations."
+        },
+        {
+          "id": "B",
+          "text": "It maximizes energy efficiency and minimizes the environmental and economic impacts of high energy consumption."
+        },
+        {
+          "id": "C",
+          "text": "It guarantees that all byproducts are converted back into starting materials."
+        },
+        {
+          "id": "D",
+          "text": "It prevents any reaction from forming covalent bonds."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Principle 6 ('Design for Energy Efficiency') dictates that energy requirements have significant environmental and economic impacts. Conducting chemical processes at ambient temperature and pressure reduces energy consumption and carbon footprints.",
+      "sourceReference": "Section 5.4.1, Page 273"
+    },
+    {
+      "id": "CHE-G12-U05-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Atom Economy evaluates the greenness and efficiency of a chemical reaction by measuring:",
+      "options": [
+        {
+          "id": "A",
+          "text": "The monetary cost of purchasing raw materials."
+        },
+        {
+          "id": "B",
+          "text": "The percentage of reactant atoms that are incorporated into the final desired product."
+        },
+        {
+          "id": "C",
+          "text": "The volume of solvent recovered after distillation."
+        },
+        {
+          "id": "D",
+          "text": "The speed at which a catalyst lowers the activation energy."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Atom Economy is a key metric in Green Chemistry defined as the ratio of the formula weight of the desired product to the sum of formula weights of all reactants, expressed as a percentage. High atom economy means minimal waste atoms.",
+      "sourceReference": "Section 5.4.1 & 5.4.2, Page 271 & Page 277"
+    },
+    {
+      "id": "CHE-G12-U05-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Ethanol (CH₃CH₂OH, molar mass = 46.0 g/mol) can be manufactured by the catalytic addition of water to ethene: C₂H₄(g) + H₂O(g) → C₂H₅OH(g). What is the theoretical Atom Economy of this addition reaction?",
+      "options": [
+        {
+          "id": "A",
+          "text": "50.0%"
+        },
+        {
+          "id": "B",
+          "text": "75.0%"
+        },
+        {
+          "id": "C",
+          "text": "100%"
+        },
+        {
+          "id": "D",
+          "text": "40.0%"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Addition reactions combine all reactant atoms into a single product with zero byproducts. Atom Economy = (Molar Mass of Ethanol / (Molar Mass of Ethene + Molar Mass of Water)) × 100% = (46.0 / (28.0 + 18.0)) × 100% = (46.0 / 46.0) × 100% = 100%.",
+      "sourceReference": "Section 5.4.1 & 5.4.2, Page 271 & Page 277"
+    },
+    {
+      "id": "CHE-G12-U05-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Calculate the percentage Atom Economy for the production of ethanol (CH₃CH₂OH, desired product, molar mass = 46.0 g/mol) via the fermentation of glucose: C₆H₁₂O₆ → 2 CH₃CH₂OH + 2 CO₂. (Molar masses: C₆H₁₂O₆ = 180.0 g/mol, CO₂ = 44.0 g/mol)",
+      "options": [
+        {
+          "id": "A",
+          "text": "25.6%"
+        },
+        {
+          "id": "B",
+          "text": "51.1%"
+        },
+        {
+          "id": "C",
+          "text": "75.0%"
+        },
+        {
+          "id": "D",
+          "text": "100%"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Total mass of desired product = 2 × 46.0 g/mol = 92.0 g/mol. Total mass of all reactants = 180.0 g/mol. Atom Economy = (92.0 g/mol / 180.0 g/mol) × 100% = 51.1%.",
+      "sourceReference": "Section 5.4.2, Page 278"
+    },
+    {
+      "id": "CHE-G12-U05-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "The industrial BHC process for synthesizing ibuprofen replaced a traditional 6-step process with a 3-step catalytic route. Which Green Chemistry principles are directly illustrated by this modification?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Increasing the number of derivatization steps and using non-recyclable reagents."
+        },
+        {
+          "id": "B",
+          "text": "Improving Atom Economy (from 40% to 80%), reducing process steps, utilizing catalytic rather than stoichiometric reagents, and minimizing waste generation."
+        },
+        {
+          "id": "C",
+          "text": "Eliminating catalysts and raising reaction temperatures to 1000 °C."
+        },
+        {
+          "id": "D",
+          "text": "Converting an addition reaction into an elimination reaction with low product yield."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The BHC process reduced synthesis steps from 6 to 3, doubled atom economy (~80%), utilized recyclable catalytic pathways, and substantially reduced chemical waste, exemplifying principles 2 (Atom Economy), 8 (Reduce Derivatives), and 9 (Catalysis).",
+      "sourceReference": "Section 5.4.1, Page 273"
+    },
+    {
+      "id": "CHE-G12-U05-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Ammonium ions (NH₄⁺) discharged from agricultural runoff undergo biological nitrification in surface waters via the overall reaction: NH₄⁺(aq) + 2O₂(g) → NO₃⁻(aq) + 2H⁺(aq) + H₂O(l). How many moles of dissolved oxygen gas (O₂) are consumed during the complete biological nitrification of 3.60 g of ammonium ions (molar mass = 18.0 g/mol)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "0.100 mol"
+        },
+        {
+          "id": "B",
+          "text": "0.200 mol"
+        },
+        {
+          "id": "C",
+          "text": "0.400 mol"
+        },
+        {
+          "id": "D",
+          "text": "0.800 mol"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Moles of NH₄⁺ = 3.60 g / 18.0 g/mol = 0.200 mol. From the reaction stoichiometry, 1 mole of NH₄⁺ consumes 2 moles of O₂. Therefore, moles of O₂ consumed = 0.200 mol × 2 = 0.400 mol.",
+      "sourceReference": "Section 5.1.1 & 5.2.2, Page 244 & Page 260"
+    }
+  ]
 }

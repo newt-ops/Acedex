@@ -1,7 +1,6 @@
 import crypto from 'crypto';
 import jwt from 'jsonwebtoken';
 import bcrypt from 'bcryptjs';
-import { OAuth2Client } from 'google-auth-library';
 import {
   AuthTokens,
   AuthUserProfile,
@@ -24,45 +23,9 @@ import {
 } from '../../common/errors/app-error';
 import { logger } from '../../common/utils/logger';
 
-const googleClient = new OAuth2Client();
-
 export class AuthService {
   private static hashToken(token: string): string {
     return crypto.createHash('sha256').update(token).digest('hex');
-  }
-
-  public static async verifyGoogleIdToken(idToken: string): Promise<{
-    sub: string;
-    email: string;
-    displayName: string;
-    picture?: string;
-  }> {
-    const audience = [
-      env.GOOGLE_CLIENT_ID,
-      env.GOOGLE_ANDROID_CLIENT_ID,
-    ].filter((id): id is string => Boolean(id && id.length > 0));
-
-    try {
-      const ticket = await googleClient.verifyIdToken({
-        idToken,
-        audience,
-      });
-
-      const payload = ticket.getPayload();
-      if (!payload || !payload.sub || !payload.email) {
-        throw new UnauthorizedError('Google token verification failed: Missing identity attributes');
-      }
-
-      return {
-        sub: payload.sub,
-        email: payload.email.toLowerCase().trim(),
-        displayName: payload.name || payload.email.split('@')[0],
-        picture: payload.picture,
-      };
-    } catch (err) {
-      logger.warn({ err }, 'Google ID Token verification rejected');
-      throw new UnauthorizedError('Invalid or expired Google ID token');
-    }
   }
 
   /**
@@ -226,90 +189,6 @@ export class AuthService {
       userId: user._id.toString(),
       action: 'USER_PIN_CHANGED',
       resource: 'auth',
-      ipAddress,
-      userAgent,
-    });
-
-    return {
-      user: this.mapUserToProfile(user),
-      tokens,
-    };
-  }
-
-  public static async loginWithGoogle(
-    idToken: string,
-    ipAddress?: string,
-    userAgent?: string
-  ): Promise<{ user: AuthUserProfile; tokens: AuthTokens }> {
-    const googleProfile = await this.verifyGoogleIdToken(idToken);
-
-    // 1. Find or create user
-    let user = await UserModel.findOne({
-      $or: [{ googleId: googleProfile.sub }, { email: googleProfile.email }],
-    });
-
-    const isWhitelistedAdmin = adminEmails.includes(googleProfile.email);
-    let isNewUser = false;
-
-    if (!user) {
-      isNewUser = true;
-      const initialRole: UserRole = isWhitelistedAdmin ? 'super_admin' : 'student';
-      const acedexId = await generateUniqueAcedexId();
-
-      user = await UserModel.create({
-        acedexId,
-        googleId: googleProfile.sub,
-        email: googleProfile.email,
-        displayName: googleProfile.displayName,
-        avatarUrl: googleProfile.picture,
-        role: initialRole,
-        status: 'active',
-        authProvider: 'google',
-        lastLoginAt: new Date(),
-      });
-
-      await AuditService.record({
-        userId: user._id.toString(),
-        userEmail: user.email,
-        action: 'USER_REGISTERED',
-        resource: 'users',
-        resourceId: user._id.toString(),
-        details: { role: user.role, provider: 'google', acedexId },
-        ipAddress,
-        userAgent,
-      });
-    } else {
-      // Existing user: check suspension
-      if (user.status === 'suspended') {
-        throw new ForbiddenError('Account is suspended. Please contact support.');
-      }
-
-      // Link googleId if missing or update profile
-      user.googleId = googleProfile.sub;
-      user.displayName = googleProfile.displayName;
-      if (googleProfile.picture) {
-        user.avatarUrl = googleProfile.picture;
-      }
-      user.lastLoginAt = new Date();
-
-      // Upgrade to super_admin if whitelisted and currently standard student
-      if (isWhitelistedAdmin && user.role === 'student') {
-        user.role = 'super_admin';
-        logger.info({ email: user.email }, 'Upgraded whitelisted email to super_admin');
-      }
-
-      await user.save();
-    }
-
-    // 2. Issue sessions
-    const tokens = await this.issueSessionTokens(user);
-
-    await AuditService.record({
-      userId: user._id.toString(),
-      userEmail: user.email,
-      action: 'USER_LOGIN',
-      resource: 'auth',
-      details: { isNewUser, role: user.role },
       ipAddress,
       userAgent,
     });

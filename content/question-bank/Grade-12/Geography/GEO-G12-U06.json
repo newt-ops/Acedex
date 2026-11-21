@@ -3,5 +3,411 @@
   "subject": "Geography",
   "unitNumber": 6,
   "unitTitle": "Solutions to Environmental and Sustainability Problems",
-  "questions": []
+  "questions": [
+    {
+      "id": "GEO-G12-U06-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which atmospheric layer contains the ozone (O3) layer that shields human health and ecosystems from damaging solar ultraviolet (UV) radiation?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Troposphere"
+        },
+        {
+          "id": "B",
+          "text": "Stratosphere"
+        },
+        {
+          "id": "C",
+          "text": "Mesosphere"
+        },
+        {
+          "id": "D",
+          "text": "Thermosphere"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The ozone layer forms a protective barrier in the stratospheric layer (roughly 15 to 30 km above the Earth's surface), absorbing harmful ultraviolet (UV) rays before they reach the surface.",
+      "sourceReference": "Grade 12 Geography Textbook, Section 6.1.2, Page 154"
+    },
+    {
+      "id": "GEO-G12-U06-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Under which major international treaty adopted during the 1992 Earth Summit in Rio de Janeiro did sovereign states commit to protecting species, genetic diversity, and ecosystems?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The Montreal Protocol"
+        },
+        {
+          "id": "B",
+          "text": "The United Nations Convention on Biological Diversity (CBD)"
+        },
+        {
+          "id": "C",
+          "text": "The Kyoto Protocol"
+        },
+        {
+          "id": "D",
+          "text": "The Basel Convention"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The UN Convention on Biological Diversity (CBD) was adopted at the Rio Earth Summit in 1992 to promote the conservation of biological diversity, sustainable use of its components, and fair sharing of benefits.",
+      "sourceReference": "Grade 12 Geography Textbook, Section 6.1.3, Page 155"
+    },
+    {
+      "id": "GEO-G12-U06-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Environmental education is defined as a lifelong learning process. Which of the following settings is categorized as an informal avenue for environmental education?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Primary school classrooms"
+        },
+        {
+          "id": "B",
+          "text": "University degree programs"
+        },
+        {
+          "id": "C",
+          "text": "Zoos, museums, aquariums, and community centers"
+        },
+        {
+          "id": "D",
+          "text": "Secondary school geography lectures"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Environmental education takes place through formal settings (schools, colleges, universities) as well as informal settings such as zoos, aquariums, museums, community centers, and public media.",
+      "sourceReference": "Grade 12 Geography Textbook, Section 6.3.2, Page 171"
+    },
+    {
+      "id": "GEO-G12-U06-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which indigenous soil and water conservation system in southern Ethiopia is internationally recognized and UNESCO World Heritage-listed for its stone-walled terracing on steep slopes?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Shifting cultivation of the Gumuz"
+        },
+        {
+          "id": "B",
+          "text": "Konso Cultural Landscape terracing"
+        },
+        {
+          "id": "C",
+          "text": "Monoculture plantations of the Rift Valley"
+        },
+        {
+          "id": "D",
+          "text": "Pastoral transhumance of the Afar"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The Konso Cultural Landscape in southern Ethiopia features an indigenous stone-walled terracing system engineered over centuries to prevent soil erosion and retain soil moisture on steep mountain slopes.",
+      "sourceReference": "Grade 12 Geography Textbook, Section 6.5.1, Page 181–182"
+    },
+    {
+      "id": "GEO-G12-U06-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What ecological condition defines an ocean 'dead zone' in marine environments?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Complete absence of dissolved salt in surface waters"
+        },
+        {
+          "id": "B",
+          "text": "A sea region where dissolved oxygen is severely or entirely depleted, preventing most marine life from surviving"
+        },
+        {
+          "id": "C",
+          "text": "A deep trench created by divergent tectonic plate movements"
+        },
+        {
+          "id": "D",
+          "text": "An area permanently covered by thick sea ice"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Ocean dead zones are regions where dissolved oxygen levels fall to 2 mg/L or lower due to excessive nutrient pollution and climate-driven ocean warming, making survival impossible for most marine organisms.",
+      "sourceReference": "Grade 12 Geography Textbook, Section 6.1.4, Page 158–159"
+    },
+    {
+      "id": "GEO-G12-U06-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How do Non-Methane Volatile Organic Compounds (NMVOCs) such as benzene and toluene contribute to atmospheric pollution and human health risks?",
+      "options": [
+        {
+          "id": "A",
+          "text": "They combine with atmospheric nitrogen to produce stratospheric ice crystals."
+        },
+        {
+          "id": "B",
+          "text": "They serve as precursors in creating ground-level ozone and pose direct toxic and carcinogenic health risks upon prolonged exposure."
+        },
+        {
+          "id": "C",
+          "text": "They absorb carbon dioxide from the lower troposphere, causing localized cooling."
+        },
+        {
+          "id": "D",
+          "text": "They convert sulfur dioxide into solid agricultural minerals."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "NMVOCs react in the presence of sunlight to form toxic ground-level ozone (photochemical smog) and can cause severe health hazards, including leukemia, through prolonged human exposure.",
+      "sourceReference": "Grade 12 Geography Textbook, Section 6.1.4, Page 156–157"
+    },
+    {
+      "id": "GEO-G12-U06-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Why are the individual ecological footprints of citizens in high-income developed countries vastly larger than those of citizens in developing nations?",
+      "options": [
+        {
+          "id": "A",
+          "text": "High-income countries have larger total land areas per capita."
+        },
+        {
+          "id": "B",
+          "text": "Developing nations consume significantly more fossil fuel energy per household."
+        },
+        {
+          "id": "C",
+          "text": "High rates of per-capita resource consumption, energy use, and waste generation in wealthy nations place disproportionate demands on global ecosystems."
+        },
+        {
+          "id": "D",
+          "text": "Citizens in developing nations rely exclusively on synthetic non-renewable chemicals."
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "An ecological footprint measures human demand on nature. Citizens in wealthy developed countries consume far more energy, consumer goods, and raw materials per head, generating vastly higher environmental footprints compared to citizens in poorer nations.",
+      "sourceReference": "Grade 12 Geography Textbook, Section 6.1, Page 153"
+    },
+    {
+      "id": "GEO-G12-U06-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which combination of design principles characterizes 'green building' architecture aimed at solving urban sustainability challenges?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Maximizing building volume using windowless concrete structures."
+        },
+        {
+          "id": "B",
+          "text": "Optimizing energy and water efficiency, utilizing natural lighting and ventilation, minimizing waste emissions, and preserving local site ecosystems."
+        },
+        {
+          "id": "C",
+          "text": "Relying entirely on high-capacity diesel generators for space heating and cooling."
+        },
+        {
+          "id": "D",
+          "text": "Removing wall insulation to increase direct heat exchange with surrounding air."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Green building design reduces environmental impacts by maximizing energy/water efficiency, using natural day-lighting and ventilation, reducing waste, and protecting the local ecosystem.",
+      "sourceReference": "Grade 12 Geography Textbook, Section 6.2, Page 168–169"
+    },
+    {
+      "id": "GEO-G12-U06-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In West Illubabor, how do local folk healers and elders among the Maccaa Oromo utilize indigenous knowledge to conserve natural environmental health?",
+      "options": [
+        {
+          "id": "A",
+          "text": "By clearing natural forests to plant commercial eucalyptus trees."
+        },
+        {
+          "id": "B",
+          "text": "By applying traditional plant identification, dosage rules, and spiritual conservation practices to protect medicinal plants and livestock remedies from depletion."
+        },
+        {
+          "id": "C",
+          "text": "By exporting raw timber logs to international markets."
+        },
+        {
+          "id": "D",
+          "text": "By replacing native flora with monoculture cereal cultivars."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The Maccaa Oromo possess specialized indigenous knowledge regarding folk healing and medicinal plants. Elders and healers apply strict rules for harvesting, dosage control, and habitat conservation to prevent medicinal species from becoming extinct.",
+      "sourceReference": "Grade 12 Geography Textbook, Section 6.5.1, Page 179"
+    },
+    {
+      "id": "GEO-G12-U06-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Why does the informal disposal of dry cell batteries into local municipal waste dumps cause long-term chemical soil pollution?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Dry cell batteries release methane gas that freezes topsoil moisture."
+        },
+        {
+          "id": "B",
+          "text": "Dry cell batteries contain toxic heavy metals that leak into the soil matrix, persisting for years and contaminating groundwater and food chains."
+        },
+        {
+          "id": "C",
+          "text": "Dry cell batteries react with nitrogen to eliminate soil organic matter."
+        },
+        {
+          "id": "D",
+          "text": "Dry cell batteries convert topsoil into pure sodium chloride."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Dry cell batteries contain heavy metals (e.g., lead, cadmium, zinc) that corrode in land disposal sites, leaking toxic chemical contaminants into the surrounding soil and groundwater for long periods.",
+      "sourceReference": "Grade 12 Geography Textbook, Section 6.1.5, Page 160–161"
+    },
+    {
+      "id": "GEO-G12-U06-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Among the Gumuz people in western Ethiopia, how does the traditional belief system surrounding 'Yamba' contribute to natural resource conservation?",
+      "options": [
+        {
+          "id": "A",
+          "text": "By mandating the seasonal burning of all forest cover."
+        },
+        {
+          "id": "B",
+          "text": "By treating land, trees, and river ecosystems as sacred communal property governed by customary rules that restrict overexploitation."
+        },
+        {
+          "id": "C",
+          "text": "By privatizing all agricultural fields among village elites."
+        },
+        {
+          "id": "D",
+          "text": "By requiring the immediate harvesting of all wild animals during rainy seasons."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Traditional belief systems like Yamba among the Gumuz serve as indigenous environmental governance, enforcing customary laws that protect forests, land, and water bodies from individual overexploitation.",
+      "sourceReference": "Grade 12 Geography Textbook, Section 6.5.1, Page 178–181"
+    },
+    {
+      "id": "GEO-G12-U06-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "The Global Environment Facility (GEF) supports three major Impact Programs to assist developing nations in fighting land degradation and deforestation. Which specific initiative connects urban planning with Land Degradation Neutrality (LDN)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The Amazon Sustainable Landscapes Program"
+        },
+        {
+          "id": "B",
+          "text": "The Sustainable Cities Impact Program"
+        },
+        {
+          "id": "C",
+          "text": "The Food Systems, Land Use, and Restoration (FOLUR) Impact Program"
+        },
+        {
+          "id": "D",
+          "text": "The Sustainable Forest Management for Dryland Landscapes Program"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The GEF's Sustainable Cities Impact Program enables countries to integrate voluntary Land Degradation Neutrality (LDN) targets and ecosystem preservation directly into urban planning and municipal management.",
+      "sourceReference": "Grade 12 Geography Textbook, Section 6.1.5, Page 161–162"
+    },
+    {
+      "id": "GEO-G12-U06-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "What biological mechanism enables marine cyanobacteria and phytoplankton to play a major natural role in mitigating global climate change?",
+      "options": [
+        {
+          "id": "A",
+          "text": "They release chlorofluorocarbons that cool the stratospheric ozone layer."
+        },
+        {
+          "id": "B",
+          "text": "They fix roughly half of global atmospheric carbon dioxide through photosynthesis, converting it into carbon-rich lipids and organic matter in ocean reservoirs."
+        },
+        {
+          "id": "C",
+          "text": "They generate thermal energy that evaporates ocean dead zones."
+        },
+        {
+          "id": "D",
+          "text": "They convert heavy metals in seawater into non-toxic nitrogen gas."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Oceans are the planet's largest carbon reservoir. Marine cyanobacteria and micro-algae fix about 50% of the world's carbon dioxide via photosynthesis, serving as a vital biological sink that reduces atmospheric greenhouse gas levels.",
+      "sourceReference": "Grade 12 Geography Textbook, Section 6.2, Page 167"
+    },
+    {
+      "id": "GEO-G12-U06-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Why is Environmental Education structurally characterized as an 'interdisciplinary' and 'lifelong' learning framework rather than a standalone academic subject?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because it relies exclusively on mathematical algorithms taught in university graduate schools."
+        },
+        {
+          "id": "B",
+          "text": "Because environmental problems span natural sciences, social sciences, and ethics, requiring continuous learning across all age groups to guide consumer behaviors and policy decisions throughout life."
+        },
+        {
+          "id": "C",
+          "text": "Because international treaties mandate that environmental education be taught only to elderly citizens."
+        },
+        {
+          "id": "D",
+          "text": "Because it replaces all physical geography curricula with legal jurisprudence."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Environmental education is interdisciplinary because understanding human-environment interactions requires integrating biology, chemistry, geography, economics, and social ethics. It is lifelong because environmental literacy must inform personal decisions, consumer habits, and civic participation across every age group.",
+      "sourceReference": "Grade 12 Geography Textbook, Section 6.3.1–6.3.2, Page 170–172"
+    },
+    {
+      "id": "GEO-G12-U06-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "In the Gedeo zone of southern Ethiopia, how does the traditional multi-tiered agroforestry system (combining Enset, Coffee, and native shade trees) achieve both high land productivity and ecological sustainability?",
+      "options": [
+        {
+          "id": "A",
+          "text": "By relying on heavy chemical pesticide applications and tractor tillage on steep slopes."
+        },
+        {
+          "id": "B",
+          "text": "By mimicking natural forest canopy stratification, where deep-rooted trees preserve soil structure and organic recycling, shade crops reduce moisture loss, and Enset provides high staple food yields per unit area."
+        },
+        {
+          "id": "C",
+          "text": "By clearing all native trees every three years to allow monocropping of maize."
+        },
+        {
+          "id": "D",
+          "text": "By converting mountain slopes into irrigated rice paddies."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The Gedeo indigenous agroforestry system creates a multi-layered canopy (upper shade trees, middle coffee bushes, lower Enset crops) that protects steep slopes from soil erosion, maintains soil organic matter through leaf decay, conserves microclimate moisture, and supports high population density sustainably.",
+      "sourceReference": "Grade 12 Geography Textbook, Section 6.5.1, Page 181–182"
+    }
+  ]
 }

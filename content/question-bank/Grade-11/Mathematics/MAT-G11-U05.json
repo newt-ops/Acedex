@@ -3,5 +3,411 @@
   "subject": "Mathematics",
   "unitNumber": 5,
   "unitTitle": "Vectors",
-  "questions": []
+  "questions": [
+    {
+      "id": "MAT-G11-U05-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which of the following physical quantities is completely specified by its magnitude with a suitable unit alone and has no direction in space?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Displacement"
+        },
+        {
+          "id": "B",
+          "text": "Torque"
+        },
+        {
+          "id": "C",
+          "text": "Temperature"
+        },
+        {
+          "id": "D",
+          "text": "Force"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "By Definition 5.1, a scalar quantity is a physical quantity expressed by a certain number associated with a suitable unit without any mention of direction in space (such as temperature, mass, time, and volume). Displacement, torque, and force are all vector quantities because they require both magnitude and direction.",
+      "sourceReference": "Section 5.1.1 & Section 5.1.2, Page 252-253"
+    },
+    {
+      "id": "MAT-G11-U05-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is the coordinate form of the vector v having initial point P(1, 2) and terminal point Q(6, 7)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(7, 9)"
+        },
+        {
+          "id": "B",
+          "text": "(5, 5)"
+        },
+        {
+          "id": "C",
+          "text": "(-5, -5)"
+        },
+        {
+          "id": "D",
+          "text": "(6, 14)"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "By Definition 5.3, if a vector v has initial point P(x₁, y₁) and terminal point Q(x₂, y₂), its coordinate form is v = (x₂ - x₁, y₂ - y₁). Substituting the points: v = (6 - 1, 7 - 2) = (5, 5).",
+      "sourceReference": "Section 5.2.1, Page 255-256"
+    },
+    {
+      "id": "MAT-G11-U05-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is the norm (magnitude) of the vector u = -4i + 3j in the plane?",
+      "options": [
+        {
+          "id": "A",
+          "text": "1 unit"
+        },
+        {
+          "id": "B",
+          "text": "5 units"
+        },
+        {
+          "id": "C",
+          "text": "7 units"
+        },
+        {
+          "id": "D",
+          "text": "25 units"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "By Definition 5.5, the norm of a vector u = xi + yj is given by |u| = √(x² + y²). For u = -4i + 3j, |u| = √((-4)² + 3²) = √(16 + 9) = √25 = 5 units.",
+      "sourceReference": "Section 5.2.5, Page 269-270"
+    },
+    {
+      "id": "MAT-G11-U05-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is the dot product (scalar product) of the vectors u = 5i + 3j and v = 7i - 2j?",
+      "options": [
+        {
+          "id": "A",
+          "text": "29"
+        },
+        {
+          "id": "B",
+          "text": "35"
+        },
+        {
+          "id": "C",
+          "text": "41"
+        },
+        {
+          "id": "D",
+          "text": "-6"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "By Corollary 5.1, the scalar product of two vectors u = (u₁, u₂) and v = (v₁, v₂) is u · v = u₁v₁ + u₂v₂. Here, u · v = (5)(7) + (3)(-2) = 35 - 6 = 29.",
+      "sourceReference": "Section 5.3.1, Page 278"
+    },
+    {
+      "id": "MAT-G11-U05-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which of the following expressions represents the unit vector in the direction of the vector v = (3, 4)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(4/5)i + (3/5)j"
+        },
+        {
+          "id": "B",
+          "text": "(3/5)i + (4/5)j"
+        },
+        {
+          "id": "C",
+          "text": "3i + 4j"
+        },
+        {
+          "id": "D",
+          "text": "(1/5)i + (1/5)j"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The unit vector in the direction of v is v̂ = (1 / |v|) v. The magnitude is |v| = √(3² + 4²) = 5. Therefore, v̂ = (1/5)(3, 4) = (3/5, 4/5) = (3/5)i + (4/5)j.",
+      "sourceReference": "Section 5.2.5, Page 270"
+    },
+    {
+      "id": "MAT-G11-U05-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What is the cosine of the angle between the two vectors u = i - j and v = 2i + j?",
+      "options": [
+        {
+          "id": "A",
+          "text": "√10 / 10"
+        },
+        {
+          "id": "B",
+          "text": "3√10 / 10"
+        },
+        {
+          "id": "C",
+          "text": "1 / 5"
+        },
+        {
+          "id": "D",
+          "text": "√2 / 2"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "By Theorem 5.4, cos θ = (u · v) / (|u||v|). The dot product is u · v = (1)(2) + (-1)(1) = 2 - 1 = 1. The magnitudes are |u| = √(1² + (-1)²) = √2 and |v| = √(2² + 1²) = √5. Thus, cos θ = 1 / (√2 · √5) = 1 / √10 = √10 / 10.",
+      "sourceReference": "Section 5.3.1, Page 277, 280"
+    },
+    {
+      "id": "MAT-G11-U05-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "For what value of the scalar k are the two vectors u = (-5, 3) and v = (6, k) orthogonal (perpendicular)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "-10"
+        },
+        {
+          "id": "B",
+          "text": "10"
+        },
+        {
+          "id": "C",
+          "text": "-6/5"
+        },
+        {
+          "id": "D",
+          "text": "6"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "By Note 9 of Section 5.3.1, two non-zero vectors are orthogonal if and only if their scalar product is zero: u · v = 0. Thus, (-5)(6) + (3)(k) = 0 => -30 + 3k = 0 => 3k = 30 => k = 10.",
+      "sourceReference": "Section 5.3.1, Page 277, 280"
+    },
+    {
+      "id": "MAT-G11-U05-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What is the cross product u × v of the vectors u = i + 3j + 4k and v = 2i + 7j - 5k?",
+      "options": [
+        {
+          "id": "A",
+          "text": "-43i + 13j + k"
+        },
+        {
+          "id": "B",
+          "text": "-43i - 13j + k"
+        },
+        {
+          "id": "C",
+          "text": "43i - 13j - k"
+        },
+        {
+          "id": "D",
+          "text": "13i + 43j + k"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Using Definition 5.7: u × v = det([[i, j, k],, [2, 7, -5]]) = [(3)(-5) - (4)(7)]i - [(1)(-5) - (4)(2)]j + [(1)(7) - (3)(2)]k = (-15 - 28)i - (-5 - 8)j + (7 - 6)k = -43i + 13j + k.",
+      "sourceReference": "Section 5.3.3, Page 288"
+    },
+    {
+      "id": "MAT-G11-U05-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What is the area of the parallelogram formed by the vectors u = 3i + j and v = 2i + 3j in the plane?",
+      "options": [
+        {
+          "id": "A",
+          "text": "5 square units"
+        },
+        {
+          "id": "B",
+          "text": "7 square units"
+        },
+        {
+          "id": "C",
+          "text": "9 square units"
+        },
+        {
+          "id": "D",
+          "text": "11 square units"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "By Theorem 5.7, the area of a parallelogram spanned by vectors u and v is A = |u × v|. Embedding in 3D: u = (3, 1, 0) and v = (2, 3, 0). The cross product is u × v = (0)i - (0)j + [(3)(3) - (1)(2)]k = 7k. The magnitude is |7k| = 7 square units.",
+      "sourceReference": "Section 5.3.3, Page 290"
+    },
+    {
+      "id": "MAT-G11-U05-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "A force of magnitude 60 N acting at an angle of 30° to the horizontal is applied to pull a cart a distance of 10 meters along flat ground. What is the total work done by this force?",
+      "options": [
+        {
+          "id": "A",
+          "text": "300 J"
+        },
+        {
+          "id": "B",
+          "text": "300√3 J"
+        },
+        {
+          "id": "C",
+          "text": "600 J"
+        },
+        {
+          "id": "D",
+          "text": "600√3 J"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Work done is given by W = F · S = |F||S| cos θ. Substituting |F| = 60 N, |S| = 10 m, and θ = 30°: W = (60)(10) cos(30°) = 600 × (√3 / 2) = 300√3 Joules.",
+      "sourceReference": "Section 5.4, Page 293, 311"
+    },
+    {
+      "id": "MAT-G11-U05-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What is the parametric equation of the straight line passing through the point P(1, 4) and having direction vector v = (1, -2)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "x = 1 + t, y = 4 - 2t, t ∈ ℝ"
+        },
+        {
+          "id": "B",
+          "text": "x = 1 - 2t, y = 4 + t, t ∈ ℝ"
+        },
+        {
+          "id": "C",
+          "text": "x = 4 + t, y = 1 - 2t, t ∈ ℝ"
+        },
+        {
+          "id": "D",
+          "text": "x = t, y = 4 - 2t, t ∈ ℝ"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "By Section 5.5.1, the parametric equations of a straight line through R₀(x₀, y₀) with direction vector v = (p, q) are given by x = x₀ + tp and y = y₀ + tq for t ∈ ℝ. Substituting (x₀, y₀) = (1, 4) and (p, q) = (1, -2) gives x = 1 + t and y = 4 - 2t.",
+      "sourceReference": "Section 5.5.1, Page 297-298"
+    },
+    {
+      "id": "MAT-G11-U05-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "If u and v are vectors such that |u| = 3, |v| = 6, and the angle between them is θ = π/3, what is the magnitude |3u - 2v|?",
+      "options": [
+        {
+          "id": "A",
+          "text": "3√13"
+        },
+        {
+          "id": "B",
+          "text": "9"
+        },
+        {
+          "id": "C",
+          "text": "13"
+        },
+        {
+          "id": "D",
+          "text": "117"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Using the properties of the dot product: |3u - 2v|² = (3u - 2v) · (3u - 2v) = 9|u|² - 12(u · v) + 4|v|². Since u · v = |u||v| cos(π/3) = (3)(6)(1/2) = 9, we compute: |3u - 2v|² = 9(3²) - 12(9) + 4(6²) = 81 - 108 + 144 = 117. Therefore, |3u - 2v| = √117 = √(9 × 13) = 3√13.",
+      "sourceReference": "Section 5.3.1, Page 279-280"
+    },
+    {
+      "id": "MAT-G11-U05-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "What is the equation of the tangent line to the circle x² + y² + 2x - 4y = 0 at the point P(-2, 4) lying on the circle?",
+      "options": [
+        {
+          "id": "A",
+          "text": "x - 2y + 10 = 0"
+        },
+        {
+          "id": "B",
+          "text": "x + 2y - 6 = 0"
+        },
+        {
+          "id": "C",
+          "text": "2x - y + 8 = 0"
+        },
+        {
+          "id": "D",
+          "text": "x - 2y - 10 = 0"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Completing the square on x² + y² + 2x - 4y = 0 gives (x + 1)² + (y - 2)² = 5. The center is C(x₀, y₀) = (-1, 2) and r² = 5. By Section 5.5.3, the vector equation of the tangent line at P(x₁, y₁) is (x - x₀)(x₁ - x₀) + (y - y₀)(y₁ - y₀) = r². Substituting (x₀, y₀) = (-1, 2) and (x₁, y₁) = (-2, 4): (x - (-1))(-2 - (-1)) + (y - 2)(4 - 2) = 5 => (x + 1)(-1) + (y - 2)(2) = 5 => -x - 1 + 2y - 4 = 5 => -x + 2y - 5 = 5 => -x + 2y - 10 = 0 => x - 2y + 10 = 0.",
+      "sourceReference": "Section 5.5.3, Page 303-305 & Review Exercise, Page 311"
+    },
+    {
+      "id": "MAT-G11-U05-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "What is the area of the triangle whose vertices in three-dimensional space are P(1, 4, 6), Q(-2, 5, -1), and R(1, -1, 1)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "5√82 square units"
+        },
+        {
+          "id": "B",
+          "text": "(5/2)√82 square units"
+        },
+        {
+          "id": "C",
+          "text": "10√41 square units"
+        },
+        {
+          "id": "D",
+          "text": "25√2 square units"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Form displacement vectors with initial point P: PQ = (-2 - 1)i + (5 - 4)j + (-1 - 6)k = -3i + j - 7k; PR = (1 - 1)i + (-1 - 4)j + (1 - 6)k = 0i - 5j - 5k. Compute PQ × PR = det([[i, j, k], [-3, 1, -7], [0, -5, -5]]) = (-5 - 35)i - (15 - 0)j + (15 - 0)k = -40i - 15j + 15k. The magnitude of the cross product is |PQ × PR| = √((-40)² + (-15)² + 15²) = √(1600 + 225 + 225) = √2050 = √(25 × 82) = 5√82. The area of triangle PQR is (1/2)|PQ × PR| = (5/2)√82 square units.",
+      "sourceReference": "Section 5.4, Page 294"
+    },
+    {
+      "id": "MAT-G11-U05-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A tightening torque is applied to a bolt using a wrench of length 0.25 m by exerting a 40 N force at an angle of 75° to the wrench arm. What is the exact magnitude of the torque vector about the center of the bolt?",
+      "options": [
+        {
+          "id": "A",
+          "text": "10 cos(75°) N·m"
+        },
+        {
+          "id": "B",
+          "text": "10 sin(75°) N·m"
+        },
+        {
+          "id": "C",
+          "text": "160 sin(75°) N·m"
+        },
+        {
+          "id": "D",
+          "text": "40 sin(75°) N·m"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The torque vector is defined by τ = r × F, and its magnitude is |τ| = |r||F| sin θ. Substituting |r| = 0.25 m, |F| = 40 N, and θ = 75° gives |τ| = (0.25)(40) sin(75°) = 10 sin(75°) N·m (approximately 9.66 N·m).",
+      "sourceReference": "Section 5.4, Page 294-295"
+    }
+  ]
 }

@@ -3,5 +3,411 @@
   "subject": "Chemistry",
   "unitNumber": 3,
   "unitTitle": "Structure of the Atom",
-  "questions": []
+  "questions": [
+    {
+      "id": "CHE-G09-U03-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "The concept of the atom dates back to ancient Greek philosophers who proposed that matter is composed of minute particles. What does the Greek term 'a-tomos' literally mean?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Positively charged particle"
+        },
+        {
+          "id": "B",
+          "text": "Indivisible or uncuttable"
+        },
+        {
+          "id": "C",
+          "text": "Continuous wave motion"
+        },
+        {
+          "id": "D",
+          "text": "Heavy solid sphere"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The word 'atom' is derived from the Greek word 'a-tomos', which means non-divisible, uncuttable, or indivisible.",
+      "sourceReference": "Section 3.1, Page 51"
+    },
+    {
+      "id": "CHE-G09-U03-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which subatomic particle was discovered by British physicist James Chadwick in 1932 by bombarding thin beryllium sheets with alpha particles?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Electron"
+        },
+        {
+          "id": "B",
+          "text": "Proton"
+        },
+        {
+          "id": "C",
+          "text": "Neutron"
+        },
+        {
+          "id": "D",
+          "text": "Positron"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "James Chadwick discovered the neutron in 1932 when he bombarded beryllium atoms with alpha particles, releasing uncharged subatomic particles with mass nearly equal to a proton.",
+      "sourceReference": "Section 3.4, Page 81"
+    },
+    {
+      "id": "CHE-G09-U03-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What are the relative electrical charges of a proton, a neutron, and an electron, respectively?",
+      "options": [
+        {
+          "id": "A",
+          "text": "+1, 0, -1"
+        },
+        {
+          "id": "B",
+          "text": "-1, 0, +1"
+        },
+        {
+          "id": "C",
+          "text": "+1, +1, -1"
+        },
+        {
+          "id": "D",
+          "text": "0, +1, -1"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "A proton carries a relative positive charge of +1, a neutron has no charge (0), and an electron carries a relative negative charge of -1.",
+      "sourceReference": "Section 3.5, Page 86"
+    },
+    {
+      "id": "CHE-G09-U03-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "According to the shell capacity formula 2n², what is the maximum number of electrons that can be accommodated in the third principal energy level (M-shell)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "8"
+        },
+        {
+          "id": "B",
+          "text": "18"
+        },
+        {
+          "id": "C",
+          "text": "32"
+        },
+        {
+          "id": "D",
+          "text": "10"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Using the formula 2n² where n is the main energy level number, for the third energy level (n = 3, M-shell), the maximum electron capacity is 2(3)² = 2 × 9 = 18 electrons.",
+      "sourceReference": "Section 3.5, Page 97"
+    },
+    {
+      "id": "CHE-G09-U03-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "The atomic number (Z) of an element uniquely distinguishes it from all other elements because Z is equal to the number of:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Neutrons in the nucleus"
+        },
+        {
+          "id": "B",
+          "text": "Protons in the nucleus"
+        },
+        {
+          "id": "C",
+          "text": "Protons plus neutrons in the nucleus"
+        },
+        {
+          "id": "D",
+          "text": "Valence energy levels"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The atomic number (Z) of an atom represents the total number of protons in its nucleus, which defines the chemical identity of an element.",
+      "sourceReference": "Section 3.5, Page 87"
+    },
+    {
+      "id": "CHE-G09-U03-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "When 10.0 g of calcium carbonate (CaCO3) is completely decomposed by thermal heating, it produces 5.6 g of solid calcium oxide (CaO) and carbon dioxide gas (CO2). According to the Law of Conservation of Mass, what mass of CO2 gas was produced?",
+      "options": [
+        {
+          "id": "A",
+          "text": "4.4 g"
+        },
+        {
+          "id": "B",
+          "text": "5.6 g"
+        },
+        {
+          "id": "C",
+          "text": "15.6 g"
+        },
+        {
+          "id": "D",
+          "text": "10.0 g"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The Law of Conservation of Mass states that total mass of reactants equals total mass of products. Mass of CO2 = Mass of CaCO3 - Mass of CaO = 10.0 g - 5.6 g = 4.4 g.",
+      "sourceReference": "Section 3.2, Page 56"
+    },
+    {
+      "id": "CHE-G09-U03-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In cathode ray tube experiments, J.J. Thomson observed that cathode rays bend toward the positively charged electric plate. What fundamental conclusion did this observation establish?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Cathode rays are uncharged electromagnetic waves."
+        },
+        {
+          "id": "B",
+          "text": "Cathode rays consist of heavy positively charged particles."
+        },
+        {
+          "id": "C",
+          "text": "Cathode rays are composed of negatively charged subatomic particles (electrons)."
+        },
+        {
+          "id": "D",
+          "text": "Cathode rays consist of neutral rays emitted from the anode."
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Since opposite electric charges attract, the deflection of cathode rays toward the positively charged electric plate proved that the rays consist of negatively charged particles, later named electrons.",
+      "sourceReference": "Section 3.4, Page 73"
+    },
+    {
+      "id": "CHE-G09-U03-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In Rutherford's alpha-particle scattering experiment, a tiny fraction of positively charged alpha particles were deflected at very large angles, some even rebounding backward. What major atomic feature was deduced from this result?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Electrons are uniformly distributed inside a sphere of positive charge like seeds in a watermelon."
+        },
+        {
+          "id": "B",
+          "text": "Almost all the mass and positive charge of an atom are concentrated in an extremely small, dense central region called the nucleus."
+        },
+        {
+          "id": "C",
+          "text": "Electrons move in stationary circular orbits where they emit continuous radiation."
+        },
+        {
+          "id": "D",
+          "text": "Neutrons surround the atom in discrete outer shells."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The sudden deflection and rebounding of positively charged alpha particles indicated that they encountered an extremely dense, small, positively charged core at the center of the atom, which Rutherford named the nucleus.",
+      "sourceReference": "Section 3.4, Page 81"
+    },
+    {
+      "id": "CHE-G09-U03-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How many protons, neutrons, and electrons are present in a phosphide ion, ³¹₁₅P³⁻?",
+      "options": [
+        {
+          "id": "A",
+          "text": "15 protons, 16 neutrons, 18 electrons"
+        },
+        {
+          "id": "B",
+          "text": "15 protons, 16 neutrons, 12 electrons"
+        },
+        {
+          "id": "C",
+          "text": "15 protons, 31 neutrons, 15 electrons"
+        },
+        {
+          "id": "D",
+          "text": "16 protons, 15 neutrons, 18 electrons"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "For ³¹₁₅P³⁻: Atomic number Z = 15 (protons = 15); Mass number A = 31, so neutrons = 31 - 15 = 16; The 3- charge means it gained 3 electrons, so total electrons = 15 + 3 = 18.",
+      "sourceReference": "Section 3.5, Page 89"
+    },
+    {
+      "id": "CHE-G09-U03-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "A neutral atom of chlorine has an atomic number of 17. What is its ground-state electron configuration across the main energy levels (K, L, M), and how many valence electrons does it possess?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Configuration: 2, 8, 7; Valence electrons: 7"
+        },
+        {
+          "id": "B",
+          "text": "Configuration: 2, 7, 8; Valence electrons: 8"
+        },
+        {
+          "id": "C",
+          "text": "Configuration: 2, 8, 8; Valence electrons: 1"
+        },
+        {
+          "id": "D",
+          "text": "Configuration: 8, 8, 1; Valence electrons: 7"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "With 17 electrons, the main shell filling order is K = 2, L = 8, M = 7 (total 17). The outermost shell (M-shell) contains 7 electrons, which are its valence electrons.",
+      "sourceReference": "Section 3.5, Page 97 & Page 100"
+    },
+    {
+      "id": "CHE-G09-U03-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which postulate of John Dalton's original 1808 atomic theory was modified by Modern Atomic Theory after the discovery of isotopes?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Atoms combine in simple whole-number ratios to form compounds."
+        },
+        {
+          "id": "B",
+          "text": "Chemical reactions involve the reorganization of atoms."
+        },
+        {
+          "id": "C",
+          "text": "All atoms of the same element are identical in mass and properties."
+        },
+        {
+          "id": "D",
+          "text": "Atoms of different elements have different chemical properties."
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Dalton postulated that all atoms of a given element are identical in mass. Modern Atomic Theory modified this because isotopes of the same element have different numbers of neutrons and therefore different mass numbers.",
+      "sourceReference": "Section 3.3, Page 67"
+    },
+    {
+      "id": "CHE-G09-U03-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Carbon forms two gaseous oxides, X and Y. Quantitative analysis shows that in oxide X, 1.00 g of carbon combines with 1.33 g of oxygen, whereas in oxide Y, 1.00 g of carbon combines with 2.66 g of oxygen. What is the small whole-number ratio of the masses of oxygen combining with a fixed mass of carbon, and which chemical law does this illustrate?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Ratio 1:2; Law of Multiple Proportions"
+        },
+        {
+          "id": "B",
+          "text": "Ratio 1:3; Law of Definite Proportions"
+        },
+        {
+          "id": "C",
+          "text": "Ratio 2:1; Law of Conservation of Mass"
+        },
+        {
+          "id": "D",
+          "text": "Ratio 3:4; Law of Definite Proportions"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The mass ratio of oxygen combining with fixed 1.00 g carbon is 2.66 g / 1.33 g = 2:1 (or 1:2). When two elements form more than one compound, the masses of one element that combine with a fixed mass of the other are in a ratio of small whole numbers, illustrating the Law of Multiple Proportions.",
+      "sourceReference": "Section 3.2, Page 63"
+    },
+    {
+      "id": "CHE-G09-U03-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Naturally occurring chlorine consists of two stable isotopes: Chlorine-35 (mass = 34.97 amu, relative abundance = 75.0%) and Chlorine-37 (mass = 36.97 amu, relative abundance = 25.0%). Calculate the average atomic mass of chlorine.",
+      "options": [
+        {
+          "id": "A",
+          "text": "35.47 amu"
+        },
+        {
+          "id": "B",
+          "text": "35.97 amu"
+        },
+        {
+          "id": "C",
+          "text": "36.00 amu"
+        },
+        {
+          "id": "D",
+          "text": "35.00 amu"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Average atomic mass = (34.97 × 0.750) + (36.97 × 0.250) = 26.2275 + 9.2425 = 35.47 amu.",
+      "sourceReference": "Section 3.5, Page 93"
+    },
+    {
+      "id": "CHE-G09-U03-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A 25.0 g sample of pure water (H2O) collected from a river is analyzed and found to contain 2.78 g of hydrogen and 22.22 g of oxygen. If a student synthesizes a separate 50.0 g sample of pure water in the laboratory, what mass of oxygen will it contain, according to the Law of Definite Proportions?",
+      "options": [
+        {
+          "id": "A",
+          "text": "22.22 g"
+        },
+        {
+          "id": "B",
+          "text": "44.44 g"
+        },
+        {
+          "id": "C",
+          "text": "11.11 g"
+        },
+        {
+          "id": "D",
+          "text": "5.56 g"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The Law of Definite Proportions states that a pure compound always contains the same elements in the same proportion by mass. Percentage of oxygen = (22.22 g / 25.0 g) × 100% = 88.88%. In a 50.0 g sample of water, mass of oxygen = 50.0 g × 0.8888 = 44.44 g.",
+      "sourceReference": "Section 3.2, Page 61"
+    },
+    {
+      "id": "CHE-G09-U03-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Consider the two atomic species ⁴⁰₁₈Ar and ⁴⁰₂₀Ca. Which statement correctly categorizes their relationship and subatomic compositions?",
+      "options": [
+        {
+          "id": "A",
+          "text": "They are isotopes because they have the same atomic number but different mass numbers."
+        },
+        {
+          "id": "B",
+          "text": "They are isobars because they have the same mass number (A = 40) but different atomic numbers, containing 22 neutrons in Ar and 20 neutrons in Ca."
+        },
+        {
+          "id": "C",
+          "text": "They are isotopes containing equal numbers of neutrons (20 neutrons each)."
+        },
+        {
+          "id": "D",
+          "text": "They are allotropes possessing identical numbers of protons and electrons."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Atoms of different elements having different atomic numbers (Z = 18 for Ar, Z = 20 for Ca) but the same mass number (A = 40) are called isobars. Ar has 40 - 18 = 22 neutrons and Ca has 40 - 20 = 20 neutrons.",
+      "sourceReference": "Section 3.5, Page 91 & Page 106"
+    }
+  ]
 }

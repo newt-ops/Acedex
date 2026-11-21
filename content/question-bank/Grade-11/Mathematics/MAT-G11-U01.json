@@ -3,5 +3,411 @@
   "subject": "Mathematics",
   "unitNumber": 1,
   "unitTitle": "Relations and Functions",
-  "questions": []
+  "questions": [
+    {
+      "id": "MAT-G11-U01-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Given the relation R = {(1, 4), (2, 7), (3, 7), (4, 11), (5, 14)}, what are the domain and the range of its inverse relation R⁻¹?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Dom(R⁻¹) = {1, 2, 3, 4, 5} and Ran(R⁻¹) = {4, 7, 11, 14}"
+        },
+        {
+          "id": "B",
+          "text": "Dom(R⁻¹) = {4, 7, 11, 14} and Ran(R⁻¹) = {1, 2, 3, 4, 5}"
+        },
+        {
+          "id": "C",
+          "text": "Dom(R⁻¹) = {4, 7, 11, 14} and Ran(R⁻¹) = {4, 7, 11, 14}"
+        },
+        {
+          "id": "D",
+          "text": "Dom(R⁻¹) = {1, 2, 3, 4, 5} and Ran(R⁻¹) = {1, 2, 3, 4, 5}"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "By definition of inverse relations, the domain of R⁻¹ equals the range of R, and the range of R⁻¹ equals the domain of R. Since Dom(R) = {1, 2, 3, 4, 5} and Ran(R) = {4, 7, 11, 14}, it follows that Dom(R⁻¹) = {4, 7, 11, 14} and Ran(R⁻¹) = {1, 2, 3, 4, 5}.",
+      "sourceReference": "Section 1.2, Page 12, 15"
+    },
+    {
+      "id": "MAT-G11-U01-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is the numerical value of the expression ⌊-7.4⌋ + sgn(-15) + |-6|?",
+      "options": [
+        {
+          "id": "A",
+          "text": "-3"
+        },
+        {
+          "id": "B",
+          "text": "-2"
+        },
+        {
+          "id": "C",
+          "text": "0"
+        },
+        {
+          "id": "D",
+          "text": "1"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Evaluating each term using the definitions in Unit 1: ⌊-7.4⌋ is the greatest integer less than or equal to -7.4, which is -8; sgn(-15) = -1 since -15 < 0; and |-6| = 6. Summing these values gives (-8) + (-1) + 6 = -3.",
+      "sourceReference": "Section 1.3.2, 1.3.3 & 1.3.4, Page 45, 55, 59"
+    },
+    {
+      "id": "MAT-G11-U01-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which of the following points lies on the graph of the inverse relation R⁻¹ if the relation R is given by R = {(x, y) : x, y ∈ ℝ and y = 4x - 7}?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(2, 1)"
+        },
+        {
+          "id": "B",
+          "text": "(1, 5)"
+        },
+        {
+          "id": "C",
+          "text": "(5, 3)"
+        },
+        {
+          "id": "D",
+          "text": "(3, 5)"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "A point (b, a) lies on the graph of R⁻¹ if and only if (a, b) lies on the graph of R (i.e., b = 4a - 7). Testing point C: (3, 5) lies on R because 4(3) - 7 = 12 - 7 = 5. Therefore, the reflected point (5, 3) must lie on the graph of R⁻¹.",
+      "sourceReference": "Section 1.2, Page 13, 17-18"
+    },
+    {
+      "id": "MAT-G11-U01-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is the solution set of the equation ⌊x - 2⌋ = 5?",
+      "options": [
+        {
+          "id": "A",
+          "text": "[5, 6)"
+        },
+        {
+          "id": "B",
+          "text": "[7, 8)"
+        },
+        {
+          "id": "C",
+          "text": "(7, 8]"
+        },
+        {
+          "id": "D",
+          "text": "{7}"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "By property of the greatest integer (floor) function, ⌊u⌋ = m (where m is an integer) if and only if m ≤ u < m + 1. Thus, ⌊x - 2⌋ = 5 is equivalent to 5 ≤ x - 2 < 6. Adding 2 across the compound inequality gives 7 ≤ x < 8, or in interval notation, [7, 8).",
+      "sourceReference": "Section 1.3.4, Page 63"
+    },
+    {
+      "id": "MAT-G11-U01-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "If f(x) = 2x - 5 and g(x) = x² + 1, what is the value of (g ∘ f)(3)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "2"
+        },
+        {
+          "id": "B",
+          "text": "5"
+        },
+        {
+          "id": "C",
+          "text": "15"
+        },
+        {
+          "id": "D",
+          "text": "17"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "By definition of composite functions, (g ∘ f)(3) = g(f(3)). First evaluate f(3): f(3) = 2(3) - 5 = 6 - 5 = 1. Then evaluate g at 1: g(1) = 1² + 1 = 2.",
+      "sourceReference": "Section 1.4, Page 65, 67"
+    },
+    {
+      "id": "MAT-G11-U01-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What are the domain and the range of the power function f(x) = 3x^(4/5)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Dom(f) = [0, ∞) and Ran(f) = [0, ∞)"
+        },
+        {
+          "id": "B",
+          "text": "Dom(f) = ℝ and Ran(f) = ℝ"
+        },
+        {
+          "id": "C",
+          "text": "Dom(f) = ℝ and Ran(f) = [0, ∞)"
+        },
+        {
+          "id": "D",
+          "text": "Dom(f) = ℝ \\ {0} and Ran(f) = (0, ∞)"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "For power functions of the form f(x) = ax^(m/n) where m is an even natural number and n is an odd natural number (here m = 4, n = 5): since the denominator n = 5 is odd, the 5th root is defined for all real numbers x ∈ ℝ, so Dom(f) = ℝ. Because the numerator m = 4 is an even positive integer, x⁴ ≥ 0 for all real x, making x^(4/5) ≥ 0. Since a = 3 > 0, Ran(f) = [0, ∞).",
+      "sourceReference": "Section 1.3.1, Page 37-38 & Review Exercise, Page 81"
+    },
+    {
+      "id": "MAT-G11-U01-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What is the complete solution set of the signum equation sgn(x² - 9) = -1?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(-3, 3)"
+        },
+        {
+          "id": "B",
+          "text": "[-3, 3]"
+        },
+        {
+          "id": "C",
+          "text": "(-∞, -3) ∪ (3, ∞)"
+        },
+        {
+          "id": "D",
+          "text": "(-∞, -3] ∪ [3, ∞)"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "By definition of the signum function, sgn(u) = -1 if and only if u < 0. Therefore, sgn(x² - 9) = -1 implies x² - 9 < 0, which factors as (x - 3)(x + 3) < 0. The quadratic inequality is satisfied strictly between the roots: -3 < x < 3, which is the interval (-3, 3).",
+      "sourceReference": "Section 1.3.3, Page 55"
+    },
+    {
+      "id": "MAT-G11-U01-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "If f(x) = (2x + 3) / (4x - 5) for x ≠ 5/4, which of the following expressions defines its inverse function f⁻¹(x)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "f⁻¹(x) = (5x + 3) / (4x - 2), for x ≠ 1/2"
+        },
+        {
+          "id": "B",
+          "text": "f⁻¹(x) = (4x - 5) / (2x + 3), for x ≠ -3/2"
+        },
+        {
+          "id": "C",
+          "text": "f⁻¹(x) = (5x - 3) / (4x + 2), for x ≠ -1/2"
+        },
+        {
+          "id": "D",
+          "text": "f⁻¹(x) = (2x - 3) / (4x - 5), for x ≠ 5/4"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Let y = (2x + 3) / (4x - 5). Interchanging variables x and y gives x = (2y + 3) / (4y - 5). Cross-multiplying: x(4y - 5) = 2y + 3 => 4xy - 5x = 2y + 3 => 4xy - 2y = 5x + 3 => y(4x - 2) = 5x + 3. Solving for y yields y = (5x + 3) / (4x - 2). Hence, f⁻¹(x) = (5x + 3) / (4x - 2) for x ≠ 1/2.",
+      "sourceReference": "Section 1.5, Page 69-70 & Review Exercise, Page 81"
+    },
+    {
+      "id": "MAT-G11-U01-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What is the natural domain of the composite function (f ∘ g)(x), where f(x) = √(4 - x) and g(x) = x²?",
+      "options": [
+        {
+          "id": "A",
+          "text": "[1]"
+        },
+        {
+          "id": "B",
+          "text": "[-2, 2]"
+        },
+        {
+          "id": "C",
+          "text": "(-∞, 4]"
+        },
+        {
+          "id": "D",
+          "text": "[-4, 4]"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The composite function is (f ∘ g)(x) = f(g(x)) = f(x²) = √(4 - x²). The square root function requires its radicand to be non-negative: 4 - x² ≥ 0 => x² ≤ 4 => -2 ≤ x ≤ 2. In interval notation, the domain is [-2, 2].",
+      "sourceReference": "Section 1.4, Page 67"
+    },
+    {
+      "id": "MAT-G11-U01-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "If x < 0, what is the simplified form of the algebraic expression E(x) = (6x - 4|x|) / (2x)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "1"
+        },
+        {
+          "id": "B",
+          "text": "5"
+        },
+        {
+          "id": "C",
+          "text": "-1"
+        },
+        {
+          "id": "D",
+          "text": "-5"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "By definition of absolute value, if x < 0, then |x| = -x. Substituting this into the expression: E(x) = (6x - 4(-x)) / (2x) = (6x + 4x) / (2x) = (10x) / (2x) = 5.",
+      "sourceReference": "Section 1.3.2, Page 45, 49"
+    },
+    {
+      "id": "MAT-G11-U01-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "A production plant manufactures rechargeable lanterns. The total daily production cost function is C(x) = 150x + 18,000 (in Birr), where x is the number of lanterns produced. If each lantern sells for a fixed price of Birr 250, how many lanterns must the plant produce and sell daily to break even (ensure no loss)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "120"
+        },
+        {
+          "id": "B",
+          "text": "150"
+        },
+        {
+          "id": "C",
+          "text": "180"
+        },
+        {
+          "id": "D",
+          "text": "240"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Revenue function is R(x) = 250x. At the break-even point, Total Revenue = Total Cost: R(x) = C(x) => 250x = 150x + 18,000 => 100x = 18,000 => x = 180 lanterns.",
+      "sourceReference": "Section 1.6, Page 78-79"
+    },
+    {
+      "id": "MAT-G11-U01-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "What is the complete solution set of the quadratic equation ⌊x⌋² + 5⌊x⌋ + 6 = 0 involving the floor function?",
+      "options": [
+        {
+          "id": "A",
+          "text": "[-3, -1)"
+        },
+        {
+          "id": "B",
+          "text": "[-3, 0)"
+        },
+        {
+          "id": "C",
+          "text": "{-3, -2}"
+        },
+        {
+          "id": "D",
+          "text": "[-2, 0)"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Let z = ⌊x⌋, where z must be an integer. The equation becomes z² + 5z + 6 = 0 => (z + 3)(z + 2) = 0, which gives z = -3 or z = -2. Case 1: ⌊x⌋ = -3 implies -3 ≤ x < -2. Case 2: ⌊x⌋ = -2 implies -2 ≤ x < -1. Taking the union of both intervals gives [-3, -2) ∪ [-2, -1) = [-3, -1).",
+      "sourceReference": "Section 1.3.4, Page 63-64"
+    },
+    {
+      "id": "MAT-G11-U01-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Let f(x) = ⌊x⌋ be the greatest integer function and g(x) = |x| be the absolute value function. What is the value of the composite sum (f ∘ g)(7/2) + (g ∘ f)(-10/3)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "6"
+        },
+        {
+          "id": "B",
+          "text": "7"
+        },
+        {
+          "id": "C",
+          "text": "8"
+        },
+        {
+          "id": "D",
+          "text": "1"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Evaluate the first term: (f ∘ g)(7/2) = f(g(7/2)) = f(|7/2|) = f(3.5) = ⌊3.5⌋ = 3. Evaluate the second term: (g ∘ f)(-10/3) = g(f(-10/3)) = g(⌊-3.333...⌋) = g(-4) = |-4| = 4. Adding both values yields 3 + 4 = 7.",
+      "sourceReference": "Section 1.3.2, 1.3.4 & 1.4, Page 48, 59, 65"
+    },
+    {
+      "id": "MAT-G11-U01-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Let f(x) = x^(1/m) and g(x) = x^(1/n) be power functions, where m and n are even natural numbers such that m > n. Which of the following statements is TRUE?",
+      "options": [
+        {
+          "id": "A",
+          "text": "If 0 ≤ x ≤ 1, then f(x) ≤ g(x)"
+        },
+        {
+          "id": "B",
+          "text": "If 0 ≤ x ≤ 1, then f(x) ≥ g(x)"
+        },
+        {
+          "id": "C",
+          "text": "If x ≥ 1, then f(x) ≥ g(x)"
+        },
+        {
+          "id": "D",
+          "text": "The domain of both f and g is ℝ"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Since m and n are even, both roots require x ≥ 0, so Dom(f) = Dom(g) = [0, ∞). Because m > n > 0, we have 1/m < 1/n. For any base x in the unit interval (0, 1), raising x to a smaller positive exponent results in a larger value (for example, take m = 4, n = 2, and x = 1/16: f(1/16) = (1/16)^(1/4) = 1/2 = 0.5, while g(1/16) = (1/16)^(1/2) = 1/4 = 0.25, so f(x) > g(x)). At x = 0 and x = 1, f(x) = g(x). Hence, for 0 ≤ x ≤ 1, f(x) ≥ g(x).",
+      "sourceReference": "Section 1.3.1, Page 32-33"
+    },
+    {
+      "id": "MAT-G11-U01-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "What is the solution set of the equation ⌊2 + ⌊x⌋⌋ = 6 in the set of real numbers?",
+      "options": [
+        {
+          "id": "A",
+          "text": "[4, 5)"
+        },
+        {
+          "id": "B",
+          "text": "[3, 4)"
+        },
+        {
+          "id": "C",
+          "text": "[5, 6)"
+        },
+        {
+          "id": "D",
+          "text": "{4}"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Let z = ⌊x⌋, which must be an integer. Since 2 is an integer, ⌊2 + z⌋ = 2 + z. Setting 2 + z = 6 gives z = 4. Replacing z with ⌊x⌋ gives ⌊x⌋ = 4, which is equivalent to 4 ≤ x < 5. Therefore, the solution set is the interval [4, 5).",
+      "sourceReference": "Section 1.3.4, Page 63-64"
+    }
+  ]
 }

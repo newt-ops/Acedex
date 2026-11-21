@@ -3,5 +3,411 @@
   "subject": "Geography",
   "unitNumber": 3,
   "unitTitle": "Natural Resource Base of Africa",
-  "questions": []
+  "questions": [
+    {
+      "id": "GEO-G10-U03-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What percentage of total global water volume is represented by freshwater resources?",
+      "options": [
+        {
+          "id": "A",
+          "text": "10.0%"
+        },
+        {
+          "id": "B",
+          "text": "2.5%"
+        },
+        {
+          "id": "C",
+          "text": "15.5%"
+        },
+        {
+          "id": "D",
+          "text": "25.0%"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Out of the total global water volume on Earth, approximately 97.5% is saltwater stored in oceans and saline aquifers, leaving only about 2.5% as freshwater.",
+      "sourceReference": "Grade 10 Geography Textbook, Section 3.1, Page 54 & Page 55 (Table 3.1)"
+    },
+    {
+      "id": "GEO-G10-U03-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which river basin in Africa is recognized as the second-largest river in the world by water volume, trailing only the Amazon River?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Nile Basin"
+        },
+        {
+          "id": "B",
+          "text": "Niger Basin"
+        },
+        {
+          "id": "C",
+          "text": "Congo Basin"
+        },
+        {
+          "id": "D",
+          "text": "Zambezi Basin"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The Congo River basin drains an area of 3.7 million square kilometers and is the Earth's second-largest river by discharge volume after the Amazon River in South America.",
+      "sourceReference": "Grade 10 Geography Textbook, Section 3.2, Page 61"
+    },
+    {
+      "id": "GEO-G10-U03-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What percentage of the Nile River's total water volume originates from the highlands of Ethiopia via the Abbay (Blue Nile), Tekeze, and Baro-Akobo rivers?",
+      "options": [
+        {
+          "id": "A",
+          "text": "30%"
+        },
+        {
+          "id": "B",
+          "text": "50%"
+        },
+        {
+          "id": "C",
+          "text": "86%"
+        },
+        {
+          "id": "D",
+          "text": "98%"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Eighty-six percent (86%) of the Nile water originates in Ethiopia, supplied through its main right-bank tributaries: the Abbay (Blue Nile), Tekeze, and Baro rivers.",
+      "sourceReference": "Grade 10 Geography Textbook, Section 3.2, Page 59–60"
+    },
+    {
+      "id": "GEO-G10-U03-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which soil group covers the largest surface area percentage across the African continent, making up roughly 22% of total African soils?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Ferralsols"
+        },
+        {
+          "id": "B",
+          "text": "Leptosols"
+        },
+        {
+          "id": "C",
+          "text": "Arenosols"
+        },
+        {
+          "id": "D",
+          "text": "Cambisols"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Arenosols (coarse-textured sandy soils) are the most extensive soil group in Africa, occupying approximately 22% of the continent's total soil cover, especially in desert and semi-arid regions.",
+      "sourceReference": "Grade 10 Geography Textbook, Section 3.3, Page 67 (Figure 3.5)"
+    },
+    {
+      "id": "GEO-G10-U03-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which African nation holds over 50% of the world's known reserves of cobalt and ranks first globally in its production?",
+      "options": [
+        {
+          "id": "A",
+          "text": "South Africa"
+        },
+        {
+          "id": "B",
+          "text": "Democratic Republic of Congo"
+        },
+        {
+          "id": "C",
+          "text": "Guinea"
+        },
+        {
+          "id": "D",
+          "text": "Zambia"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The Democratic Republic of Congo (DRC) produces over half of the world's cobalt (100,000 tons in 2019) and holds 51.4% of global cobalt reserves.",
+      "sourceReference": "Grade 10 Geography Textbook, Section 3.3, Page 70 (Table 3.2)"
+    },
+    {
+      "id": "GEO-G10-U03-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How do consumptive resource use and public-good environmental services differ in natural resource management?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Consumptive use enhances future reserves, while public goods exist only in urban centers."
+        },
+        {
+          "id": "B",
+          "text": "Consumptive use reduces resource supply through extraction or harvesting, whereas public goods provide non-excludable benefits to many people regardless of payment."
+        },
+        {
+          "id": "C",
+          "text": "Consumptive use applies only to sunlight, while public goods refer exclusively to fossil fuels."
+        },
+        {
+          "id": "D",
+          "text": "Consumptive use is prohibited by international law, while public goods are privately owned."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Consumptive use refers to utilizing resources in ways that diminish their available quantity (such as mining or timber logging), while public-good services (like air regulation or climate stabilization) benefit the public broadly without reducing availability to others.",
+      "sourceReference": "Grade 10 Geography Textbook, Section 3.1, Page 54"
+    },
+    {
+      "id": "GEO-G10-U03-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Despite being 3,540 km long, why is the Zambezi River of relatively low value for long-distance commercial vessel navigation?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It is frozen for six months of the year due to high-altitude sub-zero temperatures."
+        },
+        {
+          "id": "B",
+          "text": "It contains numerous natural barriers such as mouth sandbars, shallow stretches, rapids, and major cataracts like Victoria Falls."
+        },
+        {
+          "id": "C",
+          "text": "It flows entirely underground beneath the Kalahari sand dunes."
+        },
+        {
+          "id": "D",
+          "text": "State laws strictly forbid any watercraft from entering the river basin."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Navigation along the Zambezi River is hindered by physical obstacles including sandbars at its delta, shallow waters, and impassable rapids and waterfalls (such as Victoria Falls and Kariba Gorge).",
+      "sourceReference": "Grade 10 Geography Textbook, Section 3.2, Page 63"
+    },
+    {
+      "id": "GEO-G10-U03-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which shallow, gravelly soil type covers 17% of Africa's land area and is predominantly found in mountainous and desert regions where hard rock is exposed near the surface?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Leptosols"
+        },
+        {
+          "id": "B",
+          "text": "Vertisols"
+        },
+        {
+          "id": "C",
+          "text": "Ferralsols"
+        },
+        {
+          "id": "D",
+          "text": "Nitisols"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Leptosols (from Greek leptos, meaning thin) are shallow, gravelly soils overlying hard bedrock or highly calcareous deposits, widespread in African mountain ranges and deserts (17% of African soils).",
+      "sourceReference": "Grade 10 Geography Textbook, Section 3.3, Page 68"
+    },
+    {
+      "id": "GEO-G10-U03-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How did 19th-century European colonial rule shape the physical spatial orientation of railway infrastructure across Africa?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Railways were constructed in circular networks around national parks to boost ecotourism."
+        },
+        {
+          "id": "B",
+          "text": "Railways were built perpendicular to coastlines linking inland mineral mines and agricultural plantations directly to coastal export ports rather than connecting major domestic cities."
+        },
+        {
+          "id": "C",
+          "text": "Railways were integrated into cross-continental electric high-speed passenger lines."
+        },
+        {
+          "id": "D",
+          "text": "Railways were laid exclusively along international river beds for barge transportation."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Colonial powers designed transportation networks specifically for raw material extraction; railroads connected interior mining sites and plantations directly to ocean seaports for export to Europe, failing to connect local population centers or regional markets.",
+      "sourceReference": "Grade 10 Geography Textbook, Section 3.3, Page 71"
+    },
+    {
+      "id": "GEO-G10-U03-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which natural vegetation category covers the single largest percentage share (~29.3%) of Africa's total land area?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Tropical rainforest"
+        },
+        {
+          "id": "B",
+          "text": "Tropical shrubland"
+        },
+        {
+          "id": "C",
+          "text": "Tropical desert vegetation"
+        },
+        {
+          "id": "D",
+          "text": "Tropical moist deciduous forest"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "According to Table 3.3, Tropical desert vegetation occupies the largest surface area share in Africa, covering approximately 8,737,674 km² or 29.3% of the total land area.",
+      "sourceReference": "Grade 10 Geography Textbook, Section 3.4, Page 74 (Table 3.3)"
+    },
+    {
+      "id": "GEO-G10-U03-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which nocturnal African mammal is uniquely characterized by a piglike body, rabbit-like ears, a long snout, and a sticky one-foot-long tongue used to extract termites from earthen mounds?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Tenrec"
+        },
+        {
+          "id": "B",
+          "text": "Aardvark"
+        },
+        {
+          "id": "C",
+          "text": "Jumping hare"
+        },
+        {
+          "id": "D",
+          "text": "Lemur"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The aardvark is a unique nocturnal African mammal that uses its sharp claws to tear open termite mounds and its sticky tongue (nearly a foot long) to feed on insects inside.",
+      "sourceReference": "Grade 10 Geography Textbook, Section 3.4, Page 79–80"
+    },
+    {
+      "id": "GEO-G10-U03-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "The Inga Falls site on the lower Congo River in the Democratic Republic of Congo possesses an estimated potential hydroelectric capacity of 44,000 MW. What physical characteristics of the Congo River Basin account for its immense, unequaled hydroelectric potential (~1/6th of global potential)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Heavy seasonal snowfall melting off the Rwenzori glaciers combined with steep ocean abyssal trenches."
+        },
+        {
+          "id": "B",
+          "text": "A massive, high-volume year-round water discharge fed by equatorial rains combined with rapid drops in elevation over cataracts and gorges in its lower course."
+        },
+        {
+          "id": "C",
+          "text": "Artificial pumping stations installed along its entire 4,660 km length that accelerate river current speeds."
+        },
+        {
+          "id": "D",
+          "text": "High geothermal steam vents rising directly from the active Rift Valley floor beneath the riverbed."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Hydroelectric potential depends on both water volume and head (gradient). The Congo Basin combines a vast, continuous water volume (fed by year-round equatorial rainfall on both sides of the Equator) with steep gradient drops across cataracts and falls (such as Inga Falls) as it descends to the Atlantic Ocean.",
+      "sourceReference": "Grade 10 Geography Textbook, Section 3.2, Page 61–62"
+    },
+    {
+      "id": "GEO-G10-U03-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Ferralsols cover roughly 10% of Africa, concentrated in old Tertiary land surfaces of Central and Southern Africa. Which soil-forming processes account for their characteristic strong red/yellow color and low nutrient-holding capacity?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Intense physical freeze-thaw cycles that break down basalt into alkaline calcium carbonate pan."
+        },
+        {
+          "id": "B",
+          "text": "Severe, long-term rainwater leaching under hot, humid climates that removes weatherable minerals and leaves residual concentrations of iron and aluminum oxides."
+        },
+        {
+          "id": "C",
+          "text": "Accumulation of undecomposed organic peat moss under stagnant anaerobic swamp conditions."
+        },
+        {
+          "id": "D",
+          "text": "Wind-blown deposition of saline dust from nearby coastal salt pans."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Ferralsols are highly weathered, deeply leached soils associated with humid tropical conditions and ancient land surfaces. Prolonged leaching washes away soluble nutrients (like calcium, magnesium, and silica), leaving stable, insoluble iron and aluminum oxides that give the soil its strong reddish-yellow color and low cation-exchange capacity.",
+      "sourceReference": "Grade 10 Geography Textbook, Section 3.3, Page 69"
+    },
+    {
+      "id": "GEO-G10-U03-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "How does the Lake Chad Basin structurally and hydrologically differ from the Nile, Congo, and Niger River Basins?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It is an international transboundary river that flows directly into the Red Sea."
+        },
+        {
+          "id": "B",
+          "text": "It is a closed inland (endorheic) drainage basin located in central Africa whose surface waters do not drain into any sea or ocean."
+        },
+        {
+          "id": "C",
+          "text": "It is a deep glaciated fjord located above 4,000 meters altitude."
+        },
+        {
+          "id": "D",
+          "text": "It receives 90% of its water volume from underground saltwater ocean conduits."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Unlike the exorheic Nile (draining to the Mediterranean), Congo, and Niger basins (draining to the Atlantic), the Lake Chad Basin is an interior/endorheic drainage system in central Africa where rivers flow into a shallow lake basin without an outlet to the sea.",
+      "sourceReference": "Grade 10 Geography Textbook, Section 3.2, Page 58–59 & Page 64–65"
+    },
+    {
+      "id": "GEO-G10-U03-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Why are many mineral-rich African nations trapped in low economic returns despite holding a major share of global strategic mineral reserves (e.g., Guinea holding ~24.7% of bauxite reserves)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Global trade agreements strictly forbid African nations from selling raw ores on international markets."
+        },
+        {
+          "id": "B",
+          "text": "Most African countries export unprocessed raw mineral ores at low market prices while importing expensive manufactured finished goods, losing value-addition processing benefits and domestic industrial linkages."
+        },
+        {
+          "id": "C",
+          "text": "African mineral ores contain no pure metallic elements and must be discarded as industrial waste."
+        },
+        {
+          "id": "D",
+          "text": "Local mining operations rely exclusively on manual hand tools that prevent commercial production volumes."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Due to historical structural dependencies, low domestic technological capacity, and lack of processing infrastructure, African countries export raw, unprocessed ores for low returns and import high-cost refined metals and manufactured products, missing out on domestic value-addition, industrialization, and revenue.",
+      "sourceReference": "Grade 10 Geography Textbook, Section 3.3, Page 71–72"
+    }
+  ]
 }

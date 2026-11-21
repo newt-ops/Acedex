@@ -3,5 +3,411 @@
   "subject": "Mathematics",
   "unitNumber": 7,
   "unitTitle": "Coordinate Geometry",
-  "questions": []
+  "questions": [
+    {
+      "id": "MAT-G10-U07-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is the straight-line distance between the points A(-2, 3) and B(4, -5) in the Cartesian plane?",
+      "options": [
+        {
+          "id": "A",
+          "text": "8 units"
+        },
+        {
+          "id": "B",
+          "text": "10 units"
+        },
+        {
+          "id": "C",
+          "text": "12 units"
+        },
+        {
+          "id": "D",
+          "text": "14 units"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "According to the distance formula d = √((x₂ - x₁)² + (y₂ - y₁)²). Substituting the coordinates of A(-2, 3) and B(4, -5): d = √((4 - (-2))² + (-5 - 3)²) = √(6² + (-8)²) = √(36 + 64) = √100 = 10 units.",
+      "sourceReference": "Section 7.1, Page 349-350"
+    },
+    {
+      "id": "MAT-G10-U07-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "If M(x, y) is the midpoint of the line segment joining P(-5, 8) and Q(3, -2), what are the coordinates of point M?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(-1, 3)"
+        },
+        {
+          "id": "B",
+          "text": "(-1, 5)"
+        },
+        {
+          "id": "C",
+          "text": "(1, 3)"
+        },
+        {
+          "id": "D",
+          "text": "(-4, 3)"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Using the midpoint formula M = ((x₁ + x₂) / 2, (y₁ + y₂) / 2): x = (-5 + 3) / 2 = -2 / 2 = -1, and y = (8 + (-2)) / 2 = 6 / 2 = 3. Therefore, the coordinates of the midpoint are M(-1, 3).",
+      "sourceReference": "Section 7.2, Page 354-355"
+    },
+    {
+      "id": "MAT-G10-U07-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is the slope (gradient) of a straight line whose angle of inclination with the positive direction of the x-axis is 135°?",
+      "options": [
+        {
+          "id": "A",
+          "text": "1"
+        },
+        {
+          "id": "B",
+          "text": "-1"
+        },
+        {
+          "id": "C",
+          "text": "-√3"
+        },
+        {
+          "id": "D",
+          "text": "-1/√3"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "For any non-vertical straight line with angle of inclination θ, the slope is m = tan θ. For an obtuse angle of inclination (θ = 135°), m = tan(135°) = -tan(180° - 135°) = -tan(45°) = -1.",
+      "sourceReference": "Section 7.3.2, Page 359-361"
+    },
+    {
+      "id": "MAT-G10-U07-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is the standard equation of a circle with center C(-3, 2) and radius r = 4?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(x - 3)² + (y + 2)² = 16"
+        },
+        {
+          "id": "B",
+          "text": "(x + 3)² + (y - 2)² = 16"
+        },
+        {
+          "id": "C",
+          "text": "(x + 3)² + (y - 2)² = 8"
+        },
+        {
+          "id": "D",
+          "text": "(x - 3)² + (y + 2)² = 4"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The standard equation of a circle with center (h, k) and radius r is (x - h)² + (y - k)² = r². Here, h = -3, k = 2, and r = 4. Substituting these values gives (x - (-3))² + (y - 2)² = 4² => (x + 3)² + (y - 2)² = 16.",
+      "sourceReference": "Section 7.5.1, Page 371-372"
+    },
+    {
+      "id": "MAT-G10-U07-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "If line L₁ has a slope of -3/4, what is the slope of any non-vertical line L₂ that is perpendicular to L₁?",
+      "options": [
+        {
+          "id": "A",
+          "text": "-4/3"
+        },
+        {
+          "id": "B",
+          "text": "-3/4"
+        },
+        {
+          "id": "C",
+          "text": "3/4"
+        },
+        {
+          "id": "D",
+          "text": "4/3"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "By Theorem 7.2, two non-vertical lines with slopes m₁ and m₂ are perpendicular if and only if m₁ · m₂ = -1. Therefore, m₂ = -1 / m₁ = -1 / (-3/4) = 4/3.",
+      "sourceReference": "Section 7.4.1, Page 367-368"
+    },
+    {
+      "id": "MAT-G10-U07-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "A point R divides the line segment joining A(-3, 5) and B(7, -5) internally in the ratio 2:3. What are the coordinates of point R?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(1, 1)"
+        },
+        {
+          "id": "B",
+          "text": "(2, 0)"
+        },
+        {
+          "id": "C",
+          "text": "(-1, 2)"
+        },
+        {
+          "id": "D",
+          "text": "(3, -1)"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Using the section formula R(x, y) = ((px₂ + qx₁) / (p + q), (py₂ + qy₁) / (p + q)) with p = 2 and q = 3: x = (2(7) + 3(-3)) / (2 + 3) = (14 - 9) / 5 = 5 / 5 = 1, and y = (2(-5) + 3(5)) / (2 + 3) = (-10 + 15) / 5 = 5 / 5 = 1. Thus, R = (1, 1).",
+      "sourceReference": "Section 7.2, Page 352-353"
+    },
+    {
+      "id": "MAT-G10-U07-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What is the equation of the line that passes through the point P(2, -3) and is perpendicular to the line 3x - 2y + 6 = 0?",
+      "options": [
+        {
+          "id": "A",
+          "text": "2x + 3y + 5 = 0"
+        },
+        {
+          "id": "B",
+          "text": "2x - 3y - 13 = 0"
+        },
+        {
+          "id": "C",
+          "text": "3x + 2y = 0"
+        },
+        {
+          "id": "D",
+          "text": "2x + 3y - 5 = 0"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Expressing the given line in slope-intercept form: 2y = 3x + 6 => y = (3/2)x + 3, so its slope is m₁ = 3/2. The slope of a line perpendicular to it is m₂ = -2/3. Using point-slope form with P(2, -3): y - (-3) = (-2/3)(x - 2) => 3(y + 3) = -2(x - 2) => 3y + 9 = -2x + 4 => 2x + 3y + 5 = 0.",
+      "sourceReference": "Section 7.3.3 & Section 7.4.1, Page 363, 368-369"
+    },
+    {
+      "id": "MAT-G10-U07-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What are the center C and the radius r of the circle given by the equation x² + y² - 6x + 8y - 11 = 0?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Center: (3, -4), Radius: 6 units"
+        },
+        {
+          "id": "B",
+          "text": "Center: (-3, 4), Radius: 6 units"
+        },
+        {
+          "id": "C",
+          "text": "Center: (3, -4), Radius: 36 units"
+        },
+        {
+          "id": "D",
+          "text": "Center: (-6, 8), Radius: 11 units"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Completing the square for x and y: (x² - 6x + 9) + (y² + 8y + 16) = 11 + 9 + 16 => (x - 3)² + (y + 4)² = 36. Comparing with (x - h)² + (y - k)² = r² gives center (h, k) = (3, -4) and radius r = √36 = 6 units.",
+      "sourceReference": "Section 7.5.1, Page 373-374"
+    },
+    {
+      "id": "MAT-G10-U07-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "A straight line has an x-intercept of 4 and a y-intercept of -6. What is the equation of this line in general form Ax + By + C = 0?",
+      "options": [
+        {
+          "id": "A",
+          "text": "3x - 2y - 12 = 0"
+        },
+        {
+          "id": "B",
+          "text": "3x + 2y - 12 = 0"
+        },
+        {
+          "id": "C",
+          "text": "2x - 3y - 12 = 0"
+        },
+        {
+          "id": "D",
+          "text": "3x - 2y + 12 = 0"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Using the intercept form x/p + y/q = 1 with p = 4 and q = -6: x/4 + y/(-6) = 1. Multiplying through by the common denominator 12 gives: 3x - 2y = 12 => 3x - 2y - 12 = 0.",
+      "sourceReference": "Section 7.3.3, Page 364"
+    },
+    {
+      "id": "MAT-G10-U07-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "For what value of the constant k are the three points A(1, 2), B(3, k), and C(7, 14) collinear?",
+      "options": [
+        {
+          "id": "A",
+          "text": "4"
+        },
+        {
+          "id": "B",
+          "text": "5"
+        },
+        {
+          "id": "C",
+          "text": "6"
+        },
+        {
+          "id": "D",
+          "text": "8"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Three points are collinear if and only if the slope between any two pairs of points is equal: Slope(AB) = Slope(AC). Slope(AC) = (14 - 2) / (7 - 1) = 12 / 6 = 2. Slope(AB) = (k - 2) / (3 - 1) = (k - 2) / 2. Setting them equal: (k - 2) / 2 = 2 => k - 2 = 4 => k = 6.",
+      "sourceReference": "Section 7.3.1, Page 357-358"
+    },
+    {
+      "id": "MAT-G10-U07-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What is the area of a triangle whose vertices on the coordinate plane are A(-2, 1), B(4, 3), and C(2, 7)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "12 square units"
+        },
+        {
+          "id": "B",
+          "text": "14 square units"
+        },
+        {
+          "id": "C",
+          "text": "16 square units"
+        },
+        {
+          "id": "D",
+          "text": "28 square units"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The area of a triangle with vertices (x₁, y₁), (x₂, y₂), and (x₃, y₃) is given by A = (1/2)|x₁(y₂ - y₃) + x₂(y₃ - y₁) + x₃(y₁ - y₂)|. Substituting the vertices: A = (1/2)|(-2)(3 - 7) + 4(7 - 1) + 2(1 - 3)| = (1/2)|(-2)(-4) + 4(6) + 2(-2)| = (1/2)|8 + 24 - 4| = (1/2)|28| = 14 square units.",
+      "sourceReference": "Section 7.6, Page 375-376"
+    },
+    {
+      "id": "MAT-G10-U07-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "What is the equation of the perpendicular bisector of the line segment joining the points A(-2, 4) and B(4, 2)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "3x - y = 0"
+        },
+        {
+          "id": "B",
+          "text": "3x + y - 6 = 0"
+        },
+        {
+          "id": "C",
+          "text": "x + 3y - 10 = 0"
+        },
+        {
+          "id": "D",
+          "text": "3x - y + 6 = 0"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "First, find the midpoint M of AB: M = ((-2 + 4)/2, (4 + 2)/2) = (1, 3). Second, find the slope of AB: m_AB = (2 - 4) / (4 - (-2)) = -2 / 6 = -1/3. The perpendicular bisector has slope m_perp = -1 / (-1/3) = 3. Using point-slope form through M(1, 3): y - 3 = 3(x - 1) => y - 3 = 3x - 3 => 3x - y = 0.",
+      "sourceReference": "Section 7.2, 7.3 & 7.4, Page 354, 361, 367"
+    },
+    {
+      "id": "MAT-G10-U07-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "What is the equation of the tangent line to the circle x² + y² - 4x + 2y - 20 = 0 at the point P(5, 3) lying on the circle?",
+      "options": [
+        {
+          "id": "A",
+          "text": "3x + 4y - 27 = 0"
+        },
+        {
+          "id": "B",
+          "text": "4x - 3y - 11 = 0"
+        },
+        {
+          "id": "C",
+          "text": "3x + 4y + 27 = 0"
+        },
+        {
+          "id": "D",
+          "text": "4x + 3y - 29 = 0"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Completing the square gives (x - 2)² + (y + 1)² = 25, so the center is C(2, -1). The radius joining center C(2, -1) and point of tangency P(5, 3) has slope m_radius = (3 - (-1)) / (5 - 2) = 4/3. Since the tangent line is perpendicular to the radius at the point of tangency, its slope is m_tangent = -3/4. The equation of the tangent line is y - 3 = (-3/4)(x - 5) => 4(y - 3) = -3(x - 5) => 4y - 12 = -3x + 15 => 3x + 4y - 27 = 0.",
+      "sourceReference": "Section 7.4 & Section 7.5, Page 368, 373-374"
+    },
+    {
+      "id": "MAT-G10-U07-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "In what ratio does the x-axis divide the line segment joining the points P(2, -3) and Q(5, 6), and what are the coordinates of the point of division?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Ratio: 1:2, Point: (3, 0)"
+        },
+        {
+          "id": "B",
+          "text": "Ratio: 2:1, Point: (4, 0)"
+        },
+        {
+          "id": "C",
+          "text": "Ratio: 1:2, Point: (0, 3)"
+        },
+        {
+          "id": "D",
+          "text": "Ratio: 1:3, Point: (3, 0)"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Let the x-axis divide segment PQ internally in the ratio k:1. Any point on the x-axis has y = 0. By the section formula: y = (k(6) + 1(-3)) / (k + 1) = 0 => 6k - 3 = 0 => k = 1/2. Thus, the ratio is 1:2. The x-coordinate of the point of division is x = (1(5) + 2(2)) / (1 + 2) = (5 + 4) / 3 = 9 / 3 = 3. Therefore, the ratio is 1:2 and the point is (3, 0).",
+      "sourceReference": "Section 7.2 & Review Exercise, Page 352-353, 380"
+    },
+    {
+      "id": "MAT-G10-U07-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "The endpoints of a diameter of a circle are A(-3, 2) and B(5, -4). What is the equation of the circle in general form x² + y² + lx + my + n = 0?",
+      "options": [
+        {
+          "id": "A",
+          "text": "x² + y² - 2x + 2y - 23 = 0"
+        },
+        {
+          "id": "B",
+          "text": "x² + y² + 2x - 2y - 23 = 0"
+        },
+        {
+          "id": "C",
+          "text": "x² + y² - 2x + 2y + 25 = 0"
+        },
+        {
+          "id": "D",
+          "text": "x² + y² - x + y - 25 = 0"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The center C(h, k) is the midpoint of diameter AB: h = (-3 + 5)/2 = 1 and k = (2 + (-4))/2 = -1, so C = (1, -1). The length of diameter AB is √((5 - (-3))² + (-4 - 2)²) = √(64 + 36) = √100 = 10, so radius r = 5. The equation in standard form is (x - 1)² + (y + 1)² = 5² = 25. Expanding gives: x² - 2x + 1 + y² + 2y + 1 = 25 => x² + y² - 2x + 2y - 23 = 0.",
+      "sourceReference": "Section 7.1, 7.2 & 7.5, Page 349, 354, 373"
+    }
+  ]
 }

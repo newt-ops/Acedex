@@ -50,7 +50,7 @@ describe('Admin Rewarded Ads Analytics & Remote Configuration (RBAC Protected)',
       displayName: 'Ads Super Admin',
       role: 'admin',
       status: 'active',
-      authProvider: 'google',
+      authProvider: 'phone',
     });
 
     adminUserId = adminUser._id.toString();

@@ -3,5 +3,411 @@
   "subject": "Chemistry",
   "unitNumber": 5,
   "unitTitle": "Chemical Bonding",
-  "questions": []
+  "questions": [
+    {
+      "id": "CHE-G09-U05-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is the principal driving force that causes neutral atoms to undergo chemical bonding with other atoms?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To increase their total atomic mass and density."
+        },
+        {
+          "id": "B",
+          "text": "To achieve a stable, low-energy noble gas electron configuration (octet or duet)."
+        },
+        {
+          "id": "C",
+          "text": "To convert all their protons into neutrons within the nucleus."
+        },
+        {
+          "id": "D",
+          "text": "To absorb continuous thermal radiation from the surroundings."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Atoms undergo chemical bonding to attain lower potential energy and greater stability by achieving a noble gas electron configuration, typically having eight valence electrons (octet rule) or two for hydrogen/helium (duet rule).",
+      "sourceReference": "Section 5.1, Page 141"
+    },
+    {
+      "id": "CHE-G09-U05-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "An ionic bond is primarily formed through which mechanism between reacting atoms?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Equal sharing of valence electron pairs between two non-metallic atoms."
+        },
+        {
+          "id": "B",
+          "text": "Complete transfer of one or more valence electrons from a metal atom to a non-metal atom."
+        },
+        {
+          "id": "C",
+          "text": "Pool of mobile valence electrons surrounding fixed neutral atoms."
+        },
+        {
+          "id": "D",
+          "text": "Gravitational attraction between high-density atomic nuclei."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "An ionic bond is formed by the complete transfer of valence electrons from a metallic element (low electronegativity/ionization energy) to a non-metallic element (high electronegativity/electron affinity), forming oppositely charged ions.",
+      "sourceReference": "Section 5.2, Page 146"
+    },
+    {
+      "id": "CHE-G09-U05-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which type of chemical bond is formed when two non-metal atoms share one or more pairs of valence electrons?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Ionic bond"
+        },
+        {
+          "id": "B",
+          "text": "Covalent bond"
+        },
+        {
+          "id": "C",
+          "text": "Metallic bond"
+        },
+        {
+          "id": "D",
+          "text": "Hydrogen bond"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "A covalent bond is defined as the chemical bond resulting from the mutual sharing of valence electrons between non-metal atoms.",
+      "sourceReference": "Section 5.3, Page 154"
+    },
+    {
+      "id": "CHE-G09-U05-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "According to the electron-sea model, metallic bonding consists of electrostatic attraction between:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Negatively charged non-metal ions and positively charged hydrogen ions."
+        },
+        {
+          "id": "B",
+          "text": "Positive metal cations and a surrounding sea of delocalized valence electrons."
+        },
+        {
+          "id": "C",
+          "text": "Shared electron pairs localized strictly between adjacent metal atoms."
+        },
+        {
+          "id": "D",
+          "text": "Neutral metal atoms held together by weak dispersion forces."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Metallic bonding is described by the electron-sea model, where fixed positive metal ions (cations) are held together by electrostatic attraction to a surrounding, mobile 'sea' of delocalized valence electrons.",
+      "sourceReference": "Section 5.4, Page 168"
+    },
+    {
+      "id": "CHE-G09-U05-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In a Lewis electron-dot symbol, what do the dots arranged around an element's chemical symbol represent?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The total number of protons in the nucleus."
+        },
+        {
+          "id": "B",
+          "text": "The inner core electrons occupying filled shells."
+        },
+        {
+          "id": "C",
+          "text": "The number of valence electrons in the outermost shell."
+        },
+        {
+          "id": "D",
+          "text": "The total number of neutrons present in the most abundant isotope."
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Lewis electron-dot symbols show the chemical symbol of an element surrounded by dots representing its valence electrons.",
+      "sourceReference": "Section 5.1, Page 143"
+    },
+    {
+      "id": "CHE-G09-U05-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Why do solid ionic compounds like sodium chloride (NaCl) fail to conduct electricity, whereas their molten (liquid) states or aqueous solutions conduct electric current readily?",
+      "options": [
+        {
+          "id": "A",
+          "text": "In the solid state, valence electrons are completely absent, but they form in liquid state."
+        },
+        {
+          "id": "B",
+          "text": "In the solid crystal lattice, ions are fixed in rigid positions and cannot move, whereas in molten or dissolved states, the ions become mobile charge carriers."
+        },
+        {
+          "id": "C",
+          "text": "Solid ionic compounds are non-polar molecules, but molten ionic compounds turn into metallic elements."
+        },
+        {
+          "id": "D",
+          "text": "Water molecules destroy the ions and release free protons that carry electrical current."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Solid ionic compounds do not conduct electricity because their ions are tightly locked into a three-dimensional crystal lattice. When melted or dissolved in water, the lattice breaks down, freeing the cations and anions to move toward electrode terminals and conduct electric current.",
+      "sourceReference": "Section 5.2, Page 150"
+    },
+    {
+      "id": "CHE-G09-U05-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "A diatomic nitrogen molecule (N₂) contains two nitrogen atoms (Group VA, 5 valence electrons each). How many total electron pairs are shared between the two nitrogen atoms in N₂, and what type of covalent bond is formed?",
+      "options": [
+        {
+          "id": "A",
+          "text": "1 pair; Single covalent bond"
+        },
+        {
+          "id": "B",
+          "text": "2 pairs; Double covalent bond"
+        },
+        {
+          "id": "C",
+          "text": "3 pairs; Triple covalent bond"
+        },
+        {
+          "id": "D",
+          "text": "4 pairs; Quadruple covalent bond"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Each nitrogen atom has 5 valence electrons and needs 3 additional electrons to complete its octet. By sharing 3 pairs of electrons (6 shared electrons total), a stable triple covalent bond (:N≡N:) is formed.",
+      "sourceReference": "Section 5.3, Page 157"
+    },
+    {
+      "id": "CHE-G09-U05-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "The electronegativity values of Hydrogen and Chlorine are 2.1 and 3.0, respectively. How should the chemical bond in a Hydrogen Chloride (HCl) molecule be classified, and where does partial negative charge (δ⁻) reside?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Non-polar covalent bond; partial negative charge on Hydrogen"
+        },
+        {
+          "id": "B",
+          "text": "Polar covalent bond; partial negative charge on Chlorine"
+        },
+        {
+          "id": "C",
+          "text": "Pure ionic bond; complete negative charge on Hydrogen"
+        },
+        {
+          "id": "D",
+          "text": "Metallic bond; charges are delocalized evenly"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The electronegativity difference ΔEN = 3.0 - 2.1 = 0.9, which lies in the polar covalent range (0.4 to 1.8). Because chlorine is more electronegative than hydrogen, it attracts the shared electron pair more strongly, acquiring a partial negative charge (δ⁻).",
+      "sourceReference": "Section 5.3, Page 162"
+    },
+    {
+      "id": "CHE-G09-U05-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Magnesium (Group IIA, Z = 12) reacts with Nitrogen (Group VA, Z = 7) to form an ionic binary compound. What is the correct chemical formula of the compound formed?",
+      "options": [
+        {
+          "id": "A",
+          "text": "MgN"
+        },
+        {
+          "id": "B",
+          "text": "Mg₂N₃"
+        },
+        {
+          "id": "C",
+          "text": "Mg₃N₂"
+        },
+        {
+          "id": "D",
+          "text": "MgN₂"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Magnesium loses 2 valence electrons to form Mg²⁺ cations. Nitrogen gains 3 valence electrons to form N³⁻ anions. To achieve electrical neutrality, 3 Mg²⁺ ions (total charge +6) combine with 2 N³⁻ ions (total charge -6), yielding the chemical formula Mg₃N₂.",
+      "sourceReference": "Section 5.2, Page 148"
+    },
+    {
+      "id": "CHE-G09-U05-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Metals can be hammered into thin sheets (malleability) and drawn into fine wires (ductility) without shattering. How does metallic bonding account for these mechanical properties?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Rigid ionic bonds prevent layers of metal atoms from shifting when struck."
+        },
+        {
+          "id": "B",
+          "text": "Delocalized valence electrons allow layers of positive metal cations to slide past one another without experiencing repulsions that cause fracture."
+        },
+        {
+          "id": "C",
+          "text": "Covalent bonds between metal atoms stretch like elastic rubber bands when pressure is applied."
+        },
+        {
+          "id": "D",
+          "text": "Metal atoms easily lose their nuclei, allowing the crystal structure to reform instantaneously."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In metals, the mobile 'sea' of delocalized valence electrons acts as a flexible cushion. When mechanical force is applied, layers of positive metal cations can slide past each other without breaking the metallic bond or causing like charges to repel and shatter the solid.",
+      "sourceReference": "Section 5.4, Page 169"
+    },
+    {
+      "id": "CHE-G09-U05-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In the Lewis structure of an Ammonia (NH₃) molecule, how many bonding pairs and unshared lone pairs of electrons surround the central nitrogen atom?",
+      "options": [
+        {
+          "id": "A",
+          "text": "3 bonding pairs and 1 lone pair"
+        },
+        {
+          "id": "B",
+          "text": "2 bonding pairs and 2 lone pairs"
+        },
+        {
+          "id": "C",
+          "text": "4 bonding pairs and 0 lone pairs"
+        },
+        {
+          "id": "D",
+          "text": "1 bonding pair and 3 lone pairs"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Nitrogen has 5 valence electrons. In NH₃, nitrogen forms 3 single covalent bonds with 3 hydrogen atoms (using 3 valence electrons) and retains 2 non-bonding electrons as 1 lone pair, completing its octet (8 electrons total).",
+      "sourceReference": "Section 5.3, Page 159"
+    },
+    {
+      "id": "CHE-G09-U05-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Magnesium Oxide (MgO) has a significantly higher melting point (2,852 °C) than Sodium Chloride (NaCl, 801 °C), even though both adopt similar face-centered cubic crystal structures. What primary factor accounts for the much stronger lattice energy of MgO?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Sodium ions have a greater positive charge than magnesium ions."
+        },
+        {
+          "id": "B",
+          "text": "MgO contains covalent bonds, whereas NaCl contains purely metallic bonds."
+        },
+        {
+          "id": "C",
+          "text": "The ionic charges in MgO (Mg²⁺ and O²⁻) are twice as high as those in NaCl (Na⁺ and Cl⁻), resulting in much stronger electrostatic attraction according to Coulomb's Law."
+        },
+        {
+          "id": "D",
+          "text": "The formula mass of NaCl is significantly higher than that of MgO."
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "According to Coulomb's Law, lattice energy is directly proportional to the product of ionic charges (q1 × q2) and inversely proportional to internuclear distance. In MgO, q1 × q2 = (+2) × (-2) = -4, whereas in NaCl, q1 × q2 = (+1) × (-1) = -1. The fourfold higher charge product in MgO produces significantly stronger electrostatic forces and a much higher melting point.",
+      "sourceReference": "Section 5.2, Page 152"
+    },
+    {
+      "id": "CHE-G09-U05-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Carbon Dioxide (CO₂) contains two highly polar Carbon-Oxygen double bonds (C=O), yet the overall CO₂ molecule is completely non-polar (dipole moment = 0). What explains this observation?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The electronegativity values of carbon and oxygen become equal when double bonds form."
+        },
+        {
+          "id": "B",
+          "text": "CO₂ has a linear geometry (O=C=O) in which the two equal and opposite bond dipole vectors cancel each other out."
+        },
+        {
+          "id": "C",
+          "text": "The lone pairs on oxygen pull electrons back to the central carbon atom."
+        },
+        {
+          "id": "D",
+          "text": "Carbon dioxide converts into an ionic liquid at room temperature."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Molecular polarity depends on both bond dipoles and molecular geometry. In CO₂, the linear structure (180° bond angle) causes the two polar C=O bond dipoles to point in exactly opposite directions, canceling out and giving the molecule a net zero dipole moment.",
+      "sourceReference": "Section 5.3, Page 164"
+    },
+    {
+      "id": "CHE-G09-U05-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Boron Trifluoride (BF₃) is a well-known exception to the octet rule. Which statement accurately describes the electronic structure around the central boron atom in BF₃?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The central boron atom has an expanded octet with 10 valence electrons."
+        },
+        {
+          "id": "B",
+          "text": "The central boron atom has an incomplete octet surrounded by only 6 valence electrons (3 bonding pairs)."
+        },
+        {
+          "id": "C",
+          "text": "The central boron atom possesses 4 unshared lone pairs of electrons."
+        },
+        {
+          "id": "D",
+          "text": "Boron forms ionic bonds with fluorine by losing 3 protons."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Boron (Group IIIA) has 3 valence electrons. In BF₃, it forms 3 single covalent bonds with 3 fluorine atoms, surrounded by a total of 6 valence electrons (incomplete octet). Because it lacks a full octet, BF₃ behaves as a strong Lewis acid.",
+      "sourceReference": "Section 5.3, Page 166"
+    },
+    {
+      "id": "CHE-G09-U05-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Water (H₂O, molar mass = 18 g/mol) has an abnormally high boiling point of 100 °C, whereas Hydrogen Sulfide (H₂S, molar mass = 34 g/mol) is a gas at room temperature with a boiling point of -60 °C. What intermolecular force accounts for this dramatic anomaly?",
+      "options": [
+        {
+          "id": "A",
+          "text": "H₂O molecules are held together by strong covalent network bonds in the liquid state."
+        },
+        {
+          "id": "B",
+          "text": "H₂O forms strong intermolecular Hydrogen Bonds due to the high electronegativity and small size of Oxygen, whereas H₂S experiences only weaker dipole-dipole and London dispersion forces."
+        },
+        {
+          "id": "C",
+          "text": "H₂S molecules decompose spontaneously into elemental sulfur solid at room temperature."
+        },
+        {
+          "id": "D",
+          "text": "H₂O is an ionic compound, whereas H₂S is a metallic alloy."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Hydrogen bonding occurs when hydrogen is directly bonded to a highly electronegative atom (N, O, F). Oxygen is significantly more electronegative and smaller than sulfur, allowing liquid H₂O to form strong intermolecular hydrogen bonds that require substantial thermal energy to break, resulting in a much higher boiling point than H₂S.",
+      "sourceReference": "Section 5.5, Page 175"
+    }
+  ]
 }

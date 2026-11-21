@@ -3,5 +3,411 @@
   "subject": "Chemistry",
   "unitNumber": 3,
   "unitTitle": "Industrial Chemistry",
-  "questions": []
+  "questions": [
+    {
+      "id": "CHE-G12-U03-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which of the following natural resources utilized as a raw material in chemical manufacturing is classified as a non-renewable resource?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Solar energy"
+        },
+        {
+          "id": "B",
+          "text": "Sugar cane crops"
+        },
+        {
+          "id": "C",
+          "text": "Petroleum (crude oil)"
+        },
+        {
+          "id": "D",
+          "text": "Timber from forests"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Non-renewable resources exist in fixed, finite quantities in nature and cannot be replenished on a human timescale once consumed; fossil fuels like petroleum and mineral ores belong to this category.",
+      "sourceReference": "Section 3.2.1, Page 139"
+    },
+    {
+      "id": "CHE-G12-U03-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In the industrial manufacture of nitric acid (HNO₃) via the Ostwald process, what catalyst is used in the initial high-temperature oxidation of ammonia gas?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Platinum-rhodium (Pt/Rh) gauze catalyst"
+        },
+        {
+          "id": "B",
+          "text": "Finely divided iron catalyst"
+        },
+        {
+          "id": "C",
+          "text": "Vanadium(V) oxide (V₂O₅) catalyst"
+        },
+        {
+          "id": "D",
+          "text": "Nickel oxide catalyst"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The first step of the Ostwald process involves the catalytic oxidation of NH₃ to NO with air at ~850 °C over a platinum or platinum-rhodium gauze catalyst.",
+      "sourceReference": "Section 3.3.2, Page 153"
+    },
+    {
+      "id": "CHE-G12-U03-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Urea, (NH₂)₂CO, is the most widely used solid nitrogenous fertilizer globally. What is the approximate percentage of nitrogen by mass in pure urea?",
+      "options": [
+        {
+          "id": "A",
+          "text": "21%"
+        },
+        {
+          "id": "B",
+          "text": "33%"
+        },
+        {
+          "id": "C",
+          "text": "46%"
+        },
+        {
+          "id": "D",
+          "text": "78%"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Pure urea has a molar mass of ~60.06 g/mol and contains two nitrogen atoms (2 × 14.01 = 28.02 g/mol N), yielding a high nitrogen content of (28.02 / 60.06) × 100% ≈ 46%.",
+      "sourceReference": "Section 3.3.3, Page 159"
+    },
+    {
+      "id": "CHE-G12-U03-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What primary network-forming raw material is used in the largest proportion during the industrial manufacture of ordinary soda-lime glass?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Bauxite (Al₂O₃)"
+        },
+        {
+          "id": "B",
+          "text": "Silica sand (SiO₂)"
+        },
+        {
+          "id": "C",
+          "text": "Gypsum (CaSO₄·2H₂O)"
+        },
+        {
+          "id": "D",
+          "text": "Limestone (CaCO₃)"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Silica sand (silicon dioxide, SiO₂) constitutes the primary structural component of glass, typically making up about 60% to 75% of the raw material batch.",
+      "sourceReference": "Section 3.4.1, Page 175"
+    },
+    {
+      "id": "CHE-G12-U03-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "The industrial saponification process for manufacturing commercial hard bar soap involves boiling animal fats or vegetable oils with an aqueous solution of which strong base?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Hydrochloric acid (HCl)"
+        },
+        {
+          "id": "B",
+          "text": "Sodium hydroxide (NaOH)"
+        },
+        {
+          "id": "C",
+          "text": "Calcium sulfate (CaSO₄)"
+        },
+        {
+          "id": "D",
+          "text": "Ammonium nitrate (NH₄NO₃)"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Hard soaps consist of sodium salts of long-chain fatty acids formed by hydrolyzing triglycerides (fats/oils) with caustic soda (sodium hydroxide, NaOH).",
+      "sourceReference": "Section 3.4.9, Page 198"
+    },
+    {
+      "id": "CHE-G12-U03-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In the Contact process for sulfuric acid manufacture, which catalyst and operating temperature are utilized to optimize the oxidation of sulfur dioxide (SO₂) to sulfur trioxide (SO₃)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Iron catalyst at 200 °C"
+        },
+        {
+          "id": "B",
+          "text": "Vanadium(V) oxide (V₂O₅) catalyst at 400–450 °C"
+        },
+        {
+          "id": "C",
+          "text": "Platinum catalyst at 900 °C"
+        },
+        {
+          "id": "D",
+          "text": "Nickel catalyst at 100 °C"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The catalytic oxidation 2SO₂(g) + O₂(g) ⇌ 2SO₃(g) is exothermic. An operating temperature of 400–450 °C combined with a V₂O₅ catalyst balances optimal reaction speed and high equilibrium yield.",
+      "sourceReference": "Section 3.3.4, Page 162"
+    },
+    {
+      "id": "CHE-G12-U03-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In the Solvay process for sodium carbonate (Na₂CO₃) production, what primary chemical byproduct is formed during ammonia recovery when slaked lime reacts with ammonium chloride?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Sodium bicarbonate (NaHCO₃)"
+        },
+        {
+          "id": "B",
+          "text": "Calcium chloride (CaCl₂)"
+        },
+        {
+          "id": "C",
+          "text": "Carbon dioxide gas (CO₂)"
+        },
+        {
+          "id": "D",
+          "text": "Sulfuric acid (H₂SO₄)"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Ammonia is recycled in the Solvay process by reacting Ca(OH)₂ with NH₄Cl: Ca(OH)₂ + 2NH₄Cl → CaCl₂ + 2NH₃ + 2H₂O. The main byproduct generated is calcium chloride (CaCl₂).",
+      "sourceReference": "Section 3.3.6, Page 171"
+    },
+    {
+      "id": "CHE-G12-U03-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In Portland cement manufacturing, why is approximately 2–3% gypsum (CaSO₄·2H₂O) added to the cooled clinker before final pulverization?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To lower the required sintering temperature inside the rotary kiln."
+        },
+        {
+          "id": "B",
+          "text": "To retard (slow down) the initial setting rate of cement when mixed with water."
+        },
+        {
+          "id": "C",
+          "text": "To increase the concentration of tricalcium aluminate in the clinker."
+        },
+        {
+          "id": "D",
+          "text": "To impart a dark grey coloration to the finished product."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Gypsum acts as a setting retarder. It reacts with tricalcium aluminate to prevent instant flash-setting, ensuring that hydrated cement remains workable long enough for placement.",
+      "sourceReference": "Section 3.4.3, Page 181"
+    },
+    {
+      "id": "CHE-G12-U03-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which dominant chemical pulping process uses an alkaline digestion liquor consisting of sodium hydroxide (NaOH) and sodium sulfide (Na₂S) to dissolve lignin from wood chips?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Mechanical pulping process"
+        },
+        {
+          "id": "B",
+          "text": "Kraft (sulfate) process"
+        },
+        {
+          "id": "C",
+          "text": "Sulfite process"
+        },
+        {
+          "id": "D",
+          "text": "Thermomechanical pulping process"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The Kraft process is the principal industrial chemical pulping method. It employs a strongly basic cooking liquor (aqueous NaOH + Na₂S) at ~170 °C to break down lignin without degrading cellulose fibers.",
+      "sourceReference": "Section 3.4.5, Page 186"
+    },
+    {
+      "id": "CHE-G12-U03-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In the preparatory stages of leather manufacturing at a tannery, what is the key purpose of the 'liming' step?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To completely dehydrate the hide before applying chemical dyes."
+        },
+        {
+          "id": "B",
+          "text": "To swell the collagen structure and loosen hair roots for easy hair removal."
+        },
+        {
+          "id": "C",
+          "text": "To fix trivalent chromium salts permanently onto protein chains."
+        },
+        {
+          "id": "D",
+          "text": "To neutralize residual organic acids in the leather."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Liming involves immersing hides in slaked lime solution, Ca(OH)₂, which hydrolyzes hair protein bonds, loosens hair, and swells the hide to allow mechanical de-hairing.",
+      "sourceReference": "Section 3.4.6, Page 187"
+    },
+    {
+      "id": "CHE-G12-U03-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Diammonium monohydrogen phosphate (DAP) is a concentrated NP fertilizer produced by reacting phosphoric acid (H₃PO₄) with ammonia (NH₃) in a 1:2 molar ratio. What is the chemical formula of DAP?",
+      "options": [
+        {
+          "id": "A",
+          "text": "NH₄H₂PO₄"
+        },
+        {
+          "id": "B",
+          "text": "(NH₄)₂HPO₄"
+        },
+        {
+          "id": "C",
+          "text": "(NH₄)₃PO₄"
+        },
+        {
+          "id": "D",
+          "text": "(NH₄)₂SO₄"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Reacting 1 mole of H₃PO₄ with 2 moles of NH₃ yields diammonium hydrogen phosphate, (NH₄)₂HPO₄, containing approximately 18% N and 46% P₂O₅.",
+      "sourceReference": "Section 3.3.3, Page 160"
+    },
+    {
+      "id": "CHE-G12-U03-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "In a Haber-Bosch industrial plant, 56.0 kg of N₂ gas (molar mass = 28.0 g/mol) is reacted with 18.0 kg of H₂ gas (molar mass = 2.0 g/mol). If the process achieves an 80.0% overall conversion yield to ammonia (NH₃, molar mass = 17.0 g/mol), what mass of liquid ammonia is collected?",
+      "options": [
+        {
+          "id": "A",
+          "text": "68.0 kg"
+        },
+        {
+          "id": "B",
+          "text": "54.4 kg"
+        },
+        {
+          "id": "C",
+          "text": "102.0 kg"
+        },
+        {
+          "id": "D",
+          "text": "40.8 kg"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "N₂ moles = 56000 g / 28 g/mol = 2000 mol; H₂ moles = 18000 g / 2 g/mol = 9000 mol. Stoichiometric ratio is 1:3, so N₂ is limiting (requires 6000 mol H₂). Theoretical NH₃ yield = 2 × 2000 mol = 4000 mol = 68.0 kg. At 80.0% conversion: actual yield = 0.80 × 68.0 kg = 54.4 kg.",
+      "sourceReference": "Section 3.3.1, Page 144"
+    },
+    {
+      "id": "CHE-G12-U03-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "In the Contact process, sulfur trioxide gas (SO₃) is absorbed into 98% concentrated sulfuric acid to form oleum (H₂S₂O⑺) rather than being dissolved directly in water. What chemical engineering problem prevents direct absorption into water?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The reaction of SO₃ with water is endothermic and stops spontaneously."
+        },
+        {
+          "id": "B",
+          "text": "SO₃ is completely insoluble in pure water at atmospheric pressure."
+        },
+        {
+          "id": "C",
+          "text": "Direct reaction with water is extremely exothermic, creating a fine acid mist/fog that escapes without condensing."
+        },
+        {
+          "id": "D",
+          "text": "Direct reaction produces solid elemental sulfur precipitates that clog delivery pipes."
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Direct addition of SO₃ to water is intensely exothermic, boiling the water and creating a dense, fine fog of H₂SO₄ droplets that cannot be easily trapped or condensed in industrial equipment.",
+      "sourceReference": "Section 3.3.4, Page 163"
+    },
+    {
+      "id": "CHE-G12-U03-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "In the Castner-Kellner cell for chlor-alkali electrolysis, what are the primary chemical transformations taking place at the mercury cathode in the cell and in the denuder vessel, respectively?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Cell cathode: H⁺ reduces to H₂; Denuder: Na⁺ reduces to Na metal."
+        },
+        {
+          "id": "B",
+          "text": "Cell cathode: Na⁺ reduces to form sodium amalgam (Na-Hg); Denuder: Sodium amalgam reacts with water to form NaOH(aq), H₂(g), and regenerated Hg(l)."
+        },
+        {
+          "id": "C",
+          "text": "Cell cathode: Cl⁻ oxidizes to Cl₂; Denuder: Ca(OH)₂ reacts with NaCl."
+        },
+        {
+          "id": "D",
+          "text": "Cell cathode: Water reduces to OH⁻ and H₂; Denuder: Mercury oxidizes to mercury oxide."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "At the liquid Hg cathode in the electrolytic cell: Na⁺ + e⁻ + Hg → Na-Hg. In the separate denuder unit, sodium amalgam reacts with water: 2Na-Hg + 2H₂O → 2NaOH + H₂ + 2Hg, producing pure caustic soda.",
+      "sourceReference": "Section 3.3.7, Page 172"
+    },
+    {
+      "id": "CHE-G12-U03-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "In a Solvay plant, 100.0 metric tons of pure limestone (CaCO₃, molar mass = 100.0 g/mol) is processed according to the overall reaction CaCO₃ + 2NaCl → Na₂CO₃ + CaCl₂. If the plant operates at a 90.0% overall efficiency, what mass of pure soda ash (Na₂CO₃, molar mass = 106.0 g/mol) is obtained?",
+      "options": [
+        {
+          "id": "A",
+          "text": "106.0 metric tons"
+        },
+        {
+          "id": "B",
+          "text": "95.4 metric tons"
+        },
+        {
+          "id": "C",
+          "text": "47.7 metric tons"
+        },
+        {
+          "id": "D",
+          "text": "117.8 metric tons"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "100.0 metric tons of CaCO₃ = 1.00 megamole. Theoretical yield of Na₂CO₃ = 1.00 megamole = 106.0 metric tons. Operating at 90.0% yield: actual mass produced = 0.90 × 106.0 metric tons = 95.4 metric tons.",
+      "sourceReference": "Section 3.3.6, Page 171"
+    }
+  ]
 }

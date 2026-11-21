@@ -3,5 +3,411 @@
   "subject": "Chemistry",
   "unitNumber": 6,
   "unitTitle": "Hydrocarbons and Their Natural Sources",
-  "questions": []
+  "questions": [
+    {
+      "id": "CHE-G10-U06-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which chemical element is present in all organic compounds, forming the fundamental structural backbone of organic chemistry?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Silicon"
+        },
+        {
+          "id": "B",
+          "text": "Carbon"
+        },
+        {
+          "id": "C",
+          "text": "Nitrogen"
+        },
+        {
+          "id": "D",
+          "text": "Sulfur"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Carbon is the essential element present in all organic compounds due to its unique ability to form four covalent bonds and undergo catenation (chain formation).",
+      "sourceReference": "Section 6.1, Page 245"
+    },
+    {
+      "id": "CHE-G10-U06-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which general chemical formula represents the homologous series of open-chain saturated hydrocarbons (alkanes)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "C_n H_{2n+2}"
+        },
+        {
+          "id": "B",
+          "text": "C_n H_{2n}"
+        },
+        {
+          "id": "C",
+          "text": "C_n H_{2n-2}"
+        },
+        {
+          "id": "D",
+          "text": "C_n H_{2n-6}"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Alkanes are saturated hydrocarbons containing single carbon-carbon bonds with the general formula C_n H_{2n+2}.",
+      "sourceReference": "Section 6.2, Page 248"
+    },
+    {
+      "id": "CHE-G10-U06-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is the IUPAC systematic name for the unbranched alkane containing four carbon atoms (C₄H₁₀)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Methane"
+        },
+        {
+          "id": "B",
+          "text": "Ethane"
+        },
+        {
+          "id": "C",
+          "text": "Propane"
+        },
+        {
+          "id": "D",
+          "text": "Butane"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "The prefix 'but-' denotes a four-carbon chain, so the unbranched four-carbon alkane C₄H₁₀ is named butane.",
+      "sourceReference": "Section 6.2, Page 250"
+    },
+    {
+      "id": "CHE-G10-U06-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which structural feature distinguishes alkenes from alkanes?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Presence of only carbon-carbon single bonds"
+        },
+        {
+          "id": "B",
+          "text": "Presence of at least one carbon-carbon double bond (C=C)"
+        },
+        {
+          "id": "C",
+          "text": "Presence of at least one carbon-carbon triple bond (C≡C)"
+        },
+        {
+          "id": "D",
+          "text": "Presence of a delocalized aromatic benzene ring"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Alkenes are unsaturated hydrocarbons characterized by the presence of at least one carbon-carbon double bond (C=C).",
+      "sourceReference": "Section 6.3, Page 262"
+    },
+    {
+      "id": "CHE-G10-U06-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What industrial process is used in petroleum refineries to separate crude oil into different hydrocarbon fractions based on their boiling points?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Fractional distillation"
+        },
+        {
+          "id": "B",
+          "text": "Catalytic cracking"
+        },
+        {
+          "id": "C",
+          "text": "Polymerization"
+        },
+        {
+          "id": "D",
+          "text": "Fermentation"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Fractional distillation separates crude petroleum into distinct fractions (gasoline, kerosene, diesel, etc.) based on differences in their boiling point ranges.",
+      "sourceReference": "Section 6.5, Page 285"
+    },
+    {
+      "id": "CHE-G10-U06-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What is the correct IUPAC name for the branched alkane with the structural formula CH₃-CH(CH₃)-CH₂-CH₃?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Pentane"
+        },
+        {
+          "id": "B",
+          "text": "2-Methylbutane"
+        },
+        {
+          "id": "C",
+          "text": "3-Methylbutane"
+        },
+        {
+          "id": "D",
+          "text": "Dimethylpropane"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The longest continuous carbon chain has four carbons (butane). Numbering from the left gives the methyl substituent the lowest location number at C-2, yielding 2-methylbutane.",
+      "sourceReference": "Section 6.2, Page 253"
+    },
+    {
+      "id": "CHE-G10-U06-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "When methane (CH₄) reacts with chlorine gas (Cl₂) in the presence of ultraviolet (UV) light, which type of chemical reaction takes place?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Electrophilic addition reaction"
+        },
+        {
+          "id": "B",
+          "text": "Free-radical substitution reaction"
+        },
+        {
+          "id": "C",
+          "text": "Dehydration reaction"
+        },
+        {
+          "id": "D",
+          "text": "Polymerization reaction"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Alkanes undergo substitution reactions in which hydrogen atoms are sequentially replaced by halogen atoms via a free-radical mechanism initiated by UV light.",
+      "sourceReference": "Section 6.2, Page 258"
+    },
+    {
+      "id": "CHE-G10-U06-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How many constitutional (structural) isomers exist for the molecular formula C₄H₁₀?",
+      "options": [
+        {
+          "id": "A",
+          "text": "2"
+        },
+        {
+          "id": "B",
+          "text": "3"
+        },
+        {
+          "id": "C",
+          "text": "4"
+        },
+        {
+          "id": "D",
+          "text": "5"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "C₄H₁₀ has exactly two structural isomers: butane (n-butane, CH₃-CH₂-CH₂-CH₃) and 2-methylpropane (isobutane, CH₃-CH(CH₃)-CH₃).",
+      "sourceReference": "Section 6.2, Page 252"
+    },
+    {
+      "id": "CHE-G10-U06-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which laboratory reagent is commonly used to distinguish unsaturated hydrocarbons (alkenes and alkynes) from saturated hydrocarbons (alkanes) by undergoing rapid decolorization?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Aqueous sodium hydroxide"
+        },
+        {
+          "id": "B",
+          "text": "Bromine water (Br₂ in CCl₄)"
+        },
+        {
+          "id": "C",
+          "text": "Concentrated hydrochloric acid"
+        },
+        {
+          "id": "D",
+          "text": "Benedict's solution"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Unsaturated hydrocarbons rapidly add across carbon-carbon double or triple bonds, turning the reddish-brown color of bromine water colorless.",
+      "sourceReference": "Section 6.3, Page 268"
+    },
+    {
+      "id": "CHE-G10-U06-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What is the general formula for the homologous series of aliphatic alkynes containing one triple bond?",
+      "options": [
+        {
+          "id": "A",
+          "text": "C_n H_{2n+2}"
+        },
+        {
+          "id": "B",
+          "text": "C_n H_{2n}"
+        },
+        {
+          "id": "C",
+          "text": "C_n H_{2n-2}"
+        },
+        {
+          "id": "D",
+          "text": "C_n H_{2n-4}"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Alkynes contain one carbon-carbon triple bond and have the general molecular formula C_n H_{2n-2}.",
+      "sourceReference": "Section 6.3, Page 273"
+    },
+    {
+      "id": "CHE-G10-U06-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In petroleum refining, high-boiling heavy gas oil fractions are broken down into smaller, high-demand gasoline molecules using heat and catalysts. What is this reaction process called?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Cracking"
+        },
+        {
+          "id": "B",
+          "text": "Reforming"
+        },
+        {
+          "id": "C",
+          "text": "Saponification"
+        },
+        {
+          "id": "D",
+          "text": "Hydrogenation"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Cracking is the thermal or catalytic decomposition of large, heavy hydrocarbon molecules into smaller, higher-value alkanes and alkenes.",
+      "sourceReference": "Section 6.5, Page 288"
+    },
+    {
+      "id": "CHE-G10-U06-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "According to Markovnikov's rule, what is the major organic product formed when propene (CH₃-CH=CH₂) reacts with hydrogen bromide (HBr)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "1-Bromopropane"
+        },
+        {
+          "id": "B",
+          "text": "2-Bromopropane"
+        },
+        {
+          "id": "C",
+          "text": "1,2-Dibromopropane"
+        },
+        {
+          "id": "D",
+          "text": "Propyl bromide"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Markovnikov's rule states that when an unsymmetrical reagent (HBr) adds to an unsymmetrical alkene, the hydrogen atom attaches to the double-bonded carbon with more hydrogen atoms (C-1), while the bromide attaches to the more substituted carbon (C-2), forming 2-bromopropane as the major product.",
+      "sourceReference": "Section 6.3, Page 269"
+    },
+    {
+      "id": "CHE-G10-U06-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Benzene (C₆H₆) exhibits unusual chemical stability and preferentially undergoes substitution reactions rather than addition reactions. What structural feature accounts for this behavior?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Strong polar single bonds between carbon and hydrogen atoms."
+        },
+        {
+          "id": "B",
+          "text": "Delocalization of six pi (π) electrons across a planar cyclic ring system, providing extra resonance energy."
+        },
+        {
+          "id": "C",
+          "text": "Rapid equilibrium between linear open-chain isomers."
+        },
+        {
+          "id": "D",
+          "text": "Complete absence of pi bonds in the ring."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Benzene has a planar hexagonal ring where six pi electrons are completely delocalized across all six carbon atoms, producing high resonance stabilization energy that resists addition reactions that would disrupt the aromatic system.",
+      "sourceReference": "Section 6.4, Page 280"
+    },
+    {
+      "id": "CHE-G10-U06-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Complete combustion of 1.0 mole of a gaseous hydrocarbon X requires exactly 5.0 moles of oxygen gas (O₂) and yields 3.0 moles of carbon dioxide (CO₂) and 4.0 moles of water vapor (H₂O). What is the molecular formula of hydrocarbon X?",
+      "options": [
+        {
+          "id": "A",
+          "text": "C₃H₆"
+        },
+        {
+          "id": "B",
+          "text": "C₃H₈"
+        },
+        {
+          "id": "C",
+          "text": "C₄H₁₀"
+        },
+        {
+          "id": "D",
+          "text": "C₂H₆"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The balanced combustion equation is X + 5 O₂ → 3 CO₂ + 4 H₂O. Balancing carbon atoms gives 3 C, and balancing hydrogen atoms gives 4 × 2 = 8 H. Thus, X is propane (C₃H₈). Check oxygen: 3(2) + 4(1) = 10 O atoms = 5 O₂ molecules.",
+      "sourceReference": "Section 6.2, Page 256"
+    },
+    {
+      "id": "CHE-G10-U06-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "An unknown open-chain hydrocarbon X with molecular formula C₅H₁₀ rapidly decolorizes bromine water. Catalytic hydrogenation of X with H₂ in the presence of a Nickel catalyst yields 2-methylbutane. What is the IUPAC name of hydrocarbon X?",
+      "options": [
+        {
+          "id": "A",
+          "text": "3-Methyl-1-butene"
+        },
+        {
+          "id": "B",
+          "text": "Pentane"
+        },
+        {
+          "id": "C",
+          "text": "Cyclopentane"
+        },
+        {
+          "id": "D",
+          "text": "2,2-Dimethylpropane"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The formula C₅H₁₀ with bromine decolorization indicates an alkene. Hydrogenation yields 2-methylbutane (isopentane), meaning the carbon skeleton is branched with a methyl group at C-2. The double-bond isomer matching this skeleton is 3-methyl-1-butene (or 2-methyl-2-butene/2-methyl-1-butene). Among the given options, 3-methyl-1-butene is the correct branched alkene.",
+      "sourceReference": "Section 6.3, Page 266"
+    }
+  ]
 }

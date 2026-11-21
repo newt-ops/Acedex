@@ -3,5 +3,411 @@
   "subject": "Geography",
   "unitNumber": 1,
   "unitTitle": "Geological History and Topography of Ethiopia",
-  "questions": []
+  "questions": [
+    {
+      "id": "GEO-G09-U01-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Who among the following ancient scholars coined the term 'Geography' and defined it as 'the field of study that deals with the description of the earth'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Alexander Von Humboldt"
+        },
+        {
+          "id": "B",
+          "text": "Eratosthenes"
+        },
+        {
+          "id": "C",
+          "text": "Richard Hartshorne"
+        },
+        {
+          "id": "D",
+          "text": "Maurice Yeates"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Eratosthenes (276–194 BC), a famous Greek philosopher, coined the term 'Geography' by combining two Greek words: Geo (earth) and Graphos (writing/description), defining it as the description of the earth.",
+      "sourceReference": "Grade 9 Geography Textbook, Section 1.1, Page 3"
+    },
+    {
+      "id": "GEO-G09-U01-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which sub-branch of physical geography specifically studies landforms, their spatial distribution, origin, and the forces that modify them?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Climatology"
+        },
+        {
+          "id": "B",
+          "text": "Biogeography"
+        },
+        {
+          "id": "C",
+          "text": "Geomorphology"
+        },
+        {
+          "id": "D",
+          "text": "Oceanography"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Geomorphology is the branch of physical geography concerned with the study of landforms, their spatial distribution, origin, and the endogenic and exogenic forces that change them.",
+      "sourceReference": "Grade 9 Geography Textbook, Section 1.1, Page 6"
+    },
+    {
+      "id": "GEO-G09-U01-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is the absolute astronomical location of Ethiopia in terms of latitude and longitude?",
+      "options": [
+        {
+          "id": "A",
+          "text": "3°N to 15°N latitudes and 33°E to 48°E longitudes"
+        },
+        {
+          "id": "B",
+          "text": "3°S to 15°S latitudes and 33°W to 48°W longitudes"
+        },
+        {
+          "id": "C",
+          "text": "4°N to 18°N latitudes and 34°E to 44°E longitudes"
+        },
+        {
+          "id": "D",
+          "text": "5°N to 12°N latitudes and 30°E to 50°E longitudes"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Ethiopia is located in Eastern Africa (Horn of Africa), extending astronomically between 3°N to 15°N latitudes and 33°E to 48°E longitudes.",
+      "sourceReference": "Grade 9 Geography Textbook, Section 1.2, Page 8 & Page 34"
+    },
+    {
+      "id": "GEO-G09-U01-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "During which geological era did the major structural faulting that formed the Ethiopian Rift Valley System take place?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Precambrian Era"
+        },
+        {
+          "id": "B",
+          "text": "Paleozoic Era"
+        },
+        {
+          "id": "C",
+          "text": "Mesozoic Era"
+        },
+        {
+          "id": "D",
+          "text": "Cenozoic Era"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "Major tectonic faulting that created the East African Rift Valley system and volcanic eruptions resulting in the Trappean lava series occurred during the Cenozoic Era (specifically during its Tertiary period).",
+      "sourceReference": "Grade 9 Geography Textbook, Section 1.3, Page 19–20"
+    },
+    {
+      "id": "GEO-G09-U01-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which pair of elevation points represents the highest peak and the lowest depression in Ethiopia, respectively?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Mount Batu (4307 m) and Ogaden Plain (500 m)"
+        },
+        {
+          "id": "B",
+          "text": "Mount Gughe (4200 m) and Baro Lowland (300 m)"
+        },
+        {
+          "id": "C",
+          "text": "Ras Dashen (4620 m) and Kobar Sink (-116 m)"
+        },
+        {
+          "id": "D",
+          "text": "Mount Tullu Dimtu (4377 m) and Afar Triangle (0 m)"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Topographic variation in Ethiopia ranges from its highest point at Ras Dashen in the Semien Mountains (4620 meters above sea level) to its lowest point at the Kobar Sink / Dallol Depression (116 meters below sea level).",
+      "sourceReference": "Grade 9 Geography Textbook, Section 1.3, Page 21"
+    },
+    {
+      "id": "GEO-G09-U01-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which 20th-century geographer defined geography as a science concerned with 'the rational development and testing of theories that explain and predict the spatial distribution and locations of things and phenomena'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Richard Hartshorne"
+        },
+        {
+          "id": "B",
+          "text": "Maurice Yeates"
+        },
+        {
+          "id": "C",
+          "text": "Alexander Von Humboldt"
+        },
+        {
+          "id": "D",
+          "text": "Eratosthenes"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Maurice Yeates (1968) defined geography from a quantitative perspective, emphasizing the formulation and testing of theories to explain and predict spatial distributions and locations.",
+      "sourceReference": "Grade 9 Geography Textbook, Section 1.1, Page 3"
+    },
+    {
+      "id": "GEO-G09-U01-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How does a country's vicinal location differ from its strategic (natural) location?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Vicinal location is based on grid coordinates, while strategic location is based on climate zones."
+        },
+        {
+          "id": "B",
+          "text": "Vicinal location refers to position relative to neighboring states, while strategic location refers to position relative to water bodies and major landmasses."
+        },
+        {
+          "id": "C",
+          "text": "Vicinal location measures land compactness, while strategic location measures boundary length."
+        },
+        {
+          "id": "D",
+          "text": "Vicinal location determines elevation, while strategic location determines time zones."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Relative location is expressed in two ways: vicinal location describes a country's position relative to its immediate neighboring countries, whereas strategic (natural) location describes its location relative to water bodies and major continental landmasses.",
+      "sourceReference": "Grade 9 Geography Textbook, Section 1.2, Page 8"
+    },
+    {
+      "id": "GEO-G09-U01-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In analyzing a country's shape compactness, what does a high Area-to-Boundary (A/B) ratio signify?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The country has a highly elongated and narrow territorial shape."
+        },
+        {
+          "id": "B",
+          "text": "The country possesses a larger land area per unit of boundary length, indicating greater compactness."
+        },
+        {
+          "id": "C",
+          "text": "The country has a fragmented shape split into multiple isolated units."
+        },
+        {
+          "id": "D",
+          "text": "The boundary length is significantly longer than the area of an equivalent inscribing circle."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The Area-to-Boundary (A/B) ratio compares total land area to boundary length. A larger area per unit of boundary length reflects greater spatial compactness, reducing border defense and administrative length per square kilometer.",
+      "sourceReference": "Grade 9 Geography Textbook, Section 1.2, Page 12"
+    },
+    {
+      "id": "GEO-G09-U01-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which of the following sequences correctly presents the sedimentary rock layers formed in Ethiopia during the Mesozoic Era from bottom (oldest) to top (youngest)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Upper Sandstone → Hintalo Limestone → Adigrat Sandstone"
+        },
+        {
+          "id": "B",
+          "text": "Adigrat Sandstone → Upper Sandstone → Hintalo Limestone"
+        },
+        {
+          "id": "C",
+          "text": "Adigrat Sandstone → Hintalo Limestone → Upper Sandstone"
+        },
+        {
+          "id": "D",
+          "text": "Hintalo Limestone → Adigrat Sandstone → Upper Sandstone"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "During the Mesozoic marine transgression (SE to NW), Adigrat Sandstone was deposited first, followed by Hintalo Limestone as sea depth increased. When the sea regressed (NW to SE), Upper Sandstone was deposited on top.",
+      "sourceReference": "Grade 9 Geography Textbook, Section 1.3, Page 18–19"
+    },
+    {
+      "id": "GEO-G09-U01-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which sub-division of the Western Highlands of Ethiopia is a dome-shaped plateau that acts as a central watershed separating the Abbay, Awash, and Omo-Gibe river basins?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Tigray Plateau"
+        },
+        {
+          "id": "B",
+          "text": "North-Central Massifs"
+        },
+        {
+          "id": "C",
+          "text": "Shewan Plateau"
+        },
+        {
+          "id": "D",
+          "text": "Southwestern Highlands"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The Shewan Plateau is the smallest sub-division of the Western Highlands. It is a dome-shaped plateau that serves as a major watershed separating the Abbay, Awash, and Omo-Gibe river basins.",
+      "sourceReference": "Grade 9 Geography Textbook, Section 1.3, Page 25"
+    },
+    {
+      "id": "GEO-G09-U01-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which sub-division of the Ethiopian Rift Valley system forms a wide, funnel-shaped triangular depression in the north where the Red Sea, Gulf of Aden, and East African rifts meet?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Main Ethiopian Rift"
+        },
+        {
+          "id": "B",
+          "text": "Afar Triangle"
+        },
+        {
+          "id": "C",
+          "text": "Chew-Bahir Rift"
+        },
+        {
+          "id": "D",
+          "text": "Lakes Region Rift"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The Ethiopian Rift Valley System is divided into three parts: the northern Afar Triangle (a low, wide triangular depression), the central Main Ethiopian Rift (Lakes Region), and the southern Chew-Bahir Rift.",
+      "sourceReference": "Grade 9 Geography Textbook, Section 1.3, Page 31–32"
+    },
+    {
+      "id": "GEO-G09-U01-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Given that Ethiopia has a land area of 1,106,000 km² and an actual boundary length of 5,260 km, its theoretical equivalent circle radius is ~593.5 km (giving a circumference C ≈ 3,727 km). What is Ethiopia's Boundary-to-Circumference (B/C) ratio, and what does it indicate about its shape?",
+      "options": [
+        {
+          "id": "A",
+          "text": "B/C = 0.71, indicating an elongated linear shape"
+        },
+        {
+          "id": "B",
+          "text": "B/C = 1.41, indicating an essentially compact (circular) shape"
+        },
+        {
+          "id": "C",
+          "text": "B/C = 2.45, indicating an extremely fragmented archipelago shape"
+        },
+        {
+          "id": "D",
+          "text": "B/C = 0.35, indicating a truncated border shape"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The B/C ratio is calculated by dividing actual boundary length (5,260 km) by the circumference of an equivalent area circle (C = 2 * π * r ≈ 3,727 km). 5260 / 3727 ≈ 1.41. Values between 0.5 and 1.5 indicate approximate compactness.",
+      "sourceReference": "Grade 9 Geography Textbook, Section 1.2, Page 12–13"
+    },
+    {
+      "id": "GEO-G09-U01-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Why are Paleozoic sedimentary rock formations virtually non-existent across Ethiopia, creating an unconformity between Precambrian basement rocks and Mesozoic sediments?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The Paleozoic Era was dominated by volcanic eruptions that covered all sediments in thick granite."
+        },
+        {
+          "id": "B",
+          "text": "The Paleozoic Era was a period of prolonged land uplift and intense denudation (peneplanation) without marine deposition."
+        },
+        {
+          "id": "C",
+          "text": "Marine transgression occurred continuously, dissolving all pre-existing rock layers into ocean trenches."
+        },
+        {
+          "id": "D",
+          "text": "Severe tectonic folding compressed all sedimentary deposits into metamorphic basement complex."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "During the Paleozoic Era (600 to 250 million years ago), Ethiopia experienced prolonged epeirogenic uplift and denudation (peneplanation). Because there was no marine transgression during this era, sedimentary rocks were not formed, resulting in a major geological gap.",
+      "sourceReference": "Grade 9 Geography Textbook, Section 1.3, Page 17–18"
+    },
+    {
+      "id": "GEO-G09-U01-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "In central and northern Tigray, Mesozoic sandstones and limestones as well as Precambrian crystalline rocks appear directly on the surface as outcrops. What geological process accounts for the absence of the Tertiary Trappean basalt cap in these areas?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Tertiary volcanic activity occurred exclusively in the Rift Valley and never reached northern Ethiopia."
+        },
+        {
+          "id": "B",
+          "text": "Post-Tertiary uplift caused severe water erosion that stripped away the overlying basaltic lava layers, exposing older rocks."
+        },
+        {
+          "id": "C",
+          "text": "Glacial action during the Quaternary period completely dissolved the basaltic lava formations."
+        },
+        {
+          "id": "D",
+          "text": "Submarine faulting caused the crystalline basement rocks to thrust over the volcanic rocks."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Epeirogenic uplift during the Cenozoic Era initiated rapid river erosion. In northern areas like central and northern Tigray, continuous erosion stripped away the overlying Tertiary Trappean basalt, exposing underlying Mesozoic sedimentary rocks and Precambrian basement rocks.",
+      "sourceReference": "Grade 9 Geography Textbook, Section 1.3, Page 17 & Page 24"
+    },
+    {
+      "id": "GEO-G09-U01-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Which statement accurately contrasts the physical and climatic characteristics of the Baro-Akobo lowland with those of the Ogaden lowland?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Baro-Akobo is an eastern arid lowland, while Ogaden is a western high-rainfall lowland."
+        },
+        {
+          "id": "B",
+          "text": "Baro-Akobo is the wettest western lowland due to equatorial winds, while Ogaden is an extensive southeastern lowland with low rainfall covered by sandstones and marine deposits."
+        },
+        {
+          "id": "C",
+          "text": "Baro-Akobo lowland is covered by Quaternary marine salt beds, while Ogaden lowland is covered by Trappean volcanic basalt."
+        },
+        {
+          "id": "D",
+          "text": "Both lowlands lie inside the Rift Valley floor and have identical hyper-arid desert climates."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The Baro-Akobo lowland (Western Lowlands) is the wettest lowland in Ethiopia due to moisture-laden rain-bearing winds. In contrast, the Ogaden lowland (Southeastern Lowlands) experiences low annual rainfall (below 500 mm), harsh aridity, and surfaces covered by sandstones and recent marine sediments.",
+      "sourceReference": "Grade 9 Geography Textbook, Section 1.3, Page 27 & Page 29"
+    }
+  ]
 }

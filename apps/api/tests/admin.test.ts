@@ -51,7 +51,7 @@ describe('Admin Management Engine (RBAC Protected)', () => {
       displayName: 'Admin Staff',
       role: 'admin',
       status: 'active',
-      authProvider: 'google',
+      authProvider: 'phone',
     });
 
     adminToken = jwt.sign(

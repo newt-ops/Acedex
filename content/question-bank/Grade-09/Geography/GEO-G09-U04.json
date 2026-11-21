@@ -3,5 +3,411 @@
   "subject": "Geography",
   "unitNumber": 4,
   "unitTitle": "Population of Ethiopia",
-  "questions": []
+  "questions": [
+    {
+      "id": "GEO-G09-U04-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is the primary focus of Population Geography as a specialized branch of human geography?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The study of spatial distribution, composition, growth, and migration of human populations in relation to the environment."
+        },
+        {
+          "id": "B",
+          "text": "The physical classification of rock layers and landform evolution."
+        },
+        {
+          "id": "C",
+          "text": "The measurement of ocean currents, tides, and marine life distribution."
+        },
+        {
+          "id": "D",
+          "text": "The mapping of planetary orbits and atmospheric pressure belts."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Population geography is a specialized sub-branch of human geography concerned with spatial variations in human population numbers, composition, growth, and migration patterns in relation to physical and cultural environments.",
+      "sourceReference": "Grade 9 Geography Textbook, Section 4.1, Page 86–87"
+    },
+    {
+      "id": "GEO-G09-U04-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "According to demographic data, what is Ethiopia's continental rank in terms of total population size in Africa?",
+      "options": [
+        {
+          "id": "A",
+          "text": "First, ahead of Nigeria"
+        },
+        {
+          "id": "B",
+          "text": "Second, behind Nigeria"
+        },
+        {
+          "id": "C",
+          "text": "Fifth, behind Egypt and South Africa"
+        },
+        {
+          "id": "D",
+          "text": "Tenth, behind Democratic Republic of Congo"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Ethiopia is the second most populous nation in Africa (after Nigeria), with a rapidly growing population exceeding 115 million.",
+      "sourceReference": "Grade 9 Geography Textbook, Section 4.2, Page 88–89"
+    },
+    {
+      "id": "GEO-G09-U04-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What feature characterizes the general shape of Ethiopia's age-sex population pyramid?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A narrow base and broad top, indicating a high proportion of elderly citizens."
+        },
+        {
+          "id": "B",
+          "text": "A broad base that narrows sharply towards the top, reflecting high birth rates and a large young population."
+        },
+        {
+          "id": "C",
+          "text": "A barrel-shaped middle section, reflecting zero population growth."
+        },
+        {
+          "id": "D",
+          "text": "A rectangular column, indicating equal proportions across all age cohorts."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The population pyramid of Ethiopia features a broad base that narrows sharply towards the apex. This shape signifies high fertility rates and a large percentage of young dependent population under 15 years of age.",
+      "sourceReference": "Grade 9 Geography Textbook, Section 4.3, Page 91–93"
+    },
+    {
+      "id": "GEO-G09-U04-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which physical factor is the primary determinant of population distribution across Ethiopia?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Longitude"
+        },
+        {
+          "id": "B",
+          "text": "Distance from the Atlantic Ocean"
+        },
+        {
+          "id": "C",
+          "text": "Altitude and associated climatic conditions"
+        },
+        {
+          "id": "D",
+          "text": "Proximity to active rift volcanoes"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Altitude is the single most dominant physical factor controlling population distribution in Ethiopia, as it determines temperature, rainfall, and disease vector prevalence.",
+      "sourceReference": "Grade 9 Geography Textbook, Section 4.4, Page 99–100"
+    },
+    {
+      "id": "GEO-G09-U04-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "To which major language super-family do the majority of languages spoken in Ethiopia belong?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Nilo-Saharan"
+        },
+        {
+          "id": "B",
+          "text": "Afro-Asiatic"
+        },
+        {
+          "id": "C",
+          "text": "Niger-Congo"
+        },
+        {
+          "id": "D",
+          "text": "Indo-European"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The majority of languages spoken in Ethiopia belong to the Afro-Asiatic super-family, which is sub-divided into the Cushitic, Semitic, and Omotic language families.",
+      "sourceReference": "Grade 9 Geography Textbook, Section 4.8, Page 115–116"
+    },
+    {
+      "id": "GEO-G09-U04-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In a hypothetical Ethiopian Woreda with a total population of 100,000, there are 42,000 children aged 0–14 years, 53,000 adults aged 15–64 years, and 5,000 elderly citizens aged 65+ years. What is the Age Dependency Ratio (ADR) of this Woreda?",
+      "options": [
+        {
+          "id": "A",
+          "text": "53.0%"
+        },
+        {
+          "id": "B",
+          "text": "79.2%"
+        },
+        {
+          "id": "C",
+          "text": "88.7%"
+        },
+        {
+          "id": "D",
+          "text": "113.2%"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Age Dependency Ratio = [(Population 0–14 + Population 65+) / Population 15–64] × 100 = [(42,000 + 5,000) / 53,000] × 100 = (47,000 / 53,000) × 100 = 88.68% (approx. 88.7%).",
+      "sourceReference": "Grade 9 Geography Textbook, Section 4.3, Page 91–92"
+    },
+    {
+      "id": "GEO-G09-U04-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How do permanent rural settlements in the Ethiopian highlands differ from temporary rural settlements in the arid lowlands?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Highland settlements are mobile and shift with seasonal river floods, whereas lowland settlements are fixed towns."
+        },
+        {
+          "id": "B",
+          "text": "Highland settlements are sedentary grouped or scattered hamlets tied to crop cultivation, whereas lowland settlements are temporary mobile homesteads associated with nomadic pastoralism."
+        },
+        {
+          "id": "C",
+          "text": "Highland settlements consist exclusively of isolated state farms, whereas lowland settlements consist of dense industrial cities."
+        },
+        {
+          "id": "D",
+          "text": "Highland settlements are temporary cattle camps, whereas lowland settlements are permanent terraced villages."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Permanent (sedentary) settlements dominate the highlands where crop farming provides a stable livelihood, whereas temporary mobile settlements prevail among pastoralist communities in the lowlands who relocate seasonally for pasture and water.",
+      "sourceReference": "Grade 9 Geography Textbook, Section 4.5, Page 105–106"
+    },
+    {
+      "id": "GEO-G09-U04-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Why are vector-borne infectious diseases such as malaria historically more prevalent in the Ethiopian lowlands than in the high plateaus?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The lowlands experience high relative humidity and freezing winter temperatures that accelerate mosquito reproduction."
+        },
+        {
+          "id": "B",
+          "text": "High temperatures and stagnant water bodies in lowland environments create favorable breeding conditions for disease vectors like Anopheles mosquitoes."
+        },
+        {
+          "id": "C",
+          "text": "Highland soils contain toxic minerals that exterminate insect larvae naturally."
+        },
+        {
+          "id": "D",
+          "text": "The lowlands receive heavy snowmelt that spreads water-borne bacterial parasites."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The lowlands (Bereha and Kolla zones below 1,500 m) feature high temperatures, warm air, and seasonally stagnant water bodies that allow disease vectors like Anopheles mosquitoes to thrive, whereas cooler highlands suppress vector survival.",
+      "sourceReference": "Grade 9 Geography Textbook, Section 4.6, Page 108–109"
+    },
+    {
+      "id": "GEO-G09-U04-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What is the direct consequence of rapid population growth on agricultural land holdings in the Ethiopian highlands?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Expansion of large-scale mechanized state farms and land consolidation."
+        },
+        {
+          "id": "B",
+          "text": "Severe fragmentation and shrinking of individual household farm sizes, forcing cultivation onto steep, fragile mountain slopes."
+        },
+        {
+          "id": "C",
+          "text": "Rapid increase in agricultural land fallowing and soil organic matter accumulation."
+        },
+        {
+          "id": "D",
+          "text": "Complete abandonment of rural land in favor of pastoral livestock ranching."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "High population growth in highland agricultural zones leads to land fragmentation across generations, diminishing farm plot sizes per family and forcing farmers to clear steep, marginal mountain slopes, accelerating soil erosion.",
+      "sourceReference": "Grade 9 Geography Textbook, Section 4.7, Page 110–111"
+    },
+    {
+      "id": "GEO-G09-U04-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which combination of criteria is officially used in Ethiopia to designate an inhabited locality as an urban center?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Having a minimum population of 100,000 and an international airport."
+        },
+        {
+          "id": "B",
+          "text": "Having a minimum population threshold (usually 2,000+), administrative status as a municipality, and non-agricultural economic dominance."
+        },
+        {
+          "id": "C",
+          "text": "Presence of at least one university and a heavy manufacturing steel mill."
+        },
+        {
+          "id": "D",
+          "text": "Location above 3,000 meters altitude with paved highways connecting to foreign seaports."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In Ethiopia, urban status is granted based on: (1) a population size of 2,000 or more inhabitants, (2) official administrative charter/municipality status, and (3) predominantly non-agricultural livelihood activities (trade, services, manufacturing).",
+      "sourceReference": "Grade 9 Geography Textbook, Section 4.5, Page 107–108"
+    },
+    {
+      "id": "GEO-G09-U04-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which of the following Ethiopian language groups belongs to the Nilo-Saharan super-family rather than the Afro-Asiatic super-family?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Semitic family (e.g., Amharic, Tigrinya)"
+        },
+        {
+          "id": "B",
+          "text": "Cushitic family (e.g., Afan Oromo, Somalaligna)"
+        },
+        {
+          "id": "C",
+          "text": "Omotic family (e.g., Wolayttattuwa, Gamo)"
+        },
+        {
+          "id": "D",
+          "text": "Chari-Nile and Koman families (e.g., Anywaa, Nuer, Berta)"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "Languages spoken along the western border lowlands of Ethiopia (such as Anywaa, Nuer, Berta, and Gumuz) belong to the Nilo-Saharan super-family (Chari-Nile and Koman families), whereas Semitic, Cushitic, and Omotic belong to Afro-Asiatic.",
+      "sourceReference": "Grade 9 Geography Textbook, Section 4.8, Page 115–116"
+    },
+    {
+      "id": "GEO-G09-U04-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "In global geography, river valleys (such as the Nile or Ganges) are typically zones of high population concentration. Why do the major river valleys inside Ethiopia (such as the Abbay, Tekezze, and Omo river gorges) display low population density compared to the adjacent high plateaus?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Ethiopian river gorges lack water resources and suffer from complete soil aridity year-round."
+        },
+        {
+          "id": "B",
+          "text": "Deep river gorges are historically infested with tropical diseases (malaria, trypanosomiasis), have steep rugged terrain, intense heat, and high transport barriers."
+        },
+        {
+          "id": "C",
+          "text": "State conservation laws strictly prohibit any human settlement within 50 kilometers of all domestic rivers."
+        },
+        {
+          "id": "D",
+          "text": "The river gorges are located above 4,000 meters altitude where extreme cold prevents crop germination."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Unlike broad alluvial floodplains elsewhere, Ethiopian river valleys are deep, rugged, hot, incised gorges infested with vector diseases like malaria and tsetse flies (trypanosomiasis), making them historically inhospitable compared to cool, healthy high plateaus.",
+      "sourceReference": "Grade 9 Geography Textbook, Section 4.4, Page 100–101"
+    },
+    {
+      "id": "GEO-G09-U04-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "As fuelwood becomes increasingly scarce due to deforestation driven by rapid population growth in rural Ethiopia, how does the resulting household fuel substitution trigger a decline in agricultural crop yields?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Farmers burn chemical fertilizers instead of wood, poisoning crop roots."
+        },
+        {
+          "id": "B",
+          "text": "Families switch to burning animal dung and crop residues for cooking, depriving soils of organic manure and vital nutrient recycling."
+        },
+        {
+          "id": "C",
+          "text": "Wood ash accumulation on fields causes rapid soil acidification and toxic aluminum release."
+        },
+        {
+          "id": "D",
+          "text": "The elimination of smoke emissions increases nighttime frost frequency over farm fields."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Fuelwood scarcity forces rural households to burn dry cattle dung and crop stalks for domestic cooking. Diverting these organic materials from fields into stoves deprives soils of organic matter and nutrient replenishment, causing progressive soil degradation and lower crop yields.",
+      "sourceReference": "Grade 9 Geography Textbook, Section 4.7, Page 111 & Page 174–175"
+    },
+    {
+      "id": "GEO-G09-U04-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "An Ethiopian administrative zone has 48% of its population in the young age group (0–14 years) and 3% in the old age group (65+ years). What socio-economic challenge does this specific age structure pose to the regional government's budget allocation?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Heavy expenditure must be diverted from productive capital investments to basic consumption needs like primary schooling, maternal healthcare, and child immunization."
+        },
+        {
+          "id": "B",
+          "text": "Excessive funds must be allocated to old-age pension funds and geriatric nursing facilities."
+        },
+        {
+          "id": "C",
+          "text": "The government faces severe labor shortages in primary agriculture due to an overabundance of retired adults."
+        },
+        {
+          "id": "D",
+          "text": "The zone achieves an immediate demographic dividend with high domestic savings and low dependency."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "A youth-dominated age structure (48% under 15) generates a very high youth dependency burden. This forces regional governments to consume limited financial capital on basic social services (schools, clinics, vaccinations) rather than investing in productive infrastructure.",
+      "sourceReference": "Grade 9 Geography Textbook, Section 4.3, Page 91–93"
+    },
+    {
+      "id": "GEO-G09-U04-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Which pair of Ethiopian administrative areas demonstrates the contrast between high agricultural carrying capacity with dense population, and low carrying capacity with sparse population, respectively?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Borena Zone (lowland pastoral) and Ogaden Plain (desert lowland)"
+        },
+        {
+          "id": "B",
+          "text": "Gedeo and Sidama Zones (highland enset-coffee belt) and Afar / Somali lowlands (arid pastoral lowlands)"
+        },
+        {
+          "id": "C",
+          "text": "Metema lowland (border plain) and Humera lowland (river plain)"
+        },
+        {
+          "id": "D",
+          "text": "Semien Gondar high peaks (cold alpine) and Bale alpine peaks (afroalpine zone)"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Gedeo and Sidama zones in the fertile, high-rainfall highland enset-coffee belt have some of the highest rural population densities in Ethiopia (over 500–1000 persons/km²), whereas the arid/semi-arid Afar and Somali lowlands support sparse pastoralist densities (under 20 persons/km²).",
+      "sourceReference": "Grade 9 Geography Textbook, Section 4.4, Page 98–100"
+    }
+  ]
 }

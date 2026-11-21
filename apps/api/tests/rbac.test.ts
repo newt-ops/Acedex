@@ -36,7 +36,7 @@ describe('RBAC Middleware', () => {
       displayName: 'Test Student',
       role: 'student',
       status: 'active',
-      authProvider: 'google',
+      authProvider: 'phone',
     });
 
     studentToken = jwt.sign(
@@ -56,7 +56,7 @@ describe('RBAC Middleware', () => {
       displayName: 'Test Admin',
       role: 'admin',
       status: 'active',
-      authProvider: 'google',
+      authProvider: 'phone',
     });
 
     adminToken = jwt.sign(
@@ -76,7 +76,7 @@ describe('RBAC Middleware', () => {
       displayName: 'Test Super Admin',
       role: 'super_admin',
       status: 'active',
-      authProvider: 'google',
+      authProvider: 'phone',
     });
 
     superAdminToken = jwt.sign(

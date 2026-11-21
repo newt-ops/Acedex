@@ -3,5 +3,411 @@
   "subject": "Mathematics",
   "unitNumber": 5,
   "unitTitle": "Mathematical Applications in Business",
-  "questions": []
+  "questions": [
+    {
+      "id": "MAT-G12-U05-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "A business partnership generates an annual net profit of Birr 84,000 to be divided among three partners—Almaz, Bekele, and Chala—in the continued ratio of 2:3:7, respectively. How much does Bekele receive?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Birr 14,000"
+        },
+        {
+          "id": "B",
+          "text": "Birr 21,000"
+        },
+        {
+          "id": "C",
+          "text": "Birr 28,000"
+        },
+        {
+          "id": "D",
+          "text": "Birr 49,000"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "To allocate an amount in a continued ratio of 2:3:7, first find the total number of parts: 2 + 3 + 7 = 12 parts. The value of one single part is Birr 84,000 / 12 = Birr 7,000. Bekele's share corresponds to 3 parts: 3 × Birr 7,000 = Birr 21,000. (Almaz receives 2 × 7,000 = Birr 14,000 and Chala receives 7 × 7,000 = Birr 49,000).",
+      "sourceReference": "Section 5.1.1, Example 3, Page 308-309"
+    },
+    {
+      "id": "MAT-G12-U05-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "A trader purchases a sack of sugar for Birr 3,200 and sets the selling price with a markup of 20% based on the cost price. What is the selling price of the sugar?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Birr 3,640"
+        },
+        {
+          "id": "B",
+          "text": "Birr 3,840"
+        },
+        {
+          "id": "C",
+          "text": "Birr 4,000"
+        },
+        {
+          "id": "D",
+          "text": "Birr 4,200"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Markup based on cost is given by Markup = Cost × Markup Rate = 3,200 × 0.20 = Birr 640. Selling price = Cost + Markup = 3,200 + 640 = Birr 3,840.",
+      "sourceReference": "Section 5.1.4, Page 321"
+    },
+    {
+      "id": "MAT-G12-U05-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is the simple interest earned on a principal of Birr 45,000 deposited in a commercial bank at an annual simple interest rate of 8% for a term of 3 years?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Birr 3,600"
+        },
+        {
+          "id": "B",
+          "text": "Birr 7,200"
+        },
+        {
+          "id": "C",
+          "text": "Birr 10,800"
+        },
+        {
+          "id": "D",
+          "text": "Birr 55,800"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Using the simple interest formula I = Prt: I = 45,000 × 0.08 × 3 = Birr 10,800.",
+      "sourceReference": "Section 5.2.1, Formula 5.1, Page 325-326"
+    },
+    {
+      "id": "MAT-G12-U05-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "An annuity in which equal periodic payments are made at the end of each payment period is formally known as:",
+      "options": [
+        {
+          "id": "A",
+          "text": "An annuity due"
+        },
+        {
+          "id": "B",
+          "text": "An ordinary annuity"
+        },
+        {
+          "id": "C",
+          "text": "A deferred annuity"
+        },
+        {
+          "id": "D",
+          "text": "A perpetual annuity"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "By Definition 5.5, an ordinary annuity is an annuity whose equal payments are made at the end of each time period. When payments are made at the beginning of each time period, it is called an annuity due.",
+      "sourceReference": "Section 5.2.3, Definition 5.5, Page 346-347"
+    },
+    {
+      "id": "MAT-G12-U05-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Under Ethiopian Tax Law (Proclamation No. 979/2016), which schedule governs the taxation of income derived from employment?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Schedule 'A'"
+        },
+        {
+          "id": "B",
+          "text": "Schedule 'B'"
+        },
+        {
+          "id": "C",
+          "text": "Schedule 'C'"
+        },
+        {
+          "id": "D",
+          "text": "Schedule 'D'"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "According to Proclamation 979/2016, income is taxed under four schedules: Schedule 'A' covers income from employment, Schedule 'B' covers income from rental of buildings, Schedule 'C' covers income from business, and Schedule 'D' covers other income (such as royalties, dividends, and interest).",
+      "sourceReference": "Section 5.4.1, Page 394-395"
+    },
+    {
+      "id": "MAT-G12-U05-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "A boutique offers a pair of shoes at Birr 1,700 with a seasonal promotional discount of 15% off the marked price. What is the final sale price paid by the customer?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Birr 1,445"
+        },
+        {
+          "id": "B",
+          "text": "Birr 1,475"
+        },
+        {
+          "id": "C",
+          "text": "Birr 1,530"
+        },
+        {
+          "id": "D",
+          "text": "Birr 1,550"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Discount = Regular Price × Discount Rate = 1,700 × 0.15 = Birr 255. Sale Price = Regular Price - Discount = 1,700 - 255 = Birr 1,445.",
+      "sourceReference": "Section 5.1.4, Page 322-323"
+    },
+    {
+      "id": "MAT-G12-U05-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "A business woman deposited Birr 40,000 into a fixed time deposit account that pays an annual interest rate of 12% compounded quarterly. What will be the accumulated balance (future value) in the account at the end of 2 years?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Birr 40,000(1.03)⁸"
+        },
+        {
+          "id": "B",
+          "text": "Birr 40,000(1.12)²"
+        },
+        {
+          "id": "C",
+          "text": "Birr 40,000(1.04)⁶"
+        },
+        {
+          "id": "D",
+          "text": "Birr 40,000(1.06)⁴"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Using the compound interest formula A = P(1 + r/m)^(mt): here P = 40,000, nominal annual rate r = 0.12, quarterly compounding m = 4, and time t = 2 years. The periodic interest rate is i = r/m = 0.12 / 4 = 0.03, and the total number of compounding periods is n = mt = 4 × 2 = 8. Thus, A = 40,000(1 + 0.03)⁸ = 40,000(1.03)⁸.",
+      "sourceReference": "Section 5.2.2.2, Formula 5.4, Page 336-337"
+    },
+    {
+      "id": "MAT-G12-U05-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What is the equivalent annual rate (effective interest rate) of a nominal annual interest rate of 10% compounded semi-annually?",
+      "options": [
+        {
+          "id": "A",
+          "text": "10.00%"
+        },
+        {
+          "id": "B",
+          "text": "10.25%"
+        },
+        {
+          "id": "C",
+          "text": "10.50%"
+        },
+        {
+          "id": "D",
+          "text": "10.75%"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "By Definition 5.3, the effective interest rate r_e satisfies (1 + r_e) = (1 + r/m)^m. For r = 0.10 and semi-annual compounding m = 2: 1 + r_e = (1 + 0.10/2)² = (1.05)² = 1.1025. Thus, r_e = 1.1025 - 1 = 0.1025 = 10.25%.",
+      "sourceReference": "Section 5.2.2.3, Definition 5.3, Page 340-341"
+    },
+    {
+      "id": "MAT-G12-U05-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "A construction company purchased an electric generator for Birr 120,000. The useful life of the generator is estimated to be 10 years with a residual (salvage) value of Birr 20,000. Using the straight-line depreciation method, what is the depreciated (book) value of the generator at the end of 4 years?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Birr 40,000"
+        },
+        {
+          "id": "B",
+          "text": "Birr 72,000"
+        },
+        {
+          "id": "C",
+          "text": "Birr 80,000"
+        },
+        {
+          "id": "D",
+          "text": "Birr 90,000"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Annual straight-line depreciation = (Initial Value - Salvage Value) / Useful Life = (120,000 - 20,000) / 10 = Birr 10,000 per year. Over 4 years, accumulated depreciation = 4 × 10,000 = Birr 40,000. Depreciated value = Initial Value - Accumulated Depreciation = 120,000 - 40,000 = Birr 80,000.",
+      "sourceReference": "Section 5.2.5, Page 367-368"
+    },
+    {
+      "id": "MAT-G12-U05-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "A retail shop in Addis Ababa purchased office stationery at a VAT-inclusive price of Birr 138,000. If the standard Value Added Tax (VAT) rate in Ethiopia is 15%, what was the exact amount of VAT included in this purchase?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Birr 18,000"
+        },
+        {
+          "id": "B",
+          "text": "Birr 20,700"
+        },
+        {
+          "id": "C",
+          "text": "Birr 15,000"
+        },
+        {
+          "id": "D",
+          "text": "Birr 24,000"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Let the price before VAT be P. Then the VAT-inclusive price is P × (1 + 0.15) = 1.15 P = 138,000. Solving for P: P = 138,000 / 1.15 = Birr 120,000. The amount of VAT included is 138,000 - 120,000 = Birr 18,000 (which equals 15% of 120,000).",
+      "sourceReference": "Section 5.4.2, Page 406, 408"
+    },
+    {
+      "id": "MAT-G12-U05-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which of the following is a primary characteristic that distinguishes equity financing from debt financing for a share company?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Equity financing obligates the company to make fixed mandatory monthly interest payments regardless of profits."
+        },
+        {
+          "id": "B",
+          "text": "Debt financing requires the original owners to give up percentage ownership and voting rights to lenders."
+        },
+        {
+          "id": "C",
+          "text": "Equity financing carries no obligation to repay the invested capital, but it dilutes the ownership and profit share of existing owners."
+        },
+        {
+          "id": "D",
+          "text": "Debt financing gives the lending financial institution permanent equity shares and management board seats."
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "According to Section 5.3.3, equity financing involves selling ownership shares; its main advantage is that there is no obligation to repay the funds, but the drawback is that owners give up a percentage of ownership and must share future profits. Debt financing involves borrowing money with mandatory interest and principal repayment, but lenders gain no ownership or management control.",
+      "sourceReference": "Section 5.3.3, Page 387-389"
+    },
+    {
+      "id": "MAT-G12-U05-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Ato Dawit saves Birr 4,000 at the end of each year in an ordinary annuity account yielding an annual interest rate of 10% compounded annually. What is the total accumulated value (future value) of his savings at the end of 5 years?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Birr 24,000.00"
+        },
+        {
+          "id": "B",
+          "text": "Birr 24,420.40"
+        },
+        {
+          "id": "C",
+          "text": "Birr 26,862.44"
+        },
+        {
+          "id": "D",
+          "text": "Birr 28,000.00"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The future value of an ordinary annuity is FV = R × S_(n|i) = R × [(1 + i)ⁿ - 1] / i. Here, R = Birr 4,000, i = 0.10, and n = 5. The annuity factor is S_(5|0.10) = [(1.10)⁵ - 1] / 0.10 = [1.61051 - 1] / 0.10 = 0.61051 / 0.10 = 6.1051. Multiplying by periodic payment R: FV = 4,000 × 6.1051 = Birr 24,420.40.",
+      "sourceReference": "Section 5.2.3.1, Formulas 5.6 & 5.7, Page 351-353"
+    },
+    {
+      "id": "MAT-G12-U05-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Under Ethiopian income tax law (Schedule 'A'), taxable monthly employment income is taxed progressively as follows:\n- Up to Birr 600: Exempt\n- 601 – 1,650: 10% (Deduction Birr 60)\n- 1,651 – 3,200: 15% (Deduction Birr 142.50)\n- 3,201 – 5,250: 20% (Deduction Birr 302.50)\n- 5,251 – 7,800: 25% (Deduction Birr 565)\n- 7,801 – 10,900: 30% (Deduction Birr 955)\n- Over 10,900: 35% (Deduction Birr 1,500)\nIf an engineer earns a monthly taxable salary of Birr 7,000, what is the employee's monthly employment income tax liability?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Birr 1,185.00"
+        },
+        {
+          "id": "B",
+          "text": "Birr 1,225.00"
+        },
+        {
+          "id": "C",
+          "text": "Birr 1,445.00"
+        },
+        {
+          "id": "D",
+          "text": "Birr 1,750.00"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The taxable income of Birr 7,000 falls in the fifth tax bracket (5,251 – 7,800), where the tax rate is 25% and the standard deduction is Birr 565. Using the deduction formula: Tax Liability = (Taxable Income × Tax Rate) - Deduction = (7,000 × 0.25) - 565 = 1,750 - 565 = Birr 1,185.00.",
+      "sourceReference": "Section 5.4.1, Table 10 & Deduction Formula, Page 395-397"
+    },
+    {
+      "id": "MAT-G12-U05-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A commercial truck was purchased for Birr 800,000. It is depreciated using the declining balance (percentage) method at an annual rate of 15%. What is the market value of the truck at the end of 3 years?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Birr 440,000.00"
+        },
+        {
+          "id": "B",
+          "text": "Birr 491,300.00"
+        },
+        {
+          "id": "C",
+          "text": "Birr 520,000.00"
+        },
+        {
+          "id": "D",
+          "text": "Birr 578,000.00"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Under the declining balance method, the value after n years is given by V_n = P(1 - r)ⁿ. Here, initial cost P = 800,000, annual depreciation rate r = 0.15, and n = 3 years. Thus: V₃ = 800,000 × (1 - 0.15)³ = 800,000 × (0.85)³ = 800,000 × 0.614125 = Birr 491,300.00. (Directly models EUEE 2018 Version 3, Question 10).",
+      "sourceReference": "Section 5.2.5, Example 2, Page 365-366 & EUEE 2018 V3 Q10"
+    },
+    {
+      "id": "MAT-G12-U05-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "An investor bought an asset for an initial cost of Birr 2,400,000. After 3 years, the current market value of the investment grew to Birr 3,600,000. What is the Return on Investment (ROI) for this asset?",
+      "options": [
+        {
+          "id": "A",
+          "text": "33.33%"
+        },
+        {
+          "id": "B",
+          "text": "50.00%"
+        },
+        {
+          "id": "C",
+          "text": "66.67%"
+        },
+        {
+          "id": "D",
+          "text": "150.00%"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "By Section 5.3.2.4, Return on Investment is calculated as ROI = [(Current Value of Investment - Cost of Investment) / Cost of Investment] × 100%. Substituting the values: ROI = [(3,600,000 - 2,400,000) / 2,400,000] × 100% = [1,200,000 / 2,400,000] × 100% = 0.50 × 100% = 50.00%.",
+      "sourceReference": "Section 5.3.2.4, Page 386"
+    }
+  ]
 }

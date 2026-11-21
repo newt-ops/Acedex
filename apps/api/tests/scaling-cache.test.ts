@@ -55,7 +55,7 @@ describe('Scaling & In-Memory Caching Engine', () => {
       displayName: 'Cache Admin',
       role: 'admin',
       status: 'active',
-      authProvider: 'google',
+      authProvider: 'phone',
     });
 
     adminToken = jwt.sign(

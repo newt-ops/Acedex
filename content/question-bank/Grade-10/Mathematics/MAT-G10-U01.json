@@ -3,5 +3,411 @@
   "subject": "Mathematics",
   "unitNumber": 1,
   "unitTitle": "Relations and Functions",
-  "questions": []
+  "questions": [
+    {
+      "id": "MAT-G10-U01-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which of the following sets of ordered pairs represents a function?",
+      "options": [
+        {
+          "id": "A",
+          "text": "{(1, 2), (2, 3), (1, 4), (3, 5)}"
+        },
+        {
+          "id": "B",
+          "text": "{(-2, 3), (0, 1), (-2, -1), (4, 5)}"
+        },
+        {
+          "id": "C",
+          "text": "{(3, 4), (-1, 4), (0, 4), (5, 4)}"
+        },
+        {
+          "id": "D",
+          "text": "{(2, 5), (2, 6), (2, 7), (2, 8)}"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "By definition, a function is a relation in which no two distinct ordered pairs have the same first coordinate (input). In set C, the first coordinates are 3, -1, 0, and 5, which are all distinct, representing a constant function value. In sets A, B, and D, at least one first coordinate is paired with more than one distinct second coordinate (e.g., 1 is paired with 2 and 4 in A; -2 is paired with 3 and -1 in B; 2 is paired with multiple values in D).",
+      "sourceReference": "Section 1.2.1, Page 18-19"
+    },
+    {
+      "id": "MAT-G10-U01-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What are the domain and the range of the relation R = {(-3, 2), (-1, 5), (0, -4), (2, 5), (4, 1)}?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Domain = {-3, -1, 0, 2, 4} and Range = {-4, 1, 2, 5}"
+        },
+        {
+          "id": "B",
+          "text": "Domain = {-4, 1, 2, 5} and Range = {-3, -1, 0, 2, 4}"
+        },
+        {
+          "id": "C",
+          "text": "Domain = {-3, -1, 0, 2, 4} and Range = {-4, 1, 5}"
+        },
+        {
+          "id": "D",
+          "text": "Domain = {-3, 0, 2, 4} and Range = {-4, 1, 2, 5}"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The domain of a relation is the set of all first components of the ordered pairs, which is {-3, -1, 0, 2, 4}. The range is the set of all second components, which is {2, 5, -4, 1} = {-4, 1, 2, 5}.",
+      "sourceReference": "Section 1.1.3, Page 11-12"
+    },
+    {
+      "id": "MAT-G10-U01-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What are the slope and the x-intercept of the linear function f(x) = -3x + 6?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Slope = -3, x-intercept = (2, 0)"
+        },
+        {
+          "id": "B",
+          "text": "Slope = 3, x-intercept = (-2, 0)"
+        },
+        {
+          "id": "C",
+          "text": "Slope = -3, x-intercept = (0, 6)"
+        },
+        {
+          "id": "D",
+          "text": "Slope = 6, x-intercept = (2, 0)"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "A linear function is written in slope-intercept form as f(x) = ax + b, where a is the slope and b is the y-intercept. Here, the slope is a = -3. To find the x-intercept, set f(x) = 0: -3x + 6 = 0 => 3x = 6 => x = 2. Thus, the x-intercept is the point (2, 0).",
+      "sourceReference": "Section 1.2.4, Page 39-40"
+    },
+    {
+      "id": "MAT-G10-U01-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What are the coordinates of the vertex and the equation of the axis of symmetry for the parabola given by f(x) = 2(x + 3)² - 5?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Vertex = (3, -5), axis of symmetry: x = 3"
+        },
+        {
+          "id": "B",
+          "text": "Vertex = (-3, -5), axis of symmetry: x = -3"
+        },
+        {
+          "id": "C",
+          "text": "Vertex = (-3, 5), axis of symmetry: x = -3"
+        },
+        {
+          "id": "D",
+          "text": "Vertex = (3, 5), axis of symmetry: x = 3"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "For a quadratic function written in vertex form f(x) = a(x - h)² + k, the vertex is (h, k) and the axis of symmetry is the vertical line x = h. Here, f(x) = 2(x - (-3))² + (-5), so h = -3 and k = -5. Thus, the vertex is (-3, -5) and the axis of symmetry is x = -3.",
+      "sourceReference": "Section 1.2.4, Page 45-46 & Summary, Page 63"
+    },
+    {
+      "id": "MAT-G10-U01-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "A function f: A → B is called a one-to-one (injective) function if and only if which of the following conditions holds for all x₁, x₂ ∈ A?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Whenever x₁ ≠ x₂, then f(x₁) = f(x₂)"
+        },
+        {
+          "id": "B",
+          "text": "Whenever f(x₁) = f(x₂), then x₁ = x₂"
+        },
+        {
+          "id": "C",
+          "text": "For every y ∈ B, there exists x ∈ A such that f(x) = y"
+        },
+        {
+          "id": "D",
+          "text": "The range of f is equal to the co-domain B"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "By Definition 1.4, a function f: A → B is one-to-one (injective) if and only if distinct elements in the domain have distinct images in the co-domain, which is equivalent to the statement: for all x₁, x₂ ∈ A, f(x₁) = f(x₂) implies x₁ = x₂. Options C and D define an onto (surjective) function.",
+      "sourceReference": "Section 1.2.3, Page 29-30"
+    },
+    {
+      "id": "MAT-G10-U01-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Let f(x) = 2x - 3 and g(x) = √(x - 1). What is the domain of the quotient function (f / g)(x)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "[1, ∞)"
+        },
+        {
+          "id": "B",
+          "text": "(1, ∞)"
+        },
+        {
+          "id": "C",
+          "text": "[3/2, ∞)"
+        },
+        {
+          "id": "D",
+          "text": "ℝ \\ {1}"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The domain of f(x) is all real numbers ℝ. The domain of g(x) = √(x - 1) requires x - 1 ≥ 0, which means x ≥ 1, so Domain(g) = [1, ∞). For the quotient function (f / g)(x) = f(x) / g(x), we also require that g(x) ≠ 0. Since √(x - 1) = 0 when x = 1, we must exclude x = 1. Therefore, the domain of f / g is (1, ∞).",
+      "sourceReference": "Section 1.2.2, Page 26-27"
+    },
+    {
+      "id": "MAT-G10-U01-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What is the range of the quadratic function f(x) = -2x² + 8x - 3?",
+      "options": [
+        {
+          "id": "A",
+          "text": "[5, ∞)"
+        },
+        {
+          "id": "B",
+          "text": "(-∞, 5]"
+        },
+        {
+          "id": "C",
+          "text": "(-∞, 2]"
+        },
+        {
+          "id": "D",
+          "text": "[-3, ∞)"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Completing the square: f(x) = -2(x² - 4x) - 3 = -2((x - 2)² - 4) - 3 = -2(x - 2)² + 8 - 3 = -2(x - 2)² + 5. Since (x - 2)² ≥ 0 for all real x, -2(x - 2)² ≤ 0, which implies f(x) ≤ 5. The maximum value is 5 at x = 2. Because the leading coefficient a = -2 < 0, the parabola opens downward, so the range is {y : y ≤ 5} = (-∞, 5].",
+      "sourceReference": "Section 1.2.4 & Section 1.3, Page 45, 52-53, Summary Page 63"
+    },
+    {
+      "id": "MAT-G10-U01-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Let f: ℝ → ℝ be defined by f(x) = 3 - 5x. Which of the following statements correctly classifies f?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Injective but not surjective"
+        },
+        {
+          "id": "B",
+          "text": "Surjective but not injective"
+        },
+        {
+          "id": "C",
+          "text": "Both injective and surjective (bijective)"
+        },
+        {
+          "id": "D",
+          "text": "Neither injective nor surjective"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "To test injectivity: f(x₁) = f(x₂) => 3 - 5x₁ = 3 - 5x₂ => -5x₁ = -5x₂ => x₁ = x₂, so f is injective (one-to-one). To test surjectivity: for every real number y ∈ ℝ, setting y = 3 - 5x yields x = (3 - y) / 5, which is a real number; thus every element in the co-domain has a pre-image in the domain, making f surjective (onto). A function that is both injective and surjective is bijective (a one-to-one correspondence).",
+      "sourceReference": "Section 1.2.3, Page 29-32"
+    },
+    {
+      "id": "MAT-G10-U01-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which of the following points belongs to the graph of the relation R = {(x, y) : y ≥ 2x + 1 and y < -x + 4}?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(0, 2)"
+        },
+        {
+          "id": "B",
+          "text": "(1, 4)"
+        },
+        {
+          "id": "C",
+          "text": "(2, 1)"
+        },
+        {
+          "id": "D",
+          "text": "(-1, -2)"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Substitute the coordinates of each point into both inequalities: For (0, 2): 2 ≥ 2(0) + 1 = 1 (True) and 2 < -(0) + 4 = 4 (True). Both inequalities are satisfied. For (1, 4): 4 < -1 + 4 = 3 is False. For (2, 1): 1 ≥ 2(2) + 1 = 5 is False. For (-1, -2): -2 ≥ 2(-1) + 1 = -1 is False.",
+      "sourceReference": "Section 1.1.4, Page 15-16"
+    },
+    {
+      "id": "MAT-G10-U01-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Given the functions f(x) = x² - 3x + 2 and g(x) = 2x - 1, what is the value of (2f - 3g)(2)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "-9"
+        },
+        {
+          "id": "B",
+          "text": "9"
+        },
+        {
+          "id": "C",
+          "text": "-3"
+        },
+        {
+          "id": "D",
+          "text": "0"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "First evaluate f(2) and g(2): f(2) = 2² - 3(2) + 2 = 4 - 6 + 2 = 0. g(2) = 2(2) - 1 = 4 - 1 = 3. Then, (2f - 3g)(2) = 2f(2) - 3g(2) = 2(0) - 3(3) = 0 - 9 = -9.",
+      "sourceReference": "Section 1.2.2, Page 24, 28"
+    },
+    {
+      "id": "MAT-G10-U01-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "A farmer has 60 meters of wire fencing to enclose a rectangular vegetable garden against a straight brick wall (no fencing is needed along the wall). If x represents the width of the garden perpendicular to the wall, what value of x produces the maximum possible area of the garden?",
+      "options": [
+        {
+          "id": "A",
+          "text": "10 meters"
+        },
+        {
+          "id": "B",
+          "text": "15 meters"
+        },
+        {
+          "id": "C",
+          "text": "20 meters"
+        },
+        {
+          "id": "D",
+          "text": "30 meters"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Since one side is bounded by the wall, the two widths of length x and one length y require fencing: 2x + y = 60 => y = 60 - 2x. The area of the rectangular garden is A(x) = x(60 - 2x) = -2x² + 60x. This is a quadratic function with a = -2 and b = 60. The maximum area occurs at the vertex: x = -b / (2a) = -60 / (2(-2)) = -60 / -4 = 15 meters.",
+      "sourceReference": "Section 1.3, Page 51, 112-113"
+    },
+    {
+      "id": "MAT-G10-U01-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Let f(x) = √x and g(x) = √(9 - x²). What is the domain of the quotient function (g / f)(x)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "[1]"
+        },
+        {
+          "id": "B",
+          "text": "(0, 3]"
+        },
+        {
+          "id": "C",
+          "text": "[-3, 3] \\ {0}"
+        },
+        {
+          "id": "D",
+          "text": "(0, 3)"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The domain of f(x) = √x is [0, ∞). The domain of g(x) = √(9 - x²) requires 9 - x² ≥ 0 => x² ≤ 9 => [-3, 3]. The intersection of these two domains is [0, ∞) ∩ [-3, 3] =. For the quotient (g / f)(x) = g(x) / f(x), we have the additional restriction that the denominator cannot be zero: f(x) ≠ 0 => √x ≠ 0 => x ≠ 0. Excluding 0 from gives the domain (0, 3].",
+      "sourceReference": "Section 1.2.2, Page 27"
+    },
+    {
+      "id": "MAT-G10-U01-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "The parabola y = 2x² is shifted such that its axis of symmetry is the vertical line x = -2 and its orthogonal axis (the horizontal line passing through its vertex) is y = 3. What are the equation of the new parabola and its y-intercept?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Equation: y = 2(x - 2)² + 3, y-intercept: (0, 11)"
+        },
+        {
+          "id": "B",
+          "text": "Equation: y = 2(x + 2)² + 3, y-intercept: (0, 11)"
+        },
+        {
+          "id": "C",
+          "text": "Equation: y = 2(x + 2)² - 3, y-intercept: (0, 5)"
+        },
+        {
+          "id": "D",
+          "text": "Equation: y = 2(x - 2)² - 3, y-intercept: (0, 5)"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Shifting the parabola y = 2x² so that its axis of symmetry is x = -2 and its orthogonal axis is y = 3 places its vertex at (-2, 3). The standard form of the shifted parabola is y = 2(x - h)² + k = 2(x - (-2))² + 3 = 2(x + 2)² + 3. To find its y-intercept, set x = 0: y = 2(0 + 2)² + 3 = 2(4) + 3 = 11. Thus, the y-intercept is (0, 11).",
+      "sourceReference": "Section 1.2.4, Page 45-46"
+    },
+    {
+      "id": "MAT-G10-U01-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "What is the solution set of the quadratic inequality -x² + 2x + 8 > 0 determined from the graph of the function f(x) = -x² + 2x + 8?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(-∞, -2) ∪ (4, ∞)"
+        },
+        {
+          "id": "B",
+          "text": "[-2, 4]"
+        },
+        {
+          "id": "C",
+          "text": "(-2, 4)"
+        },
+        {
+          "id": "D",
+          "text": "(-4, 2)"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Factoring the quadratic function gives f(x) = -(x² - 2x - 8) = -(x - 4)(x + 2). The x-intercepts of the parabola are x = -2 and x = 4. Since the leading coefficient a = -1 is negative, the parabola opens downward. Therefore, the curve lies strictly above the x-axis (f(x) > 0) between the two x-intercepts. In interval notation, the solution set is (-2, 4).",
+      "sourceReference": "Section 1.3, Page 58-61"
+    },
+    {
+      "id": "MAT-G10-U01-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Two positive real numbers have a sum of 24. What are these two numbers if the sum of their squares is a minimum?",
+      "options": [
+        {
+          "id": "A",
+          "text": "10 and 14"
+        },
+        {
+          "id": "B",
+          "text": "12 and 12"
+        },
+        {
+          "id": "C",
+          "text": "8 and 16"
+        },
+        {
+          "id": "D",
+          "text": "6 and 18"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Let the two numbers be x and y. Since x + y = 24, we have y = 24 - x. The sum of their squares is S(x) = x² + y² = x² + (24 - x)² = x² + (x² - 48x + 576) = 2x² - 48x + 576. This is a quadratic function opening upward with a = 2 > 0. The minimum value occurs at the vertex: x = -b / (2a) = -(-48) / (2 × 2) = 48 / 4 = 12. When x = 12, y = 24 - 12 = 12. Both numbers are 12.",
+      "sourceReference": "Section 1.3, Page 51-53 & Review Exercise, Page 66"
+    }
+  ]
 }

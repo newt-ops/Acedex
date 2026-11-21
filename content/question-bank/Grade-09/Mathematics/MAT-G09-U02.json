@@ -3,5 +3,411 @@
   "subject": "Mathematics",
   "unitNumber": 2,
   "unitTitle": "The Number System",
-  "questions": []
+  "questions": [
+    {
+      "id": "MAT-G09-U02-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which of the following statements is TRUE regarding prime and composite numbers?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The number 1 is the smallest prime number."
+        },
+        {
+          "id": "B",
+          "text": "Every even natural number is a composite number."
+        },
+        {
+          "id": "C",
+          "text": "A natural number that has exactly two distinct factors is a prime number."
+        },
+        {
+          "id": "D",
+          "text": "The sum of any two prime numbers is always an even number."
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "By definition, a natural number that has exactly two distinct factors (1 and itself) is called a prime number. The number 1 has only one factor, so it is neither prime nor composite. The number 2 is an even number but is prime. Furthermore, the sum of 2 and 3 is 5, which is odd.",
+      "sourceReference": "Section 2.1.2, Page 33-34"
+    },
+    {
+      "id": "MAT-G09-U02-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which of the following numbers is divisible by both 3 and 4?",
+      "options": [
+        {
+          "id": "A",
+          "text": "4,518"
+        },
+        {
+          "id": "B",
+          "text": "3,756"
+        },
+        {
+          "id": "C",
+          "text": "5,234"
+        },
+        {
+          "id": "D",
+          "text": "6,142"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "A number is divisible by 3 if the sum of its digits is divisible by 3, and divisible by 4 if the number formed by its last two digits is divisible by 4. For 3,756: 3 + 7 + 5 + 6 = 21 (divisible by 3), and the last two digits form 56, which is divisible by 4 (56 / 4 = 14).",
+      "sourceReference": "Section 2.1.3, Page 35-36"
+    },
+    {
+      "id": "MAT-G09-U02-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "According to Euclid's division lemma, when a non-negative integer a is divided by 7, the remainder r must satisfy which of the following conditions?",
+      "options": [
+        {
+          "id": "A",
+          "text": "0 < r < 7"
+        },
+        {
+          "id": "B",
+          "text": "0 ≤ r ≤ 7"
+        },
+        {
+          "id": "C",
+          "text": "0 ≤ r < 7"
+        },
+        {
+          "id": "D",
+          "text": "1 ≤ r < 7"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Euclid's division lemma states that for a non-negative integer a and a positive integer b, there exist unique non-negative integers q and r such that a = b × q + r with 0 ≤ r < b. For divisor b = 7, the remainder r must satisfy 0 ≤ r < 7.",
+      "sourceReference": "Section 2.1.1, Page 30"
+    },
+    {
+      "id": "MAT-G09-U02-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is the standard (scientific) notation of the number 0.0000408?",
+      "options": [
+        {
+          "id": "A",
+          "text": "4.08 × 10^-5"
+        },
+        {
+          "id": "B",
+          "text": "40.8 × 10^-6"
+        },
+        {
+          "id": "C",
+          "text": "4.08 × 10^-4"
+        },
+        {
+          "id": "D",
+          "text": "4.08 × 10^5"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "A number is written in scientific notation when expressed as a × 10^n, where 1 ≤ a < 10 and n is an integer. Moving the decimal point 5 places to the right to place one non-zero digit before the decimal point gives 4.08 × 10^-5.",
+      "sourceReference": "Section 2.4.5, Page 90-91"
+    },
+    {
+      "id": "MAT-G09-U02-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which of the following numbers is an irrational number?",
+      "options": [
+        {
+          "id": "A",
+          "text": "√0.04"
+        },
+        {
+          "id": "B",
+          "text": "22/7"
+        },
+        {
+          "id": "C",
+          "text": "0.313131..."
+        },
+        {
+          "id": "D",
+          "text": "√18"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "An irrational number is a real number whose decimal representation is neither terminating nor repeating. Since 18 is not a perfect square, √18 = 3√2 is irrational. Meanwhile, √0.04 = 0.2 is terminating (rational), 22/7 is a ratio of integers (rational), and 0.313131... = 31/99 is a repeating decimal (rational).",
+      "sourceReference": "Section 2.3.1, Page 54"
+    },
+    {
+      "id": "MAT-G09-U02-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "The greatest common factor (GCF) of two natural numbers is 14 and their least common multiple (LCM) is 420. If one of the numbers is 84, what is the other number?",
+      "options": [
+        {
+          "id": "A",
+          "text": "60"
+        },
+        {
+          "id": "B",
+          "text": "70"
+        },
+        {
+          "id": "C",
+          "text": "80"
+        },
+        {
+          "id": "D",
+          "text": "105"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "For any two natural numbers a and b, the relationship GCF(a, b) × LCM(a, b) = a × b holds. Substituting the given values: 14 × 420 = 84 × b, which gives 5,880 = 84b. Dividing both sides by 84 gives b = 70.",
+      "sourceReference": "Section 2.1.4, Page 43-44"
+    },
+    {
+      "id": "MAT-G09-U02-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What is the simplest fraction form of the repeating decimal 0.2151515... (with 15 repeating)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "71/330"
+        },
+        {
+          "id": "B",
+          "text": "213/999"
+        },
+        {
+          "id": "C",
+          "text": "71/333"
+        },
+        {
+          "id": "D",
+          "text": "107/495"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Let d = 0.21515... Then 10d = 2.1515... and 1,000d = 215.1515... Subtracting 10d from 1,000d eliminates the repeating decimal part: 990d = 215 - 2 = 213. Therefore, d = 213/990. Dividing both numerator and denominator by their common factor 3 yields 71/330.",
+      "sourceReference": "Section 2.2.2, Page 50"
+    },
+    {
+      "id": "MAT-G09-U02-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What is the simplified value of the radical expression √75 - √48 + √108 - 2√27?",
+      "options": [
+        {
+          "id": "A",
+          "text": "3√3"
+        },
+        {
+          "id": "B",
+          "text": "2√3"
+        },
+        {
+          "id": "C",
+          "text": "√3"
+        },
+        {
+          "id": "D",
+          "text": "0"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Extract the largest square factors from each radicand: √75 = √(25 × 3) = 5√3; √48 = √(16 × 3) = 4√3; √108 = √(36 × 3) = 6√3; and 2√27 = 2√(9 × 3) = 2(3√3) = 6√3. Combining like radicals gives: (5 - 4 + 6 - 6)√3 = 1√3 = √3.",
+      "sourceReference": "Section 2.3.2, Page 59-60 & Section 2.4.3, Page 75"
+    },
+    {
+      "id": "MAT-G09-U02-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "The length of a rectangular plot is measured as 15 m and its width as 8 m, each correct to the nearest meter. What is the lower bound for the area of the plot?",
+      "options": [
+        {
+          "id": "A",
+          "text": "120.00 m²"
+        },
+        {
+          "id": "B",
+          "text": "112.50 m²"
+        },
+        {
+          "id": "C",
+          "text": "105.25 m²"
+        },
+        {
+          "id": "D",
+          "text": "108.75 m²"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "For measurements given to the nearest integer, the degree of accuracy is 1 unit, giving a half-unit boundary of 0.5. Thus, 14.5 ≤ length < 15.5 and 7.5 ≤ width < 8.5. The lower bound for the area is the product of the minimum possible length and minimum possible width: 14.5 m × 7.5 m = 108.75 m².",
+      "sourceReference": "Section 2.4.4, Page 88-89"
+    },
+    {
+      "id": "MAT-G09-U02-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "If x is a real number such that x < 3, which of the following expressions is equivalent to |x - 3| + |3 - x| - 2x?",
+      "options": [
+        {
+          "id": "A",
+          "text": "6"
+        },
+        {
+          "id": "B",
+          "text": "-4x"
+        },
+        {
+          "id": "C",
+          "text": "4x - 6"
+        },
+        {
+          "id": "D",
+          "text": "6 - 4x"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "Since x < 3, we have x - 3 < 0, which means |x - 3| = -(x - 3) = 3 - x. Similarly, 3 - x > 0, so |3 - x| = 3 - x. Substituting these into the original expression yields: (3 - x) + (3 - x) - 2x = 6 - 2x - 2x = 6 - 4x.",
+      "sourceReference": "Section 2.4.2, Page 68"
+    },
+    {
+      "id": "MAT-G09-U02-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What is the value of the algebraic expression (2^(n+3) - 2^(n+1)) / (2^(n+2) + 2^n) for any integer n?",
+      "options": [
+        {
+          "id": "A",
+          "text": "6/5"
+        },
+        {
+          "id": "B",
+          "text": "3/2"
+        },
+        {
+          "id": "C",
+          "text": "4/5"
+        },
+        {
+          "id": "D",
+          "text": "2"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Factor out 2^n from both the numerator and the denominator: Numerator = 2^n(2^3 - 2^1) = 2^n(8 - 2) = 6(2^n). Denominator = 2^n(2^2 + 2^0) = 2^n(4 + 1) = 5(2^n). Dividing numerator by denominator cancels 2^n to give 6/5.",
+      "sourceReference": "Section 2.4.3, Page 73-74"
+    },
+    {
+      "id": "MAT-G09-U02-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "If the expression (3√2 + 2√3) / (3√2 - 2√3) is rationalized and written in the form a + b√6, where a and b are rational numbers, what is the value of a + b?",
+      "options": [
+        {
+          "id": "A",
+          "text": "5"
+        },
+        {
+          "id": "B",
+          "text": "7"
+        },
+        {
+          "id": "C",
+          "text": "10"
+        },
+        {
+          "id": "D",
+          "text": "12"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Multiply both numerator and denominator by the conjugate of the denominator, (3√2 + 2√3): Denominator = (3√2)^2 - (2√3)^2 = 18 - 12 = 6. Numerator = (3√2 + 2√3)^2 = (3√2)^2 + 2(3√2)(2√3) + (2√3)^2 = 18 + 12√6 + 12 = 30 + 12√6. Dividing by 6 gives (30 + 12√6) / 6 = 5 + 2√6. Thus, a = 5 and b = 2, so a + b = 5 + 2 = 7.",
+      "sourceReference": "Section 2.4.6, Page 94-95"
+    },
+    {
+      "id": "MAT-G09-U02-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "When a positive integer n is divided by 12, the remainder is 7. What is the remainder when (n² + 2n + 5) is divided by 12?",
+      "options": [
+        {
+          "id": "A",
+          "text": "3"
+        },
+        {
+          "id": "B",
+          "text": "5"
+        },
+        {
+          "id": "C",
+          "text": "8"
+        },
+        {
+          "id": "D",
+          "text": "11"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "By Euclid's division lemma, n = 12q + 7 for some non-negative integer q. Substituting into the expression: n² + 2n + 5 = (12q + 7)² + 2(12q + 7) + 5 = (144q² + 168q + 49) + (24q + 14) + 5 = 144q² + 192q + 68. Factoring out 12 from the multiples of 12: 12(12q² + 16q + 5) + 8. Since 0 ≤ 8 < 12, the unique remainder according to the division algorithm is 8.",
+      "sourceReference": "Section 2.1.1, Page 30-31"
+    },
+    {
+      "id": "MAT-G09-U02-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "What is the simplified form of the nested radical expression √(7 + 4√3) - √(12 - 6√3)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "2√3 - 1"
+        },
+        {
+          "id": "B",
+          "text": "5"
+        },
+        {
+          "id": "C",
+          "text": "1"
+        },
+        {
+          "id": "D",
+          "text": "2√3 + 5"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Express each radicand as a perfect square: 7 + 4√3 = 4 + 4√3 + 3 = (2 + √3)², so √(7 + 4√3) = 2 + √3. Next, 12 - 6√3 = 9 - 6√3 + 3 = (3 - √3)². Since 3 > √3, √(12 - 6√3) = 3 - √3. Subtracting the two terms yields: (2 + √3) - (3 - √3) = 2 - 3 + √3 + √3 = 2√3 - 1.",
+      "sourceReference": "Section 2.4.3, Page 75"
+    },
+    {
+      "id": "MAT-G09-U02-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Two athletes, Abebe and Derartu, run along a circular track starting at the same time and from the same point in the same direction. Abebe completes one full lap in 240 seconds, while Derartu completes one full lap in 360 seconds. How many laps will Abebe have completed when they meet again at the starting point for the first time?",
+      "options": [
+        {
+          "id": "A",
+          "text": "2"
+        },
+        {
+          "id": "B",
+          "text": "3"
+        },
+        {
+          "id": "C",
+          "text": "5"
+        },
+        {
+          "id": "D",
+          "text": "6"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The two runners will meet at the starting point at a time that is the least common multiple of their lap times: LCM(240, 360). Using prime factorizations: 240 = 2^4 × 3 × 5 and 360 = 2^3 × 3^2 × 5. Thus, LCM(240, 360) = 2^4 × 3^2 × 5 = 16 × 9 × 5 = 720 seconds. The number of full laps completed by Abebe in 720 seconds is 720 / 240 = 3 laps.",
+      "sourceReference": "Section 2.1.4, Page 42-44 & Section 2.5, Page 97-98"
+    }
+  ]
 }

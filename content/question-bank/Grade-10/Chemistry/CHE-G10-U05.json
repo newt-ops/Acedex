@@ -3,5 +3,411 @@
   "subject": "Chemistry",
   "unitNumber": 5,
   "unitTitle": "Metals and Nonmetals",
-  "questions": []
+  "questions": [
+    {
+      "id": "CHE-G10-U05-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which of the following physical properties is characteristic of most metals but absent in non-metals?",
+      "options": [
+        {
+          "id": "A",
+          "text": "High electronegativity and high electron affinity"
+        },
+        {
+          "id": "B",
+          "text": "High thermal and electrical conductivity, malleability, and ductility"
+        },
+        {
+          "id": "C",
+          "text": "Low density and brittle solid structures"
+        },
+        {
+          "id": "D",
+          "text": "Formation of acidic oxides when reacted with oxygen"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Metals generally possess high thermal and electrical conductivity, luster, malleability (ability to be hammered into sheets), and ductility (ability to be drawn into wires) due to delocalized valence electrons.",
+      "sourceReference": "Section 5.1, Page 204"
+    },
+    {
+      "id": "CHE-G10-U05-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is the primary iron ore extracted and processed in a blast furnace to produce pig iron?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Bauxite (Al₂O₃·2H₂O)"
+        },
+        {
+          "id": "B",
+          "text": "Hematite (Fe₂O₃)"
+        },
+        {
+          "id": "C",
+          "text": "Galena (PbS)"
+        },
+        {
+          "id": "D",
+          "text": "Chalcopyrite (CuFeS₂)"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Hematite (Fe₂O₃) is the primary ore used in industrial blast furnaces for the extraction of iron.",
+      "sourceReference": "Section 5.2, Page 212"
+    },
+    {
+      "id": "CHE-G10-U05-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which industrial electrolytic process is used worldwide for the commercial extraction of metallic aluminum from purified alumina (Al₂O₃)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Downs process"
+        },
+        {
+          "id": "B",
+          "text": "Hall-Héroult process"
+        },
+        {
+          "id": "C",
+          "text": "Contact process"
+        },
+        {
+          "id": "D",
+          "text": "Haber-Bosch process"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The Hall-Héroult process is the industrial electrolytic method used to extract metallic aluminum from alumina dissolved in molten cryolite.",
+      "sourceReference": "Section 5.2, Page 218"
+    },
+    {
+      "id": "CHE-G10-U05-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which elemental non-metal gas constitutes approximately 78% of Earth's atmosphere by volume?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Oxygen (O₂)"
+        },
+        {
+          "id": "B",
+          "text": "Carbon dioxide (CO₂)"
+        },
+        {
+          "id": "C",
+          "text": "Nitrogen (N₂)"
+        },
+        {
+          "id": "D",
+          "text": "Argon (Ar)"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Diatomic nitrogen gas (N₂) is the most abundant non-metal element in the atmosphere, making up about 78% of clean dry air by volume.",
+      "sourceReference": "Section 5.3, Page 226"
+    },
+    {
+      "id": "CHE-G10-U05-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Brass is an important commercial alloy widely used in hardware and musical instruments. Which two metals are combined to form brass?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Copper and Zinc"
+        },
+        {
+          "id": "B",
+          "text": "Copper and Tin"
+        },
+        {
+          "id": "C",
+          "text": "Iron and Carbon"
+        },
+        {
+          "id": "D",
+          "text": "Aluminum and Magnesium"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Brass is a metallic alloy composed primarily of copper and zinc, whereas bronze is an alloy of copper and tin.",
+      "sourceReference": "Section 5.2, Page 222"
+    },
+    {
+      "id": "CHE-G10-U05-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "During the operation of a blast furnace for iron extraction, what is the key chemical function of limestone (CaCO₃) added with the charge?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It acts as the primary reducing agent that converts iron ore to liquid iron metal."
+        },
+        {
+          "id": "B",
+          "text": "It thermally decomposes into calcium oxide (CaO), which acts as a flux to react with silica impurities (SiO₂) and form molten slag (CaSiO₃)."
+        },
+        {
+          "id": "C",
+          "text": "It cools the furnace blast to prevent the iron from vaporizing."
+        },
+        {
+          "id": "D",
+          "text": "It oxidizes carbon monoxide into carbon dioxide to release extra heat."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Limestone thermally decomposes to CaO, a basic oxide that reacts with acidic sandy impurities (SiO₂) to form liquid slag (CaSiO₃), which floats on top of molten iron and can be tapped off.",
+      "sourceReference": "Section 5.2, Page 214"
+    },
+    {
+      "id": "CHE-G10-U05-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Sulfide ores such as zinc blende (ZnS) or galena (PbS) cannot be directly reduced by carbon. Which preliminary metallurgical step must be carried out first?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Electrolytic refining in aqueous solution"
+        },
+        {
+          "id": "B",
+          "text": "Roasting the sulfide ore in excess air to convert it into a metal oxide and sulfur dioxide gas"
+        },
+        {
+          "id": "C",
+          "text": "Smelting with limestone in an electric arc furnace under vacuum"
+        },
+        {
+          "id": "D",
+          "text": "Hydrometallurgical leaching with concentrated sodium hydroxide"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Roasting involves heating sulfide ores strongly in the presence of excess air/oxygen to convert metal sulfides into metal oxides (e.g., 2ZnS + 3O₂ → 2ZnO + 2SO₂), which can subsequently be reduced by carbon or carbon monoxide.",
+      "sourceReference": "Section 5.2, Page 210"
+    },
+    {
+      "id": "CHE-G10-U05-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In the industrial Haber-Bosch process for synthesizing ammonia, N₂(g) + 3H₂(g) ⇌ 2NH₃(g) (ΔH = -92 kJ/mol), which combination of catalyst and reaction conditions is employed commercially?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Platinum catalyst, low pressure (1 atm), and 1000 °C"
+        },
+        {
+          "id": "B",
+          "text": "Finely divided iron catalyst, high pressure (~200 atm), and moderate temperature (~450 °C)"
+        },
+        {
+          "id": "C",
+          "text": "Nickel catalyst, atmospheric pressure, and 0 °C"
+        },
+        {
+          "id": "D",
+          "text": "Vanadium pentoxide catalyst, vacuum pressure, and 200 °C"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The Haber process utilizes a finely divided iron catalyst with traces of Al₂O₃/K₂O promoters, operating at high pressures (~200 atm) to favor ammonia yield and moderate temperatures (~450 °C) to balance reaction rate and equilibrium.",
+      "sourceReference": "Section 5.3, Page 228"
+    },
+    {
+      "id": "CHE-G10-U05-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "The Contact process is used for the large-scale industrial manufacture of sulfuric acid (H₂SO₄). What is the key catalytic step in this process?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Direct oxidation of sulfur to sulfur trioxide using ozone"
+        },
+        {
+          "id": "B",
+          "text": "Reversible oxidation of sulfur dioxide (SO₂) to sulfur trioxide (SO₃) over vanadium(V) oxide (V₂O₅) catalyst"
+        },
+        {
+          "id": "C",
+          "text": "Reaction of sulfur dioxide gas directly with liquid water"
+        },
+        {
+          "id": "D",
+          "text": "Electrolysis of molten sodium sulfate solution"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The crucial step in the Contact process is the exothermic oxidation of SO₂ to SO₃: 2SO₂(g) + O₂(g) ⇌ 2SO₃(g), catalyzed by vanadium pentoxide (V₂O₅) at 400–450 °C.",
+      "sourceReference": "Section 5.3, Page 234"
+    },
+    {
+      "id": "CHE-G10-U05-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In the Downs cell for the extraction of metallic sodium by electrolysis of molten sodium chloride (NaCl), calcium chloride (CaCl₂) is added to the electrolyte mixture. What is the main purpose of adding CaCl₂?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To increase the purity of sodium metal at the cathode"
+        },
+        {
+          "id": "B",
+          "text": "To lower the melting point of sodium chloride from ~801 °C to about 600 °C, reducing energy costs"
+        },
+        {
+          "id": "C",
+          "text": "To prevent chlorine gas from escaping at the anode"
+        },
+        {
+          "id": "D",
+          "text": "To act as a reducing agent for sodium ions"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Adding calcium chloride (CaCl₂) lowers the melting point of NaCl from 801 °C to around 600 °C, significantly reducing the electrical energy required and preventing sodium vapor from evaporating.",
+      "sourceReference": "Section 5.2, Page 216"
+    },
+    {
+      "id": "CHE-G10-U05-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "White phosphorus (P₄) reacts vigorously with atmospheric oxygen to form tetraphosphorus decoxide (P₄O₁₀). When P₄O₁₀ is dissolved in water, what product is formed?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Phosphine gas (PH₃)"
+        },
+        {
+          "id": "B",
+          "text": "Phosphoric acid (H₃PO₄)"
+        },
+        {
+          "id": "C",
+          "text": "Phosphorous acid (H₃PO₃)"
+        },
+        {
+          "id": "D",
+          "text": "Phosphorus trichloride (PCl₃)"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "P₄O₁₀ is an acidic oxide (acid anhydride of phosphoric acid). When added to water, it reacts according to P₄O₁₀ + 6H₂O → 4H₃PO₄.",
+      "sourceReference": "Section 5.3, Page 231"
+    },
+    {
+      "id": "CHE-G10-U05-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "An industrial blast furnace processes 160 metric tons of pure hematite ore (Fe₂O₃, molar mass = 160.0 g/mol). According to the overall reduction equation Fe₂O₃ + 3CO → 2Fe + 3CO₂, what is the maximum theoretical yield of metallic iron (Fe, atomic mass = 56.0 g/mol) that can be extracted?",
+      "options": [
+        {
+          "id": "A",
+          "text": "56 metric tons"
+        },
+        {
+          "id": "B",
+          "text": "112 metric tons"
+        },
+        {
+          "id": "C",
+          "text": "80 metric tons"
+        },
+        {
+          "id": "D",
+          "text": "160 metric tons"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "1 mole of Fe₂O₃ (160 g) produces 2 moles of Fe (2 × 56 = 112 g). Therefore, 160 metric tons of Fe₂O₃ yields a theoretical maximum of (2 × 56 / 160) × 160 = 112 metric tons of pure iron.",
+      "sourceReference": "Section 5.2, Page 215"
+    },
+    {
+      "id": "CHE-G10-U05-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "In the Hall-Héroult cell for aluminum extraction, purified alumina (Al₂O₃) is dissolved in molten cryolite (Na₃AlF₆). Why cannot alumina be electrolyzed directly in its pure molten state or from an aqueous solution?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Pure Al₂O₃ has an extremely high melting point (~2045 °C) and poor electrical conductivity, while in aqueous solution, H⁺ ions are reduced at the cathode instead of Al³⁺ ions."
+        },
+        {
+          "id": "B",
+          "text": "Al₂O₃ reacts violently with water to form explosive hydrogen gas."
+        },
+        {
+          "id": "C",
+          "text": "Cryolite donates valence electrons directly to Al³⁺ without requiring electric current."
+        },
+        {
+          "id": "D",
+          "text": "Pure Al₂O₃ sublimes into gas before melting."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Pure Al₂O₃ has an extremely high melting point (~2045 °C), making direct molten electrolysis economically impractical. Electrolysis in water is impossible because H⁺ is more easily reduced than Al³⁺ (E° of Al³⁺/Al = -1.66 V), producing H₂ gas instead of Al metal. Cryolite dissolves Al₂O₃ at ~950 °C and improves electrical conductivity.",
+      "sourceReference": "Section 5.2, Page 218"
+    },
+    {
+      "id": "CHE-G10-U05-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "The choice of metallurgical extraction method for a metal depends directly on its position in the electrochemical reactivity series. Which comparison of reduction techniques for Sodium, Iron, and Copper is chemically accurate?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Sodium is reduced by carbon in a blast furnace; Iron is reduced by electrolysis; Copper is reduced by heating in hydrogen."
+        },
+        {
+          "id": "B",
+          "text": "Sodium requires electrolytic reduction of its molten salt due to its high chemical reactivity; Iron is reduced by carbon monoxide in a blast furnace; Copper can be extracted by heating its sulfide ore directly in air or reduced by milder chemical agents."
+        },
+        {
+          "id": "C",
+          "text": "Sodium, Iron, and Copper are all extracted by carbon reduction at 500 °C."
+        },
+        {
+          "id": "D",
+          "text": "Highly reactive metals like Sodium are extracted by aqueous electrolysis, whereas unreactive metals require high-temperature smelting."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Metals high in the activity series (Na, Al) form very stable compounds and require powerful electrolytic reduction. Moderately reactive metals (Fe, Zn) are reduced by carbon/CO at high temperatures. Unreactive metals (Cu, Ag) can be extracted by roasting their ores or milder chemical reduction.",
+      "sourceReference": "Section 5.2, Page 208"
+    },
+    {
+      "id": "CHE-G10-U05-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Diamond and Graphite are allotropes of carbon. Graphite conducts electricity effectively along its planar sheets, whereas Diamond is an electrical insulator. What structural feature accounts for this difference in electrical conductivity?",
+      "options": [
+        {
+          "id": "A",
+          "text": "In diamond, each carbon atom is sp³ hybridized and forms four single covalent bonds with no free electrons, whereas in graphite, each carbon atom is sp² hybridized, forming three covalent bonds and leaving one delocalized electron per carbon atom free to move along hexagonal layers."
+        },
+        {
+          "id": "B",
+          "text": "Diamond contains metallic bonds between carbon atoms, while graphite contains ionic bonds."
+        },
+        {
+          "id": "C",
+          "text": "Graphite consists of charged carbon ions, whereas diamond consists of neutral molecules."
+        },
+        {
+          "id": "D",
+          "text": "Diamond has a layered hexagonal structure, while graphite forms a rigid three-dimensional tetrahedral lattice."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "In diamond, all 4 valence electrons of each carbon are localized in 4 strong tetrahedral sp³ covalent bonds. In graphite, each carbon forms 3 sp² bonds in hexagonal sheets, leaving the 4th valence electron delocalized across the sheet, enabling electrical conductivity.",
+      "sourceReference": "Section 5.3, Page 224"
+    }
+  ]
 }

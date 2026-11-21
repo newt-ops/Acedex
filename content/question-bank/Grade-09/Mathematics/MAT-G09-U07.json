@@ -3,5 +3,411 @@
   "subject": "Mathematics",
   "unitNumber": 7,
   "unitTitle": "Congruency and Similarity",
-  "questions": []
+  "questions": [
+    {
+      "id": "MAT-G09-U07-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which of the following conditions is always satisfied when two plane figures are similar?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Their corresponding sides must be equal in length."
+        },
+        {
+          "id": "B",
+          "text": "Their corresponding angles must be congruent and their corresponding sides must be proportional."
+        },
+        {
+          "id": "C",
+          "text": "Their areas must be strictly equal."
+        },
+        {
+          "id": "D",
+          "text": "Their perimeters must be identical."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "By definition, two plane figures are similar if and only if all pairs of corresponding angles are congruent and the ratios of the lengths of their corresponding sides are proportional (equal to a constant scale factor). Equal sides or equal areas are properties of congruent figures, not general similar figures.",
+      "sourceReference": "Section 7.2, Page 245"
+    },
+    {
+      "id": "MAT-G09-U07-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Given that triangle ABC is congruent to triangle DEF (ΔABC ≅ ΔDEF), with m(∠A) = 55° and m(∠B) = 70°, what is the measure of ∠F?",
+      "options": [
+        {
+          "id": "A",
+          "text": "55°"
+        },
+        {
+          "id": "B",
+          "text": "70°"
+        },
+        {
+          "id": "C",
+          "text": "65°"
+        },
+        {
+          "id": "D",
+          "text": "50°"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "In triangle ABC, the sum of the interior angles is 180°, so m(∠C) = 180° - (55° + 70°) = 180° - 125° = 65°. Since ΔABC ≅ ΔDEF, corresponding angles are congruent, which means m(∠F) = m(∠C) = 65°.",
+      "sourceReference": "Section 7.1, Page 240-241"
+    },
+    {
+      "id": "MAT-G09-U07-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Two triangles are similar with a scale factor of 4:7. If the perimeter of the smaller triangle is 36 cm, what is the perimeter of the larger triangle?",
+      "options": [
+        {
+          "id": "A",
+          "text": "49 cm"
+        },
+        {
+          "id": "B",
+          "text": "63 cm"
+        },
+        {
+          "id": "C",
+          "text": "72 cm"
+        },
+        {
+          "id": "D",
+          "text": "84 cm"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The ratio of the perimeters of two similar figures is equal to the ratio of their corresponding side lengths (the scale factor). Setting up the proportion: P_small / P_large = 4 / 7 => 36 / P_large = 4 / 7. Solving for P_large gives P_large = (36 × 7) / 4 = 9 × 7 = 63 cm.",
+      "sourceReference": "Section 7.4, Page 259-260"
+    },
+    {
+      "id": "MAT-G09-U07-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "The lengths of the corresponding sides of two similar polygons are in the ratio 3:5. If the area of the smaller polygon is 54 cm², what is the area of the larger polygon?",
+      "options": [
+        {
+          "id": "A",
+          "text": "90 cm²"
+        },
+        {
+          "id": "B",
+          "text": "120 cm²"
+        },
+        {
+          "id": "C",
+          "text": "150 cm²"
+        },
+        {
+          "id": "D",
+          "text": "225 cm²"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "For any two similar plane figures, the ratio of their areas is equal to the square of the ratio of their corresponding side lengths: Area_small / Area_large = (3/5)² = 9/25. Substituting the area of the smaller polygon: 54 / Area_large = 9 / 25 => Area_large = (54 × 25) / 9 = 6 × 25 = 150 cm².",
+      "sourceReference": "Section 7.5, Page 262-263"
+    },
+    {
+      "id": "MAT-G09-U07-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which of the following classes of geometric figures are ALWAYS similar to one another?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Any two rectangles"
+        },
+        {
+          "id": "B",
+          "text": "Any two rhombuses"
+        },
+        {
+          "id": "C",
+          "text": "Any two equilateral triangles"
+        },
+        {
+          "id": "D",
+          "text": "Any two isosceles triangles"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "All equilateral triangles have interior angles measuring 60° (equiangular) and all sides equal in length, making their corresponding sides always proportional. Therefore, any two equilateral triangles are similar by the AAA (or SSS) similarity criterion. Rectangles, rhombuses, and general isosceles triangles can have varying angle measures or side proportions.",
+      "sourceReference": "Section 7.2 & Exercise 7.7, Page 245, 248"
+    },
+    {
+      "id": "MAT-G09-U07-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In triangle ABC, a line segment DE is drawn parallel to base BC, with D on side AB and E on side AC. If AD = 6 cm, DB = 9 cm, and AE = 8 cm, what is the total length of side AC?",
+      "options": [
+        {
+          "id": "A",
+          "text": "12 cm"
+        },
+        {
+          "id": "B",
+          "text": "18 cm"
+        },
+        {
+          "id": "C",
+          "text": "20 cm"
+        },
+        {
+          "id": "D",
+          "text": "24 cm"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Since DE is parallel to BC, ∠ADE ≅ ∠ABC and ∠AED ≅ ∠ACB (corresponding angles), meaning ΔADE ~ ΔABC by the AA similarity theorem. Therefore, AD / AB = AE / AC. The total length of AB is AD + DB = 6 + 9 = 15 cm. Substituting into the proportion: 6 / 15 = 8 / AC => 2 / 5 = 8 / AC => AC = (5 × 8) / 2 = 20 cm.",
+      "sourceReference": "Section 7.3, Page 249-250 & Review Exercise, Page 274"
+    },
+    {
+      "id": "MAT-G09-U07-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "The areas of two similar triangles ABC and DEF are 144 cm² and 81 cm² respectively. If the perimeter of triangle ABC is 36 cm, what is the perimeter of triangle DEF?",
+      "options": [
+        {
+          "id": "A",
+          "text": "20.25 cm"
+        },
+        {
+          "id": "B",
+          "text": "24 cm"
+        },
+        {
+          "id": "C",
+          "text": "27 cm"
+        },
+        {
+          "id": "D",
+          "text": "30 cm"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The ratio of the perimeters of two similar figures equals the square root of the ratio of their areas: P(ABC) / P(DEF) = √(Area(ABC) / Area(DEF)) = √(144 / 81) = 12 / 9 = 4 / 3. Substituting P(ABC) = 36 cm: 36 / P(DEF) = 4 / 3 => P(DEF) = (36 × 3) / 4 = 27 cm.",
+      "sourceReference": "Section 7.4 & Section 7.5, Page 259, 262"
+    },
+    {
+      "id": "MAT-G09-U07-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "A vertical wooden pole 1.6 meters tall casts a shadow 2.4 meters long on level ground. At the exact same time, a school flagpole casts a shadow 18 meters long. What is the height of the flagpole?",
+      "options": [
+        {
+          "id": "A",
+          "text": "10 meters"
+        },
+        {
+          "id": "B",
+          "text": "12 meters"
+        },
+        {
+          "id": "C",
+          "text": "14 meters"
+        },
+        {
+          "id": "D",
+          "text": "15 meters"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "At any given time, sunbeams strike the ground at the same angle of elevation, forming two similar right-angled triangles between the vertical objects and their shadows. Using the proportionality of corresponding sides: (Height of flagpole) / (Shadow of flagpole) = (Height of pole) / (Shadow of pole) => H / 18 = 1.6 / 2.4. Since 1.6 / 2.4 = 2 / 3, we have H = 18 × (2 / 3) = 12 meters.",
+      "sourceReference": "Section 7.7, Page 267, 270"
+    },
+    {
+      "id": "MAT-G09-U07-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which of the following conditions does NOT guarantee that two triangles are congruent?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Three pairs of corresponding sides are equal (SSS)."
+        },
+        {
+          "id": "B",
+          "text": "Two pairs of corresponding sides and the included angle are equal (SAS)."
+        },
+        {
+          "id": "C",
+          "text": "Two pairs of corresponding angles and the included side are equal (ASA)."
+        },
+        {
+          "id": "D",
+          "text": "Three pairs of corresponding angles are equal (AAA)."
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "The AAA condition ensures that two triangles have the same shape, meaning they are similar, but it does not determine their relative size. Therefore, AAA guarantees similarity, not congruency. SSS, SAS, ASA, and RHS are the established criteria for congruency of triangles.",
+      "sourceReference": "Section 7.1 & Section 7.3.1, Page 241-244, 250"
+    },
+    {
+      "id": "MAT-G09-U07-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Two quadrilateral fields ABCD and EFGH are similar (ABCD ~ EFGH). The perimeter of ABCD is 45 meters and the perimeter of EFGH is 60 meters. If side AB measures 12 meters, what is the length of the corresponding side EF?",
+      "options": [
+        {
+          "id": "A",
+          "text": "9 meters"
+        },
+        {
+          "id": "B",
+          "text": "15 meters"
+        },
+        {
+          "id": "C",
+          "text": "16 meters"
+        },
+        {
+          "id": "D",
+          "text": "18 meters"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The ratio of corresponding sides in similar polygons is equal to the ratio of their perimeters: EF / AB = Perimeter(EFGH) / Perimeter(ABCD) => EF / 12 = 60 / 45 = 4 / 3. Solving for EF gives EF = 12 × (4 / 3) = 16 meters.",
+      "sourceReference": "Section 7.4 & Exercise 7.6, Page 247, 259"
+    },
+    {
+      "id": "MAT-G09-U07-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In a right-angled triangle ABC with right angle at B, an altitude BD is drawn perpendicular to the hypotenuse AC. If AD = 3 cm and DC = 12 cm, what is the length of altitude BD?",
+      "options": [
+        {
+          "id": "A",
+          "text": "6 cm"
+        },
+        {
+          "id": "B",
+          "text": "7.5 cm"
+        },
+        {
+          "id": "C",
+          "text": "9 cm"
+        },
+        {
+          "id": "D",
+          "text": "36 cm"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The altitude to the hypotenuse divides the right-angled triangle into two smaller triangles that are similar to each other: ΔADB ~ ΔBDC. From this similarity, the ratio of corresponding sides is AD / BD = BD / DC, which gives BD² = AD × DC. Substituting the values: BD² = 3 × 12 = 36 => BD = √36 = 6 cm.",
+      "sourceReference": "Section 7.3 & Exercise 7.10 b, Page 258"
+    },
+    {
+      "id": "MAT-G09-U07-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "In a right-angled triangle ABC, ∠B = 90° and an altitude BD is drawn perpendicular to the hypotenuse AC. If AB = 15 cm and AC = 25 cm, what is the length of the altitude BD?",
+      "options": [
+        {
+          "id": "A",
+          "text": "9.6 cm"
+        },
+        {
+          "id": "B",
+          "text": "10 cm"
+        },
+        {
+          "id": "C",
+          "text": "12 cm"
+        },
+        {
+          "id": "D",
+          "text": "14.4 cm"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "By the Pythagoras theorem in right triangle ABC: BC = √(AC² - AB²) = √(25² - 15²) = √(625 - 225) = √400 = 20 cm. The area of triangle ABC can be expressed in two ways: Area = (1/2) × AB × BC = (1/2) × AC × BD. Equating the expressions: AB × BC = AC × BD => 15 × 20 = 25 × BD => 300 = 25 × BD => BD = 300 / 25 = 12 cm.",
+      "sourceReference": "Section 7.3 & Exercise 7.10 b, Page 258"
+    },
+    {
+      "id": "MAT-G09-U07-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A thin rod 12 cm long is held vertically between a point light source and a flat vertical wall, parallel to the wall. The rod is 18 cm away from the light source and 36 cm away from the wall. What is the length of the shadow cast by the rod on the wall?",
+      "options": [
+        {
+          "id": "A",
+          "text": "24 cm"
+        },
+        {
+          "id": "B",
+          "text": "30 cm"
+        },
+        {
+          "id": "C",
+          "text": "36 cm"
+        },
+        {
+          "id": "D",
+          "text": "48 cm"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The light source forms the common vertex of two similar triangles: one triangle bounded by the rod and the other by the shadow on the wall. The distance from the light source to the rod is 18 cm, while the total distance from the light source to the wall is 18 + 36 = 54 cm. By AA similarity: (Length of shadow) / (Length of rod) = (Distance to wall) / (Distance to rod) => Shadow / 12 = 54 / 18 = 3. Therefore, the shadow length is 12 × 3 = 36 cm.",
+      "sourceReference": "Section 7.7 & Exercise 7.15, Page 271-272"
+    },
+    {
+      "id": "MAT-G09-U07-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "In triangle ABC, a line segment DE is drawn parallel to side BC (with point D on AB and point E on AC) such that it divides triangle ABC into two regions of equal area: triangle ADE and trapezoid BDEC. What is the ratio of the length of segment AD to the length of side AB?",
+      "options": [
+        {
+          "id": "A",
+          "text": "1/2"
+        },
+        {
+          "id": "B",
+          "text": "√2/2"
+        },
+        {
+          "id": "C",
+          "text": "√3/2"
+        },
+        {
+          "id": "D",
+          "text": "1/√3"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Since DE is parallel to BC, ΔADE ~ ΔABC. If the area of ΔADE equals the area of trapezoid BDEC, then Area(ABC) = Area(ADE) + Area(BDEC) = 2 × Area(ADE). Thus, Area(ADE) / Area(ABC) = 1/2. For similar triangles, the ratio of areas equals the square of the ratio of corresponding side lengths: (AD / AB)² = Area(ADE) / Area(ABC) = 1/2. Taking the positive square root gives AD / AB = 1 / √2 = √2 / 2.",
+      "sourceReference": "Section 7.5 & Review Exercise, Page 262, 274"
+    },
+    {
+      "id": "MAT-G09-U07-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Two vertical poles of heights 4 meters and 6 meters stand on level ground. Ropes are tied from the top of each pole to the base of the opposite pole. At what height above the ground do the two ropes intersect?",
+      "options": [
+        {
+          "id": "A",
+          "text": "2.4 meters"
+        },
+        {
+          "id": "B",
+          "text": "2.5 meters"
+        },
+        {
+          "id": "C",
+          "text": "3.0 meters"
+        },
+        {
+          "id": "D",
+          "text": "5.0 meters"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Let h be the height of the intersection point above the ground, and let the heights of the two poles be a = 4 m and b = 6 m. Using pairs of similar right-angled triangles formed with the ground line, the crossed-ladders theorem establishes that 1/h = 1/a + 1/b. Therefore, h = (a × b) / (a + b) = (4 × 6) / (4 + 6) = 24 / 10 = 2.4 meters.",
+      "sourceReference": "Section 7.3 & Exercise 7.10 b, Page 258"
+    }
+  ]
 }

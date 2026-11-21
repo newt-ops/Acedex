@@ -84,7 +84,7 @@ export const AccountStatusSchema = z.enum([
 ]);
 export type AccountStatus = z.infer<typeof AccountStatusSchema>;
 
-export const AuthProviderSchema = z.enum(['google', 'phone']);
+export const AuthProviderSchema = z.enum(['phone']);
 export type AuthProvider = z.infer<typeof AuthProviderSchema>;
 
 export const StudentGenderSchema = z.enum(['male', 'female']);
@@ -178,11 +178,6 @@ export const UpdateProfileRequestSchema = z
   );
 export type UpdateProfileRequest = z.infer<typeof UpdateProfileRequestSchema>;
 
-export const GoogleAuthRequestSchema = z.object({
-  idToken: z.string().min(1, 'Google ID token is required'),
-  platform: z.enum(['web', 'android', 'ios']).optional(),
-});
-export type GoogleAuthRequest = z.infer<typeof GoogleAuthRequestSchema>;
 
 export const RefreshTokenRequestSchema = z.object({
   refreshToken: z.string().min(1).optional(),

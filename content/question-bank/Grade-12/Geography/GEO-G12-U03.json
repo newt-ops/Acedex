@@ -3,5 +3,411 @@
   "subject": "Geography",
   "unitNumber": 3,
   "unitTitle": "Management of Conflict Over Resources",
-  "questions": []
+  "questions": [
+    {
+      "id": "GEO-G12-U03-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "According to the landmark 1987 Brundtland Commission Report (Our Common Future), how is sustainable development formally defined?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Development that prioritizes immediate industrial growth over environmental conservation."
+        },
+        {
+          "id": "B",
+          "text": "Development that meets the needs of the present without compromising the ability of future generations to meet their own needs."
+        },
+        {
+          "id": "C",
+          "text": "Development that relies exclusively on non-renewable fossil fuel extraction to maximize GDP."
+        },
+        {
+          "id": "D",
+          "text": "Development that restricts urban settlement to polar regions."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The Brundtland Commission Report (1987) defined sustainable development as 'development that meets the needs of the present without compromising the ability of future generations to meet their own needs,' establishing a balance between economic growth, social equity, and environmental protection.",
+      "sourceReference": "Grade 12 Geography Textbook, Section 3.1, Page 63–64"
+    },
+    {
+      "id": "GEO-G12-U03-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Sustainable development rests upon three interconnected core dimensions (pillars). Which of the following sets correctly lists these three pillars?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Industrialization, Urbanization, and Military Power"
+        },
+        {
+          "id": "B",
+          "text": "Economic sustainability, Social sustainability, and Environmental sustainability"
+        },
+        {
+          "id": "C",
+          "text": "Mining, Agriculture, and Commercial Trade"
+        },
+        {
+          "id": "D",
+          "text": "Population growth, Deforestation, and Fossil fuel consumption"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Sustainable development requires balancing three primary dimensions: economic sustainability (viable economic growth), social sustainability (social equity and well-being), and environmental sustainability (ecological preservation and resource stewardship).",
+      "sourceReference": "Grade 12 Geography Textbook, Section 3.1, Page 64"
+    },
+    {
+      "id": "GEO-G12-U03-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which of the following natural resources is classified as non-renewable because its natural formation occurs so slowly that its supply is fixed and exhaustible?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Solar energy"
+        },
+        {
+          "id": "B",
+          "text": "Biomass timber"
+        },
+        {
+          "id": "C",
+          "text": "Petroleum crude oil"
+        },
+        {
+          "id": "D",
+          "text": "Geothermal energy"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Petroleum crude oil, coal, and natural gas are non-renewable (fund) resources formed over millions of years. Once extracted and consumed, they cannot be replenished on human timescales, unlike solar, biomass, or geothermal energy.",
+      "sourceReference": "Grade 12 Geography Textbook, Section 3.2, Page 68–69"
+    },
+    {
+      "id": "GEO-G12-U03-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In traditional Oromo society, which customary institution serves as a well-structured democratic system of governance and indigenous conflict resolution headed by elected leaders?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The Shimagle elders council"
+        },
+        {
+          "id": "B",
+          "text": "The Gadaa system"
+        },
+        {
+          "id": "C",
+          "text": "The Mada'a customary court"
+        },
+        {
+          "id": "D",
+          "text": "The T'eer elder assembly"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The Gadaa system is an indigenous egalitarian democratic social and political institution of the Oromo people in Ethiopia that regulates political, economic, social, and judicial affairs, including conflict resolution through leaders like the Abbaa Gadaa.",
+      "sourceReference": "Grade 12 Geography Textbook, Section 3.4, Page 85–86"
+    },
+    {
+      "id": "GEO-G12-U03-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Adopted by the United Nations General Assembly in 2015 as part of Agenda 2030, how many Sustainable Development Goals (SDGs) were established to succeed the Millennium Development Goals (MDGs)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "8"
+        },
+        {
+          "id": "B",
+          "text": "12"
+        },
+        {
+          "id": "C",
+          "text": "17"
+        },
+        {
+          "id": "D",
+          "text": "25"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "In 2015, the United Nations General Assembly adopted the 2030 Agenda for Sustainable Development, which encompasses 17 universal Sustainable Development Goals (SDGs) designed to address poverty, inequality, climate change, and environmental degradation by 2030.",
+      "sourceReference": "Grade 12 Geography Textbook, Section 3.1, Page 64–65"
+    },
+    {
+      "id": "GEO-G12-U03-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "According to natural resource management literature, which three primary structural drivers frequently act alone or in combination to trigger resource-based conflicts?",
+      "options": [
+        {
+          "id": "A",
+          "text": "High literacy rates, urban electrification, and industrial automation"
+        },
+        {
+          "id": "B",
+          "text": "Competition over increasingly scarce renewable resources, poor natural resource governance, and transboundary resource dynamics"
+        },
+        {
+          "id": "C",
+          "text": "Excessive foreign tourism, space exploration, and digital internet expansion"
+        },
+        {
+          "id": "D",
+          "text": "Pro-natalist policies, high altitude climates, and volcanic eruptions"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Conflicts over renewable natural resources are driven primarily by three factors: (1) competition over increasingly scarce renewable resources (water, land, pasture), (2) poor governance and discriminatory resource policies, and (3) transboundary natural resource dynamics and trans-state pressures.",
+      "sourceReference": "Grade 12 Geography Textbook, Section 3.2, Page 71"
+    },
+    {
+      "id": "GEO-G12-U03-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which traditional system of customary law and dispute settlement is practiced by the Afar ethnic group in eastern Ethiopia to resolve resource disputes and social conflicts?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Mada'a"
+        },
+        {
+          "id": "B",
+          "text": "Shimagille"
+        },
+        {
+          "id": "C",
+          "text": "Ogaz"
+        },
+        {
+          "id": "D",
+          "text": "Kedo Abba"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Mada'a is the traditional customary law and conflict resolution mechanism of the Afar people, providing rules and procedures for settling inter-clan and intra-clan disputes, particularly over pasture and water holes.",
+      "sourceReference": "Grade 12 Geography Textbook, Section 3.4, Page 86–87"
+    },
+    {
+      "id": "GEO-G12-U03-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Why do transboundary rivers (such as the Nile, Niger, and Mekong) present unique governance challenges compared to inland rivers confined within a single sovereign state?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Transboundary rivers flow exclusively underground through impenetrable granite bedrock."
+        },
+        {
+          "id": "B",
+          "text": "Transboundary rivers cross international sovereign borders, creating potential tensions between upstream user rights and downstream water dependence that require formal multi-state agreements."
+        },
+        {
+          "id": "C",
+          "text": "Transboundary rivers contain zero freshwater volume and cannot support agricultural irrigation."
+        },
+        {
+          "id": "D",
+          "text": "Transboundary rivers are exempt from international environmental law treaties."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Transboundary rivers flow across political boundaries of two or more sovereign states. This shared nature creates hydrological and political complexities: actions by upstream states (like dam construction or diversion) directly impact downstream water security, requiring regional cooperation and international legal frameworks.",
+      "sourceReference": "Grade 12 Geography Textbook, Section 3.2, Page 73–75"
+    },
+    {
+      "id": "GEO-G12-U03-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which of the following practices is essential for ensuring good governance of natural resources and reducing the risk of violent community conflict during large-scale development projects?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Excluding local indigenous communities from environmental impact decision-making."
+        },
+        {
+          "id": "B",
+          "text": "Transparent public participation, clear land tenure security, and inclusive environmental impact assessments."
+        },
+        {
+          "id": "C",
+          "text": "Granting exclusive resource rights to foreign commercial logging monopolies without local consultation."
+        },
+        {
+          "id": "D",
+          "text": "Concealing project revenue data from regional tax authorities."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Good governance of natural resources requires transparency, social equity, clear property/tenure security, robust environmental impact assessments, and active public participation of local communities in decision-making to prevent grievances and conflict.",
+      "sourceReference": "Grade 12 Geography Textbook, Section 3.3, Page 81–82"
+    },
+    {
+      "id": "GEO-G12-U03-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What distinct socio-cultural advantage do traditional indigenous conflict resolution practices hold over formal litigation in state court systems when resolving rural community disputes?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Indigenous practices focus on punitive imprisonment rather than verbal communication."
+        },
+        {
+          "id": "B",
+          "text": "Indigenous practices prioritize reconciliation, social harmony restoration, and mutual consensus over win-lose legal verdicts and lengthy formal bureaucracy."
+        },
+        {
+          "id": "C",
+          "text": "Indigenous practices require high monetary court fees paid in foreign currency."
+        },
+        {
+          "id": "D",
+          "text": "Indigenous practices apply only to international corporate commercial disputes."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Traditional conflict resolution systems in Ethiopia (such as Shimagille, Gadaa, Mada'a) emphasize restorative justice, community reconciliation, mutual agreement, and preserving social cohesion, whereas formal courts often result in win-lose rulings that may perpetuate underlying hostility.",
+      "sourceReference": "Grade 12 Geography Textbook, Section 3.4, Page 84–87"
+    },
+    {
+      "id": "GEO-G12-U03-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Adopted by the UN General Assembly in 2007, which two core rights articulated in the UN Declaration on the Rights of Indigenous Peoples directly address the root causes of resource conflicts affecting indigenous communities?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Right to maritime oil exploration and right to nuclear energy development"
+        },
+        {
+          "id": "B",
+          "text": "Right to land/customary territory tenure and right to self-determination"
+        },
+        {
+          "id": "C",
+          "text": "Right to mandatory urbanization and right to industrial logging subsidies"
+        },
+        {
+          "id": "D",
+          "text": "Right to establish international commercial airlines and right to outer space satellites"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The 2007 UN Declaration on the Rights of Indigenous Peoples highlights the rights of indigenous communities to their customary lands, territories, and resources, alongside the right to self-determination, addressing central triggers of indigenous land disenfranchisement and resource conflict.",
+      "sourceReference": "Grade 12 Geography Textbook, Section 3.4, Page 87"
+    },
+    {
+      "id": "GEO-G12-U03-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "In natural resource conflict analysis, how is 'structural resource scarcity' distinguished from 'demand-induced scarcity' and 'supply-induced scarcity'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Structural scarcity is caused by seasonal rainfall failure, while demand-induced scarcity is caused by volcanic eruptions."
+        },
+        {
+          "id": "B",
+          "text": "Structural scarcity occurs when resources are unequally distributed due to discriminatory laws, concentrated ownership, or weak governance, leaving marginal groups deprived regardless of total resource volume."
+        },
+        {
+          "id": "C",
+          "text": "Structural scarcity occurs only when the global human population reaches zero."
+        },
+        {
+          "id": "D",
+          "text": "Structural scarcity refers to the physical depletion of non-renewable minerals in deep oceanic trenches."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Supply-induced scarcity arises from resource degradation or depletion; demand-induced scarcity arises from population growth or increased per-capita consumption; whereas structural scarcity arises from unequal resource distribution caused by legal, political, or economic structures that concentrate wealth and land in the hands of a few, marginalizing poorer groups.",
+      "sourceReference": "Grade 12 Geography Textbook, Section 3.2, Page 70–72"
+    },
+    {
+      "id": "GEO-G12-U03-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Why do traditional seasonal migrations of pastoralist communities across international borders in the Horn of Africa frequently lead to localized resource conflicts?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because pastoralists migrate to export heavy industrial machinery across ocean ports."
+        },
+        {
+          "id": "B",
+          "text": "Because seasonal livestock mobility follows ecological availability of water and grazing land rather than political sovereign boundaries, causing competition with settled agriculturalists and host communities under drought conditions."
+        },
+        {
+          "id": "C",
+          "text": "Because international borders permanently freeze all river water flow."
+        },
+        {
+          "id": "D",
+          "text": "Because pastoralist migrations automatically increase infant mortality rates to 100%."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Pastoralist transhumance is an adaptive strategy driven by seasonal rainfall and pasture availability. Because ecosystem boundaries do not align with national borders, pastoralists move across sovereign lines, which can spark conflicts with settled farming communities or other pastoral groups when water and rangeland resources shrink during severe droughts.",
+      "sourceReference": "Grade 12 Geography Textbook, Section 3.2, Page 74–75"
+    },
+    {
+      "id": "GEO-G12-U03-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "How does the construction and operation of the Grand Ethiopian Renaissance Dam (GERD) on the Blue Nile reflect a shift in Nile Basin hydro-politics from colonial-era water allocation regimes toward equitable utilization?",
+      "options": [
+        {
+          "id": "A",
+          "text": "GERD reinforces the 1959 bilateral agreement that granted 100% of Nile waters exclusively to Egypt and Sudan."
+        },
+        {
+          "id": "B",
+          "text": "GERD asserts upper-riparian rights to generate clean hydroelectric power and develop water infrastructure based on the principles of equitable and reasonable utilization and non-significant harm."
+        },
+        {
+          "id": "C",
+          "text": "GERD diverts the entire Blue Nile flow into the Red Sea, cutting off all water to downstream states."
+        },
+        {
+          "id": "D",
+          "text": "GERD converts the Blue Nile from a renewable river into a non-renewable fossil aquifer."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The GERD represents a major shift in Nile hydro-politics. Historically dominated by colonial-era agreements (1929 and 1959) that favored downstream states (Egypt and Sudan), Ethiopia's development of the GERD asserts the right of upstream riparian states to equitably utilize shared Nile resources for clean energy while adhering to international principles of reasonable use and avoiding significant downstream harm.",
+      "sourceReference": "Grade 12 Geography Textbook, Section 3.2, Page 74–76 & Section 3.3, Page 80–82"
+    },
+    {
+      "id": "GEO-G12-U03-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "In natural resource management (NRM), why is addressing only the technical side of resource conservation (e.g., building terracing or planting trees) insufficient for preventing resource-based violent conflicts without reforming NRM governance institutions?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Technical conservation measures automatically cause geothermal volcanic activity."
+        },
+        {
+          "id": "B",
+          "text": "Conflicts over resources stem fundamentally from institutional failures—such as weak tenure security, corrupt allocation, lack of dispute mechanisms, and social exclusion—which cannot be resolved by physical infrastructure alone."
+        },
+        {
+          "id": "C",
+          "text": "Technical conservation eliminates the need for human water consumption."
+        },
+        {
+          "id": "D",
+          "text": "Governance institutions apply only to non-renewable petroleum minerals."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Resource conflicts are social and political in nature. While technical solutions (like terracing or reforestation) restore physical ecology, they do not resolve underlying social grievances, land tenure insecurity, power imbalances, or discriminatory access. Effective conflict prevention requires institutional reform, good governance, and inclusive policy frameworks alongside technical conservation.",
+      "sourceReference": "Grade 12 Geography Textbook, Section 3.2, Page 76–77 & Section 3.3, Page 81–83"
+    }
+  ]
 }

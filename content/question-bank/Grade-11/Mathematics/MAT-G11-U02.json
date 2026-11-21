@@ -3,5 +3,411 @@
   "subject": "Mathematics",
   "unitNumber": 2,
   "unitTitle": "Rational Expressions and Rational Functions",
-  "questions": []
+  "questions": [
+    {
+      "id": "MAT-G11-U02-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which of the following algebraic expressions represents a rational expression?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(2x² + x) / √(x² + 1)"
+        },
+        {
+          "id": "B",
+          "text": "(x^(3/2) + 2x - 1) / (x + 4)"
+        },
+        {
+          "id": "C",
+          "text": "(3x² - 5x + 2) / (x² - 4)"
+        },
+        {
+          "id": "D",
+          "text": "(2^x + 3) / (x - 1)"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "By Definition 2.1, a rational expression is an expression of the form p(x) / q(x), where both p(x) and q(x) are polynomial expressions and q(x) ≠ 0. In (3x² - 5x + 2) / (x² - 4), both the numerator and denominator are polynomials. Expressions involving square roots of variables (A), fractional exponents (B), or exponential terms (D) are not polynomials.",
+      "sourceReference": "Section 2.1.1, Page 84-85"
+    },
+    {
+      "id": "MAT-G11-U02-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is the domain of the rational expression (3x - 5) / (x² - 4x + 3)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "{x ∈ ℝ : x ≠ 1 and x ≠ 3}"
+        },
+        {
+          "id": "B",
+          "text": "{x ∈ ℝ : x ≠ -1 and x ≠ -3}"
+        },
+        {
+          "id": "C",
+          "text": "{x ∈ ℝ : x ≠ 5/3}"
+        },
+        {
+          "id": "D",
+          "text": "ℝ"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "By Definition 2.2, the domain of a rational expression p(x) / q(x) consists of all real numbers for which the denominator is not zero. Setting x² - 4x + 3 = 0 yields (x - 1)(x - 3) = 0, so x = 1 or x = 3. Thus, these values must be excluded, giving the domain {x ∈ ℝ : x ≠ 1 and x ≠ 3}.",
+      "sourceReference": "Section 2.1.2, Page 86-87"
+    },
+    {
+      "id": "MAT-G11-U02-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is the simplified lowest form of the rational expression (x² - 9) / (2x² + 6x) on its natural domain?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(x - 3) / (2x)"
+        },
+        {
+          "id": "B",
+          "text": "(x + 3) / (2x)"
+        },
+        {
+          "id": "C",
+          "text": "(x - 3) / 2"
+        },
+        {
+          "id": "D",
+          "text": "-9 / (6x)"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Factorizing both the numerator and the denominator: x² - 9 = (x - 3)(x + 3) and 2x² + 6x = 2x(x + 3). Cancelling out the common factor (x + 3) for x ≠ -3 and x ≠ 0 gives (x - 3) / (2x).",
+      "sourceReference": "Section 2.1.3, Page 87-89"
+    },
+    {
+      "id": "MAT-G11-U02-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is the horizontal asymptote of the rational function f(x) = (4x² - 3x + 1) / (2x² + 5x - 7)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "y = 0"
+        },
+        {
+          "id": "B",
+          "text": "y = 2"
+        },
+        {
+          "id": "C",
+          "text": "y = 4"
+        },
+        {
+          "id": "D",
+          "text": "x = 2"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "When the degree of the numerator polynomial p(x) equals the degree of the denominator polynomial q(x) (here both degrees are n = m = 2), the horizontal asymptote is the horizontal line given by y = a_n / b_m, which is the ratio of their leading coefficients: y = 4 / 2 = 2.",
+      "sourceReference": "Section 2.3.2, Page 114-115"
+    },
+    {
+      "id": "MAT-G11-U02-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which of the following lines represents a vertical asymptote to the graph of the rational function f(x) = 5 / (x² - 16)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "x = 4 and x = -4"
+        },
+        {
+          "id": "B",
+          "text": "x = 16"
+        },
+        {
+          "id": "C",
+          "text": "y = 4 and y = -4"
+        },
+        {
+          "id": "D",
+          "text": "y = 0"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "A vertical line x = a is a vertical asymptote of f(x) = p(x) / q(x) if q(a) = 0 and p(a) ≠ 0. Setting the denominator x² - 16 = 0 yields x = 4 and x = -4. Because the numerator is the non-zero constant 5, both x = 4 and x = -4 are vertical asymptotes.",
+      "sourceReference": "Section 2.3.2, Page 114-115"
+    },
+    {
+      "id": "MAT-G11-U02-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What is the simplified form of the difference of rational expressions [(x - 1) / (x + 2)] - [(x + 3) / (x² - 4)]?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(x² - 4x - 1) / (x² - 4)"
+        },
+        {
+          "id": "B",
+          "text": "(x² - 4x + 5) / (x² - 4)"
+        },
+        {
+          "id": "C",
+          "text": "-4 / (x² - 4)"
+        },
+        {
+          "id": "D",
+          "text": "(x² - 2x - 5) / (x² - 4)"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Factoring the denominator: x² - 4 = (x + 2)(x - 2). The common denominator is (x + 2)(x - 2). Rewriting the first fraction gives [(x - 1)(x - 2)] / (x² - 4) = (x² - 3x + 2) / (x² - 4). Subtracting: [(x² - 3x + 2) - (x + 3)] / (x² - 4) = (x² - 4x - 1) / (x² - 4).",
+      "sourceReference": "Section 2.1.4, Page 91-92"
+    },
+    {
+      "id": "MAT-G11-U02-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What is the solution set of the rational equation 1 / (x - 2) + 6x / (x² - 4) = 3 / (x + 2)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "{-2}"
+        },
+        {
+          "id": "B",
+          "text": "{2}"
+        },
+        {
+          "id": "C",
+          "text": "{-2, 2}"
+        },
+        {
+          "id": "D",
+          "text": "∅"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "The domain excludes values that make any denominator zero: x ≠ 2 and x ≠ -2. Multiplying the entire equation by the common denominator (x - 2)(x + 2): 1(x + 2) + 6x = 3(x - 2) => 7x + 2 = 3x - 6 => 4x = -8 => x = -2. However, x = -2 makes the denominator zero and is an extraneous root. Therefore, the equation has no valid solution, and the solution set is ∅.",
+      "sourceReference": "Section 2.2.1, Page 104-105"
+    },
+    {
+      "id": "MAT-G11-U02-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What is the solution set of the rational inequality (x - 3) / (x + 1) ≥ 0?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(-∞, -1] ∪ [3, ∞)"
+        },
+        {
+          "id": "B",
+          "text": "(-∞, -1) ∪ [3, ∞)"
+        },
+        {
+          "id": "C",
+          "text": "(-1, 3]"
+        },
+        {
+          "id": "D",
+          "text": "[-1, 3]"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The critical numbers are x = 3 (where the numerator is 0) and x = -1 (where the denominator is 0, so x ≠ -1). Testing the sign across the intervals: on (-∞, -1), both numerator and denominator are negative, so the quotient is positive (> 0); on (-1, 3), the numerator is negative and denominator is positive, so the quotient is negative (< 0); on [3, ∞), both are non-negative, so the quotient is ≥ 0. Since x = -1 makes the expression undefined, it cannot be included. Thus, the solution set is (-∞, -1) ∪ [3, ∞).",
+      "sourceReference": "Section 2.2.2, Page 107-108"
+    },
+    {
+      "id": "MAT-G11-U02-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What is the equation of the oblique (slant) asymptote to the graph of the rational function f(x) = (2x² + 3x - 1) / (x - 1)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "y = 2x + 1"
+        },
+        {
+          "id": "B",
+          "text": "y = 2x + 5"
+        },
+        {
+          "id": "C",
+          "text": "y = 2x + 3"
+        },
+        {
+          "id": "D",
+          "text": "y = 2x - 5"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Since the degree of the numerator (2) is exactly one more than the degree of the denominator (1), the graph has an oblique asymptote. Dividing 2x² + 3x - 1 by x - 1 using polynomial long division yields: f(x) = (2x + 5) + 4 / (x - 1). As x approaches ±∞, 4 / (x - 1) approaches 0. Therefore, the oblique asymptote is the linear equation y = 2x + 5.",
+      "sourceReference": "Section 2.3.2, Page 114, 116, 122-123"
+    },
+    {
+      "id": "MAT-G11-U02-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which of the following statements is TRUE concerning the discontinuities of the rational function f(x) = (x² - 4) / (x² - x - 2)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The graph has vertical asymptotes at both x = 2 and x = -1."
+        },
+        {
+          "id": "B",
+          "text": "The graph has a hole at (2, 4/3) and a vertical asymptote at x = -1."
+        },
+        {
+          "id": "C",
+          "text": "The graph has a hole at (-1, 0) and a vertical asymptote at x = 2."
+        },
+        {
+          "id": "D",
+          "text": "The graph has no vertical asymptotes."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Factoring numerator and denominator: f(x) = [(x - 2)(x + 2)] / [(x - 2)(x + 1)]. For x ≠ 2, the function simplifies to (x + 2) / (x + 1). At x = 2, both numerator and denominator vanish, producing a removable discontinuity (a hole) at (2, (2+2)/(2+1)) = (2, 4/3). At x = -1, the denominator is zero while the numerator is non-zero (-1 + 2 = 1 ≠ 0), producing a vertical asymptote at the line x = -1.",
+      "sourceReference": "Section 2.3.2, Page 114, 119-120"
+    },
+    {
+      "id": "MAT-G11-U02-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What is the decomposition of the rational expression (5x + 7) / (x² + 3x + 2) into partial fractions?",
+      "options": [
+        {
+          "id": "A",
+          "text": "2 / (x + 1) + 3 / (x + 2)"
+        },
+        {
+          "id": "B",
+          "text": "3 / (x + 1) + 2 / (x + 2)"
+        },
+        {
+          "id": "C",
+          "text": "-2 / (x + 1) + 7 / (x + 2)"
+        },
+        {
+          "id": "D",
+          "text": "1 / (x + 1) + 4 / (x + 2)"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The denominator factors as (x + 1)(x + 2). Setting up the partial fractions: (5x + 7) / [(x + 1)(x + 2)] = A / (x + 1) + B / (x + 2) => 5x + 7 = A(x + 2) + B(x + 1). Substituting x = -1 gives 5(-1) + 7 = A(-1 + 2) => 2 = A. Substituting x = -2 gives 5(-2) + 7 = B(-2 + 1) => -3 = -B => B = 3. Thus, the decomposition is 2 / (x + 1) + 3 / (x + 2).",
+      "sourceReference": "Section 2.1.5, Page 96-97"
+    },
+    {
+      "id": "MAT-G11-U02-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "If the rational expression (1 - x) / (x³ + x) is decomposed into partial fractions as A / x + (Bx + C) / (x² + 1), what is the value of the sum A + B + C?",
+      "options": [
+        {
+          "id": "A",
+          "text": "-1"
+        },
+        {
+          "id": "B",
+          "text": "0"
+        },
+        {
+          "id": "C",
+          "text": "1"
+        },
+        {
+          "id": "D",
+          "text": "-2"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Factoring the denominator gives x(x² + 1), where x² + 1 is an irreducible quadratic. Setting (1 - x) / [x(x² + 1)] = A / x + (Bx + C) / (x² + 1), we have 1 - x = A(x² + 1) + (Bx + C)x = (A + B)x² + Cx + A. Equating coefficients of like powers: Constant term gives A = 1; x term gives C = -1; x² term gives A + B = 0 => 1 + B = 0 => B = -1. Therefore, A + B + C = 1 + (-1) + (-1) = -1.",
+      "sourceReference": "Section 2.1.5, Page 98-99"
+    },
+    {
+      "id": "MAT-G11-U02-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "What is the solution set of the rational inequality (x² - 6x) / (x - 12) > 1?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(3, 4) ∪ (12, ∞)"
+        },
+        {
+          "id": "B",
+          "text": "∪ (12, ∞)"
+        },
+        {
+          "id": "C",
+          "text": "(-∞, 3) ∪ (4, 12)"
+        },
+        {
+          "id": "D",
+          "text": "(3, 12)"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Rearrange the inequality to compare with zero: (x² - 6x) / (x - 12) - 1 > 0 => [x² - 6x - (x - 12)] / (x - 12) > 0 => (x² - 7x + 12) / (x - 12) > 0 => [(x - 3)(x - 4)] / (x - 12) > 0. The critical numbers are x = 3, x = 4, and x = 12. Testing sign intervals: on (-∞, 3), expression is negative; on (3, 4), positive; on (4, 12), negative; on (12, ∞), positive. Thus, the solution set is strictly (3, 4) ∪ (12, ∞).",
+      "sourceReference": "Section 2.2.2, Page 108-109"
+    },
+    {
+      "id": "MAT-G11-U02-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "At what value(s) of x does the graph of the rational function f(x) = (x³ - 1) / (x⁴ + 1) cross its horizontal asymptote?",
+      "options": [
+        {
+          "id": "A",
+          "text": "x = 1"
+        },
+        {
+          "id": "B",
+          "text": "x = -1 and x = 1"
+        },
+        {
+          "id": "C",
+          "text": "x = 0"
+        },
+        {
+          "id": "D",
+          "text": "It never crosses its horizontal asymptote"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Because the degree of the numerator (3) is strictly less than the degree of the denominator (4), the horizontal asymptote is the line y = 0. To determine where the graph crosses this horizontal asymptote, set f(x) = 0: (x³ - 1) / (x⁴ + 1) = 0 => x³ - 1 = 0 => x³ = 1 => x = 1. Since x⁴ + 1 ≠ 0 for all real numbers, the graph crosses its horizontal asymptote uniquely at x = 1.",
+      "sourceReference": "Section 2.3.2, Page 114, 118-120"
+    },
+    {
+      "id": "MAT-G11-U02-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Two water pipes, A and B, working simultaneously can fill an empty reservoir in 6 hours. When working alone, pipe A takes 5 hours less time than pipe B to fill the same reservoir. How many hours does it take pipe A working alone to fill the reservoir?",
+      "options": [
+        {
+          "id": "A",
+          "text": "8 hours"
+        },
+        {
+          "id": "B",
+          "text": "10 hours"
+        },
+        {
+          "id": "C",
+          "text": "12 hours"
+        },
+        {
+          "id": "D",
+          "text": "15 hours"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Let t be the time taken by pipe A alone (in hours). Then pipe B takes t + 5 hours. The work rate formula gives: 1/t + 1/(t + 5) = 1/6. Combining terms: (2t + 5) / [t(t + 5)] = 1/6 => 6(2t + 5) = t(t + 5) => 12t + 30 = t² + 5t => t² - 7t - 30 = 0. Factoring gives (t - 10)(t + 3) = 0. Since time cannot be negative, t = 10 hours. (Pipe A takes 10 hours and pipe B takes 15 hours).",
+      "sourceReference": "Section 2.4, Page 124-125, Exercise 2.12 Page 127"
+    }
+  ]
 }

@@ -3,5 +3,411 @@
   "subject": "Chemistry",
   "unitNumber": 2,
   "unitTitle": "Electrochemistry",
-  "questions": []
+  "questions": [
+    {
+      "id": "CHE-G12-U02-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In a oxidation-reduction (redox) reaction, which process represents oxidation?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Gain of electrons resulting in a decrease in oxidation state."
+        },
+        {
+          "id": "B",
+          "text": "Loss of electrons resulting in an increase in oxidation state."
+        },
+        {
+          "id": "C",
+          "text": "Addition of hydrogen atoms without any change in charge."
+        },
+        {
+          "id": "D",
+          "text": "Formation of a coordinate covalent bond with a solvent molecule."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Oxidation is defined as the loss of one or more electrons by an atom or ion, which leads to an increase in its oxidation number (state).",
+      "sourceReference": "Section 2.1.1, Page 57"
+    },
+    {
+      "id": "CHE-G12-U02-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "According to Faraday's first law of electrolysis, the mass (m) of a substance liberated or deposited at an electrode during electrolysis is directly proportional to the:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Total volume of the electrolytic solution"
+        },
+        {
+          "id": "B",
+          "text": "Absolute temperature of the electrolytic cell"
+        },
+        {
+          "id": "C",
+          "text": "Quantity of electric charge (Q) passed through the electrolyte"
+        },
+        {
+          "id": "D",
+          "text": "Resistance of the external connecting circuit"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Faraday's first law states that the mass (m) of a substance deposited or dissolved at an electrode is directly proportional to the total quantity of electricity (Q = I × t) passed through the electrolyte.",
+      "sourceReference": "Section 2.3.1, Page 80"
+    },
+    {
+      "id": "CHE-G12-U02-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In any standard Galvanic (Voltaic) cell operating spontaneously, oxidation takes place at the __________, which is assigned a __________ charge.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Cathode; positive (+)"
+        },
+        {
+          "id": "B",
+          "text": "Anode; negative (-)"
+        },
+        {
+          "id": "C",
+          "text": "Anode; positive (+)"
+        },
+        {
+          "id": "D",
+          "text": "Cathode; negative (-)"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In a Galvanic cell, oxidation always occurs at the anode, which acts as the electron source for the external circuit and is assigned a negative (-) sign.",
+      "sourceReference": "Section 2.5, Page 92"
+    },
+    {
+      "id": "CHE-G12-U02-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is the primary function of a salt bridge in a Galvanic (Voltaic) cell?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To supply electrons directly to the cathode compartment."
+        },
+        {
+          "id": "B",
+          "text": "To maintain electrical neutrality in both half-cell compartments by allowing ion migration."
+        },
+        {
+          "id": "C",
+          "text": "To double the standard cell potential (E°cell) of the system."
+        },
+        {
+          "id": "D",
+          "text": "To prevent oxidation from occurring at the anode."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The salt bridge permits the flow of cations toward the cathode and anions toward the anode, neutralizing charge accumulation and completing the electrical circuit.",
+      "sourceReference": "Section 2.5, Page 93"
+    },
+    {
+      "id": "CHE-G12-U02-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "The Standard Hydrogen Electrode (SHE), used as the universal reference electrode for measuring standard reduction potentials, is assigned a standard reduction potential (E°) of:",
+      "options": [
+        {
+          "id": "A",
+          "text": "-1.00 V"
+        },
+        {
+          "id": "B",
+          "text": "+1.00 V"
+        },
+        {
+          "id": "C",
+          "text": "0.00 V"
+        },
+        {
+          "id": "D",
+          "text": "+0.76 V"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "By international convention, the standard reduction potential of the SHE (2H⁺(aq, 1 M) + 2e⁻ → H₂(g, 1 atm)) is defined as exactly 0.00 V at 25 °C.",
+      "sourceReference": "Section 2.5, Page 96"
+    },
+    {
+      "id": "CHE-G12-U02-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "During the industrial electrolysis of concentrated sodium chloride solution (brine) using inert graphite electrodes, what products are evolved at the anode and cathode, respectively?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Sodium metal at cathode, Chlorine gas at anode"
+        },
+        {
+          "id": "B",
+          "text": "Oxygen gas at anode, Hydrogen gas at cathode"
+        },
+        {
+          "id": "C",
+          "text": "Chlorine gas at anode, Hydrogen gas at cathode"
+        },
+        {
+          "id": "D",
+          "text": "Oxygen gas at cathode, Chlorine gas at anode"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "In brine electrolysis, Cl⁻ ions are preferentially oxidized at the anode to form Cl₂ gas, while H⁺ ions (from water) are preferentially reduced at the cathode to evolve H₂ gas.",
+      "sourceReference": "Section 2.2.3, Page 75"
+    },
+    {
+      "id": "CHE-G12-U02-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "When an aqueous copper(II) sulfate (CuSO₄) solution is electrolyzed using active copper electrodes, what chemical change occurs at the anode?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Oxygen gas is liberated by the oxidation of hydroxide ions."
+        },
+        {
+          "id": "B",
+          "text": "The active copper anode undergoes oxidation and dissolves into Cu²⁺ ions."
+        },
+        {
+          "id": "C",
+          "text": "Sulfate ions (SO₄²⁻) are discharged to form sulfur trioxide gas."
+        },
+        {
+          "id": "D",
+          "text": "Metallic copper deposits on the anode surface."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "With active copper electrodes, copper metal at the anode oxidizes more easily than OH⁻ or SO₄²⁻ ions (Cu(s) → Cu²⁺(aq) + 2e⁻), causing the anode to dissolve.",
+      "sourceReference": "Section 2.2.3, Page 79"
+    },
+    {
+      "id": "CHE-G12-U02-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "During the electrolysis of an aqueous solution containing 1.0 M Cu²⁺, 1.0 M Na⁺, 1.0 M SO₄²⁻, and 1.0 M NO₃⁻, which cation is preferentially reduced at the cathode?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Na⁺ because sodium is a Group IA metal."
+        },
+        {
+          "id": "B",
+          "text": "Cu²⁺ because copper lies lower in the electrochemical activity series than sodium and hydrogen."
+        },
+        {
+          "id": "C",
+          "text": "H⁺ from water because water has the lowest reduction potential."
+        },
+        {
+          "id": "D",
+          "text": "SO₄²⁻ because sulfate is a polyatomic anion."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Cu²⁺ has a much higher standard reduction potential (E° = +0.34 V) than Na⁺ (E° = -2.71 V) and H₂O (E° = -0.83 V), so Cu²⁺ is preferentially reduced to metallic copper at the cathode.",
+      "sourceReference": "Section 2.2.2, Page 71"
+    },
+    {
+      "id": "CHE-G12-U02-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "A Galvanic cell is represented by the cell notation: Zn(s) | Zn²⁺(aq, 1 M) || Ag⁺(aq, 1 M) | Ag(s). Given E°(Zn²⁺/Zn) = -0.76 V and E°(Ag⁺/Ag) = +0.80 V, what is the standard cell potential (E°cell)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "+0.04 V"
+        },
+        {
+          "id": "B",
+          "text": "+1.56 V"
+        },
+        {
+          "id": "C",
+          "text": "-1.56 V"
+        },
+        {
+          "id": "D",
+          "text": "+0.84 V"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "E°cell = E°cathode - E°anode = E°(Ag⁺/Ag) - E°(Zn²⁺/Zn) = +0.80 V - (-0.76 V) = +1.56 V.",
+      "sourceReference": "Section 2.5, Page 101"
+    },
+    {
+      "id": "CHE-G12-U02-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Buried iron steel pipelines can be protected from atmospheric corrosion (rusting) by connecting them via a wire to a block of magnesium metal. What is this protective method called?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Electroplating"
+        },
+        {
+          "id": "B",
+          "text": "Cathodic protection (sacrificial anode protection)"
+        },
+        {
+          "id": "C",
+          "text": "Galvanic leaching"
+        },
+        {
+          "id": "D",
+          "text": "Anodic passivating oxidation"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Magnesium is more easily oxidized than iron. By serving as a sacrificial anode, magnesium oxidizes preferentially, forcing the iron pipeline to act as an unreactive cathode.",
+      "sourceReference": "Section 2.5, Page 126"
+    },
+    {
+      "id": "CHE-G12-U02-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "When the redox equation MnO₄⁻(aq) + Fe²⁺(aq) + H⁺(aq) → Mn²⁺(aq) + Fe³⁺(aq) + H₂O(l) is balanced in acidic solution using the ion-electron method, what is the stoichiometric coefficient of Fe²⁺?",
+      "options": [
+        {
+          "id": "A",
+          "text": "1"
+        },
+        {
+          "id": "B",
+          "text": "2"
+        },
+        {
+          "id": "C",
+          "text": "5"
+        },
+        {
+          "id": "D",
+          "text": "8"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Oxidation half-reaction: 5 Fe²⁺ → 5 Fe³⁺ + 5e⁻. Reduction half-reaction: MnO₄⁻ + 8H⁺ + 5e⁻ → Mn²⁺ + 4H₂O. Combining gives 5 Fe²⁺ + MnO₄⁻ + 8H⁺ → 5 Fe³⁺ + Mn²⁺ + 4H₂O, giving Fe²⁺ a coefficient of 5.",
+      "sourceReference": "Section 2.1.3, Page 62"
+    },
+    {
+      "id": "CHE-G12-U02-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A constant current of 5.00 A is passed through an aqueous solution of copper(II) sulfate (CuSO₄) for 3860 seconds. What mass of metallic copper (molar mass = 63.5 g/mol) is deposited at the cathode? (Faraday's constant F = 96500 C/mol e⁻)",
+      "options": [
+        {
+          "id": "A",
+          "text": "3.18 g"
+        },
+        {
+          "id": "B",
+          "text": "6.35 g"
+        },
+        {
+          "id": "C",
+          "text": "12.7 g"
+        },
+        {
+          "id": "D",
+          "text": "25.4 g"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Charge Q = I × t = 5.00 A × 3860 s = 19300 C. Moles e⁻ = 19300 / 96500 = 0.200 mol e⁻. Cathode reduction: Cu²⁺ + 2e⁻ → Cu(s). Moles Cu = 0.200 / 2 = 0.100 mol. Mass Cu = 0.100 mol × 63.5 g/mol = 6.35 g.",
+      "sourceReference": "Section 2.3.1, Page 82"
+    },
+    {
+      "id": "CHE-G12-U02-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Two electrolytic cells containing aqueous solutions of AgNO₃ and Cr(NO₃)₃, respectively, are connected in series. If 10.8 g of silver metal (molar mass = 108 g/mol) is deposited in the first cell, what mass of chromium metal (molar mass = 52.0 g/mol) is deposited in the second cell?",
+      "options": [
+        {
+          "id": "A",
+          "text": "1.73 g"
+        },
+        {
+          "id": "B",
+          "text": "5.20 g"
+        },
+        {
+          "id": "C",
+          "text": "15.6 g"
+        },
+        {
+          "id": "D",
+          "text": "3.47 g"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Moles of Ag = 10.8 g / 108 g/mol = 0.100 mol. Since Ag⁺ + e⁻ → Ag, total e⁻ = 0.100 mol. In the second cell, Cr³⁺ + 3e⁻ → Cr, so moles Cr = 0.100 / 3 = 0.0333 mol. Mass Cr = 0.0333 mol × 52.0 g/mol = 1.73 g.",
+      "sourceReference": "Section 2.3.2, Page 84"
+    },
+    {
+      "id": "CHE-G12-U02-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Calculate the cell potential (Ecell) at 25 °C for the Voltaic cell: Zn(s) | Zn²⁺(aq, 0.010 M) || Cu²⁺(aq, 1.00 M) | Cu(s), given that the standard cell potential E°cell = 1.10 V. (Use Nernst factor 0.0592/n at 298 K)",
+      "options": [
+        {
+          "id": "A",
+          "text": "1.04 V"
+        },
+        {
+          "id": "B",
+          "text": "1.10 V"
+        },
+        {
+          "id": "C",
+          "text": "1.16 V"
+        },
+        {
+          "id": "D",
+          "text": "1.22 V"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Cell reaction: Zn + Cu²⁺ ⇌ Zn²⁺ + Cu, n = 2. Q = [Zn²⁺]/[Cu²⁺] = 0.010 / 1.00 = 10⁻². Nernst equation: Ecell = 1.10 - (0.0592 / 2) log(10⁻²) = 1.10 - 0.0296(-2) = 1.10 + 0.0592 = 1.1592 V ≈ 1.16 V.",
+      "sourceReference": "Section 2.5, Page 114"
+    },
+    {
+      "id": "CHE-G12-U02-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A concentration cell consists of two copper electrodes immersed in CuSO₄ solutions of different concentrations: Cu(s) | Cu²⁺(aq, 0.0010 M) || Cu²⁺(aq, 0.10 M) | Cu(s). What is the cell potential (Ecell) of this concentration cell at 25 °C?",
+      "options": [
+        {
+          "id": "A",
+          "text": "0.00 V"
+        },
+        {
+          "id": "B",
+          "text": "0.0592 V"
+        },
+        {
+          "id": "C",
+          "text": "0.118 V"
+        },
+        {
+          "id": "D",
+          "text": "0.0296 V"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "For a concentration cell, E°cell = 0 V, n = 2. Q = [Cu²⁺]dilute / [Cu²⁺]conc = 0.0010 / 0.10 = 10⁻². Ecell = 0 - (0.0592 / 2) log(10⁻²) = -0.0296 × (-2) = +0.0592 V.",
+      "sourceReference": "Section 2.5, Page 115"
+    }
+  ]
 }

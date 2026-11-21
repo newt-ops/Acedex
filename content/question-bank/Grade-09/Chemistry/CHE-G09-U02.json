@@ -3,5 +3,411 @@
   "subject": "Chemistry",
   "unitNumber": 2,
   "unitTitle": "Measurements and Scientific Methods",
-  "questions": []
+  "questions": [
+    {
+      "id": "CHE-G09-U02-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which of the following physical quantities is correctly matched with its SI base unit?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Volume — Liter (L)"
+        },
+        {
+          "id": "B",
+          "text": "Temperature — Kelvin (K)"
+        },
+        {
+          "id": "C",
+          "text": "Mass — Gram (g)"
+        },
+        {
+          "id": "D",
+          "text": "Energy — Joule (J)"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The International System of Units (SI) defines Kelvin (K) as the base unit for thermodynamic temperature. Liter and Joule are derived units, while the SI base unit for mass is the kilogram (kg).",
+      "sourceReference": "Section 2.1, Page 21"
+    },
+    {
+      "id": "CHE-G09-U02-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "A student measures the mass of a standard 10.00 g calibration weight three consecutive times and obtains values of 8.21 g, 8.20 g, and 8.22 g. How should these experimental results be categorized?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Both accurate and precise"
+        },
+        {
+          "id": "B",
+          "text": "Accurate but imprecise"
+        },
+        {
+          "id": "C",
+          "text": "Precise but inaccurate"
+        },
+        {
+          "id": "D",
+          "text": "Neither precise nor accurate"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Precision refers to the closeness of agreement among repeated measurements under identical conditions (8.21 g, 8.20 g, and 8.22 g are very close to each other). Accuracy refers to closeness to the true or accepted value (8.21 g is far from the true value of 10.00 g). Thus, the measurements are precise but inaccurate.",
+      "sourceReference": "Section 2.1, Page 31"
+    },
+    {
+      "id": "CHE-G09-U02-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In a scientific investigation, what is a tentative, testable explanation proposed for an observed phenomenon called?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Scientific law"
+        },
+        {
+          "id": "B",
+          "text": "Scientific theory"
+        },
+        {
+          "id": "C",
+          "text": "Hypothesis"
+        },
+        {
+          "id": "D",
+          "text": "Experimental observation"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "A hypothesis is a tentative, testable statement or educated prediction proposed to answer a scientific question based on initial observations, which can be confirmed or refuted through experimentation.",
+      "sourceReference": "Section 2.2, Page 36"
+    },
+    {
+      "id": "CHE-G09-U02-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which piece of laboratory equipment is specifically designed to deliver precise, variable volumes of liquid solution during a titration experiment?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Erlenmeyer flask"
+        },
+        {
+          "id": "B",
+          "text": "Burette"
+        },
+        {
+          "id": "C",
+          "text": "Beaker"
+        },
+        {
+          "id": "D",
+          "text": "Evaporating dish"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "A burette is a long, graduated glass tube fitted with a stopcock at its lower end, specifically used in titrations to accurately deliver measured variable volumes of liquid reagents.",
+      "sourceReference": "Section 2.1 & 2.2, Page 19 & Page 40"
+    },
+    {
+      "id": "CHE-G09-U02-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "The metric prefix 'micro-' (symbol: μ) corresponds to which exponential factor of 10 in SI measurements?",
+      "options": [
+        {
+          "id": "A",
+          "text": "10^-3"
+        },
+        {
+          "id": "B",
+          "text": "10^-6"
+        },
+        {
+          "id": "C",
+          "text": "10^-9"
+        },
+        {
+          "id": "D",
+          "text": "10^-12"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In the International System of Units (SI), the prefix 'micro-' represents a submultiple factor of 10^-6 (one-millionth).",
+      "sourceReference": "Section 2.1, Page 49"
+    },
+    {
+      "id": "CHE-G09-U02-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Room temperature in a chemistry laboratory is recorded as 25.0 °C. What is this temperature when converted to the Kelvin scale?",
+      "options": [
+        {
+          "id": "A",
+          "text": "248.15 K"
+        },
+        {
+          "id": "B",
+          "text": "298.15 K"
+        },
+        {
+          "id": "C",
+          "text": "315.15 K"
+        },
+        {
+          "id": "D",
+          "text": "77.00 K"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "To convert degrees Celsius to Kelvin, the formula is K = °C + 273.15. Substituting 25.0 °C yields: K = 25.0 + 273.15 = 298.15 K.",
+      "sourceReference": "Section 2.1, Page 21"
+    },
+    {
+      "id": "CHE-G09-U02-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "A solid metallic block has a mass of 135.0 g and a volume of 50.0 cm³. What is the density of this metal expressed in SI derived units (kg/m³)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "2.70 × 10^3 kg/m³"
+        },
+        {
+          "id": "B",
+          "text": "2.70 kg/m³"
+        },
+        {
+          "id": "C",
+          "text": "0.370 × 10^3 kg/m³"
+        },
+        {
+          "id": "D",
+          "text": "27.0 kg/m³"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Density in g/cm³ = mass / volume = 135.0 g / 50.0 cm³ = 2.70 g/cm³. To convert to the SI derived unit kg/m³, multiply by 1000 (since 1 g/cm³ = 1000 kg/m³): 2.70 × 1000 = 2700 kg/m³ = 2.70 × 10^3 kg/m³.",
+      "sourceReference": "Section 2.1, Page 23 & Page 49"
+    },
+    {
+      "id": "CHE-G09-U02-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which of the following statements correctly describes the fundamental distinction between heat and temperature?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Heat measures the average kinetic energy of particles, whereas temperature measures total internal energy."
+        },
+        {
+          "id": "B",
+          "text": "Heat flows spontaneously from a colder body to a hotter body, whereas temperature remains constant."
+        },
+        {
+          "id": "C",
+          "text": "Temperature measures the intensity of heat (degree of hotness or coldness), whereas heat is a form of energy that flows due to a temperature gradient."
+        },
+        {
+          "id": "D",
+          "text": "Temperature is measured in Joules, whereas heat is measured in Kelvin."
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Temperature measures the intensity of heat (how hot or cold an object is), reflecting the average kinetic energy of its particles. Heat is a form of energy that flows spontaneously from a body of higher temperature to a body of lower temperature.",
+      "sourceReference": "Section 2.1, Page 21"
+    },
+    {
+      "id": "CHE-G09-U02-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "A student calculates the density of a solution by carrying out the operation (12.43 g + 0.215 g) / 5.0 mL. Express the final answer to the correct number of significant figures.",
+      "options": [
+        {
+          "id": "A",
+          "text": "2.529 g/mL"
+        },
+        {
+          "id": "B",
+          "text": "2.53 g/mL"
+        },
+        {
+          "id": "C",
+          "text": "2.5 g/mL"
+        },
+        {
+          "id": "D",
+          "text": "3 g/mL"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Addition step: 12.43 + 0.215 = 12.645 g (limited to 2 decimal places, i.e., 12.65 g with 4 sig figs). Division step: 12.645 g / 5.0 mL. Since 5.0 has 2 significant figures, the quotient must be rounded to 2 significant figures: 2.529... g/mL rounds to 2.5 g/mL.",
+      "sourceReference": "Section 2.1, Page 49"
+    },
+    {
+      "id": "CHE-G09-U02-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "A student needs to gently heat a liquid solution over a Bunsen burner to evaporate the solvent and obtain a dry solid salt residue. Which apparatus assembly is most appropriate?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Volumetric flask, graduated cylinder, and pipette"
+        },
+        {
+          "id": "B",
+          "text": "Evaporating dish, wire gauze, tripod/ring stand, and Bunsen burner"
+        },
+        {
+          "id": "C",
+          "text": "Crucible, analytical balance, and burette"
+        },
+        {
+          "id": "D",
+          "text": "Separating funnel, condenser, and Florence flask"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Evaporating a liquid to recover a dissolved solid residue requires an evaporating dish supported on a tripod or ring stand with wire gauze over a Bunsen burner.",
+      "sourceReference": "Section 2.2, Page 40"
+    },
+    {
+      "id": "CHE-G09-U02-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In a precision experiment, a student determines the experimental density of ethanol to be 0.802 g/mL. If the accepted literature value is 0.798 g/mL, what is the percent error of the measurement?",
+      "options": [
+        {
+          "id": "A",
+          "text": "0.501%"
+        },
+        {
+          "id": "B",
+          "text": "0.50%"
+        },
+        {
+          "id": "C",
+          "text": "5.01%"
+        },
+        {
+          "id": "D",
+          "text": "0.004%"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Percent error = [|Experimental Value - True Value| / True Value] × 100% = [|0.802 - 0.798| / 0.798] × 100% = [0.004 / 0.798] × 100% = 0.5012% ≈ 0.50% (expressed to two significant figures based on the numerator absolute difference 0.004).",
+      "sourceReference": "Section 2.1, Page 50"
+    },
+    {
+      "id": "CHE-G09-U02-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "An industrial storage container has an internal volume of 0.075 m³. What is this volume expressed in liters (L) and in cubic centimeters (cm³)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "7.5 L and 7.5 × 10^3 cm³"
+        },
+        {
+          "id": "B",
+          "text": "75 L and 7.5 × 10^4 cm³"
+        },
+        {
+          "id": "C",
+          "text": "750 L and 7.5 × 10^5 cm³"
+        },
+        {
+          "id": "D",
+          "text": "7.5 × 10^4 L and 7.5 × 10^7 cm³"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Since 1 m³ = 1000 L, 0.075 m³ = 0.075 × 1000 = 75 L. Furthermore, 1 L = 1000 cm³, so 75 L = 75 × 1000 = 75,000 cm³ = 7.5 × 10^4 cm³.",
+      "sourceReference": "Section 2.1, Page 23 & Page 49"
+    },
+    {
+      "id": "CHE-G09-U02-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A chemical reaction takes place at an absolute temperature of 350.0 K. What is this temperature when converted to the Fahrenheit scale (°F)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "170.33 °F"
+        },
+        {
+          "id": "B",
+          "text": "138.33 °F"
+        },
+        {
+          "id": "C",
+          "text": "76.85 °F"
+        },
+        {
+          "id": "D",
+          "text": "170.60 °F"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "First, convert Kelvin to Celsius: °C = K - 273.15 = 350.0 - 273.15 = 76.85 °C. Next, convert Celsius to Fahrenheit: °F = (9/5 × °C) + 32 = (1.8 × 76.85) + 32 = 138.33 + 32 = 170.33 °F.",
+      "sourceReference": "Section 2.1, Page 23"
+    },
+    {
+      "id": "CHE-G09-U02-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A chemist investigates how changing the temperature of water affects the rate of dissolution of solid sodium chloride. Which set correctly identifies the independent variable, dependent variable, and key controlled variables for this scientific experiment?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Independent: Mass of salt; Dependent: Temperature of water; Controlled: Stirring rate"
+        },
+        {
+          "id": "B",
+          "text": "Independent: Temperature of water; Dependent: Rate of dissolution; Controlled: Mass of salt, volume of water, and stirring speed"
+        },
+        {
+          "id": "C",
+          "text": "Independent: Rate of dissolution; Dependent: Temperature of water; Controlled: Type of beaker used"
+        },
+        {
+          "id": "D",
+          "text": "Independent: Volume of water; Dependent: Mass of salt; Controlled: Ambient air temperature"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The independent variable is the factor deliberately manipulated (water temperature). The dependent variable is the responding property measured (rate of dissolution). Controlled variables must be held constant to isolate the effect of temperature (mass of salt, volume of water, particle size, and stirring rate).",
+      "sourceReference": "Section 2.2, Page 36"
+    },
+    {
+      "id": "CHE-G09-U02-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Calculate the result of the expression [(4.50 × 10^-3 g) + (1.200 × 10^-2 g)] / (6.00 × 10^-2 mL) and express the answer to the correct number of significant figures.",
+      "options": [
+        {
+          "id": "A",
+          "text": "0.275 g/mL"
+        },
+        {
+          "id": "B",
+          "text": "0.28 g/mL"
+        },
+        {
+          "id": "C",
+          "text": "0.2750 g/mL"
+        },
+        {
+          "id": "D",
+          "text": "0.3 g/mL"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "First, convert terms in numerator to the same power of 10: 0.450 × 10^-2 g + 1.200 × 10^-2 g = 1.650 × 10^-2 g (4 significant figures). Next, divide: (1.650 × 10^-2 g) / (6.00 × 10^-2 mL) = 0.275 g/mL. Since 6.00 × 10^-2 has 3 significant figures, the result is reported to 3 significant figures: 0.275 g/mL.",
+      "sourceReference": "Section 2.1, Page 49"
+    }
+  ]
 }

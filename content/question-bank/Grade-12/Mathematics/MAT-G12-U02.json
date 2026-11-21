@@ -3,5 +3,411 @@
   "subject": "Mathematics",
   "unitNumber": 2,
   "unitTitle": "Introductions to Calculus",
-  "questions": []
+  "questions": [
+    {
+      "id": "MAT-G12-U02-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is the average rate of change of the function f(x) = x² - 3x over the closed interval?",
+      "options": [
+        {
+          "id": "A",
+          "text": "2"
+        },
+        {
+          "id": "B",
+          "text": "3"
+        },
+        {
+          "id": "C",
+          "text": "4"
+        },
+        {
+          "id": "D",
+          "text": "6"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "By Definition 2.2, the average rate of change of a function y = f(x) over the interval [a, b] is given by [f(b) - f(a)] / (b - a). Here, a = 1 and b = 4. Evaluating the function: f(4) = 4² - 3(4) = 16 - 12 = 4, and f(1) = 1² - 3(1) = 1 - 3 = -2. Thus, the average rate of change is [4 - (-2)] / (4 - 1) = 6 / 3 = 2.",
+      "sourceReference": "Section 2.1.1, Page 66-68"
+    },
+    {
+      "id": "MAT-G12-U02-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "If f(x) = 4x³ - 5x² + 7x - 9, what is the value of the derivative f'(2)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "27"
+        },
+        {
+          "id": "B",
+          "text": "35"
+        },
+        {
+          "id": "C",
+          "text": "41"
+        },
+        {
+          "id": "D",
+          "text": "55"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Applying the power and sum/difference rules of differentiation: f'(x) = d/dx (4x³ - 5x² + 7x - 9) = 12x² - 10x + 7. Evaluating at x = 2 gives f'(2) = 12(2)² - 10(2) + 7 = 12(4) - 20 + 7 = 48 - 20 + 7 = 35.",
+      "sourceReference": "Section 2.1.4.3, Page 88-91"
+    },
+    {
+      "id": "MAT-G12-U02-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is the set of all critical numbers of the polynomial function f(x) = 2x³ - 3x² - 12x + 5?",
+      "options": [
+        {
+          "id": "A",
+          "text": "{-1, 2}"
+        },
+        {
+          "id": "B",
+          "text": "{1, -2}"
+        },
+        {
+          "id": "C",
+          "text": "{-2, 3}"
+        },
+        {
+          "id": "D",
+          "text": "{0, 2}"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "By Definition 2.9, a number c in the domain of f is a critical number if f'(c) = 0 or f'(c) does not exist. Differentiating: f'(x) = 6x² - 6x - 12. Setting f'(x) = 0: 6(x² - x - 2) = 0 => 6(x - 2)(x + 1) = 0. This yields x = 2 and x = -1. Since f is a polynomial defined everywhere, the critical numbers are {-1, 2}.",
+      "sourceReference": "Section 2.1.5.1, Page 99-101"
+    },
+    {
+      "id": "MAT-G12-U02-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is the indefinite integral ∫ (3x² - 4x + 5) dx, where C is the arbitrary constant of integration?",
+      "options": [
+        {
+          "id": "A",
+          "text": "x³ - 2x² + 5x + C"
+        },
+        {
+          "id": "B",
+          "text": "6x - 4 + C"
+        },
+        {
+          "id": "C",
+          "text": "3x³ - 4x² + 5x + C"
+        },
+        {
+          "id": "D",
+          "text": "x³ - 4x² + 5x + C"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Using the power rule of integration ∫ x^n dx = [x^(n+1)] / (n + 1) + C and the linearity properties: ∫ (3x² - 4x + 5) dx = 3(x³/3) - 4(x²/2) + 5x + C = x³ - 2x² + 5x + C.",
+      "sourceReference": "Section 2.3.2, Page 136-138"
+    },
+    {
+      "id": "MAT-G12-U02-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is the value of the definite integral ∫₁³ (2x + 1) dx?",
+      "options": [
+        {
+          "id": "A",
+          "text": "8"
+        },
+        {
+          "id": "B",
+          "text": "10"
+        },
+        {
+          "id": "C",
+          "text": "12"
+        },
+        {
+          "id": "D",
+          "text": "14"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "By the Fundamental Theorem of Calculus (Definition 2.15), ∫₁³ (2x + 1) dx = [x² + x]₁³. Evaluating at the limits: F(3) - F(1) = (3² + 3) - (1² + 1) = (9 + 3) - (1 + 1) = 12 - 2 = 10.",
+      "sourceReference": "Section 2.3.3, Page 138-142"
+    },
+    {
+      "id": "MAT-G12-U02-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "If f(x) = (2x + 1) / (x² + 1), what is the value of f'(1)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "1/2"
+        },
+        {
+          "id": "B",
+          "text": "-1/2"
+        },
+        {
+          "id": "C",
+          "text": "-1"
+        },
+        {
+          "id": "D",
+          "text": "0"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Using the quotient rule (Theorem 2.5): f'(x) = [g(x)u'(x) - u(x)g'(x)] / [g(x)]² where u(x) = 2x + 1 and g(x) = x² + 1. Thus, f'(x) = [(x² + 1)(2) - (2x + 1)(2x)] / (x² + 1)². Substituting x = 1: f'(1) = [(1² + 1)(2) - (2(1) + 1)(2(1))] / (1² + 1)² = [(2)(2) - (3)(2)] / 2² = (4 - 6) / 4 = -2/4 = -1/2.",
+      "sourceReference": "Section 2.1.4.3 (d), Page 94-95"
+    },
+    {
+      "id": "MAT-G12-U02-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What is the derivative of the composite function f(x) = √(2x³ + 9) at the point where x = 2?",
+      "options": [
+        {
+          "id": "A",
+          "text": "12/5"
+        },
+        {
+          "id": "B",
+          "text": "6/5"
+        },
+        {
+          "id": "C",
+          "text": "24/5"
+        },
+        {
+          "id": "D",
+          "text": "8/5"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Using the chain rule (Theorem 2.6): f'(x) = (1 / [2√(2x³ + 9)]) · d/dx (2x³ + 9) = 6x² / [2√(2x³ + 9)] = 3x² / √(2x³ + 9). Evaluating at x = 2: f'(2) = 3(2)² / √(2(2)³ + 9) = 3(4) / √(16 + 9) = 12 / √25 = 12/5.",
+      "sourceReference": "Section 2.1.4.4, Page 95-97"
+    },
+    {
+      "id": "MAT-G12-U02-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What is the equation of the normal line to the curve y = x³ - 2x + 4 at the point P(1, 3)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "x + y - 4 = 0"
+        },
+        {
+          "id": "B",
+          "text": "x - y + 2 = 0"
+        },
+        {
+          "id": "C",
+          "text": "x + y + 4 = 0"
+        },
+        {
+          "id": "D",
+          "text": "x - y - 2 = 0"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The slope of the tangent line is given by the first derivative: y' = 3x² - 2. At x = 1, m_tan = 3(1)² - 2 = 1. Since the normal line is perpendicular to the tangent line at the point of tangency, its slope is m_norm = -1 / m_tan = -1 / 1 = -1. Using the point-slope form with P(1, 3): y - 3 = -1(x - 1) => y - 3 = -x + 1 => x + y - 4 = 0.",
+      "sourceReference": "Section 2.1.6, Page 108-111"
+    },
+    {
+      "id": "MAT-G12-U02-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "On which of the following intervals is the cubic function f(x) = x³ - 6x² + 9x - 2 strictly decreasing?",
+      "options": [
+        {
+          "id": "A",
+          "text": "[1, 3]"
+        },
+        {
+          "id": "B",
+          "text": "(-∞, 1] ∪ [3, ∞)"
+        },
+        {
+          "id": "C",
+          "text": "[-3, -1]"
+        },
+        {
+          "id": "D",
+          "text": "[3]"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "A function is strictly decreasing where f'(x) ≤ 0 with f'(x) = 0 only at isolated points. Differentiating: f'(x) = 3x² - 12x + 9 = 3(x² - 4x + 3) = 3(x - 1)(x - 3). The critical numbers are x = 1 and x = 3. Setting up a sign chart: for x < 1, f'(x) > 0; for 1 < x < 3, f'(x) < 0; for x > 3, f'(x) > 0. Therefore, f is strictly decreasing on the interval.",
+      "sourceReference": "Section 2.1.5.1, Page 99-101"
+    },
+    {
+      "id": "MAT-G12-U02-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "The radius of a circular metal plate expands by heating at a constant rate of 0.4 cm/sec. At what rate is the area of the plate increasing at the instant when the radius is 15 cm?",
+      "options": [
+        {
+          "id": "A",
+          "text": "6π cm²/sec"
+        },
+        {
+          "id": "B",
+          "text": "12π cm²/sec"
+        },
+        {
+          "id": "C",
+          "text": "15π cm²/sec"
+        },
+        {
+          "id": "D",
+          "text": "24π cm²/sec"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The area of a circle is A = πr². Differentiating both sides with respect to time t: dA/dt = 2πr (dr/dt). Given dr/dt = 0.4 cm/sec and r = 15 cm: dA/dt = 2π(15)(0.4) = 30π(0.4) = 12π cm²/sec.",
+      "sourceReference": "Section 2.2.1, Page 113-115"
+    },
+    {
+      "id": "MAT-G12-U02-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What is the area of the region completely enclosed between the parabola f(x) = x² - 4 and the x-axis?",
+      "options": [
+        {
+          "id": "A",
+          "text": "16/3 square units"
+        },
+        {
+          "id": "B",
+          "text": "32/3 square units"
+        },
+        {
+          "id": "C",
+          "text": "8 square units"
+        },
+        {
+          "id": "D",
+          "text": "64/3 square units"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The x-intercepts are obtained by setting x² - 4 = 0, giving x = -2 and x = 2. On [-2, 2], the curve lies entirely below the x-axis (f(x) ≤ 0). By Section 2.3.4, the area is S = - ∫_{-2}² (x² - 4) dx = ∫_{-2}² (4 - x²) dx = [4x - x³/3]_{-2}² = [4(2) - 8/3] - [4(-2) - (-8)/3] = (8 - 8/3) - (-8 + 8/3) = 16/3 - (-16/3) = 32/3 square units.",
+      "sourceReference": "Section 2.3.4, Page 144-148"
+    },
+    {
+      "id": "MAT-G12-U02-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A firm determines that the total revenue function from selling x units of a commodity is R(x) = 120x - 0.5x² and the total cost function is C(x) = 20x + 1500 (in Birr). What production level x maximizes total profit, and what is the maximum profit?",
+      "options": [
+        {
+          "id": "A",
+          "text": "x = 100 units with maximum profit Birr 3,500"
+        },
+        {
+          "id": "B",
+          "text": "x = 120 units with maximum profit Birr 4,200"
+        },
+        {
+          "id": "C",
+          "text": "x = 100 units with maximum profit Birr 5,000"
+        },
+        {
+          "id": "D",
+          "text": "x = 80 units with maximum profit Birr 3,300"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Total profit is P(x) = R(x) - C(x) = (120x - 0.5x²) - (20x + 1500) = -0.5x² + 100x - 1500. Marginal profit is MP = P'(x) = -x + 100. Setting P'(x) = 0 gives x = 100 units. Since P''(x) = -1 < 0, x = 100 maximizes profit. The maximum profit is P(100) = -0.5(100)² + 100(100) - 1500 = -5000 + 10000 - 1500 = 3,500 Birr.",
+      "sourceReference": "Section 2.2.2, Page 116-120"
+    },
+    {
+      "id": "MAT-G12-U02-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "The cubic function f(x) = 2x³ + ax² + bx - 11 has relative extreme values at x = 1 and at x = -2. What are the values of the constants a and b, respectively?",
+      "options": [
+        {
+          "id": "A",
+          "text": "a = 3 and b = -12"
+        },
+        {
+          "id": "B",
+          "text": "a = -3 and b = 12"
+        },
+        {
+          "id": "C",
+          "text": "a = 6 and b = -18"
+        },
+        {
+          "id": "D",
+          "text": "a = -3 and b = -12"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Relative extrema occur at critical numbers where f'(x) = 0. The derivative is f'(x) = 6x² + 2ax + b. Since x = 1 and x = -2 are critical numbers: (1) f'(1) = 6(1)² + 2a(1) + b = 6 + 2a + b = 0 => 2a + b = -6. (2) f'(-2) = 6(-2)² + 2a(-2) + b = 24 - 4a + b = 0 => 4a - b = 24. Adding equations (1) and (2): (2a + b) + (4a - b) = -6 + 24 => 6a = 18 => a = 3. Substituting a = 3 into (1): 2(3) + b = -6 => 6 + b = -6 => b = -12.",
+      "sourceReference": "Section 2.1.5.2, Page 107 & Review Exercise 10, Page 157"
+    },
+    {
+      "id": "MAT-G12-U02-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A particle moves along a straight line with velocity v(t) = 3t² - 12t + 9 m/s for 0 ≤ t ≤ 4. What is the total distance traveled by the particle during this 4-second time interval?",
+      "options": [
+        {
+          "id": "A",
+          "text": "4 meters"
+        },
+        {
+          "id": "B",
+          "text": "8 meters"
+        },
+        {
+          "id": "C",
+          "text": "12 meters"
+        },
+        {
+          "id": "D",
+          "text": "16 meters"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Total distance traveled is given by the integral of speed: ∫₀⁴ |v(t)| dt. Setting v(t) = 0: 3(t² - 4t + 3) = 3(t - 1)(t - 3) = 0 => t = 1 and t = 3. Finding the position function s(t) = ∫ v(t) dt = t³ - 6t² + 9t: s(0) = 0; s(1) = 1 - 6 + 9 = 4 m; s(3) = 27 - 54 + 27 = 0 m; s(4) = 64 - 96 + 36 = 4 m. The distance over is |s(1) - s(0)| = |4 - 0| = 4 m. Over, distance is |s(3) - s(1)| = |0 - 4| = 4 m. Over, distance is |s(4) - s(3)| = |4 - 0| = 4 m. Total distance = 4 + 4 + 4 = 12 meters. (Note: The net displacement is only s(4) - s(0) = 4 meters).",
+      "sourceReference": "Section 2.3.4 & Section 2.3.5, Page 145-147, 149"
+    },
+    {
+      "id": "MAT-G12-U02-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "If ∫₀ᵏ (6x² - 2kx) dx = 64, where k is a positive constant, what is the value of k?",
+      "options": [
+        {
+          "id": "A",
+          "text": "2"
+        },
+        {
+          "id": "B",
+          "text": "4"
+        },
+        {
+          "id": "C",
+          "text": "8"
+        },
+        {
+          "id": "D",
+          "text": "16"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Integrating with respect to x: ∫₀ᵏ (6x² - 2kx) dx = [6(x³/3) - 2k(x²/2)]₀ᵏ = [2x³ - kx²]₀ᵏ. Evaluating at the limits: [2k³ - k(k²)] - 0 = 2k³ - k³ = k³. Setting the result equal to 64: k³ = 64 => k = ∛64 = 4.",
+      "sourceReference": "Section 2.3.3, Page 138-142 & 2018 EUEE V3 Q16"
+    }
+  ]
 }

@@ -3,5 +3,411 @@
   "subject": "Mathematics",
   "unitNumber": 1,
   "unitTitle": "Sequences and Series",
-  "questions": []
+  "questions": [
+    {
+      "id": "MAT-G12-U01-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is the common difference, d, of the arithmetic sequence whose terms are given by 17, 11, 5, -1, -7, ...?",
+      "options": [
+        {
+          "id": "A",
+          "text": "6"
+        },
+        {
+          "id": "B",
+          "text": "-6"
+        },
+        {
+          "id": "C",
+          "text": "-5"
+        },
+        {
+          "id": "D",
+          "text": "5"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "By Definition 1.2, the common difference d of an arithmetic sequence is the difference between any term and its preceding term: d = A_(n+1) - A_n. Evaluating between the first two terms: d = 11 - 17 = -6.",
+      "sourceReference": "Section 1.2.1, Page 9-10"
+    },
+    {
+      "id": "MAT-G12-U01-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is the 7th term of the geometric sequence whose first term is G₁ = 3 and common ratio is r = 2?",
+      "options": [
+        {
+          "id": "A",
+          "text": "96"
+        },
+        {
+          "id": "B",
+          "text": "128"
+        },
+        {
+          "id": "C",
+          "text": "192"
+        },
+        {
+          "id": "D",
+          "text": "384"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "By Theorem 1.2, the nth term of a geometric sequence is given by G_n = G₁ · r^(n-1). For n = 7: G₇ = 3 · 2^(7-1) = 3 · 2⁶ = 3 · 64 = 192.",
+      "sourceReference": "Section 1.2.2, Page 17-18"
+    },
+    {
+      "id": "MAT-G12-U01-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which of the following infinite geometric sequences converges as n approaches infinity?",
+      "options": [
+        {
+          "id": "A",
+          "text": "G_n = (4/3)ⁿ"
+        },
+        {
+          "id": "B",
+          "text": "G_n = (-5/4)ⁿ"
+        },
+        {
+          "id": "C",
+          "text": "G_n = (-3/5)ⁿ"
+        },
+        {
+          "id": "D",
+          "text": "G_n = (√3)ⁿ"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "According to the convergence criteria for an infinite geometric sequence G_n = rⁿ, the sequence converges if and only if -1 < r ≤ 1 (specifically, it converges to 0 if |r| < 1, and to 1 if r = 1). For G_n = (-3/5)ⁿ, |r| = |-3/5| = 3/5 < 1, so the sequence converges to 0. In all other options, |r| > 1, which causes the sequence to diverge or oscillate without limit.",
+      "sourceReference": "Section 1.4.1, Page 36-37"
+    },
+    {
+      "id": "MAT-G12-U01-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is the fraction in lowest terms equivalent to the purely recurring decimal 0.454545... (0.4̄5̄)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "9/20"
+        },
+        {
+          "id": "B",
+          "text": "5/11"
+        },
+        {
+          "id": "C",
+          "text": "45/98"
+        },
+        {
+          "id": "D",
+          "text": "41/90"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The recurring decimal 0.4̄5̄ can be expressed as the sum of an infinite convergent geometric series: 45/100 + 45/10,000 + ... with first term G₁ = 45/100 and common ratio r = 1/100. Using S_∞ = G₁ / (1 - r): S_∞ = (45/100) / (1 - 1/100) = (45/100) / (99/100) = 45/99. Dividing numerator and denominator by 9 gives 5/11.",
+      "sourceReference": "Section 1.4.2, Page 42-43"
+    },
+    {
+      "id": "MAT-G12-U01-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Given that ∑(k=1 to 10) a_k = 28 and ∑(k=1 to 10) b_k = 15, what is the value of ∑(k=1 to 10) (3a_k - 2b_k + 4)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "58"
+        },
+        {
+          "id": "B",
+          "text": "94"
+        },
+        {
+          "id": "C",
+          "text": "98"
+        },
+        {
+          "id": "D",
+          "text": "114"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Using the algebraic properties of sigma notation: ∑(k=1 to 10) (3a_k - 2b_k + 4) = 3 ∑(k=1 to 10) a_k - 2 ∑(k=1 to 10) b_k + ∑(k=1 to 10) 4 = 3(28) - 2(15) + 10(4) = 84 - 30 + 40 = 94.",
+      "sourceReference": "Section 1.3.1, Page 24-25"
+    },
+    {
+      "id": "MAT-G12-U01-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "The 4th term of an arithmetic progression is 19 and its 9th term is 44. What is the 25th term of this progression?",
+      "options": [
+        {
+          "id": "A",
+          "text": "119"
+        },
+        {
+          "id": "B",
+          "text": "124"
+        },
+        {
+          "id": "C",
+          "text": "129"
+        },
+        {
+          "id": "D",
+          "text": "134"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Using A_n = A₁ + (n - 1)d: A₄ = A₁ + 3d = 19 and A₉ = A₁ + 8d = 44. Subtracting the two equations: 5d = 25 => d = 5. Substituting d = 5 into the first equation: A₁ + 3(5) = 19 => A₁ = 4. The 25th term is A₂₅ = A₁ + 24d = 4 + 24(5) = 4 + 120 = 124.",
+      "sourceReference": "Section 1.2.1, Page 12-13"
+    },
+    {
+      "id": "MAT-G12-U01-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What is the single positive geometric mean between the numbers 8 and 72?",
+      "options": [
+        {
+          "id": "A",
+          "text": "24"
+        },
+        {
+          "id": "B",
+          "text": "40"
+        },
+        {
+          "id": "C",
+          "text": "24√2"
+        },
+        {
+          "id": "D",
+          "text": "48"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "By definition, the geometric mean m between two non-zero positive numbers a and b is m = √(ab). For a = 8 and b = 72: m = √(8 × 72) = √576 = 24.",
+      "sourceReference": "Section 1.2.2, Page 19-20"
+    },
+    {
+      "id": "MAT-G12-U01-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "A worker begins employment with an initial annual salary of Birr 45,000 and receives a guaranteed increment of Birr 3,200 at the start of each subsequent year. What is the total amount of money earned by the worker over the first 12 years of employment?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Birr 712,400"
+        },
+        {
+          "id": "B",
+          "text": "Birr 751,200"
+        },
+        {
+          "id": "C",
+          "text": "Birr 763,200"
+        },
+        {
+          "id": "D",
+          "text": "Birr 780,000"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The annual salaries form an arithmetic sequence with A₁ = 45,000, d = 3,200, and n = 12. Using the sum formula S_n = (n/2)[2A₁ + (n - 1)d]: S₁₂ = (12/2)[2(45,000) + (11)(3,200)] = 6[90,000 + 35,200] = 6 = Birr 751,200.",
+      "sourceReference": "Section 1.3.2 & Section 1.5, Page 28, 47"
+    },
+    {
+      "id": "MAT-G12-U01-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What is the sum to infinity of the geometric series 8 - 4 + 2 - 1 + 1/2 - ...?",
+      "options": [
+        {
+          "id": "A",
+          "text": "16/3"
+        },
+        {
+          "id": "B",
+          "text": "8/3"
+        },
+        {
+          "id": "C",
+          "text": "16"
+        },
+        {
+          "id": "D",
+          "text": "4"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The first term is G₁ = 8 and the common ratio is r = -4 / 8 = -1/2. Since |r| = |-1/2| = 1/2 < 1, the infinite geometric series converges. By Theorem 1.4/Note (i): S_∞ = G₁ / (1 - r) = 8 / (1 - (-1/2)) = 8 / (3/2) = 16/3.",
+      "sourceReference": "Section 1.4.1, Page 38-40"
+    },
+    {
+      "id": "MAT-G12-U01-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What is the sum of the first n terms of the telescoping series whose kth term is a_k = 1 / [k(k + 1)]?",
+      "options": [
+        {
+          "id": "A",
+          "text": "n / (n + 1)"
+        },
+        {
+          "id": "B",
+          "text": "1 / (n + 1)"
+        },
+        {
+          "id": "C",
+          "text": "(n + 1) / n"
+        },
+        {
+          "id": "D",
+          "text": "n / (2n + 1)"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Using partial fraction decomposition: a_k = 1/k - 1/(k + 1). Summing from k = 1 to n: S_n = (1 - 1/2) + (1/2 - 1/3) + (1/3 - 1/4) + ... + (1/n - 1/(n + 1)). All intermediate terms cancel out, leaving S_n = 1 - 1/(n + 1) = (n + 1 - 1) / (n + 1) = n / (n + 1).",
+      "sourceReference": "Section 1.3, Page 22-23"
+    },
+    {
+      "id": "MAT-G12-U01-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Professor Mulatu's sequence is defined recursively by M₀ = 4, M₁ = 1, and M_n = M_(n-1) + M_(n-2) for n ≥ 2. What is the value of M₆?",
+      "options": [
+        {
+          "id": "A",
+          "text": "17"
+        },
+        {
+          "id": "B",
+          "text": "28"
+        },
+        {
+          "id": "C",
+          "text": "45"
+        },
+        {
+          "id": "D",
+          "text": "73"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Following the recursive definition M_n = M_(n-1) + M_(n-2): M₀ = 4; M₁ = 1; M₂ = 1 + 4 = 5; M₃ = 5 + 1 = 6; M₄ = 6 + 5 = 11; M₅ = 11 + 6 = 17; M₆ = 17 + 11 = 28.",
+      "sourceReference": "Section 1.1, Page 8 & EUEE 2018 V2 Q1"
+    },
+    {
+      "id": "MAT-G12-U01-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "For what values of x does the infinite geometric series ∑(n=1 to ∞) (2x - 3)ⁿ converge?",
+      "options": [
+        {
+          "id": "A",
+          "text": "1 < x < 2"
+        },
+        {
+          "id": "B",
+          "text": "-1 < x < 1"
+        },
+        {
+          "id": "C",
+          "text": "0 < x < 3/2"
+        },
+        {
+          "id": "D",
+          "text": "1 ≤ x < 2"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The series is geometric with common ratio r = 2x - 3. An infinite geometric series converges if and only if |r| < 1. Thus, |2x - 3| < 1 <=> -1 < 2x - 3 < 1. Adding 3 across the compound inequality gives 2 < 2x < 4. Dividing by 2 yields 1 < x < 2.",
+      "sourceReference": "Section 1.4.1, Page 38-39"
+    },
+    {
+      "id": "MAT-G12-U01-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "If the sum of the first n terms of an arithmetic sequence is given by the formula S_n = 3n² + 4n, what is the 15th term (A₁₅) of the sequence?",
+      "options": [
+        {
+          "id": "A",
+          "text": "85"
+        },
+        {
+          "id": "B",
+          "text": "91"
+        },
+        {
+          "id": "C",
+          "text": "97"
+        },
+        {
+          "id": "D",
+          "text": "103"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The nth term of any sequence can be obtained from its partial sums by A_n = S_n - S_(n-1) for n ≥ 2. Here, A_n = [3n² + 4n] - [3(n - 1)² + 4(n - 1)] = [3n² + 4n] - [3(n² - 2n + 1) + 4n - 4] = [3n² + 4n] - [3n² - 2n - 1] = 6n + 1. For n = 15: A₁₅ = 6(15) + 1 = 90 + 1 = 91. Alternatively: A₁₅ = S₁₅ - S₁₄ = [3(225) + 60] - [3(196) + 56] = 735 - 644 = 91.",
+      "sourceReference": "Section 1.3.2 & Review Exercise, Page 27-28, 58"
+    },
+    {
+      "id": "MAT-G12-U01-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A rubber ball is dropped from an initial height of 80 meters. Each time it hits the ground, it rebounds to exactly 3/5 of the height from which it fell. Assuming the ball continues bouncing indefinitely, what is the total vertical distance traveled by the ball before coming to rest?",
+      "options": [
+        {
+          "id": "A",
+          "text": "200 meters"
+        },
+        {
+          "id": "B",
+          "text": "240 meters"
+        },
+        {
+          "id": "C",
+          "text": "320 meters"
+        },
+        {
+          "id": "D",
+          "text": "400 meters"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The initial downward fall covers h = 80 m. Thereafter, every rebound consists of an upward and downward journey of equal distance. The total distance is D = h + 2 [h(3/5) + h(3/5)² + h(3/5)³ + ...]. The bracketed term is an infinite geometric series with first term G₁ = 80(3/5) = 48 and r = 3/5. Its sum is G₁ / (1 - r) = 48 / (1 - 3/5) = 48 / (2/5) = 120 m. Therefore, the total vertical distance is D = 80 + 2(120) = 80 + 240 = 320 meters. (Equivalently, using formula D = h(1 + r)/(1 - r) = 80(1 + 3/5)/(1 - 3/5) = 80(8/5)/(2/5) = 80 × 4 = 320 meters).",
+      "sourceReference": "Section 1.5, Exercise 1.25, Page 54 & EUEE 2018 V2 Q15"
+    },
+    {
+      "id": "MAT-G12-U01-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "If x, 2x + 2, and 5x + 1 are the first three consecutive terms of a geometric progression of positive real numbers, what is the value of the common ratio, r?",
+      "options": [
+        {
+          "id": "A",
+          "text": "2"
+        },
+        {
+          "id": "B",
+          "text": "3"
+        },
+        {
+          "id": "C",
+          "text": "4"
+        },
+        {
+          "id": "D",
+          "text": "5"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Let the consecutive terms be x, 2x + 4, and 7x + 8. In a geometric progression, (2x + 4) / x = (7x + 8) / (2x + 4). Cross-multiplying yields: (2x + 4)² = x(7x + 8) => 4x² + 16x + 16 = 7x² + 8x => 3x² - 8x - 16 = 0. Factoring the quadratic: (x - 4)(3x + 4) = 0. Since the terms are positive real numbers, x = 4. The terms are 4, 2(4) + 4 = 12, and 7(4) + 8 = 36. The common ratio is r = 12 / 4 = 3.",
+      "sourceReference": "Section 1.2.2 & Review Exercise, Page 20, 58"
+    }
+  ]
 }

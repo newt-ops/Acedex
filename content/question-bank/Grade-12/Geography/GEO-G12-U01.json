@@ -3,5 +3,411 @@
   "subject": "Geography",
   "unitNumber": 1,
   "unitTitle": "Major Geological Processes Associated with Plate Tectonics",
-  "questions": []
+  "questions": [
+    {
+      "id": "GEO-G12-U01-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which German meteorologist proposed the Continental Drift Theory in 1912, hypothesizing that all present continents were once joined in a single supercontinent called Pangaea?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Harry Hess"
+        },
+        {
+          "id": "B",
+          "text": "Alfred Wegener"
+        },
+        {
+          "id": "C",
+          "text": "Karl Ritter"
+        },
+        {
+          "id": "D",
+          "text": "Walter Christaller"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Alfred Wegener proposed the Continental Drift Theory in 1912, suggesting that all modern continents originally formed a single massive supercontinent named Pangaea ('all-Earth') surrounded by the Panthalassa ocean.",
+      "sourceReference": "Grade 12 Geography Textbook, Section 1.1, Page 2–3"
+    },
+    {
+      "id": "GEO-G12-U01-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "According to Plate Tectonics Theory, across which semi-fluid, ductile layer of the upper mantle do rigid tectonic lithospheric plates slide?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Inner Core"
+        },
+        {
+          "id": "B",
+          "text": "Mesosphere"
+        },
+        {
+          "id": "C",
+          "text": "Asthenosphere"
+        },
+        {
+          "id": "D",
+          "text": "Stratosphere"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The Earth's lithosphere (crust and uppermost solid mantle) floats and slowly slides across the underlying asthenosphere, a hot, semi-fluid layer of the upper mantle capable of plastic flow.",
+      "sourceReference": "Grade 12 Geography Textbook, Section 1.2, Page 5–6"
+    },
+    {
+      "id": "GEO-G12-U01-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What type of tectonic plate boundary occurs where two plates pull apart from each other, allowing magma to upwell and create new oceanic crust?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Divergent (Constructive) boundary"
+        },
+        {
+          "id": "B",
+          "text": "Convergent (Destructive) boundary"
+        },
+        {
+          "id": "C",
+          "text": "Transform (Conservative) boundary"
+        },
+        {
+          "id": "D",
+          "text": "Passive continental margin"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Divergent or constructive boundaries occur where plates move in opposite directions away from each other. As they separate, molten mantle material rises to fill the gap, creating new oceanic lithosphere at mid-ocean ridges.",
+      "sourceReference": "Grade 12 Geography Textbook, Section 1.3, Page 8–9"
+    },
+    {
+      "id": "GEO-G12-U01-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which major earthquake and volcanic belt encircles the Pacific Ocean basin, accounting for approximately 80% of all global seismic energy release?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Mid-Atlantic Ridge Belt"
+        },
+        {
+          "id": "B",
+          "text": "Circum-Pacific Belt (Ring of Fire)"
+        },
+        {
+          "id": "C",
+          "text": "Mediterranean-Himalayan Belt"
+        },
+        {
+          "id": "D",
+          "text": "East African Rift System"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The Circum-Pacific Belt, popularly known as the 'Ring of Fire,' borders the mountainous coastlines and island arcs surrounding the Pacific Ocean, where roughly 80% of global earthquake energy and active volcanism occur.",
+      "sourceReference": "Grade 12 Geography Textbook, Section 1.4, Page 17–18"
+    },
+    {
+      "id": "GEO-G12-U01-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which of the following processes is classified as an endogenic (internal) geological force operating beneath or within the Earth's crust?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Wind deflation"
+        },
+        {
+          "id": "B",
+          "text": "River erosion"
+        },
+        {
+          "id": "C",
+          "text": "Volcanism and faulting"
+        },
+        {
+          "id": "D",
+          "text": "Glacial abrasion"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Endogenic forces originate within the Earth's interior (such as plate tectonics, folding, faulting, and volcanic eruptions). In contrast, wind, running water, and glaciers are exogenic (external) forces operating on the surface.",
+      "sourceReference": "Grade 12 Geography Textbook, Section 1.4, Page 11–12"
+    },
+    {
+      "id": "GEO-G12-U01-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What was the primary scientific objection that caused Alfred Wegener's Continental Drift Theory to be rejected by geologists in the 1920s?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Fossil evidence matching across separate continents was proven to be fabricated."
+        },
+        {
+          "id": "B",
+          "text": "He could not explain a plausible physical mechanism capable of moving heavy continental landmasses across the solid sea floor."
+        },
+        {
+          "id": "C",
+          "text": "Direct satellite GPS measurements proved continents were completely stationary."
+        },
+        {
+          "id": "D",
+          "text": "The matching coastline geometries of South America and Africa were disproven by hydrographic mapping."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Although Wegener presented compelling geological and paleontological evidence, he could not explain the physical mechanism responsible for moving continents (incorrectly proposing tidal forces or centrifugal force), leading to the rejection of his theory until sea-floor spreading was discovered in the 1960s.",
+      "sourceReference": "Grade 12 Geography Textbook, Section 1.1, Page 3–4"
+    },
+    {
+      "id": "GEO-G12-U01-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "When an oceanic plate collides with a continental plate at a convergent boundary, why does the oceanic plate subduct beneath the continental plate into the asthenosphere?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Oceanic crust is thicker and warmer than continental crust."
+        },
+        {
+          "id": "B",
+          "text": "Oceanic crust (composed of basalt) is significantly denser and heavier than continental crust (composed of granite)."
+        },
+        {
+          "id": "C",
+          "text": "Continental crust moves at a higher horizontal velocity than oceanic crust."
+        },
+        {
+          "id": "D",
+          "text": "Geomagnetic polarity pulls oceanic crust downward into the outer core."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Oceanic crust is composed of basaltic rocks with a high density (~3.0 g/cm³), making it heavier than continental crust made of granitic rocks (~2.7 g/cm³). During collision, the denser oceanic plate is forced downward (subducted) into the mantle below the lighter continental plate.",
+      "sourceReference": "Grade 12 Geography Textbook, Section 1.3, Page 8–9"
+    },
+    {
+      "id": "GEO-G12-U01-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What landform feature is created when crustal tension causes a central block of rock to sink downward between two roughly parallel normal fault lines?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Fold mountain (Anticline)"
+        },
+        {
+          "id": "B",
+          "text": "Block mountain (Horst)"
+        },
+        {
+          "id": "C",
+          "text": "Rift valley (Graben)"
+        },
+        {
+          "id": "D",
+          "text": "Volcanic laccolith"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Parallel faulting under tensional stress causes the central land block between two fault lines to displace downward relative to side blocks, forming an elongated fault trough called a graben or rift valley. The raised side blocks form horsts.",
+      "sourceReference": "Grade 12 Geography Textbook, Section 1.4, Page 13–14"
+    },
+    {
+      "id": "GEO-G12-U01-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "The ongoing collision between the Indian Plate and the Eurasian Plate at a continental-continental convergent boundary resulted in the formation of which major young fold mountain system?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The Andes"
+        },
+        {
+          "id": "B",
+          "text": "The Rockies"
+        },
+        {
+          "id": "C",
+          "text": "The Himalayas"
+        },
+        {
+          "id": "D",
+          "text": "The Urals"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The Himalayas were formed by continental-continental collision when the northward-drifting Indian tectonic plate collided with the Eurasian plate, compressing sediments of the ancient Tethys Sea into massive elevated mountain folds.",
+      "sourceReference": "Grade 12 Geography Textbook, Section 1.4, Page 12–13"
+    },
+    {
+      "id": "GEO-G12-U01-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which driving force of plate motion occurs as a cold, dense subducting oceanic lithospheric slab sinks into the asthenosphere, pulling the rest of the trailing plate along behind it?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Ridge push"
+        },
+        {
+          "id": "B",
+          "text": "Slab pull"
+        },
+        {
+          "id": "C",
+          "text": "Isostatic adjustment"
+        },
+        {
+          "id": "D",
+          "text": "Tidal drag"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Slab pull is the primary gravitational driving force of plate motion where a cold, dense subducting oceanic plate sinks into the warmer, less dense mantle at subduction zones, dragging the trailing plate behind it.",
+      "sourceReference": "Grade 12 Geography Textbook, Section 1.3, Page 10–11"
+    },
+    {
+      "id": "GEO-G12-U01-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which depositional landform features characteristically develop in the lower course of a river where gradient flattens and water flow velocity drops significantly?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Deep V-shaped gorges and waterfalls"
+        },
+        {
+          "id": "B",
+          "text": "Interlocking spurs and rapids"
+        },
+        {
+          "id": "C",
+          "text": "Broad floodplains and river deltas"
+        },
+        {
+          "id": "D",
+          "text": "Hanging valleys and cirques"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "In its lower course, a river flows slowly over flat terrain, losing kinetic energy. It deposits suspended alluvial materials to form flat, expansive floodplains, natural levees, and deltas near its outlet.",
+      "sourceReference": "Grade 12 Geography Textbook, Section 1.4, Page 27–29"
+    },
+    {
+      "id": "GEO-G12-U01-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Late Paleozoic glacial striations and tillite deposits of identical age (Carboniferous-Permian) are found across Southern Africa, South America, India, Australia, and Antarctica. How does this paleoclimatic evidence support Continental Drift Theory?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It proves that equatorial regions experienced global sub-zero atmospheric cooling during the Permian period."
+        },
+        {
+          "id": "B",
+          "text": "It demonstrates that these now widely separated southern landmasses were contiguous and located near the South Pole as part of Gondwanaland before drifting apart."
+        },
+        {
+          "id": "C",
+          "text": "It indicates that ancient oceans flooded all continents up to an altitude of 4,000 meters."
+        },
+        {
+          "id": "D",
+          "text": "It shows that massive volcanic ash clouds blocked solar radiation across the entire Northern Hemisphere."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Glacial striations and tillite deposits of Carboniferous-Permian age in tropical/subtropical regions like India, Brazil, and Southern Africa cannot be explained by localized weather. They indicate that these landmasses were merged near the South Pole into the supercontinent Gondwana, sharing a single ice cap before drifting to their present positions.",
+      "sourceReference": "Grade 12 Geography Textbook, Section 1.1, Page 3–4"
+    },
+    {
+      "id": "GEO-G12-U01-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "The Afar Depression in the Horn of Africa is a world-renowned geological example of a 'triple junction.' Which three tectonic plates meet and diverge at this rifting center?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Eurasian Plate, Anatolian Plate, and African Plate"
+        },
+        {
+          "id": "B",
+          "text": "Nubian (African) Plate, Somali Plate, and Arabian Plate"
+        },
+        {
+          "id": "C",
+          "text": "Indian Plate, Australian Plate, and Antarctic Plate"
+        },
+        {
+          "id": "D",
+          "text": "Nazca Plate, Cocos Plate, and South American Plate"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The Afar Triple Junction is an active tectonic boundary where three spreading rifts meet: the Nubian (African Main) Plate, the Somali Plate, and the Arabian Plate, forming the Red Sea, Gulf of Aden, and East African Rift arms.",
+      "sourceReference": "Grade 12 Geography Textbook, Section 1.3, Page 9–10"
+    },
+    {
+      "id": "GEO-G12-U01-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "How does an earthquake's 'focus' (hypocenter) differ structurally from its 'epicenter', and how do Primary (P) waves and Secondary (S) waves behave during propagation?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Focus is the surface location; epicenter is the underground origin point. S-waves arrive before P-waves."
+        },
+        {
+          "id": "B",
+          "text": "Focus is the underground origin point where fault rupture begins; epicenter is the point on Earth's surface directly vertically above the focus. P-waves travel faster and pass through solids and liquids, while S-waves are slower and pass only through solids."
+        },
+        {
+          "id": "C",
+          "text": "Focus is measured on the Richter scale; epicenter is measured on the Mercalli scale. P-waves pass only through liquids."
+        },
+        {
+          "id": "D",
+          "text": "Focus occurs only in oceanic trenches; epicenter occurs only on block mountains. P-waves and S-waves travel at identical velocities."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The focus (hypocenter) is the underground point within the crust where energy release and fault movement originate. The epicenter is the position on the Earth's surface directly above the focus. Compressional P-waves are the fastest seismic waves and travel through both solids and liquids, whereas transverse S-waves are slower and cannot propagate through fluids.",
+      "sourceReference": "Grade 12 Geography Textbook, Section 1.4, Page 16–18"
+    },
+    {
+      "id": "GEO-G12-U01-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Which intrusive igneous body forms when magma forces its way vertically or near-vertically across pre-existing rock strata (discordant) and solidifies into a wall-like underground sheet?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Sill"
+        },
+        {
+          "id": "B",
+          "text": "Batholith"
+        },
+        {
+          "id": "C",
+          "text": "Dike (Dyke)"
+        },
+        {
+          "id": "D",
+          "text": "Laccolith"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "A dike is a discordant igneous intrusion formed when magma cuts vertically or steeply across bedding planes of existing rock strata. A sill is a concordant horizontal sheet intruded parallel to rock layers, while a batholith is a vast underground plutonic mass.",
+      "sourceReference": "Grade 12 Geography Textbook, Section 1.4, Page 15–16"
+    }
+  ]
 }

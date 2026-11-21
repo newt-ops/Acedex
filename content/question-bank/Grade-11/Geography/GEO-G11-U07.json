@@ -3,5 +3,411 @@
   "subject": "Geography",
   "unitNumber": 7,
   "unitTitle": "Geographic Issues and Public Concerns",
-  "questions": []
+  "questions": [
+    {
+      "id": "GEO-G11-U07-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "According to the 18th-century English economist Thomas Malthus, how do human population and food production grow over time in the absence of checks?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Population grows arithmetically, while food production grows geometrically."
+        },
+        {
+          "id": "B",
+          "text": "Population grows geometrically (exponentially), whereas food production increases only arithmetically."
+        },
+        {
+          "id": "C",
+          "text": "Both population and food production grow at equal logarithmic rates."
+        },
+        {
+          "id": "D",
+          "text": "Population remains static, while food production grows exponentially."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Thomas Malthus argued in his pessimistic population theory that while human population tends to grow geometrically (1, 2, 4, 8, 16...), food production increases at best arithmetically (1, 2, 3, 4, 5...), eventually leading to food shortages and resource crises.",
+      "sourceReference": "Grade 11 Geography Textbook, Section 7.1.3, Page 191"
+    },
+    {
+      "id": "GEO-G11-U07-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "According to the United Nations Convention to Combat Desertification (UNCCD), how is desertification formally defined?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The natural expansion of sand dunes into polar tundra biomes."
+        },
+        {
+          "id": "B",
+          "text": "Human-induced land degradation in dry, arid, semi-arid, and dry sub-humid areas (drylands)."
+        },
+        {
+          "id": "C",
+          "text": "The conversion of tropical rainforests into permanent wetland reserves."
+        },
+        {
+          "id": "D",
+          "text": "Seasonal flooding caused by oceanic tsunamis along coastal lowlands."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The UNCCD defines desertification specifically as human-induced land degradation in arid, semi-arid, and dry sub-humid regions (collectively known as drylands), resulting from various factors including human activities and climatic variations.",
+      "sourceReference": "Grade 11 Geography Textbook, Section 7.2.4, Page 200 & Section 7.2.1, Page 189–190"
+    },
+    {
+      "id": "GEO-G11-U07-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which type of drought is defined purely based on atmospheric precipitation statistics, specifically a reduction in rainfall below the long-term historical average for a given region and time period?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Hydrological drought"
+        },
+        {
+          "id": "B",
+          "text": "Agricultural drought"
+        },
+        {
+          "id": "C",
+          "text": "Meteorological drought"
+        },
+        {
+          "id": "D",
+          "text": "Socioeconomic drought"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Meteorological drought is defined on the basis of the degree of dryness compared to a normal or average precipitation amount over a specified duration, relying strictly on precipitation statistics.",
+      "sourceReference": "Grade 11 Geography Textbook, Section 7.3.1, Page 202–203"
+    },
+    {
+      "id": "GEO-G11-U07-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which process involves the clearing and removal of natural forest trees without adequate replanting, driven by fuelwood demand, commercial logging, and agricultural expansion?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Afforestation"
+        },
+        {
+          "id": "B",
+          "text": "Reforestation"
+        },
+        {
+          "id": "C",
+          "text": "Deforestation"
+        },
+        {
+          "id": "D",
+          "text": "Agroforestry"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Deforestation refers to the clearing or indiscriminate removal of forest trees and cover through logging, burning, or cutting for agriculture, fuelwood, or settlement without sufficient replacement or regeneration.",
+      "sourceReference": "Grade 11 Geography Textbook, Section 7.4, Page 206"
+    },
+    {
+      "id": "GEO-G11-U07-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What does the term 'digital divide' refer to in contemporary global geography?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The mathematical division of Earth into eastern and western magnetic hemispheres."
+        },
+        {
+          "id": "B",
+          "text": "The gap between individuals, households, businesses, and geographic areas regarding access to Information Communication Technologies (ICTs) and the internet."
+        },
+        {
+          "id": "C",
+          "text": "The boundary separating active volcanic rift lines from stable continental shields."
+        },
+        {
+          "id": "D",
+          "text": "The difference between total rainfall volume and potential evapotranspiration rates."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The digital divide refers to the socioeconomic and spatial gap existing between people, households, companies, and geographic regions with respect to access to information communication technologies (ICTs) and internet connectivity.",
+      "sourceReference": "Grade 11 Geography Textbook, Section 7.5, Page 208"
+    },
+    {
+      "id": "GEO-G11-U07-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How does agricultural drought differ fundamentally from hydrological drought?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Agricultural drought measures river delta ocean salinity, whereas hydrological drought measures atmospheric cloud thickness."
+        },
+        {
+          "id": "B",
+          "text": "Agricultural drought occurs when topsoil moisture is deficient during crop growing seasons, whereas hydrological drought involves below-normal water levels in rivers, lakes, reservoirs, and underground aquifers."
+        },
+        {
+          "id": "C",
+          "text": "Agricultural drought affects only polar ice caps, while hydrological drought affects urban industrial parks."
+        },
+        {
+          "id": "D",
+          "text": "Agricultural drought is caused by volcanic eruptions, whereas hydrological drought is caused by earthquakes."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Agricultural drought links rainfall deficits to crop impacts, specifically focusing on topsoil moisture deficits that stress plant growth. Hydrological drought, by contrast, pertains to surface and subsurface water supply shortages in streams, lakes, reservoirs, and aquifers.",
+      "sourceReference": "Grade 11 Geography Textbook, Section 7.3.3, Page 203"
+    },
+    {
+      "id": "GEO-G11-U07-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In labor economics and population geography, how is underemployment distinguished from total unemployment?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Underemployment occurs when workers are employed in jobs that do not fully utilize their skills, education, or desired working hours, whereas unemployment refers to individuals who are jobless and actively seeking work."
+        },
+        {
+          "id": "B",
+          "text": "Underemployment applies only to agricultural self-employment, while unemployment applies only to government civil servants."
+        },
+        {
+          "id": "C",
+          "text": "Underemployment means working 80 hours per week, while unemployment means working 40 hours per week."
+        },
+        {
+          "id": "D",
+          "text": "Underemployment is caused by high birth rates, while unemployment is caused by net emigration."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Unemployment describes individuals who are employable and actively seeking work but cannot find a job. Underemployment refers to a situation where employed individuals are working below their capability, working fewer hours than desired, or holding jobs below their skill/education level.",
+      "sourceReference": "Grade 11 Geography Textbook, Section 7.1.4, Page 194–197"
+    },
+    {
+      "id": "GEO-G11-U07-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "According to IPCC and UNEP estimates presented in the textbook, drylands (comprising arid, semi-arid, and dry sub-humid zones) cover approximately what percentage of the Earth's total terrestrial land area?",
+      "options": [
+        {
+          "id": "A",
+          "text": "12.5%"
+        },
+        {
+          "id": "B",
+          "text": "25.0%"
+        },
+        {
+          "id": "C",
+          "text": "46.2%"
+        },
+        {
+          "id": "D",
+          "text": "78.9%"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "According to the IPCC special report on climate change and land, drylands cover approximately 46.2% of the global land surface and are home to over 3 billion people.",
+      "sourceReference": "Grade 11 Geography Textbook, Section 7.2.1, Page 190"
+    },
+    {
+      "id": "GEO-G11-U07-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which of the following factors represents an underlying (indirect) driver of deforestation rather than a direct (proximate) cause?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Chainsaw logging for timber extraction"
+        },
+        {
+          "id": "B",
+          "text": "Land tenure insecurity, weak governance, and population growth pressure"
+        },
+        {
+          "id": "C",
+          "text": "Clearing forest plots for shifting cultivation"
+        },
+        {
+          "id": "D",
+          "text": "Cutting trees for household fuelwood consumption"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Proximate (direct) causes of deforestation include human activities directly clearing trees (logging, fuelwood collection, agricultural expansion). Underlying (indirect) causes include broader background factors such as population growth pressure, land tenure insecurity, market demands, and weak institutional policy enforcement.",
+      "sourceReference": "Grade 11 Geography Textbook, Section 7.4.1, Page 206–207"
+    },
+    {
+      "id": "GEO-G11-U07-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In climate and drought monitoring, what does a negative value on the Standardized Precipitation Index (SPI) indicate?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Above-normal precipitation and flooding risk"
+        },
+        {
+          "id": "B",
+          "text": "High relative humidity and low solar radiation"
+        },
+        {
+          "id": "C",
+          "text": "Below-normal precipitation and drought conditions"
+        },
+        {
+          "id": "D",
+          "text": "Rapid groundwater aquifer recharge"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The Standardized Precipitation Index (SPI) quantifies precipitation deficits relative to long-term historical probability distributions. Positive SPI values represent wet conditions, whereas negative SPI values (ranging down to -2.0 or less) indicate dry/drought conditions.",
+      "sourceReference": "Grade 11 Geography Textbook, Section 7.3.4, Page 205 (Table 7.2)"
+    },
+    {
+      "id": "GEO-G11-U07-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How does the Economic Dependency Ratio (EDR) of a country differ conceptually from its standard Age Dependency Ratio (ADR)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "EDR compares total land area to agricultural crop yields."
+        },
+        {
+          "id": "B",
+          "text": "EDR compares the economically inactive population (including unemployed and non-active working-age individuals plus young and old dependents) to the actual employed labor force, rather than relying strictly on age brackets."
+        },
+        {
+          "id": "C",
+          "text": "EDR measures only the number of retired people above 80 years old."
+        },
+        {
+          "id": "D",
+          "text": "EDR is calculated by dividing total exports by total imports."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "While the Age Dependency Ratio relies strictly on age cohorts [(0-14 + 65+) / (15-64)], the Economic Dependency Ratio (EDR) compares all economically non-active and unemployed people to those who are actually employed, providing a clearer picture of real economic burden.",
+      "sourceReference": "Grade 11 Geography Textbook, Section 7.1.4, Page 195–196 (Table 7.1)"
+    },
+    {
+      "id": "GEO-G11-U07-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Consider two hypothetical countries, Country X (a high-income nation where agriculture accounts for 10% of GDP and relies on underground aquifers) and Country Y (a low-income nation where agriculture is 50% of GDP and relies almost entirely on rain-fed farming). If both countries experience a 50% reduction in annual rainfall, why are the economic and social impacts vastly more devastating in Country Y?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because Country Y has higher industrial carbon emissions than Country X."
+        },
+        {
+          "id": "B",
+          "text": "Because Country Y's heavy structural reliance on rain-fed agriculture means rainfall deficits directly collapse national crop yields, income, and food security, whereas Country X has low agricultural GDP share and resilient water infrastructure."
+        },
+        {
+          "id": "C",
+          "text": "Because Country X experiences sub-zero freezing temperatures that block drought effects."
+        },
+        {
+          "id": "D",
+          "text": "Because rain-fed farming automatically generates higher tax revenue than irrigated farming."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "As illustrated in the textbook's comparison, a drought's impact depends heavily on a nation's economic structure. In Country Y, where agriculture makes up 50% of GDP and is rain-fed, a 50% rain drop collapses food supplies, employment, and overall GDP. In Country X, agriculture is a small fraction of GDP (10%) and relies on underground aquifers, buffering it from immediate collapse.",
+      "sourceReference": "Grade 11 Geography Textbook, Section 7.3.6, Page 206–207"
+    },
+    {
+      "id": "GEO-G11-U07-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "How does Esther Boserup's optimistic Anti-Malthusian theory challenge the pessimistic Malthusian view regarding the relationship between population growth and agricultural development?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Boserup argued that population growth causes immediate societal extinction through unavoidable famine."
+        },
+        {
+          "id": "B",
+          "text": "Boserup argued that population growth acts as a stimulus for technological innovation, land intensification, and improved farming methods that expand food production capacity to meet growing demand."
+        },
+        {
+          "id": "C",
+          "text": "Boserup stated that food production grows geometrically while population remains fixed."
+        },
+        {
+          "id": "D",
+          "text": "Boserup claimed that agricultural land use is dictated entirely by von Thünen's industrial location rings."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Contrary to Malthus's view that population growth is constrained by food limits, Anti-Malthusians like Esther Boserup argued that population pressure stimulates human ingenuity, leading to technological advancements, agricultural intensification, and new methods that increase food output ('necessity is the mother of invention').",
+      "sourceReference": "Grade 11 Geography Textbook, Section 7.1.3, Page 191–193"
+    },
+    {
+      "id": "GEO-G11-U07-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "In land degradation studies, which of the following processes represents chemical soil degradation rather than physical soil degradation?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Soil compaction caused by heavy agricultural machinery"
+        },
+        {
+          "id": "B",
+          "text": "Soil crusting and surface sealing by raindrop impact"
+        },
+        {
+          "id": "C",
+          "text": "Accumulation of toxic salts (salinization) and nutrient leaching from excessive irrigation and fertilizer use"
+        },
+        {
+          "id": "D",
+          "text": "Physical detachment of topsoil particles by water rill erosion"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Physical soil degradation involves mechanical structural changes such as compaction, crusting, sealing, and loss of topsoil through water or wind erosion. Chemical degradation involves changes in soil chemistry, including salinization (salt accumulation), acidification, nutrient leaching, and toxic chemical contamination.",
+      "sourceReference": "Grade 11 Geography Textbook, Section 7.2.1, Page 198–199"
+    },
+    {
+      "id": "GEO-G11-U07-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "To protect human entitlements and prevent widespread famine during extended drought crises, which short-to-medium term policy intervention combination is recommended to maintain food security in vulnerable communities?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Banning all food imports and increasing land rent on smallholder farmers."
+        },
+        {
+          "id": "B",
+          "text": "Price stabilization, food subsidies, labor-intensive public employment creation programs, targeted food distribution, and complementary health/water initiatives."
+        },
+        {
+          "id": "C",
+          "text": "Mandatory rural-to-urban migration and privatization of all communal pastures."
+        },
+        {
+          "id": "D",
+          "text": "Converting all food crop fields into non-edible cash crop plantations."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Effective famine prevention and food security protection require short-to-medium term interventions that preserve food access and purchasing power (entitlements): stabilizing market food prices, providing food subsidies, generating income through public work programs, direct supplementary feeding, and maintaining clean water and health services.",
+      "sourceReference": "Grade 11 Geography Textbook, Section 7.4.4, Page 211–212 & Section 7.3.2, Page 205"
+    }
+  ]
 }

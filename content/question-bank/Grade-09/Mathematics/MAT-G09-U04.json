@@ -3,5 +3,411 @@
   "subject": "Mathematics",
   "unitNumber": 4,
   "unitTitle": "Solving Inequalities",
-  "questions": []
+  "questions": [
+    {
+      "id": "MAT-G09-U04-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is the solution set of the linear inequality 5x - 3(x - 2) < 14 in interval notation?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(-∞, 4)"
+        },
+        {
+          "id": "B",
+          "text": "(4, ∞)"
+        },
+        {
+          "id": "C",
+          "text": "(-∞, 10)"
+        },
+        {
+          "id": "D",
+          "text": "[4, ∞)"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Expanding the brackets gives 5x - 3x + 6 < 14. Combining like terms results in 2x + 6 < 14. Subtracting 6 from both sides yields 2x < 8, and dividing by 2 gives x < 4. In interval notation, this is (-∞, 4).",
+      "sourceReference": "Section 4.1, Page 156"
+    },
+    {
+      "id": "MAT-G09-U04-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "If x is a natural number, what is the complete solution set of the inequality 4x - 5 ≤ 11?",
+      "options": [
+        {
+          "id": "A",
+          "text": "{0, 1, 2, 3, 4}"
+        },
+        {
+          "id": "B",
+          "text": "{1, 2, 3, 4}"
+        },
+        {
+          "id": "C",
+          "text": "{1, 2, 3}"
+        },
+        {
+          "id": "D",
+          "text": "(-∞, 4]"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Solving 4x - 5 ≤ 11 gives 4x ≤ 16, which simplifies to x ≤ 4. Since x is specified to be a natural number (x ∈ N = {1, 2, 3, ...}), the elements satisfying the condition are {1, 2, 3, 4}.",
+      "sourceReference": "Section 4.1 & Review Exercise, Page 152, 183"
+    },
+    {
+      "id": "MAT-G09-U04-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which of the following intervals represents the solution set of the absolute value inequality |x - 4| < 6?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(-2, 10)"
+        },
+        {
+          "id": "B",
+          "text": "[-2, 10]"
+        },
+        {
+          "id": "C",
+          "text": "(-10, 2)"
+        },
+        {
+          "id": "D",
+          "text": "(-∞, -2) ∪ (10, ∞)"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "For any positive real number c, |u| < c is equivalent to -c < u < c. Thus, |x - 4| < 6 becomes -6 < x - 4 < 6. Adding 4 to all parts yields -2 < x < 10, which is represented by the open interval (-2, 10).",
+      "sourceReference": "Section 4.3, Page 168"
+    },
+    {
+      "id": "MAT-G09-U04-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is the solution set of the quadratic inequality (x - 3)(x + 5) < 0?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(-∞, -5) ∪ (3, ∞)"
+        },
+        {
+          "id": "B",
+          "text": "(-3, 5)"
+        },
+        {
+          "id": "C",
+          "text": "(-5, 3)"
+        },
+        {
+          "id": "D",
+          "text": "[-5, 3]"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The product of two factors is negative (< 0) when the two factors have opposite signs. The roots of the expression are x = -5 and x = 3. Between these roots, testing x = 0 gives (0 - 3)(0 + 5) = -15 < 0. Thus, the solution set is the open interval (-5, 3).",
+      "sourceReference": "Section 4.4.1, Page 172"
+    },
+    {
+      "id": "MAT-G09-U04-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which of the following points lies in the solution region of the linear inequality 2x - 3y ≥ 6?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(0, 0)"
+        },
+        {
+          "id": "B",
+          "text": "(1, 2)"
+        },
+        {
+          "id": "C",
+          "text": "(4, 0)"
+        },
+        {
+          "id": "D",
+          "text": "(2, 1)"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Substitute each given coordinate pair into 2x - 3y ≥ 6: For (4, 0): 2(4) - 3(0) = 8 ≥ 6, which is true. For (0, 0): 0 ≥ 6 (false); for (1, 2): 2 - 6 = -4 ≥ 6 (false); for (2, 1): 4 - 3 = 1 ≥ 6 (false). Therefore, (4, 0) lies in the solution region.",
+      "sourceReference": "Section 4.2, Page 157-158"
+    },
+    {
+      "id": "MAT-G09-U04-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What is the solution set of the linear inequality (x + 2)/5 - (2x - 1)/3 ≥ 1?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(-∞, -4/7]"
+        },
+        {
+          "id": "B",
+          "text": "[-4/7, ∞)"
+        },
+        {
+          "id": "C",
+          "text": "(-∞, 4/7]"
+        },
+        {
+          "id": "D",
+          "text": "[-2, ∞)"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Multiply both sides by the LCM of 5 and 3, which is 15: 3(x + 2) - 5(2x - 1) ≥ 15 => 3x + 6 - 10x + 5 ≥ 15 => -7x + 11 ≥ 15. Subtracting 11 gives -7x ≥ 4. Dividing both sides by -7 reverses the inequality sign: x ≤ -4/7. In interval notation, this is (-∞, -4/7].",
+      "sourceReference": "Section 4.1, Page 156"
+    },
+    {
+      "id": "MAT-G09-U04-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What is the solution set of the compound linear inequality -7 ≤ 3 - 2x < 9?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(-3, 5]"
+        },
+        {
+          "id": "B",
+          "text": "[-3, 5)"
+        },
+        {
+          "id": "C",
+          "text": "(-5, 3]"
+        },
+        {
+          "id": "D",
+          "text": "[-5, 3)"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Subtract 3 from all parts: -7 - 3 ≤ -2x < 9 - 3 => -10 ≤ -2x < 6. Dividing all parts by -2 reverses the direction of the inequality signs: -10/(-2) ≥ x > 6/(-2) => 5 ≥ x > -3, which is equivalent to -3 < x ≤ 5. In interval notation, this is (-3, 5].",
+      "sourceReference": "Section 4.1 & Review Exercise, Page 154, 183"
+    },
+    {
+      "id": "MAT-G09-U04-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What is the solution set of the absolute value inequality |3x + 7| ≥ 5?",
+      "options": [
+        {
+          "id": "A",
+          "text": "[-4, -2/3]"
+        },
+        {
+          "id": "B",
+          "text": "(-∞, -4] ∪ [-2/3, ∞)"
+        },
+        {
+          "id": "C",
+          "text": "(-∞, -2/3] ∪ [4, ∞)"
+        },
+        {
+          "id": "D",
+          "text": "[-2/3, 4]"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "For any positive real number c, |u| ≥ c splits into u ≤ -c or u ≥ c. Hence, 3x + 7 ≤ -5 or 3x + 7 ≥ 5. Solving the first inequality: 3x ≤ -12 => x ≤ -4. Solving the second: 3x ≥ -2 => x ≥ -2/3. Combining both gives (-∞, -4] ∪ [-2/3, ∞).",
+      "sourceReference": "Section 4.3 & Review Exercise, Page 168, 184"
+    },
+    {
+      "id": "MAT-G09-U04-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which of the following ordered pairs (x, y) is a solution to the system of linear inequalities {x - 2y > -1, 3x - y < -3}?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(2, 1)"
+        },
+        {
+          "id": "B",
+          "text": "(-2, -1)"
+        },
+        {
+          "id": "C",
+          "text": "(2, -1)"
+        },
+        {
+          "id": "D",
+          "text": "(-1, 2)"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Testing (-2, -1) in both inequalities: (1) x - 2y = -2 - 2(-1) = -2 + 2 = 0 > -1 (true); (2) 3x - y = 3(-2) - (-1) = -6 + 1 = -5 < -3 (true). Both inequalities are satisfied, so (-2, -1) is a solution.",
+      "sourceReference": "Section 4.2 & Review Exercise, Page 161, 184"
+    },
+    {
+      "id": "MAT-G09-U04-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What is the solution set of the quadratic inequality x^2 - 4x - 12 ≤ 0?",
+      "options": [
+        {
+          "id": "A",
+          "text": "[-6, 2]"
+        },
+        {
+          "id": "B",
+          "text": "[-2, 6]"
+        },
+        {
+          "id": "C",
+          "text": "(-∞, -2] ∪ [6, ∞)"
+        },
+        {
+          "id": "D",
+          "text": "(-2, 6)"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Factoring the quadratic gives: (x - 6)(x + 2) ≤ 0. The roots are x = -2 and x = 6. The parabola opens upward, so the product is less than or equal to zero between and including the roots: -2 ≤ x ≤ 6. In interval notation, this is [-2, 6].",
+      "sourceReference": "Section 4.4.2, Page 174-175"
+    },
+    {
+      "id": "MAT-G09-U04-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "A student mobile package has a fixed service fee of 40 Birr. Each text message sent costs 0.25 Birr. If the student can spend at most 90 Birr in total, what is the maximum number of text messages the student can send?",
+      "options": [
+        {
+          "id": "A",
+          "text": "200"
+        },
+        {
+          "id": "B",
+          "text": "250"
+        },
+        {
+          "id": "C",
+          "text": "160"
+        },
+        {
+          "id": "D",
+          "text": "360"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Let m be the number of text messages. The total cost is represented by the inequality 0.25m + 40 ≤ 90. Subtracting 40 from both sides gives 0.25m ≤ 50. Dividing both sides by 0.25 yields m ≤ 200. Thus, the maximum number of messages is 200.",
+      "sourceReference": "Section 4.5, Page 177-178"
+    },
+    {
+      "id": "MAT-G09-U04-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "What is the complete solution set of the absolute value inequality |2x - 5| ≤ -3?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(-∞, ∞)"
+        },
+        {
+          "id": "B",
+          "text": "[-1, 4]"
+        },
+        {
+          "id": "C",
+          "text": "{5/2}"
+        },
+        {
+          "id": "D",
+          "text": "∅"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "By definition, the absolute value of any real expression is non-negative, meaning |2x - 5| ≥ 0 for all x ∈ R. Since a non-negative number can never be less than or equal to a negative number (-3), there is no real number x that satisfies the inequality. Therefore, the solution set is the empty set, ∅.",
+      "sourceReference": "Section 4.3, Page 169"
+    },
+    {
+      "id": "MAT-G09-U04-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "What is the solution set of the quadratic inequality -2x^2 + 5x + 12 ≥ 0?",
+      "options": [
+        {
+          "id": "A",
+          "text": "[-3/2, 4]"
+        },
+        {
+          "id": "B",
+          "text": "[-4, 3/2]"
+        },
+        {
+          "id": "C",
+          "text": "(-∞, -3/2] ∪ [4, ∞)"
+        },
+        {
+          "id": "D",
+          "text": "(-∞, -4] ∪ [3/2, ∞)"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Multiplying the entire inequality by -1 reverses the inequality sign: 2x^2 - 5x - 12 ≤ 0. Factoring the quadratic gives (2x + 3)(x - 4) ≤ 0. The roots are x = -3/2 and x = 4. The product is less than or equal to zero between the roots. Thus, the solution set is [-3/2, 4].",
+      "sourceReference": "Section 4.4.1 & Exercise 4.9, Page 173"
+    },
+    {
+      "id": "MAT-G09-U04-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "For what values of the constant k does the quadratic inequality x^2 - 6x + k > 0 hold true for ALL real numbers x?",
+      "options": [
+        {
+          "id": "A",
+          "text": "k < 9"
+        },
+        {
+          "id": "B",
+          "text": "k > 9"
+        },
+        {
+          "id": "C",
+          "text": "k ≥ 9"
+        },
+        {
+          "id": "D",
+          "text": "k > 36"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "A quadratic expression ax^2 + bx + c with leading coefficient a > 0 is strictly positive (> 0) for all real x if and only if its discriminant D = b^2 - 4ac is strictly negative (D < 0), meaning the parabola has no real x-intercepts and lies entirely above the x-axis. Here, a = 1, b = -6, and c = k. So D = (-6)^2 - 4(1)(k) = 36 - 4k < 0. Solving 36 < 4k gives k > 9.",
+      "sourceReference": "Section 4.4 & Unit Summary, Page 174, 182"
+    },
+    {
+      "id": "MAT-G09-U04-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A farmer in Jimma plans to fence a rectangular vegetable garden such that its length is 3 meters longer than its width. If the area of the garden must be at least 28 m² and the perimeter must not exceed 30 meters, what is the set of all possible values for the width w (in meters)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "[4, 6]"
+        },
+        {
+          "id": "B",
+          "text": "(0, 6]"
+        },
+        {
+          "id": "C",
+          "text": "[4, 7]"
+        },
+        {
+          "id": "D",
+          "text": "[3, 6]"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Let w be the width in meters. The length is w + 3 with w > 0. Condition 1 (Area): Area = w(w + 3) ≥ 28 => w^2 + 3w - 28 ≥ 0 => (w + 7)(w - 4) ≥ 0. Since w > 0, w + 7 > 0, so w - 4 ≥ 0 => w ≥ 4. Condition 2 (Perimeter): Perimeter = 2(w + (w + 3)) = 2(2w + 3) = 4w + 6 ≤ 30 => 4w ≤ 24 => w ≤ 6. Combining both conditions gives 4 ≤ w ≤ 6, which in interval notation is.",
+      "sourceReference": "Section 4.5, Page 180-181"
+    }
+  ]
 }

@@ -3,5 +3,411 @@
   "subject": "Mathematics",
   "unitNumber": 1,
   "unitTitle": "Further on Sets",
-  "questions": []
+  "questions": [
+    {
+      "id": "MAT-G09-U01-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which of the following collections represents a well-defined set?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The collection of all honest students in Grade 9"
+        },
+        {
+          "id": "B",
+          "text": "The collection of all difficult mathematics questions in the textbook"
+        },
+        {
+          "id": "C",
+          "text": "The collection of all prime numbers less than 20"
+        },
+        {
+          "id": "D",
+          "text": "The collection of the most beautiful traditional Ethiopian dresses"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "A set is well-defined if there is an objective rule that enables us to determine whether any given object belongs to the collection or not. 'Prime numbers less than 20' is mathematically well-defined as {2, 3, 5, 7, 11, 13, 17, 19}, whereas 'honest', 'difficult', and 'most beautiful' are subjective qualities that vary by personal opinion.",
+      "sourceReference": "Section 1.1, Page 2"
+    },
+    {
+      "id": "MAT-G09-U01-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "If set A = {x ∈ W : 2x - 1 < 9}, where W is the set of whole numbers, which of the following is the complete listing of set A?",
+      "options": [
+        {
+          "id": "A",
+          "text": "{1, 2, 3, 4}"
+        },
+        {
+          "id": "B",
+          "text": "{0, 1, 2, 3, 4, 5}"
+        },
+        {
+          "id": "C",
+          "text": "{1, 2, 3, 4, 5}"
+        },
+        {
+          "id": "D",
+          "text": "{0, 1, 2, 3, 4}"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "Solving the inequality 2x - 1 < 9 gives 2x < 10, which yields x < 5. Since x is a member of the set of whole numbers W = {0, 1, 2, 3, ...}, the elements satisfying x < 5 are 0, 1, 2, 3, and 4. Hence, A = {0, 1, 2, 3, 4}.",
+      "sourceReference": "Section 1.2, Page 5"
+    },
+    {
+      "id": "MAT-G09-U01-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "If a finite set M contains exactly 5 elements, what is the total number of proper subsets of M?",
+      "options": [
+        {
+          "id": "A",
+          "text": "32"
+        },
+        {
+          "id": "B",
+          "text": "31"
+        },
+        {
+          "id": "C",
+          "text": "25"
+        },
+        {
+          "id": "D",
+          "text": "10"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "For any finite set with n elements, the total number of subsets is 2^n, and the number of proper subsets is 2^n - 1. For n = 5, the number of proper subsets is 2^5 - 1 = 32 - 1 = 31.",
+      "sourceReference": "Section 1.3, Page 10"
+    },
+    {
+      "id": "MAT-G09-U01-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Let A = {x ∈ N : x is a factor of 18} and B = {x ∈ N : x is a factor of 24}. Which of the following sets represents A ∩ B?",
+      "options": [
+        {
+          "id": "A",
+          "text": "{1, 2, 3}"
+        },
+        {
+          "id": "B",
+          "text": "{2, 3, 6}"
+        },
+        {
+          "id": "C",
+          "text": "{1, 2, 3, 6}"
+        },
+        {
+          "id": "D",
+          "text": "{1, 2, 3, 6, 9, 12}"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The factors of 18 in N are A = {1, 2, 3, 6, 9, 18} and the factors of 24 in N are B = {1, 2, 3, 4, 6, 8, 12, 24}. The intersection A ∩ B is the set of elements common to both A and B, which is {1, 2, 3, 6}.",
+      "sourceReference": "Section 1.4, Page 13"
+    },
+    {
+      "id": "MAT-G09-U01-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Let A = {a, b, c} and B = {2, 4, 6, 8}. What is the number of elements in the Cartesian product A × B?",
+      "options": [
+        {
+          "id": "A",
+          "text": "12"
+        },
+        {
+          "id": "B",
+          "text": "7"
+        },
+        {
+          "id": "C",
+          "text": "14"
+        },
+        {
+          "id": "D",
+          "text": "64"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The Cartesian product A × B is the set of all ordered pairs (x, y) where x ∈ A and y ∈ B. Its cardinality is n(A × B) = n(A) × n(B). Since n(A) = 3 and n(B) = 4, n(A × B) = 3 × 4 = 12.",
+      "sourceReference": "Section 1.4, Page 19-20"
+    },
+    {
+      "id": "MAT-G09-U01-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Let S = {2, {3}, {4, 5}, 6}. Which of the following statements is FALSE?",
+      "options": [
+        {
+          "id": "A",
+          "text": "{3} ∈ S"
+        },
+        {
+          "id": "B",
+          "text": "{{3}} ⊆ S"
+        },
+        {
+          "id": "C",
+          "text": "{4, 5} ⊆ S"
+        },
+        {
+          "id": "D",
+          "text": "{2, 6} ⊆ S"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The object {4, 5} is an element of S, so {4, 5} ∈ S. For {4, 5} to be a subset of S, each of its elements (4 and 5) would have to be elements of S, but 4 ∉ S and 5 ∉ S. Therefore, {4, 5} ⊆ S is false; the correct subset relationship is {{4, 5}} ⊆ S.",
+      "sourceReference": "Section 1.1 & Section 1.3, Page 3, 9"
+    },
+    {
+      "id": "MAT-G09-U01-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Let A = {x ∈ Z : x^2 - 5x + 6 = 0} and B = {x ∈ Z : -1 ≤ x < 4}. What is the relative complement of A with respect to B (B \\ A)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "{-1, 0, 1}"
+        },
+        {
+          "id": "B",
+          "text": "{2, 3}"
+        },
+        {
+          "id": "C",
+          "text": "{-1, 0, 1, 2, 3}"
+        },
+        {
+          "id": "D",
+          "text": "{0, 1}"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Solving x^2 - 5x + 6 = 0 yields x = 2 and x = 3, so A = {2, 3}. Set B consists of integers from -1 up to 3, so B = {-1, 0, 1, 2, 3}. The relative complement B \\ A consists of elements that belong to B but not to A: {-1, 0, 1, 2, 3} \\ {2, 3} = {-1, 0, 1}.",
+      "sourceReference": "Section 1.4, Page 16"
+    },
+    {
+      "id": "MAT-G09-U01-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Let the universal set be U = {1, 2, 3, 4, 5, 6, 7, 8}. If A = {1, 2, 4, 7} and B = {2, 3, 5, 7}, which of the following is the symmetric difference A Δ B?",
+      "options": [
+        {
+          "id": "A",
+          "text": "{2, 7}"
+        },
+        {
+          "id": "B",
+          "text": "{1, 2, 3, 4, 5, 7}"
+        },
+        {
+          "id": "C",
+          "text": "{6, 8}"
+        },
+        {
+          "id": "D",
+          "text": "{1, 3, 4, 5}"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "The symmetric difference A Δ B is defined as (A \\ B) ∪ (B \\ A) or (A ∪ B) \\ (A ∩ B). Here, A \\ B = {1, 4} and B \\ A = {3, 5}. Combining these gives A Δ B = {1, 3, 4, 5}.",
+      "sourceReference": "Section 1.4, Page 18"
+    },
+    {
+      "id": "MAT-G09-U01-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Let U = {x ∈ N : x ≤ 10} be the universal set. If A = {2, 3, 5, 7} and B = {1, 3, 5, 7, 9}, which of the following is the complement set (A ∪ B)'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "{3, 5, 7}"
+        },
+        {
+          "id": "B",
+          "text": "{4, 6, 8, 10}"
+        },
+        {
+          "id": "C",
+          "text": "{1, 9}"
+        },
+        {
+          "id": "D",
+          "text": "{2, 4, 6, 8, 10}"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The universal set is U = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}. The union is A ∪ B = {1, 2, 3, 5, 7, 9}. The absolute complement (A ∪ B)' consists of all elements in U not in A ∪ B, which is {4, 6, 8, 10}.",
+      "sourceReference": "Section 1.4, Page 15-16"
+    },
+    {
+      "id": "MAT-G09-U01-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In a class of 45 students, 28 students play football, 20 students play volleyball, and 5 students play neither sport. How many students play both football and volleyball?",
+      "options": [
+        {
+          "id": "A",
+          "text": "8"
+        },
+        {
+          "id": "B",
+          "text": "12"
+        },
+        {
+          "id": "C",
+          "text": "15"
+        },
+        {
+          "id": "D",
+          "text": "3"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The number of students playing at least one sport is n(F ∪ V) = 45 - 5 = 40. Using the formula n(F ∪ V) = n(F) + n(V) - n(F ∩ V), we get 40 = 28 + 20 - n(F ∩ V). This simplifies to 40 = 48 - n(F ∩ V), which gives n(F ∩ V) = 8.",
+      "sourceReference": "Section 1.5, Page 20-21"
+    },
+    {
+      "id": "MAT-G09-U01-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Let A = {5, x^2 - 3x} and B = {5, 10}. If A = B and x is a negative integer, what is the value of x?",
+      "options": [
+        {
+          "id": "A",
+          "text": "-5"
+        },
+        {
+          "id": "B",
+          "text": "5"
+        },
+        {
+          "id": "C",
+          "text": "2"
+        },
+        {
+          "id": "D",
+          "text": "-2"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "Two sets are equal if and only if they contain identical elements. Thus, x^2 - 3x must equal 10, giving the quadratic equation x^2 - 3x - 10 = 0. Factoring gives (x - 5)(x + 2) = 0, so x = 5 or x = -2. Since x is specified as a negative integer, x = -2.",
+      "sourceReference": "Section 1.3, Page 8"
+    },
+    {
+      "id": "MAT-G09-U01-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Let A and B be non-empty subsets of a universal set U such that A ⊂ B (A is a proper subset of B). Which of the following statements is NOT always true?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A ∩ B = A"
+        },
+        {
+          "id": "B",
+          "text": "A \\ B = ∅"
+        },
+        {
+          "id": "C",
+          "text": "B' ⊂ A'"
+        },
+        {
+          "id": "D",
+          "text": "(A' ∪ B)' = B \\ A"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "By De Morgan's Law, (A' ∪ B)' = (A')' ∩ B' = A ∩ B' = A \\ B. Since A ⊂ B, all elements of A are in B, so A \\ B = ∅. However, because A is a proper subset of B, there exists at least one element in B that is not in A, meaning B \\ A ≠ ∅. Hence, (A' ∪ B)' = B \\ A is false because ∅ ≠ B \\ A.",
+      "sourceReference": "Section 1.3 & Section 1.4, Page 10, 16-17"
+    },
+    {
+      "id": "MAT-G09-U01-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "In a survey of 60 high school students regarding membership in the Science Club (S) and Mathematics Club (M), the number of students who belong to both clubs equals the number of students who belong to neither club. The number of students who belong only to the Science Club is twice the number who belong only to the Mathematics Club. If 35 students in total are members of the Science Club, how many students are members of the Mathematics Club?",
+      "options": [
+        {
+          "id": "A",
+          "text": "15"
+        },
+        {
+          "id": "B",
+          "text": "20"
+        },
+        {
+          "id": "C",
+          "text": "25"
+        },
+        {
+          "id": "D",
+          "text": "30"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Let x = n(S ∩ M) and m = n(M \\ S). Then n(neither) = x and n(S \\ M) = 2m. The total number of students is n(S \\ M) + n(M \\ S) + n(S ∩ M) + n(neither) = 2m + m + x + x = 3m + 2x = 60. We are given n(S) = n(S \\ M) + n(S ∩ M) = 2m + x = 35, so x = 35 - 2m. Substituting into the first equation: 3m + 2(35 - 2m) = 60 => 3m + 70 - 4m = 60 => -m = -10 => m = 10. Then x = 35 - 2(10) = 15. The total number of students in the Mathematics Club is n(M) = n(M \\ S) + n(S ∩ M) = m + x = 10 + 15 = 25.",
+      "sourceReference": "Section 1.5, Page 20-21"
+    },
+    {
+      "id": "MAT-G09-U01-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Let A = {2, 5, x^2} and B = {1, 9, x + 1, x + y} be sets of integers, where x and y are positive integers. If A ∩ B = {5, 9}, what is the value of y?",
+      "options": [
+        {
+          "id": "A",
+          "text": "2"
+        },
+        {
+          "id": "B",
+          "text": "3"
+        },
+        {
+          "id": "C",
+          "text": "4"
+        },
+        {
+          "id": "D",
+          "text": "5"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Since A ∩ B = {5, 9}, 9 must be an element of A. In A = {2, 5, x^2}, this requires x^2 = 9. Given that x is a positive integer, x = 3. Substituting x = 3 into set B gives B = {1, 9, 3 + 1, 3 + y} = {1, 9, 4, 3 + y}. Since 5 must also be an element of B, the fourth element 3 + y must equal 5, which yields y = 5 - 3 = 2.",
+      "sourceReference": "Section 1.3 & Review Exercise, Page 8, 25"
+    },
+    {
+      "id": "MAT-G09-U01-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Let A, B, and C be finite sets such that n(A) = 5, n(B) = 8, n(C) = 6, and n(B ∩ C) = 3. What is the number of elements in the set (A × B) ∩ (A × C)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "10"
+        },
+        {
+          "id": "B",
+          "text": "15"
+        },
+        {
+          "id": "C",
+          "text": "24"
+        },
+        {
+          "id": "D",
+          "text": "55"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Using the distributive property of Cartesian product over intersection, (A × B) ∩ (A × C) = A × (B ∩ C). The number of elements is therefore n((A × B) ∩ (A × C)) = n(A × (B ∩ C)) = n(A) × n(B ∩ C). Substituting the given values gives 5 × 3 = 15.",
+      "sourceReference": "Section 1.4, Page 19-20"
+    }
+  ]
 }

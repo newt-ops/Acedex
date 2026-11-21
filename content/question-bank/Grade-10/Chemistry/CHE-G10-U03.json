@@ -3,5 +3,411 @@
   "subject": "Chemistry",
   "unitNumber": 3,
   "unitTitle": "Important Inorganic Compounds",
-  "questions": []
+  "questions": [
+    {
+      "id": "CHE-G10-U03-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which of the following oxides is classified as an acidic oxide because it reacts with water to form an acidic solution?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Calcium oxide (CaO)"
+        },
+        {
+          "id": "B",
+          "text": "Sulfur trioxide (SO₃)"
+        },
+        {
+          "id": "C",
+          "text": "Sodium oxide (Na₂O)"
+        },
+        {
+          "id": "D",
+          "text": "Carbon monoxide (CO)"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Sulfur trioxide (SO₃) is a non-metal oxide that reacts with water to form sulfuric acid (H₂SO₄), making it an acidic oxide (acid anhydride). CaO and Na₂O are basic oxides, while CO is a neutral oxide.",
+      "sourceReference": "Section 3.2, Page 112"
+    },
+    {
+      "id": "CHE-G10-U03-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "According to the Arrhenius theory, an acid is defined as any chemical substance that:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Produces hydroxide ions (OH⁻) as the only negative ions in aqueous solution."
+        },
+        {
+          "id": "B",
+          "text": "Produces hydrogen ions (H⁺) or hydronium ions (H₃O⁺) as the only positive ions in aqueous solution."
+        },
+        {
+          "id": "C",
+          "text": "Accepts an electron pair from a donor molecule."
+        },
+        {
+          "id": "D",
+          "text": "Donates an electron pair to a metal cation."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The Arrhenius concept defines an acid as a compound that dissociates in aqueous solution to release hydrogen ions (H⁺) or hydronium ions (H₃O⁺) as the sole cations.",
+      "sourceReference": "Section 3.3, Page 125"
+    },
+    {
+      "id": "CHE-G10-U03-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What color does phenolphthalein indicator turn when added to an aqueous solution of sodium hydroxide (NaOH)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Colorless"
+        },
+        {
+          "id": "B",
+          "text": "Red"
+        },
+        {
+          "id": "C",
+          "text": "Pink/Magenta"
+        },
+        {
+          "id": "D",
+          "text": "Yellow"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Phenolphthalein is colorless in acidic and neutral solutions (pH < 8.3) and turns bright pink/magenta in basic solutions (pH > 8.3).",
+      "sourceReference": "Section 3.4, Page 141"
+    },
+    {
+      "id": "CHE-G10-U03-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Oxides that do not react with either acids or bases to form salts are known as neutral oxides. Which of the following is a neutral oxide?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Carbon dioxide (CO₂)"
+        },
+        {
+          "id": "B",
+          "text": "Dinitrogen pentoxide (N₂O₅)"
+        },
+        {
+          "id": "C",
+          "text": "Nitric oxide (NO)"
+        },
+        {
+          "id": "D",
+          "text": "Zinc oxide (ZnO)"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Nitric oxide (NO), carbon monoxide (CO), and dinitrogen monoxide (N₂O) are neutral oxides because they display neither acidic nor basic properties and do not react with acids or bases to form salts.",
+      "sourceReference": "Section 3.2, Page 116"
+    },
+    {
+      "id": "CHE-G10-U03-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which three chemical elements are classified as primary plant macronutrients required in large amounts for crop growth, forming the foundation of commercial NPK fertilizers?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Nitrogen, Phosphorus, Potassium"
+        },
+        {
+          "id": "B",
+          "text": "Sodium, Potassium, Calcium"
+        },
+        {
+          "id": "C",
+          "text": "Nitrogen, Iron, Zinc"
+        },
+        {
+          "id": "D",
+          "text": "Phosphorus, Sulfur, Magnesium"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Nitrogen (N), Phosphorus (P), and Potassium (K) are the primary macronutrients essential for plant development and are the main components of synthetic NPK fertilizers.",
+      "sourceReference": "Section 3.6, Page 172"
+    },
+    {
+      "id": "CHE-G10-U03-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Zinc oxide (ZnO) is an amphoteric oxide. What products are formed when ZnO reacts with excess concentrated aqueous sodium hydroxide (NaOH)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Zinc hydroxide and sodium metal"
+        },
+        {
+          "id": "B",
+          "text": "Sodium zincate (Na₂ZnO₂ or Na₂[Zn(OH)₄]) and water"
+        },
+        {
+          "id": "C",
+          "text": "Zinc nitrate and water"
+        },
+        {
+          "id": "D",
+          "text": "Sodium oxide and zinc powder"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Amphoteric oxides like ZnO react with strong bases to yield complex salts and water. With NaOH, zinc oxide forms sodium zincate (Na₂ZnO₂ or Na₂[Zn(OH)₄]) and water.",
+      "sourceReference": "Section 3.2, Page 115"
+    },
+    {
+      "id": "CHE-G10-U03-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What is the pH of a 0.001 M aqueous solution of hydrochloric acid (HCl), assuming complete ionization?",
+      "options": [
+        {
+          "id": "A",
+          "text": "1.0"
+        },
+        {
+          "id": "B",
+          "text": "2.0"
+        },
+        {
+          "id": "C",
+          "text": "3.0"
+        },
+        {
+          "id": "D",
+          "text": "11.0"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "HCl is a strong monoprotic acid, so [H⁺] = 0.001 M = 10⁻³ M. The pH is calculated as pH = -log[H⁺] = -log(10⁻³) = 3.0.",
+      "sourceReference": "Section 3.3, Page 133"
+    },
+    {
+      "id": "CHE-G10-U03-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Sodium hydrogen carbonate (NaHCO₃) is produced by the partial neutralization of carbonic acid (H₂CO₃) with sodium hydroxide (NaOH). How is NaHCO₃ classified?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Normal salt"
+        },
+        {
+          "id": "B",
+          "text": "Acid salt"
+        },
+        {
+          "id": "C",
+          "text": "Basic salt"
+        },
+        {
+          "id": "D",
+          "text": "Double salt"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Acid salts contain ionizable hydrogen atoms resulting from the incomplete neutralization of polyprotic acids (e.g., NaHCO₃ or NaH₂PO₄).",
+      "sourceReference": "Section 3.5, Page 155"
+    },
+    {
+      "id": "CHE-G10-U03-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which pair of aqueous salt solutions will undergo a double displacement precipitation reaction to yield an insoluble white precipitate of barium sulfate (BaSO₄)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "BaCl₂(aq) and Na₂SO₄(aq)"
+        },
+        {
+          "id": "B",
+          "text": "Ba(NO₃)₂(aq) and HCl(aq)"
+        },
+        {
+          "id": "C",
+          "text": "BaCO₃(s) and NaOH(aq)"
+        },
+        {
+          "id": "D",
+          "text": "BaSO₄(s) and NaCl(aq)"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Mixing soluble BaCl₂ and soluble Na₂SO₄ causes a double displacement reaction forming insoluble barium sulfate precipitate: BaCl₂(aq) + Na₂SO₄(aq) → BaSO₄(s) + 2NaCl(aq).",
+      "sourceReference": "Section 3.5, Page 161"
+    },
+    {
+      "id": "CHE-G10-U03-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Sodium peroxide (Na₂O₂) reacts with dilute sulfuric acid to produce sodium sulfate and hydrogen peroxide (H₂O₂). What is the oxidation state of oxygen in peroxide compounds?",
+      "options": [
+        {
+          "id": "A",
+          "text": "-2"
+        },
+        {
+          "id": "B",
+          "text": "-1"
+        },
+        {
+          "id": "C",
+          "text": "0"
+        },
+        {
+          "id": "D",
+          "text": "+2"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In peroxides such as Na₂O₂ and H₂O₂, oxygen atoms are linked by an O-O single covalent bond, giving oxygen a characteristic oxidation state of -1.",
+      "sourceReference": "Section 3.2, Page 117"
+    },
+    {
+      "id": "CHE-G10-U03-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Diammonium phosphate (DAP) is a widely used compound fertilizer in Ethiopian agriculture. What is the correct chemical formula of DAP?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(NH₄)₂SO₄"
+        },
+        {
+          "id": "B",
+          "text": "(NH₄)₂HPO₄"
+        },
+        {
+          "id": "C",
+          "text": "NH₄H₂PO₄"
+        },
+        {
+          "id": "D",
+          "text": "(NH₄)₃PO₄"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Diammonium phosphate (DAP) has the chemical formula (NH₄)₂HPO₄, providing both nitrogen and phosphorus nutrients to agricultural soils.",
+      "sourceReference": "Section 3.6, Page 174"
+    },
+    {
+      "id": "CHE-G10-U03-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A student mixes 50.0 mL of 0.20 M HCl solution with 50.0 mL of 0.10 M NaOH solution. What is the pH of the resulting solution at 25 °C?",
+      "options": [
+        {
+          "id": "A",
+          "text": "1.00"
+        },
+        {
+          "id": "B",
+          "text": "1.30"
+        },
+        {
+          "id": "C",
+          "text": "2.00"
+        },
+        {
+          "id": "D",
+          "text": "7.00"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Moles H⁺ = 0.050 L × 0.20 M = 0.010 mol; Moles OH⁻ = 0.050 L × 0.10 M = 0.005 mol. Unreacted H⁺ = 0.010 - 0.005 = 0.005 mol. Total volume = 0.100 L. Excess [H⁺] = 0.005 mol / 0.100 L = 0.050 M. pH = -log(0.050) = 1.30.",
+      "sourceReference": "Section 3.3, Page 135"
+    },
+    {
+      "id": "CHE-G10-U03-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "What is the percentage by mass of water of crystallization in blue vitriol, hydrated copper(II) sulfate (CuSO₄·5H₂O)? (Molar masses: CuSO₄ = 159.6 g/mol, H₂O = 18.0 g/mol)",
+      "options": [
+        {
+          "id": "A",
+          "text": "25.5%"
+        },
+        {
+          "id": "B",
+          "text": "36.1%"
+        },
+        {
+          "id": "C",
+          "text": "45.0%"
+        },
+        {
+          "id": "D",
+          "text": "55.8%"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Mass of 5 H₂O = 5 × 18.0 = 90.0 g/mol. Formula mass of CuSO₄·5H₂O = 159.6 + 90.0 = 249.6 g/mol. % H₂O = (90.0 / 249.6) × 100% = 36.06% ≈ 36.1%.",
+      "sourceReference": "Section 3.5, Page 166"
+    },
+    {
+      "id": "CHE-G10-U03-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "An unknown solid powder X reacts with dilute hydrochloric acid to evolve a colorless gas that turns limewater milky. When heated strongly, X decomposes into a basic oxide Y and the same gas. What are the chemical identities of X and Y?",
+      "options": [
+        {
+          "id": "A",
+          "text": "X is Sodium chloride (NaCl); Y is Sodium metal (Na)"
+        },
+        {
+          "id": "B",
+          "text": "X is Calcium carbonate (CaCO₃); Y is Calcium oxide (CaO)"
+        },
+        {
+          "id": "C",
+          "text": "X is Ammonium nitrate (NH₄NO₃); Y is Nitrous oxide (N₂O)"
+        },
+        {
+          "id": "D",
+          "text": "X is Copper(II) sulfate (CuSO₄); Y is Copper oxide (CuO)"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Calcium carbonate (CaCO₃) reacts with HCl to release CO₂ gas, which forms a milky white CaCO₃ precipitate with limewater. Heating CaCO₃ thermally decomposes it into solid basic calcium oxide (CaO) and CO₂ gas.",
+      "sourceReference": "Section 3.2 & 3.5, Page 111 & Page 158"
+    },
+    {
+      "id": "CHE-G10-U03-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Why must farmers avoid applying agricultural lime (Ca(OH)₂ or CaCO₃) simultaneously with ammonium-based fertilizers like ammonium sulfate ((NH₄)₂SO₄)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Lime oxidizes ammonium ions into toxic chlorine gas."
+        },
+        {
+          "id": "B",
+          "text": "Basic lime reacts with ammonium ions to release volatile ammonia gas (NH₃), causing significant atmospheric nitrogen loss."
+        },
+        {
+          "id": "C",
+          "text": "Lime turns ammonium fertilizers into an insoluble stone matrix that roots cannot absorb."
+        },
+        {
+          "id": "D",
+          "text": "Lime causes extreme soil acidity that destroys soil flora."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Ammonium salts are acidic. When mixed with basic slaked lime, an acid-base neutralization reaction occurs: (NH₄)₂SO₄ + Ca(OH)₂ → CaSO₄ + 2H₂O + 2NH₃(g). The released ammonia gas escapes into the atmosphere, causing loss of nitrogen fertilizer.",
+      "sourceReference": "Section 3.6, Page 176"
+    }
+  ]
 }

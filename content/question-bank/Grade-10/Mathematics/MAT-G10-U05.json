@@ -3,5 +3,411 @@
   "subject": "Mathematics",
   "unitNumber": 5,
   "unitTitle": "Circles",
-  "questions": []
+  "questions": [
+    {
+      "id": "MAT-G10-U05-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "A chord of length 16 cm is drawn in a circle of radius 10 cm. What is the perpendicular distance from the center of the circle to the chord?",
+      "options": [
+        {
+          "id": "A",
+          "text": "4 cm"
+        },
+        {
+          "id": "B",
+          "text": "6 cm"
+        },
+        {
+          "id": "C",
+          "text": "8 cm"
+        },
+        {
+          "id": "D",
+          "text": "2√41 cm"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "According to Theorem 5.2, the perpendicular line segment drawn from the center of a circle to a chord bisects the chord. Thus, the half-chord length is 16 / 2 = 8 cm. A right-angled triangle is formed by the radius (hypotenuse r = 10 cm), the half-chord (8 cm), and the perpendicular distance d. Using the Pythagorean theorem: d = √(10² - 8²) = √(100 - 64) = √36 = 6 cm.",
+      "sourceReference": "Section 5.1, Page 254-256"
+    },
+    {
+      "id": "MAT-G10-U05-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "An inscribed angle in a circle intercepts a minor arc whose measure is 110°. What is the measure of the inscribed angle?",
+      "options": [
+        {
+          "id": "A",
+          "text": "55°"
+        },
+        {
+          "id": "B",
+          "text": "70°"
+        },
+        {
+          "id": "C",
+          "text": "110°"
+        },
+        {
+          "id": "D",
+          "text": "220°"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "By Theorem 5.6, the measure of an inscribed angle is equal to half the measure of its intercepted arc (or half the central angle intercepting the same arc). Therefore, the measure of the inscribed angle is (1/2) × 110° = 55°.",
+      "sourceReference": "Section 5.2, Page 259-261"
+    },
+    {
+      "id": "MAT-G10-U05-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Triangle ABC is inscribed in a circle with diameter AB. If m(∠ABC) = 38°, what is the measure of ∠BAC?",
+      "options": [
+        {
+          "id": "A",
+          "text": "38°"
+        },
+        {
+          "id": "B",
+          "text": "48°"
+        },
+        {
+          "id": "C",
+          "text": "52°"
+        },
+        {
+          "id": "D",
+          "text": "62°"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "By Thales' Theorem (Theorem 5.8), an angle inscribed in a semicircle is a right angle, so m(∠ACB) = 90°. In right triangle ABC, the sum of the angles is 180°, so m(∠BAC) = 180° - (90° + 38°) = 180° - 128° = 52°.",
+      "sourceReference": "Section 5.2, Page 263-264"
+    },
+    {
+      "id": "MAT-G10-U05-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is the length of an arc that subtends a central angle of 60° in a circle of radius 12 cm?",
+      "options": [
+        {
+          "id": "A",
+          "text": "2π cm"
+        },
+        {
+          "id": "B",
+          "text": "4π cm"
+        },
+        {
+          "id": "C",
+          "text": "6π cm"
+        },
+        {
+          "id": "D",
+          "text": "8π cm"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The formula for the length of an arc subtended by central angle θ is s = 2πr × (θ / 360°). Substituting r = 12 cm and θ = 60° gives s = 2π(12) × (60° / 360°) = 24π × (1/6) = 4π cm.",
+      "sourceReference": "Section 5.3, Page 268-269"
+    },
+    {
+      "id": "MAT-G10-U05-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In a cyclic quadrilateral ABCD inscribed in a circle, the measure of ∠A is 74°. What is the measure of the opposite angle, ∠C?",
+      "options": [
+        {
+          "id": "A",
+          "text": "74°"
+        },
+        {
+          "id": "B",
+          "text": "106°"
+        },
+        {
+          "id": "C",
+          "text": "116°"
+        },
+        {
+          "id": "D",
+          "text": "148°"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "According to Theorem 5.9, the sum of either pair of opposite angles in a cyclic quadrilateral is 180°. Therefore, m(∠A) + m(∠C) = 180° => m(∠C) = 180° - 74° = 106°.",
+      "sourceReference": "Section 5.2, Page 265-266"
+    },
+    {
+      "id": "MAT-G10-U05-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Two chords AB and CD intersect at a point P inside a circle. If the measure of minor arc AC is 48° and the measure of minor arc BD is 84°, what is the measure of ∠APC?",
+      "options": [
+        {
+          "id": "A",
+          "text": "36°"
+        },
+        {
+          "id": "B",
+          "text": "66°"
+        },
+        {
+          "id": "C",
+          "text": "114°"
+        },
+        {
+          "id": "D",
+          "text": "132°"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "By Theorem 5.10, if two chords intersect inside a circle, the measure of an angle formed is one-half the sum of the measures of the arcs intercepted by the angle and its vertical angle: m(∠APC) = (1/2)[m(arc AC) + m(arc BD)] = (1/2)[48° + 84°] = (1/2)(132°) = 66°.",
+      "sourceReference": "Section 5.4, Page 275-276"
+    },
+    {
+      "id": "MAT-G10-U05-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Two chords AB and CD intersect at point E inside a circle. If AE = 4 cm, EB = 9 cm, and CE = 3 cm, what is the length of segment ED?",
+      "options": [
+        {
+          "id": "A",
+          "text": "6 cm"
+        },
+        {
+          "id": "B",
+          "text": "8 cm"
+        },
+        {
+          "id": "C",
+          "text": "10 cm"
+        },
+        {
+          "id": "D",
+          "text": "12 cm"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "By the intersecting chords theorem (Exercise 5.9, Theorem), the product of the segments of one chord equals the product of the segments of the other: AE × EB = CE × ED. Substituting the known values: 4 × 9 = 3 × ED => 36 = 3 × ED => ED = 12 cm.",
+      "sourceReference": "Section 5.4, Page 276"
+    },
+    {
+      "id": "MAT-G10-U05-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Two secants AC and AE are drawn from an external point A to a circle. If the intercepted arcs are minor arc BD = 38° and major arc CE = 114°, what is the measure of ∠CAE?",
+      "options": [
+        {
+          "id": "A",
+          "text": "38°"
+        },
+        {
+          "id": "B",
+          "text": "76°"
+        },
+        {
+          "id": "C",
+          "text": "86°"
+        },
+        {
+          "id": "D",
+          "text": "152°"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "By Theorem 5.11, the measure of the angle formed by two secants intersecting outside a circle is equal to one-half the positive difference of the measures of the intercepted arcs: m(∠CAE) = (1/2)[m(arc CE) - m(arc BD)] = (1/2)[114° - 38°] = (1/2)(76°) = 38°.",
+      "sourceReference": "Section 5.4, Page 278-279"
+    },
+    {
+      "id": "MAT-G10-U05-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In a circle of radius 12 cm, a sector has an area of 24π cm². What is the measure of the central angle of this sector?",
+      "options": [
+        {
+          "id": "A",
+          "text": "30°"
+        },
+        {
+          "id": "B",
+          "text": "45°"
+        },
+        {
+          "id": "C",
+          "text": "60°"
+        },
+        {
+          "id": "D",
+          "text": "75°"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The formula for the area of a sector is A = πr²(θ / 360°). Substituting A = 24π cm² and r = 12 cm: 24π = π(12)² × (θ / 360°) => 24π = 144π × (θ / 360°). Dividing both sides by π gives 24 = 144 × (θ / 360°) => θ / 360° = 24 / 144 = 1/6 => θ = 360° / 6 = 60°.",
+      "sourceReference": "Section 5.3, Page 272-273"
+    },
+    {
+      "id": "MAT-G10-U05-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "A chord subtends a central angle of 120° in a circle of radius 10 cm. What is the length of this chord?",
+      "options": [
+        {
+          "id": "A",
+          "text": "10 cm"
+        },
+        {
+          "id": "B",
+          "text": "10√2 cm"
+        },
+        {
+          "id": "C",
+          "text": "10√3 cm"
+        },
+        {
+          "id": "D",
+          "text": "20√3 cm"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The formula for chord length subtending a central angle θ in a circle of radius r is l = 2r sin(θ / 2). For r = 10 cm and θ = 120°: l = 2(10) sin(120° / 2) = 20 sin(60°) = 20 × (√3 / 2) = 10√3 cm.",
+      "sourceReference": "Section 5.3, Page 269"
+    },
+    {
+      "id": "MAT-G10-U05-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What is the area of a circular segment associated with a central angle of 90° in a circle of radius 6 cm?",
+      "options": [
+        {
+          "id": "A",
+          "text": "9(π - 2) cm²"
+        },
+        {
+          "id": "B",
+          "text": "9(π - 1) cm²"
+        },
+        {
+          "id": "C",
+          "text": "18(π - 2) cm²"
+        },
+        {
+          "id": "D",
+          "text": "36(π - 2) cm²"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The area of a segment is given by Area(segment) = Area(sector) - Area(triangle) = πr²(θ / 360°) - (1/2)r² sin θ. For r = 6 cm and θ = 90°: Area(sector) = π(6)² × (90° / 360°) = 36π × (1/4) = 9π cm². Area(triangle) = (1/2)(6)² sin 90° = (1/2)(36)(1) = 18 cm². Thus, Area(segment) = 9π - 18 = 9(π - 2) cm².",
+      "sourceReference": "Section 5.3, Page 273-274"
+    },
+    {
+      "id": "MAT-G10-U05-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "In a circle of radius 10 cm, two parallel chords AB and CD have lengths 12 cm and 16 cm respectively. If the two chords lie on opposite sides of the center of the circle, what is the perpendicular distance between them?",
+      "options": [
+        {
+          "id": "A",
+          "text": "2 cm"
+        },
+        {
+          "id": "B",
+          "text": "10 cm"
+        },
+        {
+          "id": "C",
+          "text": "14 cm"
+        },
+        {
+          "id": "D",
+          "text": "16 cm"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Let d1 and d2 be the perpendicular distances from the center O to chords AB and CD respectively. For chord AB (length 12 cm, half-length 6 cm): d1 = √(r² - 6²) = √(10² - 6²) = √(100 - 36) = √64 = 8 cm. For chord CD (length 16 cm, half-length 8 cm): d2 = √(r² - 8²) = √(10² - 8²) = √(100 - 64) = √36 = 6 cm. Since the chords lie on opposite sides of the center, the distance between them is d1 + d2 = 8 + 6 = 14 cm.",
+      "sourceReference": "Section 5.1 & Review Exercise, Page 255-257, 283"
+    },
+    {
+      "id": "MAT-G10-U05-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Two tangent lines PA and PB are drawn from an external point P to a circle with center O, touching the circle at points A and B. Point C is any point on the major arc AB. If m(∠APB) = 56°, what is the measure of the inscribed angle ∠ACB?",
+      "options": [
+        {
+          "id": "A",
+          "text": "56°"
+        },
+        {
+          "id": "B",
+          "text": "62°"
+        },
+        {
+          "id": "C",
+          "text": "124°"
+        },
+        {
+          "id": "D",
+          "text": "152°"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Since radii OA and OB are perpendicular to tangents PA and PB at the points of tangency, m(∠OAP) = m(∠OBP) = 90°. In quadrilateral PAOB, the sum of interior angles is 360°, so central angle m(∠AOB) = 180° - m(∠APB) = 180° - 56° = 124°. The inscribed angle ∠ACB intercepts the minor arc AB, so by Theorem 5.6, m(∠ACB) = (1/2)m(∠AOB) = (1/2)(124°) = 62°.",
+      "sourceReference": "Section 5.2 & Section 5.4, Page 259-261, 279"
+    },
+    {
+      "id": "MAT-G10-U05-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "In a cyclic quadrilateral ABCD, the angles are given by m(∠A) = (2x + 10)°, m(∠B) = (3y - 5)°, m(∠C) = (3x - 35)°, and m(∠D) = (y + 45)°. What is the measure of ∠B?",
+      "options": [
+        {
+          "id": "A",
+          "text": "80°"
+        },
+        {
+          "id": "B",
+          "text": "92°"
+        },
+        {
+          "id": "C",
+          "text": "100°"
+        },
+        {
+          "id": "D",
+          "text": "108°"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Opposite angles of a cyclic quadrilateral are supplementary: (1) m(∠A) + m(∠C) = 180° => (2x + 10) + (3x - 35) = 180 => 5x - 25 = 180 => 5x = 205 => x = 41. (2) m(∠B) + m(∠D) = 180° => (3y - 5) + (y + 45) = 180 => 4y + 40 = 180 => 4y = 140 => y = 35. Therefore, m(∠B) = 3(35) - 5 = 105 - 5 = 100°.",
+      "sourceReference": "Section 5.2, Page 265-266"
+    },
+    {
+      "id": "MAT-G10-U05-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A regular hexagon of side length 12 cm is inscribed in a circle. What is the total combined area of the six circular segments that lie outside the hexagon but inside the circle?",
+      "options": [
+        {
+          "id": "A",
+          "text": "72(2π - 3√3) cm²"
+        },
+        {
+          "id": "B",
+          "text": "36(4π - 3√3) cm²"
+        },
+        {
+          "id": "C",
+          "text": "144(π - √3) cm²"
+        },
+        {
+          "id": "D",
+          "text": "72(π - 2√3) cm²"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "For a regular hexagon inscribed in a circle, the radius of the circle equals the side length of the hexagon, so r = 12 cm. The total area of the circle is Area(circle) = πr² = π(12)² = 144π cm². A regular hexagon consists of 6 congruent equilateral triangles of side 12 cm, so Area(hexagon) = 6 × [(√3 / 4) × 12²] = 6 × [36√3] = 216√3 cm². The total combined area of the six segments is Area(circle) - Area(hexagon) = 144π - 216√3 = 72(2π - 3√3) cm².",
+      "sourceReference": "Section 5.3 & Review Exercise, Page 273, 284"
+    }
+  ]
 }

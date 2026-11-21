@@ -1,86 +1,84 @@
-import { describe, it, expect, beforeAll, afterAll, vi } from 'vitest';
+import { describe, it, expect, beforeAll, afterAll } from 'vitest';
 import request from 'supertest';
-import { OAuth2Client } from 'google-auth-library';
 import { createApp } from '../src/app';
 import { connectDatabase, disconnectDatabase } from '../src/config/database';
 import { UserModel } from '../src/modules/users/user.model';
 import { RefreshTokenModel } from '../src/modules/auth/refresh-token.model';
 
-describe('Phase 2: Authentication & User Accounts', () => {
+describe('Phase 2: Authentication & User Accounts (Phone & PIN)', () => {
   const app = createApp();
-  const testStudentEmail = `test-student-${Date.now()}@example.com`;
-  const testAdminEmail = 'aymenmubarek10@gmail.com'; // In adminEmails whitelist
+  const testStudentPhone = '0912999888';
+  const testPin = '123456';
   let studentAccessToken = '';
   let studentRefreshToken = '';
 
   beforeAll(async () => {
     await connectDatabase();
-    // Clean up any previous test residues
-    await UserModel.deleteMany({ email: { $regex: /^test-/ } });
+    await UserModel.deleteMany({ phone: { $regex: /^(\+251|0)912/ } });
     await RefreshTokenModel.deleteMany({});
   });
 
   afterAll(async () => {
-    await UserModel.deleteMany({ email: { $regex: /^test-/ } });
+    await UserModel.deleteMany({ phone: { $regex: /^(\+251|0)912/ } });
     await RefreshTokenModel.deleteMany({});
     await disconnectDatabase();
   });
 
-  it('POST /api/v1/auth/google should reject requests without idToken', async () => {
-    const res = await request(app).post('/api/v1/auth/google').send({});
+  it('POST /api/v1/auth/register-phone should reject invalid phone formats', async () => {
+    const res = await request(app)
+      .post('/api/v1/auth/register-phone')
+      .send({
+        phone: '12345',
+        pin: testPin,
+        fullName: 'Test Student',
+        gender: 'male',
+        grade: 12,
+        stream: 'natural',
+      });
 
     expect(res.status).toBe(422);
     expect(res.body.success).toBe(false);
-    expect(res.body.error.code).toBe('VALIDATION_ERROR');
   });
 
-  it('POST /api/v1/auth/google should register a new student user from verified Google token', async () => {
-    // Mock Google token verification ticket
-    vi.spyOn(OAuth2Client.prototype, 'verifyIdToken').mockResolvedValueOnce({
-      getPayload: () => ({
-        sub: `google-sub-${Date.now()}`,
-        email: testStudentEmail,
-        name: 'Abebe Student',
-        picture: 'https://example.com/avatar.jpg',
-      }),
-    } as any);
-
+  it('POST /api/v1/auth/register-phone should register a new student user and return tokens', async () => {
     const res = await request(app)
-      .post('/api/v1/auth/google')
-      .send({ idToken: 'valid-mock-google-token', platform: 'web' });
+      .post('/api/v1/auth/register-phone')
+      .send({
+        phone: testStudentPhone,
+        pin: testPin,
+        fullName: 'Abebe Kebede',
+        gender: 'male',
+        grade: 12,
+        stream: 'natural',
+        candidateId: 'ACX-26-9999',
+      });
 
-    expect(res.status).toBe(200);
+    expect(res.status).toBe(201);
     expect(res.body.success).toBe(true);
-    expect(res.body.data.user.email).toBe(testStudentEmail);
+    expect(res.body.data.user.phone).toBe('+251912999888');
+    expect(res.body.data.user.acedexId).toBe('ACX-26-9999');
     expect(res.body.data.user.role).toBe('student');
     expect(res.body.data.user.status).toBe('active');
     expect(res.body.data.tokens).toHaveProperty('accessToken');
     expect(res.body.data.tokens).toHaveProperty('refreshToken');
 
-    // Web should set acedex_rt cookie
-    const cookies = res.headers['set-cookie'];
-    expect(cookies).toBeDefined();
-    expect(cookies[0]).toContain('acedex_rt');
-
     studentAccessToken = res.body.data.tokens.accessToken;
     studentRefreshToken = res.body.data.tokens.refreshToken;
   });
 
-  it('POST /api/v1/auth/google should auto-promote whitelisted email to super_admin', async () => {
-    vi.spyOn(OAuth2Client.prototype, 'verifyIdToken').mockResolvedValueOnce({
-      getPayload: () => ({
-        sub: 'google-sub-admin-whitelisted',
-        email: testAdminEmail,
-        name: 'Aymen Admin',
-      }),
-    } as any);
-
+  it('POST /api/v1/auth/login-phone should authenticate student with phone and PIN', async () => {
     const res = await request(app)
-      .post('/api/v1/auth/google')
-      .send({ idToken: 'valid-admin-token' });
+      .post('/api/v1/auth/login-phone')
+      .send({
+        phone: testStudentPhone,
+        pin: testPin,
+      });
 
     expect(res.status).toBe(200);
-    expect(res.body.data.user.role).toBe('super_admin');
+    expect(res.body.success).toBe(true);
+    expect(res.body.data.user.phone).toBe('+251912999888');
+    expect(res.body.data.tokens).toHaveProperty('accessToken');
+    expect(res.body.data.tokens).toHaveProperty('refreshToken');
   });
 
   it('GET /api/v1/auth/me should return authenticated user profile with Bearer token', async () => {
@@ -90,7 +88,7 @@ describe('Phase 2: Authentication & User Accounts', () => {
 
     expect(res.status).toBe(200);
     expect(res.body.success).toBe(true);
-    expect(res.body.data.email).toBe(testStudentEmail);
+    expect(res.body.data.phone).toBe('+251912999888');
     expect(res.body.data.role).toBe('student');
   });
 
@@ -135,18 +133,13 @@ describe('Phase 2: Authentication & User Accounts', () => {
   });
 
   it('POST /api/v1/auth/logout should revoke refresh token and clear cookie', async () => {
-    // Generate a fresh session to log out
-    vi.spyOn(OAuth2Client.prototype, 'verifyIdToken').mockResolvedValueOnce({
-      getPayload: () => ({
-        sub: `google-sub-logout-${Date.now()}`,
-        email: `test-logout-${Date.now()}@example.com`,
-        name: 'Logout Tester',
-      }),
-    } as any);
-
+    // Generate a fresh session via login to log out
     const loginRes = await request(app)
-      .post('/api/v1/auth/google')
-      .send({ idToken: 'mock-token' });
+      .post('/api/v1/auth/login-phone')
+      .send({
+        phone: testStudentPhone,
+        pin: testPin,
+      });
 
     const tokenToRevoke = loginRes.body.data.tokens.refreshToken;
 

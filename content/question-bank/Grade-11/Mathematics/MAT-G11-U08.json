@@ -3,5 +3,411 @@
   "subject": "Mathematics",
   "unitNumber": 8,
   "unitTitle": "Probability",
-  "questions": []
+  "questions": [
+    {
+      "id": "MAT-G11-U08-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "A cafeteria lunch combo consists of one appetizer, one main course, and one dessert. If the menu offers 4 different appetizers, 6 main courses, and 3 desserts, how many different three-course meal choices can a student make?",
+      "options": [
+        {
+          "id": "A",
+          "text": "13"
+        },
+        {
+          "id": "B",
+          "text": "24"
+        },
+        {
+          "id": "C",
+          "text": "72"
+        },
+        {
+          "id": "D",
+          "text": "144"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "By the Fundamental Multiplication Principle of Counting, if a sequence of events can occur in m, n, and p ways respectively, the total number of composite ways is m × n × p. Here, the number of meal choices is 4 × 6 × 3 = 72.",
+      "sourceReference": "Section 8.2.1, Page 417-418"
+    },
+    {
+      "id": "MAT-G11-U08-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In how many distinct ways can all 5 letters of the word 'ETHIO' be arranged in a row without repetition?",
+      "options": [
+        {
+          "id": "A",
+          "text": "24"
+        },
+        {
+          "id": "B",
+          "text": "60"
+        },
+        {
+          "id": "C",
+          "text": "120"
+        },
+        {
+          "id": "D",
+          "text": "720"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The word 'ETHIO' consists of n = 5 distinct letters. The number of permutations of n distinct objects taken all at a time is given by P(n, n) = n!. Thus, P(5, 5) = 5! = 5 × 4 × 3 × 2 × 1 = 120.",
+      "sourceReference": "Section 8.3.1, Page 424-425"
+    },
+    {
+      "id": "MAT-G11-U08-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "From a squad of 8 basketball players, how many different starting teams of 5 players can the coach select if the order of selection does not matter?",
+      "options": [
+        {
+          "id": "A",
+          "text": "40"
+        },
+        {
+          "id": "B",
+          "text": "56"
+        },
+        {
+          "id": "C",
+          "text": "120"
+        },
+        {
+          "id": "D",
+          "text": "336"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "By Definition 8.5, selecting r objects from n distinct objects without regard to order is a combination given by C(n, r) = n! / [(n - r)! r!]. For n = 8 and r = 5: C(8, 5) = 8! / (3! 5!) = (8 × 7 × 6) / (3 × 2 × 1) = 56.",
+      "sourceReference": "Section 8.3.2, Page 433-434"
+    },
+    {
+      "id": "MAT-G11-U08-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "If the probability of a crop seed successfully germinating under standard conditions is P(E) = 0.78, what is the probability that the seed fails to germinate?",
+      "options": [
+        {
+          "id": "A",
+          "text": "0.12"
+        },
+        {
+          "id": "B",
+          "text": "0.22"
+        },
+        {
+          "id": "C",
+          "text": "0.32"
+        },
+        {
+          "id": "D",
+          "text": "-0.78"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "By the axioms of probability, the probability of the complement of an event E (failure to germinate) is P(E') = 1 - P(E). Therefore, P(E') = 1 - 0.78 = 0.22.",
+      "sourceReference": "Section 8.7.2, Page 457-458"
+    },
+    {
+      "id": "MAT-G11-U08-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "When rolling a single fair six-sided die once, which of the following pairs of events is mutually exclusive?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Getting an even number and getting a prime number"
+        },
+        {
+          "id": "B",
+          "text": "Getting a number less than 3 and getting an odd number"
+        },
+        {
+          "id": "C",
+          "text": "Getting an odd number and getting a multiple of 4"
+        },
+        {
+          "id": "D",
+          "text": "Getting a multiple of 3 and getting an even number"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Two events are mutually exclusive if they cannot occur at the same time, meaning their intersection is empty (E₁ ∩ E₂ = ∅). For a die, the odd numbers are {1, 3, 5} and the multiples of 4 are {4}. Since {1, 3, 5} ∩ {4} = ∅, these events cannot occur simultaneously. In contrast, 2 is both even and prime, 1 is both < 3 and odd, and 6 is both a multiple of 3 and even.",
+      "sourceReference": "Section 8.6.1, Page 450-451"
+    },
+    {
+      "id": "MAT-G11-U08-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How many distinct permutations can be formed using all the letters in the word 'OROMIA'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "180"
+        },
+        {
+          "id": "B",
+          "text": "360"
+        },
+        {
+          "id": "C",
+          "text": "720"
+        },
+        {
+          "id": "D",
+          "text": "120"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The word 'OROMIA' has n = 6 total letters with the letter 'O' repeating twice (n₁ = 2) and the letters R, M, I, A each appearing once. By Definition 8.3, the number of permutations of n objects with repeated elements is n! / (n₁! n₂! ... n_r!). Thus, 6! / (2! 1! 1! 1! 1!) = 720 / 2 = 360.",
+      "sourceReference": "Section 8.3.1, Page 428-429"
+    },
+    {
+      "id": "MAT-G11-U08-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In how many distinct ways can 6 delegates be seated around a circular conference table?",
+      "options": [
+        {
+          "id": "A",
+          "text": "24"
+        },
+        {
+          "id": "B",
+          "text": "120"
+        },
+        {
+          "id": "C",
+          "text": "360"
+        },
+        {
+          "id": "D",
+          "text": "720"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "By Definition 8.4, the number of circular permutations of n distinct objects is given by (n - 1)!. For 6 delegates, the number of arrangements around a circular table is (6 - 1)! = 5! = 120.",
+      "sourceReference": "Section 8.3.1, Page 430"
+    },
+    {
+      "id": "MAT-G11-U08-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What is the numerical coefficient of the term containing x⁴y³ in the binomial expansion of (x + 2y)⁷?",
+      "options": [
+        {
+          "id": "A",
+          "text": "35"
+        },
+        {
+          "id": "B",
+          "text": "70"
+        },
+        {
+          "id": "C",
+          "text": "280"
+        },
+        {
+          "id": "D",
+          "text": "560"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "According to the Binomial Theorem, the general term in (a + b)ⁿ is C(n, r) a^(n-r) b^r. For (x + 2y)⁷ with a = x, b = 2y, and n = 7, the term containing x⁴y³ occurs when 7 - r = 4, so r = 3. The term is C(7, 3) (x)⁴ (2y)³ = [7! / (4! 3!)] × 8 x⁴ y³ = 35 × 8 x⁴ y³ = 280 x⁴ y³. The coefficient is 280.",
+      "sourceReference": "Section 8.4, Page 438-439 & EUEE 2018 V3 Q48"
+    },
+    {
+      "id": "MAT-G11-U08-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "The odds in favor of an Ethiopian national club winning an international friendly match are given as 3:5. What is the probability that the club wins the match?",
+      "options": [
+        {
+          "id": "A",
+          "text": "3/5"
+        },
+        {
+          "id": "B",
+          "text": "5/8"
+        },
+        {
+          "id": "C",
+          "text": "3/8"
+        },
+        {
+          "id": "D",
+          "text": "2/5"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "By Definition 8.11, if the odds in favor of an event E are a:b, then the ratio of favorable outcomes to unfavorable outcomes is a:b. The total number of outcomes is a + b. Therefore, the probability of occurrence is P(E) = a / (a + b) = 3 / (3 + 5) = 3/8.",
+      "sourceReference": "Section 8.7.3, Page 461-462"
+    },
+    {
+      "id": "MAT-G11-U08-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "If two fair standard six-sided dice are rolled simultaneously, what is the probability of getting a sum greater than 10 OR doubles (the same number appearing on both dice)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "1/4"
+        },
+        {
+          "id": "B",
+          "text": "2/9"
+        },
+        {
+          "id": "C",
+          "text": "4/9"
+        },
+        {
+          "id": "D",
+          "text": "1/9"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Total sample space n(S) = 36. Let E₁ be the event that the sum is greater than 10: E₁ = {(5, 6), (6, 5), (6, 6)}, so n(E₁) = 3. Let E₂ be the event of rolling doubles: E₂ = {(1, 1), (2, 2), (3, 3), (4, 4), (5, 5), (6, 6)}, so n(E₂) = 6. The intersection E₁ ∩ E₂ = {(6, 6)}, so n(E₁ ∩ E₂) = 1. By the addition rule: P(E₁ ∪ E₂) = P(E₁) + P(E₂) - P(E₁ ∩ E₂) = 3/36 + 6/36 - 1/36 = 8/36 = 2/9.",
+      "sourceReference": "Section 8.7.4, Page 464-465 & EUEE 2018 V3 Q49"
+    },
+    {
+      "id": "MAT-G11-U08-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "A box contains 5 red, 4 blue, and 3 yellow marbles. If two marbles are drawn at random one after another without replacement, what is the probability that the first marble drawn is red and the second marble drawn is blue?",
+      "options": [
+        {
+          "id": "A",
+          "text": "5/36"
+        },
+        {
+          "id": "B",
+          "text": "5/33"
+        },
+        {
+          "id": "C",
+          "text": "3/22"
+        },
+        {
+          "id": "D",
+          "text": "1/6"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Total number of marbles is 5 + 4 + 3 = 12. The probability that the first marble is red is P(R₁) = 5/12. Since the draw is without replacement, 11 marbles remain in the box with 4 blue marbles untouched. The conditional probability that the second is blue given the first was red is P(B₂|R₁) = 4/11. By the multiplication rule for dependent events: P(R₁ ∩ B₂) = P(R₁) × P(B₂|R₁) = (5/12) × (4/11) = 20/132 = 5/33.",
+      "sourceReference": "Section 8.7.5, Page 469-470"
+    },
+    {
+      "id": "MAT-G11-U08-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A department committee of 5 members is to be formed from 6 male and 4 female instructors. In how many different ways can this committee be selected if it must include at least 3 female instructors?",
+      "options": [
+        {
+          "id": "A",
+          "text": "60"
+        },
+        {
+          "id": "B",
+          "text": "66"
+        },
+        {
+          "id": "C",
+          "text": "84"
+        },
+        {
+          "id": "D",
+          "text": "120"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Having 'at least 3 female instructors' on a 5-member committee means two mutually exclusive cases: Case 1: Exactly 3 females and 2 males. The number of ways is C(4, 3) × C(6, 2) = 4 × 15 = 60. Case 2: Exactly 4 females and 1 male. The number of ways is C(4, 4) × C(6, 1) = 1 × 6 = 6. By the Addition Principle, the total number of ways is 60 + 6 = 66.",
+      "sourceReference": "Section 8.3.2, Page 435-436"
+    },
+    {
+      "id": "MAT-G11-U08-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "In how many ways can 5 boys and 4 girls be seated around a circular table such that no two girls sit adjacent to each other?",
+      "options": [
+        {
+          "id": "A",
+          "text": "576"
+        },
+        {
+          "id": "B",
+          "text": "1,440"
+        },
+        {
+          "id": "C",
+          "text": "2,880"
+        },
+        {
+          "id": "D",
+          "text": "17,280"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Step 1: First arrange the 5 boys around the circular table in (5 - 1)! = 4! = 24 ways. Step 2: This arrangement creates 5 distinct spaces between the boys. To ensure no two girls sit adjacent to each other, the 4 girls must occupy 4 of these 5 available spaces. Step 3: The number of ways to seat the 4 girls in these 5 distinct positions is P(5, 4) = 5! / (5 - 4)! = 120 ways. By the multiplication principle, the total number of arrangements is 24 × 120 = 2,880.",
+      "sourceReference": "Section 8.3.1, Page 431-432"
+    },
+    {
+      "id": "MAT-G11-U08-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "What is the constant term (the term independent of x) in the binomial expansion of (2x² - 1/x)⁹?",
+      "options": [
+        {
+          "id": "A",
+          "text": "-672"
+        },
+        {
+          "id": "B",
+          "text": "504"
+        },
+        {
+          "id": "C",
+          "text": "672"
+        },
+        {
+          "id": "D",
+          "text": "1,344"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The general term in the binomial expansion of (a + b)ⁿ is T_(r+1) = C(n, r) a^(n-r) b^r. Here n = 9, a = 2x², and b = -x⁻¹. Thus, T_(r+1) = C(9, r) (2x²)^(9-r) (-x⁻¹)^r = C(9, r) 2^(9-r) (-1)^r x^(18 - 2r - r) = C(9, r) 2^(9-r) (-1)^r x^(18 - 3r). For the constant term, the power of x must be 0: 18 - 3r = 0 => 3r = 18 => r = 6. Substituting r = 6: C(9, 6) 2^(9-6) (-1)⁶ = [9! / (6! 3!)] × 2³ × 1 = 84 × 8 = 672.",
+      "sourceReference": "Section 8.4, Page 438-439"
+    },
+    {
+      "id": "MAT-G11-U08-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A complex mathematics contest problem is given independently to three Grade 11 students: Aster, Bekele, and Chala. Their individual probabilities of solving the problem are 2/3, 3/4, and 1/2, respectively. What is the probability that the problem will be solved?",
+      "options": [
+        {
+          "id": "A",
+          "text": "1/24"
+        },
+        {
+          "id": "B",
+          "text": "11/12"
+        },
+        {
+          "id": "C",
+          "text": "23/24"
+        },
+        {
+          "id": "D",
+          "text": "5/8"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The problem is solved if at least one of the three students solves it. The complement of this event is that none of the three students solves the problem. The probabilities that each student fails to solve the problem are: P(Aster fails) = 1 - 2/3 = 1/3; P(Bekele fails) = 1 - 3/4 = 1/4; P(Chala fails) = 1 - 1/2 = 1/2. Because they work independently, the probability that none of them solves it is P(none) = (1/3) × (1/4) × (1/2) = 1/24. Therefore, the probability that the problem is solved is 1 - P(none) = 1 - 1/24 = 23/24.",
+      "sourceReference": "Section 8.7.5 & Section 8.8, Page 471, 476"
+    }
+  ]
 }

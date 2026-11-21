@@ -3,5 +3,411 @@
   "subject": "Geography",
   "unitNumber": 1,
   "unitTitle": "Formation of the Continents",
-  "questions": []
+  "questions": [
+    {
+      "id": "GEO-G11-U01-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "According to the widely supported Big Bang theory, approximately how many years ago was our Earth created from a mixture of gas and dust particles moving in space around the Sun?",
+      "options": [
+        {
+          "id": "A",
+          "text": "1.2 billion years ago"
+        },
+        {
+          "id": "B",
+          "text": "4.5 billion years ago"
+        },
+        {
+          "id": "C",
+          "text": "10.0 billion years ago"
+        },
+        {
+          "id": "D",
+          "text": "15.5 billion years ago"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Earth science literature indicates that while the Universe originated 10–20 billion years ago via the Big Bang cosmic explosion, our Earth was created from gas and dust particles moving around the Sun approximately 4.5 billion years ago (4600–3900 Ma).",
+      "sourceReference": "Grade 11 Geography Textbook, Section 1.1, Page 2–3"
+    },
+    {
+      "id": "GEO-G11-U01-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which principle of relative rock dating states that in an undisturbed sequence of sedimentary rock layers, the overlying bed is always younger than the underlying rock layer beneath it?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Law of Superposition"
+        },
+        {
+          "id": "B",
+          "text": "Principle of Original Horizontality"
+        },
+        {
+          "id": "C",
+          "text": "Principle of Cross-Cutting Relationships"
+        },
+        {
+          "id": "D",
+          "text": "Law of Radioactive Isotope Decay"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The law of superposition asserts that in an undisturbed sequence of sedimentary rock layers or lava flows, the oldest rock layer is at the bottom and each overlying layer is progressively younger.",
+      "sourceReference": "Grade 11 Geography Textbook, Section 1.2.2, Page 8"
+    },
+    {
+      "id": "GEO-G11-U01-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which geological era is commonly designated as the 'age of Dinosaurs' and 'era of middle life', during which the supercontinent Pangaea split into Laurasia and Gondwanaland?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Precambrian era"
+        },
+        {
+          "id": "B",
+          "text": "Paleozoic era"
+        },
+        {
+          "id": "C",
+          "text": "Mesozoic era"
+        },
+        {
+          "id": "D",
+          "text": "Cenozoic era"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The Mesozoic era (250–70 Ma) is known as the era of middle life and the age of Dinosaurs. During this era, the supercontinent Pangaea rifted into Laurasia in the north and Gondwanaland in the south.",
+      "sourceReference": "Grade 11 Geography Textbook, Section 1.2.3, Page 14"
+    },
+    {
+      "id": "GEO-G11-U01-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Oceans and open water bodies (the hydrosphere) cover approximately what proportion of the Earth's total surface area?",
+      "options": [
+        {
+          "id": "A",
+          "text": "29%"
+        },
+        {
+          "id": "B",
+          "text": "50%"
+        },
+        {
+          "id": "C",
+          "text": "71%"
+        },
+        {
+          "id": "D",
+          "text": "97%"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The surface area of the Earth is about 510 million km², of which oceans and water bodies cover greater than 71% of the total surface, leaving less than 29% as land area.",
+      "sourceReference": "Grade 11 Geography Textbook, Section 1.3, Page 16"
+    },
+    {
+      "id": "GEO-G11-U01-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "The discovery of identical fossil remains of the small aquatic reptile *Mesosaurus* in 250-million-year-old rock formations on opposite sides of the Atlantic Ocean (in Brazil and South Africa) provided key evidence for which theory?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Continental Drift Theory"
+        },
+        {
+          "id": "B",
+          "text": "Milankovitch Orbital Theory"
+        },
+        {
+          "id": "C",
+          "text": "Geographic Determinism Theory"
+        },
+        {
+          "id": "D",
+          "text": "Seafloor Subduction Cooling Theory"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Alfred Wegener used identical fossil remains of *Mesosaurus* found in both South America and South Africa as paleontological evidence proving that these now-separated continents were once joined together in the supercontinent Pangaea.",
+      "sourceReference": "Grade 11 Geography Textbook, Section 1.1, Page 4"
+    },
+    {
+      "id": "GEO-G11-U01-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How does absolute rock dating differ fundamentally from relative rock dating?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Absolute dating applies only to sedimentary fossils, whereas relative dating applies only to volcanic ash."
+        },
+        {
+          "id": "B",
+          "text": "Absolute dating determines the numerical age of rocks in years using radioactive isotope decay, whereas relative dating determines only the chronological sequence of events without numerical values."
+        },
+        {
+          "id": "C",
+          "text": "Absolute dating relies on weather records, whereas relative dating relies on satellite GPS."
+        },
+        {
+          "id": "D",
+          "text": "Absolute dating gives exact dates for future earthquakes, whereas relative dating measures sea level rise."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Relative age focuses on the chronological sequence of geological occurrences (which event happened before or after another) using rules like superposition. Absolute age provides numerical ages in years through measuring the decay of radioactive parent isotopes into stable daughter elements.",
+      "sourceReference": "Grade 11 Geography Textbook, Section 1.2.2, Page 7–9"
+    },
+    {
+      "id": "GEO-G11-U01-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Around 140 million years ago, the landmass that developed into the Indian sub-continent separated from Gondwanaland and drifted northward, colliding with Eurasia. What major mountain system was formed by this continental collision?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The Andes"
+        },
+        {
+          "id": "B",
+          "text": "The Alps"
+        },
+        {
+          "id": "C",
+          "text": "The Himalayas"
+        },
+        {
+          "id": "D",
+          "text": "The Appalachians"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "When the Indian sub-continent separated from Gondwanaland and drifted northward across the Tethys Sea, its collision with the Eurasian continent compressed rock strata and initiated the uplifting of the Himalayan mountain range.",
+      "sourceReference": "Grade 11 Geography Textbook, Section 1.1, Page 5"
+    },
+    {
+      "id": "GEO-G11-U01-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which geological era covers approximately 85% of Earth's total history (from 4.5 billion to 600 million years ago) and is characterized by the formation of ancient crystalline basement complex rocks found in continental shields?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Precambrian era"
+        },
+        {
+          "id": "B",
+          "text": "Paleozoic era"
+        },
+        {
+          "id": "C",
+          "text": "Mesozoic era"
+        },
+        {
+          "id": "D",
+          "text": "Cenozoic era"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The Precambrian era is the oldest and longest geological era, spanning from 4.5 billion to 600 million years ago (~85% of Earth's timeline). It was the era of Earth's crustal solidification and the formation of crystalline basement complex rocks exposed in stable continental shields.",
+      "sourceReference": "Grade 11 Geography Textbook, Section 1.2.3, Page 12"
+    },
+    {
+      "id": "GEO-G11-U01-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "During which specific period of the Paleozoic era did marine fish species diversify so rapidly that it is widely referred to by geologists as the 'age of fish'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Cambrian period"
+        },
+        {
+          "id": "B",
+          "text": "Devonian period"
+        },
+        {
+          "id": "C",
+          "text": "Triassic period"
+        },
+        {
+          "id": "D",
+          "text": "Tertiary period"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The Devonian period, the fourth period of the Paleozoic era (408–360 Ma), witnessed immense biological development of fish species and is conventionally termed the 'age of fish.'",
+      "sourceReference": "Grade 11 Geography Textbook, Section 1.2.3, Page 14"
+    },
+    {
+      "id": "GEO-G11-U01-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "According to the principle of cross-cutting relationships, if an igneous dyke or fault line cuts vertically through three horizontal sedimentary rock strata, what can be concluded about their relative ages?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The igneous dyke is older than all three sedimentary rock strata."
+        },
+        {
+          "id": "B",
+          "text": "The igneous dyke is younger than the sedimentary rock strata it cuts across."
+        },
+        {
+          "id": "C",
+          "text": "The sedimentary rock strata and the igneous dyke formed simultaneously."
+        },
+        {
+          "id": "D",
+          "text": "The top sedimentary layer is older than the bottom sedimentary layer."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The principle of cross-cutting relationships dictates that any geological feature (such as an igneous intrusion or fault line) that cuts across another rock unit must be younger than the rock unit it intersects.",
+      "sourceReference": "Grade 11 Geography Textbook, Section 1.2.2, Page 8"
+    },
+    {
+      "id": "GEO-G11-U01-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which statement correctly describes the present-day global spatial distribution of continental landmasses and oceanic basins across the Northern and Southern Hemispheres?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Continental landmasses and oceans are divided in exact equal proportions across both hemispheres."
+        },
+        {
+          "id": "B",
+          "text": "The Southern Hemisphere contains the vast majority of Earth's continental land area."
+        },
+        {
+          "id": "C",
+          "text": "Continental landmasses are predominantly concentrated north of the Equator, whereas oceanic environments dominate the Southern Hemisphere."
+        },
+        {
+          "id": "D",
+          "text": "All seven continents lie entirely within the Northern Hemisphere."
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Most of the Earth's continental landmasses occupy areas north of the Equator (Northern Hemisphere), whereas oceanic basins cover a significantly higher proportion of the Southern Hemisphere.",
+      "sourceReference": "Grade 11 Geography Textbook, Section 1.3 & 1.4, Page 16–23"
+    },
+    {
+      "id": "GEO-G11-U01-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A geologist analyzes an igneous rock sample and finds that 75% of the original parent Potassium-40 ($^{40}\\text{K}$) isotope has decayed into its stable daughter Argon-40 ($^{40}\\text{Ar}$) isotope, leaving 25% parent material remaining. If the half-life of Potassium-40 is 1.3 billion years, what is the absolute age of the rock sample?",
+      "options": [
+        {
+          "id": "A",
+          "text": "1.3 billion years"
+        },
+        {
+          "id": "B",
+          "text": "2.6 billion years"
+        },
+        {
+          "id": "C",
+          "text": "3.9 billion years"
+        },
+        {
+          "id": "D",
+          "text": "5.2 billion years"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "After 1 half-life, 50% parent remains (50% daughter). After 2 half-lives, 25% parent remains (75% daughter). Since 2 half-lives have elapsed: Absolute Age = 2 × 1.3 billion years = 2.6 billion years.",
+      "sourceReference": "Grade 11 Geography Textbook, Section 1.2.2, Page 9 (Table 1.2)"
+    },
+    {
+      "id": "GEO-G11-U01-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Which of the following options presents the correct chronological sequence of supercontinent evolution and continental break-up events in Earth's geological history?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Pangaea (~210 Ma) → Rodinia (~750 Ma) → Separation of Australia (~100 Ma) → Laurasia splitting"
+        },
+        {
+          "id": "B",
+          "text": "Assembly of Rodinia (~750 Ma) → Assembly of Pangaea (~255–210 Ma) → Splitting into Laurasia and Gondwanaland (~180 Ma) → Separation of Australia from Antarctica (~100 Ma)"
+        },
+        {
+          "id": "C",
+          "text": "Gondwanaland (~500 Ma) → Rodinia (~300 Ma) → Collision of India with Asia (~10 Ma)"
+        },
+        {
+          "id": "D",
+          "text": "Formation of Atlantic Ocean → Assembly of Pangaea → Assembly of Rodinia → Himalayan uplift"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Early landmasses first assembled into the supercontinent Rodinia (~750 Ma). Later, Pangaea assembled (~255–210 Ma). Pangaea began breaking apart into Laurasia and Gondwanaland (~180 Ma), and Australia separated from Antarctica around 100 Ma.",
+      "sourceReference": "Grade 11 Geography Textbook, Section 1.1, Page 3–5"
+    },
+    {
+      "id": "GEO-G11-U01-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Why was Alfred Wegener's Continental Drift Theory initially rejected by mainstream geologists in the 1910s and 1920s despite compelling fossil and jigsaw coastline evidence?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because satellite GPS tracking proved continents were stationary."
+        },
+        {
+          "id": "B",
+          "text": "Because rock types on opposite sides of the Atlantic were proven to have completely different chemical compositions."
+        },
+        {
+          "id": "C",
+          "text": "Because Wegener could not provide a plausible physical mechanism explaining how heavy continental blocks could move through solid oceanic crust, incorrectly proposing tidal forces and centrifugal drag."
+        },
+        {
+          "id": "D",
+          "text": "Because the Big Bang theory disproved all continental movements."
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Although Wegener provided strong fossil, structural, and coastline evidence, he lacked a viable mechanism to explain how continents moved across the ocean floor. His proposals (tidal forces and Earth's rotation) were physically inadequate, leading to rejection until seafloor spreading and plate tectonics emerged in the 1960s.",
+      "sourceReference": "Grade 11 Geography Textbook, Section 1.1, Page 4 & Grade 12 Textbook, Section 1.1, Page 3–4"
+    },
+    {
+      "id": "GEO-G11-U01-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Late Paleozoic (Permo-Carboniferous) glacial striations and tillite deposits of identical age are found in modern warm/tropical regions of South America, Southern Africa, India, and Australia. How does this paleoclimatic evidence support Continental Drift Theory?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It demonstrates that these now-separated southern landmasses were merged near the South Pole as part of Gondwanaland under a shared ice cap before drifting to their present latitudes."
+        },
+        {
+          "id": "B",
+          "text": "It proves that global solar radiation fell to zero across equatorial regions during the Carboniferous period."
+        },
+        {
+          "id": "C",
+          "text": "It shows that ocean currents carried floating glaciers across tropical land surfaces."
+        },
+        {
+          "id": "D",
+          "text": "It indicates that North America was submerged under 5,000 meters of polar sea water."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Glacial deposits of Permo-Carboniferous age in modern tropical areas (like India or Brazil) cannot be explained by local weather. They prove that these landmasses were contiguous near the South Pole as part of Gondwanaland, sharing a single ice cap before drifting apart to lower latitudes.",
+      "sourceReference": "Grade 11 Geography Textbook, Section 1.1 & 1.2.3, Page 4, 14 & Section 1.4, Page 22"
+    }
+  ]
 }

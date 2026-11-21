@@ -17,7 +17,6 @@ export interface IUser extends Document {
   gender?: StudentGender;
   grade?: number;
   stream?: StudentStream | null;
-  googleId?: string;
   role: UserRole;
   status: AccountStatus;
   authProvider: AuthProvider;
@@ -76,12 +75,6 @@ const UserSchema = new Schema<IUser>(
       enum: ['natural', 'social'],
       default: null,
     },
-    googleId: {
-      type: String,
-      unique: true,
-      sparse: true,
-      index: true,
-    },
     role: {
       type: String,
       enum: ['student', 'content_manager', 'admin', 'super_admin'],
@@ -96,7 +89,7 @@ const UserSchema = new Schema<IUser>(
     },
     authProvider: {
       type: String,
-      enum: ['google', 'phone'],
+      enum: ['phone'],
       required: true,
       default: 'phone',
     },

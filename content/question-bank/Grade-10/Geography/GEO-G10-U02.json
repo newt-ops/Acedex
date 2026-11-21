@@ -3,5 +3,411 @@
   "subject": "Geography",
   "unitNumber": 2,
   "unitTitle": "Climate of Africa",
-  "questions": []
+  "questions": [
+    {
+      "id": "GEO-G10-U02-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which of the following statements accurately distinguishes weather from climate?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Weather describes atmospheric conditions averaged over 30 years or more, while climate describes hourly atmospheric changes."
+        },
+        {
+          "id": "B",
+          "text": "Weather refers to short-term atmospheric conditions at a specific time and place, whereas climate represents the long-term pattern of weather over a prolonged period (30 years or more)."
+        },
+        {
+          "id": "C",
+          "text": "Weather is controlled exclusively by altitude, while climate depends solely on ocean current movements."
+        },
+        {
+          "id": "D",
+          "text": "Climate changes constantly from day to day, while weather remains completely unchanged across centuries."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Weather refers to short-term atmospheric conditions (such as daily temperature and precipitation) at a specific time and location, whereas climate is the statistical average of weather conditions recorded over a long period, typically 30 years or more.",
+      "sourceReference": "Grade 10 Geography Textbook, Section 2.1, Page 26 & Page 46"
+    },
+    {
+      "id": "GEO-G10-U02-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Into which three broad latitudinal zones did the ancient Greeks first divide the Earth based on their perception of solar illumination and habitability?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Equatorial, Subtropical, and Continental zones"
+        },
+        {
+          "id": "B",
+          "text": "Torrid (Tropical), Temperate, and Frigid (Polar) zones"
+        },
+        {
+          "id": "C",
+          "text": "Humid, Semi-arid, and Hyper-arid zones"
+        },
+        {
+          "id": "D",
+          "text": "Maritime, Alpine, and Desert zones"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The earliest known attempt at world climate classification was devised by the ancient Greeks, who divided each hemisphere into three latitudinal zones: Torrid (tropical), Temperate, and Frigid (polar).",
+      "sourceReference": "Grade 10 Geography Textbook, Section 2.1, Page 27–28"
+    },
+    {
+      "id": "GEO-G10-U02-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In Wladimir Köppen's world climate classification scheme, which principal climate group is defined primarily by dryness (lack of precipitation) rather than by temperature criteria?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Group A (Humid Tropical)"
+        },
+        {
+          "id": "B",
+          "text": "Group B (Dry Climate)"
+        },
+        {
+          "id": "C",
+          "text": "Group C (Mesothermal / Mild Winter)"
+        },
+        {
+          "id": "D",
+          "text": "Group E (Polar Climate)"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In Köppen's classification system, four main groups (A, C, D, E) are defined strictly by temperature thresholds, whereas Group B (Dry climate) is the only group defined primarily by precipitation deficiency relative to evapotranspiration.",
+      "sourceReference": "Grade 10 Geography Textbook, Section 2.1, Page 29"
+    },
+    {
+      "id": "GEO-G10-U02-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which climatic region in Africa covers nearly half of the continent's total surface area and is characterized by distinct wet (high sun) and dry (low sun) seasons?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Equatorial (Tropical Wet) Region"
+        },
+        {
+          "id": "B",
+          "text": "Tropical Wet-and-Dry (Savanna) Region"
+        },
+        {
+          "id": "C",
+          "text": "Mediterranean Climate Region"
+        },
+        {
+          "id": "D",
+          "text": "Warm Temperate Continental Region"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The Tropical Wet-and-Dry (Savanna) region covers a little less than half of Africa's total surface area, distinguished by alternating rainy seasons during high sun (summer) and dry seasons during low sun (winter).",
+      "sourceReference": "Grade 10 Geography Textbook, Section 2.2, Page 34"
+    },
+    {
+      "id": "GEO-G10-U02-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is the standard environmental lapse rate of temperature decrease with increasing altitude in the lower atmosphere (troposphere)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "1.0°C per 1,000 meters"
+        },
+        {
+          "id": "B",
+          "text": "3.5°C per 1,000 meters"
+        },
+        {
+          "id": "C",
+          "text": "6.4°C per 1,000 meters"
+        },
+        {
+          "id": "D",
+          "text": "10.0°C per 1,000 meters"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The standard (normal) environmental lapse rate in the troposphere dictates that air temperature decreases with ascending altitude at an average rate of 6.4°C for every 1,000 meters of elevation.",
+      "sourceReference": "Grade 10 Geography Textbook, Section 2.2, Page 41 & Page 51"
+    },
+    {
+      "id": "GEO-G10-U02-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What is the dual geographical impact of cool ocean currents (such as the Canary Current off Northwest Africa and the Benguela Current off Southwest Africa) on adjacent coastal lands?",
+      "options": [
+        {
+          "id": "A",
+          "text": "They create heavy tropical rainforests onshore and eliminate offshore marine life."
+        },
+        {
+          "id": "B",
+          "text": "They cause atmospheric stability and aridity on adjacent coastal lands while creating rich offshore fishing grounds."
+        },
+        {
+          "id": "C",
+          "text": "They trigger frequent convectional thunderstorms onshore and warm up coastal seawater."
+        },
+        {
+          "id": "D",
+          "text": "They prevent fog formation completely while inducing high annual rainfall."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Cool ocean currents chill lower air layers, causing atmospheric stability that suppresses rainfall and creates coastal deserts (e.g., Namib and Western Sahara). However, nutrient upwelling associated with cool currents creates rich offshore fishing grounds along Morocco, Western Sahara, and Namibia.",
+      "sourceReference": "Grade 10 Geography Textbook, Section 2.2, Page 40"
+    },
+    {
+      "id": "GEO-G10-U02-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which combination of seasonal wind patterns and rainfall characteristics defines the Mediterranean Climate Region located at the northern and southern fringes of Africa?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Heavy summer rainfall brought by moist Monsoon winds; dry cold winters."
+        },
+        {
+          "id": "B",
+          "text": "Year-round convectional rainfall with equal distribution across all twelve months."
+        },
+        {
+          "id": "C",
+          "text": "Hot, dry summers due to dry land-to-sea trade winds; mild, wet winters brought by moist onshore Westerly winds."
+        },
+        {
+          "id": "D",
+          "text": "Freezing winter snowstorms caused by polar trade winds; humid summer rainstorms."
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The Mediterranean climate region (found in the Maghrib coast of North Africa and the southwestern tip of South Africa) features dry, hot summers (as offshore trade winds blow) and mild, wet winters (when rain-bearing onshore Westerly winds dominate).",
+      "sourceReference": "Grade 10 Geography Textbook, Section 2.2, Page 35–36"
+    },
+    {
+      "id": "GEO-G10-U02-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "During the Northern Hemisphere winter season (December–January), how does the migration of the Inter-Tropical Convergence Zone (ITCZ) influence wind patterns across West Africa?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The ITCZ shifts northward, bringing moist Atlantic Monsoon winds across the entire Sahara Desert."
+        },
+        {
+          "id": "B",
+          "text": "The ITCZ shifts southward toward the Southern Hemisphere, allowing dry, cool, dust-laden Northeast Trade Winds (the Harmattan) from the Sahara to blow over West Africa."
+        },
+        {
+          "id": "C",
+          "text": "The ITCZ locks in a stationary position directly over 15°N, causing continuous convectional rainfall."
+        },
+        {
+          "id": "D",
+          "text": "The ITCZ diverts warm Mozambique ocean currents into the interior of West Africa."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In winter (December–January), the sun is overhead in the Southern Hemisphere, causing the ITCZ to move south. This permits dry, cool, dust-laden Northeast Trade Winds (locally called Harmattan) originating over the Sahara to sweep across West and Sub-Saharan Africa.",
+      "sourceReference": "Grade 9 Geography Textbook, Section 2.2, Page 34 & Page 38–39"
+    },
+    {
+      "id": "GEO-G10-U02-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Why is the continent of Africa described as having a near 'mirror image' spatial distribution of climate zones north and south of the Equator?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because Africa is surrounded by identical ocean currents on both eastern and western coasts."
+        },
+        {
+          "id": "B",
+          "text": "Because the Equator passes almost through the middle of the continent, causing climatic zones (equatorial, savanna, desert, Mediterranean) to repeat symmetrically with increasing latitude north and south."
+        },
+        {
+          "id": "C",
+          "text": "Because mountain ranges are evenly distributed in equal numbers across all African countries."
+        },
+        {
+          "id": "D",
+          "text": "Because the landmass width is geometrically identical in both northern and southern hemispheres."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Because the Equator bisects Africa into two almost equal halves lengthwise between the Tropics of Cancer and Capricorn, climatic zones show a mirror-image symmetry north and south of the equator (e.g., Sahara matches Kalahari; Maghrib matches Cape region).",
+      "sourceReference": "Grade 10 Geography Textbook, Section 2.2, Page 33 & Page 46"
+    },
+    {
+      "id": "GEO-G10-U02-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Along the West African coast between Cape Three Points in Ghana and Benin, annual rainfall drops anomalously below 1,000 mm despite its equatorial coastal location. Which factor contributes to this localized dry anomaly?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The presence of an offshore body of cool water that stabilizes the lower maritime air mass and causes winds to blow parallel to the coastline."
+        },
+        {
+          "id": "B",
+          "text": "The presence of massive 4,000-meter volcanic mountain barriers blocking Atlantic moisture."
+        },
+        {
+          "id": "C",
+          "text": "Continuous subsidence of polar continental air masses throughout the summer."
+        },
+        {
+          "id": "D",
+          "text": "Permanent freezing of coastal waters during the monsoon season."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The dry anomaly along the Ghana–Togo–Benin coast (<1000 mm rainfall) is caused by offshore cool water bodies that cool and stabilize incoming maritime air, strong parallel shoreline wind flow, and lack of mountain barriers to force orographic uplift.",
+      "sourceReference": "Grade 10 Geography Textbook, Section 2.2, Page 35"
+    },
+    {
+      "id": "GEO-G10-U02-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Why do hot desert regions in Africa (such as the Sahara and Kalahari) record very high diurnal (daily) temperature ranges despite having low annual mean temperature ranges?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Dense cloud cover traps solar heat during the day and reflects it back at night."
+        },
+        {
+          "id": "B",
+          "text": "Clear skies and low relative humidity allow intense solar heating during the day and rapid terrestrial radiation loss into space at night."
+        },
+        {
+          "id": "C",
+          "text": "Warm ocean currents heat the desert during daytime and cool winds blow at night."
+        },
+        {
+          "id": "D",
+          "text": "High vegetation density absorbs solar radiation during the day and releases moisture at night."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In dry deserts, extreme atmospheric dryness and absence of cloud cover allow direct solar radiation to heat the ground intensely by day (30°C–40°C+). At night, clear skies allow rapid terrestrial heat loss, causing temperatures to plummet below 10°C, producing a large daily temperature range.",
+      "sourceReference": "Grade 10 Geography Textbook, Section 2.2, Page 35–36"
+    },
+    {
+      "id": "GEO-G10-U02-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Assuming a sea-level temperature of 30°C and a standard environmental lapse rate of 6.4°C per 1,000 meters, what is the expected air temperature at the summit of Mount Kilimanjaro (elevation 5,895 meters above sea level)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "-7.7°C"
+        },
+        {
+          "id": "B",
+          "text": "0.0°C"
+        },
+        {
+          "id": "C",
+          "text": "7.7°C"
+        },
+        {
+          "id": "D",
+          "text": "12.3°C"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Temperature decrease = (5,895 m / 1,000 m) × 6.4°C = 5.895 × 6.4°C = 37.728°C (approx. 37.7°C). Expected summit temperature = 30.0°C - 37.7°C = -7.7°C. This sub-freezing temperature explains why high peaks like Kilimanjaro have permanent snow caps near the Equator.",
+      "sourceReference": "Grade 10 Geography Textbook, Section 2.2, Page 41 & Page 51"
+    },
+    {
+      "id": "GEO-G10-U02-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Why is the agricultural sector in Sub-Saharan Africa recognized as exceptionally vulnerable to the impacts of climate variability and global climate change?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Over 90% of African farmers operate large-scale greenhouse drip irrigation systems powered by fossil fuels."
+        },
+        {
+          "id": "B",
+          "text": "Agriculture is overwhelmingly rain-fed, accounts for ~70% of the labor force and >25% of GDP, and smallholder farmers possess low financial and technological adaptive capacity."
+        },
+        {
+          "id": "C",
+          "text": "African agricultural soils are permanently frozen by polar air masses."
+        },
+        {
+          "id": "D",
+          "text": "Cereal crop production takes place exclusively in low-latitude coastal ocean waters."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "African agriculture is highly vulnerable because it employs ~70% of the labor force and contributes over 25% of GDP while depending heavily on natural rainfall (rain-fed farming). Smallholder farmers lack financial capital, advanced technology, and adaptive capacity to withstand rainfall anomalies.",
+      "sourceReference": "Grade 10 Geography Textbook, Section 2.3, Page 42 & Section 2.4, Page 44–45"
+    },
+    {
+      "id": "GEO-G10-U02-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "How do empirical climate classification schemes (such as Köppen's and Trewartha's) fundamentally differ from genetic climate classification schemes?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Empirical schemes classify climate based on observed statistical data of temperature and precipitation boundaries, whereas genetic schemes classify climate based on forcing mechanisms such as air mass dynamics and solar radiation."
+        },
+        {
+          "id": "B",
+          "text": "Empirical schemes were developed by ancient Greeks, whereas genetic schemes were developed by modern satellite computers."
+        },
+        {
+          "id": "C",
+          "text": "Empirical schemes rely solely on soil color, whereas genetic schemes measure ocean depth."
+        },
+        {
+          "id": "D",
+          "text": "Empirical schemes apply only to polar ice caps, whereas genetic schemes apply only to desert sand dunes."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Empirical classification systems use observable quantitative data inputs (mean temperature and precipitation values) to define class boundaries, whereas genetic systems classify climate according to underlying physical causes and atmospheric processes (air mass movements, fronts, solar radiation).",
+      "sourceReference": "Grade 10 Geography Textbook, Section 2.1, Page 28"
+    },
+    {
+      "id": "GEO-G10-U02-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Under the modified Köppen-Geiger climate classification system, how are third-order subdivisions assigned to distinguish hot desert (BWh) from cold desert (BWk), and hot steppe (BSh) from cold steppe (BSk)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Based on whether annual rainfall exceeds 2,000 mm."
+        },
+        {
+          "id": "B",
+          "text": "Based on a mean annual temperature threshold of 18°C (64.4°F), where 'h' denotes mean annual temperature > 18°C and 'k' denotes mean annual temperature < 18°C."
+        },
+        {
+          "id": "C",
+          "text": "Based on the number of active volcanoes located inside the desert basin."
+        },
+        {
+          "id": "D",
+          "text": "Based on the ratio of sand dunes to gravel pavement."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In Köppen's third-order dry climate subdivision (B), the letter 'h' (heiss / hot) is assigned if the mean annual temperature is greater than 18°C (64.4°F), whereas 'k' (kalt / cold) is assigned if the mean annual temperature is less than 18°C.",
+      "sourceReference": "Grade 10 Geography Textbook, Section 2.2, Page 36 & Page 51"
+    }
+  ]
 }

@@ -3,5 +3,411 @@
   "subject": "Geography",
   "unitNumber": 5,
   "unitTitle": "Geography and Economic Development",
-  "questions": []
+  "questions": [
+    {
+      "id": "GEO-G11-U05-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which of the following statements correctly distinguishes economic growth from economic development?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Economic growth refers strictly to the quantitative expansion of a nation's Gross Domestic Product (GDP), whereas economic development encompasses both quantitative and qualitative improvements in public welfare, health, education, and living standards."
+        },
+        {
+          "id": "B",
+          "text": "Economic growth measures environmental sustainability, while economic development measures capital stock accumulation."
+        },
+        {
+          "id": "C",
+          "text": "Economic growth applies exclusively to landlocked nations, while economic development applies only to coastal states."
+        },
+        {
+          "id": "D",
+          "text": "Economic growth is measured by the Human Development Index (HDI), while economic development is measured solely by national literacy rates."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Economic growth focuses on quantitative increases in national output or per capita income (GDP). In contrast, economic development is a broader concept incorporating both quantitative growth and qualitative improvements in standard of living, healthcare, education, and social welfare.",
+      "sourceReference": "Grade 11 Geography Textbook, Section 5.1.1, Page 124–125"
+    },
+    {
+      "id": "GEO-G11-U05-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which geographical school of thought asserts that a country's stage of socio-economic development, culture, and societal progress are strictly dictated and controlled by its physical environment?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Geographical Possibilism"
+        },
+        {
+          "id": "B",
+          "text": "Geographical Determinism"
+        },
+        {
+          "id": "C",
+          "text": "Cultural Ecology"
+        },
+        {
+          "id": "D",
+          "text": "Spatial Interactionism"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Geographical determinism assumes that the socio-economic development, cultural characteristics, and human activities of nations are strictly determined by physical environmental factors (such as climate, location, and relief).",
+      "sourceReference": "Grade 11 Geography Textbook, Section 5.1.2, Page 125"
+    },
+    {
+      "id": "GEO-G11-U05-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In Johann Heinrich von Thünen's model of agricultural land use, which economic activity occupies the innermost ring immediately surrounding the central market city?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Extensive livestock ranching"
+        },
+        {
+          "id": "B",
+          "text": "Market gardening and intensive dairy farming"
+        },
+        {
+          "id": "C",
+          "text": "Commercial grain farming"
+        },
+        {
+          "id": "D",
+          "text": "Timber and firewood forestry"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Von Thünen's model places market gardening and intensive dairying in the first ring closest to the central city because these produce perishable, high-value goods that require rapid, short transport to the market.",
+      "sourceReference": "Grade 11 Geography Textbook, Section 5.1.3, Page 127–128"
+    },
+    {
+      "id": "GEO-G11-U05-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "How many sovereign countries in the world are classified as landlocked, representing approximately 20% (one-fifth) of all global nations?",
+      "options": [
+        {
+          "id": "A",
+          "text": "16"
+        },
+        {
+          "id": "B",
+          "text": "32"
+        },
+        {
+          "id": "C",
+          "text": "49"
+        },
+        {
+          "id": "D",
+          "text": "65"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "There are 49 landlocked countries worldwide, representing about 20% of the world's nations. They are geographically enclosed by other states without direct access to sea coasts.",
+      "sourceReference": "Grade 11 Geography Textbook, Section 5.3.1, Page 146"
+    },
+    {
+      "id": "GEO-G11-U05-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which African nation is the dominant economic player in intra-African trade, accounting for nearly one-third of all formal intra-continental exports?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Nigeria"
+        },
+        {
+          "id": "B",
+          "text": "Egypt"
+        },
+        {
+          "id": "C",
+          "text": "Kenya"
+        },
+        {
+          "id": "D",
+          "text": "South Africa"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "South Africa is the dominant market player in intra-African formal trade, exporting roughly one-third of all formal intra-African exports and importing about one-tenth of agricultural goods.",
+      "sourceReference": "Grade 11 Geography Textbook, Section 5.4.2, Page 151"
+    },
+    {
+      "id": "GEO-G11-U05-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In von Thünen's land-use model, why is timber and firewood forestry located in the second ring, closer to the city market than grain farming?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because forest trees require fertile alluvial soils found only near riverbanks."
+        },
+        {
+          "id": "B",
+          "text": "Because firewood and timber are heavy and bulky, incurring high transportation costs per unit distance that prevent them from being produced far from the city."
+        },
+        {
+          "id": "C",
+          "text": "Because grain farming produces perishable products that spoil faster than timber."
+        },
+        {
+          "id": "D",
+          "text": "Because government zoning laws forbid forest logging in peripheral rural zones."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In von Thünen's model, forestry occupies the second ring because wood is heavy and bulky to transport. High freight costs relative to value require timber production to locate near the central market city to minimize total transport expenses.",
+      "sourceReference": "Grade 11 Geography Textbook, Section 5.1.3, Page 127–128"
+    },
+    {
+      "id": "GEO-G11-U05-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "According to Alfred Weber's Industrial Location Theory, what primary cost factor dictates the optimal geographic site for a manufacturing plant?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Minimization of land rental prices in central business districts"
+        },
+        {
+          "id": "B",
+          "text": "Minimization of total transportation costs for moving raw materials to the factory and finished products to the market"
+        },
+        {
+          "id": "C",
+          "text": "Maximization of regional tax subsidies provided by local governments"
+        },
+        {
+          "id": "D",
+          "text": "Equalization of wage rates across national labor pools"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Alfred Weber's least-cost theory assumes that an industry will locate where transportation costs are lowest—balancing the cost of shipping raw materials to the factory against the cost of shipping finished goods to the market.",
+      "sourceReference": "Grade 11 Geography Textbook, Section 5.1.4, Page 128"
+    },
+    {
+      "id": "GEO-G11-U05-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "According to international economic benchmarks cited in the textbook, what daily income threshold defines extreme poverty, below which about 10% of the global population resides?",
+      "options": [
+        {
+          "id": "A",
+          "text": "$1.90 USD per day"
+        },
+        {
+          "id": "B",
+          "text": "$5.00 USD per day"
+        },
+        {
+          "id": "C",
+          "text": "$10.00 USD per day"
+        },
+        {
+          "id": "D",
+          "text": "$0.50 USD per day"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Extremely poor individuals live on less than $1.90 USD per day. Approximately 10% of the world's population (over 730 million people) lived within this extreme poverty threshold in 2015, with the majority concentrated in Sub-Saharan Africa.",
+      "sourceReference": "Grade 11 Geography Textbook, Section 5.2.2, Page 136"
+    },
+    {
+      "id": "GEO-G11-U05-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which combination of factors creates severe economic drawbacks for Landlocked Developing Countries (LLDCs) engaged in international trade?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Lack of direct ocean access, high freight transit costs, administrative border delays, and dependence on neighboring transit infrastructure"
+        },
+        {
+          "id": "B",
+          "text": "High ocean port tariffs, excessive maritime shipping fleets, and frequent coastal typhoons"
+        },
+        {
+          "id": "C",
+          "text": "Low population density, excess industrial export capacity, and zero import duties"
+        },
+        {
+          "id": "D",
+          "text": "Absence of international river systems and lack of arable soil"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Landlocked countries suffer from isolation from maritime trade routes, high transport and transit costs, border crossing delays, and vulnerability to political or infrastructure disruptions in neighboring transit countries.",
+      "sourceReference": "Grade 11 Geography Textbook, Section 5.3.2, Page 147–148"
+    },
+    {
+      "id": "GEO-G11-U05-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In Walter Christaller's Central Place Theory, how are the concepts of 'range' and 'threshold' defined?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Range is the height of urban buildings; Threshold is the depth of water wells."
+        },
+        {
+          "id": "B",
+          "text": "Range is the maximum distance consumers are willing to travel to obtain a service; Threshold is the minimum population required to support that service."
+        },
+        {
+          "id": "C",
+          "text": "Range is the total area of farmlands; Threshold is the maximum annual rainfall."
+        },
+        {
+          "id": "D",
+          "text": "Range is the price of land rent; Threshold is the number of industrial factories."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In Christaller's Central Place Theory, 'range' is the maximum distance people are prepared to travel to acquire a good or service, whereas 'threshold' is the minimum consumer population needed for a business or service to remain economically viable.",
+      "sourceReference": "Grade 11 Geography Textbook, Section 5.1.5, Page 129–130"
+    },
+    {
+      "id": "GEO-G11-U05-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How does the proportion of intraregional trade within Africa compare historically to intraregional trade volumes in Europe and Asia?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Intra-African trade is higher than in Europe, reaching over 70% of total trade."
+        },
+        {
+          "id": "B",
+          "text": "Intra-African trade is exceptionally low (~12–16% of total trade), compared to ~60% in Europe and ~50% in Asia."
+        },
+        {
+          "id": "C",
+          "text": "Intra-African trade is equal to Asian trade at exactly 50%."
+        },
+        {
+          "id": "D",
+          "text": "Intra-African trade represents 100% of all continental exports."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Intra-African trade accounts for only 12–16% of total trade on the continent. This is significantly lower than intraregional trade in Europe (~60%) and Asia (~50%), reflecting low regional economic integration and historical export orientation towards overseas markets.",
+      "sourceReference": "Grade 11 Geography Textbook, Section 5.4.1, Page 150"
+    },
+    {
+      "id": "GEO-G11-U05-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "According to von Thünen's location-rent principle, if Crop A (perishable milk) yields a land rent of $100/hectare at the city center and incurs high transport costs ($10/km), while Crop B (wheat) yields $40/hectare at the center and incurs low transport costs ($2/km), at what distance from the city market will the bid-rent curves for Crop A and Crop B intersect?",
+      "options": [
+        {
+          "id": "A",
+          "text": "5.0 km"
+        },
+        {
+          "id": "B",
+          "text": "7.5 km"
+        },
+        {
+          "id": "C",
+          "text": "10.0 km"
+        },
+        {
+          "id": "D",
+          "text": "15.0 km"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Rent for Crop A at distance d: R_A(d) = 100 - 10d. Rent for Crop B at distance d: R_B(d) = 40 - 2d. Setting R_A(d) = R_B(d) gives 100 - 10d = 40 - 2d => 60 = 8d => d = 7.5 km. Beyond 7.5 km, Crop B yields a higher location rent than Crop A.",
+      "sourceReference": "Grade 11 Geography Textbook, Section 5.1.3, Page 127–128"
+    },
+    {
+      "id": "GEO-G11-U05-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "How do recurrent climate extremes (such as persistent droughts or severe river floods) induce a self-reinforcing 'poverty trap' among poor agricultural households in Sub-Saharan Africa?",
+      "options": [
+        {
+          "id": "A",
+          "text": "By increasing urban land prices so that farmers cannot migrate to capital cities."
+        },
+        {
+          "id": "B",
+          "text": "By repeatedly destroying crops and livestock, forcing households to sell remaining productive assets and break social support networks, thereby lowering coping capacity below recovery thresholds."
+        },
+        {
+          "id": "C",
+          "text": "By eliminating all international foreign aid transfers to rural districts."
+        },
+        {
+          "id": "D",
+          "text": "By converting rain-fed cereal farms into high-yield commercial drip-irrigation estates."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Climate extremes cause poverty traps when frequent shocks hit vulnerable households before they can recover. Repeated asset loss (livestock deaths, crop failure) forces households to sell productive capital and weakens reciprocal community safety nets, trapping families in long-term poverty.",
+      "sourceReference": "Grade 11 Geography Textbook, Section 5.2.4, Page 140–142"
+    },
+    {
+      "id": "GEO-G11-U05-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Which underlying structural barrier primarily accounts for the persistent low volume of intra-African trade despite regional trade agreements like the African Continental Free Trade Area (AfCFTA)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A universal ban on currency exchanges between African central banks."
+        },
+        {
+          "id": "B",
+          "text": "Colonial-era infrastructure oriented toward exporting raw primary commodities to overseas markets, combined with low economic complementarity among neighboring African states that produce similar primary goods."
+        },
+        {
+          "id": "C",
+          "text": "Excess manufacturing capacity in small rural African villages."
+        },
+        {
+          "id": "D",
+          "text": "Complete absence of agricultural production across Sub-Saharan Africa."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Intra-African trade is hindered by colonial-inherited transport networks (built to ship raw materials to sea ports rather than connect neighboring nations), high non-tariff barriers, inadequate processing infrastructure, and low product complementarity (many countries export similar raw agricultural or mineral items).",
+      "sourceReference": "Grade 11 Geography Textbook, Section 5.4.3, Page 152–155"
+    },
+    {
+      "id": "GEO-G11-U05-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "How many landlocked states are located on the African continent, and what historical process primarily established their current landlocked borders?",
+      "options": [
+        {
+          "id": "A",
+          "text": "8 landlocked states; established by post-WWII United Nations maritime treaties."
+        },
+        {
+          "id": "B",
+          "text": "16 landlocked states; established primarily by 19th-century European colonial partitioning of Africa that drew arbitrary territorial boundaries without regard to sea access."
+        },
+        {
+          "id": "C",
+          "text": "25 landlocked states; created by recent volcanic rift valley mountain building."
+        },
+        {
+          "id": "D",
+          "text": "5 landlocked states; formed during ancient Roman trade expansion."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Africa contains 16 landlocked countries (the highest number of any continent). Their geographical isolation stems mainly from 19th-century European colonial partitioning, which carved up the continent into political territories that retained their borders after independence.",
+      "sourceReference": "Grade 11 Geography Textbook, Section 5.3.1, Page 146"
+    }
+  ]
 }

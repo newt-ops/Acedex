@@ -3,5 +3,411 @@
   "subject": "Chemistry",
   "unitNumber": 5,
   "unitTitle": "Chemical Equilibrium",
-  "questions": []
+  "questions": [
+    {
+      "id": "CHE-G11-U05-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which statement correctly describes a chemical reaction system that has achieved dynamic equilibrium?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The forward and reverse reactions have stopped completely."
+        },
+        {
+          "id": "B",
+          "text": "The concentrations of reactants and products are equal to each other."
+        },
+        {
+          "id": "C",
+          "text": "The rate of the forward reaction equals the rate of the reverse reaction, and concentrations remain constant over time."
+        },
+        {
+          "id": "D",
+          "text": "The total mass of products exceeds the total mass of reactants."
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Dynamic chemical equilibrium is established when the rate of the forward reaction equals the rate of the reverse reaction. Interconversion of molecules continues at the microscopic level, but macroscopic concentrations remain constant.",
+      "sourceReference": "Section 5.2.2, Page 225"
+    },
+    {
+      "id": "CHE-G11-U05-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which of the following chemical equations represents a reversible reaction capable of establishing dynamic equilibrium?",
+      "options": [
+        {
+          "id": "A",
+          "text": "C(s) + O₂(g) → CO₂(g)"
+        },
+        {
+          "id": "B",
+          "text": "N₂(g) + 3H₂(g) ⇌ 2NH₃(g)"
+        },
+        {
+          "id": "C",
+          "text": "2Na(s) + 2H₂O(l) → 2NaOH(aq) + H₂(g)"
+        },
+        {
+          "id": "D",
+          "text": "AgNO₃(aq) + NaCl(aq) → AgCl(s) + NaNO₃(aq)"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Reversible reactions are denoted by double arrows (⇌), signifying that reactants form products and products simultaneously react back to reform reactants.",
+      "sourceReference": "Section 5.2.1, Page 224"
+    },
+    {
+      "id": "CHE-G11-U05-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is the correct equilibrium constant expression (K_c) for the homogeneous gas-phase reaction: N₂(g) + 3H₂(g) ⇌ 2NH₃(g)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "K_c = [NH₃]² / ([N₂] [H₂]³)"
+        },
+        {
+          "id": "B",
+          "text": "K_c = ([N₂] [H₂]³) / [NH₃]²"
+        },
+        {
+          "id": "C",
+          "text": "K_c = 2[NH₃] / ([N₂] + 3[H₂])"
+        },
+        {
+          "id": "D",
+          "text": "K_c = [NH₃] / ([N₂] [H₂])"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "According to the Law of Mass Action, the equilibrium constant K_c is expressed as the product of the equilibrium concentrations of the products raised to their stoichiometric coefficients divided by that of the reactants.",
+      "sourceReference": "Section 5.2.4, Page 230"
+    },
+    {
+      "id": "CHE-G11-U05-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Why are pure solids and pure liquids omitted from the equilibrium constant expression (K_c) in heterogeneous equilibria?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Pure solids and liquids do not participate in the chemical reaction."
+        },
+        {
+          "id": "B",
+          "text": "Their effective molar concentrations remain constant at a given temperature regardless of the quantity present."
+        },
+        {
+          "id": "C",
+          "text": "Their molar masses are considered zero in thermodynamic calculations."
+        },
+        {
+          "id": "D",
+          "text": "Their partial pressures are infinitely high."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The concentration of a pure solid or liquid is an intensive property derived from its density and molar mass, which stays constant at a fixed temperature and is incorporated into K_c.",
+      "sourceReference": "Section 5.2.4, Page 233"
+    },
+    {
+      "id": "CHE-G11-U05-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "According to Le Chatelier's Principle, how does an equilibrium system respond when subjected to a disturbance in temperature, pressure, or concentration?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The reaction stops completely to prevent any change in composition."
+        },
+        {
+          "id": "B",
+          "text": "The value of the equilibrium constant K_c immediately doubles."
+        },
+        {
+          "id": "C",
+          "text": "The equilibrium position shifts in a direction that opposes or counteracts the applied disturbance."
+        },
+        {
+          "id": "D",
+          "text": "The system permanently converts into an irreversible state."
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Le Chatelier's Principle states that if an external stress is applied to a system at chemical equilibrium, the system will adjust to partially offset that stress and restore equilibrium.",
+      "sourceReference": "Section 5.2.6, Page 245"
+    },
+    {
+      "id": "CHE-G11-U05-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "For the gas-phase reaction N₂O₄(g) ⇌ 2NO₂(g), K_c is 0.36 M at 373 K. What is the value of K_p at this temperature? (R = 0.0821 L·atm/mol·K)",
+      "options": [
+        {
+          "id": "A",
+          "text": "0.0118 atm"
+        },
+        {
+          "id": "B",
+          "text": "0.36 atm"
+        },
+        {
+          "id": "C",
+          "text": "11.0 atm"
+        },
+        {
+          "id": "D",
+          "text": "30.6 atm"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Using the relation K_p = K_c(RT)^(Δn): Δn = 2 - 1 = +1. Thus, K_p = 0.36 × (0.0821 × 373)^1 = 0.36 × 30.62 = 11.0 atm.",
+      "sourceReference": "Section 5.2.4, Page 235"
+    },
+    {
+      "id": "CHE-G11-U05-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "For the reaction CO(g) + Cl₂(g) ⇌ COCl₂(g), K_c = 13.8. If a reaction mixture contains [CO] = 2.5 M, [Cl₂] = 1.2 M, and [COCl₂] = 5.0 M, what is the reaction quotient (Q_c) and which direction will the reaction shift?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Q_c = 1.67; the reaction will proceed in the forward direction (to the right)."
+        },
+        {
+          "id": "B",
+          "text": "Q_c = 1.67; the reaction will proceed in the reverse direction (to the left)."
+        },
+        {
+          "id": "C",
+          "text": "Q_c = 13.8; the system is already at dynamic equilibrium."
+        },
+        {
+          "id": "D",
+          "text": "Q_c = 0.60; the reaction will proceed in the reverse direction (to the left)."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Q_c = [COCl₂] / ([CO] [Cl₂]) = 5.0 / (2.5 × 1.2) = 1.67. Since Q_c (1.67) < K_c (13.8), the reaction is not at equilibrium and will shift to the right to form more products.",
+      "sourceReference": "Section 5.2.5, Page 241"
+    },
+    {
+      "id": "CHE-G11-U05-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Consider the exothermic reaction: 2SO₂(g) + O₂(g) ⇌ 2SO₃(g) (ΔH = -198 kJ/mol). How does an increase in temperature affect the equilibrium position and the value of K_c?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Shifts equilibrium to the right and increases K_c."
+        },
+        {
+          "id": "B",
+          "text": "Shifts equilibrium to the left and decreases K_c."
+        },
+        {
+          "id": "C",
+          "text": "Shifts equilibrium to the right and leaves K_c unchanged."
+        },
+        {
+          "id": "D",
+          "text": "Shifts equilibrium to the left and leaves K_c unchanged."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "For an exothermic reaction, heat is a product. Raising the temperature adds heat, driving the equilibrium to the left to absorb excess energy. This reduces product concentration and increases reactant concentration, decreasing K_c.",
+      "sourceReference": "Section 5.2.6, Page 250"
+    },
+    {
+      "id": "CHE-G11-U05-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "For the heterogeneous system C(s) + CO₂(g) ⇌ 2CO(g), how will increasing the total pressure by decreasing the vessel volume at constant temperature affect the yield of CO(g)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The yield of CO(g) will increase because higher pressure favors the forward reaction."
+        },
+        {
+          "id": "B",
+          "text": "The yield of CO(g) will decrease because increased pressure shifts equilibrium toward the side with fewer moles of gas (CO₂)."
+        },
+        {
+          "id": "C",
+          "text": "The yield of CO(g) will remain unchanged because solid carbon buffers pressure changes."
+        },
+        {
+          "id": "D",
+          "text": "The reaction will stop completely."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In C(s) + CO₂(g) ⇌ 2CO(g), there is 1 mole of gas on the reactant side and 2 moles of gas on the product side. Increasing pressure shifts equilibrium toward the side with fewer gas moles (to the left), decreasing the yield of CO.",
+      "sourceReference": "Section 5.2.6, Page 249"
+    },
+    {
+      "id": "CHE-G11-U05-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Given the following reactions and their equilibrium constants at 1123 K:\n(1) C(s) + CO₂(g) ⇌ 2CO(g)  [K_c1 = 1.4 × 10¹²]\n(2) CO(g) + Cl₂(g) ⇌ COCl₂(g)  [K_c2 = 55]\nWhat is the overall equilibrium constant K_c for: C(s) + CO₂(g) + 2Cl₂(g) ⇌ 2COCl₂(g)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "7.7 × 10¹³"
+        },
+        {
+          "id": "B",
+          "text": "4.2 × 10¹⁵"
+        },
+        {
+          "id": "C",
+          "text": "2.5 × 10¹⁰"
+        },
+        {
+          "id": "D",
+          "text": "1.4 × 10¹²"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Adding reaction (1) to twice reaction (2) gives the overall equation. When a reaction is multiplied by 2, its equilibrium constant is squared: (K_c2)² = (55)² = 3025. Multiplying the equilibrium constants: K_overall = K_c1 × (K_c2)² = (1.4 × 10¹²) × 3025 = 4.2 × 10¹⁵.",
+      "sourceReference": "Section 5.2.4, Page 237"
+    },
+    {
+      "id": "CHE-G11-U05-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In the industrial Haber process, N₂(g) + 3H₂(g) ⇌ 2NH₃(g) (ΔH = -92 kJ/mol), why is a moderate operating temperature (~450 °C) employed commercially rather than a lower temperature?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Lower temperatures shift the equilibrium position toward the reactants."
+        },
+        {
+          "id": "B",
+          "text": "Lower temperatures permanently deactivate the iron catalyst."
+        },
+        {
+          "id": "C",
+          "text": "Although lower temperatures favor higher equilibrium yields of NH₃, the reaction rate is too slow to be economically viable."
+        },
+        {
+          "id": "D",
+          "text": "High pressure only functions effectively above 400 °C."
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Because the reaction is exothermic, low temperatures maximize the equilibrium yield of NH₃. However, low temperatures severely decrease reaction rate. A temperature of ~450 °C provides an optimal compromise between reaction rate and yield.",
+      "sourceReference": "Section 5.2.7, Page 254"
+    },
+    {
+      "id": "CHE-G11-U05-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A 1.00 L flask is charged with 0.500 mol of H₂(g) and 0.500 mol of I₂(g) at 400 °C. The reaction H₂(g) + I₂(g) ⇌ 2HI(g) has K_c = 64.0. What is the equilibrium concentration of HI(g)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "0.400 M"
+        },
+        {
+          "id": "B",
+          "text": "0.800 M"
+        },
+        {
+          "id": "C",
+          "text": "0.100 M"
+        },
+        {
+          "id": "D",
+          "text": "0.500 M"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "ICE table: [H₂] = 0.500 - x, [I₂] = 0.500 - x, [HI] = 2x. Setting K_c = (2x)² / (0.500 - x)² = 64.0. Taking square roots: 2x / (0.500 - x) = 8.0, yielding x = 0.400 M. Thus [HI] = 2x = 0.800 M.",
+      "sourceReference": "Section 5.2.5, Page 243"
+    },
+    {
+      "id": "CHE-G11-U05-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "For the decomposition CaCO₃(s) ⇌ CaO(s) + CO₂(g) at 1000 K, the equilibrium partial pressure of CO₂ is 3.87 atm. What is the value of K_c at 1000 K? (R = 0.0821 L·atm/mol·K)",
+      "options": [
+        {
+          "id": "A",
+          "text": "3.87 M"
+        },
+        {
+          "id": "B",
+          "text": "0.0472 M"
+        },
+        {
+          "id": "C",
+          "text": "0.317 M"
+        },
+        {
+          "id": "D",
+          "text": "317.5 M"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "For CaCO₃(s) ⇌ CaO(s) + CO₂(g), K_p = P_CO₂ = 3.87 atm. Using K_p = K_c(RT)^(Δn) with Δn = 1: K_c = K_p / (RT) = 3.87 / (0.0821 × 1000) = 0.0472 M.",
+      "sourceReference": "Section 5.2.4, Page 235"
+    },
+    {
+      "id": "CHE-G11-U05-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "In a 4.00 L vessel at 400 K, 0.500 mol of N₂O₄(g) is introduced. At equilibrium, 79.3% of the N₂O₄ has decomposed according to N₂O₄(g) ⇌ 2NO₂(g). What is K_c at 400 K?",
+      "options": [
+        {
+          "id": "A",
+          "text": "0.0259 M"
+        },
+        {
+          "id": "B",
+          "text": "0.397 M"
+        },
+        {
+          "id": "C",
+          "text": "1.52 M"
+        },
+        {
+          "id": "D",
+          "text": "3.04 M"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Initial [N₂O₄] = 0.500 mol / 4.00 L = 0.125 M. Amount decomposed = 79.3% × 0.125 M = 0.0991 M. Equilibrium [N₂O₄] = 0.125 - 0.0991 = 0.0259 M. Equilibrium [NO₂] = 2 × 0.0991 M = 0.1982 M. K_c = [NO₂]² / [N₂O₄] = (0.1982)² / 0.0259 = 1.52 M.",
+      "sourceReference": "Section 5.2.5, Page 237"
+    },
+    {
+      "id": "CHE-G11-U05-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "In the industrial Contact process for manufacturing sulfuric acid, the sulfur dioxide oxidation step is: 2SO₂(g) + O₂(g) ⇌ 2SO₃(g) (ΔH = -197.8 kJ/mol). Which set of conditions maximizes both the equilibrium yield of SO₃(g) and economic efficiency?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Modest pressure (1–2 atm), moderate temperature (~450 °C), and V₂O₅ catalyst."
+        },
+        {
+          "id": "B",
+          "text": "Extremely high pressure (1000 atm), low temperature (25 °C), without a catalyst."
+        },
+        {
+          "id": "C",
+          "text": "Low pressure (0.1 atm), high temperature (1000 °C), and Pt catalyst."
+        },
+        {
+          "id": "D",
+          "text": "Vacuum pressure, low temperature (0 °C), and Fe catalyst."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The oxidation of SO₂ to SO₃ is exothermic with 3 moles of gas producing 2 moles. While high pressure increases yield, conversion exceeds 95% at 1–2 atm, making costly high-pressure equipment unnecessary. Operating at ~450 °C with a V₂O₅ catalyst optimizes reaction rate and yield.",
+      "sourceReference": "Section 5.2.7, Page 257"
+    }
+  ]
 }

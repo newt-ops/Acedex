@@ -1,6 +1,5 @@
 import { Router } from 'express';
 import {
-  GoogleAuthRequestSchema,
   RefreshTokenRequestSchema,
   PhoneRegisterRequestSchema,
   PhoneLoginRequestSchema,
@@ -34,13 +33,6 @@ router.post(
   requireAuth,
   validate({ body: ChangePinRequestSchema }),
   asyncHandler(AuthController.changePin)
-);
-
-// Staff & Admin Google OAuth
-router.post(
-  '/google',
-  validate({ body: GoogleAuthRequestSchema }),
-  asyncHandler(AuthController.google)
 );
 
 // Shared Session Management

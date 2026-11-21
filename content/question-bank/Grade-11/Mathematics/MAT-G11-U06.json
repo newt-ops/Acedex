@@ -3,5 +3,411 @@
   "subject": "Mathematics",
   "unitNumber": 6,
   "unitTitle": "Transformations of the Plane",
-  "questions": []
+  "questions": [
+    {
+      "id": "MAT-G11-U06-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which of the following geometric transformations is classified as a non-rigid motion in the plane?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A translation along a vector"
+        },
+        {
+          "id": "B",
+          "text": "A reflection across a line"
+        },
+        {
+          "id": "C",
+          "text": "An enlargement (dilation) with scale factor k = 2.5"
+        },
+        {
+          "id": "D",
+          "text": "A rotation about the origin through 90°"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "By Definition 6.1, a rigid motion (isometry) is a transformation that preserves the distance between any two points (carrying figures to congruent figures). Translations, reflections, and rotations preserve distance and are rigid motions. An enlargement (dilation) changes lengths by a scale factor, so it does not preserve distance and is a non-rigid motion.",
+      "sourceReference": "Section 6.1, Page 314"
+    },
+    {
+      "id": "MAT-G11-U06-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is the image of the point P(-4, 7) under the translation defined by the vector T = (3, -5)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(-1, 2)"
+        },
+        {
+          "id": "B",
+          "text": "(-7, 12)"
+        },
+        {
+          "id": "C",
+          "text": "(1, -2)"
+        },
+        {
+          "id": "D",
+          "text": "(-1, 12)"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Under a translation vector T = (a, b), the image of any point P(x, y) is given by P'(x + a, y + b). Here, (a, b) = (3, -5), so P' = (-4 + 3, 7 + (-5)) = (-1, 2).",
+      "sourceReference": "Section 6.2, Page 316-317"
+    },
+    {
+      "id": "MAT-G11-U06-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is the image of the point P(2, -3) when it is reflected across the line y = -x?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(-3, 2)"
+        },
+        {
+          "id": "B",
+          "text": "(2, 3)"
+        },
+        {
+          "id": "C",
+          "text": "(3, -2)"
+        },
+        {
+          "id": "D",
+          "text": "(-2, -3)"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "According to the coordinate rules for reflection, reflecting a point (x, y) across the line y = -x maps it to the point (-y, -x). For P(2, -3), x = 2 and y = -3, so its image is (-(-3), -(2)) = (3, -2).",
+      "sourceReference": "Section 6.3, Page 326"
+    },
+    {
+      "id": "MAT-G11-U06-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is the image of the point A(4, -5) under an anticlockwise (counter-clockwise) rotation of 90° about the origin?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(5, 4)"
+        },
+        {
+          "id": "B",
+          "text": "(-5, -4)"
+        },
+        {
+          "id": "C",
+          "text": "(-4, 5)"
+        },
+        {
+          "id": "D",
+          "text": "(-5, 4)"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "For an anticlockwise rotation of θ = 90° (π/2) about the origin, the mapping rule is (x, y) → (-y, x). Substituting x = 4 and y = -5 yields (-(-5), 4) = (5, 4).",
+      "sourceReference": "Section 6.4, Page 341, 343"
+    },
+    {
+      "id": "MAT-G11-U06-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which of the following points remains invariant (unchanged) when reflected across the line L: y = 2x - 3?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(1, 1)"
+        },
+        {
+          "id": "B",
+          "text": "(2, 1)"
+        },
+        {
+          "id": "C",
+          "text": "(3, 2)"
+        },
+        {
+          "id": "D",
+          "text": "(0, 3)"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "A point is invariant under a line reflection if and only if it lies directly on the axis of reflection. Testing (2, 1): 2(2) - 3 = 4 - 3 = 1, so (2, 1) lies on L and is invariant.",
+      "sourceReference": "Section 6.3 & Section 6.5, Page 323, 349-350"
+    },
+    {
+      "id": "MAT-G11-U06-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "If a translation T maps the origin (0, 0) to the point (0, 4), what is the equation of the image of the straight line 2x - y = 3 under this translation?",
+      "options": [
+        {
+          "id": "A",
+          "text": "2x - y = -1"
+        },
+        {
+          "id": "B",
+          "text": "2x - y = 1"
+        },
+        {
+          "id": "C",
+          "text": "2x + y = -1"
+        },
+        {
+          "id": "D",
+          "text": "2x - y = 7"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The translation vector is T = (0, 4). If (x', y') is on the image line, then x' = x + 0 => x = x', and y' = y + 4 => y = y' - 4. Substituting into the line equation 2x - y = 3 gives: 2x' - (y' - 4) = 3 => 2x' - y' + 4 = 3 => 2x' - y' = -1. Thus, the image line is 2x - y = -1.",
+      "sourceReference": "Section 6.2, Page 319-320"
+    },
+    {
+      "id": "MAT-G11-U06-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What is the equation of the image of the circle (x - 1)² + (y + 2)² = 4 when it is rotated through an angle of 3π/2 (270° counter-clockwise) about the origin?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(x + 2)² + (y - 1)² = 4"
+        },
+        {
+          "id": "B",
+          "text": "(x - 2)² + (y + 1)² = 4"
+        },
+        {
+          "id": "C",
+          "text": "(x + 1)² + (y + 2)² = 4"
+        },
+        {
+          "id": "D",
+          "text": "(x + 2)² + (y + 1)² = 4"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "The circle has center C(1, -2) and radius r = 2. Under a rotation of θ = 3π/2 (270° counter-clockwise) about the origin, any point (x, y) transforms according to the rule (x, y) → (y, -x). Applying this to the center C(1, -2): C' = (-2, -(1)) = (-2, -1). Since rotation is a rigid motion, the radius remains r = 2. Thus, the equation of the image circle is (x - (-2))² + (y - (-1))² = 2² => (x + 2)² + (y + 1)² = 4.",
+      "sourceReference": "Section 6.4, Page 343, 347-348"
+    },
+    {
+      "id": "MAT-G11-U06-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What is the image of the point P(-2, 4) when it is reflected across the vertical line x = 1?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(4, 4)"
+        },
+        {
+          "id": "B",
+          "text": "(-2, -4)"
+        },
+        {
+          "id": "C",
+          "text": "(3, 4)"
+        },
+        {
+          "id": "D",
+          "text": "(0, 4)"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The line x = 1 is parallel to the y-axis. The distance from P(-2, 4) to the line x = 1 is |1 - (-2)| = 3 units to the left. The image P'(x', y') must lie 3 units to the right of the line with the same y-coordinate: x' = 1 + 3 = 4, and y' = 4. Thus, P' = (4, 4).",
+      "sourceReference": "Section 6.3, Page 332"
+    },
+    {
+      "id": "MAT-G11-U06-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "A translation T carries the point A(3, -5) to A'(1, 4). What is the equation of the image of the circle x² + y² = 4 under this translation?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(x + 2)² + (y - 9)² = 4"
+        },
+        {
+          "id": "B",
+          "text": "(x - 2)² + (y + 9)² = 4"
+        },
+        {
+          "id": "C",
+          "text": "(x + 2)² + (y + 9)² = 4"
+        },
+        {
+          "id": "D",
+          "text": "(x - 2)² + (y - 9)² = 4"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The translation vector is T = A' - A = (1 - 3, 4 - (-5)) = (-2, 9). The circle x² + y² = 4 has its center at the origin (0, 0) and radius r = 2. Translating the center gives C' = (0 + (-2), 0 + 9) = (-2, 9). Because translation preserves size, the radius remains r = 2. Therefore, the equation of the image circle is (x - (-2))² + (y - 9)² = 4 => (x + 2)² + (y - 9)² = 4.",
+      "sourceReference": "Section 6.2, Page 321 & Review Exercise, Page 354"
+    },
+    {
+      "id": "MAT-G11-U06-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What is the image of the point A(2, 0) when it is rotated through an angle of 30° counter-clockwise about the origin?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(1, √3)"
+        },
+        {
+          "id": "B",
+          "text": "(√3, 1)"
+        },
+        {
+          "id": "C",
+          "text": "(√2, √2)"
+        },
+        {
+          "id": "D",
+          "text": "(√3, -1)"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Using Theorem 6.1: x' = x cos θ - y sin θ and y' = x sin θ + y cos θ. For (x, y) = (2, 0) and θ = 30°: x' = 2 cos(30°) - 0 = 2(√3/2) = √3; y' = 2 sin(30°) + 0 = 2(1/2) = 1. Thus, the image is (√3, 1).",
+      "sourceReference": "Section 6.4, Page 338-339"
+    },
+    {
+      "id": "MAT-G11-U06-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What is the equation of the axis of reflection L if the image of the point A(-3, 1) under reflection in L is A'(0, 2)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "3x + y + 3 = 0"
+        },
+        {
+          "id": "B",
+          "text": "x - 3y + 6 = 0"
+        },
+        {
+          "id": "C",
+          "text": "3x - y + 6 = 0"
+        },
+        {
+          "id": "D",
+          "text": "6x + 2y + 6 = 0"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "By Definition 6.3, the line of reflection L is the perpendicular bisector of the segment AA'. First, find the midpoint M of AA': M = ((-3 + 0)/2, (1 + 2)/2) = (-3/2, 3/2). Second, find the slope of AA': m_AA' = (2 - 1) / (0 - (-3)) = 1/3. The perpendicular bisector has slope m_L = -1 / (1/3) = -3. Using point-slope form with M(-3/2, 3/2): y - 3/2 = -3(x - (-3/2)) => y - 3/2 = -3x - 9/2 => 3x + y + 6/2 = 0 => 3x + y + 3 = 0.",
+      "sourceReference": "Section 6.3, Page 323, 330 & Review Exercise, Page 354"
+    },
+    {
+      "id": "MAT-G11-U06-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "What is the image of the point A(4, 0) when it is reflected across the line L: y = 2x + 1?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(-16/5, 18/5)"
+        },
+        {
+          "id": "B",
+          "text": "(-14/5, 16/5)"
+        },
+        {
+          "id": "C",
+          "text": "(-16/5, 14/5)"
+        },
+        {
+          "id": "D",
+          "text": "(-18/5, 16/5)"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Follow the four-step reflection procedure: (1) The slope of L is m = 2, so the line perpendicular to L through A(4, 0) has slope -1/2: y - 0 = (-1/2)(x - 4) => y = -x/2 + 2. (2) Find the intersection point B of both lines: 2x + 1 = -x/2 + 2 => 5x/2 = 1 => x = 2/5; then y = 2(2/5) + 1 = 9/5. Thus, midpoint B = (2/5, 9/5). (3) Use B as the midpoint of AA': (4 + x') / 2 = 2/5 => 4 + x' = 4/5 => x' = -16/5; and (0 + y') / 2 = 9/5 => y' = 18/5. Thus, the image point is A'(-16/5, 18/5).",
+      "sourceReference": "Section 6.3, Page 331-332"
+    },
+    {
+      "id": "MAT-G11-U06-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "What is the image of the point A(3, 4) when it is rotated through an angle of θ = π (180°) about the arbitrary point (6, 5)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(9, 6)"
+        },
+        {
+          "id": "B",
+          "text": "(6, 9)"
+        },
+        {
+          "id": "C",
+          "text": "(3, 6)"
+        },
+        {
+          "id": "D",
+          "text": "(12, 10)"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "By Corollary 6.1, rotation of (x, y) through angle θ about center (a, b) is given by: x' = a + (x - a) cos θ - (y - b) sin θ and y' = b + (x - a) sin θ + (y - b) cos θ. Here (x, y) = (3, 4), (a, b) = (6, 5), and θ = π (where cos π = -1, sin π = 0). Thus: x' = 6 + (3 - 6)(-1) - (4 - 5)(0) = 6 + 3 = 9; y' = 5 + (3 - 6)(0) + (4 - 5)(-1) = 5 + 1 = 6. Therefore, the image is (9, 6).",
+      "sourceReference": "Section 6.4, Page 345-346"
+    },
+    {
+      "id": "MAT-G11-U06-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A triangle ABC has vertices A(2, 3), B(5, 7), and C(5, 3). If triangle ABC is first reflected over the x-axis and then rotated through 180° about the origin, what are the coordinates of the resulting vertices A', B', and C'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A'(-2, 3), B'(-5, 7), C'(-5, 3)"
+        },
+        {
+          "id": "B",
+          "text": "A'(2, -3), B'(5, -7), C'(5, -3)"
+        },
+        {
+          "id": "C",
+          "text": "A'(-2, -3), B'(-5, -7), C'(-5, -3)"
+        },
+        {
+          "id": "D",
+          "text": "A'(3, 2), B'(7, 5), C'(3, 5)"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Step 1 (Reflection over x-axis): (x, y) → (x, -y). Under this transformation: A(2, 3) → (2, -3); B(5, 7) → (5, -7); C(5, 3) → (5, -3). Step 2 (Rotation of 180° about the origin): (x, y) → (-x, -y). Applying this to the intermediate points: (2, -3) → (-2, -(-3)) = (-2, 3); (5, -7) → (-5, -(-7)) = (-5, 7); (5, -3) → (-5, -(-3)) = (-5, 3). In general, reflecting across the x-axis followed by a 180° rotation is equivalent to reflecting across the y-axis ((x, y) → (-x, y)). Thus, the vertices are A'(-2, 3), B'(-5, 7), and C'(-5, 3).",
+      "sourceReference": "Section 6.3 & Section 6.5, Problem Solving 3, Page 326, 343, 351"
+    },
+    {
+      "id": "MAT-G11-U06-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "What is the equation of the image of the straight line s: -3x + y = 2 after it is reflected across the line L: y = x + 4?",
+      "options": [
+        {
+          "id": "A",
+          "text": "x - 3y + 14 = 0"
+        },
+        {
+          "id": "B",
+          "text": "3x + y - 14 = 0"
+        },
+        {
+          "id": "C",
+          "text": "x + 3y - 14 = 0"
+        },
+        {
+          "id": "D",
+          "text": "3x - y + 10 = 0"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Follow the procedure for line reflection: (1) Find the intersection point C of s: y = 3x + 2 and L: y = x + 4. Equating: 3x + 2 = x + 4 => 2x = 2 => x = 1, y = 5. So C(1, 5) lies on both lines and must lie on the image line s'. (2) Pick another point on s, e.g., A(0, 2). Reflect A across L: y = x + 4: the line perpendicular to L through A has slope -1, giving y - 2 = -(x - 0) => y = -x + 2. Intersection with L: x + 4 = -x + 2 => 2x = -2 => x = -1, y = 3. So midpoint M = (-1, 3). Then A'(x', y') has (0 + x') / 2 = -1 => x' = -2, and (2 + y') / 2 = 3 => y' = 4. Thus A' = (-2, 4). (3) The image line s' passes through C(1, 5) and A'(-2, 4): slope = (5 - 4) / (1 - (-2)) = 1/3. The equation is y - 4 = (1/3)(x + 2) => 3y - 12 = x + 2 => x - 3y + 14 = 0.",
+      "sourceReference": "Section 6.3, Page 333-334"
+    }
+  ]
 }

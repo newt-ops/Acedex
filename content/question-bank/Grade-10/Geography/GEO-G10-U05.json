@@ -3,5 +3,411 @@
   "subject": "Geography",
   "unitNumber": 5,
   "unitTitle": "Major Economic and Cultural Activities of Africa",
-  "questions": []
+  "questions": [
+    {
+      "id": "GEO-G10-U05-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which economic sector accounts for the largest share of employment in developing countries (DVCs) across Africa, primarily involving direct extraction of raw materials from the natural environment?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Secondary sector"
+        },
+        {
+          "id": "B",
+          "text": "Primary sector"
+        },
+        {
+          "id": "C",
+          "text": "Tertiary sector"
+        },
+        {
+          "id": "D",
+          "text": "Quaternary sector"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In developing countries, the workforce is predominantly engaged in the primary economic sector (agriculture, forestry, fishing, and mining), which involves extracting basic raw materials directly from nature.",
+      "sourceReference": "Grade 10 Geography Textbook, Section 5.1 & 5.2, Page 121–124"
+    },
+    {
+      "id": "GEO-G10-U05-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In labor market statistics, how is the unemployment rate of a nation mathematically calculated?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(Total Population ÷ Number of Unemployed People) × 100"
+        },
+        {
+          "id": "B",
+          "text": "(Number of Unemployed People ÷ Total Number of People in Workforce) × 100"
+        },
+        {
+          "id": "C",
+          "text": "(Total Number of Employed ÷ Total Annual GDP) × 100"
+        },
+        {
+          "id": "D",
+          "text": "(Number of Retired People ÷ Number of Working-Age Adults) × 100"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The unemployment rate is calculated as the ratio of employable individuals actively seeking work but unable to find a job divided by the total labor force (workforce), multiplied by 100.",
+      "sourceReference": "Grade 10 Geography Textbook, Section 5.3, Page 130"
+    },
+    {
+      "id": "GEO-G10-U05-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is Agenda 2063, as adopted by the African Union (AU)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A temporary emergency food aid agreement signed between European and Asian nations."
+        },
+        {
+          "id": "B",
+          "text": "Africa's 50-year strategic master plan and blueprint for transforming the continent into a global powerhouse of inclusive growth and sustainable development."
+        },
+        {
+          "id": "C",
+          "text": "A military defense pact establishing a single standing army across North Africa."
+        },
+        {
+          "id": "D",
+          "text": "An environmental treaty aimed exclusively at closing copper mines in Southern Africa."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Agenda 2063 is the African Union's strategic framework and master plan aimed at achieving socio-economic transformation, Pan-African unity, self-reliance, and sustainable development over a 50-year period (2013–2063).",
+      "sourceReference": "Grade 10 Geography Textbook, Section 5.4, Page 132"
+    },
+    {
+      "id": "GEO-G10-U05-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Approximately what proportion of the world's estimated 6,000 living languages are spoken on the African continent, making Africa the world's most linguistically diverse continent?",
+      "options": [
+        {
+          "id": "A",
+          "text": "One-tenth (~600 languages)"
+        },
+        {
+          "id": "B",
+          "text": "One-third (~2,000 languages)"
+        },
+        {
+          "id": "C",
+          "text": "One-half (~3,000 languages)"
+        },
+        {
+          "id": "D",
+          "text": "Three-fourths (~4,500 languages)"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Africa is home to roughly one-third of the world's total languages (over 2,000 living languages) despite having less than one-seventh of the global population, demonstrating extraordinary linguistic diversity.",
+      "sourceReference": "Grade 10 Geography Textbook, Section 5.6.1, Page 139"
+    },
+    {
+      "id": "GEO-G10-U05-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which historic international document established the classic definition of sustainable development as 'development that meets the needs of the present without compromising the ability of future generations to meet their own needs'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The Kyoto Protocol (1997)"
+        },
+        {
+          "id": "B",
+          "text": "The Brundtland Commission Report ('Our Common Future', 1987)"
+        },
+        {
+          "id": "C",
+          "text": "The Lagos Plan of Action (1980)"
+        },
+        {
+          "id": "D",
+          "text": "The Paris Agreement (2015)"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The 1987 Brundtland Commission Report (Our Common Future) defined sustainable development as development that satisfies current human needs while safeguarding ecological assets for future generations.",
+      "sourceReference": "Grade 10 Geography Textbook, Section 5.3, Page 131"
+    },
+    {
+      "id": "GEO-G10-U05-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Why does an economy heavily reliant on the primary sector (such as raw agricultural and mineral exports) face severe economic vulnerability in the global market?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Primary raw materials automatically command higher price stability than manufactured consumer goods."
+        },
+        {
+          "id": "B",
+          "text": "Primary commodity prices fluctuate widely in international markets, and raw exports lack value addition, resulting in unstable national export revenues."
+        },
+        {
+          "id": "C",
+          "text": "Primary production requires zero natural resource consumption."
+        },
+        {
+          "id": "D",
+          "text": "Primary sector exports are exempt from international tariff barriers."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Countries dependent on primary commodity exports face price volatility, declining terms of trade, and low earnings because raw materials lack industrial processing and value addition compared to manufactured finished goods.",
+      "sourceReference": "Grade 10 Geography Textbook, Section 5.2.1, Page 125–128"
+    },
+    {
+      "id": "GEO-G10-U05-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How is involuntary unemployment distinguished from voluntary unemployment?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Involuntary unemployment occurs when qualified individuals are willing and able to work at going wages but cannot find jobs due to economic failure, whereas voluntary unemployment occurs when individuals choose not to work at prevailing wage rates."
+        },
+        {
+          "id": "B",
+          "text": "Involuntary unemployment applies only to agricultural farm hand workers during harvest season."
+        },
+        {
+          "id": "C",
+          "text": "Involuntary unemployment occurs when retirees reach 80 years old."
+        },
+        {
+          "id": "D",
+          "text": "Involuntary unemployment is caused by mandatory government military draft."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Involuntary unemployment occurs when employable workers (such as university graduates) actively search for work at existing wages but cannot secure employment because the economy fails to generate sufficient jobs.",
+      "sourceReference": "Grade 10 Geography Textbook, Section 5.3, Page 130"
+    },
+    {
+      "id": "GEO-G10-U05-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Established by the United Nations General Assembly in 2015 as part of Agenda 2030, what was the primary purpose of the 17 Sustainable Development Goals (SDGs)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To replace all national constitutions with a single global legislative code."
+        },
+        {
+          "id": "B",
+          "text": "To serve as a universal development framework succeeding the Millennium Development Goals (MDGs) to eradicate poverty, reduce inequality, and protect the planet by 2030."
+        },
+        {
+          "id": "C",
+          "text": "To limit international trade exclusively to agricultural food crops."
+        },
+        {
+          "id": "D",
+          "text": "To nationalize all private commercial banks across developing countries."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The SDGs were adopted in 2015 under Agenda 2030 to build upon the post-2015 development agenda, succeeding the MDGs with 17 interconnected global goals addressing social equity, economic growth, and environmental sustainability.",
+      "sourceReference": "Grade 10 Geography Textbook, Section 5.5, Page 135"
+    },
+    {
+      "id": "GEO-G10-U05-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which key feature distinguishes the African Union's Agenda 2063 from the United Nations Sustainable Development Goals (SDGs / Agenda 2030)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Agenda 2063 focuses exclusively on polar environmental research, while SDGs focus on African agriculture."
+        },
+        {
+          "id": "B",
+          "text": "Agenda 2063 is a 50-year Pan-African vision specifically tailored to Africa's structural transformation and continental integration, whereas SDGs represent a global 15-year framework (2015–2030) for all UN member states."
+        },
+        {
+          "id": "C",
+          "text": "Agenda 2063 rejects environmental sustainability, whereas SDGs reject economic development."
+        },
+        {
+          "id": "D",
+          "text": "Agenda 2063 applies only to European donor nations."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "While both frameworks share common goals (poverty reduction, gender equality, clean energy), Agenda 2063 is a long-term (50-year) continental master plan driven by Pan-African priorities, whereas the SDGs are a global 15-year agenda for all nations.",
+      "sourceReference": "Grade 10 Geography Textbook, Section 5.4 & 5.5, Page 132–137"
+    },
+    {
+      "id": "GEO-G10-U05-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Economic activities involving high-level intellectual skills, scientific research, executive decision-making, and specialized legal or financial consultancy belong to which specialized sub-division of the service sector?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Primary sector"
+        },
+        {
+          "id": "B",
+          "text": "Secondary manufacturing sector"
+        },
+        {
+          "id": "C",
+          "text": "Quinary economic activities"
+        },
+        {
+          "id": "D",
+          "text": "Subsistence agrarian sector"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Quinary economic activities represent a specialized sub-category of the tertiary/quaternary sectors, encompassing top-level decision-makers, government officials, research scientists, and high-level corporate consultants.",
+      "sourceReference": "Grade 10 Geography Textbook, Section 5.1 & 5.2, Page 121–123 & 129"
+    },
+    {
+      "id": "GEO-G10-U05-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which of the following factors represents a major structural barrier preventing African countries from transforming raw primary exports into high-value manufactured products?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Complete absence of mineral resources across the continent."
+        },
+        {
+          "id": "B",
+          "text": "Limitations in science and technological capabilities, inadequate industrial infrastructure, and overdependence on raw commodity exports."
+        },
+        {
+          "id": "C",
+          "text": "Excessive domestic consumption of heavy industrial machinery."
+        },
+        {
+          "id": "D",
+          "text": "Universal implementation of green technology across all rural villages."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "African economic growth is constrained by technological limitations, poor industrial infrastructure, lack of processing capacity, and historical reliance on exporting unprocessed raw materials.",
+      "sourceReference": "Grade 10 Geography Textbook, Section 5.2.2, Page 127–128"
+    },
+    {
+      "id": "GEO-G10-U05-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "In development economics, how does the self-reinforcing mechanism known as the 'Poverty Trap' trap low-income developing nations in persistent economic stagnation?",
+      "options": [
+        {
+          "id": "A",
+          "text": "High national income creates excessive savings, which depresses domestic agricultural prices."
+        },
+        {
+          "id": "B",
+          "text": "Low national income leads to low savings, which results in low capital investment; low investment depresses productivity and human capital formation, keeping national income low."
+        },
+        {
+          "id": "C",
+          "text": "Excessive industrial automation reduces birth rates below replacement levels."
+        },
+        {
+          "id": "D",
+          "text": "High foreign investment eliminates all domestic tax revenues."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The Poverty Trap is a cyclical feedback loop: Low Income → Low Savings → Low Investment → Low Productivity/Human Capital → Low Economic Growth → Low Income, preventing self-sustained economic growth without structural intervention.",
+      "sourceReference": "Grade 10 Geography Textbook, Section 5.2.2 & 5.3, Page 128–129 (Figure 5.2)"
+    },
+    {
+      "id": "GEO-G10-U05-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Suppose Country Z has a total formal labor force (workforce) of 15,000,000 people. If 12,300,000 people are currently employed, while 2,700,000 employable people are jobless and actively seeking work, what is the exact unemployment rate of Country Z?",
+      "options": [
+        {
+          "id": "A",
+          "text": "12.0%"
+        },
+        {
+          "id": "B",
+          "text": "18.0%"
+        },
+        {
+          "id": "C",
+          "text": "22.0%"
+        },
+        {
+          "id": "D",
+          "text": "82.0%"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Unemployment Rate = (Number of Unemployed ÷ Total Labor Force) × 100 = (2,700,000 ÷ 15,000,000) × 100 = 0.18 × 100 = 18.0%.",
+      "sourceReference": "Grade 10 Geography Textbook, Section 5.3, Page 130"
+    },
+    {
+      "id": "GEO-G10-U05-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Why is the continued export of unprocessed raw materials (such as raw cocoa, unrefined minerals, or crude petroleum) alongside the import of light manufactured consumer goods described as a structural defect in African international trade?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because raw materials automatically gain value when shipped across international oceans."
+        },
+        {
+          "id": "B",
+          "text": "Because African nations export low-value raw commodities while importing high-value finished goods, transferring potential manufacturing jobs and profit margins abroad while suffering chronic trade deficits."
+        },
+        {
+          "id": "C",
+          "text": "Because foreign consumer goods are cheaper than domestic agricultural seeds."
+        },
+        {
+          "id": "D",
+          "text": "Because raw exports eliminate domestic transportation costs completely."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Exporting raw materials without processing captures only a fraction of the final product's value. Buying back expensive finished goods manufactured from those same raw materials results in negative trade balances and stifles domestic industrialization.",
+      "sourceReference": "Grade 10 Geography Textbook, Section 5.2.2, Page 127–128"
+    },
+    {
+      "id": "GEO-G10-U05-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Under Sustainable Development Goal 11 (Sustainable Cities and Communities), which policy measures are critical for managing the rapid expansion of urban informal settlements (slums) in major African cities?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Demolishing all public transport systems to reduce rural-to-urban migration."
+        },
+        {
+          "id": "B",
+          "text": "Investing in affordable housing, upgrading basic sanitation/water infrastructure, expanding public transportation, and implementing inclusive, participatory urban planning."
+        },
+        {
+          "id": "C",
+          "text": "Banning private business investments in municipal real estate."
+        },
+        {
+          "id": "D",
+          "text": "Converting urban green parks into industrial coal storage dumps."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "SDG 11 focuses on making cities inclusive, safe, resilient, and sustainable. Achieving this requires upgrading informal settlements with clean water, safe housing, sanitation, reliable public transport, and participatory urban governance.",
+      "sourceReference": "Grade 10 Geography Textbook, Section 5.5, Page 137"
+    }
+  ]
 }

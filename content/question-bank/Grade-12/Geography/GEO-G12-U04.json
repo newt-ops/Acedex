@@ -3,5 +3,411 @@
   "subject": "Geography",
   "unitNumber": 4,
   "unitTitle": "Population and Socio-Economic Development",
-  "questions": []
+  "questions": [
+    {
+      "id": "GEO-G12-U04-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which type of population policy is explicitly designed and implemented by a government to reduce fertility rates and slow down rapid population growth?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Pro-natalist policy"
+        },
+        {
+          "id": "B",
+          "text": "Anti-natalist policy"
+        },
+        {
+          "id": "C",
+          "text": "Laissez-faire policy"
+        },
+        {
+          "id": "D",
+          "text": "Expansionist policy"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "An anti-natalist policy consists of governmental measures aimed at decreasing birth rates and limiting population growth, typically implemented through family planning programs, contraceptive distribution, female education, and socioeconomic incentives.",
+      "sourceReference": "Grade 12 Geography Textbook, Section 4.2.2, Page 100"
+    },
+    {
+      "id": "GEO-G12-U04-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "According to the classic population theory advanced by Thomas Malthus, what is the fundamental imbalance between population growth and food supply?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Population increases arithmetically, while food production increases geometrically."
+        },
+        {
+          "id": "B",
+          "text": "Population increases geometrically (exponentially), while food production increases arithmetically."
+        },
+        {
+          "id": "C",
+          "text": "Both population and food production grow at equal logarithmic rates."
+        },
+        {
+          "id": "D",
+          "text": "Population remains stationary, while food production declines exponentially."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Thomas Malthus postulated that human population tends to increase at a geometric rate (1, 2, 4, 8, 16...), whereas food production can only expand at an arithmetic rate (1, 2, 3, 4, 5...), leading inevitably to food shortages and demographic crisis.",
+      "sourceReference": "Grade 12 Geography Textbook, Section 4.1, Page 92–93"
+    },
+    {
+      "id": "GEO-G12-U04-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which of the following indicators measures the total market value of all final goods and services produced within a country's geographic borders during a specified year?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Gross National Income (GNI)"
+        },
+        {
+          "id": "B",
+          "text": "Gross Domestic Product (GDP)"
+        },
+        {
+          "id": "C",
+          "text": "Human Development Index (HDI)"
+        },
+        {
+          "id": "D",
+          "text": "Net Migration Rate (NMR)"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Gross Domestic Product (GDP) represents the total monetary value of all finished goods and services produced within a nation's territorial boundaries in a given year, regardless of the producer's citizenship.",
+      "sourceReference": "Grade 12 Geography Textbook, Section 4.4, Page 109"
+    },
+    {
+      "id": "GEO-G12-U04-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In environmental health studies, which model focuses primarily on treating diseases that have already occurred within an individual or population?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Public Health Model"
+        },
+        {
+          "id": "B",
+          "text": "Clinical Model"
+        },
+        {
+          "id": "C",
+          "text": "Environmental Stewardship Model"
+        },
+        {
+          "id": "D",
+          "text": "Preventive Sanitation Model"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The Clinical Model focuses on curative medical interventions—treating diseases and injuries after they have already manifested in the population—which is often expensive and reactive compared to preventive models.",
+      "sourceReference": "Grade 12 Geography Textbook, Section 4.5, Page 116"
+    },
+    {
+      "id": "GEO-G12-U04-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is a primary objective of pro-natalist population policies introduced by governments in certain More Developed Countries (MDCs)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To restrict access to reproductive healthcare and family planning."
+        },
+        {
+          "id": "B",
+          "text": "To raise national fertility rates and mitigate the economic risks of population aging and labor shortages."
+        },
+        {
+          "id": "C",
+          "text": "To force rural agricultural populations to migrate to capital cities."
+        },
+        {
+          "id": "D",
+          "text": "To eliminate social security pensions for retired citizens."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Pro-natalist policies are adopted by governments experiencing low fertility rates and rapid population aging to encourage larger family sizes, raise birth rates, and secure a sustainable future working-age workforce.",
+      "sourceReference": "Grade 12 Geography Textbook, Section 4.2.1, Page 100"
+    },
+    {
+      "id": "GEO-G12-U04-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How do Radical (Marxist) population theories fundamentally differ from Conservative (Malthusian and Neo-Malthusian) perspectives regarding widespread poverty in developing nations?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Radical theories attribute poverty to rapid birth rates, whereas Conservative theories attribute poverty to industrial automation."
+        },
+        {
+          "id": "B",
+          "text": "Radical theories assert that poverty results from unequal resource distribution, social injustice, and exploitative economic structures, whereas Conservative theories blame poverty primarily on excessive population growth exceeding resource limits."
+        },
+        {
+          "id": "C",
+          "text": "Radical theories advocate mandatory pro-natalist tax incentives, whereas Conservative theories advocate complete industrial deregulation."
+        },
+        {
+          "id": "D",
+          "text": "Radical theories claim population growth has zero relationship to food production."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Radical/Marxist theorists argue that poverty, hunger, and environmental degradation are caused by social inequality, maldistribution of land and capital, and exploitative socioeconomic structures, rather than overpopulation per se. In contrast, Malthusians argue that uncontrolled population growth is the primary driver of poverty.",
+      "sourceReference": "Grade 12 Geography Textbook, Section 4.1, Page 94–95"
+    },
+    {
+      "id": "GEO-G12-U04-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "According to Todaro and Smith (2009), as cited in the textbook, which three core objectives must be fulfilled for true socio-economic development to occur in a society?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Maximizing fossil fuel consumption, doubling industrial exports, and expanding military spending."
+        },
+        {
+          "id": "B",
+          "text": "Increasing basic life-sustaining goods (food, shelter, health), raising living standards and self-esteem, and expanding the range of economic and social choices."
+        },
+        {
+          "id": "C",
+          "text": "Enforcing universal urban migration, nationalizing private land, and eliminating foreign trade."
+        },
+        {
+          "id": "D",
+          "text": "Increasing total population size, lowering tax rates, and legalizing unregulated resource extraction."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Development involves a multidimensional reorganization of the social system. Its three essential objectives are: (1) expanding basic life-sustaining goods (food, shelter, health), (2) raising living standards (income, education, self-esteem), and (3) expanding human freedoms and choices.",
+      "sourceReference": "Grade 12 Geography Textbook, Section 4.4, Page 107–108"
+    },
+    {
+      "id": "GEO-G12-U04-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What major ethnocentric bias is frequently raised by critics against Malthusian and Neo-Malthusian population theories?",
+      "options": [
+        {
+          "id": "A",
+          "text": "They evaluate the reproductive behavior of developing nations using criteria specific to Western European historical development while blaming population growth rather than economic policy for structural obstacles."
+        },
+        {
+          "id": "B",
+          "text": "They assume all developing nations have lower mortality rates than European nations."
+        },
+        {
+          "id": "C",
+          "text": "They advocate total reliance on traditional indigenous medicine over modern healthcare."
+        },
+        {
+          "id": "D",
+          "text": "They apply exclusively to landlocked countries in Eastern Europe."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "A major criticism of Neo-Malthusian theory is its ethnocentric bias: it evaluates reproductive patterns in developing countries through Western norms, labeling high birth rates in developing states as the primary cause of underdevelopment while treating economic downturns in wealthy nations as purely structural issues.",
+      "sourceReference": "Grade 12 Geography Textbook, Section 4.1, Page 95"
+    },
+    {
+      "id": "GEO-G12-U04-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How does the Environmental Stewardship Model differ from the Public Health Model in managing environmental health risks?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The Environmental Stewardship Model focuses on treating clinical symptoms in hospitals, whereas the Public Health Model focuses on vector eradication."
+        },
+        {
+          "id": "B",
+          "text": "The Environmental Stewardship Model seeks to proactively prevent environmental degradation and protect ecosystem health at the source, whereas the Public Health Model focuses on controlling disease-causing agents that have already infested the environment."
+        },
+        {
+          "id": "C",
+          "text": "The Environmental Stewardship Model applies only to urban industrial zones, whereas the Public Health Model applies only to rural wilderness."
+        },
+        {
+          "id": "D",
+          "text": "The Environmental Stewardship Model relies exclusively on synthetic chemical pesticides."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "While the Public Health Model acts to control existing environmental disease agents (such as water purification or pest control after contamination occurs), the Environmental Stewardship Model addresses the root human drivers of ecological disturbance, maintaining ecosystem integrity to prevent health hazards before they emerge.",
+      "sourceReference": "Grade 12 Geography Textbook, Section 4.5, Page 116–117"
+    },
+    {
+      "id": "GEO-G12-U04-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which non-coercive population policy intervention has proven most effective across developing nations in naturally reducing total fertility rates while fostering long-term socio-economic development?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Imposing heavy tax penalties on families with female children."
+        },
+        {
+          "id": "B",
+          "text": "Expanding female education, improving women's socio-economic status, and broadening access to voluntary reproductive healthcare."
+        },
+        {
+          "id": "C",
+          "text": "Restricting family planning information to urban elite groups."
+        },
+        {
+          "id": "D",
+          "text": "Banning female participation in formal labor markets."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Empirical evidence demonstrates that promoting female education, empowering women economically, delaying age at marriage, and offering accessible voluntary family planning are the most effective, sustainable means to reduce fertility rates and advance broader development goals.",
+      "sourceReference": "Grade 12 Geography Textbook, Section 4.2.2 & 4.3, Page 101–103"
+    },
+    {
+      "id": "GEO-G12-U04-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "According to global environmental health research cited in the textbook, what primary drivers account for the accelerating emergence of novel zoonotic infectious diseases (such as COVID-19, Ebola, MERS, and SARS)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Sub-zero polar atmospheric cooling and excessive ocean desalinization."
+        },
+        {
+          "id": "B",
+          "text": "Exponential human population growth, intensive livestock production, forest fragmentation, and severe loss of natural ecosystem resilience."
+        },
+        {
+          "id": "C",
+          "text": "Universal adoption of organic farming and agroforestry."
+        },
+        {
+          "id": "D",
+          "text": "Decreasing international trade and reduction of global travel networks."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The rapid emergence of zoonotic pathogens (diseases leaping from animals to humans) is driven by rapid human population growth, expanding agricultural encroachment into natural habitats, biodiversity destruction, and intensive animal husbandry that disturb natural ecological balances.",
+      "sourceReference": "Grade 12 Geography Textbook, Section 4.5, Page 117–118"
+    },
+    {
+      "id": "GEO-G12-U04-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Suppose Country A has a population of 50,000,000 and a total annual GDP of $50 Billion USD. If its population grows at an annual rate of 3.0% while its total real GDP grows at 2.0% per year, what will be the immediate trend in Country A's GDP per capita, and what demographic phenomenon does this illustrate?",
+      "options": [
+        {
+          "id": "A",
+          "text": "GDP per capita will rise by 1.0%; illustrating a successful demographic dividend."
+        },
+        {
+          "id": "B",
+          "text": "GDP per capita will decline, illustrating how population growth outstripping economic expansion depresses living standards and creates a poverty trap."
+        },
+        {
+          "id": "C",
+          "text": "GDP per capita will remain exactly constant at $1,000 USD."
+        },
+        {
+          "id": "D",
+          "text": "GDP per capita will double within 10 years due to labor expansion."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "GDP per capita = Total GDP / Total Population. When the population growth rate (3.0%) exceeds real GDP growth rate (2.0%), per capita income decreases annually, demonstrating how high demographic growth can undermine economic gains, depress living standards, and reinforce poverty traps.",
+      "sourceReference": "Grade 12 Geography Textbook, Section 4.4, Page 109–114"
+    },
+    {
+      "id": "GEO-G12-U04-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "In assessing population-environment dynamics, how does Esther Boserup's Anti-Malthusian model counter the pessimistic assumptions of Neo-Malthusian 'Limits to Growth' models regarding agricultural carrying capacity?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Boserup asserted that population growth leads to mandatory state control of farmlands."
+        },
+        {
+          "id": "B",
+          "text": "Boserup demonstrated that rising population density acts as an indispensable catalyst for technological innovation, land intensification, and adoption of efficient farming practices, expanding carrying capacity rather than collapsing it."
+        },
+        {
+          "id": "C",
+          "text": "Boserup argued that agricultural output is independent of human labor inputs."
+        },
+        {
+          "id": "D",
+          "text": "Boserup proved that soil erosion can be eliminated by increasing livestock herd sizes."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Boserup's model asserts that population growth drives agricultural change ('necessity is the mother of invention'). As population pressure increases on land, farmers are compelled to adopt new technologies, intensify land use, shorten fallow periods, and improve inputs, thereby raising agricultural productivity and pushing carrying capacity upward.",
+      "sourceReference": "Grade 12 Geography Textbook, Section 4.1, Page 93–94"
+    },
+    {
+      "id": "GEO-G12-U04-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Why is the concept of 'Environmental Justice' (and its counterpart 'Environmental Racism') central to contemporary discussions on population and environmental health?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because it mandates that all developing nations pay equal carbon taxes to international organizations."
+        },
+        {
+          "id": "B",
+          "text": "Because low-income, marginalized, and racial minority communities disproportionately bear the burden of environmental hazards (toxic waste dumps, industrial pollution, unsafe housing) while possessing fewer resources to adapt or seek legal redress."
+        },
+        {
+          "id": "C",
+          "text": "Because high-income communities generate zero solid or liquid waste."
+        },
+        {
+          "id": "D",
+          "text": "Because environmental laws apply exclusively to rural agricultural zones."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Environmental justice addresses the inequitable distribution of environmental harms and benefits. Marginalized, low-income, and minority populations frequently reside in areas exposed to high pollution, industrial contamination, and inadequate municipal services, leading to unequal health risks and outcomes.",
+      "sourceReference": "Grade 12 Geography Textbook, Section 4.5, Page 115–117"
+    },
+    {
+      "id": "GEO-G12-U04-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "In Sub-Saharan Africa, how can a country successfully harness a 'demographic dividend' generated by a falling crude birth rate, and what policy risk occurs if youth employment opportunities are not created simultaneously?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The dividend is captured automatically without public policy investments; no risk exists."
+        },
+        {
+          "id": "B",
+          "text": "The dividend is realized by investing heavily in youth education and healthcare while fostering job creation; failure to absorb the expanding working-age population results in severe youth unemployment, social instability, and economic stagnation."
+        },
+        {
+          "id": "C",
+          "text": "The dividend requires expanding primary sector raw commodity exports exclusively."
+        },
+        {
+          "id": "D",
+          "text": "The dividend occurs only when the proportion of elderly retirees exceeds 50% of the total population."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "A demographic dividend occurs when a decline in birth rates shifts the population age structure so that there are more working-age adults relative to young dependents. To reap this dividend, nations must invest in education and health while expanding economic opportunities. If jobs are lacking, the surge of unemployed youth can lead to social unrest and economic distress.",
+      "sourceReference": "Grade 12 Geography Textbook, Section 4.1.1 & 4.4, Page 103–104 & 114–115"
+    }
+  ]
 }

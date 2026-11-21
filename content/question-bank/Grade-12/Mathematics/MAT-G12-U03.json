@@ -3,5 +3,411 @@
   "subject": "Mathematics",
   "unitNumber": 3,
   "unitTitle": "Statistics",
-  "questions": []
+  "questions": [
+    {
+      "id": "MAT-G12-U03-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which of the following statistical measures is a relative (dimensionless and unit-free) measure of dispersion?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Standard deviation"
+        },
+        {
+          "id": "B",
+          "text": "Interquartile range"
+        },
+        {
+          "id": "C",
+          "text": "Coefficient of variation"
+        },
+        {
+          "id": "D",
+          "text": "Variance"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Absolute measures of dispersion (such as range, interquartile range, mean deviation, variance, and standard deviation) retain the units of the original observations. In contrast, relative measures of dispersion (such as the coefficient of range, coefficient of quartile deviation, and coefficient of variation) are pure, unit-free ratios used to compare variability between different data sets.",
+      "sourceReference": "Section 3.1 & Section 3.2, Page 161, 202-203"
+    },
+    {
+      "id": "MAT-G12-U03-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is the range of the following set of negative temperature readings: -4, -20, -30, -44, and -36?",
+      "options": [
+        {
+          "id": "A",
+          "text": "-48"
+        },
+        {
+          "id": "B",
+          "text": "40"
+        },
+        {
+          "id": "C",
+          "text": "-40"
+        },
+        {
+          "id": "D",
+          "text": "48"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "By Definition 3.1, the range R of an ungrouped data set is R = L - S, where L is the largest value and S is the smallest value. In this data set, the largest value is L = -4 and the smallest value is S = -44. Therefore, R = -4 - (-44) = -4 + 44 = 40.",
+      "sourceReference": "Section 3.1.1, Page 162-164 & 2018 EUEE V2 Q11"
+    },
+    {
+      "id": "MAT-G12-U03-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which of the following statements correctly defines the interquartile range (IQR) of a distribution?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The difference between the maximum and minimum observations"
+        },
+        {
+          "id": "B",
+          "text": "The difference between the third quartile and the first quartile (Q₃ - Q₁)"
+        },
+        {
+          "id": "C",
+          "text": "Half of the difference between the third quartile and the first quartile"
+        },
+        {
+          "id": "D",
+          "text": "The difference between the arithmetic mean and the median"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "By Definition 3.3, the interquartile range (IQR) is the difference between the upper quartile (third quartile, Q₃) and the lower quartile (first quartile, Q₁), giving IQR = Q₃ - Q₁. (Half of this difference is known as the quartile deviation or semi-interquartile range).",
+      "sourceReference": "Section 3.1.1, Page 165 & 2017 EUEE V1 Q41"
+    },
+    {
+      "id": "MAT-G12-U03-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "For any set of numerical data x₁, x₂, ..., x_n with arithmetic mean x̄, what is the value of the sum of the deviations from the mean, ∑(x_i - x̄)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Always equal to 0"
+        },
+        {
+          "id": "B",
+          "text": "Always positive"
+        },
+        {
+          "id": "C",
+          "text": "Equal to the variance"
+        },
+        {
+          "id": "D",
+          "text": "Equal to the sample size n"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "An algebraic property of the arithmetic mean is that the sum of the deviations of all observations from the mean is identically zero: ∑(x_i - x̄) = ∑ x_i - n x̄ = n x̄ - n x̄ = 0. This is the primary motivation for using absolute deviations (mean deviation) or squared deviations (variance).",
+      "sourceReference": "Section 3.1.2 & Section 3.1.3, Page 167-168, 186 & 2018 EUEE V2 Q28"
+    },
+    {
+      "id": "MAT-G12-U03-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "A regional education office wants to select a systematic random sample of n = 4,000 vouchers from a total population of N = 48,000 vouchers. If the 5th voucher is chosen as the random starting point, which voucher will be selected next?",
+      "options": [
+        {
+          "id": "A",
+          "text": "9th"
+        },
+        {
+          "id": "B",
+          "text": "12th"
+        },
+        {
+          "id": "C",
+          "text": "17th"
+        },
+        {
+          "id": "D",
+          "text": "20th"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "In systematic sampling, the sampling interval k is calculated as k = N / n = 48,000 / 4,000 = 12. If the random starting unit selected is r = 5, the subsequent units selected in the sequence are r + k, r + 2k, ..., so the very next unit selected is 5 + 12 = 17th.",
+      "sourceReference": "Section 3.4, Page 220-221 & 2018 EUEE V2 Q6"
+    },
+    {
+      "id": "MAT-G12-U03-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What is the mean deviation about the mean, MD(x̄), for the data set: 3, 5, 7, 8, 9, 10?",
+      "options": [
+        {
+          "id": "A",
+          "text": "2.0"
+        },
+        {
+          "id": "B",
+          "text": "2.5"
+        },
+        {
+          "id": "C",
+          "text": "3.0"
+        },
+        {
+          "id": "D",
+          "text": "12.0"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Step 1: Compute the arithmetic mean: x̄ = (3 + 5 + 7 + 8 + 9 + 10) / 6 = 42 / 6 = 7. Step 2: Compute the absolute deviations |x_i - x̄|: |3 - 7| = 4, |5 - 7| = 2, |7 - 7| = 0, |8 - 7| = 1, |9 - 7| = 2, |10 - 7| = 3. Step 3: Sum the absolute deviations: 4 + 2 + 0 + 1 + 2 + 3 = 12. Step 4: Divide by n = 6: MD(x̄) = 12 / 6 = 2.0.",
+      "sourceReference": "Section 3.1.2, Page 168-169 & 2017 EUEE V1 Q42"
+    },
+    {
+      "id": "MAT-G12-U03-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What is the coefficient of range (CR) for the data set: 12, 18, 25, 30, and 48?",
+      "options": [
+        {
+          "id": "A",
+          "text": "0.36"
+        },
+        {
+          "id": "B",
+          "text": "0.60"
+        },
+        {
+          "id": "C",
+          "text": "0.75"
+        },
+        {
+          "id": "D",
+          "text": "36.0"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "By Definition 3.8, the coefficient of range is given by CR = (L - S) / (L + S), where L is the largest value and S is the smallest value. Here, L = 48 and S = 12. Thus, CR = (48 - 12) / (48 + 12) = 36 / 60 = 0.60.",
+      "sourceReference": "Section 3.2.1, Page 194-196"
+    },
+    {
+      "id": "MAT-G12-U03-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "A quarterly examination report shows that the first quartile score is Q₁ = 15 and the third quartile score is Q₃ = 45. What is the coefficient of quartile deviation (CQD)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "0.25"
+        },
+        {
+          "id": "B",
+          "text": "0.50"
+        },
+        {
+          "id": "C",
+          "text": "0.75"
+        },
+        {
+          "id": "D",
+          "text": "1.50"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "By Definition 3.9, the coefficient of quartile deviation is given by CQD = (Q₃ - Q₁) / (Q₃ + Q₁). Substituting Q₁ = 15 and Q₃ = 45: CQD = (45 - 15) / (45 + 15) = 30 / 60 = 0.50.",
+      "sourceReference": "Section 3.2.2, Page 197-198"
+    },
+    {
+      "id": "MAT-G12-U03-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "The aggregate marks of two student groups, Group A and Group B, have the following summary statistics:\nGroup A: Mean = 40, Standard Deviation = 8\nGroup B: Mean = 60, Standard Deviation = 9\nWhich group exhibits greater relative variability in performance?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Group A, because its coefficient of variation (20%) is higher than that of Group B (15%)."
+        },
+        {
+          "id": "B",
+          "text": "Group B, because its standard deviation (9) is greater than that of Group A (8)."
+        },
+        {
+          "id": "C",
+          "text": "Group B, because its coefficient of variation is 25%."
+        },
+        {
+          "id": "D",
+          "text": "Both groups have identical variability because their ranges are proportional."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "To compare the relative variability of two distributions with different means, the coefficient of variation CV = (σ / x̄) × 100% must be used. For Group A: CV_A = (8 / 40) × 100% = 20%. For Group B: CV_B = (9 / 60) × 100% = 15%. Since CV_A > CV_B, Group A shows greater relative dispersion and is less consistent.",
+      "sourceReference": "Section 3.2.4, Page 202-205 & 2018 EUEE V2 Q7"
+    },
+    {
+      "id": "MAT-G12-U03-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In a unimodal frequency distribution of monthly wages, the mean is Birr 4,500, the median is Birr 4,800, and the mode is Birr 5,400. Which of the following statements correctly describes the shape of this distribution?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It is positively skewed because the mode is the highest value."
+        },
+        {
+          "id": "B",
+          "text": "It is negatively skewed (skewed to the left) because Mean < Median < Mode."
+        },
+        {
+          "id": "C",
+          "text": "It is a symmetrical normal distribution."
+        },
+        {
+          "id": "D",
+          "text": "The Pearsonian coefficient of skewness is strictly positive."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "According to Section 3.3.1, when the mean is the smallest value and the median lies between the mean and the mode (Mean < Median < Mode, here 4,500 < 4,800 < 5,400), the longer tail of the frequency curve stretches toward the lower values on the left. Hence, the distribution is negatively skewed (skewed to the left).",
+      "sourceReference": "Section 3.3.1, Page 206-208 & 2018 EUEE V3 Q25"
+    },
+    {
+      "id": "MAT-G12-U03-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "A regional education bureau divides all secondary schools into two distinct categories—Urban and Rural—and then draws proportional random samples of classroom sections from each category. Which sampling technique is being implemented?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Simple random sampling"
+        },
+        {
+          "id": "B",
+          "text": "Systematic sampling"
+        },
+        {
+          "id": "C",
+          "text": "Stratified sampling"
+        },
+        {
+          "id": "D",
+          "text": "Convenience sampling"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "By Section 3.4, stratified sampling is used when a population contains identifiable, non-overlapping subgroups (strata) that are relatively homogeneous internally (such as Urban vs. Rural schools), and independent samples are selected from each stratum.",
+      "sourceReference": "Section 3.4, Page 221-224"
+    },
+    {
+      "id": "MAT-G12-U03-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A distribution has lower quartile Q₁ = 30, upper quartile Q₃ = 70, and median = 45. What is Bowley's coefficient of skewness, and what does it indicate about the distribution?",
+      "options": [
+        {
+          "id": "A",
+          "text": "β = 0.25; the distribution is positively skewed (skewed to the right)."
+        },
+        {
+          "id": "B",
+          "text": "β = -0.25; the distribution is negatively skewed (skewed to the left)."
+        },
+        {
+          "id": "C",
+          "text": "β = 0.50; the distribution is positively skewed."
+        },
+        {
+          "id": "D",
+          "text": "β = 0; the distribution is perfectly symmetrical."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Bowley's coefficient of skewness is given by β = [Q₃ + Q₁ - 2(Median)] / (Q₃ - Q₁). Substituting the values: β = [70 + 30 - 2(45)] / (70 - 30) = (100 - 90) / 40 = 10 / 40 = +0.25. Since β > 0, the distribution is skewed positively (skewed to the right). (Note: Bowley's coefficient always lies in the interval [-1, 1]).",
+      "sourceReference": "Section 3.3.2, Page 210-211 & 2018 EUEE V2 Q26"
+    },
+    {
+      "id": "MAT-G12-U03-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A data set of test scores has a variance of σ² = 16. If each score x_i is transformed into a new score y_i by the linear relation y_i = 3x_i + 5, what are the new variance and new standard deviation of the transformed scores?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Variance = 48, Standard Deviation = 12"
+        },
+        {
+          "id": "B",
+          "text": "Variance = 144, Standard Deviation = 12"
+        },
+        {
+          "id": "C",
+          "text": "Variance = 149, Standard Deviation = √149"
+        },
+        {
+          "id": "D",
+          "text": "Variance = 16, Standard Deviation = 4"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Adding a constant c to every observation shifts the center but does not change dispersion: Var(x + c) = Var(x). Multiplying every observation by a constant a scales the deviations by a: Var(ax) = a² Var(x) and SD(ax) = |a| SD(x). For y = 3x + 5: Var(y) = 3² Var(x) = 9(16) = 144. The new standard deviation is SD(y) = √144 = 3(4) = 12.",
+      "sourceReference": "Section 3.1.3, Review Exercise 4, Page 234"
+    },
+    {
+      "id": "MAT-G12-U03-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "The mean and standard deviation of 20 observations were calculated as x̄ = 10 and σ = 2, respectively. Later, it was discovered that one observation recorded as 8 was incorrect and should have been 12. What is the corrected mean of the 20 observations?",
+      "options": [
+        {
+          "id": "A",
+          "text": "10.1"
+        },
+        {
+          "id": "B",
+          "text": "10.2"
+        },
+        {
+          "id": "C",
+          "text": "10.4"
+        },
+        {
+          "id": "D",
+          "text": "10.8"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Original sum of observations: ∑ x_i = n · x̄ = 20 × 10 = 200. Correcting the sum by removing the incorrect observation (8) and adding the correct observation (12): Corrected ∑ x_i = 200 - 8 + 12 = 204. Therefore, the corrected arithmetic mean is x̄_corrected = 204 / 20 = 10.2.",
+      "sourceReference": "Section 3.1.3, Review Exercise 7 & 14, Page 234-235"
+    },
+    {
+      "id": "MAT-G12-U03-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Consider the following continuous grouped frequency distribution of examination marks for 50 students:\nClass Interval: 10–20 (f = 5), 20–30 (f = 15), 30–40 (f = 20), 40–50 (f = 10)\nWhat is the quartile deviation (QD) of this distribution?",
+      "options": [
+        {
+          "id": "A",
+          "text": "6.875 marks"
+        },
+        {
+          "id": "B",
+          "text": "13.75 marks"
+        },
+        {
+          "id": "C",
+          "text": "5.50 marks"
+        },
+        {
+          "id": "D",
+          "text": "8.25 marks"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Cumulative frequencies: 10–20: 5; 20–30: 20; 30–40: 40; 40–50: 50. Total n = 50. First quartile Q₁: Position is n/4 = 50/4 = 12.5th item, which lies in class 20–30. L = 20, cf_prev = 5, f = 15, w = 10. Q₁ = 20 + ((12.5 - 5) / 15) × 10 = 20 + (7.5 / 15) × 10 = 20 + 5 = 25. Third quartile Q₃: Position is 3n/4 = 37.5th item, which lies in class 30–40. L = 30, cf_prev = 20, f = 20, w = 10. Q₃ = 30 + ((37.5 - 20) / 20) × 10 = 30 + (17.5 / 20) × 10 = 30 + 8.75 = 38.75. The Quartile Deviation is QD = (Q₃ - Q₁) / 2 = (38.75 - 25) / 2 = 13.75 / 2 = 6.875 marks.",
+      "sourceReference": "Section 3.1.1 & Section 3.1.2, Page 165-167, 183-186"
+    }
+  ]
 }

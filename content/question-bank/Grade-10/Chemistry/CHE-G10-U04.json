@@ -3,5 +3,411 @@
   "subject": "Chemistry",
   "unitNumber": 4,
   "unitTitle": "Energy Changes and Electrochemistry",
-  "questions": []
+  "questions": [
+    {
+      "id": "CHE-G10-U04-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "A chemical reaction that absorbs heat energy from its surroundings, resulting in a positive enthalpy change (ΔH > 0), is classified as an:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Exothermic reaction"
+        },
+        {
+          "id": "B",
+          "text": "Endothermic reaction"
+        },
+        {
+          "id": "C",
+          "text": "Electrochemical reaction"
+        },
+        {
+          "id": "D",
+          "text": "Spontaneous reaction"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "An endothermic reaction absorbs heat energy from its surroundings, causing the temperature of the surroundings to decrease and resulting in a positive enthalpy change (ΔH > 0).",
+      "sourceReference": "Section 4.1, Page 169"
+    },
+    {
+      "id": "CHE-G10-U04-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In metallic conduction, electrical current is carried through the solid metal by the movement of:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Mobile cations and anions"
+        },
+        {
+          "id": "B",
+          "text": "Delocalized valence electrons"
+        },
+        {
+          "id": "C",
+          "text": "Hydronium ions"
+        },
+        {
+          "id": "D",
+          "text": "Protons in the atomic nucleus"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Metallic conduction is a physical process in which electrical current is transported by the movement of free, delocalized valence electrons through the metal lattice without any transport of matter.",
+      "sourceReference": "Section 4.2, Page 174"
+    },
+    {
+      "id": "CHE-G10-U04-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "An electrochemical cell that converts chemical energy stored in reactants into electrical energy via a spontaneous redox reaction is known as a(n):",
+      "options": [
+        {
+          "id": "A",
+          "text": "Electrolytic cell"
+        },
+        {
+          "id": "B",
+          "text": "Galvanic (Voltaic) cell"
+        },
+        {
+          "id": "C",
+          "text": "Concentration cell"
+        },
+        {
+          "id": "D",
+          "text": "Electrolytic refining cell"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "A Galvanic (or Voltaic) cell converts chemical potential energy into electrical energy using a spontaneous oxidation-reduction reaction.",
+      "sourceReference": "Section 4.3, Page 182"
+    },
+    {
+      "id": "CHE-G10-U04-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In any electrochemical cell (whether Galvanic or Electrolytic), oxidation always occurs at which electrode?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Cathode"
+        },
+        {
+          "id": "B",
+          "text": "Anode"
+        },
+        {
+          "id": "C",
+          "text": "Salt bridge"
+        },
+        {
+          "id": "D",
+          "text": "External battery terminal"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "By international convention, oxidation (loss of electrons) always takes place at the anode, while reduction (gain of electrons) always takes place at the cathode.",
+      "sourceReference": "Section 4.4, Page 188"
+    },
+    {
+      "id": "CHE-G10-U04-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which of the following substances acts as a non-electrolyte when dissolved in pure water?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Sodium chloride (NaCl)"
+        },
+        {
+          "id": "B",
+          "text": "Hydrochloric acid (HCl)"
+        },
+        {
+          "id": "C",
+          "text": "Sucrose (C₁₂H₂₂O₁₁)"
+        },
+        {
+          "id": "D",
+          "text": "Sodium hydroxide (NaOH)"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Sucrose dissolves in water as intact neutral molecules without dissociating into ions, forming a solution that does not conduct electric current (a non-electrolyte).",
+      "sourceReference": "Section 4.2, Page 179"
+    },
+    {
+      "id": "CHE-G10-U04-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "During a chemical process in a closed system, the system absorbs 250 J of heat (q) from the surroundings while performing 100 J of expansion work (w) on the surroundings. What is the net change in internal energy (ΔE) of the system?",
+      "options": [
+        {
+          "id": "A",
+          "text": "+350 J"
+        },
+        {
+          "id": "B",
+          "text": "+150 J"
+        },
+        {
+          "id": "C",
+          "text": "-150 J"
+        },
+        {
+          "id": "D",
+          "text": "-350 J"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Using the first law relation ΔE = q + w: Heat absorbed by the system is positive (q = +250 J), and work done by the system on the surroundings is negative (w = -100 J). Thus, ΔE = +250 J - 100 J = +150 J.",
+      "sourceReference": "Section 4.1, Page 168"
+    },
+    {
+      "id": "CHE-G10-U04-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In a standard Daniell cell operating under spontaneous conditions (Zn/Zn²⁺ || Cu²⁺/Cu), which chemical transformation occurs at the zinc electrode?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Reduction of Zn²⁺ ions to form solid zinc metal at the cathode."
+        },
+        {
+          "id": "B",
+          "text": "Oxidation of solid zinc metal to Zn²⁺ ions at the anode."
+        },
+        {
+          "id": "C",
+          "text": "Oxidation of Cu²⁺ ions to copper metal at the anode."
+        },
+        {
+          "id": "D",
+          "text": "Reduction of gaseous oxygen to hydroxide ions at the cathode."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In a Daniell cell, zinc is more reactive than copper and undergoes oxidation at the anode: Zn(s) → Zn²⁺(aq) + 2e⁻, releasing electrons into the external circuit.",
+      "sourceReference": "Section 4.3, Page 183"
+    },
+    {
+      "id": "CHE-G10-U04-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "When a lead-storage automobile battery discharges during vehicle operation, what chemical reaction takes place at the lead (Pb) anode?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Lead dioxide (PbO₂) is reduced to lead sulfate (PbSO₄)."
+        },
+        {
+          "id": "B",
+          "text": "Elemental lead (Pb) is oxidized to lead sulfate (PbSO₄)."
+        },
+        {
+          "id": "C",
+          "text": "Sulfuric acid (H₂SO₄) is decomposed into hydrogen gas and oxygen gas."
+        },
+        {
+          "id": "D",
+          "text": "Lead sulfate (PbSO₄) is reduced to elemental lead metal."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "During discharge, the anode reaction is: Pb(s) + SO₄²⁻(aq) → PbSO₄(s) + 2e⁻, where metallic lead is oxidized from 0 to +2 oxidation state in PbSO₄.",
+      "sourceReference": "Section 4.3, Page 186"
+    },
+    {
+      "id": "CHE-G10-U04-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "During the industrial electrolysis of molten (fused) sodium chloride (NaCl) in a Downs cell, which product is formed at the cathode?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Chlorine gas (Cl₂)"
+        },
+        {
+          "id": "B",
+          "text": "Oxygen gas (O₂)"
+        },
+        {
+          "id": "C",
+          "text": "Molten sodium metal (Na)"
+        },
+        {
+          "id": "D",
+          "text": "Hydrogen gas (H₂)"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Na⁺ cations migrate to the negatively charged cathode where they undergo reduction (gain electrons): Na⁺(l) + e⁻ → Na(l), yielding liquid sodium metal.",
+      "sourceReference": "Section 4.4, Page 189"
+    },
+    {
+      "id": "CHE-G10-U04-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How does an increase in temperature affect the electrical conductivity of a metallic conductor versus an aqueous electrolytic solution?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Metallic conductivity increases, while electrolytic conductivity decreases."
+        },
+        {
+          "id": "B",
+          "text": "Metallic conductivity decreases, while electrolytic conductivity increases."
+        },
+        {
+          "id": "C",
+          "text": "Both metallic and electrolytic conductivities increase."
+        },
+        {
+          "id": "D",
+          "text": "Both metallic and electrolytic conductivities decrease."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Increasing temperature increases thermal vibrations of metal atoms, impeding electron flow and decreasing metallic conductivity. Conversely, heating an electrolytic solution reduces viscosity and increases ionic mobility, increasing electrolytic conductivity.",
+      "sourceReference": "Section 4.2, Page 176"
+    },
+    {
+      "id": "CHE-G10-U04-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "When fused lead(II) bromide (PbBr₂) is electrolyzed using inert graphite electrodes, what are the products evolved at the anode and cathode, respectively?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Hydrogen gas at anode, Lead metal at cathode"
+        },
+        {
+          "id": "B",
+          "text": "Bromine gas (Br₂) at anode, Lead metal (Pb) at cathode"
+        },
+        {
+          "id": "C",
+          "text": "Oxygen gas at anode, Bromine gas at cathode"
+        },
+        {
+          "id": "D",
+          "text": "Lead metal at anode, Bromine gas at cathode"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Br⁻ anions migrate to the positive anode and oxidize to red-brown bromine vapor (2Br⁻ → Br₂ + 2e⁻). Pb²⁺ cations migrate to the negative cathode and reduce to metallic lead (Pb²⁺ + 2e⁻ → Pb).",
+      "sourceReference": "Section 4.4, Page 191"
+    },
+    {
+      "id": "CHE-G10-U04-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A student uses a calorimeter containing 100.0 g of water (specific heat capacity c = 4.18 J/g·°C) to measure the heat released by dissolving a solid reagent. If the temperature of the water increases from 22.0 °C to 32.0 °C, how much heat energy (in kJ) was absorbed by the water?",
+      "options": [
+        {
+          "id": "A",
+          "text": "4.18 kJ"
+        },
+        {
+          "id": "B",
+          "text": "0.418 kJ"
+        },
+        {
+          "id": "C",
+          "text": "41.8 kJ"
+        },
+        {
+          "id": "D",
+          "text": "13.38 kJ"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Heat q = c × m × ΔT = (4.18 J/g·°C) × (100.0 g) × (32.0 °C - 22.0 °C) = 4.18 × 100.0 × 10.0 = 4180 J = 4.18 kJ.",
+      "sourceReference": "Section 4.1, Page 170"
+    },
+    {
+      "id": "CHE-G10-U04-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Which statement correctly compares the electrical signs of the electrodes and the thermodynamic spontaneity (ΔG) for Galvanic (Voltaic) cells versus Electrolytic cells?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Galvanic: Anode (-), Cathode (+), Spontaneous (ΔG < 0); Electrolytic: Anode (+), Cathode (-), Non-spontaneous (ΔG > 0)"
+        },
+        {
+          "id": "B",
+          "text": "Galvanic: Anode (+), Cathode (-), Non-spontaneous (ΔG > 0); Electrolytic: Anode (-), Cathode (+), Spontaneous (ΔG < 0)"
+        },
+        {
+          "id": "C",
+          "text": "Galvanic: Anode (-), Cathode (+), Non-spontaneous (ΔG > 0); Electrolytic: Anode (+), Cathode (-), Spontaneous (ΔG < 0)"
+        },
+        {
+          "id": "D",
+          "text": "Galvanic: Anode (+), Cathode (-), Spontaneous (ΔG < 0); Electrolytic: Anode (-), Cathode (+), Non-spontaneous (ΔG > 0)"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "In a Galvanic cell, spontaneous redox (ΔG < 0) releases electrons at the anode, making it negative (-). In an Electrolytic cell, an external voltage forces a non-spontaneous reaction (ΔG > 0), pulling electrons from the anode, making it positive (+).",
+      "sourceReference": "Section 4.3 & 4.4, Page 182 & Page 188"
+    },
+    {
+      "id": "CHE-G10-U04-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "In a classic Leclanché (zinc-carbon) dry cell, what primary role is served by manganese dioxide (MnO₂) mixed around the central graphite rod?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It acts as an anode reducing agent that dissolves to release free electrons."
+        },
+        {
+          "id": "B",
+          "text": "It acts as a depolarizer at the cathode, preventing gas accumulation by oxidizing hydrogen ions/ammonia."
+        },
+        {
+          "id": "C",
+          "text": "It acts as an electrolyte salt bridge to transfer zinc ions."
+        },
+        {
+          "id": "D",
+          "text": "It reacts with zinc to form a protective rust-proof coating."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Manganese dioxide (MnO₂) functions as a depolarizer at the cathode. It accepts electrons during reduction (2NH₄⁺ + 2MnO₂ + 2e⁻ → Mn₂O₃ + H₂O + 2NH₃), preventing gas polarization around the carbon rod.",
+      "sourceReference": "Section 4.3, Page 184"
+    },
+    {
+      "id": "CHE-G10-U04-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "An endothermic chemical reaction has a forward activation energy (Ea, fwd) of 120 kJ/mol and an overall enthalpy change (ΔH) of +45 kJ/mol. What is the activation energy for the reverse reaction (Ea, rev)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "165 kJ/mol"
+        },
+        {
+          "id": "B",
+          "text": "75 kJ/mol"
+        },
+        {
+          "id": "C",
+          "text": "45 kJ/mol"
+        },
+        {
+          "id": "D",
+          "text": "-75 kJ/mol"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The relationship between forward and reverse activation energy is ΔH = Ea(fwd) - Ea(rev). Substituting: +45 kJ/mol = 120 kJ/mol - Ea(rev), which yields Ea(rev) = 120 - 45 = 75 kJ/mol.",
+      "sourceReference": "Section 4.1, Page 170"
+    }
+  ]
 }

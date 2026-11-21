@@ -3,5 +3,411 @@
   "subject": "Geography",
   "unitNumber": 5,
   "unitTitle": "Challenges of Economic Development",
-  "questions": []
+  "questions": [
+    {
+      "id": "GEO-G12-U05-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "How is 'absolute poverty' formally defined and distinguished from 'relative poverty' in development studies?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Absolute poverty is defined by comparing an individual's income against the national average income of high-earning citizens."
+        },
+        {
+          "id": "B",
+          "text": "Absolute poverty is a severe state of deprivation where an individual lacks the basic minimum resources necessary to sustain physical life (food, shelter, clean water), regardless of location."
+        },
+        {
+          "id": "C",
+          "text": "Absolute poverty applies exclusively to urban industrial workers who earn less than $100 USD per day."
+        },
+        {
+          "id": "D",
+          "text": "Absolute poverty refers to temporary income loss resulting from seasonal job changes."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Absolute poverty refers to a condition where an individual lacks the minimum basic requirements needed to sustain human life—such as adequate food, safe drinking water, sanitation, shelter, and basic health—independent of geographic location or social comparison.",
+      "sourceReference": "Grade 12 Geography Textbook, Section 5.1, Page 124–125"
+    },
+    {
+      "id": "GEO-G12-U05-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which of the following best defines the process of 'globalization' in geographic and economic studies?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The complete isolation of national economies to prevent foreign trade."
+        },
+        {
+          "id": "B",
+          "text": "The increasing worldwide integration and interdependence of economies, cultures, technologies, and populations across national boundaries."
+        },
+        {
+          "id": "C",
+          "text": "The military conquest and annexation of small island nations by neighboring continental states."
+        },
+        {
+          "id": "D",
+          "text": "The exclusive migration of agricultural farmers from polar ice caps to tropical deserts."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Globalization refers to the accelerating process of global integration, interconnection, and interdependence among nations, driven by international trade, capital flows, technological advances, and cultural exchange.",
+      "sourceReference": "Grade 12 Geography Textbook, Section 5.2, Page 129–130"
+    },
+    {
+      "id": "GEO-G12-U05-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which statistical index is most widely used by geographers and economists to measure income inequality within a population or between nations?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Human Poverty Index (HPI)"
+        },
+        {
+          "id": "B",
+          "text": "Gini Coefficient"
+        },
+        {
+          "id": "C",
+          "text": "Consumer Price Index (CPI)"
+        },
+        {
+          "id": "D",
+          "text": "Standardized Precipitation Index (SPI)"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The Gini Coefficient (derived from the Lorenz Curve) is the standard metric used to measure income or wealth inequality within a country or region, ranging from 0 (perfect equality) to 1 (perfect inequality).",
+      "sourceReference": "Grade 12 Geography Textbook, Section 5.3, Page 136–137"
+    },
+    {
+      "id": "GEO-G12-U05-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In public administration and development studies, how is 'grand corruption' distinguished from 'petty corruption'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Grand corruption occurs at lower levels of public administration involving small daily bribes paid to traffic police."
+        },
+        {
+          "id": "B",
+          "text": "Grand corruption consists of high-level acts committed by senior public officials that distort policies, central institutions, and major public financial allocations."
+        },
+        {
+          "id": "C",
+          "text": "Grand corruption applies exclusively to non-profit charitable non-governmental organizations."
+        },
+        {
+          "id": "D",
+          "text": "Grand corruption refers to legal international banking transactions between private citizens."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Grand corruption consists of acts committed at the highest levels of government that distort policies or the central functioning of the state, enabling leaders to benefit at the expense of the public good, whereas petty corruption involves small-scale bribery in everyday public service delivery.",
+      "sourceReference": "Grade 12 Geography Textbook, Section 5.4, Page 138–139"
+    },
+    {
+      "id": "GEO-G12-U05-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "According to global health data cited in the textbook, what is the estimated annual economic cost of lost productivity caused by malaria in Sub-Saharan Africa?",
+      "options": [
+        {
+          "id": "A",
+          "text": "$500 thousand USD"
+        },
+        {
+          "id": "B",
+          "text": "$12 billion USD"
+        },
+        {
+          "id": "C",
+          "text": "$150 billion USD"
+        },
+        {
+          "id": "D",
+          "text": "$1 trillion USD"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Malaria infects over 500 million people annually and places a massive burden on Sub-Saharan Africa, costing the continent an estimated $12 billion USD each year in lost economic productivity and healthcare expenses.",
+      "sourceReference": "Grade 12 Geography Textbook, Section 5.5, Page 145"
+    },
+    {
+      "id": "GEO-G12-U05-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Why has the international assessment of poverty shifted from relying strictly on monetary income thresholds ($1.90/day) toward Multidimensional Poverty measurement?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Monetary income indicators are illegal under international development treaties."
+        },
+        {
+          "id": "B",
+          "text": "Monetary income alone fails to capture severe non-monetary deprivations such as poor health, lack of education access, unsafe drinking water, inadequate housing, and social exclusion."
+        },
+        {
+          "id": "C",
+          "text": "Multidimensional metrics evaluate only urban luxury consumption habits."
+        },
+        {
+          "id": "D",
+          "text": "Monetary thresholds apply only to high-income developed countries."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Multidimensional poverty assessments recognize that poverty is not merely a lack of income, but an accumulation of simultaneous deprivations in health (malnutrition, mortality), education (school enrollment), and living standards (clean water, electricity, sanitation).",
+      "sourceReference": "Grade 12 Geography Textbook, Section 5.1, Page 124–126"
+    },
+    {
+      "id": "GEO-G12-U05-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which of the following represents a major disadvantage or limitation of globalization for domestic economies in developing nations (Global South)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Complete elimination of foreign direct investment in domestic real estate."
+        },
+        {
+          "id": "B",
+          "text": "Multinational corporations can outcompete and bankrupt vulnerable domestic industries while local cultural traditions and languages experience erosion."
+        },
+        {
+          "id": "C",
+          "text": "Global internet networks prevent developing countries from accessing scientific knowledge."
+        },
+        {
+          "id": "D",
+          "text": "International trade forces all developing nations to revalue their national currencies above the US dollar."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Critics of globalization point out that large multinational corporations from developed nations can dominate local markets, leading to the collapse of infant domestic businesses, while Western consumerist cultures can erode traditional local heritage and values.",
+      "sourceReference": "Grade 12 Geography Textbook, Section 5.2, Page 129–132"
+    },
+    {
+      "id": "GEO-G12-U05-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What primary structural factor accounts for the persistent trade imbalance between developing nations (Global South) and advanced economies (Global North)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Developing nations export high-value supercomputers while importing low-value raw timber."
+        },
+        {
+          "id": "B",
+          "text": "Developing nations largely export low-value, unprocessed primary commodities subject to volatile world prices, while importing expensive, high-value manufactured technology goods from developed countries."
+        },
+        {
+          "id": "C",
+          "text": "Advanced economies receive zero revenue from international shipping services."
+        },
+        {
+          "id": "D",
+          "text": "Global trade treaties mandate that developing nations pay 100% interest on all agricultural exports."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The global trade imbalance stems from unequal terms of trade: developing countries export low-value raw agricultural and mineral products with fluctuating prices, while importing expensive manufactured technology and capital goods from developed nations.",
+      "sourceReference": "Grade 12 Geography Textbook, Section 5.3, Page 134–136"
+    },
+    {
+      "id": "GEO-G12-U05-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How does systemic corruption in public governance directly hinder a nation's socio-economic development?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It automatically increases foreign direct investment in rural primary schools."
+        },
+        {
+          "id": "B",
+          "text": "It diverts public financial resources away from essential social services (health, education, infrastructure), distorts market competition, and deters legitimate domestic and foreign investment."
+        },
+        {
+          "id": "C",
+          "text": "It lowers national inflation rates to zero percent permanently."
+        },
+        {
+          "id": "D",
+          "text": "It guarantees equal land distribution among all landless rural farmers."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Corruption acts as a heavy tax on development by misallocating public funds into private hands, undermining infrastructural quality, weakening public trust, and discouraging productive domestic and foreign investment.",
+      "sourceReference": "Grade 12 Geography Textbook, Section 5.4, Page 139–141"
+    },
+    {
+      "id": "GEO-G12-U05-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which historic global pandemic, occurring between 1918 and 1919, caused widespread mortality in Ethiopia where it was locally remembered as 'Ye Hedar Beshita'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The Black Death (Bubonic Plague)"
+        },
+        {
+          "id": "B",
+          "text": "The Spanish Influenza Epidemic"
+        },
+        {
+          "id": "C",
+          "text": "The Asian Cholera Outbreak"
+        },
+        {
+          "id": "D",
+          "text": "The Yellow Fever Epidemic"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The 1918–1919 Spanish Influenza pandemic swept across the globe and hit Ethiopia severely in late 1918, where it caused heavy fatalities and became historically known in Ethiopian collective memory as 'Ye Hedar Beshita' (the disease of Hedar).",
+      "sourceReference": "Grade 12 Geography Textbook, Section 5.5, Page 146"
+    },
+    {
+      "id": "GEO-G12-U05-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In analyzing the root causes of poverty, how do 'structural explanations' differ from 'behavioral/cultural explanations'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Structural explanations attribute poverty to individual laziness, whereas behavioral explanations attribute poverty to geographic latitude."
+        },
+        {
+          "id": "B",
+          "text": "Structural explanations attribute poverty to systemic inequalities, discriminatory economic policies, and institutional barriers, whereas behavioral explanations attribute poverty to individual choices, lack of skills, or cultural attitudes."
+        },
+        {
+          "id": "C",
+          "text": "Structural explanations apply only to island states, whereas behavioral explanations apply only to landlocked states."
+        },
+        {
+          "id": "D",
+          "text": "Structural explanations focus on solar radiation levels, whereas behavioral explanations focus on soil texture."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Structural explanations look at macro-level institutional setups, economic governance, unequal resource access, and historical forces that trap people in poverty. Behavioral/cultural explanations focus on micro-level individual characteristics, skills, decisions, or social habits.",
+      "sourceReference": "Grade 12 Geography Textbook, Section 5.1, Page 125–126"
+    },
+    {
+      "id": "GEO-G12-U05-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Suppose Country X has a Gini Coefficient of 0.28, while Country Y has a Gini Coefficient of 0.58. What do these numerical values reveal about the income distribution profiles of both nations?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Country X has severe income concentration among the rich, whereas Country Y has a perfectly equal income distribution."
+        },
+        {
+          "id": "B",
+          "text": "Country X has a relatively equitable income distribution, whereas Country Y suffers from extreme income inequality and wealth concentration."
+        },
+        {
+          "id": "C",
+          "text": "Both countries have identical poverty levels because Gini coefficients ignore rural populations."
+        },
+        {
+          "id": "D",
+          "text": "Country Y has double the Gross Domestic Product of Country X."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "A Gini coefficient closer to 0 indicates greater income equality, so Country X (0.28) has a relatively low level of inequality. A coefficient closer to 1 indicates high inequality, meaning Country Y (0.58) experiences high income concentration and wealth disparity.",
+      "sourceReference": "Grade 12 Geography Textbook, Section 5.3, Page 136–137"
+    },
+    {
+      "id": "GEO-G12-U05-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "How does the interplay between violent political conflict and widespread poverty create a self-reinforcing 'conflict-poverty trap' in developing regions?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Conflict increases government revenue from tourism, which eliminates domestic poverty."
+        },
+        {
+          "id": "B",
+          "text": "Poverty creates social grievances and youth vulnerability to recruitment, sparking conflict; in turn, violent conflict destroys infrastructure, halts investment, and displaces populations, worsening poverty."
+        },
+        {
+          "id": "C",
+          "text": "Conflict automatically stabilizes national currencies against foreign inflation."
+        },
+        {
+          "id": "D",
+          "text": "Poverty reduces population size to zero, ending all resource competition."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Poverty and conflict reinforce each other in a vicious cycle: high poverty, unemployment, and weak institutions increase the risk of armed conflict, while conflict destroys economic assets, human capital, and social stability, deepening poverty further.",
+      "sourceReference": "Grade 12 Geography Textbook, Section 5.1, Page 126–127"
+    },
+    {
+      "id": "GEO-G12-U05-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Why do classic international trade mechanisms under globalization often exacerbate economic divergence (widening inequality) between high-income developed countries and low-income developing nations rather than bringing automatic convergence?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because developed nations forbid foreign investment in low-income markets."
+        },
+        {
+          "id": "B",
+          "text": "Because high-income nations capture high profit margins through technological monopolies, high-value manufacturing, and intellectual property rights, while developing nations face declining terms of trade for primary raw commodities."
+        },
+        {
+          "id": "C",
+          "text": "Because international trade is conducted without monetary currencies."
+        },
+        {
+          "id": "D",
+          "text": "Because developing nations refuse to participate in regional economic communities."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Globalization can widen regional disparities because advanced economies retain high-value technological, financial, and intellectual property monopolies, accumulating wealth faster than primary-commodity-dependent developing nations whose export prices remain low and volatile.",
+      "sourceReference": "Grade 12 Geography Textbook, Section 5.2 & 5.3, Page 130–136"
+    },
+    {
+      "id": "GEO-G12-U05-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "How do major global health emergencies (such as the COVID-19 pandemic or Ebola outbreaks) disrupt the macro-economic stability and sustainable development pathways of developing nations?",
+      "options": [
+        {
+          "id": "A",
+          "text": "By increasing national savings and reducing public health expenditures to zero."
+        },
+        {
+          "id": "B",
+          "text": "By simultaneously severing global supply chains, depressing trade and tourism, straining fragile health budgets, and forcing governments to reallocate scarce development capital to crisis response."
+        },
+        {
+          "id": "C",
+          "text": "By automatically forgiving all sovereign foreign debt owed to international creditors."
+        },
+        {
+          "id": "D",
+          "text": "By increasing industrial manufacturing output across rural agricultural sectors."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Global health crises impose double macro-economic shocks: supply-side disruptions (border closures, trade halts, labor loss) and demand-side collapses (tourism loss, reduced revenue), while forcing governments to divert public funds from long-term infrastructure and education into emergency health response.",
+      "sourceReference": "Grade 12 Geography Textbook, Section 5.5, Page 145–149"
+    }
+  ]
 }

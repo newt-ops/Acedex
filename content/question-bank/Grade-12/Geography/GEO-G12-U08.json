@@ -3,5 +3,411 @@
   "subject": "Geography",
   "unitNumber": 8,
   "unitTitle": "Geographical Enquiry and Map Making",
-  "questions": []
+  "questions": [
+    {
+      "id": "GEO-G12-U08-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which of the following is classified as a primary source of geographic data in research?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Published national census statistical abstracts"
+        },
+        {
+          "id": "B",
+          "text": "Field survey questionnaires, direct personal observations, and GPS measurements"
+        },
+        {
+          "id": "C",
+          "text": "Academic journal review articles"
+        },
+        {
+          "id": "D",
+          "text": "Textbooks and encyclopedia entries"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Primary data sources consist of raw, firsthand information collected directly by the researcher for a specific study, such as field surveys, structured interviews, personal observations, and direct GPS measurements.",
+      "sourceReference": "Grade 12 Geography Textbook, Section 8.1.4, Page 228–229"
+    },
+    {
+      "id": "GEO-G12-U08-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "How does research methodology differ fundamentally from research methods?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Research methodology refers exclusively to statistical software, whereas research methods refer to library books."
+        },
+        {
+          "id": "B",
+          "text": "Research methodology is the broader philosophy and rationale guiding how research is conducted scientifically, whereas research methods are the specific tools and techniques used to collect and analyze data."
+        },
+        {
+          "id": "C",
+          "text": "Research methodology applies only to physical sciences, while research methods apply only to social sciences."
+        },
+        {
+          "id": "D",
+          "text": "Research methodology deals solely with printing final reports, while research methods deal with choosing a title."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Research methodology represents the overall philosophy, logic, and strategic rationale behind a study (why data is collected, how hypotheses are framed), while research methods refer to the specific practical tools, instruments, and procedures used for data collection and analysis.",
+      "sourceReference": "Grade 12 Geography Textbook, Section 8.1.3, Page 223–224"
+    },
+    {
+      "id": "GEO-G12-U08-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In a GIS vector dataset, which geometric dimensionality is used to represent zero-dimensional features such as water wells, meteorological stations, or individual mountain peaks?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Polygon (Area)"
+        },
+        {
+          "id": "B",
+          "text": "Polyline (Line)"
+        },
+        {
+          "id": "C",
+          "text": "Point"
+        },
+        {
+          "id": "D",
+          "text": "Volume (3D surface)"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Point features are zero-dimensional geographic entities specified by a single X, Y coordinate pair. They represent discrete locations where boundary area and length are negligible at the map scale (e.g., water wells, weather stations).",
+      "sourceReference": "Grade 12 Geography Textbook, Section 8.2.1, Page 233–234"
+    },
+    {
+      "id": "GEO-G12-U08-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which GIS data classification method groups spatial data based on how much individual observation values deviate above or below the mean value of the dataset?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Equal Interval method"
+        },
+        {
+          "id": "B",
+          "text": "Standard Deviation method"
+        },
+        {
+          "id": "C",
+          "text": "Quantile method"
+        },
+        {
+          "id": "D",
+          "text": "Natural Breaks (Jenk's) method"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The Standard Deviation classification method calculates the mean and standard deviation of a dataset, setting class breaks at intervals of standard deviations (e.g., ±0.5, ±1.0, ±1.5) to show how far values depart from the average.",
+      "sourceReference": "Grade 12 Geography Textbook, Section 8.2.1, Page 238"
+    },
+    {
+      "id": "GEO-G12-U08-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which sampling technique ensures that every individual member of a target population has a known, non-zero probability of being selected for a survey?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Convenience sampling"
+        },
+        {
+          "id": "B",
+          "text": "Random (Probability) sampling"
+        },
+        {
+          "id": "C",
+          "text": "Snowball sampling"
+        },
+        {
+          "id": "D",
+          "text": "Judgmental quota sampling"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Probability (random) sampling is a statistical selection method where every element in the target population has a known, equal chance of inclusion, minimizing selection bias.",
+      "sourceReference": "Grade 12 Geography Textbook, Section 8.1.4, Page 228"
+    },
+    {
+      "id": "GEO-G12-U08-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What is a defining characteristic of a qualitative research approach in geography?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It relies exclusively on mathematical algorithms and hypothesis testing using discrete numerical datasets."
+        },
+        {
+          "id": "B",
+          "text": "It uses extensive descriptive and narrative data (such as interviews, case studies, and observations) to gain deep insights into human perceptions and spatial phenomena."
+        },
+        {
+          "id": "C",
+          "text": "It requires double-blind laboratory experiments to measure atmospheric pressure."
+        },
+        {
+          "id": "D",
+          "text": "It expresses all findings strictly as statistical correlations and regression equations."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Qualitative research focuses on non-numerical, descriptive data (e.g., narrative accounts, interviews, field observations, case studies) to understand meanings, spatial experiences, and social processes without relying on statistical hypothesis testing.",
+      "sourceReference": "Grade 12 Geography Textbook, Section 8.1.3, Page 222–223"
+    },
+    {
+      "id": "GEO-G12-U08-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In GIS map production, which process involves grouping data values into homogeneous classes and eliminating unwanted detail to enhance visual communication on a map?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Data digitizing and georeferencing"
+        },
+        {
+          "id": "B",
+          "text": "Data generalization (simplification and classification)"
+        },
+        {
+          "id": "C",
+          "text": "Raster conversion and rasterization"
+        },
+        {
+          "id": "D",
+          "text": "Attribute table join"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Map data generalization is the process of simplifying, classifying, exaggerating, and symbolizing spatial features and attributes so that complex real-world details can be communicated clearly on a map without clutter.",
+      "sourceReference": "Grade 12 Geography Textbook, Section 8.2.1, Page 235–236"
+    },
+    {
+      "id": "GEO-G12-U08-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How does the Natural Breaks (Jenk's) classification method determine class boundaries for choropleth mapping in GIS?",
+      "options": [
+        {
+          "id": "A",
+          "text": "By dividing the dataset into classes that each contain an equal number of geographic features."
+        },
+        {
+          "id": "B",
+          "text": "By setting equal numerical ranges between the minimum and maximum values across all classes."
+        },
+        {
+          "id": "C",
+          "text": "By using an optimization algorithm that minimizes variance within each class while maximizing variance between different classes."
+        },
+        {
+          "id": "D",
+          "text": "By manually assigning class breaks based on alphabetical order of administrative names."
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Natural Breaks (Jenk's optimization) identifies natural groupings inherent in data by grouping values that are most homogeneous within each class while maximizing differences between class boundaries.",
+      "sourceReference": "Grade 12 Geography Textbook, Section 8.2.1, Page 236–237"
+    },
+    {
+      "id": "GEO-G12-U08-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "An environmental officer creates a 1-kilometer zone around protected forest reserves in GIS to identify agricultural encroachment. Which spatial analysis tool is being utilized?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Attribute Query"
+        },
+        {
+          "id": "B",
+          "text": "Vector Buffering (Proximity analysis)"
+        },
+        {
+          "id": "C",
+          "text": "Network Allocation"
+        },
+        {
+          "id": "D",
+          "text": "Raster Map Algebra"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Vector buffering is a proximity analysis operation that generates a spatial polygon zone at a specified distance around point, line, or polygon features to define areas of influence or protection zones.",
+      "sourceReference": "Grade 12 Geography Textbook, Section 8.2.2, Page 240–241"
+    },
+    {
+      "id": "GEO-G12-U08-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How does GIS overlay analysis differ from simple attribute querying?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Overlay analysis alters only font styles in the legend, whereas querying changes coordinate projections."
+        },
+        {
+          "id": "B",
+          "text": "Overlay analysis combines spatial geometries and attribute tables from two or more distinct data layers to produce a new geospatial dataset, whereas querying selects existing features without creating new layers."
+        },
+        {
+          "id": "C",
+          "text": "Overlay analysis operates exclusively on paper maps, while querying operates only on GPS receivers."
+        },
+        {
+          "id": "D",
+          "text": "Overlay analysis deletes underlying spatial tables, whereas querying adds new columns to non-spatial spreadsheets."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Overlay analysis combines two or more spatial data layers (such as land use and soil type) to create a new output dataset containing merged spatial geometries and attributes. In contrast, querying filters or selects existing features without generating new spatial layers.",
+      "sourceReference": "Grade 12 Geography Textbook, Section 8.2.2, Page 242–243"
+    },
+    {
+      "id": "GEO-G12-U08-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which GIS spatial analysis technique is specifically designed to calculate the shortest path, trace flow directions, and optimize delivery routes along interconnected linear features (such as roads, pipelines, or rivers)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Network Analysis"
+        },
+        {
+          "id": "B",
+          "text": "Euclidean Distance Buffering"
+        },
+        {
+          "id": "C",
+          "text": "Natural Break Classification"
+        },
+        {
+          "id": "D",
+          "text": "Choropleth Symbolization"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Network analysis operates on interconnected linear features (networks like roads, railways, or stream systems) to perform pathfinding (shortest route), allocation, tracing, and location-allocation modeling.",
+      "sourceReference": "Grade 12 Geography Textbook, Section 8.2.2, Page 243–244"
+    },
+    {
+      "id": "GEO-G12-U08-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A researcher studying rural-to-urban migration formulates the hypothesis: 'Highland agricultural land degradation significantly increases out-migration rates to capital cities.' In this quantitative research design, what are the independent and dependent variables?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Independent variable: Out-migration rate; Dependent variable: Highland land degradation."
+        },
+        {
+          "id": "B",
+          "text": "Independent variable: Highland agricultural land degradation; Dependent variable: Out-migration rate."
+        },
+        {
+          "id": "C",
+          "text": "Both variables are qualitative attributes that cannot be measured statistically."
+        },
+        {
+          "id": "D",
+          "text": "Independent variable: Capital city population size; Dependent variable: Soil erosion color."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In a causal hypothesis, the independent variable is the presumed cause or predictor (agricultural land degradation), while the dependent variable is the outcome being measured or explained (out-migration rate).",
+      "sourceReference": "Grade 12 Geography Textbook, Section 8.1.3, Page 221–224 & Section 8.1.4, Page 225–226"
+    },
+    {
+      "id": "GEO-G12-U08-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "When mapping regional population data across 50 districts where 5 major urban centers have extremely high populations while 45 rural districts have very low populations (highly right-skewed distribution), why is the Quantile classification method more appropriate for map communication than the Equal Interval method?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Quantile classification places an equal number of districts (10 per class) into each of the 5 map classes, preventing urban outliers from pushing 90% of rural districts into a single lowest class."
+        },
+        {
+          "id": "B",
+          "text": "Quantile classification automatically converts vector shapefiles into 3D elevation rasters."
+        },
+        {
+          "id": "C",
+          "text": "Equal Interval classification is illegal under international cartographic standards for population mapping."
+        },
+        {
+          "id": "D",
+          "text": "Quantile classification eliminates the need for map scales and north arrows."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "When data is highly skewed, the Equal Interval method results in most observations falling into one or two classes while extreme outliers occupy upper classes alone. The Quantile method places an equal number of observations (20% of total features per class in a 5-class map) into each class, highlighting relative rankings effectively across the entire dataset.",
+      "sourceReference": "Grade 12 Geography Textbook, Section 8.2.1, Page 237–238"
+    },
+    {
+      "id": "GEO-G12-U08-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "In vector overlay analysis, what is the key difference between the 'Intersect' function and the 'Union' function when combining two polygon layers (e.g., Flood Hazard Zone and Land Use Type)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Intersect preserves spatial features and attributes common to both layers (overlapping areas only), whereas Union preserves all spatial features and attributes from both layers regardless of overlap."
+        },
+        {
+          "id": "B",
+          "text": "Intersect applies only to point data, whereas Union applies only to raster elevation grids."
+        },
+        {
+          "id": "C",
+          "text": "Intersect creates a 5-kilometer buffer, whereas Union deletes non-spatial text fields."
+        },
+        {
+          "id": "D",
+          "text": "Intersect increases map scale by 50%, whereas Union converts vector data into satellite images."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "In vector GIS overlay: 'Intersect' outputs only the geographic areas where all input layers overlap, combining their attributes. 'Union' combines all geometries and attributes from both input layers, keeping overlapping as well as non-overlapping areas.",
+      "sourceReference": "Grade 12 Geography Textbook, Section 8.2.2, Page 242–243"
+    },
+    {
+      "id": "GEO-G12-U08-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A district health officer plans to locate a new primary healthcare center to serve underserved rural communities. The research design requires: (1) extracting unserved rural areas further than 5 km from existing clinics, (2) selecting flat terrain with slopes under 3%, and (3) selecting areas within 500 meters of all-weather roads. Which integrated GIS workflow fulfills this multi-criteria spatial decision model?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Digitizing paper maps without georeferencing, followed by simple line graph plotting."
+        },
+        {
+          "id": "B",
+          "text": "Generating proximity buffers around clinics (>5 km) and roads (<500 m), performing slope analysis on elevation raster, and overlaying (intersecting) the criteria layers to isolate suitable candidate parcels."
+        },
+        {
+          "id": "C",
+          "text": "Applying a Quantile data classification on historical health census spreadsheets without spatial coordinates."
+        },
+        {
+          "id": "D",
+          "text": "Executing a network tracing query to measure ocean current salinity along coastal rivers."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Multi-criteria spatial decision modeling in GIS integrates multiple spatial operations: (1) Proximity analysis (buffering clinics at 5 km and roads at 500 m), (2) Surface analysis (deriving slope from raster elevation models and querying slopes <3%), and (3) Spatial Overlay (intersecting all qualifying vector/raster criteria) to output suitable geographic locations.",
+      "sourceReference": "Grade 12 Geography Textbook, Section 8.1.4, Page 228–230 & Section 8.2.2, Page 240–243"
+    }
+  ]
 }

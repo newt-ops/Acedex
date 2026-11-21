@@ -3,5 +3,411 @@
   "subject": "Geography",
   "unitNumber": 2,
   "unitTitle": "Climate Classification and Climate Regions of Our World",
-  "questions": []
+  "questions": [
+    {
+      "id": "GEO-G11-U02-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which ancient Greek climate classification scheme divided the Earth into three broad thermal zones based on latitude and habitability?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Equatorial, Savanna, and Tundra Zones"
+        },
+        {
+          "id": "B",
+          "text": "Frigid, Temperate, and Torrid Zones"
+        },
+        {
+          "id": "C",
+          "text": "Marine, Continental, and Alpine Zones"
+        },
+        {
+          "id": "D",
+          "text": "Megalothermal, Mesothermal, and Microthermal Zones"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Ancient Greek scholars categorized the Earth's climate into three fundamental zones based on temperature and latitude: the Torrid Zone (hot tropical area), Temperate Zone (mild middle latitudes), and Frigid Zone (cold polar regions).",
+      "sourceReference": "Grade 11 Geography Textbook, Section 2.1, Page 28"
+    },
+    {
+      "id": "GEO-G11-U02-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Upon which primary environmental indicator did Wladimir Köppen base his world climate classification system?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Satellite remote sensing measurements of cloud reflectivity"
+        },
+        {
+          "id": "B",
+          "text": "Natural vegetation zones and biomes"
+        },
+        {
+          "id": "C",
+          "text": "Ocean salinity and tidal current patterns"
+        },
+        {
+          "id": "D",
+          "text": "Atmospheric jet stream velocities"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Köppen recognized that natural vegetation is the best expression of overall climate. He mapped biomes and used temperature and precipitation data to define boundaries between vegetation groups.",
+      "sourceReference": "Grade 11 Geography Textbook, Section 2.2.1, Page 30"
+    },
+    {
+      "id": "GEO-G11-U02-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In Köppen's climate classification system, which letter code is used to designate Dry climates (arid and semi-arid) where potential evapotranspiration exceeds annual precipitation?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Group A"
+        },
+        {
+          "id": "B",
+          "text": "Group B"
+        },
+        {
+          "id": "C",
+          "text": "Group C"
+        },
+        {
+          "id": "D",
+          "text": "Group D"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Group B in Köppen's classification designates Dry climates (arid deserts and semi-arid steppes), where moisture deficit occurs because potential evaporation exceeds annual precipitation.",
+      "sourceReference": "Grade 11 Geography Textbook, Section 2.2.1, Page 30 (Figure 2.2)"
+    },
+    {
+      "id": "GEO-G11-U02-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which traditional Ethiopian agro-climatic zone lies between 1,500 and 2,300 meters above sea level with mean annual temperatures of 16°C to 20°C, forming the primary agricultural zone for surplus grain production?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Bereha"
+        },
+        {
+          "id": "B",
+          "text": "Kolla"
+        },
+        {
+          "id": "C",
+          "text": "Woina-Dega"
+        },
+        {
+          "id": "D",
+          "text": "Wurch"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Woina-Dega (warm temperate highland zone) spans elevations of 1,500 to 2,300 meters a.s.l. with temperatures ranging from 16°C to 20°C. It contains most of Ethiopia's settled agricultural lands.",
+      "sourceReference": "Grade 11 Geography Textbook, Section 2.5, Page 52–53"
+    },
+    {
+      "id": "GEO-G11-U02-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is the Intertropical Convergence Zone (ITCZ)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A permanent high-pressure cell located over the North and South Poles."
+        },
+        {
+          "id": "B",
+          "text": "A low-pressure belt along the tropics where Northeast and Southeast trade winds converge, producing convectional rainfall."
+        },
+        {
+          "id": "C",
+          "text": "A cold ocean current flowing along the western coast of South America."
+        },
+        {
+          "id": "D",
+          "text": "An upper-atmosphere wind belt that moves exclusively from west to east across polar ice caps."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The ITCZ is a low-pressure belt near the equator where the trade winds of the Northern and Southern Hemispheres meet, causing rising air, cloud formation, and abundant precipitation.",
+      "sourceReference": "Grade 11 Geography Textbook, Section 2.4.5, Page 49"
+    },
+    {
+      "id": "GEO-G11-U02-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How does an empirical climate classification system differ fundamentally from a genetic climate classification system?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Empirical systems use observable environmental data such as temperature and precipitation, whereas genetic systems classify climate based on the underlying forcing mechanisms and air mass dynamics that produce climate."
+        },
+        {
+          "id": "B",
+          "text": "Empirical systems rely on satellite imagery, whereas genetic systems rely on ancient Greek manuscripts."
+        },
+        {
+          "id": "C",
+          "text": "Empirical systems classify only polar ice caps, whereas genetic systems classify only tropical rainforests."
+        },
+        {
+          "id": "D",
+          "text": "Empirical systems determine future climate change, whereas genetic systems analyze historical fossil soils."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Empirical classification systems (like Köppen's) are based on observed, statistical weather data (temperature, precipitation, vegetation). Genetic classification systems are based on the causes or forcing mechanisms of climate (air masses, atmospheric circulation, solar radiation).",
+      "sourceReference": "Grade 11 Geography Textbook, Section 2.1, Page 28–29"
+    },
+    {
+      "id": "GEO-G11-U02-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which of the following atmospheric characteristics uniquely defines the Tropical Wet or Equatorial Rainforest climate (Af) in Köppen's system?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Severe winter frost with mean monthly temperatures dropping below -3°C."
+        },
+        {
+          "id": "B",
+          "text": "Year-round high temperatures with an extremely small annual temperature range (<3°C) and consistent monthly precipitation throughout the year."
+        },
+        {
+          "id": "C",
+          "text": "High rainfall during winter months accompanied by a completely dry summer period."
+        },
+        {
+          "id": "D",
+          "text": "Dominance of cold continental polar air masses throughout the year."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The Tropical Wet climate (Af) is dominated by equatorial maritime air masses, maintaining consistently warm temperatures year-round (annual range <3°C) and receiving abundant precipitation in every month without a distinct dry season.",
+      "sourceReference": "Grade 11 Geography Textbook, Section 2.2.2 & 2.3.1, Page 33 & 39"
+    },
+    {
+      "id": "GEO-G11-U02-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Why do inland locations far from oceans (continental interior climates) exhibit a much larger annual temperature range than coastal locations (maritime climates) at the same latitude?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Ocean waters reflect 100% of solar radiation back into outer space."
+        },
+        {
+          "id": "B",
+          "text": "Land surfaces heat up and cool down much faster than water bodies because land has a lower specific heat capacity and absorbs heat only in a thin surface layer."
+        },
+        {
+          "id": "C",
+          "text": "Inland locations receive zero solar insolation during the winter solstice."
+        },
+        {
+          "id": "D",
+          "text": "Maritime locations are completely shielded from prevailing winds by coastal sand dunes."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Water has a high specific heat capacity, heats slowly, and stores heat deeply, moderating coastal temperatures. Land heats rapidly during summer/daytime and cools rapidly during winter/nighttime, causing interior continental locations to experience extreme temperature ranges.",
+      "sourceReference": "Grade 11 Geography Textbook, Section 2.4.3, Page 47"
+    },
+    {
+      "id": "GEO-G11-U02-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What atmospheric mechanism explains why the Mediterranean climate (Cs) experiences warm, dry summers and mild, wet winters?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Seasonal migration of Subtropical High Pressure over the region during summer (suppressing rain) and shift of prevailing Westerlies over the region during winter (bringing rain)."
+        },
+        {
+          "id": "B",
+          "text": "Continuous year-round upwelling of warm ocean currents along western continental coasts."
+        },
+        {
+          "id": "C",
+          "text": "Outbursts of severe Siberian polar continental air masses during the summer months."
+        },
+        {
+          "id": "D",
+          "text": "Convergence of monsoon winds from equatorial rainforests during the winter season."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "In summer, the Subtropical High Pressure belt shifts poleward over Mediterranean regions, bringing stable, dry, subsiding air. In winter, the high-pressure system shifts equatorward, allowing moisture-bearing mid-latitude Westerlies and cyclones to bring precipitation.",
+      "sourceReference": "Grade 11 Geography Textbook, Section 2.3.2 & 2.4.5, Page 42 & 49"
+    },
+    {
+      "id": "GEO-G11-U02-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which Ethiopian traditional agro-ecological zone is found at elevations above 3,300 meters above sea level, characterized by mean annual temperatures below 10°C, frequent frost, and specialized cultivation of barley?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Kolla"
+        },
+        {
+          "id": "B",
+          "text": "Woina-Dega"
+        },
+        {
+          "id": "C",
+          "text": "Dega"
+        },
+        {
+          "id": "D",
+          "text": "Wurch (Kur)"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "The Wurch (or Alpine/Kur) zone occurs above 3,300 m a.s.l. on high mountain plateaus (such as Semien, Bale, and Choke). It experiences mean temperatures below 10°C and cold conditions suitable mainly for hardy barley crops and Afro-alpine vegetation.",
+      "sourceReference": "Grade 11 Geography Textbook, Section 2.5, Page 53–54"
+    },
+    {
+      "id": "GEO-G11-U02-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "When moist air masses are forced to rise over a mountain range (orographic lifting), what climatic phenomenon develops on the leeward slope of the mountain?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Heavy convective thunderstorm activity and flash flooding."
+        },
+        {
+          "id": "B",
+          "text": "A rain shadow zone characterized by dry, descending air that warms adiabatically and suppresses precipitation."
+        },
+        {
+          "id": "C",
+          "text": "Constant polar blizzard conditions with 100% relative humidity."
+        },
+        {
+          "id": "D",
+          "text": "High atmospheric pressure resulting in year-round snowfall."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "As air ascends the windward side, it expands, cools, condenses, and drops moisture. Upon crossing the ridge, the now dry air descends down the leeward side, warming adiabatically. This warm, dry descending air creates a dry 'rain shadow' region on the leeward slope.",
+      "sourceReference": "Grade 11 Geography Textbook, Section 2.4.8, Page 51 (Figure 2.10)"
+    },
+    {
+      "id": "GEO-G11-U02-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Why does solar insolation per unit surface area decrease progressively from the Equator (0°) toward the Poles (90°)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Solar rays at high latitudes strike the Earth at an oblique angle, spreading energy over a larger surface area while passing through a thicker atmospheric path that increases scattering and absorption."
+        },
+        {
+          "id": "B",
+          "text": "The distance between the Sun and the Poles is 50% greater than the distance between the Sun and the Equator."
+        },
+        {
+          "id": "C",
+          "text": "The Earth's rotation speed at the Poles is zero, which halts heat transfer."
+        },
+        {
+          "id": "D",
+          "text": "Polar regions absorb all incoming ultraviolet rays in the stratosphere, preventing light from reaching the surface."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Solar angle is direct (90°) at the equator, concentrating energy on a smaller area and passing through a shorter atmospheric path. At higher latitudes, solar rays strike obliquely, spreading energy over a wider area and traversing a longer atmospheric distance, increasing scattering and absorption.",
+      "sourceReference": "Grade 11 Geography Textbook, Section 2.4.1, Page 45"
+    },
+    {
+      "id": "GEO-G11-U02-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "In modified Köppen climate code terminology, how does a highland climate classified as Cwb (such as the Ethiopian highland climate around Addis Ababa) differ from a humid subtropical climate classified as Cfa?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Cwb has a dry winter season ('w') and cool summers ('b') due to high altitude moderation, whereas Cfa has year-round precipitation ('f') and hot summers ('a')."
+        },
+        {
+          "id": "B",
+          "text": "Cwb occurs exclusively at sea level, whereas Cfa occurs exclusively above 4,000 meters elevation."
+        },
+        {
+          "id": "C",
+          "text": "Cwb receives zero rainfall throughout the year, whereas Cfa experiences 10 consecutive months of snow."
+        },
+        {
+          "id": "D",
+          "text": "Cwb is governed by polar continental air masses, whereas Cfa is governed by Antarctic katabatic winds."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "In Köppen code symbols: 'C' = mild mid-latitude/highland temperate; 'w' = dry winter season; 'f' = fully humid; 'b' = warm/cool summer (warmest month <22°C, typical of elevated tropical highlands); 'a' = hot summer (warmest month >22°C). Thus, Cwb represents a dry-winter subtropical highland climate modified by altitude.",
+      "sourceReference": "Grade 11 Geography Textbook, Section 2.2.2 & 2.3.4, Page 31–37 & 52"
+    },
+    {
+      "id": "GEO-G11-U02-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "How do cold ocean currents (such as the Benguela Current off southwest Africa and the Canary Current off northwest Africa) contribute to the hyper-aridity of adjacent coastal deserts (like the Namib and Western Sahara)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Cold ocean currents warm the overlying air, increasing atmospheric moisture capacity and evaporating all coastal rivers."
+        },
+        {
+          "id": "B",
+          "text": "Cold ocean currents chill the lower layer of maritime air, creating a strong temperature inversion that stabilizes the atmosphere and inhibits vertical convection and cloud formation."
+        },
+        {
+          "id": "C",
+          "text": "Cold ocean currents divert trade winds directly toward the North Pole, leaving coastal regions with zero wind."
+        },
+        {
+          "id": "D",
+          "text": "Cold ocean currents increase atmospheric pressure to 2,000 millibars, causing volcanic eruptions."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Cold ocean currents cool the air directly above them. Because cool air is dense beneath warmer air aloft, a temperature inversion is established. This atmospheric stability prevents convective updrafts, cloud development, and precipitation, creating dry fog and extreme coastal aridity.",
+      "sourceReference": "Grade 11 Geography Textbook, Section 2.4.7, Page 50"
+    },
+    {
+      "id": "GEO-G11-U02-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "When evaluating the alignment between Köppen's global climate classification and Ethiopia's traditional indigenous agro-climatic zonation system, which factor explains why traditional Ethiopian zonation (Bereha, Kolla, Woina-Dega, Dega, Wurch) provides a more practical local guide for Ethiopian farmers than Köppen's broad thermal groups?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Traditional Ethiopian zonation incorporates local altitudinal lapse rates directly tied to specific crop viability limits and traditional agricultural calendars."
+        },
+        {
+          "id": "B",
+          "text": "Köppen's classification system ignores temperature and precipitation entirely."
+        },
+        {
+          "id": "C",
+          "text": "Traditional Ethiopian zonation was created using space satellite sensors, whereas Köppen used hand drawings."
+        },
+        {
+          "id": "D",
+          "text": "Köppen's system applies only to ocean water bodies and cannot be used on landmasses."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Traditional Ethiopian agro-ecological zonation uses vertical temperature lapse rates driven by altitude, establishing elevation thresholds that correlate directly with specific agricultural cropping belts (e.g., teff and maize in Woina-Dega, barley in Dega/Wurch) and microclimates, offering immediate practical relevance for smallholder Ethiopian farmers.",
+      "sourceReference": "Grade 11 Geography Textbook, Section 2.5, Page 52–54"
+    }
+  ]
 }

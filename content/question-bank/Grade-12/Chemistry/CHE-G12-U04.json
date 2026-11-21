@@ -3,5 +3,411 @@
   "subject": "Chemistry",
   "unitNumber": 4,
   "unitTitle": "Polymers",
-  "questions": []
+  "questions": [
+    {
+      "id": "CHE-G12-U04-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "A polymer is best defined as a macromolecule composed of:",
+      "options": [
+        {
+          "id": "A",
+          "text": "A single heavy metallic atom bonded to multiple noble gas atoms."
+        },
+        {
+          "id": "B",
+          "text": "Numerous small, repeating structural units called monomers linked by covalent bonds."
+        },
+        {
+          "id": "C",
+          "text": "An unstable mixture of subatomic particles held together by weak gravitational forces."
+        },
+        {
+          "id": "D",
+          "text": "A lattice of oppositely charged ions held together by electrostatic forces."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Polymers are high-molar-mass macromolecules built by chemically linking many repeating small molecular units called monomers through covalent bonds.",
+      "sourceReference": "Section 4.1, Page 214"
+    },
+    {
+      "id": "CHE-G12-U04-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which characteristic distinguishes addition polymerization from condensation polymerization?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Addition polymerization produces water or hydrogen chloride as byproducts."
+        },
+        {
+          "id": "B",
+          "text": "Addition polymerization involves unsaturated monomers joining without eliminating any byproduct molecules."
+        },
+        {
+          "id": "C",
+          "text": "Addition polymerization requires two different dicarboxylic acid monomers."
+        },
+        {
+          "id": "D",
+          "text": "Addition polymerization yields only low-molecular-weight oligomers."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In addition (chain-growth) polymerization, unsaturated monomer molecules (containing C=C double bonds) join together sequentially without the loss or elimination of any small atoms or molecules.",
+      "sourceReference": "Section 4.2, Page 216"
+    },
+    {
+      "id": "CHE-G12-U04-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Why can thermoplastic polymers be repeatedly melted, reshaped, and recycled upon heating?",
+      "options": [
+        {
+          "id": "A",
+          "text": "They contain rigid three-dimensional covalent cross-links that melt at low temperatures."
+        },
+        {
+          "id": "B",
+          "text": "Their linear or branched chains are held together by relatively weak intermolecular forces that soften when heated."
+        },
+        {
+          "id": "C",
+          "text": "They undergo permanent chemical decomposition at room temperature."
+        },
+        {
+          "id": "D",
+          "text": "They consist entirely of metallic bonds that allow atom sliding."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Thermoplastics consist of linear or branched polymer chains bound by intermolecular forces (such as London dispersion or dipole forces). Heating overcomes these weak interactions, enabling the polymer to flow and be remolded repeatedly.",
+      "sourceReference": "Section 4.3, Page 231"
+    },
+    {
+      "id": "CHE-G12-U04-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is the monomer unit used to produce Polytetrafluoroethylene (PTFE, commercially known as Teflon)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Tetrafluoroethylene (CF₂=CF₂)"
+        },
+        {
+          "id": "B",
+          "text": "Vinyl chloride (CH₂=CHCl)"
+        },
+        {
+          "id": "C",
+          "text": "Styrene (C₆H₅CH=CH₂)"
+        },
+        {
+          "id": "D",
+          "text": "Acrylonitrile (CH₂=CHCN)"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Polytetrafluoroethylene (PTFE or Teflon) is synthesized via the addition polymerization of tetrafluoroethylene (CF₂=CF₂).",
+      "sourceReference": "Section 4.3, Page 230"
+    },
+    {
+      "id": "CHE-G12-U04-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which of the following materials is a naturally occurring biopolymer?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Polypropylene"
+        },
+        {
+          "id": "B",
+          "text": "Proteins (polypeptides)"
+        },
+        {
+          "id": "C",
+          "text": "Polystyrene"
+        },
+        {
+          "id": "D",
+          "text": "Bakelite"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Proteins are natural biopolymers composed of amino acid monomer units linked by peptide (amide) bonds, whereas polypropylene, polystyrene, and Bakelite are synthetic man-made polymers.",
+      "sourceReference": "Section 4.3, Page 226"
+    },
+    {
+      "id": "CHE-G12-U04-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Styrene-butadiene rubber (SBR) is synthesized by polymerizing a mixture of styrene and 1,3-butadiene. SBR is classified as a:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Homopolymer"
+        },
+        {
+          "id": "B",
+          "text": "Copolymer"
+        },
+        {
+          "id": "C",
+          "text": "Monomer"
+        },
+        {
+          "id": "D",
+          "text": "Biopolymer"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "A polymer formed by polymerizing two or more different species of monomer units is classified as a copolymer. SBR contains both styrene and 1,3-butadiene units.",
+      "sourceReference": "Section 4.3, Page 223"
+    },
+    {
+      "id": "CHE-G12-U04-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which pair of bifunctional compounds undergoes condensation to yield the polyamide Nylon-6,6?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Adipic acid (hexanedioic acid) and hexamethylenediamine (1,6-diaminohexane)"
+        },
+        {
+          "id": "B",
+          "text": "Terephthalic acid and ethylene glycol"
+        },
+        {
+          "id": "C",
+          "text": "Phenol and formaldehyde"
+        },
+        {
+          "id": "D",
+          "text": "Lactic acid and glycolic acid"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Nylon-6,6 is synthesized by reacting hexanedioic acid (adipic acid, containing 6 carbons) with 1,6-diaminohexane (hexamethylenediamine, containing 6 carbons) with the elimination of water molecules.",
+      "sourceReference": "Section 4.2, Page 219"
+    },
+    {
+      "id": "CHE-G12-U04-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "During the synthesis of Polyethylene Terephthalate (PET or Dacron), ester linkages are formed between which functional groups?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Carboxylic acid (-COOH) and alcohol (-OH) groups"
+        },
+        {
+          "id": "B",
+          "text": "Amine (-NH₂) and carboxylic acid (-COOH) groups"
+        },
+        {
+          "id": "C",
+          "text": "Aldehyde (-CHO) and ketone (-CO-) groups"
+        },
+        {
+          "id": "D",
+          "text": "Alkene (C=C) and ether (-O-) groups"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "PET is a polyester produced by the step-growth condensation reaction between the carboxyl groups of terephthalic acid and the hydroxyl groups of ethylene glycol (1,2-ethanediol).",
+      "sourceReference": "Section 4.2, Page 220"
+    },
+    {
+      "id": "CHE-G12-U04-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What is the role of an organic peroxide (such as benzoyl peroxide) in the free-radical polymerization of ethylene?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It acts as a chain terminator that stops polymer growth."
+        },
+        {
+          "id": "B",
+          "text": "It undergoes homolytic cleavage to generate free radicals that initiate chain growth."
+        },
+        {
+          "id": "C",
+          "text": "It functions as a solvent to dissolve linear polymer chains."
+        },
+        {
+          "id": "D",
+          "text": "It cross-links adjacent polyethylene chains with ionic bonds."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Organic peroxides contain weak O-O bonds that easily cleave homolytically upon heating or light exposure, generating free radicals that initiate free-radical addition polymerization.",
+      "sourceReference": "Section 4.2, Page 217"
+    },
+    {
+      "id": "CHE-G12-U04-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Polymethyl methacrylate (PMMA) is widely used as a shatter-resistant substitute for glass. Which monomer produces PMMA?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Methyl methacrylate"
+        },
+        {
+          "id": "B",
+          "text": "Ethyl acetate"
+        },
+        {
+          "id": "C",
+          "text": "Vinyl alcohol"
+        },
+        {
+          "id": "D",
+          "text": "Methyl ethanoate"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "PMMA (Plexiglas/Lucite) is prepared by the addition polymerization of methyl methacrylate [CH₂=C(CH₃)COOCH₃].",
+      "sourceReference": "Section 4.3, Page 230"
+    },
+    {
+      "id": "CHE-G12-U04-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Bakelite is formed by the condensation reaction of phenol with formaldehyde. Why does Bakelite maintain its shape and resist melting when heated?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It consists of non-polar unbranched linear chains."
+        },
+        {
+          "id": "B",
+          "text": "It forms a heavily cross-linked three-dimensional network structure bound by strong covalent bonds."
+        },
+        {
+          "id": "C",
+          "text": "It easily dissolves in water to form a stable gel."
+        },
+        {
+          "id": "D",
+          "text": "Its monomer units are linked exclusively by hydrogen bonds."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Bakelite is a thermosetting polymer with extensive three-dimensional covalent cross-linking between phenolic rings and methylene bridges, making it infusible and thermally stable.",
+      "sourceReference": "Section 4.3, Page 231"
+    },
+    {
+      "id": "CHE-G12-U04-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A sample of polypropylene has an average molar mass of 126,000 g/mol. What is its degree of polymerization (number of propene units, n)? (Molar mass of propene, C₃H₆ = 42 g/mol)",
+      "options": [
+        {
+          "id": "A",
+          "text": "1,500"
+        },
+        {
+          "id": "B",
+          "text": "3,000"
+        },
+        {
+          "id": "C",
+          "text": "4,500"
+        },
+        {
+          "id": "D",
+          "text": "6,000"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Degree of polymerization DP = Molar mass of polymer / Molar mass of monomer = 126,000 g/mol / 42 g/mol = 3,000.",
+      "sourceReference": "Section 4.1 & 4.2, Page 214 & Page 217"
+    },
+    {
+      "id": "CHE-G12-U04-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Polystyrene is produced from the monomer styrene (C₈H₈, molar mass = 104 g/mol). If a polystyrene chain has a degree of polymerization of 2,500, what is the total molar mass of the polymer chain?",
+      "options": [
+        {
+          "id": "A",
+          "text": "104,000 g/mol"
+        },
+        {
+          "id": "B",
+          "text": "260,000 g/mol"
+        },
+        {
+          "id": "C",
+          "text": "520,000 g/mol"
+        },
+        {
+          "id": "D",
+          "text": "26,000 g/mol"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Total molar mass = Degree of polymerization × Monomer molar mass = 2,500 × 104 g/mol = 260,000 g/mol (2.60 × 10⁵ g/mol).",
+      "sourceReference": "Section 4.2, Page 217"
+    },
+    {
+      "id": "CHE-G12-U04-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Comparing the addition polymerization of vinyl chloride to form PVC with the condensation polymerization of lactic acid to form poly(lactic acid) (PLA), which statement correctly evaluates their Atom Economy?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Vinyl chloride polymerization has 100% Atom Economy because all reactant atoms are incorporated into PVC without byproduct formation."
+        },
+        {
+          "id": "B",
+          "text": "Lactic acid condensation has 100% Atom Economy because water is an environmentally benign byproduct."
+        },
+        {
+          "id": "C",
+          "text": "Both polymerization processes have an Atom Economy below 50%."
+        },
+        {
+          "id": "D",
+          "text": "Vinyl chloride polymerization has a lower Atom Economy than lactic acid condensation."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Addition polymerization incorporates 100% of the monomer atoms into the polymer chain, achieving a 100% Atom Economy. Condensation polymerization eliminates small molecules (e.g., H₂O), so its Atom Economy is strictly less than 100%.",
+      "sourceReference": "Section 4.2 & Unit 5, Page 216 & Page 277"
+    },
+    {
+      "id": "CHE-G12-U04-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Natural rubber (cis-1,4-polyisoprene) is sticky when warm and brittle when cold. Heating natural rubber with elemental sulfur dramatically improves its elasticity and structural strength because sulfur:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Hydrolyzes the double bonds in polyisoprene to form alcohol groups."
+        },
+        {
+          "id": "B",
+          "text": "Forms covalent disulfide (-S-S-) cross-links between adjacent polyisoprene chains, preventing uncoiling sliding."
+        },
+        {
+          "id": "C",
+          "text": "Acts as a plasticizer that decreases intermolecular attractions."
+        },
+        {
+          "id": "D",
+          "text": "Converts cis-1,4-polyisoprene into a linear thermoplastic polyester."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Vulcanization involves heating natural rubber with sulfur, introducing disulfide cross-links between adjacent polymer chains. These cross-links prevent chain slipping under stress while allowing elastic recovery.",
+      "sourceReference": "Section 4.3, Page 226 & Page 231"
+    }
+  ]
 }

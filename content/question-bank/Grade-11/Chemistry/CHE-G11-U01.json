@@ -3,5 +3,411 @@
   "subject": "Chemistry",
   "unitNumber": 1,
   "unitTitle": "Atomic Structure and Periodic Properties of the Elements",
-  "questions": []
+  "questions": [
+    {
+      "id": "CHE-G11-U01-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which postulate of John Dalton's original 1808 atomic theory was modified in Modern Atomic Theory following the discovery of isotopes?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Atoms combine in simple whole-number ratios to form chemical compounds."
+        },
+        {
+          "id": "B",
+          "text": "All atoms of a given element are identical in mass and properties."
+        },
+        {
+          "id": "C",
+          "text": "Atoms can neither be created nor destroyed during chemical reactions."
+        },
+        {
+          "id": "D",
+          "text": "Chemical reactions involve the reorganization of constituent atoms."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Dalton postulated that all atoms of a given element are identical in mass. The discovery of isotopes (atoms of the same element possessing different numbers of neutrons and therefore different mass numbers) modified this postulate in Modern Atomic Theory.",
+      "sourceReference": "Section 1.2, Page 5"
+    },
+    {
+      "id": "CHE-G11-U01-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In his cathode-ray tube experiments, J.J. Thomson determined which fundamental property of the electron?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The exact absolute charge of an individual electron"
+        },
+        {
+          "id": "B",
+          "text": "The charge-to-mass ratio (e/m) of the electron"
+        },
+        {
+          "id": "C",
+          "text": "The precise radius of the electron's orbit"
+        },
+        {
+          "id": "D",
+          "text": "The spin quantum number of the electron"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "By measuring the deflection of cathode rays in electric and magnetic fields, J.J. Thomson determined the charge-to-mass ratio (e/m) of the electron (-1.76 × 10^11 C/kg). Robert Millikan later determined the absolute charge of the electron in his oil-drop experiment.",
+      "sourceReference": "Section 1.3, Page 7"
+    },
+    {
+      "id": "CHE-G11-U01-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "An electromagnetic wave has a frequency (ν) and a wavelength (λ) traveling through a vacuum at speed c. Which equation correctly relates these wave parameters?",
+      "options": [
+        {
+          "id": "A",
+          "text": "c = λ / ν"
+        },
+        {
+          "id": "B",
+          "text": "c = λ × ν"
+        },
+        {
+          "id": "C",
+          "text": "λ = c × ν"
+        },
+        {
+          "id": "D",
+          "text": "ν = λ / c"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The speed of electromagnetic radiation in a vacuum is equal to the product of its wavelength and frequency: c = λ × ν (or λ = c / ν).",
+      "sourceReference": "Section 1.5, Page 16"
+    },
+    {
+      "id": "CHE-G11-U01-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In quantum mechanics, an angular momentum quantum number of l = 2 designates which type of atomic subshell?",
+      "options": [
+        {
+          "id": "A",
+          "text": "s subshell"
+        },
+        {
+          "id": "B",
+          "text": "p subshell"
+        },
+        {
+          "id": "C",
+          "text": "d subshell"
+        },
+        {
+          "id": "D",
+          "text": "f subshell"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The values of the angular momentum quantum number l correspond to specific subshell designations: l = 0 is s, l = 1 is p, l = 2 is d, and l = 3 is f.",
+      "sourceReference": "Section 1.6, Page 36"
+    },
+    {
+      "id": "CHE-G11-U01-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which rule or principle states that degenerate orbitals must each be occupied by a single electron with parallel spins before any orbital is doubly occupied?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Aufbau Principle"
+        },
+        {
+          "id": "B",
+          "text": "Pauli's Exclusion Principle"
+        },
+        {
+          "id": "C",
+          "text": "Hund's Rule"
+        },
+        {
+          "id": "D",
+          "text": "Heisenberg's Uncertainty Principle"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Hund's Rule states that for degenerate (equal energy) orbitals, electrons occupy them singly with parallel spins before a second electron of opposite spin enters any single orbital.",
+      "sourceReference": "Section 1.7, Page 41"
+    },
+    {
+      "id": "CHE-G11-U01-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "An element X has two naturally occurring isotopes: X-63 (isotopic mass = 62.93 amu, relative abundance = 60.0%) and X-65 (isotopic mass = 64.93 amu, relative abundance = 40.0%). What is the average atomic mass of element X?",
+      "options": [
+        {
+          "id": "A",
+          "text": "63.73 amu"
+        },
+        {
+          "id": "B",
+          "text": "63.93 amu"
+        },
+        {
+          "id": "C",
+          "text": "64.13 amu"
+        },
+        {
+          "id": "D",
+          "text": "63.00 amu"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Average atomic mass = (62.93 amu × 0.600) + (64.93 amu × 0.400) = 37.758 + 25.972 = 63.73 amu.",
+      "sourceReference": "Section 1.4, Page 13"
+    },
+    {
+      "id": "CHE-G11-U01-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What is the energy (in Joules) of a single photon of cyan light with a wavelength of 500 nm? (Planck's constant h = 6.63 × 10^-34 J·s, speed of light c = 3.00 × 10^8 m/s)",
+      "options": [
+        {
+          "id": "A",
+          "text": "3.98 × 10^-19 J"
+        },
+        {
+          "id": "B",
+          "text": "1.33 × 10^-19 J"
+        },
+        {
+          "id": "C",
+          "text": "6.63 × 10^-19 J"
+        },
+        {
+          "id": "D",
+          "text": "3.98 × 10^-25 J"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Convert wavelength to meters: 500 nm = 5.00 × 10^-7 m. Energy E = hc / λ = (6.63 × 10^-34 J·s × 3.00 × 10^8 m/s) / (5.00 × 10^-7 m) = (1.989 × 10^-25) / (5.00 × 10^-7) = 3.98 × 10^-19 J.",
+      "sourceReference": "Section 1.5, Page 18"
+    },
+    {
+      "id": "CHE-G11-U01-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In the emission spectrum of the hydrogen atom, which spectral line series corresponds to electron transitions terminating at the n_f = 2 energy level, producing lines in the visible region?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Lyman series"
+        },
+        {
+          "id": "B",
+          "text": "Balmer series"
+        },
+        {
+          "id": "C",
+          "text": "Paschen series"
+        },
+        {
+          "id": "D",
+          "text": "Brackett series"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The Balmer series consists of electronic transitions where electrons drop to the n_f = 2 state (from n_i = 3, 4, 5...), emitting light in the visible and near-ultraviolet spectral regions. Lyman terminates at n_f = 1 (UV), and Paschen terminates at n_f = 3 (Infrared).",
+      "sourceReference": "Section 1.5, Page 31"
+    },
+    {
+      "id": "CHE-G11-U01-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which of the following sets of quantum numbers (n, l, m_l, m_s) represents an IMPOSSIBLE electronic state in an atom?",
+      "options": [
+        {
+          "id": "A",
+          "text": "n = 3, l = 2, m_l = -1, m_s = +1/2"
+        },
+        {
+          "id": "B",
+          "text": "n = 4, l = 0, m_l = 0, m_s = -1/2"
+        },
+        {
+          "id": "C",
+          "text": "n = 3, l = 3, m_l = +1, m_s = +1/2"
+        },
+        {
+          "id": "D",
+          "text": "n = 2, l = 1, m_l = 0, m_s = -1/2"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "For any principal quantum number n, the allowed values of the angular momentum quantum number l range from 0 up to (n - 1). If n = 3, l can only be 0, 1, or 2. Therefore, l = 3 is not allowed when n = 3 (a 3f orbital does not exist).",
+      "sourceReference": "Section 1.6, Page 38"
+    },
+    {
+      "id": "CHE-G11-U01-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Chromium (Z = 24) has an experimental ground-state electron configuration of [Ar] 4s¹ 3d⁵ rather than the expected [Ar] 4s² 3d⁴. What is the primary physical reason for this anomaly?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The 4s orbital has a higher energy than the 3d orbitals in multi-electron atoms."
+        },
+        {
+          "id": "B",
+          "text": "The enhanced thermodynamic stability associated with a half-filled 3d subshell (3d⁵)."
+        },
+        {
+          "id": "C",
+          "text": "Complete shielding of the nucleus by 4s electrons."
+        },
+        {
+          "id": "D",
+          "text": "Chromium becomes diamagnetic when the 4s subshell is full."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Subshells that are completely filled (d¹⁰) or exactly half-filled (d⁵) possess extra stability due to symmetrical electron distribution and maximum exchange energy. Transferring one electron from 4s to 3d creates two half-filled subshells (4s¹ 3d⁵).",
+      "sourceReference": "Section 1.7, Page 44"
+    },
+    {
+      "id": "CHE-G11-U01-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Across Period 2 of the periodic table, the first ionization energy generally increases from left to right. However, Nitrogen (Z = 7) has a higher first ionization energy than Oxygen (Z = 8). How is this irregularity explained?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Oxygen has a smaller effective nuclear charge than Nitrogen."
+        },
+        {
+          "id": "B",
+          "text": "Nitrogen has a stable half-filled 2p subshell (2p³), whereas Oxygen has a doubly occupied 2p orbital experiencing inter-electron repulsion."
+        },
+        {
+          "id": "C",
+          "text": "Oxygen has a larger atomic radius than Nitrogen."
+        },
+        {
+          "id": "D",
+          "text": "Nitrogen's valence electrons are located in a higher energy shell than Oxygen's."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Nitrogen has the configuration 1s² 2s² 2p³ with three unpaired electrons in separate 2p orbitals (half-filled stability). Oxygen (2p⁴) has two paired electrons in one 2p orbital, resulting in electron-electron repulsion that makes it easier to remove one electron.",
+      "sourceReference": "Section 1.8, Page 53"
+    },
+    {
+      "id": "CHE-G11-U01-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "According to the Bohr model, what is the wavelength (in nanometers) of the photon emitted when an electron in a hydrogen atom undergoes a transition from the n_i = 4 excited state to the n_f = 2 state? (Rydberg constant R_H = 2.18 × 10^-18 J, h = 6.63 × 10^-34 J·s, c = 3.00 × 10^8 m/s)",
+      "options": [
+        {
+          "id": "A",
+          "text": "486 nm"
+        },
+        {
+          "id": "B",
+          "text": "656 nm"
+        },
+        {
+          "id": "C",
+          "text": "434 nm"
+        },
+        {
+          "id": "D",
+          "text": "410 nm"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Energy change ΔE = -R_H (1/n_f² - 1/n_i²) = -2.18 × 10^-18 J (1/2² - 1/4²) = -2.18 × 10^-18 J (1/4 - 1/16) = -2.18 × 10^-18 J × (3/16) = -4.0875 × 10^-19 J. Wavelength λ = hc / |ΔE| = (6.63 × 10^-34 × 3.00 × 10^8) / (4.0875 × 10^-19) = 1.989 × 10^-25 / 4.0875 × 10^-19 = 4.865 × 10^-7 m = 486 nm.",
+      "sourceReference": "Section 1.5, Page 29"
+    },
+    {
+      "id": "CHE-G11-U01-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "According to de Broglie's wave-particle duality relation, what is the characteristic wavelength (in nm) of an electron (mass = 9.11 × 10^-31 kg) moving at a velocity of 2.00 × 10^6 m/s? (h = 6.63 × 10^-34 J·s)",
+      "options": [
+        {
+          "id": "A",
+          "text": "0.364 nm"
+        },
+        {
+          "id": "B",
+          "text": "3.64 nm"
+        },
+        {
+          "id": "C",
+          "text": "0.182 nm"
+        },
+        {
+          "id": "D",
+          "text": "0.728 nm"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "De Broglie equation: λ = h / (m × v). Substituting: λ = (6.63 × 10^-34 J·s) / (9.11 × 10^-31 kg × 2.00 × 10^6 m/s) = (6.63 × 10^-34) / (1.822 × 10^-24) = 3.6388 × 10^-10 m = 0.364 nm.",
+      "sourceReference": "Section 1.5, Page 33"
+    },
+    {
+      "id": "CHE-G11-U01-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "In the fourth principal shell (n = 4) of an atom, how many individual electrons can simultaneously possess quantum number values of m_l = +1 and m_s = -1/2?",
+      "options": [
+        {
+          "id": "A",
+          "text": "3"
+        },
+        {
+          "id": "B",
+          "text": "4"
+        },
+        {
+          "id": "C",
+          "text": "6"
+        },
+        {
+          "id": "D",
+          "text": "8"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "For n = 4, the subshells are l = 0 (4s), l = 1 (4p), l = 2 (4d), and l = 3 (4f). The magnetic quantum number m_l = +1 exists in subshells with l ≥ 1 (i.e., 4p, 4d, and 4f, giving 3 orbitals). Each of these 3 orbitals can hold exactly 1 electron with spin m_s = -1/2. Thus, exactly 3 electrons can have both m_l = +1 and m_s = -1/2.",
+      "sourceReference": "Section 1.6, Page 37"
+    },
+    {
+      "id": "CHE-G11-U01-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A main-group element X located in Period 3 of the periodic table exhibits the following successive ionization energies (in kJ/mol): IE1 = 578, IE2 = 1817, IE3 = 2745, IE4 = 11578, IE5 = 14830. What is the ground-state valence electron configuration and chemical identity of element X?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Aluminum (Al), [Ne] 3s² 3p¹"
+        },
+        {
+          "id": "B",
+          "text": "Silicon (Si), [Ne] 3s² 3p²"
+        },
+        {
+          "id": "C",
+          "text": "Magnesium (Mg), [Ne] 3s²"
+        },
+        {
+          "id": "D",
+          "text": "Phosphorus (P), [Ne] 3s² 3p³"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "A massive jump occurs between IE3 (2745 kJ/mol) and IE4 (11578 kJ/mol), indicating that 3 valence electrons are easily removed before breaking into a stable noble gas core ([Ne]). The Period 3 element with 3 valence electrons is Aluminum (Al, Z = 13), with valence configuration 3s² 3p¹.",
+      "sourceReference": "Section 1.8, Page 54"
+    }
+  ]
 }

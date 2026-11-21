@@ -3,5 +3,411 @@
   "subject": "Chemistry",
   "unitNumber": 1,
   "unitTitle": "Chemical Reactions and Stoichiometry",
-  "questions": []
+  "questions": [
+    {
+      "id": "CHE-G10-U01-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which of the following observations provides definitive evidence that a chemical change (chemical reaction) has taken place rather than a physical change?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The boiling of liquid water to form water vapor."
+        },
+        {
+          "id": "B",
+          "text": "The formation of a new substance with a different chemical composition, often accompanied by energy changes or gas evolution."
+        },
+        {
+          "id": "C",
+          "text": "The melting of solid ice into liquid water."
+        },
+        {
+          "id": "D",
+          "text": "The dissolving of sugar crystals in a cup of hot tea."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "A chemical change involves a transformation resulting in one or more new substances with new chemical compositions, whereas physical changes alter physical state without changing chemical composition.",
+      "sourceReference": "Section 1.1, Page 2"
+    },
+    {
+      "id": "CHE-G10-U01-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "According to the Law of Conservation of Mass, why must a chemical equation be balanced?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To ensure that the total number of molecules on both sides of the equation is identical."
+        },
+        {
+          "id": "B",
+          "text": "To show that atoms are neither created nor destroyed during a chemical reaction, keeping the total number of each type of atom equal before and after the reaction."
+        },
+        {
+          "id": "C",
+          "text": "To equalize the physical volumes of all reactants and products."
+        },
+        {
+          "id": "D",
+          "text": "To guarantee that all reactants are completely converted into gaseous products."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The Law of Conservation of Mass dictates that mass (and atoms) cannot be created or destroyed in a chemical reaction. Therefore, a chemical equation must be balanced by coefficients so that the number of atoms of each element remains identical on both reactant and product sides.",
+      "sourceReference": "Section 1.2, Page 5"
+    },
+    {
+      "id": "CHE-G10-U01-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "The chemical reaction represented by 2H₂O₂(aq) → 2H₂O(l) + O₂(g) belongs to which major category of chemical reactions?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Direct combination reaction"
+        },
+        {
+          "id": "B",
+          "text": "Single displacement reaction"
+        },
+        {
+          "id": "C",
+          "text": "Decomposition reaction"
+        },
+        {
+          "id": "D",
+          "text": "Double displacement reaction"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "A decomposition reaction is a reaction in which a single compound breaks down into two or more simpler substances (elements or compounds).",
+      "sourceReference": "Section 1.3, Page 13"
+    },
+    {
+      "id": "CHE-G10-U01-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In chemical calculations, one mole of any pure substance is defined as containing exactly how many representative entities (Avogadro's number)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "6.02 × 10²² particles"
+        },
+        {
+          "id": "B",
+          "text": "6.02 × 10²³ particles"
+        },
+        {
+          "id": "C",
+          "text": "3.01 × 10²³ particles"
+        },
+        {
+          "id": "D",
+          "text": "1.20 × 10²⁴ particles"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "A mole is defined as the amount of a substance that contains Avogadro's number of units/particles, which is 6.02 × 10²³ (equivalent to the number of carbon atoms in 12 g of Carbon-12).",
+      "sourceReference": "Section 1.5, Page 29"
+    },
+    {
+      "id": "CHE-G10-U01-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is the oxidation state of sulfur in its elemental, uncombined polyatomic form (S₈)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "-2"
+        },
+        {
+          "id": "B",
+          "text": "0"
+        },
+        {
+          "id": "C",
+          "text": "+4"
+        },
+        {
+          "id": "D",
+          "text": "+6"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Rule 1 for assigning oxidation numbers states that the oxidation state of any uncombined, free element (including polyatomic molecules such as S₈ or P₄) is always zero.",
+      "sourceReference": "Section 1.4, Page 21"
+    },
+    {
+      "id": "CHE-G10-U01-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "When the chemical equation Fe(s) + H₂O(g) → Fe₃O₄(s) + H₂(g) is balanced using the smallest whole-number coefficients, what are the stoichiometric coefficients for Fe and H₂O, respectively?",
+      "options": [
+        {
+          "id": "A",
+          "text": "1 and 4"
+        },
+        {
+          "id": "B",
+          "text": "3 and 4"
+        },
+        {
+          "id": "C",
+          "text": "3 and 2"
+        },
+        {
+          "id": "D",
+          "text": "2 and 3"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Balancing the equation gives: 3 Fe + 4 H₂O → Fe₃O₄ + 4 H₂. Thus, the coefficient for iron (Fe) is 3 and the coefficient for water (H₂O) is 4.",
+      "sourceReference": "Section 1.2, Page 6"
+    },
+    {
+      "id": "CHE-G10-U01-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Active metals displace hydrogen gas from dilute acids. Which of the following metals will NOT displace hydrogen when added to dilute hydrochloric acid (HCl)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Zinc (Zn)"
+        },
+        {
+          "id": "B",
+          "text": "Iron (Fe)"
+        },
+        {
+          "id": "C",
+          "text": "Copper (Cu)"
+        },
+        {
+          "id": "D",
+          "text": "Magnesium (Mg)"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Reactive metals above hydrogen in the reactivity series (such as K, Na, Ca, Mg, Zn, Fe) displace hydrogen from dilute acids, whereas less active metals like copper (Cu) cannot displace hydrogen from acids.",
+      "sourceReference": "Section 1.3, Page 15"
+    },
+    {
+      "id": "CHE-G10-U01-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What is the oxidation number of manganese (Mn) in potassium permanganate (KMnO₄)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "+5"
+        },
+        {
+          "id": "B",
+          "text": "+6"
+        },
+        {
+          "id": "C",
+          "text": "+7"
+        },
+        {
+          "id": "D",
+          "text": "+4"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "In KMnO₄: K is +1, O is -2 (total for 4 oxygens = -8). For a neutral compound, (+1) + Mn + (-8) = 0, which yields Mn = +7.",
+      "sourceReference": "Section 1.4, Page 21"
+    },
+    {
+      "id": "CHE-G10-U01-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "A compound of phosphorus and oxygen contains 43.6% phosphorus (P, atomic mass = 31.0 g/mol) and 56.4% oxygen (O, atomic mass = 16.0 g/mol) by mass. What is the empirical formula of this compound?",
+      "options": [
+        {
+          "id": "A",
+          "text": "PO₂"
+        },
+        {
+          "id": "B",
+          "text": "P₂O₃"
+        },
+        {
+          "id": "C",
+          "text": "P₂O₅"
+        },
+        {
+          "id": "D",
+          "text": "P₄O₆"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Moles of P = 43.6 / 31.0 = 1.406 mol. Moles of O = 56.4 / 16.0 = 3.525 mol. Dividing by the smaller number (1.406): P = 1.0, O = 2.5. Multiplying by 2 to obtain whole numbers yields P₂O₅.",
+      "sourceReference": "Section 1.5, Page 31"
+    },
+    {
+      "id": "CHE-G10-U01-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Aluminum reacts with oxygen according to the balanced equation: 4Al(s) + 3O₂(g) → 2Al₂O₃(s). How many grams of aluminum (Al, molar mass = 27.0 g/mol) are required to produce 20.4 g of aluminum oxide (Al₂O₃, molar mass = 102.0 g/mol)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "5.4 g"
+        },
+        {
+          "id": "B",
+          "text": "10.8 g"
+        },
+        {
+          "id": "C",
+          "text": "21.6 g"
+        },
+        {
+          "id": "D",
+          "text": "13.5 g"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Moles of Al₂O₃ = 20.4 g / 102.0 g/mol = 0.20 mol. From the stoichiometry, 4 moles Al produce 2 moles Al₂O₃ (2:1 ratio). Moles of Al required = 0.20 × 2 = 0.40 mol. Mass of Al = 0.40 mol × 27.0 g/mol = 10.8 g.",
+      "sourceReference": "Section 1.6, Page 35"
+    },
+    {
+      "id": "CHE-G10-U01-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Methane burns completely in oxygen according to the equation: CH₄(g) + 2O₂(g) → CO₂(g) + 2H₂O(g). What volume of oxygen gas at STP is required to react completely to yield 44.8 L of carbon dioxide gas at STP?",
+      "options": [
+        {
+          "id": "A",
+          "text": "22.4 L"
+        },
+        {
+          "id": "B",
+          "text": "44.8 L"
+        },
+        {
+          "id": "C",
+          "text": "89.6 L"
+        },
+        {
+          "id": "D",
+          "text": "134.4 L"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "According to Gay-Lussac's law of combining volumes, 1 volume of CO₂ requires 2 volumes of O₂. Therefore, 44.8 L of CO₂ requires 44.8 L × 2 = 89.6 L of O₂ at STP.",
+      "sourceReference": "Section 1.6, Page 40"
+    },
+    {
+      "id": "CHE-G10-U01-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Consider the redox reaction: 3Cu(s) + 8HNO₃(aq) → 3Cu(NO₃)₂(aq) + 2NO(g) + 4H₂O(l). Which substance acts as the reducing agent, and why?",
+      "options": [
+        {
+          "id": "A",
+          "text": "HNO₃, because nitrogen is reduced from an oxidation state of +5 to +2."
+        },
+        {
+          "id": "B",
+          "text": "Cu, because elemental copper is oxidized from 0 to +2 by losing electrons."
+        },
+        {
+          "id": "C",
+          "text": "HNO₃, because it provides oxygen to form water."
+        },
+        {
+          "id": "D",
+          "text": "Cu, because it gains electrons to form copper ions."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "A reducing agent is the substance that undergoes oxidation (loses electrons / increases in oxidation number). Copper (Cu) starts at oxidation state 0 and increases to +2 in Cu(NO₃)₂, making Cu the reducing agent.",
+      "sourceReference": "Section 1.4, Page 23"
+    },
+    {
+      "id": "CHE-G10-U01-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Magnesium metal reacts with hydrochloric acid as follows: Mg(s) + 2HCl(aq) → MgCl₂(aq) + H₂(g). If 0.30 mol of Mg is added to a solution containing 0.50 mol of HCl, which reactant is limiting and what is the theoretical yield of H₂ gas?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Mg is limiting; 0.30 mol of H₂ is produced."
+        },
+        {
+          "id": "B",
+          "text": "HCl is limiting; 0.25 mol of H₂ is produced."
+        },
+        {
+          "id": "C",
+          "text": "Mg is limiting; 0.15 mol of H₂ is produced."
+        },
+        {
+          "id": "D",
+          "text": "HCl is limiting; 0.50 mol of H₂ is produced."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "0.30 mol of Mg requires 0.30 × 2 = 0.60 mol of HCl for complete reaction. Since only 0.50 mol of HCl is available, HCl is the limiting reactant. Yield of H₂ = 0.50 mol HCl × (1 mol H₂ / 2 mol HCl) = 0.25 mol of H₂.",
+      "sourceReference": "Section 1.6, Page 42"
+    },
+    {
+      "id": "CHE-G10-U01-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "When 21.6 g of aluminum reacts with excess oxygen gas, the theoretical yield of aluminum oxide (Al₂O₃) is calculated to be 40.8 g. If an experiment yields an actual mass of 30.6 g of Al₂O₃, what is the percentage yield of the reaction?",
+      "options": [
+        {
+          "id": "A",
+          "text": "53.0%"
+        },
+        {
+          "id": "B",
+          "text": "75.0%"
+        },
+        {
+          "id": "C",
+          "text": "82.5%"
+        },
+        {
+          "id": "D",
+          "text": "94.2%"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Percentage yield = (Actual Yield / Theoretical Yield) × 100% = (30.6 g / 40.8 g) × 100% = 75.0%.",
+      "sourceReference": "Section 1.6, Page 45"
+    },
+    {
+      "id": "CHE-G10-U01-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A gaseous hydrocarbon consists of 85.62% carbon (C, atomic mass = 12.01 g/mol) and 14.38% hydrogen (H, atomic mass = 1.008 g/mol) by mass. If its experimentally determined molar mass is 56.1 g/mol, what are its empirical formula and molecular formula?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Empirical formula: CH; Molecular formula: C₄H₄"
+        },
+        {
+          "id": "B",
+          "text": "Empirical formula: CH₂; Molecular formula: C₄H₈"
+        },
+        {
+          "id": "C",
+          "text": "Empirical formula: CH₃; Molecular formula: C₃H₉"
+        },
+        {
+          "id": "D",
+          "text": "Empirical formula: C₂H₅; Molecular formula: C₄H₁₀"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Moles C = 85.62 / 12.01 = 7.129 mol; Moles H = 14.38 / 1.008 = 14.266 mol. Ratio H/C = 14.266 / 7.129 = 2, so empirical formula is CH₂ (formula mass = 14.03 g/mol). Ratio of molecular mass to empirical formula mass = 56.1 / 14.03 = 4. Molecular formula is (CH₂)₄ = C₄H₈.",
+      "sourceReference": "Section 1.5, Page 32"
+    }
+  ]
 }

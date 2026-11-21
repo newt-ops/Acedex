@@ -3,5 +3,411 @@
   "subject": "Geography",
   "unitNumber": 8,
   "unitTitle": "Geo-spatial Information and Data Processing",
-  "questions": []
+  "questions": [
+    {
+      "id": "GEO-G11-U08-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which term refers to imaginary lines drawn on a topographic map that connect points of equal elevation above a designated datum (usually mean sea level)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Hachures"
+        },
+        {
+          "id": "B",
+          "text": "Contour lines (isohypses)"
+        },
+        {
+          "id": "C",
+          "text": "Isobars"
+        },
+        {
+          "id": "D",
+          "text": "Isotherms"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Contour lines (also called isohypses) are imaginary lines connecting points of equal elevation on the Earth's surface above a reference datum, such as mean sea level.",
+      "sourceReference": "Grade 11 Geography Textbook, Section 8.1.1, Page 218–220"
+    },
+    {
+      "id": "GEO-G11-U08-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "On a topographic map, what terrain characteristic is indicated by a pattern of very closely spaced contour lines?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A flat alluvial plain"
+        },
+        {
+          "id": "B",
+          "text": "A gentle slope"
+        },
+        {
+          "id": "C",
+          "text": "A steep slope or cliff"
+        },
+        {
+          "id": "D",
+          "text": "A broad river valley"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Closely spaced contour lines indicate a steep slope or cliff because elevation changes rapidly over a short horizontal distance. Conversely, widely spaced contours represent gentle slopes.",
+      "sourceReference": "Grade 11 Geography Textbook, Section 8.1.3, Page 220–222 & Page 228"
+    },
+    {
+      "id": "GEO-G11-U08-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is a Geographic Information System (GIS)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A mechanical weather instrument used solely for measuring atmospheric pressure."
+        },
+        {
+          "id": "B",
+          "text": "A computer-based system designed for capturing, storing, checking, manipulating, analyzing, and displaying geographically referenced data."
+        },
+        {
+          "id": "C",
+          "text": "A paper drafting tool used to manually trace aerial photographs."
+        },
+        {
+          "id": "D",
+          "text": "A satellite system designed exclusively to measure solar radiation at the Equator."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "A Geographic Information System (GIS) is defined as a computer-based system used to capture, store, retrieve, manipulate, analyze, and display geographically referenced (geospatial) data.",
+      "sourceReference": "Grade 11 Geography Textbook, Section 8.2.1, Page 230"
+    },
+    {
+      "id": "GEO-G11-U08-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which of the following is NOT one of the five core components of a functional Geographic Information System (GIS)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Hardware"
+        },
+        {
+          "id": "B",
+          "text": "Software"
+        },
+        {
+          "id": "C",
+          "text": "Analogue printing press"
+        },
+        {
+          "id": "D",
+          "text": "People"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "A functional GIS integrates five essential components: Hardware, Software, Data, People, and Methods/Procedures. An analogue printing press is not an internal component of GIS.",
+      "sourceReference": "Grade 11 Geography Textbook, Section 8.2.2, Page 230–234"
+    },
+    {
+      "id": "GEO-G11-U08-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In a vector spatial data model, how are point features (such as water wells, mountain peaks, or weather stations) represented in a GIS database?",
+      "options": [
+        {
+          "id": "A",
+          "text": "By a grid matrix of square pixels"
+        },
+        {
+          "id": "B",
+          "text": "By a single X, Y coordinate pair"
+        },
+        {
+          "id": "C",
+          "text": "By a closed set of boundary vertices"
+        },
+        {
+          "id": "D",
+          "text": "By a continuous surface raster layer"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In vector spatial data structures, discrete point features are encoded using a single coordinate pair (X, Y). Lines are represented by sequences of coordinates, and polygons by closed coordinate loops.",
+      "sourceReference": "Grade 11 Geography Textbook, Section 8.2.2, Page 232–233 (Figure 8.14)"
+    },
+    {
+      "id": "GEO-G11-U08-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "When contour lines cross a river valley on a topographic map, in which direction do the 'V'-shaped bends of the contour lines point?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Downstream toward the river mouth"
+        },
+        {
+          "id": "B",
+          "text": "Upstream toward higher ground or the river source"
+        },
+        {
+          "id": "C",
+          "text": "Parallel to the ocean coastline"
+        },
+        {
+          "id": "D",
+          "text": "Randomly in all cardinal directions"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The 'V'-shaped contour bends crossing a stream or river valley always point upstream (toward higher elevation/the source of the stream). Water flows out of the apex of the 'V' toward lower ground.",
+      "sourceReference": "Grade 11 Geography Textbook, Section 8.1.3, Page 222 (Figure 8.6)"
+    },
+    {
+      "id": "GEO-G11-U08-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What is a major limitation of using hachures instead of contour lines to represent relief features on maps?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Hachures cannot be printed on paper maps."
+        },
+        {
+          "id": "B",
+          "text": "Hachures provide only qualitative impressions of slope direction without indicating exact elevation values or precise numerical gradients."
+        },
+        {
+          "id": "C",
+          "text": "Hachures are used exclusively in digital GIS applications."
+        },
+        {
+          "id": "D",
+          "text": "Hachures show only underwater depths in marine trenches."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Hachures are short lines drawn along the direction of steepest slope. Their primary drawback is that they provide only qualitative visual descriptions of slope steepness and direction, failing to give exact elevation heights or precise quantitative gradients.",
+      "sourceReference": "Grade 11 Geography Textbook, Section 8.1.1, Page 218"
+    },
+    {
+      "id": "GEO-G11-U08-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How does spatial data differ from attribute data within a Geographic Information System (GIS)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Spatial data stores non-geographic text descriptions, whereas attribute data stores satellite orbital paths."
+        },
+        {
+          "id": "B",
+          "text": "Spatial data defines the geographic location, geometry, and shape of features, whereas attribute data describes the non-spatial characteristics, properties, or tabular measurements of those features."
+        },
+        {
+          "id": "C",
+          "text": "Spatial data operates only on paper maps, whereas attribute data operates only in barometers."
+        },
+        {
+          "id": "D",
+          "text": "Spatial data contains no coordinates, whereas attribute data contains only elevation contours."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Spatial data specifies where a feature is located on Earth using coordinates (geometry, shape, location). Attribute data describes what the feature is, providing tabular descriptive properties (e.g., land cover type, name, population count) linked directly to the spatial feature.",
+      "sourceReference": "Grade 11 Geography Textbook, Section 8.2.2, Page 232–233"
+    },
+    {
+      "id": "GEO-G11-U08-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "An urban planner creates a 500-meter zone around a highway corridor to evaluate noise pollution impacts on nearby residential buildings. Which GIS spatial analysis function is being performed?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Attribute Query"
+        },
+        {
+          "id": "B",
+          "text": "Overlay analysis"
+        },
+        {
+          "id": "C",
+          "text": "Buffering (proximity analysis)"
+        },
+        {
+          "id": "D",
+          "text": "Network tracing"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Buffering is a proximity analysis tool in GIS that constructs a polygon zone of a specified distance around selected point, line, or polygon vector features (such as creating a 500m buffer zone along a road network).",
+      "sourceReference": "Grade 11 Geography Textbook, Section 8.2.2, Page 239–244"
+    },
+    {
+      "id": "GEO-G11-U08-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "When mapping regional population data using a quantile classification method in GIS, how are observation values divided into map classes?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Each class spans an equal range of numerical data values (e.g., 0–20, 20–40, 40–60)."
+        },
+        {
+          "id": "B",
+          "text": "Each class contains an equal number of ordered spatial units or observations (e.g., 20% of countries per class in a 5-class map)."
+        },
+        {
+          "id": "C",
+          "text": "Class boundaries are determined strictly by subtracting standard deviations from the mean."
+        },
+        {
+          "id": "D",
+          "text": "Class boundaries are assigned manually based on alphabetical country names."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "A quantile classification method divides ordered data so that an equal number of geographic features/observations are placed into each class (for instance, dividing 25 countries into 5 classes results in exactly 5 countries per class).",
+      "sourceReference": "Grade 11 Geography Textbook, Section 8.2.1, Page 237–238 (Figure 8.10)"
+    },
+    {
+      "id": "GEO-G11-U08-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How is a volcanic crater or a dry sinkhole depression represented on a contour map to distinguish it from a hill or mountain peak?",
+      "options": [
+        {
+          "id": "A",
+          "text": "By a series of concentric closed contours with short tick marks (hachures) pointing inward toward lower ground."
+        },
+        {
+          "id": "B",
+          "text": "By parallel blue line segments crossing at right angles."
+        },
+        {
+          "id": "C",
+          "text": "By a single straight line with a red star symbol."
+        },
+        {
+          "id": "D",
+          "text": "By widely spaced dashed contours with values increasing inward."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Depressions (such as craters or sinkholes) are depicted on contour maps using closed concentric contour lines containing small perpendicular hachure ticks pointing inward toward the lower ground at the center.",
+      "sourceReference": "Grade 11 Geography Textbook, Section 8.1.3, Page 223 (Figure 8.8)"
+    },
+    {
+      "id": "GEO-G11-U08-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "On a 1:50,000 scale topographic map, Point X lies on the 1,400-meter contour line and Point Y lies on the 1,700-meter contour line. If the straight-line map distance between Point X and Point Y is 6 cm, what is the actual ground distance and the average vertical gradient (slope ratio) between the two points?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Ground distance = 3 km; Gradient = 1 in 10 (10%)"
+        },
+        {
+          "id": "B",
+          "text": "Ground distance = 30 km; Gradient = 1 in 100 (1%)"
+        },
+        {
+          "id": "C",
+          "text": "Ground distance = 1.2 km; Gradient = 1 in 4 (25%)"
+        },
+        {
+          "id": "D",
+          "text": "Ground distance = 300 m; Gradient = 1 in 1 (100%)"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "1) Ground distance = 6 cm × 50,000 cm = 300,000 cm = 3,000 meters (3 km).\n2) Vertical interval (height difference) = 1,700 m - 1,400 m = 300 meters.\n3) Gradient = Vertical Rise / Horizontal Distance = 300 m / 3,000 m = 1/10 = 1 in 10 (or 10%).",
+      "sourceReference": "Grade 11 Geography Textbook, Section 8.1.1, Page 217–220 & Section 8.1.3, Page 220–228"
+    },
+    {
+      "id": "GEO-G11-U08-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "What structural procedure is used to delineate a watershed boundary (drainage divide) separating two adjacent river catchments on a topographic contour map?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Connecting the lowest points along river channels with a straight blue line."
+        },
+        {
+          "id": "B",
+          "text": "Tracing a boundary line along highest elevation points, ridges, and saddles surrounding a stream network, crossing contours at right angles where runoff splits."
+        },
+        {
+          "id": "C",
+          "text": "Drawing a circle centered on the river mouth with a radius equal to the map scale."
+        },
+        {
+          "id": "D",
+          "text": "Connecting all urban settlement symbols using a dashed line."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Delineating a watershed (drainage divide) involves identifying high elevation points, ridge crests, and saddles encircling the river's tributaries, and connecting these high points such that rainwater falling inside the line flows into the stream network while water falling outside flows into adjacent basins. The divide crosses contour lines perpendicularly at peak elevations.",
+      "sourceReference": "Grade 11 Geography Textbook, Section 8.1.4, Page 226–227 (Figure 8.12)"
+    },
+    {
+      "id": "GEO-G11-U08-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "An environmental scientist needs to perform continuous surface modeling (such as elevation terrain analysis and continuous soil erosion risk calculation across a watershed). Why is the raster data model structurally more advantageous for this task than the vector data model?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because rasters represent features as discrete polygon boundaries with precise X, Y vertex tables."
+        },
+        {
+          "id": "B",
+          "text": "Because rasters store data as a regular matrix of grid cells, making mathematical surface overlay calculations, spatial interpolation, and cell-by-cell matrix operations computationally efficient."
+        },
+        {
+          "id": "C",
+          "text": "Because rasters require zero computer memory and contain no attribute tables."
+        },
+        {
+          "id": "D",
+          "text": "Because rasters are analogue paper drawings that do not require GIS software."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The raster model represents spatial phenomena as a continuous matrix of uniform grid cells. This structure makes cell-by-cell mathematical modeling (map algebra, slope analysis, continuous surface interpolation) computationally fast and straightforward compared to complex topological vector overlays.",
+      "sourceReference": "Grade 11 Geography Textbook, Section 8.2.2, Page 232–234"
+    },
+    {
+      "id": "GEO-G11-U08-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A regional development agency uses ArcMap to select suitable sites for a new solar energy plant in Ethiopia. The criteria require: (1) elevation below 1,500 meters, (2) land slope under 5%, and (3) distance within 2 km of existing electrical transmission lines. Which combination of GIS operations must be executed to identify suitable sites?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Digital scanning of paper maps followed by simple map enlargement."
+        },
+        {
+          "id": "B",
+          "text": "Re-projecting shapefiles to unprojected geographic coordinates and printing layout maps."
+        },
+        {
+          "id": "C",
+          "text": "Performing proximity buffering around transmission lines, spatial/attribute querying of elevation and slope criteria, and overlaying the resulting layers to extract intersecting areas."
+        },
+        {
+          "id": "D",
+          "text": "Calculating simple pie chart percentages of regional population growth."
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Multi-criteria spatial site selection requires: (1) Buffering (proximity analysis) to establish the 2 km buffer around power lines, (2) Attribute/Spatial Querying to filter areas meeting elevation (<1500m) and slope (<5%) limits, and (3) Overlay Analysis (intersection) to combine all criteria layers and extract qualifying target geographic areas.",
+      "sourceReference": "Grade 11 Geography Textbook, Section 8.2.2, Page 230–235 & Page 239–244"
+    }
+  ]
 }

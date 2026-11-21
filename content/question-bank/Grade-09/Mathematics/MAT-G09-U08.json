@@ -3,5 +3,411 @@
   "subject": "Mathematics",
   "unitNumber": 8,
   "unitTitle": "Vectors in Two Dimensions",
-  "questions": []
+  "questions": [
+    {
+      "id": "MAT-G09-U08-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which of the following physical quantities is a vector quantity?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The mass of a bag of teff (50 kg)"
+        },
+        {
+          "id": "B",
+          "text": "The temperature of a classroom (24°C)"
+        },
+        {
+          "id": "C",
+          "text": "The displacement of an athlete running 400 m due North"
+        },
+        {
+          "id": "D",
+          "text": "The area of a rectangular school compound (2,400 m²)"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "A scalar quantity is described by magnitude alone, whereas a vector quantity requires both magnitude and a specific direction. Mass, temperature, and area are fully described by numerical values with units (scalars). Displacement describes directed distance (400 m due North), making it a vector quantity.",
+      "sourceReference": "Section 8.1, Page 279-280"
+    },
+    {
+      "id": "MAT-G09-U08-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is the magnitude of the column vector u = (-5, 12)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "7 units"
+        },
+        {
+          "id": "B",
+          "text": "13 units"
+        },
+        {
+          "id": "C",
+          "text": "17 units"
+        },
+        {
+          "id": "D",
+          "text": "√119 units"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "For any vector u with horizontal component x and vertical component y, its magnitude is given by |u| = √(x² + y²). For u = (-5, 12), |u| = √((-5)² + 12²) = √(25 + 144) = √169 = 13 units.",
+      "sourceReference": "Section 8.2, Page 285"
+    },
+    {
+      "id": "MAT-G09-U08-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Given two column vectors a = (3, -4) and b = (-7, 9), what is the resultant vector a + b?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(-4, 5)"
+        },
+        {
+          "id": "B",
+          "text": "(10, -13)"
+        },
+        {
+          "id": "C",
+          "text": "(-4, -13)"
+        },
+        {
+          "id": "D",
+          "text": "(4, 5)"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Vector addition in component form is computed by adding the corresponding components: a + b = (3 + (-7), -4 + 9) = (-4, 5).",
+      "sourceReference": "Section 8.3.1, Page 293"
+    },
+    {
+      "id": "MAT-G09-U08-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "According to the triangle law of vector addition, for any three points P, Q, and R in a plane, which vector equation is always TRUE?",
+      "options": [
+        {
+          "id": "A",
+          "text": "vector(PQ) + vector(PR) = vector(QR)"
+        },
+        {
+          "id": "B",
+          "text": "vector(PQ) + vector(QR) = vector(PR)"
+        },
+        {
+          "id": "C",
+          "text": "vector(PR) + vector(QR) = vector(PQ)"
+        },
+        {
+          "id": "D",
+          "text": "vector(PQ) - vector(QR) = vector(PR)"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "By the triangle law of vector addition, if the terminal point of the first directed line segment vector(PQ) coincides with the initial point of the second directed line segment vector(QR), their sum is the directed line segment connecting the initial point of the first to the terminal point of the second: vector(PQ) + vector(QR) = vector(PR).",
+      "sourceReference": "Section 8.3.1, Page 289"
+    },
+    {
+      "id": "MAT-G09-U08-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "If vector v = (6, -8), what is the scalar multiple (-1/2)v?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(-3, -4)"
+        },
+        {
+          "id": "B",
+          "text": "(3, -4)"
+        },
+        {
+          "id": "C",
+          "text": "(-3, 4)"
+        },
+        {
+          "id": "D",
+          "text": "(12, -16)"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Multiplying a column vector by a scalar k multiplies each of its components by k: (-1/2)v = (-1/2 * 6, -1/2 * (-8)) = (-3, 4).",
+      "sourceReference": "Section 8.3.2, Page 298"
+    },
+    {
+      "id": "MAT-G09-U08-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Let A(3, -2) and B(-1, 6) be two points on the Cartesian coordinate plane. What is the position vector corresponding to vector(AB)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "4i - 8j"
+        },
+        {
+          "id": "B",
+          "text": "-4i + 8j"
+        },
+        {
+          "id": "C",
+          "text": "2i + 4j"
+        },
+        {
+          "id": "D",
+          "text": "-4i + 4j"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The position vector corresponding to vector(AB) with initial point A(x1, y1) and terminal point B(x2, y2) has components (x2 - x1, y2 - y1). Thus, vector(AB) = (-1 - 3)i + (6 - (-2))j = -4i + 8j.",
+      "sourceReference": "Section 8.4, Page 300-302"
+    },
+    {
+      "id": "MAT-G09-U08-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "The vectors u = (4, -6) and v = (-10, k) are parallel. What is the value of the scalar constant k?",
+      "options": [
+        {
+          "id": "A",
+          "text": "-15"
+        },
+        {
+          "id": "B",
+          "text": "12"
+        },
+        {
+          "id": "C",
+          "text": "15"
+        },
+        {
+          "id": "D",
+          "text": "-12"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Two non-zero vectors u and v are parallel if and only if one is a scalar multiple of the other: v = c * u. For the horizontal components, -10 = 4c, which yields c = -2.5. For the vertical components, k = c * (-6) = -2.5 * (-6) = 15.",
+      "sourceReference": "Section 8.2 & Section 8.3.2, Page 283, 296"
+    },
+    {
+      "id": "MAT-G09-U08-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Let u = 3i - 4j and v = -2i + 5j. What is the magnitude of the vector w = 2u + 3v?",
+      "options": [
+        {
+          "id": "A",
+          "text": "7 units"
+        },
+        {
+          "id": "B",
+          "text": "√49 units"
+        },
+        {
+          "id": "C",
+          "text": "5√2 units"
+        },
+        {
+          "id": "D",
+          "text": "√58 units"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "First find the linear combination w = 2u + 3v: w = 2(3i - 4j) + 3(-2i + 5j) = (6i - 8j) + (-6i + 15j) = (6 - 6)i + (-8 + 15)j = 0i + 7j. The magnitude of w is |w| = √(0² + 7²) = 7 units.",
+      "sourceReference": "Section 8.3 & Section 8.4, Page 293, 301"
+    },
+    {
+      "id": "MAT-G09-U08-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "A delivery van starts at a central warehouse, travels 24 km due West, and then travels 10 km due South. What is the straight-line distance of the van from the warehouse?",
+      "options": [
+        {
+          "id": "A",
+          "text": "34 km"
+        },
+        {
+          "id": "B",
+          "text": "26 km"
+        },
+        {
+          "id": "C",
+          "text": "28 km"
+        },
+        {
+          "id": "D",
+          "text": "14 km"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The west and south movements are perpendicular to each other, forming a right-angled triangle with the straight-line displacement as the hypotenuse. Displacement magnitude |d| = √(24² + 10²) = √(576 + 100) = √676 = 26 km.",
+      "sourceReference": "Section 8.5, Page 304"
+    },
+    {
+      "id": "MAT-G09-U08-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What angle θ does the position vector u = 4i + 4√3 j make with the positive x-axis?",
+      "options": [
+        {
+          "id": "A",
+          "text": "30°"
+        },
+        {
+          "id": "B",
+          "text": "45°"
+        },
+        {
+          "id": "C",
+          "text": "60°"
+        },
+        {
+          "id": "D",
+          "text": "75°"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The direction angle θ of a position vector u = xi + yj with x > 0 and y > 0 satisfies tan θ = y / x. Here, tan θ = (4√3) / 4 = √3. From trigonometric values of special angles, tan 60° = √3, so θ = 60°.",
+      "sourceReference": "Section 8.4, Page 301-302"
+    },
+    {
+      "id": "MAT-G09-U08-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "If ABCD is any quadrilateral in a plane, what is the value of the vector sum vector(AB) + vector(BC) + vector(CD) + vector(DA)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "2 * vector(AC)"
+        },
+        {
+          "id": "B",
+          "text": "vector(BD)"
+        },
+        {
+          "id": "C",
+          "text": "The zero vector 0"
+        },
+        {
+          "id": "D",
+          "text": "vector(AD)"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Using the triangle law repeatedly: vector(AB) + vector(BC) = vector(AC); vector(AC) + vector(CD) = vector(AD); and vector(AD) + vector(DA) = vector(AA) = 0. A closed loop of vectors returning to the initial starting point always results in the zero vector.",
+      "sourceReference": "Section 8.3.1 & Unit Summary, Page 294, 307"
+    },
+    {
+      "id": "MAT-G09-U08-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "In triangle ABC, point D is the midpoint of side AB and point E is the midpoint of side AC. If vector(AB) = u and vector(AC) = v, which expression represents the vector vector(DE)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(1/2)(v - u)"
+        },
+        {
+          "id": "B",
+          "text": "(1/2)(u - v)"
+        },
+        {
+          "id": "C",
+          "text": "(1/2)(u + v)"
+        },
+        {
+          "id": "D",
+          "text": "v - 2u"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Since D is the midpoint of AB, vector(AD) = (1/2)u. Since E is the midpoint of AC, vector(AE) = (1/2)v. In triangle ADE, vector(AD) + vector(DE) = vector(AE), which gives vector(DE) = vector(AE) - vector(AD) = (1/2)v - (1/2)u = (1/2)(v - u).",
+      "sourceReference": "Section 8.5, Page 304-305"
+    },
+    {
+      "id": "MAT-G09-U08-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A vector v has initial point P(2, -1) and terminal point Q located on the positive y-axis (above the origin). If the magnitude of vector v is √29 units, what are the coordinates of point Q?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(0, 6)"
+        },
+        {
+          "id": "B",
+          "text": "(0, 4)"
+        },
+        {
+          "id": "C",
+          "text": "(0, 5)"
+        },
+        {
+          "id": "D",
+          "text": "(0, 3)"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Since point Q lies on the positive y-axis, its coordinates are (0, y) with y > 0. The displacement vector is vector(PQ) = (0 - 2)i + (y - (-1))j = -2i + (y + 1)j. Its magnitude squared is |v|² = (-2)² + (y + 1)² = 4 + (y + 1)². Setting this equal to (√29)² = 29 yields 4 + (y + 1)² = 29 => (y + 1)² = 25. Since y > 0, y + 1 = 5, which gives y = 4. Thus, Q = (0, 4).",
+      "sourceReference": "Section 8.4 & Review Exercise, Page 302, 309"
+    },
+    {
+      "id": "MAT-G09-U08-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A motorboat crosses a wide river, heading due East at a speed of 12 m/s relative to the water. The river has a constant current flowing due South at 5 m/s. What is the magnitude of the boat's resultant velocity relative to the riverbank, and what is the direction of its motion?",
+      "options": [
+        {
+          "id": "A",
+          "text": "13 m/s at an angle of arctan(5/12) South of East"
+        },
+        {
+          "id": "B",
+          "text": "17 m/s at an angle of arctan(12/5) South of East"
+        },
+        {
+          "id": "C",
+          "text": "13 m/s at an angle of arctan(12/5) North of East"
+        },
+        {
+          "id": "D",
+          "text": "7 m/s at an angle of arctan(5/12) South of East"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The velocity of the boat relative to the bank is the vector sum of its velocity relative to the water (12i m/s) and the current's velocity (-5j m/s): v = 12i - 5j. The magnitude is |v| = √(12² + (-5)²) = √(144 + 25) = √169 = 13 m/s. The direction angle relative to the East axis points South with tan α = |y| / |x| = 5/12, so the direction is arctan(5/12) South of East.",
+      "sourceReference": "Section 8.5, Page 304-306"
+    },
+    {
+      "id": "MAT-G09-U08-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Let a = 4i - 3j and b = 2i + 5j. For what value of the scalar constant k is the linear combination vector w = 3a - k*b parallel to the y-axis (having zero horizontal component)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "k = 4"
+        },
+        {
+          "id": "B",
+          "text": "k = 6"
+        },
+        {
+          "id": "C",
+          "text": "k = -6"
+        },
+        {
+          "id": "D",
+          "text": "k = 8/3"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The linear combination vector is w = 3(4i - 3j) - k(2i + 5j) = (12 - 2k)i + (-9 - 5k)j. For vector w to be parallel to the y-axis, its horizontal (i) component must equal zero: 12 - 2k = 0 => 2k = 12 => k = 6.",
+      "sourceReference": "Section 8.3.2 & Section 8.4, Page 298, 301"
+    }
+  ]
 }

@@ -1,6 +1,5 @@
 import { Response } from 'express';
 import {
-  GoogleAuthRequest,
   RefreshTokenRequest,
   PhoneRegisterRequest,
   PhoneLoginRequest,
@@ -95,26 +94,6 @@ export class AuthController {
       req.ip,
       req.headers['user-agent']
     );
-
-    return sendSuccess(res, result, 200);
-  }
-
-  public static async google(
-    req: AuthenticatedRequest,
-    res: Response
-  ): Promise<Response> {
-    const { idToken, platform } = req.body as GoogleAuthRequest;
-
-    const result = await AuthService.loginWithGoogle(
-      idToken,
-      req.ip,
-      req.headers['user-agent']
-    );
-
-    // Set cookie for web applications
-    if (result.tokens.refreshToken && (platform === 'web' || !platform)) {
-      AuthController.setRefreshTokenCookie(res, result.tokens.refreshToken);
-    }
 
     return sendSuccess(res, result, 200);
   }

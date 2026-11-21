@@ -3,5 +3,411 @@
   "subject": "Geography",
   "unitNumber": 6,
   "unitTitle": "Major Global Environmental Changes",
-  "questions": []
+  "questions": [
+    {
+      "id": "GEO-G11-U06-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In ecological geography, what term is defined as the specific subset of physical environmental factors that surrounds an organism or species and permits it to survive and reproduce?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Biome"
+        },
+        {
+          "id": "B",
+          "text": "Habitat"
+        },
+        {
+          "id": "C",
+          "text": "Ecoregion"
+        },
+        {
+          "id": "D",
+          "text": "Ecotone"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "A habitat is defined as the subset of physical environmental factors that permits a particular species or individual organism to survive, feed, and reproduce at any given point in time.",
+      "sourceReference": "Grade 11 Geography Textbook, Section 6.1.1, Page 160"
+    },
+    {
+      "id": "GEO-G11-U06-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which process occurs when natural resources (such as fish stocks, water aquifers, grazing pastures, or forests) are harvested or extracted at a rate faster than their natural capacity for regeneration?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Habitat fragmentation"
+        },
+        {
+          "id": "B",
+          "text": "Agricultural intensification"
+        },
+        {
+          "id": "C",
+          "text": "Overexploitation"
+        },
+        {
+          "id": "D",
+          "text": "Phenotypic plasticity"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Overexploitation occurs when natural resources (wild medicinal plants, grazing pastures, fish stocks, forests, water aquifers) are harvested at an excessive rate without appropriate attention to natural regeneration.",
+      "sourceReference": "Grade 11 Geography Textbook, Section 6.1.3, Page 164"
+    },
+    {
+      "id": "GEO-G11-U06-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which aquatic invasive species native to South America forms dense mats of spongy rosettes on water bodies in Africa (e.g., Lake Tana), deoxygenating water and killing fish populations?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Mangrove"
+        },
+        {
+          "id": "B",
+          "text": "Water hyacinth (Eichhornia crassipes)"
+        },
+        {
+          "id": "C",
+          "text": "Purple loosestrife"
+        },
+        {
+          "id": "D",
+          "text": "Mayapple (Podophyllum peltatum)"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Water hyacinth (Eichhornia crassipes) is an emergent aquatic perennial native to South America that forms thick mats across freshwater bodies in Africa (such as Lake Tana), blocking light, deoxygenating water, and disrupting local fishing livelihoods.",
+      "sourceReference": "Grade 11 Geography Textbook, Section 6.1.4, Page 169"
+    },
+    {
+      "id": "GEO-G11-U06-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "How is the mutually reinforcing relationship between poverty and environmental damage commonly conceptualized in environmental geography?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The Malthusian population trap"
+        },
+        {
+          "id": "B",
+          "text": "The 'vicious cycle' or downward spiral"
+        },
+        {
+          "id": "C",
+          "text": "The demographic transition model"
+        },
+        {
+          "id": "D",
+          "text": "The Environmental Kuznets Curve"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The poverty–environment nexus is commonly depicted as a 'vicious cycle' or downward spiral: poverty forces poor people to overexploit natural resources for daily survival, causing environmental degradation that further deepens the scope and severity of poverty.",
+      "sourceReference": "Grade 11 Geography Textbook, Section 6.2, Page 173"
+    },
+    {
+      "id": "GEO-G11-U06-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which term describes the overall deterioration of the biophysical environment through ecosystem destruction, habitat loss, wildlife extinction, pollution, and natural resource depletion?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Environmental degradation"
+        },
+        {
+          "id": "B",
+          "text": "Agricultural intensification"
+        },
+        {
+          "id": "C",
+          "text": "Phenotypic adaptation"
+        },
+        {
+          "id": "D",
+          "text": "Habitat restoration"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Environmental degradation refers to the deterioration of the environment through the destruction of ecosystems, habitat loss, species extinction, pollution, and depletion of air, water, and soil quality.",
+      "sourceReference": "Grade 11 Geography Textbook, Section 6.3.1, Page 177"
+    },
+    {
+      "id": "GEO-G11-U06-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Since the late 1960s, agricultural intensification during the Green Revolution introduced high-yielding crop cultivars, pesticides, and fertilizers. Which major negative ecological consequence resulted from this widespread practice?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Complete eradication of all agricultural crop pests"
+        },
+        {
+          "id": "B",
+          "text": "Severe loss of genetic agricultural biodiversity due to monocropping of a few homogeneous crop varieties"
+        },
+        {
+          "id": "C",
+          "text": "Rapid expansion of natural undisturbed forest cover"
+        },
+        {
+          "id": "D",
+          "text": "Universal enrichment of soil micronutrients across all farmlands"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Agricultural intensification relying on monocropping of a few genetically homogeneous high-yielding varieties (e.g., dwarf wheat, rice) replaced traditional crop varieties, resulting in a loss of genetic biodiversity where only 15 crop species now supply 90% of human food.",
+      "sourceReference": "Grade 11 Geography Textbook, Section 6.1.2, Page 162"
+    },
+    {
+      "id": "GEO-G11-U06-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How do mangrove plants adapt to survive in fine, waterlogged, oxygen-deficient mud within coastal saline environments?",
+      "options": [
+        {
+          "id": "A",
+          "text": "They shed all leaves during rainy seasons to prevent waterlogging."
+        },
+        {
+          "id": "B",
+          "text": "They grow specialized aerial roots (containing lenticels) upward above the water and mud surface to absorb atmospheric oxygen."
+        },
+        {
+          "id": "C",
+          "text": "They absorb salt directly into roots to convert seawater into freshwater."
+        },
+        {
+          "id": "D",
+          "text": "They submerge completely underwater to avoid direct solar radiation."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In oxygen-poor coastal mud, mangroves adapt by growing specialized roots upward above the mud and water level. These aerial roots feature lenticels that allow them to breathe atmospheric oxygen.",
+      "sourceReference": "Grade 11 Geography Textbook, Section 6.1.4, Page 168"
+    },
+    {
+      "id": "GEO-G11-U06-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which three-part strategy is advocated by international forestry frameworks to harness forests for poverty reduction while maintaining environmental sustainability?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Promoting commercial timber logging, exporting raw logs, and clearing forests for highways."
+        },
+        {
+          "id": "B",
+          "text": "Strengthening local tenure rights/community forestry, integrating forests into sustainable development strategies, and protecting local and global ecosystem values."
+        },
+        {
+          "id": "C",
+          "text": "Banning local communities from entering forests, burning undergrowth, and planting monoculture crops."
+        },
+        {
+          "id": "D",
+          "text": "Exporting native wildlife, draining forest wetlands, and subsidizing charcoal burning."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Forest-based poverty reduction relies on three pillars: (1) empowering marginalized communities through tenure rights and community forestry, (2) integrating sustainable forestry into national development strategies, and (3) protecting ecosystem services (biodiversity, carbon sequestration).",
+      "sourceReference": "Grade 11 Geography Textbook, Section 6.2.2, Page 175–176"
+    },
+    {
+      "id": "GEO-G11-U06-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In the management timeline of invasive alien species, at which stage is eradication still feasible at a relatively low cost?",
+      "options": [
+        {
+          "id": "A",
+          "text": "When the invasive species is widespread and abundant across the entire region"
+        },
+        {
+          "id": "B",
+          "text": "During the initial introduction phase when a small, localized population is first detected"
+        },
+        {
+          "id": "C",
+          "text": "After the species undergoes rapid exponential growth and spread"
+        },
+        {
+          "id": "D",
+          "text": "When long-term population suppression is the only remaining management option"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Eradication of invasive species is feasible and cost-effective only during the early introduction phase when the population is small and localized. Once species spread exponentially, eradication becomes improbable and management costs rise steeply.",
+      "sourceReference": "Grade 11 Geography Textbook, Section 6.1.4, Page 170 (Figure 6.7)"
+    },
+    {
+      "id": "GEO-G11-U06-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which set of practices characterizes 'green building' architecture as a sustainable solution to urban environmental degradation?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Exclusive reliance on diesel generators for continuous heating and cooling."
+        },
+        {
+          "id": "B",
+          "text": "Maximizing energy and water efficiency, utilizing natural lighting and ventilation, minimizing waste output, and using eco-friendly materials."
+        },
+        {
+          "id": "C",
+          "text": "Paving over surrounding urban wetlands to construct surface parking lots."
+        },
+        {
+          "id": "D",
+          "text": "Removing wall insulation to increase direct heat exchange during winter."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Green building design reduces environmental impact by optimizing energy and water efficiency, utilizing natural ventilation/lighting, reducing waste and emissions, and choosing environmentally sustainable construction materials.",
+      "sourceReference": "Grade 11 Geography Textbook, Section 6.3.2, Page 168–169"
+    },
+    {
+      "id": "GEO-G11-U06-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How does habitat fragmentation differ structurally from complete habitat destruction?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Habitat fragmentation expands continuous forest area, while destruction reduces soil erosion."
+        },
+        {
+          "id": "B",
+          "text": "Habitat fragmentation breaks a continuous natural habitat into smaller, isolated patches separated by human-modified land uses, whereas destruction eliminates the habitat entirely."
+        },
+        {
+          "id": "C",
+          "text": "Habitat fragmentation impacts only marine organisms, while destruction impacts only migratory birds."
+        },
+        {
+          "id": "D",
+          "text": "Habitat fragmentation is caused only by earthquakes, while destruction is caused only by wind."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Habitat destruction involves complete removal of natural cover. Habitat fragmentation occurs when a large, continuous landscape is carved into smaller, isolated fragments separated by human activities (farms, roads, settlements).",
+      "sourceReference": "Grade 11 Geography Textbook, Section 6.1.1, Page 160–161"
+    },
+    {
+      "id": "GEO-G11-U06-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "In tropical agricultural ecosystems, why does torrential rainfall on deforested or overgrazed slopes accelerate the 'vicious cycle' of soil degradation and rural poverty?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Torrential rain converts topsoil into alkaline limestone pans that halt seed germination."
+        },
+        {
+          "id": "B",
+          "text": "Heavy rainfall on unprotected soils washes away topsoil and leaches essential nutrients, causing low crop yields that force poor farmers to clear additional fragile land."
+        },
+        {
+          "id": "C",
+          "text": "Rainwater stops geothermal heat flow, preventing root expansion."
+        },
+        {
+          "id": "D",
+          "text": "Excessive rainfall creates permanent sub-zero soil freezing in tropical lowlands."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In humid tropical regions, clearing vegetation leaves thin topsoils vulnerable to torrential rains. Water erosion strips topsoil and leaches nutrients, driving down crop yields. Lacking capital for inputs, impoverished farmers clear more forestland, reinforcing the downward spiral.",
+      "sourceReference": "Grade 11 Geography Textbook, Section 6.2.1, Page 174–175"
+    },
+    {
+      "id": "GEO-G11-U06-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "In botanical ecology, what is meant by 'phenotypic plasticity', and how does it assist terrestrial plant species in adapting to variable environmental conditions?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The capacity of a plant to produce synthetic polymers in its stems to resist insect pests."
+        },
+        {
+          "id": "B",
+          "text": "The ability of a single plant genotype to express morphological or physiological variations when grown under different environmental conditions."
+        },
+        {
+          "id": "C",
+          "text": "A permanent genetic mutation caused by industrial chemical pollution."
+        },
+        {
+          "id": "D",
+          "text": "The process by which plants convert solar radiation directly into fossil fuels."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Phenotypic plasticity refers to the degree to which a plant's physical traits (morphology, growth form, physiological responses) can vary among individual plants sharing the same genotype when exposed to different environmental conditions.",
+      "sourceReference": "Grade 11 Geography Textbook, Section 6.1.4, Page 166"
+    },
+    {
+      "id": "GEO-G11-U06-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "What specific ecological condition defines 'overfishing' in marine and freshwater fisheries management?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Catching fish exclusively during night hours using solar-powered vessels."
+        },
+        {
+          "id": "B",
+          "text": "Harvesting a fish stock down below the population size that can support the long-term maximum sustainable yield (MSY)."
+        },
+        {
+          "id": "C",
+          "text": "Rearing fish in enclosed commercial aquaculture ponds."
+        },
+        {
+          "id": "D",
+          "text": "Restricting fishing activities to coastal estuaries during spawning seasons."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Overfishing is specifically defined in fisheries ecology as harvesting a fish stock faster than it can reproduce, depressing the population below the level required to sustain its maximum sustainable yield (MSY).",
+      "sourceReference": "Grade 11 Geography Textbook, Section 6.1.3, Page 164"
+    },
+    {
+      "id": "GEO-G11-U06-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Why are environmental challenges such as tropical deforestation, soil degradation, and loss of biodiversity analyzed as both local and global issues in contemporary geography?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because they occur only in polar regions but are monitored by tropical weather satellites."
+        },
+        {
+          "id": "B",
+          "text": "Because localized human actions (e.g., local forest clearing) cause immediate local damage while cumulatively contributing to global environmental crises like carbon emissions, climate change, and loss of planetary biodiversity."
+        },
+        {
+          "id": "C",
+          "text": "Because international laws require all land degradation to be measured in a single designated village."
+        },
+        {
+          "id": "D",
+          "text": "Because local farmers export eroded topsoil directly to overseas markets."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Environmental issues operate across multiple spatial scales: local actions (like clearing a local watershed) cause direct local impacts (soil erosion, loss of livelihoods) while cumulatively driving global planetary changes (releasing greenhouse gases, accelerating global climate change, and eroding world biodiversity).",
+      "sourceReference": "Grade 11 Geography Textbook, Section 6.3.1, Page 177"
+    }
+  ]
 }

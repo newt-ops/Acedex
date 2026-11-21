@@ -3,5 +3,411 @@
   "subject": "Geography",
   "unitNumber": 4,
   "unitTitle": "Global Population Dynamics and Challenges",
-  "questions": []
+  "questions": [
+    {
+      "id": "GEO-G11-U04-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which specialized sub-branch of geography focuses on the study of human population size, composition, spatial distribution, and temporal dynamics?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Geomorphology"
+        },
+        {
+          "id": "B",
+          "text": "Population Geography"
+        },
+        {
+          "id": "C",
+          "text": "Climatology"
+        },
+        {
+          "id": "D",
+          "text": "Urban Ecology"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Population geography is the branch of human geography that specifically investigates the spatial distribution, composition, growth, and temporal dynamics of human populations in relation to their environment.",
+      "sourceReference": "Grade 11 Geography Textbook, Section 4.1, Page 96"
+    },
+    {
+      "id": "GEO-G11-U04-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "According to United Nations demographic projections, which global region is expected to account for more than half of the total world population growth between 2019 and 2050?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Europe and Northern America"
+        },
+        {
+          "id": "B",
+          "text": "Sub-Saharan Africa"
+        },
+        {
+          "id": "C",
+          "text": "Eastern and South-Eastern Asia"
+        },
+        {
+          "id": "D",
+          "text": "Latin America and the Caribbean"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Sub-Saharan Africa is projected to add over 1.1 billion people between 2019 and 2050, accounting for more than 50% of the world's overall population growth during that period.",
+      "sourceReference": "Grade 11 Geography Textbook, Section 4.1, Page 98–99"
+    },
+    {
+      "id": "GEO-G11-U04-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What primary demographic change historically triggered the initial acceleration of global population growth in developing nations during the 20th century?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A sudden increase in crude birth rates"
+        },
+        {
+          "id": "B",
+          "text": "A rapid decline in death rates due to medical advances and public health improvements"
+        },
+        {
+          "id": "C",
+          "text": "Massive inward international migration"
+        },
+        {
+          "id": "D",
+          "text": "A universal decline in life expectancy"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The primary factor behind accelerated population growth was the rapid mortality transition—the reduction in death rates (especially infant and child mortality) resulting from advances in medical knowledge, immunization, and public sanitation.",
+      "sourceReference": "Grade 11 Geography Textbook, Section 4.2, Page 106"
+    },
+    {
+      "id": "GEO-G11-U04-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which demographic trend uniquely characterizes More Developed Countries (MDCs) compared to Less Developed Countries (LDCs)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "High infant mortality rates and extreme youth dependency"
+        },
+        {
+          "id": "B",
+          "text": "Population stagnation accompanied by rapid population aging and a shrinking labor force"
+        },
+        {
+          "id": "C",
+          "text": "Uncontrolled rapid fertility growth"
+        },
+        {
+          "id": "D",
+          "text": "Complete absence of international migration"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Unlike LDCs which experience rapid growth and young age structures, MDCs face low fertility rates, population stagnation or decline, and significant population aging, leading to a shrinking working-age population.",
+      "sourceReference": "Grade 11 Geography Textbook, Section 4.1.2, Page 105"
+    },
+    {
+      "id": "GEO-G11-U04-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What type of population policy is implemented by a government aiming to encourage higher birth rates and increase national fertility levels?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Anti-natalist policy"
+        },
+        {
+          "id": "B",
+          "text": "Pro-natalist policy"
+        },
+        {
+          "id": "C",
+          "text": "Migration containment policy"
+        },
+        {
+          "id": "D",
+          "text": "Laissez-faire policy"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "A pro-natalist policy consists of governmental measures designed to promote higher birth rates and encourage larger family sizes, often implemented in nations facing population decline or severe aging.",
+      "sourceReference": "Grade 11 Geography Textbook, Section 4.4.1, Page 117–118"
+    },
+    {
+      "id": "GEO-G11-U04-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "A country with a total population of 80,000,000 records 240,000 immigrants and 80,000 emigrants in a given year. What is its Net Migration Rate (NMR) per 1,000 people?",
+      "options": [
+        {
+          "id": "A",
+          "text": "1.0 per 1,000"
+        },
+        {
+          "id": "B",
+          "text": "2.0 per 1,000"
+        },
+        {
+          "id": "C",
+          "text": "3.0 per 1,000"
+        },
+        {
+          "id": "D",
+          "text": "4.0 per 1,000"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Net Migration Rate (NMR) = [(Immigrants - Emigrants) / Total Population] × 1,000 = [(240,000 - 80,000) / 80,000,000] × 1,000 = (160,000 / 80,000,000) × 1,000 = 2.0 per 1,000.",
+      "sourceReference": "Grade 11 Geography Textbook, Section 4.3, Page 116"
+    },
+    {
+      "id": "GEO-G11-U04-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In an administrative zone, 500,000 live births were recorded in 2021. If 30,000 of these infants died before reaching their first birthday, what is the Infant Mortality Rate (IMR) per 1,000 live births?",
+      "options": [
+        {
+          "id": "A",
+          "text": "15 per 1,000"
+        },
+        {
+          "id": "B",
+          "text": "60 per 1,000"
+        },
+        {
+          "id": "C",
+          "text": "120 per 1,000"
+        },
+        {
+          "id": "D",
+          "text": "30 per 1,000"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Infant Mortality Rate (IMR) = (Total Infant Deaths under 1 year / Total Live Births) × 1,000 = (30,000 / 500,000) × 1,000 = 0.06 × 1,000 = 60 per 1,000 live births.",
+      "sourceReference": "Grade 11 Geography Textbook, Section 4.2, Page 111"
+    },
+    {
+      "id": "GEO-G11-U04-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How does forced international migration fundamentally differ from voluntary international migration?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Voluntary migration is driven by economic opportunities and career choices, whereas forced migration is compelled by life-threatening factors such as armed conflict, persecution, or disasters."
+        },
+        {
+          "id": "B",
+          "text": "Voluntary migration occurs exclusively within national borders, whereas forced migration is strictly international."
+        },
+        {
+          "id": "C",
+          "text": "Forced migration increases natural growth at origin, whereas voluntary migration lowers life expectancy."
+        },
+        {
+          "id": "D",
+          "text": "Voluntary migration requires government tax subsidies, whereas forced migration is illegal under all international laws."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Voluntary migration involves individuals moving out of personal choice to seek better economic or social prospects, while forced migration involves refugees or displaced persons compelled to relocate due to fear, conflict, or environmental destruction.",
+      "sourceReference": "Grade 11 Geography Textbook, Section 4.3, Page 112–113"
+    },
+    {
+      "id": "GEO-G11-U04-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In Stage 2 of the Demographic Transition Model, why does a country experience rapid natural population growth?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Both birth rates and death rates decline simultaneously at equal rates."
+        },
+        {
+          "id": "B",
+          "text": "Death rates drop significantly due to healthcare improvements while birth rates remain persistently high."
+        },
+        {
+          "id": "C",
+          "text": "Birth rates drop below death rates, causing temporary population contraction."
+        },
+        {
+          "id": "D",
+          "text": "Net emigration turns negative while life expectancy drops."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Stage 2 is characterized by a rapid reduction in mortality (death rates) stemming from better food supply and sanitation, while fertility (birth rates) remains elevated, widening the gap between births and deaths and producing high natural increase.",
+      "sourceReference": "Grade 11 Geography Textbook, Section 4.1, Page 97–98"
+    },
+    {
+      "id": "GEO-G11-U04-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What primary socio-economic challenge arises from a declining 'potential support ratio' in More Developed Countries experiencing low fertility and high life expectancy?",
+      "options": [
+        {
+          "id": "A",
+          "text": "An expansion of primary sector agricultural jobs."
+        },
+        {
+          "id": "B",
+          "text": "A shrinking ratio of working-age adults relative to elderly dependents, placing heavy financial pressure on pension and healthcare systems."
+        },
+        {
+          "id": "C",
+          "text": "Extreme youth dependency requiring massive construction of primary schools."
+        },
+        {
+          "id": "D",
+          "text": "Hyper-inflation caused by rapid urban population growth."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The potential support ratio compares the number of working-age adults (15–64) to the elderly population (65+). A lower ratio means fewer active workers are available to financially support each elderly retiree through taxes, social security, and medical care.",
+      "sourceReference": "Grade 11 Geography Textbook, Section 4.1.2, Page 105"
+    },
+    {
+      "id": "GEO-G11-U04-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which population policy intervention is commonly implemented by governments to manage rapid urban migration and alleviate overcrowding in primate capital cities?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Mandating universal emigration to foreign countries."
+        },
+        {
+          "id": "B",
+          "text": "Promoting regional economic development, rural infrastructure, and growth centers in secondary towns."
+        },
+        {
+          "id": "C",
+          "text": "Banning all agricultural activities in rural provinces."
+        },
+        {
+          "id": "D",
+          "text": "Forcing urban residents to work exclusively in primary mining sectors."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Spatial distribution policies aim to decentralize urban growth by developing secondary towns, expanding rural infrastructure, and providing localized employment opportunities to reduce excessive migration pressure on primate capital cities.",
+      "sourceReference": "Grade 11 Geography Textbook, Section 4.4.2, Page 118"
+    },
+    {
+      "id": "GEO-G11-U04-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Why did the largest historical annual numerical additions to the global population occur during the late 20th century, even though the annual global population growth rate (%) had already begun to decline?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because international migration doubled the number of births in developed nations."
+        },
+        {
+          "id": "B",
+          "text": "Because the underlying total population base was so large that applying a smaller percentage rate produced larger absolute numerical increases ('demographic momentum')."
+        },
+        {
+          "id": "C",
+          "text": "Because crude death rates worldwide plummeted to zero."
+        },
+        {
+          "id": "D",
+          "text": "Because anti-natalist policies were completely abandoned across all Less Developed Countries."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "This phenomenon reflects demographic momentum: when the total base population expands significantly (e.g., reaching 5 to 6 billion), even a reduced percentage growth rate generates a larger absolute annual addition of human lives than a higher growth rate applied to a smaller base population.",
+      "sourceReference": "Grade 11 Geography Textbook, Section 4.1, Page 97–98"
+    },
+    {
+      "id": "GEO-G11-U04-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A region with a mid-year population of 26,000,000 recorded 104,000 total deaths during the year. What is the Crude Death Rate (CDR) per 1,000 population, and how is it interpreted?",
+      "options": [
+        {
+          "id": "A",
+          "text": "CDR = 2.5 per 1,000; an extremely high mortality rate."
+        },
+        {
+          "id": "B",
+          "text": "CDR = 4.0 per 1,000; a low crude death rate typical of populations with youthful age structures."
+        },
+        {
+          "id": "C",
+          "text": "CDR = 8.0 per 1,000; equal to the global average crude death rate."
+        },
+        {
+          "id": "D",
+          "text": "CDR = 10.4 per 1,000; a severe infant mortality indicator."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "CDR = (Total Annual Deaths / Total Mid-Year Population) × 1,000 = (104,000 / 26,000,000) × 1,000 = 0.004 × 1,000 = 4.0 per 1,000. A CDR of 4.0 is low and is common in developing regions with a large proportion of young citizens.",
+      "sourceReference": "Grade 11 Geography Textbook, Section 4.2, Page 111"
+    },
+    {
+      "id": "GEO-G11-U04-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "During the 2010–2020 decade, several Eastern European nations (e.g., Bulgaria, Latvia, Lithuania) experienced significant total population decline. What combined demographic mechanisms produced this rapid population contraction?",
+      "options": [
+        {
+          "id": "A",
+          "text": "High crude birth rates combined with high immigration rates."
+        },
+        {
+          "id": "B",
+          "text": "High total fertility rates combined with forced displacement."
+        },
+        {
+          "id": "C",
+          "text": "Negative natural increase (deaths exceeding births) operating simultaneously with net international emigration."
+        },
+        {
+          "id": "D",
+          "text": "Rapid expansion of rural agricultural jobs combined with pro-natalist tax incentives."
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Severe population decline occurs when a negative natural increase (more annual deaths than births due to low fertility and aging) is compounded by net international emigration (more people leaving the country than moving in).",
+      "sourceReference": "Grade 11 Geography Textbook, Section 4.3, Page 114"
+    },
+    {
+      "id": "GEO-G11-U04-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "From a demographic perspective, why does female age at first marriage exercise a strong influence on a country's Total Fertility Rate (TFR) in societies with low contraceptive prevalence?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Early marriage shortens the biological reproductive span of women."
+        },
+        {
+          "id": "B",
+          "text": "Early marriage extends the duration of exposure to pregnancy across a woman's peak reproductive years (ages 15–49), significantly elevating completed family size."
+        },
+        {
+          "id": "C",
+          "text": "Early marriage automatically reduces infant mortality rates to zero."
+        },
+        {
+          "id": "D",
+          "text": "Early marriage shifts employment from the primary sector to the quinary sector."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In societies where family planning access is limited, marrying at a young age lengthens the total duration of exposure to risk of pregnancy throughout a woman's reproductive lifecycle, leading to higher completed fertility rates per woman.",
+      "sourceReference": "Grade 11 Geography Textbook, Section 4.2, Page 107–108"
+    }
+  ]
 }

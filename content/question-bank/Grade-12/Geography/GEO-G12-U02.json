@@ -3,5 +3,411 @@
   "subject": "Geography",
   "unitNumber": 2,
   "unitTitle": "Climate Change",
-  "questions": []
+  "questions": [
+    {
+      "id": "GEO-G12-U02-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "According to the Intergovernmental Panel on Climate Change (IPCC), how is 'climate change' formally defined?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A short-term daily fluctuation of local atmospheric temperature and pressure over a 24-hour period."
+        },
+        {
+          "id": "B",
+          "text": "A change in the state of the climate identified by changes in the mean and/or variability of its properties that persists for an extended period, typically decades or longer."
+        },
+        {
+          "id": "C",
+          "text": "Seasonal variations in rainfall caused exclusively by local wind reversals."
+        },
+        {
+          "id": "D",
+          "text": "Sudden, non-persistent atmospheric disturbances resulting from localized thunderstorm activity."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The IPCC defines climate change as a change in the state of the climate that can be identified by changes in the mean and/or the variability of its properties and that persists for an extended period, typically decades or longer, due to natural variability or human activity.",
+      "sourceReference": "Grade 12 Geography Textbook, Section 2.1, Page 36"
+    },
+    {
+      "id": "GEO-G12-U02-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "According to the IPCC Fifth Assessment Report (2013), what is identified as the dominant cause of observed global warming since the mid-20th century?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Fluctuations in lunar gravitational drag"
+        },
+        {
+          "id": "B",
+          "text": "Human activities, primarily the emission of greenhouse gases from burning fossil fuels"
+        },
+        {
+          "id": "C",
+          "text": "Shifts in deep oceanic thermal convection currents"
+        },
+        {
+          "id": "D",
+          "text": "Periodic increases in cosmic ray bombardment"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The IPCC Fifth Assessment Report (2013) states that it is extremely likely (at least 95% probability) that human influence, mainly greenhouse gas emissions from fossil fuel combustion and land-use change, has been the dominant cause of observed warming since the mid-20th century.",
+      "sourceReference": "Grade 12 Geography Textbook, Section 2.3, Page 40"
+    },
+    {
+      "id": "GEO-G12-U02-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In climate change response strategies, how is 'mitigation' distinguished from 'adaptation'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Mitigation involves relocating coastal communities, while adaptation focuses on building sea walls."
+        },
+        {
+          "id": "B",
+          "text": "Mitigation aims to reduce greenhouse gas emissions and enhance carbon sinks, while adaptation involves adjusting social and ecological systems to reduce damage from actual or expected climate impacts."
+        },
+        {
+          "id": "C",
+          "text": "Mitigation is undertaken exclusively by private citizens, while adaptation is restricted to international treaties."
+        },
+        {
+          "id": "D",
+          "text": "Mitigation applies only to tropical regions, while adaptation applies only to polar zones."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Mitigation seeks to limit climate change by reducing greenhouse gas emissions and enhancing carbon sinks (e.g., renewable energy, reforestation). Adaptation refers to adjustments in ecological, social, or economic systems in response to actual or expected climate stimuli to moderate harm or exploit beneficial opportunities.",
+      "sourceReference": "Grade 12 Geography Textbook, Section 2.5, Page 50–52"
+    },
+    {
+      "id": "GEO-G12-U02-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Under the 2015 Paris Agreement on climate change, what fundamental mechanism governs national commitments to greenhouse gas reduction?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Mandatory uniform carbon taxes imposed equally on all member states by the United Nations."
+        },
+        {
+          "id": "B",
+          "text": "Nationally determined voluntary targets set by each country, with regular progress reporting."
+        },
+        {
+          "id": "C",
+          "text": "Complete prohibition of all industrial manufacturing in developing countries."
+        },
+        {
+          "id": "D",
+          "text": "Binding legal penalties enforced by international military forces."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Under the Paris Agreement (2015), adopted by virtually all nations, each country sets its own voluntary emission reduction targets (Nationally Determined Contributions) and reports progress transparently on a regular basis.",
+      "sourceReference": "Grade 12 Geography Textbook, Section 2.6, Page 56"
+    },
+    {
+      "id": "GEO-G12-U02-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "How many core pillars form the foundation of Ethiopia's Climate Resilient Green Economy (CRGE) strategy?",
+      "options": [
+        {
+          "id": "A",
+          "text": "2"
+        },
+        {
+          "id": "B",
+          "text": "4"
+        },
+        {
+          "id": "C",
+          "text": "7"
+        },
+        {
+          "id": "D",
+          "text": "10"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Ethiopia's Climate Resilient Green Economy (CRGE) strategy is built on four core pillars: (1) improving crop and livestock practices, (2) protecting and re-establishing forests, (3) expanding renewable electricity generation, and (4) leapfrogging to energy-efficient technologies in transport, industry, and buildings.",
+      "sourceReference": "Grade 12 Geography Textbook, Section 2.7, Page 57–58"
+    },
+    {
+      "id": "GEO-G12-U02-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "The Milankovitch Theory attributes long-term natural glacial and interglacial cycles to three orbital variations. What are these three orbital parameters?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Solar flares, sunspot cycles, and geomagnetic reversals"
+        },
+        {
+          "id": "B",
+          "text": "Eccentricity (orbit shape), obliquity (axial tilt), and precession (axial wobbling)"
+        },
+        {
+          "id": "C",
+          "text": "Continental drift, sea-floor spreading, and subduction rate"
+        },
+        {
+          "id": "D",
+          "text": "Atmospheric pressure, ocean salinity, and trade wind strength"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The Milankovitch Theory proposes that long-term natural ice age cycles are driven by variations in solar radiation received at Earth's surface due to three orbital parameters: changes in orbit shape (eccentricity), changes in axial tilt (obliquity), and axial wobbling (precession).",
+      "sourceReference": "Grade 12 Geography Textbook, Section 2.3, Page 41"
+    },
+    {
+      "id": "GEO-G12-U02-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Explosive volcanic eruptions rich in sulfur gases can induce temporary global cooling. What chemical and physical mechanism causes this atmospheric cooling effect?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Sulfur gases react with nitrogen to absorb all atmospheric oxygen."
+        },
+        {
+          "id": "B",
+          "text": "Sulfur dioxide in the stratosphere combines with water vapor to form microscopic sulfuric acid aerosol hazes that reflect incoming solar radiation back to space."
+        },
+        {
+          "id": "C",
+          "text": "Volcanic ash forms heavy cloud layers in the troposphere that permanently trap outgoing terrestrial heat."
+        },
+        {
+          "id": "D",
+          "text": "Sulfur gases neutralize carbon dioxide, reducing the natural greenhouse effect to zero."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Sulfur-rich volcanic gases ejected into the stratosphere combine with water vapor to produce fine reflective sulfuric acid aerosols. This stratospheric haze reflects a portion of incoming solar energy back into space, cooling the Earth's lower atmosphere and surface for several years.",
+      "sourceReference": "Grade 12 Geography Textbook, Section 2.3, Page 42"
+    },
+    {
+      "id": "GEO-G12-U02-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How do Carbon Dioxide (CO2), Methane (CH4), and Nitrous Oxide (N2O) compare in terms of atmospheric lifetime and global warming potential?",
+      "options": [
+        {
+          "id": "A",
+          "text": "CO2 has the shortest lifetime of 2 days, while CH4 remains for thousands of years."
+        },
+        {
+          "id": "B",
+          "text": "CO2 persists in the atmosphere for over a century, whereas CH4 and N2O absorb infrared energy much more efficiently per unit mass despite shorter atmospheric lifetimes."
+        },
+        {
+          "id": "C",
+          "text": "All three gases have identical lifetimes and equal heat-trapping capacities per kilogram."
+        },
+        {
+          "id": "D",
+          "text": "N2O is an inert gas that causes no atmospheric heat trapping."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Carbon dioxide (CO2) stays in the atmosphere for over 100 years. Methane (CH4) and nitrous oxide (N2O) have shorter atmospheric lifetimes but exhibit much higher warming potentials per unit mass (e.g., CH4 traps significantly more heat per molecule than CO2 over a 100-year period).",
+      "sourceReference": "Grade 12 Geography Textbook, Section 2.3, Page 44"
+    },
+    {
+      "id": "GEO-G12-U02-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "A coastal municipal government enacts new building codes requiring all sea-front structures to be constructed on elevated stilts in response to projected sea-level rise. How is this adaptation measure classified?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Autonomous and reactive adaptation"
+        },
+        {
+          "id": "B",
+          "text": "Planned and anticipatory adaptation"
+        },
+        {
+          "id": "C",
+          "text": "Private and spontaneous adaptation"
+        },
+        {
+          "id": "D",
+          "text": "Maladaptive and natural adaptation"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Planned adaptation is the result of a deliberate policy decision by public authorities based on an awareness that conditions will change. Anticipatory (proactive) adaptation takes place before the full impacts are felt (e.g., revising building codes before coastal flooding damages occur).",
+      "sourceReference": "Grade 12 Geography Textbook, Section 2.5, Page 51–52"
+    },
+    {
+      "id": "GEO-G12-U02-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Under Pillar 3 of Ethiopia's Climate Resilient Green Economy (CRGE) strategy, how does expanding renewable electricity generation contribute simultaneously to national economic development and global climate mitigation?",
+      "options": [
+        {
+          "id": "A",
+          "text": "By replacing all agricultural activities with thermal coal-fired power stations."
+        },
+        {
+          "id": "B",
+          "text": "By powering industrial growth, urban centers, and irrigation with zero-emission hydro, geothermal, solar, and wind energy while creating potential for clean power export to neighboring countries."
+        },
+        {
+          "id": "C",
+          "text": "By importing expensive petroleum fuels from overseas markets."
+        },
+        {
+          "id": "D",
+          "text": "By shutting down the national electrical grid during summer months."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Pillar 3 focuses on expanding electricity generation from clean, renewable sources (hydro, geothermal, solar, wind) to power industrialization, urban centers, and agriculture at virtually zero GHG emissions, while offering clean energy export potential to neighboring states.",
+      "sourceReference": "Grade 12 Geography Textbook, Section 2.7, Page 58"
+    },
+    {
+      "id": "GEO-G12-U02-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What are the two primary physical mechanisms responsible for global sea-level rise during the 20th and 21st centuries?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Increased ocean salinity and submarine volcanic lava displacement"
+        },
+        {
+          "id": "B",
+          "text": "Thermal expansion of warming ocean water and the melting of land-based glaciers and ice sheets"
+        },
+        {
+          "id": "C",
+          "text": "High atmospheric evaporation rates and coastal land subsidence"
+        },
+        {
+          "id": "D",
+          "text": "Changes in lunar tidal forces and river dam construction"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Global sea-level rise is driven by two main processes: (1) thermal expansion of seawater as ocean temperatures rise, and (2) the addition of freshwater from melting land-based glaciers and ice sheets (Greenland and Antarctica).",
+      "sourceReference": "Grade 12 Geography Textbook, Section 2.4, Page 47"
+    },
+    {
+      "id": "GEO-G12-U02-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "In high-latitude northern regions, how can the northward expansion of dark boreal forests into tundra landscapes create a positive climate feedback loop that accelerates regional warming?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Boreal trees release methane gas that destroys stratospheric ozone."
+        },
+        {
+          "id": "B",
+          "text": "Boreal forest canopies have a much lower albedo than snow-covered tundra, absorbing up to three times more solar energy and transferring heat into the atmosphere."
+        },
+        {
+          "id": "C",
+          "text": "Forest expansion halts soil organic matter decomposition, eliminating all atmospheric carbon dioxide."
+        },
+        {
+          "id": "D",
+          "text": "Boreal trees increase snow reflectivity, pushing polar temperatures below freezing."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Dark boreal forest canopies absorb significantly more solar radiation (lower albedo) than bright, snow-covered tundra (which reflects up to 90% of sunlight). As warming allows trees to encroach into tundra areas, the reduced surface albedo leads to higher absorption of solar heat, accelerating regional atmospheric warming in a positive feedback cycle.",
+      "sourceReference": "Grade 12 Geography Textbook, Section 2.4, Page 46"
+    },
+    {
+      "id": "GEO-G12-U02-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Which historical international event in 1988 advanced public climate debate by bringing together over 340 participants from 46 nations, leading directly to UN Resolution 43/53 and the establishment of the IPCC by WMO and UNEP?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The First World Climate Conference in Geneva (1979)"
+        },
+        {
+          "id": "B",
+          "text": "The Toronto Conference on the Changing Atmosphere (1988)"
+        },
+        {
+          "id": "C",
+          "text": "The Kyoto Conference on Greenhouse Abatement (1997)"
+        },
+        {
+          "id": "D",
+          "text": "The Marrakesh Climate Summit (2001)"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The Toronto Conference on the Changing Atmosphere (1988) recommended developing a global framework convention to protect the atmosphere. This spurred UN General Assembly Resolution 43/53 and led WMO and UNEP to establish the Intergovernmental Panel on Climate Change (IPCC) later that year.",
+      "sourceReference": "Grade 12 Geography Textbook, Section 2.6, Page 53–54"
+    },
+    {
+      "id": "GEO-G12-U02-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "How does Pillar 1 (Agriculture) of Ethiopia's CRGE strategy balance the need for increased agricultural productivity with greenhouse gas mitigation?",
+      "options": [
+        {
+          "id": "A",
+          "text": "By converting all existing natural forests into monoculture wheat fields."
+        },
+        {
+          "id": "B",
+          "text": "By prioritizing initiatives that increase crop and livestock resource efficiency and farmer incomes while limiting soil-based emissions and preventing agricultural expansion into forest lands."
+        },
+        {
+          "id": "C",
+          "text": "By banning the use of irrigation and organic fertilizers nationwide."
+        },
+        {
+          "id": "D",
+          "text": "By replacing smallholder farms with foreign-owned petroleum refineries."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Pillar 1 of the CRGE strategy seeks to boost food security and farmer incomes through sustainable agricultural intensification (higher resource efficiency in crops and livestock) while actively limiting soil-based emissions and curbing forest clearing for new farmland.",
+      "sourceReference": "Grade 12 Geography Textbook, Section 2.7, Page 57–58"
+    },
+    {
+      "id": "GEO-G12-U02-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Why do climate change impact models project that agricultural crop yields in tropical developing regions will suffer more severe negative impacts than in high-latitude developed regions?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Tropical regions have sub-zero temperatures that freeze crops during summer months."
+        },
+        {
+          "id": "B",
+          "text": "High-latitude areas benefit from longer growing seasons and earlier snowmelt, whereas tropical crops operate near their upper thermal tolerance limits where additional warming increases soil drying, heat stress, and pest incidence."
+        },
+        {
+          "id": "C",
+          "text": "High-latitude regions receive zero solar radiation, preventing weed growth."
+        },
+        {
+          "id": "D",
+          "text": "Tropical crops do not require carbon dioxide for photosynthesis."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In tropical developing regions, baseline temperatures are already high and crops often grow near their upper thermal limits; additional warming leads to soil moisture loss, severe heat stress, and increased pest outbreaks, depressing yields. Conversely, high-latitude developed regions may temporarily benefit from extended growing seasons and reduced winter frost.",
+      "sourceReference": "Grade 12 Geography Textbook, Section 2.4, Page 48–49"
+    }
+  ]
 }

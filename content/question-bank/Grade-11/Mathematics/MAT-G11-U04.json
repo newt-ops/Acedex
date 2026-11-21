@@ -3,5 +3,411 @@
   "subject": "Mathematics",
   "unitNumber": 4,
   "unitTitle": "Determinants and Their Properties",
-  "questions": []
+  "questions": [
+    {
+      "id": "MAT-G11-U04-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is the determinant of the 2 × 2 matrix A = []?",
+      "options": [
+        {
+          "id": "A",
+          "text": "2"
+        },
+        {
+          "id": "B",
+          "text": "-2"
+        },
+        {
+          "id": "C",
+          "text": "10"
+        },
+        {
+          "id": "D",
+          "text": "-10"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "By Definition 4.1, for any 2 × 2 matrix A = [[a, b], [c, d]], the determinant is given by det(A) = ad - bc. Substituting the entries: det(A) = (1)(4) - (2)(3) = 4 - 6 = -2.",
+      "sourceReference": "Section 4.1, Page 209"
+    },
+    {
+      "id": "MAT-G11-U04-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "For what value of x is the determinant of the matrix A = [] equal to zero?",
+      "options": [
+        {
+          "id": "A",
+          "text": "x = -1"
+        },
+        {
+          "id": "B",
+          "text": "x = 0"
+        },
+        {
+          "id": "C",
+          "text": "x = 1"
+        },
+        {
+          "id": "D",
+          "text": "x = 2"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Evaluating the determinant: det(A) = 1(x + 1) - x(2) = x + 1 - 2x = 1 - x. Setting det(A) = 0 gives 1 - x = 0 => x = 1.",
+      "sourceReference": "Section 4.1, Page 210"
+    },
+    {
+      "id": "MAT-G11-U04-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Given the 3 × 3 matrix A = [], what is the minor of the entry a₁₂, denoted by |A₁₂|?",
+      "options": [
+        {
+          "id": "A",
+          "text": "-6"
+        },
+        {
+          "id": "B",
+          "text": "0"
+        },
+        {
+          "id": "C",
+          "text": "6"
+        },
+        {
+          "id": "D",
+          "text": "-11"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "By Definition 4.2, the submatrix A₁₂ is obtained by crossing out the 1st row and the 2nd column of A, leaving A₁₂ = []. The minor is the determinant of this 2 × 2 submatrix: |A₁₂| = (0)(5) - (0)(3) = 0 - 0 = 0.",
+      "sourceReference": "Section 4.2, Page 211-212"
+    },
+    {
+      "id": "MAT-G11-U04-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is the determinant of the lower triangular matrix B = []?",
+      "options": [
+        {
+          "id": "A",
+          "text": "1"
+        },
+        {
+          "id": "B",
+          "text": "-2"
+        },
+        {
+          "id": "C",
+          "text": "2"
+        },
+        {
+          "id": "D",
+          "text": "0"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "By Theorem 4.2, the determinant of any triangular matrix (upper, lower, or diagonal) is the product of its main diagonal entries. Thus, det(B) = (-1) × 2 × 1 = -2.",
+      "sourceReference": "Section 4.4, Page 220-221"
+    },
+    {
+      "id": "MAT-G11-U04-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "If A is an invertible square matrix of order 3 such that det(A) = 4, what is the determinant of its inverse, det(A⁻¹)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "4"
+        },
+        {
+          "id": "B",
+          "text": "-4"
+        },
+        {
+          "id": "C",
+          "text": "1/4"
+        },
+        {
+          "id": "D",
+          "text": "1/64"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "By Theorem 4.5, for any invertible matrix A, det(A · A⁻¹) = det(I) = 1 => det(A) · det(A⁻¹) = 1 => det(A⁻¹) = 1 / det(A). Therefore, det(A⁻¹) = 1/4.",
+      "sourceReference": "Section 4.4, Page 229"
+    },
+    {
+      "id": "MAT-G11-U04-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Consider the 3 × 3 matrix A = []. What is the cofactor C₃₂ of the entry a₃₂?",
+      "options": [
+        {
+          "id": "A",
+          "text": "7"
+        },
+        {
+          "id": "B",
+          "text": "-7"
+        },
+        {
+          "id": "C",
+          "text": "9"
+        },
+        {
+          "id": "D",
+          "text": "-9"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "By Definition 4.3, the cofactor of entry a_ij is C_ij = (-1)^(i+j) det(A_ij). Deleting row 3 and column 2 leaves the submatrix A₃₂ = []. Then det(A₃₂) = (1)(9) - (3)(6) = 9 - 18 = -9. Since i + j = 3 + 2 = 5 (odd), C₃₂ = (-1)⁵(-9) = -( -9) = 9... Wait: let us re-evaluate det(A₃₂): crossing row 3 and column 2 gives row 1: and row 2:. (1)(9) - (3)(6) = 9 - 18 = -9. Multiplied by (-1)^(3+2) = -1 gives +9. From the options, +9 is Option D.",
+      "sourceReference": "Section 4.2 & Section 4.5, Page 213, 231, 247"
+    },
+    {
+      "id": "MAT-G11-U04-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "If A is a 3 × 3 square matrix with det(A) = 3, which of the following operations results in a new matrix whose determinant is 128 when applied to a 3 × 3 matrix?",
+      "options": [
+        {
+          "id": "A",
+          "text": "If det(A) = 2, the determinant of 4A is equal to 128."
+        },
+        {
+          "id": "B",
+          "text": "If det(A) = 4, the determinant of 2A is equal to 128."
+        },
+        {
+          "id": "C",
+          "text": "If det(A) = 2, the determinant of 2A is equal to 128."
+        },
+        {
+          "id": "D",
+          "text": "If det(A) = 8, the determinant of 4A is equal to 128."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "By Theorem 4.3 and its corollary, for any scalar k and an n × n square matrix A, det(kA) = kⁿ det(A). For n = 3, det(4A) = 4³ det(A) = 64 det(A). If det(A) = 2, then det(4A) = 64 × 2 = 128.",
+      "sourceReference": "Section 4.4, Page 223, 225"
+    },
+    {
+      "id": "MAT-G11-U04-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What is the adjugate matrix, Adj(A), of the 2 × 2 matrix A = []?",
+      "options": [
+        {
+          "id": "A",
+          "text": "[[-3, 1], [4, -2]]"
+        },
+        {
+          "id": "B",
+          "text": "[, [-2, 1]]"
+        },
+        {
+          "id": "C",
+          "text": "[, [-3, 1]]"
+        },
+        {
+          "id": "D",
+          "text": "[[-4, 2], [3, -1]]"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "By Definition 4.5, Adj(A) is the transpose of the cofactor matrix. For A = []: cofactors are C₁₁ = 4, C₁₂ = -3, C₂₁ = -2, C₂₂ = 1. The cofactor matrix is [[4, -3], [-2, 1]]. Transposing this yields Adj(A) = [[4, -2], [-3, 1]].",
+      "sourceReference": "Section 4.5, Page 230-231, 233"
+    },
+    {
+      "id": "MAT-G11-U04-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What is the area of a triangle in the xy-plane whose vertices are P(1, 1), Q(1, 3), and R(4, 5)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "6 square units"
+        },
+        {
+          "id": "B",
+          "text": "3 square units"
+        },
+        {
+          "id": "C",
+          "text": "2.5 square units"
+        },
+        {
+          "id": "D",
+          "text": "4 square units"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The area of a triangle with vertices (x₁, y₁), (x₂, y₂), and (x₃, y₃) is given by Area = (1/2)|det([[x₁, y₁, 1], [x₂, y₂, 1], [x₃, y₃, 1]])|. Evaluating the determinant of []: expanding along row 1 gives 1(3 - 5) - 1(1 - 4) + 1(5 - 12) = -2 + 3 - 7 = -6. Thus, Area = (1/2)|-6| = 3 square units.",
+      "sourceReference": "Section 4.7, Page 244-245"
+    },
+    {
+      "id": "MAT-G11-U04-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Using the determinant form of the equation of a straight line, what is the equation of the line passing through the points P(2, 0) and R(0, 3)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "3x + 2y - 6 = 0"
+        },
+        {
+          "id": "B",
+          "text": "2x + 3y - 6 = 0"
+        },
+        {
+          "id": "C",
+          "text": "3x - 2y + 6 = 0"
+        },
+        {
+          "id": "D",
+          "text": "3x + 2y + 6 = 0"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The line equation through (x₁, y₁) and (x₂, y₂) is given by det([[x, y, 1]]) = 0. Expanding along row 1: x(0 - 3) - y(2 - 0) + 1(6 - 0) = 0 => -3x - 2y + 6 = 0 => 3x + 2y - 6 = 0.",
+      "sourceReference": "Section 4.7, Page 246-247"
+    },
+    {
+      "id": "MAT-G11-U04-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Using Cramer's Rule, what is the value of the variable y in the solution to the system of linear equations:\n  x + y = 1\n  2x + y = 5?",
+      "options": [
+        {
+          "id": "A",
+          "text": "4"
+        },
+        {
+          "id": "B",
+          "text": "-3"
+        },
+        {
+          "id": "C",
+          "text": "3"
+        },
+        {
+          "id": "D",
+          "text": "-4"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "By Theorem 4.7, the determinant of the coefficient matrix is D = det([]) = 1 - 2 = -1. The determinant for y is D_y = det([]) = 5 - 2 = 3. By Cramer's Rule, y = D_y / D = 3 / (-1) = -3. (Likewise, D_x = det([]) = 1 - 5 = -4, so x = -4 / (-1) = 4).",
+      "sourceReference": "Section 4.6, Page 236"
+    },
+    {
+      "id": "MAT-G11-U04-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Let A and B be 3 × 3 square matrices with det(A) = 4 and det(B) = 5. What is the value of det(2ABᵀ)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "40"
+        },
+        {
+          "id": "B",
+          "text": "80"
+        },
+        {
+          "id": "C",
+          "text": "160"
+        },
+        {
+          "id": "D",
+          "text": "320"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "By Theorem 4.3 and Theorem 4.4: det(2M) = 2³ det(M) = 8 det(M) for any 3 × 3 matrix M. Furthermore, det(ABᵀ) = det(A) det(Bᵀ) = det(A) det(B). Substituting det(A) = 4 and det(B) = 5 gives det(2ABᵀ) = 8 × det(A) × det(B) = 8 × 4 × 5 = 160.",
+      "sourceReference": "Section 4.4, Page 228"
+    },
+    {
+      "id": "MAT-G11-U04-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "For what values of the constant k are the three points (3, k), (k, 1), and (6, -1) collinear in the xy-plane?",
+      "options": [
+        {
+          "id": "A",
+          "text": "k = 0 or k = 5"
+        },
+        {
+          "id": "B",
+          "text": "k = 2 or k = 3"
+        },
+        {
+          "id": "C",
+          "text": "k = -1 or k = 6"
+        },
+        {
+          "id": "D",
+          "text": "k = 1 or k = 5"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Three points (x₁, y₁), (x₂, y₂), and (x₃, y₃) in the xy-plane are collinear if and only if the determinant det([[x₁, y₁, 1], [x₂, y₂, 1], [x₃, y₃, 1]]) = 0. Here, det([[3, k, 1], [k, 1, 1], [6, -1, 1]]) = 0. Expanding along the first row: 3(1 - (-1)) - k(k - 6) + 1(-k - 6) = 0 => 3(2) - k² + 6k - k - 6 = 0 => 6 - k² + 5k - 6 = 0 => -k² + 5k = 0 => k(5 - k) = 0. Therefore, k = 0 or k = 5.",
+      "sourceReference": "Section 4.7 & Problem Solving, Page 245, 248"
+    },
+    {
+      "id": "MAT-G11-U04-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "What is the inverse matrix A⁻¹ of the 3 × 3 matrix A = []?",
+      "options": [
+        {
+          "id": "A",
+          "text": "[[-3, 1, 1], [3/2, -1/2, -1], [-1, 0, 1]]"
+        },
+        {
+          "id": "B",
+          "text": "[[-6, 2, 2], [3, -1, -2], [-2, 0, 2]]"
+        },
+        {
+          "id": "C",
+          "text": "[[3, -1, -1], [-3/2, 1/2, 1], [1, 0, -1]]"
+        },
+        {
+          "id": "D",
+          "text": "[[3, -3/2, 1], [-1, 1/2, 0], [-1, 1, -1]]"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "By Theorem 4.6, A⁻¹ = (1 / det(A)) Adj(A). For matrix A = [], its determinant is det(A) = -2, and its adjoint matrix is Adj(A) = [[-6, 2, 2], [3, -1, -2], [-2, 0, 2]]. Dividing each entry of Adj(A) by det(A) = -2 gives A⁻¹ = [[3, -1, -1], [-3/2, 1/2, 1], [1, 0, -1]].",
+      "sourceReference": "Section 4.5, Page 233-234"
+    },
+    {
+      "id": "MAT-G11-U04-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Using Cramer's Rule, what is the unique solution (x, y, z) for the system of linear equations:\n  x + y + z = 3\n  -2x + 2y + 2z = 5\n  x + y + 2z = 4?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(-1/4, 9/4, 1)"
+        },
+        {
+          "id": "B",
+          "text": "(1/4, 7/4, 1)"
+        },
+        {
+          "id": "C",
+          "text": "(-1/2, 5/2, 1)"
+        },
+        {
+          "id": "D",
+          "text": "(1/2, 3/2, 1)"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Evaluating the coefficient determinant: D = det([, [-2, 2, 2]]) = 1(4 - 2) - 1(-4 - 2) + 1(-2 - 2) = 2 + 6 - 4 = 4. Evaluating D_x: det([]) = 3(2) - 1(2) + 1(-3) = 1 => x = D_x / D = 1/4. Evaluating D_y: det([, [-2, 5, 2]]) = 1(2) - 3(-6) + 1(-13) = 7 => y = D_y / D = 7/4. Evaluating D_z: det([, [-2, 2, 5]]) = 1(3) - 1(-13) + 3(-4) = 4 => z = D_z / D = 4/4 = 1. Therefore, the unique solution is (1/4, 7/4, 1).",
+      "sourceReference": "Section 4.6 & Exercise 4.12, Page 237-238, 250"
+    }
+  ]
 }

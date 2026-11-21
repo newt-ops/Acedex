@@ -3,5 +3,411 @@
   "subject": "Mathematics",
   "unitNumber": 4,
   "unitTitle": "Introduction to Linear Programming",
-  "questions": []
+  "questions": [
+    {
+      "id": "MAT-G12-U04-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "When graphing the linear inequality 3x - 2y < 6 in the xy-coordinate plane, which of the following statements correctly describes the boundary line and its inclusion in the solution set?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The boundary line 3x - 2y = 6 is drawn as a dashed (broken) line, and its points are not included in the solution set."
+        },
+        {
+          "id": "B",
+          "text": "The boundary line 3x - 2y = 6 is drawn as a solid line, and its points are included in the solution set."
+        },
+        {
+          "id": "C",
+          "text": "The boundary line 3x - 2y = 6 is drawn as a solid line, and only its intercepts are included in the solution set."
+        },
+        {
+          "id": "D",
+          "text": "The boundary line 3x - 2y = 6 is drawn as a dashed (broken) line, and its points are included in the solution set."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "According to the graphing rules in Section 4.1.3, if an inequality involves a strict inequality symbol ('<' or '>'), the points lying directly on the boundary line do not satisfy the strict condition. Therefore, the boundary line must be drawn as a dashed (broken) line to show that points on the line are excluded from the solution set.",
+      "sourceReference": "Section 4.1.3, Page 247-248"
+    },
+    {
+      "id": "MAT-G12-U04-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which of the following ordered pairs (x, y) lies within the feasible region of the system of linear inequalities:\n  2x + y ≤ 8\n  x - y ≥ 1\n  x ≥ 0, y ≥ 0?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(1, 2)"
+        },
+        {
+          "id": "B",
+          "text": "(2, 1)"
+        },
+        {
+          "id": "C",
+          "text": "(4, 1)"
+        },
+        {
+          "id": "D",
+          "text": "(0, 0)"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Testing each candidate point against all constraints:\n- For (2, 1): 2(2) + 1 = 5 ≤ 8 (True); 2 - 1 = 1 ≥ 1 (True); 2 ≥ 0 and 1 ≥ 0 (True). Thus, (2, 1) satisfies all constraints.\n- For (1, 2): 1 - 2 = -1 < 1 (False).\n- For (4, 1): 2(4) + 1 = 9 > 8 (False).\n- For (0, 0): 0 - 0 = 0 < 1 (False).",
+      "sourceReference": "Section 4.1.4, Page 253-254"
+    },
+    {
+      "id": "MAT-G12-U04-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "According to Theorem 4.2 of linear programming, which of the following statements is necessarily TRUE if the feasible region R of a linear programming problem is bounded?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The objective function Z has neither a maximum nor a minimum value on R."
+        },
+        {
+          "id": "B",
+          "text": "The objective function Z has a maximum value on R, but a minimum value may not exist."
+        },
+        {
+          "id": "C",
+          "text": "The objective function Z has both a maximum and a minimum value on R, and each occurs at a corner point (vertex) of R."
+        },
+        {
+          "id": "D",
+          "text": "Every interior point of R yields the same optimal value for the objective function Z."
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Theorem 4.2 states that if the feasible region R for a linear programming problem is bounded, then the linear objective function Z = ax + by attains both an absolute maximum and an absolute minimum value on R, and each of these extreme values occurs at a corner point (vertex) of R.",
+      "sourceReference": "Section 4.2.1, Theorem 4.2, Page 266 & EUEE 2018 V3 Q7"
+    },
+    {
+      "id": "MAT-G12-U04-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "A bounded feasible region of a linear programming problem has vertices at (0, 0), (4, 0), (2, 3), and (0, 5). What is the maximum value of the objective function Z = 5x + 2y on this region?",
+      "options": [
+        {
+          "id": "A",
+          "text": "10"
+        },
+        {
+          "id": "B",
+          "text": "16"
+        },
+        {
+          "id": "C",
+          "text": "20"
+        },
+        {
+          "id": "D",
+          "text": "26"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "By the Corner Point Method, evaluating the objective function Z = 5x + 2y at each vertex:\n- At (0, 0): Z = 5(0) + 2(0) = 0\n- At (4, 0): Z = 5(4) + 2(0) = 20\n- At (2, 3): Z = 5(2) + 2(3) = 10 + 6 = 16\n- At (0, 5): Z = 5(0) + 2(5) = 10\nThe maximum value is 20, occurring at the vertex (4, 0).",
+      "sourceReference": "Section 4.2, Page 263-264, 269"
+    },
+    {
+      "id": "MAT-G12-U04-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In the mathematical formulation of a linear programming problem, the restrictions or limitations imposed on the decision variables by available resources (such as capital, labor, or raw materials) are formally called:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Objective functions"
+        },
+        {
+          "id": "B",
+          "text": "Linear constraints"
+        },
+        {
+          "id": "C",
+          "text": "Optimal solutions"
+        },
+        {
+          "id": "D",
+          "text": "Slack variables"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In linear programming terminology, the linear inequalities or equations that restrict the values of the decision variables due to limited resources, capacities, or requirements are called linear constraints.",
+      "sourceReference": "Section 4.2, Page 260-261, 298"
+    },
+    {
+      "id": "MAT-G12-U04-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What are all the corner points (vertices) of the feasible region defined by the following system of linear inequalities:\n  x + y ≤ 6\n  2x + y ≤ 8\n  x ≥ 0, y ≥ 0?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(0, 0), (4, 0), (2, 4), and (0, 6)"
+        },
+        {
+          "id": "B",
+          "text": "(0, 0), (6, 0), (2, 4), and (0, 8)"
+        },
+        {
+          "id": "C",
+          "text": "(0, 0), (4, 0), (3, 3), and (0, 6)"
+        },
+        {
+          "id": "D",
+          "text": "(0, 0), (4, 0), and (0, 6)"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The boundary lines are x + y = 6, 2x + y = 8, x = 0, and y = 0:\n1. The origin is (0, 0).\n2. Along the x-axis (y = 0): x ≤ 6 and 2x ≤ 8 => x ≤ 4. The intercept is (4, 0).\n3. Along the y-axis (x = 0): y ≤ 6 and y ≤ 8 => y ≤ 6. The intercept is (0, 6).\n4. Intersection of x + y = 6 and 2x + y = 8: subtracting the first from the second gives x = 2; then y = 6 - 2 = 4, giving the vertex (2, 4).\nThus, the four corner points are (0, 0), (4, 0), (2, 4), and (0, 6).",
+      "sourceReference": "Section 4.1.5, Page 254-255"
+    },
+    {
+      "id": "MAT-G12-U04-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "A bakery makes two types of bread: White bread (x) and Brown bread (y). Each loaf of White bread requires 200 g of flour and 20 g of sugar. Each loaf of Brown bread requires 100 g of flour and 40 g of sugar. The bakery has at most 10 kg (10,000 g) of flour and at most 1.6 kg (1,600 g) of sugar available daily. Furthermore, the number of Brown loaves cannot exceed twice the number of White loaves. Which system of linear inequalities models these constraints?",
+      "options": [
+        {
+          "id": "A",
+          "text": "2x + y ≤ 100, x + 2y ≤ 80, y ≤ 2x, x ≥ 0, y ≥ 0"
+        },
+        {
+          "id": "B",
+          "text": "2x + y ≤ 100, x + 2y ≤ 80, x ≤ 2y, x ≥ 0, y ≥ 0"
+        },
+        {
+          "id": "C",
+          "text": "x + 2y ≤ 100, 2x + y ≤ 80, y ≤ 2x, x ≥ 0, y ≥ 0"
+        },
+        {
+          "id": "D",
+          "text": "2x + y ≥ 100, x + 2y ≥ 80, y ≥ 2x, x ≥ 0, y ≥ 0"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Formulating each constraint:\n1. Flour: 200x + 100y ≤ 10,000. Dividing by 100 yields 2x + y ≤ 100.\n2. Sugar: 20x + 40y ≤ 1,600. Dividing by 20 yields x + 2y ≤ 80.\n3. Production condition: 'the number of Brown loaves (y) cannot exceed twice the number of White loaves (x)' translates to y ≤ 2x.\n4. Non-negativity: x ≥ 0, y ≥ 0.\nThis corresponds to Option A.",
+      "sourceReference": "Section 4.1.2 & Section 4.3.1, Page 243-245, 277-280 & EUEE 2018 V3 Q27"
+    },
+    {
+      "id": "MAT-G12-U04-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What is the minimum value of the objective function Z = 3x + 5y subject to the constraints:\n  x + 2y ≥ 10\n  3x + y ≥ 15\n  x ≥ 0, y ≥ 0?",
+      "options": [
+        {
+          "id": "A",
+          "text": "25"
+        },
+        {
+          "id": "B",
+          "text": "27"
+        },
+        {
+          "id": "C",
+          "text": "30"
+        },
+        {
+          "id": "D",
+          "text": "75"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The feasible region is in the first quadrant above the two boundary lines:\n1. Intersection of x + 2y = 10 with the y-axis: x = 0 => y = 5, but for 3x + y ≥ 15 at x = 0, y ≥ 15. So the y-intercept vertex is (0, 15).\n2. Intersection of 3x + y = 15 with the x-axis: y = 0 => x = 5, but for x + 2y ≥ 10 at y = 0, x ≥ 10. So the x-intercept vertex is (10, 0).\n3. Intersection of x + 2y = 10 and 3x + y = 15: multiply the second equation by 2: 6x + 2y = 30. Subtracting the first gives 5x = 20 => x = 4; then y = 15 - 3(4) = 3. So (4, 3) is a vertex.\nEvaluating Z = 3x + 5y at the vertices:\n- At (0, 15): Z = 3(0) + 5(15) = 75\n- At (4, 3): Z = 3(4) + 5(3) = 12 + 15 = 27\n- At (10, 0): Z = 3(10) + 5(0) = 30\nThe minimum value is 27 at (4, 3).",
+      "sourceReference": "Section 4.2.1, Page 267-270"
+    },
+    {
+      "id": "MAT-G12-U04-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Consider the linear programming problem: Maximize Z = 4x + 3y subject to x - y ≤ 2, x ≥ 0, and y ≥ 0. What can be concluded about the optimal solution of this problem?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The maximum value is 8 occurring at (2, 0)."
+        },
+        {
+          "id": "B",
+          "text": "The maximum value is 0 occurring at (0, 0)."
+        },
+        {
+          "id": "C",
+          "text": "No maximum value exists because the feasible region is unbounded in the direction of increasing Z."
+        },
+        {
+          "id": "D",
+          "text": "The problem has multiple optimal solutions along the line x - y = 2."
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The constraint x - y ≤ 2 can be written as y ≥ x - 2. In the first quadrant (x ≥ 0, y ≥ 0), as x and y increase indefinitely (for instance along the line y = x, where x - y = 0 ≤ 2), both decision variables can become arbitrarily large. Consequently, Z = 4x + 3y = 7x increases without bound. Hence, no maximum value exists.",
+      "sourceReference": "Section 4.2.1, Page 266-267, 272"
+    },
+    {
+      "id": "MAT-G12-U04-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Under which of the following geometric conditions does a linear programming problem have multiple (infinitely many) optimal solutions?",
+      "options": [
+        {
+          "id": "A",
+          "text": "When the feasible region is an unbounded polygon."
+        },
+        {
+          "id": "B",
+          "text": "When the slope of the objective function is equal to the slope of a binding constraint boundary line segment joining two optimal corner points."
+        },
+        {
+          "id": "C",
+          "text": "When the objective function passes through the origin (0, 0)."
+        },
+        {
+          "id": "D",
+          "text": "When all constraints have strictly positive y-intercepts."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "As demonstrated in Example 2 of Section 4.2, when the level line of the objective function ax + by = Z has the same slope as a binding boundary line segment of the feasible region, the objective function attains the same optimal value at both endpoints of that segment and at every point along the segment, resulting in infinitely many optimal solutions.",
+      "sourceReference": "Section 4.2, Example 2, Page 272-273"
+    },
+    {
+      "id": "MAT-G12-U04-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "When setting up and solving a Linear Programming Problem using Microsoft Excel's built-in Solver add-in, which parameter in the Solver Parameters dialog box specifies the cell containing the linear objective function formula?",
+      "options": [
+        {
+          "id": "A",
+          "text": "By Changing Cells"
+        },
+        {
+          "id": "B",
+          "text": "Set Target Cell (or Set Objective)"
+        },
+        {
+          "id": "C",
+          "text": "Subject to the Constraints"
+        },
+        {
+          "id": "D",
+          "text": "Value of"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In Section 4.3.2 (Step 5), the objective function location is defined in the Solver dialog box by entering the cell reference where the objective function sum formula is computed into the 'Set Target Cell' (or 'Set Objective') field, while decision variables are designated in the 'By Changing Cells' field.",
+      "sourceReference": "Section 4.3.2, Page 292-293"
+    },
+    {
+      "id": "MAT-G12-U04-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A small carpentry workshop manufactures two products: Stools (x) and Benches (y). Fabricating each stool requires 2 hours on Machine 1 and 1 hour on Machine 2. Fabricating each bench requires 2 hours on Machine 1 and 3 hours on Machine 2. Machine 1 is available for at most 16 hours per day, and Machine 2 is available for at most 18 hours per day. If the profit is Birr 120 per stool and Birr 150 per bench, what is the maximum daily profit the workshop can achieve?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Birr 960"
+        },
+        {
+          "id": "B",
+          "text": "Birr 1,110"
+        },
+        {
+          "id": "C",
+          "text": "Birr 1,200"
+        },
+        {
+          "id": "D",
+          "text": "Birr 1,350"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Formulating the model:\nMaximize Z = 120x + 150y\nSubject to:\n  2x + 2y ≤ 16 => x + y ≤ 8\n  x + 3y ≤ 18\n  x ≥ 0, y ≥ 0\nFinding the corner points of the bounded feasible region:\n1. Origin: (0, 0) => Z = 0\n2. x-intercept: along y = 0, x ≤ 8 and x ≤ 18 => (8, 0). Z = 120(8) + 0 = Birr 960\n3. y-intercept: along x = 0, y ≤ 8 and 3y ≤ 18 (y ≤ 6) => (0, 6). Z = 0 + 150(6) = Birr 900\n4. Intersection of x + y = 8 and x + 3y = 18: subtracting gives 2y = 10 => y = 5; then x = 8 - 5 = 3 => vertex (3, 5). Z = 120(3) + 150(5) = 360 + 750 = Birr 1,110.\nComparing all vertices, the maximum profit is Birr 1,110 (produced by making 3 stools and 5 benches).",
+      "sourceReference": "Section 4.3.1 (Manufacturing Problems), Page 277-279"
+    },
+    {
+      "id": "MAT-G12-U04-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A dairy farmer mixes two feed supplements, Feed X and Feed Y, to provide at least 24 units of protein and at least 36 units of carbohydrates daily. Each kilogram of Feed X contains 2 units of protein and 6 units of carbohydrates and costs Birr 40. Each kilogram of Feed Y contains 4 units of protein and 3 units of carbohydrates and costs Birr 50. What is the minimum daily cost to satisfy these dietary requirements?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Birr 300"
+        },
+        {
+          "id": "B",
+          "text": "Birr 360"
+        },
+        {
+          "id": "C",
+          "text": "Birr 480"
+        },
+        {
+          "id": "D",
+          "text": "Birr 600"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Mathematical formulation:\nMinimize C = 40x + 50y\nSubject to:\n  2x + 4y ≥ 24 => x + 2y ≥ 12\n  6x + 3y ≥ 36 => 2x + y ≥ 12\n  x ≥ 0, y ≥ 0\nThe corner points of the feasible region are:\n1. (0, 12) [satisfies 2(0) + 12 = 12 ≥ 12 and 0 + 2(12) = 24 ≥ 12]: C = 40(0) + 50(12) = Birr 600\n2. (12, 0) [satisfies 12 + 0 ≥ 12 and 2(12) + 0 = 24 ≥ 12]: C = 40(12) + 50(0) = Birr 480\n3. Intersection of x + 2y = 12 and 2x + y = 12: from the first, x = 12 - 2y. Substituting into the second: 2(12 - 2y) + y = 12 => 24 - 3y = 12 => 3y = 12 => y = 4, which gives x = 4. At (4, 4): C = 40(4) + 50(4) = 160 + 200 = Birr 360.\nSince all coefficients in the objective function are positive and the region is bounded below in the first quadrant, the minimum cost is Birr 360.",
+      "sourceReference": "Section 4.3.1 (Diet Problems), Page 274-276, 282-284"
+    },
+    {
+      "id": "MAT-G12-U04-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A transport agency must move at least 300 passengers using standard buses (x) and minibuses (y). Each standard bus carries 50 passengers, requires 2 crew members, and costs Birr 3,000 to operate. Each minibus carries 20 passengers, requires 1 crew member, and costs Birr 1,500 to operate. At most 18 crew members are available. What is the minimum operating cost to transport the passengers?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Birr 18,000"
+        },
+        {
+          "id": "B",
+          "text": "Birr 19,500"
+        },
+        {
+          "id": "C",
+          "text": "Birr 22,500"
+        },
+        {
+          "id": "D",
+          "text": "Birr 27,000"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Formulating the problem:\nMinimize Z = 3000x + 1500y\nSubject to:\n  50x + 20y ≥ 300 => 5x + 2y ≥ 30 (passenger capacity)\n  2x + y ≤ 18 (crew limit)\n  x ≥ 0, y ≥ 0\nExamining the vertices of the feasible region:\n1. Along the y-axis (x = 0): from 2y ≥ 30, y ≥ 15; from y ≤ 18, y ≤ 18. So vertices are (0, 15) and (0, 18).\n   - At (0, 15): Z = 3000(0) + 1500(15) = Birr 22,500\n   - At (0, 18): Z = 3000(0) + 1500(18) = Birr 27,000\n2. Along the x-axis (y = 0): from 5x ≥ 30, x ≥ 6; from 2x ≤ 18, x ≤ 9. So vertices are (6, 0) and (9, 0).\n   - At (6, 0): Z = 3000(6) + 1500(0) = Birr 18,000\n   - At (9, 0): Z = 3000(9) + 1500(0) = Birr 27,000\nComparing all corner points, the minimum operating cost is Birr 18,000, achieved by operating 6 standard buses and 0 minibuses (accommodating 6 × 50 = 300 passengers with 6 × 2 = 12 crew members ≤ 18).",
+      "sourceReference": "Section 4.3.1 (Transportation Problems), Page 284-286"
+    },
+    {
+      "id": "MAT-G12-U04-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Consider the linear programming problem:\n  Maximize Z = kx + y\n  Subject to:\n    x + 2y ≤ 10\n    2x + y ≤ 14\n    x ≥ 0, y ≥ 0\nFor what range of the constant parameter k does the objective function attain its maximum at the corner point (6, 2)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "0 < k ≤ 1/2"
+        },
+        {
+          "id": "B",
+          "text": "1/2 ≤ k ≤ 2"
+        },
+        {
+          "id": "C",
+          "text": "k ≥ 2"
+        },
+        {
+          "id": "D",
+          "text": "-2 ≤ k ≤ -1/2"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The point (6, 2) is the intersection of the two boundary lines:\n1. Line 1: x + 2y = 10 => y = -(1/2)x + 5, which has slope m₁ = -1/2.\n2. Line 2: 2x + y = 14 => y = -2x + 14, which has slope m₂ = -2.\nThe objective function is Z = kx + y => y = -kx + Z, with slope m_obj = -k.\nFor the linear objective function to attain its maximum at the vertex (6, 2), the slope of the objective function's level lines must lie between the slopes of the two intersecting constraint lines:\n  m₂ ≤ m_obj ≤ m₁\n  -2 ≤ -k ≤ -1/2\nMultiplying by -1 and reversing the inequality signs:\n  1/2 ≤ k ≤ 2.\n(If k > 2, the maximum shifts to (7, 0); if k < 1/2, the maximum shifts to (0, 5)).",
+      "sourceReference": "Section 4.2, Page 264, 270-272"
+    }
+  ]
 }

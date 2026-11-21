@@ -3,5 +3,411 @@
   "subject": "Geography",
   "unitNumber": 6,
   "unitTitle": "Human - Natural Environment Interactions",
-  "questions": []
+  "questions": [
+    {
+      "id": "GEO-G10-U06-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which 19th-century geographical doctrine asserted that human culture, economic development, and social activities are strictly controlled and dictated by the physical environment?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Environmental Possibilism"
+        },
+        {
+          "id": "B",
+          "text": "Environmental Determinism"
+        },
+        {
+          "id": "C",
+          "text": "Cultural Ecology"
+        },
+        {
+          "id": "D",
+          "text": "Spatial Heterogeneity"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Environmental determinism is the doctrine (popular among 19th-century European scholars) asserting that economic growth, culture, and human activities are dictated and controlled by the physical natural environment.",
+      "sourceReference": "Grade 10 Geography Textbook, Section 6.2, Page 149–150"
+    },
+    {
+      "id": "GEO-G10-U06-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which mode of human–environment interaction involves adjusting lifestyle, clothing, or building practices to withstand environmental conditions without physically altering the natural terrain?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Modification"
+        },
+        {
+          "id": "B",
+          "text": "Exploitation"
+        },
+        {
+          "id": "C",
+          "text": "Adaptation"
+        },
+        {
+          "id": "D",
+          "text": "Degradation"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Adaptation refers to an adjustment in human or natural systems in response to environmental stimuli (such as wearing heavy clothing in cold areas or building houses on high ground to avoid floods) to improve survival without modifying the physical environment.",
+      "sourceReference": "Grade 10 Geography Textbook, Section 6.2, Page 151–153"
+    },
+    {
+      "id": "GEO-G10-U06-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What type of environmental adaptation occurs naturally or spontaneously in ecological systems or market behaviors without being directed by deliberate governmental policy decisions?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Planned adaptation"
+        },
+        {
+          "id": "B",
+          "text": "Autonomous (spontaneous) adaptation"
+        },
+        {
+          "id": "C",
+          "text": "Industrial adaptation"
+        },
+        {
+          "id": "D",
+          "text": "Structural adaptation"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Autonomous (or spontaneous) adaptation is triggered by natural ecological changes or market shifts in human systems without a conscious or deliberate governmental policy decision.",
+      "sourceReference": "Grade 10 Geography Textbook, Section 6.2, Page 153"
+    },
+    {
+      "id": "GEO-G10-U06-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "According to demographic records, what primary factors caused Africa's population size to remain largely stagnant between 1500 and 1900 AD?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Universal adoption of anti-natalist family planning policies"
+        },
+        {
+          "id": "B",
+          "text": "Massive industrial emigration to Latin America and East Asia"
+        },
+        {
+          "id": "C",
+          "text": "The destructive impacts of the slave trade and widespread epidemic diseases"
+        },
+        {
+          "id": "D",
+          "text": "Severe polar climate freezing across Sub-Saharan Africa"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Africa experienced demographic stagnation between 1500 and 1900 primarily due to the loss of fertile population through the slave trade combined with the widespread prevalence of deadly diseases.",
+      "sourceReference": "Grade 10 Geography Textbook, Section 6.1, Page 146 & Review Questions, Page 157"
+    },
+    {
+      "id": "GEO-G10-U06-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "How is indigenous knowledge in natural resource conservation primarily preserved and transmitted across generations in traditional African societies?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Through digital satellite databases and peer-reviewed journals"
+        },
+        {
+          "id": "B",
+          "text": "Orally through cultural practices, elders' teachings, and community traditions"
+        },
+        {
+          "id": "C",
+          "text": "Through mandatory municipal tax assessments"
+        },
+        {
+          "id": "D",
+          "text": "Through international trade treaties signed at the United Nations"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Indigenous knowledge in Africa is an accumulated body of trial-and-error wisdom that is orally transferred across generations through cultural traditions, elder teachings, and social practices.",
+      "sourceReference": "Grade 10 Geography Textbook, Section 6.3, Page 154–155"
+    },
+    {
+      "id": "GEO-G10-U06-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "A regional government implements an official policy to construct coastal sea walls, introduce drought-resistant crop varieties, and establish flood early-warning systems. Which classification of environmental adaptation does this policy represent?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Autonomous adaptation"
+        },
+        {
+          "id": "B",
+          "text": "Spontaneous adaptation"
+        },
+        {
+          "id": "C",
+          "text": "Planned adaptation"
+        },
+        {
+          "id": "D",
+          "text": "Deterministic adaptation"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Planned adaptation is the result of a deliberate policy decision based on an awareness that environmental conditions have changed or are about to change, aiming to take action to return to or maintain a desired state.",
+      "sourceReference": "Grade 10 Geography Textbook, Section 6.2, Page 153"
+    },
+    {
+      "id": "GEO-G10-U06-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which of the following human actions represents a positive environmental modification aimed at enhancing atmospheric carbon sequestration and restoring degraded ecosystems?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Clearing mountain slope forests for rain-fed cereal farming"
+        },
+        {
+          "id": "B",
+          "text": "Drilling deep exploratory wells for petroleum extraction"
+        },
+        {
+          "id": "C",
+          "text": "Large-scale afforestation and watershed conservation projects"
+        },
+        {
+          "id": "D",
+          "text": "Constructing asphalt highway corridors through national parks"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "While clearing forests and drilling wells represent environmental modifications with negative footprints, afforestation and resource conservation represent positive human modifications that improve air quality and restore ecological functions.",
+      "sourceReference": "Grade 10 Geography Textbook, Section 6.2, Page 151–152"
+    },
+    {
+      "id": "GEO-G10-U06-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Why was the doctrine of Environmental Determinism rejected by geographers in the 1950s and replaced by Environmental Possibilism?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because modern satellite technology proved that weather does not affect crop production."
+        },
+        {
+          "id": "B",
+          "text": "Because determinism treated humans as passive subjects while failing to account for human agency, technological innovation, and freedom of choice."
+        },
+        {
+          "id": "C",
+          "text": "Because all continents developed identical economic structures regardless of climate."
+        },
+        {
+          "id": "D",
+          "text": "Because environmental possibilism claims physical geography has zero influence on human life."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Environmental determinism was rejected because it over-simplistically assumed physical environment strictly dictates human growth. Possibilism replaced it by emphasizing that nature offers choices and possibilities, while humans use culture and technology to select among them.",
+      "sourceReference": "Grade 10 Geography Textbook, Section 6.2, Page 149–150"
+    },
+    {
+      "id": "GEO-G10-U06-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What major global developments over the past two centuries served as the primary drivers of rapid world population expansion by significantly reducing mortality rates?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Widespread decline in agricultural food supply and urban migration bans"
+        },
+        {
+          "id": "B",
+          "text": "Advances in modern medicine, improved public sanitation, and rising living standards"
+        },
+        {
+          "id": "C",
+          "text": "Increase in global infant and maternal mortality rates"
+        },
+        {
+          "id": "D",
+          "text": "Global adoption of strict pro-natalist laws across all sovereign nations"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The rapid increase in world population over recent centuries is primarily the result of advances in modern medicine and improvements in living standards, which reduced infant, child, and maternal mortality while raising life expectancy.",
+      "sourceReference": "Grade 10 Geography Textbook, Section 6.1, Page 148"
+    },
+    {
+      "id": "GEO-G10-U06-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which of the following ecosystem services represents an indirect environmental benefit that human societies depend upon for climate regulation and disaster risk reduction?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Extraction of granite rock for building foundations"
+        },
+        {
+          "id": "B",
+          "text": "Harvesting timber for furniture manufacturing"
+        },
+        {
+          "id": "C",
+          "text": "Carbon sequestration by forests and natural wetland flood management"
+        },
+        {
+          "id": "D",
+          "text": "Pumping groundwater for commercial bottled water sales"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Human beings depend on environmental ecosystem services both directly (food, water, shelter) and indirectly through natural services like carbon sequestration, water purification, flood risk management, and nutrient cycling.",
+      "sourceReference": "Grade 10 Geography Textbook, Section 6.2, Page 151"
+    },
+    {
+      "id": "GEO-G10-U06-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What makes indigenous knowledge particularly valuable when managing natural resources and environmental degradation in Africa?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It eliminates the need for scientific research or data collection."
+        },
+        {
+          "id": "B",
+          "text": "It offers context-specific, time-tested local ecological observations and conservation practices accumulated over generations."
+        },
+        {
+          "id": "C",
+          "text": "It allows commercial logging companies to bypass environmental impact assessments."
+        },
+        {
+          "id": "D",
+          "text": "It relies exclusively on synthetic chemical fertilizers to restore degraded soils."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Indigenous knowledge represents holistic, locally adapted ecological wisdom gained through generations of trial and error, making it highly effective for managing environmental degradation and supporting sustainable resource use.",
+      "sourceReference": "Grade 10 Geography Textbook, Section 6.3, Page 154–155"
+    },
+    {
+      "id": "GEO-G10-U06-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "In Sub-Saharan Africa, how does the 'vicious cycle' between poverty and environmental degradation operate to worsen socio-economic conditions?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Poverty causes people to reduce food consumption, which automatically restores natural forest cover."
+        },
+        {
+          "id": "B",
+          "text": "Poverty forces vulnerable rural households to overexploit fragile natural resources for daily survival, triggering environmental degradation which lowers land productivity and deepens poverty."
+        },
+        {
+          "id": "C",
+          "text": "Environmental degradation enriches rural communities by expanding desert sand export markets."
+        },
+        {
+          "id": "D",
+          "text": "High household incomes force families to clear communal forests to qualify for international aid."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The poverty–environment nexus operates as a downward spiral: poverty leads poor people to overexploit and degrade the resources on which they rely for day-to-day survival. The resulting environmental degradation lowers agricultural productivity, compounding the depth of poverty.",
+      "sourceReference": "Grade 10 Geography Textbook, Section 6.2, Page 150 & Unit Summary, Page 156"
+    },
+    {
+      "id": "GEO-G10-U06-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Which of the following paired scenarios correctly distinguishes an environmental 'adaptation' from an environmental 'modification'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Adaptation: Building a hydroelectric dam; Modification: Wearing thick woolen clothes in cold weather."
+        },
+        {
+          "id": "B",
+          "text": "Adaptation: Drilling deep oil wells; Modification: Terracing steep mountain slopes."
+        },
+        {
+          "id": "C",
+          "text": "Adaptation: Taking benefit of the natural slope of the land for gravity irrigation; Modification: Constructing a large storage dam across a river channel."
+        },
+        {
+          "id": "D",
+          "text": "Adaptation: Deforesting hillsides for crop fields; Modification: Planting ornamental trees in urban parks."
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Taking advantage of an existing natural slope for gravity irrigation is a classic adaptation (working with natural landforms without physically altering the terrain), whereas damming a river is an environmental modification (changing physical environmental structures).",
+      "sourceReference": "Grade 10 Geography Textbook, Section 6.2, Page 151 & Page 153"
+    },
+    {
+      "id": "GEO-G10-U06-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Why does the persistent rapid population growth in Sub-Saharan Africa complicate national development efforts and environmental sustainability?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It lowers the median age to zero, eliminating all primary school enrollments."
+        },
+        {
+          "id": "B",
+          "text": "It generates high youth dependency, diverting scarce national capital from productive development investments to basic social consumption needs like healthcare, schooling, and food."
+        },
+        {
+          "id": "C",
+          "text": "It causes global atmospheric cooling and halts urban migration flows."
+        },
+        {
+          "id": "D",
+          "text": "It has reached absolute overpopulation where technology cannot increase agricultural output."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Rapid population growth creates a high youth dependency structure. Persisting high fertility constantly dwarfs economic gains because scarce financial resources that could be used for capital development are shifted to meet basic social supplies (health, education, food, housing) for expanding populations.",
+      "sourceReference": "Grade 10 Geography Textbook, Section 6.1, Page 146 & Unit Summary, Page 156"
+    },
+    {
+      "id": "GEO-G10-U06-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "In geographic enquiry, why is the argument that 'tropical environmental conditions directly cause economic backwardness and weak governance' considered a flawed application of Environmental Determinism?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because tropical climates have sub-zero freezing temperatures that prevent crop cultivation."
+        },
+        {
+          "id": "B",
+          "text": "Because it over-simplistically reduces complex human development outcomes solely to physical climate while ignoring institutional, historical, technological, and socio-political factors."
+        },
+        {
+          "id": "C",
+          "text": "Because environmental determinism was proven 100% accurate by modern satellite GIS data."
+        },
+        {
+          "id": "D",
+          "text": "Because tropical regions contain zero natural resources or mineral deposits."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Environmental determinism is criticized for over-simplifying human geography by asserting that physical environment strictly controls human culture and development, ignoring human innovation, institutional quality, historical trade relations, and technological adaptability.",
+      "sourceReference": "Grade 10 Geography Textbook, Section 6.2, Page 149–150"
+    }
+  ]
 }

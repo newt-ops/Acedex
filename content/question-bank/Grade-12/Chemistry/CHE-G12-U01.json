@@ -3,5 +3,411 @@
   "subject": "Chemistry",
   "unitNumber": 1,
   "unitTitle": "Acid-Base Equilibria",
-  "questions": []
+  "questions": [
+    {
+      "id": "CHE-G12-U01-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In the Brønsted-Lowry acid-base theory, a conjugate base is defined as the chemical species that:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Accepts an electron pair to form a coordinate covalent bond."
+        },
+        {
+          "id": "B",
+          "text": "Remains after a Brønsted-Lowry acid donates a single proton (H⁺)."
+        },
+        {
+          "id": "C",
+          "text": "Increases the hydroxide ion concentration (OH⁻) in aqueous solution."
+        },
+        {
+          "id": "D",
+          "text": "Donates a proton (H⁺) to a solvent molecule."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "According to the Brønsted-Lowry theory, when an acid donates a single proton (H⁺), the remaining species is defined as its conjugate base.",
+      "sourceReference": "Section 1.1, Page 5"
+    },
+    {
+      "id": "CHE-G12-U01-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "According to the Lewis concept of acids and bases, a Lewis base is defined as any substance that acts as an:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Electron-pair acceptor"
+        },
+        {
+          "id": "B",
+          "text": "Proton (H⁺) donor"
+        },
+        {
+          "id": "C",
+          "text": "Electron-pair donor"
+        },
+        {
+          "id": "D",
+          "text": "Proton (H⁺) acceptor"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The Lewis concept defines a base as an electron-pair donor and an acid as an electron-pair acceptor.",
+      "sourceReference": "Section 1.1, Page 11"
+    },
+    {
+      "id": "CHE-G12-U01-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "At 25 °C, pure water autoionizes to yield [H₃O⁺] = 1.0 × 10⁻⁷ M. What is the value of the ion-product constant of water (K_w)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "1.0 × 10⁻⁷"
+        },
+        {
+          "id": "B",
+          "text": "1.0 × 10⁻¹⁴"
+        },
+        {
+          "id": "C",
+          "text": "1.0 × 10⁷"
+        },
+        {
+          "id": "D",
+          "text": "1.0 × 10¹⁴"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The ion-product constant of water is K_w = [H₃O⁺][OH⁻]. At 25 °C, K_w = (1.0 × 10⁻⁷)(1.0 × 10⁻⁷) = 1.0 × 10⁻¹⁴.",
+      "sourceReference": "Section 1.2, Page 15"
+    },
+    {
+      "id": "CHE-G12-U01-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which combination of dissolved solutes forms a standard buffer solution capable of resisting changes in pH upon addition of small amounts of acid or base?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Strong acid and its salt (e.g., HCl and NaCl)"
+        },
+        {
+          "id": "B",
+          "text": "Weak acid and its conjugate base salt (e.g., CH₃COOH and CH₃COONa)"
+        },
+        {
+          "id": "C",
+          "text": "Strong base and its salt (e.g., NaOH and Na₂SO₄)"
+        },
+        {
+          "id": "D",
+          "text": "Strong acid and strong base in equal molar quantities"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "A buffer solution consists of a weak acid and its conjugate base (or a weak base and its conjugate acid), which neutralizes added H⁺ or OH⁻ ions to maintain a steady pH.",
+      "sourceReference": "Section 1.3, Page 34"
+    },
+    {
+      "id": "CHE-G12-U01-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which of the following polyatomic ions is amphiprotic, meaning it can act as either a Brønsted-Lowry acid or a Brønsted-Lowry base?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Carbonate ion (CO₃²⁻)"
+        },
+        {
+          "id": "B",
+          "text": "Hydrogen carbonate ion (HCO₃⁻)"
+        },
+        {
+          "id": "C",
+          "text": "Hydronium ion (H₃O⁺)"
+        },
+        {
+          "id": "D",
+          "text": "Chloride ion (Cl⁻)"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "HCO₃⁻ is amphiprotic because it can donate a proton to form CO₃²⁻ (acidic behavior) or accept a proton to form H₂CO₃ (basic behavior).",
+      "sourceReference": "Section 1.1, Page 9"
+    },
+    {
+      "id": "CHE-G12-U01-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What is the conjugate acid of the hydrogen phosphate ion (HPO₄²⁻)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Phosphate ion (PO₄³⁻)"
+        },
+        {
+          "id": "B",
+          "text": "Dihydrogen phosphate ion (H₂PO₄⁻)"
+        },
+        {
+          "id": "C",
+          "text": "Phosphoric acid (H₃PO₄)"
+        },
+        {
+          "id": "D",
+          "text": "Phosphite ion (PO₃³⁻)"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The conjugate acid is formed by adding one proton (H⁺) to the base HPO₄²⁻, yielding H₂PO₄⁻.",
+      "sourceReference": "Section 1.1, Page 6"
+    },
+    {
+      "id": "CHE-G12-U01-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What is the approximate pH of a 0.10 M solution of acetic acid (CH₃COOH) at 25 °C? (K_a of CH₃COOH = 1.8 × 10⁻⁵)",
+      "options": [
+        {
+          "id": "A",
+          "text": "1.00"
+        },
+        {
+          "id": "B",
+          "text": "2.87"
+        },
+        {
+          "id": "C",
+          "text": "4.74"
+        },
+        {
+          "id": "D",
+          "text": "5.74"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "[H₃O⁺] = √(K_a × c) = √((1.8 × 10⁻⁵) × 0.10) = √(1.8 × 10⁻⁶) = 1.34 × 10⁻³ M. pH = -log(1.34 × 10⁻³) = 2.87.",
+      "sourceReference": "Section 1.2, Page 27"
+    },
+    {
+      "id": "CHE-G12-U01-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What occurs to the percent ionization and pH of a 0.10 M CH₃COOH solution when solid sodium acetate (CH₃COONa) is added to it?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Percent ionization increases and pH decreases."
+        },
+        {
+          "id": "B",
+          "text": "Percent ionization decreases and pH increases."
+        },
+        {
+          "id": "C",
+          "text": "Percent ionization increases and pH increases."
+        },
+        {
+          "id": "D",
+          "text": "Both percent ionization and pH remain unchanged."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Adding the common ion CH₃COO⁻ shifts the ionization equilibrium CH₃COOH ⇌ H⁺ + CH₃COO⁻ to the left (common ion effect), repressing acid ionization and raising the pH.",
+      "sourceReference": "Section 1.3, Page 32"
+    },
+    {
+      "id": "CHE-G12-U01-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "An aqueous solution of sodium carbonate (Na₂CO₃) is basic (pH > 7). Which reaction accounts for this alkalinity?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Na⁺ ions hydrolyze to produce H₃O⁺ ions."
+        },
+        {
+          "id": "B",
+          "text": "CO₃²⁻ ions undergo anion hydrolysis with water to produce HCO₃⁻ and OH⁻ ions."
+        },
+        {
+          "id": "C",
+          "text": "Na₂CO₃ reacts with dissolved CO₂ gas to form strong carbonic acid."
+        },
+        {
+          "id": "D",
+          "text": "Carbonate ions decompose into oxygen gas and sodium hydroxide."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Na₂CO₃ is a salt of a strong base (NaOH) and a weak acid (H₂CO₃). The weak acid conjugate base CO₃²⁻ hydrolyzes: CO₃²⁻(aq) + H₂O(l) ⇌ HCO₃⁻(aq) + OH⁻(aq), yielding excess OH⁻ ions.",
+      "sourceReference": "Section 1.4, Page 40"
+    },
+    {
+      "id": "CHE-G12-U01-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "During the titration of a weak monoprotic acid (CH₃COOH) with a strong base (NaOH), what is the expected pH at the equivalence point, and which indicator should be used?",
+      "options": [
+        {
+          "id": "A",
+          "text": "pH < 7.0, using Methyl orange (pH range 3.2–4.4)"
+        },
+        {
+          "id": "B",
+          "text": "pH = 7.0, using Bromthymol blue (pH range 6.0–7.6)"
+        },
+        {
+          "id": "C",
+          "text": "pH > 7.0, using Phenolphthalein (pH range 8.2–10.0)"
+        },
+        {
+          "id": "D",
+          "text": "pH = 1.0, using Methyl red (pH range 4.8–6.0)"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "At the equivalence point of a weak acid-strong base titration, the solution contains the conjugate base salt, making it basic (pH > 7). Phenolphthalein (color change range 8.2–10.0) is the suitable indicator.",
+      "sourceReference": "Section 1.5, Page 43 & Page 45"
+    },
+    {
+      "id": "CHE-G12-U01-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which of the following salt compounds will produce an ACIDIC solution (pH < 7) when dissolved in pure water?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Potassium nitrate (KNO₃)"
+        },
+        {
+          "id": "B",
+          "text": "Potassium acetate (CH₃COOK)"
+        },
+        {
+          "id": "C",
+          "text": "Ammonium chloride (NH₄Cl)"
+        },
+        {
+          "id": "D",
+          "text": "Sodium sulfide (Na₂S)"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "NH₄Cl is a salt of a weak base (NH₃) and a strong acid (HCl). Cationic hydrolysis of NH₄⁺ (NH₄⁺ + H₂O ⇌ NH₃ + H₃O⁺) releases H₃O⁺ ions, producing an acidic solution.",
+      "sourceReference": "Section 1.4, Page 40"
+    },
+    {
+      "id": "CHE-G12-U01-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "What is the percent ionization of a 0.50 M nitrous acid (HNO₂) solution at 25 °C? (K_a of HNO₂ = 4.5 × 10⁻⁴)",
+      "options": [
+        {
+          "id": "A",
+          "text": "0.09%"
+        },
+        {
+          "id": "B",
+          "text": "3.0%"
+        },
+        {
+          "id": "C",
+          "text": "0.90%"
+        },
+        {
+          "id": "D",
+          "text": "4.5%"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "[H₃O⁺] = √(K_a × c) = √((4.5 × 10⁻⁴) × 0.50) = √(2.25 × 10⁻⁴) = 0.015 M. Percent ionization = ([H₃O⁺] / c_initial) × 100% = (0.015 / 0.50) × 100% = 3.0%.",
+      "sourceReference": "Section 1.2, Page 27"
+    },
+    {
+      "id": "CHE-G12-U01-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A buffer solution is prepared by combining 0.20 M propanoic acid (CH₃CH₂COOH, K_a = 1.3 × 10⁻⁵) and 0.40 M sodium propanoate (CH₃CH₂COONa). What is the pH of this buffer? (log 1.3 = 0.11, log 2 = 0.30)",
+      "options": [
+        {
+          "id": "A",
+          "text": "4.59"
+        },
+        {
+          "id": "B",
+          "text": "4.89"
+        },
+        {
+          "id": "C",
+          "text": "5.19"
+        },
+        {
+          "id": "D",
+          "text": "3.89"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "pK_a = -log(1.3 × 10⁻⁵) = 5 - log(1.3) = 4.89. By Henderson-Hasselbalch: pH = pK_a + log([base]/[acid]) = 4.89 + log(0.40 / 0.20) = 4.89 + log(2) = 4.89 + 0.30 = 5.19.",
+      "sourceReference": "Section 1.3, Page 36"
+    },
+    {
+      "id": "CHE-G12-U01-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Ammonium formate (NH₄HCOO) is a salt derived from weak acid formic acid (HCOOH, K_a = 1.8 × 10⁻⁴) and weak base ammonia (NH₃, K_b = 1.8 × 10⁻⁵). What is the chemical nature of an aqueous ammonium formate solution?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Basic, because K_b of NH₃ > K_a of HCOOH."
+        },
+        {
+          "id": "B",
+          "text": "Acidic, because K_a of parent acid HCOOH > K_b of parent base NH₃, making NH₄⁺ a stronger acid than HCOO⁻ is a base."
+        },
+        {
+          "id": "C",
+          "text": "Neutral, because organic salts cannot undergo hydrolysis."
+        },
+        {
+          "id": "D",
+          "text": "Strongly alkaline, due to precipitation of ammonium ions."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "For a salt of a weak acid and weak base, the solution is acidic if K_a(parent acid) > K_b(parent base). Since K_a(HCOOH) = 1.8 × 10⁻⁴ > K_b(NH₃) = 1.8 × 10⁻⁵, K_a(NH₄⁺) = K_w/K_b = 5.6 × 10⁻¹⁰ exceeds K_b(HCOO⁻) = K_w/K_a = 5.6 × 10⁻¹¹, making the solution slightly acidic.",
+      "sourceReference": "Section 1.4, Page 41"
+    },
+    {
+      "id": "CHE-G12-U01-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "What volume of 0.150 N H₂SO₄ solution is required to neutralize completely 50.0 mL of a 0.300 M Ba(OH)₂ solution?",
+      "options": [
+        {
+          "id": "A",
+          "text": "100 mL"
+        },
+        {
+          "id": "B",
+          "text": "200 mL"
+        },
+        {
+          "id": "C",
+          "text": "50.0 mL"
+        },
+        {
+          "id": "D",
+          "text": "400 mL"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Ba(OH)₂ furnishes 2 OH⁻ ions per formula unit, so its normality N_base = 0.300 M × 2 = 0.600 N. Using N_acid × V_acid = N_base × V_base: (0.150 N) × V_acid = (0.600 N) × (50.0 mL) ⇒ V_acid = 200 mL.",
+      "sourceReference": "Section 1.5, Page 44"
+    }
+  ]
 }

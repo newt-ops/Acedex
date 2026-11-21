@@ -3,5 +3,411 @@
   "subject": "Chemistry",
   "unitNumber": 3,
   "unitTitle": "Physical States of Matter",
-  "questions": []
+  "questions": [
+    {
+      "id": "CHE-G11-U03-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "According to the Kinetic Molecular Theory of matter, which physical state of matter possesses particles with the highest kinetic energy and highest degree of random movement?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Solid state"
+        },
+        {
+          "id": "B",
+          "text": "Liquid state"
+        },
+        {
+          "id": "C",
+          "text": "Gaseous state"
+        },
+        {
+          "id": "D",
+          "text": "Condensed crystal state"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "In the gaseous state, particles possess the highest kinetic energy, completely overcoming intermolecular attractive forces and moving continuously and randomly in all directions.",
+      "sourceReference": "Section 3.2, Page 148"
+    },
+    {
+      "id": "CHE-G11-U03-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Boyle's Law states that at constant temperature, the volume of a fixed mass of gas is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Directly proportional to its absolute temperature."
+        },
+        {
+          "id": "B",
+          "text": "Inversely proportional to its pressure."
+        },
+        {
+          "id": "C",
+          "text": "Directly proportional to its molar mass."
+        },
+        {
+          "id": "D",
+          "text": "Inversely proportional to its number of moles."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Boyle's Law establishes that at constant temperature, the volume of a given sample of gas varies inversely with its pressure (V ∝ 1/P or P1V1 = P2V2).",
+      "sourceReference": "Section 3.3, Page 155"
+    },
+    {
+      "id": "CHE-G11-U03-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Under Standard Temperature and Pressure (STP: 0 °C and 1.00 atm), what is the molar volume occupied by 1.00 mole of an ideal gas?",
+      "options": [
+        {
+          "id": "A",
+          "text": "24.5 L"
+        },
+        {
+          "id": "B",
+          "text": "22.4 L"
+        },
+        {
+          "id": "C",
+          "text": "11.2 L"
+        },
+        {
+          "id": "D",
+          "text": "1.00 L"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "At standard conditions (STP = 273.15 K and 1.00 atm), exactly 1.00 mole of any ideal gas occupies a standard molar volume of 22.4 L.",
+      "sourceReference": "Section 3.3, Page 154"
+    },
+    {
+      "id": "CHE-G11-U03-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "The direct phase transition of a substance from the solid state into the gaseous state without passing through the intermediate liquid state is known as:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Vaporization"
+        },
+        {
+          "id": "B",
+          "text": "Condensation"
+        },
+        {
+          "id": "C",
+          "text": "Sublimation"
+        },
+        {
+          "id": "D",
+          "text": "Deposition"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Sublimation is the endothermic phase change in which a solid transforms directly into a gas without melting into a liquid first (e.g., solid CO₂ or iodine crystals).",
+      "sourceReference": "Section 3.5, Page 181"
+    },
+    {
+      "id": "CHE-G11-U03-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "The normal boiling point of a liquid is defined as the temperature at which its equilibrium vapor pressure equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Zero atm"
+        },
+        {
+          "id": "B",
+          "text": "Exactly 1.00 atm (760 mmHg)"
+        },
+        {
+          "id": "C",
+          "text": "The critical pressure of water"
+        },
+        {
+          "id": "D",
+          "text": "The triple point pressure"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The normal boiling point is specifically defined as the boiling temperature when the external atmospheric pressure equals 1.00 atm (760 torr).",
+      "sourceReference": "Section 3.4, Page 177"
+    },
+    {
+      "id": "CHE-G11-U03-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "A 2.50 L sample of nitrogen gas at 27 °C (300 K) is heated at constant pressure to a temperature of 127 °C (400 K). According to Charles' Law, what is the new volume of the gas?",
+      "options": [
+        {
+          "id": "A",
+          "text": "1.88 L"
+        },
+        {
+          "id": "B",
+          "text": "3.33 L"
+        },
+        {
+          "id": "C",
+          "text": "5.00 L"
+        },
+        {
+          "id": "D",
+          "text": "11.8 L"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Using Charles' Law V1/T1 = V2/T2: V2 = V1 × (T2 / T1) = 2.50 L × (400 K / 300 K) = 3.33 L.",
+      "sourceReference": "Section 3.3, Page 160"
+    },
+    {
+      "id": "CHE-G11-U03-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Methane gas (CH₄, molar mass = 16.0 g/mol) diffuses 2.0 times faster than an unknown gas X under identical conditions of temperature and pressure. According to Graham's Law, what is the molar mass of gas X?",
+      "options": [
+        {
+          "id": "A",
+          "text": "8.0 g/mol"
+        },
+        {
+          "id": "B",
+          "text": "32.0 g/mol"
+        },
+        {
+          "id": "C",
+          "text": "64.0 g/mol"
+        },
+        {
+          "id": "D",
+          "text": "48.0 g/mol"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Using Graham's Law r1/r2 = √(M2/M1): 2.0 = √(M_X / 16.0). Squaring both sides gives 4.0 = M_X / 16.0, which yields M_X = 64.0 g/mol.",
+      "sourceReference": "Section 3.3, Page 171"
+    },
+    {
+      "id": "CHE-G11-U03-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "An unknown pure gas has a measured density of 1.96 g/L at STP (273 K and 1.00 atm). What is the molar mass of this gas? (Gas constant R = 0.0821 L·atm/mol·K)",
+      "options": [
+        {
+          "id": "A",
+          "text": "44.0 g/mol"
+        },
+        {
+          "id": "B",
+          "text": "28.0 g/mol"
+        },
+        {
+          "id": "C",
+          "text": "16.0 g/mol"
+        },
+        {
+          "id": "D",
+          "text": "64.0 g/mol"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Molar mass M = (d × R × T) / P = (1.96 g/L × 0.0821 L·atm/mol·K × 273 K) / 1.00 atm = 43.9 g/mol ≈ 44.0 g/mol (Carbon dioxide).",
+      "sourceReference": "Section 3.3, Page 168"
+    },
+    {
+      "id": "CHE-G11-U03-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "A sample of neon gas occupies 500 mL at 27 °C (300 K) and 1.20 atm. What volume will it occupy under STP conditions (273 K and 1.00 atm)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "546 mL"
+        },
+        {
+          "id": "B",
+          "text": "455 mL"
+        },
+        {
+          "id": "C",
+          "text": "600 mL"
+        },
+        {
+          "id": "D",
+          "text": "375 mL"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Using the Combined Gas Law (P1V1/T1 = P2V2/T2): V2 = (P1 × V1 × T2) / (P2 × T1) = (1.20 atm × 500 mL × 273 K) / (1.00 atm × 300 K) = 163800 / 300 = 546 mL.",
+      "sourceReference": "Section 3.3, Page 164"
+    },
+    {
+      "id": "CHE-G11-U03-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Liquid A has a higher normal boiling point than Liquid B. What can be inferred about their intermolecular forces and vapor pressures at room temperature (25 °C)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Liquid A has weaker intermolecular forces and higher vapor pressure than Liquid B."
+        },
+        {
+          "id": "B",
+          "text": "Liquid A has stronger intermolecular forces and lower vapor pressure than Liquid B."
+        },
+        {
+          "id": "C",
+          "text": "Liquid A has stronger intermolecular forces and higher vapor pressure than Liquid B."
+        },
+        {
+          "id": "D",
+          "text": "Liquid A and Liquid B have identical vapor pressures at room temperature."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "A higher normal boiling point indicates stronger intermolecular attractive forces holding molecules in the liquid state, resulting in fewer molecules escaping into the vapor phase and thus a lower equilibrium vapor pressure at 25 °C.",
+      "sourceReference": "Section 3.4, Page 175"
+    },
+    {
+      "id": "CHE-G11-U03-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "According to Hess's Law applied to phase transitions, the molar enthalpy of sublimation (ΔH_sub) of a substance is equal to the sum of its:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Molar heat of fusion (ΔH_fus) and molar heat of vaporization (ΔH_vap)"
+        },
+        {
+          "id": "B",
+          "text": "Molar heat of condensation (ΔH_cond) and molar heat of crystallization (ΔH_cryst)"
+        },
+        {
+          "id": "C",
+          "text": "Molar heat of fusion (ΔH_fus) and molar heat of condensation (ΔH_cond)"
+        },
+        {
+          "id": "D",
+          "text": "Molar heat of deposition (ΔH_dep) and molar heat of vaporization (ΔH_vap)"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The overall enthalpy change for direct solid-to-gas transition (sublimation) equals the sum of solid-to-liquid (fusion) and liquid-to-gas (vaporization) enthalpy changes: ΔH_sub = ΔH_fus + ΔH_vap.",
+      "sourceReference": "Section 3.5, Page 181"
+    },
+    {
+      "id": "CHE-G11-U03-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Under which conditions of temperature and pressure does a real gas exhibit maximum deviation from ideal gas behavior?",
+      "options": [
+        {
+          "id": "A",
+          "text": "High temperature and low pressure"
+        },
+        {
+          "id": "B",
+          "text": "Low temperature and high pressure"
+        },
+        {
+          "id": "C",
+          "text": "High temperature and high pressure"
+        },
+        {
+          "id": "D",
+          "text": "Low temperature and low pressure"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Real gases deviate most significantly from ideal behavior at low temperatures (where intermolecular attractive forces become significant as kinetic energy decreases) and high pressures (where the finite physical volume of gas molecules becomes a noticeable fraction of total container volume).",
+      "sourceReference": "Section 3.3, Page 167"
+    },
+    {
+      "id": "CHE-G11-U03-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "What mass of potassium chlorate (KClO₃, molar mass = 122.55 g/mol) must be thermally decomposed according to 2KClO₃(s) → 2KCl(s) + 3O₂(g) to collect 6.72 L of oxygen gas at STP?",
+      "options": [
+        {
+          "id": "A",
+          "text": "12.3 g"
+        },
+        {
+          "id": "B",
+          "text": "18.4 g"
+        },
+        {
+          "id": "C",
+          "text": "24.5 g"
+        },
+        {
+          "id": "D",
+          "text": "36.8 g"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Moles of O₂ at STP = 6.72 L / 22.4 L/mol = 0.300 mol. From reaction stoichiometry, 3 mol O₂ requires 2 mol KClO₃, so moles of KClO₃ required = 0.300 × (2/3) = 0.200 mol. Mass of KClO₃ = 0.200 mol × 122.55 g/mol = 24.51 g ≈ 24.5 g.",
+      "sourceReference": "Section 3.3, Page 166"
+    },
+    {
+      "id": "CHE-G11-U03-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "How much heat energy (in kJ) is required to convert 36.0 g of liquid water (H₂O, molar mass = 18.0 g/mol) at 100 °C completely into steam at 100 °C? (Molar heat of vaporization ΔH_vap = 40.7 kJ/mol)",
+      "options": [
+        {
+          "id": "A",
+          "text": "40.7 kJ"
+        },
+        {
+          "id": "B",
+          "text": "81.4 kJ"
+        },
+        {
+          "id": "C",
+          "text": "14.5 kJ"
+        },
+        {
+          "id": "D",
+          "text": "162.8 kJ"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Moles of water = 36.0 g / 18.0 g/mol = 2.00 mol. Heat required q = n × ΔH_vap = 2.00 mol × 40.7 kJ/mol = 81.4 kJ.",
+      "sourceReference": "Section 3.4, Page 180"
+    },
+    {
+      "id": "CHE-G11-U03-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A volume of 100 mL of methane gas (CH₄, molar mass = 16.0 g/mol) effuses through a porous membrane in 20.0 seconds. Under identical conditions, how long will it take for 100 mL of sulfur dioxide gas (SO₂, molar mass = 64.0 g/mol) to effuse through the same membrane?",
+      "options": [
+        {
+          "id": "A",
+          "text": "10.0 seconds"
+        },
+        {
+          "id": "B",
+          "text": "20.0 seconds"
+        },
+        {
+          "id": "C",
+          "text": "40.0 seconds"
+        },
+        {
+          "id": "D",
+          "text": "80.0 seconds"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "By Graham's Law, effusion time t for an equal volume is directly proportional to the square root of molar mass: t2 / t1 = √(M2 / M1). Thus, t_SO2 / 20.0 s = √(64.0 / 16.0) = √4.0 = 2.0, giving t_SO2 = 20.0 s × 2.0 = 40.0 seconds.",
+      "sourceReference": "Section 3.3, Page 171"
+    }
+  ]
 }

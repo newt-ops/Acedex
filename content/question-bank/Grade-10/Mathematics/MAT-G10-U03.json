@@ -3,5 +3,411 @@
   "subject": "Mathematics",
   "unitNumber": 3,
   "unitTitle": "Exponential and Logarithmic Functions",
-  "questions": []
+  "questions": [
+    {
+      "id": "MAT-G10-U03-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is the simplified numerical value of the exponential expression (27/8)^(-2/3)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "4/9"
+        },
+        {
+          "id": "B",
+          "text": "9/4"
+        },
+        {
+          "id": "C",
+          "text": "-9/4"
+        },
+        {
+          "id": "D",
+          "text": "-4/9"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Using the negative exponent rule (a/b)^(-n) = (b/a)^n, we rewrite (27/8)^(-2/3) as (8/27)^(2/3). Applying the rational exponent rule (u)^(m/n) = ((u)^(1/n))^m gives ((8/27)^(1/3))^2 = (2/3)^2 = 4/9.",
+      "sourceReference": "Section 3.1.1, Page 128, 133"
+    },
+    {
+      "id": "MAT-G10-U03-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is the value of the logarithmic expression log_3(1/81) + log_2(32)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "1"
+        },
+        {
+          "id": "B",
+          "text": "9"
+        },
+        {
+          "id": "C",
+          "text": "-1"
+        },
+        {
+          "id": "D",
+          "text": "7"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Since 1/81 = 3^(-4), log_3(1/81) = -4. Since 32 = 2^5, log_2(32) = 5. Adding the two values yields -4 + 5 = 1.",
+      "sourceReference": "Section 3.1.2, Page 138-139"
+    },
+    {
+      "id": "MAT-G10-U03-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which of the following statements correctly describes the domain, range, and horizontal asymptote of the exponential function f(x) = 4^x?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Domain: (0, ∞), Range: ℝ, Horizontal asymptote: x = 0"
+        },
+        {
+          "id": "B",
+          "text": "Domain: ℝ, Range: (0, ∞), Horizontal asymptote: y = 0"
+        },
+        {
+          "id": "C",
+          "text": "Domain: ℝ, Range: [0, ∞), Horizontal asymptote: y = 1"
+        },
+        {
+          "id": "D",
+          "text": "Domain: ℝ, Range: (0, ∞), Horizontal asymptote: y = 4"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "For any exponential function f(x) = a^x with base a > 1, the function is defined for all real numbers (Domain: ℝ), its outputs are strictly positive (Range: (0, ∞)), and as x → -∞, f(x) approaches 0, making the line y = 0 (the x-axis) its horizontal asymptote.",
+      "sourceReference": "Section 3.2.2, Page 158"
+    },
+    {
+      "id": "MAT-G10-U03-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is the solution of the logarithmic equation log_2(3x - 1) = 5?",
+      "options": [
+        {
+          "id": "A",
+          "text": "x = 9"
+        },
+        {
+          "id": "B",
+          "text": "x = 11"
+        },
+        {
+          "id": "C",
+          "text": "x = 33"
+        },
+        {
+          "id": "D",
+          "text": "x = 31/3"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Converting the logarithmic equation into exponential form yields 3x - 1 = 2^5. Since 2^5 = 32, we have 3x - 1 = 32 => 3x = 33 => x = 11. Substituting x = 11 back gives 3(11) - 1 = 32 > 0, which is in the universe of the logarithm.",
+      "sourceReference": "Section 3.4.2, Page 175-176"
+    },
+    {
+      "id": "MAT-G10-U03-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "If the scientific notation of a number is p = 3.45 × 10^2, such that log(p) = 2 + log(3.45) = 2.5378, what are the characteristic and the mantissa of log(p)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Characteristic = 3.45, Mantissa = 2"
+        },
+        {
+          "id": "B",
+          "text": "Characteristic = 2, Mantissa = 0.5378"
+        },
+        {
+          "id": "C",
+          "text": "Characteristic = 0.5378, Mantissa = 2"
+        },
+        {
+          "id": "D",
+          "text": "Characteristic = 2.5378, Mantissa = 0"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "For any common logarithm expressed in standard form log(m × 10^c) = c + log(m) where 1 ≤ m < 10, the integer power c is the characteristic (c = 2) and the fractional part log(m) is the mantissa (log(3.45) = 0.5378).",
+      "sourceReference": "Section 3.1.2, Page 146-148"
+    },
+    {
+      "id": "MAT-G10-U03-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What is the simplified numerical value of [log_2(24) - log_2(3)] + [log_3(54) - log_3(2)]?",
+      "options": [
+        {
+          "id": "A",
+          "text": "5"
+        },
+        {
+          "id": "B",
+          "text": "6"
+        },
+        {
+          "id": "C",
+          "text": "8"
+        },
+        {
+          "id": "D",
+          "text": "9"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Using the quotient rule of logarithms log_a(M) - log_a(N) = log_a(M/N): the first part is log_2(24/3) = log_2(8) = log_2(2^3) = 3. The second part is log_3(54/2) = log_3(27) = log_3(3^3) = 3. Adding the two values gives 3 + 3 = 6.",
+      "sourceReference": "Section 3.1.2, Page 140-143"
+    },
+    {
+      "id": "MAT-G10-U03-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What is the numerical value of log_√2(16) - log_100(0.001)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "13/2"
+        },
+        {
+          "id": "B",
+          "text": "19/2"
+        },
+        {
+          "id": "C",
+          "text": "11/2"
+        },
+        {
+          "id": "D",
+          "text": "5"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Using the change of base and power rules: for log_√2(16), (√2)^8 = (2^(1/2))^8 = 2^4 = 16, so log_√2(16) = 8. For log_100(0.001), 100 = 10^2 and 0.001 = 10^(-3), so log_100(0.001) = log_10(10^(-3)) / log_10(10^2) = -3/2. Subtracting gives 8 - (-3/2) = 8 + 3/2 = 19/2.",
+      "sourceReference": "Section 3.1.2, Page 144"
+    },
+    {
+      "id": "MAT-G10-U03-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What is the solution of the exponential equation (1/4)^(2x - 3) = 8^(x + 1)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "x = 3/7"
+        },
+        {
+          "id": "B",
+          "text": "x = 9/7"
+        },
+        {
+          "id": "C",
+          "text": "x = -3/7"
+        },
+        {
+          "id": "D",
+          "text": "x = 1"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Express both sides in powers of the common base 2: 1/4 = 2^(-2) and 8 = 2^3. The equation becomes (2^(-2))^(2x - 3) = (2^3)^(x + 1) => 2^(-4x + 6) = 2^(3x + 3). Equating exponents: -4x + 6 = 3x + 3 => 6 - 3 = 3x + 4x => 3 = 7x => x = 3/7.",
+      "sourceReference": "Section 3.4.1, Page 173-174"
+    },
+    {
+      "id": "MAT-G10-U03-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What are the domain and the vertical asymptote of the logarithmic function f(x) = log_3(6 - 2x)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Domain: (-∞, 3), Vertical asymptote: x = 3"
+        },
+        {
+          "id": "B",
+          "text": "Domain: (3, ∞), Vertical asymptote: x = 3"
+        },
+        {
+          "id": "C",
+          "text": "Domain: (-∞, 3], Vertical asymptote: x = 0"
+        },
+        {
+          "id": "D",
+          "text": "Domain: (-∞, 6), Vertical asymptote: x = 6"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "A logarithmic function log_a(u) is defined only when its argument is strictly positive: 6 - 2x > 0 => 6 > 2x => x < 3. Thus, the domain is (-∞, 3). The vertical asymptote occurs where the inner linear argument equals zero: 6 - 2x = 0 => x = 3.",
+      "sourceReference": "Section 3.3.2, Page 165-167"
+    },
+    {
+      "id": "MAT-G10-U03-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What is the complete solution set of the logarithmic equation log(x + 4) + log(x - 1) = log(6)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "{-5, 2}"
+        },
+        {
+          "id": "B",
+          "text": "{2}"
+        },
+        {
+          "id": "C",
+          "text": "{-5}"
+        },
+        {
+          "id": "D",
+          "text": "∅"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "First, establish the universe: x + 4 > 0 and x - 1 > 0 implies x > 1. Applying the product property: log((x + 4)(x - 1)) = log(6) => (x + 4)(x - 1) = 6 => x^2 + 3x - 4 = 6 => x^2 + 3x - 10 = 0. Factoring gives (x + 5)(x - 2) = 0, so x = -5 or x = 2. Since x must be greater than 1, x = -5 is extraneous. The only valid solution is x = 2.",
+      "sourceReference": "Section 3.4.2, Page 175-176"
+    },
+    {
+      "id": "MAT-G10-U03-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "A customer deposits Birr 10,000 in a bank account that pays an annual interest rate of 8% compounded quarterly. Which of the following expressions represents the total accumulated amount in the account after 2 years?",
+      "options": [
+        {
+          "id": "A",
+          "text": "10,000(1.08)^2 Birr"
+        },
+        {
+          "id": "B",
+          "text": "10,000(1.04)^4 Birr"
+        },
+        {
+          "id": "C",
+          "text": "10,000(1.02)^8 Birr"
+        },
+        {
+          "id": "D",
+          "text": "10,000(1.02)^2 Birr"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The compound interest formula is A(t) = P(1 + r/n)^(nt). Here, principal P = 10,000, annual rate r = 0.08, quarterly compounding means n = 4, and time t = 2 years. Therefore, r/n = 0.08 / 4 = 0.02 and nt = 4 × 2 = 8. Substituting gives A(2) = 10,000(1 + 0.02)^8 = 10,000(1.02)^8 Birr.",
+      "sourceReference": "Section 3.6.1, Page 182-184"
+    },
+    {
+      "id": "MAT-G10-U03-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "What is the solution set of the exponential equation 4^x - 3(2^(x + 1)) + 8 = 0 in the set of real numbers?",
+      "options": [
+        {
+          "id": "A",
+          "text": "{1, 2}"
+        },
+        {
+          "id": "B",
+          "text": "{2, 4}"
+        },
+        {
+          "id": "C",
+          "text": "{0, 3}"
+        },
+        {
+          "id": "D",
+          "text": "{1, 3}"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Rewrite the equation in terms of 2^x: note that 4^x = (2^x)^2 and 3(2^(x + 1)) = 3(2 · 2^x) = 6(2^x). Let u = 2^x (with u > 0). The equation becomes u^2 - 6u + 8 = 0. Factoring gives (u - 2)(u - 4) = 0, so u = 2 or u = 4. Replacing u with 2^x: 2^x = 2 => x = 1, and 2^x = 4 = 2^2 => x = 2. Thus, the solution set is {1, 2}.",
+      "sourceReference": "Section 3.4.1 & Review Exercise, Page 173, 197"
+    },
+    {
+      "id": "MAT-G10-U03-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "What is the solution set of the logarithmic equation (log_2 x)^2 - log_2(x^3) - 4 = 0?",
+      "options": [
+        {
+          "id": "A",
+          "text": "{2, 16}"
+        },
+        {
+          "id": "B",
+          "text": "{1/2, 16}"
+        },
+        {
+          "id": "C",
+          "text": "{1/4, 8}"
+        },
+        {
+          "id": "D",
+          "text": "{1/2, 8}"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The universe is x > 0. Using the power law of logarithms, log_2(x^3) = 3 log_2 x. Let u = log_2 x. The equation becomes u^2 - 3u - 4 = 0. Factoring gives (u - 4)(u + 1) = 0, so u = 4 or u = -1. For u = 4: log_2 x = 4 => x = 2^4 = 16. For u = -1: log_2 x = -1 => x = 2^(-1) = 1/2. Both solutions are positive and valid, so the solution set is {1/2, 16}.",
+      "sourceReference": "Section 3.4.2 & Review Exercise, Page 176, 197"
+    },
+    {
+      "id": "MAT-G10-U03-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "If log_10(2) = a and log_10(3) = b, which of the following expressions represents log_6(15) in terms of a and b?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(1 - a + b) / (a + b)"
+        },
+        {
+          "id": "B",
+          "text": "(a + b) / (1 - a + b)"
+        },
+        {
+          "id": "C",
+          "text": "(1 + a + b) / (a + b)"
+        },
+        {
+          "id": "D",
+          "text": "(b - a) / (a + b)"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "By the change of base theorem, log_6(15) = log_10(15) / log_10(6). For the numerator: log_10(15) = log_10(3 × 5) = log_10(3) + log_10(10/2) = log_10(3) + log_10(10) - log_10(2) = b + 1 - a = 1 - a + b. For the denominator: log_10(6) = log_10(2 × 3) = log_10(2) + log_10(3) = a + b. Thus, log_6(15) = (1 - a + b) / (a + b).",
+      "sourceReference": "Section 3.1.2 & Review Exercise, Page 144, 195"
+    },
+    {
+      "id": "MAT-G10-U03-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A biological population grows continuously according to the model P(t) = P_0 e^(kt), where t is measured in years. If the population doubles every 14 years, how many years will it take for the population to triple?",
+      "options": [
+        {
+          "id": "A",
+          "text": "14 · (ln 3 / ln 2) years"
+        },
+        {
+          "id": "B",
+          "text": "21 years"
+        },
+        {
+          "id": "C",
+          "text": "14 · (ln 2 / ln 3) years"
+        },
+        {
+          "id": "D",
+          "text": "28 · (ln 3 / ln 2) years"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "From the doubling condition: P(14) = 2P_0 => P_0 e^(14k) = 2P_0 => e^(14k) = 2. Taking the natural logarithm gives 14k = ln 2 => k = (ln 2) / 14. To find the time t when the population triples: P(t) = 3P_0 => P_0 e^(kt) = 3P_0 => e^(kt) = 3. Taking the natural logarithm gives kt = ln 3 => t = (ln 3) / k. Substituting k: t = (ln 3) / ((ln 2) / 14) = 14 · (ln 3 / ln 2) years.",
+      "sourceReference": "Section 3.6.2, Page 186-188"
+    }
+  ]
 }

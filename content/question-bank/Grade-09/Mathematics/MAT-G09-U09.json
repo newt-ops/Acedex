@@ -3,5 +3,411 @@
   "subject": "Mathematics",
   "unitNumber": 9,
   "unitTitle": "Statistics and Probability",
-  "questions": []
+  "questions": [
+    {
+      "id": "MAT-G09-U09-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which of the following variables is an example of continuous quantitative data?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The number of students enrolled in a secondary school"
+        },
+        {
+          "id": "B",
+          "text": "The shoe sizes of football players in a school team"
+        },
+        {
+          "id": "C",
+          "text": "The time taken by an athlete to complete a 100-meter sprint"
+        },
+        {
+          "id": "D",
+          "text": "The number of hospital beds in a health center"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Continuous data can take any numerical value along a continuous scale or continuum (such as time, height, and temperature) and can be meaningfully divided into finer subdivisions like seconds and milliseconds. Counts of students, hospital beds, and shoe sizes are discrete data.",
+      "sourceReference": "Section 9.1.1, Page 315-316"
+    },
+    {
+      "id": "MAT-G09-U09-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In a statistical study to determine the average daily study hours of high school students in a town with 8,000 students, a researcher administers a questionnaire to 400 randomly selected students. What are the population and the sample in this study?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Population: 400 students; Sample: 8,000 students"
+        },
+        {
+          "id": "B",
+          "text": "Population: 8,000 students; Sample: 400 students"
+        },
+        {
+          "id": "C",
+          "text": "Population: all high school students in Ethiopia; Sample: 8,000 students"
+        },
+        {
+          "id": "D",
+          "text": "Population: 8,000 students; Sample: the average daily study hours"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In statistics, the population is the entire collection of individuals or objects under investigation (all 8,000 students in the town), while the sample is a subset selected from the population to represent it (the 400 selected students).",
+      "sourceReference": "Section 9.1.1, Page 318-320"
+    },
+    {
+      "id": "MAT-G09-U09-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is the median of the following set of test scores: 18, 11, 25, 14, 9, 21, 14, 16?",
+      "options": [
+        {
+          "id": "A",
+          "text": "14"
+        },
+        {
+          "id": "B",
+          "text": "15"
+        },
+        {
+          "id": "C",
+          "text": "16"
+        },
+        {
+          "id": "D",
+          "text": "16.5"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Arranging the 8 scores in ascending order gives: 9, 11, 14, 14, 16, 18, 21, 25. For an even number of observations, the median is the arithmetic mean of the two middle scores (the 4th and 5th scores): (14 + 16) / 2 = 30 / 2 = 15.",
+      "sourceReference": "Section 9.1.3, Page 332-333"
+    },
+    {
+      "id": "MAT-G09-U09-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "The scores of seven students in a mathematics quiz are 8, 12, 5, 19, 14, 7, and 15. What is the range of these scores?",
+      "options": [
+        {
+          "id": "A",
+          "text": "11"
+        },
+        {
+          "id": "B",
+          "text": "12"
+        },
+        {
+          "id": "C",
+          "text": "14"
+        },
+        {
+          "id": "D",
+          "text": "19"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The range is defined as the difference between the largest value and the smallest value in a dataset: Range = Largest value - Smallest value = 19 - 5 = 14.",
+      "sourceReference": "Section 9.1.4, Page 338-339"
+    },
+    {
+      "id": "MAT-G09-U09-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "A fair six-sided die is rolled once. What is the theoretical probability that the number showing on the upper face is a prime number?",
+      "options": [
+        {
+          "id": "A",
+          "text": "1/6"
+        },
+        {
+          "id": "B",
+          "text": "1/3"
+        },
+        {
+          "id": "C",
+          "text": "1/2"
+        },
+        {
+          "id": "D",
+          "text": "2/3"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The sample space of rolling a fair die is S = {1, 2, 3, 4, 5, 6}, so n(S) = 6. The prime numbers in this sample space are E = {2, 3, 5}, so n(E) = 3. Therefore, the probability is P(E) = n(E) / n(S) = 3/6 = 1/2.",
+      "sourceReference": "Section 9.2, Page 355-356"
+    },
+    {
+      "id": "MAT-G09-U09-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "The following frequency table shows the marks scored by a group of students in a quiz: Mark (x): 5, 10, 15, 20 with Frequency (f): 4, 6, 8, 2 respectively. What is the mean mark of the students?",
+      "options": [
+        {
+          "id": "A",
+          "text": "11.5"
+        },
+        {
+          "id": "B",
+          "text": "12.0"
+        },
+        {
+          "id": "C",
+          "text": "12.5"
+        },
+        {
+          "id": "D",
+          "text": "13.0"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The mean is given by Σ(f*x) / Σf. Total frequency Σf = 4 + 6 + 8 + 2 = 20. The sum of the products is Σ(f*x) = (5 × 4) + (10 × 6) + (15 × 8) + (20 × 2) = 20 + 60 + 120 + 40 = 240. Thus, mean = 240 / 20 = 12.",
+      "sourceReference": "Section 9.1.3, Page 328-329"
+    },
+    {
+      "id": "MAT-G09-U09-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "For any set of n numerical observations x1, x2, ..., xn with arithmetic mean x̄, which of the following statements is always TRUE?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The sum of the deviations from the mean, Σ(xi - x̄), is equal to zero."
+        },
+        {
+          "id": "B",
+          "text": "The sum of the squared deviations from the mean, Σ(xi - x̄)², is equal to zero."
+        },
+        {
+          "id": "C",
+          "text": "The mean is always equal to one of the observed data values."
+        },
+        {
+          "id": "D",
+          "text": "The median of the dataset is always equal to its arithmetic mean."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Property 1 of the arithmetic mean states that the sum of the deviations of all observations from their arithmetic mean is always zero: Σ(xi - x̄) = Σxi - n*x̄ = n*x̄ - n*x̄ = 0.",
+      "sourceReference": "Section 9.1.3, Page 330-331"
+    },
+    {
+      "id": "MAT-G09-U09-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In a school survey of 180 students regarding their favorite extracurricular activity, 45 students chose Football, 60 chose Music, 30 chose Art, and 45 chose Drama. In a pie chart representing this data, what is the central angle of the sector representing Music?",
+      "options": [
+        {
+          "id": "A",
+          "text": "60°"
+        },
+        {
+          "id": "B",
+          "text": "90°"
+        },
+        {
+          "id": "C",
+          "text": "120°"
+        },
+        {
+          "id": "D",
+          "text": "150°"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "In a pie chart, the central angle of a sector is proportional to its frequency: Angle = (Frequency / Total) × 360°. For Music: Angle = (60 / 180) × 360° = (1/3) × 360° = 120°.",
+      "sourceReference": "Section 9.1.2, Page 322"
+    },
+    {
+      "id": "MAT-G09-U09-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What are the variance and standard deviation of the numerical dataset {2, 4, 6, 8, 10}?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Variance = 8, Standard deviation = 2√2"
+        },
+        {
+          "id": "B",
+          "text": "Variance = 10, Standard deviation = √10"
+        },
+        {
+          "id": "C",
+          "text": "Variance = 16, Standard deviation = 4"
+        },
+        {
+          "id": "D",
+          "text": "Variance = 8, Standard deviation = 4"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Mean x̄ = (2 + 4 + 6 + 8 + 10) / 5 = 30 / 5 = 6. The squared deviations are (2-6)² = 16, (4-6)² = 4, (6-6)² = 0, (8-6)² = 4, and (10-6)² = 16. The variance is the mean of these squared deviations: σ² = (16 + 4 + 0 + 4 + 16) / 5 = 40 / 5 = 8. Standard deviation is σ = √8 = 2√2.",
+      "sourceReference": "Section 9.1.4, Page 340-341"
+    },
+    {
+      "id": "MAT-G09-U09-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Three fair coins are tossed simultaneously. What is the probability of obtaining at least two heads?",
+      "options": [
+        {
+          "id": "A",
+          "text": "1/4"
+        },
+        {
+          "id": "B",
+          "text": "3/8"
+        },
+        {
+          "id": "C",
+          "text": "1/2"
+        },
+        {
+          "id": "D",
+          "text": "5/8"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The sample space contains 2³ = 8 equally likely outcomes: S = {HHH, HHT, HTH, HTT, THH, THT, TTH, TTT}. The outcomes with at least two heads are {HHH, HHT, HTH, THH}, which are 4 outcomes. Therefore, the probability is 4/8 = 1/2.",
+      "sourceReference": "Section 9.2, Page 353-354"
+    },
+    {
+      "id": "MAT-G09-U09-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "A set of examination scores has a mean of 60 and a standard deviation of 8. If each student's score is multiplied by 1.5 and then increased by 5, what are the new mean and new standard deviation of the scores?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Mean = 95, Standard deviation = 17"
+        },
+        {
+          "id": "B",
+          "text": "Mean = 90, Standard deviation = 12"
+        },
+        {
+          "id": "C",
+          "text": "Mean = 95, Standard deviation = 12"
+        },
+        {
+          "id": "D",
+          "text": "Mean = 95, Standard deviation = 8"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "When each observation is transformed by y = c*x + k: the new mean is c*(old mean) + k = 1.5(60) + 5 = 90 + 5 = 95. Adding a constant does not affect dispersion, so the new standard deviation is |c|*(old standard deviation) = 1.5 × 8 = 12.",
+      "sourceReference": "Section 9.1.3 & Section 9.1.4, Page 331, 343-345"
+    },
+    {
+      "id": "MAT-G09-U09-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "In an examination, the mean score of a class of 40 students was calculated as 72.5. Later, it was discovered that one student's score was mistakenly recorded as 48 instead of the correct score of 88. What is the correct mean score of the class?",
+      "options": [
+        {
+          "id": "A",
+          "text": "73.0"
+        },
+        {
+          "id": "B",
+          "text": "73.5"
+        },
+        {
+          "id": "C",
+          "text": "74.0"
+        },
+        {
+          "id": "D",
+          "text": "74.5"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The initial calculated sum of scores is 40 × 72.5 = 2,900. Correcting the wrongly recorded score gives: Correct sum = 2,900 - 48 + 88 = 2,940. Therefore, the correct mean is 2,940 / 40 = 73.5.",
+      "sourceReference": "Section 9.1.3 & Review Exercise, Page 337, 360"
+    },
+    {
+      "id": "MAT-G09-U09-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Consider the dataset {3, 5, 7, 9, x}. If the mean of this dataset is equal to its median, and x is an integer strictly greater than 9, what is the value of x?",
+      "options": [
+        {
+          "id": "A",
+          "text": "10"
+        },
+        {
+          "id": "B",
+          "text": "11"
+        },
+        {
+          "id": "C",
+          "text": "12"
+        },
+        {
+          "id": "D",
+          "text": "13"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Since x > 9, the sorted order of the five observations is 3, 5, 7, 9, x. The median is the middle (3rd) value, which is 7. Setting the mean equal to the median: (3 + 5 + 7 + 9 + x) / 5 = 7 => (24 + x) / 5 = 7 => 24 + x = 35 => x = 11.",
+      "sourceReference": "Section 9.1.3, Page 328, 332-333"
+    },
+    {
+      "id": "MAT-G09-U09-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Two fair six-sided dice are rolled simultaneously. What is the probability that the sum of the numbers appearing on the two dice is a prime number?",
+      "options": [
+        {
+          "id": "A",
+          "text": "7/18"
+        },
+        {
+          "id": "B",
+          "text": "5/12"
+        },
+        {
+          "id": "C",
+          "text": "1/2"
+        },
+        {
+          "id": "D",
+          "text": "17/36"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Total outcomes in rolling two dice = 36. Possible prime sums are 2, 3, 5, 7, and 11. Sum = 2: (1,1) [1 outcome]; Sum = 3: (1,2), (2,1) [2 outcomes]; Sum = 5: (1,4), (2,3), (3,2), (4,1) [4 outcomes]; Sum = 7: (1,6), (2,5), (3,4), (4,3), (5,2), (6,1) [6 outcomes]; Sum = 11: (5,6), (6,5) [2 outcomes]. Total favorable outcomes = 1 + 2 + 4 + 6 + 2 = 15. Probability = 15/36 = 5/12.",
+      "sourceReference": "Section 9.2 & Review Exercise, Page 356-357, 361"
+    },
+    {
+      "id": "MAT-G09-U09-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A box contains 5 red balls, 4 blue balls, and 3 green balls. Two balls are drawn at random one after the other without replacement. What is the probability that both balls drawn are of the same color?",
+      "options": [
+        {
+          "id": "A",
+          "text": "19/66"
+        },
+        {
+          "id": "B",
+          "text": "25/72"
+        },
+        {
+          "id": "C",
+          "text": "1/3"
+        },
+        {
+          "id": "D",
+          "text": "31/66"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Total balls = 5 + 4 + 3 = 12. Total pairs of draws without replacement = 12 × 11 = 132. Favorable outcomes for same color: Both red = 5 × 4 = 20; Both blue = 4 × 3 = 12; Both green = 3 × 2 = 6. Total favorable outcomes = 20 + 12 + 6 = 38. Probability = 38 / 132 = 19 / 66.",
+      "sourceReference": "Section 9.2, Page 354, 356-357"
+    }
+  ]
 }
