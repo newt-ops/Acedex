@@ -17,3 +17,4 @@ export 'inputs/acedex_theme_toggle.dart';
 export 'badges/acedex_badge.dart';
 export 'progress/acedex_progress.dart';
 export 'progress/acedex_dots_loader.dart';
+export 'navigation/acedex_bottom_nav_bar.dart';
