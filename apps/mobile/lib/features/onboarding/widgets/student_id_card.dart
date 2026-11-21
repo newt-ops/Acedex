@@ -3,8 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:hugeicons/hugeicons.dart';
 import 'package:qr_flutter/qr_flutter.dart';
+import '../../../core/models/student_avatar.dart';
+import '../../../core/storage/auth_storage.dart';
 import '../../../core/theme/app_colors.dart';
 import '../../../core/ui/animations/bounceable.dart';
+import '../../../core/ui/avatars/student_avatar_widget.dart';
 import '../models/student_registration_draft.dart';
 
 /// Apple-Grade 3D-Tilt & 180° Flippable Student Candidate Pass
@@ -319,25 +322,42 @@ class StudentIdCardState extends State<StudentIdCard>
           Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Container(
-                width: 54,
-                height: 54,
-                decoration: BoxDecoration(
-                  color: softAccent,
-                  borderRadius: BorderRadius.circular(16),
-                  border: Border.all(
-                    color: accent.withValues(alpha: 0.3),
-                    width: 1,
-                  ),
-                ),
-                alignment: Alignment.center,
-                child: HugeIcon(
-                  icon: isFemale
-                      ? HugeIcons.strokeRoundedFemale02
-                      : HugeIcons.strokeRoundedMale02,
-                  color: accent,
-                  size: 28,
-                ),
+              ValueListenableBuilder<StudentAvatar>(
+                valueListenable: AuthStorage.instance.avatarNotifier,
+                builder: (context, avatar, _) {
+                  return Container(
+                    width: 54,
+                    height: 54,
+                    decoration: BoxDecoration(
+                      color: softAccent,
+                      borderRadius: BorderRadius.circular(16),
+                      border: Border.all(
+                        color: accent.withValues(alpha: 0.3),
+                        width: 1,
+                      ),
+                    ),
+                    alignment: Alignment.center,
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(15),
+                      child: (avatar.type == StudentAvatarType.preset &&
+                              avatar.presetId == 'default')
+                          ? HugeIcon(
+                              icon: isFemale
+                                  ? HugeIcons.strokeRoundedFemale02
+                                  : HugeIcons.strokeRoundedMale02,
+                              color: accent,
+                              size: 28,
+                            )
+                          : StudentAvatarWidget(
+                              avatar: avatar,
+                              size: 54,
+                              initials: widget.draft.fullName.isNotEmpty
+                                  ? widget.draft.fullName
+                                  : 'AM',
+                            ),
+                    ),
+                  );
+                },
               ),
               const SizedBox(width: 12),
               Expanded(

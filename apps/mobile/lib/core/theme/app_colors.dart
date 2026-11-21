@@ -36,6 +36,8 @@ abstract class AppColors {
   static const Color purple = Color(0xFF8A2BA3);
   static const Color purpleLight = Color(0xFFB866CF);
   static const Color accent = Color(0xFF8A2BA3);
+  static const Color royalPurple = Color(0xFF8A2BA3);
+  static const Color royalPurpleSoft = Color(0xFFEFE1F2);
 
   // --- Light Mode Tokens ---
   static const Color lightBackground = Color(0xFFFFFFFF);

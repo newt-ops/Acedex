@@ -1,6 +1,8 @@
 import 'dart:convert';
+import 'package:flutter/foundation.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../models/auth_tokens.dart';
+import '../models/student_avatar.dart';
 import '../models/user_profile.dart';
 
 class AuthStorage {
@@ -8,6 +10,7 @@ class AuthStorage {
   static const String _keyRefreshToken = 'acedex_refresh_token';
   static const String _keyProfile = 'acedex_user_profile';
   static const String _keyHasSeenOnboarding = 'acedex_seen_onboarding';
+  static const String _keyAvatar = 'acedex_student_avatar';
 
   static AuthStorage? _instance;
   static AuthStorage get instance => _instance ??= AuthStorage._();
@@ -16,6 +19,10 @@ class AuthStorage {
 
   String? _cachedToken;
   UserProfile? _cachedProfile;
+  StudentAvatar? _cachedAvatar;
+
+  final ValueNotifier<StudentAvatar> avatarNotifier =
+      ValueNotifier<StudentAvatar>(StudentAvatar.defaultSilhouette);
 
   Future<void> saveTokens(AuthTokens tokens) async {
     _cachedToken = tokens.accessToken;
@@ -53,6 +60,34 @@ class AuthStorage {
     }
   }
 
+  Future<StudentAvatar> getAvatar() async {
+    if (_cachedAvatar != null) return _cachedAvatar!;
+    final prefs = await SharedPreferences.getInstance();
+    final raw = prefs.getString(_keyAvatar);
+    if (raw == null) {
+      _cachedAvatar = StudentAvatar.defaultSilhouette;
+      avatarNotifier.value = _cachedAvatar!;
+      return _cachedAvatar!;
+    }
+    try {
+      final map = jsonDecode(raw) as Map<String, dynamic>;
+      _cachedAvatar = StudentAvatar.fromJson(map);
+      avatarNotifier.value = _cachedAvatar!;
+      return _cachedAvatar!;
+    } catch (_) {
+      _cachedAvatar = StudentAvatar.defaultSilhouette;
+      avatarNotifier.value = _cachedAvatar!;
+      return _cachedAvatar!;
+    }
+  }
+
+  Future<void> saveAvatar(StudentAvatar avatar) async {
+    _cachedAvatar = avatar;
+    avatarNotifier.value = avatar;
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setString(_keyAvatar, jsonEncode(avatar.toJson()));
+  }
+
   Future<bool> hasSeenOnboarding() async {
     final prefs = await SharedPreferences.getInstance();
     return prefs.getBool(_keyHasSeenOnboarding) ?? false;
@@ -66,9 +101,12 @@ class AuthStorage {
   Future<void> clear() async {
     _cachedToken = null;
     _cachedProfile = null;
+    _cachedAvatar = StudentAvatar.defaultSilhouette;
+    avatarNotifier.value = StudentAvatar.defaultSilhouette;
     final prefs = await SharedPreferences.getInstance();
     await prefs.remove(_keyToken);
     await prefs.remove(_keyRefreshToken);
     await prefs.remove(_keyProfile);
+    await prefs.remove(_keyAvatar);
   }
 }

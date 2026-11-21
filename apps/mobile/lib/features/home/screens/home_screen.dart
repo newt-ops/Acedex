@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hugeicons/hugeicons.dart';
+import '../../../core/models/student_avatar.dart';
 import '../../../core/models/user_profile.dart';
 import '../../../core/storage/auth_storage.dart';
 import '../../../core/theme/app_colors.dart';
@@ -28,9 +29,6 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
-    final isDark = theme.brightness == Brightness.dark;
-
-    final primaryColor = theme.colorScheme.primary;
     final displayName = widget.user?.displayName.isNotEmpty == true
         ? widget.user!.displayName
         : 'Student';
@@ -39,44 +37,18 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       extendBody: true,
       backgroundColor: theme.scaffoldBackgroundColor,
-      appBar: AppBar(
-        backgroundColor: Colors.transparent,
-        elevation: 0,
-        automaticallyImplyLeading: false,
-        title: Row(
-          children: [
-            Container(
-              padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
-              decoration: BoxDecoration(
-                color: primaryColor,
-                borderRadius: BorderRadius.circular(8),
-              ),
-              child: const Text(
-                'ACEDEX',
-                style: TextStyle(
-                  fontWeight: FontWeight.w900,
-                  fontSize: 14,
-                  color: Colors.white,
-                  letterSpacing: 0.8,
-                ),
-              ),
-            ),
-            const SizedBox(width: 8),
-            AcedexBadge(label: gradeLabel, variant: AcedexBadgeVariant.primary),
-          ],
-        ),
-        actions: [
-          IconButton(
-            tooltip: 'Sign Out',
-            icon: HugeIcon(
-              icon: HugeIcons.strokeRoundedLogout01,
-              color: isDark ? AppColors.darkSubtext : AppColors.lightSubtext,
-              size: 20,
-            ),
-            onPressed: () => _signOut(context),
-          ),
-          const SizedBox(width: 8),
-        ],
+      appBar: AcedexHeaderBar(
+        user: widget.user,
+        onProfileTap: () {
+          ProfilePhotoModal.show(context, user: widget.user);
+        },
+        onNotificationTap: () {
+          AcedexToast.show(
+            context,
+            message: 'Notification preferences synced',
+            type: AcedexToastType.info,
+          );
+        },
       ),
       body: IndexedStack(
         index: _currentIndex,
@@ -133,11 +105,11 @@ class _HomeDashboardView extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          // Welcome Header
+          // Dashboard Header
           Text(
-            'Hello, $displayName',
+            'Master Your Curriculum',
             style: TextStyle(
-              fontSize: 26,
+              fontSize: 24,
               fontWeight: FontWeight.w800,
               letterSpacing: -0.4,
               color: theme.colorScheme.onSurface,
@@ -882,7 +854,64 @@ class _ProfileView extends StatelessWidget {
 
           // 3D Flippable Student ID Pass with Vector QR Code
           StudentIdCard(draft: draft),
-          const SizedBox(height: 24),
+          const SizedBox(height: 20),
+
+          // Profile Photo & Avatar Quick-Edit Card
+          AcedexCard(
+            variant: AcedexCardVariant.flat,
+            onTap: () {
+              ProfilePhotoModal.show(context, user: user);
+            },
+            child: Row(
+              children: [
+                ValueListenableBuilder<StudentAvatar>(
+                  valueListenable: AuthStorage.instance.avatarNotifier,
+                  builder: (context, avatar, _) {
+                    return StudentAvatarWidget(
+                      avatar: avatar,
+                      size: 46,
+                      initials: displayName,
+                    );
+                  },
+                ),
+                const SizedBox(width: 14),
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'Change Profile Photo',
+                        style: TextStyle(
+                          fontSize: 14.5,
+                          fontWeight: FontWeight.w700,
+                          color: theme.colorScheme.onSurface,
+                        ),
+                      ),
+                      const SizedBox(height: 3),
+                      ValueListenableBuilder<StudentAvatar>(
+                        valueListenable: AuthStorage.instance.avatarNotifier,
+                        builder: (context, avatar, _) {
+                          return Text(
+                            avatar.label,
+                            style: TextStyle(
+                              fontSize: 12.5,
+                              color: isDark ? AppColors.darkSubtext : AppColors.lightSubtext,
+                            ),
+                          );
+                        },
+                      ),
+                    ],
+                  ),
+                ),
+                HugeIcon(
+                  icon: HugeIcons.strokeRoundedCamera01,
+                  color: isDark ? const Color(0xFFB866CF) : AppColors.royalPurple,
+                  size: 20,
+                ),
+              ],
+            ),
+          ),
+          const SizedBox(height: 16),
 
           // Theme Selector
           AcedexCard(
