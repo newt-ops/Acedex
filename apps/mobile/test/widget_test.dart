@@ -19,13 +19,20 @@ void main() {
     // Initial route is LoadingScreen
     expect(find.byType(LoadingScreen), findsOneWidget);
     expect(find.text('Acedex'), findsOneWidget);
-    expect(find.text('Preparing your study space...'), findsOneWidget);
 
-    // Advance past loading screen transition timer (1200ms)
-    await tester.pump(const Duration(milliseconds: 1400));
+    // Skip to Stage 3 and tap "I already have an account"
+    await tester.tap(find.byType(LoadingScreen));
+    await tester.pump();
+    await tester.tap(find.byType(LoadingScreen));
+    await tester.pump();
+    await tester.pump(const Duration(milliseconds: 100));
+
+    expect(find.text('Ace every exam'), findsOneWidget);
+    expect(find.text('I already have an account'), findsOneWidget);
+    await tester.tap(find.text('I already have an account'));
     await tester.pumpAndSettle();
 
-    // After loading, user is on AuthScreen (Login Gateway)
+    // After navigating from loading, user is on AuthScreen (Login Gateway)
     expect(find.byType(AuthScreen), findsOneWidget);
     expect(find.text('Welcome Back'), findsOneWidget);
     expect(find.text('Continue'), findsOneWidget);

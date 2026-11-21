@@ -4,24 +4,127 @@ import 'package:acedex/core/theme/app_theme.dart';
 import 'package:acedex/features/splash/screens/loading_screen.dart';
 
 void main() {
-  testWidgets('LoadingScreen renders brand insignia, title, and preparing message',
+  testWidgets('LoadingScreen renders Stage 1 Splash with Acedex wordmark',
       (WidgetTester tester) async {
     await tester.pumpWidget(
       MaterialApp(
         theme: AppTheme.lightTheme,
         home: const LoadingScreen(
-          duration: Duration(milliseconds: 500),
+          duration: Duration(milliseconds: 7000),
         ),
       ),
     );
-    await tester.pump();
+    await tester.pump(const Duration(milliseconds: 500));
 
-    // Verify brand crest 'A' and title
-    expect(find.text('A'), findsOneWidget);
+    // Stage 1 Splash lockup wordmark
     expect(find.text('Acedex'), findsOneWidget);
-    expect(find.text('Ethiopian National Learning Platform'), findsOneWidget);
-    expect(find.text('Preparing your study space...'), findsOneWidget);
-    expect(find.byType(CircularProgressIndicator), findsOneWidget);
+  });
+
+  testWidgets('LoadingScreen advances to Stage 2 (Focus deeply) and Stage 3 (Ace every exam)',
+      (WidgetTester tester) async {
+    await tester.pumpWidget(
+      MaterialApp(
+        theme: AppTheme.lightTheme,
+        home: const LoadingScreen(
+          duration: Duration(milliseconds: 7000),
+        ),
+      ),
+    );
+    await tester.pump(const Duration(milliseconds: 200));
+
+    // Tap screen to advance into Stage 2 (Focus)
+    await tester.tap(find.byType(LoadingScreen));
+    await tester.pump();
+    await tester.pump(const Duration(milliseconds: 100));
+
+    expect(find.text('STUDY FLOW'), findsOneWidget);
+    expect(find.text('Focus deeply'), findsOneWidget);
+    expect(find.text('Distraction-free study sessions engineered for deep retention.'),
+        findsOneWidget);
+
+    // Tap screen again to advance into Stage 3 (Ready)
+    await tester.tap(find.byType(LoadingScreen));
+    await tester.pump();
+    await tester.pump(const Duration(milliseconds: 100));
+
+    expect(find.text('READY TO MASTER'), findsOneWidget);
+    expect(find.text('Ace every exam'), findsOneWidget);
+    expect(find.text('Smart flashcards, active recall & daily study streaks.'),
+        findsOneWidget);
+    expect(find.text('Get Started'), findsOneWidget);
+    expect(find.text('I already have an account'), findsOneWidget);
+  });
+
+  testWidgets('LoadingScreen tapping "Get Started" navigates to /onboarding',
+      (WidgetTester tester) async {
+    bool navigatedToOnboarding = false;
+
+    await tester.pumpWidget(
+      MaterialApp(
+        theme: AppTheme.lightTheme,
+        initialRoute: '/',
+        routes: {
+          '/': (context) => const LoadingScreen(
+                duration: Duration(milliseconds: 7000),
+              ),
+          '/onboarding': (context) {
+            navigatedToOnboarding = true;
+            return const Scaffold(body: Text('Onboarding Page'));
+          },
+        },
+      ),
+    );
+    await tester.pump(const Duration(milliseconds: 200));
+
+    // Skip to Stage 3
+    await tester.tap(find.byType(LoadingScreen));
+    await tester.pump();
+    await tester.tap(find.byType(LoadingScreen));
+    await tester.pump();
+    await tester.pump(const Duration(milliseconds: 100));
+
+    expect(find.text('Get Started'), findsOneWidget);
+    await tester.tap(find.text('Get Started'));
+    await tester.pumpAndSettle();
+
+    expect(navigatedToOnboarding, isTrue);
+    expect(find.text('Onboarding Page'), findsOneWidget);
+  });
+
+  testWidgets('LoadingScreen tapping "I already have an account" navigates to /auth',
+      (WidgetTester tester) async {
+    bool navigatedToAuth = false;
+
+    await tester.pumpWidget(
+      MaterialApp(
+        theme: AppTheme.lightTheme,
+        initialRoute: '/',
+        routes: {
+          '/': (context) => const LoadingScreen(
+                duration: Duration(milliseconds: 7000),
+              ),
+          '/auth': (context) {
+            navigatedToAuth = true;
+            return const Scaffold(body: Text('Auth Gateway'));
+          },
+        },
+      ),
+    );
+    await tester.pump(const Duration(milliseconds: 200));
+
+    // Skip to Stage 3
+    await tester.tap(find.byType(LoadingScreen));
+    await tester.pump();
+    await tester.tap(find.byType(LoadingScreen));
+    await tester.pump();
+    await tester.pump(const Duration(milliseconds: 100));
+
+    expect(find.text('I already have an account'), findsOneWidget);
+    await tester.tap(find.text('I already have an account'));
+    await tester.pumpAndSettle();
+
+    expect(navigatedToAuth, isTrue);
+    expect(find.text('Auth Gateway'), findsOneWidget);
   });
 
   testWidgets('LoadingScreen triggers onLoaded callback after duration',
