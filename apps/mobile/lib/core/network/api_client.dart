@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'package:flutter/foundation.dart';
 import 'package:http/http.dart' as http;
 import 'api_endpoints.dart';
 import 'api_exception.dart';
@@ -41,7 +42,8 @@ class ApiClient {
       return _handleResponse(response);
     } on ApiException {
       rethrow;
-    } catch (_) {
+    } catch (e, stack) {
+      debugPrint('[ApiClient POST Error] $path: $e\n$stack');
       throw const ApiException(
         'Unable to connect to Acedex. Please check your internet connection.',
       );
@@ -70,7 +72,8 @@ class ApiClient {
       return _handleResponse(response);
     } on ApiException {
       rethrow;
-    } catch (_) {
+    } catch (e, stack) {
+      debugPrint('[ApiClient GET Error] $path: $e\n$stack');
       throw const ApiException(
         'Unable to connect to Acedex. Please check your internet connection.',
       );

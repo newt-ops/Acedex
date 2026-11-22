@@ -88,10 +88,7 @@ class _HomeDashboardView extends StatelessWidget {
   final UserProfile? user;
   final String displayName;
 
-  const _HomeDashboardView({
-    required this.user,
-    required this.displayName,
-  });
+  const _HomeDashboardView({required this.user, required this.displayName});
 
   @override
   Widget build(BuildContext context) {
@@ -164,7 +161,9 @@ class _HomeDashboardView extends StatelessWidget {
                         'Complete 10 practice questions to extend your streak',
                         style: TextStyle(
                           fontSize: 13,
-                          color: isDark ? AppColors.darkSubtext : AppColors.lightSubtext,
+                          color: isDark
+                              ? AppColors.darkSubtext
+                              : AppColors.lightSubtext,
                         ),
                       ),
                     ],
@@ -211,7 +210,9 @@ class _HomeDashboardView extends StatelessWidget {
                   'Timed questions, step-by-step explanations, and real Ethiopian national entrance exam coverage.',
                   style: TextStyle(
                     fontSize: 13.5,
-                    color: isDark ? AppColors.darkSubtext : AppColors.lightSubtext,
+                    color: isDark
+                        ? AppColors.darkSubtext
+                        : AppColors.lightSubtext,
                     height: 1.4,
                   ),
                 ),
@@ -246,13 +247,19 @@ class _HomeDashboardView extends StatelessWidget {
                     fontSize: 11,
                     fontWeight: FontWeight.w700,
                     letterSpacing: 0.8,
-                    color: isDark ? AppColors.darkSubtext : AppColors.lightSubtext,
+                    color: isDark
+                        ? AppColors.darkSubtext
+                        : AppColors.lightSubtext,
                   ),
                 ),
                 const SizedBox(height: 12),
                 _ProfileRow(label: 'Name', value: displayName),
-                if (user?.phone != null) _ProfileRow(label: 'Phone', value: user!.phone!),
-                _ProfileRow(label: 'Curriculum', value: user?.gradeLabel ?? 'High School'),
+                if (user?.phone != null)
+                  _ProfileRow(label: 'Phone', value: user!.phone!),
+                _ProfileRow(
+                  label: 'Curriculum',
+                  value: user?.gradeLabel ?? 'High School',
+                ),
                 if (user?.acedexId != null && user!.acedexId.isNotEmpty)
                   _ProfileRow(label: 'Candidate ID', value: user!.acedexId),
               ],
@@ -277,11 +284,31 @@ class _StudyCurriculumView extends StatelessWidget {
     final isDark = theme.brightness == Brightness.dark;
 
     final subjects = [
-      {'name': 'Biology', 'units': '6 Units • 90 Questions', 'progress': '4/6 Completed'},
-      {'name': 'Chemistry', 'units': '6 Units • 90 Questions', 'progress': '5/6 Completed'},
-      {'name': 'Mathematics', 'units': '7 Units • 105 Questions', 'progress': '6/7 Completed'},
-      {'name': 'Physics', 'units': '6 Units • 90 Questions', 'progress': '6/6 Completed'},
-      {'name': 'English', 'units': '10 Units • 150 Questions', 'progress': '8/10 Completed'},
+      {
+        'name': 'Biology',
+        'units': '6 Units • 90 Questions',
+        'progress': '4/6 Completed',
+      },
+      {
+        'name': 'Chemistry',
+        'units': '6 Units • 90 Questions',
+        'progress': '5/6 Completed',
+      },
+      {
+        'name': 'Mathematics',
+        'units': '7 Units • 105 Questions',
+        'progress': '6/7 Completed',
+      },
+      {
+        'name': 'Physics',
+        'units': '6 Units • 90 Questions',
+        'progress': '6/6 Completed',
+      },
+      {
+        'name': 'English',
+        'units': '10 Units • 150 Questions',
+        'progress': '8/10 Completed',
+      },
     ];
 
     return SingleChildScrollView(
@@ -376,7 +403,9 @@ class _StudyCurriculumView extends StatelessWidget {
                           sub['units']!,
                           style: TextStyle(
                             fontSize: 12.5,
-                            color: isDark ? AppColors.darkSubtext : AppColors.lightSubtext,
+                            color: isDark
+                                ? AppColors.darkSubtext
+                                : AppColors.lightSubtext,
                           ),
                         ),
                       ],
@@ -460,7 +489,10 @@ class _PracticeExamView extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Container(
-                      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 10,
+                        vertical: 4,
+                      ),
                       decoration: BoxDecoration(
                         color: Colors.white.withValues(alpha: 0.2),
                         borderRadius: BorderRadius.circular(999),
@@ -569,7 +601,9 @@ class _PracticeExamView extends StatelessWidget {
                         'Past national exams',
                         style: TextStyle(
                           fontSize: 12,
-                          color: isDark ? AppColors.darkSubtext : AppColors.lightSubtext,
+                          color: isDark
+                              ? AppColors.darkSubtext
+                              : AppColors.lightSubtext,
                         ),
                       ),
                     ],
@@ -609,7 +643,9 @@ class _PracticeExamView extends StatelessWidget {
                         'Retry mistakes',
                         style: TextStyle(
                           fontSize: 12,
-                          color: isDark ? AppColors.darkSubtext : AppColors.lightSubtext,
+                          color: isDark
+                              ? AppColors.darkSubtext
+                              : AppColors.lightSubtext,
                         ),
                       ),
                     ],
@@ -634,9 +670,21 @@ class _ProgressAnalyticsView extends StatelessWidget {
     final isDark = theme.brightness == Brightness.dark;
 
     final stats = [
-      {'title': 'Curriculum Mastery', 'value': '84%', 'detail': '29 of 35 Units Passed'},
-      {'title': 'Average Score', 'value': '82.5%', 'detail': 'Benchmark: >=70%'},
-      {'title': 'Questions Solved', 'value': '435', 'detail': 'Across all 5 subjects'},
+      {
+        'title': 'Curriculum Mastery',
+        'value': '84%',
+        'detail': '29 of 35 Units Passed',
+      },
+      {
+        'title': 'Average Score',
+        'value': '82.5%',
+        'detail': 'Benchmark: >=70%',
+      },
+      {
+        'title': 'Questions Solved',
+        'value': '435',
+        'detail': 'Across all 5 subjects',
+      },
       {'title': 'Current Streak', 'value': '1 Day', 'detail': 'Best: 14 Days'},
     ];
 
@@ -685,7 +733,9 @@ class _ProgressAnalyticsView extends StatelessWidget {
                       style: TextStyle(
                         fontSize: 12,
                         fontWeight: FontWeight.w600,
-                        color: isDark ? AppColors.darkSubtext : AppColors.lightSubtext,
+                        color: isDark
+                            ? AppColors.darkSubtext
+                            : AppColors.lightSubtext,
                       ),
                     ),
                     Text(
@@ -701,7 +751,9 @@ class _ProgressAnalyticsView extends StatelessWidget {
                       s['detail']!,
                       style: TextStyle(
                         fontSize: 11,
-                        color: isDark ? AppColors.darkSubtext : AppColors.lightSubtext,
+                        color: isDark
+                            ? AppColors.darkSubtext
+                            : AppColors.lightSubtext,
                       ),
                     ),
                   ],
@@ -723,15 +775,37 @@ class _ProgressAnalyticsView extends StatelessWidget {
                     fontSize: 11,
                     fontWeight: FontWeight.w700,
                     letterSpacing: 0.8,
-                    color: isDark ? AppColors.darkSubtext : AppColors.lightSubtext,
+                    color: isDark
+                        ? AppColors.darkSubtext
+                        : AppColors.lightSubtext,
                   ),
                 ),
                 const SizedBox(height: 16),
-                _MasteryRow(subject: 'Physics', percent: 1.0, color: AppColors.success),
-                _MasteryRow(subject: 'Mathematics', percent: 0.85, color: theme.colorScheme.primary),
-                _MasteryRow(subject: 'Chemistry', percent: 0.83, color: theme.colorScheme.primary),
-                _MasteryRow(subject: 'English', percent: 0.80, color: theme.colorScheme.primary),
-                _MasteryRow(subject: 'Biology', percent: 0.67, color: AppColors.warning),
+                _MasteryRow(
+                  subject: 'Physics',
+                  percent: 1.0,
+                  color: AppColors.success,
+                ),
+                _MasteryRow(
+                  subject: 'Mathematics',
+                  percent: 0.85,
+                  color: theme.colorScheme.primary,
+                ),
+                _MasteryRow(
+                  subject: 'Chemistry',
+                  percent: 0.83,
+                  color: theme.colorScheme.primary,
+                ),
+                _MasteryRow(
+                  subject: 'English',
+                  percent: 0.80,
+                  color: theme.colorScheme.primary,
+                ),
+                _MasteryRow(
+                  subject: 'Biology',
+                  percent: 0.67,
+                  color: AppColors.warning,
+                ),
               ],
             ),
           ),
@@ -789,7 +863,9 @@ class _MasteryRow extends StatelessWidget {
             child: LinearProgressIndicator(
               value: percent,
               minHeight: 6,
-              backgroundColor: isDark ? const Color(0xFF2B2B31) : const Color(0xFFE4E4E8),
+              backgroundColor: isDark
+                  ? const Color(0xFF2B2B31)
+                  : const Color(0xFFE4E4E8),
               valueColor: AlwaysStoppedAnimation<Color>(color),
             ),
           ),
@@ -895,7 +971,9 @@ class _ProfileView extends StatelessWidget {
                             avatar.label,
                             style: TextStyle(
                               fontSize: 12.5,
-                              color: isDark ? AppColors.darkSubtext : AppColors.lightSubtext,
+                              color: isDark
+                                  ? AppColors.darkSubtext
+                                  : AppColors.lightSubtext,
                             ),
                           );
                         },
@@ -905,7 +983,9 @@ class _ProfileView extends StatelessWidget {
                 ),
                 HugeIcon(
                   icon: HugeIcons.strokeRoundedCamera01,
-                  color: isDark ? const Color(0xFFB866CF) : AppColors.royalPurple,
+                  color: isDark
+                      ? const Color(0xFFB866CF)
+                      : AppColors.royalPurple,
                   size: 20,
                 ),
               ],
@@ -945,12 +1025,15 @@ class _ProfileView extends StatelessWidget {
                     fontSize: 11,
                     fontWeight: FontWeight.w700,
                     letterSpacing: 0.8,
-                    color: isDark ? AppColors.darkSubtext : AppColors.lightSubtext,
+                    color: isDark
+                        ? AppColors.darkSubtext
+                        : AppColors.lightSubtext,
                   ),
                 ),
                 const SizedBox(height: 12),
                 _ProfileRow(label: 'Name', value: displayName),
-                if (user?.phone != null) _ProfileRow(label: 'Phone', value: user!.phone!),
+                if (user?.phone != null)
+                  _ProfileRow(label: 'Phone', value: user!.phone!),
                 _ProfileRow(label: 'Curriculum', value: gradeLabel),
                 if (user?.acedexId != null && user!.acedexId.isNotEmpty)
                   _ProfileRow(label: 'Candidate ID', value: user!.acedexId),
