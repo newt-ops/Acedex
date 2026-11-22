@@ -3,5 +3,411 @@
   "subject": "Biology",
   "unitNumber": 5,
   "unitTitle": "The Human Body Systems",
-  "questions": []
+  "questions": [
+    {
+      "id": "BIO-G11-U05-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which type of connective tissue specifically functions to attach skeletal muscles to bones, transmitting contractile force to produce body movement?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Ligament"
+        },
+        {
+          "id": "B",
+          "text": "Tendon"
+        },
+        {
+          "id": "C",
+          "text": "Cartilage"
+        },
+        {
+          "id": "D",
+          "text": "Synovial membrane"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Tendons are tough cords of fibrous connective tissue that attach muscles to bones, whereas ligaments connect bone to bone to stabilize joints.",
+      "sourceReference": "Section 5.1, Page 175-176"
+    },
+    {
+      "id": "BIO-G11-U05-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In the human skeletal system, which bone cell type is responsible for breaking down bone tissue to help reabsorb mineral matrix and shape bones properly?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Osteoblasts"
+        },
+        {
+          "id": "B",
+          "text": "Osteocytes"
+        },
+        {
+          "id": "C",
+          "text": "Osteoclasts"
+        },
+        {
+          "id": "D",
+          "text": "Osteoprogenitor cells"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Osteoclasts are specialized bone cells that break down and resorb bone tissue, functioning in bone remodeling and shaping, while osteoblasts form new bone tissue.",
+      "sourceReference": "Section 5.1.3, Page 181"
+    },
+    {
+      "id": "BIO-G11-U05-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In the male reproductive tract, which accessory gland secretes an alkaline fluid into semen to buffer and neutralize the acidic environment of the female vagina?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Seminal vesicle"
+        },
+        {
+          "id": "B",
+          "text": "Prostate gland"
+        },
+        {
+          "id": "C",
+          "text": "Epididymis"
+        },
+        {
+          "id": "D",
+          "text": "Adrenal gland"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The prostate gland secretes an alkaline buffer into the semen that protects and maintains the motility of sperm against the natural acidic environment of the vagina.",
+      "sourceReference": "Section 5.2.1, Page 187 (Table 5.4)"
+    },
+    {
+      "id": "BIO-G11-U05-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "At which developmental stage does the developing human secondary oocyte arrest during oogenesis until fertilization occurs?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Prophase I"
+        },
+        {
+          "id": "B",
+          "text": "Metaphase I"
+        },
+        {
+          "id": "C",
+          "text": "Prophase II"
+        },
+        {
+          "id": "D",
+          "text": "Metaphase II"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "Primary oocytes arrest in Prophase I before birth. Following ovulation after puberty, the secondary oocyte arrests at Metaphase II of meiosis, completing meiosis II only upon sperm penetration.",
+      "sourceReference": "Section 5.2.2, Page 191 (Figure 5.11)"
+    },
+    {
+      "id": "BIO-G11-U05-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which of the following sexually transmitted infections is caused by an infection of the bacterium Treponema pallidum?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Gonorrhea"
+        },
+        {
+          "id": "B",
+          "text": "Syphilis"
+        },
+        {
+          "id": "C",
+          "text": "Chancroid"
+        },
+        {
+          "id": "D",
+          "text": "Trichomoniasis"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Syphilis is a multi-stage bacterial STI caused by the spirochete Treponema pallidum, leading to chancres, rashes, and cardiovascular and neurodegenerative damage if untreated.",
+      "sourceReference": "Section 5.2.6, Page 207"
+    },
+    {
+      "id": "BIO-G11-U05-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which of the following characteristics accurately differentiates cardiac muscle tissue from skeletal and smooth muscle tissues?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Cardiac muscle is non-striated and regulated under voluntary conscious control"
+        },
+        {
+          "id": "B",
+          "text": "Cardiac muscle fibers are spindle-shaped, multinucleated, and lack intercalated discs"
+        },
+        {
+          "id": "C",
+          "text": "Cardiac muscle cells are striated, involuntary, branched, and joined at specialized junctions called intercalated discs"
+        },
+        {
+          "id": "D",
+          "text": "Cardiac muscle contains no actin or myosin myofilaments in its cytoplasm"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Cardiac muscle (myocardium) is involuntary and striated, consisting of branched cells interconnected by intercalated discs containing gap junctions and desmosomes, facilitating synchronous contraction.",
+      "sourceReference": "Section 5.1.1, Page 177"
+    },
+    {
+      "id": "BIO-G11-U05-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "During the sliding filament mechanism of skeletal muscle contraction, what direct role do calcium ions (Ca2+) play once released from the sarcoplasmic reticulum?",
+      "options": [
+        {
+          "id": "A",
+          "text": "They directly hydrolyze ATP molecules into ADP and inorganic phosphate"
+        },
+        {
+          "id": "B",
+          "text": "They bind to troponin, causing a conformational shift that pulls tropomyosin away from actin's myosin-binding sites"
+        },
+        {
+          "id": "C",
+          "text": "They convert thick myosin fibers into thin actin filaments"
+        },
+        {
+          "id": "D",
+          "text": "They close acetylcholine receptors along the motor end-plate"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Calcium binds to troponin, causing a conformational change that moves tropomyosin away from the active binding sites on actin, allowing myosin cross-bridges to bind actin and initiate contraction.",
+      "sourceReference": "Section 5.1.2, Page 179-180"
+    },
+    {
+      "id": "BIO-G11-U05-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What is the primary role of the tall somatic Sertoli cells located within the germinal epithelium of the seminiferous tubules?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Secreting luteinizing hormone directly into the bloodstream"
+        },
+        {
+          "id": "B",
+          "text": "Providing nourishment and structural support to developing sperm cells as nurse cells"
+        },
+        {
+          "id": "C",
+          "text": "Undergoing meiotic reduction division to generate primary spermatocytes"
+        },
+        {
+          "id": "D",
+          "text": "Storing mature spermatozoa prior to ejaculation"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Sertoli cells (nurse cells) are elongated somatic cells spanning the seminiferous tubule lining that provide essential nutrients, hormonal signals, and physical support to developing spermatogenic cells.",
+      "sourceReference": "Section 5.2.2, Page 191"
+    },
+    {
+      "id": "BIO-G11-U05-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Around midway through the human menstrual cycle (days 12–14), what hormonal event acts as a positive feedback mechanism triggering ovulation?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A sudden drop in blood progesterone to near zero"
+        },
+        {
+          "id": "B",
+          "text": "High levels of circulating estrogen stimulating a dramatic surge in luteinizing hormone (LH)"
+        },
+        {
+          "id": "C",
+          "text": "Complete cessation of gonadotropin-releasing hormone (GnRH) production by the hypothalamus"
+        },
+        {
+          "id": "D",
+          "text": "Degeneration of the functional endometrial wall"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "High estrogen levels produced by the mature follicle switch from negative to positive feedback on the hypothalamus and pituitary, inducing a sharp surge in LH that triggers the rupture of the Graafian follicle and release of the secondary oocyte (ovulation).",
+      "sourceReference": "Section 5.2.2, Page 193-196"
+    },
+    {
+      "id": "BIO-G11-U05-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What primary mechanism of action allows combined oral contraceptive pills (COCs) containing estrogen and progestin to prevent pregnancy?",
+      "options": [
+        {
+          "id": "A",
+          "text": "They chemically dissolve sperm cells within the urethra"
+        },
+        {
+          "id": "B",
+          "text": "They suppress FSH and LH secretion to inhibit ovulation, thicken cervical mucus to impede sperm entry, and thin the endometrium"
+        },
+        {
+          "id": "C",
+          "text": "They induce permanent surgical occlusion of the fallopian tubes"
+        },
+        {
+          "id": "D",
+          "text": "They prevent maternal antibodies from crossing the placental barrier"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Combined oral contraceptives exert negative feedback on the anterior pituitary to block the LH/FSH surge, preventing ovulation. They also thicken cervical mucus to obstruct sperm passage and alter the endometrium to prevent implantation.",
+      "sourceReference": "Section 5.2.4, Page 199-200"
+    },
+    {
+      "id": "BIO-G11-U05-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which of the following describes a direct consequence of chewing Khat (Catha edulis) leaves on human physiology?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It acts as a potent central nervous system depressant that induces severe hypothermia"
+        },
+        {
+          "id": "B",
+          "text": "The active stimulant cathinone stimulates the central nervous system, elevating heart rate and blood pressure, and contributes to gum disease and gastritis with chronic use"
+        },
+        {
+          "id": "C",
+          "text": "It eliminates the risk of contracting sexually transmitted infections"
+        },
+        {
+          "id": "D",
+          "text": "It stops skeletal muscle contraction by preventing sarcoplasmic calcium release"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Khat contains the psychoactive alkaloid cathinone, an amphetamine-like stimulant that increases alertness, blood pressure, and respiratory rate, while habitual use can lead to tooth decay, periodontal disease, gastrointestinal ulcers, and cardiovascular strain.",
+      "sourceReference": "Section 5.5.2, Page 220, 224"
+    },
+    {
+      "id": "BIO-G11-U05-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "During rigorous exercise, an athlete lifts a heavy weight and holds it completely motionless in a fixed position without changing the joint angle or overall muscle length. What specific type of muscle contraction is taking place?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Concentric isotonic contraction"
+        },
+        {
+          "id": "B",
+          "text": "Eccentric isotonic contraction"
+        },
+        {
+          "id": "C",
+          "text": "Isometric contraction"
+        },
+        {
+          "id": "D",
+          "text": "Peristaltic contraction"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "An isometric contraction occurs when tension is generated within the muscle fiber against resistance, but the overall length of the muscle does not change and no joint movement is produced.",
+      "sourceReference": "Section 5.1.2, Page 180"
+    },
+    {
+      "id": "BIO-G11-U05-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "If human fertilization fails to occur following ovulation, which physiological sequence leads directly to the onset of the menstruation phase?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The corpus luteum degenerates into the corpus albicans, causing estrogen and progesterone levels to drop sharply and triggering the shedding of the endometrium"
+        },
+        {
+          "id": "B",
+          "text": "The anterior pituitary secretes high levels of Human Chorionic Gonadotropin (hCG), which dissolves the uterine lining"
+        },
+        {
+          "id": "C",
+          "text": "Progesterone levels double, stimulating osteoclasts to break down cervical cartilage"
+        },
+        {
+          "id": "D",
+          "text": "The graafian follicle transforms into a secondary oocyte that releases cytotoxic enzymes into the fallopian tube"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "In the absence of fertilization, hCG is not produced to sustain the corpus luteum, which degenerates into the corpus albicans. The withdrawal of estrogen and progesterone deprives the vascularized functional layer of the endometrium of hormonal support, causing it to break down and shed as menstrual flow.",
+      "sourceReference": "Section 5.2.2, Page 193-196"
+    },
+    {
+      "id": "BIO-G11-U05-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A clinical patient presents with an acute, single, painless indurated sore (chancre) at the site of sexual contact, accompanied by regional lymphadenopathy. Which stage of syphilis does this represent, and what occurs if the infection remains untreated?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Tertiary syphilis; it leads immediately to systemic organ calcification"
+        },
+        {
+          "id": "B",
+          "text": "Secondary syphilis; the chancre spreads to form a generalized skin rash over several days"
+        },
+        {
+          "id": "C",
+          "text": "Primary syphilis; the chancre heals spontaneously but the spirochetes disseminate systemically, progressing over time to secondary rashes and potentially destructive tertiary lesions"
+        },
+        {
+          "id": "D",
+          "text": "Latent syphilis; the bacteria cannot be transmitted to sexual partners at this stage"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The primary stage of syphilis is marked by a painless chancre at the infection site. Even though the chancre heals without treatment, Treponema pallidum disseminates hematogenously, progressing to secondary syphilis (rashes, mucous patches) and, after latency, potentially fatal tertiary syphilis (gummas, neurosyphilis, aortic aneurysm).",
+      "sourceReference": "Section 5.2.6, Page 207 (Table 5.7)"
+    },
+    {
+      "id": "BIO-G11-U05-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Which of the following correctly pairs an anatomical component of the human skeleton with its exact bone count and structural classification?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Axial skeleton: consists of 126 bones, including the shoulder and pelvic girdles"
+        },
+        {
+          "id": "B",
+          "text": "Appendicular skeleton: consists of 80 bones, comprising the skull, vertebral column, and rib cage"
+        },
+        {
+          "id": "C",
+          "text": "Axial skeleton: consists of 80 bones (skull, vertebral column, thoracic cage, ossicles, and hyoid); Appendicular skeleton: consists of 126 bones (upper/lower limbs and supporting girdles)"
+        },
+        {
+          "id": "D",
+          "text": "Vertebral column: contains 46 separate irregular bones in adult humans"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The human skeleton has 206 total bones: the axial division has 80 bones (22 skull bones, 6 auditory ossicles, 1 hyoid, 24 ribs, 1 sternum, and 26 vertebral column bones), while the appendicular division has 126 bones (4 pectoral girdle, 60 upper extremity, 2 pelvic, and 60 lower extremity bones).",
+      "sourceReference": "Section 5.1.3, Page 182-183 (Tables 5.2 & 5.3)"
+    }
+  ]
 }

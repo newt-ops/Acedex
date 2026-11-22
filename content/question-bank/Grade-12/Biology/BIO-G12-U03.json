@@ -3,5 +3,411 @@
   "subject": "Biology",
   "unitNumber": 3,
   "unitTitle": "Energy Transformation",
-  "questions": []
+  "questions": [
+    {
+      "id": "BIO-G12-U03-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In the internal anatomy of a plant chloroplast, where do the light-dependent reactions of photosynthesis take place?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Aqueous stroma matrix"
+        },
+        {
+          "id": "B",
+          "text": "Thylakoid membranes (grana)"
+        },
+        {
+          "id": "C",
+          "text": "Outer chloroplast envelope"
+        },
+        {
+          "id": "D",
+          "text": "Stomatal guard cell cytoplasm"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The light-dependent reactions of photosynthesis occur in the thylakoid membranes, which are organized into disc-like stacks called grana. These membranes house the light-absorbing chlorophyll pigments, photosystems, and electron transport carriers.",
+      "sourceReference": "Section 3.2, Page 120"
+    },
+    {
+      "id": "BIO-G12-U03-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which specific form of chlorophyll is found exclusively in the photosynthetic members of Chromista and dinoflagellates?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Chlorophyll a"
+        },
+        {
+          "id": "B",
+          "text": "Chlorophyll b"
+        },
+        {
+          "id": "C",
+          "text": "Chlorophyll c"
+        },
+        {
+          "id": "D",
+          "text": "Bacteriochlorophyll"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Chlorophyll a is the primary pigment found in all oxygenic phototrophs; chlorophyll b is restricted to green algae and land plants; and chlorophyll c is found only in the photosynthetic members of Chromista (such as brown algae and diatoms) and dinoflagellates.",
+      "sourceReference": "Section 3.2.1, Page 121"
+    },
+    {
+      "id": "BIO-G12-U03-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In which cellular compartment does glycolysis take place, and what is the net yield of ATP molecules produced per molecule of glucose oxidized?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Mitochondrial matrix; 4 ATP"
+        },
+        {
+          "id": "B",
+          "text": "Inner mitochondrial membrane; 32 ATP"
+        },
+        {
+          "id": "C",
+          "text": "Cytosol (cytoplasm); 2 ATP"
+        },
+        {
+          "id": "D",
+          "text": "Peroxisome; 0 ATP"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Glycolysis takes place in the cytosol of both eukaryotic and prokaryotic cells. Although 4 ATP molecules are synthesized by substrate-level phosphorylation during the energy liberation phase, 2 ATP molecules are invested in the preparatory phase, resulting in a net yield of 2 ATP per glucose.",
+      "sourceReference": "Section 3.4.1 & 3.4.2, Page 139, 142"
+    },
+    {
+      "id": "BIO-G12-U03-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "During aerobic cellular respiration, which molecule serves as the terminal electron acceptor at the conclusion of the mitochondrial electron transport chain?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Carbon dioxide (CO2)"
+        },
+        {
+          "id": "B",
+          "text": "Pyruvate"
+        },
+        {
+          "id": "C",
+          "text": "NAD+"
+        },
+        {
+          "id": "D",
+          "text": "Molecular oxygen (O2)"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "At the end of the electron transport chain (Complex IV), electrons are transferred to molecular oxygen (O2), which simultaneously binds protons (H+) from the matrix to form water (H2O).",
+      "sourceReference": "Section 3.4.2, Page 145, 151"
+    },
+    {
+      "id": "BIO-G12-U03-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In the laboratory starch test on a green leaf, why is the leaf initially immersed in boiling water for approximately 30 seconds before being placed in boiling ethanol?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To extract and dissolve the waxy cuticle and chlorophyll pigments"
+        },
+        {
+          "id": "B",
+          "text": "To kill the cytoplasm, denature leaf enzymes, and make the cell membranes permeable to iodine solution"
+        },
+        {
+          "id": "C",
+          "text": "To hydrolyze leaf starch polymers directly into glucose monosaccharides"
+        },
+        {
+          "id": "D",
+          "text": "To activate RuBisCO enzyme activity prior to staining"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Dipping the leaf in boiling water kills the plant cells, denatures metabolic enzymes to halt biochemical reactions, and disrupts cell membrane integrity so that iodine solution can penetrate the tissue. Chlorophyll extraction is subsequently performed using warm ethanol.",
+      "sourceReference": "Section 3.2.5, Page 131"
+    },
+    {
+      "id": "BIO-G12-U03-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How does non-cyclic photophosphorylation differ from cyclic photophosphorylation in terms of the photosystems engaged and the chemical products generated?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Non-cyclic involves only Photosystem I and generates ATP; cyclic involves Photosystem II and generates NADPH"
+        },
+        {
+          "id": "B",
+          "text": "Non-cyclic involves both Photosystems II and I, yielding ATP, NADPH, and O2; cyclic involves Photosystem I only, generating ATP without producing NADPH or O2"
+        },
+        {
+          "id": "C",
+          "text": "Non-cyclic produces glucose directly in the stroma; cyclic splits water molecules to release protons"
+        },
+        {
+          "id": "D",
+          "text": "Non-cyclic occurs exclusively during the dark reactions; cyclic operates only under extreme cold"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Non-cyclic photophosphorylation utilizes both Photosystem II (P680) and Photosystem I (P700), oxidizing water via photolysis to release O2 and generating both ATP and NADPH. In cyclic photophosphorylation, excited electrons from Photosystem I return to P700 via cytochrome intermediates, synthesizing ATP via chemiosmosis without photolysis of water or NADPH formation.",
+      "sourceReference": "Section 3.2.2, Page 123-124"
+    },
+    {
+      "id": "BIO-G12-U03-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In C4 plants such as maize and sorghum, which enzyme catalyzes the initial fixation of atmospheric carbon dioxide, and in which specific leaf cell type does this reaction take place?",
+      "options": [
+        {
+          "id": "A",
+          "text": "RuBisCO in bundle sheath cells"
+        },
+        {
+          "id": "B",
+          "text": "PEP carboxylase in mesophyll cells"
+        },
+        {
+          "id": "C",
+          "text": "Malic enzyme in spongy parenchyma cells"
+        },
+        {
+          "id": "D",
+          "text": "Carbonic anhydrase in stomatal guard cells"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In C4 plants, initial carbon fixation occurs in the mesophyll cells, where the enzyme phosphoenolpyruvate (PEP) carboxylase fixes atmospheric CO2 (as bicarbonate) onto PEP to form the 4-carbon acid oxaloacetate. PEP carboxylase has a high affinity for CO2 and zero affinity for oxygen.",
+      "sourceReference": "Section 3.2.5, Page 127-128"
+    },
+    {
+      "id": "BIO-G12-U03-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How do succulent CAM plants (such as cacti) temporally separate carbon acquisition from the Calvin cycle to achieve superior water-use efficiency in arid desert climates?",
+      "options": [
+        {
+          "id": "A",
+          "text": "They fix CO2 only during midday while opening stomata under intense sunlight"
+        },
+        {
+          "id": "B",
+          "text": "They open stomata during cool desert nights to fix CO2 into malate stored in large vacuoles, then close stomata during hot days while decarboxylating malate to refix CO2 via the Calvin cycle"
+        },
+        {
+          "id": "C",
+          "text": "They perform light-dependent reactions at night and the Calvin cycle exclusively underground in root nodules"
+        },
+        {
+          "id": "D",
+          "text": "They bypass the Calvin cycle entirely, synthesizing hexose sugars directly from carbonic acid"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Crassulacean Acid Metabolism (CAM) plants display temporal separation of carbon fixation: stomata open at night to minimize transpiration, and PEP carboxylase fixes CO2 into malic acid, which is stored in large vacuoles (nocturnal leaf acidification). During the daytime, stomata remain tightly closed to prevent desiccation, and stored malate is decarboxylated in chloroplasts to supply CO2 to RuBisCO for the Calvin cycle.",
+      "sourceReference": "Section 3.2.5, Page 128-129"
+    },
+    {
+      "id": "BIO-G12-U03-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What are the total net molecular products formed during pyruvate oxidation (the transition/link reaction) per single molecule of glucose entering cellular respiration?",
+      "options": [
+        {
+          "id": "A",
+          "text": "1 Acetyl-CoA, 1 NADH, and 1 CO2"
+        },
+        {
+          "id": "B",
+          "text": "2 Acetyl-CoA, 2 NADH, 2 H+, and 2 CO2"
+        },
+        {
+          "id": "C",
+          "text": "2 Citrate, 2 FADH2, and 4 ATP"
+        },
+        {
+          "id": "D",
+          "text": "2 Lactate, 2 NAD+, and 2 ATP"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Because one glucose molecule yields two molecules of pyruvate during glycolysis, both pyruvate molecules enter the mitochondrial matrix. Each undergoes oxidative decarboxylation: pyruvate + NAD+ + CoA → acetyl-CoA + NADH + H+ + CO2. For one full glucose molecule, the link reaction yields 2 Acetyl-CoA, 2 NADH, 2 H+, and 2 CO2.",
+      "sourceReference": "Section 3.4.2, Page 142-143"
+    },
+    {
+      "id": "BIO-G12-U03-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "According to the chemiosmotic mechanism in mitochondria, how does the passage of electrons through respiratory Complexes I, III, and IV power ATP synthase?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Electrons flow directly into the catalytic active site of ATP synthase to phosphorylate ADP"
+        },
+        {
+          "id": "B",
+          "text": "Protons (H+) are pumped from the mitochondrial matrix into the intermembrane space, establishing an electrochemical proton gradient that drives ATP synthesis as protons diffuse back through ATP synthase"
+        },
+        {
+          "id": "C",
+          "text": "Complexes I, III, and IV hydrolyze ATP to release inorganic phosphate into the matrix"
+        },
+        {
+          "id": "D",
+          "text": "The inner membrane becomes completely permeable to all anions, generating osmotic suction"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "As electrons travel through respiratory chain complexes I, III, and IV, free energy is released to translocate protons from the matrix into the intermembrane space. This creates an electrochemical proton gradient (proton-motive force); as protons diffuse back into the matrix down their gradient through the Fo-F1 ATP synthase complex, ATP is phosphorylated from ADP and inorganic phosphate.",
+      "sourceReference": "Section 3.4.2, Page 145, 147"
+    },
+    {
+      "id": "BIO-G12-U03-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Under anaerobic conditions in human skeletal muscle during strenuous exercise, what is the primary biochemical role of converting pyruvate to lactic acid?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To generate additional molecules of ATP via oxidative phosphorylation"
+        },
+        {
+          "id": "B",
+          "text": "To regenerate NAD+ from NADH so that glycolysis can continue producing ATP via substrate-level phosphorylation"
+        },
+        {
+          "id": "C",
+          "text": "To lower intracellular pH to prevent protein synthesis"
+        },
+        {
+          "id": "D",
+          "text": "To deliver molecular oxygen directly to myoglobin stores"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "During anaerobic conditions, the mitochondrial electron transport chain cannot oxidize NADH due to the absence of oxygen. To prevent glycolysis from halting for lack of oxidized cofactors, lactate dehydrogenase reduces pyruvate to lactate while reoxidizing NADH back to NAD+, allowing glycolysis to continue generating 2 ATP per glucose.",
+      "sourceReference": "Section 3.4.2, Page 152-153"
+    },
+    {
+      "id": "BIO-G12-U03-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "To achieve the net synthesis of one hexose sugar molecule (fructose-6-phosphate or glucose) from carbon dioxide via the Calvin cycle, what exact stoichiometric quantities of CO2, ATP, and NADPH are consumed?",
+      "options": [
+        {
+          "id": "A",
+          "text": "3 CO2, 9 ATP, and 6 NADPH"
+        },
+        {
+          "id": "B",
+          "text": "6 CO2, 12 ATP, and 12 NADPH"
+        },
+        {
+          "id": "C",
+          "text": "6 CO2, 18 ATP, and 12 NADPH"
+        },
+        {
+          "id": "D",
+          "text": "12 CO2, 36 ATP, and 24 NADPH"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Fixing 6 molecules of CO2 requires 6 turns of the Calvin cycle. To reduce the resulting 12 molecules of 3-PGA to 12 molecules of G3P, 12 ATP and 12 NADPH are consumed. Two G3P molecules exit for hexose synthesis, while the remaining 10 G3P molecules require an additional 6 ATP to regenerate 6 molecules of RuBP, bringing the net requirement to 6 CO2, 18 ATP, and 12 NADPH per hexose molecule.",
+      "sourceReference": "Section 3.2.5, Page 126-127"
+    },
+    {
+      "id": "BIO-G12-U03-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Why does photorespiration significantly decrease the net photosynthetic yield of C3 crops under hot, dry conditions, and why is this energetic loss virtually eliminated in C4 plants?",
+      "options": [
+        {
+          "id": "A",
+          "text": "RuBisCO binds O2 instead of CO2, forming 2-phosphoglycolate which consumes ATP and releases CO2 without producing sugar; C4 plants concentrate CO2 in bundle sheath cells via PEP carboxylase, outcompeting oxygen"
+        },
+        {
+          "id": "B",
+          "text": "C3 plants lack peroxisomes and mitochondria to recycle glycolate; C4 plants perform photosynthesis exclusively in the dark"
+        },
+        {
+          "id": "C",
+          "text": "In C3 plants, stomatal closure causes internal CO2 to increase to toxic levels; C4 plants destroy oxygen molecules in their grana"
+        },
+        {
+          "id": "D",
+          "text": "Photorespiration completely denatures chloroplast ribosomes in C3 leaves; C4 plants possess heat-resistant chlorophyll c"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "When stomata close during hot, arid conditions, internal CO2 drops and O2 accumulates. RuBisCO's oxygenase activity oxygenates RuBP to produce 3-PGA and toxic 2-phosphoglycolate. The metabolic salvage pathway (involving chloroplast, peroxisome, and mitochondrion) consumes ATP and releases fixed CO2 without synthesizing sugar. C4 plants avoid this because PEP carboxylase fixes CO2 without oxygen competition, pumping CO2 into bundle sheath cells to keep local CO2 concentrations high around RuBisCO.",
+      "sourceReference": "Section 3.2.5, Page 127, 129-130"
+    },
+    {
+      "id": "BIO-G12-U03-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Why does the complete metabolic oxidation of one gram of dietary fat yield more than twice as much ATP as the oxidation of one gram of carbohydrate or protein?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Fats bypass the electron transport chain and directly phosphorylate ADP in the cytosol"
+        },
+        {
+          "id": "B",
+          "text": "Fatty acids are in a much more chemically reduced state with abundant C-H bonds, undergoing beta-oxidation to generate large quantities of acetyl-CoA, NADH, and FADH2 per unit mass"
+        },
+        {
+          "id": "C",
+          "text": "Glycerol molecules directly split into two glucose molecules without energy investment"
+        },
+        {
+          "id": "D",
+          "text": "Adipose tissue contains specialized thermogenic mitochondria that prevent heat dissipation"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Fatty acid hydrocarbon chains are in a highly reduced state, consisting almost entirely of carbon-hydrogen bonds where electrons are equally shared. Through beta-oxidation, fatty acids are cleaved into two-carbon acetyl-CoA units while concurrently generating NADH and FADH2. Because they possess far less oxygen per carbon atom than carbohydrates or proteins, complete oxidation of fats yields more than double the energy (~38 kJ/g vs. ~17 kJ/g) and correspondingly higher ATP.",
+      "sourceReference": "Section 3.4.2, Page 149"
+    },
+    {
+      "id": "BIO-G12-U03-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A cell biologist isolates intact, functional mitochondria and provides two molecules of Acetyl-CoA in the presence of required cofactors and oxygen. Considering the citric acid cycle (Krebs cycle) alone, what exact yield of reduced coenzymes, high-energy phosphates, and decarboxylated carbon molecules is produced from these two acetyl groups?",
+      "options": [
+        {
+          "id": "A",
+          "text": "4 NADH, 2 FADH2, 2 ATP, and 2 CO2"
+        },
+        {
+          "id": "B",
+          "text": "6 NADH, 2 FADH2, 2 ATP (or GTP), and 4 CO2"
+        },
+        {
+          "id": "C",
+          "text": "8 NADH, 4 FADH2, 4 ATP, and 6 CO2"
+        },
+        {
+          "id": "D",
+          "text": "2 NADH, 1 FADH2, 1 ATP, and 2 CO2"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Each single turn of the citric acid cycle (oxidizing one Acetyl-CoA molecule) produces 3 NADH, 1 FADH2, 1 ATP (via GTP by substrate-level phosphorylation), and releases 2 CO2. Therefore, processing two molecules of Acetyl-CoA through two complete turns of the cycle yields exactly 6 NADH, 2 FADH2, 2 ATP (or GTP), and 4 CO2.",
+      "sourceReference": "Section 3.4.2, Page 143-144, 147"
+    }
+  ]
 }

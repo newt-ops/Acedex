@@ -3,5 +3,411 @@
   "subject": "Biology",
   "unitNumber": 3,
   "unitTitle": "Cells",
-  "questions": []
+  "questions": [
+    {
+      "id": "BIO-G09-U03-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which seventeenth-century English scientist first observed microscopic box-like compartments in thin slices of cork and coined the biological term 'cells'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Anton van Leeuwenhoek"
+        },
+        {
+          "id": "B",
+          "text": "Theodor Schwann"
+        },
+        {
+          "id": "C",
+          "text": "Matthias Schleiden"
+        },
+        {
+          "id": "D",
+          "text": "Robert Hooke"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "In 1665, English natural philosopher Robert Hooke examined thin slices of dead plant cork under his microscope and named the repeating pore-like chambers 'cellulae' (cells), Latin for small rooms.",
+      "sourceReference": "Section 3.2, Page 45"
+    },
+    {
+      "id": "BIO-G09-U03-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which organelle in eukaryotic cells is described as the 'powerhouse of the cell' because it serves as the primary site of aerobic respiration and ATP generation?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Golgi apparatus"
+        },
+        {
+          "id": "B",
+          "text": "Mitochondrion"
+        },
+        {
+          "id": "C",
+          "text": "Lysosome"
+        },
+        {
+          "id": "D",
+          "text": "Endoplasmic reticulum"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Mitochondria possess folded inner membranes (cristae) where respiration occurs, releasing the cellular energy (ATP) needed for biological work, which is why they are known as the powerhouses of the cell.",
+      "sourceReference": "Section 3.3, Page 50"
+    },
+    {
+      "id": "BIO-G09-U03-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which of the following cellular structures is present in typical plant cells but completely absent in animal cells?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Cellulose cell wall"
+        },
+        {
+          "id": "B",
+          "text": "Mitochondrion"
+        },
+        {
+          "id": "C",
+          "text": "Cell surface membrane"
+        },
+        {
+          "id": "D",
+          "text": "Ribosome"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Plant cells are enclosed by a rigid external cell wall composed of cellulose that provides structural support and shape, whereas animal cells possess only a flexible cell membrane and lack a cell wall.",
+      "sourceReference": "Section 3.3 & 3.5, Page 48, 54"
+    },
+    {
+      "id": "BIO-G09-U03-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is the net movement of water molecules from a region of higher water concentration (dilute solution) to a region of lower water concentration (concentrated solution) across a partially permeable membrane called?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Phagocytosis"
+        },
+        {
+          "id": "B",
+          "text": "Active transport"
+        },
+        {
+          "id": "C",
+          "text": "Osmosis"
+        },
+        {
+          "id": "D",
+          "text": "Simple diffusion"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Osmosis is a specialized form of passive transport defined specifically as the diffusion of water molecules across a selectively (partially) permeable membrane down its water potential gradient.",
+      "sourceReference": "Section 3.7.1, Page 59, 62"
+    },
+    {
+      "id": "BIO-G09-U03-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In the structural hierarchy of multicellular organisms, a group of similar cells working together to perform a specific biological function is defined as a(n):",
+      "options": [
+        {
+          "id": "A",
+          "text": "Organ"
+        },
+        {
+          "id": "B",
+          "text": "Tissue"
+        },
+        {
+          "id": "C",
+          "text": "Organ system"
+        },
+        {
+          "id": "D",
+          "text": "Organelle"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "At the organismal level of biological organization, tissues are functional units composed of groups of similar specialized cells (such as muscle tissue or epidermal tissue) carrying out a coordinated task.",
+      "sourceReference": "Section 3.8, Page 69"
+    },
+    {
+      "id": "BIO-G09-U03-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "German scientists Matthias Schleiden and Theodor Schwann made foundational contributions to the classical cell theory in 1838–1839 by proposing that:",
+      "options": [
+        {
+          "id": "A",
+          "text": "All living organisms, including both plants and animals, are composed of cells as their fundamental structural unit"
+        },
+        {
+          "id": "B",
+          "text": "Cells spontaneously generate from non-living organic fluids inside the body"
+        },
+        {
+          "id": "C",
+          "text": "All cellular metabolic activities occur exclusively inside the double-membraned nucleus"
+        },
+        {
+          "id": "D",
+          "text": "Prokaryotic bacteria evolve directly from eukaryotic animal cells"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Matthias Schleiden (1838) demonstrated that all plants are composed of cells, and Theodor Schwann (1839) concluded that all animals are made of cells, establishing that cells are the natural, fundamental units of all living things.",
+      "sourceReference": "Section 3.2, Page 45-46"
+    },
+    {
+      "id": "BIO-G09-U03-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What is the primary structural difference that causes the rough endoplasmic reticulum (Rough ER) to appear dotted or rough compared to the smooth endoplasmic reticulum (Smooth ER)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Attachment of spherical lysosomes along its lumen"
+        },
+        {
+          "id": "B",
+          "text": "Presence of protein-synthesizing ribosomes bound to its outer membrane surface"
+        },
+        {
+          "id": "C",
+          "text": "Embedded circular DNA molecules undergoing active transcription"
+        },
+        {
+          "id": "D",
+          "text": "Perforations created by nuclear pores spanning its double membrane"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Rough ER gets its rough, granular appearance from numerous ribosomes attached to its cytoplasmic surface, which synthesize proteins destined for secretion or membrane insertion.",
+      "sourceReference": "Section 3.3, Page 49"
+    },
+    {
+      "id": "BIO-G09-U03-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Why does a mature mammalian red blood cell lack a nucleus when circulating in the bloodstream?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It degenerated because mature red blood cells reproduce exclusively by binary fission"
+        },
+        {
+          "id": "B",
+          "text": "It was lost during cellular maturation to maximize internal space for packing hemoglobin to transport oxygen"
+        },
+        {
+          "id": "C",
+          "text": "It migrated into the lymphatic vessels to synthesize defensive blood antibodies"
+        },
+        {
+          "id": "D",
+          "text": "It fused with surrounding vascular endothelial cells to strengthen capillary walls"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "As mammalian red blood cells mature, they extrude their nucleus. This structural adaptation frees up internal cytoplasmic volume to carry the maximum possible amount of oxygen-transporting hemoglobin.",
+      "sourceReference": "Section 3.3, Page 49"
+    },
+    {
+      "id": "BIO-G09-U03-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which of the following cellular features correctly distinguishes prokaryotic cells (such as bacteria) from eukaryotic cells?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Prokaryotes lack membrane-enclosed organelles and have circular DNA not complexed with histones, whereas eukaryotes contain membrane-bound organelles and linear chromosomes"
+        },
+        {
+          "id": "B",
+          "text": "Prokaryotes possess larger ribosomes (80S) and multiple nuclei, whereas eukaryotes possess smaller ribosomes (70S) and no nucleus"
+        },
+        {
+          "id": "C",
+          "text": "Prokaryotes have cell walls made exclusively of cellulose, whereas eukaryotes have peptidoglycan walls"
+        },
+        {
+          "id": "D",
+          "text": "Prokaryotes carry out active transport across their membrane, whereas eukaryotes rely entirely on passive diffusion"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Prokaryotic cells lack a membrane-bound nucleus and internal membrane-bound organelles, and their circular DNA is naked (without histone proteins). Eukaryotes feature distinct membrane-bound organelles (like the nucleus and mitochondria) and linear chromosomes.",
+      "sourceReference": "Section 3.4, Page 53-54"
+    },
+    {
+      "id": "BIO-G09-U03-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "When preparing a temporary wet mount of onion epidermal cells or human cheek cells for light microscopy, why is the coverslip slowly lowered over the specimen at a 45° angle?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To prevent staining solution from evaporating from the edges of the slide"
+        },
+        {
+          "id": "B",
+          "text": "To ensure that the coarse adjustment knob can move the stage to its lowest position"
+        },
+        {
+          "id": "C",
+          "text": "To prevent trapping air bubbles that would refract light and obscure cellular details"
+        },
+        {
+          "id": "D",
+          "text": "To chemically fix the cellular proteins without using alcohol"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Lowering the coverslip gently at a 45° angle with a mounted needle or forceps pushes air out from underneath the glass, preventing trapped air bubbles which reflect and refract light, obscuring the specimen.",
+      "sourceReference": "Section 3.6, Page 57-58"
+    },
+    {
+      "id": "BIO-G09-U03-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Freshwater unicellular amoebas inhabit a hypotonic aquatic environment. What specialized organelle expels excess accumulating water to prevent the cell from swelling and undergoing lysis?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Food vacuole"
+        },
+        {
+          "id": "B",
+          "text": "Contractile vacuole"
+        },
+        {
+          "id": "C",
+          "text": "Large central vacuole"
+        },
+        {
+          "id": "D",
+          "text": "Phagosome"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Freshwater amoebas lack a rigid cell wall to resist osmotic influx. They utilize contractile vacuoles to collect incoming excess water and rhythmically pump it out of the cytoplasm, maintaining osmoregulation.",
+      "sourceReference": "Section 3.3 & 3.7.1, Page 51, 65"
+    },
+    {
+      "id": "BIO-G09-U03-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A freshly isolated human red blood cell is placed into a beaker containing pure distilled water (0% solute concentration). What will happen to the cell, and what explains this outcome?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The cell will lose water rapidly by osmosis and become crenated (shrunken)"
+        },
+        {
+          "id": "B",
+          "text": "The cell will absorb water by osmosis, develop turgor pressure against its wall, and remain intact"
+        },
+        {
+          "id": "C",
+          "text": "Water will move into the cell down its water potential gradient, causing it to swell and burst (hemolysis) due to the absence of a rigid cell wall"
+        },
+        {
+          "id": "D",
+          "text": "No net movement of water will occur because the cell membrane becomes completely impermeable to water"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Pure water is strongly hypotonic relative to the red blood cell cytoplasm. Water enters the cell by osmosis; because animal cells lack a rigid cell wall to exert counter-turgor pressure, the delicate plasma membrane stretches until it bursts (hemolysis).",
+      "sourceReference": "Section 3.7.1, Page 64"
+    },
+    {
+      "id": "BIO-G09-U03-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A healthy green potted plant is accidentally irrigated with a highly concentrated salt solution. After several hours, the plant's leaves wilt visibly. What cellular phenomenon has occurred inside the leaf cells?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Plasmolysis, because water exited the central vacuoles by osmosis into the hypertonic soil solution, causing turgor pressure to drop"
+        },
+        {
+          "id": "B",
+          "text": "Hemolysis, because mineral ions rushed into the chloroplasts and caused them to burst"
+        },
+        {
+          "id": "C",
+          "text": "Turgidity, because the salt ions pulled excess water into the cytoplasm by active transport"
+        },
+        {
+          "id": "D",
+          "text": "Incipient expansion, because cellulose fibers in the cell wall dissolved under hypertonic conditions"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The concentrated salt solution creates a hypertonic external environment. Water moves out of the plant cell vacuoles by osmosis. The cytoplasm shrinks away from the rigid cell wall (plasmolysis), eliminating the turgor pressure required to keep leaves and stems upright.",
+      "sourceReference": "Section 3.7.1, Page 63"
+    },
+    {
+      "id": "BIO-G09-U03-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A student sets up an artificial cell model by filling a piece of sealed dialysis tubing with a 20% sucrose solution and immersing it into a beaker filled with pure water. If the dialysis membrane is permeable to water molecules but completely impermeable to sucrose, what changes will be observed after 30 minutes?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Sucrose molecules will diffuse into the beaker until the solution in the tube becomes completely clear"
+        },
+        {
+          "id": "B",
+          "text": "Water molecules will enter the dialysis tube by osmosis, increasing both the volume and internal pressure of the tube"
+        },
+        {
+          "id": "C",
+          "text": "Water will move from inside the tube into the beaker, causing the dialysis tube to collapse and lose mass"
+        },
+        {
+          "id": "D",
+          "text": "Both water and sucrose will exchange equally across the membrane without any change in volume"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The concentrated sucrose inside the tube has a lower water concentration than the pure water in the beaker. Water diffuses through the microscopic membrane pores down its gradient into the tube (osmosis), causing the tube to swell, increase in volume, and gain mass.",
+      "sourceReference": "Section 3.7.1, Page 67"
+    },
+    {
+      "id": "BIO-G09-U03-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Plant root hair cells absorb essential mineral ions (such as nitrate and potassium) from the soil even when the concentration of these ions is significantly higher inside the root cells than in the surrounding soil water. Which transport mechanism accomplishes this, and what is strictly required for it to proceed?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Facilitated diffusion, requiring a steep downward concentration gradient and no metabolic energy"
+        },
+        {
+          "id": "B",
+          "text": "Simple diffusion, relying solely on thermal kinetic energy to move ions through the stomatal openings"
+        },
+        {
+          "id": "C",
+          "text": "Active transport, requiring membrane carrier proteins and cellular metabolic energy (ATP) derived from respiration"
+        },
+        {
+          "id": "D",
+          "text": "Osmosis, requiring turgor pressure from the central vacuole to pull mineral salts passively"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Moving solutes against an established concentration gradient (from low in soil to high in root hair cytoplasm) is active transport. It requires membrane transport proteins and the expenditure of cellular metabolic energy (ATP) released during cellular respiration.",
+      "sourceReference": "Section 3.7.2, Page 68"
+    }
+  ]
 }

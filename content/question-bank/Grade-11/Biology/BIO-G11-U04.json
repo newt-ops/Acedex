@@ -3,5 +3,411 @@
   "subject": "Biology",
   "unitNumber": 4,
   "unitTitle": "Genetics",
-  "questions": []
+  "questions": [
+    {
+      "id": "BIO-G11-U04-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which of the following nitrogenous bases is classified as a purine and forms two hydrogen bonds with thymine in a double-stranded DNA molecule?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Cytosine"
+        },
+        {
+          "id": "B",
+          "text": "Adenine"
+        },
+        {
+          "id": "C",
+          "text": "Guanine"
+        },
+        {
+          "id": "D",
+          "text": "Uracil"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Adenine (A) and guanine (G) are double-ringed purines. In DNA base-pairing rules, adenine specifically pairs with thymine (T) via two hydrogen bonds, whereas guanine pairs with cytosine (C) via three hydrogen bonds.",
+      "sourceReference": "Section 4.2.1, Page 110-111"
+    },
+    {
+      "id": "BIO-G11-U04-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "During DNA replication, which enzyme is responsible for unwinding and unzipping the double-helix structure by breaking hydrogen bonds between complementary base pairs?",
+      "options": [
+        {
+          "id": "A",
+          "text": "DNA ligase"
+        },
+        {
+          "id": "B",
+          "text": "DNA helicase"
+        },
+        {
+          "id": "C",
+          "text": "RNA primase"
+        },
+        {
+          "id": "D",
+          "text": "Topoisomerase"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "DNA helicase binds to double-stranded DNA and separates the two strands by breaking the hydrogen bonds holding base pairs together, opening the replication fork.",
+      "sourceReference": "Section 4.2.3, Page 114"
+    },
+    {
+      "id": "BIO-G11-U04-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "During which specific sub-stage of meiotic cell division does crossing over take place between non-sister chromatids of homologous chromosomes?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Metaphase I"
+        },
+        {
+          "id": "B",
+          "text": "Prophase I"
+        },
+        {
+          "id": "C",
+          "text": "Anaphase II"
+        },
+        {
+          "id": "D",
+          "text": "Telophase I"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Crossing over occurs during Prophase I of meiosis, where homologous chromosomes synapse to form tetrads and exchange non-sister chromatid segments at chiasmata, generating genetic variation.",
+      "sourceReference": "Section 4.3.1, Page 123-124"
+    },
+    {
+      "id": "BIO-G11-U04-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which of the following three-nucleotide mRNA base sequences serves as the universal start (initiator) codon for protein synthesis in eukaryotic cells?",
+      "options": [
+        {
+          "id": "A",
+          "text": "UAA"
+        },
+        {
+          "id": "B",
+          "text": "UGA"
+        },
+        {
+          "id": "C",
+          "text": "AUG"
+        },
+        {
+          "id": "D",
+          "text": "UAG"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "AUG is the universal start codon that initiates translation, encoding the amino acid methionine. UAA, UAG, and UGA function as stop (nonsense) codons that terminate protein synthesis.",
+      "sourceReference": "Section 4.4, Page 128"
+    },
+    {
+      "id": "BIO-G11-U04-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Down syndrome in humans is a chromosomal abnormality characterized by the presence of an extra copy of chromosome 21. Which genetic term describes this condition?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Monosomy 21 (2n - 1)"
+        },
+        {
+          "id": "B",
+          "text": "Trisomy 21 (2n + 1)"
+        },
+        {
+          "id": "C",
+          "text": "Polyploidy (3n)"
+        },
+        {
+          "id": "D",
+          "text": "Reciprocal translocation"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Down syndrome is an aneuploid condition resulting from nondisjunction during cell division, leading to three copies of chromosome 21 (trisomy 21, designated 2n + 1) instead of the normal pair.",
+      "sourceReference": "Section 4.9.2, Page 155-156"
+    },
+    {
+      "id": "BIO-G11-U04-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "If a template DNA strand has the nucleotide sequence 3'-TAC GGC TTA CGA-5', what will be the nucleotide sequence of the mRNA transcript synthesized during transcription?",
+      "options": [
+        {
+          "id": "A",
+          "text": "5'-AUG CCG AAU GCU-3'"
+        },
+        {
+          "id": "B",
+          "text": "5'-ATG CCG AAT GCT-3'"
+        },
+        {
+          "id": "C",
+          "text": "3'-AUG CCG AAU GCU-5'"
+        },
+        {
+          "id": "D",
+          "text": "5'-UAC GGC UUA CGA-3'"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "During transcription, RNA polymerase synthesizes an antiparallel mRNA strand in the 5' to 3' direction using complementary base pairing (A pairs with U, T pairs with A, C pairs with G, and G pairs with C). Therefore, 3'-TAC GGC TTA CGA-5' transcribes into 5'-AUG CCG AAU GCU-3'.",
+      "sourceReference": "Section 4.4, Page 128-129"
+    },
+    {
+      "id": "BIO-G11-U04-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Why is DNA replication defined as 'semiconservative' in molecular genetics?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Half of the parent cell's total nuclear DNA is conserved while the rest is hydrolyzed for ATP production"
+        },
+        {
+          "id": "B",
+          "text": "Each newly formed DNA double helix consists of one intact original parental strand and one newly synthesized strand"
+        },
+        {
+          "id": "C",
+          "text": "Replication only occurs along the leading strand, while the lagging strand is transcribed into RNA"
+        },
+        {
+          "id": "D",
+          "text": "Only autosomal DNA replicates, whereas sex chromosomes remain uncopied"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Semiconservative replication means that when the original double helix unwinds, each parental strand acts as a template for a new complementary strand, resulting in two identical daughter duplexes, each composed of one old parental strand and one newly synthesized strand.",
+      "sourceReference": "Section 4.2.3, Page 114"
+    },
+    {
+      "id": "BIO-G11-U04-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In short-horned cattle, crossing a pure red bull (RR) with a pure white cow (WW) results in 100% roan offspring (RW) displaying an intermingling of red and white hairs. What pattern of inheritance does this demonstrate?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Complete dominance"
+        },
+        {
+          "id": "B",
+          "text": "Incomplete dominance"
+        },
+        {
+          "id": "C",
+          "text": "Co-dominance"
+        },
+        {
+          "id": "D",
+          "text": "Sex-linked inheritance"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Co-dominance occurs when both alleles in a heterozygote are expressed simultaneously and fully without blending. In roan cattle (RW), both the red and white alleles are actively expressed, producing individual red and white hairs together.",
+      "sourceReference": "Section 4.7.1, Page 143"
+    },
+    {
+      "id": "BIO-G11-U04-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which of the following parental genotype combinations can produce children representing all four ABO blood groups (A, B, AB, and O)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "I^A I^B × ii"
+        },
+        {
+          "id": "B",
+          "text": "I^A i × I^B i"
+        },
+        {
+          "id": "C",
+          "text": "I^A I^A × I^B I^B"
+        },
+        {
+          "id": "D",
+          "text": "I^B i × ii"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "A cross between heterozygous blood group A (I^A i) and heterozygous blood group B (I^B i) yields four equally possible genotypes in offspring: I^A I^B (Type AB), I^A i (Type A), I^B i (Type B), and ii (Type O), each with a 25% probability.",
+      "sourceReference": "Section 4.7.1, Page 144-145"
+    },
+    {
+      "id": "BIO-G11-U04-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In a dihybrid cross between two heterozygous round yellow pea plants (RrYy × RrYy), what fraction of the F2 generation is expected to display the recombinant phenotype 'round green'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "9/16"
+        },
+        {
+          "id": "B",
+          "text": "3/16"
+        },
+        {
+          "id": "C",
+          "text": "1/16"
+        },
+        {
+          "id": "D",
+          "text": "1/4"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "According to Mendel's law of independent assortment, a dihybrid cross between two RrYy heterozygotes produces a 9:3:3:1 phenotypic ratio: 9/16 Round Yellow, 3/16 Round Green, 3/16 Wrinkled Yellow, and 1/16 Wrinkled Green.",
+      "sourceReference": "Section 4.5.3, Page 136-137"
+    },
+    {
+      "id": "BIO-G11-U04-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How does somatic gene therapy differ fundamentally from germ-line gene therapy in medical genetics?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Somatic gene therapy modifies gametes or zygotes, passing genetic edits to future generations, whereas germ-line therapy treats only body cells"
+        },
+        {
+          "id": "B",
+          "text": "Somatic gene therapy transfers therapeutic genes strictly into non-reproductive body cells so alterations are not inherited by offspring, whereas germ-line gene therapy modifies sex cells and passes edits to subsequent generations"
+        },
+        {
+          "id": "C",
+          "text": "Somatic gene therapy uses synthetic mRNA vaccines, whereas germ-line therapy relies exclusively on chemical chemotherapy"
+        },
+        {
+          "id": "D",
+          "text": "Somatic gene therapy cures all multifactorial cancers, while germ-line therapy is restricted to bacterial infections"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In somatic gene therapy, therapeutic genes are introduced into somatic tissues (e.g., bone marrow, lungs), meaning the corrective changes affect only the patient and cannot be passed to descendants. Germ-line gene therapy modifies germ cells (sperm, ova, or early embryos), making the genetic changes permanent and transmissible to future generations.",
+      "sourceReference": "Section 4.11, Page 160"
+    },
+    {
+      "id": "BIO-G11-U04-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A geneticist crosses a pea plant displaying the dominant purple flower phenotype with a plant having white flowers (homozygous recessive, pp). The resulting F1 progeny consists of 48 purple-flowered and 52 white-flowered plants. What was the exact genotype of the parental purple-flowered plant, and what genetic procedure was performed?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Homozygous dominant (PP); Monohybrid self-cross"
+        },
+        {
+          "id": "B",
+          "text": "Heterozygous (Pp); Testcross"
+        },
+        {
+          "id": "C",
+          "text": "Homozygous recessive (pp); Reciprocal cross"
+        },
+        {
+          "id": "D",
+          "text": "Incompletely dominant (Pp); Backcross with dominant parent"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Crossing an individual of unknown genotype exhibiting a dominant phenotype with a homozygous recessive individual is a testcross. A 1:1 phenotypic ratio (~50% purple : 50% white) confirms that the dominant parent was heterozygous (Pp), producing gametes P and p in equal proportions.",
+      "sourceReference": "Section 4.5.4, Page 138-139"
+    },
+    {
+      "id": "BIO-G11-U04-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Red-green color blindness is an X-linked recessive disorder in humans. A woman with normal vision whose father was color-blind marries a man with normal vision. What is the probability that their first son will be red-green color-blind?",
+      "options": [
+        {
+          "id": "A",
+          "text": "0%"
+        },
+        {
+          "id": "B",
+          "text": "25%"
+        },
+        {
+          "id": "C",
+          "text": "50%"
+        },
+        {
+          "id": "D",
+          "text": "100%"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The woman inherited her father's mutant X chromosome, making her a carrier (X^B X^b). Her husband has normal vision (X^B Y). When having a male child, the father contributes the Y chromosome and the mother contributes either X^B or X^b with equal likelihood. Thus, there is a 50% (1/2) chance that any son born to them will inherit X^b and be color-blind.",
+      "sourceReference": "Section 4.7.3, Page 147-148"
+    },
+    {
+      "id": "BIO-G11-U04-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Himalayan rabbits carry an allele that causes dark pigmentation on their ears, nose, and paws when raised at moderate temperatures, but develop completely white fur across their entire body when raised at high temperatures. What biological phenomenon does this illustrate?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Genomic imprinting of paternal alleles"
+        },
+        {
+          "id": "B",
+          "text": "Environmental modification of phenotype (phenocopy), where temperature affects gene expression and enzyme activity"
+        },
+        {
+          "id": "C",
+          "text": "Chromosomal deletion resulting from UV radiation"
+        },
+        {
+          "id": "D",
+          "text": "Independent assortment of non-homologous autosomes"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "This demonstrates environmental effects on phenotype and the concept of phenocopy. The tyrosinase enzyme responsible for melanin synthesis in Himalayan rabbits is heat-sensitive; high temperatures inactivate the enzyme, yielding an environmentally induced white phenotype that mimics a genetically white rabbit.",
+      "sourceReference": "Section 4.7.4, Page 148-149"
+    },
+    {
+      "id": "BIO-G11-U04-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "What is the primary genetic danger of prolonged inbreeding within domestic livestock populations, and why do Ethiopian pastoralists traditionally avoid continuous inbreeding of their indigenous cattle breeds?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It induces spontaneous polyploidy and prevents gamete production entirely"
+        },
+        {
+          "id": "B",
+          "text": "It increases homozygosity, which raises the probability of expressing deleterious, harmful recessive alleles and reduces overall biological fitness (inbreeding depression)"
+        },
+        {
+          "id": "C",
+          "text": "It causes extensive DNA methylation that eliminates all phenotypic variations in milk yield"
+        },
+        {
+          "id": "D",
+          "text": "It triggers high rates of reciprocal translocation between sex chromosomes"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Inbreeding involves mating closely related individuals. Over successive generations, inbreeding increases genetic homozygosity, causing previously masked deleterious recessive alleles to be expressed in the homozygous state, leading to inbreeding depression, physical defects, reduced fertility, and weakened disease resistance.",
+      "sourceReference": "Section 4.12, Page 162-163"
+    }
+  ]
 }

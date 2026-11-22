@@ -3,5 +3,411 @@
   "subject": "Biology",
   "unitNumber": 3,
   "unitTitle": "Enzymes",
-  "questions": []
+  "questions": [
+    {
+      "id": "BIO-G11-U03-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Enzymes are described as biological catalysts. By which fundamental thermodynamic mechanism do they accelerate the rate of metabolic chemical reactions?",
+      "options": [
+        {
+          "id": "A",
+          "text": "By increasing the total thermal energy of the reacting substrate molecules"
+        },
+        {
+          "id": "B",
+          "text": "By lowering the activation energy barrier required to convert reactants into products"
+        },
+        {
+          "id": "C",
+          "text": "By shifting the chemical equilibrium permanently toward product formation"
+        },
+        {
+          "id": "D",
+          "text": "By acting as a consumable reactant that donates peptide bonds to products"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Enzymes function as biocatalysts by lowering the activation energy—the minimum energy required for colliding molecules to reach the reactive transition state—allowing reactions to occur rapidly at physiological temperatures without altering reaction equilibrium.",
+      "sourceReference": "Section 3.1 & 3.2.2, Page 80, 85"
+    },
+    {
+      "id": "BIO-G11-U03-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which level of protein structural organization is characterized by local regular folding patterns, such as right-handed alpha-helices and beta-pleated sheets, stabilized predominantly by hydrogen bonds between peptide backbone atoms?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Primary structure"
+        },
+        {
+          "id": "B",
+          "text": "Secondary structure"
+        },
+        {
+          "id": "C",
+          "text": "Tertiary structure"
+        },
+        {
+          "id": "D",
+          "text": "Quaternary structure"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The secondary structure of a protein refers to local conformation patterns (alpha-helices and beta-pleated sheets) formed by repetitive hydrogen bonding between the carbonyl oxygen (C=O) of one amino acid and the amino hydrogen (N-H) of another along the polypeptide backbone.",
+      "sourceReference": "Section 3.3, Page 88-89"
+    },
+    {
+      "id": "BIO-G11-U03-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In the structural classification of conjugated enzymes (holoenzymes), what is the specific term for the inactive, purely protein component that requires a non-protein cofactor to become catalytic?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Apoenzyme"
+        },
+        {
+          "id": "B",
+          "text": "Coenzyme"
+        },
+        {
+          "id": "C",
+          "text": "Prosthetic group"
+        },
+        {
+          "id": "D",
+          "text": "Allosteric activator"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "A complete, catalytically active conjugated enzyme is termed a holoenzyme. It consists of a protein portion called an apoenzyme (which is inactive on its own) and a non-protein cofactor (such as a metal ion or coenzyme).",
+      "sourceReference": "Section 3.6.1, Page 98"
+    },
+    {
+      "id": "BIO-G11-U03-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is the key principle of the 'lock and key' model of enzyme-substrate interaction proposed by Emil Fischer?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The active site undergoes a dynamic structural conformational change only after binding the substrate"
+        },
+        {
+          "id": "B",
+          "text": "The substrate fits into the preformed, rigid complementary shape of the enzyme's active site from the very beginning"
+        },
+        {
+          "id": "C",
+          "text": "The enzyme and substrate interact solely through permanent, irreversible covalent bonds"
+        },
+        {
+          "id": "D",
+          "text": "Substrates bind exclusively to allosteric regulatory sites rather than catalytic sites"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The lock and key model assumes that the active site of the enzyme and the substrate possess complementary, geometric shapes that fit each other precisely from the onset, much like a specific key fits into a rigid keyhole.",
+      "sourceReference": "Section 3.4.1, Page 92"
+    },
+    {
+      "id": "BIO-G11-U03-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In traditional Ethiopian brewing and modern malting, what are the three sequential steps used to process cereal grains such as barley into malt?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Kilning → Fermentation → Distillation"
+        },
+        {
+          "id": "B",
+          "text": "Steeping → Germinating → Kilning"
+        },
+        {
+          "id": "C",
+          "text": "Mashing → Boiling → Pasteurization"
+        },
+        {
+          "id": "D",
+          "text": "Grinding → Decanting → Centrifugation"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The malting of grain involves three essential sequential stages: steeping (soaking the grain in water and aerating it), germinating (allowing grain modification and enzyme activation), and kilning (controlled heating to dry the green malt and halt growth).",
+      "sourceReference": "Section 3.10.1 & 3.10.3, Page 107-108"
+    },
+    {
+      "id": "BIO-G11-U03-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Enzymes demonstrate a colloidal nature in biological solutions. Which characteristic of enzymes is directly attributable to this property?",
+      "options": [
+        {
+          "id": "A",
+          "text": "They have very high molecular weights and exhibit little to no dialysis across semipermeable membranes"
+        },
+        {
+          "id": "B",
+          "text": "They denature instantaneously whenever mixed with non-polar solvents"
+        },
+        {
+          "id": "C",
+          "text": "They remain completely insoluble in neutral aqueous saline solutions"
+        },
+        {
+          "id": "D",
+          "text": "They possess an identical linear amino acid sequence regardless of species"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Because enzymes are high-molecular-weight macromolecular proteins, their solutions behave as colloids; their large molecular dimensions prevent them from diffusing or dialyzing across semipermeable membranes.",
+      "sourceReference": "Section 3.2.1, Page 82-83"
+    },
+    {
+      "id": "BIO-G11-U03-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How does a competitive enzyme inhibitor reduce the initial rate of an enzyme-catalyzed reaction?",
+      "options": [
+        {
+          "id": "A",
+          "text": "By binding covalently to a non-catalytic allosteric site to deform the enzyme"
+        },
+        {
+          "id": "B",
+          "text": "By structurally mimicking the natural substrate and directly competing for occupancy of the active site"
+        },
+        {
+          "id": "C",
+          "text": "By selectively cleaving the peptide bonds of the enzyme's primary polypeptide chain"
+        },
+        {
+          "id": "D",
+          "text": "By binding exclusively to the enzyme-substrate complex after catalysis begins"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "A competitive inhibitor has a chemical structure closely resembling that of the substrate. It binds reversibly to the enzyme's catalytic active site, directly competing with the substrate for access.",
+      "sourceReference": "Section 3.5, Page 96"
+    },
+    {
+      "id": "BIO-G11-U03-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "An enzyme catalyzes the transfer of a methyl or phosphate group from a donor molecule to an acceptor molecule without performing oxidation or reduction. Under which of the six major IUBMB enzyme classes is it categorized?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Oxidoreductases"
+        },
+        {
+          "id": "B",
+          "text": "Transferases"
+        },
+        {
+          "id": "C",
+          "text": "Hydrolases"
+        },
+        {
+          "id": "D",
+          "text": "Lyases"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Transferases are enzymes that catalyze the transfer of functional groups (such as methyl, amino, or phosphate groups) from one chemical compound (donor) to another (acceptor).",
+      "sourceReference": "Section 3.6.2, Page 98-99"
+    },
+    {
+      "id": "BIO-G11-U03-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In metabolic feedback (end-product) inhibition, how does the final accumulated product of a multi-step biochemical pathway regulate its own synthesis?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It acts as an allosteric inhibitor, binding to a regulatory site on the first enzyme of the pathway to suppress its activity"
+        },
+        {
+          "id": "B",
+          "text": "It destroys the mRNA molecules responsible for translating the entire enzyme cascade"
+        },
+        {
+          "id": "C",
+          "text": "It competitively hydrolyzes the substrate of the terminal pathway reaction"
+        },
+        {
+          "id": "D",
+          "text": "It permanently denatures all intermediate enzymes by lowering cytosolic pH"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "In end-product feedback inhibition, when the terminal product reaches high concentrations, it binds reversibly to the allosteric (regulatory) site of the initial committed enzyme in the pathway, changing the active site conformation and halting excess production.",
+      "sourceReference": "Section 3.7.1, Page 101-102"
+    },
+    {
+      "id": "BIO-G11-U03-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In the Michaelis-Menten kinetic model of enzymatic reactions, what does the Michaelis constant (Km) specifically represent?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The maximum velocity (Vmax) achieved when all enzyme active sites are completely saturated"
+        },
+        {
+          "id": "B",
+          "text": "The substrate concentration at which the reaction velocity reaches exactly half of its maximum value (1/2 Vmax)"
+        },
+        {
+          "id": "C",
+          "text": "The number of substrate molecules converted into product per enzyme molecule per second"
+        },
+        {
+          "id": "D",
+          "text": "The optimal pH value at which the enzyme exhibits zero denaturation"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The Michaelis constant (Km) is defined as the substrate concentration at which the initial reaction velocity (V) is equal to half of the maximal velocity (1/2 Vmax). It provides an inverse measure of the enzyme's affinity for its substrate.",
+      "sourceReference": "Section 3.8, Page 103"
+    },
+    {
+      "id": "BIO-G11-U03-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which commercial enzyme is widely utilized in the dairy industry to coagulate milk protein (casein) during the manufacture of cheese?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Pectinase"
+        },
+        {
+          "id": "B",
+          "text": "Cellulase"
+        },
+        {
+          "id": "C",
+          "text": "Rennin (Chymosin)"
+        },
+        {
+          "id": "D",
+          "text": "Ligninase"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Rennin (chymosin) is a proteolytic enzyme historically extracted from the stomachs of young ruminants (and now produced microbially) that hydrolyzes milk kappa-casein to form curds during commercial cheese making.",
+      "sourceReference": "Section 3.9.1, Page 105 (Table 3.3)"
+    },
+    {
+      "id": "BIO-G11-U03-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "How does the 'induced fit' model of enzyme catalysis, formulated by Daniel Koshland, refine and improve upon the classical 'lock and key' model?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It demonstrates that the active site is completely flexible and non-selective, allowing any organic molecule to bind"
+        },
+        {
+          "id": "B",
+          "text": "It posits that substrate binding induces conformational adjustments in the active site that place strain on specific substrate bonds, facilitating transition state formation"
+        },
+        {
+          "id": "C",
+          "text": "It proves that catalysis proceeds exclusively without the formation of an enzyme-substrate complex"
+        },
+        {
+          "id": "D",
+          "text": "It establishes that enzymes change their primary amino acid sequence during each catalytic cycle"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The induced fit model explains that the enzyme's active site is not a completely rigid template. Rather, substrate binding induces precise conformational changes in the enzyme that bring catalytic amino acid side chains into optimal alignment and strain substrate bonds, stabilizing the transition state.",
+      "sourceReference": "Section 3.4.1, Page 92-93"
+    },
+    {
+      "id": "BIO-G11-U03-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "An enzymatic assay is performed in the presence of a reversible competitive inhibitor. How are the maximum velocity (Vmax) and the apparent Michaelis constant (Km) affected in comparison to the uninhibited reaction?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Vmax is significantly reduced, while Km remains unchanged"
+        },
+        {
+          "id": "B",
+          "text": "Km increases (reflecting lower apparent affinity), while Vmax remains unchanged because sufficiently high substrate concentration overcomes the inhibition"
+        },
+        {
+          "id": "C",
+          "text": "Both Vmax and Km decrease by an identical mathematical factor"
+        },
+        {
+          "id": "D",
+          "text": "Both Vmax and Km increase proportionally due to allosteric activation"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Because competitive inhibitors compete directly with substrate for active sites, adding excess substrate eventually displaces the inhibitor, allowing the reaction to attain the original Vmax. However, reaching 1/2 Vmax requires more substrate, resulting in an increased apparent Km.",
+      "sourceReference": "Section 3.5 & 3.8, Page 96, 103"
+    },
+    {
+      "id": "BIO-G11-U03-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Which combination of non-covalent interactions and covalent linkages is primarily responsible for maintaining the unique, biologically active three-dimensional tertiary conformation of globular protein enzymes?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Peptide bonds exclusively along the amino acid backbone"
+        },
+        {
+          "id": "B",
+          "text": "Hydrophobic interactions, ionic bonds (salt bridges), hydrogen bonds between R-groups, and covalent disulfide bridges (-S-S-)"
+        },
+        {
+          "id": "C",
+          "text": "Phosphodiester linkages between ribose sugars and nitrogenous bases"
+        },
+        {
+          "id": "D",
+          "text": "Ester linkages formed between fatty acids and glycerol molecules"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Tertiary protein structure is determined by interactions between amino acid side-chain (R) groups: hydrophobic interactions (internal clustering of non-polar groups), ionic bonds between charged groups, hydrogen bonds between polar R-groups, and covalent disulfide bridges between cysteine residues.",
+      "sourceReference": "Section 3.3, Page 89-90"
+    },
+    {
+      "id": "BIO-G11-U03-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "During the traditional preparation of Ethiopian malt (Bikil) for brewing Tella, why is controlled barley germination allowed to proceed for several days before being halted by heat drying (kilning)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To allow seedling roots to completely consume all grain carbohydrates into carbon dioxide"
+        },
+        {
+          "id": "B",
+          "text": "To mobilize and synthesize hydrolytic enzymes (alpha- and beta-amylases) that convert insoluble grain starches into fermentable sugars for subsequent yeast fermentation"
+        },
+        {
+          "id": "C",
+          "text": "To eliminate all naturally occurring yeast strains so that bacteria perform lactic fermentation"
+        },
+        {
+          "id": "D",
+          "text": "To hydrolyze cellulose fibers into toxic polyphenols that act as natural preservatives"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Controlled germination mobilizes hydrolytic enzymes, notably alpha- and beta-amylase and proteases. These enzymes break down stored endosperm starch into maltose, glucose, and maltodextrins, which yeast (Saccharomyces) uses as fermentable sugar substrates to produce alcohol and carbon dioxide during Tella brewing.",
+      "sourceReference": "Section 3.10.1 & 3.10.2, Page 107-108"
+    }
+  ]
 }

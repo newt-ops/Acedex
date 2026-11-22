@@ -3,5 +3,411 @@
   "subject": "Biology",
   "unitNumber": 6,
   "unitTitle": "Ecology",
-  "questions": []
+  "questions": [
+    {
+      "id": "BIO-G09-U06-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In ecological terminology, what is the term used to describe both the physical place where an organism lives and the functional role or 'job' it performs in its community?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Biosphere"
+        },
+        {
+          "id": "B",
+          "text": "Habitat"
+        },
+        {
+          "id": "C",
+          "text": "Niche"
+        },
+        {
+          "id": "D",
+          "text": "Biome"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "While a habitat is merely the physical location where an organism resides, an ecological niche represents the combination of the organism's habitat and the functional role or job it performs within that ecosystem.",
+      "sourceReference": "Section 6.1.1, Page 140"
+    },
+    {
+      "id": "BIO-G09-U06-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which ecological level of organization is defined as a group of interbreeding individuals belonging to the same species that inhabit the same geographical area at the same time?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Biological community"
+        },
+        {
+          "id": "B",
+          "text": "Population"
+        },
+        {
+          "id": "C",
+          "text": "Ecosystem"
+        },
+        {
+          "id": "D",
+          "text": "Biome"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "A population is specifically defined as a group of interbreeding organisms of the same species living together in a defined area at the same time and competing for shared resources.",
+      "sourceReference": "Section 6.1.3, Page 143"
+    },
+    {
+      "id": "BIO-G09-U06-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which terrestrial biome is characterized by extreme cold, low annual precipitation, dwarf shrubs, mosses, and a permanently frozen subsoil layer known as permafrost?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Boreal forest (Taiga)"
+        },
+        {
+          "id": "B",
+          "text": "Temperate grassland"
+        },
+        {
+          "id": "C",
+          "text": "Tundra"
+        },
+        {
+          "id": "D",
+          "text": "Savanna"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The tundra biome, covering Arctic and high alpine zones, is characterized by herbaceous vegetation, lichens, low temperatures, and a permanently frozen subsoil layer called permafrost that restricts plant root penetration.",
+      "sourceReference": "Section 6.1.5, Page 150-151"
+    },
+    {
+      "id": "BIO-G09-U06-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "When primary ecological succession begins on newly exposed bare volcanic rock or glacial moraines, which organisms typically act as the initial macroscopic pioneer photosynthesizers?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Deep-rooted hardwood trees"
+        },
+        {
+          "id": "B",
+          "text": "Lichens and mosses"
+        },
+        {
+          "id": "C",
+          "text": "Perennial tallgrasses"
+        },
+        {
+          "id": "D",
+          "text": "Woody coniferous shrubs"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In primary succession on barren rock, windblown spores of lichens and mosses establish first as pioneer species, breaking down rock and accumulating organic matter to form the initial thin layer of soil.",
+      "sourceReference": "Section 6.1.6, Page 155-156"
+    },
+    {
+      "id": "BIO-G09-U06-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What type of symbiotic interaction occurs when two different species interact in a close biological association where both species derive mutual survival or nutritional benefits (+/+)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Mutualism"
+        },
+        {
+          "id": "B",
+          "text": "Commensalism"
+        },
+        {
+          "id": "C",
+          "text": "Parasitism"
+        },
+        {
+          "id": "D",
+          "text": "Herbivory"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Mutualism is an interspecific interaction in which individuals of both participating species gain benefits (+/+), such as pollinators receiving nectar while facilitating plant reproduction.",
+      "sourceReference": "Section 6.2, Page 159"
+    },
+    {
+      "id": "BIO-G09-U06-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In what way does the life cycle of common frogs reduce intense intraspecific competition for food resources among members of the same population?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Adult frogs hibernate during the feeding season of the tadpoles"
+        },
+        {
+          "id": "B",
+          "text": "Tadpoles feed primarily on aquatic algae, whereas adult frogs feed on terrestrial insects"
+        },
+        {
+          "id": "C",
+          "text": "Tadpoles migrate upstream to marine estuaries while adult frogs remain in ponds"
+        },
+        {
+          "id": "D",
+          "text": "Adult frogs feed solely on tadpoles through density-dependent cannibalism"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "To minimize competition for food among individuals of the same species, frogs undergo metamorphosis where aquatic tadpoles possess herbivorous diets (feeding on algae) while adult frogs are carnivorous predators (feeding on insects).",
+      "sourceReference": "Section 6.1.3, Page 143"
+    },
+    {
+      "id": "BIO-G09-U06-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How does dissolved oxygen concentration typically vary in freshwater aquatic ecosystems, and which physical conditions provide the highest oxygen availability for fish?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Warm, stagnant water has higher dissolved oxygen than cold, turbulent water"
+        },
+        {
+          "id": "B",
+          "text": "Cold, fast-moving turbulent water maintains a significantly higher dissolved oxygen concentration than warm or stagnant water"
+        },
+        {
+          "id": "C",
+          "text": "Deep aphotic zones contain more dissolved oxygen than wind-agitated surface waters"
+        },
+        {
+          "id": "D",
+          "text": "High water salinity directly increases the solubility of oxygen in river headwaters"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Gases dissolve more readily in cold water than in warm water, and physical turbulence from fast flow constantly aerates the stream; hence, cold, fast-moving headwaters possess much higher dissolved oxygen levels than warm, stagnant waters.",
+      "sourceReference": "Section 6.1.2, Page 141"
+    },
+    {
+      "id": "BIO-G09-U06-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What is the fundamental ecological difference between primary succession and secondary succession?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Primary succession only occurs in marine biomes, whereas secondary succession occurs on land"
+        },
+        {
+          "id": "B",
+          "text": "Primary succession begins in virtually lifeless areas lacking pre-existing soil, whereas secondary succession occurs where a disturbance left the soil intact"
+        },
+        {
+          "id": "C",
+          "text": "Primary succession produces a climax community, whereas secondary succession never reaches a stable state"
+        },
+        {
+          "id": "D",
+          "text": "Primary succession is driven exclusively by human clearing, whereas secondary succession is initiated only by volcanic eruptions"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Primary succession begins on completely barren substrates without pre-existing soil (such as new lava or glacial moraines), whereas secondary succession occurs after a disturbance (like fire or agricultural abandonment) that cleared the vegetation but left intact soil behind.",
+      "sourceReference": "Section 6.1.6, Page 155-156"
+    },
+    {
+      "id": "BIO-G09-U06-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "African savannas experience warm temperatures year-round with an extended dry season lasting up to eight or nine months. Which adaptations allow dominant plant species to thrive in this biome?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Developing needle-like leaves that retain snow cover and resist acidic soils"
+        },
+        {
+          "id": "B",
+          "text": "Broad evergreen leaves with shallow root systems that require continuous year-round rain"
+        },
+        {
+          "id": "C",
+          "text": "Tolerance to seasonal drought, rapid growth following rains, and adaptations to survive dry-season ground fires"
+        },
+        {
+          "id": "D",
+          "text": "Complete absence of stomata to prevent any transpiration of water"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Savanna grasses and scattered trees are specifically adapted to endure long seasonal droughts, grow rapidly when seasonal rains arrive, and withstand regular dry-season brush fires.",
+      "sourceReference": "Section 6.1.5, Page 147-148"
+    },
+    {
+      "id": "BIO-G09-U06-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Cattle egrets often forage beside grazing livestock, capturing insects flushed out of the grass as the cattle move. If the birds benefit by securing food and the grazing mammals are essentially unaffected, what ecological relationship does this represent?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Commensalism (+/0)"
+        },
+        {
+          "id": "B",
+          "text": "Mutualism (+/+)"
+        },
+        {
+          "id": "C",
+          "text": "Interspecific competition (-/-)"
+        },
+        {
+          "id": "D",
+          "text": "Parasitism (+/-)"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Commensalism is an interspecific interaction in which one organism benefits while the other is neither helped nor harmed (+/0). The egrets feed more efficiently on flushed insects, while the grazing livestock are largely unaffected.",
+      "sourceReference": "Section 6.2, Page 160"
+    },
+    {
+      "id": "BIO-G09-U06-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In the vertical stratification of aquatic biomes, how is the photic zone distinguished from the aphotic zone?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The photic zone is entirely freshwater, whereas the aphotic zone is strictly marine"
+        },
+        {
+          "id": "B",
+          "text": "The photic zone receives sufficient light penetration for photosynthesis to occur, whereas the aphotic zone receives little to no light"
+        },
+        {
+          "id": "C",
+          "text": "The photic zone consists solely of benthic sediments, whereas the aphotic zone represents open surface water"
+        },
+        {
+          "id": "D",
+          "text": "The photic zone has zero dissolved oxygen, whereas the aphotic zone is saturated with oxygen"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The photic zone is the upper water layer that receives sufficient sunlight penetration to drive photosynthetic primary production, whereas the deeper aphotic zone lacks sufficient light for photosynthesis.",
+      "sourceReference": "Section 6.1.5, Page 152"
+    },
+    {
+      "id": "BIO-G09-U06-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Agricultural runoff carrying synthetic fertilizers rich in nitrogen and phosphorus enters a freshwater lake. Which sequence of ecological events accurately explains why this causes massive fish mortality?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Fertilizers poison phytoplankton directly → water transparency increases → fish freeze due to lack of surface insulation"
+        },
+        {
+          "id": "B",
+          "text": "Excess nutrients trigger an algal bloom → dying algae are decomposed by aerobic bacteria → dissolved oxygen is depleted → fish suffocate"
+        },
+        {
+          "id": "C",
+          "text": "Nutrient enrichment lowers lake salinity → aquatic plants undergo plasmolysis → toxic methane gas displaces carbon dioxide"
+        },
+        {
+          "id": "D",
+          "text": "Excess minerals trigger immediate evaporation of lake water → benthic predators consume all littoral fish"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Eutrophication occurs when excess nitrogen and phosphorus stimulate rapid growth of algae (algal blooms). When these short-lived algae die, decomposer bacteria consume enormous amounts of dissolved oxygen during aerobic decomposition, causing severe hypoxia that suffocates fish.",
+      "sourceReference": "Section 6.1.5, Page 152"
+    },
+    {
+      "id": "BIO-G09-U06-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "As a river travels along its continuum from high-altitude mountainous headwaters down toward its mouth at the sea, which physical and chemical transitions typically occur?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The water becomes colder, flow velocity accelerates, and sediment turbidity drops to zero"
+        },
+        {
+          "id": "B",
+          "text": "The channel narrows, dissolved oxygen reaches maximum saturation, and mineral nutrients decline"
+        },
+        {
+          "id": "C",
+          "text": "Water temperature rises, sediment turbidity increases, and the concentration of dissolved nutrients and salts rises"
+        },
+        {
+          "id": "D",
+          "text": "Photosynthetic phytoplankton disappear completely due to toxic atmospheric wind shear"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Headwaters are typically cold, clear, swift, turbulent, and oxygen-rich. As tributaries join downstream to form wide lowland rivers, the water warms, becomes more turbid from suspended sediment, and accumulates higher concentrations of dissolved salts and nutrients.",
+      "sourceReference": "Section 6.1.5, Page 153-154"
+    },
+    {
+      "id": "BIO-G09-U06-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "An estuary is a coastal transition zone where a freshwater river meets the open sea. Which physical property dictates the water layering inside an estuarine channel during tidal cycles?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Higher-density seawater occupies the bottom of the channel, while lower-density river water flows above it at the surface"
+        },
+        {
+          "id": "B",
+          "text": "Freshwater sinks rapidly to the channel floor because dissolved mineral salts make it denser than marine water"
+        },
+        {
+          "id": "C",
+          "text": "Complete vertical mixing eliminates all salinity gradients regardless of rising or falling tides"
+        },
+        {
+          "id": "D",
+          "text": "River water remains boiling hot, pushing cool marine tides back out into the open oceanic abyss"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Because saline marine water has a higher salt content and density than river water, incoming seawater forms a dense wedge at the bottom of the estuarine channel, while lower-density freshwater flows over it along the surface.",
+      "sourceReference": "Section 6.1.5, Page 154"
+    },
+    {
+      "id": "BIO-G09-U06-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "In a mycorrhizal mutualism between plant roots and soil fungi, both partners incur energetic costs and receive vital biological resources. What specific exchange takes place between them?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The plant provides atmospheric oxygen to the fungus, while the fungus supplies chlorophyll for root photosynthesis"
+        },
+        {
+          "id": "B",
+          "text": "The plant transfers photosynthetically produced carbohydrates to the fungus, while the fungus delivers limiting soil nutrients like phosphorus to the plant"
+        },
+        {
+          "id": "C",
+          "text": "The fungus supplies lipid bilayers to cell walls, while the plant secretes chitin to protect fungal hyphae from soil bacteria"
+        },
+        {
+          "id": "D",
+          "text": "The fungus conducts active transport of glucose into the soil, while the plant digests fungal spores internally"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In mycorrhizae, the association is mutually beneficial but balanced: the host plant supplies organic carbohydrates (sugars) produced through photosynthesis to the heterotrophic fungus, and the extensive fungal mycelium absorbs and transfers limiting inorganic nutrients (especially phosphorus) from the soil to the plant.",
+      "sourceReference": "Section 6.2, Page 159"
+    }
+  ]
 }

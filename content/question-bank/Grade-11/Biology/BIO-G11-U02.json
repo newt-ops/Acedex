@@ -3,5 +3,411 @@
   "subject": "Biology",
   "unitNumber": 2,
   "unitTitle": "Animals",
-  "questions": []
+  "questions": [
+    {
+      "id": "BIO-G11-U02-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which structural feature fundamentally distinguishes vertebrate animals from all invertebrate animal groups?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Possession of bilateral body symmetry"
+        },
+        {
+          "id": "B",
+          "text": "Presence of an internal vertebral column (backbone)"
+        },
+        {
+          "id": "C",
+          "text": "Ability to reproduce sexually through gametes"
+        },
+        {
+          "id": "D",
+          "text": "Possession of an external chitinous exoskeleton"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Animals are classified into two major categories based on skeletal anatomy: invertebrates, which lack a backbone or vertebral column, and vertebrates, which possess an internal skeleton with cartilage and a vertebral column (backbone).",
+      "sourceReference": "Section 2.2, Page 23-24"
+    },
+    {
+      "id": "BIO-G11-U02-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is the correct sequential order of the four developmental stages in the complete metamorphosis of insects such as the honeybee?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Egg → Nymph → Pupa → Adult"
+        },
+        {
+          "id": "B",
+          "text": "Egg → Larva → Pupa → Adult"
+        },
+        {
+          "id": "C",
+          "text": "Egg → Larva → Nymph → Adult"
+        },
+        {
+          "id": "D",
+          "text": "Larva → Pupa → Nymph → Adult"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Complete metamorphosis in insects consists of four distinct developmental stages: egg, feeding larva, inactive pupa, and reproductive adult. In contrast, incomplete metamorphosis (e.g., in grasshoppers) has three stages: egg, nymph, and adult.",
+      "sourceReference": "Section 2.3.3, Page 29"
+    },
+    {
+      "id": "BIO-G11-U02-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In the female bird reproductive tract, in which specialized region of the oviduct is the albumen (egg white) primarily secreted and deposited around the yolk?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Infundibulum"
+        },
+        {
+          "id": "B",
+          "text": "Isthmus"
+        },
+        {
+          "id": "C",
+          "text": "Magnum"
+        },
+        {
+          "id": "D",
+          "text": "Shell gland (Uterus)"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The magnum is the longest section of the avian oviduct; its primary physiological function is the secretion and deposition of nearly all the albumen (egg white) around the descending yolk.",
+      "sourceReference": "Section 2.3.6, Page 35 (Table 2.1)"
+    },
+    {
+      "id": "BIO-G11-U02-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which commercial natural resin, widely used in inks, polishes, sealing waxes, and wood finishes, is secreted by cultured scale insects of the species Laccifer lacca?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Shellac"
+        },
+        {
+          "id": "B",
+          "text": "Cochineal"
+        },
+        {
+          "id": "C",
+          "text": "Cantharidin"
+        },
+        {
+          "id": "D",
+          "text": "Tannic acid"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Shellac is a natural commercial resin secreted by lac insects, commercially cultured from Laccifer lacca. It is utilized in the manufacture of varnishes, polishes, printing inks, and sealing wax.",
+      "sourceReference": "Section 2.4.1, Page 45"
+    },
+    {
+      "id": "BIO-G11-U02-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "When circulating blood glucose levels drop below the normal physiological set point, which pancreatic hormone is released to stimulate the breakdown of glycogen into glucose in the liver?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Insulin"
+        },
+        {
+          "id": "B",
+          "text": "Glucagon"
+        },
+        {
+          "id": "C",
+          "text": "Thyroxine"
+        },
+        {
+          "id": "D",
+          "text": "Antidiuretic hormone"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "When blood sugar concentration is low, alpha cells of the pancreas release glucagon. Glucagon acts upon liver hepatocytes to stimulate glycogenolysis (the hydrolysis of glycogen to glucose), raising blood glucose back to normal.",
+      "sourceReference": "Section 2.6.3, Page 62-63"
+    },
+    {
+      "id": "BIO-G11-U02-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "During embryonic development in animals, what is the critical process called in which the hollow blastula undergoes cell division and rearrangement to produce distinct embryonic germ layers?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Cleavage"
+        },
+        {
+          "id": "B",
+          "text": "Organogenesis"
+        },
+        {
+          "id": "C",
+          "text": "Gastrulation"
+        },
+        {
+          "id": "D",
+          "text": "Parthenogenesis"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Following cleavage and blastula formation, the embryo undergoes gastrulation—a complex rearrangement and folding of cells that forms the gastrula and establishes the primary embryonic germ layers (ectoderm, mesoderm, and endoderm).",
+      "sourceReference": "Section 2.3.2, Page 27-28"
+    },
+    {
+      "id": "BIO-G11-U02-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which reproductive adaptation enables reptiles, such as crocodiles, to reproduce successfully on dry land, distinguishing them from amphibians like frogs?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Relying on external fertilization in terrestrial puddles"
+        },
+        {
+          "id": "B",
+          "text": "Producing gelatinous eggs that absorb ambient humidity from soil"
+        },
+        {
+          "id": "C",
+          "text": "Laying shelled amniotic eggs containing protective fluid-filled membranes"
+        },
+        {
+          "id": "D",
+          "text": "Undergoing viviparous embryonic development supported by a maternal placenta"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Unlike frogs whose eggs lack shells and must be laid in water to avoid desiccation, reptiles produce amniotic eggs enclosed in leathery or calcareous shells. The internal amnion creates a private fluid-filled aquatic capsule that protects the embryo on land.",
+      "sourceReference": "Section 2.3.4 & 2.3.5, Page 31, 33"
+    },
+    {
+      "id": "BIO-G11-U02-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which of the following pairs correctly matches a beneficial insect predator with the specific agricultural pest it regulates in biological pest control?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Cheilomenes (ladybird beetle) — feeds on cotton aphids and scale worms"
+        },
+        {
+          "id": "B",
+          "text": "Sitophilus (rice weevil) — destroys fungal spores in stored wheat"
+        },
+        {
+          "id": "C",
+          "text": "Laccifer (lac insect) — feeds on parasitic caterpillars of maize"
+        },
+        {
+          "id": "D",
+          "text": "Glossina (tsetse fly) — eliminates mosquito larvae in stagnant water"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "In biological pest control, Cheilomenes (a ladybird beetle) is a beneficial predatory insect that feeds on crop-damaging aphids and scale insects, helping to control pest populations without synthetic insecticides.",
+      "sourceReference": "Section 2.4.1, Page 44"
+    },
+    {
+      "id": "BIO-G11-U02-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In B.F. Skinner's experimental studies on operant conditioning in animals, environmental responses that increase the probability of a specific behavior being repeated are termed:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Punishers"
+        },
+        {
+          "id": "B",
+          "text": "Neutral operants"
+        },
+        {
+          "id": "C",
+          "text": "Reinforcers"
+        },
+        {
+          "id": "D",
+          "text": "Reflexes"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "In operant conditioning, reinforcers are environmental outcomes (either positive or negative) that strengthen a behavioral pattern and increase the probability that the organism will repeat the action.",
+      "sourceReference": "Section 2.5.1, Page 50"
+    },
+    {
+      "id": "BIO-G11-U02-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "The Ethiopian wolf (Canis simensis) lives and hunts in packs in Afro-alpine habitats. How do male and female members of a pack primarily defend their home range and signal territorial boundaries to neighboring packs?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Building large rock mounds around the borders of their hunting zone"
+        },
+        {
+          "id": "B",
+          "text": "Engaging in continuous lethal physical combat with adjacent packs every morning"
+        },
+        {
+          "id": "C",
+          "text": "Marking boundary vegetation with urine containing chemical pheromones"
+        },
+        {
+          "id": "D",
+          "text": "Emitting continuous low-frequency seismic thumps by pounding their paws"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Territoriality involves protecting an area's resources from conspecifics. Ethiopian wolves mark and maintain their territory borders by depositing urine containing specialized chemical cues (pheromones), which signals neighboring packs to stay away without costly fighting.",
+      "sourceReference": "Section 2.5.2, Page 53-54"
+    },
+    {
+      "id": "BIO-G11-U02-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "When a human experiences severe dehydration due to heavy physical exertion in a hot climate, how do the brain and kidneys coordinate osmoregulation to conserve body water?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The pituitary gland secretes more antidiuretic hormone (ADH), stimulating the kidneys to reabsorb water and produce a low volume of concentrated urine"
+        },
+        {
+          "id": "B",
+          "text": "The pituitary halts ADH secretion, allowing the kidneys to excrete large volumes of dilute urine"
+        },
+        {
+          "id": "C",
+          "text": "The kidneys shut down all nephron filtration, diverting waste products to be excreted through sweat glands"
+        },
+        {
+          "id": "D",
+          "text": "The adrenal cortex secretes insulin to lower blood osmolarity by precipitating sodium salts"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "When water content in the blood is low, osmoreceptors in the hypothalamus signal the posterior pituitary to secrete more antidiuretic hormone (ADH). ADH increases water permeability in collecting ducts, maximizing water reabsorption and yielding a small volume of hypertonic (concentrated) urine.",
+      "sourceReference": "Section 2.6.2, Page 61-62"
+    },
+    {
+      "id": "BIO-G11-U02-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Prior to the breeding and egg-laying season, how does the female bird physically modify her ventral breast area to ensure efficient thermal transmission to incubating eggs?",
+      "options": [
+        {
+          "id": "A",
+          "text": "She grows an extra layer of dense down feathers that trap metabolic body heat"
+        },
+        {
+          "id": "B",
+          "text": "She develops a brood patch—a bare area of skin with densely packed blood vessels that transfers warmth directly to the eggs"
+        },
+        {
+          "id": "C",
+          "text": "She secretes warm subcutaneous lipids onto her skin that act as a thermal liquid blanket"
+        },
+        {
+          "id": "D",
+          "text": "She rubs abrasive soil onto her feathers to generate continuous frictional static heat"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "When the breeding season approaches, birds develop a brood patch: an area of bare skin on the breast where feathers drop out and blood vessels become densely concentrated. This vascularized surface allows direct and efficient conduction of maternal body heat into the clutches during incubation.",
+      "sourceReference": "Section 2.3.6, Page 37"
+    },
+    {
+      "id": "BIO-G11-U02-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Why does a small mammal, such as a pygmy shrew or rabbit, exhibit a much higher rate of heat loss per unit of body mass in cold environments compared to a large mammal, such as an elephant?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Smaller animals possess a higher surface-area-to-volume ratio, causing body heat to dissipate more rapidly into the surroundings"
+        },
+        {
+          "id": "B",
+          "text": "Smaller animals possess a lower surface-area-to-volume ratio, preventing them from generating metabolic heat via shivering"
+        },
+        {
+          "id": "C",
+          "text": "Large mammals have thinner subcutaneous adipose layers that accelerate cutaneous vasodilation"
+        },
+        {
+          "id": "D",
+          "text": "Small mammals lack internal autonomic thermoreceptors and rely solely on behavioral estivation"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "As body size decreases, volume drops much faster than surface area, giving small animals a significantly higher surface-area-to-volume (SA:V) ratio. Because heat exchange occurs across body surfaces, smaller animals lose heat to the environment at a much faster rate per gram of tissue than large animals.",
+      "sourceReference": "Section 2.6.1, Page 59-60"
+    },
+    {
+      "id": "BIO-G11-U02-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "When a homeothermic animal is exposed to severe ambient cold, which coordinated physiological negative feedback loop is triggered by the hypothalamus to maintain core temperature?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Cutaneous arterioles dilate (vasodilation) and diaphoresis increases to accelerate radiant heat exchange"
+        },
+        {
+          "id": "B",
+          "text": "Cutaneous arterioles constrict (vasoconstriction) to minimize heat loss, sweat glands are deactivated, and involuntary skeletal muscle contractions (shivering) generate metabolic heat"
+        },
+        {
+          "id": "C",
+          "text": "Blood vessels to peripheral capillaries open widely, sweat rate doubles, and hepatic gluconeogenesis ceases"
+        },
+        {
+          "id": "D",
+          "text": "Thyroid hormone release drops to zero, smooth muscles in hollow organs relax, and panting begins"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In response to falling core temperature, the hypothalamus triggers vasoconstriction of skin arterioles to reduce cutaneous blood flow and prevent heat radiation, inhibits sweat secretion, and activates shivering (rapid involuntary contractions of skeletal muscles), which consumes ATP and releases heat through cellular respiration.",
+      "sourceReference": "Section 2.6.1 & 2.6.4, Page 57-58, 64-65"
+    },
+    {
+      "id": "BIO-G11-U02-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Newly hatched sea turtle hatchlings crawl toward the ocean immediately upon emerging from their underground sand nest, and spiders spin orb webs with geometrical precision without prior trial-and-error experience. Which category of animal behavior does this represent, and what is its defining characteristic?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Operant conditioning, because the behavior is reinforced by repeated environmental punishments"
+        },
+        {
+          "id": "B",
+          "text": "Innate (instinctive) behavior, because it is inborn, genetically programmed, species-specific, and performed without prior learning"
+        },
+        {
+          "id": "C",
+          "text": "Habituation, because the animal ceases responding after continuous exposure to maternal cues"
+        },
+        {
+          "id": "D",
+          "text": "Insight learning, because the organism reasons through complex mechanical problems before acting"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Innate or inherent behaviors (such as web-making in spiders, nest-building in birds, and hatchling migration) are genetically determined, inborn traits that are characteristic of a species and executed completely and correctly without requiring prior practice, conditioning, or individual experience.",
+      "sourceReference": "Section 2.5.1, Page 48-49"
+    }
+  ]
 }

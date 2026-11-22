@@ -3,5 +3,411 @@
   "subject": "Biology",
   "unitNumber": 1,
   "unitTitle": "Application of Biology",
-  "questions": []
+  "questions": [
+    {
+      "id": "BIO-G12-U01-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "According to the United Nations' Committee on World Food Security, under which condition is a community officially recognized as having achieved food security?",
+      "options": [
+        {
+          "id": "A",
+          "text": "When the government provides synthetic chemical fertilizers free of charge to rural farmers"
+        },
+        {
+          "id": "B",
+          "text": "When all people at all times have physical, social, and economic access to sufficient, safe, and nutritious food meeting their dietary preferences for an active and healthy life"
+        },
+        {
+          "id": "C",
+          "text": "When food exports exceed food imports by at least fifty percent annually"
+        },
+        {
+          "id": "D",
+          "text": "When local markets sell only processed and genetically engineered staple grains"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Food security, as defined by the UN Committee on World Food Security, exists when all people, at all times, have physical, social, and economic access to sufficient, safe, and nutritious food that meets their food preferences and dietary needs for an active and healthy life.",
+      "sourceReference": "Section 1.2, Page 11"
+    },
+    {
+      "id": "BIO-G12-U01-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In single-cell protein (SCP) biotechnology, which microorganism is cultured on a mass commercial scale to manufacture the high-protein animal feed known as Pruteen?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Fusarium venenatum"
+        },
+        {
+          "id": "B",
+          "text": "Methylophilus methylotrophus"
+        },
+        {
+          "id": "C",
+          "text": "Saccharomyces cerevisiae"
+        },
+        {
+          "id": "D",
+          "text": "Aspergillus niger"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Pruteen is an animal feed supplement rich in single-cell protein produced by the mass culture of the bacterium Methylophilus methylotrophus using petroleum by-products or agricultural wastes, whereas Fusarium venenatum produces mycoprotein for human consumption.",
+      "sourceReference": "Section 1.4(i), Page 15"
+    },
+    {
+      "id": "BIO-G12-U01-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which chemolithotrophic acidophile bacterium is widely utilized in biohydrometallurgy (microbiological mining) to leach water-soluble copper from low-grade copper sulfide ores?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Thiobacillus ferrooxidans"
+        },
+        {
+          "id": "B",
+          "text": "Bacillus thuringiensis"
+        },
+        {
+          "id": "C",
+          "text": "Agrobacterium tumefaciens"
+        },
+        {
+          "id": "D",
+          "text": "Streptococcus thermophilus"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Thiobacillus ferrooxidans is a chemolithotrophic and acidophilic bacterium that obtains metabolic energy by oxidizing the insoluble sulfur in copper sulfide ores to soluble sulfate, releasing the pure metal into solution so it can be recovered.",
+      "sourceReference": "Section 1.6(V), Page 24-25"
+    },
+    {
+      "id": "BIO-G12-U01-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In the industrial processing and packaging of commercial fruit drinks, which enzyme is added to break down cell wall polysaccharides, maximizing juice yield and clarifying cloudy juices?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Protease"
+        },
+        {
+          "id": "B",
+          "text": "Lipase"
+        },
+        {
+          "id": "C",
+          "text": "Pectinase"
+        },
+        {
+          "id": "D",
+          "text": "DNA ligase"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Pectinases hydrolyze plant pectins, which trap liquid and cause cloudiness. In the beverage industry, pectinases are added to fruit pulp to maximize liquid extraction and clarify fruit juices.",
+      "sourceReference": "Section 1.4(Vii), Page 31"
+    },
+    {
+      "id": "BIO-G12-U01-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In agricultural genetic engineering, what natural bacterial vector is commonly employed to introduce foreign transgenes, such as herbicide resistance, into host plant genomes?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Bacteriophage T4"
+        },
+        {
+          "id": "B",
+          "text": "Tumour-inducing (Ti) plasmid of Agrobacterium tumefaciens"
+        },
+        {
+          "id": "C",
+          "text": "Retroviral envelope of HIV"
+        },
+        {
+          "id": "D",
+          "text": "Endospore capsule of Clostridium tetani"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The tumour-inducing (Ti) plasmid found in the soil bacterium Agrobacterium tumefaciens is naturally adapted to transfer its DNA into plant nuclei, making it the primary cloning vector for inserting foreign genes (transgenes) into plant crops.",
+      "sourceReference": "Section 1.4(Viii), Page 32-33"
+    },
+    {
+      "id": "BIO-G12-U01-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "During the commercial manufacture of beer, what is the primary biochemical objective of malting cereal grains (barley) and subsequently mixing crushed malt with hot water (mashing)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To pasteurize the grain and remove all naturally occurring lactic acid bacteria"
+        },
+        {
+          "id": "B",
+          "text": "To stimulate the synthesis of endogenous starch-digesting enzymes that hydrolyze insoluble grain starches into fermentable sugars for yeast"
+        },
+        {
+          "id": "C",
+          "text": "To directly convert maltose into high-proof distilled spirits without requiring anaerobic fermentation"
+        },
+        {
+          "id": "D",
+          "text": "To hydrolyze cellulose fibers into insoluble toxic polyphenols that act as clarifying agents"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Malting partially germinates cereal grain to synthesize hydrolytic enzymes (amylases). Mashing crushed malt with hot water (~65°C) activates these enzymes, breaking down stored starch into fermentable sugars to produce the sweet liquid extract called wort.",
+      "sourceReference": "Section 1.4(i), Page 16-17"
+    },
+    {
+      "id": "BIO-G12-U01-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In municipal wastewater management, what does a high Biochemical Oxygen Demand (BOD) value indicate, and how does secondary treatment alter this parameter?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It indicates zero organic pollution; secondary treatment adds toxic mercury to sterilize the effluent"
+        },
+        {
+          "id": "B",
+          "text": "It indicates a high concentration of decomposing organic matter; secondary microbial oxidation drastically reduces the BOD by 80–90%"
+        },
+        {
+          "id": "C",
+          "text": "It indicates excessive levels of dissolved atmospheric oxygen; secondary treatment converts oxygen into carbon monoxide"
+        },
+        {
+          "id": "D",
+          "text": "It indicates that all pathogenic protozoans have been eliminated by mechanical filtration"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Biochemical Oxygen Demand (BOD) measures the amount of dissolved oxygen required by aerobic microbes to oxidize organic matter. A high BOD indicates high organic pollution. Secondary biological treatment (trickling filters or activated sludge flocs) oxidizes organic pollutants, decreasing BOD by 80–90%.",
+      "sourceReference": "Section 1.4(Vi), Page 26-27"
+    },
+    {
+      "id": "BIO-G12-U01-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which of the following pairs correctly matches an agricultural biopesticide with its biological classification and mode of pest control?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Bacillus thuringiensis — an entomopathogenic bacterium that produces crystal endotoxins toxic to insect larvae"
+        },
+        {
+          "id": "B",
+          "text": "Beauveria bassiana — a parasitic nematode that reproduces exclusively in plant xylem vessels"
+        },
+        {
+          "id": "C",
+          "text": "Nuclear Polyhedrosis Virus (NPV) — a synthetic herbicide that inhibits plant photosynthesis"
+        },
+        {
+          "id": "D",
+          "text": "Metarhizium anisopliae — a bacterium that consumes glyphosate from contaminated farmlands"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Bacillus thuringiensis (Bt) is a soil bacterium that produces protein delta-endotoxin crystals. When ingested by vulnerable insect larvae (such as caterpillars or corn borers), the toxin binds to the gut epithelium, causing lysis and death.",
+      "sourceReference": "Section 1.4(Viii), Page 32"
+    },
+    {
+      "id": "BIO-G12-U01-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How do modern analytical biosensors function in food quality inspection and clinical diagnostics?",
+      "options": [
+        {
+          "id": "A",
+          "text": "They emit high-energy ultraviolet radiation to disintegrate all viral envelopes in blood samples"
+        },
+        {
+          "id": "B",
+          "text": "They couple a biological recognition element (living microbes, enzymes, or antibodies) with an electronic transducer that converts biochemical reactions into measurable electrical currents"
+        },
+        {
+          "id": "C",
+          "text": "They use chemical indicators that change permanently into radioactive isotopes upon exposure to glucose"
+        },
+        {
+          "id": "D",
+          "text": "They rely on mechanical centrifuges that separate proteins strictly on the basis of mass"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "A biosensor combines a biological recognition component (such as immobilized enzymes, whole microorganisms, or antibodies) with a physical transducer/electrode. The interaction between the biomolecule and the target analyte generates a quantifiable electrical signal proportional to analyte concentration.",
+      "sourceReference": "Section 1.6(b), Page 22-23"
+    },
+    {
+      "id": "BIO-G12-U01-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In the reproductive cloning of Dolly the sheep, which sequence of laboratory procedures was executed to produce the cloned lamb?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Sperm from a ram was injected into an intact fertilized egg, and the blastocyst was cultured in an agar broth"
+        },
+        {
+          "id": "B",
+          "text": "A diploid nucleus from an adult sheep's mammary gland cell was transferred into an enucleated unfertilized egg, fused using an electrical pulse, and implanted into a surrogate mother"
+        },
+        {
+          "id": "C",
+          "text": "Embryos were irradiated with X-rays to double the chromosome number before being divided into identical fragments"
+        },
+        {
+          "id": "D",
+          "text": "Tissue culture plantlets were exposed to retroviruses that induced somatic embryogenesis in sheep milk"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Dolly was cloned via somatic cell nuclear transfer: an adult udder cell (somatic cell) was taken from a donor sheep, fused using an electric pulse with an enucleated unfertilized egg from a second sheep, cultured to an early embryo, and implanted into a surrogate ewe.",
+      "sourceReference": "Section 1.4(H), Page 36-37"
+    },
+    {
+      "id": "BIO-G12-U01-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In public health and community nutrition assessments, how does the chronic childhood malnutrition condition known as 'stunting' differ diagnostically from 'wasting'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Stunting describes excessive body mass for age, whereas wasting describes deficient bone mineralization"
+        },
+        {
+          "id": "B",
+          "text": "Stunting indicates that a child is too short for their age (chronic growth restriction), whereas wasting indicates that a child is too thin for their height (acute severe weight loss)"
+        },
+        {
+          "id": "C",
+          "text": "Stunting results solely from vitamin C deficiency, whereas wasting is caused by lack of dietary iodine"
+        },
+        {
+          "id": "D",
+          "text": "Stunting occurs exclusively in elderly adults, while wasting affects only newborn infants"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "According to World Health Organization nutritional standards outlined in the curriculum, stunting is defined as low height-for-age resulting from prolonged chronic undernutrition, whereas wasting is low weight-for-height indicating acute, severe nutritional deficit.",
+      "sourceReference": "Section 1.2, Page 11-12"
+    },
+    {
+      "id": "BIO-G12-U01-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "In biohydrometallurgy, certain mineral ores such as pyrite (FeS2) and chalcopyrite (CuFeS2) resist single-species microbial degradation. How does the combined bacterial consortium of Leptospirillum ferrooxidans and Thiobacillus organoparus degrade these recalcitrant minerals?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Both bacteria secrete synthetic cellulase enzymes that physically dissolve the stone matrix"
+        },
+        {
+          "id": "B",
+          "text": "L. ferrooxidans oxidizes ferrous iron while T. organoparus oxidizes sulfur moieties, achieving synergistic degradation that neither organism can accomplish alone"
+        },
+        {
+          "id": "C",
+          "text": "T. organoparus produces high concentrations of methane to raise the pH to alkaline neutrality"
+        },
+        {
+          "id": "D",
+          "text": "L. ferrooxidans converts heavy metals into volatile organic gases that evaporate into the atmosphere"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Certain refractory sulfide ores require cooperative microbial action: Leptospirillum ferrooxidans attacks the iron components, while Thiobacillus organoparus breaks down the sulfur components. Because their metabolic capabilities complement each other, the consortium degrades chalcopyrite and pyrite, whereas neither can do so in pure monoculture.",
+      "sourceReference": "Section 1.6(V), Page 25"
+    },
+    {
+      "id": "BIO-G12-U01-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A plant molecular biologist engineers a recombinant Ti plasmid containing a gene for glyphosate herbicide resistance and an antibiotic-resistance marker gene, then inoculates host plant leaf explants. Why is an antibiotic added to the culture agar medium during the subsequent callus growth phase?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To prevent the plant tissues from undergoing normal photosynthetic carbon fixation"
+        },
+        {
+          "id": "B",
+          "text": "To act as a selective agent that kills non-transformed plant cells, ensuring that only cells that successfully integrated the recombinant plasmid survive and form calluses"
+        },
+        {
+          "id": "C",
+          "text": "To mutate the plant genome and accelerate spontaneous polyploidy"
+        },
+        {
+          "id": "D",
+          "text": "To stimulate the rapid decomposition of the Agrobacterium chromosomal DNA"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The antibiotic resistance gene acts as a selectable marker. When plant tissue is cultured on agar containing the antibiotic, only transformed cells that integrated the plasmid construct can detoxify the antibiotic and divide to form a callus; non-transformed cells are killed.",
+      "sourceReference": "Section 1.4(Viii), Page 33"
+    },
+    {
+      "id": "BIO-G12-U01-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "In forensic DNA profiling, technicians amplify multiple Variable Number of Tandem Repeat (VNTR) loci via PCR and separate fragments by gel electrophoresis. Why does analyzing 5 to 10 distinct VNTR loci provide nearly irrefutable individual identification in court?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Every human individual possesses completely different, unique amino acids in their blood proteins"
+        },
+        {
+          "id": "B",
+          "text": "Because VNTR repeat counts vary independently among alleles, the mathematical probability of two unrelated individuals sharing the identical multi-locus band pattern by chance is approximately 1 in 10 billion"
+        },
+        {
+          "id": "C",
+          "text": "PCR permanently alters the criminal's DNA, converting all purines into pyrimidines"
+        },
+        {
+          "id": "D",
+          "text": "VNTR loci are found only on the Y chromosome of male perpetrators"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "VNTR regions exhibit extreme polymorphism across the human population. By evaluating the repeat lengths at 5 to 10 unlinked VNTR loci, the product rule makes the probability that two unrelated individuals possess the exact same profile infinitesimally small (~1 in 10 billion), providing conclusive forensic evidence.",
+      "sourceReference": "Section 1.6(c), Page 23-24"
+    },
+    {
+      "id": "BIO-G12-U01-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "In the production of second-generation bioethanol from lignocellulosic crop residues, what is the primary biochemical barrier encountered during fermentation, and how has metabolic genetic engineering overcome this obstacle?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Natural yeasts only ferment pure fats; bacteria are engineered to produce synthetic glycerol"
+        },
+        {
+          "id": "B",
+          "text": "Crop residues contain pentose sugars (such as xylose and arabinose) that wild-type Saccharomyces cerevisiae cannot ferment; geneticists engineered strains expressing Zymomonas mobilis genes to ferment pentoses along with hexoses"
+        },
+        {
+          "id": "C",
+          "text": "Cellulose breakdown produces extreme acidity that denatures all microbial ribosomes"
+        },
+        {
+          "id": "D",
+          "text": "Lignocellulose ferments spontaneously into toxic carbon monoxide unless exposed to boiling nitric acid"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Lignocellulosic crop residues consist of cellulose and hemicellulose, yielding 5-carbon sugars (xylose, arabinose) and 6-carbon sugars. Natural brewer's yeast cannot ferment pentose sugars; genetic engineering introduced pentose-utilizing pathway genes (such as from Zymomonas mobilis into E. coli or recombinant S. cerevisiae) to achieve high-yield bioethanol production from agricultural residues.",
+      "sourceReference": "Section 1.4(Vi), Page 28"
+    }
+  ]
 }

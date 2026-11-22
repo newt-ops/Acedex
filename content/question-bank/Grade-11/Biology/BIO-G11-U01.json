@@ -3,5 +3,411 @@
   "subject": "Biology",
   "unitNumber": 1,
   "unitTitle": "Biology and Technology",
-  "questions": []
+  "questions": [
+    {
+      "id": "BIO-G11-U01-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "The design of modern painless hypodermic injection needles was developed through the biological imitation of which natural structure?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Honeybee stinger"
+        },
+        {
+          "id": "B",
+          "text": "Mosquito proboscis"
+        },
+        {
+          "id": "C",
+          "text": "Snake venom fang"
+        },
+        {
+          "id": "D",
+          "text": "Sea urchin spine"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Engineers designed micro-injection needles by copying the anatomical structure and piercing mechanism of the mosquito's proboscis, significantly reducing tissue resistance and pain during medical injections.",
+      "sourceReference": "Section 1.1, Page 4"
+    },
+    {
+      "id": "BIO-G11-U01-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "The passive ventilation and temperature-regulating architectural design of the Eastgate Centre building in Harare, Zimbabwe, was modeled on the structure of:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Termite mounds"
+        },
+        {
+          "id": "B",
+          "text": "Beehive honeycombs"
+        },
+        {
+          "id": "C",
+          "text": "Bird nests"
+        },
+        {
+          "id": "D",
+          "text": "Nautilus shells"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The Eastgate Centre in Harare was engineered using biomimicry inspired by termite mounds, utilizing a chimney and duct system that maintains stable internal temperature and humidity without conventional air conditioning.",
+      "sourceReference": "Section 1.1 & 1.2.1, Page 4, 6"
+    },
+    {
+      "id": "BIO-G11-U01-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Modern rapid urine pregnancy test kits confirm pregnancy by biochemically detecting the presence of which hormone?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Luteinizing hormone (LH)"
+        },
+        {
+          "id": "B",
+          "text": "Follicle-stimulating hormone (FSH)"
+        },
+        {
+          "id": "C",
+          "text": "Human Chorionic Gonadotropin (hCG)"
+        },
+        {
+          "id": "D",
+          "text": "Prolactin"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Rapid home pregnancy test strips use immobilized antibodies to detect Human Chorionic Gonadotropin (hCG), a hormone secreted by the developing placenta into maternal blood and excreted in urine shortly after implantation.",
+      "sourceReference": "Section 1.2.2, Page 8"
+    },
+    {
+      "id": "BIO-G11-U01-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which scientific discipline integrates computer science, software engineering, and molecular biology to collect, store, analyze, and disseminate large datasets of DNA and amino acid sequences?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Biophysics"
+        },
+        {
+          "id": "B",
+          "text": "Bioinformatics"
+        },
+        {
+          "id": "C",
+          "text": "Biogeography"
+        },
+        {
+          "id": "D",
+          "text": "Biomedicine"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Bioinformatics is the computational field that develops software tools, algorithms, and digital databases to organize, align, and analyze massive amounts of biological data, particularly nucleotide sequences and protein structures.",
+      "sourceReference": "Section 1.2.2, Page 8"
+    },
+    {
+      "id": "BIO-G11-U01-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In the ethical conduct of scientific research involving live animals, what does the principle of 'Reduction' specifically require researchers to do?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Completely replace all experimental animals with computational software models"
+        },
+        {
+          "id": "B",
+          "text": "Minimize the number of animals used per study by improving experimental design and sharing data"
+        },
+        {
+          "id": "C",
+          "text": "Use anesthetics and improved housing to minimize distress during testing"
+        },
+        {
+          "id": "D",
+          "text": "Shorten the duration of quarantine for wild-caught research specimens"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Under the Three Rs ethical framework, Reduction focuses on minimizing the total number of animals needed in an investigation through robust experimental design, statistical optimization, and sharing published data with other laboratories.",
+      "sourceReference": "Section 1.4.1.2, Page 14"
+    },
+    {
+      "id": "BIO-G11-U01-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Engineers redesigned the aerodynamic nose of Japanese high-speed bullet trains (Shinkansen) to eliminate loud sonic booms when exiting tunnels by imitating the:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Streamlined rostrum of a bottlenose dolphin"
+        },
+        {
+          "id": "B",
+          "text": "Slender beak of a kingfisher entering water"
+        },
+        {
+          "id": "C",
+          "text": "Pectoral fin of a humpback whale"
+        },
+        {
+          "id": "D",
+          "text": "Curved beak of a peregrine falcon in a dive"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The front nose of the bullet train was redesigned based on the streamlined beak of the kingfisher bird, which dives smoothly from low-density air into high-density water without splashing, thereby resolving the tunnel pressure wave and sonic boom problem.",
+      "sourceReference": "Section 1.2.1, Page 7"
+    },
+    {
+      "id": "BIO-G11-U01-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How does Positron Emission Tomography (PET scan) differ fundamentally in diagnostic function from a standard Computed Tomography (CT scan)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A PET scan visualizes metabolic and physiological activity using radioactive tracers, whereas a CT scan provides detailed anatomical cross-sectional images using X-rays"
+        },
+        {
+          "id": "B",
+          "text": "A PET scan relies solely on magnetic fields, whereas a CT scan detects ultrasound echoes"
+        },
+        {
+          "id": "C",
+          "text": "A PET scan is restricted to viewing superficial skin disorders, whereas a CT scan examines single cells"
+        },
+        {
+          "id": "D",
+          "text": "A PET scan detects bone fractures, whereas a CT scan is used only to measure core body temperature"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "A CT scan uses rotating X-ray beams to produce detailed anatomical slices of organs and tissues. In contrast, a PET scan detects gamma radiation from injected radioactive metabolic tracers (such as radiolabeled glucose) to evaluate cellular metabolic processes and tumor activity.",
+      "sourceReference": "Section 1.2.2, Page 10"
+    },
+    {
+      "id": "BIO-G11-U01-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which of the following technological innovations in material science was directly inspired by the molecular composition and high tensile strength of spider dragline silk?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Scratch-resistant polycarbonate lenses"
+        },
+        {
+          "id": "B",
+          "text": "High-strength synthetic fibers used in bulletproof vests"
+        },
+        {
+          "id": "C",
+          "text": "Hydrophobic non-stick Teflon coatings"
+        },
+        {
+          "id": "D",
+          "text": "Biodegradable cellulose packaging film"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Spider silk possesses remarkable tensile strength and elasticity exceeding that of steel by weight; material scientists imitated its structural protein configuration to develop synthetic Kevlar-like polymers and lightweight bulletproof fabrics.",
+      "sourceReference": "Section 1.1, Page 4"
+    },
+    {
+      "id": "BIO-G11-U01-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In the Three Rs framework governing laboratory animal welfare, which action represents the principle of 'Replacement'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Administering local analgesics to minimize animal pain during surgical interventions"
+        },
+        {
+          "id": "B",
+          "text": "Housing experimental rodents in larger, enriched cages with social bedding"
+        },
+        {
+          "id": "C",
+          "text": "Substituting live mammalian test subjects with in vitro human cell cultures or computer models"
+        },
+        {
+          "id": "D",
+          "text": "Sharing control group data across institutions to reduce the sample size needed"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Replacement refers to methods that avoid or replace the use of conscious, living animals in experiments—such as utilizing cultured cell lines (in vitro), computerized simulations, or non-sentient biological materials.",
+      "sourceReference": "Section 1.4.1.2, Page 15-16"
+    },
+    {
+      "id": "BIO-G11-U01-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How does the study of biophysics contribute to advancing modern biological research?",
+      "options": [
+        {
+          "id": "A",
+          "text": "By evaluating the commercial market value of processed timber and cash crops"
+        },
+        {
+          "id": "B",
+          "text": "By applying physical principles, devices, and quantitative measurements to understand biological processes from the molecular to organismal levels"
+        },
+        {
+          "id": "C",
+          "text": "By formulating legal statutes regarding the boundaries of national wildlife sanctuaries"
+        },
+        {
+          "id": "D",
+          "text": "By restricting scientific investigations exclusively to macroscopic taxonomic identification"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Biophysics is the interdisciplinary science that applies physical methods, mechanical concepts, and physical devices to investigate biological phenomena across all scales of biological organization (molecular, cellular, and organismic).",
+      "sourceReference": "Section 1.2.2, Page 8"
+    },
+    {
+      "id": "BIO-G11-U01-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which of the following examples illustrates a severe negative ethical or societal impact arising from the unregulated misuse of modern biological technologies?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Using recombinant bacteria to produce affordable biosynthetic human insulin"
+        },
+        {
+          "id": "B",
+          "text": "Employing Global Positioning System (GPS) collars to track seasonal wildlife migrations"
+        },
+        {
+          "id": "C",
+          "text": "Developing biological warfare agents (pathogenic bioweapons) that cause widespread morbidity and ecological devastation"
+        },
+        {
+          "id": "D",
+          "text": "Utilizing digital blood glucose meters to manage diabetes mellitus at home"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "While biotechnology provides medical and agricultural advances, its misuse—such as engineering virulent microbial pathogens as biological warfare agents or weaponized toxins—represents an extreme negative application that threatens human survival and the biosphere.",
+      "sourceReference": "Section 1.3.1, Page 12"
+    },
+    {
+      "id": "BIO-G11-U01-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "In sub-Saharan Africa, macrotermes termites build towering mounds that maintain a stable internal nest temperature despite fluctuating outdoor ambient temperatures. How do termites achieve this passive thermoregulation, and how has architecture adapted this mechanism?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Termites metabolize calcium carbonate to release endothermic vapors; buildings mimic this by coating roofs with liquid nitrogen"
+        },
+        {
+          "id": "B",
+          "text": "Mounds feature porous walls and vertical chimney channels that continuously vent rising warm stale air while drawing in cooler air at the base via convection; buildings use hollow internal spines and fans to cycle ambient night air"
+        },
+        {
+          "id": "C",
+          "text": "Termites absorb geothermal radiation from deep water tables; architects dig deep geothermal tunnels beneath skyscrapers"
+        },
+        {
+          "id": "D",
+          "text": "Mound walls reflect 100% of incoming solar infrared light; buildings utilize polished aluminum panels to block all thermal absorption"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Termite mounds use passive buoyancy-driven ventilation: metabolic heat produced by the fungal gardens and termites warms the air, causing it to rise and vent through chimneys, while fresh cool air is sucked into underground ducts at the base. Architects copied this chimney and thermal mass strategy to passively cool buildings like Harare's Eastgate Centre.",
+      "sourceReference": "Section 1.1 & 1.2.1, Page 4, 6"
+    },
+    {
+      "id": "BIO-G11-U01-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A pharmacological laboratory seeks to evaluate the analgesic efficacy of a novel pain medication. The research committee modifies the experimental protocol by training technicians in gentle handling techniques, administering preemptive local anesthesia during minor incisions, and providing post-procedural pain relief. Under the Three Rs, which specific ethical principle is being implemented?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Replacement"
+        },
+        {
+          "id": "B",
+          "text": "Refinement"
+        },
+        {
+          "id": "C",
+          "text": "Reduction"
+        },
+        {
+          "id": "D",
+          "text": "Replication"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Refinement consists of modifying husbandry procedures, housing conditions, and experimental protocols to minimize pain, suffering, and distress, thereby improving the overall welfare of animals that must be used in the study.",
+      "sourceReference": "Section 1.4.1.2, Page 14-15"
+    },
+    {
+      "id": "BIO-G11-U01-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Why is the unrestrained application of fetal sex-determination technologies accompanied by sex-selective abortion considered a serious bioethical crisis with long-term societal consequences?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It accelerates the natural chromosomal mutation rate of the Y chromosome across generations"
+        },
+        {
+          "id": "B",
+          "text": "It artificially skews the demographic sex ratio at birth, leading to long-term demographic imbalances and social instability"
+        },
+        {
+          "id": "C",
+          "text": "It prevents the maternal placenta from synthesizing human chorionic gonadotropin"
+        },
+        {
+          "id": "D",
+          "text": "It causes developing fetuses to become completely resistant to childhood vaccines"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Using biotechnology (such as prenatal ultrasound or genetic tests) to selectively abort fetuses of an unwanted sex (such as female fetuses) skews the natural sex ratio of human populations, producing severe demographic deficits of females and profound long-term social disruption.",
+      "sourceReference": "Section 1.3.1, Page 12"
+    },
+    {
+      "id": "BIO-G11-U01-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "How does the flexible, multi-segmented design of an elephant's trunk provide a superior biological blueprint for robotic arms compared to traditional rigid industrial robotic manipulators?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The elephant trunk contains dozens of hinged bony levers that rotate around fixed synovial joints"
+        },
+        {
+          "id": "B",
+          "text": "The trunk operates as a muscular hydrostat lacking internal bones, conferring continuous multi-axis bending, delicate grasping, and high shock tolerance"
+        },
+        {
+          "id": "C",
+          "text": "The trunk relies on pressurized pneumatic air sacs rather than muscular contraction"
+        },
+        {
+          "id": "D",
+          "text": "The trunk surface is lined with chitinous exoskeleton scales that eliminate mechanical friction"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "An elephant's trunk is a muscular hydrostat—it has no bones or joints, being entirely composed of tightly coordinated muscle groups. This provides near-infinite degrees of freedom, continuous curvature, and flexible compliance, inspiring soft bio-robotic arms capable of maneuvering safely in delicate environments.",
+      "sourceReference": "Section 1.1, Page 4-5"
+    }
+  ]
 }

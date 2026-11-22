@@ -1,0 +1,506 @@
+import 'package:flutter/material.dart';
+import 'package:hugeicons/hugeicons.dart';
+import '../../../core/theme/app_colors.dart';
+import '../../../core/ui/animations/bounceable.dart';
+import '../../../core/ui/progress/acedex_dots_loader.dart';
+import '../models/study_models.dart';
+
+/// Interactive Syllabus Unit Viewer with Expandable Accordions & Sub-Topic Tree (Component 3)
+class SyllabusUnitAccordion extends StatefulWidget {
+  final SubjectCurriculum subject;
+  final String searchQuery;
+  final String activeFilter; // 'all' | 'progress' | 'bookmarked'
+  final ValueChanged<String> onToggleUnitExpand;
+  final ValueChanged<String> onToggleTopicComplete;
+  final ValueChanged<String> onOpenNotes;
+  final ValueChanged<String> onOpenDrill;
+  final VoidCallback onResetFilters;
+
+  const SyllabusUnitAccordion({
+    super.key,
+    required this.subject,
+    required this.searchQuery,
+    required this.activeFilter,
+    required this.onToggleUnitExpand,
+    required this.onToggleTopicComplete,
+    required this.onOpenNotes,
+    required this.onOpenDrill,
+    required this.onResetFilters,
+  });
+
+  @override
+  State<SyllabusUnitAccordion> createState() => _SyllabusUnitAccordionState();
+}
+
+class _SyllabusUnitAccordionState extends State<SyllabusUnitAccordion> {
+  String? _loadingNotesTopicId;
+  String? _loadingDrillTopicId;
+
+  bool _topicMatchesSearch(StudyUnit unit, StudyTopic topic, String query) {
+    if (query.isEmpty) return true;
+    final q = query.toLowerCase();
+    final haystack = [
+      unit.code,
+      unit.title,
+      topic.code,
+      topic.title,
+      ...topic.notes.summary,
+      ...topic.notes.formulas.map((f) => '${f.name} ${f.expr}'),
+    ].join(' ').toLowerCase();
+    return haystack.contains(q);
+  }
+
+  void _handleNotesTap(String topicId) {
+    if (_loadingNotesTopicId != null || _loadingDrillTopicId != null) return;
+    setState(() => _loadingNotesTopicId = topicId);
+
+    Future.delayed(const Duration(milliseconds: 540), () {
+      if (mounted) {
+        setState(() => _loadingNotesTopicId = null);
+        widget.onOpenNotes(topicId);
+      }
+    });
+  }
+
+  void _handleDrillTap(String topicId) {
+    if (_loadingNotesTopicId != null || _loadingDrillTopicId != null) return;
+    setState(() => _loadingDrillTopicId = topicId);
+
+    Future.delayed(const Duration(milliseconds: 580), () {
+      if (mounted) {
+        setState(() => _loadingDrillTopicId = null);
+        widget.onOpenDrill(topicId);
+      }
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+    final isDark = theme.brightness == Brightness.dark;
+    final primaryColor = theme.colorScheme.primary;
+    final surfaceColor = isDark ? const Color(0xFF1B1B1F) : const Color(0xFFF4F4F6);
+    final raisedBg = isDark ? const Color(0xFF2B2B31) : Colors.white;
+    final lineBorder = isDark ? const Color(0xFF2B2B31) : const Color(0xFFE4E4E8);
+    final subtextColor = isDark ? AppColors.darkSubtext : AppColors.lightSubtext;
+
+    // Filter units & topics
+    final visibleUnits = <Map<String, dynamic>>[];
+
+    for (final unit in widget.subject.units) {
+      final unitDoneCount = unit.topics.where((t) => t.completed).length;
+      final unitTotalCount = unit.topics.length;
+      final isUnitComplete = unitDoneCount == unitTotalCount && unitTotalCount > 0;
+
+      // Filter out completed units if 'progress' filter is active
+      if (widget.activeFilter == 'progress' && isUnitComplete) continue;
+
+      final matchingTopics = unit.topics.where((t) {
+        if (!_topicMatchesSearch(unit, t, widget.searchQuery)) return false;
+        if (widget.activeFilter == 'bookmarked' && !t.bookmarked) return false;
+        return true;
+      }).toList();
+
+      if (matchingTopics.isNotEmpty) {
+        visibleUnits.add({
+          'unit': unit,
+          'matchingTopics': matchingTopics,
+          'isUnitComplete': isUnitComplete,
+          'unitDoneCount': unitDoneCount,
+          'unitTotalCount': unitTotalCount,
+        });
+      }
+    }
+
+    final hasZeroMatches = visibleUnits.isEmpty;
+    final unitCountLabel = '${visibleUnits.length} ${visibleUnits.length == 1 ? "Unit" : "Units"} • Tap to expand';
+
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        // Section Header
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Text(
+              'Syllabus Units',
+              style: TextStyle(
+                fontSize: 15,
+                fontWeight: FontWeight.w700,
+                letterSpacing: -0.3,
+                color: theme.colorScheme.onSurface,
+              ),
+            ),
+            Text(
+              unitCountLabel,
+              style: TextStyle(
+                fontSize: 11,
+                fontWeight: FontWeight.w600,
+                color: subtextColor,
+              ),
+            ),
+          ],
+        ),
+
+        const SizedBox(height: 10),
+
+        if (hasZeroMatches)
+          // Empty State Container
+          Container(
+            padding: const EdgeInsets.all(22),
+            decoration: BoxDecoration(
+              color: surfaceColor,
+              borderRadius: BorderRadius.circular(20),
+              border: Border.all(color: lineBorder),
+            ),
+            child: Column(
+              children: [
+                Text(
+                  'No matching units or topics',
+                  style: TextStyle(
+                    fontSize: 13,
+                    fontWeight: FontWeight.w700,
+                    color: theme.colorScheme.onSurface,
+                  ),
+                ),
+                const SizedBox(height: 4),
+                Text(
+                  'Try clearing your search or switching to All Units.',
+                  style: TextStyle(
+                    fontSize: 11.5,
+                    color: subtextColor,
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+                const SizedBox(height: 12),
+                AcedexBounceable(
+                  onTap: widget.onResetFilters,
+                  child: Container(
+                    height: 32,
+                    padding: const EdgeInsets.symmetric(horizontal: 16),
+                    decoration: BoxDecoration(
+                      color: primaryColor,
+                      borderRadius: BorderRadius.circular(999),
+                    ),
+                    alignment: Alignment.center,
+                    child: const Text(
+                      'Reset Filters',
+                      style: TextStyle(
+                        fontSize: 11.5,
+                        fontWeight: FontWeight.w700,
+                        color: Colors.white,
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          )
+        else
+          // List of Unit Cards
+          ListView.separated(
+            shrinkWrap: true,
+            physics: const NeverScrollableScrollPhysics(),
+            itemCount: visibleUnits.length,
+            separatorBuilder: (_, i) => const SizedBox(height: 10),
+            itemBuilder: (context, index) {
+              final item = visibleUnits[index];
+              final unit = item['unit'] as StudyUnit;
+              final matchingTopics = item['matchingTopics'] as List<StudyTopic>;
+              final isUnitComplete = item['isUnitComplete'] as bool;
+              final unitDoneCount = item['unitDoneCount'] as int;
+              final unitTotalCount = item['unitTotalCount'] as int;
+
+              // Force expand if searching or bookmarked filter
+              final isExpanded = widget.searchQuery.isNotEmpty || widget.activeFilter == 'bookmarked'
+                  ? true
+                  : unit.expanded;
+
+              return Container(
+                decoration: BoxDecoration(
+                  color: surfaceColor,
+                  borderRadius: BorderRadius.circular(20),
+                  border: Border.all(
+                    color: isExpanded ? primaryColor : lineBorder,
+                    width: 1.0,
+                  ),
+                ),
+                child: Column(
+                  children: [
+                    // Unit Header Trigger
+                    AcedexBounceable(
+                      onTap: () => widget.onToggleUnitExpand(unit.id),
+                      child: Padding(
+                        padding: const EdgeInsets.all(12),
+                        child: Row(
+                          children: [
+                            // Unit Code Badge (Green if complete, Purple otherwise)
+                            Container(
+                              width: 36,
+                              height: 36,
+                              decoration: BoxDecoration(
+                                color: isUnitComplete
+                                    ? (isDark ? AppColors.darkSuccess : AppColors.success)
+                                        .withValues(alpha: 0.16)
+                                    : primaryColor.withValues(alpha: 0.14),
+                                borderRadius: BorderRadius.circular(12),
+                              ),
+                              alignment: Alignment.center,
+                              child: Text(
+                                unit.code,
+                                style: TextStyle(
+                                  fontSize: 12,
+                                  fontWeight: FontWeight.w800,
+                                  color: isUnitComplete
+                                      ? (isDark ? AppColors.darkSuccess : AppColors.success)
+                                      : primaryColor,
+                                ),
+                              ),
+                            ),
+
+                            const SizedBox(width: 10),
+
+                            // Unit Title, Weight & Progress Count
+                            Expanded(
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    unit.title,
+                                    maxLines: 1,
+                                    overflow: TextOverflow.ellipsis,
+                                    style: TextStyle(
+                                      fontSize: 13,
+                                      fontWeight: FontWeight.w700,
+                                      letterSpacing: -0.2,
+                                      color: theme.colorScheme.onSurface,
+                                    ),
+                                  ),
+                                  const SizedBox(height: 3),
+                                  Row(
+                                    children: [
+                                      Container(
+                                        padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 1.5),
+                                        decoration: BoxDecoration(
+                                          color: raisedBg,
+                                          borderRadius: BorderRadius.circular(6),
+                                          border: Border.all(color: lineBorder),
+                                        ),
+                                        child: Text(
+                                          unit.examWeight,
+                                          style: TextStyle(
+                                            fontSize: 9.5,
+                                            fontWeight: FontWeight.w800,
+                                            color: primaryColor,
+                                          ),
+                                        ),
+                                      ),
+                                      const SizedBox(width: 6),
+                                      Text(
+                                        '$unitDoneCount/$unitTotalCount Topics',
+                                        style: TextStyle(
+                                          fontSize: 10.5,
+                                          fontWeight: FontWeight.w700,
+                                          color: isUnitComplete
+                                              ? (isDark ? AppColors.darkSuccess : AppColors.success)
+                                              : subtextColor,
+                                          fontFeatures: const [FontFeature.tabularFigures()],
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ],
+                              ),
+                            ),
+
+                            const SizedBox(width: 8),
+
+                            // Rotating Chevron Icon
+                            AnimatedRotation(
+                              turns: isExpanded ? 0.5 : 0.0,
+                              duration: const Duration(milliseconds: 280),
+                              curve: Curves.easeOutCubic,
+                              child: Icon(
+                                Icons.keyboard_arrow_down_rounded,
+                                size: 18,
+                                color: subtextColor,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+
+                    // Expandable Sub-Topic Rows Accordion
+                    AnimatedSize(
+                      duration: const Duration(milliseconds: 280),
+                      curve: Curves.easeOutCubic,
+                      child: isExpanded
+                          ? Container(
+                              decoration: BoxDecoration(
+                                color: raisedBg,
+                                borderRadius: const BorderRadius.vertical(bottom: Radius.circular(19)),
+                              ),
+                              child: Column(
+                                children: matchingTopics.map((topic) {
+                                  final isLoadingNotes = _loadingNotesTopicId == topic.id;
+                                  final isLoadingDrill = _loadingDrillTopicId == topic.id;
+
+                                  return Container(
+                                    padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
+                                    decoration: BoxDecoration(
+                                      border: Border(top: BorderSide(color: lineBorder)),
+                                    ),
+                                    child: Row(
+                                      children: [
+                                        // Spring Completion Check Circle
+                                        AcedexBounceable(
+                                          onTap: () => widget.onToggleTopicComplete(topic.id),
+                                          child: Container(
+                                            width: 22,
+                                            height: 22,
+                                            decoration: BoxDecoration(
+                                              shape: BoxShape.circle,
+                                              color: topic.completed
+                                                  ? (isDark ? AppColors.darkSuccess : AppColors.success)
+                                                  : surfaceColor,
+                                              border: Border.all(
+                                                color: topic.completed
+                                                    ? (isDark ? AppColors.darkSuccess : AppColors.success)
+                                                    : subtextColor,
+                                                width: 1.8,
+                                              ),
+                                            ),
+                                            alignment: Alignment.center,
+                                            child: topic.completed
+                                                ? const Icon(
+                                                    Icons.check_rounded,
+                                                    size: 14,
+                                                    color: Colors.white,
+                                                  )
+                                                : null,
+                                          ),
+                                        ),
+
+                                        const SizedBox(width: 10),
+
+                                        // Topic Code, Title & Bookmark
+                                        Expanded(
+                                          child: Column(
+                                            crossAxisAlignment: CrossAxisAlignment.start,
+                                            children: [
+                                              Row(
+                                                children: [
+                                                  Expanded(
+                                                    child: Text(
+                                                      '${topic.code} ${topic.title}',
+                                                      maxLines: 1,
+                                                      overflow: TextOverflow.ellipsis,
+                                                      style: TextStyle(
+                                                        fontSize: 12,
+                                                        fontWeight: FontWeight.w700,
+                                                        letterSpacing: -0.1,
+                                                        color: theme.colorScheme.onSurface,
+                                                      ),
+                                                    ),
+                                                  ),
+                                                  if (topic.bookmarked) ...[
+                                                    const SizedBox(width: 4),
+                                                    HugeIcon(
+                                                      icon: HugeIcons.strokeRoundedBookmark01,
+                                                      color: primaryColor,
+                                                      size: 12,
+                                                    ),
+                                                  ],
+                                                ],
+                                              ),
+                                              const SizedBox(height: 2),
+                                              Text(
+                                                '${topic.duration} • ${topic.questionCount} Qs',
+                                                style: TextStyle(
+                                                  fontSize: 10.5,
+                                                  fontWeight: FontWeight.w500,
+                                                  color: subtextColor,
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                        ),
+
+                                        const SizedBox(width: 8),
+
+                                        // "Notes" Action Button
+                                        AcedexBounceable(
+                                          onTap: () => _handleNotesTap(topic.id),
+                                          child: Container(
+                                            height: 27,
+                                            padding: const EdgeInsets.symmetric(horizontal: 10),
+                                            decoration: BoxDecoration(
+                                              color: surfaceColor,
+                                              borderRadius: BorderRadius.circular(999),
+                                              border: Border.all(color: lineBorder),
+                                            ),
+                                            alignment: Alignment.center,
+                                            child: isLoadingNotes
+                                                ? AcedexDotsLoader(
+                                                    color: theme.colorScheme.onSurface,
+                                                    dotSize: 3.5,
+                                                    gap: 2.5,
+                                                  )
+                                                : Text(
+                                                    'Notes',
+                                                    style: TextStyle(
+                                                      fontSize: 10.5,
+                                                      fontWeight: FontWeight.w700,
+                                                      color: theme.colorScheme.onSurface,
+                                                    ),
+                                                  ),
+                                          ),
+                                        ),
+
+                                        const SizedBox(width: 6),
+
+                                        // "Drill" Action Button
+                                        AcedexBounceable(
+                                          onTap: () => _handleDrillTap(topic.id),
+                                          child: Container(
+                                            height: 27,
+                                            padding: const EdgeInsets.symmetric(horizontal: 10),
+                                            decoration: BoxDecoration(
+                                              color: primaryColor.withValues(alpha: 0.14),
+                                              borderRadius: BorderRadius.circular(999),
+                                            ),
+                                            alignment: Alignment.center,
+                                            child: isLoadingDrill
+                                                ? AcedexDotsLoader(
+                                                    color: primaryColor,
+                                                    dotSize: 3.5,
+                                                    gap: 2.5,
+                                                  )
+                                                : Text(
+                                                    'Drill',
+                                                    style: TextStyle(
+                                                      fontSize: 10.5,
+                                                      fontWeight: FontWeight.w700,
+                                                      color: primaryColor,
+                                                    ),
+                                                  ),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  );
+                                }).toList(),
+                              ),
+                            )
+                          : const SizedBox.shrink(),
+                    ),
+                  ],
+                ),
+              );
+            },
+          ),
+      ],
+    );
+  }
+}

@@ -3,5 +3,411 @@
   "subject": "Biology",
   "unitNumber": 5,
   "unitTitle": "Human Health, Nutrition, and Disease",
-  "questions": []
+  "questions": [
+    {
+      "id": "BIO-G09-U05-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which of the following classes of food nutrients is primarily required by the human body for growth, building new cells, and repairing damaged tissues?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Carbohydrates"
+        },
+        {
+          "id": "B",
+          "text": "Proteins"
+        },
+        {
+          "id": "C",
+          "text": "Vitamins"
+        },
+        {
+          "id": "D",
+          "text": "Lipids"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Proteins are body-building nutrients made of amino acids; their primary physiological roles are providing growth, building new cells, and repairing worn-out or damaged body tissues.",
+      "sourceReference": "Section 5.3, Page 108"
+    },
+    {
+      "id": "BIO-G09-U05-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "A deficiency of which mineral in the human diet impairs the synthesis of hemoglobin in red blood cells, leading to tiredness and lack of energy?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Calcium"
+        },
+        {
+          "id": "B",
+          "text": "Iodine"
+        },
+        {
+          "id": "C",
+          "text": "Iron"
+        },
+        {
+          "id": "D",
+          "text": "Phosphorus"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Iron is the essential mineral required to synthesize hemoglobin, the oxygen-carrying molecule in red blood cells. Insufficient dietary iron causes anemia, characterized by fatigue and weakness.",
+      "sourceReference": "Section 5.3 & 5.5, Page 109, 113"
+    },
+    {
+      "id": "BIO-G09-U05-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which deficiency disease in children is caused specifically by a severe lack of dietary protein, manifesting as a swollen abdomen, edema of the limbs, and skin peeling?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Marasmus"
+        },
+        {
+          "id": "B",
+          "text": "Rickets"
+        },
+        {
+          "id": "C",
+          "text": "Scurvy"
+        },
+        {
+          "id": "D",
+          "text": "Kwashiorkor"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "Kwashiorkor is a form of malnutrition caused by an inadequate intake of protein despite adequate or marginal caloric intake, leading to edema (swelling of abdomen and ankles), flaky skin, and hair discoloration.",
+      "sourceReference": "Section 5.5, Page 113"
+    },
+    {
+      "id": "BIO-G09-U05-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which causative microorganism is responsible for the transmission and clinical manifestation of tuberculosis in humans?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Plasmodium falciparum"
+        },
+        {
+          "id": "B",
+          "text": "Mycobacterium tuberculosis"
+        },
+        {
+          "id": "C",
+          "text": "Treponema pallidum"
+        },
+        {
+          "id": "D",
+          "text": "Human Immunodeficiency Virus"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Tuberculosis (TB) is an infectious bacterial disease primarily affecting the lungs, caused by the bacterium Mycobacterium tuberculosis (and rarely Mycobacterium bovis).",
+      "sourceReference": "Section 5.8.1, Page 130"
+    },
+    {
+      "id": "BIO-G09-U05-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which psychoactive chemical compound found in tobacco smoke is primarily responsible for inducing physiological addiction and increasing resting heart rate?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Nicotine"
+        },
+        {
+          "id": "B",
+          "text": "Tar"
+        },
+        {
+          "id": "C",
+          "text": "Carbon monoxide"
+        },
+        {
+          "id": "D",
+          "text": "Cathinone"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Nicotine is the addictive stimulant present in tobacco smoke; it triggers dopamine release in the brain and stimulates the cardiovascular system, raising heart rate and narrowing arterioles.",
+      "sourceReference": "Section 5.7, Page 119-120"
+    },
+    {
+      "id": "BIO-G09-U05-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Although dietary fiber (cellulose) cannot be digested by human digestive enzymes, why is its regular inclusion in a balanced diet essential for human health?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It provides 16 kJ per gram of absorbable energy directly to human muscle cells"
+        },
+        {
+          "id": "B",
+          "text": "It adds bulk to the contents of the colon, retains water to soften feces, and prevents constipation"
+        },
+        {
+          "id": "C",
+          "text": "It serves as the main precursor for synthesizing fat-soluble vitamins A and D in the stomach"
+        },
+        {
+          "id": "D",
+          "text": "It dissolves cholesterol deposits along the lining of coronary arteries"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Cellulose passes undigested to the large intestine as dietary fiber (roughage). It provides bulk, retains moisture to soften feces, stimulates peristalsis, and prevents constipation.",
+      "sourceReference": "Section 5.3, Page 107"
+    },
+    {
+      "id": "BIO-G09-U05-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Why do athletes undergoing heavy endurance training require a higher proportion of dietary proteins and carbohydrates compared to a sedentary adult office worker?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Carbohydrates provide elevated daily metabolic energy, while proteins supply amino acids for muscle tissue growth and repair"
+        },
+        {
+          "id": "B",
+          "text": "Carbohydrates synthesize hemoglobin, while proteins act as insulation to prevent sweating"
+        },
+        {
+          "id": "C",
+          "text": "Proteins prevent dehydration, while carbohydrates provide 37 kJ per gram to replace body water"
+        },
+        {
+          "id": "D",
+          "text": "Athletes cannot metabolize dietary lipids and must rely solely on protein digestion for basal metabolic rate"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Athletes require more carbohydrates to sustain vigorous physical exertion and higher energy expenditure, along with elevated dietary protein intake to repair exercise-induced micro-damage and build skeletal muscle mass.",
+      "sourceReference": "Section 5.4, Page 111-112"
+    },
+    {
+      "id": "BIO-G09-U05-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Under the World Health Organization classification for undernutrition, how is 'stunting' specifically defined and differentiated from 'wasting' in children?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Stunting is low weight-for-height indicating recent severe weight loss, whereas wasting is low height-for-age"
+        },
+        {
+          "id": "B",
+          "text": "Stunting is low weight-for-age, whereas wasting is excessive accumulation of adipose tissue"
+        },
+        {
+          "id": "C",
+          "text": "Stunting is low height-for-age resulting from chronic undernutrition, whereas wasting is low weight-for-height"
+        },
+        {
+          "id": "D",
+          "text": "Stunting reflects micronutrient toxicity, whereas wasting reflects acute vitamin C deficiency"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Stunting is defined as low height-for-age resulting from long-term chronic undernutrition, whereas wasting is defined as low weight-for-height, indicating acute or recent severe weight loss.",
+      "sourceReference": "Section 5.6, Page 115"
+    },
+    {
+      "id": "BIO-G09-U05-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How does chronic exposure to tobacco tar cause the respiratory disorder known as chronic bronchitis in habitual smokers?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Tar combines irreversibly with hemoglobin, preventing red blood cells from absorbing oxygen"
+        },
+        {
+          "id": "B",
+          "text": "Tar paralyzes and destroys airway cilia while stimulating excess mucus production, leading to persistent coughing and narrowed airways"
+        },
+        {
+          "id": "C",
+          "text": "Tar dissolves the cartilage rings of the trachea, causing the windpipe to collapse"
+        },
+        {
+          "id": "D",
+          "text": "Tar triggers an immediate allergic reaction in the nasal sinuses that stops diaphragm contraction"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Tar accumulates in the airways, irritating epithelial linings and stimulating mucus secretion while damaging the protective cilia. The trapped mucus cannot be cleared, narrowing bronchioles and causing chronic coughing and inflammation (chronic bronchitis).",
+      "sourceReference": "Section 5.7, Page 118-119"
+    },
+    {
+      "id": "BIO-G09-U05-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What is the primary active alkaloid found in fresh leaves of the Khat plant (Catha edulis) that produces central nervous system stimulation and alertness?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Tetrahydrocannabinol (THC)"
+        },
+        {
+          "id": "B",
+          "text": "Cathinone"
+        },
+        {
+          "id": "C",
+          "text": "Carboxy-hemoglobin"
+        },
+        {
+          "id": "D",
+          "text": "Erythropoietin"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Fresh leaves of Catha edulis contain the psychoactive stimulant cathinone, which stimulates the central nervous system. Cathinone degrades as leaves dry out, which is why fresh leaves are predominantly chewed.",
+      "sourceReference": "Section 5.7, Page 122"
+    },
+    {
+      "id": "BIO-G09-U05-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Why is the use of the synthetic performance-enhancing hormone Erythropoietin (EPO) strictly banned in competitive athletics by the World Anti-Doping Agency (WADA)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It destroys muscle fibers and causes instantaneous kidney calcification"
+        },
+        {
+          "id": "B",
+          "text": "It artificially increases red blood cell count, dangerously raising blood viscosity and the risk of pulmonary embolism and stroke"
+        },
+        {
+          "id": "C",
+          "text": "It suppresses basal metabolic rate and promotes rapid bodily wasting"
+        },
+        {
+          "id": "D",
+          "text": "It acts as a potent diuretic that masks the detection of glucose in urine"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "EPO stimulates bone marrow to produce excess red blood cells to enhance oxygen carrying capacity. This causes thick, viscous blood, dramatically increasing the risk of hypertension, blood clots, heart attacks, and pulmonary embolism.",
+      "sourceReference": "Section 5.7, Page 124-125"
+    },
+    {
+      "id": "BIO-G09-U05-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "An adult male has a body mass of 97.2 kg and a measured height of 1.80 meters. Based on the standard Body Mass Index (BMI) formula, what is his calculated BMI and corresponding nutritional status?",
+      "options": [
+        {
+          "id": "A",
+          "text": "BMI = 27.0 kg/m²; Overweight"
+        },
+        {
+          "id": "B",
+          "text": "BMI = 30.0 kg/m²; Obese"
+        },
+        {
+          "id": "C",
+          "text": "BMI = 24.5 kg/m²; Normal weight"
+        },
+        {
+          "id": "D",
+          "text": "BMI = 35.2 kg/m²; Severely underweight"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "BMI is calculated as mass (kg) divided by height squared (m²): BMI = 97.2 / (1.80 × 1.80) = 97.2 / 3.24 = 30.0 kg/m². A BMI of 30.0 or higher is classified as obese.",
+      "sourceReference": "Section 5.6, Page 117"
+    },
+    {
+      "id": "BIO-G09-U05-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Why does carbon monoxide gas inhaled from burning tobacco present a severe, life-threatening danger to the human cardiovascular and respiratory systems?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It binds with high affinity to hemoglobin to form carboxyhemoglobin, permanently blocking oxygen transport and forcing the heart to beat faster"
+        },
+        {
+          "id": "B",
+          "text": "It destroys surfactant in the alveoli, causing the lungs to fill immediately with tissue fluid"
+        },
+        {
+          "id": "C",
+          "text": "It dissolves the smooth muscle layer of veins, causing systemic internal hemorrhaging"
+        },
+        {
+          "id": "D",
+          "text": "It prevents the liver from metabolizing alcohol and other dietary toxins"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Carbon monoxide binds tenaciously with hemoglobin to form stable carboxyhemoglobin. This prevents hemoglobin from binding and carrying oxygen, causing tissue hypoxia and placing compensatory strain on the heart.",
+      "sourceReference": "Section 5.7, Page 119"
+    },
+    {
+      "id": "BIO-G09-U05-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Why do individuals infected with the Human Immunodeficiency Virus (HIV) eventually succumb to opportunistic infections such as severe pneumonia, tuberculosis, and fungal candidiasis?",
+      "options": [
+        {
+          "id": "A",
+          "text": "HIV directly destroys pulmonary alveoli and digestive epithelial cells upon first contact"
+        },
+        {
+          "id": "B",
+          "text": "The virus selectively infects and destroys host T-lymphocytes (T-helper cells), progressively crippling the body's immune defense mechanisms"
+        },
+        {
+          "id": "C",
+          "text": "HIV produces neurotoxins that inhibit the brainstem respiratory control center"
+        },
+        {
+          "id": "D",
+          "text": "The virus stimulates excessive production of antibodies that attack the host's own red blood cells"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "HIV invades and replicates inside CD4+ T-lymphocytes (T-helper cells), destroying them in the process. Over time, the decline in T-cells disables adaptive immunity, leaving the body unable to defend against opportunistic pathogens.",
+      "sourceReference": "Section 5.8.1, Page 129"
+    },
+    {
+      "id": "BIO-G09-U05-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Which of the following correctly describes the structural components of the SARS-CoV-2 (COVID-19) virion and their respective biological functions during host infection?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A rigid peptidoglycan wall with flagella for swimming across mucosal secretions"
+        },
+        {
+          "id": "B",
+          "text": "A protein capsid lacking any outer lipid bilayer, which penetrates red blood cells via active transport"
+        },
+        {
+          "id": "C",
+          "text": "A lipid bilayer envelope containing envelope (E) and membrane (M) structural proteins, with surface spike (S) glycoproteins that mediate binding and entry into host cells"
+        },
+        {
+          "id": "D",
+          "text": "A double-stranded DNA genome enclosed in a cellulose sheath that blocks host antibody binding"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "SARS-CoV-2 has a lipid bilayer envelope supported by Membrane (M) and Envelope (E) proteins, with outer Spike (S) glycoproteins on its surface that interact with host cell receptors to mediate viral entry.",
+      "sourceReference": "Section 5.8.1, Page 133"
+    }
+  ]
 }

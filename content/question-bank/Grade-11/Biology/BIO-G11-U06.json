@@ -3,5 +3,411 @@
   "subject": "Biology",
   "unitNumber": 6,
   "unitTitle": "Population and Natural Resources",
-  "questions": []
+  "questions": [
+    {
+      "id": "BIO-G11-U06-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In the logistic population growth model, what does the carrying capacity (K) specifically represent?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The minimum number of individuals required to prevent inbreeding depression"
+        },
+        {
+          "id": "B",
+          "text": "The maximum population size that the available environmental resources can sustainably support"
+        },
+        {
+          "id": "C",
+          "text": "The initial population size before exponential acceleration begins"
+        },
+        {
+          "id": "D",
+          "text": "The total number of individuals that migrate out of an ecosystem per year"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Carrying capacity (designated as K) is defined as the maximum population size of a species that the available resources (food, water, shelter, space) in a specific environment can sustainably support without environmental degradation.",
+      "sourceReference": "Section 6.1.2, Page 239"
+    },
+    {
+      "id": "BIO-G11-U06-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which of the following natural resources is classified as a non-renewable resource because its rate of consumption far exceeds its natural rate of formation?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Biomass energy"
+        },
+        {
+          "id": "B",
+          "text": "Solar radiation"
+        },
+        {
+          "id": "C",
+          "text": "Coal"
+        },
+        {
+          "id": "D",
+          "text": "Wind power"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Non-renewable resources (such as coal, crude oil, natural gas, and mineral ores) exist in finite deposits and take millions of years of geological processing to form, meaning they cannot replenish at the rate they are consumed by humans.",
+      "sourceReference": "Section 6.2.2, Page 249"
+    },
+    {
+      "id": "BIO-G11-U06-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which of the following characteristics is typical of an organism exhibiting a Type I survivorship curve, such as humans and large mammals?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Producing thousands of offspring with zero parental care"
+        },
+        {
+          "id": "B",
+          "text": "High mortality rates among newborn infants and low survival to adulthood"
+        },
+        {
+          "id": "C",
+          "text": "Low juvenile mortality and high survival throughout early and middle life, with most deaths occurring in old age"
+        },
+        {
+          "id": "D",
+          "text": "A constant mortality rate at every single age interval throughout the entire lifespan"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Organisms with a Type I survivorship curve (such as humans and large mammals) invest significant parental care in relatively few offspring, leading to very low mortality during juvenile and adult stages, with death concentrated primarily among older age cohorts.",
+      "sourceReference": "Section 6.1.3, Page 245"
+    },
+    {
+      "id": "BIO-G11-U06-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which class of synthetic chemical compounds, commonly used as refrigerants and propellants, is primarily responsible for the catalytic destruction of the stratospheric ozone layer?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Chlorofluorocarbons (CFCs)"
+        },
+        {
+          "id": "B",
+          "text": "Methane (CH4)"
+        },
+        {
+          "id": "C",
+          "text": "Carbon dioxide (CO2)"
+        },
+        {
+          "id": "D",
+          "text": "Sulfur dioxide (SO2)"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Chlorofluorocarbons (CFCs), historically used in refrigerators, air conditioners, and aerosol sprays, drift into the stratosphere where ultraviolet radiation breaks them down to release reactive chlorine radicals that catalytically destroy ozone (O3) molecules.",
+      "sourceReference": "Section 6.5.4, Page 265"
+    },
+    {
+      "id": "BIO-G11-U06-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "The Konso Cultural Landscape in southern Ethiopia is recognized as a UNESCO World Heritage site primarily due to its:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Large-scale commercial irrigated sugarcane monocultures"
+        },
+        {
+          "id": "B",
+          "text": "Extensive traditional dry stone terracing used for soil and water conservation"
+        },
+        {
+          "id": "C",
+          "text": "Heavy industrial mining operations for rare earth metals"
+        },
+        {
+          "id": "D",
+          "text": "Dense urban network of multi-story concrete residential complexes"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The Konso Cultural Landscape is globally celebrated and UNESCO-inscribed for its multi-generational indigenous dry stone terracing constructed on rugged hillsides, which prevents severe soil erosion, retains rainwater runoff, and creates cultivable land saddles.",
+      "sourceReference": "Section 6.6, Page 274"
+    },
+    {
+      "id": "BIO-G11-U06-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In a wildlife field survey using the mark-recapture method, researchers capture, tag, and release 60 birds. Later, they capture a second sample of 100 birds, of which 20 are found to be marked. What is the estimated total population size of birds in the study area?",
+      "options": [
+        {
+          "id": "A",
+          "text": "120"
+        },
+        {
+          "id": "B",
+          "text": "200"
+        },
+        {
+          "id": "C",
+          "text": "300"
+        },
+        {
+          "id": "D",
+          "text": "600"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Using the mark-recapture Lincoln-Petersen index formula: N = (M × n) / X, where M = initial marked individuals (60), n = total caught in second sample (100), and X = marked recaptures (20). N = (60 × 100) / 20 = 6,000 / 20 = 300 birds.",
+      "sourceReference": "Section 6.1.1, Page 234"
+    },
+    {
+      "id": "BIO-G11-U06-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which of the following factors regulates population size in a density-independent manner?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Interspecific competition for nesting territories"
+        },
+        {
+          "id": "B",
+          "text": "A severe flash flood resulting from torrential unseasonal rainfall"
+        },
+        {
+          "id": "C",
+          "text": "Transmission of infectious bacterial pathogens"
+        },
+        {
+          "id": "D",
+          "text": "Predation pressure from an increasing carnivore population"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Density-independent factors are abiotic environmental events (such as floods, catastrophic droughts, volcanic eruptions, or sudden freezes) that affect the mortality rate of a population regardless of whether the population density is high or low.",
+      "sourceReference": "Section 6.1.4, Page 246-247"
+    },
+    {
+      "id": "BIO-G11-U06-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "A demographer analyzes a national population pyramid that exhibits an expansive profile—characterized by a broad base in the 0–14 age group and a steeply tapering apex. What does this demographic shape indicate about the nation?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A developed nation with a shrinking population and negative growth rate"
+        },
+        {
+          "id": "B",
+          "text": "A developing country with high fertility rates, rapid population growth potential, and a high youth dependency ratio"
+        },
+        {
+          "id": "C",
+          "text": "A stable country with equal birth and death rates across all age cohorts"
+        },
+        {
+          "id": "D",
+          "text": "An aging society where median life expectancy exceeds 85 years"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "An expansive population pyramid has a wide base and narrow top, reflecting high birth and fertility rates with a large proportion of young individuals (under age 15) and lower life expectancy, characteristic of developing nations.",
+      "sourceReference": "Section 6.1.3, Page 242-243"
+    },
+    {
+      "id": "BIO-G11-U06-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which of the following interventions is categorized as a mechanical measure of soil and water conservation in Ethiopia?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Establishing area enclosures to exclude livestock grazing"
+        },
+        {
+          "id": "B",
+          "text": "Planting multipurpose legume trees along farm boundaries (agroforestry)"
+        },
+        {
+          "id": "C",
+          "text": "Constructing physical stone check dams, bunds, and hillside terraces"
+        },
+        {
+          "id": "D",
+          "text": "Afforestation initiatives such as the Green Legacy campaign"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Mechanical measures involve constructing physical engineering structures—such as stone bunds, hillside terraces, check dams, and diversion ditches—to intercept surface runoff and trap sediment. Vegetative planting, afforestation, and enclosures are biological measures.",
+      "sourceReference": "Section 6.3, Page 256"
+    },
+    {
+      "id": "BIO-G11-U06-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How do industrial emissions of sulfur dioxide (SO2) and nitrogen dioxide (NO2) result in the formation of acid rain?",
+      "options": [
+        {
+          "id": "A",
+          "text": "They react directly with atmospheric ozone to produce solid ammonium chloride particulates"
+        },
+        {
+          "id": "B",
+          "text": "They dissolve in atmospheric water vapor and react with oxygen to form dilute solutions of sulfuric acid (H2SO4) and nitric acid (HNO3)"
+        },
+        {
+          "id": "C",
+          "text": "They catalyze the synthesis of carbonic acid from evaporated methane gas"
+        },
+        {
+          "id": "D",
+          "text": "They neutralize alkaline hydroxide ions, freezing raindrops into acidic permafrost"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Sulfur dioxide and nitrogen oxides released from burning fossil fuels react with atmospheric water and oxygen: 2SO2 + O2 + 2H2O → 2H2SO4 and 4NO2 + O2 + 2H2O → 4HNO3, precipitating as acid rain with pH well below normal natural rain.",
+      "sourceReference": "Section 6.5.5, Page 267"
+    },
+    {
+      "id": "BIO-G11-U06-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In the central highlands of Ethiopia, what is the indigenous communal governance system known as 'Qero' that has successfully protected the Guassa Community Conservation Area for over 400 years?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A ritual hunting ceremony conducted annually to eradicate all rodent populations"
+        },
+        {
+          "id": "B",
+          "text": "A traditional rotational resource management system where community elders enforce closures of Afro-alpine grassland for 3–5 years to allow thatch grass and wildlife recovery"
+        },
+        {
+          "id": "C",
+          "text": "A commercial timber concession awarded to private foreign lumber companies"
+        },
+        {
+          "id": "D",
+          "text": "A state-mandated program that drains peat bogs for mechanized wheat farming"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The Qero system of Menz Guassa is an ancient communal conservation regime where elected headmen regulate resource access. The Afro-alpine grassland is closed to grazing and thatch grass cutting for 3–5 years to permit vegetative regeneration, protecting the endemic Ethiopian wolf and Gelada baboons.",
+      "sourceReference": "Section 6.6, Page 277"
+    },
+    {
+      "id": "BIO-G11-U06-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "According to the logistic population growth model governed by the equation dN/dt = r × ((K - N) / K) × N, at which population size (N) is the absolute population growth rate (optimum yield) at its theoretical maximum?",
+      "options": [
+        {
+          "id": "A",
+          "text": "When N approaches 0, because intraspecific competition is completely absent"
+        },
+        {
+          "id": "B",
+          "text": "When N = 1/2 K (half of the carrying capacity)"
+        },
+        {
+          "id": "C",
+          "text": "When N = K, because the population contains the largest number of breeding individuals"
+        },
+        {
+          "id": "D",
+          "text": "When N exceeds K by 25%"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In logistic growth, the rate of increase dN/dt is a parabolic function of N. When N is very small, growth is limited by the small number of breeding individuals. When N approaches K, the term (K - N) / K approaches zero due to density-dependent resistance. The mathematical product N × (K - N) / K is maximized exactly at N = 1/2 K, which represents the point of maximum growth rate (inflection point / optimum yield).",
+      "sourceReference": "Section 6.1.2, Page 239-240"
+    },
+    {
+      "id": "BIO-G11-U06-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A freshwater lake receives pesticide runoff containing low concentrations of the persistent organic pollutant DDT. A trophic chain exists: Phytoplankton → Zooplankton → Small Fish → Fish Eagle. Why does the fish eagle accumulate the highest concentration of DDT, and what physiological damage does this cause?",
+      "options": [
+        {
+          "id": "A",
+          "text": "DDT is water-soluble and evaporates from fish gills; in eagles, it damages respiratory alveoli"
+        },
+        {
+          "id": "B",
+          "text": "DDT is fat-soluble and resistant to metabolic breakdown, biomagnifying at each successive trophic level; in birds of prey, it interferes with calcium deposition, producing fragile eggshells that crack during incubation"
+        },
+        {
+          "id": "C",
+          "text": "DDT is absorbed exclusively through eagle feathers, preventing birds of prey from flying during migration"
+        },
+        {
+          "id": "D",
+          "text": "DDT converts into synthetic glucose in eagle blood, inducing fatal diabetic ketoacidosis"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Because DDT is persistent, non-biodegradable, and lipophilic (fat-soluble), it cannot be excreted easily and magnifies at each ascending trophic level (biomagnification). Top predators like fish eagles accumulate massive concentrations, which disrupt calcium metabolism, resulting in abnormally thin-shelled eggs that break under the mother's weight during incubation.",
+      "sourceReference": "Section 6.5.7, Page 271-272"
+    },
+    {
+      "id": "BIO-G11-U06-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "In the stratosphere, how does a single reactive chlorine atom (Cl) originating from a photolyzed CFC molecule destroy thousands of ozone (O3) molecules in a self-sustaining catalytic cycle?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The chlorine atom converts ozone into solid ice crystals that precipitate as acidic snow"
+        },
+        {
+          "id": "B",
+          "text": "Chlorine reacts with O3 to form ClO and O2; then ClO reacts with free atomic oxygen (O) to release O2 and regenerate the reactive Cl atom to repeat the cycle"
+        },
+        {
+          "id": "C",
+          "text": "The chlorine atom binds permanently to an ozone molecule, forming an inert trichloride complex that settles into the troposphere"
+        },
+        {
+          "id": "D",
+          "text": "Chlorine absorbs incoming UV rays, preventing ozone from splitting into diatomic oxygen"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The catalytic ozone depletion cycle occurs in two steps: first, Cl + O3 → ClO + O2; second, ClO + O → Cl + O2. Because the chlorine radical is regenerated unchanged at the end of the second reaction, a single chlorine atom can repeat this cycle thousands of times before being removed, dramatically depleting stratospheric ozone.",
+      "sourceReference": "Section 6.5.4, Page 265-266"
+    },
+    {
+      "id": "BIO-G11-U06-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A road ecology study conducted in an Ethiopian conservation area (such as Geralle National Park) revealed that highway traffic causes up to 29% of wild animal mortality. Which ecological consequence and engineering mitigation strategy are most accurately aligned with this finding?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Road traffic eliminates all plant seed dispersal; highways must be covered with artificial plastic canopies"
+        },
+        {
+          "id": "B",
+          "text": "Highways cause habitat fragmentation and severe roadkill mortality; constructing dedicated wildlife corridors and vegetated underpasses restores landscape connectivity and safe animal movement"
+        },
+        {
+          "id": "C",
+          "text": "Vehicles emit carbon monoxide that suffocates soil nematodes; roads must be redirected into lake beds"
+        },
+        {
+          "id": "D",
+          "text": "Noise pollution forces all wild mammals to become strictly diurnal; erecting continuous electric fences along both sides of every road is the only viable remedy"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Roads cutting across protected landscapes bisect ecological territories and cause severe population reductions via vehicular collisions (roadkills) and barrier effects. Road ecology demonstrates that constructing wildlife crossing structures—such as vegetated underpasses and overpasses combined with directional fencing—restores habitat connectivity and natural migratory movements.",
+      "sourceReference": "Section 6.4, Page 257"
+    }
+  ]
 }

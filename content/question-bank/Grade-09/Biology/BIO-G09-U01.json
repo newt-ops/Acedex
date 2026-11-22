@@ -3,5 +3,411 @@
   "subject": "Biology",
   "unitNumber": 1,
   "unitTitle": "Introduction to Biology",
-  "questions": []
+  "questions": [
+    {
+      "id": "BIO-G09-U01-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "The term 'Biology' is derived from two Greek words, 'bios' and 'logos'. What do these words literally mean?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Bios means earth, and logos means measurement"
+        },
+        {
+          "id": "B",
+          "text": "Bios means animal, and logos means structure"
+        },
+        {
+          "id": "C",
+          "text": "Bios means life, and logos means study"
+        },
+        {
+          "id": "D",
+          "text": "Bios means plant, and logos means classification"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Biology originates from the Greek words 'bios', which means life, and 'logos', which means study or reasoning; hence, biology is defined as the scientific study of life and living organisms.",
+      "sourceReference": "Section 1.1, Page 1"
+    },
+    {
+      "id": "BIO-G09-U01-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In a biological investigation, what is the primary defining characteristic of a scientific hypothesis?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It is an unchangeable scientific law established by extensive experimentation"
+        },
+        {
+          "id": "B",
+          "text": "It is a proposed, testable scientific explanation for an observed phenomenon"
+        },
+        {
+          "id": "C",
+          "text": "It is a conclusive summary reached after analyzing experimental data"
+        },
+        {
+          "id": "D",
+          "text": "It is a general opinion held by scientists without requiring verification"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "A scientific hypothesis is a proposed explanation or possible answer formulated to address a specific question. To be scientifically valid, a hypothesis must be testable through experimentation and capable of being supported or rejected.",
+      "sourceReference": "Section 1.3, Page 3"
+    },
+    {
+      "id": "BIO-G09-U01-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which piece of laboratory equipment is specifically designed to sterilize culture media and glassware by using high temperatures and pressurized steam to destroy bacterial spores?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Bacteriological incubator"
+        },
+        {
+          "id": "B",
+          "text": "Crucible"
+        },
+        {
+          "id": "C",
+          "text": "Laboratory hotplate"
+        },
+        {
+          "id": "D",
+          "text": "Autoclave"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "An autoclave is the laboratory equipment used to achieve complete sterilization. It destroys resistant bacterial endospores, culture media, and contaminated items by exposing them to high-pressure steam at elevated temperatures.",
+      "sourceReference": "Section 1.4.1, Page 7"
+    },
+    {
+      "id": "BIO-G09-U01-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "If a student uses a compound light microscope fitted with a 10× eyepiece and a 40× high-power objective lens, what is the total magnification of the specimen being observed?",
+      "options": [
+        {
+          "id": "A",
+          "text": "400×"
+        },
+        {
+          "id": "B",
+          "text": "50×"
+        },
+        {
+          "id": "C",
+          "text": "4000×"
+        },
+        {
+          "id": "D",
+          "text": "40×"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Total magnification in a compound light microscope is determined by calculating the product of the eyepiece (ocular lens) magnification and the objective lens magnification: 10 × 40 = 400×.",
+      "sourceReference": "Section 1.5, Page 10"
+    },
+    {
+      "id": "BIO-G09-U01-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "According to standard laboratory safety procedures, what is the immediate first-aid action required if a student suffers a thermal or chemical skin burn during an experiment?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Apply a thick layer of grease or cooking oil over the affected skin"
+        },
+        {
+          "id": "B",
+          "text": "Cover the burned region immediately with an airtight adhesive bandage"
+        },
+        {
+          "id": "C",
+          "text": "Flood the affected area continuously with cold running tap water for several minutes"
+        },
+        {
+          "id": "D",
+          "text": "Neutralize the burn by applying a concentrated acidic or basic solution"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "In the event of a laboratory burn or chemical skin exposure, the immediate first-aid rule is to flood the affected area with cold running tap water for several minutes to minimize tissue damage and wash away chemical residues.",
+      "sourceReference": "Section 1.6, Page 15"
+    },
+    {
+      "id": "BIO-G09-U01-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which of the following real-world applications directly demonstrates the use of microorganisms in municipal and environmental biotechnology?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Synthesizing inorganic mineral fertilizers using synthetic chemical catalysts"
+        },
+        {
+          "id": "B",
+          "text": "Utilizing bacterial filter beds in sewage treatment to break down organic effluents"
+        },
+        {
+          "id": "C",
+          "text": "Imitating termite mound structures to design modern ventilated buildings"
+        },
+        {
+          "id": "D",
+          "text": "Employing electromagnetic lenses to observe the internal structure of viruses"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Sewage disposal relies on microbial action where bacteria in the filter beds decompose organic waste and form the foundation of a purifying food chain that treats effluent before discharge.",
+      "sourceReference": "Section 1.1, Page 2"
+    },
+    {
+      "id": "BIO-G09-U01-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "A biologist tests the hypothesis that bean seeds germinate faster at 25°C than at 10°C. After three repeated trials, seeds at 25°C show no difference in germination time compared to those at 10°C. According to the scientific method, what should the researcher do next?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Publish the original hypothesis as an established scientific theory regardless of the results"
+        },
+        {
+          "id": "B",
+          "text": "Disregard the data collected from the 10°C group to force the hypothesis to appear valid"
+        },
+        {
+          "id": "C",
+          "text": "Conclude that the experiment was useless and abandon seed germination studies entirely"
+        },
+        {
+          "id": "D",
+          "text": "Reject the initial hypothesis, evaluate the findings, and propose an alternative testable hypothesis"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "When experimental data fail to support an initial hypothesis, scientists reject or revise that hypothesis in light of the newly gathered evidence and formulate an alternative hypothesis for further testing.",
+      "sourceReference": "Section 1.3, Page 3"
+    },
+    {
+      "id": "BIO-G09-U01-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How does the optical property of 'resolution' differ fundamentally from 'magnification' in microscopy?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Resolution is the ability to distinguish two separate points as distinct, whereas magnification is the enlargement of an image"
+        },
+        {
+          "id": "B",
+          "text": "Resolution indicates the physical size of the specimen, whereas magnification measures the field of view"
+        },
+        {
+          "id": "C",
+          "text": "Resolution refers to the total number of glass lenses present, whereas magnification denotes the intensity of light"
+        },
+        {
+          "id": "D",
+          "text": "Resolution is only achieved using oil immersion, whereas magnification only occurs under low power"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Magnification refers to how many times larger an image appears compared to the actual size of the object, while resolving power (resolution) is the capacity of an optical system to distinguish between two closely spaced points as separate entities.",
+      "sourceReference": "Section 1.4.1, Page 5"
+    },
+    {
+      "id": "BIO-G09-U01-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "A student needs to culture a bacterial sample on an agar plate at a steady temperature of 37°C for 48 hours. Which instrument must be used to provide and regulate this growth environment?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Autoclave"
+        },
+        {
+          "id": "B",
+          "text": "Centrifuge"
+        },
+        {
+          "id": "C",
+          "text": "Bacteriological incubator"
+        },
+        {
+          "id": "D",
+          "text": "Water bath with a Bunsen burner"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "An incubator is an insulated device engineered to maintain the optimal environmental temperature and conditions required for the growth and propagation of cultured microorganisms.",
+      "sourceReference": "Section 1.4.1, Page 7"
+    },
+    {
+      "id": "BIO-G09-U01-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which component of the compound light microscope is positioned beneath the stage to regulate the diameter and intensity of the light beam that reaches the specimen?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Coarse adjustment knob"
+        },
+        {
+          "id": "B",
+          "text": "Iris diaphragm"
+        },
+        {
+          "id": "C",
+          "text": "Revolving nosepiece"
+        },
+        {
+          "id": "D",
+          "text": "Body tube"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The diaphragm (iris) is located under the microscope stage and serves to control the amount and intensity of light transmitted through the aperture to the specimen on the glass slide.",
+      "sourceReference": "Section 1.5.1, Page 13"
+    },
+    {
+      "id": "BIO-G09-U01-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Why is it an essential rule to always focus a light microscope by moving the objective lens away from the slide rather than toward it while looking through the eyepiece?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To prevent the objective lens from colliding with and cracking the glass slide and damaging the lens"
+        },
+        {
+          "id": "B",
+          "text": "To prevent the microscopic illuminator bulb from burning out prematurely"
+        },
+        {
+          "id": "C",
+          "text": "To prevent the specimen from undergoing excessive thermal expansion"
+        },
+        {
+          "id": "D",
+          "text": "To increase the numerical aperture and resolving power of the ocular lens"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Focusing by moving the objective lens away from the specimen ensures that the lens does not accidentally hit the coverslip or slide, which could shatter the glass slide and scratch or destroy delicate optical lens surfaces.",
+      "sourceReference": "Section 1.5.2, Page 13"
+    },
+    {
+      "id": "BIO-G09-U01-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A researcher conducts an experiment to evaluate whether a new antibacterial plant extract inhibits the growth of Staphylococcus aureus. Plate 1 receives the plant extract on an agar lawn of bacteria, while Plate 2 receives only sterile distilled water on an identical lawn. Both plates are incubated at 35°C for 24 hours. What is the specific scientific role of Plate 2?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It acts as the independent variable being manipulated"
+        },
+        {
+          "id": "B",
+          "text": "It provides a duplicate experimental trial to test higher extract toxicity"
+        },
+        {
+          "id": "C",
+          "text": "It serves as a negative control to prove that bacterial inhibition is due specifically to the extract and not the solvent or incubation conditions"
+        },
+        {
+          "id": "D",
+          "text": "It serves to formulate an initial hypothesis after the final results have already been documented"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "In scientific experimentation, a control group (Plate 2) provides a baseline that keeps all environmental variables identical except the factor being tested, demonstrating that any observed antibacterial effect in Plate 1 is caused exclusively by the extract.",
+      "sourceReference": "Section 1.3, Page 2"
+    },
+    {
+      "id": "BIO-G09-U01-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "When examining a stained bacterial smear under the highest power of a compound light microscope (100× objective lens), a drop of immersion oil must be placed between the coverslip and the lens. What is the physical reason for this procedure?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Immersion oil acts as a stain to dye the peptidoglycan cell walls of the bacteria"
+        },
+        {
+          "id": "B",
+          "text": "Immersion oil permanently seals the coverslip to prevent evaporation of the mount"
+        },
+        {
+          "id": "C",
+          "text": "Immersion oil cools the slide to prevent bacterial cells from rupturing due to lamp heat"
+        },
+        {
+          "id": "D",
+          "text": "Immersion oil has the same refractive index as glass, preventing light rays from bending and escaping into the air"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "At 100× magnification, the objective lens aperture is very small. Because light bends (refracts) when passing from glass into air, light rays would be lost. Immersion oil matches the refractive index of glass, reducing refraction and directing light into the lens to maintain high resolution.",
+      "sourceReference": "Section 1.5.2, Page 13"
+    },
+    {
+      "id": "BIO-G09-U01-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Which of the following correctly contrasts the operational mechanisms of a transmission electron microscope with a standard compound light microscope?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Light microscopes use electromagnets in a vacuum, whereas electron microscopes use glass lenses in air"
+        },
+        {
+          "id": "B",
+          "text": "Electron microscopes use a beam of electrons and electromagnets to achieve much higher resolution, whereas light microscopes use light beams and glass lenses"
+        },
+        {
+          "id": "C",
+          "text": "Electron microscopes allow direct observation of living swimming protists, whereas light microscopes can only examine dead metal-coated specimens"
+        },
+        {
+          "id": "D",
+          "text": "Light microscopes provide higher resolving power than electron microscopes, enabling clear visualization of individual viral capsids"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Electron microscopes employ beams of electrons focused by electromagnetic fields in a vacuum, providing vastly superior resolving power and magnification compared to light microscopes, which rely on visible light transmitted through glass lenses.",
+      "sourceReference": "Section 1.4.1, Page 6"
+    },
+    {
+      "id": "BIO-G09-U01-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A student successfully focuses on an epidermal onion cell under low-power magnification (10× objective) and then rotates the revolving nosepiece to the high-power objective (40×). Which combination of changes occurs in the field of view, image brightness, and focal depth?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The field of view becomes narrower, the image appears darker, and only fine adjustment should be used for focusing"
+        },
+        {
+          "id": "B",
+          "text": "The field of view expands, the image appears brighter, and the coarse adjustment knob must be turned rapidly"
+        },
+        {
+          "id": "C",
+          "text": "The field of view remains unchanged, the light intensity increases, and the iris diaphragm must be closed completely"
+        },
+        {
+          "id": "D",
+          "text": "The field of view becomes wider, the resolving power drops to zero, and the working distance increases significantly"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Switching to a higher magnification objective lens reduces the diameter of the field of view and allows less light into the objective (making the image darker, requiring the diaphragm to be opened). Because the lens is close to the slide, only the fine adjustment knob should be adjusted to achieve sharp focus.",
+      "sourceReference": "Section 1.5.1 & 1.5.2, Page 12-13"
+    }
+  ]
 }

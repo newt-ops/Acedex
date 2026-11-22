@@ -3,5 +3,411 @@
   "subject": "Biology",
   "unitNumber": 5,
   "unitTitle": "Human Body System",
-  "questions": []
+  "questions": [
+    {
+      "id": "BIO-G12-U05-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which structural component of a typical multipolar neuron is primarily specialized for receiving incoming electrochemical signals from sensory receptors or adjacent neurons?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Axon terminal"
+        },
+        {
+          "id": "B",
+          "text": "Dendrite"
+        },
+        {
+          "id": "C",
+          "text": "Myelin sheath"
+        },
+        {
+          "id": "D",
+          "text": "Node of Ranvier"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Dendrites are branching cellular extensions from the neuronal soma (cell body) that function as the receptive input zones, collecting incoming signals from sensory receptors or presynaptic neurons and conveying them toward the cell body.",
+      "sourceReference": "Section 5.1.1, Page 240-241"
+    },
+    {
+      "id": "BIO-G12-U05-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "During the generation of a neuronal action potential, which rapid ionic event directly causes the initial depolarization of the axonal membrane from -65 mV to approximately +40 mV?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Efflux of potassium ions (K+) out of the axon through voltage-gated channels"
+        },
+        {
+          "id": "B",
+          "text": "Influx of sodium ions (Na+) into the axon through opened voltage-gated channels"
+        },
+        {
+          "id": "C",
+          "text": "Active pumping of three sodium ions out by the sodium-potassium pump"
+        },
+        {
+          "id": "D",
+          "text": "Diffusion of negative chloride ions (Cl-) into the axoplasm"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "When an axon is stimulated beyond the threshold voltage, voltage-gated sodium channels open rapidly. Driven by both concentration and electrical gradients, Na+ rushes inward, reversing the resting negative internal charge to a positive potential (+40 mV), a state known as depolarization.",
+      "sourceReference": "Section 5.1.2, Page 247-249"
+    },
+    {
+      "id": "BIO-G12-U05-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In the human middle ear, what is the correct anatomical sequence of the three auditory ossicles that transmit and amplify sound vibrations from the tympanic membrane inward to the oval window?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Incus (anvil) → Malleus (hammer) → Stapes (stirrup)"
+        },
+        {
+          "id": "B",
+          "text": "Stapes (stirrup) → Incus (anvil) → Malleus (hammer)"
+        },
+        {
+          "id": "C",
+          "text": "Malleus (hammer) → Incus (anvil) → Stapes (stirrup)"
+        },
+        {
+          "id": "D",
+          "text": "Malleus (hammer) → Stapes (stirrup) → Incus (anvil)"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The three middle ear ossicles bridge the air-filled cavity in a precise anatomical sequence: the malleus (hammer) attaches directly to the eardrum (tympanic membrane), articulates with the intermediate incus (anvil), which in turn articulates with the stapes (stirrup) resting against the oval window.",
+      "sourceReference": "Section 5.2.5, Page 292-293"
+    },
+    {
+      "id": "BIO-G12-U05-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which hormone is synthesized and secreted by the pineal gland to synchronize circadian rhythms and regulate the human sleep-wake cycle in response to environmental darkness?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Melatonin"
+        },
+        {
+          "id": "B",
+          "text": "Thyroxine"
+        },
+        {
+          "id": "C",
+          "text": "Thymosin"
+        },
+        {
+          "id": "D",
+          "text": "Prolactin"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The pineal gland, situated deep within the brain, secretes the hormone melatonin. Melatonin secretion is inhibited by bright ambient light and stimulated by darkness, coordinating the body's internal biological clock and 24-hour sleep-wake cycle.",
+      "sourceReference": "Section 5.2.6, Page 313-315"
+    },
+    {
+      "id": "BIO-G12-U05-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In the microscopic architecture of the human kidney, what constitutes the functional filtration unit, and where does blood ultrafiltration specifically occur?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Neuron; within the loop of Henle"
+        },
+        {
+          "id": "B",
+          "text": "Nephron; across the glomerulus into the Bowman's capsule"
+        },
+        {
+          "id": "C",
+          "text": "Renal pelvis; within the ureter"
+        },
+        {
+          "id": "D",
+          "text": "Calyx; inside the collecting duct"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The functional microscopic unit of the kidney is the nephron. High hydrostatic blood pressure inside the glomerulus forces water and small soluble solutes across capillary walls into the surrounding Bowman's capsule via ultrafiltration.",
+      "sourceReference": "Section 5.3.1, Page 317-318"
+    },
+    {
+      "id": "BIO-G12-U05-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "When a person moves from a dimly lit room into intense, bright sunlight, which coordinated muscular response of the iris occurs to protect the retina from photoreceptor damage?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Radial muscles contract and circular muscles relax, causing the pupil to dilate widely"
+        },
+        {
+          "id": "B",
+          "text": "Circular muscles contract and radial muscles relax, causing the pupil to constrict"
+        },
+        {
+          "id": "C",
+          "text": "Ciliary muscles contract and suspensory ligaments tighten, flattening the cornea"
+        },
+        {
+          "id": "D",
+          "text": "Both circular and radial muscles relax completely, closing the lacrimal puncta"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In bright light, parasympathetic impulses trigger the contraction of the circular (sphincter pupillae) muscles while the radial muscles relax. This narrows the central aperture (pupil constriction), decreasing the quantity of light entering the eye and preventing retinal overstimulation.",
+      "sourceReference": "Section 5.2.4, Page 286-288"
+    },
+    {
+      "id": "BIO-G12-U05-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How do the sympathetic and parasympathetic divisions of the autonomic nervous system interact to regulate visceral organ activity during physiological stress versus rest?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Sympathetic nerves stimulate intestinal peristalsis and constrict bronchioles, whereas parasympathetic nerves accelerate heart rate"
+        },
+        {
+          "id": "B",
+          "text": "Sympathetic nerves mediate 'fight-or-flight' reactions (elevating heart rate, dilating bronchioles, and inhibiting gut motility), whereas parasympathetic nerves mediate 'rest-and-digest' functions (slowing heart rate and stimulating digestion)"
+        },
+        {
+          "id": "C",
+          "text": "Both divisions act synergistically to continuously shut down renal blood supply during restful sleep"
+        },
+        {
+          "id": "D",
+          "text": "Sympathetic nerves control skeletal voluntary muscles, while parasympathetic nerves regulate somatic reflex arcs"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The autonomic nervous system possesses antagonistic divisions: the sympathetic division prepares the organism for physical emergencies ('fight or flight') by boosting cardiac output, dilating airways, and shunting blood from the digestive tract; the parasympathetic division conserves energy ('rest and digest') by slowing heart rate and stimulating digestion.",
+      "sourceReference": "Section 5.1.4, Page 260-261"
+    },
+    {
+      "id": "BIO-G12-U05-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Following a carbohydrate-rich meal, circulating blood glucose rises above the normal homeostatic set point (~90 mg/100 mL). Which endocrine feedback loop restores glucose equilibrium?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Pancreatic alpha cells release glucagon to stimulate hepatic glycogenolysis"
+        },
+        {
+          "id": "B",
+          "text": "Pancreatic beta cells secrete insulin, which promotes glucose uptake into tissue cells and stimulates glycogen synthesis in the liver and skeletal muscles"
+        },
+        {
+          "id": "C",
+          "text": "Adrenal medulla releases aldosterone to excrete excess blood glucose in urine"
+        },
+        {
+          "id": "D",
+          "text": "The anterior pituitary secretes TSH to hydrolyze stored glucose into lactic acid"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Elevated blood sugar stimulates beta cells in the pancreatic islets of Langerhans to release insulin. Insulin binds target cell receptors, facilitating cellular glucose uptake and activating enzymes that convert excess glucose into stored glycogen in the liver and muscles, lowering blood sugar back to set point.",
+      "sourceReference": "Section 5.2.6, Page 307-310"
+    },
+    {
+      "id": "BIO-G12-U05-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "When severe sweating or dehydration lowers the body's water content, how do hypothalamic osmoreceptors and the posterior pituitary coordinate renal osmoregulation?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Osmoreceptors trigger the posterior pituitary to secrete Antidiuretic Hormone (ADH), which increases water permeability in the distal tubules and collecting ducts, producing concentrated urine"
+        },
+        {
+          "id": "B",
+          "text": "Osmoreceptors inhibit ADH secretion, allowing collecting ducts to excrete a large volume of dilute urine"
+        },
+        {
+          "id": "C",
+          "text": "The pituitary secretes oxytocin, which constricts the renal artery to halt all urine filtration"
+        },
+        {
+          "id": "D",
+          "text": "The hypothalamus signals the liver to convert blood urea into metabolic water"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "When blood osmolarity rises due to water deficit, hypothalamic osmoreceptors stimulate the posterior pituitary to release antidiuretic hormone (ADH/vasopressin). ADH increases aquaporin channel permeability in the late distal convoluted tubule and collecting duct, maximizing water reabsorption and producing a small volume of hypertonic (concentrated) urine.",
+      "sourceReference": "Section 5.2.6 & 5.3.1, Page 300, 320-322"
+    },
+    {
+      "id": "BIO-G12-U05-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which of the following describes the physiological mechanism by which Parathyroid Hormone (PTH) elevates declining blood calcium (Ca2+) levels back to normal?",
+      "options": [
+        {
+          "id": "A",
+          "text": "PTH inhibits osteoclasts, promotes bone mineralization, and accelerates urinary calcium excretion"
+        },
+        {
+          "id": "B",
+          "text": "PTH stimulates osteoclasts to release Ca2+ from bone matrix, enhances renal tubular Ca2+ reabsorption, and activates vitamin D to boost intestinal Ca2+ absorption"
+        },
+        {
+          "id": "C",
+          "text": "PTH converts circulating calcium ions into insoluble calcium carbonate in the spleen"
+        },
+        {
+          "id": "D",
+          "text": "PTH stimulates thyroid C cells to release calcitonin into arterial blood"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Parathyroid hormone (PTH) acts antagonistically to calcitonin. In response to hypocalcemia, PTH stimulates osteoclast activity to resorb bone calcium into the blood, stimulates renal tubular reabsorption of calcium from glomerular filtrate, and activates renal vitamin D synthesis to enhance intestinal dietary calcium uptake.",
+      "sourceReference": "Section 5.2.6, Page 303-304"
+    },
+    {
+      "id": "BIO-G12-U05-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What is the primary neurochemical mechanism by which Khat (Catha edulis) chewing and cigarette smoking produce physiological stimulation and potential addiction?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Cathinone from khat acts as an amphetamine-like stimulant, and nicotine from tobacco triggers dopamine release in brain reward pathways, reinforcing compulsive consumption"
+        },
+        {
+          "id": "B",
+          "text": "Both substances act as GABA agonists that shut down sensory transmission in the medulla"
+        },
+        {
+          "id": "C",
+          "text": "They permanently destroy synaptic vesicles and prevent all neurotransmitter synthesis"
+        },
+        {
+          "id": "D",
+          "text": "They act exclusively on peripheral pain nociceptors without influencing central brain chemistry"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Khat leaves contain cathinone, an amphetamine-like alkaloid that stimulates the central nervous system, increasing heart rate and alertness. Nicotine stimulates nicotinic acetylcholine receptors, provoking dopamine release in mesolimbic reward circuits that fosters physical and psychological addiction.",
+      "sourceReference": "Section 5.1.7, Page 269-271"
+    },
+    {
+      "id": "BIO-G12-U05-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "During the repolarization and hyperpolarization phases of an action potential, what specific molecular mechanisms restore the original resting potential of -65 mV and maintain proper ion gradients?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Sodium channels remain permanently locked open while calcium pumps import chloride ions"
+        },
+        {
+          "id": "B",
+          "text": "Voltage-gated Na+ channels inactivate, voltage-gated K+ channels open allowing K+ to diffuse out of the axon down its concentration gradient, and the Na+/K+ ATPase actively pumps 3 Na+ out for every 2 K+ pumped in"
+        },
+        {
+          "id": "C",
+          "text": "Potassium ions enter through simple diffusion while ATP synthase synthesizes glycogen in the axoplasm"
+        },
+        {
+          "id": "D",
+          "text": "The axonal membrane dissolves its phospholipid bilayer to equalize internal and external charges"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Repolarization occurs when voltage-gated Na+ channels close/inactivate and voltage-gated K+ channels open, allowing rapid K+ efflux down its electrochemical gradient, which restores the negative interior. Because K+ channels close slowly, brief hyperpolarization occurs. The electrogenic Na+/K+ ATPase pump subsequently restores baseline ion distributions by actively transporting 3 Na+ out of the cell for every 2 K+ transported in.",
+      "sourceReference": "Section 5.1.2, Page 248-249"
+    },
+    {
+      "id": "BIO-G12-U05-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Which chronological sequence of biochemical events occurs at a cholinergic chemical synapse when a nerve impulse arrives at the presynaptic terminal?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Action potential depolarizes terminal → voltage-gated Ca2+ channels open → Ca2+ influx triggers exocytosis of acetylcholine (ACh) vesicles → ACh diffuses across the synaptic cleft and binds postsynaptic receptors → acetylcholinesterase hydrolyzes ACh"
+        },
+        {
+          "id": "B",
+          "text": "ACh binds presynaptic receptors → Ca2+ is pumped into the cleft → action potential travels backwards along the axon → synaptic vesicles absorb surrounding fluid"
+        },
+        {
+          "id": "C",
+          "text": "Acetylcholinesterase synthesizes ATP → synaptic vesicles undergo endocytosis into the cleft → post-synaptic neuron undergoes hyperpolarization immediately"
+        },
+        {
+          "id": "D",
+          "text": "Electrical ions jump directly across the gap junction without chemical mediation or enzymatic breakdown"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Upon arrival of an action potential, the terminal depolarizes, opening voltage-gated Ca2+ channels. Inflowing Ca2+ induces synaptic vesicles to fuse with the presynaptic membrane and release acetylcholine via exocytosis into the cleft. ACh diffuses across, binding ligand-gated receptors on the postsynaptic membrane to generate a postsynaptic potential. Acetylcholinesterase rapidly hydrolyzes ACh to terminate the signal and allow reset.",
+      "sourceReference": "Section 5.1.2 & 5.1.3, Page 250-252"
+    },
+    {
+      "id": "BIO-G12-U05-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "How does the human eye achieve optical accommodation when focusing on a near object (such as reading fine print), and how does this mechanism alter the geometry of the crystalline lens?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Ciliary muscles relax, suspensory ligaments tighten, pulling the lens into a flattened, less convex shape with reduced refractive power"
+        },
+        {
+          "id": "B",
+          "text": "Ciliary muscles contract, relaxing tension on suspensory ligaments, allowing the elastic lens capsule to bulge into a more rounded, highly convex shape that sharply refracts diverging light rays"
+        },
+        {
+          "id": "C",
+          "text": "The cornea alters its curvature while the lens remains completely rigid and motionless"
+        },
+        {
+          "id": "D",
+          "text": "The vitreous humour is pumped into the anterior chamber, pushing the retina backward"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "To focus on near objects, diverging light rays require greater convergence. The parasympathetically stimulated ciliary muscles contract forward, releasing tension on the suspensory ligaments (zonules). Relieved of outward radial pull, the naturally elastic lens rounds up, increasing its curvature (convexity) and refractive power to focus sharp images onto the fovea centralis.",
+      "sourceReference": "Section 5.2.4, Page 285-286"
+    },
+    {
+      "id": "BIO-G12-U05-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "In the human nephron, how do the physiological transport processes occurring in the proximal convoluted tubule (PCT) differ fundamentally from those in the descending and ascending limbs of the loop of Henle?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The PCT is impermeable to water, whereas the loop of Henle reabsorbs 100% of all filtered glucose and amino acids"
+        },
+        {
+          "id": "B",
+          "text": "The PCT obligatorily reabsorbs 100% of glucose and amino acids along with ~67% of Na+ and ~80% of water, whereas the loop of Henle creates an osmotic medulla gradient (descending limb is permeable to water but not salts; thick ascending limb actively pumps out Na+ and Cl- and is impermeable to water)"
+        },
+        {
+          "id": "C",
+          "text": "The PCT secretes urea into the renal vein, while the ascending limb produces glomerular filtrate"
+        },
+        {
+          "id": "D",
+          "text": "The PCT functions only under extreme ADH stimulation, whereas the loop of Henle operates strictly via passive ultrafiltration"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The proximal convoluted tubule (PCT) has extensive microvilli that actively reabsorb 100% of filtered glucose and amino acids, approximately 67% of sodium, and ~80% of water iso-osmotically. In contrast, the loop of Henle acts as a countercurrent multiplier to concentrate medullary interstitium: the descending limb is water-permeable but salt-impermeable, whereas the thick ascending limb actively extrudes Na+ and Cl- and is completely impermeable to water.",
+      "sourceReference": "Section 5.3.1, Page 318-320"
+    }
+  ]
 }

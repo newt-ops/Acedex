@@ -3,5 +3,411 @@
   "subject": "Biology",
   "unitNumber": 4,
   "unitTitle": "Evolution",
-  "questions": []
+  "questions": [
+    {
+      "id": "BIO-G12-U04-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In his famous experiments to test the theory of spontaneous generation (abiogenesis), how did Louis Pasteur's swan-neck flasks disprove the idea that microbial life arises spontaneously from nutrient broth?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The twisted neck prevented all air from entering the flask, proving oxygen destroys vital forces"
+        },
+        {
+          "id": "B",
+          "text": "The bent neck allowed air into the flask but trapped airborne dust and microorganisms, keeping the boiled broth sterile until tilted"
+        },
+        {
+          "id": "C",
+          "text": "The glass wall released mercury vapors that permanently sterilized the mutton broth"
+        },
+        {
+          "id": "D",
+          "text": "The broth spontaneously transformed into maggots only when exposed to extreme freezing"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Pasteur used swan-neck flasks that allowed ambient air to exchange freely while trapping airborne microbes and dust in the curve of the neck. The broth remained sterile indefinitely as long as the neck was intact, disproving spontaneous generation and demonstrating that life comes only from preexisting life ('Omne vivum ex vivo').",
+      "sourceReference": "Section 4.1.1, Page 164-165"
+    },
+    {
+      "id": "BIO-G12-U04-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which of the following sets of anatomical structures represents homologous structures, indicating a common evolutionary ancestry despite differences in function?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The wings of a bat, a bird, and an insect"
+        },
+        {
+          "id": "B",
+          "text": "The forelimbs of a human, a cat, a whale, and a bat"
+        },
+        {
+          "id": "C",
+          "text": "The eyes of an octopus and the eyes of a human"
+        },
+        {
+          "id": "D",
+          "text": "The dorsal fin of a shark and the flipper of a dolphin"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Homologous structures share a common fundamental anatomical plan and evolutionary origin, even though they may serve different functions. The forelimbs of humans (manipulation), cats (running), whales (swimming), and bats (flying) share the pentadactyl bone arrangement inherited from a common mammalian ancestor.",
+      "sourceReference": "Section 4.1.3.1, Page 177-178"
+    },
+    {
+      "id": "BIO-G12-U04-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "A fossilized bone discovered in a sedimentary rock layer is determined to contain 25% (one-fourth) of its original radioactive Carbon-14 (C-14) relative to living organisms. Given that the half-life of C-14 is 5,730 years, what is the estimated age of the fossil?",
+      "options": [
+        {
+          "id": "A",
+          "text": "2,865 years"
+        },
+        {
+          "id": "B",
+          "text": "5,730 years"
+        },
+        {
+          "id": "C",
+          "text": "11,460 years"
+        },
+        {
+          "id": "D",
+          "text": "22,920 years"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "After one half-life (5,730 years), 50% of C-14 remains. After two half-lives, 25% (half of 50%) of C-14 remains. Therefore, the fossil has undergone two half-lives: 2 × 5,730 years = 11,460 years.",
+      "sourceReference": "Section 4.1.3.3, Page 183-184"
+    },
+    {
+      "id": "BIO-G12-U04-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Sickle-cell anemia is caused by a point mutation in the gene coding for the beta-chain of hemoglobin. Which nucleotide change and resulting amino acid substitution produce this condition?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The codon changes from GAG to GTG, replacing glutamic acid with valine"
+        },
+        {
+          "id": "B",
+          "text": "The codon changes from GTG to GAG, replacing valine with glutamic acid"
+        },
+        {
+          "id": "C",
+          "text": "The codon changes from AAG to UAG, creating a premature stop codon"
+        },
+        {
+          "id": "D",
+          "text": "The codon changes from CAA to CCA, replacing glutamine with proline"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "In sickle-cell hemoglobin, a single base substitution occurs in the sixth triplet of the beta-globin gene, altering the sequence from GAG to GTG. This causes the hydrophobic amino acid valine to replace the hydrophilic amino acid glutamic acid, altering the hemoglobin's quaternary behavior under low oxygen.",
+      "sourceReference": "Section 4.1.6, Page 210"
+    },
+    {
+      "id": "BIO-G12-U04-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In 1974, Donald Johanson and Tom Gray discovered the famous 3.2-million-year-old hominid fossil 'Lucy' at Hadar in the Afar region of Ethiopia. To which species did Lucy belong, and what key trait did her skeleton confirm?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Homo erectus; confirmed the mastery of fire and complex stone tools"
+        },
+        {
+          "id": "B",
+          "text": "Australopithecus afarensis; confirmed that bipedalism evolved before large brain expansion"
+        },
+        {
+          "id": "C",
+          "text": "Ardipithecus ramidus; confirmed that hominins evolved exclusively in aquatic marshes"
+        },
+        {
+          "id": "D",
+          "text": "Homo habilis; confirmed that cranial volume exceeded 1,500 cm³ before upright walking"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Lucy belonged to Australopithecus afarensis and lived approximately 3.2 million years ago. Analysis of her pelvic girdle, femur, and knee joints confirmed that bipedal upright walking evolved early in hominin history, preceding the rapid enlargement of the brain.",
+      "sourceReference": "Section 4.1.5, Page 203-205, 228"
+    },
+    {
+      "id": "BIO-G12-U04-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How did Jean-Baptiste Lamarck's evolutionary theory of 'inheritance of acquired characteristics' differ fundamentally from Charles Darwin's theory of 'natural selection'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Lamarck proposed that acquired physical changes resulting from use and disuse during an organism's lifetime are inherited, whereas Darwin emphasized that preexisting heritable variations determine differential reproductive success"
+        },
+        {
+          "id": "B",
+          "text": "Lamarck believed in catastrophic mass extinctions, while Darwin believed species never change over time"
+        },
+        {
+          "id": "C",
+          "text": "Lamarck's theory was grounded in Mendelian population genetics, whereas Darwin rejected the concept of common descent"
+        },
+        {
+          "id": "D",
+          "text": "Lamarck maintained that natural selection operates on genetic drift, while Darwin focused on divine special creation"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Lamarck argued that organisms develop adaptations through the use and disuse of organs to satisfy environmental needs, passing these acquired traits to offspring (e.g., giraffes stretching necks). In contrast, Darwin showed that preexisting inherited variation within a population confers differential survival and reproductive advantage in a given environment.",
+      "sourceReference": "Section 4.1.2, Page 171-176"
+    },
+    {
+      "id": "BIO-G12-U04-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In the 1953 Miller-Urey experiment simulating the biochemical origin of life (the Oparin-Haldane hypothesis), which combination of gases was subjected to electric spark discharges to represent Earth's prebiotic atmosphere?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Oxygen (O2), Nitrogen (N2), Carbon dioxide (CO2), and Ozone (O3)"
+        },
+        {
+          "id": "B",
+          "text": "Methane (CH4), Ammonia (NH3), Water vapor (H2O), and Hydrogen gas (H2)"
+        },
+        {
+          "id": "C",
+          "text": "Chlorofluorocarbons (CFCs), Carbon monoxide (CO), and Argon (Ar)"
+        },
+        {
+          "id": "D",
+          "text": "Sulfur dioxide (SO2), Chlorine (Cl2), and Nitric oxide (NO)"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Miller and Urey circulated a reducing gaseous mixture of methane (CH4), ammonia (NH3), hydrogen gas (H2), and water vapor (H2O)—without free molecular oxygen (O2)—past continuous electrical discharges, successfully synthesizing organic building blocks including amino acids.",
+      "sourceReference": "Section 4.1.1, Page 167-168, 229"
+    },
+    {
+      "id": "BIO-G12-U04-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "A population of seed-eating birds displays a continuous variation in beak size. A prolonged drought eliminates medium-sized seeds, leaving only very small, soft seeds and very large, hard seeds. Over several generations, birds with either small beaks or large beaks survive and reproduce better than birds with intermediate beaks. Which type of natural selection is operating?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Stabilizing selection"
+        },
+        {
+          "id": "B",
+          "text": "Directional selection"
+        },
+        {
+          "id": "C",
+          "text": "Disruptive selection"
+        },
+        {
+          "id": "D",
+          "text": "Artificial selection"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Disruptive (diversifying) selection occurs when environmental conditions favor individuals at both phenotypic extremes over individuals with intermediate traits. This trims away the intermediate phenotypes and produces a bimodal distribution.",
+      "sourceReference": "Section 4.1.4, Page 190, 227"
+    },
+    {
+      "id": "BIO-G12-U04-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What primary geographic or reproductive distinction differentiates allopatric speciation from sympatric speciation?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Allopatric speciation requires initial geographic isolation of populations, whereas sympatric speciation occurs within the same geographic area without physical separation"
+        },
+        {
+          "id": "B",
+          "text": "Allopatric speciation is driven solely by artificial breeding, while sympatric speciation occurs exclusively via fossilization"
+        },
+        {
+          "id": "C",
+          "text": "Allopatric speciation occurs only in bacteria, whereas sympatric speciation occurs only in large mammals"
+        },
+        {
+          "id": "D",
+          "text": "Allopatric speciation eliminates genetic variation, while sympatric speciation maintains identical gene pools"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Allopatric speciation occurs when a physical geographic barrier (such as a river, mountain, or canyon) divides an ancestral population, allowing isolated gene pools to diverge independently. Sympatric speciation occurs when reproductive isolation emerges without geographic separation (e.g., through polyploidy or behavioral divergence).",
+      "sourceReference": "Section 4.1.4, Page 193-195"
+    },
+    {
+      "id": "BIO-G12-U04-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "A female horse (2n = 64) and a male donkey (2n = 62) mate to produce a viable, robust offspring known as a mule (2n = 63). However, the mule cannot produce offspring because its maternal and paternal chromosomes cannot form homologous bivalents during meiosis. Which reproductive isolating mechanism does this illustrate?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Prezygotic gametic isolation"
+        },
+        {
+          "id": "B",
+          "text": "Prezygotic behavioral isolation"
+        },
+        {
+          "id": "C",
+          "text": "Postzygotic hybrid sterility (infertility)"
+        },
+        {
+          "id": "D",
+          "text": "Postzygotic hybrid inviability"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Postzygotic barriers operate after fertilization. When an interspecific hybrid survives to adulthood but is incapable of producing functional gametes due to chromosomal incompatibility (as seen in the sterile mule with 63 unpaired chromosomes), it represents hybrid sterility (hybrid infertility).",
+      "sourceReference": "Section 4.1.4, Page 196-197"
+    },
+    {
+      "id": "BIO-G12-U04-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "A sudden natural catastrophe, such as an intense volcanic eruption or flash flood, decimates 95% of a forest beetle population regardless of the beetles' individual genetic fitness. The surviving beetles happen to carry different allele frequencies from the pre-catastrophe population. Which evolutionary mechanism has occurred?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The founder effect"
+        },
+        {
+          "id": "B",
+          "text": "The genetic bottleneck effect"
+        },
+        {
+          "id": "C",
+          "text": "Horizontal gene transfer"
+        },
+        {
+          "id": "D",
+          "text": "Directional stabilizing mutation"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The bottleneck effect is a form of genetic drift resulting from a catastrophic event that drastically reduces population size at random. The surviving individuals represent a limited sample of the original gene pool, leading to reduced genetic diversity and altered allele frequencies by chance.",
+      "sourceReference": "Section 4.1.7, Page 220-221"
+    },
+    {
+      "id": "BIO-G12-U04-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "In a population of ferrets that conforms to Hardy-Weinberg equilibrium, coat color is governed by a single gene with two alleles: the dominant allele (D) codes for dark fur, and the recessive allele (d) codes for tan fur. If 16% (0.16) of the ferrets display tan fur, what percentage of the population is expected to be heterozygous carriers (Dd)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "16%"
+        },
+        {
+          "id": "B",
+          "text": "36%"
+        },
+        {
+          "id": "C",
+          "text": "48%"
+        },
+        {
+          "id": "D",
+          "text": "84%"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "According to the Hardy-Weinberg equations: q² = frequency of homozygous recessive individuals (dd) = 0.16. Therefore, q = √0.16 = 0.4. Because p + q = 1, p = 1 - 0.4 = 0.6. The frequency of heterozygous carriers (Dd) is given by 2pq = 2 × 0.6 × 0.4 = 0.48, which corresponds to 48% of the population.",
+      "sourceReference": "Section 4.1.7, Page 217-218"
+    },
+    {
+      "id": "BIO-G12-U04-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A point mutation alters a single nucleotide within a protein-coding gene sequence, changing the codon from CAA to UAA. What specific type of point mutation has occurred, and what is its consequence on the translated polypeptide?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Silent mutation; the translated protein remains completely normal and full-length"
+        },
+        {
+          "id": "B",
+          "text": "Missense mutation; a different amino acid is inserted but the chain reaches its normal length"
+        },
+        {
+          "id": "C",
+          "text": "Nonsense mutation; a premature stop codon terminates translation, producing a truncated, non-functional protein"
+        },
+        {
+          "id": "D",
+          "text": "Frameshift mutation; the entire reading frame downstream shifts into an inverted sequence"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "A nonsense mutation is a point mutation in which a sense codon (such as CAA encoding glutamine) is altered into a termination or stop codon (UAA, UAG, or UGA). This causes premature chain termination during translation, cutting the resulting protein short and typically abolishing its biological activity.",
+      "sourceReference": "Section 4.1.6, Page 209 (Table 4.2)"
+    },
+    {
+      "id": "BIO-G12-U04-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Comparative biochemical analysis of the beta-globin polypeptide chain reveals that humans and chimpanzees share identical amino acid sequences (0 differences), humans and gorillas have 1 difference, humans and rhesus monkeys have 8 differences, and humans and chickens have 45 differences. What phylogenetic conclusion does this comparative biochemistry support?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Chickens and humans share a more recent common ancestor than humans and rhesus monkeys"
+        },
+        {
+          "id": "B",
+          "text": "The rate of amino acid divergence is random and has no correlation with evolutionary descent"
+        },
+        {
+          "id": "C",
+          "text": "Humans and chimpanzees shared a more recent common ancestor with each other than with gorillas, monkeys, or birds, reflecting evolutionary divergence time"
+        },
+        {
+          "id": "D",
+          "text": "All primates independently evolved their hemoglobin genes through convergent evolution from distinct ancestors"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The degree of similarity in shared macromolecules (such as hemoglobin or cytochrome c) directly reflects evolutionary relatedness. The fewer the amino acid differences between two species, the more recently they diverged from a common ancestor. Humans and chimpanzees show 0 differences in beta-globin, confirming their status as each other's closest living relatives.",
+      "sourceReference": "Section 4.1.3.4, Page 185-187, 233"
+    },
+    {
+      "id": "BIO-G12-U04-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "The 4.4-million-year-old fossil skeleton of Ardipithecus ramidus ('Ardi'), discovered in the Afar depression of Ethiopia and published in 2009, displayed a pelvis and limb anatomy adapted for bipedal walking alongside an opposable big toe (hallux) suited for tree climbing. Why did this discovery fundamentally reshape scientific understanding of human evolution?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It proved that large cranial capacity evolved millions of years before upright walking"
+        },
+        {
+          "id": "B",
+          "text": "It showed that the last common ancestor of humans and chimpanzees was not a knuckle-walking ape resembling modern chimpanzees, but rather possessed a distinct mosaic of bipedal and arboreal adaptations"
+        },
+        {
+          "id": "C",
+          "text": "It demonstrated that hominins originated in Europe before migrating southward into eastern Africa"
+        },
+        {
+          "id": "D",
+          "text": "It established that Australopithecus afarensis was a quadrapedal marine mammal"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "At 4.4 million years old, Ardi is the closest fossil hominin to the human-chimpanzee divergence yet discovered. Her skeletal anatomy revealed facultative bipedalism combined with an opposable grasping hallux for climbing trees, disproving the longstanding assumption that our common ancestor walked on its knuckles like modern chimpanzees or gorillas.",
+      "sourceReference": "Section 4.1.5, Page 204-205, 228"
+    }
+  ]
 }

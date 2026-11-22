@@ -3,5 +3,411 @@
   "subject": "Biology",
   "unitNumber": 2,
   "unitTitle": "Plants",
-  "questions": []
+  "questions": [
+    {
+      "id": "BIO-G10-U02-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which of the following structural characteristics fundamentally distinguishes gymnosperms, such as pine and juniper trees, from angiosperms?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Gymnosperms lack vascular conduction tissues (xylem and phloem)"
+        },
+        {
+          "id": "B",
+          "text": "Gymnosperms bear exposed, naked seeds on cones rather than enclosing seeds inside fruits"
+        },
+        {
+          "id": "C",
+          "text": "Gymnosperms reproduce exclusively through microscopic asexual motile spores"
+        },
+        {
+          "id": "D",
+          "text": "Gymnosperms possess true flowers containing colourful petals and nectar glands"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Gymnosperms are vascular, seed-bearing plants whose seeds are not enclosed within a protective ovary or fruit; instead, their seeds develop naked on the scales of reproductive cones. Angiosperms enclose their seeds within a fruit derived from a flower.",
+      "sourceReference": "Section 2.2, Page 19"
+    },
+    {
+      "id": "BIO-G10-U02-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In the anatomical structure of a typical angiosperm flower, which collective group of parts constitutes the female reproductive organ (pistil or carpel)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Anther and filament"
+        },
+        {
+          "id": "B",
+          "text": "Sepals and petals"
+        },
+        {
+          "id": "C",
+          "text": "Stigma, style, and ovary"
+        },
+        {
+          "id": "D",
+          "text": "Receptacle and peduncle"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The female reproductive structure of a flower is the pistil (or carpel), which consists of the sticky stigma that receives pollen, the elongated style through which the pollen tube grows, and the basal ovary containing one or more ovules.",
+      "sourceReference": "Section 2.4.2, Page 28"
+    },
+    {
+      "id": "BIO-G10-U02-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "During a laboratory starch test on a green leaf, why must the leaf be boiled in ethanol (alcohol) after being killed in boiling water?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To dissolve and extract the green chlorophyll pigment so color changes with iodine can be seen clearly"
+        },
+        {
+          "id": "B",
+          "text": "To break down insoluble starch molecules directly into reducing glucose monomers"
+        },
+        {
+          "id": "C",
+          "text": "To hydrolyze the cellulose cell walls and soften the fragile leaf tissues"
+        },
+        {
+          "id": "D",
+          "text": "To supply moisture and activate latent amylase enzymes within the leaf cells"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Boiling the leaf in ethanol extracts and decolourizes the green chlorophyll pigment. Removing this green background ensures that any blue-black colour reaction indicating starch presence upon iodine addition can be clearly observed.",
+      "sourceReference": "Section 2.7.4, Page 36-37"
+    },
+    {
+      "id": "BIO-G10-U02-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which conducting tissue in vascular plants is composed of living cells and is responsible for the translocation of synthesized sugars and amino acids from sources to sinks?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Xylem vessels"
+        },
+        {
+          "id": "B",
+          "text": "Sclerenchyma fibers"
+        },
+        {
+          "id": "C",
+          "text": "Phloem tissue"
+        },
+        {
+          "id": "D",
+          "text": "Cork cambium"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Phloem is the vascular conducting tissue composed of living cells arranged end-to-end that transports soluble organic products of photosynthesis (primarily sucrose and amino acids) bidirectionally between sources (leaves) and sinks (growing points or storage organs).",
+      "sourceReference": "Section 2.8.1, Page 37-38"
+    },
+    {
+      "id": "BIO-G10-U02-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which prominent Ethiopian botanist was elected as a Foreign Member of the Royal Society in London and received the Cuatrecasas Medal for documenting and conserving the Ethiopian flora?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Dr. Melaku Worede"
+        },
+        {
+          "id": "B",
+          "text": "Professor Sebsebe Demissew"
+        },
+        {
+          "id": "C",
+          "text": "Professor Tilahun Yilma"
+        },
+        {
+          "id": "D",
+          "text": "Dr. Aklilu Lemma"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Professor Sebsebe Demissew is a leading Ethiopian botanical scientist, Leader of the Ethiopian Flora Project, and Executive Director of the Gullele Botanic Garden, recognized globally with the Kew International Medal and election to the Royal Society.",
+      "sourceReference": "Section 2.11, Page 46"
+    },
+    {
+      "id": "BIO-G10-U02-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Why does the palisade mesophyll layer of a dicot leaf perform the greatest proportion of photosynthesis compared to the spongy mesophyll layer?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Its cells are columnar, closely packed, contain the highest density of chloroplasts, and lie directly beneath the transparent upper epidermis"
+        },
+        {
+          "id": "B",
+          "text": "Its cells contain large intercellular spaces that store pressurized oxygen and nitrogen"
+        },
+        {
+          "id": "C",
+          "text": "It lacks cell walls and allows carbon dioxide to dissolve directly into the vacuoles"
+        },
+        {
+          "id": "D",
+          "text": "It contains abundant stomatal pores that absorb liquid water directly from raindrops"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The palisade mesophyll is situated immediately below the upper epidermis and comprises regularly arranged, vertically elongated cells packed with the largest number of chloroplasts per cell, maximizing light capture for photosynthesis.",
+      "sourceReference": "Section 2.3.1, Page 22-23"
+    },
+    {
+      "id": "BIO-G10-U02-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In the internal cross-sectional anatomy of a dicotyledonous plant root, which specific tissue layer gives rise to lateral (branch) roots?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Piliferous layer"
+        },
+        {
+          "id": "B",
+          "text": "Pericycle"
+        },
+        {
+          "id": "C",
+          "text": "Endodermis"
+        },
+        {
+          "id": "D",
+          "text": "Cortex"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The pericycle is a cylinder of parenchyma or sclerenchyma cells located just inside the endodermis. In roots, it retains meristematic capability and serves as the precise site of origin for lateral (branch) roots.",
+      "sourceReference": "Section 2.3.3, Page 25"
+    },
+    {
+      "id": "BIO-G10-U02-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Angiosperms undergo a unique reproductive process known as 'double fertilization'. What are the specific cellular products of these two separate fertilization events?",
+      "options": [
+        {
+          "id": "A",
+          "text": "One sperm fertilizes the egg to form a diploid zygote, while the second sperm fuses with central nuclei to produce triploid endosperm tissue"
+        },
+        {
+          "id": "B",
+          "text": "Both sperms fuse with the egg cell simultaneously to produce a tetraploid seed coat"
+        },
+        {
+          "id": "C",
+          "text": "One sperm forms the vegetative shoot, while the second sperm develops into the taproot system"
+        },
+        {
+          "id": "D",
+          "text": "One sperm fertilizes the ovule to form the pericarp, while the second sperm dissolves the style tissue"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "In angiosperm double fertilization, one haploid sperm unites with the haploid egg to form the diploid (2n) zygote (embryo), while the second sperm fuses with two polar nuclei to form the triploid (3n) endosperm, which serves as nutritive food storage.",
+      "sourceReference": "Section 2.4.3, Page 29"
+    },
+    {
+      "id": "BIO-G10-U02-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How does epigeal germination differ fundamentally from hypogeal germination in seed plants?",
+      "options": [
+        {
+          "id": "A",
+          "text": "In epigeal germination, cotyledons remain underground; in hypogeal germination, cotyledons are pushed into the air"
+        },
+        {
+          "id": "B",
+          "text": "In epigeal germination, elongation of the hypocotyl lifts the cotyledons above the soil; in hypogeal germination, the epicotyl elongates while the cotyledons remain under the soil"
+        },
+        {
+          "id": "C",
+          "text": "In epigeal germination, seeds germinate without water; in hypogeal germination, germination requires an anaerobic environment"
+        },
+        {
+          "id": "D",
+          "text": "In epigeal germination, only the radicle grows; in hypogeal germination, only the plumule elongates"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The distinction lies in the elongation region: in epigeal germination (e.g., bean), the hypocotyl elongates and arches, pulling the cotyledons above the soil. In hypogeal germination (e.g., maize), the epicotyl elongates while the cotyledon remains buried beneath the soil.",
+      "sourceReference": "Section 2.6.2, Page 33"
+    },
+    {
+      "id": "BIO-G10-U02-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which of the following correctly pairs the internal chloroplast compartment with the specific photosynthetic events occurring within it?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Thylakoid/Granum: Photolysis of water and ATP/NADPH generation; Stroma: Carbon fixation and carbohydrate synthesis"
+        },
+        {
+          "id": "B",
+          "text": "Stroma: Absorption of blue light by chlorophyll; Granum: Enzymatic fixation of carbon dioxide"
+        },
+        {
+          "id": "C",
+          "text": "Outer membrane: Synthesis of starch; Intermembrane space: Photolysis of oxygen molecules"
+        },
+        {
+          "id": "D",
+          "text": "Thylakoid lumen: Conversion of glucose into maltose; Stroma: Release of oxygen gas"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The light-dependent reaction occurs on the thylakoid membranes of the grana, where chlorophyll absorbs light and splits water (photolysis) to yield ATP, NADPH, and O2. The light-independent (dark) reaction occurs in the fluid stroma, where ATP and NADPH drive carbon fixation to synthesize sugars.",
+      "sourceReference": "Section 2.7.1 & 2.7.3, Page 34-36"
+    },
+    {
+      "id": "BIO-G10-U02-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In Ethiopian traditional medicine, the dried female flowers of Hagenia abyssinica ('Ye-kosso Zaf') are widely administered orally to treat which medical condition?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Bacterial pneumonia"
+        },
+        {
+          "id": "B",
+          "text": "Tapeworm infestation (cestodiasis)"
+        },
+        {
+          "id": "C",
+          "text": "Cutaneous fungal infection"
+        },
+        {
+          "id": "D",
+          "text": "Malaria paroxysms"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Hagenia abyssinica (known locally as 'Kosso') is an indigenous Ethiopian medicinal tree whose dried female inflorescences have been used traditionally as a powerful anthelmintic remedy against human tapeworm infections.",
+      "sourceReference": "Section 2.10, Page 45"
+    },
+    {
+      "id": "BIO-G10-U02-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A complete ring of bark down to the vascular cambium is stripped from the trunk of a healthy woody dicot plant (girdling/ringing experiment). Which physiological sequence accurately predicts the outcome over time?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Water ascent halts immediately, causing the upper leaves to wilt and drop within one hour"
+        },
+        {
+          "id": "B",
+          "text": "Translocation in the phloem is interrupted, sugars accumulate above the girdle causing a swelling, and roots die first due to starvation, eventually killing the entire plant"
+        },
+        {
+          "id": "C",
+          "text": "The exposed xylem vessels actively regenerate phloem cells, preventing any loss of root viability"
+        },
+        {
+          "id": "D",
+          "text": "Upward transpiration accelerates, causing high turgor pressure that bursts the central pith"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Girdling removes the phloem while leaving inward xylem intact. Downward translocation of photosynthetic assimilates is blocked, causing sugar accumulation and swelling directly above the incision. Deprived of organic food, the root system dies first; once roots fail, water uptake stops and the entire plant dies.",
+      "sourceReference": "Section 2.8.2, Page 40-41"
+    },
+    {
+      "id": "BIO-G10-U02-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "According to the cohesion-tension theory of transpiration pull, how is continuous ascent of water maintained through xylem vessels to the tops of tall forest trees without breaking the water column?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Osmotic pressure in the phloem actively pumps water into xylem vessels at every stem node"
+        },
+        {
+          "id": "B",
+          "text": "Atmospheric pressure pushes the sap column upward into empty vacuum spaces within the pith"
+        },
+        {
+          "id": "C",
+          "text": "Evaporation at the leaves creates negative pressure (tension) that pulls a continuous water column held together by hydrogen bonding (cohesion) and attracted to xylem walls (adhesion)"
+        },
+        {
+          "id": "D",
+          "text": "Root endodermal cells undergo constant rhythmic contractions that squeeze water upward into the branches"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Transpiration from leaf mesophyll surfaces generates negative hydrostatic pressure (tension). Because water molecules exhibit high cohesion due to intermolecular hydrogen bonds, they form an unbroken column, while adhesion to hydrophilic xylem walls helps resist the downward gravitational pull.",
+      "sourceReference": "Section 2.8.2, Page 38-39"
+    },
+    {
+      "id": "BIO-G10-U02-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A young bean seedling is placed horizontally in the dark. How does the redistribution of auxin (IAA) explain why the shoot bends upward (negative geotropism) while the root bends downward (positive geotropism)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Auxin accumulates on the lower side of both organs; in shoots this concentration stimulates cell elongation, whereas in roots the same concentration inhibits cell elongation"
+        },
+        {
+          "id": "B",
+          "text": "Auxin migrates exclusively to the upper side of the shoot, completely halting cellular respiration in the root"
+        },
+        {
+          "id": "C",
+          "text": "Auxin is degraded by light on the lower side of the shoot while increasing cell division in root caps"
+        },
+        {
+          "id": "D",
+          "text": "Gravity destroys auxin in the root while converting shoot auxin into inhibitory gibberellins"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Under the influence of gravity, auxin accumulates along the lower side of both horizontal shoot and root tissues. Shoot cells have a high optimum auxin threshold, so higher auxin concentration on the lower side accelerates elongation, bending the shoot upward. Conversely, roots are far more sensitive; the high auxin on the lower side inhibits cell elongation, allowing the upper side to elongate faster and curve the root downward.",
+      "sourceReference": "Section 2.9.1, Page 41-44"
+    },
+    {
+      "id": "BIO-G10-U02-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A germinating bean seedling is secured horizontally inside a clinostat that rotates slowly and continuously for several days in a dark room. What will be the resulting growth orientation of its radicle and plumule, and why?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Both radicle and plumule will curve tightly into spirals due to mechanical friction"
+        },
+        {
+          "id": "B",
+          "text": "The radicle will grow straight downward and the plumule will bend sharply upward in response to centrifugal forces"
+        },
+        {
+          "id": "C",
+          "text": "Both radicle and plumule will continue growing horizontally in a straight line because continuous rotation exposes all sides equally to gravity, preventing unilateral auxin accumulation"
+        },
+        {
+          "id": "D",
+          "text": "Growth will cease entirely because the rotation inactivates all metabolic enzymes within the apical meristems"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "A rotating clinostat continually shifts the gravitational orientation of the horizontal seedling. Because the gravitational pull is distributed equally around all sides of the stem and root, no unilateral gradient or asymmetrical accumulation of auxin can develop, causing both the shoot and root to continue growing straight along their horizontal axis.",
+      "sourceReference": "Section 2.9.1, Page 44"
+    }
+  ]
 }

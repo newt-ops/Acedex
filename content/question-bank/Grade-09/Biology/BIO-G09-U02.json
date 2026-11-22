@@ -3,5 +3,411 @@
   "subject": "Biology",
   "unitNumber": 2,
   "unitTitle": "Characteristics and Classification of Organisms",
-  "questions": []
+  "questions": [
+    {
+      "id": "BIO-G09-U02-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which characteristic of living organisms specifically refers to the permanent removal of metabolic waste products, such as carbon dioxide, that are produced during cellular chemical reactions?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Secretion"
+        },
+        {
+          "id": "B",
+          "text": "Egestion"
+        },
+        {
+          "id": "C",
+          "text": "Digestion"
+        },
+        {
+          "id": "D",
+          "text": "Excretion"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "Excretion is defined as the removal of toxic metabolic waste substances formed during cellular metabolism (such as carbon dioxide and urea). In contrast, egestion is the expulsion of undigested dietary food residues from the digestive tract.",
+      "sourceReference": "Section 2.1, Page 20"
+    },
+    {
+      "id": "BIO-G09-U02-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In the standard Linnaean taxonomic hierarchy of biological classification, which rank is placed directly between Phylum and Order?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Family"
+        },
+        {
+          "id": "B",
+          "text": "Genus"
+        },
+        {
+          "id": "C",
+          "text": "Class"
+        },
+        {
+          "id": "D",
+          "text": "Species"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The biological classification hierarchy in descending order is Domain, Kingdom, Phylum (or Division for plants), Class, Order, Family, Genus, and Species. Thus, Class directly connects Phylum and Order.",
+      "sourceReference": "Section 2.2.2, Page 22-23"
+    },
+    {
+      "id": "BIO-G09-U02-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "According to the international rules of binomial nomenclature introduced by Carolus Linnaeus, how must a scientific name be formatted when printed?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Both the genus and specific epithet begin with capital letters and appear in bold font"
+        },
+        {
+          "id": "B",
+          "text": "The genus begins with a lowercase letter and the specific epithet is fully capitalized in plain font"
+        },
+        {
+          "id": "C",
+          "text": "The specific epithet is placed first in italics followed by the capitalized genus name in quotation marks"
+        },
+        {
+          "id": "D",
+          "text": "The genus name begins with a capital letter, the specific epithet starts with a lowercase letter, and both parts are italicized"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "Under binomial nomenclature, the scientific name consists of two parts: the genus name, which is always capitalized, and the specific epithet, which always begins with a lowercase letter. When printed, both words must be italicized (or underlined when handwritten).",
+      "sourceReference": "Section 2.4, Page 26"
+    },
+    {
+      "id": "BIO-G09-U02-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Unlike plant cell walls which are built primarily of cellulose, the rigid cell walls of organisms belonging to Kingdom Fungi are composed of:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Peptidoglycan"
+        },
+        {
+          "id": "B",
+          "text": "Chitin and polysaccharides"
+        },
+        {
+          "id": "C",
+          "text": "Collagen and silica"
+        },
+        {
+          "id": "D",
+          "text": "Glycogen and phospholipids"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "A distinguishing characteristic of Kingdom Fungi is that their cell walls are reinforced with chitin and structural polysaccharides, unlike plants (cellulose) and bacteria (peptidoglycan).",
+      "sourceReference": "Section 2.6.3, Page 33"
+    },
+    {
+      "id": "BIO-G09-U02-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which renowned Ethiopian botanist contributed significantly to the publication of the 'Flora of Ethiopia' and served as the director of the Gullele Botanical Garden?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Professor Sebsebe Demissew"
+        },
+        {
+          "id": "B",
+          "text": "Dr. Melaku Worede"
+        },
+        {
+          "id": "C",
+          "text": "Professor Tilahun Yilma"
+        },
+        {
+          "id": "D",
+          "text": "Dr. Aklilu Lemma"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Professor Sebsebe Demissew is a distinguished Ethiopian taxonomist who led research projects on African vegetation, served as director of the Flora of Ethiopia and the Gullele Botanical Garden, and held leadership roles in international taxonomic associations.",
+      "sourceReference": "Section 2.7, Page 39-40"
+    },
+    {
+      "id": "BIO-G09-U02-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which of the following cellular features correctly distinguishes organisms in the domain Archaea from those in the domain Bacteria?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Archaea contain linear chromosomes packaged with histones, whereas Bacteria possess membrane-bound nuclei"
+        },
+        {
+          "id": "B",
+          "text": "Archaea lack peptidoglycan in their cell walls, whereas true Bacteria have cell walls containing peptidoglycan"
+        },
+        {
+          "id": "C",
+          "text": "Archaea are multicellular eukaryotic organisms, whereas Bacteria are strictly unicellular prokaryotes"
+        },
+        {
+          "id": "D",
+          "text": "Archaea reproduce solely through meiosis, whereas Bacteria divide exclusively by mitosis"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "While both Archaea and Bacteria are prokaryotes with circular chromosomes and no membrane-bound nucleus, they differ fundamentally in cell wall biochemistry: bacterial cell walls contain peptidoglycan, whereas archaeal cell walls completely lack peptidoglycan.",
+      "sourceReference": "Section 2.2.2, Page 22-23"
+    },
+    {
+      "id": "BIO-G09-U02-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Under the biological species concept, a group of organisms is defined as belonging to the same species if its members:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Can naturally interbreed with one another to produce viable, fertile offspring"
+        },
+        {
+          "id": "B",
+          "text": "Inhabit the exact same geographic region and consume identical dietary resources"
+        },
+        {
+          "id": "C",
+          "text": "Exhibit identical body size, outward coloration, and anatomical proportions"
+        },
+        {
+          "id": "D",
+          "text": "Possess the same physiological tolerance limits to abiotic environmental stress"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "In biological taxonomy, a biological species is fundamentally defined as a population or group of populations whose members have the potential to interbreed in nature and produce viable, fertile offspring.",
+      "sourceReference": "Section 2.2.2, Page 24"
+    },
+    {
+      "id": "BIO-G09-U02-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Ethiopia is globally recognized as a primary centre of origin and genetic diversity for which pair of agricultural crops?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Rubber tree (Hevea brasiliensis) and cassava (Manihot esculenta)"
+        },
+        {
+          "id": "B",
+          "text": "Maize (Zea mays) and soybean (Glycine max)"
+        },
+        {
+          "id": "C",
+          "text": "Tef (Eragrostis tef) and noug (Guizotia abyssinica)"
+        },
+        {
+          "id": "D",
+          "text": "Rice (Oryza sativa) and potato (Solanum tuberosum)"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Due to its diverse topography and climate, Ethiopia is a recognized primary centre of diversity for field crops including indigenous domesticates such as tef (Eragrostis tef), noug (Guizotia abyssinica), and Ethiopian mustard (Brassica carinata).",
+      "sourceReference": "Section 2.5, Page 26"
+    },
+    {
+      "id": "BIO-G09-U02-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Diatoms are photosynthetic unicellular protists whose silica-rich microscopic shells accumulate as diatomite rock. Which industrial application directly utilizes diatomite?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Synthesizing inorganic ammonium nitrate fertilizers for soil enrichment"
+        },
+        {
+          "id": "B",
+          "text": "Serving as a microbial bioinsecticide against agricultural crop borers"
+        },
+        {
+          "id": "C",
+          "text": "Acting as a fermenting agent to raise traditional bread dough"
+        },
+        {
+          "id": "D",
+          "text": "Serving as an absorbent agent for chemical spills and an abrasive in polishing cleaners"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "Diatomite is a powdery, porous sedimentary deposit formed from fossilized diatom cell walls. Because it is highly absorbent and mildly abrasive, it is widely used in chemical spill cleanup, pet litter, filtration, and household polishing agents.",
+      "sourceReference": "Section 2.6.2, Page 31-32"
+    },
+    {
+      "id": "BIO-G09-U02-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "A student examines a plant that possesses true roots, stems, and leaves with well-developed vascular tissues (xylem and phloem), but reproduces solely via spores without ever producing cones, flowers, or seeds. To which division does this plant belong?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Bryophyta"
+        },
+        {
+          "id": "B",
+          "text": "Pteridophyta"
+        },
+        {
+          "id": "C",
+          "text": "Gymnospermae"
+        },
+        {
+          "id": "D",
+          "text": "Angiospermae"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Pteridophytes (such as ferns) are seedless vascular plants that have true vegetative organs and vascular conduction tissues, but reproduce using spores rather than seeds.",
+      "sourceReference": "Section 2.6.4, Page 35-36"
+    },
+    {
+      "id": "BIO-G09-U02-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which combination of nutritional and structural characteristics uniquely distinguishes organisms in Kingdom Animalia from both plants and fungi?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Autotrophic nutrition, cellulose cell walls, and chloroplast-containing cells"
+        },
+        {
+          "id": "B",
+          "text": "Absorptive heterotrophy, chitinous cell walls, and filamentous hyphae"
+        },
+        {
+          "id": "C",
+          "text": "Ingestive heterotrophy, lack of cell walls, and structural support provided by collagen"
+        },
+        {
+          "id": "D",
+          "text": "Chemosynthetic nutrition, presence of peptidoglycan walls, and lack of membrane organelles"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Animals are multicellular heterotrophs that ingest food before digesting it internally. Unlike plants and fungi, animal cells completely lack cell walls and are held together by structural proteins, predominantly collagen.",
+      "sourceReference": "Section 2.6.5, Page 37"
+    },
+    {
+      "id": "BIO-G09-U02-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A student identifies an unknown vertebrate using the following dichotomous key steps:\n1. Poikilothermic (go to 2) / Homoiothermic (go to 4)\n2. Has fins but no limbs (Fish) / Has four limbs (go to 3)\n3. Has no scales on body (Amphibian) / Has scales or shell (Reptile)\n4. Has feathers (Bird) / Has fur (Mammal)\nIf the specimen has a fluctuating body temperature dependent on the surroundings, four walking limbs, and smooth, moist skin completely lacking scales, which class does it belong to?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Reptile"
+        },
+        {
+          "id": "B",
+          "text": "Amphibian"
+        },
+        {
+          "id": "C",
+          "text": "Mammal"
+        },
+        {
+          "id": "D",
+          "text": "Fish"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Following the key: being cold-blooded (poikilothermic) directs to step 2; having four limbs rather than fins directs to step 3; having four limbs with skin lacking scales leads directly to the identification of an Amphibian.",
+      "sourceReference": "Section 2.5, Page 27-28"
+    },
+    {
+      "id": "BIO-G09-U02-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Why did modern biologists find the historical two-kingdom classification scheme (Plantae and Animalia) inadequate, leading Whittaker to propose the five-kingdom system in 1969?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It failed to distinguish prokaryotes from eukaryotes, unicellular from multicellular forms, and photosynthetic plants from absorptive fungi"
+        },
+        {
+          "id": "B",
+          "text": "It incorrectly classified flying birds, bats, and insects together into a single taxonomic order"
+        },
+        {
+          "id": "C",
+          "text": "It classified non-living pathogenic viruses as photosynthetic autotrophs within Kingdom Plantae"
+        },
+        {
+          "id": "D",
+          "text": "It completely omitted macroscopic plants and focused exclusively on single-celled bacteria"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The early two-kingdom system was deemed inadequate because it placed fundamentally different organisms into the same group. It did not differentiate between prokaryotic and eukaryotic cellular organization, unicellular and multicellular bodies, or autotrophic green plants and heterotrophic saprophytic fungi.",
+      "sourceReference": "Section 2.2.2 & 2.6, Page 22, 28"
+    },
+    {
+      "id": "BIO-G09-U02-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A biology student compares maize (Zea mays) with a faba bean plant. Which pair of morphological characteristics correctly distinguishes maize (a monocotyledon) from the faba bean (a dicotyledon)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Maize has an embryo with two cotyledons and reticulate leaf venation; faba bean has a single cotyledon and parallel leaf venation"
+        },
+        {
+          "id": "B",
+          "text": "Maize develops naked seeds born on exposed scales; faba bean develops seeds inside closed fleshy berries"
+        },
+        {
+          "id": "C",
+          "text": "Maize has an embryo with a single cotyledon and leaves with parallel veins; faba bean has two cotyledons and branching (net-like) veins"
+        },
+        {
+          "id": "D",
+          "text": "Maize lacks conducting vascular bundles; faba bean contains xylem and phloem in its stems and roots"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Monocotyledons (such as maize) are characterized by having a single seed leaf (cotyledon) in the embryo and leaves with parallel venation. Dicotyledons (such as faba bean) have two cotyledons and reticulate (branching/net-like) leaf venation.",
+      "sourceReference": "Section 2.6.4, Page 36"
+    },
+    {
+      "id": "BIO-G09-U02-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Although both fungi and animals are heterotrophic eukaryotes, they obtain nourishment through fundamentally different mechanisms. How do saprophytic fungi acquire organic nutrients from their environment?",
+      "options": [
+        {
+          "id": "A",
+          "text": "They ingest solid food particles into internal digestive cavities via phagocytosis"
+        },
+        {
+          "id": "B",
+          "text": "They utilize bacteriochlorophyll pigments to synthesize organic compounds from dead substrates in the dark"
+        },
+        {
+          "id": "C",
+          "text": "They absorb intact, unhydrolyzed starch and protein polymers directly through specialized root hairs"
+        },
+        {
+          "id": "D",
+          "text": "They secrete extracellular hydrolytic enzymes through their hyphae to digest substrates externally, then absorb the soluble nutrients"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "Unlike animals that ingest food and digest it internally, fungi perform extracellular digestion. Their hyphae release hydrolytic enzymes into the surrounding substrate to break down complex polymers into simple soluble molecules, which are then absorbed across their cell membranes.",
+      "sourceReference": "Section 2.6.3, Page 33-34"
+    }
+  ]
 }

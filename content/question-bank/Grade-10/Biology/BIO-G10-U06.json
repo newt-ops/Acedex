@@ -3,5 +3,411 @@
   "subject": "Biology",
   "unitNumber": 6,
   "unitTitle": "Ecological Interaction",
-  "questions": []
+  "questions": [
+    {
+      "id": "BIO-G10-U06-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is the ultimate and foundational source of energy that sustains biological life across terrestrial and aquatic ecosystems?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Chemical energy released from decomposing organic humus"
+        },
+        {
+          "id": "B",
+          "text": "Thermal geothermal energy emanating from the Earth's molten core"
+        },
+        {
+          "id": "C",
+          "text": "Solar radiant energy emitted by the sun"
+        },
+        {
+          "id": "D",
+          "text": "Inorganic mineral ions dissolved in deep groundwater aquifers"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The ultimate source of energy in living systems is the sun. Solar radiant energy is trapped by photosynthetic autotrophs (producers) and converted into chemical bond energy that flows unidirectionally through consumers.",
+      "sourceReference": "Section 6.1.1, Page 153"
+    },
+    {
+      "id": "BIO-G10-U06-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In an ecological food chain consisting of: Grass → Grasshopper → Frog → Snake → Eagle, which organism occupies the third trophic level?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Grasshopper"
+        },
+        {
+          "id": "B",
+          "text": "Frog"
+        },
+        {
+          "id": "C",
+          "text": "Snake"
+        },
+        {
+          "id": "D",
+          "text": "Eagle"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Trophic levels indicate the order of receiving energy: Grass is at the 1st trophic level (producer), grasshopper is at the 2nd trophic level (primary consumer/herbivore), and frog is at the 3rd trophic level (secondary consumer/carnivore).",
+      "sourceReference": "Section 6.1.1, Page 155"
+    },
+    {
+      "id": "BIO-G10-U06-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which phase of the global hydrologic cycle describes the physical transformation of rising water vapor into liquid water droplets upon meeting colder air in the upper atmosphere?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Infiltration"
+        },
+        {
+          "id": "B",
+          "text": "Transpiration"
+        },
+        {
+          "id": "C",
+          "text": "Condensation"
+        },
+        {
+          "id": "D",
+          "text": "Percolation"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Condensation is the physical process in the water cycle where ascending water vapor cools at higher altitudes and condenses back into microscopic liquid water droplets, forming clouds and precipitation.",
+      "sourceReference": "Section 6.2.1, Page 160-161"
+    },
+    {
+      "id": "BIO-G10-U06-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which biological enzyme complex is strictly responsible for catalyzing the reduction of atmospheric nitrogen gas (N2) into ammonia (NH3) during biological nitrogen fixation?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Nitrogenase"
+        },
+        {
+          "id": "B",
+          "text": "DNA ligase"
+        },
+        {
+          "id": "C",
+          "text": "Nitrate reductase"
+        },
+        {
+          "id": "D",
+          "text": "Carbonic anhydrase"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Biological nitrogen fixation—whether performed by symbiotic rhizobia in legume root nodules or free-living soil diazotrophs—is driven exclusively by the multi-protein enzyme complex known as nitrogenase.",
+      "sourceReference": "Section 6.2.3, Page 165"
+    },
+    {
+      "id": "BIO-G10-U06-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Why are earthworms popularly designated as 'friends of farmers' in sustainable agriculture and soil ecology?",
+      "options": [
+        {
+          "id": "A",
+          "text": "They produce synthetic nitrogen fertilizers directly from ingested quartz grains"
+        },
+        {
+          "id": "B",
+          "text": "They secrete acidic compounds that eliminate all mycorrhizal fungal hyphae"
+        },
+        {
+          "id": "C",
+          "text": "Their burrowing action enhances soil porosity and aeration, while their digestion produces nutrient-rich casts that accelerate organic recycling"
+        },
+        {
+          "id": "D",
+          "text": "They consume pest caterpillars and locusts during nocturnal surface foraging"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Earthworms act as major macro-decomposers whose continuous tunneling creates tubular channels that enhance soil porosity, water infiltration, and aeration. Their feeding on dead matter facilitates microbial decomposition and produces fertile vermicompost.",
+      "sourceReference": "Section 6.2.3, Page 169"
+    },
+    {
+      "id": "BIO-G10-U06-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How does the pathway of nutrient elements differ fundamentally from the pathway of energy within a natural ecosystem?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Energy is recycled indefinitely between organisms, whereas nutrient elements are permanently radiated into deep space"
+        },
+        {
+          "id": "B",
+          "text": "Energy flows unidirectionally through trophic levels and is lost as metabolic heat, whereas chemical nutrients cycle continuously between biotic and abiotic reservoirs"
+        },
+        {
+          "id": "C",
+          "text": "Nutrients move exclusively through living producers, whereas energy resides solely within non-living lithospheric rocks"
+        },
+        {
+          "id": "D",
+          "text": "Both energy and nutrients follow strictly reversible cyclical closed loops with zero environmental dissipation"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Energy flows in a one-way unidirectional path from the sun through producers and consumers, dissipating progressively as metabolic heat that cannot return to the sun. In contrast, matter and essential chemical nutrients are finite and cycle repeatedly between organisms and abiotic reservoirs.",
+      "sourceReference": "Section 6.1.2, Page 156"
+    },
+    {
+      "id": "BIO-G10-U06-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Approximately what percentage of the total energy stored in the biomass of one trophic level is successfully transferred and converted into new living biomass at the next trophic level?",
+      "options": [
+        {
+          "id": "A",
+          "text": "10%"
+        },
+        {
+          "id": "B",
+          "text": "50%"
+        },
+        {
+          "id": "C",
+          "text": "90%"
+        },
+        {
+          "id": "D",
+          "text": "1%"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "On average, only about 10% of the energy present in one trophic level is assimilated into the body tissues (biomass) of the subsequent trophic level. The remaining approximately 90% is expended during cellular respiration, dissipated as metabolic heat, or egested as undigested waste.",
+      "sourceReference": "Section 6.1.2, Page 156-157"
+    },
+    {
+      "id": "BIO-G10-U06-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Why is an ecological pyramid of energy always upright with a wide base and narrow apex, never inverted in any natural terrestrial or aquatic ecosystem?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because decomposers destroy all solar radiation reaching the surface waters"
+        },
+        {
+          "id": "B",
+          "text": "Because energy is progressively lost as metabolic heat and respiration work at each successive trophic transfer"
+        },
+        {
+          "id": "C",
+          "text": "Because apex carnivores produce their own food through chemosynthesis"
+        },
+        {
+          "id": "D",
+          "text": "Because the physical biomass of producers is always identical to the biomass of tertiary consumers"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Because thermodynamic energy transfer between trophic levels involves substantial dissipation (roughly 90% loss as heat, maintenance, and unassimilated waste), the quantity of usable energy available to each ascending level diminishes monotonically, making the pyramid of energy strictly upright.",
+      "sourceReference": "Section 6.1.2, Page 157-158"
+    },
+    {
+      "id": "BIO-G10-U06-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which of the following biological processes converts reduced organic nitrogen compounds (such as amino acids and urea from dead organisms) into inorganic ammonium ions (NH4+) in the soil?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Denitrification"
+        },
+        {
+          "id": "B",
+          "text": "Ammonification"
+        },
+        {
+          "id": "C",
+          "text": "Nitrification"
+        },
+        {
+          "id": "D",
+          "text": "Photosynthetic assimilation"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Ammonification is the mineralization step in the nitrogen cycle wherein decomposing bacteria and fungi hydrolyze nitrogenous organic matter (proteins, urea, nucleic acids) from plant and animal remains to yield inorganic ammonium ions (NH4+).",
+      "sourceReference": "Section 6.2.3, Page 166"
+    },
+    {
+      "id": "BIO-G10-U06-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In the two-step chemoautotrophic process of soil nitrification, which specific genera of bacteria oxidize ammonia (NH3) to nitrite (NO2-), and which oxidize nitrite (NO2-) to nitrate (NO3-), respectively?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Nitrosomonas oxidizes ammonia to nitrite; Nitrobacter oxidizes nitrite to nitrate"
+        },
+        {
+          "id": "B",
+          "text": "Rhizobium oxidizes ammonia to nitrate; Pseudomonas oxidizes nitrite to nitrogen gas"
+        },
+        {
+          "id": "C",
+          "text": "Azotobacter oxidizes ammonia to amino acids; Klebsiella oxidizes nitrite to urea"
+        },
+        {
+          "id": "D",
+          "text": "Nitrobacter oxidizes ammonia to nitrite; Nitrosomonas oxidizes nitrite to nitrate"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Nitrification is a sequential two-step oxidation performed by nitrifying bacteria: first, ammonia-oxidizing bacteria such as Nitrosomonas oxidize NH3 to NO2-; second, nitrite-oxidizing bacteria such as Nitrobacter oxidize NO2- to NO3-.",
+      "sourceReference": "Section 6.2.3, Page 166"
+    },
+    {
+      "id": "BIO-G10-U06-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Unlike carbon, nitrogen, and water, which major biogeochemical cycle lacks a significant atmospheric or gaseous reservoir?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Sulfur cycle"
+        },
+        {
+          "id": "B",
+          "text": "Carbon cycle"
+        },
+        {
+          "id": "C",
+          "text": "Phosphorus cycle"
+        },
+        {
+          "id": "D",
+          "text": "Oxygen cycle"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The phosphorus cycle is a sedimentary cycle. Phosphorus does not enter the atmosphere under normal environmental conditions; its primary reservoirs are the lithosphere (rocks, sedimentary deposits) and the hydrosphere (dissolved phosphate ions in water).",
+      "sourceReference": "Section 6.2.4, Page 170"
+    },
+    {
+      "id": "BIO-G10-U06-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A balanced grassland food chain consists of Grass → Mice → Snakes → Hawks. If the producers assimilate 80,000 kJ of net energy through photosynthesis, based on the general 10% ecological trophic efficiency rule, what is the maximum energy assimilated into hawk biomass?",
+      "options": [
+        {
+          "id": "A",
+          "text": "8,000 kJ"
+        },
+        {
+          "id": "B",
+          "text": "800 kJ"
+        },
+        {
+          "id": "C",
+          "text": "80 kJ"
+        },
+        {
+          "id": "D",
+          "text": "8 kJ"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Applying the 10% trophic efficiency rule across consecutive levels: Producers (Grass) = 80,000 kJ; Primary consumers (Mice, 2nd level) = 8,000 kJ; Secondary consumers (Snakes, 3rd level) = 800 kJ; Tertiary consumers (Hawks, 4th level) = 80 kJ.",
+      "sourceReference": "Section 6.1.2, Page 156-157"
+    },
+    {
+      "id": "BIO-G10-U06-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Under what specific ecological condition can an inverted pyramid of biomass—where the standing crop biomass of primary consumers exceeds that of producers—occur naturally?",
+      "options": [
+        {
+          "id": "A",
+          "text": "In a mature temperate forest where large hardwood trees support tiny parasitic insect larvae"
+        },
+        {
+          "id": "B",
+          "text": "In an open pelagic marine ecosystem where short-lived phytoplankton reproduce rapidly to support a larger standing biomass of longer-lived zooplankton and small fish"
+        },
+        {
+          "id": "C",
+          "text": "In an arid desert where succulent cacti store immense volumes of water relative to herbivorous rodents"
+        },
+        {
+          "id": "D",
+          "text": "In an agricultural wheat field undergoing heavy herbicide and biofertilizer treatment"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Inverted pyramids of biomass occur in aquatic and marine ecosystems. Microscopic phytoplankton (algae) have very low standing biomass at any single moment, but possess exceptionally high turnover and reproductive rates, allowing them to support a greater standing biomass of zooplankton and fish.",
+      "sourceReference": "Section 6.1.2, Page 158"
+    },
+    {
+      "id": "BIO-G10-U06-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Heavy rains wash excessive synthetic agricultural fertilizers rich in nitrates and soluble phosphates into a small freshwater lake. Which sequence of ecological events accurately explains the resulting eutrophication?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Nitrates directly poison fish gills → rotting fish release methane → macrophyte plants undergo plasmolysis → water volume drops"
+        },
+        {
+          "id": "B",
+          "text": "Nutrient enrichment causes rapid algal blooms → algae die and are decomposed by aerobic bacteria → water column becomes severely depleted of dissolved oxygen (hypoxia) → aquatic fauna suffocates"
+        },
+        {
+          "id": "C",
+          "text": "Phosphates react with calcium carbonate to form limestone rock → water transparency drops to zero → benthic plants undergo hyperactive photosynthesis"
+        },
+        {
+          "id": "D",
+          "text": "Excess fertilizer sterilizes all aquatic bacteria → water stagnates into pure distilled water → zooplankton undergo osmotic burst"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Eutrophication begins when leached nitrogen and phosphorus stimulate explosive algal growth (algal blooms). When these short-lived algae die, decomposer bacteria multiply rapidly and consume dissolved oxygen during aerobic decomposition, producing severe hypoxia that causes extensive fish mortality.",
+      "sourceReference": "Section 6.2.4, Page 170-171"
+    },
+    {
+      "id": "BIO-G10-U06-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Why do Ethiopian organic farmers regularly practice crop rotation by cultivating leguminous crops (such as faba beans or field peas) prior to planting cereal crops like tef or maize?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Legume roots synthesize synthetic cellulase that sterilizes pathogenic weeds and herbivorous insects"
+        },
+        {
+          "id": "B",
+          "text": "Symbiotic rhizobia in legume root nodules fix atmospheric N2 into bioavailable nitrogen, enriching the soil's nitrogen reservoir without requiring expensive chemical fertilizers"
+        },
+        {
+          "id": "C",
+          "text": "Legumes absorb massive quantities of toxic carbon dioxide from deep soil layers through denitrification"
+        },
+        {
+          "id": "D",
+          "text": "Legume taproots permanently convert soil sand particles into insoluble phosphate bedrock"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Leguminous crops harbor symbiotic Rhizobium bacteria in their root nodules that fix atmospheric N2 into ammonium, supplying the legume with nitrogen while leaving nitrogen-rich residues and roots in the soil. Subsequent cereal crops (like maize or tef) utilize this accumulated fixed nitrogen for higher yields without synthetic fertilizers.",
+      "sourceReference": "Section 6.2.3, Page 165, 169"
+    }
+  ]
 }

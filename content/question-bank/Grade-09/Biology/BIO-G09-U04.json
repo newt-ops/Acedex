@@ -3,5 +3,411 @@
   "subject": "Biology",
   "unitNumber": 4,
   "unitTitle": "Reproduction",
-  "questions": []
+  "questions": [
+    {
+      "id": "BIO-G09-U04-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which of the following is an example of natural vegetative propagation involving underground horizontal stems that produce shoots from their nodes?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Rhizomes in couch grass"
+        },
+        {
+          "id": "B",
+          "text": "Runners in cultivated strawberry"
+        },
+        {
+          "id": "C",
+          "text": "Stem cuttings in hibiscus"
+        },
+        {
+          "id": "D",
+          "text": "Grafting in fruit orchards"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Underground horizontal stems that grow beneath the soil and produce shoots from lateral buds at their nodes are known as rhizomes, as typically seen in couch grass.",
+      "sourceReference": "Section 4.3.4, Page 78-79"
+    },
+    {
+      "id": "BIO-G09-U04-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In the human male reproductive system, what is the primary biological reason for the testes being housed externally inside the scrotum?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To allow unhindered storage of urine prior to ejaculation"
+        },
+        {
+          "id": "B",
+          "text": "To protect Leydig cells from high arterial blood pressure"
+        },
+        {
+          "id": "C",
+          "text": "To maintain a slightly lower temperature necessary for viable sperm development"
+        },
+        {
+          "id": "D",
+          "text": "To facilitate direct secretion of fructose into the urinary bladder"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Human spermatogenesis requires a temperature slightly lower than normal internal core body temperature; the scrotum suspends the testes outside the abdominal cavity to provide this cooler environment.",
+      "sourceReference": "Section 4.6, Page 84"
+    },
+    {
+      "id": "BIO-G09-U04-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In the human female reproductive tract, where does fertilization of an ovulated egg by a sperm typically take place?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Cervix"
+        },
+        {
+          "id": "B",
+          "text": "Oviduct (Fallopian tube)"
+        },
+        {
+          "id": "C",
+          "text": "Uterine cavity"
+        },
+        {
+          "id": "D",
+          "text": "Vagina"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "After ovulation, the released egg enters the oviduct (Fallopian tube), which is the usual biological site where sperm encounters and fertilizes the ovum.",
+      "sourceReference": "Section 4.7 & 4.9, Page 86, 90"
+    },
+    {
+      "id": "BIO-G09-U04-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which pituitary gonadotropic hormone surges abruptly around day 14 of a standard 28-day menstrual cycle to directly trigger ovulation?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Luteinizing hormone (LH)"
+        },
+        {
+          "id": "B",
+          "text": "Human chorionic gonadotropin (hCG)"
+        },
+        {
+          "id": "C",
+          "text": "Progesterone"
+        },
+        {
+          "id": "D",
+          "text": "Prolactin"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Mid-cycle high levels of estrogens stimulate the anterior pituitary to release a surge of luteinizing hormone (LH), which causes the mature ovarian follicle to rupture and release the egg (ovulation).",
+      "sourceReference": "Section 4.8, Page 88"
+    },
+    {
+      "id": "BIO-G09-U04-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which of the following sexually transmitted infections is caused by the spiral-shaped bacterium Treponema pallidum?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Trichomoniasis"
+        },
+        {
+          "id": "B",
+          "text": "Gonorrhea"
+        },
+        {
+          "id": "C",
+          "text": "Syphilis"
+        },
+        {
+          "id": "D",
+          "text": "Chancroid"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Syphilis is caused by the spiral-shaped spirochete bacterium Treponema pallidum, which enters tissues through micro-abrasions in mucous membranes or skin.",
+      "sourceReference": "Section 4.11, Page 98"
+    },
+    {
+      "id": "BIO-G09-U04-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In a colony of common honeybees (Apis mellifera), male drones develop from unfertilized eggs without receiving genetic contribution from a father. What form of asexual reproduction is this?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Multiple fission"
+        },
+        {
+          "id": "B",
+          "text": "Parthenogenesis"
+        },
+        {
+          "id": "C",
+          "text": "Fragmentation"
+        },
+        {
+          "id": "D",
+          "text": "Budding"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Parthenogenesis is an asexual reproductive strategy in which an unfertilized egg develops into an adult organism; in honeybees, unfertilized haploid eggs develop into male drones.",
+      "sourceReference": "Section 4.3.5, Page 81"
+    },
+    {
+      "id": "BIO-G09-U04-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which of the following pairs of characteristics correctly distinguishes primary sexual characteristics from secondary sexual characteristics in humans?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Primary characteristics develop during puberty; secondary characteristics are present at birth"
+        },
+        {
+          "id": "B",
+          "text": "Primary characteristics are internal reproductive organs only; secondary characteristics are external genitalia only"
+        },
+        {
+          "id": "C",
+          "text": "Primary characteristics are anatomical sex organs present at birth; secondary characteristics are traits that emerge during puberty under hormonal control"
+        },
+        {
+          "id": "D",
+          "text": "Primary characteristics are controlled by thyroid hormones; secondary characteristics are regulated exclusively by the adrenal cortex"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Primary sexual characteristics comprise the anatomical sex organs present at birth (penis, testes, ovaries, uterus), while secondary sexual characteristics (e.g., voice deepening, breast development, pubic hair) emerge during puberty in response to sex hormones.",
+      "sourceReference": "Section 4.5, Page 82"
+    },
+    {
+      "id": "BIO-G09-U04-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What is the primary physiological function of the alkaline secretions provided by the human male prostate gland?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To supply fructose as the primary metabolic fuel for sperm motility"
+        },
+        {
+          "id": "B",
+          "text": "To raise the pH of the acidic vaginal tract, thereby protecting and preserving sperm viability"
+        },
+        {
+          "id": "C",
+          "text": "To trigger the immediate acrosome reaction before entering the cervix"
+        },
+        {
+          "id": "D",
+          "text": "To nourish primary spermatocytes undergoing meiosis in the seminiferous tubules"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The prostate gland secretes an alkaline fluid that neutralizes the natural acidity of both the male urethra and the female vagina, establishing a hospitable environment that keeps sperm viable.",
+      "sourceReference": "Section 4.6, Page 84-85"
+    },
+    {
+      "id": "BIO-G09-U04-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "During the luteal phase of the human menstrual cycle, what endocrine structure is formed from the ruptured follicle, and which hormone does it predominantly secrete to maintain the endometrium?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Corpus luteum, secreting large amounts of progesterone"
+        },
+        {
+          "id": "B",
+          "text": "Graafian follicle, secreting high levels of luteinizing hormone"
+        },
+        {
+          "id": "C",
+          "text": "Placenta, secreting follicle-stimulating hormone"
+        },
+        {
+          "id": "D",
+          "text": "Endometrial stroma, secreting oxytocin"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Following ovulation, LH transforms the remnants of the ruptured follicle into the corpus luteum, which secretes high amounts of progesterone (and some estrogen) to thicken and vascularize the uterine lining in preparation for potential pregnancy.",
+      "sourceReference": "Section 4.8, Page 88"
+    },
+    {
+      "id": "BIO-G09-U04-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How do monozygotic (identical) twins differ in origin from dizygotic (fraternal) twins?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Monozygotic twins develop from two separate eggs fertilized by two different sperm; dizygotic twins originate from a single fertilized egg that splits"
+        },
+        {
+          "id": "B",
+          "text": "Monozygotic twins originate from a single zygote that separates into two embryos; dizygotic twins originate from two separate ova fertilized by two distinct sperm"
+        },
+        {
+          "id": "C",
+          "text": "Monozygotic twins always have completely independent placentas; dizygotic twins always share a single common placenta"
+        },
+        {
+          "id": "D",
+          "text": "Monozygotic twins can be of different sexes; dizygotic twins are strictly of the same sex"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Monozygotic (identical) twins arise from a single fertilized ovum (zygote) that splits into two early embryos sharing identical genetic material. Dizygotic (fraternal) twins result when two separate ova are fertilized by two different sperm.",
+      "sourceReference": "Section 4.9, Page 90"
+    },
+    {
+      "id": "BIO-G09-U04-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which of the following family planning methods offers dual protection by preventing unintended pregnancy and reducing the transmission of sexually transmitted infections (STIs), including HIV?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Copper intra-uterine device (IUD)"
+        },
+        {
+          "id": "B",
+          "text": "Subdermal progestin implant"
+        },
+        {
+          "id": "C",
+          "text": "Combined oral contraceptive pill"
+        },
+        {
+          "id": "D",
+          "text": "Male or female condom"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "Barrier methods—specifically male and female condoms—are unique among contraceptives because they block the passage of body fluids, providing dual protection against unintended pregnancy and STIs/HIV.",
+      "sourceReference": "Section 4.10, Page 92, 94-95"
+    },
+    {
+      "id": "BIO-G09-U04-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A farmer successfully propagates an elite disease-susceptible apple variety through grafting, using scions from the elite variety attached onto hardy rootstocks. After several growing seasons, a novel bacterial blight strikes the orchard. Why are all the grafted trees equally devastated by this disease?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The graft union blocked the transpiration of water through the vascular cambium"
+        },
+        {
+          "id": "B",
+          "text": "Asexual vegetative propagation produces genetically uniform clones, resulting in zero genetic variation for disease resistance"
+        },
+        {
+          "id": "C",
+          "text": "The hardy rootstock completely altered the nuclear genotype of the scion via meiosis"
+        },
+        {
+          "id": "D",
+          "text": "The scion tissues reverted spontaneously to a non-photosynthetic state"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Vegetative propagation (such as grafting) is an asexual reproductive technique where all offspring are genetic clones of the parent scion. Because no genetic variation or recombination occurs, if the parent is susceptible to a pathogen, all cloned descendants lack resistance.",
+      "sourceReference": "Section 4.2 & 4.3.4, Page 75, 80"
+    },
+    {
+      "id": "BIO-G09-U04-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A man undergoes a successful bilateral vasectomy for permanent family planning. Which of the following accurately describes his reproductive physiology post-recovery?",
+      "options": [
+        {
+          "id": "A",
+          "text": "His testes stop producing testosterone, leading to loss of secondary sexual characteristics"
+        },
+        {
+          "id": "B",
+          "text": "Spermatogenesis ceases immediately, and semen volume drops by over 95%"
+        },
+        {
+          "id": "C",
+          "text": "Sperm are still produced in the seminiferous tubules but cannot travel past the severed vas deferens, while ejaculate contains accessory gland secretions without sperm"
+        },
+        {
+          "id": "D",
+          "text": "Sperm cells are diverted into the ureters and excreted during normal urination"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "In a vasectomy, only the vas deferens is cut and ligated. Testicular production of testosterone and sperm continues normally; developing sperm are reabsorbed by white blood cells in the epididymis. The ejaculated semen contains fluid from the seminal vesicles and prostate, but no sperm.",
+      "sourceReference": "Section 4.10.2, Page 96-97"
+    },
+    {
+      "id": "BIO-G09-U04-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "If human fertilization occurs in the upper oviduct, what hormonal mechanism prevents the degeneration of the uterine lining and inhibits the onset of the next menstrual period?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A precipitous drop in LH causes immediate shedding of the endometrium"
+        },
+        {
+          "id": "B",
+          "text": "High levels of progesterone and estrogens are maintained, preventing the breakdown of the endometrium and suppressing pituitary FSH and LH secretion"
+        },
+        {
+          "id": "C",
+          "text": "The anterior pituitary releases massive amounts of FSH to stimulate additional follicle development in both ovaries"
+        },
+        {
+          "id": "D",
+          "text": "The unfertilized egg rapidly consumes existing estrogen to trigger local vascular clotting"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Following conception, the corpus luteum is maintained and continues to secrete high levels of progesterone and estrogens. These steroids maintain the vascularized endometrium for embryonic implantation while exerting negative feedback on the pituitary, preventing new follicle maturation and menstruation.",
+      "sourceReference": "Section 4.8 & 4.9, Page 88, 90"
+    },
+    {
+      "id": "BIO-G09-U04-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Why is the maternal bloodstream physically separated from the embryonic bloodstream across the placenta rather than flowing directly into the embryo's circulatory vessels?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To prevent high maternal blood pressure and incompatible blood antigens or pathogens from damaging fragile embryonic capillaries while allowing diffusion of gases and nutrients"
+        },
+        {
+          "id": "B",
+          "text": "To allow red blood cells to travel only in one direction from mother to embryo via active transport"
+        },
+        {
+          "id": "C",
+          "text": "To ensure carbon dioxide diffuses from the maternal circulation into the fetal tissues"
+        },
+        {
+          "id": "D",
+          "text": "To prevent the embryo from absorbing essential glucose and amino acids from the mother"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Maternal and fetal blood do not mix directly. The placental barrier protects the delicate fetal capillary network from the high pressure of maternal circulation, prevents immunological rejection due to differing blood types, while facilitating diffusion of oxygen, nutrients, and metabolic wastes.",
+      "sourceReference": "Section 4.9, Page 91"
+    }
+  ]
 }

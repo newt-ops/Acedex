@@ -3,5 +3,411 @@
   "subject": "Biology",
   "unitNumber": 4,
   "unitTitle": "Cell Reproduction",
-  "questions": []
+  "questions": [
+    {
+      "id": "BIO-G10-U04-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "During which phase of the eukaryotic cell cycle does DNA replication take place, producing identical sister chromatids?",
+      "options": [
+        {
+          "id": "A",
+          "text": "G1 phase"
+        },
+        {
+          "id": "B",
+          "text": "S phase"
+        },
+        {
+          "id": "C",
+          "text": "G2 phase"
+        },
+        {
+          "id": "D",
+          "text": "M phase"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "During the S (Synthesis) phase of interphase, the cell replicates its chromosomal DNA so that each chromosome consists of two identical sister chromatids prior to cell division.",
+      "sourceReference": "Section 4.1, Page 82"
+    },
+    {
+      "id": "BIO-G10-U04-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is the primary biological outcome of mitotic cell division (mitosis followed by cytokinesis)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Four haploid daughter cells that are genetically distinct from the parent cell"
+        },
+        {
+          "id": "B",
+          "text": "Two diploid daughter cells that are genetically identical to the parent cell"
+        },
+        {
+          "id": "C",
+          "text": "Two haploid gametes ready for fertilization"
+        },
+        {
+          "id": "D",
+          "text": "A single polyploid cell with multiple nuclei"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Mitosis is an equational division in which a diploid (2n) mother cell duplicates and evenly distributes its chromosomes to form two genetically identical diploid (2n) daughter cells.",
+      "sourceReference": "Section 4.2.1, Page 85"
+    },
+    {
+      "id": "BIO-G10-U04-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In which stage of mitosis do chromosomes align along the equatorial plane (equatorial plate) of the cell?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Prophase"
+        },
+        {
+          "id": "B",
+          "text": "Metaphase"
+        },
+        {
+          "id": "C",
+          "text": "Anaphase"
+        },
+        {
+          "id": "D",
+          "text": "Telophase"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "During metaphase, the fully formed mitotic spindle aligns the condensed chromosomes along the center or metaphase plate of the cell.",
+      "sourceReference": "Section 4.2.1, Page 86-87"
+    },
+    {
+      "id": "BIO-G10-U04-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Why is the meiotic cell division process fundamentally referred to as a 'reduction division'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It reduces the physical size and cytoplasmic volume of daughter cells by 90%"
+        },
+        {
+          "id": "B",
+          "text": "It reduces the chromosome number by half, from diploid (2n) to haploid (n)"
+        },
+        {
+          "id": "C",
+          "text": "It reduces the metabolic rate and ATP synthesis of dividing cells"
+        },
+        {
+          "id": "D",
+          "text": "It reduces the total number of cell cycles an organism can undergo"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Meiosis reduces the chromosome complement from the diploid number (2n) to the haploid number (n) during the formation of gametes, preventing the doubling of chromosomes across generations.",
+      "sourceReference": "Section 4.2.2, Page 89"
+    },
+    {
+      "id": "BIO-G10-U04-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which renowned Ethiopian geneticist and agronomist received the Right Livelihood Award in 1989 for establishing the Plant Genetic Resources Centre and conserving native crop landraces?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Dr. Aklilu Lemma"
+        },
+        {
+          "id": "B",
+          "text": "Prof. Gebissa Ejeta"
+        },
+        {
+          "id": "C",
+          "text": "Dr. Melaku Worede"
+        },
+        {
+          "id": "D",
+          "text": "Prof. Tilahun Yilma"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Dr. Melaku Worede is renowned for preserving Ethiopia's genetic wealth through community-based landrace conservation and establishing the Plant Genetic Resources Centre in Addis Ababa.",
+      "sourceReference": "Section 4.3, Page 91"
+    },
+    {
+      "id": "BIO-G10-U04-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How does cytokinesis in dividing plant cells differ fundamentally from cytokinesis in animal cells?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Plant cells pinch inward via a cleavage furrow, whereas animal cells form a middle lamella"
+        },
+        {
+          "id": "B",
+          "text": "Plant cells synthesize a new cell plate and middle lamella between daughter nuclei, whereas animal cells divide by furrowing and constriction of the cell membrane"
+        },
+        {
+          "id": "C",
+          "text": "Plant cells undergo cytokinesis during G1 phase, whereas animal cells undergo cytokinesis in S phase"
+        },
+        {
+          "id": "D",
+          "text": "Plant cells divide their cytoplasm twice, whereas animal cells omit cytokinesis entirely"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Because plant cells are encased by a rigid cell wall, their cytoplasm cannot pinch off. Instead, a new cell plate and wall (middle lamella) are laid down between daughter cells, whereas animal cells form a cleavage furrow that constricts inward.",
+      "sourceReference": "Section 4.2.1, Page 87"
+    },
+    {
+      "id": "BIO-G10-U04-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "During which phase of the cell cycle does a cell replenish its energy stores, synthesize proteins required for chromosome manipulation, and duplicate some organelles before entering mitosis?",
+      "options": [
+        {
+          "id": "A",
+          "text": "G1 phase"
+        },
+        {
+          "id": "B",
+          "text": "S phase"
+        },
+        {
+          "id": "C",
+          "text": "G2 phase"
+        },
+        {
+          "id": "D",
+          "text": "M phase"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "During the G2 phase (second gap), the cell replenishes energy reserves, synthesizes proteins necessary for spindle assembly and chromosome movement, and duplicates certain organelles as final preparation for mitosis.",
+      "sourceReference": "Section 4.1, Page 82"
+    },
+    {
+      "id": "BIO-G10-U04-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What primary genetic event occurs during Prophase I of meiosis that does NOT occur during mitotic prophase?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Degeneration of the cell membrane and immediate lysis of the cytoplasm"
+        },
+        {
+          "id": "B",
+          "text": "Synapsis of homologous chromosomes and crossing over between non-sister chromatids"
+        },
+        {
+          "id": "C",
+          "text": "Separation of sister chromatids to opposite poles of the spindle"
+        },
+        {
+          "id": "D",
+          "text": "Condensation of chromatin into individual visible chromatids"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In Prophase I of meiosis, homologous chromosomes pair up closely (synapsis) to form tetrads and exchange genetic segments through crossing over, creating new allele combinations that do not occur in mitosis.",
+      "sourceReference": "Section 4.2.2, Page 89-90"
+    },
+    {
+      "id": "BIO-G10-U04-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Why is uncontrolled and unregulated progression through the cell cycle dangerous to a multicellular organism?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It causes all somatic cells to instantly convert into haploid gametes"
+        },
+        {
+          "id": "B",
+          "text": "It results in excessive, uncontrolled cell proliferation leading to the formation of tumors and cancer"
+        },
+        {
+          "id": "C",
+          "text": "It permanently halts all protein synthesis and ATP generation in the body"
+        },
+        {
+          "id": "D",
+          "text": "It leads to the destruction of the nuclear envelope in non-dividing nerve cells"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "When internal regulatory checkpoints of the cell cycle fail, cells divide uncontrollably at high density without responding to normal growth-inhibitory signals, which can lead to tumor growth and cancer.",
+      "sourceReference": "Section 4.1, Page 83-84"
+    },
+    {
+      "id": "BIO-G10-U04-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which statement correctly describes the behavior of chromosomes during Anaphase I of meiosis?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Sister chromatids separate as centromeres split, moving as individual chromosomes to opposite poles"
+        },
+        {
+          "id": "B",
+          "text": "Homologous chromosome pairs separate and move toward opposite poles while sister chromatids remain attached at their centromeres"
+        },
+        {
+          "id": "C",
+          "text": "All 46 chromosomes migrate to one pole, leaving the other pole completely empty"
+        },
+        {
+          "id": "D",
+          "text": "Non-homologous chromosomes fuse together at the metaphase plate"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In Anaphase I, the centromeres do not divide; instead, homologous chromosomes of each pair separate and move to opposite poles, halving the chromosome number from diploid to haploid.",
+      "sourceReference": "Section 4.2.2, Page 89-90"
+    },
+    {
+      "id": "BIO-G10-U04-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "As a cell grows larger in volume during interphase, which physiological limitation creates the need for the cell to divide?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The surface area-to-volume ratio decreases, making simple diffusion across the plasma membrane inadequate to support the large volume"
+        },
+        {
+          "id": "B",
+          "text": "The concentration of nuclear DNA increases to toxic levels inside the nucleolus"
+        },
+        {
+          "id": "C",
+          "text": "The cell wall dissolves completely when exposed to elevated cytoplasmic pressure"
+        },
+        {
+          "id": "D",
+          "text": "Mitochondria stop producing ATP once the cell diameter exceeds 5 micrometers"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "As cell size increases, cytoplasmic volume expands much faster than the membrane surface area, decreasing the surface area-to-volume ratio and making material exchange by diffusion insufficient to meet metabolic demands.",
+      "sourceReference": "Section 4.2, Page 84-85"
+    },
+    {
+      "id": "BIO-G10-U04-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A cell with a diploid chromosome number of 2n = 40 undergoes meiosis. How many daughter cells are produced at the completion of Meiosis I and Meiosis II, and how many chromosomes does each daughter cell contain at these respective stages?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Meiosis I: 2 cells with 40 chromosomes each; Meiosis II: 4 cells with 40 chromosomes each"
+        },
+        {
+          "id": "B",
+          "text": "Meiosis I: 2 cells with 20 chromosomes each; Meiosis II: 4 cells with 20 chromosomes each"
+        },
+        {
+          "id": "C",
+          "text": "Meiosis I: 4 cells with 20 chromosomes each; Meiosis II: 4 cells with 10 chromosomes each"
+        },
+        {
+          "id": "D",
+          "text": "Meiosis I: 2 cells with 10 chromosomes each; Meiosis II: 4 cells with 5 chromosomes each"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Meiosis I is a reduction division that produces 2 haploid cells, each containing 20 duplicated chromosomes (n = 20). Meiosis II separates sister chromatids without altering chromosome number, resulting in 4 haploid daughter cells, each with 20 chromosomes.",
+      "sourceReference": "Section 4.2.2 & Review Questions, Page 89, 93"
+    },
+    {
+      "id": "BIO-G10-U04-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "If a dividing cell is treated with a pharmacological agent that specifically prevents the breakdown of cohesin proteins at the centromeres, at which stage of mitosis will the cell division be arrested?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Transition from Prophase to Metaphase"
+        },
+        {
+          "id": "B",
+          "text": "Transition from Metaphase to Anaphase"
+        },
+        {
+          "id": "C",
+          "text": "Transition from Telophase to Cytokinesis"
+        },
+        {
+          "id": "D",
+          "text": "Entry from G2 phase into M phase"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "During anaphase, cohesin proteins that hold sister chromatids together at the centromere must be cleaved to allow chromatids to separate and move toward opposite poles. Preventing cohesin breakdown arrests the cell at metaphase.",
+      "sourceReference": "Section 4.2.1, Page 87"
+    },
+    {
+      "id": "BIO-G10-U04-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "In what specific way is Meiosis II mechanistically similar to standard mitotic division, distinguishing it from Meiosis I?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Both involve the pairing of homologous chromosomes into bivalents"
+        },
+        {
+          "id": "B",
+          "text": "Both involve the separation of individual sister chromatids as centromeres divide"
+        },
+        {
+          "id": "C",
+          "text": "Both are preceded by a complete round of chromosome duplication during S phase"
+        },
+        {
+          "id": "D",
+          "text": "Both reduce the overall ploidy level of daughter cells from 2n to n"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Meiosis II is an equational division analogous to mitosis: chromosomes align individually at the metaphase plate and sister chromatids are pulled to opposite poles upon centromere division, unlike Meiosis I where homologous pairs separate.",
+      "sourceReference": "Section 4.2.2, Page 89-90"
+    },
+    {
+      "id": "BIO-G10-U04-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Which of the following explains why Dr. Melaku Worede's on-farm landrace conservation strategy in Ethiopia proved more sustainable for resource-poor farmers than relying exclusively on imported high-input seeds?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Native seed landraces were genetically cloned in laboratories to eliminate all phenotypic variation"
+        },
+        {
+          "id": "B",
+          "text": "Locally adapted native seeds possessed broad genetic diversity that provided resilience against drought and pests while outyielding high-input varieties without costly chemical fertilizers"
+        },
+        {
+          "id": "C",
+          "text": "Native landraces were modified to reproduce exclusively by asexual budding rather than sexual pollination"
+        },
+        {
+          "id": "D",
+          "text": "Imported high-input seeds were incapable of germinating in tropical African day-lengths"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Dr. Melaku Worede demonstrated that diverse, locally adapted farmer landraces (such as indigenous durum wheat) could yield 10-15% more than high-input varieties and 20-25% more than original cultivars under local farming conditions without requiring expensive commercial fertilizers or pesticides.",
+      "sourceReference": "Section 4.3, Page 91"
+    }
+  ]
 }

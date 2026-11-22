@@ -3,5 +3,411 @@
   "subject": "Biology",
   "unitNumber": 3,
   "unitTitle": "Biochemical Molecules",
-  "questions": []
+  "questions": [
+    {
+      "id": "BIO-G10-U03-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which of the following organic molecules serves as the primary and most immediate source of energy for cellular respiration in living organisms?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Cellulose"
+        },
+        {
+          "id": "B",
+          "text": "Glucose"
+        },
+        {
+          "id": "C",
+          "text": "Hemoglobin"
+        },
+        {
+          "id": "D",
+          "text": "DNA"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Glucose is a hexose monosaccharide that serves as the primary and most readily available source of metabolic energy, undergoing oxidation during cellular respiration to synthesize ATP.",
+      "sourceReference": "Section 3.1.3, Page 61-62"
+    },
+    {
+      "id": "BIO-G10-U03-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which property of water allows aquatic insects, such as raft spiders and pond skaters, to walk and settle across the surface of a pond without sinking?",
+      "options": [
+        {
+          "id": "A",
+          "text": "High surface tension resulting from cohesive forces between water molecules"
+        },
+        {
+          "id": "B",
+          "text": "Low boiling point under ambient atmospheric pressure"
+        },
+        {
+          "id": "C",
+          "text": "Inability to dissolve ionic mineral salts"
+        },
+        {
+          "id": "D",
+          "text": "Lower density of liquid water compared to ice at 0°C"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Due to extensive intermolecular hydrogen bonding, water molecules exhibit high cohesion, creating high surface tension at the air-water interface that supports small organisms like raft spiders.",
+      "sourceReference": "Section 3.1.1.1, Page 53-54"
+    },
+    {
+      "id": "BIO-G10-U03-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In the structural organization of proteins, which covalent linkage connects the carboxyl group of one amino acid to the amine group of an adjacent amino acid?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Glycosidic bond"
+        },
+        {
+          "id": "B",
+          "text": "Phosphodiester bond"
+        },
+        {
+          "id": "C",
+          "text": "Ester linkage"
+        },
+        {
+          "id": "D",
+          "text": "Peptide bond"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "A peptide bond is a covalent link formed by a condensation reaction between the carboxylic acid group of one amino acid and the amine group of another, with the release of a water molecule.",
+      "sourceReference": "Section 3.1.3, Page 69"
+    },
+    {
+      "id": "BIO-G10-U03-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What nitrogenous base is present in ribonucleic acid (RNA) molecules in place of the thymine found in deoxyribonucleic acid (DNA)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Guanine"
+        },
+        {
+          "id": "B",
+          "text": "Adenine"
+        },
+        {
+          "id": "C",
+          "text": "Uracil"
+        },
+        {
+          "id": "D",
+          "text": "Cytosine"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "While DNA uses adenine, thymine, cytosine, and guanine, RNA contains uracil instead of thymine as one of its four nitrogenous bases.",
+      "sourceReference": "Section 3.1.3, Page 73-74"
+    },
+    {
+      "id": "BIO-G10-U03-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "A dietary deficiency of which mineral element impairs the synthesis of thyroid hormones, directly leading to the development of an enlarged thyroid gland (goiter)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Iron"
+        },
+        {
+          "id": "B",
+          "text": "Calcium"
+        },
+        {
+          "id": "C",
+          "text": "Iodine"
+        },
+        {
+          "id": "D",
+          "text": "Sodium"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Iodine is an essential trace element required for the synthesis of thyroid hormones that regulate metabolism; its deficiency impairs hormone production and results in goiter.",
+      "sourceReference": "Section 3.1.2, Page 58"
+    },
+    {
+      "id": "BIO-G10-U03-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How does the high specific heat capacity of water directly benefit living organisms and aquatic ecosystems?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It ensures that biological fluids freeze immediately when environmental temperatures reach 4°C"
+        },
+        {
+          "id": "B",
+          "text": "It acts as a thermal buffer that resists sudden temperature fluctuations, maintaining stable internal and aquatic environments"
+        },
+        {
+          "id": "C",
+          "text": "It enables water to dissolve large non-polar organic molecules such as triglycerides and waxes"
+        },
+        {
+          "id": "D",
+          "text": "It eliminates the need for metabolic energy during transcellular active transport"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Because extensive hydrogen bonds require large amounts of heat energy to be broken before molecules can move faster, water possesses a high specific heat capacity, buffering organisms and aquatic habitats against rapid temperature changes.",
+      "sourceReference": "Section 3.1.1.1, Page 52-53"
+    },
+    {
+      "id": "BIO-G10-U03-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Why is sucrose classified as a non-reducing disaccharide, unlike maltose and lactose?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It contains five-carbon pentose sugars that lack hydroxyl groups"
+        },
+        {
+          "id": "B",
+          "text": "Its glycosidic bond involves the anomeric carbon atoms of both glucose and fructose, leaving no free aldehyde or ketone group available to reduce copper(II) ions"
+        },
+        {
+          "id": "C",
+          "text": "It is composed entirely of long-chain fatty acids that do not dissolve in water"
+        },
+        {
+          "id": "D",
+          "text": "It precipitates immediately when mixed with alkaline sodium hydroxide solutions"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In sucrose, the bond forms between the reducing groups of both glucose and fructose. Without a free aldehyde or ketone group, it cannot donate electrons to reduce Benedict's reagent (Cu2+ to Cu+), making it a non-reducing sugar.",
+      "sourceReference": "Section 3.1.3, Page 62-63"
+    },
+    {
+      "id": "BIO-G10-U03-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which of the following pairs of cellular inorganic ions correctly contrasts the major cation of extracellular fluid with the major cation of intracellular fluid?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Extracellular: Sodium (Na+); Intracellular: Potassium (K+)"
+        },
+        {
+          "id": "B",
+          "text": "Extracellular: Potassium (K+); Intracellular: Sodium (Na+)"
+        },
+        {
+          "id": "C",
+          "text": "Extracellular: Iron (Fe2+); Intracellular: Calcium (Ca2+)"
+        },
+        {
+          "id": "D",
+          "text": "Extracellular: Phosphate (PO4^3-); Intracellular: Chloride (Cl-)"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Sodium (Na+) is the primary positively charged cation found in extracellular body fluids, whereas potassium (K+) is the predominant intracellular cation concentrated within the cytoplasm of cells.",
+      "sourceReference": "Section 3.1.2, Page 55-56"
+    },
+    {
+      "id": "BIO-G10-U03-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What structural feature fundamentally distinguishes unsaturated fatty acids from saturated fatty acids?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Unsaturated fatty acids lack carboxyl groups at the end of their hydrocarbon chains"
+        },
+        {
+          "id": "B",
+          "text": "Unsaturated fatty acids contain one or more double bonds (-C=C-) in their hydrocarbon chain, making them melt more easily"
+        },
+        {
+          "id": "C",
+          "text": "Unsaturated fatty acids contain three phosphate groups attached to a glycerol backbone"
+        },
+        {
+          "id": "D",
+          "text": "Unsaturated fatty acids are completely solid at typical room temperatures"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Unsaturated fatty acids possess one or more carbon-carbon double bonds in their hydrocarbon chains, preventing tight molecular packing and resulting in lower melting points, which causes plant oils to remain liquid at room temperature.",
+      "sourceReference": "Section 3.1.3, Page 66-67"
+    },
+    {
+      "id": "BIO-G10-U03-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How do globular proteins differ fundamentally from fibrous proteins in terms of their molecular conformation and typical biological roles?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Globular proteins are insoluble structural strands, while fibrous proteins are compact spherical molecules with metabolic functions"
+        },
+        {
+          "id": "B",
+          "text": "Globular proteins curl into spherical shapes with hydrophilic surfaces for active metabolic roles; fibrous proteins form insoluble elongated strands that provide structural support"
+        },
+        {
+          "id": "C",
+          "text": "Globular proteins are found only in plant cell walls, whereas fibrous proteins occur only in bacterial ribosomes"
+        },
+        {
+          "id": "D",
+          "text": "Globular proteins lack peptide bonds, whereas fibrous proteins consist solely of linked nucleotide monomers"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Globular proteins (such as enzymes and hemoglobin) fold into compact spherical shapes with hydrophobic residues shielded inside, functioning in metabolic reactions. Fibrous proteins (like collagen and keratin) form long, insoluble structural sheets or fibers.",
+      "sourceReference": "Section 3.1.3, Page 70"
+    },
+    {
+      "id": "BIO-G10-U03-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Why is germinated cereal grain (malt) traditionally prepared and added during the brewing of Ethiopian indigenous fermented beverages such as Tella and Areke?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To activate amylase enzymes that hydrolyze insoluble cereal starches into fermentable sugars for yeast"
+        },
+        {
+          "id": "B",
+          "text": "To prevent any microbial growth by raising the alcohol concentration above 90%"
+        },
+        {
+          "id": "C",
+          "text": "To supply calcium ions that convert liquid water into solid ice crystals"
+        },
+        {
+          "id": "D",
+          "text": "To denature all plant proteins so that no amino acids remain in the mixture"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The process of malting (controlled germination) activates endogenous hydrolytic enzymes, notably amylase, which break down insoluble stored grain starches into maltose and glucose, providing fermentable substrates for yeast.",
+      "sourceReference": "Section 3.1.3, Page 62, 64"
+    },
+    {
+      "id": "BIO-G10-U03-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A student tests three unlabelled food extracts (X, Y, and Z) in a laboratory:\n• Sample X turns blue-black upon the addition of iodine solution.\n• Sample Y produces a brick-red precipitate when heated with Benedict's reagent, but remains blue with Biuret reagent.\n• Sample Z produces a mauve (purple) colour with Biuret reagent, but remains brown with iodine.\nWhich of the following correctly identifies the primary organic macromolecules present in samples X, Y, and Z, respectively?",
+      "options": [
+        {
+          "id": "A",
+          "text": "X = Protein; Y = Starch; Z = Reducing sugar"
+        },
+        {
+          "id": "B",
+          "text": "X = Reducing sugar; Y = Lipid; Z = Protein"
+        },
+        {
+          "id": "C",
+          "text": "X = Starch; Y = Reducing sugar; Z = Protein"
+        },
+        {
+          "id": "D",
+          "text": "X = Glycogen; Y = Polypeptide; Z = Non-reducing sugar"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "A blue-black reaction with iodine confirms the presence of starch in Sample X. Formation of a brick-red precipitate with heated Benedict's reagent identifies reducing sugars in Sample Y. A purple (mauve) reaction with Biuret reagent confirms the presence of protein in Sample Z.",
+      "sourceReference": "Section 3.1.3, Page 63, 65, 71"
+    },
+    {
+      "id": "BIO-G10-U03-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "How does the amphipathic structure of phospholipid molecules explain why they spontaneously assemble into a stable bilayer in aqueous intracellular and extracellular environments?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Their hydrophilic phosphate heads orient outward toward water, while their hydrophobic fatty acid tails face inward away from water"
+        },
+        {
+          "id": "B",
+          "text": "Their fatty acid tails form strong covalent peptide bonds with surrounding water molecules"
+        },
+        {
+          "id": "C",
+          "text": "Their glycerol backbones form rigid cellulose fibers that exclude all ions and polar molecules"
+        },
+        {
+          "id": "D",
+          "text": "Their non-polar heads attract hydrogen ions, forcing the entire molecule into a spherical micelle that dissolves in the cytoplasm"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Phospholipids have polar, hydrophilic phosphate heads that interact favourably with aqueous environments (cytoplasm and ECF) and non-polar, hydrophobic hydrocarbon tails that tuck inward, forming a stable bilayer barrier.",
+      "sourceReference": "Section 3.1.3, Page 67"
+    },
+    {
+      "id": "BIO-G10-U03-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Which of the following structural comparisons between deoxyribose and ribose pentose sugars is chemically accurate?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Deoxyribose has six carbon atoms, whereas ribose has only five carbon atoms"
+        },
+        {
+          "id": "B",
+          "text": "Deoxyribose lacks an oxygen atom at the 2' carbon position (formula C5H10O4), whereas ribose possesses a hydroxyl group at the 2' carbon position (formula C5H10O5)"
+        },
+        {
+          "id": "C",
+          "text": "Deoxyribose forms a double helix by itself, whereas ribose forms only branched polymers with sulfur"
+        },
+        {
+          "id": "D",
+          "text": "Ribose contains two additional nitrogen atoms attached to its 5' carbon ring"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Both are five-carbon pentose sugars, but deoxyribose (C5H10O4) differs from ribose (C5H10O5) by lacking an oxygen atom on carbon-2, having -H instead of an -OH group.",
+      "sourceReference": "Section 3.1.3, Page 73"
+    },
+    {
+      "id": "BIO-G10-U03-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Why do animal cells store surplus glucose as the branched insoluble polysaccharide glycogen rather than maintaining it as free, soluble glucose monomers in the cytoplasm?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Accumulation of soluble glucose would drastically lower the cellular water potential, causing massive osmotic water influx and cell lysis"
+        },
+        {
+          "id": "B",
+          "text": "Free glucose cannot be broken down by respiratory enzymes to generate ATP"
+        },
+        {
+          "id": "C",
+          "text": "Glycogen provides a rigid structural wall that keeps animal cells turgid and upright"
+        },
+        {
+          "id": "D",
+          "text": "Soluble glucose actively destroys nucleic acids by forming irreversible peptide linkages with DNA"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Glucose is soluble and chemically reactive; if stored as free monomers, it would exert an extreme osmotic pull, drawing excess water into animal cells and disrupting cellular homeostasis. Condensing it into insoluble, compact glycogen eliminates this osmotic disruption.",
+      "sourceReference": "Section 3.1.3, Page 63, 65"
+    }
+  ]
 }

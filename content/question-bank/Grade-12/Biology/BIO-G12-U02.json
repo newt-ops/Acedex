@@ -3,5 +3,411 @@
   "subject": "Biology",
   "unitNumber": 2,
   "unitTitle": "Microorganisms",
-  "questions": []
+  "questions": [
+    {
+      "id": "BIO-G12-U02-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which of the following cellular features is present in both Gram-positive and Gram-negative bacterial cell walls?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Outer membrane"
+        },
+        {
+          "id": "B",
+          "text": "Peptidoglycan"
+        },
+        {
+          "id": "C",
+          "text": "Teichoic acid"
+        },
+        {
+          "id": "D",
+          "text": "Lipopolysaccharide (LPS)"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Both Gram-positive and Gram-negative bacteria contain peptidoglycan in their cell walls; Gram-positive bacteria possess a thick peptidoglycan layer, whereas Gram-negative bacteria possess a thin peptidoglycan layer situated beneath an outer membrane.",
+      "sourceReference": "Section 2.1.1, Page 49-50"
+    },
+    {
+      "id": "BIO-G12-U02-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which structural and biochemical characteristic fundamentally distinguishes members of the Domain Archaea from the Domain Bacteria?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Archaea possess membrane-bound nuclei and mitochondria"
+        },
+        {
+          "id": "B",
+          "text": "Archaea lack true peptidoglycan in their cell walls and have branched hydrocarbon chains in their membrane lipids"
+        },
+        {
+          "id": "C",
+          "text": "Archaea reproduce exclusively by sexual syngamy"
+        },
+        {
+          "id": "D",
+          "text": "Archaea lack ribosomes in their cytoplasm"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Archaea differ from true bacteria in that their cell walls lack true peptidoglycan, their plasma membrane lipids contain branched hydrocarbon chains (ether-linked), and their protein synthesis initiates with methionine rather than N-formylmethionine.",
+      "sourceReference": "Section 2.2, Page 57, 59"
+    },
+    {
+      "id": "BIO-G12-U02-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is the primary structural polysaccharide found in the rigid cell walls of true fungi (Eumycota)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Peptidoglycan"
+        },
+        {
+          "id": "B",
+          "text": "Cellulose"
+        },
+        {
+          "id": "C",
+          "text": "Chitin"
+        },
+        {
+          "id": "D",
+          "text": "Pectin"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The protoplasm of fungal hyphae is encased by a rigid cell wall composed primarily of chitin and glucans, distinguishing fungi from green plants (which contain cellulose) and bacteria (which contain peptidoglycan).",
+      "sourceReference": "Section 2.3.1, Page 63"
+    },
+    {
+      "id": "BIO-G12-U02-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which group of protozoans moves and captures food using temporary cytoplasmic projections known as pseudopodia (false feet)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Ciliates"
+        },
+        {
+          "id": "B",
+          "text": "Flagellates"
+        },
+        {
+          "id": "C",
+          "text": "Sporozoans"
+        },
+        {
+          "id": "D",
+          "text": "Amebae (Rhizopodea)"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "Amebae (such as Amoeba and Entamoeba histolytica) utilize pseudopodia for locomotion and phagocytic engulfment of food particles, whereas ciliates use cilia, flagellates use flagella, and sporozoans are generally non-motile in adult stages.",
+      "sourceReference": "Section 2.4, Page 72"
+    },
+    {
+      "id": "BIO-G12-U02-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In the replication of temperate bacteriophages, what is the viral cycle called when the viral DNA integrates into the host bacterial chromosome without lysing the cell?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Lytic cycle"
+        },
+        {
+          "id": "B",
+          "text": "Lysogenic cycle"
+        },
+        {
+          "id": "C",
+          "text": "Productive cycle"
+        },
+        {
+          "id": "D",
+          "text": "Schizogony"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In the lysogenic cycle, a temperate phage inserts its genome into the host bacterial chromosome as a dormant prophage. The viral DNA replicates synchronously with the bacterial chromosome without immediately destroying or lysing the host.",
+      "sourceReference": "Section 2.5.3, Page 86-87"
+    },
+    {
+      "id": "BIO-G12-U02-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "A soil bacterium uses atmospheric carbon dioxide (CO2) as its primary carbon source and derives its energy and electrons from the oxidation of inorganic ammonium ions (NH4+). Under which nutritional category is this bacterium classified?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Chemoorganoheterotroph"
+        },
+        {
+          "id": "B",
+          "text": "Photolithoautotroph"
+        },
+        {
+          "id": "C",
+          "text": "Chemolithoautotroph"
+        },
+        {
+          "id": "D",
+          "text": "Photoorganoheterotroph"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Chemolithoautotrophs use inorganic chemical compounds (such as ammonium, nitrite, or hydrogen sulfide) as their energy and electron donors, while fixing inorganic carbon dioxide (CO2) as their sole carbon source for biosynthesis.",
+      "sourceReference": "Section 2.1.2, Page 52-53"
+    },
+    {
+      "id": "BIO-G12-U02-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which of the following classes of microorganisms thrives optimally at cold temperatures with a growth optimum near 15°C and can grow at temperatures as low as 0°C?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Mesophiles"
+        },
+        {
+          "id": "B",
+          "text": "Psychrophiles"
+        },
+        {
+          "id": "C",
+          "text": "Thermophiles"
+        },
+        {
+          "id": "D",
+          "text": "Hyperthermophiles"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Psychrophiles are cold-loving microorganisms that have an optimum growth temperature of around 15°C or lower and are capable of growing at 0°C. In contrast, mesophiles grow best at moderate temperatures (around 37°C), and thermophiles prefer temperatures above 55°C.",
+      "sourceReference": "Section 2.2.2, Page 60-61"
+    },
+    {
+      "id": "BIO-G12-U02-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Ingestion of peanuts, maize, or cereals contaminated with Aspergillus flavus poses a severe health hazard to humans and livestock primarily due to the production of which mycotoxin?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Ergot alkaloids"
+        },
+        {
+          "id": "B",
+          "text": "Aflatoxins"
+        },
+        {
+          "id": "C",
+          "text": "Botulinum toxin"
+        },
+        {
+          "id": "D",
+          "text": "Streptomycin"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Aspergillus flavus and A. parasiticus produce carcinogenic mycotoxins called aflatoxins when growing on stored grains, peanuts, and animal feeds under warm, humid conditions, which can lead to liver toxicity and hepatocellular carcinoma.",
+      "sourceReference": "Section 2.3.5, Page 68"
+    },
+    {
+      "id": "BIO-G12-U02-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How do sporozoan protozoans, such as Plasmodium falciparum, divide during the asexual reproductive process called schizogony (multiple fission)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The parent cell pinches off tiny unequal buds from its surface"
+        },
+        {
+          "id": "B",
+          "text": "The nucleus undergoes multiple successive divisions before the cytoplasm divides, forming many daughter cells simultaneously"
+        },
+        {
+          "id": "C",
+          "text": "Two cells align longitudinally to swap haploid micronuclei without changing cell count"
+        },
+        {
+          "id": "D",
+          "text": "The entire cell divides once along its transverse axis"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Schizogony (multiple fission) is an asexual reproductive process in sporozoa wherein the nucleus divides repeatedly within the schizont before cytoplasmic cleavage occurs, producing numerous merozoites simultaneously.",
+      "sourceReference": "Section 2.4, Page 73"
+    },
+    {
+      "id": "BIO-G12-U02-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How does the resident normal microbiota of the human body protect healthy individuals against colonization by pathogenic microorganisms?",
+      "options": [
+        {
+          "id": "A",
+          "text": "By actively producing antibodies that enter host red blood cells"
+        },
+        {
+          "id": "B",
+          "text": "By competing for and occupying cellular attachment sites, consuming available nutrients, and producing antimicrobial metabolites"
+        },
+        {
+          "id": "C",
+          "text": "By degrading the human epithelial basement membrane"
+        },
+        {
+          "id": "D",
+          "text": "By preventing the liver from synthesizing blood clotting factors"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Normal microbiota protects the host through competitive exclusion: occupying surface attachment sites, consuming localized nutrients, lowering pH, producing antimicrobial substances (bacteriocins), and priming the host immune response.",
+      "sourceReference": "Section 2.6, Page 90-91"
+    },
+    {
+      "id": "BIO-G12-U02-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Heat-labile culture media containing serum or egg proteins that cannot withstand the high temperature of an autoclave are typically sterilized by which intermittent heating method?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Incineration at 500°C"
+        },
+        {
+          "id": "B",
+          "text": "Tyndallization (exposure to free-flowing steam at 100°C for 20 minutes on three consecutive days)"
+        },
+        {
+          "id": "C",
+          "text": "Flash pasteurization at 71°C for 15 seconds"
+        },
+        {
+          "id": "D",
+          "text": "Hot air oven heating at 160°C for 2 hours"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Tyndallization is an intermittent sterilization technique used for heat-sensitive media. Samples are heated with free-flowing steam at 100°C for 20 minutes across three successive days, allowing surviving bacterial endospores to germinate into vulnerable vegetative cells between heating cycles.",
+      "sourceReference": "Section 2.9, Page 108"
+    },
+    {
+      "id": "BIO-G12-U02-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "A microbiologist performs a structural comparison between the cell envelopes of Gram-positive and Gram-negative bacteria. Which of the following comparative descriptions is accurate?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Gram-positive walls have two major layers with porin proteins; Gram-negative walls have a single layer lacking porins"
+        },
+        {
+          "id": "B",
+          "text": "Gram-positive envelopes contain lipopolysaccharide (LPS) and an extensive periplasmic space; Gram-negative envelopes contain teichoic acid and lack an outer membrane"
+        },
+        {
+          "id": "C",
+          "text": "Gram-positive envelopes consist of a single thick peptidoglycan layer containing teichoic acids and lack an outer membrane; Gram-negative envelopes have a thin peptidoglycan layer, an outer membrane with LPS, porin proteins, and an extensive periplasmic space"
+        },
+        {
+          "id": "D",
+          "text": "Gram-positive bacteria have thinner cell walls (8–11 nm) that easily lose crystal violet; Gram-negative bacteria have thicker walls (20–80 nm) that retain the primary stain"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Gram-positive bacteria have a thick (20–80 nm) single peptidoglycan layer embedded with teichoic and lipoteichoic acids, with a narrow periplasmic space and no outer membrane or porins. Gram-negative bacteria have a thinner (8–11 nm) peptidoglycan layer, an outer membrane containing lipopolysaccharide (endotoxin) and porin proteins, and an extensive periplasmic space.",
+      "sourceReference": "Section 2.1.1, Page 49-50"
+    },
+    {
+      "id": "BIO-G12-U02-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Which of the following correctly contrasts the lytic replication cycle of a virulent bacteriophage with the lysogenic replication cycle of a temperate bacteriophage?",
+      "options": [
+        {
+          "id": "A",
+          "text": "In the lytic cycle, phage DNA incorporates as a prophage without hydrolyzing host DNA; in the lysogenic cycle, the host chromosome is immediately destroyed"
+        },
+        {
+          "id": "B",
+          "text": "In the lytic cycle, viral DNA directs the immediate synthesis of phage components and lyses the host cell via lysozyme; in the lysogenic cycle, viral DNA integrates into the bacterial chromosome as a prophage and replicates along with host DNA without immediate lysis"
+        },
+        {
+          "id": "C",
+          "text": "The lytic cycle takes a long period of time and produces no symptoms; the lysogenic cycle takes a short time and always lyses the host cell"
+        },
+        {
+          "id": "D",
+          "text": "The lytic cycle allows bacterial genetic recombination; the lysogenic cycle hydrolyzes all bacterial DNA into free nucleotides"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In the lytic cycle, a virulent phage infects, degrades host DNA, synthesizes viral proteins, and uses phage-encoded lysozyme to lyse the bacterial wall to release progeny virions. In the lysogenic cycle, the temperate phage integrates its genome into the host chromosome as a prophage, remaining dormant and dividing with the host cell until induction occurs.",
+      "sourceReference": "Section 2.5.3, Page 86-88"
+    },
+    {
+      "id": "BIO-G12-U02-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Robert Koch formulated four postulates to establish a causal relationship between a specific microbe and a disease. Under which experimental scenario would fulfilling Koch's second postulate be scientifically challenging?",
+      "options": [
+        {
+          "id": "A",
+          "text": "When the suspected pathogen is a rod-shaped bacterium like Bacillus anthracis"
+        },
+        {
+          "id": "B",
+          "text": "When the disease-causing agent is an obligate intracellular pathogen (such as Treponema pallidum or a virus) that cannot be cultivated on standard cell-free nutrient agar"
+        },
+        {
+          "id": "C",
+          "text": "When the experimental animal exhibits identical clinical symptoms following inoculation"
+        },
+        {
+          "id": "D",
+          "text": "When the microorganism is present in all diseased individuals and absent in healthy controls"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Koch's second postulate states that the microorganism must be isolated from the diseased animal and grown in pure culture away from the animal body on artificial media. Obligate intracellular parasites (such as viruses, chlamydiae, and Treponema pallidum) cannot grow on cell-free artificial culture media, presenting a recognized limitation to satisfying this postulate.",
+      "sourceReference": "Section 2.6, Page 91-92"
+    },
+    {
+      "id": "BIO-G12-U02-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "During the municipal biological secondary treatment of wastewater, what is the role of the slime-forming bacterium Zoogloea in the activated sludge process?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It synthesizes toxic antibiotics that kill all aquatic protozoans"
+        },
+        {
+          "id": "B",
+          "text": "It secretes gelatinous extracellular slime that binds suspended particulates and microbes into flocs, incorporating organic pollutants and facilitating their sedimentation to reduce BOD"
+        },
+        {
+          "id": "C",
+          "text": "It generates methane gas directly from sulfate minerals in aerated trickling filters"
+        },
+        {
+          "id": "D",
+          "text": "It raises the water temperature to 100°C to achieve complete thermal sterilization"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In activated sludge treatment, Zoogloea bacteria secrete extracellular slime matrices that cause bacteria, protozoans, and organic debris to aggregate into macroscopic masses called flocs. These flocs adsorb and metabolize dissolved organic matter, settle out as sludge, and dramatically lower the Biochemical Oxygen Demand (BOD) of the effluent.",
+      "sourceReference": "Section 2.8, Page 98 & Unit 1 Section 1.4, Page 26"
+    }
+  ]
 }

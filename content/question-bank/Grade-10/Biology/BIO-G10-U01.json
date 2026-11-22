@@ -3,5 +3,411 @@
   "subject": "Biology",
   "unitNumber": 1,
   "unitTitle": "Sub-fields of Biology",
-  "questions": []
+  "questions": [
+    {
+      "id": "BIO-G10-U01-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which sub-field of biology is specifically defined as the study of the detailed microscopic structure of biological tissues?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Cytology"
+        },
+        {
+          "id": "B",
+          "text": "Histology"
+        },
+        {
+          "id": "C",
+          "text": "Anatomy"
+        },
+        {
+          "id": "D",
+          "text": "Morphology"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Histology is the branch of biology that deals with the microscopic study of the detailed structure of animal and plant tissues (such as parenchyma or connective tissues), whereas cytology focuses specifically on individual cells.",
+      "sourceReference": "Section 1.1, Page 3"
+    },
+    {
+      "id": "BIO-G10-U01-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which of the following sub-fields of biology is classified as an applied biological science rather than a pure biological science?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Taxonomy"
+        },
+        {
+          "id": "B",
+          "text": "Paleontology"
+        },
+        {
+          "id": "C",
+          "text": "Biotechnology"
+        },
+        {
+          "id": "D",
+          "text": "Embryology"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Pure biology studies how life functions naturally in terms of structure, behavior, and evolution, whereas applied biology (such as biotechnology, agriculture, and forestry) uses that biological knowledge to produce goods, manage living systems, or improve human welfare.",
+      "sourceReference": "Section 1.2, Page 5"
+    },
+    {
+      "id": "BIO-G10-U01-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which pioneering German physician is recognized as the father of modern bacteriology for pinpointing the causal bacterial agents of anthrax, tuberculosis, and cholera?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Louis Pasteur"
+        },
+        {
+          "id": "B",
+          "text": "Antonie van Leeuwenhoek"
+        },
+        {
+          "id": "C",
+          "text": "Alexander Fleming"
+        },
+        {
+          "id": "D",
+          "text": "Robert Koch"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "Robert Koch pioneered bacteriology and formulated rigorous criteria for infectious diseases, successfully isolating and identifying the specific bacterial pathogens that cause anthrax, tuberculosis, and cholera.",
+      "sourceReference": "Section 1.3, Page 8"
+    },
+    {
+      "id": "BIO-G10-U01-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What major practical discovery was made by the renowned Ethiopian biologist Dr. Aklilu Lemma in 1964 to combat schistosomiasis (bilharzia)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Using crushed berries of the soapberry plant (Endod) as an effective, natural molluscicide against host snails"
+        },
+        {
+          "id": "B",
+          "text": "Isolating an oral antibiotic from soil fungi to destroy schistosome flatworms inside the human gut"
+        },
+        {
+          "id": "C",
+          "text": "Developing a drought-tolerant cereal variety resistant to freshwater parasitic flukes"
+        },
+        {
+          "id": "D",
+          "text": "Synthesizing an injectable protein vaccine that immunizes children against bilharzia"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Dr. Aklilu Lemma discovered that dried and crushed berries of the local soapberry plant, Phytolacca dodecandra ('Endod'), act as a potent, biodegradable molluscicide that destroys the freshwater snails serving as intermediate hosts for the bilharzia parasite.",
+      "sourceReference": "Section 1.5, Page 13"
+    },
+    {
+      "id": "BIO-G10-U01-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In 1953, James Watson and Francis Crick revolutionized modern biology by discovering and proposing:",
+      "options": [
+        {
+          "id": "A",
+          "text": "The particulate laws of dominant and recessive genetic inheritance"
+        },
+        {
+          "id": "B",
+          "text": "The double-helix molecular structure of DNA"
+        },
+        {
+          "id": "C",
+          "text": "The technique of nuclear transfer to clone adult mammals"
+        },
+        {
+          "id": "D",
+          "text": "The existence of transposable jumping genes in cereal crops"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "James Watson and Francis Crick discovered the double-helix model of DNA, demonstrating how genetic information is coded, replicated, and passed on to descendants, for which they received the Nobel Prize in 1962.",
+      "sourceReference": "Section 1.3, Page 8-9"
+    },
+    {
+      "id": "BIO-G10-U01-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "When explaining how water is conducted upward through xylem vessels from roots to leaves in plants, biology relies directly on which principles of physics?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Thermodynamic heat exchange and atmospheric ionization"
+        },
+        {
+          "id": "B",
+          "text": "Electromagnetic induction and sound wave resonance"
+        },
+        {
+          "id": "C",
+          "text": "Nuclear magnetic dipole alignment and fluid buoyancy"
+        },
+        {
+          "id": "D",
+          "text": "Cohesion and adhesion resulting in surface tension and capillary action"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "The movement of water through xylem against gravity depends on physical properties of liquids: cohesion (hydrogen bonding between water molecules) and adhesion (attraction of water molecules to xylem cell walls), which create surface tension and capillary pull.",
+      "sourceReference": "Section 1.1, Page 4"
+    },
+    {
+      "id": "BIO-G10-U01-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "A research team uses computational algorithms, databases, and software tools to store, align, and analyze massive DNA and amino acid sequence datasets to predict protein folding. Which biological field is this?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Bioinformatics"
+        },
+        {
+          "id": "B",
+          "text": "Biomedical engineering"
+        },
+        {
+          "id": "C",
+          "text": "Forensic science"
+        },
+        {
+          "id": "D",
+          "text": "Environmental management"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Bioinformatics is an applied interdisciplinary field concerned with the acquisition, storage, computerized analysis, and dissemination of biological data, particularly DNA and protein sequences.",
+      "sourceReference": "Section 1.2, Page 6"
+    },
+    {
+      "id": "BIO-G10-U01-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How did the ancient medical teachings of Galen differ fundamentally from the modern understanding of the circulatory system first described by Ibn al-Nafis and William Harvey?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Galen believed blood moved in an open, continuous circulatory loop through microscopic capillaries"
+        },
+        {
+          "id": "B",
+          "text": "Galen identified the anatomical distinction between arteries and veins but taught that blood ebbed and flowed from the liver and heart rather than circulating continuously"
+        },
+        {
+          "id": "C",
+          "text": "Galen stated that arteries carried pure oxygen while veins carried exclusively digested nutrients"
+        },
+        {
+          "id": "D",
+          "text": "Galen believed the heart was an endocrine organ producing bile rather than a muscular pump"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Galen recognized the anatomical difference between arteries and veins and that the larynx produces voice, but his physiological model held that blood was constantly formed in the liver and ebbed and flowed through the vessels, rather than circulating in a closed continuous circuit as proven by William Harvey.",
+      "sourceReference": "Section 1.3 & 1.4, Page 7, 11"
+    },
+    {
+      "id": "BIO-G10-U01-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "American geneticist Barbara McClintock received the Nobel Prize in 1983 for her cytogenetic investigations of maize chromosomes, which revealed that:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Chromosomes are composed entirely of proteins without any nucleic acids"
+        },
+        {
+          "id": "B",
+          "text": "Genes can change positions on a chromosome (transposition) and switch physical characteristics on or off"
+        },
+        {
+          "id": "C",
+          "text": "Plant cells reproduce exclusively through amitotic fission"
+        },
+        {
+          "id": "D",
+          "text": "All genetic mutations in cereal plants are lethal to the embryo"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Barbara McClintock discovered genetic transposition ('jumping genes'), demonstrating that mobile elements within the genome can move from one chromosomal site to another and regulate the activity of nearby genes.",
+      "sourceReference": "Section 1.3, Page 8"
+    },
+    {
+      "id": "BIO-G10-U01-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Professor Gebissa Ejeta was awarded the prestigious World Food Prize in 2009 in recognition of his genetic and plant-breeding research on which major crop?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Developing high-yielding wheat varieties resistant to stem rust"
+        },
+        {
+          "id": "B",
+          "text": "Developing hybrid sorghum varieties that are both drought-tolerant and resistant to the parasitic weed Striga"
+        },
+        {
+          "id": "C",
+          "text": "Breeding pest-resistant tef varieties adapted to waterlogged vertisol soils"
+        },
+        {
+          "id": "D",
+          "text": "Synthesizing edible microbial single-cell proteins from molasses residues"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Prof. Gebissa Ejeta developed Africa's first commercial hybrid sorghum strains that require less water and are resistant to drought, as well as cultivars resistant to the devastating parasitic weed Striga, greatly enhancing food security.",
+      "sourceReference": "Section 1.5, Page 14"
+    },
+    {
+      "id": "BIO-G10-U01-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which of the following describes the notable research contribution of Professor Yalemtsehay Mekonnen at Addis Ababa University?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Cloning indigenous Ethiopian sheep through somatic nuclear transfer"
+        },
+        {
+          "id": "B",
+          "text": "Discovering the 3.3-million-year-old hominid child fossil 'Selam' in the Afar region"
+        },
+        {
+          "id": "C",
+          "text": "Assessing human health hazards associated with chemical pesticide exposure and investigating medicinal plants such as Moringa stenopetala"
+        },
+        {
+          "id": "D",
+          "text": "Formulating the rinderpest livestock vaccine for African pastoralists"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Professor Yalemtsehay Mekonnen, a specialist in human physiology, conducted prominent research assessing chemical pesticide hazards among farm workers in the Rift Valley and investigated the medicinal and physiological properties of indigenous plants, notably Moringa stenopetala.",
+      "sourceReference": "Section 1.5, Page 12-13"
+    },
+    {
+      "id": "BIO-G10-U01-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "In 1996, Ian Wilmut and Keith Campbell cloned Dolly the sheep. What made this scientific breakthrough fundamentally significant to developmental biology?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It showed that mammalian reproduction can proceed without the participation of an enucleated ovum"
+        },
+        {
+          "id": "B",
+          "text": "It proved that a differentiated adult specialized mammalian cell nucleus retains the full genetic potential to direct the development of an entire viable organism"
+        },
+        {
+          "id": "C",
+          "text": "It established that mitochondrial DNA determines all morphological traits in vertebrates"
+        },
+        {
+          "id": "D",
+          "text": "It proved that adult cells undergo meiosis spontaneously when subjected to electrical pulses"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Dolly was cloned from an adult mammary gland cell using nuclear transfer into an enucleated unfertilized egg. This demonstrated that cellular differentiation does not permanently alter or delete the nuclear genome, proving that specialized adult cells remain genetically totipotent under proper cytoplasmic conditions.",
+      "sourceReference": "Section 1.3, Page 9"
+    },
+    {
+      "id": "BIO-G10-U01-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Why was the rediscovery of Gregor Mendel's genetic laws in the early 20th century vital for validating Charles Darwin's theory of evolution by natural selection?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Darwin's theory required that acquired characteristics be inherited, which Mendel's experiments verified"
+        },
+        {
+          "id": "B",
+          "text": "Mendel proved that mutations occur in predictable cyclical waves every several generations"
+        },
+        {
+          "id": "C",
+          "text": "Under the 19th-century 'blending inheritance' model, favorable variations would be diluted away; Mendel demonstrated that discrete hereditary units persist intact across generations"
+        },
+        {
+          "id": "D",
+          "text": "Mendel demonstrated that spontaneous generation occurs frequently in natural populations"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "A major criticism of Darwin's theory was that favorable variations would blend with common traits and disappear over generations. Mendel's discovery of particulate inheritance (genes retaining their identity without blending) provided the missing mechanism for how natural selection preserves advantageous genetic variations.",
+      "sourceReference": "Section 1.3, Page 7-8"
+    },
+    {
+      "id": "BIO-G10-U01-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "How did the invention and advancement of electron and atomic force microscopes expand biological capabilities beyond the limits of classical optical light microscopes?",
+      "options": [
+        {
+          "id": "A",
+          "text": "They enabled scientists to observe living unicellular protists moving in pond water with natural colors"
+        },
+        {
+          "id": "B",
+          "text": "They eliminated the need for specimens to be placed in an artificial vacuum chamber"
+        },
+        {
+          "id": "C",
+          "text": "They overcame the ~200 nm diffraction limit of visible light, enabling direct visualization of viruses, subcellular components, and macromolecular complexes at the atomic level"
+        },
+        {
+          "id": "D",
+          "text": "They allowed direct clinical viewing of thick, opaque bone tissues without any physical sectioning"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Because light microscopes are restricted by the wavelength of visible light (resolving limit ~200 nm), structures smaller than bacteria could not be resolved clearly. Electron and atomic force microscopes utilize extremely short electron wavelengths or physical probes to resolve viral structures and cellular components down to the nanometer and atomic scale.",
+      "sourceReference": "Section 1.4, Page 10"
+    },
+    {
+      "id": "BIO-G10-U01-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "What primary ecological and economic advantages made Dr. Aklilu Lemma's discovery of Endod (Phytolacca dodecandra) far more viable for African communities than the synthetic chemical molluscicides recommended by the World Health Organization?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Endod selectively kills adult flatworms inside the human vascular system without affecting aquatic snails"
+        },
+        {
+          "id": "B",
+          "text": "Endod is inexpensive, locally cultivable, and breaks down naturally in water within about two days, avoiding persistent environmental toxicity"
+        },
+        {
+          "id": "C",
+          "text": "Endod permanently alters river pH so that snail vectors can never recolonize the body of water"
+        },
+        {
+          "id": "D",
+          "text": "Synthetic chemical molluscicides evaporate immediately, whereas Endod remains active in soil for several decades"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "While synthetic chemical molluscicides recommended by the WHO were prohibitively expensive and ecologically damaging, Endod proved highly potent at low concentrations, inexpensive, familiar to local communities, and environmentally safe because it biodegrades naturally within approximately two days.",
+      "sourceReference": "Section 1.5, Page 13-14"
+    }
+  ]
 }

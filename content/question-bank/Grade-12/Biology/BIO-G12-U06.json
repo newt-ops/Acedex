@@ -3,5 +3,411 @@
   "subject": "Biology",
   "unitNumber": 6,
   "unitTitle": "Climate Change",
-  "questions": []
+  "questions": [
+    {
+      "id": "BIO-G12-U06-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Without the natural greenhouse effect trapping heat in the atmosphere, what would the average surface temperature of the Earth drop to?",
+      "options": [
+        {
+          "id": "A",
+          "text": "0°C (32°F)"
+        },
+        {
+          "id": "B",
+          "text": "-18°C (-0.4°F)"
+        },
+        {
+          "id": "C",
+          "text": "-50°C (-58°F)"
+        },
+        {
+          "id": "D",
+          "text": "4°C (39°F)"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Natural greenhouse gases in the atmosphere trap outgoing thermal infrared radiation, maintaining Earth's global average surface temperature at approximately 14°C (57°F). Without this natural insulating greenhouse effect, heat would escape into space and Earth's average temperature would plummet to around -18°C (-0.4°F), which is too cold to sustain most forms of life.",
+      "sourceReference": "Section 6.1.2, Page 334"
+    },
+    {
+      "id": "BIO-G12-U06-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which of the following greenhouse gases is predominantly emitted from synthetic agricultural fertilizers and animal manure management?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Nitrous oxide (N2O)"
+        },
+        {
+          "id": "B",
+          "text": "Sulfur hexafluoride (SF6)"
+        },
+        {
+          "id": "C",
+          "text": "Carbon dioxide (CO2)"
+        },
+        {
+          "id": "D",
+          "text": "Perfluorocarbons (PFCs)"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Nitrous oxide (N2O) is a potent greenhouse gas that is released predominantly from agricultural soil management, including the application of synthetic nitrogen fertilizers and the breakdown of livestock wastes and manure.",
+      "sourceReference": "Section 6.1.2, Page 335 (Table 6.1)"
+    },
+    {
+      "id": "BIO-G12-U06-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Under the greenhouse gas emissions accounting framework (Scopes 1, 2, and 3), what do Scope 2 emissions specifically refer to?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Direct emissions from on-site company fuel combustion and fleet vehicles"
+        },
+        {
+          "id": "B",
+          "text": "Indirect greenhouse gas emissions resulting from the consumption of purchased electricity, heat, or steam"
+        },
+        {
+          "id": "C",
+          "text": "Emissions associated with the extraction and refining of purchased raw materials"
+        },
+        {
+          "id": "D",
+          "text": "Emissions generated during the end-of-life disposal of manufactured products"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Scope 1 emissions are direct emissions from owned or controlled sources (such as factory boilers and company vehicles). Scope 2 emissions are energy-indirect emissions resulting from the generation of purchased electricity, heating, or cooling consumed by an organization. Scope 3 covers all other indirect supply-chain and product-lifecycle emissions.",
+      "sourceReference": "Section 6.1.2, Page 334 (Figure 6.1)"
+    },
+    {
+      "id": "BIO-G12-U06-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Adopted in December 1997, which international treaty operationalized the UNFCCC by committing industrialized nations to legally binding targets for reducing greenhouse gas emissions?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The Montreal Protocol"
+        },
+        {
+          "id": "B",
+          "text": "The Kyoto Protocol"
+        },
+        {
+          "id": "C",
+          "text": "The Ramsar Convention"
+        },
+        {
+          "id": "D",
+          "text": "The Basel Convention"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The Kyoto Protocol was adopted in 1997 (entering into force in 2005) under the United Nations Framework Convention on Climate Change (UNFCCC). It legally bound industrialized countries to reduce overall greenhouse gas emissions by an average of 5% below 1990 levels during the 2008–2012 commitment period.",
+      "sourceReference": "Section 6.3.2, Page 350"
+    },
+    {
+      "id": "BIO-G12-U06-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Ethiopia's Green Legacy Initiative (GLI), launched in 2019 under the Climate Resilient Green Economy (CRGE) strategy, set an initial national target to:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Construct 50 coal-fired power stations across rural districts"
+        },
+        {
+          "id": "B",
+          "text": "Plant 20 billion tree seedlings within a four-year period"
+        },
+        {
+          "id": "C",
+          "text": "Ban all domestic agricultural livestock exports"
+        },
+        {
+          "id": "D",
+          "text": "Convert all protected national parks into irrigated sugarcane plantations"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Launched in 2019, Ethiopia's Green Legacy Initiative (GLI) targeted planting 20 billion tree seedlings over four years to enhance forest cover, sequester carbon, combat soil erosion, and build national climate resilience.",
+      "sourceReference": "Section 6.3.3, Page 351-352"
+    },
+    {
+      "id": "BIO-G12-U06-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which of the following is classified as a direct physical consequence of anthropogenic climate change rather than an indirect secondary consequence?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Thawing of permafrost in sub-polar regions"
+        },
+        {
+          "id": "B",
+          "text": "Increasing spread of agricultural insect pests into higher elevations"
+        },
+        {
+          "id": "C",
+          "text": "Economic crisis resulting from disrupted commodity markets"
+        },
+        {
+          "id": "D",
+          "text": "Increased incidence of water-borne infectious outbreaks in urban slums"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Direct consequences of climate change are primary physical climate shifts, including rising surface temperatures, sea-level rise, higher ocean temperatures, retreat of glaciers, and the thawing of permafrost. The spread of pests, hunger crises, human health risks, and economic disturbances represent indirect secondary consequences.",
+      "sourceReference": "Section 6.2, Page 339"
+    },
+    {
+      "id": "BIO-G12-U06-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Why is carbon dioxide (CO2) recognized as the primary contributor to recent anthropogenic global warming, even though methane (CH4) absorbs more heat per molecule?",
+      "options": [
+        {
+          "id": "A",
+          "text": "CO2 is the only gas capable of reflecting ultraviolet light into deep space"
+        },
+        {
+          "id": "B",
+          "text": "CO2 is emitted in vastly larger volumes and persists in the atmosphere for decades to centuries, accounting for roughly two-thirds of the energy imbalance"
+        },
+        {
+          "id": "C",
+          "text": "CO2 reacts violently with nitrogen to create solid ozone crystals"
+        },
+        {
+          "id": "D",
+          "text": "CO2 is completely insoluble in ocean surface waters"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Although methane and nitrous oxide have higher global warming potentials per molecule, carbon dioxide is emitted in far greater mass through fossil fuel combustion and deforestation. Because it remains in the atmosphere for decades to centuries, CO2 accounts for about two-thirds of the total planetary energy imbalance.",
+      "sourceReference": "Section 6.1.2, Page 336"
+    },
+    {
+      "id": "BIO-G12-U06-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which of the following fluorinated greenhouse gases is primarily used as an electrical dielectric insulator in high-voltage transmission equipment and aluminum smelting?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Methane (CH4)"
+        },
+        {
+          "id": "B",
+          "text": "Sulfur hexafluoride (SF6)"
+        },
+        {
+          "id": "C",
+          "text": "Nitrous oxide (N2O)"
+        },
+        {
+          "id": "D",
+          "text": "Carbon monoxide (CO)"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Sulfur hexafluoride (SF6) is a high-potency synthetic greenhouse gas utilized primarily as a gaseous dielectric insulator in high-voltage electrical switchgear, circuit breakers, and transmission grids, as well as in aluminum and magnesium smelting.",
+      "sourceReference": "Section 6.1.2, Page 335 (Table 6.1)"
+    },
+    {
+      "id": "BIO-G12-U06-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "During a sudden, intense earthquake, what is the safest and recommended indoor protective safety rule to minimize injury?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Immediately run out of the building toward the exterior sidewalks"
+        },
+        {
+          "id": "B",
+          "text": "Take an elevator down to the basement immediately"
+        },
+        {
+          "id": "C",
+          "text": "Stay inside, drop down, take cover under sturdy furniture away from windows, and hold on until shaking stops"
+        },
+        {
+          "id": "D",
+          "text": "Stand directly beneath external building exits and masonry awnings"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "During an earthquake, ground shaking itself rarely causes direct injury; most casualties result from collapsing walls, falling light fixtures, and flying glass. Safety protocols dictate staying inside, taking cover under sturdy furniture (Drop, Cover, and Hold On), staying away from windows, and not using elevators.",
+      "sourceReference": "Section 6.2.4.4, Page 346"
+    },
+    {
+      "id": "BIO-G12-U06-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How does rising atmospheric carbon dioxide (CO2) lead to ocean acidification, and what physiological threat does it pose to marine ecosystems?",
+      "options": [
+        {
+          "id": "A",
+          "text": "CO2 dissolves into surface waters to form carbonic acid, reducing seawater pH and depleting carbonate ions needed by corals and shell-forming organisms"
+        },
+        {
+          "id": "B",
+          "text": "CO2 strips salt ions from seawater, converting marine oceans into freshwater lakes"
+        },
+        {
+          "id": "C",
+          "text": "CO2 consumes all dissolved oxygen in marine surface layers, preventing fish respiration"
+        },
+        {
+          "id": "D",
+          "text": "CO2 forms solid ice sheets on coral reefs, preventing exposure to sunlight"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Approximately 30% of anthropogenic atmospheric CO2 is absorbed by oceans, reacting with water to form carbonic acid (H2CO3). This lowers ocean pH (ocean acidification) and reduces the concentration of carbonate ions (CO3^2-), impairing the ability of corals, mollusks, and plankton to secrete protective calcium carbonate shells.",
+      "sourceReference": "Section 6.2, Page 339-340"
+    },
+    {
+      "id": "BIO-G12-U06-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "The Grand Ethiopian Renaissance Dam (GERD), constructed on the Abay (Blue Nile) River, supports Ethiopia's Climate Resilient Green Economy (CRGE) strategy primarily by:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Generating 5.15 gigawatts of renewable, low-carbon hydroelectric power to replace fossil fuel combustion and facilitate regional clean energy export"
+        },
+        {
+          "id": "B",
+          "text": "Draining seasonal wetland ecosystems to expand petroleum exploration"
+        },
+        {
+          "id": "C",
+          "text": "Completely halting river flow to downstream nations permanently"
+        },
+        {
+          "id": "D",
+          "text": "Generating geothermal steam power by drilling into volcanic fissures beneath the dam"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The Grand Ethiopian Renaissance Dam (GERD) on the Abay River has a planned generating capacity of 5.15 gigawatts, making it the largest hydroelectric installation in Africa. It supports Ethiopia's CRGE strategy by supplying renewable, zero-emission electricity to eliminate domestic energy poverty and displace fossil fuel usage across the region.",
+      "sourceReference": "Section 6.3.3, Page 351-352"
+    },
+    {
+      "id": "BIO-G12-U06-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "The 2015 Paris Agreement (COP21) established what core multilateral temperature objective relative to pre-industrial baselines?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Capping the global temperature increase at exactly 0.5°C by the year 2020"
+        },
+        {
+          "id": "B",
+          "text": "Holding the increase in global average temperature to well below 2.0°C and pursuing active efforts to limit warming to 1.5°C"
+        },
+        {
+          "id": "C",
+          "text": "Allowing global temperatures to rise up to 4.0°C to stimulate tropical crop growth"
+        },
+        {
+          "id": "D",
+          "text": "Freezing polar temperatures at -80°C using atmospheric aerosol dispersal"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The central objective of the Paris Agreement is to strengthen the global response to climate change by holding the increase in global average temperature to well below 2.0°C above pre-industrial levels, while actively pursuing efforts to limit the increase to 1.5°C to significantly reduce climate risks and ecosystem impacts.",
+      "sourceReference": "Section 6.3, Page 349"
+    },
+    {
+      "id": "BIO-G12-U06-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Why do projected increases in surface temperatures combined with erratic rainfall regimes represent a severe threat to agricultural food security in Ethiopia?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Warming temperatures eliminate the ability of leguminous crop root nodules to form symbiotic associations with all soil fungi"
+        },
+        {
+          "id": "B",
+          "text": "Higher temperatures increase evapotranspiration rates and soil moisture deficits, shorten crop growing cycles, and facilitate the migration of insect pests and fungal blights into previously cooler highlands"
+        },
+        {
+          "id": "C",
+          "text": "Elevated temperatures convert agricultural soils into solid calcium carbonate rock"
+        },
+        {
+          "id": "D",
+          "text": "Rainfall shifts stimulate excessive vegetative growth that prevents crop flowering"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In rain-fed agrarian systems such as Ethiopia's, rising temperatures accelerate soil water evaporation, causing severe crop water stress and desertification. Concurrently, warmer temperatures expand the geographic range of crop pests (such as locusts and stem borers) and fungal pathogens into high-altitude farming zones that were historically protected by cooler ambient climates.",
+      "sourceReference": "Section 6.2.2 & 6.2.3, Page 341-343"
+    },
+    {
+      "id": "BIO-G12-U06-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Why does burning fossil fuels disrupt the global carbon cycle in a manner that natural biological respiration and volcanic emissions do not?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Volcanic emissions contain non-carbon elements, whereas fossil fuels release entirely synthetic carbon atoms that destroy chloroplasts"
+        },
+        {
+          "id": "B",
+          "text": "Fossil fuel combustion extracts carbon that was sequestered geologically for hundreds of millions of years and releases it into the active atmosphere in decades, vastly outpacing natural oceanic and rock weathering sinks"
+        },
+        {
+          "id": "C",
+          "text": "Biological respiration consumes carbon dioxide, whereas fossil fuels consume pure nitrogen gas"
+        },
+        {
+          "id": "D",
+          "text": "Volcanoes absorb atmospheric carbon dioxide to form magma basalt"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Natural carbon cycling continuously balances biological respiration and photosynthesis, while volcanic emissions account for a minor fraction (~1%) balanced by slow chemical weathering of silicate rocks over geologic timescales. In contrast, burning fossil fuels releases massive reserves of carbon that were sequestered underground over hundreds of millions of years within a few decades, overwhelming natural biological and oceanic carbon sinks.",
+      "sourceReference": "Section 6.1.2, Page 335, 337-338"
+    },
+    {
+      "id": "BIO-G12-U06-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "As global temperatures rise, endemic species inhabiting the high-altitude Afro-alpine ecosystems of Ethiopia (such as the Ethiopian wolf and giant lobelias) face an acute risk of extinction primarily because:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Afro-alpine species cannot tolerate exposure to natural solar ultraviolet radiation"
+        },
+        {
+          "id": "B",
+          "text": "Warmer climate zones shift upward along mountain slopes, forcing highland species into higher elevations until they run out of physical terrain, resulting in habitat contraction with nowhere higher to migrate"
+        },
+        {
+          "id": "C",
+          "text": "Warmer weather triggers spontaneous meiotic polyploidy in Afro-alpine mammal populations"
+        },
+        {
+          "id": "D",
+          "text": "Excess atmospheric carbon dioxide acts as a metabolic neurotoxin in high-altitude carnivores"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Montane and Afro-alpine species respond to climate warming by shifting their elevational distributions upward to remain within their thermal tolerances. However, mountaintop endemics eventually encounter a physical 'mountaintop extinction trap' where no higher elevational habitat exists, leading to severe range contraction, competition from encroaching lowland species, and elevated risk of extinction.",
+      "sourceReference": "Section 6.2.1, Page 340, 342"
+    }
+  ]
 }

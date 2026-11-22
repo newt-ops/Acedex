@@ -3,5 +3,411 @@
   "subject": "Biology",
   "unitNumber": 5,
   "unitTitle": "Human Biology",
-  "questions": []
+  "questions": [
+    {
+      "id": "BIO-G10-U05-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In the human digestive tract, where does the chemical digestion of carbohydrates (starch) first begin, and which specific enzyme initiates this process?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Stomach, by the action of pepsin"
+        },
+        {
+          "id": "B",
+          "text": "Duodenum, by the action of pancreatic lipase"
+        },
+        {
+          "id": "C",
+          "text": "Oral cavity, by the action of salivary amylase (ptyalin)"
+        },
+        {
+          "id": "D",
+          "text": "Ileum, by the action of maltase"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Chemical digestion of starch begins in the oral cavity (mouth), where salivary glands secrete saliva containing the enzyme salivary amylase (ptyalin), which hydrolyzes polysaccharides into simpler disaccharides like maltose.",
+      "sourceReference": "Section 5.1, Page 96"
+    },
+    {
+      "id": "BIO-G10-U05-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which heart valve is situated between the right atrium and the right ventricle to prevent the backflow of deoxygenated blood during ventricular systole?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Bicuspid (mitral) valve"
+        },
+        {
+          "id": "B",
+          "text": "Aortic semilunar valve"
+        },
+        {
+          "id": "C",
+          "text": "Pulmonary semilunar valve"
+        },
+        {
+          "id": "D",
+          "text": "Tricuspid valve"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "The tricuspid valve (right atrioventricular valve) separates the right atrium from the right ventricle, closing during ventricular contraction to prevent blood from flowing back into the right atrium.",
+      "sourceReference": "Section 5.2, Page 108"
+    },
+    {
+      "id": "BIO-G10-U05-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In the ABO blood group system, why are individuals with blood group O designated as 'universal donors' for red blood cell transfusions?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Their red blood cells completely lack A and B surface antigens"
+        },
+        {
+          "id": "B",
+          "text": "Their blood plasma lacks both anti-A and anti-B antibodies"
+        },
+        {
+          "id": "C",
+          "text": "Their plasma carries high concentrations of Rhesus antigens"
+        },
+        {
+          "id": "D",
+          "text": "Their hemoglobin has a three-chain fetal structure"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Group O red blood cells do not have A or B antigens on their surface. Because recipient antibodies have no corresponding donor antigens to attack, group O red blood cells can be safely transfused to individuals of any ABO group.",
+      "sourceReference": "Section 5.2, Page 116-117"
+    },
+    {
+      "id": "BIO-G10-U05-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In the human respiratory tract, which microscopic structures constitute the actual site of gas exchange between inhaled air and pulmonary capillary blood?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Bronchioles"
+        },
+        {
+          "id": "B",
+          "text": "Alveoli"
+        },
+        {
+          "id": "C",
+          "text": "Tracheal rings"
+        },
+        {
+          "id": "D",
+          "text": "Larynx"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The alveoli are microscopic, elastic air sacs clustered in alveolar ducts. They provide a massive, thin, moist surface area surrounded by pulmonary capillaries where oxygen diffuses into the blood and carbon dioxide diffuses out.",
+      "sourceReference": "Section 5.3, Page 133"
+    },
+    {
+      "id": "BIO-G10-U05-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is the microscopic, functional structural unit of the human kidney responsible for filtering blood and producing urine?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Neuron"
+        },
+        {
+          "id": "B",
+          "text": "Villus"
+        },
+        {
+          "id": "C",
+          "text": "Nephron"
+        },
+        {
+          "id": "D",
+          "text": "Renal pelvis"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The nephron is the functional unit of the kidney, with each human kidney containing over one million nephrons composed of a renal corpuscle (glomerulus and Bowman's capsule) and a renal tubule.",
+      "sourceReference": "Section 5.4, Page 140"
+    },
+    {
+      "id": "BIO-G10-U05-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What is the primary physiological role of bile, which is synthesized by the liver and stored in the gallbladder, during the digestive process in the duodenum?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Chemically hydrolyzing peptide bonds into free amino acids"
+        },
+        {
+          "id": "B",
+          "text": "Physically emulsifying large fat globules into tiny droplets to increase the surface area for lipase action"
+        },
+        {
+          "id": "C",
+          "text": "Lowering the pH of chyme to pH 1.5 to activate pepsin"
+        },
+        {
+          "id": "D",
+          "text": "Directly digesting starch polymers into glucose monomers"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Bile contains bile salts that emulsify large fat globules into microscopic droplets. This is physical (mechanical) digestion, not chemical cleavage, which greatly expands the exposed surface area for pancreatic lipase to digest lipids efficiently.",
+      "sourceReference": "Section 5.1, Page 104-105"
+    },
+    {
+      "id": "BIO-G10-U05-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Why is the myocardium (muscular wall) of the left ventricle significantly thicker than that of the right ventricle in the human heart?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The left ventricle must generate much higher hydrostatic pressure to pump oxygenated blood throughout the entire systemic circulation"
+        },
+        {
+          "id": "B",
+          "text": "The left ventricle stores blood for several hours before releasing it into the pulmonary trunk"
+        },
+        {
+          "id": "C",
+          "text": "The left ventricle pumps deoxygenated blood through narrower capillaries in the adjacent lungs"
+        },
+        {
+          "id": "D",
+          "text": "The left ventricle lacks semilunar valves and must rely on continuous muscular spasm"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "While the right ventricle pumps blood only a short distance to the lungs under low pressure (pulmonary circuit), the left ventricle must generate enough contractile force and pressure to circulate blood through the aorta to the entire systemic circuit of the body.",
+      "sourceReference": "Section 5.2, Page 108, 110"
+    },
+    {
+      "id": "BIO-G10-U05-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In the microscopic anatomy of an intestinal villus, how do the absorption pathways of digested water-soluble nutrients differ from those of digested dietary lipids?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Water-soluble monosaccharides and amino acids enter the central lacteal, whereas fatty acids enter blood capillaries"
+        },
+        {
+          "id": "B",
+          "text": "Monosaccharides and amino acids are absorbed directly into blood capillaries, whereas fatty acids and glycerol enter the lymphatic lacteal"
+        },
+        {
+          "id": "C",
+          "text": "Both amino acids and lipids enter the lymphatic duct directly, bypassing the bloodstream entirely"
+        },
+        {
+          "id": "D",
+          "text": "Lipids diffuse across the stomach mucosa, while monosaccharides are absorbed solely in the large intestine"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Within each villus of the small intestine, water-soluble monosaccharides and amino acids are absorbed into the dense blood capillary network (heading toward the hepatic portal vein), whereas digested fat molecules enter the central lymph vessel (lacteal) as chyle.",
+      "sourceReference": "Section 5.1 & 5.2, Page 103, 120-121"
+    },
+    {
+      "id": "BIO-G10-U05-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which combination of muscular movements and thoracic pressure changes occurs during normal human inhalation (inspiration)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The diaphragm relaxes into a dome shape, ribs move downward, thoracic volume decreases, and alveolar pressure increases"
+        },
+        {
+          "id": "B",
+          "text": "Internal intercostal muscles contract, the diaphragm flattens upward, and air is pushed out by thoracic compression"
+        },
+        {
+          "id": "C",
+          "text": "The diaphragm contracts and flattens downward, external intercostal muscles pull the rib cage upward and outward, thoracic volume increases, and alveolar pressure drops below atmospheric pressure"
+        },
+        {
+          "id": "D",
+          "text": "Abdominal muscles contract, driving lung pressure higher than atmospheric pressure so air rushes inward"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "During inspiration, the diaphragm contracts and moves downward while external intercostal muscles pull the ribs up and out. This expands the thoracic volume, reducing the intrapulmonary pressure below atmospheric pressure so that outside air is driven into the lungs.",
+      "sourceReference": "Section 5.3, Page 134-135"
+    },
+    {
+      "id": "BIO-G10-U05-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In the nephron's loop of Henle, how do the transport properties of the descending limb differ from those of the ascending limb?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The descending limb possesses aquaporins permeable to water, while the ascending limb is impermeable to water and actively transports sodium and chloride ions into the interstitial fluid"
+        },
+        {
+          "id": "B",
+          "text": "The descending limb pumps urea out of the filtrate, while the ascending limb absorbs proteins via pinocytosis"
+        },
+        {
+          "id": "C",
+          "text": "The descending limb actively secretes glucose, while the ascending limb absorbs red blood cells"
+        },
+        {
+          "id": "D",
+          "text": "Both limbs are completely impermeable to water and electrolytes"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The descending limb of the loop of Henle contains aquaporin channels that allow water to exit into the hypertonic medullary interstitial fluid by osmosis. In contrast, the ascending limb is impermeable to water, actively transporting Na+ and Cl- into the interstitial space.",
+      "sourceReference": "Section 5.4, Page 141-142"
+    },
+    {
+      "id": "BIO-G10-U05-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How does the innate immune system differ fundamentally from the adaptive (acquired) immune system in defending the human body against pathogens?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Innate immunity provides targeted responses against specific viral strains, whereas adaptive immunity relies solely on intact skin"
+        },
+        {
+          "id": "B",
+          "text": "Innate immunity comprises non-specific, immediate physical and cellular defenses present from birth, whereas adaptive immunity develops pathogen-specific antibodies and immunological memory following exposure"
+        },
+        {
+          "id": "C",
+          "text": "Innate immunity is mediated exclusively by memory B-lymphocytes, whereas adaptive immunity relies entirely on stomach acid"
+        },
+        {
+          "id": "D",
+          "text": "Innate immunity takes two weeks to develop, while adaptive immunity is fully functional at the moment of conception"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Innate immunity acts as an immediate, non-specific barrier (skin, mucous membranes, phagocytes, complement) that does not change upon repeated exposure. Adaptive immunity recognizes specific antigens, mounts targeted responses via B and T lymphocytes, and generates long-term immunological memory.",
+      "sourceReference": "Section 5.5, Page 143"
+    },
+    {
+      "id": "BIO-G10-U05-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "An Rh-negative mother gives birth to her first Rh-positive child without complications. However, during a second pregnancy with an Rh-positive fetus, the fetus develops severe hemolytic disease (erythroblastosis fetalis). What immunological mechanism explains this clinical outcome?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Fetal red blood cells cross into maternal circulation during the second pregnancy to synthesize anti-O antibodies"
+        },
+        {
+          "id": "B",
+          "text": "Maternal Rh antigens cross the placenta during the second trimester and destroy fetal bone marrow stem cells"
+        },
+        {
+          "id": "C",
+          "text": "During first childbirth, placental detachment exposes the mother to Rh+ fetal red blood cells, stimulating anti-Rh antibody production; during the second pregnancy, these maternal antibodies cross the placenta and destroy fetal erythrocytes"
+        },
+        {
+          "id": "D",
+          "text": "The father's sperm carries maternal anti-Rh antibodies that directly lyse the zygote upon fertilization"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "During the first delivery, placental separation allows Rh+ fetal blood into the Rh- mother's circulation, sensitizing her immune system to produce anti-Rh antibodies. In a subsequent Rh+ pregnancy, these maternal antibodies cross the placenta and attack fetal red blood cells, causing hemolysis, anemia, and jaundice.",
+      "sourceReference": "Section 5.2, Page 118"
+    },
+    {
+      "id": "BIO-G10-U05-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Why does pepsin operate efficiently in the stomach lumen without digesting the gastric epithelial cells, and why does its proteolytic activity cease upon reaching the duodenum?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Pepsin is secreted as inactive pepsinogen and the lining is shielded by alkaline mucus; in the duodenum, alkaline bile and pancreatic bicarbonate raise the pH to 7-8, denaturing pepsin"
+        },
+        {
+          "id": "B",
+          "text": "Pepsin digests only plant cellulose in the stomach; in the duodenum, salivary amylase breaks down pepsin"
+        },
+        {
+          "id": "C",
+          "text": "Pepsin is active only in the presence of bile salts; the duodenum lacks bile salts and degrades pepsin"
+        },
+        {
+          "id": "D",
+          "text": "Pepsin remains bound to the esophageal sphincter until gastric emptying is completed"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Chief cells secrete inactive pepsinogen, which HCl activates into pepsin in the acidic lumen (pH 1.5-2.5), while a thick layer of alkaline mucus coats and shields the stomach wall. When acidic chyme reaches the duodenum, alkaline pancreatic secretions (bicarbonate) and bile raise the pH to 7-8, denaturing and inactivating pepsin.",
+      "sourceReference": "Section 5.1, Page 101, 104"
+    },
+    {
+      "id": "BIO-G10-U05-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "When blood pH drops toward acidosis (pH < 7.35), how do the renal tubules of the nephron actively adjust the filtrate to restore physiological acid-base balance?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The proximal and distal tubules secrete hydrogen ions (H+) and ammonia into the tubular fluid while reabsorbing bicarbonate ions (HCO3-) into the blood"
+        },
+        {
+          "id": "B",
+          "text": "The glomerulus filters out all blood proteins and absorbs atmospheric carbon dioxide"
+        },
+        {
+          "id": "C",
+          "text": "The collecting duct excretes excess bicarbonate into the ureters and retains all metabolic acids"
+        },
+        {
+          "id": "D",
+          "text": "The loop of Henle halts water reabsorption, resulting in massive urinary excretion of sodium bicarbonate"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "To counteract acidosis, tubular cells in the proximal convoluted tubule and distal convoluted tubule actively secrete H+ and ammonia (forming NH4+) into the filtrate to eliminate excess acid, while simultaneously reabsorbing bicarbonate ions (HCO3-) into peritubular capillaries to replenish blood buffering capacity.",
+      "sourceReference": "Section 5.4, Page 141-142"
+    },
+    {
+      "id": "BIO-G10-U05-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Habitual cigarette smoking often leads to emphysema, a chronic obstructive pulmonary disease. Which sequence correctly describes the underlying structural damage and resulting physiological impairment?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Cartilage rings of the trachea dissolve → vocal cords swell → high blood pressure causes pulmonary hemorrhage"
+        },
+        {
+          "id": "B",
+          "text": "Persistent irritation causes alveolar walls to lose elasticity and rupture → surface area for gas exchange decreases and air becomes trapped during exhalation → blood oxygen levels drop, causing compensatory tachycardia"
+        },
+        {
+          "id": "C",
+          "text": "Surfactant levels increase uncontrollably → alveoli collapse completely during inhalation → carbon dioxide drops to zero"
+        },
+        {
+          "id": "D",
+          "text": "Bronchial cilia multiply rapidly → mucus production halts → lungs hyperinflate and freeze in inspiration"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In emphysema, chronic inflammation breaks down elastic fibers and alveolar septa, merging alveoli into enlarged, inelastic air spaces. This drastically diminishes the surface area available for gas exchange and causes bronchiolar collapse during expiration, trapping stale air in the lungs. Resulting tissue hypoxia forces the heart to beat faster (tachycardia) to compensate.",
+      "sourceReference": "Section 5.3, Page 136-137"
+    }
+  ]
 }
