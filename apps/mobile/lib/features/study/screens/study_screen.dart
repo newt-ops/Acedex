@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../../core/config/feature_flags.dart';
 import '../../../core/models/user_profile.dart';
 import '../models/study_models.dart';
 import '../widgets/curriculum_hero_card.dart';
@@ -319,13 +320,18 @@ class _StudyScreenState extends State<StudyScreen> {
           CurriculumHeroCard(
             subject: subj,
             lastTopicLabel: lastTopicLabel,
+            ctaLabel: FeatureFlags.enableSmartNotes ? 'Resume Last Note' : 'Start Unit Drill',
             onResumeNote: () {
               final topic = _findTopicById(subj.lastTopicId) ??
                   (subj.units.isNotEmpty && subj.units.first.topics.isNotEmpty
                       ? subj.units.first.topics.first
                       : null);
               if (topic != null) {
-                _launchNotesSheet(topic);
+                if (FeatureFlags.enableSmartNotes) {
+                  _launchNotesSheet(topic);
+                } else {
+                  _launchTopicDrill(topic, 3, 'Standard');
+                }
               }
             },
           ),
@@ -337,12 +343,17 @@ class _StudyScreenState extends State<StudyScreen> {
             subject: subj,
             searchQuery: _searchQuery,
             activeFilter: _selectedFilter,
+            showNotesButton: FeatureFlags.enableSmartNotes,
             onToggleUnitExpand: _toggleUnitExpand,
             onToggleTopicComplete: _toggleTopicCompletion,
             onOpenNotes: (topicId) {
               final topic = _findTopicById(topicId);
               if (topic != null) {
-                _launchNotesSheet(topic);
+                if (FeatureFlags.enableSmartNotes) {
+                  _launchNotesSheet(topic);
+                } else {
+                  _launchTopicDrill(topic, 3, 'Standard');
+                }
               }
             },
             onOpenDrill: (topicId) {

@@ -15,6 +15,7 @@ class SyllabusUnitAccordion extends StatefulWidget {
   final ValueChanged<String> onOpenNotes;
   final ValueChanged<String> onOpenDrill;
   final VoidCallback onResetFilters;
+  final bool showNotesButton;
 
   const SyllabusUnitAccordion({
     super.key,
@@ -26,6 +27,7 @@ class SyllabusUnitAccordion extends StatefulWidget {
     required this.onOpenNotes,
     required this.onOpenDrill,
     required this.onResetFilters,
+    this.showNotesButton = true,
   });
 
   @override
@@ -427,36 +429,38 @@ class _SyllabusUnitAccordionState extends State<SyllabusUnitAccordion> {
                                           ),
                                         ),
 
-                                        const SizedBox(width: 8),
+                                        if (widget.showNotesButton) ...[
+                                          const SizedBox(width: 8),
 
-                                        // "Notes" Action Button
-                                        AcedexBounceable(
-                                          onTap: () => _handleNotesTap(topic.id),
-                                          child: Container(
-                                            height: 27,
-                                            padding: const EdgeInsets.symmetric(horizontal: 10),
-                                            decoration: BoxDecoration(
-                                              color: surfaceColor,
-                                              borderRadius: BorderRadius.circular(999),
-                                              border: Border.all(color: lineBorder),
-                                            ),
-                                            alignment: Alignment.center,
-                                            child: isLoadingNotes
-                                                ? AcedexDotsLoader(
-                                                    color: theme.colorScheme.onSurface,
-                                                    dotSize: 3.5,
-                                                    gap: 2.5,
-                                                  )
-                                                : Text(
-                                                    'Notes',
-                                                    style: TextStyle(
-                                                      fontSize: 10.5,
-                                                      fontWeight: FontWeight.w700,
+                                          // "Notes" Action Button
+                                          AcedexBounceable(
+                                            onTap: () => _handleNotesTap(topic.id),
+                                            child: Container(
+                                              height: 27,
+                                              padding: const EdgeInsets.symmetric(horizontal: 10),
+                                              decoration: BoxDecoration(
+                                                color: surfaceColor,
+                                                borderRadius: BorderRadius.circular(999),
+                                                border: Border.all(color: lineBorder),
+                                              ),
+                                              alignment: Alignment.center,
+                                              child: isLoadingNotes
+                                                  ? AcedexDotsLoader(
                                                       color: theme.colorScheme.onSurface,
+                                                      dotSize: 3.5,
+                                                      gap: 2.5,
+                                                    )
+                                                  : Text(
+                                                      'Notes',
+                                                      style: TextStyle(
+                                                        fontSize: 10.5,
+                                                        fontWeight: FontWeight.w700,
+                                                        color: theme.colorScheme.onSurface,
+                                                      ),
                                                     ),
-                                                  ),
+                                            ),
                                           ),
-                                        ),
+                                        ],
 
                                         const SizedBox(width: 6),
 

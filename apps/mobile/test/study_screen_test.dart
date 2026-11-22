@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:acedex/core/config/feature_flags.dart';
 import 'package:acedex/core/models/user_profile.dart';
 import 'package:acedex/features/study/screens/study_screen.dart';
 import 'package:acedex/features/study/widgets/curriculum_hero_card.dart';
@@ -38,6 +39,9 @@ void main() {
   }
 
   group('StudyScreen Full Inside UI Showcase Tests', () {
+    setUp(() {
+      FeatureFlags.enableSmartNotes = true;
+    });
     testWidgets('renders all core inside components', (tester) async {
       configureViewport(tester);
       await tester.pumpWidget(createStudyHarness());
@@ -220,6 +224,28 @@ void main() {
 
       // Back on Study Screen
       expect(find.byType(TopicDrillEngineSheet), findsNothing);
+    });
+
+    testWidgets('Feature gating: when notes are disabled, Notes buttons are hidden and hero CTA is Start Unit Drill',
+        (tester) async {
+      FeatureFlags.enableSmartNotes = false;
+
+      configureViewport(tester);
+      await tester.pumpWidget(createStudyHarness());
+      await tester.pump();
+
+      // Hero button label changes to Start Unit Drill
+      expect(find.text('Start Unit Drill'), findsOneWidget);
+      expect(find.text('Resume Last Note'), findsNothing);
+
+      // Expand U1
+      final u1Header = find.text('Application of Physics in Other Fields');
+      await tester.tap(u1Header);
+      await tester.pumpAndSettle();
+
+      // Notes button is omitted, Drill button is present
+      expect(find.text('Notes'), findsNothing);
+      expect(find.text('Drill'), findsWidgets);
     });
   });
 }

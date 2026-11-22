@@ -17,12 +17,14 @@ class CurriculumHeroCard extends StatefulWidget {
   final SubjectCurriculum subject;
   final String lastTopicLabel;
   final VoidCallback onResumeNote;
+  final String? ctaLabel;
 
   const CurriculumHeroCard({
     super.key,
     required this.subject,
     required this.lastTopicLabel,
     required this.onResumeNote,
+    this.ctaLabel,
   });
 
   @override
@@ -293,20 +295,20 @@ class _CurriculumHeroCardState extends State<CurriculumHeroCard> {
                             dotSize: 4.5,
                             gap: 3.5,
                           )
-                        : const Row(
+                        : Row(
                             mainAxisSize: MainAxisSize.min,
                             children: [
                               Text(
-                                'Resume Last Note',
-                                style: TextStyle(
+                                widget.ctaLabel ?? 'Resume Last Note',
+                                style: const TextStyle(
                                   fontSize: 11.5,
                                   fontWeight: FontWeight.w700,
                                   color: Colors.white,
                                   letterSpacing: -0.1,
                                 ),
                               ),
-                              SizedBox(width: 4),
-                              HugeIcon(
+                              const SizedBox(width: 4),
+                              const HugeIcon(
                                 icon: HugeIcons.strokeRoundedArrowRight01,
                                 color: Colors.white,
                                 size: 13,

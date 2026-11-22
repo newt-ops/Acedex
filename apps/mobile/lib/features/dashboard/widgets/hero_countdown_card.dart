@@ -17,12 +17,14 @@ class HeroCountdownCard extends StatefulWidget {
   final String gradeLabel;
   final int readinessScore;
   final VoidCallback onContinueUnit4;
+  final DateTime? targetDate;
 
   const HeroCountdownCard({
     super.key,
     required this.gradeLabel,
     required this.readinessScore,
     required this.onContinueUnit4,
+    this.targetDate,
   });
 
   @override
@@ -33,15 +35,22 @@ class _HeroCountdownCardState extends State<HeroCountdownCard> {
   String _heroMode = 'countdown'; // 'countdown' | 'readiness'
   bool _isLoadingUnit4 = false;
 
-  // Live ticking countdown: 48 days, 14 hours, 32 mins
-  int _countdownMinutes = 48 * 24 * 60 + 14 * 60 + 32;
+  // Study deadline: June 8, 2026 EUEE Examination
+  late int _countdownMinutes;
   bool _pulseOn = true;
   Timer? _pulseTimer;
   Timer? _minuteTimer;
 
+  void _recomputeCountdown() {
+    final target = widget.targetDate ?? DateTime(2026, 6, 8, 9, 0);
+    final diff = target.difference(DateTime.now());
+    _countdownMinutes = diff.isNegative ? 0 : diff.inMinutes;
+  }
+
   @override
   void initState() {
     super.initState();
+    _recomputeCountdown();
     _pulseTimer = Timer.periodic(const Duration(seconds: 1), (_) {
       if (mounted) {
         setState(() => _pulseOn = !_pulseOn);
@@ -49,10 +58,22 @@ class _HeroCountdownCardState extends State<HeroCountdownCard> {
     });
 
     _minuteTimer = Timer.periodic(const Duration(minutes: 1), (_) {
-      if (mounted && _countdownMinutes > 0) {
-        setState(() => _countdownMinutes -= 1);
+      if (mounted) {
+        setState(() {
+          _recomputeCountdown();
+        });
       }
     });
+  }
+
+  @override
+  void didUpdateWidget(HeroCountdownCard oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    if (oldWidget.targetDate != widget.targetDate) {
+      setState(() {
+        _recomputeCountdown();
+      });
+    }
   }
 
   @override
@@ -109,9 +130,9 @@ class _HeroCountdownCardState extends State<HeroCountdownCard> {
         border: Border.all(color: lineBorder),
         boxShadow: [
           BoxShadow(
-            color: primaryColor.withValues(alpha: isDark ? 0.30 : 0.14),
-            blurRadius: 28,
-            offset: const Offset(0, 12),
+            color: Colors.black.withValues(alpha: isDark ? 0.20 : 0.04),
+            blurRadius: 8,
+            offset: const Offset(0, 2),
           ),
         ],
       ),
@@ -312,9 +333,9 @@ class _HeroCountdownCardState extends State<HeroCountdownCard> {
                       borderRadius: BorderRadius.circular(999),
                       boxShadow: [
                         BoxShadow(
-                          color: primaryColor.withValues(alpha: 0.40),
-                          blurRadius: 14,
-                          offset: const Offset(0, 4),
+                          color: Colors.black.withValues(alpha: 0.12),
+                          blurRadius: 6,
+                          offset: const Offset(0, 2),
                         ),
                       ],
                     ),

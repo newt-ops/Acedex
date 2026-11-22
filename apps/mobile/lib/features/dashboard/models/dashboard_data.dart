@@ -9,6 +9,8 @@ class StudyTaskItem {
   final String subject;
   final String duration;
   final bool completed;
+  final String? timeSpan;
+  final String? focusMode;
 
   const StudyTaskItem({
     required this.id,
@@ -16,6 +18,8 @@ class StudyTaskItem {
     required this.subject,
     required this.duration,
     required this.completed,
+    this.timeSpan,
+    this.focusMode,
   });
 
   StudyTaskItem copyWith({
@@ -24,6 +28,8 @@ class StudyTaskItem {
     String? subject,
     String? duration,
     bool? completed,
+    String? timeSpan,
+    String? focusMode,
   }) {
     return StudyTaskItem(
       id: id ?? this.id,
@@ -31,6 +37,8 @@ class StudyTaskItem {
       subject: subject ?? this.subject,
       duration: duration ?? this.duration,
       completed: completed ?? this.completed,
+      timeSpan: timeSpan ?? this.timeSpan,
+      focusMode: focusMode ?? this.focusMode,
     );
   }
 }
@@ -129,6 +137,10 @@ Color getSubjectColor(String subject) {
       return AppColors.warning;
     case 'biology':
       return AppColors.success;
+    case 'english':
+      return const Color(0xFF0D9488);
+    case 'aptitude':
+      return const Color(0xFF8B5CF6);
     default:
       return AppColors.royalPurple;
   }
@@ -146,42 +158,17 @@ List<List<dynamic>> getSubjectIconData(String subject) {
       return HugeIcons.strokeRoundedChemistry01;
     case 'biology':
       return HugeIcons.strokeRoundedDna;
+    case 'english':
+      return HugeIcons.strokeRoundedBook02;
+    case 'aptitude':
+      return HugeIcons.strokeRoundedIdea01;
     default:
       return HugeIcons.strokeRoundedBookOpen01;
   }
 }
 
-/// Initial Study Tasks matching the Acedex Curriculum Showcase
-final List<StudyTaskItem> defaultStudyTasks = [
-  const StudyTaskItem(
-    id: 'task-1',
-    title: 'Physics: Electromagnetism Formula Review',
-    subject: 'Physics',
-    duration: '15m',
-    completed: true,
-  ),
-  const StudyTaskItem(
-    id: 'task-2',
-    title: 'Mathematics: Definite Integrals Past Set',
-    subject: 'Math',
-    duration: '20m',
-    completed: true,
-  ),
-  const StudyTaskItem(
-    id: 'task-3',
-    title: 'Chemistry: Galvanic Cells & Nernst Drill',
-    subject: 'Chemistry',
-    duration: '25m',
-    completed: false,
-  ),
-  const StudyTaskItem(
-    id: 'task-4',
-    title: 'Biology: Molecular Genetics Enzymes Check',
-    subject: 'Biology',
-    duration: '15m',
-    completed: false,
-  ),
-];
+/// Initial Study Tasks (starts empty by default as requested; populated when student adds tasks)
+final List<StudyTaskItem> defaultStudyTasks = [];
 
 /// Initial Subject Mastery data with 3-question EUEE drill questions & syllabus
 final List<SubjectMasteryItem> defaultSubjectsData = [

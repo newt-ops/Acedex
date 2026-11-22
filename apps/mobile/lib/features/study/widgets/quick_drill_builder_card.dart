@@ -421,9 +421,9 @@ class _QuickTopicDrillBuilderCardState
                       subtextColor: subtextColor,
                     ),
                     _buildSegmentButton(
-                      label: '8 Qs',
-                      isSelected: widget.questionCount == 8,
-                      onTap: () => widget.onCountChanged(8),
+                      label: '15 Qs',
+                      isSelected: widget.questionCount == 15,
+                      onTap: () => widget.onCountChanged(15),
                       accent: accent,
                       subtextColor: subtextColor,
                     ),

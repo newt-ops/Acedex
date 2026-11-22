@@ -6,6 +6,8 @@ import 'api_exception.dart';
 import '../storage/auth_storage.dart';
 
 class ApiClient {
+  static final ApiClient instance = ApiClient();
+
   final http.Client _client;
   final String baseUrl;
 

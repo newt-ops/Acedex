@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import '../../../core/models/user_profile.dart';
 import '../../../core/theme/app_colors.dart';
+import '../../dashboard/models/dashboard_data.dart';
+import '../../dashboard/widgets/mini_drill_sheet.dart';
+import '../../dashboard/widgets/subject_mastery_section.dart';
 import '../models/practice_models.dart';
 import '../widgets/answer_review_view.dart';
 import '../widgets/completed_sessions_list.dart';
@@ -37,9 +40,10 @@ class _PracticeScreenState extends State<PracticeScreen> {
   String _builderSessionMode = 'study'; // 'study' | 'exam'
   int _builderMockCount = 3; // 3 | 5
 
-  // Persistent in-memory session and paper stores
+  // Persistent in-memory session, paper, and subject mastery stores
   late List<EueePaper> _papers;
   late List<CompletedSession> _completedSessions;
+  late List<SubjectMasteryItem> _subjects;
 
   // Active Quiz / Review Session State
   EueePaper? _activePaper;
@@ -57,6 +61,22 @@ class _PracticeScreenState extends State<PracticeScreen> {
     super.initState();
     _papers = List.from(defaultEueePapers);
     _completedSessions = List.from(defaultCompletedSessions);
+    _subjects = List.from(defaultSubjectsData);
+  }
+
+  void _onStartDrill(SubjectMasteryItem subject) {
+    MiniDrillSheet.show(
+      context,
+      subject: subject,
+      onMasteryUpdated: (subjectId, newMastery) {
+        setState(() {
+          final index = _subjects.indexWhere((s) => s.id == subjectId);
+          if (index != -1) {
+            _subjects[index] = _subjects[index].copyWith(mastery: newMastery);
+          }
+        });
+      },
+    );
   }
 
   void _launchPaperQuiz(EueePaper paper) {
@@ -411,6 +431,14 @@ class _PracticeScreenState extends State<PracticeScreen> {
               onReviewSession: _handleReviewSession,
             ),
           ],
+
+          const SizedBox(height: 20),
+
+          // Subject Mastery & EUEE Unit Drills Section (Moved from Home/Dashboard)
+          SubjectMasterySection(
+            subjects: _subjects,
+            onStartDrill: _onStartDrill,
+          ),
         ],
       ),
     );

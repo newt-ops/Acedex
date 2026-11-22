@@ -12,19 +12,27 @@ import '../../../core/ui/animations/bounceable.dart';
 /// - Card 4: Stream Standing (Tappable toggle between Weekly "Top 5%" / "2,480 XP"
 ///   and All-Time "Top 3%" / "18,940 XP")
 class CurriculumBentoGrid extends StatefulWidget {
+  final int unitsMastered;
+  final int totalUnits;
+  final double accuracyPercentage;
   final int focusMinutes;
   final int focusGoalMinutes;
   final VoidCallback onQuickLogFocus;
   final bool standingIsAllTime;
   final VoidCallback onToggleStanding;
+  final int standingXp;
 
   const CurriculumBentoGrid({
     super.key,
+    this.unitsMastered = 0,
+    this.totalUnits = 237,
+    this.accuracyPercentage = 0.0,
     required this.focusMinutes,
     this.focusGoalMinutes = 60,
     required this.onQuickLogFocus,
     required this.standingIsAllTime,
     required this.onToggleStanding,
+    this.standingXp = 2480,
   });
 
   @override
@@ -165,7 +173,7 @@ class _CurriculumBentoGridState extends State<CurriculumBentoGrid>
                     ),
                     const SizedBox(height: 10),
                     Text(
-                      '18 / 24',
+                      '${widget.unitsMastered} / ${widget.totalUnits}',
                       style: TextStyle(
                         fontSize: 19,
                         fontWeight: FontWeight.w800,
@@ -183,7 +191,9 @@ class _CurriculumBentoGridState extends State<CurriculumBentoGrid>
                         child: Align(
                           alignment: Alignment.centerLeft,
                           child: FractionallySizedBox(
-                            widthFactor: 18 / 24,
+                            widthFactor: widget.totalUnits > 0
+                                ? (widget.unitsMastered / widget.totalUnits).clamp(0.0, 1.0)
+                                : 0.0,
                             child: Container(
                               decoration: BoxDecoration(
                                 color: primaryColor,
@@ -243,7 +253,7 @@ class _CurriculumBentoGridState extends State<CurriculumBentoGrid>
                       textBaseline: TextBaseline.alphabetic,
                       children: [
                         Text(
-                          '83.4%',
+                          '${widget.accuracyPercentage.toStringAsFixed(1)}%',
                           style: TextStyle(
                             fontSize: 19,
                             fontWeight: FontWeight.w800,
@@ -252,23 +262,25 @@ class _CurriculumBentoGridState extends State<CurriculumBentoGrid>
                             fontFeatures: const [FontFeature.tabularFigures()],
                           ),
                         ),
-                        const SizedBox(width: 6),
-                        Container(
-                          padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 1.5),
-                          decoration: BoxDecoration(
-                            color: (isDark ? AppColors.darkSuccess : AppColors.success)
-                                .withValues(alpha: 0.16),
-                            borderRadius: BorderRadius.circular(5),
-                          ),
-                          child: Text(
-                            '+2.8%',
-                            style: TextStyle(
-                              fontSize: 9.5,
-                              fontWeight: FontWeight.w800,
-                              color: isDark ? AppColors.darkSuccess : AppColors.success,
+                        if (widget.accuracyPercentage > 0) ...[
+                          const SizedBox(width: 6),
+                          Container(
+                            padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 1.5),
+                            decoration: BoxDecoration(
+                              color: (isDark ? AppColors.darkSuccess : AppColors.success)
+                                  .withValues(alpha: 0.16),
+                              borderRadius: BorderRadius.circular(5),
+                            ),
+                            child: Text(
+                              '+2.8%',
+                              style: TextStyle(
+                                fontSize: 9.5,
+                                fontWeight: FontWeight.w800,
+                                color: isDark ? AppColors.darkSuccess : AppColors.success,
+                              ),
                             ),
                           ),
-                        ),
+                        ],
                       ],
                     ),
                     const SizedBox(height: 4),

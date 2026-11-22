@@ -3,25 +3,32 @@ import 'package:hugeicons/hugeicons.dart';
 import '../../../core/theme/app_colors.dart';
 import '../../../core/ui/animations/bounceable.dart';
 import '../models/dashboard_data.dart';
+import 'add_study_plan_sheet.dart';
 
 /// Today's Study Plan (Section 3)
 ///
 /// Features:
-/// - Header with dynamic progress badge ("2 of 4 done") & "+ Add" button
-/// - Inline Cupertino Task Input Drawer (title text field, subject & duration dropdowns, cancel/save)
+/// - Header with dynamic progress badge & "+ Add" button
+/// - Opens Apple-style Cupertino `AddStudyPlanSheet` modal
+/// - Clean empty state when no tasks are planned yet
 /// - Celebratory Banner when 100% of tasks are completed (+50 XP)
 /// - Interactive Task Rows with iOS spring squircle checkboxes, "Up Next" highlight,
-///   strikethrough text, subject pills with color dots, and duration badges
+///   strikethrough text, subject pills with color dots, time spans, and duration badges
+/// - Deletable tasks with one-tap delete button
 class StudyPlanSection extends StatefulWidget {
   final List<StudyTaskItem> tasks;
   final ValueChanged<String> onToggleTask;
   final void Function(String title, String subject, String duration) onAddTask;
+  final ValueChanged<String>? onDeleteTask;
+  final ValueChanged<StudyTaskItem>? onAddStudyPlan;
 
   const StudyPlanSection({
     super.key,
     required this.tasks,
     required this.onToggleTask,
     required this.onAddTask,
+    this.onDeleteTask,
+    this.onAddStudyPlan,
   });
 
   @override
@@ -29,42 +36,17 @@ class StudyPlanSection extends StatefulWidget {
 }
 
 class _StudyPlanSectionState extends State<StudyPlanSection> {
-  bool _isAddDrawerOpen = false;
-  final TextEditingController _titleController = TextEditingController();
-  final FocusNode _titleFocusNode = FocusNode();
-  String _selectedSubject = 'Physics';
-  String _selectedDuration = '20m';
-
-  @override
-  void dispose() {
-    _titleController.dispose();
-    _titleFocusNode.dispose();
-    super.dispose();
-  }
-
-  void _toggleDrawer([bool? force]) {
-    setState(() {
-      _isAddDrawerOpen = force ?? !_isAddDrawerOpen;
-      if (_isAddDrawerOpen) {
-        Future.delayed(const Duration(milliseconds: 150), () {
-          if (mounted) _titleFocusNode.requestFocus();
-        });
-      } else {
-        _titleController.clear();
-        _titleFocusNode.unfocus();
-      }
-    });
-  }
-
-  void _saveTask() {
-    final title = _titleController.text.trim();
-    if (title.isEmpty) {
-      _titleFocusNode.requestFocus();
-      return;
-    }
-
-    widget.onAddTask(title, _selectedSubject, _selectedDuration);
-    _toggleDrawer(false);
+  void _openAddModal() {
+    AddStudyPlanSheet.show(
+      context,
+      onSave: (task) {
+        if (widget.onAddStudyPlan != null) {
+          widget.onAddStudyPlan!(task);
+        } else {
+          widget.onAddTask(task.title, task.subject, task.duration);
+        }
+      },
+    );
   }
 
   @override
@@ -110,7 +92,7 @@ class _StudyPlanSectionState extends State<StudyPlanSection> {
                     borderRadius: BorderRadius.circular(999),
                   ),
                   child: Text(
-                    '$completedCount of $totalCount done',
+                    totalCount == 0 ? '0 planned' : '$completedCount of $totalCount done',
                     style: TextStyle(
                       fontSize: 10.5,
                       fontWeight: FontWeight.w700,
@@ -122,7 +104,7 @@ class _StudyPlanSectionState extends State<StudyPlanSection> {
             ),
 
             AcedexBounceable(
-              onTap: () => _toggleDrawer(),
+              onTap: _openAddModal,
               child: Container(
                 height: 28,
                 padding: const EdgeInsets.symmetric(horizontal: 10),
@@ -134,18 +116,18 @@ class _StudyPlanSectionState extends State<StudyPlanSection> {
                 child: Row(
                   mainAxisSize: MainAxisSize.min,
                   children: [
-                    HugeIcon(
-                      icon: HugeIcons.strokeRoundedAdd01,
-                      color: primaryColor,
-                      size: 13,
+                    Icon(
+                      Icons.add_rounded,
+                      size: 14,
+                      color: theme.colorScheme.onSurface,
                     ),
-                    const SizedBox(width: 4),
+                    const SizedBox(width: 3),
                     Text(
                       'Add',
                       style: TextStyle(
                         fontSize: 11,
                         fontWeight: FontWeight.w700,
-                        color: primaryColor,
+                        color: theme.colorScheme.onSurface,
                       ),
                     ),
                   ],
@@ -158,212 +140,155 @@ class _StudyPlanSectionState extends State<StudyPlanSection> {
         const SizedBox(height: 10),
 
         // =====================================================================
-        // INLINE CUPERTINO TASK INPUT DRAWER
+        // EMPTY STATE (NO TASKS)
         // =====================================================================
-        AnimatedSize(
-          duration: const Duration(milliseconds: 320),
-          curve: Curves.easeOutCubic,
-          child: _isAddDrawerOpen
-              ? Container(
-                  margin: const EdgeInsets.only(bottom: 10),
-                  padding: const EdgeInsets.all(12),
-                  decoration: BoxDecoration(
-                    color: surfaceColor,
-                    borderRadius: BorderRadius.circular(18),
-                    border: Border.all(color: primaryColor),
-                  ),
-                  child: Column(
-                    children: [
-                      // Title Input Field
-                      TextField(
-                        controller: _titleController,
-                        focusNode: _titleFocusNode,
-                        maxLength: 56,
-                        style: TextStyle(
-                          fontSize: 12.5,
-                          fontWeight: FontWeight.w600,
-                          color: theme.colorScheme.onSurface,
-                        ),
-                        decoration: InputDecoration(
-                          counterText: '',
-                          hintText: 'e.g., Physics: Capacitor Circuits Review',
-                          hintStyle: TextStyle(
-                            fontSize: 12,
-                            fontWeight: FontWeight.w500,
-                            color: subtextColor,
-                          ),
-                          filled: true,
-                          fillColor: raisedBg,
-                          contentPadding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
-                          border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(12),
-                            borderSide: BorderSide(color: lineBorder),
-                          ),
-                          enabledBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(12),
-                            borderSide: BorderSide(color: lineBorder),
-                          ),
-                          focusedBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(12),
-                            borderSide: BorderSide(color: primaryColor, width: 1.5),
-                          ),
-                        ),
-                        onSubmitted: (_) => _saveTask(),
-                      ),
-
-                      const SizedBox(height: 10),
-
-                      // Dropdowns + Action Buttons
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          // Selects (Subject & Duration)
-                          Row(
-                            children: [
-                              _buildDropdown<String>(
-                                value: _selectedSubject,
-                                items: const ['Physics', 'Math', 'Chemistry', 'Biology'],
-                                onChanged: (v) {
-                                  if (v != null) setState(() => _selectedSubject = v);
-                                },
-                                raisedBg: raisedBg,
-                                lineBorder: lineBorder,
-                              ),
-                              const SizedBox(width: 8),
-                              _buildDropdown<String>(
-                                value: _selectedDuration,
-                                items: const ['15m', '20m', '25m', '30m'],
-                                onChanged: (v) {
-                                  if (v != null) setState(() => _selectedDuration = v);
-                                },
-                                raisedBg: raisedBg,
-                                lineBorder: lineBorder,
-                              ),
-                            ],
-                          ),
-
-                          // Cancel & Save Buttons
-                          Row(
-                            children: [
-                              GestureDetector(
-                                onTap: () => _toggleDrawer(false),
-                                child: Padding(
-                                  padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 6),
-                                  child: Text(
-                                    'Cancel',
-                                    style: TextStyle(
-                                      fontSize: 11.5,
-                                      fontWeight: FontWeight.w600,
-                                      color: subtextColor,
-                                    ),
-                                  ),
-                                ),
-                              ),
-                              const SizedBox(width: 4),
-                              AcedexBounceable(
-                                onTap: _saveTask,
-                                child: Container(
-                                  height: 28,
-                                  padding: const EdgeInsets.symmetric(horizontal: 14),
-                                  decoration: BoxDecoration(
-                                    color: primaryColor,
-                                    borderRadius: BorderRadius.circular(999),
-                                  ),
-                                  alignment: Alignment.center,
-                                  child: const Text(
-                                    'Save',
-                                    style: TextStyle(
-                                      fontSize: 11.5,
-                                      fontWeight: FontWeight.w700,
-                                      color: Colors.white,
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
-                )
-              : const SizedBox.shrink(),
-        ),
-
-        // =====================================================================
-        // CELEBRATORY BANNER (100% COMPLETE)
-        // =====================================================================
-        if (isAllDone) ...[
+        if (widget.tasks.isEmpty) ...[
           Container(
-            margin: const EdgeInsets.only(bottom: 10),
-            padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 9),
+            padding: const EdgeInsets.symmetric(vertical: 24, horizontal: 16),
             decoration: BoxDecoration(
-              color: (isDark ? AppColors.darkSuccess : AppColors.success)
-                  .withValues(alpha: 0.16),
-              borderRadius: BorderRadius.circular(16),
-              border: Border.all(
-                color: isDark ? AppColors.darkSuccess : AppColors.success,
-              ),
+              color: surfaceColor,
+              borderRadius: BorderRadius.circular(20),
+              border: Border.all(color: lineBorder),
             ),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            child: Column(
               children: [
-                Row(
-                  children: [
-                    HugeIcon(
-                      icon: HugeIcons.strokeRoundedCheckmarkCircle01,
-                      color: isDark ? AppColors.darkSuccess : AppColors.success,
-                      size: 16,
-                    ),
-                    const SizedBox(width: 8),
-                    Text(
-                      'All daily goals complete! +50 XP',
-                      style: TextStyle(
-                        fontSize: 11.5,
-                        fontWeight: FontWeight.w700,
-                        color: isDark ? AppColors.darkSuccess : AppColors.success,
-                      ),
-                    ),
-                  ],
+                Container(
+                  width: 44,
+                  height: 44,
+                  decoration: BoxDecoration(
+                    color: primaryColor.withValues(alpha: 0.12),
+                    shape: BoxShape.circle,
+                  ),
+                  alignment: Alignment.center,
+                  child: HugeIcon(
+                    icon: HugeIcons.strokeRoundedCalendar03,
+                    color: primaryColor,
+                    size: 20,
+                  ),
                 ),
+                const SizedBox(height: 10),
                 Text(
-                  '100%',
+                  'No Tasks Planned Yet',
                   style: TextStyle(
-                    fontSize: 10,
-                    fontWeight: FontWeight.w800,
-                    letterSpacing: 0.5,
-                    color: isDark ? AppColors.darkSuccess : AppColors.success,
+                    fontSize: 14,
+                    fontWeight: FontWeight.w700,
+                    color: theme.colorScheme.onSurface,
+                  ),
+                ),
+                const SizedBox(height: 4),
+                Text(
+                  'Schedule your daily study sessions to master EUEE units.',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontSize: 11.5,
+                    fontWeight: FontWeight.w500,
+                    color: subtextColor,
+                  ),
+                ),
+                const SizedBox(height: 14),
+                AcedexBounceable(
+                  onTap: _openAddModal,
+                  child: Container(
+                    height: 32,
+                    padding: const EdgeInsets.symmetric(horizontal: 14),
+                    decoration: BoxDecoration(
+                      color: primaryColor,
+                      borderRadius: BorderRadius.circular(999),
+                    ),
+                    alignment: Alignment.center,
+                    child: const Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Icon(Icons.add_rounded, size: 14, color: Colors.white),
+                        SizedBox(width: 4),
+                        Text(
+                          'Add Study Plan',
+                          style: TextStyle(
+                            fontSize: 11.5,
+                            fontWeight: FontWeight.w700,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ],
             ),
           ),
-        ],
+        ] else ...[
+          // =====================================================================
+          // CELEBRATORY BANNER (100% COMPLETE)
+          // =====================================================================
+          if (isAllDone) ...[
+            Container(
+              margin: const EdgeInsets.only(bottom: 10),
+              padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 9),
+              decoration: BoxDecoration(
+                color: (isDark ? AppColors.darkSuccess : AppColors.success)
+                    .withValues(alpha: 0.16),
+                borderRadius: BorderRadius.circular(16),
+                border: Border.all(
+                  color: isDark ? AppColors.darkSuccess : AppColors.success,
+                ),
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Row(
+                    children: [
+                      HugeIcon(
+                        icon: HugeIcons.strokeRoundedCheckmarkCircle01,
+                        color: isDark ? AppColors.darkSuccess : AppColors.success,
+                        size: 16,
+                      ),
+                      const SizedBox(width: 8),
+                      Text(
+                        'All daily goals complete! +50 XP',
+                        style: TextStyle(
+                          fontSize: 11.5,
+                          fontWeight: FontWeight.w700,
+                          color: isDark ? AppColors.darkSuccess : AppColors.success,
+                        ),
+                      ),
+                    ],
+                  ),
+                  Text(
+                    '100%',
+                    style: TextStyle(
+                      fontSize: 10,
+                      fontWeight: FontWeight.w800,
+                      letterSpacing: 0.5,
+                      color: isDark ? AppColors.darkSuccess : AppColors.success,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ],
 
-        // =====================================================================
-        // TASK ROWS
-        // =====================================================================
-        ListView.separated(
-          shrinkWrap: true,
-          physics: const NeverScrollableScrollPhysics(),
-          itemCount: widget.tasks.length,
-          separatorBuilder: (_, i) => const SizedBox(height: 8),
-          itemBuilder: (context, index) {
-            final task = widget.tasks[index];
-            final isUpNext = !task.completed && index == firstUncheckedIdx;
-            final dotColor = getSubjectColor(task.subject);
+          // =====================================================================
+          // TASK ROWS (DELETABLE)
+          // =====================================================================
+          ListView.separated(
+            shrinkWrap: true,
+            physics: const NeverScrollableScrollPhysics(),
+            itemCount: widget.tasks.length,
+            separatorBuilder: (_, i) => const SizedBox(height: 8),
+            itemBuilder: (context, index) {
+              final task = widget.tasks[index];
+              final isUpNext = !task.completed && index == firstUncheckedIdx;
+              final dotColor = getSubjectColor(task.subject);
 
-            final rowBg = isUpNext
-                ? (isDark
-                    ? primaryColor.withValues(alpha: 0.18)
-                    : primaryColor.withValues(alpha: 0.08))
-                : surfaceColor;
-            final rowBorder = isUpNext ? primaryColor : lineBorder;
+              final rowBg = isUpNext
+                  ? (isDark
+                      ? primaryColor.withValues(alpha: 0.18)
+                      : primaryColor.withValues(alpha: 0.08))
+                  : surfaceColor;
+              final rowBorder = isUpNext ? primaryColor : lineBorder;
 
-            return AcedexBounceable(
-              onTap: () => widget.onToggleTask(task.id),
-              child: Container(
-                padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 11),
+              return Container(
+                padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
                 decoration: BoxDecoration(
                   color: rowBg,
                   borderRadius: BorderRadius.circular(16),
@@ -372,105 +297,141 @@ class _StudyPlanSectionState extends State<StudyPlanSection> {
                 child: Row(
                   children: [
                     // Spring Animated Squircle Checkbox
-                    Container(
-                      width: 22,
-                      height: 22,
-                      decoration: BoxDecoration(
-                        color: task.completed ? primaryColor : raisedBg,
-                        borderRadius: BorderRadius.circular(7),
-                        border: Border.all(
-                          color: task.completed ? primaryColor : subtextColor,
-                          width: 1.8,
+                    AcedexBounceable(
+                      onTap: () => widget.onToggleTask(task.id),
+                      child: Container(
+                        width: 22,
+                        height: 22,
+                        decoration: BoxDecoration(
+                          color: task.completed ? primaryColor : raisedBg,
+                          borderRadius: BorderRadius.circular(7),
+                          border: Border.all(
+                            color: task.completed ? primaryColor : subtextColor,
+                            width: 1.8,
+                          ),
                         ),
+                        alignment: Alignment.center,
+                        child: task.completed
+                            ? const Icon(
+                                Icons.check_rounded,
+                                size: 15,
+                                color: Colors.white,
+                              )
+                            : null,
                       ),
-                      alignment: Alignment.center,
-                      child: task.completed
-                          ? const Icon(
-                              Icons.check_rounded,
-                              size: 15,
-                              color: Colors.white,
-                            )
-                          : null,
                     ),
 
                     const SizedBox(width: 10),
 
                     // Task Title & Subject Badge
                     Expanded(
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            task.title,
-                            maxLines: 1,
-                            overflow: TextOverflow.ellipsis,
-                            style: TextStyle(
-                              fontSize: 12.5,
-                              fontWeight: FontWeight.w600,
-                              letterSpacing: -0.1,
-                              color: task.completed
-                                  ? subtextColor
-                                  : theme.colorScheme.onSurface,
-                              decoration: task.completed
-                                  ? TextDecoration.lineThrough
-                                  : TextDecoration.none,
-                            ),
-                          ),
-                          const SizedBox(height: 4),
-                          Row(
-                            children: [
-                              Container(
-                                padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
-                                decoration: BoxDecoration(
-                                  color: raisedBg,
-                                  borderRadius: BorderRadius.circular(6),
-                                  border: Border.all(color: lineBorder),
-                                ),
-                                child: Row(
-                                  mainAxisSize: MainAxisSize.min,
-                                  children: [
-                                    Container(
-                                      width: 5,
-                                      height: 5,
-                                      decoration: BoxDecoration(
-                                        color: dotColor,
-                                        shape: BoxShape.circle,
-                                      ),
-                                    ),
-                                    const SizedBox(width: 5),
-                                    Text(
-                                      task.subject,
-                                      style: TextStyle(
-                                        fontSize: 9.5,
-                                        fontWeight: FontWeight.w700,
-                                        color: theme.colorScheme.onSurface,
-                                      ),
-                                    ),
-                                  ],
-                                ),
+                      child: GestureDetector(
+                        behavior: HitTestBehavior.opaque,
+                        onTap: () => widget.onToggleTask(task.id),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              task.title,
+                              maxLines: 1,
+                              overflow: TextOverflow.ellipsis,
+                              style: TextStyle(
+                                fontSize: 12.5,
+                                fontWeight: FontWeight.w600,
+                                letterSpacing: -0.1,
+                                color: task.completed
+                                    ? subtextColor
+                                    : theme.colorScheme.onSurface,
+                                decoration: task.completed
+                                    ? TextDecoration.lineThrough
+                                    : TextDecoration.none,
                               ),
-                              if (isUpNext) ...[
-                                const SizedBox(width: 6),
+                            ),
+                            const SizedBox(height: 4),
+                            Row(
+                              children: [
                                 Container(
                                   padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
                                   decoration: BoxDecoration(
-                                    color: primaryColor,
+                                    color: raisedBg,
                                     borderRadius: BorderRadius.circular(6),
+                                    border: Border.all(color: lineBorder),
                                   ),
-                                  child: const Text(
-                                    'UP NEXT',
-                                    style: TextStyle(
-                                      fontSize: 8.5,
-                                      fontWeight: FontWeight.w800,
-                                      letterSpacing: 0.4,
-                                      color: Colors.white,
-                                    ),
+                                  child: Row(
+                                    mainAxisSize: MainAxisSize.min,
+                                    children: [
+                                      Container(
+                                        width: 5,
+                                        height: 5,
+                                        decoration: BoxDecoration(
+                                          color: dotColor,
+                                          shape: BoxShape.circle,
+                                        ),
+                                      ),
+                                      const SizedBox(width: 5),
+                                      Text(
+                                        task.subject,
+                                        style: TextStyle(
+                                          fontSize: 9.5,
+                                          fontWeight: FontWeight.w700,
+                                          color: theme.colorScheme.onSurface,
+                                        ),
+                                      ),
+                                    ],
                                   ),
                                 ),
+                                if (task.timeSpan != null) ...[
+                                  const SizedBox(width: 6),
+                                  Text(
+                                    task.timeSpan!,
+                                    style: TextStyle(
+                                      fontSize: 9.5,
+                                      fontWeight: FontWeight.w500,
+                                      color: subtextColor,
+                                    ),
+                                  ),
+                                ],
+                                if (task.focusMode != null) ...[
+                                  const SizedBox(width: 6),
+                                  Container(
+                                    padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 1.5),
+                                    decoration: BoxDecoration(
+                                      color: primaryColor.withValues(alpha: 0.12),
+                                      borderRadius: BorderRadius.circular(4),
+                                    ),
+                                    child: Text(
+                                      task.focusMode!,
+                                      style: TextStyle(
+                                        fontSize: 8.5,
+                                        fontWeight: FontWeight.w700,
+                                        color: primaryColor,
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                                if (isUpNext) ...[
+                                  const SizedBox(width: 6),
+                                  Container(
+                                    padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+                                    decoration: BoxDecoration(
+                                      color: primaryColor,
+                                      borderRadius: BorderRadius.circular(6),
+                                    ),
+                                    child: const Text(
+                                      'UP NEXT',
+                                      style: TextStyle(
+                                        fontSize: 8.5,
+                                        fontWeight: FontWeight.w800,
+                                        letterSpacing: 0.4,
+                                        color: Colors.white,
+                                      ),
+                                    ),
+                                  ),
+                                ],
                               ],
-                            ],
-                          ),
-                        ],
+                            ),
+                          ],
+                        ),
                       ),
                     ),
 
@@ -494,57 +455,35 @@ class _StudyPlanSectionState extends State<StudyPlanSection> {
                         ),
                       ),
                     ),
+
+                    // Deletable action button
+                    if (widget.onDeleteTask != null) ...[
+                      const SizedBox(width: 6),
+                      AcedexBounceable(
+                        onTap: () => widget.onDeleteTask!(task.id),
+                        child: Container(
+                          width: 28,
+                          height: 28,
+                          decoration: BoxDecoration(
+                            color: Colors.transparent,
+                            borderRadius: BorderRadius.circular(8),
+                          ),
+                          alignment: Alignment.center,
+                          child: HugeIcon(
+                            icon: HugeIcons.strokeRoundedDelete02,
+                            size: 14,
+                            color: subtextColor.withValues(alpha: 0.8),
+                          ),
+                        ),
+                      ),
+                    ],
                   ],
                 ),
-              ),
-            );
-          },
-        ),
-      ],
-    );
-  }
-
-  Widget _buildDropdown<T>({
-    required T value,
-    required List<T> items,
-    required ValueChanged<T?> onChanged,
-    required Color raisedBg,
-    required Color lineBorder,
-  }) {
-    final theme = Theme.of(context);
-
-    return Container(
-      height: 28,
-      padding: const EdgeInsets.symmetric(horizontal: 8),
-      decoration: BoxDecoration(
-        color: raisedBg,
-        borderRadius: BorderRadius.circular(8),
-        border: Border.all(color: lineBorder),
-      ),
-      child: DropdownButtonHideUnderline(
-        child: DropdownButton<T>(
-          value: value,
-          onChanged: onChanged,
-          icon: Icon(
-            Icons.keyboard_arrow_down_rounded,
-            size: 16,
-            color: theme.colorScheme.onSurface,
+              );
+            },
           ),
-          items: items.map((item) {
-            return DropdownMenuItem<T>(
-              value: item,
-              child: Text(
-                item.toString(),
-                style: TextStyle(
-                  fontSize: 11,
-                  fontWeight: FontWeight.w700,
-                  color: theme.colorScheme.onSurface,
-                ),
-              ),
-            );
-          }).toList(),
-        ),
-      ),
+        ],
+      ],
     );
   }
 }

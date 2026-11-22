@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:acedex/core/models/user_profile.dart';
+import 'package:acedex/features/dashboard/widgets/subject_mastery_section.dart';
 import 'package:acedex/features/practice/screens/practice_screen.dart';
 import 'package:acedex/features/practice/widgets/answer_review_view.dart';
 import 'package:acedex/features/practice/widgets/completed_sessions_list.dart';
@@ -50,7 +51,7 @@ void main() {
 
       // Subject Filter Rail
       expect(find.byType(PracticeSubjectFilterRail), findsOneWidget);
-      expect(find.text('All'), findsOneWidget);
+      expect(find.text('All'), findsWidgets);
       expect(find.text('Physics'), findsWidgets);
       expect(find.text('Mathematics'), findsWidgets);
       expect(find.text('Chemistry'), findsWidgets);
@@ -80,6 +81,11 @@ void main() {
       expect(find.byType(CompletedSessionsList), findsOneWidget);
       expect(find.text('Recent Completed Sessions'), findsOneWidget);
       expect(find.text('Review Answers'), findsWidgets);
+
+      // Subject Mastery Section moved to Practice screen
+      expect(find.byType(SubjectMasterySection), findsOneWidget);
+      expect(find.text('Subject Mastery'), findsOneWidget);
+      expect(find.text('Tap card for syllabus'), findsOneWidget);
     });
 
     testWidgets('subject filter rail updates visible past papers', (tester) async {

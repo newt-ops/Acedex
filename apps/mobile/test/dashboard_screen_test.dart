@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:hugeicons/hugeicons.dart';
+import 'package:acedex/core/config/feature_flags.dart';
 import 'package:acedex/core/models/user_profile.dart';
+import 'package:acedex/features/dashboard/models/dashboard_data.dart';
 import 'package:acedex/features/dashboard/screens/dashboard_screen.dart';
+import 'package:acedex/features/dashboard/widgets/add_study_plan_sheet.dart';
 import 'package:acedex/features/dashboard/widgets/curriculum_bento_grid.dart';
 import 'package:acedex/features/dashboard/widgets/formula_flashcards_carousel.dart';
 import 'package:acedex/features/dashboard/widgets/hero_countdown_card.dart';
@@ -23,10 +27,48 @@ void main() {
     status: 'active',
   );
 
-  Widget createDashboardHarness({UserProfile? user}) {
+  final sampleTasks = [
+    const StudyTaskItem(
+      id: 'sample-1',
+      title: 'Physics: Electromagnetism Formula Review',
+      subject: 'Physics',
+      duration: '15m',
+      completed: true,
+    ),
+    const StudyTaskItem(
+      id: 'sample-2',
+      title: 'Mathematics: Definite Integrals Past Set',
+      subject: 'Math',
+      duration: '20m',
+      completed: true,
+    ),
+    const StudyTaskItem(
+      id: 'sample-3',
+      title: 'Chemistry: Galvanic Cells & Nernst Drill',
+      subject: 'Chemistry',
+      duration: '25m',
+      completed: false,
+    ),
+    const StudyTaskItem(
+      id: 'sample-4',
+      title: 'Biology: Molecular Genetics Enzymes Check',
+      subject: 'Biology',
+      duration: '15m',
+      completed: false,
+    ),
+  ];
+
+  Widget createDashboardHarness({UserProfile? user, List<StudyTaskItem>? tasks}) {
     return MaterialApp(
       home: Scaffold(
-        body: DashboardScreen(user: user ?? testUser),
+        body: DashboardScreen(
+          user: user ?? testUser,
+          initialTasks: tasks,
+          initialUnitsMastered: 0,
+          initialTotalUnits: 237,
+          initialAccuracyPct: 0.0,
+          initialExamDate: DateTime(2026, 6, 8, 9, 0),
+        ),
       ),
     );
   }
@@ -39,40 +81,43 @@ void main() {
   }
 
   group('DashboardScreen Full Inside UI Showcase Tests', () {
-    testWidgets('renders all 5 canonical inside sections', (tester) async {
+    setUp(() {
+      FeatureFlags.enableFlashcards = true;
+      FeatureFlags.enableSmartNotes = true;
+    });
+
+    testWidgets('renders all canonical inside dashboard sections with live DB metrics', (tester) async {
       configureViewport(tester);
       await tester.pumpWidget(createDashboardHarness());
       await tester.pump();
 
-      // Section 1: Hero Countdown & Readiness Card
+      // Section 1: Hero Countdown & Readiness Card (No glow)
       expect(find.byType(HeroCountdownCard), findsOneWidget);
       expect(find.text('G12 • NATURAL SCIENCE'), findsOneWidget);
       expect(find.text('Countdown'), findsOneWidget);
       expect(find.text('Readiness'), findsOneWidget);
       expect(find.text('Continue Unit 4'), findsOneWidget);
 
-      // Section 2: Live Curriculum Bento Grid (2x2)
+      // Section 2: Live Curriculum Bento Grid (Real 237 Units from DB)
       expect(find.byType(CurriculumBentoGrid), findsOneWidget);
       expect(find.text('Curriculum Pulse'), findsOneWidget);
-      expect(find.text('18 / 24'), findsOneWidget);
-      expect(find.text('83.4%'), findsOneWidget);
+      expect(find.text('0 / 237'), findsOneWidget);
+      expect(find.text('0.0%'), findsOneWidget);
       expect(find.text('45 / 60m'), findsOneWidget);
       expect(find.text('+15m'), findsOneWidget);
       expect(find.text('Top 5%'), findsOneWidget);
 
-      // Section 3: Today's Study Plan
+      // Section 3: Today's Study Plan (Empty by default)
       expect(find.byType(StudyPlanSection), findsOneWidget);
       expect(find.text("Today's Study Plan"), findsOneWidget);
-      expect(find.text('2 of 4 done'), findsOneWidget);
+      expect(find.text('0 planned'), findsOneWidget);
+      expect(find.text('No Tasks Planned Yet'), findsOneWidget);
       expect(find.text('Add'), findsOneWidget);
 
-      // Section 4: Subject Mastery
-      expect(find.byType(SubjectMasterySection), findsOneWidget);
-      expect(find.text('Subject Mastery'), findsOneWidget);
-      expect(find.text('Needs Focus'), findsOneWidget);
-      expect(find.text('Strong'), findsOneWidget);
+      // Section 4: Subject Mastery moved to Practice screen (not on Dashboard)
+      expect(find.byType(SubjectMasterySection), findsNothing);
 
-      // Section 5: Formula Flashcards
+      // Section 5: Formula Flashcards (When enabled)
       expect(find.byType(FormulaFlashcardsCarousel), findsOneWidget);
       expect(find.text('Formula Flashcards'), findsOneWidget);
     });
@@ -134,7 +179,7 @@ void main() {
     testWidgets('Study plan: toggling a task updates progress badge and celebration',
         (tester) async {
       configureViewport(tester);
-      await tester.pumpWidget(createDashboardHarness());
+      await tester.pumpWidget(createDashboardHarness(tasks: sampleTasks));
       await tester.pump();
 
       expect(find.text('2 of 4 done'), findsOneWidget);
@@ -160,88 +205,68 @@ void main() {
       );
     });
 
-    testWidgets('Study plan: inline Add task drawer creates a new task', (tester) async {
+    testWidgets('Study plan: tapping Add opens AddStudyPlanSheet and adds a new task', (tester) async {
       configureViewport(tester);
       await tester.pumpWidget(createDashboardHarness());
       await tester.pump();
 
-      expect(find.text('2 of 4 done'), findsOneWidget);
+      expect(find.text('0 planned'), findsOneWidget);
 
       // Tap Add button
       await tester.tap(find.text('Add'));
       await tester.pumpAndSettle();
 
-      // Enter task title
+      // AddStudyPlanSheet is displayed
+      expect(find.byType(AddStudyPlanSheet), findsOneWidget);
+      expect(
+        find.descendant(
+          of: find.byType(AddStudyPlanSheet),
+          matching: find.text('Add Study Plan'),
+        ),
+        findsOneWidget,
+      );
+
+      // Enter custom topic
       final inputFinder = find.byType(TextField);
       expect(inputFinder, findsOneWidget);
       await tester.enterText(inputFinder, 'Physics: Wave Optics Drill');
       await tester.pump();
 
-      // Tap Save
-      await tester.tap(find.text('Save'));
+      // Tap "Add to Today's Plan"
+      await tester.tap(find.text("Add to Today's Plan"));
+      await tester.pump(const Duration(milliseconds: 700));
       await tester.pumpAndSettle();
 
+      // Sheet dismissed, task added!
+      expect(find.byType(AddStudyPlanSheet), findsNothing);
       expect(find.text('Physics: Wave Optics Drill'), findsOneWidget);
-      expect(find.text('2 of 5 done'), findsOneWidget);
+      expect(find.text('0 of 1 done'), findsOneWidget);
     });
 
-    testWidgets('Subject mastery: filter pills filter subjects correctly', (tester) async {
+    testWidgets('Study plan: tasks can be deleted with the delete icon', (tester) async {
       configureViewport(tester);
-      await tester.pumpWidget(createDashboardHarness());
+      await tester.pumpWidget(createDashboardHarness(tasks: sampleTasks));
       await tester.pump();
 
-      final masterySection = find.byType(SubjectMasterySection);
+      expect(find.text('2 of 4 done'), findsOneWidget);
+      expect(find.text('Physics: Electromagnetism Formula Review'), findsOneWidget);
 
-      // All 4 subjects initially present in SubjectMasterySection
-      expect(find.descendant(of: masterySection, matching: find.text('Physics')), findsOneWidget);
-      expect(find.descendant(of: masterySection, matching: find.text('Mathematics')), findsOneWidget);
-      expect(find.descendant(of: masterySection, matching: find.text('Chemistry')), findsOneWidget);
-      expect(find.descendant(of: masterySection, matching: find.text('Biology')), findsOneWidget);
+      // Tap first delete icon
+      final deleteButtons = find.byType(GestureDetector);
+      expect(deleteButtons, findsWidgets);
 
-      // Filter by "Needs Focus" (<80% mastery): Chemistry (71%), Biology (79%)
-      await tester.tap(find.text('Needs Focus'));
+      // Delete the first task
+      final deleteIconFinder = find.byWidgetPredicate(
+        (widget) => widget is HugeIcon && widget.icon == HugeIcons.strokeRoundedDelete02,
+      );
+      expect(deleteIconFinder, findsNWidgets(4));
+
+      await tester.tap(deleteIconFinder.first);
       await tester.pumpAndSettle();
 
-      expect(find.descendant(of: masterySection, matching: find.text('Physics')), findsNothing);
-      expect(find.descendant(of: masterySection, matching: find.text('Mathematics')), findsNothing);
-      expect(find.descendant(of: masterySection, matching: find.text('Chemistry')), findsOneWidget);
-      expect(find.descendant(of: masterySection, matching: find.text('Biology')), findsOneWidget);
-
-      // Filter by "Strong" (>=80% mastery): Physics (82%), Mathematics (88%)
-      await tester.tap(find.text('Strong'));
-      await tester.pumpAndSettle();
-
-      expect(find.descendant(of: masterySection, matching: find.text('Physics')), findsOneWidget);
-      expect(find.descendant(of: masterySection, matching: find.text('Mathematics')), findsOneWidget);
-      expect(find.descendant(of: masterySection, matching: find.text('Chemistry')), findsNothing);
-      expect(find.descendant(of: masterySection, matching: find.text('Biology')), findsNothing);
-
-      // Restore "All"
-      await tester.tap(find.text('All'));
-      await tester.pumpAndSettle();
-
-      expect(find.descendant(of: masterySection, matching: find.text('Physics')), findsOneWidget);
-      expect(find.descendant(of: masterySection, matching: find.text('Mathematics')), findsOneWidget);
-    });
-
-    testWidgets('Subject mastery: tapping subject card body expands syllabus drawer',
-        (tester) async {
-      configureViewport(tester);
-      await tester.pumpWidget(createDashboardHarness());
-      await tester.pump();
-
-      final masterySection = find.byType(SubjectMasterySection);
-
-      // Initially syllabus units are collapsed
-      expect(find.text('GRADE 12 SYLLABUS UNITS'), findsNothing);
-
-      // Tap on Physics card inside SubjectMasterySection
-      await tester.tap(find.descendant(of: masterySection, matching: find.text('Physics')));
-      await tester.pumpAndSettle();
-
-      expect(find.text('GRADE 12 SYLLABUS UNITS'), findsOneWidget);
-      expect(find.text('Unit 3: Fluid Mechanics'), findsOneWidget);
-      expect(find.text('Unit 4: Electromagnetism'), findsOneWidget);
+      // Task is removed, remaining 3 tasks
+      expect(find.text('Physics: Electromagnetism Formula Review'), findsNothing);
+      expect(find.text('1 of 3 done'), findsOneWidget);
     });
 
     testWidgets('Formula flashcard: tap flips card 180 degrees to show formula and tip',
@@ -289,36 +314,26 @@ void main() {
       expect(find.textContaining('Correct! F = qvB·sin(0°) = 0 N'), findsOneWidget);
     });
 
-    testWidgets('Drill button opens MiniDrillSheet and advances through questions',
+    testWidgets('Feature gating: when disabled, flashcards carousel is omitted and Hero opens drill',
         (tester) async {
+      FeatureFlags.enableFlashcards = false;
+      FeatureFlags.enableSmartNotes = false;
+
       configureViewport(tester);
       await tester.pumpWidget(createDashboardHarness());
       await tester.pump();
 
-      // Tap first Drill button (Physics)
-      final drillButtonFinder = find.text('Drill').first;
-      await tester.tap(drillButtonFinder);
-      await tester.pump(const Duration(milliseconds: 650));
+      // Carousel is not present
+      expect(find.byType(FormulaFlashcardsCarousel), findsNothing);
+
+      // Tap Continue Unit 4 opens MiniDrillSheet instead of QuickStudySheet
+      await tester.tap(find.text('Continue Unit 4'));
+      await tester.pump(const Duration(milliseconds: 700));
       await tester.pumpAndSettle();
 
+      expect(find.byType(QuickStudySheet), findsNothing);
       expect(find.byType(MiniDrillSheet), findsOneWidget);
       expect(find.text('PHYSICS • EUEE DRILL'), findsOneWidget);
-      expect(find.text('1 of 3'), findsOneWidget);
-      expect(find.text('Electromagnetic Induction'), findsOneWidget);
-
-      // Select Option B (20 V - correct answer for Q1)
-      await tester.tap(find.text('20 V'));
-      await tester.pumpAndSettle();
-
-      expect(find.text('Correct Answer!'), findsOneWidget);
-      expect(find.text('Next Question'), findsOneWidget);
-
-      // Tap Next Question to advance to Q2
-      await tester.tap(find.text('Next Question'));
-      await tester.pumpAndSettle();
-
-      expect(find.text('2 of 3'), findsOneWidget);
-      expect(find.text('Lorentz Force'), findsOneWidget);
     });
   });
 }

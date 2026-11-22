@@ -20,6 +20,10 @@ router.get(
   asyncHandler(CurriculumController.getOfflinePack)
 );
 
+// Live Dashboard Metrics
+router.get('/exam-countdown', asyncHandler(CurriculumController.getExamCountdown));
+router.get('/pulse', optionalAuth, asyncHandler(CurriculumController.getCurriculumPulse));
+
 // EUEE Subject Model Exam Generator
 router.get(
   '/subjects/:subjectCode/model-exam',

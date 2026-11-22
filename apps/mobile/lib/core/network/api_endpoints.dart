@@ -8,4 +8,8 @@ class ApiEndpoints {
   static const String checkPhone = '/api/v1/auth/check-phone';
   static const String me = '/api/v1/auth/me';
   static const String refresh = '/api/v1/auth/refresh';
+
+  // Curriculum & Live Metrics
+  static const String examCountdown = '/api/v1/curriculum/exam-countdown';
+  static const String curriculumPulse = '/api/v1/curriculum/pulse';
 }

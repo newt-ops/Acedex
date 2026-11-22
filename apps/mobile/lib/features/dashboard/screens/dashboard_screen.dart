@@ -1,5 +1,9 @@
+import 'dart:async';
 import 'package:flutter/material.dart';
+import '../../../core/config/feature_flags.dart';
 import '../../../core/models/user_profile.dart';
+import '../../../core/network/api_client.dart';
+import '../../../core/network/api_endpoints.dart';
 import '../models/dashboard_data.dart';
 import '../widgets/curriculum_bento_grid.dart';
 import '../widgets/formula_flashcards_carousel.dart';
@@ -7,16 +11,16 @@ import '../widgets/hero_countdown_card.dart';
 import '../widgets/mini_drill_sheet.dart';
 import '../widgets/quick_study_sheet.dart';
 import '../widgets/study_plan_section.dart';
-import '../widgets/subject_mastery_section.dart';
 
 /// Clean Apple-Style Inside Dashboard Screen (Tab 0: Home)
 ///
 /// Features:
-/// 1. EUEE 2026 Countdown & Readiness Hero Card ("Countdown" / "Readiness" toggle + "Continue Unit 4 >" CTA)
-/// 2. Live Curriculum Bento Grid (2x2: Units Mastered, EUEE Accuracy, Daily Focus "+15m", Stream Standing)
-/// 3. Today's Study Plan (Inline Cupertino "+ Add", spring checkboxes, "Up Next" highlight, 100% celebration)
-/// 4. Subject Mastery & EUEE Drill Launcher (Segmented filters, expandable syllabus, 3-Q Mini-Drill Sheet)
-/// 5. Quick Formula & Concept Flashcards (Horizontal snap carousel with authentic 3D 180° flip)
+/// 1. EUEE 2026 Countdown & Readiness Hero Card ("Countdown" / "Readiness" toggle,
+///    server-backed target date June 8 2026, zero atmospheric glow)
+/// 2. Live Curriculum Bento Grid (2x2: Live Units Mastered across G9-12 from DB,
+///    EUEE Accuracy, Daily Focus "+15m", Stream Standing)
+/// 3. Today's Study Plan (Empty initially, Cupertino Add Study Plan modal, deletable tasks)
+/// 4. Quick Formula & Concept Flashcards (Gated via FeatureFlags)
 ///
 /// Design Rules:
 /// - Pure inside screen: header and footer bars are delegated to the outer `HomeScreen` shell
@@ -27,12 +31,22 @@ class DashboardScreen extends StatefulWidget {
   final UserProfile? user;
   final VoidCallback? onNavigateToStudy;
   final VoidCallback? onNavigateToPractice;
+  final List<StudyTaskItem>? initialTasks;
+  final int? initialUnitsMastered;
+  final int? initialTotalUnits;
+  final double? initialAccuracyPct;
+  final DateTime? initialExamDate;
 
   const DashboardScreen({
     super.key,
     this.user,
     this.onNavigateToStudy,
     this.onNavigateToPractice,
+    this.initialTasks,
+    this.initialUnitsMastered,
+    this.initialTotalUnits,
+    this.initialAccuracyPct,
+    this.initialExamDate,
   });
 
   @override
@@ -45,6 +59,12 @@ class _DashboardScreenState extends State<DashboardScreen> {
   final int _focusGoalMinutes = 60;
   bool _standingIsAllTime = false;
 
+  // Live Curriculum Pulse Metrics (Database: 237 units across G9-12)
+  late int _unitsMastered;
+  late int _totalUnits;
+  late double _accuracyPct;
+  late DateTime _examDate;
+
   late List<StudyTaskItem> _tasks;
   late List<SubjectMasteryItem> _subjects;
   late final List<FlashcardItem> _flashcards;
@@ -52,13 +72,72 @@ class _DashboardScreenState extends State<DashboardScreen> {
   @override
   void initState() {
     super.initState();
-    _tasks = List.from(defaultStudyTasks);
+    _tasks = widget.initialTasks != null
+        ? List.from(widget.initialTasks!)
+        : List.from(defaultStudyTasks);
     _subjects = List.from(defaultSubjectsData);
     _flashcards = defaultFlashcardsData;
+
+    _unitsMastered = widget.initialUnitsMastered ?? 0;
+    _totalUnits = widget.initialTotalUnits ?? 237;
+    _accuracyPct = widget.initialAccuracyPct ?? 0.0;
+    _examDate = widget.initialExamDate ?? DateTime(2026, 6, 8, 9, 0);
+
+    unawaited(_fetchLiveDashboardData());
+  }
+
+  Future<void> _fetchLiveDashboardData() async {
+    try {
+      final pulseRes = await ApiClient.instance.get(
+        ApiEndpoints.curriculumPulse,
+        requiresAuth: false,
+      );
+      final data = pulseRes['data'] ?? pulseRes;
+      if (mounted) {
+        setState(() {
+          _totalUnits = (data['totalUnits'] as num?)?.toInt() ?? _totalUnits;
+          _unitsMastered = (data['unitsMastered'] as num?)?.toInt() ?? _unitsMastered;
+          _accuracyPct = (data['accuracy'] as num?)?.toDouble() ?? _accuracyPct;
+        });
+      }
+    } catch (_) {
+      // Offline fallback: keep real baseline (237 units from database)
+    }
+
+    try {
+      final countdownRes = await ApiClient.instance.get(
+        ApiEndpoints.examCountdown,
+        requiresAuth: false,
+      );
+      final data = countdownRes['data'] ?? countdownRes;
+      final targetStr = data['targetDate'] as String?;
+      if (targetStr != null && mounted) {
+        final parsed = DateTime.tryParse(targetStr);
+        if (parsed != null) {
+          setState(() {
+            _examDate = parsed;
+          });
+        }
+      }
+    } catch (_) {
+      // Offline fallback: June 8, 2026
+    }
   }
 
   void _onContinueUnit4() {
-    QuickStudySheet.show(context);
+    if (FeatureFlags.enableSmartNotes) {
+      QuickStudySheet.show(context);
+    } else {
+      final physicsSubj = _subjects.firstWhere(
+        (s) => s.id == 'physics',
+        orElse: () => _subjects.first,
+      );
+      MiniDrillSheet.show(
+        context,
+        subject: physicsSubj,
+        onMasteryUpdated: _onMasteryUpdated,
+      );
+    }
   }
 
   void _onQuickLogFocus() {
@@ -100,12 +179,18 @@ class _DashboardScreenState extends State<DashboardScreen> {
     });
   }
 
-  void _onStartDrill(SubjectMasteryItem subject) {
-    MiniDrillSheet.show(
-      context,
-      subject: subject,
-      onMasteryUpdated: _onMasteryUpdated,
-    );
+  void _onAddStudyPlan(StudyTaskItem item) {
+    setState(() {
+      _tasks.add(item);
+    });
+  }
+
+  void _onDeleteTask(String id) {
+    setState(() {
+      _tasks.removeWhere((t) => t.id == id);
+      final completedCount = _tasks.where((t) => t.completed).length;
+      _readinessScore = (74 + completedCount).clamp(0, 99);
+    });
   }
 
   void _onMasteryUpdated(String subjectId, int newMastery) {
@@ -145,20 +230,24 @@ class _DashboardScreenState extends State<DashboardScreen> {
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               // ===============================================================
-              // SECTION 1: EUEE 2026 Countdown & Readiness Hero Card
+              // SECTION 1: EUEE 2026 Countdown & Readiness Hero Card (No glow)
               // ===============================================================
               HeroCountdownCard(
                 gradeLabel: gradeLabel,
                 readinessScore: _readinessScore,
                 onContinueUnit4: _onContinueUnit4,
+                targetDate: _examDate,
               ),
 
               const SizedBox(height: 20),
 
               // ===============================================================
-              // SECTION 2: Live Curriculum Bento Grid (2x2)
+              // SECTION 2: Live Curriculum Bento Grid (2x2: Real database units)
               // ===============================================================
               CurriculumBentoGrid(
+                unitsMastered: _unitsMastered,
+                totalUnits: _totalUnits,
+                accuracyPercentage: _accuracyPct,
                 focusMinutes: _focusMinutes,
                 focusGoalMinutes: _focusGoalMinutes,
                 onQuickLogFocus: _onQuickLogFocus,
@@ -169,32 +258,23 @@ class _DashboardScreenState extends State<DashboardScreen> {
               const SizedBox(height: 20),
 
               // ===============================================================
-              // SECTION 3: Today's Study Plan
+              // SECTION 3: Today's Study Plan (Empty by default & deletable)
               // ===============================================================
               StudyPlanSection(
                 tasks: _tasks,
                 onToggleTask: _onToggleTask,
                 onAddTask: _onAddTask,
+                onAddStudyPlan: _onAddStudyPlan,
+                onDeleteTask: _onDeleteTask,
               ),
 
-              const SizedBox(height: 20),
-
-              // ===============================================================
-              // SECTION 4: Subject Mastery & EUEE Drill Launcher
-              // ===============================================================
-              SubjectMasterySection(
-                subjects: _subjects,
-                onStartDrill: _onStartDrill,
-              ),
-
-              const SizedBox(height: 20),
-
-              // ===============================================================
-              // SECTION 5: Quick Formula & Concept Flashcards Carousel
-              // ===============================================================
-              FormulaFlashcardsCarousel(
-                flashcards: _flashcards,
-              ),
+              // SECTION 4: Quick Formula & Concept Flashcards (Gated)
+              if (FeatureFlags.enableFlashcards) ...[
+                const SizedBox(height: 20),
+                FormulaFlashcardsCarousel(
+                  flashcards: _flashcards,
+                ),
+              ],
             ],
           ),
         ),
