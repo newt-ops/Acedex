@@ -86,6 +86,8 @@ class AuthService {
 
     await _storage.saveTokens(tokens);
     await _storage.saveProfile(user);
+    await _storage.saveLastPhone(cleanPhone);
+    await _storage.setSeenSplash(true);
 
     return user;
   }
@@ -138,6 +140,8 @@ class AuthService {
 
     await _storage.saveTokens(tokens);
     await _storage.saveProfile(user);
+    await _storage.saveLastPhone(cleanPhone);
+    await _storage.setSeenSplash(true);
 
     return user;
   }

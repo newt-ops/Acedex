@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:hugeicons/hugeicons.dart';
 import '../../../core/network/api_exception.dart';
+import '../../../core/storage/auth_storage.dart';
 import '../../../core/theme/app_colors.dart';
 import '../../../core/ui/animations/bounceable.dart';
 import '../../../core/ui/inputs/acedex_theme_toggle.dart';
@@ -97,6 +98,9 @@ class _LoginPinScreenState extends State<LoginPinScreen>
       );
 
       if (!mounted) return;
+      await AuthStorage.instance.saveLastPhone(cleanPhone);
+      await AuthStorage.instance.setSeenSplash(true);
+      if (!mounted) return;
       HapticFeedback.mediumImpact();
       Navigator.of(context).pushNamedAndRemoveUntil(
         '/home',
@@ -155,7 +159,13 @@ class _LoginPinScreenState extends State<LoginPinScreen>
         leading: Padding(
           padding: const EdgeInsets.only(left: 16),
           child: AcedexBounceable(
-            onTap: () => Navigator.of(context).pop(),
+            onTap: () {
+              if (Navigator.of(context).canPop()) {
+                Navigator.of(context).pop();
+              } else {
+                Navigator.of(context).pushReplacementNamed('/auth');
+              }
+            },
             child: Center(
               child: HugeIcon(
                 icon: HugeIcons.strokeRoundedArrowLeft01,
@@ -245,6 +255,26 @@ class _LoginPinScreenState extends State<LoginPinScreen>
                               ),
                             ),
                           ],
+                        ),
+                      ),
+                      const SizedBox(height: 8),
+
+                      // Switch Account / Use different number link
+                      AcedexBounceable(
+                        onTap: () {
+                          Navigator.of(context).pushReplacementNamed('/auth');
+                        },
+                        child: Padding(
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 10, vertical: 4),
+                          child: Text(
+                            'Switch Account',
+                            style: TextStyle(
+                              fontSize: 12,
+                              fontWeight: FontWeight.w700,
+                              color: accent,
+                            ),
+                          ),
                         ),
                       ),
 

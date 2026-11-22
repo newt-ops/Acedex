@@ -11,6 +11,8 @@ class AuthStorage {
   static const String _keyProfile = 'acedex_user_profile';
   static const String _keyHasSeenOnboarding = 'acedex_seen_onboarding';
   static const String _keyAvatar = 'acedex_student_avatar';
+  static const String _keyLastPhone = 'acedex_last_phone';
+  static const String _keyHasSeenSplash = 'acedex_seen_splash';
 
   static AuthStorage? _instance;
   static AuthStorage get instance => _instance ??= AuthStorage._();
@@ -20,6 +22,7 @@ class AuthStorage {
   String? _cachedToken;
   UserProfile? _cachedProfile;
   StudentAvatar? _cachedAvatar;
+  String? _cachedLastPhone;
 
   final ValueNotifier<StudentAvatar> avatarNotifier =
       ValueNotifier<StudentAvatar>(StudentAvatar.defaultSilhouette);
@@ -37,6 +40,35 @@ class AuthStorage {
     _cachedProfile = profile;
     final prefs = await SharedPreferences.getInstance();
     await prefs.setString(_keyProfile, jsonEncode(profile.toJson()));
+    if (profile.phone != null && profile.phone!.isNotEmpty) {
+      await saveLastPhone(profile.phone!);
+    }
+  }
+
+  Future<void> saveLastPhone(String phone) async {
+    _cachedLastPhone = phone;
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setString(_keyLastPhone, phone);
+  }
+
+  Future<String?> getLastPhone() async {
+    if (_cachedLastPhone != null) return _cachedLastPhone;
+    final prefs = await SharedPreferences.getInstance();
+    _cachedLastPhone = prefs.getString(_keyLastPhone);
+    if (_cachedLastPhone == null && _cachedProfile?.phone != null) {
+      _cachedLastPhone = _cachedProfile!.phone;
+    }
+    return _cachedLastPhone;
+  }
+
+  Future<bool> hasSeenSplash() async {
+    final prefs = await SharedPreferences.getInstance();
+    return prefs.getBool(_keyHasSeenSplash) ?? false;
+  }
+
+  Future<void> setSeenSplash(bool seen) async {
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setBool(_keyHasSeenSplash, seen);
   }
 
   Future<String?> getToken() async {
@@ -102,6 +134,7 @@ class AuthStorage {
     _cachedToken = null;
     _cachedProfile = null;
     _cachedAvatar = StudentAvatar.defaultSilhouette;
+    _cachedLastPhone = null;
     avatarNotifier.value = StudentAvatar.defaultSilhouette;
     final prefs = await SharedPreferences.getInstance();
     await prefs.remove(_keyToken);

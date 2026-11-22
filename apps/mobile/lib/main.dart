@@ -10,6 +10,7 @@ import 'features/auth/screens/login_pin_screen.dart';
 import 'features/home/screens/home_screen.dart';
 import 'features/onboarding/screens/onboarding_screen.dart';
 import 'features/splash/screens/loading_screen.dart';
+import 'features/splash/screens/minimal_loading_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -28,6 +29,8 @@ void main() async {
   final token = await storage.getToken();
   final profile = await storage.getProfile();
   final hasSeenOnboarding = await storage.hasSeenOnboarding();
+  final hasSeenSplash = await storage.hasSeenSplash();
+  final lastPhone = await storage.getLastPhone() ?? profile?.phone;
 
   final prefs = await SharedPreferences.getInstance();
   final savedTheme = prefs.getString('acedex_theme_mode');
@@ -42,6 +45,9 @@ void main() async {
   runApp(AcedexApp(
     initialUser: token != null ? profile : null,
     hasSeenOnboarding: hasSeenOnboarding,
+    hasSeenSplash: hasSeenSplash,
+    lastPhone: lastPhone,
+    requirePinOnLaunch: true,
   ));
 }
 
@@ -79,15 +85,25 @@ class AcedexApp extends StatelessWidget {
 
   final UserProfile? initialUser;
   final bool hasSeenOnboarding;
+  final bool hasSeenSplash;
+  final String? lastPhone;
+  final bool requirePinOnLaunch;
 
   const AcedexApp({
     super.key,
     this.initialUser,
     this.hasSeenOnboarding = false,
+    this.hasSeenSplash = false,
+    this.lastPhone,
+    this.requirePinOnLaunch = false,
   });
 
   @override
   Widget build(BuildContext context) {
+    final String initialRouteName = (initialUser != null && !requirePinOnLaunch)
+        ? '/home'
+        : (hasSeenSplash ? '/loading/minimal' : '/loading');
+
     return ValueListenableBuilder<ThemeMode>(
       valueListenable: themeModeNotifier,
       builder: (context, themeMode, _) {
@@ -98,9 +114,11 @@ class AcedexApp extends StatelessWidget {
           theme: AppTheme.lightTheme,
           darkTheme: AppTheme.darkTheme,
           themeMode: themeMode,
-          initialRoute: initialUser != null ? '/home' : '/loading',
+          initialRoute: initialRouteName,
           routes: {
             '/loading': (context) => const LoadingScreen(),
+            '/loading/minimal': (context) =>
+                MinimalLoadingScreen(lastPhone: lastPhone),
             '/auth': (context) {
               final args = ModalRoute.of(context)?.settings.arguments
                   as Map<String, dynamic>?;
@@ -110,7 +128,7 @@ class AcedexApp extends StatelessWidget {
             '/auth/pin': (context) {
               final args = ModalRoute.of(context)?.settings.arguments
                   as Map<String, dynamic>?;
-              final phone = args?['phone'] as String? ?? '';
+              final phone = args?['phone'] as String? ?? lastPhone ?? '';
               return LoginPinScreen(phone: phone);
             },
             '/onboarding': (context) => const OnboardingScreen(),
