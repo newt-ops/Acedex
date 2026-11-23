@@ -150,6 +150,12 @@ class _StudyScreenState extends State<StudyScreen> {
         final Map<String, SubjectCurriculum> newMap = {};
 
         for (final s in subjData) {
+          final streamCategory = (s['streamCategory'] as String? ?? '').toLowerCase();
+          if (streamCategory.isNotEmpty) {
+            if (_studentStream == 'natural' && streamCategory == 'social') continue;
+            if (_studentStream == 'social' && streamCategory == 'natural') continue;
+          }
+
           final code = (s['code'] as String? ?? '').toUpperCase();
           final name = s['name'] as String? ?? '';
           final slug = (s['slug'] as String? ?? name.toLowerCase()).trim();
