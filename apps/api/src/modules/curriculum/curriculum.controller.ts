@@ -195,9 +195,9 @@ export class CurriculumController {
     req: AuthenticatedRequest,
     res: Response
   ): Promise<Response> {
-    const totalUnits = await UnitModel.countDocuments(); // ~237 across G9-12
-    const publishedUnits = await UnitModel.countDocuments({ isPublished: true }); // ~197
-    const totalQuestions = await QuestionModel.countDocuments(); // 2,955
+    const totalUnits = await UnitModel.countDocuments(); // 237 across G9-12
+    const publishedUnits = await UnitModel.countDocuments({ isPublished: true }); // 237 published
+    const totalQuestions = await QuestionModel.countDocuments(); // 3,555 questions
 
     let unitsMastered = 0;
     let accuracy = 0.0;
