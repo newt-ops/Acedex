@@ -5,8 +5,8 @@ export const requestLogger = pinoHttp({
   logger,
   autoLogging: {
     ignore: (req) => {
-      // Don't flood logs with polling health check calls if desired
-      return req.url === '/health' && process.env.NODE_ENV === 'test';
+      // Suppress automated health check polling from flooding production & test logs
+      return req.url === '/health';
     },
   },
   serializers: {
