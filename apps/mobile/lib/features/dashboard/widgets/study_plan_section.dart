@@ -55,16 +55,10 @@ class _StudyPlanSectionState extends State<StudyPlanSection> {
     final theme = Theme.of(context);
     final isDark = theme.brightness == Brightness.dark;
     final primaryColor = theme.colorScheme.primary;
-    final surfaceColor = isDark
-        ? const Color(0xFF1B1B1F)
-        : const Color(0xFFF4F4F6);
+    final surfaceColor = isDark ? const Color(0xFF1B1B1F) : const Color(0xFFF4F4F6);
     final raisedBg = isDark ? const Color(0xFF2B2B31) : Colors.white;
-    final lineBorder = isDark
-        ? const Color(0xFF2B2B31)
-        : const Color(0xFFE4E4E8);
-    final subtextColor = isDark
-        ? AppColors.darkSubtext
-        : AppColors.lightSubtext;
+    final lineBorder = isDark ? const Color(0xFF2B2B31) : const Color(0xFFE4E4E8);
+    final subtextColor = isDark ? AppColors.darkSubtext : AppColors.lightSubtext;
 
     final completedCount = widget.tasks.where((t) => t.completed).length;
     final totalCount = widget.tasks.length;
@@ -80,47 +74,36 @@ class _StudyPlanSectionState extends State<StudyPlanSection> {
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Expanded(
-              child: Row(
-                children: [
-                  Flexible(
-                    child: Text(
-                      "Today's Study Plan",
-                      maxLines: 1,
-                      overflow: TextOverflow.ellipsis,
-                      style: TextStyle(
-                        fontSize: 15,
-                        fontWeight: FontWeight.w700,
-                        letterSpacing: -0.3,
-                        color: theme.colorScheme.onSurface,
-                      ),
+            Row(
+              children: [
+                Text(
+                  "Today's Study Plan",
+                  style: TextStyle(
+                    fontSize: 15,
+                    fontWeight: FontWeight.w700,
+                    letterSpacing: -0.3,
+                    color: theme.colorScheme.onSurface,
+                  ),
+                ),
+                const SizedBox(width: 8),
+                Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2.5),
+                  decoration: BoxDecoration(
+                    color: primaryColor.withValues(alpha: 0.14),
+                    borderRadius: BorderRadius.circular(999),
+                  ),
+                  child: Text(
+                    totalCount == 0 ? '0 planned' : '$completedCount of $totalCount done',
+                    style: TextStyle(
+                      fontSize: 10.5,
+                      fontWeight: FontWeight.w700,
+                      color: primaryColor,
                     ),
                   ),
-                  const SizedBox(width: 8),
-                  Container(
-                    padding: const EdgeInsets.symmetric(
-                      horizontal: 8,
-                      vertical: 2.5,
-                    ),
-                    decoration: BoxDecoration(
-                      color: primaryColor.withValues(alpha: 0.14),
-                      borderRadius: BorderRadius.circular(999),
-                    ),
-                    child: Text(
-                      totalCount == 0
-                          ? '0 planned'
-                          : '$completedCount of $totalCount done',
-                      style: TextStyle(
-                        fontSize: 10.5,
-                        fontWeight: FontWeight.w700,
-                        color: primaryColor,
-                      ),
-                    ),
-                  ),
-                ],
-              ),
+                ),
+              ],
             ),
-            const SizedBox(width: 8),
+
             AcedexBounceable(
               onTap: _openAddModal,
               child: Container(
@@ -253,35 +236,24 @@ class _StudyPlanSectionState extends State<StudyPlanSection> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Expanded(
-                    child: Row(
-                      children: [
-                        HugeIcon(
-                          icon: HugeIcons.strokeRoundedCheckmarkCircle01,
-                          color: isDark
-                              ? AppColors.darkSuccess
-                              : AppColors.success,
-                          size: 16,
+                  Row(
+                    children: [
+                      HugeIcon(
+                        icon: HugeIcons.strokeRoundedCheckmarkCircle01,
+                        color: isDark ? AppColors.darkSuccess : AppColors.success,
+                        size: 16,
+                      ),
+                      const SizedBox(width: 8),
+                      Text(
+                        'All daily goals complete! +50 XP',
+                        style: TextStyle(
+                          fontSize: 11.5,
+                          fontWeight: FontWeight.w700,
+                          color: isDark ? AppColors.darkSuccess : AppColors.success,
                         ),
-                        const SizedBox(width: 8),
-                        Flexible(
-                          child: Text(
-                            'All daily goals complete! +50 XP',
-                            maxLines: 1,
-                            overflow: TextOverflow.ellipsis,
-                            style: TextStyle(
-                              fontSize: 11.5,
-                              fontWeight: FontWeight.w700,
-                              color: isDark
-                                  ? AppColors.darkSuccess
-                                  : AppColors.success,
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
+                      ),
+                    ],
                   ),
-                  const SizedBox(width: 8),
                   Text(
                     '100%',
                     style: TextStyle(
@@ -311,16 +283,13 @@ class _StudyPlanSectionState extends State<StudyPlanSection> {
 
               final rowBg = isUpNext
                   ? (isDark
-                        ? primaryColor.withValues(alpha: 0.18)
-                        : primaryColor.withValues(alpha: 0.08))
+                      ? primaryColor.withValues(alpha: 0.18)
+                      : primaryColor.withValues(alpha: 0.08))
                   : surfaceColor;
               final rowBorder = isUpNext ? primaryColor : lineBorder;
 
               return Container(
-                padding: const EdgeInsets.symmetric(
-                  horizontal: 12,
-                  vertical: 10,
-                ),
+                padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
                 decoration: BoxDecoration(
                   color: rowBg,
                   borderRadius: BorderRadius.circular(16),
@@ -357,8 +326,8 @@ class _StudyPlanSectionState extends State<StudyPlanSection> {
 
                     // Task Title & Subject Badge
                     Expanded(
-                      child: AcedexBounceable(
-                        scaleFactor: 0.98,
+                      child: GestureDetector(
+                        behavior: HitTestBehavior.opaque,
                         onTap: () => widget.onToggleTask(task.id),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -386,10 +355,7 @@ class _StudyPlanSectionState extends State<StudyPlanSection> {
                               crossAxisAlignment: WrapCrossAlignment.center,
                               children: [
                                 Container(
-                                  padding: const EdgeInsets.symmetric(
-                                    horizontal: 6,
-                                    vertical: 2,
-                                  ),
+                                  padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
                                   decoration: BoxDecoration(
                                     color: raisedBg,
                                     borderRadius: BorderRadius.circular(6),
@@ -408,9 +374,7 @@ class _StudyPlanSectionState extends State<StudyPlanSection> {
                                       ),
                                       const SizedBox(width: 5),
                                       ConstrainedBox(
-                                        constraints: const BoxConstraints(
-                                          maxWidth: 85,
-                                        ),
+                                        constraints: const BoxConstraints(maxWidth: 85),
                                         child: Text(
                                           task.subject,
                                           maxLines: 1,
@@ -425,8 +389,7 @@ class _StudyPlanSectionState extends State<StudyPlanSection> {
                                     ],
                                   ),
                                 ),
-                                if (task.timeSpan != null &&
-                                    task.timeSpan!.isNotEmpty)
+                                if (task.timeSpan != null && task.timeSpan!.isNotEmpty)
                                   Text(
                                     task.timeSpan!,
                                     style: TextStyle(
@@ -435,17 +398,11 @@ class _StudyPlanSectionState extends State<StudyPlanSection> {
                                       color: subtextColor,
                                     ),
                                   ),
-                                if (task.focusMode != null &&
-                                    task.focusMode!.isNotEmpty)
+                                if (task.focusMode != null && task.focusMode!.isNotEmpty)
                                   Container(
-                                    padding: const EdgeInsets.symmetric(
-                                      horizontal: 5,
-                                      vertical: 1.5,
-                                    ),
+                                    padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 1.5),
                                     decoration: BoxDecoration(
-                                      color: primaryColor.withValues(
-                                        alpha: 0.12,
-                                      ),
+                                      color: primaryColor.withValues(alpha: 0.12),
                                       borderRadius: BorderRadius.circular(4),
                                     ),
                                     child: Text(
@@ -459,10 +416,7 @@ class _StudyPlanSectionState extends State<StudyPlanSection> {
                                   ),
                                 if (isUpNext)
                                   Container(
-                                    padding: const EdgeInsets.symmetric(
-                                      horizontal: 6,
-                                      vertical: 2,
-                                    ),
+                                    padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
                                     decoration: BoxDecoration(
                                       color: primaryColor,
                                       borderRadius: BorderRadius.circular(6),
@@ -488,27 +442,19 @@ class _StudyPlanSectionState extends State<StudyPlanSection> {
 
                     // Duration Badge Pill
                     Container(
-                      padding: const EdgeInsets.symmetric(
-                        horizontal: 8,
-                        vertical: 4,
-                      ),
+                      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
                       decoration: BoxDecoration(
                         color: raisedBg,
                         borderRadius: BorderRadius.circular(999),
                         border: Border.all(color: lineBorder),
                       ),
-                      child: ConstrainedBox(
-                        constraints: const BoxConstraints(maxWidth: 80),
-                        child: Text(
-                          task.duration,
-                          maxLines: 1,
-                          overflow: TextOverflow.ellipsis,
-                          style: TextStyle(
-                            fontSize: 10.5,
-                            fontWeight: FontWeight.w700,
-                            color: subtextColor,
-                            fontFeatures: const [FontFeature.tabularFigures()],
-                          ),
+                      child: Text(
+                        task.duration,
+                        style: TextStyle(
+                          fontSize: 10.5,
+                          fontWeight: FontWeight.w700,
+                          color: subtextColor,
+                          fontFeatures: const [FontFeature.tabularFigures()],
                         ),
                       ),
                     ),
@@ -521,8 +467,7 @@ class _StudyPlanSectionState extends State<StudyPlanSection> {
                           final confirmed = await showAcedexConfirmDialog(
                             context,
                             title: 'Delete Task',
-                            message:
-                                'Are you sure you want to remove "${task.title}" from today\'s plan?',
+                            message: 'Are you sure you want to remove "${task.title}" from today\'s plan?',
                             confirmLabel: 'Delete',
                             cancelLabel: 'Keep',
                             isDestructive: true,
