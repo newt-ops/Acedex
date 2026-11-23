@@ -365,7 +365,7 @@ class StudentIdCardState extends State<StudentIdCard>
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     AcedexBounceable(
-                      onTap: () => widget.onEditStep?.call(0),
+                      onTap: widget.onEditStep != null ? () => widget.onEditStep!(0) : null,
                       child: Row(
                         children: [
                           Flexible(
@@ -392,7 +392,7 @@ class StudentIdCardState extends State<StudentIdCard>
                     ),
                     const SizedBox(height: 4),
                     AcedexBounceable(
-                      onTap: () => widget.onEditStep?.call(1),
+                      onTap: widget.onEditStep != null ? () => widget.onEditStep!(1) : null,
                       child: Row(
                         children: [
                           Text(
@@ -428,7 +428,7 @@ class StudentIdCardState extends State<StudentIdCard>
             runSpacing: 7,
             children: [
               AcedexBounceable(
-                onTap: () => widget.onEditStep?.call(2),
+                onTap: widget.onEditStep != null ? () => widget.onEditStep!(2) : null,
                 child: _buildChip(
                   icon: isFemale
                       ? HugeIcons.strokeRoundedFemale02
@@ -440,7 +440,7 @@ class StudentIdCardState extends State<StudentIdCard>
                 ),
               ),
               AcedexBounceable(
-                onTap: () => widget.onEditStep?.call(3),
+                onTap: widget.onEditStep != null ? () => widget.onEditStep!(3) : null,
                 child: _buildChip(
                   icon: HugeIcons.strokeRoundedMortarboard02,
                   label: 'Grade ${widget.draft.grade}',
@@ -451,7 +451,7 @@ class StudentIdCardState extends State<StudentIdCard>
               ),
               if (widget.draft.requiresStream)
                 AcedexBounceable(
-                  onTap: () => widget.onEditStep?.call(4),
+                  onTap: widget.onEditStep != null ? () => widget.onEditStep!(4) : null,
                   child: _buildChip(
                     icon: isNatural
                         ? HugeIcons.strokeRoundedAtom02

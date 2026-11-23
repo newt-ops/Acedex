@@ -9,6 +9,7 @@ import '../../theme/app_colors.dart';
 import '../animations/bounceable.dart';
 import '../avatars/student_avatar_widget.dart';
 import '../feedback/profile_photo_modal.dart';
+import '../../../main.dart';
 
 /// Single Unified Apple iOS Header Bar (68px Height)
 ///
@@ -46,14 +47,7 @@ class AcedexHeaderBar extends StatefulWidget implements PreferredSizeWidget {
 
 class _AcedexHeaderBarState extends State<AcedexHeaderBar>
     with TickerProviderStateMixin {
-  late int _streakCount;
   late bool _hasUnread;
-
-  // Streak bounce & +1 float animation controllers
-  late final AnimationController _streakBounceController;
-  late final AnimationController _plusOneController;
-  late final Animation<double> _plusOneOffsetAnimation;
-  late final Animation<double> _plusOneOpacityAnimation;
 
   // Notification bell pendulum ring animation controller
   late final AnimationController _bellRingController;
@@ -62,45 +56,10 @@ class _AcedexHeaderBarState extends State<AcedexHeaderBar>
   @override
   void initState() {
     super.initState();
-    _streakCount = widget.initialStreak;
     _hasUnread = widget.initialHasUnread;
 
     // Initialize avatar from AuthStorage if not already loaded
     AuthStorage.instance.getAvatar();
-
-    // Streak spring bounce
-    _streakBounceController = AnimationController(
-      vsync: this,
-      duration: const Duration(milliseconds: 480),
-    );
-
-    // Floating +1 pill animation
-    _plusOneController = AnimationController(
-      vsync: this,
-      duration: const Duration(milliseconds: 950),
-    );
-    _plusOneOffsetAnimation = Tween<double>(begin: 4.0, end: -28.0).animate(
-      CurvedAnimation(
-        parent: _plusOneController,
-        curve: Curves.easeOutCubic,
-      ),
-    );
-    _plusOneOpacityAnimation = TweenSequence<double>([
-      TweenSequenceItem(
-        tween: Tween<double>(begin: 0.0, end: 1.0)
-            .chain(CurveTween(curve: Curves.easeIn)),
-        weight: 25,
-      ),
-      TweenSequenceItem(
-        tween: ConstantTween<double>(1.0),
-        weight: 45,
-      ),
-      TweenSequenceItem(
-        tween: Tween<double>(begin: 1.0, end: 0.0)
-            .chain(CurveTween(curve: Curves.easeOut)),
-        weight: 30,
-      ),
-    ]).animate(_plusOneController);
 
     // Bell pendulum ring animation
     _bellRingController = AnimationController(
@@ -138,8 +97,6 @@ class _AcedexHeaderBarState extends State<AcedexHeaderBar>
 
   @override
   void dispose() {
-    _streakBounceController.dispose();
-    _plusOneController.dispose();
     _bellRingController.dispose();
     super.dispose();
   }
@@ -173,15 +130,212 @@ class _AcedexHeaderBarState extends State<AcedexHeaderBar>
     return name.substring(0, name.length >= 2 ? 2 : 1).toUpperCase();
   }
 
-  void _onStreakTapped() {
-    HapticFeedback.lightImpact();
-    setState(() {
-      _streakCount += 1;
-    });
+  void _showThemeModePopover(BuildContext context) {
+    HapticFeedback.selectionClick();
+    showGeneralDialog(
+      context: context,
+      barrierDismissible: true,
+      barrierLabel: 'Dismiss Theme Popover',
+      barrierColor: Colors.black.withValues(alpha: 0.32),
+      transitionDuration: const Duration(milliseconds: 220),
+      pageBuilder: (dialogContext, animation, secondaryAnimation) {
+        final theme = Theme.of(context);
+        final isDark = theme.brightness == Brightness.dark;
+        final popoverBg = isDark ? const Color(0xFF1B1B20) : Colors.white;
+        final border = isDark ? const Color(0xFF2E2E38) : const Color(0xFFE5E5EB);
+        final subtextColor = isDark ? AppColors.darkSubtext : AppColors.lightSubtext;
+        final primaryColor = theme.colorScheme.primary;
 
-    _streakBounceController.forward(from: 0.0);
-    _plusOneController.forward(from: 0.0);
-    widget.onStreakTap?.call();
+        final modes = [
+          (
+            ThemeMode.system,
+            HugeIcons.strokeRoundedLaptop,
+            'System Default',
+            'Follow device settings',
+            isDark ? Colors.white70 : const Color(0xFF4B5563),
+          ),
+          (
+            ThemeMode.light,
+            HugeIcons.strokeRoundedSun02,
+            'Light Mode',
+            'Clean, bright interface',
+            const Color(0xFFF59E0B),
+          ),
+          (
+            ThemeMode.dark,
+            HugeIcons.strokeRoundedMoon02,
+            'Dark Mode',
+            'Deep OLED night palette',
+            const Color(0xFF38BDF8),
+          ),
+        ];
+
+        return SafeArea(
+          child: Align(
+            alignment: Alignment.topRight,
+            child: Padding(
+              padding: const EdgeInsets.only(top: 54, right: 16),
+              child: Material(
+                color: Colors.transparent,
+                child: Container(
+                  width: 260,
+                  decoration: BoxDecoration(
+                    color: popoverBg,
+                    borderRadius: BorderRadius.circular(20),
+                    border: Border.all(color: border, width: 1.2),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black.withValues(alpha: isDark ? 0.45 : 0.12),
+                        blurRadius: 24,
+                        offset: const Offset(0, 8),
+                      ),
+                    ],
+                  ),
+                  clipBehavior: Clip.antiAlias,
+                  child: ValueListenableBuilder<ThemeMode>(
+                    valueListenable: AcedexApp.themeModeNotifier,
+                    builder: (context, currentMode, _) {
+                      return Column(
+                        mainAxisSize: MainAxisSize.min,
+                        crossAxisAlignment: CrossAxisAlignment.stretch,
+                        children: [
+                          // Popover Header
+                          Padding(
+                            padding: const EdgeInsets.fromLTRB(16, 14, 16, 10),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Text(
+                                  'APPEARANCE',
+                                  style: TextStyle(
+                                    fontSize: 10.5,
+                                    fontWeight: FontWeight.w800,
+                                    letterSpacing: 0.8,
+                                    color: subtextColor,
+                                  ),
+                                ),
+                                Container(
+                                  padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 2),
+                                  decoration: BoxDecoration(
+                                    color: primaryColor.withValues(alpha: 0.12),
+                                    borderRadius: BorderRadius.circular(6),
+                                  ),
+                                  child: Text(
+                                    currentMode.name.toUpperCase(),
+                                    style: TextStyle(
+                                      fontSize: 9,
+                                      fontWeight: FontWeight.w800,
+                                      letterSpacing: 0.5,
+                                      color: primaryColor,
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          Divider(
+                            height: 1,
+                            thickness: 1,
+                            color: isDark ? const Color(0xFF282830) : const Color(0xFFEEEEF2),
+                          ),
+                          // 3 Features List (System, Light, Dark)
+                          ...modes.map((item) {
+                            final mode = item.$1;
+                            final icon = item.$2;
+                            final title = item.$3;
+                            final subtitle = item.$4;
+                            final iconColor = item.$5;
+                            final isSelected = currentMode == mode;
+
+                            return InkWell(
+                              key: Key('theme_option_${mode.name}'),
+                              onTap: () {
+                                HapticFeedback.selectionClick();
+                                AcedexApp.setThemeMode(mode);
+                                Navigator.of(dialogContext).pop();
+                              },
+                              child: Container(
+                                padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 11),
+                                color: isSelected
+                                    ? primaryColor.withValues(alpha: isDark ? 0.12 : 0.08)
+                                    : Colors.transparent,
+                                child: Row(
+                                  children: [
+                                    Container(
+                                      width: 32,
+                                      height: 32,
+                                      decoration: BoxDecoration(
+                                        color: isSelected
+                                            ? iconColor.withValues(alpha: 0.16)
+                                            : (isDark ? const Color(0xFF24242C) : const Color(0xFFF1F1F5)),
+                                        borderRadius: BorderRadius.circular(9),
+                                      ),
+                                      alignment: Alignment.center,
+                                      child: HugeIcon(
+                                        icon: icon,
+                                        color: iconColor,
+                                        size: 16,
+                                      ),
+                                    ),
+                                    const SizedBox(width: 11),
+                                    Expanded(
+                                      child: Column(
+                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        children: [
+                                          Text(
+                                            title,
+                                            style: TextStyle(
+                                              fontSize: 12.5,
+                                              fontWeight: isSelected ? FontWeight.w700 : FontWeight.w600,
+                                              color: isSelected ? primaryColor : theme.colorScheme.onSurface,
+                                            ),
+                                          ),
+                                          const SizedBox(height: 1.5),
+                                          Text(
+                                            subtitle,
+                                            style: TextStyle(
+                                              fontSize: 10,
+                                              fontWeight: FontWeight.w500,
+                                              color: subtextColor,
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                    if (isSelected)
+                                      Icon(
+                                        Icons.check_rounded,
+                                        size: 17,
+                                        color: primaryColor,
+                                      ),
+                                  ],
+                                ),
+                              ),
+                            );
+                          }),
+                        ],
+                      );
+                    },
+                  ),
+                ),
+              ),
+            ),
+          ),
+        );
+      },
+      transitionBuilder: (context, anim, secondaryAnim, child) {
+        return FadeTransition(
+          opacity: CurvedAnimation(parent: anim, curve: Curves.easeOutCubic),
+          child: ScaleTransition(
+            scale: Tween<double>(begin: 0.92, end: 1.0).animate(
+              CurvedAnimation(parent: anim, curve: Curves.easeOutBack),
+            ),
+            alignment: const Alignment(0.85, -0.85),
+            child: child,
+          ),
+        );
+      },
+    );
   }
 
   void _onBellTapped() {
@@ -389,87 +543,56 @@ class _AcedexHeaderBarState extends State<AcedexHeaderBar>
               Row(
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  // Tactile Streak Pill Button with Floating "+1" Badge
-                  Stack(
-                    clipBehavior: Clip.none,
-                    alignment: Alignment.center,
-                    children: [
-                      // Floating "+1" Royal Purple Pill Badge
-                      AnimatedBuilder(
-                        animation: _plusOneController,
-                        builder: (context, child) {
-                          if (!_plusOneController.isAnimating) {
-                            return const SizedBox.shrink();
-                          }
-                          return Positioned(
-                            top: _plusOneOffsetAnimation.value,
-                            child: Opacity(
-                              opacity: _plusOneOpacityAnimation.value,
-                              child: Container(
-                                padding: const EdgeInsets.symmetric(
-                                  horizontal: 7,
-                                  vertical: 1.5,
-                                ),
-                                decoration: BoxDecoration(
-                                  color: AppColors.royalPurple,
-                                  borderRadius: BorderRadius.circular(999),
-                                  boxShadow: [
-                                    BoxShadow(
-                                      color: AppColors.royalPurple.withValues(alpha: 0.36),
-                                      blurRadius: 10,
-                                      offset: const Offset(0, 4),
-                                    ),
-                                  ],
-                                ),
-                                child: const Text(
-                                  '+1',
-                                  style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 10.5,
-                                    fontWeight: FontWeight.w800,
-                                    letterSpacing: -0.1,
-                                  ),
-                                ),
-                              ),
-                            ),
-                          );
-                        },
-                      ),
-
-                      // Streak Pill Button
-                      AcedexBounceable(
-                        onTap: _onStreakTapped,
-                        child: Container(
-                          height: 36,
-                          padding: const EdgeInsets.symmetric(horizontal: 11),
-                          decoration: BoxDecoration(
-                            color: surfaceColor,
-                            borderRadius: BorderRadius.circular(999),
-                            border: Border.all(color: lineColor),
+                  // 3-Mode Appearance / Theme Toggle Button (System, Light, Dark)
+                  ValueListenableBuilder<ThemeMode>(
+                    valueListenable: AcedexApp.themeModeNotifier,
+                    builder: (context, currentMode, _) {
+                      final (icon, iconColor, tooltip) = switch (currentMode) {
+                        ThemeMode.light => (
+                            HugeIcons.strokeRoundedSun02,
+                            const Color(0xFFF59E0B),
+                            'Light Mode'
                           ),
-                          child: Row(
-                            mainAxisSize: MainAxisSize.min,
-                            children: [
-                              const HugeIcon(
-                                icon: HugeIcons.strokeRoundedFire,
-                                color: Color(0xFFF59E0B),
-                                size: 14,
-                              ),
-                              const SizedBox(width: 5),
-                              Text(
-                                '$_streakCount',
-                                style: TextStyle(
-                                  fontSize: 13,
-                                  fontWeight: FontWeight.w700,
-                                  color: theme.colorScheme.onSurface,
-                                  fontFeatures: const [FontFeature.tabularFigures()],
-                                ),
-                              ),
-                            ],
+                        ThemeMode.dark => (
+                            HugeIcons.strokeRoundedMoon02,
+                            const Color(0xFF38BDF8),
+                            'Dark Mode'
+                          ),
+                        ThemeMode.system => (
+                            HugeIcons.strokeRoundedLaptop,
+                            isDark ? Colors.white70 : const Color(0xFF4B5563),
+                            'System Mode'
+                          ),
+                      };
+
+                      return Tooltip(
+                        message: 'Appearance: $tooltip',
+                        child: AcedexBounceable(
+                          key: const Key('header_theme_toggle_button'),
+                          onTap: () {
+                            if (widget.onStreakTap != null) {
+                              widget.onStreakTap!();
+                            }
+                            _showThemeModePopover(context);
+                          },
+                          child: Container(
+                            width: 38,
+                            height: 38,
+                            decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                              color: surfaceColor,
+                              border: Border.all(color: lineColor),
+                            ),
+                            alignment: Alignment.center,
+                            child: HugeIcon(
+                              icon: icon,
+                              color: iconColor,
+                              size: 17,
+                            ),
                           ),
                         ),
-                      ),
-                    ],
+                      );
+                    },
                   ),
 
                   const SizedBox(width: 8),

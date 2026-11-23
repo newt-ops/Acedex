@@ -348,7 +348,10 @@ class _StudyPlanSectionState extends State<StudyPlanSection> {
                               ),
                             ),
                             const SizedBox(height: 4),
-                            Row(
+                            Wrap(
+                              spacing: 5,
+                              runSpacing: 4,
+                              crossAxisAlignment: WrapCrossAlignment.center,
                               children: [
                                 Container(
                                   padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
@@ -369,19 +372,23 @@ class _StudyPlanSectionState extends State<StudyPlanSection> {
                                         ),
                                       ),
                                       const SizedBox(width: 5),
-                                      Text(
-                                        task.subject,
-                                        style: TextStyle(
-                                          fontSize: 9.5,
-                                          fontWeight: FontWeight.w700,
-                                          color: theme.colorScheme.onSurface,
+                                      ConstrainedBox(
+                                        constraints: const BoxConstraints(maxWidth: 85),
+                                        child: Text(
+                                          task.subject,
+                                          maxLines: 1,
+                                          overflow: TextOverflow.ellipsis,
+                                          style: TextStyle(
+                                            fontSize: 9.5,
+                                            fontWeight: FontWeight.w700,
+                                            color: theme.colorScheme.onSurface,
+                                          ),
                                         ),
                                       ),
                                     ],
                                   ),
                                 ),
-                                if (task.timeSpan != null) ...[
-                                  const SizedBox(width: 6),
+                                if (task.timeSpan != null && task.timeSpan!.isNotEmpty)
                                   Text(
                                     task.timeSpan!,
                                     style: TextStyle(
@@ -390,9 +397,7 @@ class _StudyPlanSectionState extends State<StudyPlanSection> {
                                       color: subtextColor,
                                     ),
                                   ),
-                                ],
-                                if (task.focusMode != null) ...[
-                                  const SizedBox(width: 6),
+                                if (task.focusMode != null && task.focusMode!.isNotEmpty)
                                   Container(
                                     padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 1.5),
                                     decoration: BoxDecoration(
@@ -408,9 +413,7 @@ class _StudyPlanSectionState extends State<StudyPlanSection> {
                                       ),
                                     ),
                                   ),
-                                ],
-                                if (isUpNext) ...[
-                                  const SizedBox(width: 6),
+                                if (isUpNext)
                                   Container(
                                     padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
                                     decoration: BoxDecoration(
@@ -427,7 +430,6 @@ class _StudyPlanSectionState extends State<StudyPlanSection> {
                                       ),
                                     ),
                                   ),
-                                ],
                               ],
                             ),
                           ],

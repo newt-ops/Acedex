@@ -35,6 +35,34 @@ void main() {
       expect(tapped, isTrue);
     });
 
+    testWidgets('AcedexBounceable in scrollable does not trigger tap on drag scroll',
+        (WidgetTester tester) async {
+      bool tapped = false;
+
+      await tester.pumpWidget(
+        MaterialApp(
+          home: Scaffold(
+            body: ListView(
+              children: [
+                AcedexBounceable(
+                  onTap: () => tapped = true,
+                  child: const SizedBox(height: 100, child: Text('Scrollable Card')),
+                ),
+                const SizedBox(height: 1000),
+              ],
+            ),
+          ),
+        ),
+      );
+
+      // Drag to scroll vertically by 150px
+      await tester.drag(find.text('Scrollable Card'), const Offset(0, -150));
+      await tester.pumpAndSettle();
+
+      // Ensure scrolling did NOT trigger tap!
+      expect(tapped, isFalse);
+    });
+
     testWidgets('AcedexButton renders correct Teal styling and handles loading state',
         (WidgetTester tester) async {
       await tester.pumpWidget(

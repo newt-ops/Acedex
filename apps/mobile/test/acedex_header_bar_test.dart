@@ -8,6 +8,7 @@ import 'package:acedex/core/storage/auth_storage.dart';
 import 'package:acedex/core/ui/navigation/acedex_header_bar.dart';
 import 'package:acedex/core/ui/feedback/profile_photo_modal.dart';
 import 'package:acedex/core/ui/avatars/student_avatar_widget.dart';
+import 'package:acedex/main.dart';
 
 void main() {
   setUp(() {
@@ -43,7 +44,7 @@ void main() {
   }
 
   group('AcedexHeaderBar Widget Tests', () {
-    testWidgets('renders Apple iOS 68px header bar with avatar, greeting stack, streak, and bell', (tester) async {
+    testWidgets('renders Apple iOS 68px header bar with avatar, greeting stack, theme toggle, and bell', (tester) async {
       await tester.pumpWidget(
         buildTestableWidget(
           const AcedexHeaderBar(user: testUser),
@@ -64,9 +65,8 @@ void main() {
         findsOneWidget,
       );
 
-      // Verify Initial Streak Pill ("12") and Flame Icon
-      expect(find.text('12'), findsOneWidget);
-      expect(findHugeIcon(HugeIcons.strokeRoundedFire), findsOneWidget);
+      // Verify Theme Toggle Button is rendered
+      expect(find.byKey(const Key('header_theme_toggle_button')), findsOneWidget);
 
       // Verify Circular Notification Bell
       expect(findHugeIcon(HugeIcons.strokeRoundedNotification01), findsOneWidget);
@@ -75,27 +75,43 @@ void main() {
       expect(findHugeIcon(HugeIcons.strokeRoundedCamera01), findsOneWidget);
     });
 
-    testWidgets('tapping streak pill increments streak count and displays floating +1 badge', (tester) async {
+    testWidgets('tapping theme toggle button reveals 3-mode appearance popover (System, Light, Dark)', (tester) async {
+      AcedexApp.themeModeNotifier.value = ThemeMode.system;
       await tester.pumpWidget(
         buildTestableWidget(
-          const AcedexHeaderBar(user: testUser, initialStreak: 12),
+          const AcedexHeaderBar(user: testUser),
         ),
       );
       await tester.pumpAndSettle();
 
-      expect(find.text('12'), findsOneWidget);
+      final toggleFinder = find.byKey(const Key('header_theme_toggle_button'));
+      expect(toggleFinder, findsOneWidget);
 
-      // Tap streak pill button
-      await tester.tap(find.text('12'));
-      await tester.pump(const Duration(milliseconds: 100));
-
-      // Streak count increments to 13
-      expect(find.text('13'), findsOneWidget);
-      // Floating "+1" badge is visible
-      expect(find.text('+1'), findsOneWidget);
-
-      // Settle animation
+      // Tap theme toggle button
+      await tester.tap(toggleFinder);
       await tester.pumpAndSettle();
+
+      // Verify Popover reveals 3 appearance features
+      expect(find.text('APPEARANCE'), findsOneWidget);
+      expect(find.text('System Default'), findsOneWidget);
+      expect(find.text('Light Mode'), findsOneWidget);
+      expect(find.text('Dark Mode'), findsOneWidget);
+
+      // Tap Light Mode option
+      await tester.tap(find.byKey(const Key('theme_option_light')));
+      await tester.pumpAndSettle();
+
+      // Verify theme switched to light
+      expect(AcedexApp.themeModeNotifier.value, ThemeMode.light);
+
+      // Re-open popover and select Dark Mode
+      await tester.tap(find.byKey(const Key('header_theme_toggle_button')));
+      await tester.pumpAndSettle();
+      await tester.tap(find.byKey(const Key('theme_option_dark')));
+      await tester.pumpAndSettle();
+
+      // Verify theme switched to dark
+      expect(AcedexApp.themeModeNotifier.value, ThemeMode.dark);
     });
 
     testWidgets('tapping notification bell triggers ring and toggles unread state', (tester) async {

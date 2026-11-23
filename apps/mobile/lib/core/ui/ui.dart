@@ -12,6 +12,7 @@ export 'feedback/acedex_toast.dart';
 export 'feedback/acedex_dialog.dart';
 export 'feedback/acedex_bottom_sheet.dart';
 export 'feedback/acedex_state_views.dart';
+export 'feedback/acedex_skeleton.dart';
 export 'feedback/profile_photo_modal.dart';
 export 'inputs/acedex_text_field.dart';
 export 'inputs/acedex_toggle.dart';

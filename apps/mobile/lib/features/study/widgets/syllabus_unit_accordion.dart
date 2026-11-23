@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:hugeicons/hugeicons.dart';
 import '../../../core/theme/app_colors.dart';
 import '../../../core/ui/animations/bounceable.dart';
+import '../../../core/ui/feedback/acedex_skeleton.dart';
 import '../../../core/ui/progress/acedex_dots_loader.dart';
 import '../models/study_models.dart';
 
@@ -17,6 +18,7 @@ class SyllabusUnitAccordion extends StatefulWidget {
   final ValueChanged<StudyUnit>? onTakeUnitAssessment;
   final VoidCallback onResetFilters;
   final bool showNotesButton;
+  final bool isLoading;
 
   const SyllabusUnitAccordion({
     super.key,
@@ -30,6 +32,7 @@ class SyllabusUnitAccordion extends StatefulWidget {
     this.onTakeUnitAssessment,
     required this.onResetFilters,
     this.showNotesButton = true,
+    this.isLoading = false,
   });
 
   @override
@@ -135,7 +138,9 @@ class _SyllabusUnitAccordionState extends State<SyllabusUnitAccordion> {
     }
 
     final hasZeroMatches = visibleUnits.isEmpty;
-    final unitCountLabel = '${visibleUnits.length} ${visibleUnits.length == 1 ? "Unit" : "Units"} • Tap to expand';
+    final unitCountLabel = widget.isLoading
+        ? 'Loading units...'
+        : '${visibleUnits.length} ${visibleUnits.length == 1 ? "Unit" : "Units"} • Tap to expand';
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -166,7 +171,12 @@ class _SyllabusUnitAccordionState extends State<SyllabusUnitAccordion> {
 
         const SizedBox(height: 10),
 
-        if (hasZeroMatches)
+        if (widget.isLoading)
+          const AcedexSkeletonList(
+            itemCount: 4,
+            spacing: 10,
+          )
+        else if (hasZeroMatches)
           // Empty State Container
           Container(
             padding: const EdgeInsets.all(22),

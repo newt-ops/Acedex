@@ -47,6 +47,7 @@ class _StudyScreenState extends State<StudyScreen> {
   String _searchQuery = '';
   String _selectedFilter = 'all'; // 'all', 'progress', 'bookmarked'
   bool _isLoading = false;
+  String? _loadingUnitsSubjectId;
   String? _errorMessage;
 
   @override
@@ -178,10 +179,14 @@ class _StudyScreenState extends State<StudyScreen> {
             if (!_curriculumMap.containsKey(_activeSubjectId)) {
               _activeSubjectId = _curriculumMap.keys.first;
             }
+            _loadingUnitsSubjectId = _activeSubjectId;
           });
 
           // Fetch Units for the active subject
           await _fetchUnitsForSubject(_activeSubject);
+          if (mounted) {
+            setState(() => _loadingUnitsSubjectId = null);
+          }
         }
       }
     } catch (e) {
@@ -816,10 +821,14 @@ class _StudyScreenState extends State<StudyScreen> {
           SubjectPillRailAndSearch(
             subjects: subjectsList,
             activeSubjectId: _activeSubjectId,
-            onSelectSubject: (id) {
+            onSelectSubject: (id) async {
               setState(() => _activeSubjectId = id);
               if (_curriculumMap[id]?.units.isEmpty ?? true) {
-                _fetchUnitsForSubject(_curriculumMap[id]!);
+                setState(() => _loadingUnitsSubjectId = id);
+                await _fetchUnitsForSubject(_curriculumMap[id]!);
+                if (mounted) {
+                  setState(() => _loadingUnitsSubjectId = null);
+                }
               }
             },
             searchController: _searchController,
@@ -862,6 +871,7 @@ class _StudyScreenState extends State<StudyScreen> {
           // 3. Interactive Syllabus Unit Viewer (Expandable Accordion with 15-Q Assessments)
           SyllabusUnitAccordion(
             subject: subj,
+            isLoading: _loadingUnitsSubjectId == subj.id || (_isLoading && subj.units.isEmpty),
             searchQuery: _searchQuery,
             activeFilter: _selectedFilter,
             showNotesButton: FeatureFlags.enableSmartNotes,

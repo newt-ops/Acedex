@@ -35,7 +35,7 @@ class _AcedexBounceableState extends State<AcedexBounceable>
     with SingleTickerProviderStateMixin {
   late final AnimationController _controller;
   late final Animation<double> _scaleAnimation;
-  bool _isPointerInside = false;
+  bool _isPressed = false;
 
   @override
   void initState() {
@@ -67,27 +67,26 @@ class _AcedexBounceableState extends State<AcedexBounceable>
     super.dispose();
   }
 
-  void _onPointerDown(PointerDownEvent event) {
-    if (widget.onTap == null && widget.onLongPress == null) return;
-    _isPointerInside = true;
+  void _onTapDown(TapDownDetails details) {
+    _isPressed = true;
     if (widget.enableHaptics) {
       HapticFeedback.lightImpact();
     }
     _controller.forward();
   }
 
-  void _onPointerUp(PointerUpEvent event) {
-    if (!_isPointerInside) return;
-    _isPointerInside = false;
-    _controller.reverse();
-    if (widget.onTap != null) {
-      widget.onTap!();
+  void _onTapUp(TapUpDetails details) {
+    if (_isPressed) {
+      _isPressed = false;
+      _controller.reverse();
     }
   }
 
-  void _onPointerCancel(PointerCancelEvent event) {
-    _isPointerInside = false;
-    _controller.reverse();
+  void _onTapCancel() {
+    if (_isPressed) {
+      _isPressed = false;
+      _controller.reverse();
+    }
   }
 
   @override
@@ -96,32 +95,30 @@ class _AcedexBounceableState extends State<AcedexBounceable>
       return widget.child;
     }
 
-    return Listener(
+    return GestureDetector(
       behavior: widget.hitTestBehavior,
-      onPointerDown: _onPointerDown,
-      onPointerUp: _onPointerUp,
-      onPointerCancel: _onPointerCancel,
-      child: GestureDetector(
-        behavior: widget.hitTestBehavior,
-        onLongPress: widget.onLongPress != null
-            ? () {
-                if (widget.enableHaptics) {
-                  HapticFeedback.mediumImpact();
-                }
-                widget.onLongPress!();
+      onTapDown: _onTapDown,
+      onTapUp: _onTapUp,
+      onTapCancel: _onTapCancel,
+      onTap: widget.onTap,
+      onLongPress: widget.onLongPress != null
+          ? () {
+              if (widget.enableHaptics) {
+                HapticFeedback.mediumImpact();
               }
-            : null,
-        child: AnimatedBuilder(
-          animation: _scaleAnimation,
-          builder: (context, child) {
-            return Transform.scale(
-              scale: _scaleAnimation.value,
-              alignment: Alignment.center,
-              child: child,
-            );
-          },
-          child: widget.child,
-        ),
+              widget.onLongPress!();
+            }
+          : null,
+      child: AnimatedBuilder(
+        animation: _scaleAnimation,
+        builder: (context, child) {
+          return Transform.scale(
+            scale: _scaleAnimation.value,
+            alignment: Alignment.center,
+            child: child,
+          );
+        },
+        child: widget.child,
       ),
     );
   }
