@@ -6,7 +6,8 @@ import '../../../core/models/user_profile.dart';
 import '../../../core/network/api_client.dart';
 import '../../../core/network/api_endpoints.dart';
 import '../../../core/theme/app_colors.dart';
-import '../data/authentic_question_bank.dart';
+import '../../../core/ui/animations/bounceable.dart';
+import '../../../core/ui/progress/acedex_dots_loader.dart';
 import '../models/study_models.dart';
 import '../widgets/curriculum_hero_card.dart';
 import '../widgets/smart_notes_reader_sheet.dart';
@@ -16,32 +17,42 @@ import '../widgets/topic_drill_engine_sheet.dart';
 
 /// Clean Apple-Style Study & Curriculum Inside Screen (Tab 1: Study)
 ///
-/// Features dynamic curriculum synchronization from MongoDB Atlas:
-/// - Real-time Subject & Unit loading (56 units across Grades 9-12)
-/// - 15-Question Unit Assessment Engine with isolated answer key verification
-/// - Zero mock drill data; authentic curriculum questions only
+/// Fetches all subjects, units, and assessment questions 100% dynamically from MongoDB Atlas:
+/// - Real-time Subject & Unit loading (Grades 9-12)
+/// - 15-Question Unit Assessment Engine with authentic database questions
+/// - Zero hardcoded curriculum data
 /// - Bottom padding set to 130px to scroll clear of concave floating navigation bar.
 class StudyScreen extends StatefulWidget {
   final UserProfile? user;
+  final Map<String, SubjectCurriculum>? initialCurriculum;
 
-  const StudyScreen({super.key, this.user});
+  const StudyScreen({
+    super.key,
+    this.user,
+    this.initialCurriculum,
+  });
 
   @override
   State<StudyScreen> createState() => _StudyScreenState();
 }
 
 class _StudyScreenState extends State<StudyScreen> {
-  // In-memory mutable curriculum store initialized with authentic curriculum units
-  late Map<String, SubjectCurriculum> _curriculumMap;
+  // In-memory mutable curriculum store populated dynamically via API
+  Map<String, SubjectCurriculum> _curriculumMap = {};
   String _activeSubjectId = 'physics';
   final TextEditingController _searchController = TextEditingController();
   String _searchQuery = '';
   String _selectedFilter = 'all'; // 'all', 'progress', 'bookmarked'
+  bool _isLoading = false;
+  String? _errorMessage;
 
   @override
   void initState() {
     super.initState();
-    _curriculumMap = Map.from(defaultCurriculumData);
+    if (widget.initialCurriculum != null && widget.initialCurriculum!.isNotEmpty) {
+      _curriculumMap = Map.from(widget.initialCurriculum!);
+      _activeSubjectId = _curriculumMap.keys.first;
+    }
     _fetchLiveCurriculum();
   }
 
@@ -52,7 +63,18 @@ class _StudyScreenState extends State<StudyScreen> {
   }
 
   SubjectCurriculum get _activeSubject =>
-      _curriculumMap[_activeSubjectId] ?? _curriculumMap.values.first;
+      _curriculumMap[_activeSubjectId] ??
+      (_curriculumMap.isNotEmpty
+          ? _curriculumMap.values.first
+          : const SubjectCurriculum(
+              id: 'physics',
+              name: 'Physics',
+              mastery: 75,
+              lastTopicId: 'phy-u1',
+              iconData: HugeIcons.strokeRoundedAtom01,
+              color: AppColors.royalPurple,
+              units: [],
+            ));
 
   int _getBookmarkedCount(SubjectCurriculum subj) {
     int count = 0;
@@ -93,6 +115,13 @@ class _StudyScreenState extends State<StudyScreen> {
   Future<void> _fetchLiveCurriculum() async {
     final grade = widget.user?.grade ?? 12;
 
+    if (_curriculumMap.isEmpty) {
+      setState(() {
+        _isLoading = true;
+        _errorMessage = null;
+      });
+    }
+
     try {
       // 1. Fetch Subjects for this grade from API
       final subjRes = await ApiClient.instance.get(
@@ -127,13 +156,23 @@ class _StudyScreenState extends State<StudyScreen> {
               _activeSubjectId = _curriculumMap.keys.first;
             }
           });
+
+          // Fetch Units for the active subject
+          await _fetchUnitsForSubject(_activeSubject);
         }
       }
-
-      // 2. Fetch Units for the active subject
-      await _fetchUnitsForSubject(_activeSubject);
     } catch (e) {
-      debugPrint('[StudyScreen] Network fetch fallback to authentic database copy: $e');
+      debugPrint('[StudyScreen] Network fetch error: $e');
+      if (mounted && _curriculumMap.isEmpty) {
+        setState(() {
+          _errorMessage =
+              'Unable to connect to database. Please check your internet connection.';
+        });
+      }
+    } finally {
+      if (mounted) {
+        setState(() => _isLoading = false);
+      }
     }
   }
 
@@ -370,12 +409,16 @@ class _StudyScreenState extends State<StudyScreen> {
       }
     }
 
-    // 3. Fallback to authentic question bank
-    if (assessmentQuestions.isEmpty) {
-      assessmentQuestions = AuthenticQuestionBank.getQuestions(unitCode, unit);
-    }
+    if (!mounted) return;
 
-    if (!mounted || assessmentQuestions.isEmpty) return;
+    if (assessmentQuestions.isEmpty) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(
+          content: Text('Unable to load assessment questions from database. Please check your connection.'),
+        ),
+      );
+      return;
+    }
 
     TopicDrillEngineSheet.show(
       context,
@@ -480,6 +523,103 @@ class _StudyScreenState extends State<StudyScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+    final isDark = theme.brightness == Brightness.dark;
+
+    // Loading State
+    if (_isLoading && _curriculumMap.isEmpty) {
+      return Center(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(vertical: 80),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              AcedexDotsLoader(
+                color: isDark ? AppColors.accentDark : AppColors.royalPurple,
+                dotSize: 6.0,
+                gap: 4.5,
+              ),
+              const SizedBox(height: 14),
+              Text(
+                'Loading Curriculum from Database...',
+                style: TextStyle(
+                  fontSize: 12,
+                  fontWeight: FontWeight.w600,
+                  color: isDark ? AppColors.darkSecondaryText : AppColors.lightSecondaryText,
+                ),
+              ),
+            ],
+          ),
+        ),
+      );
+    }
+
+    // Error State
+    if (_errorMessage != null && _curriculumMap.isEmpty) {
+      return Center(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 28, vertical: 60),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Container(
+                width: 52,
+                height: 52,
+                decoration: BoxDecoration(
+                  color: isDark ? AppColors.darkErrorSoft : AppColors.lightErrorSoft,
+                  borderRadius: BorderRadius.circular(16),
+                ),
+                child: Center(
+                  child: HugeIcon(
+                    icon: HugeIcons.strokeRoundedAlertCircle,
+                    color: isDark ? AppColors.darkError : AppColors.error,
+                    size: 26,
+                  ),
+                ),
+              ),
+              const SizedBox(height: 14),
+              Text(
+                'Curriculum Unavailable',
+                style: TextStyle(
+                  fontSize: 15,
+                  fontWeight: FontWeight.w700,
+                  color: theme.colorScheme.onSurface,
+                ),
+              ),
+              const SizedBox(height: 6),
+              Text(
+                _errorMessage!,
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontSize: 11.5,
+                  color: isDark ? AppColors.darkSecondaryText : AppColors.lightSecondaryText,
+                ),
+              ),
+              const SizedBox(height: 18),
+              AcedexBounceable(
+                onTap: _fetchLiveCurriculum,
+                child: Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 9),
+                  decoration: BoxDecoration(
+                    color: isDark ? AppColors.accentDark : AppColors.royalPurple,
+                    borderRadius: BorderRadius.circular(999),
+                  ),
+                  child: const Text(
+                    'Retry Connection',
+                    style: TextStyle(
+                      fontSize: 11.5,
+                      fontWeight: FontWeight.w700,
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+      );
+    }
+
     final subj = _activeSubject;
     final subjectsList = _curriculumMap.values.toList();
     final bookmarkedCount = _getBookmarkedCount(subj);
