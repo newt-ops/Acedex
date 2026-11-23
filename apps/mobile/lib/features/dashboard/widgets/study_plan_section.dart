@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:hugeicons/hugeicons.dart';
 import '../../../core/theme/app_colors.dart';
 import '../../../core/ui/animations/bounceable.dart';
+import '../../../core/ui/feedback/acedex_dialog.dart';
 import '../models/dashboard_data.dart';
 import 'add_study_plan_sheet.dart';
 
@@ -458,11 +459,28 @@ class _StudyPlanSectionState extends State<StudyPlanSection> {
                       ),
                     ),
 
-                    // Deletable action button
+                    // Deletable action button with custom Acedex confirmation modal
                     if (widget.onDeleteTask != null) ...[
                       const SizedBox(width: 6),
                       AcedexBounceable(
-                        onTap: () => widget.onDeleteTask!(task.id),
+                        onTap: () async {
+                          final confirmed = await showAcedexConfirmDialog(
+                            context,
+                            title: 'Delete Task',
+                            message: 'Are you sure you want to remove "${task.title}" from today\'s plan?',
+                            confirmLabel: 'Delete',
+                            cancelLabel: 'Keep',
+                            isDestructive: true,
+                            icon: const HugeIcon(
+                              icon: HugeIcons.strokeRoundedDelete02,
+                              color: Color(0xFFEF4444),
+                              size: 22,
+                            ),
+                          );
+                          if (confirmed == true && context.mounted) {
+                            widget.onDeleteTask!(task.id);
+                          }
+                        },
                         child: Container(
                           width: 28,
                           height: 28,

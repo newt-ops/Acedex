@@ -4,6 +4,7 @@ import '../../../core/config/feature_flags.dart';
 import '../../../core/models/user_profile.dart';
 import '../../../core/network/api_client.dart';
 import '../../../core/network/api_endpoints.dart';
+import '../../../core/storage/auth_storage.dart';
 import '../models/dashboard_data.dart';
 import '../widgets/curriculum_bento_grid.dart';
 import '../widgets/formula_flashcards_carousel.dart';
@@ -55,9 +56,45 @@ class DashboardScreen extends StatefulWidget {
 
 class _DashboardScreenState extends State<DashboardScreen> {
   int _readinessScore = 76;
-  int _focusMinutes = 45;
+  final int _focusMinutes = 45;
   final int _focusGoalMinutes = 60;
+  int _extraFocusMinutes = 0;
   bool _standingIsAllTime = false;
+
+  static int _parseDurationMinutes(String duration) {
+    int total = 0;
+    final hourMatch = RegExp(r'(\d+)\s*h', caseSensitive: false).firstMatch(duration);
+    if (hourMatch != null) {
+      total += (int.tryParse(hourMatch.group(1)!) ?? 0) * 60;
+    }
+    final minMatch = RegExp(r'(\d+)\s*(?:m|min)', caseSensitive: false).firstMatch(duration);
+    if (minMatch != null) {
+      total += int.tryParse(minMatch.group(1)!) ?? 0;
+    }
+    if (total == 0) {
+      total = int.tryParse(RegExp(r'\d+').firstMatch(duration)?.group(0) ?? '') ?? 0;
+    }
+    return total;
+  }
+
+  int get _calculatedFocusMinutes {
+    if (_tasks.isEmpty) {
+      return _focusMinutes + _extraFocusMinutes;
+    }
+    final completedMins = _tasks
+        .where((t) => t.completed)
+        .fold<int>(0, (sum, t) => sum + _parseDurationMinutes(t.duration));
+    return completedMins + _extraFocusMinutes;
+  }
+
+  int get _calculatedFocusGoalMinutes {
+    if (_tasks.isEmpty) {
+      return _focusGoalMinutes;
+    }
+    final totalTaskMins = _tasks
+        .fold<int>(0, (sum, t) => sum + _parseDurationMinutes(t.duration));
+    return totalTaskMins > 0 ? (totalTaskMins > 60 ? totalTaskMins : 60) : _focusGoalMinutes;
+  }
 
   // Live Curriculum Pulse Metrics (Database: 237 units across G9-12)
   late int _unitsMastered;
@@ -81,9 +118,14 @@ class _DashboardScreenState extends State<DashboardScreen> {
     _unitsMastered = widget.initialUnitsMastered ?? 0;
     _totalUnits = widget.initialTotalUnits ?? 237;
     _accuracyPct = widget.initialAccuracyPct ?? 0.0;
-    _examDate = widget.initialExamDate ?? DateTime(2026, 6, 8, 9, 0);
+    final now = DateTime.now();
+    final defaultExamDate = now.isBefore(DateTime(now.year, 6, 8, 9, 0))
+        ? DateTime(now.year, 6, 8, 9, 0)
+        : DateTime(now.year + 1, 6, 8, 9, 0);
+    _examDate = widget.initialExamDate ?? defaultExamDate;
 
     unawaited(_fetchLiveDashboardData());
+    unawaited(AuthStorage.instance.getCompletedUnits());
   }
 
   Future<void> _fetchLiveDashboardData() async {
@@ -142,7 +184,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
 
   void _onQuickLogFocus() {
     setState(() {
-      _focusMinutes += 15;
+      _extraFocusMinutes += 15;
     });
   }
 
@@ -244,15 +286,24 @@ class _DashboardScreenState extends State<DashboardScreen> {
               // ===============================================================
               // SECTION 2: Live Curriculum Bento Grid (2x2: Real database units)
               // ===============================================================
-              CurriculumBentoGrid(
-                unitsMastered: _unitsMastered,
-                totalUnits: _totalUnits,
-                accuracyPercentage: _accuracyPct,
-                focusMinutes: _focusMinutes,
-                focusGoalMinutes: _focusGoalMinutes,
-                onQuickLogFocus: _onQuickLogFocus,
-                standingIsAllTime: _standingIsAllTime,
-                onToggleStanding: _onToggleStanding,
+              ValueListenableBuilder<Set<String>>(
+                valueListenable: AuthStorage.instance.completedUnitsNotifier,
+                builder: (context, completedUnits, _) {
+                  final effectiveUnitsMastered = completedUnits.isNotEmpty
+                      ? completedUnits.length
+                      : _unitsMastered;
+
+                  return CurriculumBentoGrid(
+                    unitsMastered: effectiveUnitsMastered,
+                    totalUnits: _totalUnits,
+                    accuracyPercentage: _accuracyPct,
+                    focusMinutes: _calculatedFocusMinutes,
+                    focusGoalMinutes: _calculatedFocusGoalMinutes,
+                    onQuickLogFocus: _onQuickLogFocus,
+                    standingIsAllTime: _standingIsAllTime,
+                    onToggleStanding: _onToggleStanding,
+                  );
+                },
               ),
 
               const SizedBox(height: 20),

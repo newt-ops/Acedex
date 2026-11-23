@@ -5,6 +5,7 @@ import '../../../core/config/feature_flags.dart';
 import '../../../core/models/user_profile.dart';
 import '../../../core/network/api_client.dart';
 import '../../../core/network/api_endpoints.dart';
+import '../../../core/storage/auth_storage.dart';
 import '../../../core/theme/app_colors.dart';
 import '../../../core/ui/animations/bounceable.dart';
 import '../../../core/ui/progress/acedex_dots_loader.dart';
@@ -55,6 +56,7 @@ class _StudyScreenState extends State<StudyScreen> {
     super.initState();
     _selectedGrade = widget.user?.grade ?? 12;
     _studentStream = widget.user?.stream ?? 'natural';
+    unawaited(AuthStorage.instance.getCompletedUnits());
     if (widget.initialCurriculum != null && widget.initialCurriculum!.isNotEmpty) {
       _curriculumMap = Map.from(widget.initialCurriculum!);
       _activeSubjectId = _curriculumMap.keys.first;
@@ -220,11 +222,14 @@ class _StudyScreenState extends State<StudyScreen> {
               '${subj.subjectCode}-G${grade.toString().padLeft(2, '0')}-U${unitNum.toString().padLeft(2, '0')}';
           final title = raw['title'] as String? ?? 'Unit $unitNum';
           final qCount = raw['questionCount'] as int? ?? 15;
-          final isDone = raw['isStudyCompleted'] == true || raw['passed'] == true;
+          final unitId = raw['_id'] as String? ?? unitCode;
+          final isDone = raw['isStudyCompleted'] == true ||
+              raw['passed'] == true ||
+              AuthStorage.instance.completedUnitsNotifier.value.contains(unitId);
           final bestScore = raw['bestScore'] as int?;
 
           return StudyUnit(
-            id: raw['_id'] as String? ?? unitCode,
+            id: unitId,
             code: code,
             unitCode: unitCode,
             title: title,
@@ -335,6 +340,8 @@ class _StudyScreenState extends State<StudyScreen> {
       _curriculumMap[subj.id] = updatedSubj;
       _recalculateSubjectMastery(_curriculumMap[subj.id]!);
     });
+
+    unawaited(AuthStorage.instance.setUnitCompletion(unitId, targetState));
 
     if (targetState) {
       final unitCode = unit.resolvedUnitCode(subj.subjectCode);
@@ -473,6 +480,7 @@ class _StudyScreenState extends State<StudyScreen> {
         setState(() {
           _curriculumMap[subj.id] = updatedSubj;
         });
+        unawaited(AuthStorage.instance.setUnitCompletion(unit.id, true));
 
         unawaited(
           ApiClient.instance

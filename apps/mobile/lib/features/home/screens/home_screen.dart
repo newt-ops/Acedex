@@ -20,6 +20,21 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   int _currentIndex = 0;
+  final Set<int> _loadingTabs = {};
+
+  @override
+  void initState() {
+    super.initState();
+    // Brief graceful initial skeleton on Home launch
+    _loadingTabs.add(0);
+    Future.delayed(const Duration(milliseconds: 320), () {
+      if (mounted) {
+        setState(() {
+          _loadingTabs.remove(0);
+        });
+      }
+    });
+  }
 
   Future<void> _signOut(BuildContext context) async {
     await AuthStorage.instance.clear();
@@ -28,8 +43,19 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   void _navigateToTab(int index) {
+    if (index == _currentIndex && !_loadingTabs.contains(index)) return;
     setState(() {
       _currentIndex = index;
+      _loadingTabs.add(index);
+    });
+
+    // Brief smooth skeleton loading placeholder when navigating across all 5 screens
+    Future.delayed(const Duration(milliseconds: 320), () {
+      if (mounted) {
+        setState(() {
+          _loadingTabs.remove(index);
+        });
+      }
     });
   }
 
@@ -56,17 +82,53 @@ class _HomeScreenState extends State<HomeScreen> {
       body: IndexedStack(
         index: _currentIndex,
         children: [
-          DashboardScreen(
-            user: widget.user,
-            onNavigateToStudy: () => _navigateToTab(1),
-            onNavigateToPractice: () => _navigateToTab(2),
+          AnimatedSwitcher(
+            duration: const Duration(milliseconds: 240),
+            child: _loadingTabs.contains(0)
+                ? const AcedexDashboardSkeleton(key: ValueKey('skeleton_0'))
+                : DashboardScreen(
+                    key: const ValueKey('screen_0'),
+                    user: widget.user,
+                    onNavigateToStudy: () => _navigateToTab(1),
+                    onNavigateToPractice: () => _navigateToTab(2),
+                  ),
           ),
-          StudyScreen(user: widget.user),
-          PracticeScreen(user: widget.user),
-          ProgressScreen(user: widget.user),
-          ProfileScreen(
-            user: widget.user,
-            onSignOut: () => _signOut(context),
+          AnimatedSwitcher(
+            duration: const Duration(milliseconds: 240),
+            child: _loadingTabs.contains(1)
+                ? const AcedexStudySkeleton(key: ValueKey('skeleton_1'))
+                : StudyScreen(
+                    key: const ValueKey('screen_1'),
+                    user: widget.user,
+                  ),
+          ),
+          AnimatedSwitcher(
+            duration: const Duration(milliseconds: 240),
+            child: _loadingTabs.contains(2)
+                ? const AcedexPracticeSkeleton(key: ValueKey('skeleton_2'))
+                : PracticeScreen(
+                    key: const ValueKey('screen_2'),
+                    user: widget.user,
+                  ),
+          ),
+          AnimatedSwitcher(
+            duration: const Duration(milliseconds: 240),
+            child: _loadingTabs.contains(3)
+                ? const AcedexProgressSkeleton(key: ValueKey('skeleton_3'))
+                : ProgressScreen(
+                    key: const ValueKey('screen_3'),
+                    user: widget.user,
+                  ),
+          ),
+          AnimatedSwitcher(
+            duration: const Duration(milliseconds: 240),
+            child: _loadingTabs.contains(4)
+                ? const AcedexProfileSkeleton(key: ValueKey('skeleton_4'))
+                : ProfileScreen(
+                    key: const ValueKey('screen_4'),
+                    user: widget.user,
+                    onSignOut: () => _signOut(context),
+                  ),
           ),
         ],
       ),

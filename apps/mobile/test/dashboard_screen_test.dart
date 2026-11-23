@@ -264,6 +264,14 @@ void main() {
       await tester.tap(deleteIconFinder.first);
       await tester.pumpAndSettle();
 
+      // Verify custom reusable Acedex confirmation modal is presented
+      expect(find.text('Delete Task'), findsOneWidget);
+      expect(find.textContaining('Are you sure you want to remove'), findsOneWidget);
+
+      // Confirm deletion in modal dialog
+      await tester.tap(find.text('Delete'));
+      await tester.pumpAndSettle();
+
       // Task is removed, remaining 3 tasks
       expect(find.text('Physics: Electromagnetism Formula Review'), findsNothing);
       expect(find.text('1 of 3 done'), findsOneWidget);

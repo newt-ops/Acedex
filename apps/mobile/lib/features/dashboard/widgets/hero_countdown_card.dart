@@ -42,8 +42,12 @@ class _HeroCountdownCardState extends State<HeroCountdownCard> {
   Timer? _minuteTimer;
 
   void _recomputeCountdown() {
-    final target = widget.targetDate ?? DateTime(2026, 6, 8, 9, 0);
-    final diff = target.difference(DateTime.now());
+    DateTime target = widget.targetDate ?? DateTime(2026, 6, 8, 9, 0);
+    final now = DateTime.now();
+    if (target.isBefore(now)) {
+      target = DateTime(now.year + 1, 6, 8, 9, 0);
+    }
+    final diff = target.difference(now);
     _countdownMinutes = diff.isNegative ? 0 : diff.inMinutes;
   }
 

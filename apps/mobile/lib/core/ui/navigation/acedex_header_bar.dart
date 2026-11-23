@@ -137,7 +137,7 @@ class _AcedexHeaderBarState extends State<AcedexHeaderBar>
       barrierDismissible: true,
       barrierLabel: 'Dismiss Theme Popover',
       barrierColor: Colors.black.withValues(alpha: 0.32),
-      transitionDuration: const Duration(milliseconds: 220),
+      transitionDuration: const Duration(milliseconds: 280),
       pageBuilder: (dialogContext, animation, secondaryAnimation) {
         final theme = Theme.of(context);
         final isDark = theme.brightness == Brightness.dark;
@@ -324,13 +324,16 @@ class _AcedexHeaderBarState extends State<AcedexHeaderBar>
         );
       },
       transitionBuilder: (context, anim, secondaryAnim, child) {
+        final bounceCurved = CurvedAnimation(
+          parent: anim,
+          curve: Curves.easeOutBack,
+          reverseCurve: Curves.easeInCubic,
+        );
         return FadeTransition(
           opacity: CurvedAnimation(parent: anim, curve: Curves.easeOutCubic),
           child: ScaleTransition(
-            scale: Tween<double>(begin: 0.92, end: 1.0).animate(
-              CurvedAnimation(parent: anim, curve: Curves.easeOutBack),
-            ),
-            alignment: const Alignment(0.85, -0.85),
+            scale: Tween<double>(begin: 0.80, end: 1.0).animate(bounceCurved),
+            alignment: const Alignment(0.86, -0.88),
             child: child,
           ),
         );
@@ -569,6 +572,9 @@ class _AcedexHeaderBarState extends State<AcedexHeaderBar>
                         message: 'Appearance: $tooltip',
                         child: AcedexBounceable(
                           key: const Key('header_theme_toggle_button'),
+                          scaleFactor: 0.82,
+                          duration: const Duration(milliseconds: 140),
+                          reverseDuration: const Duration(milliseconds: 240),
                           onTap: () {
                             if (widget.onStreakTap != null) {
                               widget.onStreakTap!();
@@ -584,10 +590,25 @@ class _AcedexHeaderBarState extends State<AcedexHeaderBar>
                               border: Border.all(color: lineColor),
                             ),
                             alignment: Alignment.center,
-                            child: HugeIcon(
-                              icon: icon,
-                              color: iconColor,
-                              size: 17,
+                            child: AnimatedSwitcher(
+                              duration: const Duration(milliseconds: 320),
+                              switchInCurve: Curves.easeOutBack,
+                              switchOutCurve: Curves.easeInBack,
+                              transitionBuilder: (child, anim) {
+                                return RotationTransition(
+                                  turns: Tween<double>(begin: -0.15, end: 0.0).animate(anim),
+                                  child: ScaleTransition(
+                                    scale: Tween<double>(begin: 0.72, end: 1.0).animate(anim),
+                                    child: child,
+                                  ),
+                                );
+                              },
+                              child: HugeIcon(
+                                key: ValueKey(currentMode),
+                                icon: icon,
+                                color: iconColor,
+                                size: 17,
+                              ),
                             ),
                           ),
                         ),

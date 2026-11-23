@@ -181,8 +181,14 @@ export class CurriculumController {
     _req: AuthenticatedRequest,
     res: Response
   ): Promise<Response> {
-    const targetDate = new Date('2026-06-08T06:00:00.000Z'); // June 8, 2026 (09:00 EAT)
     const now = new Date();
+    // June 8 EUEE Examination: automatically targets upcoming June 8 session
+    let examYear = now.getUTCFullYear();
+    let targetDate = new Date(Date.UTC(examYear, 5, 8, 6, 0, 0)); // June 8 at 09:00 EAT (06:00 UTC)
+    if (now.getTime() >= targetDate.getTime()) {
+      examYear += 1;
+      targetDate = new Date(Date.UTC(examYear, 5, 8, 6, 0, 0));
+    }
     const remainingMs = Math.max(0, targetDate.getTime() - now.getTime());
     const totalMinutes = Math.floor(remainingMs / (1000 * 60));
     const days = Math.floor(totalMinutes / (24 * 60));
@@ -193,8 +199,8 @@ export class CurriculumController {
       res,
       {
         targetDate: targetDate.toISOString(),
-        label: 'EUEE 2026 Examination',
-        academicYear: 2026,
+        label: `EUEE ${examYear} Examination`,
+        academicYear: examYear,
         serverTime: now.toISOString(),
         totalMinutes,
         days,

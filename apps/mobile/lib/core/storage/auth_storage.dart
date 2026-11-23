@@ -24,8 +24,32 @@ class AuthStorage {
   StudentAvatar? _cachedAvatar;
   String? _cachedLastPhone;
 
+  static const String _keyCompletedUnits = 'acedex_completed_units';
+
   final ValueNotifier<StudentAvatar> avatarNotifier =
       ValueNotifier<StudentAvatar>(StudentAvatar.defaultSilhouette);
+
+  final ValueNotifier<Set<String>> completedUnitsNotifier =
+      ValueNotifier<Set<String>>({});
+
+  Future<Set<String>> getCompletedUnits() async {
+    final prefs = await SharedPreferences.getInstance();
+    final list = prefs.getStringList(_keyCompletedUnits) ?? [];
+    completedUnitsNotifier.value = list.toSet();
+    return completedUnitsNotifier.value;
+  }
+
+  Future<void> setUnitCompletion(String unitId, bool completed) async {
+    final current = Set<String>.from(completedUnitsNotifier.value);
+    if (completed) {
+      current.add(unitId);
+    } else {
+      current.remove(unitId);
+    }
+    completedUnitsNotifier.value = current;
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setStringList(_keyCompletedUnits, current.toList());
+  }
 
   Future<void> saveTokens(AuthTokens tokens) async {
     _cachedToken = tokens.accessToken;

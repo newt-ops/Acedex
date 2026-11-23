@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:hugeicons/hugeicons.dart';
 import '../../../core/theme/app_colors.dart';
 import '../../../core/ui/animations/bounceable.dart';
@@ -140,6 +141,8 @@ class _AddStudyPlanSheetState extends State<AddStudyPlanSheet> {
 
   String _selectedSubjectId = 'physics';
   late final TextEditingController _topicController;
+  final FocusNode _topicFocusNode = FocusNode();
+  bool _isTopicFocused = false;
   int _startMinutes = 16 * 60 + 30; // 04:30 PM
   int _endMinutes = 18 * 60; // 06:00 PM
   String _selectedFocusMode = 'Deep Focus';
@@ -152,10 +155,18 @@ class _AddStudyPlanSheetState extends State<AddStudyPlanSheet> {
   void initState() {
     super.initState();
     _topicController = TextEditingController(text: _currentSubject.suggestions.first);
+    _topicFocusNode.addListener(() {
+      if (mounted) {
+        setState(() {
+          _isTopicFocused = _topicFocusNode.hasFocus;
+        });
+      }
+    });
   }
 
   @override
   void dispose() {
+    _topicFocusNode.dispose();
     _topicController.dispose();
     super.dispose();
   }
@@ -450,57 +461,83 @@ class _AddStudyPlanSheetState extends State<AddStudyPlanSheet> {
                   ),
                   const SizedBox(height: 8),
 
-                  Container(
-                    height: 46,
+                  AnimatedContainer(
+                    duration: const Duration(milliseconds: 200),
+                    curve: Curves.easeOutCubic,
+                    height: 48,
                     padding: const EdgeInsets.symmetric(horizontal: 12),
                     decoration: BoxDecoration(
-                      color: surfaceColor,
+                      color: _isTopicFocused ? raisedBg : surfaceColor,
                       borderRadius: BorderRadius.circular(15),
-                      border: Border.all(color: lineBorder),
+                      border: Border.all(
+                        color: _isTopicFocused ? primaryColor : lineBorder,
+                        width: _isTopicFocused ? 1.5 : 1.0,
+                      ),
+                      boxShadow: _isTopicFocused
+                          ? [
+                              BoxShadow(
+                                color: primaryColor.withValues(alpha: 0.12),
+                                blurRadius: 10,
+                                offset: const Offset(0, 2),
+                              ),
+                            ]
+                          : null,
                     ),
                     child: Row(
                       children: [
-                        HugeIcon(
-                          icon: HugeIcons.strokeRoundedEdit02,
-                          color: primaryColor,
-                          size: 16,
+                        AnimatedScale(
+                          duration: const Duration(milliseconds: 200),
+                          scale: _isTopicFocused ? 1.08 : 1.0,
+                          child: HugeIcon(
+                            icon: HugeIcons.strokeRoundedEdit02,
+                            color: _isTopicFocused ? primaryColor : subtextColor,
+                            size: 16,
+                          ),
                         ),
                         const SizedBox(width: 10),
                         Expanded(
                           child: TextField(
+                            focusNode: _topicFocusNode,
                             controller: _topicController,
+                            textInputAction: TextInputAction.done,
+                            textCapitalization: TextCapitalization.sentences,
+                            cursorColor: primaryColor,
                             style: TextStyle(
                               fontSize: 13,
                               fontWeight: FontWeight.w600,
+                              letterSpacing: -0.2,
                               color: theme.colorScheme.onSurface,
                             ),
                             decoration: InputDecoration(
                               hintText: _currentSubject.placeholder,
                               hintStyle: TextStyle(
                                 fontSize: 13,
+                                fontWeight: FontWeight.normal,
                                 color: subtextColor.withValues(alpha: 0.7),
                               ),
                               border: InputBorder.none,
                               isDense: true,
+                              contentPadding: const EdgeInsets.symmetric(vertical: 12),
                             ),
                             onChanged: (_) => setState(() {}),
                           ),
                         ),
                         if (_topicController.text.isNotEmpty)
-                          GestureDetector(
+                          AcedexBounceable(
                             onTap: () {
+                              HapticFeedback.selectionClick();
                               _topicController.clear();
                               setState(() {});
                             },
                             child: Container(
-                              width: 18,
-                              height: 18,
+                              width: 22,
+                              height: 22,
                               decoration: BoxDecoration(
                                 color: lineBorder,
                                 shape: BoxShape.circle,
                               ),
                               alignment: Alignment.center,
-                              child: Icon(Icons.close_rounded, size: 12, color: subtextColor),
+                              child: Icon(Icons.close_rounded, size: 13, color: subtextColor),
                             ),
                           ),
                       ],
@@ -843,56 +880,61 @@ class _AddStudyPlanSheetState extends State<AddStudyPlanSheet> {
             ),
           ),
 
-          // Sticky Bottom CTA Button
-          Container(
-            padding: const EdgeInsets.fromLTRB(20, 12, 20, 24),
-            decoration: BoxDecoration(
-              color: theme.scaffoldBackgroundColor,
-              border: Border(top: BorderSide(color: lineBorder)),
-            ),
-            child: AcedexBounceable(
-              onTap: _handleSave,
-              child: Container(
-                height: 48,
+          // Sticky Bottom CTA Button (Elevated above system gesture / navigation bar)
+          Builder(
+            builder: (context) {
+              final bottomInset = MediaQuery.paddingOf(context).bottom;
+              return Container(
+                padding: EdgeInsets.fromLTRB(20, 12, 20, 18 + bottomInset),
                 decoration: BoxDecoration(
-                  color: primaryColor,
-                  borderRadius: BorderRadius.circular(999),
-                  boxShadow: [
-                    BoxShadow(
-                      color: primaryColor.withValues(alpha: 0.35),
-                      blurRadius: 14,
-                      offset: const Offset(0, 4),
-                    ),
-                  ],
+                  color: theme.scaffoldBackgroundColor,
+                  border: Border(top: BorderSide(color: lineBorder)),
                 ),
-                alignment: Alignment.center,
-                child: _isSaving
-                    ? const AcedexDotsLoader(
-                        color: Colors.white,
-                        dotSize: 4.5,
-                        gap: 3.5,
-                      )
-                    : const Row(
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          Text(
-                            "Add to Today's Plan",
-                            style: TextStyle(
-                              fontSize: 13.5,
-                              fontWeight: FontWeight.w700,
-                              color: Colors.white,
-                            ),
-                          ),
-                          SizedBox(width: 6),
-                          Icon(
-                            Icons.arrow_forward_rounded,
-                            size: 16,
+                child: AcedexBounceable(
+                  onTap: _handleSave,
+                  child: Container(
+                    height: 48,
+                    decoration: BoxDecoration(
+                      color: primaryColor,
+                      borderRadius: BorderRadius.circular(999),
+                      boxShadow: [
+                        BoxShadow(
+                          color: primaryColor.withValues(alpha: 0.35),
+                          blurRadius: 14,
+                          offset: const Offset(0, 4),
+                        ),
+                      ],
+                    ),
+                    alignment: Alignment.center,
+                    child: _isSaving
+                        ? const AcedexDotsLoader(
                             color: Colors.white,
+                            dotSize: 4.5,
+                            gap: 3.5,
+                          )
+                        : const Row(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              Text(
+                                "Add to Today's Plan",
+                                style: TextStyle(
+                                  fontSize: 13.5,
+                                  fontWeight: FontWeight.w700,
+                                  color: Colors.white,
+                                ),
+                              ),
+                              SizedBox(width: 6),
+                              Icon(
+                                Icons.arrow_forward_rounded,
+                                size: 16,
+                                color: Colors.white,
+                              ),
+                            ],
                           ),
-                        ],
-                      ),
-              ),
-            ),
+                  ),
+                ),
+              );
+            },
           ),
         ],
       ),
