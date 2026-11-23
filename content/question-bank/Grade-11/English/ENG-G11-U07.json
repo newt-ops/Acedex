@@ -3,5 +3,411 @@
   "subject": "English",
   "unitNumber": 7,
   "unitTitle": "Patriotism",
-  "questions": []
+  "questions": [
+    {
+      "id": "ENG-G11-U07-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "By the time Emperor Menelik's army arrived at the battlefield of Adwa, the local scouts ______ detailed information about the enemy positions.",
+      "options": [
+        {
+          "id": "A",
+          "text": "had gathered"
+        },
+        {
+          "id": "B",
+          "text": "have gathered"
+        },
+        {
+          "id": "C",
+          "text": "gather"
+        },
+        {
+          "id": "D",
+          "text": "will gather"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "When an action was completed prior to a specified past reference event ('arrived'), the earlier completed action requires the Past Perfect tense ('had gathered').",
+      "sourceReference": "Section 7E.2, Pages 181-182"
+    },
+    {
+      "id": "ENG-G11-U07-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In the reading text 'Adwa: A Symbol of National Unity', what is the closest contextual meaning of 'stunning' in the sentence 'The battle of Adwa was a stunning victory for Ethiopia'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Dramatic, spectacular, or astonishing"
+        },
+        {
+          "id": "B",
+          "text": "Unfortunate and disgraceful"
+        },
+        {
+          "id": "C",
+          "text": "Slow and barely noticeable"
+        },
+        {
+          "id": "D",
+          "text": "Temporarily forgotten"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Contextually in Section 7C.1, 'stunning' means impressive, dramatic, or astonishingly spectacular.",
+      "sourceReference": "Section 7C.1, Pages 173-175"
+    },
+    {
+      "id": "ENG-G11-U07-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Emperor Menelik II led a brilliant military campaign against the invading forces, ______?",
+      "options": [
+        {
+          "id": "A",
+          "text": "didn't he"
+        },
+        {
+          "id": "B",
+          "text": "did he"
+        },
+        {
+          "id": "C",
+          "text": "hasn't he"
+        },
+        {
+          "id": "D",
+          "text": "doesn't he"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "A positive statement in the Simple Past tense ('led') takes a negative tag question using the auxiliary verb 'didn't' ('didn't he').",
+      "sourceReference": "Section 7E.7, Pages 195-197"
+    },
+    {
+      "id": "ENG-G11-U07-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "During the final lap of the national athletic championship, the Ethiopian runner managed to ______ in the last hundred meters to win the gold medal.",
+      "options": [
+        {
+          "id": "A",
+          "text": "pull ahead"
+        },
+        {
+          "id": "B",
+          "text": "pull down"
+        },
+        {
+          "id": "C",
+          "text": "pull off"
+        },
+        {
+          "id": "D",
+          "text": "pull over"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The phrasal verb 'pull ahead' means to move into the lead or surpass competitors during a race or competition.",
+      "sourceReference": "Section 7D.2, Page 178"
+    },
+    {
+      "id": "ENG-G11-U07-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which expression is appropriate for accepting praise gracefully when someone compliments your academic performance?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Thank you so much, it's very kind of you to say that."
+        },
+        {
+          "id": "B",
+          "text": "I don't care about your opinion at all."
+        },
+        {
+          "id": "C",
+          "text": "You ought to apologize immediately."
+        },
+        {
+          "id": "D",
+          "text": "I disagree completely with everything you said."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "'Thank you so much, it's very kind of you to say that' is a standard polite social expression used to accept praise.",
+      "sourceReference": "Section 7B.2, Pages 169-170"
+    },
+    {
+      "id": "ENG-G11-U07-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Choose the sentence that displays the CORRECT order of adjectives according to standard English rules:",
+      "options": [
+        {
+          "id": "A",
+          "text": "She bought a beautiful, large, antique, Ethiopian wooden carving."
+        },
+        {
+          "id": "B",
+          "text": "She bought an Ethiopian, antique, large, wooden, beautiful carving."
+        },
+        {
+          "id": "C",
+          "text": "She bought a wooden, Ethiopian, beautiful, large, antique carving."
+        },
+        {
+          "id": "D",
+          "text": "She bought a large, beautiful, wooden, Ethiopian, antique carving."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Standard English adjective order follows: Opinion/Quality ('beautiful') -> Size ('large') -> Age ('antique') -> Origin/Proper Adj ('Ethiopian') -> Material ('wooden') + Noun ('carving').",
+      "sourceReference": "Section 7E.4, Pages 185-187"
+    },
+    {
+      "id": "ENG-G11-U07-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "The veteran soldiers had hardly rested after the long march, ______?",
+      "options": [
+        {
+          "id": "A",
+          "text": "had they"
+        },
+        {
+          "id": "B",
+          "text": "hadn't they"
+        },
+        {
+          "id": "C",
+          "text": "did they"
+        },
+        {
+          "id": "D",
+          "text": "didn't they"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Words with negative sense like 'hardly', 'scarcely', or 'barely' make a statement negative, requiring a positive tag question ('had they').",
+      "sourceReference": "Section 7E.7, Pages 198-199"
+    },
+    {
+      "id": "ENG-G11-U07-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "National monuments and historic sites are preserved ______ citizens can reflect on the brave sacrifices of their ancestors.",
+      "options": [
+        {
+          "id": "A",
+          "text": "where"
+        },
+        {
+          "id": "B",
+          "text": "wherever"
+        },
+        {
+          "id": "C",
+          "text": "anywhere"
+        },
+        {
+          "id": "D",
+          "text": "everywhere"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "'Where' introduces an adverbial clause of place specifying a definite place or location.",
+      "sourceReference": "Section 7E.3, Pages 183-184"
+    },
+    {
+      "id": "ENG-G11-U07-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "General Baratieri was reluctant to attack Menelik's army in the open field. What is the contextual synonym of 'reluctant'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Unwilling, hesitant, or disinclined"
+        },
+        {
+          "id": "B",
+          "text": "Eager, enthusiastic, and ready"
+        },
+        {
+          "id": "C",
+          "text": "Legally forced or compelled"
+        },
+        {
+          "id": "D",
+          "text": "Highly experienced and confident"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Contextually in Section 7C.1, 'reluctant' means hesitant, unwilling, or disinclined to act.",
+      "sourceReference": "Section 7C.1, Page 175"
+    },
+    {
+      "id": "ENG-G11-U07-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Don't forget to attend the national heritage celebration tomorrow morning, ______?",
+      "options": [
+        {
+          "id": "A",
+          "text": "will you"
+        },
+        {
+          "id": "B",
+          "text": "don't you"
+        },
+        {
+          "id": "C",
+          "text": "shall we"
+        },
+        {
+          "id": "D",
+          "text": "aren't you"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Negative imperative commands ('Don't forget...') take the tag question 'will you?'.",
+      "sourceReference": "Section 7E.7, Pages 196-198"
+    },
+    {
+      "id": "ENG-G11-U07-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "According to the Grade 11 reading text 'Adwa: A Symbol of National Unity', why was the victory of Adwa historically significant beyond the borders of Ethiopia?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It served as a powerful symbol of anti-colonial resistance and African freedom worldwide."
+        },
+        {
+          "id": "B",
+          "text": "It led directly to the immediate collapse of all European monarchies in 1896."
+        },
+        {
+          "id": "C",
+          "text": "It resulted in Ethiopia signing economic treaties with South American nations exclusively."
+        },
+        {
+          "id": "D",
+          "text": "It forced all foreign nations to adopt the Ethiopian Ge'ez calendar."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Section 7C.1 emphasizes that Adwa was a remarkable victory where Africans secured their own freedom against European expansion, inspiring anti-colonial movements and black people globally.",
+      "sourceReference": "Section 7C.1, Pages 173-175"
+    },
+    {
+      "id": "ENG-G11-U07-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Let's organize a community mobilization event to clean the local historical monument, ______?",
+      "options": [
+        {
+          "id": "A",
+          "text": "shall we"
+        },
+        {
+          "id": "B",
+          "text": "will we"
+        },
+        {
+          "id": "C",
+          "text": "don't we"
+        },
+        {
+          "id": "D",
+          "text": "aren't we"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Suggestions introduced by 'Let's' (Let us) take the specific fixed tag question 'shall we?'.",
+      "sourceReference": "Section 7E.7, Pages 197-198"
+    },
+    {
+      "id": "ENG-G11-U07-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "General Baratieri's officers must have underestimated the numerical strength and determination of Emperor Menelik's forces because ______.",
+      "options": [
+        {
+          "id": "A",
+          "text": "they relied on inaccurate spy reports suggesting the Ethiopian troops were depleted"
+        },
+        {
+          "id": "B",
+          "text": "they had already surrendered their weapons prior to the battle"
+        },
+        {
+          "id": "C",
+          "text": "the Ethiopian army lacked any modern firearms or artillery"
+        },
+        {
+          "id": "D",
+          "text": "foreign treaties prohibited the Italian army from retreating"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Section 7C.1 notes that Baratieri's officers cited spy reports claiming Menelik's forces were demoralized and depleted, leading them to miscalculate and push for a night advance. 'Must have + past participle' expresses a logical past deduction.",
+      "sourceReference": "Section 7C.1 & Section 7E.5, Pages 173, 190"
+    },
+    {
+      "id": "ENG-G11-U07-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "In writing a descriptive essay about a historic national victory, which element is ESSENTIAL to create a vivid sensory image for the reader?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Incorporating specific sensory details (sight, sound, touch) and precise descriptive adjectives"
+        },
+        {
+          "id": "B",
+          "text": "Including statistical graphs and mathematical formulas"
+        },
+        {
+          "id": "C",
+          "text": "Writing in bullet points without forming complete paragraphs"
+        },
+        {
+          "id": "D",
+          "text": "Using formal academic citations from legal textbooks"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Descriptive writing relies on vivid sensory details (sight, sound, touch) and precise adjectives to show rather than just tell, creating mental pictures for readers.",
+      "sourceReference": "Section 7F.1, Pages 200-202"
+    },
+    {
+      "id": "ENG-G11-U07-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Choose the sentence that demonstrates CORRECT punctuation and clause structure when an adverbial clause of time precedes the main clause:",
+      "options": [
+        {
+          "id": "A",
+          "text": "As soon as Emperor Menelik issued the mobilization proclamation, thousands of patriots gathered from every corner of the country."
+        },
+        {
+          "id": "B",
+          "text": "As soon as Emperor Menelik issued the mobilization proclamation thousands of patriots gathered from every corner of the country."
+        },
+        {
+          "id": "C",
+          "text": "As soon as, Emperor Menelik issued the mobilization proclamation thousands of patriots gathered from every corner of the country."
+        },
+        {
+          "id": "D",
+          "text": "As soon as Emperor Menelik, issued the mobilization proclamation, thousands of patriots gathered from every corner of the country."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "When an introductory dependent adverbial clause of time ('As soon as...') precedes the main clause, it must be separated from the independent clause by a comma.",
+      "sourceReference": "Section 7E.2, Pages 181-182"
+    }
+  ]
 }

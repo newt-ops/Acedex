@@ -3,5 +3,411 @@
   "subject": "English",
   "unitNumber": 9,
   "unitTitle": "Indigenous Conflict Resolution",
-  "questions": []
+  "questions": [
+    {
+      "id": "ENG-G11-U09-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Community elders ______ gather all disputed parties in a neutral location before starting the traditional reconciliation process.",
+      "options": [
+        {
+          "id": "A",
+          "text": "must"
+        },
+        {
+          "id": "B",
+          "text": "shouldn't"
+        },
+        {
+          "id": "C",
+          "text": "might not"
+        },
+        {
+          "id": "D",
+          "text": "ought not"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "'Must' expresses strong obligation or necessity in formal procedural contexts.",
+      "sourceReference": "Section 9E.1, Page 235"
+    },
+    {
+      "id": "ENG-G11-U09-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In the reading text on indigenous conflict resolution, what is the closest contextual meaning of the verb 'reconcile'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Restore friendly relations between opposing parties"
+        },
+        {
+          "id": "B",
+          "text": "Escalate an argument into physical violence"
+        },
+        {
+          "id": "C",
+          "text": "Permanently separate neighboring communities"
+        },
+        {
+          "id": "D",
+          "text": "Impose heavy financial fines without hearing testimony"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Contextually in Unit 9, 'reconcile' means to bring opposing sides into agreement and restore harmonious relations.",
+      "sourceReference": "Section 9C.1, Page 228"
+    },
+    {
+      "id": "ENG-G11-U09-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "When negotiations between the two clan elders collapsed, violent clashes unfortunately ______ in the border village.",
+      "options": [
+        {
+          "id": "A",
+          "text": "broke out"
+        },
+        {
+          "id": "B",
+          "text": "broke down"
+        },
+        {
+          "id": "C",
+          "text": "broke off"
+        },
+        {
+          "id": "D",
+          "text": "broke through"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The phrasal verb 'break out' means to start suddenly, as of war, conflict, fire, or violence.",
+      "sourceReference": "Section 9D.3, Page 233"
+    },
+    {
+      "id": "ENG-G11-U09-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "The village elder said, 'We seek peace and harmony.' When converted into reported speech, this sentence becomes: 'The village elder said that they ______ peace and harmony.'",
+      "options": [
+        {
+          "id": "A",
+          "text": "sought"
+        },
+        {
+          "id": "B",
+          "text": "seek"
+        },
+        {
+          "id": "C",
+          "text": "seeking"
+        },
+        {
+          "id": "D",
+          "text": "seeked"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "When reporting direct speech with a past tense reporting verb ('said'), Simple Present verbs ('seek') backshift to Simple Past ('sought').",
+      "sourceReference": "Section 9E.2, Page 238"
+    },
+    {
+      "id": "ENG-G11-U09-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Complete the dialogue: Elder A: 'Traditional mediation mechanisms save time and prevent revenge cycles.' Elder B: '______; they foster lasting harmony within the community.'",
+      "options": [
+        {
+          "id": "A",
+          "text": "Exactly, I couldn't agree more"
+        },
+        {
+          "id": "B",
+          "text": "I completely disagree with you"
+        },
+        {
+          "id": "C",
+          "text": "That is a totally absurd idea"
+        },
+        {
+          "id": "D",
+          "text": "You should apologize for that statement"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "'Exactly, I couldn't agree more' is a standard formal expression used to express strong agreement with an opinion.",
+      "sourceReference": "Section 9B.2, Page 224"
+    },
+    {
+      "id": "ENG-G11-U09-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Indigenous conflict resolution practices ______ by rural communities across Ethiopia for centuries to settle land disputes peacefully.",
+      "options": [
+        {
+          "id": "A",
+          "text": "have been utilized"
+        },
+        {
+          "id": "B",
+          "text": "were utilizing"
+        },
+        {
+          "id": "C",
+          "text": "are utilize"
+        },
+        {
+          "id": "D",
+          "text": "had utilizing"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Actions that began in the past and continue to possess present relevance in passive voice require the Present Perfect Passive ('have been utilized').",
+      "sourceReference": "Section 9E.3, Pages 240-241"
+    },
+    {
+      "id": "ENG-G11-U09-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What is the primary function of the traditional 'Shimgelinna' system in Ethiopian society?",
+      "options": [
+        {
+          "id": "A",
+          "text": "An indigenous elders' council mechanism designed to mediate disputes and restore social cohesion"
+        },
+        {
+          "id": "B",
+          "text": "A modern industrial tribunal that issues commercial bank loans"
+        },
+        {
+          "id": "C",
+          "text": "A court of law that enforces international maritime trade regulations"
+        },
+        {
+          "id": "D",
+          "text": "An agricultural cooperative for exporting cash crops"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Section 9C.1 describes 'Shimgelinna' as a well-established Ethiopian customary dispute resolution system operated by respected community elders to reconcile conflicting parties.",
+      "sourceReference": "Section 9C.1, Pages 227-229"
+    },
+    {
+      "id": "ENG-G11-U09-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "After three days of intense peace talks, the two rival factions managed to ______ the communication barrier and agree on a ceasefire.",
+      "options": [
+        {
+          "id": "A",
+          "text": "break through"
+        },
+        {
+          "id": "B",
+          "text": "break up"
+        },
+        {
+          "id": "C",
+          "text": "break down"
+        },
+        {
+          "id": "D",
+          "text": "break into"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The phrasal verb 'break through' means to make a major breakthrough or overcome an obstacle or impasse.",
+      "sourceReference": "Section 9D.3, Pages 233-234"
+    },
+    {
+      "id": "ENG-G11-U09-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "According to traditional customary laws, disputing parties ______ commit acts of retaliation while mediation is actively underway.",
+      "options": [
+        {
+          "id": "A",
+          "text": "must not"
+        },
+        {
+          "id": "B",
+          "text": "don't have to"
+        },
+        {
+          "id": "C",
+          "text": "might"
+        },
+        {
+          "id": "D",
+          "text": "need to"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "'Must not' is used to express strict prohibition or forbidden behavior.",
+      "sourceReference": "Section 9E.1, Pages 235-236"
+    },
+    {
+      "id": "ENG-G11-U09-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "The mediator asked the two parties, 'Are you prepared to forgive past grievances?' In reported speech: The mediator asked the two parties ______.",
+      "options": [
+        {
+          "id": "A",
+          "text": "if they were prepared to forgive past grievances"
+        },
+        {
+          "id": "B",
+          "text": "that were they prepared to forgive past grievances"
+        },
+        {
+          "id": "C",
+          "text": "if are they prepared to forgive past grievances"
+        },
+        {
+          "id": "D",
+          "text": "whether were they prepared to forgive past grievances"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Reported yes/no questions use 'if' or 'whether' followed by statement word order (Subject + Verb) and backshifted tense ('if they were prepared...').",
+      "sourceReference": "Section 9E.2, Pages 238-239"
+    },
+    {
+      "id": "ENG-G11-U09-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Attaching the prefix 'un-' to the adjective 'biased' forms 'unbiased'. What does an 'unbiased' mediator represent during conflict resolution?",
+      "options": [
+        {
+          "id": "A",
+          "text": "An impartial neutral party who shows no favoritism toward either side"
+        },
+        {
+          "id": "B",
+          "text": "A heavily prejudiced judge who favors wealthy landowners"
+        },
+        {
+          "id": "C",
+          "text": "A legal representative appointed exclusively by the state"
+        },
+        {
+          "id": "D",
+          "text": "An inexperienced apprentice who lacks knowledge of customary laws"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The prefix 'un-' means 'not'; 'unbiased' contextually means fair, neutral, and free from prejudice or favoritism.",
+      "sourceReference": "Section 9D.1, Page 231"
+    },
+    {
+      "id": "ENG-G11-U09-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "The chief elder advised: 'You ought to respect the customary boundaries, or further conflict will arise.' Which reported speech transformation is grammatically correct?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The chief elder advised them to respect the customary boundaries, warning that further conflict would arise."
+        },
+        {
+          "id": "B",
+          "text": "The chief elder advised them that you ought to respect the customary boundaries or further conflict will arise."
+        },
+        {
+          "id": "C",
+          "text": "The chief elder advised them to respect customary boundaries or further conflict will arise."
+        },
+        {
+          "id": "D",
+          "text": "The chief elder advised them that they ought respect the customary boundaries or further conflict had arisen."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Reporting advice with modals uses 'advise + object + to-infinitive' while shifting future tense 'will' to conditional 'would' ('would arise').",
+      "sourceReference": "Section 9E.2, Pages 238-240"
+    },
+    {
+      "id": "ENG-G11-U09-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "In comparing indigenous conflict resolution mechanisms with modern court litigation, what key advantage of traditional systems is highlighted in Unit 9?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Traditional mechanisms focus on restorative justice and communal reconciliation, whereas formal courts primarily focus on retributive punishment and legal guilt."
+        },
+        {
+          "id": "B",
+          "text": "Formal courts operate without written laws, whereas traditional systems rely strictly on codified statutory law."
+        },
+        {
+          "id": "C",
+          "text": "Traditional mechanisms are far more expensive and time-consuming than modern legal proceedings."
+        },
+        {
+          "id": "D",
+          "text": "Formal courts require no lawyers or formal judicial procedures."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Section 9C.1 and 9F.2 emphasize that indigenous mechanisms prioritize restorative justice (rebuilding community ties and healing relationships), unlike formal adversarial courts.",
+      "sourceReference": "Section 9C.1 & 9F.2, Pages 228-230, 245"
+    },
+    {
+      "id": "ENG-G11-U09-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Select the sentence that demonstrates CORRECT punctuation and transition usage in an argumentative paragraph comparing legal systems:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Formal court litigation often enforces strict legal penalties; nevertheless, indigenous mediation fosters genuine reconciliation between conflicting families."
+        },
+        {
+          "id": "B",
+          "text": "Formal court litigation often enforces strict legal penalties, nevertheless; indigenous mediation fosters genuine reconciliation between conflicting families."
+        },
+        {
+          "id": "C",
+          "text": "Formal court litigation often enforces strict legal penalties; nevertheless indigenous mediation fosters genuine reconciliation, between conflicting families."
+        },
+        {
+          "id": "D",
+          "text": "Formal court litigation often enforces strict legal penalties nevertheless, indigenous mediation fosters genuine reconciliation between conflicting families."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Connecting two independent clauses with a conjunctive adverb ('nevertheless') requires a preceding semicolon and a trailing comma (Clause 1; nevertheless, Clause 2.).",
+      "sourceReference": "Section 9F.1 & 9F.2, Pages 243-245"
+    },
+    {
+      "id": "ENG-G11-U09-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Reorder the jumbled clauses into a syntactically correct complex sentence: 'the / mediated / after / dispute / elders / communities / neighboring / peacefully / re-established / trade / had / the / relations / .'",
+      "options": [
+        {
+          "id": "A",
+          "text": "After the elders had mediated the dispute, the neighboring communities peacefully re-established trade relations."
+        },
+        {
+          "id": "B",
+          "text": "The neighboring communities after had mediated the elders dispute re-established trade relations peacefully."
+        },
+        {
+          "id": "C",
+          "text": "After the dispute elders had mediated, peacefully the neighboring communities re-established trade relations."
+        },
+        {
+          "id": "D",
+          "text": "Peacefully trade relations re-established after the elders had mediated the neighboring communities dispute."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Correct complex sentence syntax: Subordinating conjunction ('After') + Subject ('the elders') + Past Perfect ('had mediated') + Object ('the dispute') + Comma + Main Clause ('the neighboring communities peacefully re-established trade relations').",
+      "sourceReference": "Section 9E.2 & 9F.1, Pages 238, 243"
+    }
+  ]
 }

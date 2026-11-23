@@ -3,5 +3,411 @@
   "subject": "English",
   "unitNumber": 8,
   "unitTitle": "Telemedicine",
-  "questions": []
+  "questions": [
+    {
+      "id": "ENG-G12-U08-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Dr. Abera treats patients living in remote villages using mobile consultation tools. Which option correctly converts this sentence into the Passive Voice?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Patients living in remote villages are treated by Dr. Abera using mobile consultation tools."
+        },
+        {
+          "id": "B",
+          "text": "Patients living in remote villages were treated by Dr. Abera using mobile consultation tools."
+        },
+        {
+          "id": "C",
+          "text": "Patients living in remote villages have been treated by Dr. Abera using mobile consultation tools."
+        },
+        {
+          "id": "D",
+          "text": "Patients living in remote villages will be treated by Dr. Abera using mobile consultation tools."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "In Simple Present active sentences ('treats'), the Passive Voice transformation requires 'am/is/are + past participle' ('are treated').",
+      "sourceReference": "Section 8E.1, Pages 204-205"
+    },
+    {
+      "id": "ENG-G12-U08-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In medical vocabulary, what is the contextual definition of 'diagnosis'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The identification of the nature and cause of an illness or disease through examination"
+        },
+        {
+          "id": "B",
+          "text": "The surgical removal of damaged internal organs"
+        },
+        {
+          "id": "C",
+          "text": "The financial cost of purchasing imported pharmaceuticals"
+        },
+        {
+          "id": "D",
+          "text": "The administrative registration of new hospital employees"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "In Section 8A.1 and 8D.1 vocabulary, 'diagnosis' refers to identifying a medical condition or disease by analyzing symptoms and medical data.",
+      "sourceReference": "Section 8A.1 & 8D.1, Pages 181, 198"
+    },
+    {
+      "id": "ENG-G12-U08-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "All regional healthcare officers attended the virtual telemedicine conference ______ Dr. Kebede, who was performing emergency surgery.",
+      "options": [
+        {
+          "id": "A",
+          "text": "except"
+        },
+        {
+          "id": "B",
+          "text": "accept"
+        },
+        {
+          "id": "C",
+          "text": "expect"
+        },
+        {
+          "id": "D",
+          "text": "aspect"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "'Except' is a preposition meaning 'excluding' or 'other than'. 'Accept' is a verb meaning to receive.",
+      "sourceReference": "Section 8D.4, Page 200"
+    },
+    {
+      "id": "ENG-G12-U08-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "The young physician had to ______ the invitation to speak at the international medical summit because of urgent clinical duties.",
+      "options": [
+        {
+          "id": "A",
+          "text": "turn down"
+        },
+        {
+          "id": "B",
+          "text": "turn off"
+        },
+        {
+          "id": "C",
+          "text": "turn into"
+        },
+        {
+          "id": "D",
+          "text": "turn around"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The phrasal verb 'turn down' means to refuse, decline, or reject an offer or invitation.",
+      "sourceReference": "Section 8D.5, Pages 202-203"
+    },
+    {
+      "id": "ENG-G12-U08-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "According to Grade 12 Unit 8, what constitutes the fundamental definition of 'telemedicine'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The delivery of healthcare services and medical expertise over distance using information and communications technology (ICT)"
+        },
+        {
+          "id": "B",
+          "text": "The commercial sale of herbal remedies via radio broadcasts"
+        },
+        {
+          "id": "C",
+          "text": "The physical transport of rural patients by ambulance to capital cities"
+        },
+        {
+          "id": "D",
+          "text": "The manufacture of electronic diagnostic devices in local factories"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Section 8A.1 and 8C.1 explicitly define 'telemedicine' as utilizing ICT systems to deliver healthcare, consultation, and diagnostic services across distance barriers.",
+      "sourceReference": "Section 8A.1 & 8C.1, Pages 180, 189"
+    },
+    {
+      "id": "ENG-G12-U08-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Healthcare providers in remote rural districts usually rely ______ mobile satellite networks to consult with urban specialists.",
+      "options": [
+        {
+          "id": "A",
+          "text": "on"
+        },
+        {
+          "id": "B",
+          "text": "to"
+        },
+        {
+          "id": "C",
+          "text": "for"
+        },
+        {
+          "id": "D",
+          "text": "at"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The verb 'rely' requires the specific preposition 'on' ('rely on something/someone').",
+      "sourceReference": "Section 8E.2, Pages 206-207"
+    },
+    {
+      "id": "ENG-G12-U08-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Direct speech: The specialist said, \"I conducted three tele-consultations yesterday.\" In reported speech: The specialist said that he had conducted three tele-consultations ______.",
+      "options": [
+        {
+          "id": "A",
+          "text": "the day before"
+        },
+        {
+          "id": "B",
+          "text": "yesterday"
+        },
+        {
+          "id": "C",
+          "text": "the next day"
+        },
+        {
+          "id": "D",
+          "text": "that day"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "When converting direct speech into reported speech, the time adverb 'yesterday' backshifts to 'the day before' (or 'the previous day').",
+      "sourceReference": "Section 8E.3, Pages 209-210"
+    },
+    {
+      "id": "ENG-G12-U08-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "The medical director paid a gracious ______ to the hospital staff for successfully managing the telemedicine pilot project.",
+      "options": [
+        {
+          "id": "A",
+          "text": "compliment"
+        },
+        {
+          "id": "B",
+          "text": "complement"
+        },
+        {
+          "id": "C",
+          "text": "implement"
+        },
+        {
+          "id": "D",
+          "text": "supplement"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "'Compliment' (noun) means an expression of praise or admiration. 'Complement' means something that completes or brings to perfection.",
+      "sourceReference": "Section 8D.4, Page 201"
+    },
+    {
+      "id": "ENG-G12-U08-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Solve the domain analogy based on Section 8D.1: DERMATOLOGY is to SKIN as RADIOLOGY is to ______.",
+      "options": [
+        {
+          "id": "A",
+          "text": "medical imaging and X-rays"
+        },
+        {
+          "id": "B",
+          "text": "heart and blood vessels"
+        },
+        {
+          "id": "C",
+          "text": "eye diseases and vision"
+        },
+        {
+          "id": "D",
+          "text": "mind and mental health"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Dermatology is the medical branch specializing in skin diseases; similarly, radiology is the branch specializing in medical imaging and X-rays.",
+      "sourceReference": "Section 8D.1 & 8D.3, Pages 198, 200"
+    },
+    {
+      "id": "ENG-G12-U08-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In formal administrative and organizational meetings, what is the official written record of the proceedings, decisions, and attendance called?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Minutes"
+        },
+        {
+          "id": "B",
+          "text": "Agenda"
+        },
+        {
+          "id": "C",
+          "text": "Brochure"
+        },
+        {
+          "id": "D",
+          "text": "Abstract"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Section 8B.1 defines 'minutes' as the official written record summarizing what took place and what decisions were passed during a meeting.",
+      "sourceReference": "Section 8B.1, Pages 184-185"
+    },
+    {
+      "id": "ENG-G12-U08-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "According to Section 8C.2 'Telemedicine in Ethiopia', which central hospital in Addis Ababa serves as the main telemedicine hub delivering tele-radiology and tele-dermatology services to regional hospitals in Gondar, Jimma, and Nekemte?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Tikur Anbessa (Black Lion) Hospital"
+        },
+        {
+          "id": "B",
+          "text": "St. Paul's Hospital"
+        },
+        {
+          "id": "C",
+          "text": "Alert Hospital"
+        },
+        {
+          "id": "D",
+          "text": "Zewditu Hospital"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Section 8C.2 highlights that Tikur Anbessa Hospital houses the primary telemedicine center, connecting specialized medical talent to regional hospital hubs.",
+      "sourceReference": "Section 8C.2, Page 196"
+    },
+    {
+      "id": "ENG-G12-U08-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Select the option that correctly converts the Future Perfect Active sentence into the Passive Voice: \"By the end of next year, the Ministry of Health will have established ten new tele-dermatology centers.\"",
+      "options": [
+        {
+          "id": "A",
+          "text": "By the end of next year, ten new tele-dermatology centers will have been established by the Ministry of Health."
+        },
+        {
+          "id": "B",
+          "text": "By the end of next year, ten new tele-dermatology centers will be established by the Ministry of Health."
+        },
+        {
+          "id": "C",
+          "text": "By the end of next year, ten new tele-dermatology centers will have established by the Ministry of Health."
+        },
+        {
+          "id": "D",
+          "text": "By the end of next year, ten new tele-dermatology centers were established by the Ministry of Health."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Future Perfect Passive voice requires 'will have been + past participle' ('will have been established').",
+      "sourceReference": "Section 8E.1, Pages 204-205"
+    },
+    {
+      "id": "ENG-G12-U08-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Direct speech: The consultant stated, \"We may install advanced digital radiology equipment here next week.\" Which reported speech conversion is GRAMMATICALLY CORRECT?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The consultant stated that they might install advanced digital radiology equipment there the following week."
+        },
+        {
+          "id": "B",
+          "text": "The consultant stated that we may install advanced digital radiology equipment here next week."
+        },
+        {
+          "id": "C",
+          "text": "The consultant stated that they can install advanced digital radiology equipment there the week before."
+        },
+        {
+          "id": "D",
+          "text": "The consultant stated that they might install advanced digital radiology equipment here last week."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "In reported speech, modal 'may' backshifts to 'might', pronoun 'we' to 'they', place adverb 'here' to 'there', and time adverb 'next week' to 'the following week'.",
+      "sourceReference": "Section 8E.3, Pages 209-211"
+    },
+    {
+      "id": "ENG-G12-U08-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "According to World Health Organization (WHO 2014) data cited in Section 8C.2, what key structural statistic underlines the urgent necessity of telemedicine in Ethiopia?",
+      "options": [
+        {
+          "id": "A",
+          "text": "An extremely low physician-to-population density of 0.025 per 1,000 people, with most specialists concentrated in urban centers."
+        },
+        {
+          "id": "B",
+          "text": "A complete absence of pharmaceutical imports across all regional states."
+        },
+        {
+          "id": "C",
+          "text": "A legal prohibition against training medical doctors in public universities."
+        },
+        {
+          "id": "D",
+          "text": "An oversupply of specialized surgeons residing exclusively in rural villages."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Section 8C.2 cites the WHO physician-to-population density ratio of 0.025/1,000 in Ethiopia, demonstrating the severe urban-rural medical disparity that telemedicine bridges.",
+      "sourceReference": "Section 8C.2, Pages 193-195"
+    },
+    {
+      "id": "ENG-G12-U08-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "When structuring a persuasive or argumentative essay advocating for telemedicine expansion, where should the author address potential counterarguments (such as internet connectivity constraints), and how should they handle them?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Within the body paragraphs, treating opposing views respectfully before refuting them with logical evidence and alternative technological solutions."
+        },
+        {
+          "id": "B",
+          "text": "Inside the title, ignoring all opposing perspectives completely."
+        },
+        {
+          "id": "C",
+          "text": "At the very beginning of the essay, insulting opponents for lacking technical knowledge."
+        },
+        {
+          "id": "D",
+          "text": "In a separate appendix, without connecting them to the main thesis statement."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Effective argumentative writing (Section 8F.1 & 8F.4) acknowledges opposing views respectfully within body paragraphs and uses solid evidence to refute them and reinforce the main thesis.",
+      "sourceReference": "Section 8F.1 & 8F.4, Pages 212-214"
+    }
+  ]
 }

@@ -3,5 +3,411 @@
   "subject": "English",
   "unitNumber": 3,
   "unitTitle": "Evidence on Traffic Accident",
-  "questions": []
+  "questions": [
+    {
+      "id": "ENG-G12-U03-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "If drivers obey urban speed limits strictly, the number of pedestrian accidents ______ significantly.",
+      "options": [
+        {
+          "id": "A",
+          "text": "will decrease"
+        },
+        {
+          "id": "B",
+          "text": "decreased"
+        },
+        {
+          "id": "C",
+          "text": "would have decreased"
+        },
+        {
+          "id": "D",
+          "text": "had decreased"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "In Conditional Type 1 (real future possibility), the simple present tense in the 'if'-clause ('obey') requires 'will + base verb' ('will decrease') in the result clause.",
+      "sourceReference": "Section 3E.1, Pages 66-67"
+    },
+    {
+      "id": "ENG-G12-U03-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In road traffic accident reports, what is the closest contextual meaning of the word 'fatality'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A death resulting from an accident or disaster"
+        },
+        {
+          "id": "B",
+          "text": "A minor mechanical failure in a vehicle"
+        },
+        {
+          "id": "C",
+          "text": "A temporary traffic congestion"
+        },
+        {
+          "id": "D",
+          "text": "A financial grant for road construction"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "In Section 3D.1 vocabulary, 'fatality' contextually refers to a death caused by an accident, disaster, or violence.",
+      "sourceReference": "Section 3D.1, Page 64"
+    },
+    {
+      "id": "ENG-G12-U03-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "The traffic police officer examined the ______ vehicle left at the side of the highway.",
+      "options": [
+        {
+          "id": "A",
+          "text": "damaged"
+        },
+        {
+          "id": "B",
+          "text": "damaging"
+        },
+        {
+          "id": "C",
+          "text": "damage"
+        },
+        {
+          "id": "D",
+          "text": "to damage"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The past participle 'damaged' functions as a passive adjective modifying the noun 'vehicle' (the vehicle that suffered damage).",
+      "sourceReference": "Section 3E.2, Pages 68-69"
+    },
+    {
+      "id": "ENG-G12-U03-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which word is the direct opposite (antonym) of 'reckless' as used in the phrase 'reckless driving'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Cautious or careful"
+        },
+        {
+          "id": "B",
+          "text": "Dangerous or hazardous"
+        },
+        {
+          "id": "C",
+          "text": "Fast or rapid"
+        },
+        {
+          "id": "D",
+          "text": "Unplanned or sudden"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "'Reckless' means careless and rash without regard to danger; its direct antonym is 'cautious' or 'careful'.",
+      "sourceReference": "Section 3D.2, Page 65"
+    },
+    {
+      "id": "ENG-G12-U03-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "According to Grade 12 Unit 3 listening and reading texts, which road user group is classified under 'vulnerable road users'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Pedestrians, cyclists, and motorcyclists"
+        },
+        {
+          "id": "B",
+          "text": "Train operators and locomotive engineers"
+        },
+        {
+          "id": "C",
+          "text": "Heavy cargo truck drivers"
+        },
+        {
+          "id": "D",
+          "text": "Commercial airline pilots"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Section 3A.2 explicitly identifies pedestrians, cyclists, and riders of motorized two-wheelers as vulnerable road users due to lack of protective vehicle shells.",
+      "sourceReference": "Section 3A.2, Page 56"
+    },
+    {
+      "id": "ENG-G12-U03-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "If municipal authorities ______ modern traffic lights at the busy intersection, fewer collisions would occur during peak hours.",
+      "options": [
+        {
+          "id": "A",
+          "text": "installed"
+        },
+        {
+          "id": "B",
+          "text": "install"
+        },
+        {
+          "id": "C",
+          "text": "will install"
+        },
+        {
+          "id": "D",
+          "text": "had installed"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Conditional Type II (hypothetical present/future) takes Simple Past ('installed') in the 'if'-clause paired with 'would + base verb' ('would occur') in the main clause.",
+      "sourceReference": "Section 3E.1, Pages 66-67"
+    },
+    {
+      "id": "ENG-G12-U03-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "The UN Sustainable Development Goals (SDG Goal 3) set a target to halve global road traffic injuries per annum. What does 'per annum' mean?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Each year or annually"
+        },
+        {
+          "id": "B",
+          "text": "Every decade"
+        },
+        {
+          "id": "C",
+          "text": "Per kilometer traveled"
+        },
+        {
+          "id": "D",
+          "text": "Per registered vehicle"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "'Per annum' is a Latin phrase used in formal statistical reports meaning yearly or annually.",
+      "sourceReference": "Section 3D.1, Page 64"
+    },
+    {
+      "id": "ENG-G12-U03-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "If the eyewitness ______ the registration number of the speeding car, the traffic police could have tracked down the driver immediately.",
+      "options": [
+        {
+          "id": "A",
+          "text": "had recorded"
+        },
+        {
+          "id": "B",
+          "text": "recorded"
+        },
+        {
+          "id": "C",
+          "text": "records"
+        },
+        {
+          "id": "D",
+          "text": "would record"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Conditional Type III (unfulfilled past condition) requires Past Perfect ('had recorded') in the 'if'-clause paired with 'could have + past participle' in the result clause.",
+      "sourceReference": "Section 3E.1, Pages 66-67"
+    },
+    {
+      "id": "ENG-G12-U03-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which of the following expressions is used to state a firm personal opinion during a panel discussion on highway safety?",
+      "options": [
+        {
+          "id": "A",
+          "text": "I am strongly convinced that speed limiters should be mandatory for public buses."
+        },
+        {
+          "id": "B",
+          "text": "Could you please clarify your previous point?"
+        },
+        {
+          "id": "C",
+          "text": "I wonder if you agree with my opinion."
+        },
+        {
+          "id": "D",
+          "text": "Let us move to the next agenda item."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "'I am strongly convinced that...' is a standard formal expression used to express a firm opinion during discussions.",
+      "sourceReference": "Section 3B.1, Page 58"
+    },
+    {
+      "id": "ENG-G12-U03-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "According to the reading text 'Evidence of Road Traffic Accident in Africa', why do some low-income nations report unexpectedly low official traffic fatality rates despite poor road conditions?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because of under-reporting and incomplete crash data collection systems"
+        },
+        {
+          "id": "B",
+          "text": "Because all vehicles in low-income nations feature automatic collision avoidance"
+        },
+        {
+          "id": "C",
+          "text": "Because citizens travel exclusively by electric railways"
+        },
+        {
+          "id": "D",
+          "text": "Because highway speed limits are set to zero"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Section 3C.2 notes that low official fatality figures in certain developing nations often result from severe under-reporting and incomplete data collection.",
+      "sourceReference": "Section 3C.2, Pages 61-62"
+    },
+    {
+      "id": "ENG-G12-U03-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "______ the emergency call from the dispatch center, the ambulance driver rushed to the accident scene.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Receiving"
+        },
+        {
+          "id": "B",
+          "text": "Received"
+        },
+        {
+          "id": "C",
+          "text": "Having receive"
+        },
+        {
+          "id": "D",
+          "text": "To receive"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The present participle phrase 'Receiving the emergency call...' functions as an active clause modifying 'the ambulance driver'.",
+      "sourceReference": "Section 3E.2, Pages 68-69"
+    },
+    {
+      "id": "ENG-G12-U03-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "______ the driver worn his seatbelt at the time of the rollover collision, he would have escaped without severe thoracic injuries.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Had"
+        },
+        {
+          "id": "B",
+          "text": "Were"
+        },
+        {
+          "id": "C",
+          "text": "If had"
+        },
+        {
+          "id": "D",
+          "text": "Should"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "In formal inverted Third Conditional clauses, 'If' is omitted and the auxiliary verb 'Had' is inverted with the subject ('Had the driver worn...').",
+      "sourceReference": "Section 3E.1, Page 67"
+    },
+    {
+      "id": "ENG-G12-U03-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Identify the sentence that suffers from a MISPLACED MODIFIER:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Arriving at the crash site, the injured passengers were treated by paramedics."
+        },
+        {
+          "id": "B",
+          "text": "Arriving at the crash site, the paramedics immediately treated the injured passengers."
+        },
+        {
+          "id": "C",
+          "text": "When the paramedics arrived at the crash site, they treated the injured passengers."
+        },
+        {
+          "id": "D",
+          "text": "After arriving at the crash site, the medical team treated the injured passengers."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "In Option A, 'Arriving at the crash site' illogically modifies 'the injured passengers' (making it sound as if the injured passengers arrived at their own crash site as treating personnel). This is a misplaced modifier.",
+      "sourceReference": "Section 3E.3, Pages 69-70"
+    },
+    {
+      "id": "ENG-G12-U03-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "When composing a narrative essay detailing an eyewitness account of a highway collision, which tense sequence and structure are most appropriate?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Simple Past and Past Continuous tenses arranged in chronological sequence with vivid sensory details"
+        },
+        {
+          "id": "B",
+          "text": "Simple Present and Present Perfect tenses formatted as bulleted lists"
+        },
+        {
+          "id": "C",
+          "text": "Future Tense exclusively formatted as a mathematical table"
+        },
+        {
+          "id": "D",
+          "text": "Imperative commands without temporal transition words"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Narrative essays describing past events rely on Simple Past and Past Continuous tenses ordered chronologically to construct a clear narrative arc.",
+      "sourceReference": "Section 3F.1, Pages 70-72"
+    },
+    {
+      "id": "ENG-G12-U03-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "In systematic traffic crash investigation, what three core data parameters must crash investigators record regarding the drivers involved?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Driver identification/license status, alcohol or substance impairment test results, and safety restraint usage"
+        },
+        {
+          "id": "B",
+          "text": "Favorite musical genres, vehicle paint color, and engine market value"
+        },
+        {
+          "id": "C",
+          "text": "Historical family lineage, political affiliation, and hotel preference"
+        },
+        {
+          "id": "D",
+          "text": "Shoe size, hair color, and preferred sports club"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Section 3A.1 outlines common driver data parameters collected at accident scenes: driver license validity, impairment status (blood alcohol level), and safety restraint compliance.",
+      "sourceReference": "Section 3A.1, Page 55"
+    }
+  ]
 }

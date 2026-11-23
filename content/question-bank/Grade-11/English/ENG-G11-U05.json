@@ -3,5 +3,411 @@
   "subject": "English",
   "unitNumber": 5,
   "unitTitle": "Irrigation",
-  "questions": []
+  "questions": [
+    {
+      "id": "ENG-G11-U05-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In modern agricultural schemes, water ______ directly to plant roots through narrow plastic tubes called drip lines.",
+      "options": [
+        {
+          "id": "A",
+          "text": "is delivered"
+        },
+        {
+          "id": "B",
+          "text": "delivers"
+        },
+        {
+          "id": "C",
+          "text": "was delivered"
+        },
+        {
+          "id": "D",
+          "text": "is delivering"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Describing factual processes in the present passive voice requires 'is/are + past participle' ('is delivered').",
+      "sourceReference": "Section 5E.1, Page 135"
+    },
+    {
+      "id": "ENG-G11-U05-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Traditional surface irrigation often leads to excessive water loss due to high rates of evaporation. What is the closest contextual meaning of 'evaporation'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The process of liquid water turning into vapor or gas"
+        },
+        {
+          "id": "B",
+          "text": "The process of water freezing into solid ice"
+        },
+        {
+          "id": "C",
+          "text": "The accumulation of heavy mud at the bottom of a river"
+        },
+        {
+          "id": "D",
+          "text": "The artificial pumping of underground water"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Evaporation contextually refers to the physical transition of water from a liquid state into atmospheric gas or vapor due to heat.",
+      "sourceReference": "Section 5C.1, Page 128"
+    },
+    {
+      "id": "ENG-G11-U05-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "During the long dry season, small seasonal streams across the lowland region often ______ completely.",
+      "options": [
+        {
+          "id": "A",
+          "text": "dry up"
+        },
+        {
+          "id": "B",
+          "text": "dry off"
+        },
+        {
+          "id": "C",
+          "text": "dry out from"
+        },
+        {
+          "id": "D",
+          "text": "dry over"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The phrasal verb 'dry up' means to lose all moisture or cease flowing completely.",
+      "sourceReference": "Section 5D.3, Page 133"
+    },
+    {
+      "id": "ENG-G11-U05-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "If local farmers ______ modern drip irrigation systems, they will conserve precious water resources during severe droughts.",
+      "options": [
+        {
+          "id": "A",
+          "text": "adopt"
+        },
+        {
+          "id": "B",
+          "text": "adopted"
+        },
+        {
+          "id": "C",
+          "text": "had adopted"
+        },
+        {
+          "id": "D",
+          "text": "would adopt"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "In Conditional Type 1 real future possibilities, the 'if'-clause takes the Simple Present ('adopt') paired with 'will + base verb' in the main clause.",
+      "sourceReference": "Section 5E.2, Page 137"
+    },
+    {
+      "id": "ENG-G11-U05-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which of the following words contains the diphthong sound /əʊ/ as in 'go'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "flow"
+        },
+        {
+          "id": "B",
+          "text": "cow"
+        },
+        {
+          "id": "C",
+          "text": "now"
+        },
+        {
+          "id": "D",
+          "text": "law"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "'Flow' /fləʊ/ contains the diphthong /əʊ/. 'Cow' and 'now' contain /aʊ/, while 'law' contains /ɔː/.",
+      "sourceReference": "Section 5B.1, Page 120"
+    },
+    {
+      "id": "ENG-G11-U05-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Constructing micro-dams enables agricultural communities to harvest rainwater so that crops ______ throughout the year.",
+      "options": [
+        {
+          "id": "A",
+          "text": "can be irrigated"
+        },
+        {
+          "id": "B",
+          "text": "can irrigate"
+        },
+        {
+          "id": "C",
+          "text": "could have irrigated"
+        },
+        {
+          "id": "D",
+          "text": "irrigating"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Passive modal constructions require 'modal + be + past participle' ('can be irrigated').",
+      "sourceReference": "Section 5E.1, Page 135"
+    },
+    {
+      "id": "ENG-G11-U05-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "The expansion of small-scale irrigation schemes has transformed once arid lands into fertile, highly arable fields. What is the contextual meaning of 'arable'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Suitable for growing crops and farming"
+        },
+        {
+          "id": "B",
+          "text": "Rocky and unfit for vegetation"
+        },
+        {
+          "id": "C",
+          "text": "Permanently flooded with saltwater"
+        },
+        {
+          "id": "D",
+          "text": "Reserved exclusively for urban building construction"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Contextually in Unit 5, 'arable' describes land suitable for plowing, tillage, and agricultural crop production.",
+      "sourceReference": "Section 5C.1 & 5D.1, Pages 128, 131"
+    },
+    {
+      "id": "ENG-G11-U05-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Engineers lined the main irrigation canal with heavy concrete layers ______ prevent water seepage into sandy soil.",
+      "options": [
+        {
+          "id": "A",
+          "text": "in order to"
+        },
+        {
+          "id": "B",
+          "text": "so that"
+        },
+        {
+          "id": "C",
+          "text": "because of"
+        },
+        {
+          "id": "D",
+          "text": "owing to"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "'In order to' is followed directly by a base verb ('prevent') to express purpose.",
+      "sourceReference": "Section 5E.3, Page 139"
+    },
+    {
+      "id": "ENG-G11-U05-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "The agricultural extension bureau decided to ______ a new water-harvesting demonstration project in the village.",
+      "options": [
+        {
+          "id": "A",
+          "text": "set up"
+        },
+        {
+          "id": "B",
+          "text": "set off"
+        },
+        {
+          "id": "C",
+          "text": "set out for"
+        },
+        {
+          "id": "D",
+          "text": "set back in"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The phrasal verb 'set up' means to establish, construct, or initiate an organization or project.",
+      "sourceReference": "Section 5D.3, Page 133"
+    },
+    {
+      "id": "ENG-G11-U05-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Attaching the prefix 'de-' to the root word 'salination' forms 'desalination'. What does this term mean?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The process of removing salt and minerals from saline water"
+        },
+        {
+          "id": "B",
+          "text": "The process of adding extra salt into freshwater reservoirs"
+        },
+        {
+          "id": "C",
+          "text": "The natural evaporation of river water in hot climates"
+        },
+        {
+          "id": "D",
+          "text": "The pollution of river banks by industrial chemical waste"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The prefix 'de-' indicates removal or reversal; 'desalination' is the process of removing salt and dissolved minerals from water.",
+      "sourceReference": "Section 5D.2, Page 132"
+    },
+    {
+      "id": "ENG-G11-U05-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "According to the Grade 11 reading text on Irrigation in Ethiopia, what major environmental challenge threatens artificial water reservoirs created behind dams?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Siltation caused by soil erosion, which gradually reduces reservoir storage capacity"
+        },
+        {
+          "id": "B",
+          "text": "Excessive freezing of reservoir surfaces during summer months"
+        },
+        {
+          "id": "C",
+          "text": "Total absence of fish and aquatic organisms"
+        },
+        {
+          "id": "D",
+          "text": "Immediate contamination by radioactive elements"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Section 5C.1 explains that soil erosion deposits high volumes of silt into river reservoirs, causing siltation that decreases water capacity over time.",
+      "sourceReference": "Section 5C.1, Pages 127-129"
+    },
+    {
+      "id": "ENG-G11-U05-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "The regional agricultural bureau had several deep water boreholes ______ across the drought-prone district before the dry season arrived.",
+      "options": [
+        {
+          "id": "A",
+          "text": "drilled"
+        },
+        {
+          "id": "B",
+          "text": "drill"
+        },
+        {
+          "id": "C",
+          "text": "to drill"
+        },
+        {
+          "id": "D",
+          "text": "drilling"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The causative structure 'have + object + past participle' ('had several deep water boreholes drilled') indicates arranging for an action to be performed by external agents or professionals.",
+      "sourceReference": "Section 5E.1, Pages 135-136"
+    },
+    {
+      "id": "ENG-G11-U05-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "If the government ______ in large-scale irrigation infrastructure a decade ago, the drought-affected region ______ severe food shortages today.",
+      "options": [
+        {
+          "id": "A",
+          "text": "had invested / would not be facing"
+        },
+        {
+          "id": "B",
+          "text": "invested / will not face"
+        },
+        {
+          "id": "C",
+          "text": "invests / would not have faced"
+        },
+        {
+          "id": "D",
+          "text": "has invested / is not facing"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Mixed Conditionals linking an unfulfilled past action to a present result require 'If + Past Perfect' ('had invested') in the conditional clause and 'would not + base verb' ('would not be facing') in the result clause.",
+      "sourceReference": "Section 5E.2, Pages 137-138"
+    },
+    {
+      "id": "ENG-G11-U05-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Select the sentence that demonstrates CORRECT punctuation when using a conjunctive adverb to link two independent clauses discussing agricultural technologies:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Drip irrigation minimizes water waste through targeted delivery; furthermore, it reduces weed growth between crop rows."
+        },
+        {
+          "id": "B",
+          "text": "Drip irrigation minimizes water waste through targeted delivery, furthermore; it reduces weed growth between crop rows."
+        },
+        {
+          "id": "C",
+          "text": "Drip irrigation minimizes water waste through targeted delivery; furthermore it reduces weed growth, between crop rows."
+        },
+        {
+          "id": "D",
+          "text": "Drip irrigation minimizes water waste through targeted delivery furthermore, it reduces weed growth between crop rows."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Connecting two independent main clauses with a conjunctive adverb ('furthermore') requires a semicolon before the adverb and a comma immediately following it.",
+      "sourceReference": "Section 5F.1, Pages 141-142"
+    },
+    {
+      "id": "ENG-G11-U05-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Which statement accurately synthesizes the primary comparative advantage of drip irrigation over traditional surface flood irrigation as presented in Unit 5?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Drip irrigation delivers precise water quantities directly to the root zone, significantly reducing evaporation and runoff while increasing crop yield per unit of water."
+        },
+        {
+          "id": "B",
+          "text": "Drip irrigation floods the entire field surface simultaneously, requiring no pipes, pumps, or technical maintenance."
+        },
+        {
+          "id": "C",
+          "text": "Drip irrigation depends entirely on seasonal rainfall and cannot be utilized with underground borehole water."
+        },
+        {
+          "id": "D",
+          "text": "Drip irrigation increases weed growth across uncultivated field spaces by spreading water indiscriminately."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Section 5C.1 and 5F.3 present drip irrigation as a high-efficiency technology that minimizes evaporation and runoff by applying water directly to root zones, maximizing agricultural yield per volume of water used.",
+      "sourceReference": "Section 5C.1 & 5F.3, Pages 128, 144"
+    }
+  ]
 }

@@ -3,5 +3,411 @@
   "subject": "English",
   "unitNumber": 9,
   "unitTitle": "Multilingualism",
-  "questions": []
+  "questions": [
+    {
+      "id": "ENG-G10-U09-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "If I ______ fluent in three international languages, I would apply for an interpreter position at the United Nations.",
+      "options": [
+        {
+          "id": "A",
+          "text": "am"
+        },
+        {
+          "id": "B",
+          "text": "were"
+        },
+        {
+          "id": "C",
+          "text": "will be"
+        },
+        {
+          "id": "D",
+          "text": "have been"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In Second Conditional hypothetical statements expressing unreal present situations, 'were' is used for all subjects in standard formal English ('If I were...').",
+      "sourceReference": "Section 9.5.1, Page 256"
+    },
+    {
+      "id": "ENG-G10-U09-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "According to the listening passage in Unit 9, what is the definition of a 'polyglot'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A person who stammers while speaking a foreign language"
+        },
+        {
+          "id": "B",
+          "text": "A person who can speak six or more languages fluently"
+        },
+        {
+          "id": "C",
+          "text": "A student who refuses to learn foreign alphabets"
+        },
+        {
+          "id": "D",
+          "text": "An expert who studies ancient extinct scripts"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In Section 9.1 (Page 244), a 'polyglot' is explicitly defined as a person who can speak six or more languages fluently.",
+      "sourceReference": "Section 9.1, Page 244"
+    },
+    {
+      "id": "ENG-G10-U09-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Complete the sentence with the appropriate article: 'Ato Worku is ______ honest public administrator who respects cultural diversity.'",
+      "options": [
+        {
+          "id": "A",
+          "text": "a"
+        },
+        {
+          "id": "B",
+          "text": "an"
+        },
+        {
+          "id": "C",
+          "text": "the"
+        },
+        {
+          "id": "D",
+          "text": "no article needed"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The indefinite article 'an' is used before words beginning with a vowel sound, such as 'honest' (where the initial letter 'h' is silent).",
+      "sourceReference": "Section 9.5.2, Page 257"
+    },
+    {
+      "id": "ENG-G10-U09-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Whenever our school organizes a cultural diversity festival, senior students always volunteer to ______ with setting up the stage.",
+      "options": [
+        {
+          "id": "A",
+          "text": "help out"
+        },
+        {
+          "id": "B",
+          "text": "hold against"
+        },
+        {
+          "id": "C",
+          "text": "head back"
+        },
+        {
+          "id": "D",
+          "text": "hear of"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The phrasal verb 'help out' means to assist someone, especially by doing a share of work or providing a favor.",
+      "sourceReference": "Section 9.6.2, Page 272"
+    },
+    {
+      "id": "ENG-G10-U09-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "According to the reading passage 'Cognitive Benefits of being Multilingual', how does multilingualism benefit elderly individuals?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It completely eliminates physical fatigue during exercise."
+        },
+        {
+          "id": "B",
+          "text": "It reduces overall mental decline in old age as cognitive energy is expended using multiple languages."
+        },
+        {
+          "id": "C",
+          "text": "It allows them to bypass formal medical examinations."
+        },
+        {
+          "id": "D",
+          "text": "It replaces the need for balanced nutritional diets."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Section 9.3 highlights that elderly people who expend cognitive energy using multiple languages experience less overall cognitive decline in old age.",
+      "sourceReference": "Section 9.3, Page 249"
+    },
+    {
+      "id": "ENG-G10-U09-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "If the government ______ multilingual education in primary schools ten years ago, more citizens would have developed cross-cultural communication skills.",
+      "options": [
+        {
+          "id": "A",
+          "text": "implemented"
+        },
+        {
+          "id": "B",
+          "text": "had implemented"
+        },
+        {
+          "id": "C",
+          "text": "implements"
+        },
+        {
+          "id": "D",
+          "text": "would implement"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Conditional Type 3 requires 'If + Past Perfect' ('had implemented') in the conditional clause to express an unfulfilled past condition paired with 'would have + past participle' in the main clause.",
+      "sourceReference": "Section 9.5.1, Page 256"
+    },
+    {
+      "id": "ENG-G10-U09-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Choose the sentence that correctly uses state verbs expressing thoughts and opinions:",
+      "options": [
+        {
+          "id": "A",
+          "text": "I am believing that learning regional languages fosters national unity."
+        },
+        {
+          "id": "B",
+          "text": "I believe that learning regional languages fosters national unity."
+        },
+        {
+          "id": "C",
+          "text": "I am hoping that she is knowing three languages."
+        },
+        {
+          "id": "D",
+          "text": "She is wanting to study linguistics at university."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Stative verbs expressing mental states or opinions (e.g. 'believe', 'know', 'want', 'hope') are not used in continuous (-ing) forms in standard English.",
+      "sourceReference": "Section 9.5.4, Page 269"
+    },
+    {
+      "id": "ENG-G10-U09-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What distinguishes a 'bilingual' person from a 'monolingual' person?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A bilingual person speaks two languages fluently, whereas a monolingual person speaks only one language."
+        },
+        {
+          "id": "B",
+          "text": "A bilingual person speaks three languages, whereas a monolingual person speaks four."
+        },
+        {
+          "id": "C",
+          "text": "A bilingual person cannot write, whereas a monolingual person is illiterate."
+        },
+        {
+          "id": "D",
+          "text": "Both terms refer to individuals who communicate exclusively in sign language."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The prefix 'bi-' means two (bilingual = speaking two languages), while 'mono-' means one (monolingual = speaking only one language).",
+      "sourceReference": "Section 9.6, Page 270"
+    },
+    {
+      "id": "ENG-G10-U09-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Despite their heated debate on regional language policies, the two diplomats agreed not to ______ personal disagreements ______ each other.",
+      "options": [
+        {
+          "id": "A",
+          "text": "hold / against"
+        },
+        {
+          "id": "B",
+          "text": "head / toward"
+        },
+        {
+          "id": "C",
+          "text": "hear / about"
+        },
+        {
+          "id": "D",
+          "text": "help / out"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The phrasal verb 'hold (something) against (someone)' means to remain angry at someone or allow a past error/disagreement to negatively influence one's opinion of them.",
+      "sourceReference": "Section 9.6.2, Page 272"
+    },
+    {
+      "id": "ENG-G10-U09-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which rule is ESSENTIAL when writing a formal business or application letter?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Use informal slang, emotional threats, and personal gossip."
+        },
+        {
+          "id": "B",
+          "text": "State your objective clearly and concisely while maintaining a professional and polite tone."
+        },
+        {
+          "id": "C",
+          "text": "Write at least ten pages without using paragraph divisions."
+        },
+        {
+          "id": "D",
+          "text": "Include decorative hand drawings instead of an official signature."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Section 9.4.2 outlines three key elements of formal letter writing: identify your audience, present your objective clearly and concisely, and remain professional and polite.",
+      "sourceReference": "Section 9.4.2, Page 254"
+    },
+    {
+      "id": "ENG-G10-U09-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Select the sentence that demonstrates CORRECT article usage for unique celestial bodies:",
+      "options": [
+        {
+          "id": "A",
+          "text": "A moon reflects light received from a sun."
+        },
+        {
+          "id": "B",
+          "text": "The moon reflects light received from the sun."
+        },
+        {
+          "id": "C",
+          "text": "Moon reflects light received from sun."
+        },
+        {
+          "id": "D",
+          "text": "An moon reflects light received from an sun."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Unique astronomical objects that are the only ones of their kind in our solar system (such as 'the moon' and 'the sun') require the definite article 'the'.",
+      "sourceReference": "Section 9.5.2, Page 258"
+    },
+    {
+      "id": "ENG-G10-U09-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "______ the committee chairperson fluent in multiple local languages, she would have resolved the community dispute much faster.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Had"
+        },
+        {
+          "id": "B",
+          "text": "Were"
+        },
+        {
+          "id": "C",
+          "text": "If had"
+        },
+        {
+          "id": "D",
+          "text": "Should"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Formal inverted Second Conditional clauses omit 'If' and invert 'Were' with the subject ('Were the committee chairperson fluent...'), expressing a hypothetical present/future condition.",
+      "sourceReference": "Section 9.5.1, Pages 256-257"
+    },
+    {
+      "id": "ENG-G10-U09-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "In linguistic study (Section 9.6.1), words like 'jacket', 'gas', 'mango', and 'television' are used in everyday speech across Ethiopia. Through which word formation process did these words enter local languages?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Clipping"
+        },
+        {
+          "id": "B",
+          "text": "Backformation"
+        },
+        {
+          "id": "C",
+          "text": "Borrowing"
+        },
+        {
+          "id": "D",
+          "text": "Blending"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Section 9.6.1 explains that 'borrowing' occurs when words from one language (e.g. English words like jacket, gas, television) are directly adopted into another language.",
+      "sourceReference": "Section 9.6.1, Page 272"
+    },
+    {
+      "id": "ENG-G10-U09-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "According to the reading text 'Cognitive Benefits of being Multilingual', why do multilingual individuals tend to be more effective communicators, exact editors, and compelling writers?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because learning multiple languages forces individuals to memorize dictionary definitions verbatim."
+        },
+        {
+          "id": "B",
+          "text": "Because navigating multiple linguistic systems deepens their structural understanding of how language, grammar, and syntax function overall."
+        },
+        {
+          "id": "C",
+          "text": "Because multilingual speakers are automatically exempt from learning formal grammar rules."
+        },
+        {
+          "id": "D",
+          "text": "Because monolingual writers are legally prohibited from editing academic articles."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The text states that multilingual individuals better understand sentence structure, grammar, and conjugations across languages, making them more exact editors and compelling communicators even in their native tongue.",
+      "sourceReference": "Section 9.3, Page 249"
+    },
+    {
+      "id": "ENG-G10-U09-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Reorder the jumbled words into a syntactically correct sentence containing a conditional clause: 'multilingual / if / she / were / competent / circumstances / every / she / would / be / in / .'",
+      "options": [
+        {
+          "id": "A",
+          "text": "If she were multilingual, she would be competent in every circumstance."
+        },
+        {
+          "id": "B",
+          "text": "She would be if multilingual she were competent in every circumstance."
+        },
+        {
+          "id": "C",
+          "text": "Were she multilingual if she would be in every circumstance competent."
+        },
+        {
+          "id": "D",
+          "text": "If she competent were multilingual she would be in every circumstance."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Standard Second Conditional word order requires: 'If' + Subject ('she') + Subjunctive verb ('were') + Adjective ('multilingual') + Comma + Main Clause ('she would be competent in every circumstance').",
+      "sourceReference": "Section 9.5.1 & 9.5.2, Pages 256-257"
+    }
+  ]
 }

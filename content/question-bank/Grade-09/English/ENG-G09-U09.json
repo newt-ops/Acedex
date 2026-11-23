@@ -3,5 +3,411 @@
   "subject": "English",
   "unitNumber": 9,
   "unitTitle": "Fairness and Equity",
-  "questions": []
+  "questions": [
+    {
+      "id": "ENG-G09-U09-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Aster has worked as a human rights advocate in Addis Ababa ______ 2015.",
+      "options": [
+        {
+          "id": "A",
+          "text": "since"
+        },
+        {
+          "id": "B",
+          "text": "for"
+        },
+        {
+          "id": "C",
+          "text": "ago"
+        },
+        {
+          "id": "D",
+          "text": "before"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The Present Perfect tense paired with a specific starting point in past time ('2015') requires the preposition 'since'.",
+      "sourceReference": "Section 9.4, Page 194"
+    },
+    {
+      "id": "ENG-G09-U09-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In the reading text 'Equality, Equity and Justice', what does the concept of 'equity' specifically involve?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Giving everyone the exact same resources regardless of starting points"
+        },
+        {
+          "id": "B",
+          "text": "Understanding and giving people what they tailoredly need to achieve fair results"
+        },
+        {
+          "id": "C",
+          "text": "Restricting educational resources for low-income communities"
+        },
+        {
+          "id": "D",
+          "text": "Enforcing identical penalties without evaluating court evidence"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Equity involves recognizing individual differences and providing tailored support or resources so that all members of society can achieve fair outcomes.",
+      "sourceReference": "Section 9.2, Page 183"
+    },
+    {
+      "id": "ENG-G09-U09-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Complete the sentence: 'You can always ______ your community members when organizing a local sanitation campaign.'",
+      "options": [
+        {
+          "id": "A",
+          "text": "count on"
+        },
+        {
+          "id": "B",
+          "text": "count up"
+        },
+        {
+          "id": "C",
+          "text": "crack down"
+        },
+        {
+          "id": "D",
+          "text": "cut back"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The phrasal verb 'count on' means to rely on, depend on, or trust someone for support.",
+      "sourceReference": "Section 9.3, Page 189"
+    },
+    {
+      "id": "ENG-G09-U09-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "The committee members haven't finished their discussion on human rights policies ______.",
+      "options": [
+        {
+          "id": "A",
+          "text": "yet"
+        },
+        {
+          "id": "B",
+          "text": "already"
+        },
+        {
+          "id": "C",
+          "text": "ago"
+        },
+        {
+          "id": "D",
+          "text": "since"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "'Yet' is placed at the end of negative Present Perfect sentences to indicate that an expected action has not occurred up to the present moment.",
+      "sourceReference": "Section 9.4, Page 197"
+    },
+    {
+      "id": "ENG-G09-U09-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "After hearing testimony from both the accuser and the defendant, the jury delivered a fair verdict. What is the contextual synonym of 'verdict'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Formal judicial decision or judgment"
+        },
+        {
+          "id": "B",
+          "text": "Financial loan agreement"
+        },
+        {
+          "id": "C",
+          "text": "Political election campaign"
+        },
+        {
+          "id": "D",
+          "text": "Public protest rally"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "In legal and judicial contexts, a 'verdict' refers to the official decision or judgment reached by a jury in a court trial.",
+      "sourceReference": "Section 9.2, Page 186"
+    },
+    {
+      "id": "ENG-G09-U09-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Choose the sentence that correctly uses the Simple Past tense for an action completed at a specified past time.",
+      "options": [
+        {
+          "id": "A",
+          "text": "The Ministry enacted the new employment equity law yesterday."
+        },
+        {
+          "id": "B",
+          "text": "The Ministry has enacted the new employment equity law yesterday."
+        },
+        {
+          "id": "C",
+          "text": "The Ministry is enacting the new employment equity law since yesterday."
+        },
+        {
+          "id": "D",
+          "text": "The Ministry has been enacting the new employment equity law yesterday."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Definite past time markers like 'yesterday' require the Simple Past tense ('enacted'), whereas the Present Perfect cannot be paired with specific completed past time adverbs.",
+      "sourceReference": "Section 9.4, Pages 191, 194"
+    },
+    {
+      "id": "ENG-G09-U09-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "To ensure fairness in a sprint competition on an oval track, race officials stagger the starting positions. What is the meaning of 'stagger' in this context?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Arrange starting lines at offset positions to equalize total distance"
+        },
+        {
+          "id": "B",
+          "text": "Force all runners to compete in a single inner lane"
+        },
+        {
+          "id": "C",
+          "text": "Disqualify athletes who run in the outer lanes"
+        },
+        {
+          "id": "D",
+          "text": "Delay the race until weather conditions change"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Contextually, to 'stagger' starting points means arranging them at offset distances across lanes to compensate for the larger circumference of outer lanes, ensuring equal distance for all runners.",
+      "sourceReference": "Section 9.2, Page 185"
+    },
+    {
+      "id": "ENG-G09-U09-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "The local administration decided to ______ unlawful workplace discrimination across the city.",
+      "options": [
+        {
+          "id": "A",
+          "text": "crack down on"
+        },
+        {
+          "id": "B",
+          "text": "count up to"
+        },
+        {
+          "id": "C",
+          "text": "cross off from"
+        },
+        {
+          "id": "D",
+          "text": "cut down on"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The phrasal verb 'crack down on' means to enforce laws strictly or take severe action against illegal activities.",
+      "sourceReference": "Section 9.3, Page 189"
+    },
+    {
+      "id": "ENG-G09-U09-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Why does starting all runners at the exact same physical line on an oval track represent 'equality' but fail to achieve 'equity'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Runners in outer lanes have a longer distance to run than those in inner lanes."
+        },
+        {
+          "id": "B",
+          "text": "Inner lane runners are required to run faster by rule."
+        },
+        {
+          "id": "C",
+          "text": "Outer lane runners carry additional weights during the race."
+        },
+        {
+          "id": "D",
+          "text": "Oval tracks cannot accommodate more than two competitors at a time."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Starting at the exact same physical line is equal treatment, but because outer lanes have a greater curvature distance, it places outer runners at a disadvantage. Equity offsets this difference by staggering start positions.",
+      "sourceReference": "Section 9.2, Page 185"
+    },
+    {
+      "id": "ENG-G09-U09-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Choose the sentence that correctly uses the Present Perfect tense with 'for' to express duration extending to the present.",
+      "options": [
+        {
+          "id": "A",
+          "text": "She has worked as a community organizer for five years."
+        },
+        {
+          "id": "B",
+          "text": "She worked as a community organizer for five years ago."
+        },
+        {
+          "id": "C",
+          "text": "She has been working as a community organizer since five years."
+        },
+        {
+          "id": "D",
+          "text": "She is working as a community organizer for five years."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "'For' specifies a period or duration of time ('five years') when paired with the Present Perfect tense ('has worked').",
+      "sourceReference": "Section 9.4, Pages 194, 197"
+    },
+    {
+      "id": "ENG-G09-U09-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "According to Unit 9 speaking activities, which strategy effectively prevents social discrimination in institutions?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Ignoring cultural and individual differences entirely"
+        },
+        {
+          "id": "B",
+          "text": "Refusing to initiate, participate in, or condone offensive jokes and harassment"
+        },
+        {
+          "id": "C",
+          "text": "Restricting minority groups from participating in communal leadership"
+        },
+        {
+          "id": "D",
+          "text": "Applying identical rules without providing necessary accommodations"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Preventing discrimination requires active commitment: refusing to engage in or tolerate offensive stereotyping and harassment while promoting mutual respect.",
+      "sourceReference": "Section 9.5, Page 198"
+    },
+    {
+      "id": "ENG-G09-U09-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Analyze the sentences: (1) 'The judge has reviewed three case files this week.' (2) 'The judge reviewed three case files last week.' Which statement correctly explains their tense usage?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Sentence (1) uses Present Perfect for an unfinished time period ('this week'), while (2) uses Simple Past for a completed past period ('last week')."
+        },
+        {
+          "id": "B",
+          "text": "Sentence (1) expresses a future intention, while (2) describes an ongoing habitual routine."
+        },
+        {
+          "id": "C",
+          "text": "Both sentences represent past actions that have no grammatical or contextual difference."
+        },
+        {
+          "id": "D",
+          "text": "Sentence (2) is grammatically incorrect because 'last week' requires the Present Perfect tense."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The Present Perfect ('has reviewed') is used when referring to an unexpired time interval ('this week'), whereas the Simple Past ('reviewed') is used with expired time periods ('last week').",
+      "sourceReference": "Section 9.4, Pages 190-196"
+    },
+    {
+      "id": "ENG-G09-U09-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "'When a crime has been allegedly committed under the law, the perpetrator is allowed a trial by jury.' What are the contextual meanings of 'allegedly' and 'perpetrator'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Reported without proof yet established / person who carries out an illegal act"
+        },
+        {
+          "id": "B",
+          "text": "Proven beyond doubt / victim of a crime"
+        },
+        {
+          "id": "C",
+          "text": "Conducted in secret / police officer investigating an incident"
+        },
+        {
+          "id": "D",
+          "text": "Falsely accused / defense lawyer representing a client"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "'Allegedly' means claimed or asserted without formal proof yet proven, and 'perpetrator' refers to a person who commits an offense or illegal act.",
+      "sourceReference": "Section 9.2 & 9.3, Pages 186, 189"
+    },
+    {
+      "id": "ENG-G09-U09-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "The text quotes Confucius: 'In a country well governed, poverty is something to be ashamed of. In a country badly governed, wealth is something to be ashamed of.' What is the core meaning of this statement in the context of justice?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Good governance provides fair opportunities making poverty rare, whereas bad governance allows wealth to be accumulated through injustice."
+        },
+        {
+          "id": "B",
+          "text": "All wealthy individuals in every nation should be subjected to criminal investigation."
+        },
+        {
+          "id": "C",
+          "text": "Well-governed societies must completely eliminate trade and currency systems."
+        },
+        {
+          "id": "D",
+          "text": "Poor citizens in poorly governed nations bear personal blame for systemic inequality."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The quotation highlights that in a just, well-governed nation, equity and opportunity enable citizens to thrive; in a poorly governed system, wealth is often derived from exploitation and systemic unfairness.",
+      "sourceReference": "Section 9.2, Pages 184-185"
+    },
+    {
+      "id": "ENG-G09-U09-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Reorder the jumbled words into a syntactically correct sentence: 'production / because / the / factory / cut / has / sales / back / on / slow / were / .'",
+      "options": [
+        {
+          "id": "A",
+          "text": "The factory has cut back on production because sales were slow."
+        },
+        {
+          "id": "B",
+          "text": "Because sales were slow the factory cut back has on production."
+        },
+        {
+          "id": "C",
+          "text": "The factory cut back has because sales were slow on production."
+        },
+        {
+          "id": "D",
+          "text": "Cut back on production the factory has because sales were slow."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Standard English word order requires: Subject ('The factory') + Present Perfect auxiliary & phrasal verb ('has cut back on') + Object ('production') + Subordinate Clause ('because sales were slow').",
+      "sourceReference": "Section 9.3 & 9.4, Pages 189, 194"
+    }
+  ]
 }

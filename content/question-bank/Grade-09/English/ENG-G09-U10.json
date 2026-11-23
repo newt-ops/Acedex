@@ -3,5 +3,411 @@
   "subject": "English",
   "unitNumber": 10,
   "unitTitle": "The Internet",
-  "questions": []
+  "questions": [
+    {
+      "id": "ENG-G09-U10-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "I ______ on the educational website for two hours, and I have already found five useful research articles.",
+      "options": [
+        {
+          "id": "A",
+          "text": "have been searching"
+        },
+        {
+          "id": "B",
+          "text": "am searching"
+        },
+        {
+          "id": "C",
+          "text": "searched yesterday"
+        },
+        {
+          "id": "D",
+          "text": "had searched"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The Present Perfect Continuous tense ('have been searching') is used for an action that started in the past and continues up to or affects the present, especially when specified by a duration like 'for two hours'.",
+      "sourceReference": "Section 10.4, Page 212"
+    },
+    {
+      "id": "ENG-G09-U10-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "The invention of the internet has been a great boon to global communication. What is the closest contextual meaning of 'boon'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Benefit or blessing"
+        },
+        {
+          "id": "B",
+          "text": "Harmful obstacle"
+        },
+        {
+          "id": "C",
+          "text": "Financial loss"
+        },
+        {
+          "id": "D",
+          "text": "Complicated problem"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "In reading passages on technology, a 'boon' refers to a helpful benefit, blessing, or advantage.",
+      "sourceReference": "Section 10.3.1, Page 210"
+    },
+    {
+      "id": "ENG-G09-U10-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "The school administration decided to do ______ paper-based assignment submissions and switch to digital uploads.",
+      "options": [
+        {
+          "id": "A",
+          "text": "away with"
+        },
+        {
+          "id": "B",
+          "text": "up with"
+        },
+        {
+          "id": "C",
+          "text": "over with"
+        },
+        {
+          "id": "D",
+          "text": "out with"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The phrasal verb 'do away with' means to abolish, eliminate, or stop using something.",
+      "sourceReference": "Section 10.3.2, Page 211"
+    },
+    {
+      "id": "ENG-G09-U10-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "While Solomon ______ an online lecture on computer programming, his internet connection suddenly dropped.",
+      "options": [
+        {
+          "id": "A",
+          "text": "was watching"
+        },
+        {
+          "id": "B",
+          "text": "watches"
+        },
+        {
+          "id": "C",
+          "text": "is watching"
+        },
+        {
+          "id": "D",
+          "text": "has watched"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "An ongoing background action in the past interrupted by a sudden past event takes the Past Continuous tense ('was watching').",
+      "sourceReference": "Section 10.4, Page 212"
+    },
+    {
+      "id": "ENG-G09-U10-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "According to the Unit 10 listening text, the internet has accelerated human interaction primarily through ______.",
+      "options": [
+        {
+          "id": "A",
+          "text": "instant messaging, emails, and online forums"
+        },
+        {
+          "id": "B",
+          "text": "postal mail and printed telegrams"
+        },
+        {
+          "id": "C",
+          "text": "manual typewriter exchanges"
+        },
+        {
+          "id": "D",
+          "text": "radio broadcasting towers"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Section 10.1 explains that internet technology accelerated global human interaction via instant messaging, email, and social media platforms.",
+      "sourceReference": "Section 10.1, Page 204"
+    },
+    {
+      "id": "ENG-G09-U10-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "As computers become increasingly pervasive in modern society, people use them everywhere from buses to classrooms. What does 'pervasive' mean in this context?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Spreading widely throughout an area or group of people"
+        },
+        {
+          "id": "B",
+          "text": "Rare and difficult to locate"
+        },
+        {
+          "id": "C",
+          "text": "Extremely expensive to purchase"
+        },
+        {
+          "id": "D",
+          "text": "Limited to scientific laboratories"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Contextually, 'pervasive' describes something that has spread widely and is present throughout all parts of a community or system.",
+      "sourceReference": "Section 10.3.1, Page 210"
+    },
+    {
+      "id": "ENG-G09-U10-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Exhausted after studying all night, the student unintentionally ______ in front of his laptop screen.",
+      "options": [
+        {
+          "id": "A",
+          "text": "dozed off"
+        },
+        {
+          "id": "B",
+          "text": "dressed up"
+        },
+        {
+          "id": "C",
+          "text": "did over"
+        },
+        {
+          "id": "D",
+          "text": "did away"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The phrasal verb 'doze off' means to fall asleep unintentionally for a short time.",
+      "sourceReference": "Section 10.3.2, Page 211"
+    },
+    {
+      "id": "ENG-G09-U10-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Aster ______ three online quizzes last week, but she ______ her final web project yet.",
+      "options": [
+        {
+          "id": "A",
+          "text": "completed / hasn't submitted"
+        },
+        {
+          "id": "B",
+          "text": "has completed / didn't submit"
+        },
+        {
+          "id": "C",
+          "text": "is completing / doesn't submit"
+        },
+        {
+          "id": "D",
+          "text": "completes / hadn't submitted"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Definite completed past time phrases like 'last week' take the Simple Past ('completed'), while the adverb 'yet' paired with an unfinished state takes the Present Perfect ('hasn't submitted').",
+      "sourceReference": "Section 10.4, Page 213"
+    },
+    {
+      "id": "ENG-G09-U10-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Digital word processors allow students to print assignments in neat and legible fonts. What is the contextual meaning of 'legible'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Clear and easy to read"
+        },
+        {
+          "id": "B",
+          "text": "Unreadable and messy"
+        },
+        {
+          "id": "C",
+          "text": "Extremely long and detailed"
+        },
+        {
+          "id": "D",
+          "text": "Confidential and secret"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "In typography and writing contexts, 'legible' means clear enough to be read easily.",
+      "sourceReference": "Section 10.3.1, Page 210"
+    },
+    {
+      "id": "ENG-G09-U10-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Complete the dialogue: Chala: 'In my opinion, spending more than four hours a day on social media reduces face-to-face communication skills.' Bontu: '______; students should balance their online time with real-life interactions.'",
+      "options": [
+        {
+          "id": "A",
+          "text": "I couldn't agree more"
+        },
+        {
+          "id": "B",
+          "text": "I completely disagree"
+        },
+        {
+          "id": "C",
+          "text": "I don't think so"
+        },
+        {
+          "id": "D",
+          "text": "That makes no sense"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "'I couldn't agree more' is a standard formal expression used to indicate strong agreement with an opinion.",
+      "sourceReference": "Section 10.5, Page 218"
+    },
+    {
+      "id": "ENG-G09-U10-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "By the time the IT technician arrived at the school library, the network outage ______ for more than forty-five minutes.",
+      "options": [
+        {
+          "id": "A",
+          "text": "had been lasting"
+        },
+        {
+          "id": "B",
+          "text": "has lasted"
+        },
+        {
+          "id": "C",
+          "text": "lasts"
+        },
+        {
+          "id": "D",
+          "text": "is lasting"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "When an ongoing duration occurred before another completed past event ('arrived'), the Past Perfect Continuous tense ('had been lasting') is required.",
+      "sourceReference": "Section 10.4, Page 213"
+    },
+    {
+      "id": "ENG-G09-U10-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Before the software company launched its new application, the development team ______ on the program's security features for eight consecutive months.",
+      "options": [
+        {
+          "id": "A",
+          "text": "had been working"
+        },
+        {
+          "id": "B",
+          "text": "have been working"
+        },
+        {
+          "id": "C",
+          "text": "are working"
+        },
+        {
+          "id": "D",
+          "text": "will have worked"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The Past Perfect Continuous tense ('had been working') expresses an action that was ongoing for a specified duration prior to a defined past event ('launched').",
+      "sourceReference": "Section 10.4, Pages 212-214"
+    },
+    {
+      "id": "ENG-G09-U10-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "The passage states: 'It depends on our wisely making use of a computer to turn it into a boon instead of a bane for us.' What is the exact relationship between 'boon' and 'bane'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Antonyms: 'boon' means a helpful benefit, whereas 'bane' means a cause of harm or ruin."
+        },
+        {
+          "id": "B",
+          "text": "Synonyms: both words refer to technological destruction."
+        },
+        {
+          "id": "C",
+          "text": "Homophones: words that sound identical but have unrelated origins."
+        },
+        {
+          "id": "D",
+          "text": "Collocations: words that must always be used together as verbs."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "'Boon' (a blessing or benefit) and 'bane' (a source of misery or ruin) are direct antonyms juxtaposed to show contrast.",
+      "sourceReference": "Section 10.2 & 10.3.1, Pages 208, 210"
+    },
+    {
+      "id": "ENG-G09-U10-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "When the electricity supply failed during the storm, the online research team had to ______ internet access and rely on offline reference books.",
+      "options": [
+        {
+          "id": "A",
+          "text": "do without"
+        },
+        {
+          "id": "B",
+          "text": "do away with"
+        },
+        {
+          "id": "C",
+          "text": "do over"
+        },
+        {
+          "id": "D",
+          "text": "do up"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The phrasal verb 'do without' means to manage or get along in the absence of something unavailable.",
+      "sourceReference": "Section 10.3.2, Page 211"
+    },
+    {
+      "id": "ENG-G09-U10-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Reorder the jumbled words into a syntactically correct sentence: 'lives / of / internet / reshaped / the / modern / human / aspect / has / virtually / every / .'",
+      "options": [
+        {
+          "id": "A",
+          "text": "The internet has reshaped virtually every aspect of modern human lives."
+        },
+        {
+          "id": "B",
+          "text": "Virtually every aspect of modern human lives internet has reshaped."
+        },
+        {
+          "id": "C",
+          "text": "Has reshaped virtually every aspect of modern human lives the internet."
+        },
+        {
+          "id": "D",
+          "text": "The internet virtually aspect has reshaped of modern human lives."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Standard English word order requires: Subject ('The internet') + Present Perfect verb ('has reshaped') + Adverb ('virtually') + Direct Object phrase ('every aspect of modern human lives').",
+      "sourceReference": "Section 10.1 & 10.6, Pages 204, 219"
+    }
+  ]
 }

@@ -3,5 +3,411 @@
   "subject": "English",
   "unitNumber": 7,
   "unitTitle": "Branding Ethiopia and National Identity",
-  "questions": []
+  "questions": [
+    {
+      "id": "ENG-G10-U07-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "If tourists visit the historic walled city of Harar Jugol, they ______ ancient shrines and unique cultural heritage.",
+      "options": [
+        {
+          "id": "A",
+          "text": "see"
+        },
+        {
+          "id": "B",
+          "text": "will see"
+        },
+        {
+          "id": "C",
+          "text": "would see"
+        },
+        {
+          "id": "D",
+          "text": "had seen"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In Conditional Type 1 sentences describing probable future events, the 'if'-clause takes the Simple Present ('visit') while the result clause takes 'will + base verb' ('will see').",
+      "sourceReference": "Section 7.5.1, Page 203"
+    },
+    {
+      "id": "ENG-G10-U07-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Jemal said, 'I enjoy visiting Ethiopian UNESCO heritage sites.' When converted into reported speech, this sentence becomes: 'Jemal said that he ______ visiting Ethiopian UNESCO heritage sites.'",
+      "options": [
+        {
+          "id": "A",
+          "text": "enjoys"
+        },
+        {
+          "id": "B",
+          "text": "enjoyed"
+        },
+        {
+          "id": "C",
+          "text": "has enjoyed"
+        },
+        {
+          "id": "D",
+          "text": "had enjoyed"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "When reporting direct speech with a past tense reporting verb ('said'), Simple Present verbs ('enjoy') backshift to Simple Past ('enjoyed').",
+      "sourceReference": "Section 7.5.2, Page 208"
+    },
+    {
+      "id": "ENG-G10-U07-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Harar Jugol is surrounded by ancient walls constructed to protect the sacred city from invaders. What is the closest contextual meaning of 'fortified'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Strengthened or secured with defensive structures"
+        },
+        {
+          "id": "B",
+          "text": "Completely demolished and destroyed"
+        },
+        {
+          "id": "C",
+          "text": "Temporarily abandoned by residents"
+        },
+        {
+          "id": "D",
+          "text": "Painted in vibrant modern colors"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "In Section 7.4 vocabulary, 'fortified' contextually means strengthened, defended, or protected against invasion using walls or barriers.",
+      "sourceReference": "Section 7.4, Page 197"
+    },
+    {
+      "id": "ENG-G10-U07-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "While the students were conducting their science experiment in the school laboratory, all the electric lights suddenly ______.",
+      "options": [
+        {
+          "id": "A",
+          "text": "went off"
+        },
+        {
+          "id": "B",
+          "text": "went for"
+        },
+        {
+          "id": "C",
+          "text": "went up"
+        },
+        {
+          "id": "D",
+          "text": "went with"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The phrasal verb 'go off' means to stop functioning, turn off, or lose electric power suddenly.",
+      "sourceReference": "Section 7.4.2, Page 201"
+    },
+    {
+      "id": "ENG-G10-U07-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Complete the dialogue: Abebe: 'In my view, preserving indigenous national heritages promotes tourism and national unity.' Met'elo: '______; our cultural heritage defines our identity.'",
+      "options": [
+        {
+          "id": "A",
+          "text": "I couldn't agree with you more"
+        },
+        {
+          "id": "B",
+          "text": "I totally disagree with you"
+        },
+        {
+          "id": "C",
+          "text": "I'm afraid I have a different opinion"
+        },
+        {
+          "id": "D",
+          "text": "That makes no sense at all"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "'I couldn't agree with you more' is a standard formal expression used to express strong agreement with an opinion.",
+      "sourceReference": "Section 7.2.2, Page 184"
+    },
+    {
+      "id": "ENG-G10-U07-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "If I ______ the Minister of Tourism and Culture, I would allocate additional financial resources to restore ancient historical sites across Ethiopia.",
+      "options": [
+        {
+          "id": "A",
+          "text": "am"
+        },
+        {
+          "id": "B",
+          "text": "was"
+        },
+        {
+          "id": "C",
+          "text": "were"
+        },
+        {
+          "id": "D",
+          "text": "had been"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "In standard formal English, Second Conditional hypothetical clauses use the subjunctive 'were' for all subjects ('If I were...').",
+      "sourceReference": "Section 7.5.1, Page 204"
+    },
+    {
+      "id": "ENG-G10-U07-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Before submitting your final draft of the argumentative essay, you should carefully ______ your written paragraphs to correct grammatical errors.",
+      "options": [
+        {
+          "id": "A",
+          "text": "go over"
+        },
+        {
+          "id": "B",
+          "text": "go off"
+        },
+        {
+          "id": "C",
+          "text": "go with"
+        },
+        {
+          "id": "D",
+          "text": "go down"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The phrasal verb 'go over' means to review, examine, check, or inspect something carefully.",
+      "sourceReference": "Section 7.4.2, Page 201"
+    },
+    {
+      "id": "ENG-G10-U07-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Senait said, 'We will visit the Konso Cultural Landscape tomorrow.' In reported speech: Senait said that they would visit the Konso Cultural Landscape ______.",
+      "options": [
+        {
+          "id": "A",
+          "text": "tomorrow"
+        },
+        {
+          "id": "B",
+          "text": "the next day"
+        },
+        {
+          "id": "C",
+          "text": "yesterday"
+        },
+        {
+          "id": "D",
+          "text": "the previous day"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In reported speech, time expressions referring to the future like 'tomorrow' shift to 'the next day' or 'the following day'.",
+      "sourceReference": "Section 7.5.2, Pages 208-210"
+    },
+    {
+      "id": "ENG-G10-U07-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Attaching the prefix 'im-' to the root word 'moral' forms 'immoral'. Which prefix added to 'management' forms a word meaning 'bad or ineffective administration'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "un-"
+        },
+        {
+          "id": "B",
+          "text": "dis-"
+        },
+        {
+          "id": "C",
+          "text": "mis-"
+        },
+        {
+          "id": "D",
+          "text": "de-"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The prefix 'mis-' signifies bad, wrong, or ill. Combining 'mis-' with 'management' forms 'mismanagement'.",
+      "sourceReference": "Section 7.4.1, Page 198"
+    },
+    {
+      "id": "ENG-G10-U07-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Ethiopia will attract millions of international visitors ______ the government and local communities maintain peace and preserve historical monuments.",
+      "options": [
+        {
+          "id": "A",
+          "text": "provided that"
+        },
+        {
+          "id": "B",
+          "text": "unless"
+        },
+        {
+          "id": "C",
+          "text": "despite"
+        },
+        {
+          "id": "D",
+          "text": "in order to"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "'Provided that' functions as a conditional connector meaning 'on condition that' or 'if'.",
+      "sourceReference": "Section 7.5.1, Page 202"
+    },
+    {
+      "id": "ENG-G10-U07-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "The Konso Cultural Landscape is celebrated for its stone-walled terraces that protect farmland from soil erosion. What is the contextual meaning of 'vicinities'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Remote foreign countries"
+        },
+        {
+          "id": "B",
+          "text": "Surrounding areas or neighboring regions"
+        },
+        {
+          "id": "C",
+          "text": "Underground water wells"
+        },
+        {
+          "id": "D",
+          "text": "Modern high-rise buildings"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Contextually in Unit 7, 'vicinities' refers to surrounding areas, neighborhoods, or nearby regions.",
+      "sourceReference": "Section 7.4, Page 197"
+    },
+    {
+      "id": "ENG-G10-U07-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "______ the regional administration invested in heritage conservation five years ago, the ancient palace walls would not have suffered severe structural collapse.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Had"
+        },
+        {
+          "id": "B",
+          "text": "If had"
+        },
+        {
+          "id": "C",
+          "text": "Were"
+        },
+        {
+          "id": "D",
+          "text": "Should"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "In formal inverted Third Conditional sentences, 'If' is omitted and the auxiliary verb 'Had' is inverted with the subject ('Had the regional administration invested...').",
+      "sourceReference": "Section 7.5.1, Pages 204-205"
+    },
+    {
+      "id": "ENG-G10-U07-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "The tour guide told us: 'You can take photographs of the traditional costumes, but you must not touch the ancient museum artifacts.' Which reported speech sentence is grammatically correct?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The tour guide told us that we could take photographs of the traditional costumes, but we must not touch the ancient museum artifacts."
+        },
+        {
+          "id": "B",
+          "text": "The tour guide told us that we can take photographs of the traditional costumes, but we were not allowed to touch the ancient museum artifacts."
+        },
+        {
+          "id": "C",
+          "text": "The tour guide told us that we could take photographs of the traditional costumes, but we were not to touch the ancient museum artifacts."
+        },
+        {
+          "id": "D",
+          "text": "The tour guide told us that we can take photographs of the traditional costumes, but we mustn't touch the ancient museum artifacts."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "In reported speech, modal 'can' backshifts to 'could', while modal prohibition 'must not' remains 'must not' when expressing an ongoing rule or prohibition.",
+      "sourceReference": "Section 7.5.2, Pages 207-210"
+    },
+    {
+      "id": "ENG-G10-U07-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Select the option that correctly categorizes the transition words 'furthermore', 'nevertheless', and 'consequently' by their paragraph function in an argumentative essay:",
+      "options": [
+        {
+          "id": "A",
+          "text": "furthermore (addition) / nevertheless (contrast) / consequently (result)"
+        },
+        {
+          "id": "B",
+          "text": "furthermore (contrast) / nevertheless (cause) / consequently (addition)"
+        },
+        {
+          "id": "C",
+          "text": "furthermore (result) / nevertheless (addition) / consequently (contrast)"
+        },
+        {
+          "id": "D",
+          "text": "furthermore (summary) / nevertheless (illustration) / consequently (reason)"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "'Furthermore' adds supporting ideas, 'nevertheless' introduces a contrasting idea or counterargument, and 'consequently' introduces a logical result or conclusion.",
+      "sourceReference": "Section 7.6.1, Pages 212-214"
+    },
+    {
+      "id": "ENG-G10-U07-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Reorder the jumbled words into a syntactically correct Conditional Type 3 sentence: 'national / tourism / Ethiopia / had / revenues / its / expanded / sector / would / heritages / preserved / have / if / .'",
+      "options": [
+        {
+          "id": "A",
+          "text": "If Ethiopia had preserved its national heritages, tourism revenues would have expanded."
+        },
+        {
+          "id": "B",
+          "text": "If Ethiopia preserved its national heritages, tourism revenues had expanded."
+        },
+        {
+          "id": "C",
+          "text": "Tourism revenues had expanded if Ethiopia preserved its national heritages."
+        },
+        {
+          "id": "D",
+          "text": "Had Ethiopia preserve its national heritages, tourism revenues would expanded."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Conditional Type 3 syntax requires: 'If' + Subject ('Ethiopia') + Past Perfect ('had preserved') + Object ('its national heritages') + Comma + Main Clause ('tourism revenues would have expanded').",
+      "sourceReference": "Section 7.5.1, Pages 204-206"
+    }
+  ]
 }

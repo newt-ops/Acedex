@@ -3,5 +3,411 @@
   "subject": "English",
   "unitNumber": 7,
   "unitTitle": "National Pride",
-  "questions": []
+  "questions": [
+    {
+      "id": "ENG-G12-U07-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "The engineer stated, \"I am working on the GERD mega-project today.\" When converted into reported speech, this becomes: The engineer stated that he was working on the GERD mega-project ______.",
+      "options": [
+        {
+          "id": "A",
+          "text": "that day"
+        },
+        {
+          "id": "B",
+          "text": "today"
+        },
+        {
+          "id": "C",
+          "text": "the next day"
+        },
+        {
+          "id": "D",
+          "text": "yesterday"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "In indirect/reported speech, the time adverb 'today' shifts to 'that day' when reporting past utterances.",
+      "sourceReference": "Section 7E.1, Pages 172-174"
+    },
+    {
+      "id": "ENG-G12-U07-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Cultural heritage and shared historical victories represent intangible assets that unite citizens across generations. What is the closest contextual meaning of 'intangible'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Non-physical, abstract, or incapable of being touched"
+        },
+        {
+          "id": "B",
+          "text": "Heavy and constructed of solid concrete"
+        },
+        {
+          "id": "C",
+          "text": "Temporary and legally invalid"
+        },
+        {
+          "id": "D",
+          "text": "Extremely expensive in cash terms"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "In Section 7D.1, 'intangible' refers to valuable assets or qualities that lack physical form (such as pride, heritage, or unity).",
+      "sourceReference": "Section 7D.1, Page 170"
+    },
+    {
+      "id": "ENG-G12-U07-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Worku said, \"The national athletic team won three gold medals.\" In reported speech: Worku said that the national athletic team ______ three gold medals.",
+      "options": [
+        {
+          "id": "A",
+          "text": "had won"
+        },
+        {
+          "id": "B",
+          "text": "wins"
+        },
+        {
+          "id": "C",
+          "text": "has win"
+        },
+        {
+          "id": "D",
+          "text": "will win"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "When reporting direct speech in the past, Simple Past verbs ('won') backshift to Past Perfect ('had won').",
+      "sourceReference": "Section 7E.1, Pages 172-174"
+    },
+    {
+      "id": "ENG-G12-U07-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Thousands of enthusiastic citizens decided to ______ in massive numbers to support the national greening initiative.",
+      "options": [
+        {
+          "id": "A",
+          "text": "turn out"
+        },
+        {
+          "id": "B",
+          "text": "turn down"
+        },
+        {
+          "id": "C",
+          "text": "turn off"
+        },
+        {
+          "id": "D",
+          "text": "turn away"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The phrasal verb 'turn out' means to assemble, gather, or attend a public event or mobilization drive.",
+      "sourceReference": "Section 7D.3, Page 171"
+    },
+    {
+      "id": "ENG-G12-U07-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In formal classroom debate evaluation, what term completes the three core criteria of public speaking presentation: Manner, Matter, and ______?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Method"
+        },
+        {
+          "id": "B",
+          "text": "Memory"
+        },
+        {
+          "id": "C",
+          "text": "Monologue"
+        },
+        {
+          "id": "D",
+          "text": "Mutation"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Section 7B.1 specifies that formal debates are judged on Manner (presentation style), Matter (content and evidence), and Method (logical structure and organization).",
+      "sourceReference": "Section 7B.1, Pages 162-164"
+    },
+    {
+      "id": "ENG-G12-U07-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "The commander declared, \"We must defend our national sovereignty at all costs.\" In reported speech: The commander declared that they ______ defend their national sovereignty at all costs.",
+      "options": [
+        {
+          "id": "A",
+          "text": "had to"
+        },
+        {
+          "id": "B",
+          "text": "must to"
+        },
+        {
+          "id": "C",
+          "text": "ought"
+        },
+        {
+          "id": "D",
+          "text": "shall"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "When converting direct speech into reported speech, the modal 'must' expressing obligation backshifts to 'had to'.",
+      "sourceReference": "Section 7E.1, Pages 173-174"
+    },
+    {
+      "id": "ENG-G12-U07-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Identify the sentence that suffers from a VAGUE PRONOUN REFERENCE:",
+      "options": [
+        {
+          "id": "A",
+          "text": "When the engineer met the project manager, he said that the dam construction was complete."
+        },
+        {
+          "id": "B",
+          "text": "When the engineer met the project manager, the manager said that the dam construction was complete."
+        },
+        {
+          "id": "C",
+          "text": "The engineer told the manager that the dam construction was complete."
+        },
+        {
+          "id": "D",
+          "text": "The project manager announced that the dam construction was complete."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "In Option A, the pronoun 'he' is vague/ambiguous because it could refer to either the engineer or the project manager.",
+      "sourceReference": "Section 7E.3, Pages 175-176"
+    },
+    {
+      "id": "ENG-G12-U07-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "According to Section 7C.1 on 'Mega Projects of Countries', how do strategic national infrastructure investments foster national pride and economic transformation?",
+      "options": [
+        {
+          "id": "A",
+          "text": "By demonstrating national self-reliance, expanding energy capacity, and driving regional economic integration."
+        },
+        {
+          "id": "B",
+          "text": "By eliminating the need for agriculture or international trade."
+        },
+        {
+          "id": "C",
+          "text": "By relying entirely on foreign physical labor and grants."
+        },
+        {
+          "id": "D",
+          "text": "By privatizing all public water resources for personal profit."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Section 7C.1 explains that landmark national projects (such as GERD) showcase technological capacity, boost self-reliance, and accelerate economic growth.",
+      "sourceReference": "Section 7C.1, Pages 164-167"
+    },
+    {
+      "id": "ENG-G12-U07-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Solve the word relationship analogy based on Section 7D.2: LEGACY is to HERITAGE as MOBILIZATION is to ______.",
+      "options": [
+        {
+          "id": "A",
+          "text": "assembly"
+        },
+        {
+          "id": "B",
+          "text": "destruction"
+        },
+        {
+          "id": "C",
+          "text": "isolation"
+        },
+        {
+          "id": "D",
+          "text": "stagnation"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "'Legacy' and 'heritage' are synonymous. Similarly, 'mobilization' and 'assembly' (or rally) are synonymous.",
+      "sourceReference": "Section 7D.2, Page 171"
+    },
+    {
+      "id": "ENG-G12-U07-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Select the sentence that is CORRECTLY punctuated according to standard mechanics for direct speech:",
+      "options": [
+        {
+          "id": "A",
+          "text": "\"National pride inspires unity,\" said the historian, \"and it strengthens social cohesion.\""
+        },
+        {
+          "id": "B",
+          "text": "\"National pride inspires unity\" said the historian \"and it strengthens social cohesion.\""
+        },
+        {
+          "id": "C",
+          "text": "\"National pride inspires unity,\" Said the historian, \"And it strengthens social cohesion.\""
+        },
+        {
+          "id": "D",
+          "text": "\"National pride inspires unity.\" said the historian, \"and it strengthens social cohesion\""
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Splitting a direct quote requires commas inside closing quotation marks, lower-case reporting verbs ('said'), and lower-case continuation inside quotes if continuing a single sentence.",
+      "sourceReference": "Section 7F.1, Pages 177-178"
+    },
+    {
+      "id": "ENG-G12-U07-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In the poem 'A Hero Does Not Recognize Death' (Section 7C.2), what central message does the poet convey regarding true heroes?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A true hero's legacy lives on indefinitely through their noble deeds, art, and sacrifices, transcending physical death."
+        },
+        {
+          "id": "B",
+          "text": "A hero avoids dangerous situations to prioritize personal physical safety above all."
+        },
+        {
+          "id": "C",
+          "text": "True heroism is measured strictly by financial riches accumulated in life."
+        },
+        {
+          "id": "D",
+          "text": "Physical death erases all memory and historical impact of a national leader."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Section 7C.2 emphasizes that time cannot erase a hero's story; noble deeds and commitment to justice confer enduring historical immortality.",
+      "sourceReference": "Section 7C.2, Pages 167-169"
+    },
+    {
+      "id": "ENG-G12-U07-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "The federation official announced: \"If our team wins the championship tomorrow, we will host a national celebration.\" Which reported speech conversion is GRAMMATICALLY CORRECT?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The federation official announced that if their team won the championship the following day, they would host a national celebration."
+        },
+        {
+          "id": "B",
+          "text": "The federation official announced that if our team wins the championship tomorrow, we will host a national celebration."
+        },
+        {
+          "id": "C",
+          "text": "The federation official announced if their team win the championship the next day, they will host a national celebration."
+        },
+        {
+          "id": "D",
+          "text": "The federation official announced that if their team had won the championship tomorrow, they had hosted a national celebration."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Converting Conditional Type 1 into reported speech backshifts present 'wins' to past 'won', future 'will' to 'would', pronouns 'our/we' to 'their/they', and 'tomorrow' to 'the following day'.",
+      "sourceReference": "Section 7E.1, Pages 172-175"
+    },
+    {
+      "id": "ENG-G12-U07-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Read the sentence: \"In the news report, it says that the new highway project will boost regional trade.\" Which revision BEST corrects the unattached pronoun reference 'it'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The news report states that the new highway project will boost regional trade."
+        },
+        {
+          "id": "B",
+          "text": "In the news report, they say that the new highway project will boost regional trade."
+        },
+        {
+          "id": "C",
+          "text": "It is stated by the news report that the highway project will boost trade."
+        },
+        {
+          "id": "D",
+          "text": "In it, the news report says that regional trade will be boosted by the highway."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Replacing vague 'it says in...' with a direct concrete noun subject ('The news report states...') eliminates vague pronoun reference.",
+      "sourceReference": "Section 7E.3, Pages 175-176"
+    },
+    {
+      "id": "ENG-G12-U07-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Based on Section 7C.1, what common historical feature links ancient mega-projects (such as the Roman Colosseum) with modern projects like the Grand Ethiopian Renaissance Dam (GERD)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "They represent monumental engineering feats that redefine national infrastructure, foster collective identity, and symbolize economic ambition."
+        },
+        {
+          "id": "B",
+          "text": "They were constructed without any financial capital or labor."
+        },
+        {
+          "id": "C",
+          "text": "They served purely ornamental purposes without practical or economic utility."
+        },
+        {
+          "id": "D",
+          "text": "They were built exclusively for foreign private entities."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Section 7C.1 highlights that mega-projects serve as symbols of civilizational achievement, unity, and economic progress across different eras.",
+      "sourceReference": "Section 7C.1, Pages 164-167"
+    },
+    {
+      "id": "ENG-G12-U07-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Reorder the following narrative sentences into a logically coherent paragraph describing an athletic achievement:\n(1) Standing atop the podium, she wept tears of joy as the national anthem played.\n(2) For years, Abebech had trained relentlessly under the grueling high-altitude sun.\n(3) Crossing the finish line ahead of world-class runners, she raised her arms in triumph.\n(4) Her dedication finally culminated on the final lap of the Olympic marathon.",
+      "options": [
+        {
+          "id": "A",
+          "text": "(2) -> (4) -> (3) -> (1)"
+        },
+        {
+          "id": "B",
+          "text": "(1) -> (3) -> (2) -> (4)"
+        },
+        {
+          "id": "C",
+          "text": "(3) -> (1) -> (4) -> (2)"
+        },
+        {
+          "id": "D",
+          "text": "(4) -> (2) -> (1) -> (3)"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Logical narrative chronological order: (2) Years of prior training -> (4) Culmination on the final lap -> (3) Crossing the finish line -> (1) Podium ceremony with national anthem.",
+      "sourceReference": "Section 7F.2, Pages 178-179"
+    }
+  ]
 }

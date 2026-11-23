@@ -3,5 +3,411 @@
   "subject": "English",
   "unitNumber": 1,
   "unitTitle": "Living in Urban Areas",
-  "questions": []
+  "questions": [
+    {
+      "id": "ENG-G09-U01-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Choose the correct question tag: 'He lives in a big city, ______?'",
+      "options": [
+        {
+          "id": "A",
+          "text": "doesn't he"
+        },
+        {
+          "id": "B",
+          "text": "don't he"
+        },
+        {
+          "id": "C",
+          "text": "isn't he"
+        },
+        {
+          "id": "D",
+          "text": "didn't he"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "In English question tag rules, a affirmative statement in the Simple Present tense with a third-person singular subject ('He lives') requires a negative question tag formed with the auxiliary verb 'does' + 'not' ('doesn't') followed by the pronoun 'he'.",
+      "sourceReference": "Section 1.4.1, Page 11"
+    },
+    {
+      "id": "ENG-G09-U01-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Addis Ababa is a major metropolitan center in Ethiopia. What is the closest contextual meaning of the word 'metropolitan'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A small and quiet rural village"
+        },
+        {
+          "id": "B",
+          "text": "A large, busy, and central city"
+        },
+        {
+          "id": "C",
+          "text": "An agricultural crop farmland"
+        },
+        {
+          "id": "D",
+          "text": "A densely forested wildlife park"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Contextually within urban studies reading materials, 'metropolitan' refers to a major, densely populated city encompassing an urban center and its surrounding residential communities.",
+      "sourceReference": "Section 1.2 & 1.3.1, Page 4"
+    },
+    {
+      "id": "ENG-G09-U01-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "She ______ to the central market every Saturday morning to buy fresh vegetables.",
+      "options": [
+        {
+          "id": "A",
+          "text": "is going"
+        },
+        {
+          "id": "B",
+          "text": "go"
+        },
+        {
+          "id": "C",
+          "text": "goes"
+        },
+        {
+          "id": "D",
+          "text": "went"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The time marker 'every Saturday morning' specifies a routine, habitual action expressed in the Simple Present tense. Third-person singular subjects ('She') require the verb ending '-es' ('goes').",
+      "sourceReference": "Section 1.4.2, Page 13"
+    },
+    {
+      "id": "ENG-G09-U01-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Complete the dialogue: Student A: '______ is your favorite hobby?' Student B: 'My favorite hobby is reading books.'",
+      "options": [
+        {
+          "id": "A",
+          "text": "Where"
+        },
+        {
+          "id": "B",
+          "text": "What"
+        },
+        {
+          "id": "C",
+          "text": "Who"
+        },
+        {
+          "id": "D",
+          "text": "Why"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The Wh-question word 'What' is used when asking for specific information about things, objects, or activities such as hobbies.",
+      "sourceReference": "Section 1.4.4, Page 21"
+    },
+    {
+      "id": "ENG-G09-U01-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "The students decided to ______ the story on stage using gestures and actions during their drama lesson.",
+      "options": [
+        {
+          "id": "A",
+          "text": "act out"
+        },
+        {
+          "id": "B",
+          "text": "act up"
+        },
+        {
+          "id": "C",
+          "text": "act on"
+        },
+        {
+          "id": "D",
+          "text": "add up"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The phrasal verb 'act out' means to perform a narrative, role, or story using actions, gestures, and speech on stage.",
+      "sourceReference": "Section 1.3.2, Page 10"
+    },
+    {
+      "id": "ENG-G09-U01-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Choose the grammatically correct question tag for the statement: 'I am late for home, ______?'",
+      "options": [
+        {
+          "id": "A",
+          "text": "am not I"
+        },
+        {
+          "id": "B",
+          "text": "aren't I"
+        },
+        {
+          "id": "C",
+          "text": "don't I"
+        },
+        {
+          "id": "D",
+          "text": "isn't it"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In standard English question tag rules, when an affirmative main clause uses the first-person singular 'I am', the standard contracted negative tag is 'aren't I?'.",
+      "sourceReference": "Section 1.4.1, Page 12"
+    },
+    {
+      "id": "ENG-G09-U01-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Look! The traffic officer ______ the pedestrians who are crossing the busy street right now.",
+      "options": [
+        {
+          "id": "A",
+          "text": "helps"
+        },
+        {
+          "id": "B",
+          "text": "is helping"
+        },
+        {
+          "id": "C",
+          "text": "helped"
+        },
+        {
+          "id": "D",
+          "text": "has helped"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The exclamatory imperative 'Look!' calls attention to an action happening at the present moment of speech, requiring the Present Continuous tense ('is helping').",
+      "sourceReference": "Section 1.4.3, Page 17"
+    },
+    {
+      "id": "ENG-G09-U01-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Before making major system updates, it is wise to ______ all important computer files onto an external drive.",
+      "options": [
+        {
+          "id": "A",
+          "text": "back away"
+        },
+        {
+          "id": "B",
+          "text": "back down"
+        },
+        {
+          "id": "C",
+          "text": "back up"
+        },
+        {
+          "id": "D",
+          "text": "act on"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The phrasal verb 'back up' means to make a duplicate copy of electronic data or computer files for protection.",
+      "sourceReference": "Section 1.3.2, Page 10"
+    },
+    {
+      "id": "ENG-G09-U01-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "'To reap the perks of city life, one must make sure to work hard at the same pace as it runs.' What is the closest contextual meaning of 'reap'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Destroy or abandon"
+        },
+        {
+          "id": "B",
+          "text": "Earn, gain, or secure"
+        },
+        {
+          "id": "C",
+          "text": "Ignore completely"
+        },
+        {
+          "id": "D",
+          "text": "Lose gradually"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In the Unit 1 reading text 'Life in a Big City', the verb 'reap' contextually means to obtain, earn, or secure benefits as a result of effort.",
+      "sourceReference": "Section 1.2 & 1.3.1, Page 9"
+    },
+    {
+      "id": "ENG-G09-U01-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Select the correct verb to complete the Yes/No question: '______ the number of high schools in urban areas higher than those in rural areas?'",
+      "options": [
+        {
+          "id": "A",
+          "text": "Do"
+        },
+        {
+          "id": "B",
+          "text": "Does"
+        },
+        {
+          "id": "C",
+          "text": "Is"
+        },
+        {
+          "id": "D",
+          "text": "Have"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The phrase 'the number of...' takes a singular verb agreement when indicating a single statistical value, requiring the singular linking verb 'Is'.",
+      "sourceReference": "Section 1.4.4, Page 22"
+    },
+    {
+      "id": "ENG-G09-U01-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which of the following questions is spoken using a RISING intonation pattern?",
+      "options": [
+        {
+          "id": "A",
+          "text": "What is the major cause of urban pollution?"
+        },
+        {
+          "id": "B",
+          "text": "Do you live near the central square?"
+        },
+        {
+          "id": "C",
+          "text": "Where can I find the city library?"
+        },
+        {
+          "id": "D",
+          "text": "How many people reside in your village?"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Yes/No questions introduced by auxiliary verbs (like 'Do you live...') take a rising intonation pattern, whereas information-seeking Wh-questions take a falling intonation pattern.",
+      "sourceReference": "Section 1.5.2, Page 28"
+    },
+    {
+      "id": "ENG-G09-U01-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Choose the correct question tag: 'You hardly get any free and peaceful time in bustling cities, ______?'",
+      "options": [
+        {
+          "id": "A",
+          "text": "don't you"
+        },
+        {
+          "id": "B",
+          "text": "do you"
+        },
+        {
+          "id": "C",
+          "text": "aren't you"
+        },
+        {
+          "id": "D",
+          "text": "can't you"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Sentences containing negative adverbs like 'hardly', 'seldom', or 'never' are grammatically negative in meaning and therefore require a positive question tag ('do you?').",
+      "sourceReference": "Section 1.4.1, Page 12"
+    },
+    {
+      "id": "ENG-G09-U01-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Although my brother usually ______ to work by public bus, tomorrow morning he ______ the 8:00 AM express train because of an important meeting.",
+      "options": [
+        {
+          "id": "A",
+          "text": "goes / is taking"
+        },
+        {
+          "id": "B",
+          "text": "is going / takes"
+        },
+        {
+          "id": "C",
+          "text": "go / take"
+        },
+        {
+          "id": "D",
+          "text": "went / was taking"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The frequency adverb 'usually' takes the Simple Present tense ('goes') to denote a routine habit. The time phrase 'tomorrow morning' paired with a fixed personal arrangement takes the Present Continuous tense ('is taking').",
+      "sourceReference": "Section 1.4.2 & 1.4.3, Pages 14-19"
+    },
+    {
+      "id": "ENG-G09-U01-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Reorder the jumbled words into a syntactically correct Wh-question: 'urban / do / why / live / in / people / like / areas / ?'",
+      "options": [
+        {
+          "id": "A",
+          "text": "Why do people like to live in urban areas?"
+        },
+        {
+          "id": "B",
+          "text": "Why people do like to live in urban areas?"
+        },
+        {
+          "id": "C",
+          "text": "Do people like why to live in urban areas?"
+        },
+        {
+          "id": "D",
+          "text": "Why urban areas do people like to live in?"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Standard Wh-question word order in English follows: Wh-word ('Why') + Auxiliary verb ('do') + Subject ('people') + Main verb ('like') + Infinitive phrase ('to live in urban areas').",
+      "sourceReference": "Section 1.4.4, Page 21"
+    },
+    {
+      "id": "ENG-G09-U01-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Select the appropriate transition marker to complete the text: 'Living in a rural area gives me enormous satisfaction. There is fresh air and peaceful scenery. ______, people live in close-knit communities where everyone knows each other.'",
+      "options": [
+        {
+          "id": "A",
+          "text": "However"
+        },
+        {
+          "id": "B",
+          "text": "Besides"
+        },
+        {
+          "id": "C",
+          "text": "On the contrary"
+        },
+        {
+          "id": "D",
+          "text": "Otherwise"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The transition connector 'Besides' functions as an addition marker to connect mutually reinforcing positive points. 'However' and 'On the contrary' express contrast, while 'Otherwise' expresses a condition.",
+      "sourceReference": "Section 1.6.2, Page 31"
+    }
+  ]
 }

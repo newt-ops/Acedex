@@ -3,5 +3,411 @@
   "subject": "English",
   "unitNumber": 3,
   "unitTitle": "Punctuality",
-  "questions": []
+  "questions": [
+    {
+      "id": "ENG-G10-U03-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Ato Tadesse is a very disciplined manager; he ______ arrives at the office before 8:00 a.m.",
+      "options": [
+        {
+          "id": "A",
+          "text": "always"
+        },
+        {
+          "id": "B",
+          "text": "never"
+        },
+        {
+          "id": "C",
+          "text": "seldom"
+        },
+        {
+          "id": "D",
+          "text": "rarely"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The adverb of frequency 'always' describes an action that occurs consistently every time, matching the description of a disciplined manager.",
+      "sourceReference": "Section 3.5.1, Page 82"
+    },
+    {
+      "id": "ENG-G10-U03-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In the reading text on time management, what is the closest synonym of the word 'procrastination'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Delaying or postponing tasks"
+        },
+        {
+          "id": "B",
+          "text": "Arriving ahead of schedule"
+        },
+        {
+          "id": "C",
+          "text": "Working hard continuously"
+        },
+        {
+          "id": "D",
+          "text": "Accepting new responsibilities"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "'Procrastination' refers to the habit or practice of delaying or postponing actions and assignments.",
+      "sourceReference": "Section 3.1 & 3.3, Pages 67, 75"
+    },
+    {
+      "id": "ENG-G10-U03-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "I always prefer to travel to the university ______ foot rather than taking a crowded taxi.",
+      "options": [
+        {
+          "id": "A",
+          "text": "on"
+        },
+        {
+          "id": "B",
+          "text": "by"
+        },
+        {
+          "id": "C",
+          "text": "in"
+        },
+        {
+          "id": "D",
+          "text": "with"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Standard English prepositional collocation requires 'on foot' when referring to walking.",
+      "sourceReference": "Section 3.5.4, Page 86"
+    },
+    {
+      "id": "ENG-G10-U03-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "After a long semester of hard study, the students were eager to ______ for a short vacation in Hawassa.",
+      "options": [
+        {
+          "id": "A",
+          "text": "get away"
+        },
+        {
+          "id": "B",
+          "text": "get down"
+        },
+        {
+          "id": "C",
+          "text": "get behind"
+        },
+        {
+          "id": "D",
+          "text": "get back at"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The phrasal verb 'get away' means to go on a vacation or escape from daily work routines.",
+      "sourceReference": "Section 3.4.2, Page 80"
+    },
+    {
+      "id": "ENG-G10-U03-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Bejiga: 'I never arrive late for my morning English classes.' Aster: '______ do I.'",
+      "options": [
+        {
+          "id": "A",
+          "text": "Neither"
+        },
+        {
+          "id": "B",
+          "text": "So"
+        },
+        {
+          "id": "C",
+          "text": "Either"
+        },
+        {
+          "id": "D",
+          "text": "Nor"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "'Neither do I' is used to express agreement with a negative statement ('I never arrive late').",
+      "sourceReference": "Section 3.2.3, Page 71"
+    },
+    {
+      "id": "ENG-G10-U03-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Although government employees faced inflation, many managed to ______ on their monthly salary by budgeting carefully.",
+      "options": [
+        {
+          "id": "A",
+          "text": "get on by"
+        },
+        {
+          "id": "B",
+          "text": "get behind"
+        },
+        {
+          "id": "C",
+          "text": "get away"
+        },
+        {
+          "id": "D",
+          "text": "get back at"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The phrasal verb 'get on by' means to manage or survive financially on a limited income.",
+      "sourceReference": "Section 3.4.2, Page 80"
+    },
+    {
+      "id": "ENG-G10-U03-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Despite facing tough questions, Bontu spoke with great ______ because she had prepared her presentation well.",
+      "options": [
+        {
+          "id": "A",
+          "text": "confidence"
+        },
+        {
+          "id": "B",
+          "text": "confident"
+        },
+        {
+          "id": "C",
+          "text": "confidential"
+        },
+        {
+          "id": "D",
+          "text": "confidentially"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The noun form 'confidence' is required after the preposition 'with' (preposition + noun).",
+      "sourceReference": "Section 3.4.1, Page 79"
+    },
+    {
+      "id": "ENG-G10-U03-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "The guest speaker delivered his address in a very ______ manner, making everyone feel welcomed.",
+      "options": [
+        {
+          "id": "A",
+          "text": "friendly"
+        },
+        {
+          "id": "B",
+          "text": "friend"
+        },
+        {
+          "id": "C",
+          "text": "friendlier"
+        },
+        {
+          "id": "D",
+          "text": "friendship"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Adjectives that already end in '-ly' (like 'friendly') express manner through the construction 'in a ... manner/way'.",
+      "sourceReference": "Section 3.5.2, Page 84"
+    },
+    {
+      "id": "ENG-G10-U03-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "The teacher allowed the students to go home early ______ condition that they complete all homework exercises.",
+      "options": [
+        {
+          "id": "A",
+          "text": "on"
+        },
+        {
+          "id": "B",
+          "text": "in"
+        },
+        {
+          "id": "C",
+          "text": "at"
+        },
+        {
+          "id": "D",
+          "text": "for"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The fixed prepositional phrase expressing a stipulation or agreement is 'on condition that'.",
+      "sourceReference": "Section 3.5.4, Page 86"
+    },
+    {
+      "id": "ENG-G10-U03-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "The board needed a ______ leader who could remain calm and make sensible decisions during a crisis.",
+      "options": [
+        {
+          "id": "A",
+          "text": "level-headed"
+        },
+        {
+          "id": "B",
+          "text": "short-tempered"
+        },
+        {
+          "id": "C",
+          "text": "procrastinating"
+        },
+        {
+          "id": "D",
+          "text": "tardy"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "'Level-headed' means sensible, calm, and sound in judgment, especially under pressure.",
+      "sourceReference": "Section 3.3 & 3.4, Pages 75, 78"
+    },
+    {
+      "id": "ENG-G10-U03-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "If you want to write a good narrative essay, the first step is to ______ your main ideas on paper.",
+      "options": [
+        {
+          "id": "A",
+          "text": "get down"
+        },
+        {
+          "id": "B",
+          "text": "get off"
+        },
+        {
+          "id": "C",
+          "text": "get away"
+        },
+        {
+          "id": "D",
+          "text": "get behind"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The phrasal verb 'get down' means to write down or record thoughts on paper.",
+      "sourceReference": "Section 3.4.2, Page 81"
+    },
+    {
+      "id": "ENG-G10-U03-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Which of the following sentences demonstrates CORRECT adverb of manner placement according to English syntax rules?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The student answered the exam questions carefully."
+        },
+        {
+          "id": "B",
+          "text": "The student answered carefully the exam questions."
+        },
+        {
+          "id": "C",
+          "text": "The student answered very carefully all the exam questions."
+        },
+        {
+          "id": "D",
+          "text": "The student answered with care carefully the exam questions."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "An adverb cannot be placed between a transitive verb ('answered') and its direct object ('the exam questions'). The adverb must come after the direct object or before the verb.",
+      "sourceReference": "Section 3.5.2, Page 84"
+    },
+    {
+      "id": "ENG-G10-U03-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Whenever I feel overwhelmed with administrative work, I usually cannot ______ answering my personal emails until the weekend.",
+      "options": [
+        {
+          "id": "A",
+          "text": "get around to"
+        },
+        {
+          "id": "B",
+          "text": "get back at"
+        },
+        {
+          "id": "C",
+          "text": "get away"
+        },
+        {
+          "id": "D",
+          "text": "get behind"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The phrasal verb 'get around to' means to find the necessary time to deal with or perform a task.",
+      "sourceReference": "Section 3.4.2, Page 80"
+    },
+    {
+      "id": "ENG-G10-U03-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Fill in the blanks with the correct pair of prepositions: '______ balance, living ______ your own teaches you how to manage your time effectively.'",
+      "options": [
+        {
+          "id": "A",
+          "text": "On / on"
+        },
+        {
+          "id": "B",
+          "text": "In / in"
+        },
+        {
+          "id": "C",
+          "text": "At / on"
+        },
+        {
+          "id": "D",
+          "text": "On / in"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Both idiomatic expressions require the preposition 'on': 'On balance' (taking everything into consideration) and 'on your own' (independently).",
+      "sourceReference": "Section 3.5.4, Pages 86-87"
+    },
+    {
+      "id": "ENG-G10-U03-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "In the Grade 10 reading text 'Punctuality', what is the author's primary critique regarding the social practice known as 'yehabesha ketero'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It is a harmful excuse used to rationalize procrastination and disrespect others' time under the guise of a social norm."
+        },
+        {
+          "id": "B",
+          "text": "It is an ancient cultural tradition that should be preserved as part of national heritage."
+        },
+        {
+          "id": "C",
+          "text": "It proves that senior executives have more valuable responsibilities than ordinary employees."
+        },
+        {
+          "id": "D",
+          "text": "It is a legally binding appointment system used in rural Ethiopian communities."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The author argues that 'yehabesha ketero' is a wrongly accepted social pretext used to excuse tardiness and procrastination, reflecting a lack of respect for time and other people.",
+      "sourceReference": "Section 3.3, Pages 74-75"
+    }
+  ]
 }

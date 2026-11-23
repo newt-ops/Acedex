@@ -3,5 +3,411 @@
   "subject": "English",
   "unitNumber": 8,
   "unitTitle": "Communicable Diseases",
-  "questions": []
+  "questions": [
+    {
+      "id": "ENG-G09-U08-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Aster ______ in Hawassa since 2018.",
+      "options": [
+        {
+          "id": "A",
+          "text": "lives"
+        },
+        {
+          "id": "B",
+          "text": "has lived"
+        },
+        {
+          "id": "C",
+          "text": "is living"
+        },
+        {
+          "id": "D",
+          "text": "was living"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The time marker 'since 2018' paired with an action starting in the past and extending to the present requires the Present Perfect tense ('has lived').",
+      "sourceReference": "Section 8.4.1, Page 168"
+    },
+    {
+      "id": "ENG-G09-U08-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Maybe you should see a doctor; this is the third time you have ______ a cold this month.",
+      "options": [
+        {
+          "id": "A",
+          "text": "come down with"
+        },
+        {
+          "id": "B",
+          "text": "come out with"
+        },
+        {
+          "id": "C",
+          "text": "come over with"
+        },
+        {
+          "id": "D",
+          "text": "come off with"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The phrasal verb 'come down with' means to catch an illness or become sick with a minor disease such as a cold or flu.",
+      "sourceReference": "Section 8.3.2, Page 167"
+    },
+    {
+      "id": "ENG-G09-U08-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In the reading text on global health, what is the synonym of the word 'estimate'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Exact measurement"
+        },
+        {
+          "id": "B",
+          "text": "Approximate calculation"
+        },
+        {
+          "id": "C",
+          "text": "Refusal of facts"
+        },
+        {
+          "id": "D",
+          "text": "Complete destruction"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In statistical and epidemiological reading contexts, 'estimate' refers to an approximate calculation or judgment of a quantity.",
+      "sourceReference": "Section 8.3.1, Page 166"
+    },
+    {
+      "id": "ENG-G09-U08-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "The laboratory team has been analyzing the water samples ______ three hours.",
+      "options": [
+        {
+          "id": "A",
+          "text": "since"
+        },
+        {
+          "id": "B",
+          "text": "for"
+        },
+        {
+          "id": "C",
+          "text": "during"
+        },
+        {
+          "id": "D",
+          "text": "from"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "'For' is used to denote a duration or period of time ('three hours'), whereas 'since' refers to a specific starting point.",
+      "sourceReference": "Section 8.4.1, Page 173"
+    },
+    {
+      "id": "ENG-G09-U08-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Complete the dialogue: Doctor: 'What's the matter with you today?' Patient: 'I have a severe headache and my whole body ______.'",
+      "options": [
+        {
+          "id": "A",
+          "text": "is sore"
+        },
+        {
+          "id": "B",
+          "text": "are sore"
+        },
+        {
+          "id": "C",
+          "text": "sore"
+        },
+        {
+          "id": "D",
+          "text": "were sore"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The singular subject phrase 'my whole body' takes the singular linking verb 'is' followed by the descriptive adjective 'sore'.",
+      "sourceReference": "Section 8.5.1, Page 176"
+    },
+    {
+      "id": "ENG-G09-U08-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "They are exhausted because they ______ for the lost patient in the forest all night.",
+      "options": [
+        {
+          "id": "A",
+          "text": "have searched"
+        },
+        {
+          "id": "B",
+          "text": "have been searching"
+        },
+        {
+          "id": "C",
+          "text": "are searching"
+        },
+        {
+          "id": "D",
+          "text": "search"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The Present Perfect Continuous tense ('have been searching') emphasizes an ongoing, continuous activity starting in the past whose physical effect is evident in the present ('they are exhausted').",
+      "sourceReference": "Section 8.4, Pages 168, 174"
+    },
+    {
+      "id": "ENG-G09-U08-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "If the medical team ______ to the remote village earlier, they would have averted the disease outbreak.",
+      "options": [
+        {
+          "id": "A",
+          "text": "arrived"
+        },
+        {
+          "id": "B",
+          "text": "had arrived"
+        },
+        {
+          "id": "C",
+          "text": "arrives"
+        },
+        {
+          "id": "D",
+          "text": "would arrive"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Conditional Type 3 uses 'If + Past Perfect' ('had arrived') in the conditional clause to express an unfulfilled past condition paired with 'would have + past participle' in the main clause.",
+      "sourceReference": "Section 8.5.3, Page 178"
+    },
+    {
+      "id": "ENG-G09-U08-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Public health measures were implemented quickly, so the prevalence of the infectious disease was curbed. What is the contextual meaning of 'curbed'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Restrained or controlled"
+        },
+        {
+          "id": "B",
+          "text": "Increased dramatically"
+        },
+        {
+          "id": "C",
+          "text": "Ignored completely"
+        },
+        {
+          "id": "D",
+          "text": "Discovered accidentally"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Contextually within public health reading passages, 'curbed' means checked, restrained, or controlled from spreading.",
+      "sourceReference": "Section 8.3.1, Page 166"
+    },
+    {
+      "id": "ENG-G09-U08-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "While cleaning the medical storage room yesterday, the nurse ______ an old box of sterile gloves.",
+      "options": [
+        {
+          "id": "A",
+          "text": "came across"
+        },
+        {
+          "id": "B",
+          "text": "came off"
+        },
+        {
+          "id": "C",
+          "text": "came out"
+        },
+        {
+          "id": "D",
+          "text": "came down"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The phrasal verb 'come across' means to find or encounter something by chance or unexpectedly.",
+      "sourceReference": "Section 8.3.2, Page 167"
+    },
+    {
+      "id": "ENG-G09-U08-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Choose the sentence that correctly emphasizes a completed past action with a result in the present rather than an ongoing duration.",
+      "options": [
+        {
+          "id": "A",
+          "text": "She has been writing three medical reports today."
+        },
+        {
+          "id": "B",
+          "text": "She has written three medical reports today."
+        },
+        {
+          "id": "C",
+          "text": "She is writing three medical reports today."
+        },
+        {
+          "id": "D",
+          "text": "She was writing three medical reports today."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Present Perfect ('has written') focuses on completed quantities or accomplishments, whereas Present Perfect Continuous focuses on ongoing activity duration.",
+      "sourceReference": "Section 8.4.1, Pages 168-174"
+    },
+    {
+      "id": "ENG-G09-U08-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "According to the Grade 9 reading text on global health projections, which two diseases, alongside HIV/AIDS, are projected to remain among the top causes of death worldwide?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Heart disease and stroke"
+        },
+        {
+          "id": "B",
+          "text": "Malaria and yellow fever"
+        },
+        {
+          "id": "C",
+          "text": "Diabetes and asthma"
+        },
+        {
+          "id": "D",
+          "text": "Typhoid and cholera"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Section 8.2 of the textbook highlights that HIV/AIDS, heart disease, and stroke are projected by researchers to be major leading global causes of mortality.",
+      "sourceReference": "Section 8.2, Pages 164-165"
+    },
+    {
+      "id": "ENG-G09-U08-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "______ the international community provided emergency funds on time, millions of lives would have been saved from the epidemic.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Had"
+        },
+        {
+          "id": "B",
+          "text": "If had"
+        },
+        {
+          "id": "C",
+          "text": "Were"
+        },
+        {
+          "id": "D",
+          "text": "Should"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "In formal inverted Third Conditional constructions, 'If' is omitted and the auxiliary verb 'Had' is inverted with the subject ('Had the international community provided...').",
+      "sourceReference": "Section 8.5.3, Page 178"
+    },
+    {
+      "id": "ENG-G09-U08-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Individuals with weakened immune systems are particularly susceptible to opportunistic respiratory infections. What is the closest contextual synonym for 'susceptible'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Immune and resistant"
+        },
+        {
+          "id": "B",
+          "text": "Vulnerable and predisposed"
+        },
+        {
+          "id": "C",
+          "text": "Uncooperative and hostile"
+        },
+        {
+          "id": "D",
+          "text": "Unaware and ignorant"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In health contexts, 'susceptible' contextually means vulnerable, prone, or predisposed to developing an illness.",
+      "sourceReference": "Section 8.3.1, Page 166"
+    },
+    {
+      "id": "ENG-G09-U08-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Identify the sentence that displays CORRECT tense and time preposition agreement.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Dr. Bekele has been working at the referral hospital since ten years."
+        },
+        {
+          "id": "B",
+          "text": "Dr. Bekele has been working at the referral hospital for ten years."
+        },
+        {
+          "id": "C",
+          "text": "Dr. Bekele is working at the referral hospital for ten years."
+        },
+        {
+          "id": "D",
+          "text": "Dr. Bekele worked at the referral hospital since ten years."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "A period or duration of time ('ten years') requires the preposition 'for' paired with the Present Perfect Continuous tense ('has been working').",
+      "sourceReference": "Section 8.4.1, Page 173"
+    },
+    {
+      "id": "ENG-G09-U08-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Reorder the jumbled words into a syntactically correct Conditional Type 3 sentence: 'he / have / caught / early / medical / sought / not / if / the / severe / illness / had / would / advice / he / .'",
+      "options": [
+        {
+          "id": "A",
+          "text": "If he had sought early medical advice, he would not have caught the severe illness."
+        },
+        {
+          "id": "B",
+          "text": "If he sought early medical advice, he would not caught the severe illness."
+        },
+        {
+          "id": "C",
+          "text": "Had he seek early medical advice, he would not have caught the severe illness."
+        },
+        {
+          "id": "D",
+          "text": "He had sought if early medical advice, he would not have caught severe illness."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Standard Conditional Type 3 syntax requires: 'If' + Subject ('he') + Past Perfect ('had sought') + Object ('early medical advice') + Comma + Main Clause ('he would not have caught the severe illness').",
+      "sourceReference": "Section 8.5.3 & 8.6, Pages 178-179"
+    }
+  ]
 }

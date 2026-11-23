@@ -3,5 +3,411 @@
   "subject": "English",
   "unitNumber": 8,
   "unitTitle": "The Healing Power of Plants",
-  "questions": []
+  "questions": [
+    {
+      "id": "ENG-G10-U08-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "We haven't got ______ petrol left in the car, so we need to stop at the next gas station.",
+      "options": [
+        {
+          "id": "A",
+          "text": "much"
+        },
+        {
+          "id": "B",
+          "text": "many"
+        },
+        {
+          "id": "C",
+          "text": "few"
+        },
+        {
+          "id": "D",
+          "text": "a few"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "'Petrol' is an uncountable noun, so 'much' is used in negative sentences to express quantity.",
+      "sourceReference": "Section 8.5.1, Page 235"
+    },
+    {
+      "id": "ENG-G10-U08-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In the reading passage on Moringa Olifera, what is the closest contextual meaning of the verb 'synthesize'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Produce or combine simple elements into complex compounds"
+        },
+        {
+          "id": "B",
+          "text": "Destroy or break down organic materials completely"
+        },
+        {
+          "id": "C",
+          "text": "Store in artificial cold storage units"
+        },
+        {
+          "id": "D",
+          "text": "Transport goods across long distances"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "In botanical and scientific contexts, 'synthesize' means to combine simpler substances to produce complex organic compounds.",
+      "sourceReference": "Section 8.4, Page 231"
+    },
+    {
+      "id": "ENG-G10-U08-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "We decided to stay indoors ______ it was raining heavily outside.",
+      "options": [
+        {
+          "id": "A",
+          "text": "because"
+        },
+        {
+          "id": "B",
+          "text": "so that"
+        },
+        {
+          "id": "C",
+          "text": "although"
+        },
+        {
+          "id": "D",
+          "text": "in order to"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "'Because' introduces an adverbial clause of reason explaining why an action took place.",
+      "sourceReference": "Section 8.5.2, Page 236"
+    },
+    {
+      "id": "ENG-G10-U08-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "It was getting very warm inside the hall, so Solomon decided to ______ his heavy coat.",
+      "options": [
+        {
+          "id": "A",
+          "text": "take off"
+        },
+        {
+          "id": "B",
+          "text": "take in"
+        },
+        {
+          "id": "C",
+          "text": "take over"
+        },
+        {
+          "id": "D",
+          "text": "take after"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The phrasal verb 'take off' means to remove a garment or clothing item.",
+      "sourceReference": "Section 8.4.2, Page 234"
+    },
+    {
+      "id": "ENG-G10-U08-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What verb is formed through backformation from the noun 'administration'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "administer"
+        },
+        {
+          "id": "B",
+          "text": "administrate"
+        },
+        {
+          "id": "C",
+          "text": "administrating"
+        },
+        {
+          "id": "D",
+          "text": "administratory"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "In English morphology (Section 8.4.1), backformation reduces the noun 'administration' to derive the verb 'administer'.",
+      "sourceReference": "Section 8.4.1, Page 233"
+    },
+    {
+      "id": "ENG-G10-U08-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Although he had ______ knowledge of traditional herbal remedies, he managed to identify the Moringa tree correctly.",
+      "options": [
+        {
+          "id": "A",
+          "text": "little"
+        },
+        {
+          "id": "B",
+          "text": "few"
+        },
+        {
+          "id": "C",
+          "text": "a few"
+        },
+        {
+          "id": "D",
+          "text": "many"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "'Little' modifies uncountable nouns ('knowledge') and signifies 'hardly any', creating the required contrast introduced by 'Although'.",
+      "sourceReference": "Section 8.5.1, Page 235"
+    },
+    {
+      "id": "ENG-G10-U08-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "He acts ______ he were a qualified medical specialist, even though he has never attended university.",
+      "options": [
+        {
+          "id": "A",
+          "text": "as if"
+        },
+        {
+          "id": "B",
+          "text": "because"
+        },
+        {
+          "id": "C",
+          "text": "so that"
+        },
+        {
+          "id": "D",
+          "text": "since"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "'As if' introduces an adverb clause of manner expressing an hypothetical or unreal condition, followed by the subjunctive 'were'.",
+      "sourceReference": "Section 8.5.3, Page 237"
+    },
+    {
+      "id": "ENG-G10-U08-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Dr. Almaz ______ at the rural health clinic for six months, and she continues to treat hundreds of community members every week.",
+      "options": [
+        {
+          "id": "A",
+          "text": "has worked"
+        },
+        {
+          "id": "B",
+          "text": "worked"
+        },
+        {
+          "id": "C",
+          "text": "works"
+        },
+        {
+          "id": "D",
+          "text": "had worked"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "An action that began in the past and continues up to the present requires the Present Perfect tense ('has worked').",
+      "sourceReference": "Section 8.5.4, Pages 238-240"
+    },
+    {
+      "id": "ENG-G10-U08-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "According to the Grade 10 textbook chart on traditional plant characteristics, what part of the 'Nech shinkurt' (Garlic) plant is primarily used in traditional remedies?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Root"
+        },
+        {
+          "id": "B",
+          "text": "Leaves"
+        },
+        {
+          "id": "C",
+          "text": "Latex"
+        },
+        {
+          "id": "D",
+          "text": "Flowers"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Section 8.2 (Page 220) specifies that the root of 'Nech shinkurt' is used in traditional medicinal applications.",
+      "sourceReference": "Section 8.2, Page 220"
+    },
+    {
+      "id": "ENG-G10-U08-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Can you explain to the class how this unexpected situation ______ during yesterday's meeting?",
+      "options": [
+        {
+          "id": "A",
+          "text": "came about"
+        },
+        {
+          "id": "B",
+          "text": "came off"
+        },
+        {
+          "id": "C",
+          "text": "came out"
+        },
+        {
+          "id": "D",
+          "text": "came away"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The phrasal verb 'come about' means to happen, occur, or take place.",
+      "sourceReference": "Section 8.4.2, Page 234"
+    },
+    {
+      "id": "ENG-G10-U08-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which of the following words is formed by backformation rather than compounding?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Televise"
+        },
+        {
+          "id": "B",
+          "text": "Fireplace"
+        },
+        {
+          "id": "C",
+          "text": "Mailman"
+        },
+        {
+          "id": "D",
+          "text": "Mailbox"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "'Televise' is derived via backformation from the noun 'television', whereas fireplace, mailman, and mailbox are compound words.",
+      "sourceReference": "Section 8.4.1, Page 232"
+    },
+    {
+      "id": "ENG-G10-U08-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "The community health campaign was postponed ______ the unexpected heavy rainfall across the district.",
+      "options": [
+        {
+          "id": "A",
+          "text": "owing to"
+        },
+        {
+          "id": "B",
+          "text": "because"
+        },
+        {
+          "id": "C",
+          "text": "as"
+        },
+        {
+          "id": "D",
+          "text": "since"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "'Owing to' is a prepositional phrase followed by a noun phrase ('the unexpected heavy rainfall'), whereas 'because', 'as', and 'since' are subordinating conjunctions requiring a clause (subject + verb).",
+      "sourceReference": "Section 8.5.2, Page 236"
+    },
+    {
+      "id": "ENG-G10-U08-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Select the sentence that correctly uses the Present Perfect tense to express an action completed in the RECENT past with present impact:",
+      "options": [
+        {
+          "id": "A",
+          "text": "The medical team has just published its research report on medicinal plants."
+        },
+        {
+          "id": "B",
+          "text": "The medical team published its research report on medicinal plants ten years ago."
+        },
+        {
+          "id": "C",
+          "text": "The medical team is publishing its research report on medicinal plants yesterday."
+        },
+        {
+          "id": "D",
+          "text": "The medical team had published its research report before the conference began."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "'Has just published' uses 'just' with the Present Perfect tense to convey an action completed in the immediate past that bears direct present relevance.",
+      "sourceReference": "Section 8.5.4, Pages 238-240"
+    },
+    {
+      "id": "ENG-G10-U08-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "In the reading passage 'A Traditional Medicine, Moringa Olifera', why is Moringa Olifera frequently described as a 'miracle tree'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because every part of the plant provides extraordinary nutritional, therapeutic, and water-purifying benefits."
+        },
+        {
+          "id": "B",
+          "text": "Because it grows exclusively inside climate-controlled scientific laboratories."
+        },
+        {
+          "id": "C",
+          "text": "Because its seeds can be refined into synthetic industrial fuel."
+        },
+        {
+          "id": "D",
+          "text": "Because it requires expensive artificial fertilizers to sustain growth."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The passage highlights that Moringa Olifera contains rich vitamins, essential minerals, medicinal properties, and seed coagulants for water purification.",
+      "sourceReference": "Section 8.3, Pages 227-230"
+    },
+    {
+      "id": "ENG-G10-U08-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Which set of graph interpretation vocabulary describes a rapid, steep, and significant downward trend in statistical data?",
+      "options": [
+        {
+          "id": "A",
+          "text": "dropped sharply / declined dramatically"
+        },
+        {
+          "id": "B",
+          "text": "fluctuated gently / remained stable"
+        },
+        {
+          "id": "C",
+          "text": "increased slightly / climbed gradually"
+        },
+        {
+          "id": "D",
+          "text": "rose steadily / grew consistently"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "In graph analysis terminology (Section 8.6.1), 'dropped sharply' and 'declined dramatically' indicate sudden and steep decreases.",
+      "sourceReference": "Section 8.6.1, Page 241"
+    }
+  ]
 }

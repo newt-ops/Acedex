@@ -3,5 +3,411 @@
   "subject": "English",
   "unitNumber": 6,
   "unitTitle": "Global Warming",
-  "questions": []
+  "questions": [
+    {
+      "id": "ENG-G11-U06-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "If industrial nations reduce carbon emissions significantly, global temperatures ______ to stabilize over time.",
+      "options": [
+        {
+          "id": "A",
+          "text": "will begin"
+        },
+        {
+          "id": "B",
+          "text": "began"
+        },
+        {
+          "id": "C",
+          "text": "would have begun"
+        },
+        {
+          "id": "D",
+          "text": "had begun"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "In Conditional Type 1 real future conditions, the 'if'-clause takes the Simple Present ('reduce') while the main clause takes 'will + base verb' ('will begin').",
+      "sourceReference": "Section 6E.2, Page 156"
+    },
+    {
+      "id": "ENG-G11-U06-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In the reading text on global warming, what is the closest contextual meaning of the word 'curtail'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Reduce, limit, or restrict"
+        },
+        {
+          "id": "B",
+          "text": "Expand or increase"
+        },
+        {
+          "id": "C",
+          "text": "Celebrate publicly"
+        },
+        {
+          "id": "D",
+          "text": "Ignore completely"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "In Section 6D.1 vocabulary, 'curtail' contextually means to reduce, cut back, or restrict an activity.",
+      "sourceReference": "Section 6D.1, Page 152"
+    },
+    {
+      "id": "ENG-G11-U06-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Solar energy is ______ clean as wind energy in reducing carbon footprints across urban centers.",
+      "options": [
+        {
+          "id": "A",
+          "text": "as"
+        },
+        {
+          "id": "B",
+          "text": "so"
+        },
+        {
+          "id": "C",
+          "text": "more"
+        },
+        {
+          "id": "D",
+          "text": "such"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The comparative equality structure 'as + adjective + as' ('as clean as') is used to express equal degree between two items.",
+      "sourceReference": "Section 6E.1, Page 154"
+    },
+    {
+      "id": "ENG-G11-U06-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "The municipal authorities warned that households must ______ for electricity consumption before the end of the month.",
+      "options": [
+        {
+          "id": "A",
+          "text": "pay up"
+        },
+        {
+          "id": "B",
+          "text": "pay off"
+        },
+        {
+          "id": "C",
+          "text": "pay back"
+        },
+        {
+          "id": "D",
+          "text": "pay into"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The phrasal verb 'pay up' means to pay a debt or bill completely, especially under obligation or deadline.",
+      "sourceReference": "Section 6D.2, Page 153"
+    },
+    {
+      "id": "ENG-G11-U06-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which pair of words correctly contrasts the unvoiced dental fricative /θ/ as in 'think' with the voiced dental fricative /ð/ as in 'this'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "tooth / smooth"
+        },
+        {
+          "id": "B",
+          "text": "cat / cut"
+        },
+        {
+          "id": "C",
+          "text": "ship / sheep"
+        },
+        {
+          "id": "D",
+          "text": "pen / pan"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "'Tooth' contains the unvoiced dental fricative [θ], whereas 'smooth' contains the voiced dental fricative [ð].",
+      "sourceReference": "Section 6B.1, Page 144"
+    },
+    {
+      "id": "ENG-G11-U06-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "______ international governments implemented strict carbon emission controls a decade ago, sea levels would not have risen so alarmingly.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Had"
+        },
+        {
+          "id": "B",
+          "text": "If had"
+        },
+        {
+          "id": "C",
+          "text": "Were"
+        },
+        {
+          "id": "D",
+          "text": "Should"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "In formal inverted Third Conditional clauses, 'If' is omitted and the auxiliary verb 'Had' is inverted with the subject ('Had international governments implemented...').",
+      "sourceReference": "Section 6E.2, Page 158"
+    },
+    {
+      "id": "ENG-G11-U06-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "The reading text notes that greenhouse gas emissions continue 'unabated' in many industrial zones. What does 'unabated' mean?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Without reducing in intensity, strength, or power"
+        },
+        {
+          "id": "B",
+          "text": "Strictly regulated by environmental laws"
+        },
+        {
+          "id": "C",
+          "text": "Completely eliminated"
+        },
+        {
+          "id": "D",
+          "text": "Temporarily paused for inspection"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "In context (Section 6D.1), 'unabated' means continuing at full force or intensity without weakening or diminishing.",
+      "sourceReference": "Section 6D.1, Page 152"
+    },
+    {
+      "id": "ENG-G11-U06-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "If humanity ______ carbon emission controls today, future generations would avoid catastrophic weather disasters.",
+      "options": [
+        {
+          "id": "A",
+          "text": "prioritized"
+        },
+        {
+          "id": "B",
+          "text": "prioritizes"
+        },
+        {
+          "id": "C",
+          "text": "had prioritized"
+        },
+        {
+          "id": "D",
+          "text": "will prioritize"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Second Conditional hypothetical clauses use Simple Past ('prioritized') in the 'if'-clause paired with 'would + base verb' ('would avoid') in the main clause.",
+      "sourceReference": "Section 6E.2, Page 157"
+    },
+    {
+      "id": "ENG-G11-U06-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "The research team managed to ______ the list of potential climate adaptation solutions from twenty options to three primary strategies.",
+      "options": [
+        {
+          "id": "A",
+          "text": "narrow down"
+        },
+        {
+          "id": "B",
+          "text": "pile up"
+        },
+        {
+          "id": "C",
+          "text": "pay off"
+        },
+        {
+          "id": "D",
+          "text": "pick out"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The phrasal verb 'narrow down' means to reduce the number of possibilities or choices to a manageable few.",
+      "sourceReference": "Section 6D.2, Page 152"
+    },
+    {
+      "id": "ENG-G11-U06-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Rebuilding infrastructure after natural disasters strike is by far ______ option compared to investing in preventive climate measures.",
+      "options": [
+        {
+          "id": "A",
+          "text": "the most expensive"
+        },
+        {
+          "id": "B",
+          "text": "more expensive"
+        },
+        {
+          "id": "C",
+          "text": "as expensive"
+        },
+        {
+          "id": "D",
+          "text": "expensive"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Superlative degree modified by 'by far' requires 'the most + multi-syllable adjective' ('the most expensive').",
+      "sourceReference": "Section 6E.1, Page 154"
+    },
+    {
+      "id": "ENG-G11-U06-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "According to the reading text 'The Effects of Global Warming on Economic Development', what defines 'climate refugees'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "People forced to abandon their homes due to severe environmental disasters such as prolonged drought and flooding"
+        },
+        {
+          "id": "B",
+          "text": "Tourists who travel to cooler mountain resorts during summer months"
+        },
+        {
+          "id": "C",
+          "text": "Meteorologists studying weather fluctuations in desert areas"
+        },
+        {
+          "id": "D",
+          "text": "Investors relocating capital into green energy technology markets"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Section 6C.1 (Paragraph 4) defines 'climate refugees' as people forced to leave their homes and communities because of drought, flooding, or climate-related disasters.",
+      "sourceReference": "Section 6C.1, Page 149"
+    },
+    {
+      "id": "ENG-G11-U06-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "______ environmental scientists foreseen the rapid melting of glaciers, they would have urged immediate policy reforms much earlier.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Had"
+        },
+        {
+          "id": "B",
+          "text": "Were"
+        },
+        {
+          "id": "C",
+          "text": "If had"
+        },
+        {
+          "id": "D",
+          "text": "Should"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Inverted Third Conditional forms omit 'If' and place 'Had' at the sentence beginning followed by the subject ('Had environmental scientists foreseen...').",
+      "sourceReference": "Section 6E.2, Page 158"
+    },
+    {
+      "id": "ENG-G11-U06-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "If we ______ effective carbon reduction policies years ago, our planet ______ such extreme weather disruptions today.",
+      "options": [
+        {
+          "id": "A",
+          "text": "had instituted / would not be suffering"
+        },
+        {
+          "id": "B",
+          "text": "instituted / will not suffer"
+        },
+        {
+          "id": "C",
+          "text": "institute / would not have suffered"
+        },
+        {
+          "id": "D",
+          "text": "have instituted / is not suffering"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Mixed conditionals linking a past unfulfilled condition to a present result require 'If + Past Perfect' ('had instituted') in the conditional clause and 'would not + be + -ing' ('would not be suffering') in the main clause.",
+      "sourceReference": "Section 6E.2, Pages 156-159"
+    },
+    {
+      "id": "ENG-G11-U06-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "In Section 6C.1, what is the primary economic distinction between 'preventive climate measures' and 'post-disaster coping measures'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Preventive measures reduce carbon emissions beforehand, whereas post-disaster rebuilding and coping measures are far more costly."
+        },
+        {
+          "id": "B",
+          "text": "Preventive measures involve building seawalls, while post-disaster coping measures reduce global carbon footprints."
+        },
+        {
+          "id": "C",
+          "text": "Post-disaster coping measures cost less than early warning disaster systems."
+        },
+        {
+          "id": "D",
+          "text": "Both strategies incur identical economic expenditures according to scientific studies."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Section 6C.1 highlights that rebuilding and coping after disasters strike is proven to be vastly more expensive than taking early preventive steps to reduce carbon emissions.",
+      "sourceReference": "Section 6C.1, Pages 150-151"
+    },
+    {
+      "id": "ENG-G11-U06-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Select the sentence that correctly uses a transitional conjunctive phrase to connect two independent clauses in a compare-and-contrast essay on climate policy:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Preventive climate investment requires substantial upfront capital; in contrast, neglecting carbon controls leads to far greater long-term economic destruction."
+        },
+        {
+          "id": "B",
+          "text": "Preventive climate investment requires substantial upfront capital, in contrast; neglecting carbon controls leads to far greater long-term economic destruction."
+        },
+        {
+          "id": "C",
+          "text": "Preventive climate investment requires substantial upfront capital; in contrast neglecting carbon controls leads to far greater long-term economic destruction."
+        },
+        {
+          "id": "D",
+          "text": "Preventive climate investment requires substantial upfront capital in contrast, neglecting carbon controls leads to far greater long-term economic destruction."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Connecting two independent main clauses with a transition phrase like 'in contrast' requires a preceding semicolon and a trailing comma (Clause 1; in contrast, Clause 2.).",
+      "sourceReference": "Section 6F.2, Pages 163-164"
+    }
+  ]
 }

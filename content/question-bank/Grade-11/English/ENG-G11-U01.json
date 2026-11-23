@@ -3,5 +3,411 @@
   "subject": "English",
   "unitNumber": 1,
   "unitTitle": "Environmental Hazards",
-  "questions": []
+  "questions": [
+    {
+      "id": "ENG-G11-U01-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Tsadik is a dedicated eleventh-grade student. He ______ to school early every morning so that he can sit in the front row.",
+      "options": [
+        {
+          "id": "A",
+          "text": "arrive"
+        },
+        {
+          "id": "B",
+          "text": "arrives"
+        },
+        {
+          "id": "C",
+          "text": "arrived"
+        },
+        {
+          "id": "D",
+          "text": "is arriving"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Habitual routines in the present with a third-person singular subject ('He') require the Simple Present tense verb form ending in '-s' ('arrives').",
+      "sourceReference": "Section 1E.1, Page 18"
+    },
+    {
+      "id": "ENG-G11-U01-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Human activities have an adverse effect on the environment by polluting water, air, and soil. What is the closest contextual meaning of 'adverse'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Harmful or unfavorable"
+        },
+        {
+          "id": "B",
+          "text": "Beneficial and helpful"
+        },
+        {
+          "id": "C",
+          "text": "Temporary and light"
+        },
+        {
+          "id": "D",
+          "text": "Financial and commercial"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "In Section 1C vocabulary, 'adverse' contextually means unfavorable, harmful, or damaging to living organisms and ecosystems.",
+      "sourceReference": "Section 1C.1, Page 10"
+    },
+    {
+      "id": "ENG-G11-U01-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Complete the process sentence in passive voice: 'To prepare cultural tea, clean tea cups ______ into the tray before hot water is poured.'",
+      "options": [
+        {
+          "id": "A",
+          "text": "are placed"
+        },
+        {
+          "id": "B",
+          "text": "place"
+        },
+        {
+          "id": "C",
+          "text": "were placed"
+        },
+        {
+          "id": "D",
+          "text": "placed"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Describing procedural steps in the present passive requires 'is/are + past participle' ('are placed').",
+      "sourceReference": "Section 1E.2, Page 22"
+    },
+    {
+      "id": "ENG-G11-U01-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Before going to sleep, you should always ______ the lights to conserve electrical energy.",
+      "options": [
+        {
+          "id": "A",
+          "text": "turn off"
+        },
+        {
+          "id": "B",
+          "text": "turn on"
+        },
+        {
+          "id": "C",
+          "text": "turn down"
+        },
+        {
+          "id": "D",
+          "text": "turn up"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The phrasal verb 'turn off' means to deactivate or stop the flow of electricity to an appliance or light fixture.",
+      "sourceReference": "Section 1D.4, Page 17"
+    },
+    {
+      "id": "ENG-G11-U01-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which pair of words correctly contrasts the short pure vowel sound [ɪ] as in 'sit' with the long pure vowel sound [i:] as in 'seat'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "ship / sheep"
+        },
+        {
+          "id": "B",
+          "text": "cat / cut"
+        },
+        {
+          "id": "C",
+          "text": "full / fool"
+        },
+        {
+          "id": "D",
+          "text": "pen / pan"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The minimal pair 'ship' [ʃɪp] and 'sheep' [ʃi:p] contrasts the short high front unrounded vowel [ɪ] with the long high front unrounded vowel [i:].",
+      "sourceReference": "Section 1B.4, Page 8"
+    },
+    {
+      "id": "ENG-G11-U01-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "______ the industrial revolution brought significant technological progress, it introduced massive amounts of air pollutants into the atmosphere.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Although"
+        },
+        {
+          "id": "B",
+          "text": "Because"
+        },
+        {
+          "id": "C",
+          "text": "In order that"
+        },
+        {
+          "id": "D",
+          "text": "Consequently"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "'Although' introduces an adverbial clause of concession that contrasts a positive fact with an unexpected or opposing fact in the main clause.",
+      "sourceReference": "Section 1E.4, Pages 24-25"
+    },
+    {
+      "id": "ENG-G11-U01-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Complete the panel discussion dialogue: Moderator: 'What is your view on the main cause of local deforestation?' Environmentalist: '______ the lack of public awareness and illegal tree cutting are the primary factors.'",
+      "options": [
+        {
+          "id": "A",
+          "text": "I strongly believe that"
+        },
+        {
+          "id": "B",
+          "text": "What do you think about"
+        },
+        {
+          "id": "C",
+          "text": "I am wondering if"
+        },
+        {
+          "id": "D",
+          "text": "Did you know that"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "'I strongly believe that' is a formal expression used to state a firm personal conviction or opinion during a structured panel discussion.",
+      "sourceReference": "Section 1B.2, Pages 5-6"
+    },
+    {
+      "id": "ENG-G11-U01-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Identify the option that correctly classifies the noun 'deforestation' in terms of concrete vs. abstract noun categories.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Abstract noun, because it refers to a process, concept, or environmental phenomenon"
+        },
+        {
+          "id": "B",
+          "text": "Concrete noun, because it can be touched as a physical object"
+        },
+        {
+          "id": "C",
+          "text": "Proper noun, because it names a specific geographic region"
+        },
+        {
+          "id": "D",
+          "text": "Pronoun, because it replaces a human subject"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "'Deforestation' is an abstract noun because it represents a broad concept, phenomenon, or process rather than a single tangible object.",
+      "sourceReference": "Section 1E.5, Pages 25-26"
+    },
+    {
+      "id": "ENG-G11-U01-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Identify the sentence structure error in the following construction: 'Because urbanization and industrialization are reaching unprecedented proportions worldwide.'",
+      "options": [
+        {
+          "id": "A",
+          "text": "Sentence Fragment (dependent clause standing alone without an independent main clause)"
+        },
+        {
+          "id": "B",
+          "text": "Run-on Sentence (two independent clauses joined without punctuation)"
+        },
+        {
+          "id": "C",
+          "text": "Comma Splice (two independent clauses joined with only a comma)"
+        },
+        {
+          "id": "D",
+          "text": "Correct Compound Sentence"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Subordinating conjunctions like 'Because' introduce dependent clauses; leaving a dependent clause standing alone without an independent main clause creates a sentence fragment.",
+      "sourceReference": "Section 1F.4, Page 30"
+    },
+    {
+      "id": "ENG-G11-U01-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "According to the reading text on environmental hazards in Unit 1, anthropogenic air pollution accounts for approximately how many global deaths annually?",
+      "options": [
+        {
+          "id": "A",
+          "text": "9 million"
+        },
+        {
+          "id": "B",
+          "text": "1 million"
+        },
+        {
+          "id": "C",
+          "text": "25 million"
+        },
+        {
+          "id": "D",
+          "text": "500,000"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Paragraph 1 of the reading text explicitly states that anthropogenic air pollution accounts for about 9 million deaths per year worldwide.",
+      "sourceReference": "Section 1C.1, Page 10"
+    },
+    {
+      "id": "ENG-G11-U01-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "After endless negotiations, the local council members decided to ______ with their environmental preservation campaign despite budget limits.",
+      "options": [
+        {
+          "id": "A",
+          "text": "keep on"
+        },
+        {
+          "id": "B",
+          "text": "kick out"
+        },
+        {
+          "id": "C",
+          "text": "knock off"
+        },
+        {
+          "id": "D",
+          "text": "turn off"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The phrasal verb 'keep on' means to continue doing an action or maintaining a course of action without stopping.",
+      "sourceReference": "Section 1D.4, Page 17"
+    },
+    {
+      "id": "ENG-G11-U01-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Choose the sentence that displays CORRECT syntax and comma placement when an adverbial clause of concession introduces a sentence.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Even though global temperatures are rising rapidly, many industrial nations fail to reduce carbon emissions."
+        },
+        {
+          "id": "B",
+          "text": "Even though global temperatures are rising rapidly many industrial nations fail to reduce carbon emissions."
+        },
+        {
+          "id": "C",
+          "text": "Even though, global temperatures are rising rapidly many industrial nations fail to reduce carbon emissions."
+        },
+        {
+          "id": "D",
+          "text": "Even though global temperatures, are rising rapidly many industrial nations fail to reduce carbon emissions."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "When an adverbial clause of concession ('Even though...') precedes the main clause, a comma must separate the dependent clause from the main clause.",
+      "sourceReference": "Section 1E.4, Page 25"
+    },
+    {
+      "id": "ENG-G11-U01-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Identify the functional category and communicative purpose of the sentence: 'Shut off all electronic appliances immediately when leaving the laboratory!'",
+      "options": [
+        {
+          "id": "A",
+          "text": "Imperative sentence used to issue an urgent command or instruction"
+        },
+        {
+          "id": "B",
+          "text": "Declarative sentence used to provide factual statements"
+        },
+        {
+          "id": "C",
+          "text": "Interrogative sentence used to gather technical data"
+        },
+        {
+          "id": "D",
+          "text": "Exclamatory sentence expressing surprise without command"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Imperative sentences begin with a verb in base form and function to pass direct commands, instructions, or orders to the listener.",
+      "sourceReference": "Section 1F.1, Page 27"
+    },
+    {
+      "id": "ENG-G11-U01-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Analyze the error in: 'Urbanization expands rapidly into rural areas, agricultural land is destroyed.' Which option correctly resolves this comma splice?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Urbanization expands rapidly into rural areas; consequently, agricultural land is destroyed."
+        },
+        {
+          "id": "B",
+          "text": "Urbanization expands rapidly into rural areas, agricultural land is destroyed quickly."
+        },
+        {
+          "id": "C",
+          "text": "Urbanization expands rapidly into rural areas agricultural land is destroyed."
+        },
+        {
+          "id": "D",
+          "text": "Urbanization expands rapidly into rural areas, but agricultural land is destroyed."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "A comma splice occurs when two independent clauses are improperly joined with only a comma. Joining them with a semicolon and conjunctive adverb ('; consequently,') eliminates the structural error.",
+      "sourceReference": "Section 1F.4, Page 30"
+    },
+    {
+      "id": "ENG-G11-U01-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "In environmental reports, the term 'anthropogenic air pollution' refers specifically to pollution caused by:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Human activities such as industrial emissions, deforestation, and vehicle exhausts"
+        },
+        {
+          "id": "B",
+          "text": "Natural volcanic eruptions and desert dust storms"
+        },
+        {
+          "id": "C",
+          "text": "Marine ocean currents and aquatic plants"
+        },
+        {
+          "id": "D",
+          "text": "Solar flares and atmospheric radiation"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The prefix 'anthropo-' relates to human beings; 'anthropogenic' means originating from human activities.",
+      "sourceReference": "Section 1C.1, Page 10"
+    }
+  ]
 }

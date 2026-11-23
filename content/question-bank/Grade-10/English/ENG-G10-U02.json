@@ -3,5 +3,411 @@
   "subject": "English",
   "unitNumber": 2,
   "unitTitle": "Travel Behaviors",
-  "questions": []
+  "questions": [
+    {
+      "id": "ENG-G10-U02-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Yesterday afternoon, after the tour guide completed the safety briefing, all the tourists ______ onto the bus to visit Omo National Park.",
+      "options": [
+        {
+          "id": "A",
+          "text": "got"
+        },
+        {
+          "id": "B",
+          "text": "get"
+        },
+        {
+          "id": "C",
+          "text": "are getting"
+        },
+        {
+          "id": "D",
+          "text": "have gotten"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The Simple Past tense ('got') is required for an action completed at a definite past time indicated by 'Yesterday afternoon'.",
+      "sourceReference": "Section 2.4, Page 50"
+    },
+    {
+      "id": "ENG-G10-U02-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Navigating through heavy traffic during peak hours turned out to be a grueling ordeal for the driver. What is the closest contextual meaning of 'ordeal'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A painful or difficult experience"
+        },
+        {
+          "id": "B",
+          "text": "A joyful celebration"
+        },
+        {
+          "id": "C",
+          "text": "An easy shortcut"
+        },
+        {
+          "id": "D",
+          "text": "A formal invitation"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "In Grade 10 Unit 2 reading vocabulary, 'ordeal' refers to a severe, painful, or difficult experience or test.",
+      "sourceReference": "Section 2.3.1, Page 48"
+    },
+    {
+      "id": "ENG-G10-U02-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Before taking the long-distance bus from Addis Ababa to Hawassa, the driver stopped at the gas station to ______ the fuel tank completely.",
+      "options": [
+        {
+          "id": "A",
+          "text": "fill up"
+        },
+        {
+          "id": "B",
+          "text": "fill in"
+        },
+        {
+          "id": "C",
+          "text": "fill out"
+        },
+        {
+          "id": "D",
+          "text": "fix up"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The phrasal verb 'fill up' means to make something completely full (such as a vehicle's fuel tank). 'Fill out'/'fill in' are used for completing forms.",
+      "sourceReference": "Section 2.3.2, Pages 48-49"
+    },
+    {
+      "id": "ENG-G10-U02-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Traffic rules state that pedestrians ______ look both ways before stepping onto a busy road to avoid accidents.",
+      "options": [
+        {
+          "id": "A",
+          "text": "must"
+        },
+        {
+          "id": "B",
+          "text": "shouldn't"
+        },
+        {
+          "id": "C",
+          "text": "might not"
+        },
+        {
+          "id": "D",
+          "text": "don't have to"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "In traffic safety contexts (Unit 2.2.2), 'must' is used to express a strong obligation, rule, or vital safety advice.",
+      "sourceReference": "Section 2.2.2, Page 41"
+    },
+    {
+      "id": "ENG-G10-U02-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which of the following options represents a simple sentence with a compound subject?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Halefom and Wegaso visited Wolaita Sodo town yesterday."
+        },
+        {
+          "id": "B",
+          "text": "Halefom visited Wolaita Sodo, and Wegaso went back to Addis Ababa."
+        },
+        {
+          "id": "C",
+          "text": "Although Halefom visited Wolaita Sodo, he returned early."
+        },
+        {
+          "id": "D",
+          "text": "Halefom visited Wolaita Sodo because he wanted to see his family."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "A simple sentence contains a single main clause. Option A has a compound subject ('Halefom and Wegaso') sharing a single predicate verb ('visited').",
+      "sourceReference": "Section 2.5.1, Page 53"
+    },
+    {
+      "id": "ENG-G10-U02-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "When the new employee arrived at the travel agency, the secretary asked her to ______ an official registration form with her personal details.",
+      "options": [
+        {
+          "id": "A",
+          "text": "fill out"
+        },
+        {
+          "id": "B",
+          "text": "fill up"
+        },
+        {
+          "id": "C",
+          "text": "fix up"
+        },
+        {
+          "id": "D",
+          "text": "freak out"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "'Fill out' (or 'fill in') means to write all necessary information in the blank spaces of an official document or form.",
+      "sourceReference": "Section 2.3.2, Pages 48-49"
+    },
+    {
+      "id": "ENG-G10-U02-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Long-distance travel by bus can become repetitive, breaking the daily routine but introducing a sense of monotony. What does 'monotony' mean in this context?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Lack of variety leading to boredom"
+        },
+        {
+          "id": "B",
+          "text": "Intense excitement and delight"
+        },
+        {
+          "id": "C",
+          "text": "High speed and danger"
+        },
+        {
+          "id": "D",
+          "text": "Financial expenditure"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Contextually in Unit 2 reading materials, 'monotony' refers to tedious sameness, repetition, or lack of variety that causes boredom during trips.",
+      "sourceReference": "Section 2.3.1, Page 48"
+    },
+    {
+      "id": "ENG-G10-U02-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "You look completely exhausted after walking in the hot sun; you ______ sit down and drink some water before continuing your journey.",
+      "options": [
+        {
+          "id": "A",
+          "text": "had better"
+        },
+        {
+          "id": "B",
+          "text": "ought not to"
+        },
+        {
+          "id": "C",
+          "text": "mustn't to"
+        },
+        {
+          "id": "D",
+          "text": "wouldn't"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "'Had better' + bare infinitive is used to give strong, polite, or urgent advice when negative consequences might follow if ignored.",
+      "sourceReference": "Section 2.2.2, Page 41"
+    },
+    {
+      "id": "ENG-G10-U02-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Identify the sentence that is correctly structured as a compound sentence joined by a coordinating conjunction.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Ujulu likes reading travel guides, and Megersa prefers to watch documentary films."
+        },
+        {
+          "id": "B",
+          "text": "Ujulu likes reading travel guides while Megersa watches films."
+        },
+        {
+          "id": "C",
+          "text": "Because Ujulu likes reading travel guides, Megersa bought him one."
+        },
+        {
+          "id": "D",
+          "text": "Ujulu, who likes reading travel guides, visited the library."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "A compound sentence consists of two independent clauses connected by a coordinating conjunction (FANBOYS: for, and, nor, but, or, yet, so). Option A joins two independent clauses with ', and'.",
+      "sourceReference": "Section 2.5.1, Pages 53-54"
+    },
+    {
+      "id": "ENG-G10-U02-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "According to the Unit 2 text on travel behaviors, why should travelers predetermine their destination, purpose, and required budget before embarking on a journey?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because travel behaviors are interdependent with beliefs, values, and practical needs."
+        },
+        {
+          "id": "B",
+          "text": "Because traffic laws prohibit travelers from carrying cash on buses."
+        },
+        {
+          "id": "C",
+          "text": "Because hotels only accept guests who travel without luggage."
+        },
+        {
+          "id": "D",
+          "text": "Because road signs are removed during urban holidays."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Section 2.3 states that actual travel behaviors are interdependent with beliefs, attitudes, and values; predetermining trip purpose, timing, and funds ensures safety and smooth decision-making.",
+      "sourceReference": "Section 2.3, Page 46"
+    },
+    {
+      "id": "ENG-G10-U02-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Choose the correctly punctuated sentence using a semicolon and a conjunctive adverb:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Patience is an essential quality when traveling in heavy traffic; however, it requires maturity and self-control."
+        },
+        {
+          "id": "B",
+          "text": "Patience is an essential quality when traveling in heavy traffic, however; it requires maturity and self-control."
+        },
+        {
+          "id": "C",
+          "text": "Patience is an essential quality when traveling in heavy traffic; however it requires maturity, and self-control."
+        },
+        {
+          "id": "D",
+          "text": "Patience is an essential quality when traveling in heavy traffic however; it requires maturity."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "When joining two independent clauses with a conjunctive adverb ('however'), place a semicolon before the adverb and a comma after it (Clause 1; however, Clause 2.).",
+      "sourceReference": "Section 2.5.4, Pages 61, 63"
+    },
+    {
+      "id": "ENG-G10-U02-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Which sentence demonstrates CORRECT tense balance between a continuous background travel activity and a sudden completed event in the Simple Past?",
+      "options": [
+        {
+          "id": "A",
+          "text": "While the tourists were walking along the sidewalk in Merkato, a pick-pocket suddenly snatched the woman's handbag."
+        },
+        {
+          "id": "B",
+          "text": "While the tourists walked along the sidewalk in Merkato, a pick-pocket was suddenly snatching the woman's handbag."
+        },
+        {
+          "id": "C",
+          "text": "While the tourists had been walking along the sidewalk in Merkato, a pick-pocket snatches the woman's handbag."
+        },
+        {
+          "id": "D",
+          "text": "While the tourists are walking along the sidewalk in Merkato, a pick-pocket snatched the woman's handbag."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "An ongoing past action ('were walking') introduced by 'While' takes the Past Continuous, while the sudden interrupting past event ('snatched') takes the Simple Past.",
+      "sourceReference": "Section 2.4.1 & 2.3, Pages 46, 50"
+    },
+    {
+      "id": "ENG-G10-U02-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Analyze the sentence: 'Reading is an important language skill for travelers, but it is difficult to master unless one practices continuously.' What structural classification does this sentence belong to?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Compound-Complex sentence"
+        },
+        {
+          "id": "B",
+          "text": "Simple sentence"
+        },
+        {
+          "id": "C",
+          "text": "Compound sentence"
+        },
+        {
+          "id": "D",
+          "text": "Complex sentence"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The sentence contains two independent clauses ('Reading is an important language skill for travelers' / 'it is difficult to master') joined by the coordinating conjunction 'but', and one dependent clause ('unless one practices continuously') introduced by the subordinating conjunction 'unless'. Thus, it is a compound-complex sentence.",
+      "sourceReference": "Section 2.5.1, Page 54"
+    },
+    {
+      "id": "ENG-G10-U02-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Select the row that accurately matches each phrasal verb from Unit 2 with its correct contextual definition:",
+      "options": [
+        {
+          "id": "A",
+          "text": "find out (discover information) / fix up (arrange or repair) / flip out (react with extreme anger or excitement)"
+        },
+        {
+          "id": "B",
+          "text": "find out (fill with gas) / fix up (fall asleep) / flip out (drive away)"
+        },
+        {
+          "id": "C",
+          "text": "find out (cancel an event) / fix up (borrow money) / flip out (walk slowly)"
+        },
+        {
+          "id": "D",
+          "text": "find out (refuse advice) / fix up (exceed speed limit) / flip out (write a summary)"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "In Grade 10 Unit 2 phrasal verb lists, 'find out' means to discover facts, 'fix up' means to arrange or repair, and 'flip out' means to become suddenly angry or wildly excited.",
+      "sourceReference": "Section 2.3.2, Pages 48-49"
+    },
+    {
+      "id": "ENG-G10-U02-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "When summarizing a passage about travel behaviors or academic plagiarism (as taught in Unit 2.5.2), which set of guidelines MUST a student rigorously follow?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Restate the main ideas in your own words, omit personal opinions, and maintain objective focus without changing the original core meaning."
+        },
+        {
+          "id": "B",
+          "text": "Copy long sentences verbatim, insert your personal disagreement with the author, and double the text length."
+        },
+        {
+          "id": "C",
+          "text": "Omit the thesis statement, focus exclusively on minor decorative details, and write in bullet points only."
+        },
+        {
+          "id": "D",
+          "text": "Include imaginative fictional events not present in the original text and remove all concluding remarks."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Unit 2.5.2 guidelines specify that a summary must condense the original text using the writer's own words, accurately capture main ideas, exclude personal opinions or interpretations, and wrap up with a logical concluding statement.",
+      "sourceReference": "Section 2.5.2, Pages 56-57"
+    }
+  ]
 }

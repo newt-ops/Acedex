@@ -3,5 +3,411 @@
   "subject": "English",
   "unitNumber": 9,
   "unitTitle": "Conflict Management",
-  "questions": []
+  "questions": [
+    {
+      "id": "ENG-G12-U09-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Kebede does not have sufficient experience in dispute mediation; he wishes he ______ more trained in conflict resolution techniques.",
+      "options": [
+        {
+          "id": "A",
+          "text": "were"
+        },
+        {
+          "id": "B",
+          "text": "is"
+        },
+        {
+          "id": "C",
+          "text": "will be"
+        },
+        {
+          "id": "D",
+          "text": "has been"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "When expressing a present wish or regret for a situation to be different, 'wish' takes the Simple Past subjunctive verb form ('were' across all personal subjects in formal English).",
+      "sourceReference": "Section 9E.1, Pages 228-229"
+    },
+    {
+      "id": "ENG-G12-U09-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In family conflict management, parent-teen disagreements are often prevalent during early adolescence. What is the closest contextual meaning of 'prevalent'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Widespread, common, or frequently occurring"
+        },
+        {
+          "id": "B",
+          "text": "Completely absent and unheard of"
+        },
+        {
+          "id": "C",
+          "text": "Strictly illegal under national law"
+        },
+        {
+          "id": "D",
+          "text": "Highly profitable in financial terms"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "In Section 9C.1 vocabulary, 'prevalent' contextually means widespread, common, or frequently encountered in a given setting.",
+      "sourceReference": "Section 9C.1, Page 222"
+    },
+    {
+      "id": "ENG-G12-U09-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Neither the school counselor nor the disputing students ______ willing to compromise during the first mediation session yesterday.",
+      "options": [
+        {
+          "id": "A",
+          "text": "were"
+        },
+        {
+          "id": "B",
+          "text": "was"
+        },
+        {
+          "id": "C",
+          "text": "is"
+        },
+        {
+          "id": "D",
+          "text": "has been"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "When compound subjects are connected by 'neither... nor', the verb must agree in number with the noun closest to it ('disputing students' -> plural verb 'were').",
+      "sourceReference": "Section 9E.2, Pages 229-230"
+    },
+    {
+      "id": "ENG-G12-U09-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "During the department meeting, the chief mediator decided to ______ the controversial topic of salary disparities to reach a peaceful compromise.",
+      "options": [
+        {
+          "id": "A",
+          "text": "bring up"
+        },
+        {
+          "id": "B",
+          "text": "bring down"
+        },
+        {
+          "id": "C",
+          "text": "bring off"
+        },
+        {
+          "id": "D",
+          "text": "bring out"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The phrasal verb 'bring up' means to mention, introduce, or raise a subject for group discussion.",
+      "sourceReference": "Section 9D.1, Pages 226-227"
+    },
+    {
+      "id": "ENG-G12-U09-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which structural element of a formal job application letter immediately follows the sender's header and date line?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Inside address (Receiver's name, title, and organization)"
+        },
+        {
+          "id": "B",
+          "text": "Complementary closing ('Sincerely')"
+        },
+        {
+          "id": "C",
+          "text": "Main body paragraph detailing qualifications"
+        },
+        {
+          "id": "D",
+          "text": "Postscript (P.S.) note"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "In formal business letter layout (Section 9F.3), the inside address specifying the recipient's name, title, and address comes directly after the date.",
+      "sourceReference": "Section 9F.3, Pages 238-241"
+    },
+    {
+      "id": "ENG-G12-U09-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Aster failed to attend the community mediation session last Sunday. Now she regrets her absence and wishes she ______ to the elders' council.",
+      "options": [
+        {
+          "id": "A",
+          "text": "had gone"
+        },
+        {
+          "id": "B",
+          "text": "went"
+        },
+        {
+          "id": "C",
+          "text": "has gone"
+        },
+        {
+          "id": "D",
+          "text": "would go"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Expressing a wish or regret about an unfulfilled past action requires 'wish + Past Perfect' ('had gone').",
+      "sourceReference": "Section 9E.1, Pages 228-229"
+    },
+    {
+      "id": "ENG-G12-U09-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Not only the school principal but also the guidance counselors ______ implementing new peer-mediation strategies this semester.",
+      "options": [
+        {
+          "id": "A",
+          "text": "are"
+        },
+        {
+          "id": "B",
+          "text": "is"
+        },
+        {
+          "id": "C",
+          "text": "was"
+        },
+        {
+          "id": "D",
+          "text": "has"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "When subject noun phrases are linked by 'not only... but also', the verb agrees with the closer subject ('guidance counselors' -> plural verb 'are').",
+      "sourceReference": "Section 9E.2, Pages 229-230"
+    },
+    {
+      "id": "ENG-G12-U09-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "According to Section 9C.1 on 'Models for Managing Conflict in a Family', what three psychological processes must occur during adolescence for a child to achieve healthy emotional adulthood?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Separation, differentiation, and opposition"
+        },
+        {
+          "id": "B",
+          "text": "Competition, isolation, and legal litigation"
+        },
+        {
+          "id": "C",
+          "text": "Financial independence, marriage, and migration"
+        },
+        {
+          "id": "D",
+          "text": "Memorization, submission, and strict silence"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Section 9C.1 (citing Carl Pickhardt) identifies separation (gaining distance/privacy), differentiation (experimenting with self-image), and opposition (challenging authority) as three necessary adolescent growth processes.",
+      "sourceReference": "Section 9C.1, Pages 222-223"
+    },
+    {
+      "id": "ENG-G12-U09-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Solve the domain analogy based on Section 9D.2: TEACHER is to SCHOOL as JUDGE is to ______.",
+      "options": [
+        {
+          "id": "A",
+          "text": "courthouse"
+        },
+        {
+          "id": "B",
+          "text": "hospital"
+        },
+        {
+          "id": "C",
+          "text": "engine"
+        },
+        {
+          "id": "D",
+          "text": "library"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "In a worker-and-workplace analogy relationship, a teacher operates in a school; similarly, a judge operates in a courthouse.",
+      "sourceReference": "Section 9D.2, Pages 227-228"
+    },
+    {
+      "id": "ENG-G12-U09-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "The family council ______ divided in their opinions regarding how to settle the land boundary dispute among the siblings.",
+      "options": [
+        {
+          "id": "A",
+          "text": "were"
+        },
+        {
+          "id": "B",
+          "text": "was"
+        },
+        {
+          "id": "C",
+          "text": "is"
+        },
+        {
+          "id": "D",
+          "text": "has"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "When a collective noun ('family council') acts as separate individuals holding differing opinions ('divided in their opinions'), it takes a plural verb ('were').",
+      "sourceReference": "Section 9E.2, Pages 229-230"
+    },
+    {
+      "id": "ENG-G12-U09-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In John Dewey's problem-solving model for family conflict resolution, why are 'win-lose' solutions explicitly discouraged?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because they leave one party defeated, breeding long-term frustration and resentment."
+        },
+        {
+          "id": "B",
+          "text": "Because they require excessive financial expenditure from both sides."
+        },
+        {
+          "id": "C",
+          "text": "Because they are strictly prohibited by statutory civil laws."
+        },
+        {
+          "id": "D",
+          "text": "Because they always result in immediate physical violence."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Section 9C.1 notes that 'win-lose' outcomes leave the losing party resentful and frustrated; effective conflict resolution seeks 'win-win' solutions where both parties satisfy core needs.",
+      "sourceReference": "Section 9C.1, Page 224"
+    },
+    {
+      "id": "ENG-G12-U09-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "If only our local administration ______ more proactive during last month's land boundary dispute, the community would not be facing severe social tension today.",
+      "options": [
+        {
+          "id": "A",
+          "text": "had been"
+        },
+        {
+          "id": "B",
+          "text": "were"
+        },
+        {
+          "id": "C",
+          "text": "was"
+        },
+        {
+          "id": "D",
+          "text": "would be"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "'If only' expressing a past regret linked to a present conditional outcome ('would not be facing... today') requires the Past Perfect verb form ('had been').",
+      "sourceReference": "Section 9E.1, Pages 228-229"
+    },
+    {
+      "id": "ENG-G12-U09-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "The box containing confidential mediation reports, along with several ancient customary law scrolls, ______ missing from the archive room.",
+      "options": [
+        {
+          "id": "A",
+          "text": "is"
+        },
+        {
+          "id": "B",
+          "text": "are"
+        },
+        {
+          "id": "C",
+          "text": "were"
+        },
+        {
+          "id": "D",
+          "text": "have been"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Intervening prepositional phrases introduced by 'along with', 'as well as', or 'together with' do not change the number of the simple subject ('The box' -> singular verb 'is').",
+      "sourceReference": "Section 9E.2, Pages 229-230"
+    },
+    {
+      "id": "ENG-G12-U09-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "When writing a formal job application letter where no specific contact person is named, which salutation and matching closing pair is GRAMMATICALLY CORRECT?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Salutation: \"Dear Sir/Madam,\" — Closing: \"Yours faithfully,\""
+        },
+        {
+          "id": "B",
+          "text": "Salutation: \"Dear Mr. Kebede,\" — Closing: \"Yours faithfully,\""
+        },
+        {
+          "id": "C",
+          "text": "Salutation: \"Dear Sir/Madam,\" — Closing: \"Warmest regards,\""
+        },
+        {
+          "id": "D",
+          "text": "Salutation: \"Hi there,\" — Closing: \"Yours sincerely,\""
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "In standard formal business letter conventions (Section 9F.3), letters opened with an unnamed salutation ('Dear Sir/Madam,') MUST close with 'Yours faithfully,'. Letters addressed to a named person ('Dear Mr. Kebede,') close with 'Yours sincerely,'.",
+      "sourceReference": "Section 9F.3, Pages 238-241"
+    },
+    {
+      "id": "ENG-G12-U09-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "In a five-paragraph argumentative essay on workplace conflict management, where should the thesis statement be positioned, and what critical structural requirement must it satisfy?",
+      "options": [
+        {
+          "id": "A",
+          "text": "At the end of the introductory paragraph, explicitly declaring the author's central stance on the debatable topic and outlining main supporting arguments."
+        },
+        {
+          "id": "B",
+          "text": "Inside the second body paragraph, presenting minor statistical data."
+        },
+        {
+          "id": "C",
+          "text": "At the start of the final conclusion paragraph, introducing entirely new unmentioned evidence."
+        },
+        {
+          "id": "D",
+          "text": "In the title line, replacing the need for topic sentences in body paragraphs."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "In formal argumentative writing (Section 9F.2), the thesis statement appears at the end of the introductory paragraph to declare the writer's central position and preview the argument's scope.",
+      "sourceReference": "Section 9F.2, Pages 234-237"
+    }
+  ]
 }

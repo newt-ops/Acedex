@@ -3,5 +3,411 @@
   "subject": "English",
   "unitNumber": 4,
   "unitTitle": "National Parks",
-  "questions": []
+  "questions": [
+    {
+      "id": "ENG-G09-U04-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Choose the correct verb form for the Zero Conditional statement: 'If you heat ice, it ______.'",
+      "options": [
+        {
+          "id": "A",
+          "text": "melts"
+        },
+        {
+          "id": "B",
+          "text": "melted"
+        },
+        {
+          "id": "C",
+          "text": "will melt"
+        },
+        {
+          "id": "D",
+          "text": "would melt"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Zero Conditional is used to express general scientific facts and universal truths using Simple Present in both clauses (If + Simple Present, Simple Present). 'If you heat ice, it melts.'",
+      "sourceReference": "Section 4.4.1, Page 98"
+    },
+    {
+      "id": "ENG-G09-U04-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "The Simien Mountains offer breathtaking scenery that attracts tourists from around the world. What is the closest contextual meaning of 'scenery'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Natural landscape views"
+        },
+        {
+          "id": "B",
+          "text": "Urban traffic noise"
+        },
+        {
+          "id": "C",
+          "text": "Wildlife protection laws"
+        },
+        {
+          "id": "D",
+          "text": "Historical storybooks"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Contextually within reading texts on national parks, 'scenery' refers to the attractive natural features of a landscape, such as mountains, valleys, and rivers.",
+      "sourceReference": "Section 4.3.1, Page 94"
+    },
+    {
+      "id": "ENG-G09-U04-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "If she ______ hard for the upcoming examination, she will pass with high marks.",
+      "options": [
+        {
+          "id": "A",
+          "text": "studies"
+        },
+        {
+          "id": "B",
+          "text": "studied"
+        },
+        {
+          "id": "C",
+          "text": "will study"
+        },
+        {
+          "id": "D",
+          "text": "study"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Conditional Type 1 uses the Simple Present tense in the conditional clause ('studies') for a third-person singular subject ('she') to express a real future possibility.",
+      "sourceReference": "Section 4.4.2, Page 100"
+    },
+    {
+      "id": "ENG-G09-U04-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which prefix added to the root word 'biotic' forms a word meaning a substance that opposes or inhibits the growth of bacteria?",
+      "options": [
+        {
+          "id": "A",
+          "text": "anti-"
+        },
+        {
+          "id": "B",
+          "text": "dis-"
+        },
+        {
+          "id": "C",
+          "text": "ante-"
+        },
+        {
+          "id": "D",
+          "text": "un-"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The prefix 'anti-' means opposing or against. Attaching 'anti-' to 'biotic' forms 'antibiotic'.",
+      "sourceReference": "Section 4.3.3, Page 96"
+    },
+    {
+      "id": "ENG-G09-U04-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "If it rains tomorrow, we ______ our planned trip to the national park.",
+      "options": [
+        {
+          "id": "A",
+          "text": "will cancel"
+        },
+        {
+          "id": "B",
+          "text": "canceled"
+        },
+        {
+          "id": "C",
+          "text": "would cancel"
+        },
+        {
+          "id": "D",
+          "text": "cancel"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "In Conditional Type 1, when the if-clause is in the Simple Present ('If it rains'), the main clause uses 'will + base verb' ('will cancel') to express the future result.",
+      "sourceReference": "Section 4.4.2, Page 101"
+    },
+    {
+      "id": "ENG-G09-U04-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "According to the Unit 4 reading text on Ethiopian National Parks, Ras Dejen is notable because it is ______.",
+      "options": [
+        {
+          "id": "A",
+          "text": "the oldest wildlife reserve in Ethiopia"
+        },
+        {
+          "id": "B",
+          "text": "the highest peak in Ethiopia, standing at 4,620 meters"
+        },
+        {
+          "id": "C",
+          "text": "accessible only by ferry across the Omo River"
+        },
+        {
+          "id": "D",
+          "text": "a mineral hot spring located 225 km east of Addis Ababa"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The reading passage explicitly describes Ras Dejen as the highest peak in Ethiopia at 4,620 meters, located adjacent to the Simien Mountains National Park.",
+      "sourceReference": "Section 4.2, Page 92"
+    },
+    {
+      "id": "ENG-G09-U04-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Identify the sentence that represents a Zero Conditional statement expressing a general law or scientific fact.",
+      "options": [
+        {
+          "id": "A",
+          "text": "If you mix red and yellow, you get orange."
+        },
+        {
+          "id": "B",
+          "text": "If you call him now, he will pick up the phone."
+        },
+        {
+          "id": "C",
+          "text": "If I win the competition, I will buy a new bicycle."
+        },
+        {
+          "id": "D",
+          "text": "If we leave early, we will arrive before dark."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Zero Conditional (If + Simple Present, Simple Present) is used for facts, general truths, and scientific laws. Mixing red and yellow to produce orange is a universal fact.",
+      "sourceReference": "Section 4.4.1, Pages 97-98"
+    },
+    {
+      "id": "ENG-G09-U04-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Species like the Walia Ibex and Ethiopian Wolf are described as 'endemic' to Ethiopia. What does 'endemic' mean in this context?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Native and restricted to a specific geographic region"
+        },
+        {
+          "id": "B",
+          "text": "Imported from foreign continents recently"
+        },
+        {
+          "id": "C",
+          "text": "Dangerous to humans and livestock"
+        },
+        {
+          "id": "D",
+          "text": "Completely extinct in natural habitats"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "In ecological and national park contexts, 'endemic' refers to species that are native to and naturally found only within a specific country or region.",
+      "sourceReference": "Section 4.2, Pages 88, 92"
+    },
+    {
+      "id": "ENG-G09-U04-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Choose the correct prefix to form the verb meaning 'to declare ineligible or remove from competition':",
+      "options": [
+        {
+          "id": "A",
+          "text": "disqualify"
+        },
+        {
+          "id": "B",
+          "text": "unqualify"
+        },
+        {
+          "id": "C",
+          "text": "antiqualify"
+        },
+        {
+          "id": "D",
+          "text": "antequalify"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The prefix 'dis-' denotes negation or removal. Combining 'dis-' with 'qualify' forms the verb 'disqualify'.",
+      "sourceReference": "Section 4.3.3, Page 96"
+    },
+    {
+      "id": "ENG-G09-U04-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "If students ______ hard for their national examinations, they will not achieve top scores.",
+      "options": [
+        {
+          "id": "A",
+          "text": "don't study"
+        },
+        {
+          "id": "B",
+          "text": "doesn't study"
+        },
+        {
+          "id": "C",
+          "text": "won't study"
+        },
+        {
+          "id": "D",
+          "text": "didn't study"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The plural noun subject 'students' requires the negative auxiliary 'don't study' in the Simple Present conditional clause of Conditional Type 1.",
+      "sourceReference": "Section 4.4.2, Page 101"
+    },
+    {
+      "id": "ENG-G09-U04-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which Ethiopian national park features the 2,007-meter Fantalle Volcano Crater, mineral hot springs, and is bordered to the south by the Awash River?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Awash National Park"
+        },
+        {
+          "id": "B",
+          "text": "Simien Mountains National Park"
+        },
+        {
+          "id": "C",
+          "text": "Omo National Park"
+        },
+        {
+          "id": "D",
+          "text": "Gambella National Park"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Section 4.2 of the textbook specifies that Awash National Park features the Fantalle Volcano Crater and hot springs, bordered to the south by the Awash River.",
+      "sourceReference": "Section 4.2, Page 89"
+    },
+    {
+      "id": "ENG-G09-U04-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Which sentence correctly demonstrates a Zero Conditional structure where the main clause precedes the conditional clause?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Water boils if you heat it to 100 degrees Celsius at sea level."
+        },
+        {
+          "id": "B",
+          "text": "Water will boil if you heat it to 100 degrees Celsius at sea level."
+        },
+        {
+          "id": "C",
+          "text": "If water boils, you heat it to 100 degrees Celsius at sea level."
+        },
+        {
+          "id": "D",
+          "text": "Water boiled if you will heat it to 100 degrees Celsius at sea level."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "When the main clause comes first in Zero Conditional sentences, both verbs remain in the Simple Present ('boils', 'heat') and no comma is placed between clauses.",
+      "sourceReference": "Section 4.4.1, Pages 97-98"
+    },
+    {
+      "id": "ENG-G09-U04-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Complete the complex Conditional Type 1 sentence: 'If local communities ______ national park conservation rules, tourist revenue ______ in the region.'",
+      "options": [
+        {
+          "id": "A",
+          "text": "respect / will increase"
+        },
+        {
+          "id": "B",
+          "text": "respected / would increase"
+        },
+        {
+          "id": "C",
+          "text": "will respect / increases"
+        },
+        {
+          "id": "D",
+          "text": "respects / will be increased"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The plural subject 'communities' takes the base verb 'respect' in the Simple Present if-clause, paired with 'will increase' in the active main clause.",
+      "sourceReference": "Section 4.4.2, Pages 100-101"
+    },
+    {
+      "id": "ENG-G09-U04-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "In drafting a short report about a visited historical or natural park (as outlined in Unit 4.6.2), which core set of questions MUST be systematically addressed?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Where did you go, when did you go, who went with you, and what key features did you observe?"
+        },
+        {
+          "id": "B",
+          "text": "How much did your ticket cost, why did you dislike the food, and when will you return?"
+        },
+        {
+          "id": "C",
+          "text": "What is your opinion on global trade, who is the president, and how to drive a car?"
+        },
+        {
+          "id": "D",
+          "text": "Which hotel is most expensive, why is traffic heavy, and how to write a poem?"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Section 4.6.2 specifies that a formal short report of a visit must answer: destination (where), date/time (when), companions (who), and key sights/findings (what).",
+      "sourceReference": "Section 4.6.2, Page 104"
+    },
+    {
+      "id": "ENG-G09-U04-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "'The vast expanse of wilderness adjacent to the river provides a habitat where birdlife soars freely above the valleys.' What are the closest contextual synonyms for 'expanse' and 'soars'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "wide area / flies high"
+        },
+        {
+          "id": "B",
+          "text": "narrow path / falls down"
+        },
+        {
+          "id": "C",
+          "text": "small cage / sings loudly"
+        },
+        {
+          "id": "D",
+          "text": "crowded city / runs quickly"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "In Unit 4 reading passages, 'expanse' contextually means a wide, continuous area of land, while 'soar' means to fly or glide high in the air.",
+      "sourceReference": "Section 4.2 & 4.3.1, Pages 90, 92, 94"
+    }
+  ]
 }

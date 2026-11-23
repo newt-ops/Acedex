@@ -3,5 +3,411 @@
   "subject": "English",
   "unitNumber": 2,
   "unitTitle": "Time Management",
-  "questions": []
+  "questions": [
+    {
+      "id": "ENG-G12-U02-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Sintayehu struggles with procrastination; he wishes he ______ better time management skills to meet his assignment deadlines.",
+      "options": [
+        {
+          "id": "A",
+          "text": "had"
+        },
+        {
+          "id": "B",
+          "text": "has"
+        },
+        {
+          "id": "C",
+          "text": "will have"
+        },
+        {
+          "id": "D",
+          "text": "is having"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "When expressing a desire for a present situation to be different, 'wish' takes the Simple Past tense verb form ('had').",
+      "sourceReference": "Section 2E.2, Page 43"
+    },
+    {
+      "id": "ENG-G12-U02-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Students must learn to avoid procrastination in order to submit their projects on time. What is the closest contextual meaning of 'procrastination'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The habit of delaying or postponing tasks that require attention"
+        },
+        {
+          "id": "B",
+          "text": "The practice of waking up early in the morning"
+        },
+        {
+          "id": "C",
+          "text": "The ability to complete multiple tasks simultaneously"
+        },
+        {
+          "id": "D",
+          "text": "The act of organizing study schedules in advance"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "In Unit 2 reading vocabulary, 'procrastination' refers to intentionally delaying or postponing tasks that need to be done.",
+      "sourceReference": "Section 2A.2 & 2C.1, Pages 26, 32"
+    },
+    {
+      "id": "ENG-G12-U02-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "The student was ______ overwhelmed by his homework load that he decided to create a daily study schedule.",
+      "options": [
+        {
+          "id": "A",
+          "text": "so"
+        },
+        {
+          "id": "B",
+          "text": "such"
+        },
+        {
+          "id": "C",
+          "text": "too"
+        },
+        {
+          "id": "D",
+          "text": "very"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The structure 'so + adjective + that clause' ('so overwhelmed that') is used to express cause and result.",
+      "sourceReference": "Section 2E.1, Pages 40-41"
+    },
+    {
+      "id": "ENG-G12-U02-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Whenever you encounter a difficult problem in your assignment, you should never give up; instead, ______ trying until you find the solution.",
+      "options": [
+        {
+          "id": "A",
+          "text": "go on"
+        },
+        {
+          "id": "B",
+          "text": "break down"
+        },
+        {
+          "id": "C",
+          "text": "put through"
+        },
+        {
+          "id": "D",
+          "text": "keep off"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The phrasal verb 'go on' means to continue doing an action without stopping.",
+      "sourceReference": "Section 2D.1, Pages 38, 40"
+    },
+    {
+      "id": "ENG-G12-U02-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In English phonetics, the plural noun ending '-s' is pronounced as the distinct syllable /-iz/ after sibilant sounds. In which word is '-s' pronounced as /-iz/?",
+      "options": [
+        {
+          "id": "A",
+          "text": "buses"
+        },
+        {
+          "id": "B",
+          "text": "parks"
+        },
+        {
+          "id": "C",
+          "text": "bags"
+        },
+        {
+          "id": "D",
+          "text": "texts"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Nouns ending in sibilant sounds (/s/, /z/, /ʃ/, /tʃ/, /dʒ/) add the plural suffix pronunciation /-iz/ (e.g., 'buses' /ˈbʌsɪz/).",
+      "sourceReference": "Section 1B.1 / Unit 2 Review, Page 5"
+    },
+    {
+      "id": "ENG-G12-U02-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "______ prioritized daily schedules enables high school students to balance academic study with extracurricular activities.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Creating"
+        },
+        {
+          "id": "B",
+          "text": "Create"
+        },
+        {
+          "id": "C",
+          "text": "Created"
+        },
+        {
+          "id": "D",
+          "text": "To created"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "A gerund ('Creating') can function as the grammatical subject of a sentence.",
+      "sourceReference": "Section 2E.3, Pages 45-46"
+    },
+    {
+      "id": "ENG-G12-U02-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "According to the reading text 'Cultural Views of Time Management', which cultural time view considers time as a linear, structured continuum where tasks are planned sequentially 'one at a time'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Linear time view"
+        },
+        {
+          "id": "B",
+          "text": "Multi-active time view"
+        },
+        {
+          "id": "C",
+          "text": "Cyclical time view"
+        },
+        {
+          "id": "D",
+          "text": "Polychronic time view"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Section 2C.2 specifies that a 'linear time view' treats time as a sequential continuum where tasks are planned and executed one after another.",
+      "sourceReference": "Section 2C.2, Pages 33-34"
+    },
+    {
+      "id": "ENG-G12-U02-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "It was ______ an urgent assignment that the entire research team stayed in the university library past midnight.",
+      "options": [
+        {
+          "id": "A",
+          "text": "such"
+        },
+        {
+          "id": "B",
+          "text": "so"
+        },
+        {
+          "id": "C",
+          "text": "too"
+        },
+        {
+          "id": "D",
+          "text": "very"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The structure 'such + (article) + adjective + noun + that' ('such an urgent assignment that') introduces a clause of result.",
+      "sourceReference": "Section 2E.1, Pages 40-41"
+    },
+    {
+      "id": "ENG-G12-U02-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Identify the sentence structure error in the following construction: 'Chaltu follows a strict study timetable she always completes her assignments before the deadline.'",
+      "options": [
+        {
+          "id": "A",
+          "text": "Run-on Sentence (two independent clauses joined without punctuation)"
+        },
+        {
+          "id": "B",
+          "text": "Sentence Fragment (a dependent clause standing alone)"
+        },
+        {
+          "id": "C",
+          "text": "Comma Splice (two independent clauses joined improperly with only a comma)"
+        },
+        {
+          "id": "D",
+          "text": "Correct Complex Sentence"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "A run-on sentence occurs when two complete independent clauses are joined together without any punctuation or coordinating conjunction between them.",
+      "sourceReference": "Section 2F.1, Pages 47-48"
+    },
+    {
+      "id": "ENG-G12-U02-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Solve the verbal analogy: 'PLENTY is to AMPLE as SHORTAGE is to ______'.",
+      "options": [
+        {
+          "id": "A",
+          "text": "scarcity"
+        },
+        {
+          "id": "B",
+          "text": "abundance"
+        },
+        {
+          "id": "C",
+          "text": "surplus"
+        },
+        {
+          "id": "D",
+          "text": "excess"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "In Section 2D analogies, 'plenty' and 'ample' are synonyms. Similarly, 'shortage' and 'scarcity' are synonyms.",
+      "sourceReference": "Section 2D.2, Pages 36-37"
+    },
+    {
+      "id": "ENG-G12-U02-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "I am really looking forward ______ my classmates at the annual high school graduation ceremony next week.",
+      "options": [
+        {
+          "id": "A",
+          "text": "to seeing"
+        },
+        {
+          "id": "B",
+          "text": "to see"
+        },
+        {
+          "id": "C",
+          "text": "seeing"
+        },
+        {
+          "id": "D",
+          "text": "see"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The three-word phrasal verb 'look forward to' requires a gerund/noun object following the preposition 'to' ('looking forward to seeing').",
+      "sourceReference": "Section 2D.1, Pages 39-40"
+    },
+    {
+      "id": "ENG-G12-U02-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Yared failed his final English examination because he spent all week playing video games. Now he wishes he ______ harder for the test.",
+      "options": [
+        {
+          "id": "A",
+          "text": "had studied"
+        },
+        {
+          "id": "B",
+          "text": "studied"
+        },
+        {
+          "id": "C",
+          "text": "would study"
+        },
+        {
+          "id": "D",
+          "text": "has studied"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Expressing a past regret about an unfulfilled past action requires 'wish + Past Perfect' ('had studied').",
+      "sourceReference": "Section 2E.2, Page 43"
+    },
+    {
+      "id": "ENG-G12-U02-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Which option correctly revises the run-on sentence: 'School in Munich was too rigid and boring for young Einstein he did not do well.'",
+      "options": [
+        {
+          "id": "A",
+          "text": "School in Munich was too rigid and boring for young Einstein; consequently, he did not do well."
+        },
+        {
+          "id": "B",
+          "text": "School in Munich was too rigid and boring for young Einstein, he did not do well."
+        },
+        {
+          "id": "C",
+          "text": "School in Munich was too rigid and boring for young Einstein so he did not do well."
+        },
+        {
+          "id": "D",
+          "text": "School in Munich was too rigid and boring for young Einstein, that he did not do well."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Connecting two independent main clauses using a semicolon and conjunctive adverb ('; consequently,') eliminates a run-on sentence error.",
+      "sourceReference": "Section 2F.1, Pages 48-49"
+    },
+    {
+      "id": "ENG-G12-U02-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "In contrast to linear time cultures, how do 'multi-active' (polychronic) cultures view time management during business meetings according to Section 2C.2?",
+      "options": [
+        {
+          "id": "A",
+          "text": "They prioritize building relationships and maintaining high-quality social interactions over strictly adhering to meeting durations or clocks."
+        },
+        {
+          "id": "B",
+          "text": "They strictly enforce minute-by-minute agendas and end meetings immediately when the timer expires."
+        },
+        {
+          "id": "C",
+          "text": "They view time as a revolving circle where past and future repeat identically."
+        },
+        {
+          "id": "D",
+          "text": "They reject all forms of face-to-face communication in favor of automated digital scheduling."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Section 2C.2 explains that multi-active (polychronic) cultures focus on relationship synergy and conversation quality rather than rigid clock efficiency.",
+      "sourceReference": "Section 2C.2, Pages 34-35"
+    },
+    {
+      "id": "ENG-G12-U02-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Analyze the grammatical function of the gerund 'eating' in the sentence: 'Her favorite morning habit is eating fresh fruits before studying.'",
+      "options": [
+        {
+          "id": "A",
+          "text": "Subject complement (following the linking verb 'is')"
+        },
+        {
+          "id": "B",
+          "text": "Direct object of a transitive verb"
+        },
+        {
+          "id": "C",
+          "text": "Subject of the sentence"
+        },
+        {
+          "id": "D",
+          "text": "Object of a preposition"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "In this sentence, 'eating fresh fruits...' follows the linking verb 'is' and completes/describes the subject 'Her favorite morning habit', functioning as a subject complement.",
+      "sourceReference": "Section 2E.3, Pages 45-46"
+    }
+  ]
 }

@@ -3,5 +3,411 @@
   "subject": "English",
   "unitNumber": 4,
   "unitTitle": "People and Natural Resources",
-  "questions": []
+  "questions": [
+    {
+      "id": "ENG-G11-U04-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "By the end of this decade, environmentalists predict that local communities ______ thousands of indigenous trees across the deforested valley.",
+      "options": [
+        {
+          "id": "A",
+          "text": "will have planted"
+        },
+        {
+          "id": "B",
+          "text": "have planted"
+        },
+        {
+          "id": "C",
+          "text": "plant"
+        },
+        {
+          "id": "D",
+          "text": "were planting"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The Future Perfect tense ('will have + past participle') is required to describe an action that will be completed prior to a specific future time ('By the end of this decade').",
+      "sourceReference": "Section 4E.2, Page 110"
+    },
+    {
+      "id": "ENG-G11-U04-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Community leaders organized an environmental awareness workshop ______ local farmers could learn sustainable land conservation techniques.",
+      "options": [
+        {
+          "id": "A",
+          "text": "so that"
+        },
+        {
+          "id": "B",
+          "text": "despite"
+        },
+        {
+          "id": "C",
+          "text": "because of"
+        },
+        {
+          "id": "D",
+          "text": "in order to"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "'So that' is a subordinating conjunction introducing an adverbial clause of purpose containing a subject ('local farmers') and modal verb ('could').",
+      "sourceReference": "Section 4E.3, Page 110"
+    },
+    {
+      "id": "ENG-G11-U04-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "While visiting the wildlife reserve, tourists were instructed to ______ for rare bird species in the dense canopy.",
+      "options": [
+        {
+          "id": "A",
+          "text": "look out"
+        },
+        {
+          "id": "B",
+          "text": "look down"
+        },
+        {
+          "id": "C",
+          "text": "look up to"
+        },
+        {
+          "id": "D",
+          "text": "look after"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The phrasal verb 'look out (for)' means to maintain a vigilant watch or look attentively for something.",
+      "sourceReference": "Section 4D.3, Page 107"
+    },
+    {
+      "id": "ENG-G11-U04-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which prefix attached to the root word 'reversible' forms its direct opposite antonym?",
+      "options": [
+        {
+          "id": "A",
+          "text": "ir-"
+        },
+        {
+          "id": "B",
+          "text": "un-"
+        },
+        {
+          "id": "C",
+          "text": "dis-"
+        },
+        {
+          "id": "D",
+          "text": "mis-"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The prefix 'ir-' attaches to words beginning with the letter 'r' to form negative antonyms ('irreversible' = impossible to reverse).",
+      "sourceReference": "Section 4D.1, Page 102"
+    },
+    {
+      "id": "ENG-G11-U04-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which of the following words contains a triphthong (a sequence of three vowel sounds gliding continuously in a single syllable)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "power"
+        },
+        {
+          "id": "B",
+          "text": "cat"
+        },
+        {
+          "id": "C",
+          "text": "seat"
+        },
+        {
+          "id": "D",
+          "text": "ship"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "'Power' (/paʊə/) contains the triphthong sound formed by gliding from /a/ to /ʊ/ to /ə/.",
+      "sourceReference": "Section 4B.1, Page 93"
+    },
+    {
+      "id": "ENG-G11-U04-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "By October next year, the regional forestry department ______ the boundary survey for the new conservation park.",
+      "options": [
+        {
+          "id": "A",
+          "text": "will have completed"
+        },
+        {
+          "id": "B",
+          "text": "completes"
+        },
+        {
+          "id": "C",
+          "text": "will complete"
+        },
+        {
+          "id": "D",
+          "text": "was completing"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Time expressions specifying a future completion milestone introduced by 'By' (e.g., 'By October next year') require the Future Perfect tense.",
+      "sourceReference": "Section 4E.2, Page 110"
+    },
+    {
+      "id": "ENG-G11-U04-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Indigenous communities possess an intangible wealth of ecological knowledge passed down through generations. What is the contextual meaning of 'intangible'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Incapable of being touched or physically grasped; abstract"
+        },
+        {
+          "id": "B",
+          "text": "Easily broken or fragile"
+        },
+        {
+          "id": "C",
+          "text": "Expensive and luxurious"
+        },
+        {
+          "id": "D",
+          "text": "Completely temporary and short-lived"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Contextually in Unit 4 reading texts, 'intangible' refers to non-physical, abstract cultural assets, knowledge, or traditions.",
+      "sourceReference": "Section 4C.1 & 4D.1, Pages 100, 102"
+    },
+    {
+      "id": "ENG-G11-U04-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "The forest rangers patrolled the protected zone continuously ______ illegal loggers should destroy the remaining endemic trees.",
+      "options": [
+        {
+          "id": "A",
+          "text": "lest"
+        },
+        {
+          "id": "B",
+          "text": "so that"
+        },
+        {
+          "id": "C",
+          "text": "in order to"
+        },
+        {
+          "id": "D",
+          "text": "because"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "'Lest' is a formal conjunction expressing negative purpose ('for fear that' / 'to prevent the possibility of') and takes 'should' or subjunctive verb forms.",
+      "sourceReference": "Section 4E.3, Page 110"
+    },
+    {
+      "id": "ENG-G11-U04-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Identify the sentence that correctly uses parentheses to insert non-essential supplementary details without disrupting grammatical structure.",
+      "options": [
+        {
+          "id": "A",
+          "text": "The two researchers (Kassa and Bekele) presented their survey on soil erosion at the conference."
+        },
+        {
+          "id": "B",
+          "text": "The two researchers... Kassa and Bekele presented their survey on soil erosion at the conference."
+        },
+        {
+          "id": "C",
+          "text": "The two researchers \"Kassa and Bekele\" presented their survey on soil erosion at the conference."
+        },
+        {
+          "id": "D",
+          "text": "The two researchers; Kassa and Bekele; presented their survey on soil erosion at the conference."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Parentheses () enclose supplementary or clarifying material that can be removed without altering the basic grammatical structure of the sentence.",
+      "sourceReference": "Section 4F.1, Pages 112-113"
+    },
+    {
+      "id": "ENG-G11-U04-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Young conservationists across Ethiopia highly ______ senior environmental scientists who advocate for indigenous forest protection.",
+      "options": [
+        {
+          "id": "A",
+          "text": "look up to"
+        },
+        {
+          "id": "B",
+          "text": "look out for"
+        },
+        {
+          "id": "C",
+          "text": "look down on"
+        },
+        {
+          "id": "D",
+          "text": "look away from"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The three-word phrasal verb 'look up to' means to admire, respect, or hold someone in high regard as a role model.",
+      "sourceReference": "Section 4D.3, Page 107"
+    },
+    {
+      "id": "ENG-G11-U04-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "According to the reading text on Indigenous Forest Conservation, why is engaging local indigenous communities vital for sustainable natural resource management?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because their ancestral knowledge and traditional land stewardship provide an effective first line of action in conservation."
+        },
+        {
+          "id": "B",
+          "text": "Because international law prohibits government agencies from managing national forests."
+        },
+        {
+          "id": "C",
+          "text": "Because indigenous communities rely exclusively on imported synthetic fertilizers."
+        },
+        {
+          "id": "D",
+          "text": "Because forest fires never occur in areas inhabited by indigenous peoples."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Section 4C.1 emphasizes that indigenous peoples hold ancestral knowledge and traditional cultural practices essential for protecting biodiversity and managing forests.",
+      "sourceReference": "Section 4C.1, Pages 99-100"
+    },
+    {
+      "id": "ENG-G11-U04-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Identify the sentence that contains a DANGLING MODIFIER (where the opening modifier falsely modifies the wrong noun phrase following the comma):",
+      "options": [
+        {
+          "id": "A",
+          "text": "Walking through the dense bamboo forest, a sudden thunderstorm soaked the research team."
+        },
+        {
+          "id": "B",
+          "text": "Walking through the dense bamboo forest, the research team was suddenly soaked by a thunderstorm."
+        },
+        {
+          "id": "C",
+          "text": "As the research team was walking through the dense bamboo forest, a sudden thunderstorm soaked them."
+        },
+        {
+          "id": "D",
+          "text": "While walking through the dense bamboo forest, the researchers noticed rare bird species."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "In Option A, the modifier 'Walking through the dense bamboo forest' illogically attaches to 'a sudden thunderstorm' (making it sound as if the thunderstorm was walking). This is a dangling modifier.",
+      "sourceReference": "Section 4F.1, Pages 113-114"
+    },
+    {
+      "id": "ENG-G11-U04-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Read the sentence: 'Having completed the environmental impact assessment, a detailed conservation report was published by the ministry.' Which option correctly revises this sentence to eliminate the dangling modifier?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Having completed the environmental impact assessment, the ministry published a detailed conservation report."
+        },
+        {
+          "id": "B",
+          "text": "Having completed the environmental impact assessment, a report was published by the ministry detailedly."
+        },
+        {
+          "id": "C",
+          "text": "Completing the environmental impact assessment, a detailed conservation report was published."
+        },
+        {
+          "id": "D",
+          "text": "Upon completing the environmental impact assessment, publishing a detailed conservation report happened."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Placing the logical subject ('the ministry'—who completed the assessment) directly after the introductory participial phrase corrects the dangling modifier.",
+      "sourceReference": "Section 4F.1, Pages 113-114"
+    },
+    {
+      "id": "ENG-G11-U04-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "According to English suffix spelling rules (Section 4D.2.2), which word correctly retains the silent 'e' when attaching a suffix that begins with a consonant?",
+      "options": [
+        {
+          "id": "A",
+          "text": "care + ful = careful"
+        },
+        {
+          "id": "B",
+          "text": "replace + able = replacable"
+        },
+        {
+          "id": "C",
+          "text": "argue + ment = arguement"
+        },
+        {
+          "id": "D",
+          "text": "true + ly = truely"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "When adding a suffix starting with a consonant ('-ful'), the silent final 'e' in the root word ('care') is retained ('careful'). Options B, C, and D represent common spelling errors (correct: replaceable, argument, truly).",
+      "sourceReference": "Section 4D.2.2, Page 105"
+    },
+    {
+      "id": "ENG-G11-U04-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "When composing a five-paragraph expository essay on natural resource conservation, where should the thesis statement be positioned, and what primary function must it serve?",
+      "options": [
+        {
+          "id": "A",
+          "text": "At the end of the introductory paragraph, explicitly stating the central argument and key supporting points."
+        },
+        {
+          "id": "B",
+          "text": "At the beginning of the concluding paragraph, introducing entirely new research arguments."
+        },
+        {
+          "id": "C",
+          "text": "Inside the second body paragraph, functioning as a minor supporting detail."
+        },
+        {
+          "id": "D",
+          "text": "As the title of the essay, replacing the need for an introductory paragraph."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "In formal expository essay writing, the thesis statement appears at the end of the introductory paragraph to define the scope, central claim, and outline the main points discussed in the body paragraphs.",
+      "sourceReference": "Section 4F.2, Pages 114-115"
+    }
+  ]
 }

@@ -3,5 +3,411 @@
   "subject": "English",
   "unitNumber": 10,
   "unitTitle": "Artificial Intelligence",
-  "questions": []
+  "questions": [
+    {
+      "id": "ENG-G11-U10-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Meseret cannot attend the national artificial intelligence conference ______ her school principal gives her official permission.",
+      "options": [
+        {
+          "id": "A",
+          "text": "unless"
+        },
+        {
+          "id": "B",
+          "text": "despite"
+        },
+        {
+          "id": "C",
+          "text": "because of"
+        },
+        {
+          "id": "D",
+          "text": "in order to"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "'Unless' functions as a subordinating conjunction introducing an adverbial clause of condition meaning 'if... not'.",
+      "sourceReference": "Section 10E.2, Page 266"
+    },
+    {
+      "id": "ENG-G11-U10-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Ongoing technological advances offer promising prospects for higher industrial productivity. What is the closest contextual meaning of 'prospects'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Future possibilities or chances for success"
+        },
+        {
+          "id": "B",
+          "text": "Past economic failures and debts"
+        },
+        {
+          "id": "C",
+          "text": "Immediate physical hazards"
+        },
+        {
+          "id": "D",
+          "text": "Strict legal prohibitions"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "In Section 10D.1 vocabulary, 'prospects' contextually refers to future possibilities, opportunities, or potential for success.",
+      "sourceReference": "Section 10D.1, Page 260"
+    },
+    {
+      "id": "ENG-G11-U10-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "The research team had to halt the field test of the autonomous drone because it ______ electrical battery power.",
+      "options": [
+        {
+          "id": "A",
+          "text": "ran out of"
+        },
+        {
+          "id": "B",
+          "text": "ran into"
+        },
+        {
+          "id": "C",
+          "text": "ran over"
+        },
+        {
+          "id": "D",
+          "text": "ran across"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The phrasal verb 'run out of' means to deplete or exhaust the available supply of a resource.",
+      "sourceReference": "Section 10D.3, Page 262"
+    },
+    {
+      "id": "ENG-G11-U10-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Complete the dialogue: Student: 'What do you think about the software glitch during yesterday's robotics demonstration?' Evaluator: '______; the system froze completely in front of the audience.'",
+      "options": [
+        {
+          "id": "A",
+          "text": "It was very disappointing"
+        },
+        {
+          "id": "B",
+          "text": "I am delighted with it"
+        },
+        {
+          "id": "C",
+          "text": "That sounds wonderfully perfect"
+        },
+        {
+          "id": "D",
+          "text": "I couldn't agree more with your success"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "'It was very disappointing' is a standard formal expression used to express dissatisfaction with an outcome or performance.",
+      "sourceReference": "Section 10B.1, Page 256"
+    },
+    {
+      "id": "ENG-G11-U10-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "According to the listening text 'Robotics in Ethiopia', which Ethiopian software research center co-developed software for Sophia, the world-famous humanoid robot?",
+      "options": [
+        {
+          "id": "A",
+          "text": "iCog Labs"
+        },
+        {
+          "id": "B",
+          "text": "Ethiopian Telecommunications Corporation"
+        },
+        {
+          "id": "C",
+          "text": "National Aviation Academy"
+        },
+        {
+          "id": "D",
+          "text": "Addis Ababa Water Authority"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Section 10A.2 explicitly notes that iCog Labs, a software research center in Ethiopia, was part of the international team that developed software for Sophia.",
+      "sourceReference": "Section 10A.2, Page 255"
+    },
+    {
+      "id": "ENG-G11-U10-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "While computer scientists ______ advanced machine learning algorithms at the laboratory right now, traditional systems still rely on basic manual input.",
+      "options": [
+        {
+          "id": "A",
+          "text": "are developing"
+        },
+        {
+          "id": "B",
+          "text": "develop"
+        },
+        {
+          "id": "C",
+          "text": "developed"
+        },
+        {
+          "id": "D",
+          "text": "had developed"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "An action taking place at the present moment of speaking ('right now') requires the Present Progressive tense ('are developing').",
+      "sourceReference": "Section 10E.3, Pages 266-267"
+    },
+    {
+      "id": "ENG-G11-U10-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "If local manufacturing plants ______ automated robotic systems, production speed and precision would improve significantly.",
+      "options": [
+        {
+          "id": "A",
+          "text": "adopted"
+        },
+        {
+          "id": "B",
+          "text": "adopt"
+        },
+        {
+          "id": "C",
+          "text": "will adopt"
+        },
+        {
+          "id": "D",
+          "text": "had adopted"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Second Conditional hypothetical clauses use Simple Past ('adopted') in the 'if'-clause paired with 'would + base verb' ('would improve') in the main clause.",
+      "sourceReference": "Section 10E.1, Pages 263-265"
+    },
+    {
+      "id": "ENG-G11-U10-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "During the panel discussion on technology, the researchers emphasized that we cannot ______ the possibility of artificial intelligence transforming the future job market.",
+      "options": [
+        {
+          "id": "A",
+          "text": "rule out"
+        },
+        {
+          "id": "B",
+          "text": "run over"
+        },
+        {
+          "id": "C",
+          "text": "run down"
+        },
+        {
+          "id": "D",
+          "text": "rule away"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The phrasal verb 'rule out' means to exclude, eliminate, or reject a possibility.",
+      "sourceReference": "Section 10D.3, Page 262"
+    },
+    {
+      "id": "ENG-G11-U10-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which pair of words represents HOMOGRAPHS (words sharing identical spelling but possessing different meanings and pronunciations)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "wind / wind"
+        },
+        {
+          "id": "B",
+          "text": "peace / piece"
+        },
+        {
+          "id": "C",
+          "text": "there / their"
+        },
+        {
+          "id": "D",
+          "text": "pray / prey"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "'Wind' (/wɪnd/ = moving air) and 'wind' (/waɪnd/ = to turn or twist) are homographs because they share identical spelling but differ in pronunciation and meaning. Options B, C, and D are homophones.",
+      "sourceReference": "Section 10D.2, Pages 261-262"
+    },
+    {
+      "id": "ENG-G11-U10-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "According to the reading text 'The Impact of New Technologies on the Labour Market', why do many economists argue that technological automation will NOT cause permanent mass unemployment?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because historical evidence demonstrates that technological waves boost productivity, lower costs, and create new job sectors that did not previously exist."
+        },
+        {
+          "id": "B",
+          "text": "Because international laws strictly prohibit companies from using robots in factories."
+        },
+        {
+          "id": "C",
+          "text": "Because artificial intelligence systems are too expensive to operate continuously."
+        },
+        {
+          "id": "D",
+          "text": "Because low-skilled workers automatically acquire computer programming degrees overnight."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Section 10C.1 (Paragraph 2) highlights that historically, technological advances have increased overall productivity, raised living standards, and generated more new jobs than they destroyed.",
+      "sourceReference": "Section 10C.1, Pages 258-259"
+    },
+    {
+      "id": "ENG-G11-U10-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In the descriptive phrase 'an Ethiopian artificial intelligence laboratory', what grammatical category does the word 'Ethiopian' belong to?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Proper adjective"
+        },
+        {
+          "id": "B",
+          "text": "Quantitative adjective"
+        },
+        {
+          "id": "C",
+          "text": "Indefinite pronoun"
+        },
+        {
+          "id": "D",
+          "text": "Demonstrative determiners"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Adjectives derived from proper nouns (such as 'Ethiopian' derived from 'Ethiopia') are classified as Proper adjectives.",
+      "sourceReference": "Section 10E.4, Page 268"
+    },
+    {
+      "id": "ENG-G11-U10-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "______ software engineers integrated ethical guidelines into artificial intelligence programming years ago, algorithmic bias would not be such a major social concern today.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Had"
+        },
+        {
+          "id": "B",
+          "text": "Were"
+        },
+        {
+          "id": "C",
+          "text": "If had"
+        },
+        {
+          "id": "D",
+          "text": "Should"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "In formal inverted Conditionals linking an unfulfilled past condition to a present result, 'If' is omitted and 'Had' is placed first ('Had software engineers integrated...').",
+      "sourceReference": "Section 10E.1, Pages 263-265"
+    },
+    {
+      "id": "ENG-G11-U10-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Automated diagnostic robots will be deployed in regional hospitals ______ medical staff receive comprehensive operational training.",
+      "options": [
+        {
+          "id": "A",
+          "text": "provided that"
+        },
+        {
+          "id": "B",
+          "text": "unless"
+        },
+        {
+          "id": "C",
+          "text": "even though"
+        },
+        {
+          "id": "D",
+          "text": "despite"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "'Provided that' is a subordinating conjunction introducing an adverbial clause of condition meaning 'on condition that' or 'only if'.",
+      "sourceReference": "Section 10E.2, Page 266"
+    },
+    {
+      "id": "ENG-G11-U10-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "The computer scientist stated: 'Artificial intelligence is transforming our local agricultural practices.' Which reported speech transformation is grammatically correct for a radio news report?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The computer scientist stated that artificial intelligence was transforming their local agricultural practices."
+        },
+        {
+          "id": "B",
+          "text": "The computer scientist stated that artificial intelligence is transforming our local agricultural practices."
+        },
+        {
+          "id": "C",
+          "text": "The computer scientist stated that artificial intelligence will transform their local agricultural practices."
+        },
+        {
+          "id": "D",
+          "text": "The computer scientist stated that artificial intelligence had transformed our local agricultural practices."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "In formal report writing using reported speech, present progressive 'is transforming' backshifts to past progressive 'was transforming', and possessive pronoun 'our' shifts to 'their'.",
+      "sourceReference": "Section 10F.2, Pages 269-270"
+    },
+    {
+      "id": "ENG-G11-U10-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "In Section 10C.1, what economic phenomenon is described when technological automation increases demand for high-skilled cognitive jobs and low-skilled manual service jobs while reducing middle-skilled routine jobs?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Labor market polarization"
+        },
+        {
+          "id": "B",
+          "text": "Complete economic stagnation"
+        },
+        {
+          "id": "C",
+          "text": "Universal financial inflation"
+        },
+        {
+          "id": "D",
+          "text": "Agricultural de-mechanization"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Section 10C.1 and 10D.1 explicitly define 'labor market polarization' as the structural shift where automation replaces middle-tier routine tasks, expanding opportunities mainly at the high-skill and low-skill ends of the market.",
+      "sourceReference": "Section 10C.1 & 10D.1, Pages 258-260"
+    }
+  ]
 }

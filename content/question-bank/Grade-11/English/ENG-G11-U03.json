@@ -3,5 +3,411 @@
   "subject": "English",
   "unitNumber": 3,
   "unitTitle": "Causes of Road Traffic Accidents",
-  "questions": []
+  "questions": [
+    {
+      "id": "ENG-G11-U03-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Many drivers exceed urban speed limits ______ they are in a hurry to reach their workplaces on time.",
+      "options": [
+        {
+          "id": "A",
+          "text": "because"
+        },
+        {
+          "id": "B",
+          "text": "so that"
+        },
+        {
+          "id": "C",
+          "text": "despite"
+        },
+        {
+          "id": "D",
+          "text": "in order to"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "'Because' introduces an adverbial clause of reason explaining the cause behind drivers exceeding speed limits.",
+      "sourceReference": "Section 3E.1, Page 79"
+    },
+    {
+      "id": "ENG-G11-U03-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Road traffic accidents cause catastrophic socio-economic impacts on low-income families. What is the closest contextual meaning of 'catastrophic'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Disastrous or ruinous"
+        },
+        {
+          "id": "B",
+          "text": "Minor and negligible"
+        },
+        {
+          "id": "C",
+          "text": "Highly profitable"
+        },
+        {
+          "id": "D",
+          "text": "Temporary and easily fixed"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "In Section 3C.1 vocabulary, 'catastrophic' describes extremely disastrous, ruinous, or calamitous events.",
+      "sourceReference": "Section 3C.1, Page 72"
+    },
+    {
+      "id": "ENG-G11-U03-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "I promised to assist the traffic police officer with the crash investigation, and I will not ______ him ______.",
+      "options": [
+        {
+          "id": "A",
+          "text": "let / down"
+        },
+        {
+          "id": "B",
+          "text": "let / in"
+        },
+        {
+          "id": "C",
+          "text": "let / off"
+        },
+        {
+          "id": "D",
+          "text": "let / out"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The phrasal verb 'let (someone) down' means to fail to support, disappoint, or betray someone's trust.",
+      "sourceReference": "Section 3D.3, Page 78"
+    },
+    {
+      "id": "ENG-G11-U03-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Complete the opinion dialogue: Traffic Officer: 'What is your opinion on mandatory seatbelt laws?' Driver: '______ my view, wearing seatbelts significantly reduces fatality rates during collisions.'",
+      "options": [
+        {
+          "id": "A",
+          "text": "In"
+        },
+        {
+          "id": "B",
+          "text": "From"
+        },
+        {
+          "id": "C",
+          "text": "On"
+        },
+        {
+          "id": "D",
+          "text": "With"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The standard prepositional phrase used to introduce a personal opinion is 'In my view'.",
+      "sourceReference": "Section 3B.1, Page 68"
+    },
+    {
+      "id": "ENG-G11-U03-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "The heavy truck was traveling ______ fast that the driver lost control at the sharp mountain curve.",
+      "options": [
+        {
+          "id": "A",
+          "text": "so"
+        },
+        {
+          "id": "B",
+          "text": "such"
+        },
+        {
+          "id": "C",
+          "text": "too"
+        },
+        {
+          "id": "D",
+          "text": "very"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "'So + adverb + that clause' ('so fast that') is used to express cause and result.",
+      "sourceReference": "Section 3E.2, Page 80"
+    },
+    {
+      "id": "ENG-G11-U03-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "The fatal collision occurred ______ the reckless overtaking behavior of the minibus driver.",
+      "options": [
+        {
+          "id": "A",
+          "text": "due to"
+        },
+        {
+          "id": "B",
+          "text": "because"
+        },
+        {
+          "id": "C",
+          "text": "since"
+        },
+        {
+          "id": "D",
+          "text": "as"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "'Due to' is a prepositional phrase followed by a noun phrase ('the reckless overtaking behavior'), whereas 'because', 'since', and 'as' are subordinating conjunctions requiring a clause.",
+      "sourceReference": "Section 3E.1, Pages 79-80"
+    },
+    {
+      "id": "ENG-G11-U03-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Attaching the suffix '-ity' to the adjective 'severe' forms the noun 'severity'. Which structural classification does this suffix belong to?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Class-changing derivational suffix"
+        },
+        {
+          "id": "B",
+          "text": "Class-maintaining inflectional prefix"
+        },
+        {
+          "id": "C",
+          "text": "Compounding root modifier"
+        },
+        {
+          "id": "D",
+          "text": "Phrasal verb particle"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "A suffix that changes the grammatical class of a word (from adjective 'severe' to noun 'severity') is a class-changing derivational suffix.",
+      "sourceReference": "Section 3D.2, Page 75"
+    },
+    {
+      "id": "ENG-G11-U03-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Although the young driver exceeded the speed limit slightly, the traffic police officer gave him a stern reprimand and decided to ______ him ______ without issuing a fine.",
+      "options": [
+        {
+          "id": "A",
+          "text": "let / off"
+        },
+        {
+          "id": "B",
+          "text": "let / out"
+        },
+        {
+          "id": "C",
+          "text": "let / down"
+        },
+        {
+          "id": "D",
+          "text": "let / up"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The phrasal verb 'let (someone) off' means to pardon someone or release them without severe punishment or penalty.",
+      "sourceReference": "Section 3D.3, Pages 77-78"
+    },
+    {
+      "id": "ENG-G11-U03-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which sentence demonstrates CORRECT semicolon usage when connecting two closely related independent clauses without a conjunction?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Some road accidents stem from mechanical failure; others are caused by human error."
+        },
+        {
+          "id": "B",
+          "text": "Some road accidents stem from mechanical failure; and others are caused by human error."
+        },
+        {
+          "id": "C",
+          "text": "Some road accidents stem from mechanical failure, others are caused by human error."
+        },
+        {
+          "id": "D",
+          "text": "Some road accidents stem from mechanical failure; because others are caused by human error."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "A semicolon is properly used to link two independent main clauses that balance each other without coordinating conjunctions or subordinating words.",
+      "sourceReference": "Section 3F.1, Pages 82-83"
+    },
+    {
+      "id": "ENG-G11-U03-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "According to the Grade 11 reading text on road safety, which road user group accounts for a disproportionately high percentage of traffic fatalities in low- and middle-income countries?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Vulnerable road users, including pedestrians, cyclists, and motorcyclists"
+        },
+        {
+          "id": "B",
+          "text": "Commercial airline pilots and flight crews"
+        },
+        {
+          "id": "C",
+          "text": "Train drivers operating electric railway systems"
+        },
+        {
+          "id": "D",
+          "text": "Offshore maritime ship captains"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Section 3C.1 notes that vulnerable road users (pedestrians, cyclists, two-wheeler riders) suffer disproportionately high casualty rates in developing nations.",
+      "sourceReference": "Section 3C.1, Pages 71-72"
+    },
+    {
+      "id": "ENG-G11-U03-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "It was ______ a severe highway congestion that hundreds of long-distance buses were delayed for five hours.",
+      "options": [
+        {
+          "id": "A",
+          "text": "such"
+        },
+        {
+          "id": "B",
+          "text": "so"
+        },
+        {
+          "id": "C",
+          "text": "too"
+        },
+        {
+          "id": "D",
+          "text": "very"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "'Such + (article) + adjective + noun + that' ('such a severe highway congestion that') introduces a clause of result.",
+      "sourceReference": "Section 3E.2, Pages 80-81"
+    },
+    {
+      "id": "ENG-G11-U03-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "______ the municipal administration installed digital speed cameras and reinforced traffic penalties, the annual highway fatality rate dropped significantly.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Since"
+        },
+        {
+          "id": "B",
+          "text": "Owing to"
+        },
+        {
+          "id": "C",
+          "text": "Because of"
+        },
+        {
+          "id": "D",
+          "text": "On account of"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "'Since' functions as a subordinating conjunction introducing a complete cause clause (subject + verb), whereas 'owing to', 'because of', and 'on account of' are prepositions requiring noun phrases.",
+      "sourceReference": "Section 3E.1, Pages 79-80"
+    },
+    {
+      "id": "ENG-G11-U03-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Despite intense questioning by crash investigators, the suspect driver refused to ______ that he had been distracted by his mobile phone at the time of the collision.",
+      "options": [
+        {
+          "id": "A",
+          "text": "let on"
+        },
+        {
+          "id": "B",
+          "text": "let out"
+        },
+        {
+          "id": "C",
+          "text": "let down"
+        },
+        {
+          "id": "D",
+          "text": "let up"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The phrasal verb 'let on' means to reveal, admit, or disclose a secret or truth.",
+      "sourceReference": "Section 3D.3, Pages 77-78"
+    },
+    {
+      "id": "ENG-G11-U03-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Which sentence uses a VERB that signals cause and effect correctly according to Grade 11 Unit 3 cause-and-effect writing guidelines?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Driver carelessness induces catastrophic traffic collisions on major highways."
+        },
+        {
+          "id": "B",
+          "text": "Driver carelessness is because catastrophic traffic collisions on major highways."
+        },
+        {
+          "id": "C",
+          "text": "Driver carelessness so catastrophic traffic collisions on major highways."
+        },
+        {
+          "id": "D",
+          "text": "Driver carelessness owing to catastrophic traffic collisions on major highways."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "In cause-and-effect essay vocabulary (Section 3F.3, Page 87), 'induces' (or creates, causes, triggers, brings about) is a verb that explicitly links a cause to its effect.",
+      "sourceReference": "Section 3F.3, Page 87"
+    },
+    {
+      "id": "ENG-G11-U03-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Choose the sentence that applies CORRECT hyphenation rules for compound modifiers preceding nouns:",
+      "options": [
+        {
+          "id": "A",
+          "text": "The traffic agency launched a well-planned road-safety campaign across all major highways."
+        },
+        {
+          "id": "B",
+          "text": "The traffic agency launched a well planned road safety campaign across all major highways."
+        },
+        {
+          "id": "C",
+          "text": "The traffic agency launched a well-planned-road-safety-campaign across all major highways."
+        },
+        {
+          "id": "D",
+          "text": "The traffic agency launched a well planned-road safety campaign across all major highways."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Compound adjectives coming before the noun they modify require hyphenation ('well-planned', 'road-safety').",
+      "sourceReference": "Section 3F.1, Pages 82-83"
+    }
+  ]
 }

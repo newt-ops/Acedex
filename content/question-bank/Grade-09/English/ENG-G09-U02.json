@@ -3,5 +3,411 @@
   "subject": "English",
   "unitNumber": 2,
   "unitTitle": "Study Skills",
-  "questions": []
+  "questions": [
+    {
+      "id": "ENG-G09-U02-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "We couldn't arrive at the examination center on time because of the ______ traffic on the main avenue.",
+      "options": [
+        {
+          "id": "A",
+          "text": "heavy"
+        },
+        {
+          "id": "B",
+          "text": "big"
+        },
+        {
+          "id": "C",
+          "text": "strong"
+        },
+        {
+          "id": "D",
+          "text": "rich"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "In standard English word collocations, the noun 'traffic' naturally pairs with the adjective 'heavy' ('heavy traffic') to describe dense vehicle movement.",
+      "sourceReference": "Section 2.3.2, Page 39"
+    },
+    {
+      "id": "ENG-G09-U02-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "While Aster ______ her English summary notes in the library, her classmates were discussing their group assignment.",
+      "options": [
+        {
+          "id": "A",
+          "text": "was reading"
+        },
+        {
+          "id": "B",
+          "text": "reads"
+        },
+        {
+          "id": "C",
+          "text": "is reading"
+        },
+        {
+          "id": "D",
+          "text": "has read"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The Past Continuous tense ('was reading') is required to describe an ongoing action taking place at a specific past time, introduced by 'While'.",
+      "sourceReference": "Section 2.4.5, Page 50"
+    },
+    {
+      "id": "ENG-G09-U02-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Reading English storybooks expands your vocabulary; ______, it improves your overall sentence writing fluency.",
+      "options": [
+        {
+          "id": "A",
+          "text": "furthermore"
+        },
+        {
+          "id": "B",
+          "text": "however"
+        },
+        {
+          "id": "C",
+          "text": "but"
+        },
+        {
+          "id": "D",
+          "text": "although"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "'Furthermore' is a transition marker of addition used to introduce an extra reinforcing positive point. 'However', 'but', and 'although' express contrast.",
+      "sourceReference": "Section 2.4.1, Page 42"
+    },
+    {
+      "id": "ENG-G09-U02-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "The old school bus engine began to ______ on the steep hill, so the driver pulled over safely.",
+      "options": [
+        {
+          "id": "A",
+          "text": "break down"
+        },
+        {
+          "id": "B",
+          "text": "break out"
+        },
+        {
+          "id": "C",
+          "text": "blow off"
+        },
+        {
+          "id": "D",
+          "text": "blow away"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The phrasal verb 'break down' means to stop functioning mechanically or fail structurally.",
+      "sourceReference": "Section 2.3.2, Page 40"
+    },
+    {
+      "id": "ENG-G09-U02-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Setting small, ______ study goals every day is far more effective than trying to memorize an entire textbook in one night.",
+      "options": [
+        {
+          "id": "A",
+          "text": "achievable"
+        },
+        {
+          "id": "B",
+          "text": "impossible"
+        },
+        {
+          "id": "C",
+          "text": "severe"
+        },
+        {
+          "id": "D",
+          "text": "unmanageable"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "In learning strategy contexts, 'achievable' goals refer to realistic targets that are within a student's capability to reach through steady practice.",
+      "sourceReference": "Section 2.2, Page 35"
+    },
+    {
+      "id": "ENG-G09-U02-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "The invigilator handed out the examination papers. ______, the students prepared their pens and waited quietly for the signal to start.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Meanwhile"
+        },
+        {
+          "id": "B",
+          "text": "Although"
+        },
+        {
+          "id": "C",
+          "text": "On the contrary"
+        },
+        {
+          "id": "D",
+          "text": "Otherwise"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The sequence connector 'Meanwhile' indicates an action taking place simultaneously with another event during a sequence of activities.",
+      "sourceReference": "Section 2.4.2, Page 43"
+    },
+    {
+      "id": "ENG-G09-U02-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "I ______ my study schedule on the desk when the bell suddenly rang for class.",
+      "options": [
+        {
+          "id": "A",
+          "text": "was organizing"
+        },
+        {
+          "id": "B",
+          "text": "organize"
+        },
+        {
+          "id": "C",
+          "text": "am organizing"
+        },
+        {
+          "id": "D",
+          "text": "have organized"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "When an ongoing continuous background activity ('was organizing') is interrupted by a sudden completed past action ('the bell rang'), the background clause requires the Past Continuous tense.",
+      "sourceReference": "Section 2.4.5, Page 51"
+    },
+    {
+      "id": "ENG-G09-U02-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "A fire unexpectedly ______ in the school science laboratory yesterday afternoon, but the emergency team controlled it quickly.",
+      "options": [
+        {
+          "id": "A",
+          "text": "broke out"
+        },
+        {
+          "id": "B",
+          "text": "broke off"
+        },
+        {
+          "id": "C",
+          "text": "blew up"
+        },
+        {
+          "id": "D",
+          "text": "blew out"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The phrasal verb 'break out' is used specifically when dangerous events such as fires, epidemics, or wars begin suddenly.",
+      "sourceReference": "Section 2.3.2, Page 40"
+    },
+    {
+      "id": "ENG-G09-U02-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which one of the following sentences is a grammatically structured complex sentence?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Although she felt tired after school, she revised all her lessons before going to bed."
+        },
+        {
+          "id": "B",
+          "text": "She felt tired after school, and she went straight to bed."
+        },
+        {
+          "id": "C",
+          "text": "She studied hard for the test and passed with top marks."
+        },
+        {
+          "id": "D",
+          "text": "Effective study habits lead to academic success."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "A complex sentence consists of one independent clause ('she revised all her lessons...') and at least one dependent clause introduced by a subordinating conjunction ('Although she felt tired...').",
+      "sourceReference": "Section 2.6.1, Page 56"
+    },
+    {
+      "id": "ENG-G09-U02-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Solomon speaks English with a ______ accent because he grew up in a region where several languages are spoken.",
+      "options": [
+        {
+          "id": "A",
+          "text": "strong"
+        },
+        {
+          "id": "B",
+          "text": "heavy"
+        },
+        {
+          "id": "C",
+          "text": "big"
+        },
+        {
+          "id": "D",
+          "text": "high"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Standard English collocation pairs the noun 'accent' with the adjective 'strong' ('a strong accent') to describe a pronounced regional or non-native speech pattern.",
+      "sourceReference": "Section 2.3.2, Page 39"
+    },
+    {
+      "id": "ENG-G09-U02-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Kiya: 'How do you manage to learn five new English vocabulary words every day?' Bontu: '______ by grouping related words together and using them in daily conversations.'",
+      "options": [
+        {
+          "id": "A",
+          "text": "I usually achieve this"
+        },
+        {
+          "id": "B",
+          "text": "I was learning yesterday"
+        },
+        {
+          "id": "C",
+          "text": "No, I don't like new words"
+        },
+        {
+          "id": "D",
+          "text": "Because vocabulary is big"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Option A provides a contextually and grammatically appropriate response explaining habitual study execution in the Simple Present tense.",
+      "sourceReference": "Section 2.5.2, Page 55"
+    },
+    {
+      "id": "ENG-G09-U02-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "While the teacher was writing the key points on the board, the students ______ their exercise books.",
+      "options": [
+        {
+          "id": "A",
+          "text": "were opening"
+        },
+        {
+          "id": "B",
+          "text": "opened"
+        },
+        {
+          "id": "C",
+          "text": "open"
+        },
+        {
+          "id": "D",
+          "text": "have opened"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "When two continuous actions take place simultaneously in the past connected by 'While', both clauses use the Past Continuous tense ('was writing' / 'were opening').",
+      "sourceReference": "Section 2.4.5, Page 52"
+    },
+    {
+      "id": "ENG-G09-U02-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Reorder the jumbled words into a syntactically correct complex sentence: 'manage / you / time / your / if / will / achieve / goals / effectively / your / .'",
+      "options": [
+        {
+          "id": "A",
+          "text": "If you manage your time effectively, you will achieve your goals."
+        },
+        {
+          "id": "B",
+          "text": "You manage if your time effectively, you will achieve your goals."
+        },
+        {
+          "id": "C",
+          "text": "If your goals you achieve, you manage your time effectively."
+        },
+        {
+          "id": "D",
+          "text": "Time manage effectively if you, achieve your goals you will."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Standard English complex sentence syntax requiring a conditional subordinate clause follows: Subordinate Clause ('If' + Subject 'you' + Verb 'manage' + Object 'your time' + Adverb 'effectively') + Comma + Main Clause ('you will achieve your goals').",
+      "sourceReference": "Section 2.6.1, Page 57"
+    },
+    {
+      "id": "ENG-G09-U02-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Choose the connector that BEST maintains cohesive logical flow: 'Successful language learners maintain a daily study schedule. ______, they actively ask questions during class to clarify confusing points.'",
+      "options": [
+        {
+          "id": "A",
+          "text": "Besides"
+        },
+        {
+          "id": "B",
+          "text": "However"
+        },
+        {
+          "id": "C",
+          "text": "Nevertheless"
+        },
+        {
+          "id": "D",
+          "text": "On the contrary"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "'Besides' (along with 'Moreover', 'Furthermore', 'In addition') functions as an addition transition marker joining two mutually reinforcing supporting points. 'However', 'Nevertheless', and 'On the contrary' express contrast.",
+      "sourceReference": "Section 2.4.1, Page 41"
+    },
+    {
+      "id": "ENG-G09-U02-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Which of the following Wh-questions is delivered with a RISING intonation pattern because it is used to seek confirmation of shared information rather than new facts?",
+      "options": [
+        {
+          "id": "A",
+          "text": "And what do we have on Mondays?"
+        },
+        {
+          "id": "B",
+          "text": "Where is the main library located?"
+        },
+        {
+          "id": "C",
+          "text": "How many units are covered in Grade 9?"
+        },
+        {
+          "id": "D",
+          "text": "Why did the student arrive late?"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Standard Wh-questions seeking new information take a falling intonation pattern. However, when a Wh-question is asked to confirm shared information already known to both speaker and listener, it takes a rising intonation pattern (e.g., 'And what do we have on Mondays?').",
+      "sourceReference": "Section 2.5.1, Page 54"
+    }
+  ]
 }

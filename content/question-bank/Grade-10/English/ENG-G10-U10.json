@@ -3,5 +3,411 @@
   "subject": "English",
   "unitNumber": 10,
   "unitTitle": "Digital Vs Satellite Television",
-  "questions": []
+  "questions": [
+    {
+      "id": "ENG-G10-U10-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Digital television delivers high-definition picture quality through cables, ______ satellite television transmits signals wirelessly through orbiting satellites.",
+      "options": [
+        {
+          "id": "A",
+          "text": "similarly"
+        },
+        {
+          "id": "B",
+          "text": "whereas"
+        },
+        {
+          "id": "C",
+          "text": "in the same way"
+        },
+        {
+          "id": "D",
+          "text": "as well as"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "'Whereas' is a contrast connector used to highlight differences between two distinct systems (cable digital TV vs. satellite TV).",
+      "sourceReference": "Section 10.5.1, Page 285"
+    },
+    {
+      "id": "ENG-G10-U10-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Technological advancement gave birth to cutting-edge television models equipped with smart features. What is the closest contextual meaning of 'cutting-edge'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Highly advanced and innovative"
+        },
+        {
+          "id": "B",
+          "text": "Old-fashioned and outdated"
+        },
+        {
+          "id": "C",
+          "text": "Physically dangerous or sharp"
+        },
+        {
+          "id": "D",
+          "text": "Extremely cheap and fragile"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Contextually in Unit 10 reading vocabulary, 'cutting-edge' describes highly advanced, state-of-the-art, or innovative technology.",
+      "sourceReference": "Section 10.4, Page 282"
+    },
+    {
+      "id": "ENG-G10-U10-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "All television broadcast networks ______ obtain a legal operating license from the broadcasting authority before transmitting programs.",
+      "options": [
+        {
+          "id": "A",
+          "text": "must"
+        },
+        {
+          "id": "B",
+          "text": "shouldn't"
+        },
+        {
+          "id": "C",
+          "text": "might not"
+        },
+        {
+          "id": "D",
+          "text": "ought not"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "'Must' (or 'have to') expresses strong obligation, legal requirement, or necessity.",
+      "sourceReference": "Section 10.5.2, Pages 289-290"
+    },
+    {
+      "id": "ENG-G10-U10-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "After discussing the signal reception problem for hours, the technician finally ______ a practical solution.",
+      "options": [
+        {
+          "id": "A",
+          "text": "came up with"
+        },
+        {
+          "id": "B",
+          "text": "came across as"
+        },
+        {
+          "id": "C",
+          "text": "fell apart from"
+        },
+        {
+          "id": "D",
+          "text": "held on to"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The phrasal verb 'come up with' means to produce, invent, or think of an idea or solution.",
+      "sourceReference": "Section 10.4.1, Page 283"
+    },
+    {
+      "id": "ENG-G10-U10-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Complete the dialogue: Worknehe: 'That was an outstanding presentation on digital media technology!' Hawi: '______; I spent a lot of time preparing it.'",
+      "options": [
+        {
+          "id": "A",
+          "text": "Thank you, it's very kind of you to say so"
+        },
+        {
+          "id": "B",
+          "text": "I completely disagree with you"
+        },
+        {
+          "id": "C",
+          "text": "That makes no sense at all"
+        },
+        {
+          "id": "D",
+          "text": "Mind your own business"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "'Thank you, it's very kind of you to say so' is a standard polite social expression used to accept a compliment.",
+      "sourceReference": "Section 10.2, Page 277"
+    },
+    {
+      "id": "ENG-G10-U10-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which of the following sentences contains an INTRANSITIVE verb (a verb that does not take a direct object)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The satellite signal faded during the thunderstorm."
+        },
+        {
+          "id": "B",
+          "text": "The engineer repaired the coaxial cable yesterday."
+        },
+        {
+          "id": "C",
+          "text": "Students watch educational documentaries on television."
+        },
+        {
+          "id": "D",
+          "text": "The journalist wrote an informative news article."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "'Faded' is an intransitive verb in this sentence because it operates without a direct object ('during the thunderstorm' is an adverbial prepositional phrase). In options B, C, and D, 'repaired', 'watch', and 'wrote' take direct objects.",
+      "sourceReference": "Section 10.5.4, Page 294"
+    },
+    {
+      "id": "ENG-G10-U10-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In some countries, installing digital set-top converter boxes became mandatory when analog broadcasts were discontinued. What does 'mandatory' mean?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Required by law or authority; compulsory"
+        },
+        {
+          "id": "B",
+          "text": "Optional and voluntary"
+        },
+        {
+          "id": "C",
+          "text": "Extremely expensive"
+        },
+        {
+          "id": "D",
+          "text": "Temporarily prohibited"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "'Mandatory' contextually means required by law, rules, or official authority; compulsory.",
+      "sourceReference": "Section 10.4, Page 282"
+    },
+    {
+      "id": "ENG-G10-U10-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Television serves as a powerful medium for disseminating global news. ______, radio broadcasts provide immediate information to remote rural communities.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Similarly"
+        },
+        {
+          "id": "B",
+          "text": "In contrast"
+        },
+        {
+          "id": "C",
+          "text": "However"
+        },
+        {
+          "id": "D",
+          "text": "On the other hand"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "'Similarly' is used to signal comparison between two elements that share similar positive characteristics or functions.",
+      "sourceReference": "Section 10.5.1, Page 286"
+    },
+    {
+      "id": "ENG-G10-U10-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In the sentence 'The news anchor offered the audience a detailed explanation of the new policy', what is the INDIRECT OBJECT?",
+      "options": [
+        {
+          "id": "A",
+          "text": "the audience"
+        },
+        {
+          "id": "B",
+          "text": "the news anchor"
+        },
+        {
+          "id": "C",
+          "text": "a detailed explanation"
+        },
+        {
+          "id": "D",
+          "text": "the new policy"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "'The audience' is the indirect object (answering 'to whom' the explanation was offered), while 'a detailed explanation' is the direct object.",
+      "sourceReference": "Section 10.5.3, Page 293"
+    },
+    {
+      "id": "ENG-G10-U10-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "According to the Unit 10 reading passage on TV technologies, what is the primary technical distinction between cable television and satellite television?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Cable TV is transmitted through physical coaxial wires into homes, whereas Satellite TV is beamed down through the air from orbiting satellites to personal dishes."
+        },
+        {
+          "id": "B",
+          "text": "Cable TV requires large rooftop satellite dishes, whereas Satellite TV relies strictly on underground telephone lines."
+        },
+        {
+          "id": "C",
+          "text": "Cable TV operates exclusively on analog signals, whereas Satellite TV cannot broadcast high-definition video."
+        },
+        {
+          "id": "D",
+          "text": "Satellite TV was invented in the 1940s, whereas Cable TV was introduced in 2009."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Section 10.3 explicitly clarifies that cable TV reaches homes via physical coaxial cable wires, while satellite TV signals travel through space from orbiting satellites to subscriber dishes.",
+      "sourceReference": "Section 10.3, Pages 279-280"
+    },
+    {
+      "id": "ENG-G10-U10-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which sentence correctly uses the modal verb 'should' without grammatical errors?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Viewers should limit the time children spend watching violent programs."
+        },
+        {
+          "id": "B",
+          "text": "Viewers should to limit the time children spend watching violent programs."
+        },
+        {
+          "id": "C",
+          "text": "Viewers should limiting the time children spend watching violent programs."
+        },
+        {
+          "id": "D",
+          "text": "Viewers should to limiting the time children spend watching violent programs."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Modal auxiliary verbs like 'should' are followed directly by the bare infinitive ('limit') without 'to' or '-ing'.",
+      "sourceReference": "Section 10.5.2, Pages 288-289"
+    },
+    {
+      "id": "ENG-G10-U10-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Choose the sentence that is correctly punctuated and syntactically sound when connecting two independent clauses with a conjunctive adverb of contrast:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Analog television sets provided simple signal reception for decades; however, modern digital systems offer vastly superior image resolution and sound quality."
+        },
+        {
+          "id": "B",
+          "text": "Analog television sets provided simple signal reception for decades, however; modern digital systems offer vastly superior image resolution and sound quality."
+        },
+        {
+          "id": "C",
+          "text": "Analog television sets provided simple signal reception for decades; however modern digital systems offer vastly superior image resolution, and sound quality."
+        },
+        {
+          "id": "D",
+          "text": "Analog television sets provided simple signal reception for decades however, modern digital systems offer vastly superior image resolution and sound quality."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "When joining two independent clauses using a conjunctive adverb like 'however', standard punctuation requires a semicolon before the adverb and a comma immediately after it (Clause 1; however, Clause 2.).",
+      "sourceReference": "Section 10.5.1 & 10.6.2, Pages 285-287, 295"
+    },
+    {
+      "id": "ENG-G10-U10-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "When the severe windstorm blew across the city, the outdoor television antenna ______ unexpectedly, disrupting local broadcasts.",
+      "options": [
+        {
+          "id": "A",
+          "text": "fell apart"
+        },
+        {
+          "id": "B",
+          "text": "came up with"
+        },
+        {
+          "id": "C",
+          "text": "held on to"
+        },
+        {
+          "id": "D",
+          "text": "got along with"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "'Fell apart' means broke into pieces or disintegrated suddenly and unexpectedly.",
+      "sourceReference": "Section 10.4.1, Pages 283-284"
+    },
+    {
+      "id": "ENG-G10-U10-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "According to the Unit 10 listening text 'Is Television Harmful to Children?', what happens when a child enters the 'Alpha State' while watching TV?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Brain wave activity slows down into a passive, hypnotic trance where critical thinking and active mental processing are reduced."
+        },
+        {
+          "id": "B",
+          "text": "Physical heart rate doubles due to intense athletic engagement."
+        },
+        {
+          "id": "C",
+          "text": "Creative problem-solving skills increase dramatically."
+        },
+        {
+          "id": "D",
+          "text": "Vocabulary acquisition accelerates faster than through reading books."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The listening text highlights that sitting passively in front of a screen induces the 'Alpha State', a relaxed, hypnotic mental state in which critical thinking and active brain evaluation drop significantly.",
+      "sourceReference": "Section 10.1, Pages 274-275"
+    },
+    {
+      "id": "ENG-G10-U10-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Reorder the jumbled sentences into a coherent expository paragraph: (1) As a result, consumers today enjoy high-definition picture quality and interactive programming. (2) Technological advancement has transformed the broadcasting industry over recent decades. (3) Initially, households relied on basic analog signals delivered through simple rooftop antennas. (4) Later, digital cable and satellite systems revolutionized how media content is transmitted.",
+      "options": [
+        {
+          "id": "A",
+          "text": "(2) -> (3) -> (4) -> (1)"
+        },
+        {
+          "id": "B",
+          "text": "(3) -> (1) -> (4) -> (2)"
+        },
+        {
+          "id": "C",
+          "text": "(4) -> (2) -> (3) -> (1)"
+        },
+        {
+          "id": "D",
+          "text": "(1) -> (4) -> (2) -> (3)"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Sentence (2) introduces the main topic sentence (technological transformation of broadcasting). Sentence (3) details the initial past state (analog signals). Sentence (4) introduces subsequent technological shifts (digital cable and satellite). Sentence (1) provides the concluding result statement.",
+      "sourceReference": "Section 10.6.1 & 10.6.4, Pages 295, 301-302"
+    }
+  ]
 }

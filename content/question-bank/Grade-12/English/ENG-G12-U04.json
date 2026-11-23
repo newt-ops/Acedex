@@ -3,5 +3,411 @@
   "subject": "English",
   "unitNumber": 4,
   "unitTitle": "Natural Resource Management",
-  "questions": []
+  "questions": [
+    {
+      "id": "ENG-G12-U04-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Farmers in the Ethiopian highlands inspect their crops ______ the first seasonal rains begin in April.",
+      "options": [
+        {
+          "id": "A",
+          "text": "as soon as"
+        },
+        {
+          "id": "B",
+          "text": "so that"
+        },
+        {
+          "id": "C",
+          "text": "although"
+        },
+        {
+          "id": "D",
+          "text": "lest"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "'As soon as' is a subordinating conjunction of time used to indicate that an event occurs immediately after another specified event.",
+      "sourceReference": "Section 4E.1, Pages 93-95"
+    },
+    {
+      "id": "ENG-G12-U04-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "The reading text notes that agroforestry contributes significantly to 'biodiversity' conservation. What is the closest contextual meaning of 'biodiversity'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The variety of plant and animal species living in a particular habitat"
+        },
+        {
+          "id": "B",
+          "text": "The chemical composition of synthetic agricultural pesticides"
+        },
+        {
+          "id": "C",
+          "text": "The financial profit earned from timber export sales"
+        },
+        {
+          "id": "D",
+          "text": "The total volume of rainfall recorded annually"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "'Biodiversity' contextually refers to the variety and variability of living flora and fauna within an ecosystem.",
+      "sourceReference": "Section 4C.1, Pages 84-86"
+    },
+    {
+      "id": "ENG-G12-U04-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Despite severe budget constraints and public skepticism, the conservation committee decided to ______ its original environmental protection plan.",
+      "options": [
+        {
+          "id": "A",
+          "text": "stick to"
+        },
+        {
+          "id": "B",
+          "text": "stick out"
+        },
+        {
+          "id": "C",
+          "text": "stick down"
+        },
+        {
+          "id": "D",
+          "text": "stick around"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The phrasal verb 'stick to' means to adhere firmly to a plan, rule, or decision without altering it.",
+      "sourceReference": "Section 4D.3, Pages 91-92"
+    },
+    {
+      "id": "ENG-G12-U04-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Complete the dialogue: Kebede: 'Community-based resource management empowers local residents.' Lemlem: '______; when local people own the land, conservation efforts succeed.'",
+      "options": [
+        {
+          "id": "A",
+          "text": "I couldn't agree more"
+        },
+        {
+          "id": "B",
+          "text": "I am afraid I disagree"
+        },
+        {
+          "id": "C",
+          "text": "That makes no sense at all"
+        },
+        {
+          "id": "D",
+          "text": "I completely oppose your view"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "'I couldn't agree more' is a standard formal expression used to signal complete agreement with an opinion.",
+      "sourceReference": "Section 4B.1, Pages 77-78"
+    },
+    {
+      "id": "ENG-G12-U04-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which of the following three-syllable words places its primary stress on the SECOND syllable?",
+      "options": [
+        {
+          "id": "A",
+          "text": "department"
+        },
+        {
+          "id": "B",
+          "text": "telephone"
+        },
+        {
+          "id": "C",
+          "text": "garden"
+        },
+        {
+          "id": "D",
+          "text": "kindergarten"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "'Department' has three syllables with primary stress on the second syllable (/dɪˈpɑːrt.mənt/). 'Telephone' and 'kindergarten' stress their first syllables.",
+      "sourceReference": "Section 4B.2, Page 83"
+    },
+    {
+      "id": "ENG-G12-U04-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "By the time the new reforestation guidelines ______ officially published next year, local communities ______ over one million indigenous saplings.",
+      "options": [
+        {
+          "id": "A",
+          "text": "are / will have planted"
+        },
+        {
+          "id": "B",
+          "text": "were / planted"
+        },
+        {
+          "id": "C",
+          "text": "will be / have planted"
+        },
+        {
+          "id": "D",
+          "text": "have been / plant"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "In time clauses referring to future completion, the time clause uses Simple Present ('are') while the main clause requires Future Perfect ('will have planted').",
+      "sourceReference": "Section 4E.1, Pages 93-95"
+    },
+    {
+      "id": "ENG-G12-U04-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Trees in agroforestry systems help 'sequester' atmospheric carbon dioxide. What does 'sequester' mean in this ecological context?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Isolate, absorb, and store carbon safely away from the atmosphere"
+        },
+        {
+          "id": "B",
+          "text": "Release large volumes of toxic gas into the air"
+        },
+        {
+          "id": "C",
+          "text": "Burn plant residue during crop harvesting"
+        },
+        {
+          "id": "D",
+          "text": "Export unprocessed timber to overseas markets"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "In environmental science, 'sequester' means to capture, absorb, and store carbon dioxide in plant biomass or soil over long periods.",
+      "sourceReference": "Section 4C.1 & 4D.1, Pages 86, 90"
+    },
+    {
+      "id": "ENG-G12-U04-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Solve the verbal analogy: ORNITHOLOGIST is to BIRD as ARCHAEOLOGIST is to ______.",
+      "options": [
+        {
+          "id": "A",
+          "text": "artifact"
+        },
+        {
+          "id": "B",
+          "text": "island"
+        },
+        {
+          "id": "C",
+          "text": "ocean"
+        },
+        {
+          "id": "D",
+          "text": "atmosphere"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "An ornithologist specializes in studying birds; similarly, an archaeologist specializes in studying ancient human artifacts and historical remains.",
+      "sourceReference": "Section 4D.2, Page 90"
+    },
+    {
+      "id": "ENG-G12-U04-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which of the following sentences contains a DANGLING MODIFIER?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Drooping and looking all dried out, the children watered the garden plants."
+        },
+        {
+          "id": "B",
+          "text": "While the children were watering the garden plants, the flowers looked drooping and dried out."
+        },
+        {
+          "id": "C",
+          "text": "Having finished their homework, the students watered the garden plants."
+        },
+        {
+          "id": "D",
+          "text": "After inspecting the dry soil, the gardener watered the plants."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "In Option A, 'Drooping and looking all dried out' illogically modifies 'the children' (suggesting the children were drooping and dried out). This is a dangling modifier.",
+      "sourceReference": "Section 4F.1, Pages 96-98"
+    },
+    {
+      "id": "ENG-G12-U04-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "According to the reading text on Natural Resource Management in Ethiopia, what distinguishes the Guassa area conservation system in North Shewa?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It is one of the oldest community-based resource management systems in Sub-Saharan Africa, operating under customary tenure rules."
+        },
+        {
+          "id": "B",
+          "text": "It relies exclusively on foreign commercial timber companies for funding."
+        },
+        {
+          "id": "C",
+          "text": "It was established in 2020 by international private investors."
+        },
+        {
+          "id": "D",
+          "text": "It prohibits local residents from harvesting grass or pasturing livestock under any circumstances."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Section 4C.2 notes that the Guassa conservation system is an ancient community-managed commons system operating for over 400 years under traditional governance.",
+      "sourceReference": "Section 4C.2, Pages 87-88"
+    },
+    {
+      "id": "ENG-G12-U04-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "During the heated environmental debate, the young researcher stood up and ______ her colleagues when they faced unfair criticism.",
+      "options": [
+        {
+          "id": "A",
+          "text": "stuck up for"
+        },
+        {
+          "id": "B",
+          "text": "stuck out"
+        },
+        {
+          "id": "C",
+          "text": "stuck down"
+        },
+        {
+          "id": "D",
+          "text": "stuck around"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The three-word phrasal verb 'stick up for' means to defend, support, or speak in favor of someone facing criticism.",
+      "sourceReference": "Section 4D.3, Page 91"
+    },
+    {
+      "id": "ENG-G12-U04-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Read the sentence: 'Using the Pythagorean Theorem, the complex math problem was easily solved.' Which option correctly revises this sentence to eliminate the dangling modifier?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Using the Pythagorean Theorem, the student easily solved the complex math problem."
+        },
+        {
+          "id": "B",
+          "text": "Using the Pythagorean Theorem, the complex math problem solved itself easily."
+        },
+        {
+          "id": "C",
+          "text": "Being solved easily, the complex math problem used the Pythagorean Theorem."
+        },
+        {
+          "id": "D",
+          "text": "Easily solving the complex math problem, the Pythagorean Theorem was used."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Placing the logical subject ('the student'—who actually used the theorem) directly after the introductory participial phrase corrects the dangling modifier.",
+      "sourceReference": "Section 4F.1, Pages 96-98"
+    },
+    {
+      "id": "ENG-G12-U04-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "______ the regional water bureau completed the watershed restoration project, severe soil erosion had already swept away tons of fertile topsoil.",
+      "options": [
+        {
+          "id": "A",
+          "text": "By the time"
+        },
+        {
+          "id": "B",
+          "text": "As long as"
+        },
+        {
+          "id": "C",
+          "text": "So that"
+        },
+        {
+          "id": "D",
+          "text": "In order that"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "'By the time' introduces a time clause indicating that an event occurred prior to another past milestone (paired with Past Perfect 'had already swept away').",
+      "sourceReference": "Section 4E.1, Pages 93-95"
+    },
+    {
+      "id": "ENG-G12-U04-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "In Section 4C.1, why are leguminous trees specifically highlighted as crucial components of sustainable agroforestry systems?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because of their unique biological ability to fix atmospheric nitrogen and enrich soil fertility for surrounding crops."
+        },
+        {
+          "id": "B",
+          "text": "Because they produce synthetic chemical herbicides naturally."
+        },
+        {
+          "id": "C",
+          "text": "Because they eliminate the need for rainfall or irrigation in dry regions."
+        },
+        {
+          "id": "D",
+          "text": "Because they prevent wild animals from entering agricultural fields."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Section 4C.1 notes that leguminous trees fix atmospheric nitrogen into the soil, naturally replenishing soil nutrients and reducing dependence on chemical fertilizers.",
+      "sourceReference": "Section 4C.1, Page 86"
+    },
+    {
+      "id": "ENG-G12-U04-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "When structuring a five-paragraph expository essay on the environmental impacts of human activities on natural resources, what function must the body paragraphs serve?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Presenting distinct supporting evidence, specific cause-and-effect relationships, and logical data analysis governed by topic sentences."
+        },
+        {
+          "id": "B",
+          "text": "Introducing fictional dialogue between imaginary characters."
+        },
+        {
+          "id": "C",
+          "text": "Restating the thesis statement in every single line without adding new information."
+        },
+        {
+          "id": "D",
+          "text": "Listing emotional personal complaints without factual backing."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "In expository essay writing (Section 4F.2), body paragraphs develop the central claim using topic sentences, factual evidence, logical cause-and-effect reasoning, and objective data analysis.",
+      "sourceReference": "Section 4F.2, Pages 99-101"
+    }
+  ]
 }

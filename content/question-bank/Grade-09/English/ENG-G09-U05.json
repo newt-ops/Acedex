@@ -3,5 +3,411 @@
   "subject": "English",
   "unitNumber": 5,
   "unitTitle": "Horticulture",
-  "questions": []
+  "questions": [
+    {
+      "id": "ENG-G09-U05-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Choose the correct verb form for the Second Conditional statement: 'If I ______ enough land in my backyard, I would plant a small vegetable garden.'",
+      "options": [
+        {
+          "id": "A",
+          "text": "have"
+        },
+        {
+          "id": "B",
+          "text": "had"
+        },
+        {
+          "id": "C",
+          "text": "will have"
+        },
+        {
+          "id": "D",
+          "text": "have had"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The Second Conditional uses the Simple Past tense ('had') in the conditional clause to express a hypothetical present or future situation paired with 'would + base verb'.",
+      "sourceReference": "Section 5.4.1, Page 114"
+    },
+    {
+      "id": "ENG-G09-U05-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Working in a garden helps people unwind after a long and stressful week. What is the closest contextual meaning of the word 'unwind'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Relax and reduce tension"
+        },
+        {
+          "id": "B",
+          "text": "Become more anxious"
+        },
+        {
+          "id": "C",
+          "text": "Fasten tightly"
+        },
+        {
+          "id": "D",
+          "text": "Stop working permanently"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "In the Unit 5 reading text 'Health Benefits of Gardening', the verb 'unwind' contextually means to relax, de-stress, or ease physical and mental tension.",
+      "sourceReference": "Section 5.3.1, Page 112"
+    },
+    {
+      "id": "ENG-G09-U05-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Choose the correct verb form for the Third Conditional statement: 'If the floriculture company ______ its vegetables earlier, the products would not have spoiled during transit.'",
+      "options": [
+        {
+          "id": "A",
+          "text": "packs"
+        },
+        {
+          "id": "B",
+          "text": "has packed"
+        },
+        {
+          "id": "C",
+          "text": "had packed"
+        },
+        {
+          "id": "D",
+          "text": "would pack"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The Third Conditional requires the Past Perfect tense ('had packed') in the conditional clause to express an unfulfilled past event paired with 'would not have + past participle'.",
+      "sourceReference": "Section 5.4.2, Page 114"
+    },
+    {
+      "id": "ENG-G09-U05-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which prefix added to the root word 'title' forms a word meaning a secondary heading placed below a main heading?",
+      "options": [
+        {
+          "id": "A",
+          "text": "mis-"
+        },
+        {
+          "id": "B",
+          "text": "sub-"
+        },
+        {
+          "id": "C",
+          "text": "pre-"
+        },
+        {
+          "id": "D",
+          "text": "ex-"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The prefix 'sub-' denotes lower, under, or secondary. Attaching 'sub-' to 'title' forms 'subtitle'.",
+      "sourceReference": "Section 5.3.2, Page 112"
+    },
+    {
+      "id": "ENG-G09-U05-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What does the term 'floriculture' specifically refer to within the Ethiopian horticulture sector?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The cultivation and marketing of flowering and ornamental plants"
+        },
+        {
+          "id": "B",
+          "text": "The commercial harvesting of ocean fish"
+        },
+        {
+          "id": "C",
+          "text": "The extraction of natural gas and oil"
+        },
+        {
+          "id": "D",
+          "text": "The processing of grain crops into flour"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Floriculture is a specialized branch of horticulture dealing specifically with the cultivation, production, and trade of flowers and decorative plants.",
+      "sourceReference": "Section 5.1, Page 107"
+    },
+    {
+      "id": "ENG-G09-U05-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Choose the grammatically correct verb for the hypothetical conditional: 'If I ______ the Minister of Agriculture, I would subsidize modern drip irrigation for horticulture farmers.'",
+      "options": [
+        {
+          "id": "A",
+          "text": "am"
+        },
+        {
+          "id": "B",
+          "text": "was"
+        },
+        {
+          "id": "C",
+          "text": "were"
+        },
+        {
+          "id": "D",
+          "text": "will be"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "In formal standard English, Second Conditional sentences use the subjunctive form 'were' for all subjects (including first-person singular 'I') when describing imaginary roles or states.",
+      "sourceReference": "Section 5.4.1, Page 114"
+    },
+    {
+      "id": "ENG-G09-U05-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "If the regional agricultural bureau had provided technical training last season, the smallholder farmers ______ higher yields of fresh vegetables.",
+      "options": [
+        {
+          "id": "A",
+          "text": "would harvest"
+        },
+        {
+          "id": "B",
+          "text": "would have harvested"
+        },
+        {
+          "id": "C",
+          "text": "will harvest"
+        },
+        {
+          "id": "D",
+          "text": "harvested"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In Third Conditional sentences (If + Past Perfect), the main clause takes 'would have + past participle' ('would have harvested') to indicate an impossible past outcome.",
+      "sourceReference": "Section 5.4.2, Page 114"
+    },
+    {
+      "id": "ENG-G09-U05-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Choose the word containing a prefix that correctly means 'to judge wrongly or incorrectly':",
+      "options": [
+        {
+          "id": "A",
+          "text": "misjudge"
+        },
+        {
+          "id": "B",
+          "text": "subjudge"
+        },
+        {
+          "id": "C",
+          "text": "prejudge"
+        },
+        {
+          "id": "D",
+          "text": "exjudge"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The prefix 'mis-' means wrongly or bad. Combining 'mis-' with 'judge' forms 'misjudge'.",
+      "sourceReference": "Section 5.3.2, Page 112"
+    },
+    {
+      "id": "ENG-G09-U05-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "'Consuming fresh horticultural produce contributes to enhancing human immunity.' What is the closest synonym of 'enhancing' in this context?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Deteriorating"
+        },
+        {
+          "id": "B",
+          "text": "Improving or strengthening"
+        },
+        {
+          "id": "C",
+          "text": "Restricting"
+        },
+        {
+          "id": "D",
+          "text": "Removing"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In the Unit 5 reading text on nutrition and health, 'enhancing' contextually means boosting, improving, or strengthening.",
+      "sourceReference": "Section 5.3.1, Page 112"
+    },
+    {
+      "id": "ENG-G09-U05-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Analyze the conditional sentence: 'If local investors had expanded greenhouse facilities last year, Ethiopia would compete more strongly in the global flower market today.' This sentence is an example of a ______.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Zero Conditional"
+        },
+        {
+          "id": "B",
+          "text": "First Conditional"
+        },
+        {
+          "id": "C",
+          "text": "Mixed Conditional"
+        },
+        {
+          "id": "D",
+          "text": "Simple Present Statement"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "A mixed conditional combines a Past Perfect condition ('had expanded') with a present result modal ('would compete today'), linking an unfulfilled past action to a present hypothetical state.",
+      "sourceReference": "Section 5.4.2, Pages 113-114"
+    },
+    {
+      "id": "ENG-G09-U05-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "According to the listening text on horticulture investment, why is Ethiopia considered highly competitive in flower and vegetable export markets?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It relies exclusively on imported artificial lighting"
+        },
+        {
+          "id": "B",
+          "text": "It possesses favorable climatic conditions, abundant water, and proximity to international export markets"
+        },
+        {
+          "id": "C",
+          "text": "It imports all fresh vegetables from neighbouring countries"
+        },
+        {
+          "id": "D",
+          "text": "It has prohibited private investment in agriculture"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The listening text highlights Ethiopia's natural competitive advantages in horticulture, including diverse agro-climatic zones, water resources, and favorable transport access to global markets.",
+      "sourceReference": "Section 5.1, Page 107"
+    },
+    {
+      "id": "ENG-G09-U05-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Select the sentence that expresses a hypothetical present situation rather than an unfulfilled past regret.",
+      "options": [
+        {
+          "id": "A",
+          "text": "If we had bought the greenhouse last year, we wouldn't have lost our crop to frost."
+        },
+        {
+          "id": "B",
+          "text": "If farmer Tadesse knew how to install drip irrigation, he would save a lot of water on his farm."
+        },
+        {
+          "id": "C",
+          "text": "If the flight had not been delayed, the fresh cut roses would have arrived on time."
+        },
+        {
+          "id": "D",
+          "text": "If the government had not intervened, the export sector would have collapsed in 2020."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Option B uses the Second Conditional structure (If + Simple Past 'knew', main clause 'would save') to express a present imaginary condition. Options A, C, and D are Third Conditionals describing past events.",
+      "sourceReference": "Section 5.4.1 & 5.4.2, Pages 113-115"
+    },
+    {
+      "id": "ENG-G09-U05-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Which of the following sentences correctly restates: 'If the manager had recognized the export potential of organic strawberries, he would have invested earlier' without using the word 'if'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Had the manager recognized the export potential of organic strawberries, he would have invested earlier."
+        },
+        {
+          "id": "B",
+          "text": "Did the manager recognize the export potential of organic strawberries, he would have invested earlier."
+        },
+        {
+          "id": "C",
+          "text": "Was the manager to recognize the export potential of organic strawberries, he would have invested earlier."
+        },
+        {
+          "id": "D",
+          "text": "Should the manager recognize the export potential of organic strawberries, he would have invested earlier."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "In formal inverted Third Conditional constructions, 'if' is omitted and the auxiliary verb 'Had' is inverted with the subject ('Had the manager recognized...').",
+      "sourceReference": "Section 5.4.2, Page 114"
+    },
+    {
+      "id": "ENG-G09-U05-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Read the sentence: 'Due to unforeseen transport delays, the exporter had to re-examine the shipment before exporting.' Which row accurately identifies the meanings of the three prefixes used in bold?",
+      "options": [
+        {
+          "id": "A",
+          "text": "un- (not) / re- (again) / ex- (out/away)"
+        },
+        {
+          "id": "B",
+          "text": "un- (again) / re- (under) / ex- (wrongly)"
+        },
+        {
+          "id": "C",
+          "text": "un- (under) / re- (not) / ex- (before)"
+        },
+        {
+          "id": "D",
+          "text": "un- (out) / re- (against) / ex- (under)"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "'un-' means not (unforeseen = not foreseen), 're-' means again (re-examine = examine again), and 'ex-' means out or away (exporting = sending out of a country).",
+      "sourceReference": "Section 5.3.2, Page 112"
+    },
+    {
+      "id": "ENG-G09-U05-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Choose the sentence that BEST serves as a cohesive topic sentence for a paragraph explaining both the health and economic benefits of community gardening:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Flower gardens require expensive chemical fertilizers imported from overseas."
+        },
+        {
+          "id": "B",
+          "text": "Community gardening provides dual advantages by supplying nutrient-rich produce for physical well-being while fostering local economic self-reliance."
+        },
+        {
+          "id": "C",
+          "text": "Many people prefer watching television to working outdoors on rainy afternoons."
+        },
+        {
+          "id": "D",
+          "text": "Public buses in urban centers are usually overcrowded during peak hours."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "A strong topic sentence unifies the main controlling ideas of the paragraph. Option B explicitly connects both health benefits (nutrient-rich produce, physical well-being) and economic advantages (self-reliance).",
+      "sourceReference": "Section 5.6, Page 121"
+    }
+  ]
 }

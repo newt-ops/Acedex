@@ -3,5 +3,411 @@
   "subject": "English",
   "unitNumber": 6,
   "unitTitle": "Migration",
-  "questions": []
+  "questions": [
+    {
+      "id": "ENG-G10-U06-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Many young Ethiopians learn digital skills ______ they can create job opportunities locally.",
+      "options": [
+        {
+          "id": "A",
+          "text": "so that"
+        },
+        {
+          "id": "B",
+          "text": "in order"
+        },
+        {
+          "id": "C",
+          "text": "so as"
+        },
+        {
+          "id": "D",
+          "text": "because of"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "'so that' is followed by a clause containing a subject and modal verb ('they can create') to express an adverbial clause of purpose.",
+      "sourceReference": "Section 6.5.3, Page 165"
+    },
+    {
+      "id": "ENG-G10-U06-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In the reading text 'Migration in Ethiopia', what is the closest contextual meaning of 'livelihood'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Means of securing the necessities of life or income"
+        },
+        {
+          "id": "B",
+          "text": "Travel destination for tourists"
+        },
+        {
+          "id": "C",
+          "text": "Formal political election"
+        },
+        {
+          "id": "D",
+          "text": "Severe physical illness"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Contextually, 'livelihood' refers to a means of securing the necessities of life, such as food, shelter, and financial income.",
+      "sourceReference": "Section 6.4, Page 155"
+    },
+    {
+      "id": "ENG-G10-U06-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is the correct plural form of the hyphenated compound noun 'commander-in-chief'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "commanders-in-chief"
+        },
+        {
+          "id": "B",
+          "text": "commander-in-chiefs"
+        },
+        {
+          "id": "C",
+          "text": "commanders-in-chiefs"
+        },
+        {
+          "id": "D",
+          "text": "commander-ins-chief"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "In hyphenated compound nouns containing prepositional phrases, the plural suffix '-s' is attached to the principal noun ('commanders-in-chief').",
+      "sourceReference": "Section 6.4.1, Page 156"
+    },
+    {
+      "id": "ENG-G10-U06-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "A trustworthy leader will never ______ his word after making an official promise to the community.",
+      "options": [
+        {
+          "id": "A",
+          "text": "go back on"
+        },
+        {
+          "id": "B",
+          "text": "go around with"
+        },
+        {
+          "id": "C",
+          "text": "go through in"
+        },
+        {
+          "id": "D",
+          "text": "go down by"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The phrasal verb 'go back on' means to break or fail to keep a promise or agreement.",
+      "sourceReference": "Section 6.4 & 6.5, Page 158"
+    },
+    {
+      "id": "ENG-G10-U06-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which of the following words is spelled correctly following the rule 'i before e except after c'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "receive"
+        },
+        {
+          "id": "B",
+          "text": "recieve"
+        },
+        {
+          "id": "C",
+          "text": "recive"
+        },
+        {
+          "id": "D",
+          "text": "reseive"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Following the rule 'i before e except after c', 'receive' takes 'ei' directly after the letter 'c'.",
+      "sourceReference": "Section 6.6.3, Page 173"
+    },
+    {
+      "id": "ENG-G10-U06-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "By the time Momina arrived at the hotel in Dire Dawa, the broker ______ all her travel arrangements.",
+      "options": [
+        {
+          "id": "A",
+          "text": "had already made"
+        },
+        {
+          "id": "B",
+          "text": "has already made"
+        },
+        {
+          "id": "C",
+          "text": "is making"
+        },
+        {
+          "id": "D",
+          "text": "will make"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "When an action was completed before a specific past event ('arrived'), the earlier completed event requires the Past Perfect tense ('had already made').",
+      "sourceReference": "Section 6.5.1, Pages 159-161"
+    },
+    {
+      "id": "ENG-G10-U06-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "'Ethiopia is surprisingly endowed with immense natural resources.' What is the contextual synonym of 'endowed'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Provided naturally or gifted with"
+        },
+        {
+          "id": "B",
+          "text": "Deprived or completely lacking"
+        },
+        {
+          "id": "C",
+          "text": "Penalized legally"
+        },
+        {
+          "id": "D",
+          "text": "Forced into debt"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "In context, 'endowed' means blessed, gifted, or naturally provided with valuable assets or resources.",
+      "sourceReference": "Section 6.4, Page 155"
+    },
+    {
+      "id": "ENG-G10-U06-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "The historical Kara Mara battle broke out ______ 6:00 a.m. ______ October 1977.",
+      "options": [
+        {
+          "id": "A",
+          "text": "at / in"
+        },
+        {
+          "id": "B",
+          "text": "in / at"
+        },
+        {
+          "id": "C",
+          "text": "on / at"
+        },
+        {
+          "id": "D",
+          "text": "at / of"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Specific clock times take the preposition 'at' ('at 6:00 a.m.'), whereas months or years take 'in' ('in October 1977').",
+      "sourceReference": "Section 6.5.2, Pages 162-163"
+    },
+    {
+      "id": "ENG-G10-U06-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Young irregular migrants often ______ severe hardship and dangerous weather conditions during long desert journeys.",
+      "options": [
+        {
+          "id": "A",
+          "text": "go through"
+        },
+        {
+          "id": "B",
+          "text": "go off"
+        },
+        {
+          "id": "C",
+          "text": "go back on"
+        },
+        {
+          "id": "D",
+          "text": "go in for"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The phrasal verb 'go through' means to experience, undergo, or suffer through a difficult situation.",
+      "sourceReference": "Section 6.4, Page 158"
+    },
+    {
+      "id": "ENG-G10-U06-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Youth empowerment programs are expanding across regions ______ provide sustainable employment opportunities for university graduates.",
+      "options": [
+        {
+          "id": "A",
+          "text": "in order to"
+        },
+        {
+          "id": "B",
+          "text": "so that"
+        },
+        {
+          "id": "C",
+          "text": "because of"
+        },
+        {
+          "id": "D",
+          "text": "so long as"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "'In order to' is followed directly by a base verb ('provide') to express purpose, whereas 'so that' introduces a clause with a subject and verb.",
+      "sourceReference": "Section 6.5.3, Page 165"
+    },
+    {
+      "id": "ENG-G10-U06-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "According to the Grade 10 reading text 'Migration in Ethiopia', what demographic proportion of the Ethiopian population is under thirty years old?",
+      "options": [
+        {
+          "id": "A",
+          "text": "71%"
+        },
+        {
+          "id": "B",
+          "text": "45%"
+        },
+        {
+          "id": "C",
+          "text": "25%"
+        },
+        {
+          "id": "D",
+          "text": "90%"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Section 6.3 (Paragraph 4) explicitly states that 71% of the country's population is under thirty years of age, representing a crucial productive force.",
+      "sourceReference": "Section 6.3, Page 154"
+    },
+    {
+      "id": "ENG-G10-U06-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Identify the sentence that demonstrates CORRECT tense alignment for past narrative events in complex sentences:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Momina had been traveling for three days when she realized that her broker had deceived her."
+        },
+        {
+          "id": "B",
+          "text": "Momina has been traveling for three days when she realizes that her broker had deceived her."
+        },
+        {
+          "id": "C",
+          "text": "Momina was traveling for three days when she has realized that her broker deceived her."
+        },
+        {
+          "id": "D",
+          "text": "Momina travels for three days when she was realizing that her broker deceives her."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The Past Perfect Continuous ('had been traveling') expresses ongoing duration prior to a point in past time ('realized'), combined with the Past Perfect ('had deceived') for an even earlier action.",
+      "sourceReference": "Section 6.5.1, Pages 159-162"
+    },
+    {
+      "id": "ENG-G10-U06-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Which sentence correctly uses a compound noun formed with a preposition to describe an essential orientation program before starting work?",
+      "options": [
+        {
+          "id": "A",
+          "text": "All new staff members are required to attend an in-service training session this week."
+        },
+        {
+          "id": "B",
+          "text": "All new staff members are required to attend an in-services training session this week."
+        },
+        {
+          "id": "C",
+          "text": "All new staff members are required to attend an inside-service training session this week."
+        },
+        {
+          "id": "D",
+          "text": "All new staff members are required to attend an into-service training session this week."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "'in-service' is a compound modifier formed with the preposition 'in' modifying the noun 'training'.",
+      "sourceReference": "Section 6.4.1, Pages 156-157"
+    },
+    {
+      "id": "ENG-G10-U06-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "In analyzing a line graph illustrating migration trends over time, which adverb phrase indicates a sudden and extreme upward movement?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Increased sharply and dramatically"
+        },
+        {
+          "id": "B",
+          "text": "Fluctuated steadily and gently"
+        },
+        {
+          "id": "C",
+          "text": "Declined gradually and slightly"
+        },
+        {
+          "id": "D",
+          "text": "Remained completely stable"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "In graph interpretation vocabulary (Section 6.6.2), 'sharply' and 'dramatically' describe rapid, steep, and significant increases.",
+      "sourceReference": "Section 6.6.2, Page 171"
+    },
+    {
+      "id": "ENG-G10-U06-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Choose the sentence in which ALL words containing 'ie' or 'ei' are spelled correctly according to Unit 6 spelling rules:",
+      "options": [
+        {
+          "id": "A",
+          "text": "The foreign diplomat received official documents concerning national sovereignty."
+        },
+        {
+          "id": "B",
+          "text": "The foriegn diplomat recieved official documents concerning national sovereignty."
+        },
+        {
+          "id": "C",
+          "text": "The foreign diplomat received official documents concerning national soverniegnty."
+        },
+        {
+          "id": "D",
+          "text": "The foriegn diplomat received official documents concerning national sovereignty."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "'Foreign' (exception: 'ei'), 'received' ('ei' after 'c'), and 'sovereignty' (exception: 'ei') are all correctly spelled in Option A.",
+      "sourceReference": "Section 6.6.3, Page 173"
+    }
+  ]
 }

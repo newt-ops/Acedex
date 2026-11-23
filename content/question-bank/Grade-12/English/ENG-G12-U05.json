@@ -3,5 +3,411 @@
   "subject": "English",
   "unitNumber": 5,
   "unitTitle": "Mechanized Agriculture",
-  "questions": []
+  "questions": [
+    {
+      "id": "ENG-G12-U05-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "If local farmers ______ modern agricultural machinery, their crop productivity would increase significantly.",
+      "options": [
+        {
+          "id": "A",
+          "text": "adopted"
+        },
+        {
+          "id": "B",
+          "text": "adopt"
+        },
+        {
+          "id": "C",
+          "text": "will adopt"
+        },
+        {
+          "id": "D",
+          "text": "had adopted"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Conditional Type 2 (hypothetical present) takes Simple Past ('adopted') in the 'if'-clause paired with 'would + base verb' ('would increase') in the result clause.",
+      "sourceReference": "Section 5E.2, Pages 120-121"
+    },
+    {
+      "id": "ENG-G12-U05-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In the listening and reading texts of Unit 5, what is the contextual definition of 'mechanized agriculture'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The introduction and use of powered machinery to perform agricultural tasks previously done manually or with draft animals"
+        },
+        {
+          "id": "B",
+          "text": "The practice of growing crops without using water or soil"
+        },
+        {
+          "id": "C",
+          "text": "The exclusive exportation of unprocessed timber to foreign markets"
+        },
+        {
+          "id": "D",
+          "text": "The manual harvesting of grain using hand sickles and wooden flails"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Section 5A.1 defines mechanized agriculture as replacing manual or animal labor with mechanical equipment and automated technology to boost farm efficiency.",
+      "sourceReference": "Section 5A.1, Page 103"
+    },
+    {
+      "id": "ENG-G12-U05-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "______ modern combine harvesters reduces harvest time and minimizes grain losses during harvesting seasons.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Operating"
+        },
+        {
+          "id": "B",
+          "text": "Operate"
+        },
+        {
+          "id": "C",
+          "text": "Operated"
+        },
+        {
+          "id": "D",
+          "text": "To operating"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "A gerund ('Operating') functions as the singular noun subject of the main verb 'reduces'.",
+      "sourceReference": "Section 5E.1, Pages 116-117"
+    },
+    {
+      "id": "ENG-G12-U05-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "According to Section 5C.2, which commercial enterprise is highlighted as one of the largest poultry producers in Ethiopia delivering table eggs and broiler meat?",
+      "options": [
+        {
+          "id": "A",
+          "text": "ELFORA Agro Industry"
+        },
+        {
+          "id": "B",
+          "text": "Ethiopian Airlines"
+        },
+        {
+          "id": "C",
+          "text": "National Cement Corporation"
+        },
+        {
+          "id": "D",
+          "text": "Ethio Telecom"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Section 5C.2 identifies ELFORA Agro Industry as a leading commercial poultry enterprise producing table eggs, day-old chicks, and broiler meat.",
+      "sourceReference": "Section 5C.2, Pages 111-114"
+    },
+    {
+      "id": "ENG-G12-U05-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Solve the synonym analogy from Section 5D.2: PRODUCE is to MAKE as BENEFIT is to ______.",
+      "options": [
+        {
+          "id": "A",
+          "text": "advantage"
+        },
+        {
+          "id": "B",
+          "text": "drawback"
+        },
+        {
+          "id": "C",
+          "text": "expense"
+        },
+        {
+          "id": "D",
+          "text": "loss"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "'Produce' and 'make' are synonyms. Similarly, 'benefit' and 'advantage' are synonyms.",
+      "sourceReference": "Section 5D.2, Page 116"
+    },
+    {
+      "id": "ENG-G12-U05-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "If the agricultural cooperative ______ sufficient investment capital last year, they ______ a modern tractor for the harvest.",
+      "options": [
+        {
+          "id": "A",
+          "text": "had possessed / would have purchased"
+        },
+        {
+          "id": "B",
+          "text": "possessed / will purchase"
+        },
+        {
+          "id": "C",
+          "text": "possesses / would purchase"
+        },
+        {
+          "id": "D",
+          "text": "has possessed / purchased"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Conditional Type 3 (unfulfilled past condition) takes Past Perfect ('had possessed') in the 'if'-clause paired with 'would have + past participle' ('would have purchased') in the result clause.",
+      "sourceReference": "Section 5E.2, Pages 120-121"
+    },
+    {
+      "id": "ENG-G12-U05-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "______ by vacuum generators, suction end-effectors in agricultural pick-and-place robots can lift smooth objects without causing physical damage.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Powered"
+        },
+        {
+          "id": "B",
+          "text": "Powering"
+        },
+        {
+          "id": "C",
+          "text": "Power"
+        },
+        {
+          "id": "D",
+          "text": "To power"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "A past participial phrase ('Powered by vacuum generators...') modifies the noun subject ('suction end-effectors') in a passive sense.",
+      "sourceReference": "Section 5E.1, Pages 117-118"
+    },
+    {
+      "id": "ENG-G12-U05-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Large-scale commercial poultry farms establish specialized 'hatcheries'. What is the contextual meaning of 'hatchery'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A facility where fertile eggs are incubated and hatched under controlled artificial conditions"
+        },
+        {
+          "id": "B",
+          "text": "A storage warehouse for storing synthetic chemical fertilizers"
+        },
+        {
+          "id": "C",
+          "text": "A mechanical workshop for repairing broken tractor engines"
+        },
+        {
+          "id": "D",
+          "text": "A slaughterhouse reserved exclusively for cattle processing"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "In poultry farming vocabulary (Section 5D.1), a 'hatchery' is a specialized facility equipped with incubators to hatch fertile eggs into day-old chicks.",
+      "sourceReference": "Section 5D.1, Page 115"
+    },
+    {
+      "id": "ENG-G12-U05-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which of the following sentences successfully eliminates unnecessary WORDINESS while retaining the full original meaning?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Farmers prefer mechanized agriculture because it saves time and boosts productivity."
+        },
+        {
+          "id": "B",
+          "text": "Due to the fact that mechanized agriculture saves time, farmers choose it for the reason that it increases speed."
+        },
+        {
+          "id": "C",
+          "text": "On account of the fact that time is saved by mechanized agriculture, the reason farmers choose it is because of productivity."
+        },
+        {
+          "id": "D",
+          "text": "Owing to the reason that mechanized agriculture saves time, therefore farmers prefer it."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Section 5F.1 teaches editing wordiness by replacing redundant filler phrases ('due to the fact that', 'for the reason that') with concise conjunctions like 'because'.",
+      "sourceReference": "Section 5F.1, Pages 123-124"
+    },
+    {
+      "id": "ENG-G12-U05-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "______ smallholder farmers receive technical training on machine operational maintenance, modern agricultural machinery will deteriorate rapidly.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Unless"
+        },
+        {
+          "id": "B",
+          "text": "If"
+        },
+        {
+          "id": "C",
+          "text": "Provided that"
+        },
+        {
+          "id": "D",
+          "text": "As long as"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "'Unless' means 'if... not', introducing a negative conditional requirement ('Unless smallholder farmers receive technical training...').",
+      "sourceReference": "Section 5E.2, Page 121"
+    },
+    {
+      "id": "ENG-G12-U05-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "According to Section 5C.1, why must agricultural mechanization be supported by 'complementary inputs'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because machinery yields maximum benefits only when paired with improved seeds, fertilizers, and efficient irrigation management."
+        },
+        {
+          "id": "B",
+          "text": "Because machines operate automatically without any human operators or fuel."
+        },
+        {
+          "id": "C",
+          "text": "Because international laws mandate that all farms use imported synthetic pesticides exclusively."
+        },
+        {
+          "id": "D",
+          "text": "Because smallholders are prohibited from selling harvested crops in local markets."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Section 5C.1 emphasizes that the long-term benefits of farm mechanization are sustained through the combined availability and use of complementary inputs like high-yielding seeds, fertilizers, and water resources.",
+      "sourceReference": "Section 5C.1, Pages 109-110"
+    },
+    {
+      "id": "ENG-G12-U05-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "______ the Ministry of Agriculture allocated emergency subsidies for tractor imports last season, commercial wheat farmers would have suffered catastrophic losses.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Had"
+        },
+        {
+          "id": "B",
+          "text": "Were"
+        },
+        {
+          "id": "C",
+          "text": "If had"
+        },
+        {
+          "id": "D",
+          "text": "Should"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "In formal inverted Third Conditional constructions, 'If' is omitted and the auxiliary verb 'Had' is placed at the beginning before the subject ('Had the Ministry of Agriculture allocated...').",
+      "sourceReference": "Section 5E.2, Page 121"
+    },
+    {
+      "id": "ENG-G12-U05-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "______ the timely deployment of automated combine harvesters, the entire cereal crop would have rotted during the unseasonal heavy rains.",
+      "options": [
+        {
+          "id": "A",
+          "text": "But for"
+        },
+        {
+          "id": "B",
+          "text": "Except"
+        },
+        {
+          "id": "C",
+          "text": "Provided that"
+        },
+        {
+          "id": "D",
+          "text": "Unless"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "'But for' (meaning 'If it had not been for') introduces a conditional prepositional phrase followed by a noun phrase, indicating that without the harvesters, the crop would have rotted.",
+      "sourceReference": "Section 5E.2, Page 121"
+    },
+    {
+      "id": "ENG-G12-U05-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Analyze the grammatical function of the bold infinitive phrase in the sentence: 'To increase agricultural yield per hectare is the chief objective of farm mechanization.'",
+      "options": [
+        {
+          "id": "A",
+          "text": "Subject of the sentence (preceding the linking verb 'is')"
+        },
+        {
+          "id": "B",
+          "text": "Direct object of a transitive verb"
+        },
+        {
+          "id": "C",
+          "text": "Adverbial modifier of result"
+        },
+        {
+          "id": "D",
+          "text": "Object of a preposition"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "In this sentence, the infinitive phrase 'To increase agricultural yield per hectare' functions as the subject of the main linking verb 'is'.",
+      "sourceReference": "Section 5E.1, Pages 118-120"
+    },
+    {
+      "id": "ENG-G12-U05-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "In writing a descriptive essay about a modern mechanized farm, which set of transitional expressions best establishes clear SPATIAL LAYOUT and physical organization?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To the right, beyond the grain silos, in front of the processing unit"
+        },
+        {
+          "id": "B",
+          "text": "Furthermore, in addition, moreover"
+        },
+        {
+          "id": "C",
+          "text": "As a result, consequently, therefore"
+        },
+        {
+          "id": "D",
+          "text": "First, secondly, finally"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Spatial transitions (e.g., 'To the right', 'beyond', 'in front of') organize descriptive writing according to physical location and spatial relationships.",
+      "sourceReference": "Section 5F.2, Pages 124-126"
+    }
+  ]
 }

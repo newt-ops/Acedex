@@ -3,5 +3,411 @@
   "subject": "English",
   "unitNumber": 1,
   "unitTitle": "Sustainable Development",
-  "questions": []
+  "questions": [
+    {
+      "id": "ENG-G12-U01-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Economic growth focuses primarily on quantitative increases in national financial output, ______ sustainable development emphasizes qualitative improvements in human well-being and environmental health.",
+      "options": [
+        {
+          "id": "A",
+          "text": "similarly"
+        },
+        {
+          "id": "B",
+          "text": "whereas"
+        },
+        {
+          "id": "C",
+          "text": "as well as"
+        },
+        {
+          "id": "D",
+          "text": "in the same way"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "'Whereas' is a contrast connector used to highlight fundamental differences between two distinct concepts (quantitative economic growth vs. qualitative sustainable development).",
+      "sourceReference": "Section 1E.1, Page 16"
+    },
+    {
+      "id": "ENG-G12-U01-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "The reading passage notes that implementing the Sustainable Development Goals requires a comprehensive strategy. What is the closest contextual meaning of 'comprehensive'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Narrow and highly specialized"
+        },
+        {
+          "id": "B",
+          "text": "Thorough, broad, and all-inclusive"
+        },
+        {
+          "id": "C",
+          "text": "Temporary and easily abandoned"
+        },
+        {
+          "id": "D",
+          "text": "Extremely expensive and unprofitable"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In Section 1D.1 vocabulary, 'comprehensive' contextually means thorough, broad, or complete in scope.",
+      "sourceReference": "Section 1D.1, Page 14"
+    },
+    {
+      "id": "ENG-G12-U01-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In English pronunciation, the plural suffix '-s' is pronounced as the distinct syllable /-iz/ after sibilant consonant sounds. In which of the following words is '-s' pronounced as /-iz/?",
+      "options": [
+        {
+          "id": "A",
+          "text": "texts"
+        },
+        {
+          "id": "B",
+          "text": "buses"
+        },
+        {
+          "id": "C",
+          "text": "bags"
+        },
+        {
+          "id": "D",
+          "text": "parks"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Nouns ending in sibilant sounds (/s/, /z/, /ʃ/, /tʃ/, /dʒ/) add the plural pronunciation /-iz/ (e.g., 'buses' /ˈbʌsɪz/).",
+      "sourceReference": "Section 1B.1, Page 5"
+    },
+    {
+      "id": "ENG-G12-U01-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Identify the structural error in the following construction: 'Because local Ethiopian communities mobilized to support natural forest conservation projects.'",
+      "options": [
+        {
+          "id": "A",
+          "text": "Sentence Fragment (dependent clause standing alone without an independent main clause)"
+        },
+        {
+          "id": "B",
+          "text": "Run-on Sentence (two main clauses fused without punctuation)"
+        },
+        {
+          "id": "C",
+          "text": "Comma Splice (two main clauses joined improperly with only a comma)"
+        },
+        {
+          "id": "D",
+          "text": "Correct Compound Sentence"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Subordinating conjunctions like 'Because' introduce dependent clauses; leaving a dependent clause standing alone without a main clause creates a sentence fragment.",
+      "sourceReference": "Section 1E.2, Page 19"
+    },
+    {
+      "id": "ENG-G12-U01-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "According to Grade 12 Unit 1, how many integrated pillars form the core foundation of Sustainable Development Goals (SDGs)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "One pillar (exclusively commercial trade)"
+        },
+        {
+          "id": "B",
+          "text": "Two pillars (industrial technology and infrastructure)"
+        },
+        {
+          "id": "C",
+          "text": "Three pillars (economic, environmental, and social dimensions)"
+        },
+        {
+          "id": "D",
+          "text": "Five pillars (military, political, agricultural, space, and legal)"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Section 1C.2 specifies that sustainable development rests on three balanced, interrelated pillars: economic growth, environmental protection, and social equity.",
+      "sourceReference": "Section 1C.2, Page 12"
+    },
+    {
+      "id": "ENG-G12-U01-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "______ the city administration introduced government-initiated development projects to alleviate urban poverty, environmental impact assessments were frequently overlooked.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Although"
+        },
+        {
+          "id": "B",
+          "text": "Consequently"
+        },
+        {
+          "id": "C",
+          "text": "Therefore"
+        },
+        {
+          "id": "D",
+          "text": "In addition"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "'Although' introduces an adverbial clause of concession that contrasts a positive initiative (poverty reduction) with an unexpected negative oversight (overlooking environmental assessments).",
+      "sourceReference": "Section 1E.1, Pages 16-17"
+    },
+    {
+      "id": "ENG-G12-U01-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "When different development institutions combine their resources to produce a total impact greater than the sum of their individual efforts, they achieve '______'.",
+      "options": [
+        {
+          "id": "A",
+          "text": "stagnation"
+        },
+        {
+          "id": "B",
+          "text": "demise"
+        },
+        {
+          "id": "C",
+          "text": "synergy"
+        },
+        {
+          "id": "D",
+          "text": "compromise"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "In Section 1D.1, 'synergy' is defined as the combined or cooperative action/force of independent entities working together to achieve greater combined effectiveness.",
+      "sourceReference": "Section 1D.1, Page 14"
+    },
+    {
+      "id": "ENG-G12-U01-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In standard English pronunciation, which of the following regular past-tense verbs features the past-morpheme suffix pronounced as /-id/ (or /-əd/)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "watched"
+        },
+        {
+          "id": "B",
+          "text": "stayed"
+        },
+        {
+          "id": "C",
+          "text": "needed"
+        },
+        {
+          "id": "D",
+          "text": "walked"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Past-tense regular verbs whose base forms end in the alveolar stops /t/ or /d/ (such as 'need' -> 'needed') pronounce the '-ed' suffix as /-id/.",
+      "sourceReference": "Section 1B.1, Pages 5-6"
+    },
+    {
+      "id": "ENG-G12-U01-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In the listening text 'Innovation for Business and Development', what type of innovation is defined as a series of small, continuous improvements made to an existing product or process?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Radical innovation"
+        },
+        {
+          "id": "B",
+          "text": "Incremental innovation"
+        },
+        {
+          "id": "C",
+          "text": "Disruptive innovation"
+        },
+        {
+          "id": "D",
+          "text": "Stagnant innovation"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Section 1A.2 explicitly defines 'incremental innovation' as a series of small, step-by-step enhancements made over time, contrasting with radical or disruptive innovations.",
+      "sourceReference": "Section 1A.2, Page 4"
+    },
+    {
+      "id": "ENG-G12-U01-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Select the option that correctly rearranges the jumbled words into a syntactically coherent sentence: 'development / pillars / sustainable / equal / requires / three / emphasis / on / .'",
+      "options": [
+        {
+          "id": "A",
+          "text": "Sustainable development requires equal emphasis on three pillars."
+        },
+        {
+          "id": "B",
+          "text": "Three pillars sustainable development requires emphasis on equal."
+        },
+        {
+          "id": "C",
+          "text": "Equal emphasis requires sustainable development on three pillars."
+        },
+        {
+          "id": "D",
+          "text": "On three pillars sustainable equal development requires emphasis."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Standard declarative sentence structure: Subject ('Sustainable development') + Verb ('requires') + Direct Object / Prepositional phrase ('equal emphasis on three pillars').",
+      "sourceReference": "Section 1F.1, Page 20"
+    },
+    {
+      "id": "ENG-G12-U01-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Read the statement: 'Ethiopia's 2030 Agenda for Sustainable Development cannot be fully realized if economic growth is aggressively promoted at the expense of environmental protection.' Based on Section 1C.2, this statement is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "True, according to textbook evidence"
+        },
+        {
+          "id": "B",
+          "text": "False, according to textbook evidence"
+        },
+        {
+          "id": "C",
+          "text": "Not Given in the textbook"
+        },
+        {
+          "id": "D",
+          "text": "Irrelevant to environmental policy"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Section 1C.2 highlights that prioritizing the economic pillar while neglecting environmental protection creates an imbalance that holds back the full realization of the SDGs.",
+      "sourceReference": "Section 1C.2, Page 12"
+    },
+    {
+      "id": "ENG-G12-U01-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Choose the sentence that correctly combines two independent clauses using a conjunctive adverb with standard academic punctuation:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Ethiopia has established progressive environmental protection laws; however, enforcement remains slow due to institutional capacity constraints."
+        },
+        {
+          "id": "B",
+          "text": "Ethiopia has established progressive environmental protection laws, however; enforcement remains slow due to institutional capacity constraints."
+        },
+        {
+          "id": "C",
+          "text": "Ethiopia has established progressive environmental protection laws; however enforcement remains slow, due to institutional capacity constraints."
+        },
+        {
+          "id": "D",
+          "text": "Ethiopia has established progressive environmental protection laws however, enforcement remains slow due to institutional capacity constraints."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Joining two independent main clauses with a conjunctive adverb ('however') requires a preceding semicolon and a trailing comma (Clause 1; however, Clause 2.).",
+      "sourceReference": "Section 1E.1, Pages 16-18"
+    },
+    {
+      "id": "ENG-G12-U01-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "When structuring a public speech or expository essay comparing 'Economic Growth' and 'Sustainable Development', where should the thesis statement be positioned, and what primary function must it serve?",
+      "options": [
+        {
+          "id": "A",
+          "text": "At the end of the introductory section, explicitly defining the central comparative argument and guiding the scope of the paper."
+        },
+        {
+          "id": "B",
+          "text": "Inside the second body paragraph, functioning as a minor supporting detail."
+        },
+        {
+          "id": "C",
+          "text": "At the beginning of the concluding paragraph, introducing entirely new unmentioned research topics."
+        },
+        {
+          "id": "D",
+          "text": "In the title box, replacing the need for an introductory paragraph."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "In formal public speech and essay writing guidelines (Section 1B.3 & 1F.2), the thesis statement appears at the end of the introduction to define the central claim and outline the scope.",
+      "sourceReference": "Section 1B.3 & Section 1F.2, Pages 7, 21"
+    },
+    {
+      "id": "ENG-G12-U01-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "In Section 1C.2, the term 'cross-cutting issue' in national development planning refers specifically to a topic that:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Relates exclusively to a single specialized government department"
+        },
+        {
+          "id": "B",
+          "text": "Impacts multiple development sectors simultaneously and must be integrated across all policy areas"
+        },
+        {
+          "id": "C",
+          "text": "Cancels out pre-existing international trade treaties"
+        },
+        {
+          "id": "D",
+          "text": "Pertains solely to timber harvesting in forestry management"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Section 1C.2 and 1D.1 define 'cross-cutting' issues (such as gender equity or environmental sustainability) as subjects that span across multiple sectors and require coordinated integration.",
+      "sourceReference": "Section 1C.2 & 1D.1, Pages 12, 14"
+    },
+    {
+      "id": "ENG-G12-U01-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Based on the World Population Chart in Section 1F.4 (Urban vs. Rural 1950–2050), which statement accurately synthesizes the demographic trend projected by 2050?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The global urban population is projected to expand significantly to approximately 68%, outstripping the rural population percentage."
+        },
+        {
+          "id": "B",
+          "text": "The rural population will grow to 90% while the urban population declines to 10%."
+        },
+        {
+          "id": "C",
+          "text": "The urban and rural populations will remain perfectly equal at 50% each."
+        },
+        {
+          "id": "D",
+          "text": "The global urban population will completely vanish by 2050 due to reverse rural migration."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The chart in Section 1F.4 shows a major global demographic shift where the urban population rises from 30% in 1950 to a projected 68% by 2050, significantly surpassing the rural population proportion.",
+      "sourceReference": "Section 1F.4, Page 22"
+    }
+  ]
 }

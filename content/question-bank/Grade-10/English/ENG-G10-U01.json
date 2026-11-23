@@ -3,5 +3,411 @@
   "subject": "English",
   "unitNumber": 1,
   "unitTitle": "Population Growth",
-  "questions": []
+  "questions": [
+    {
+      "id": "ENG-G10-U01-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "The author ______ book on environmental degradation won an international award will visit our school tomorrow.",
+      "options": [
+        {
+          "id": "A",
+          "text": "who"
+        },
+        {
+          "id": "B",
+          "text": "whose"
+        },
+        {
+          "id": "C",
+          "text": "whom"
+        },
+        {
+          "id": "D",
+          "text": "which"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The possessive relative pronoun 'whose' is used to show ownership or relationship referring to a person ('author whose book...').",
+      "sourceReference": "Section 1.4.3, Page 28"
+    },
+    {
+      "id": "ENG-G10-U01-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "The rapid increase in urban population is exacerbating environmental degradation in many areas. What is the closest contextual meaning of 'exacerbating'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Reducing or lessening"
+        },
+        {
+          "id": "B",
+          "text": "Making worse or aggravating"
+        },
+        {
+          "id": "C",
+          "text": "Solving completely"
+        },
+        {
+          "id": "D",
+          "text": "Preventing entirely"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In context, 'exacerbating' means making a bad situation, problem, or crisis worse or more severe.",
+      "sourceReference": "Section 1.3.2, Page 13"
+    },
+    {
+      "id": "ENG-G10-U01-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Ras Dejen is the ______ mountain peak in Ethiopia.",
+      "options": [
+        {
+          "id": "A",
+          "text": "high"
+        },
+        {
+          "id": "B",
+          "text": "higher"
+        },
+        {
+          "id": "C",
+          "text": "highest"
+        },
+        {
+          "id": "D",
+          "text": "most high"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Comparing one entity against all others requires the superlative degree of a one-syllable adjective ('highest').",
+      "sourceReference": "Section 1.4.1, Page 18"
+    },
+    {
+      "id": "ENG-G10-U01-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "When the bus jerked unexpectedly, all the ripe avocadoes fell ______ the plastic bag because it had a hole.",
+      "options": [
+        {
+          "id": "A",
+          "text": "out of"
+        },
+        {
+          "id": "B",
+          "text": "for"
+        },
+        {
+          "id": "C",
+          "text": "off"
+        },
+        {
+          "id": "D",
+          "text": "behind"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The phrasal verb 'fall out of' means to drop or tumble from inside an enclosed container or space through an opening.",
+      "sourceReference": "Section 1.3.4, Page 16"
+    },
+    {
+      "id": "ENG-G10-U01-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "You have a high fever; I think you ______ see a doctor as soon as possible.",
+      "options": [
+        {
+          "id": "A",
+          "text": "should"
+        },
+        {
+          "id": "B",
+          "text": "suggests"
+        },
+        {
+          "id": "C",
+          "text": "ought not"
+        },
+        {
+          "id": "D",
+          "text": "had better to"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The modal verb 'should' is used to give recommendations or advice.",
+      "sourceReference": "Section 1.4.4, Page 31"
+    },
+    {
+      "id": "ENG-G10-U01-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Choose the correct proportional comparison structure: 'The ______ a region is populated, the ______ its natural resources are degraded.'",
+      "options": [
+        {
+          "id": "A",
+          "text": "more / more"
+        },
+        {
+          "id": "B",
+          "text": "most / most"
+        },
+        {
+          "id": "C",
+          "text": "much / much"
+        },
+        {
+          "id": "D",
+          "text": "many / many"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Proportional comparison follows the pattern 'The + comparative..., the + comparative...' to show two parallel changes occurring together ('The more..., the more...').",
+      "sourceReference": "Section 1.4.1, Page 17"
+    },
+    {
+      "id": "ENG-G10-U01-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which prefix added to the root word 'plan' creates a word meaning 'to plan or arrange beforehand'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "re-"
+        },
+        {
+          "id": "B",
+          "text": "pre-"
+        },
+        {
+          "id": "C",
+          "text": "mis-"
+        },
+        {
+          "id": "D",
+          "text": "dis-"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The prefix 'pre-' means before or beforehand. Attaching 'pre-' to 'plan' forms 'preplan'.",
+      "sourceReference": "Section 1.3.3, Page 15"
+    },
+    {
+      "id": "ENG-G10-U01-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Deforestation threatens both local flora and fauna. What do 'flora' and 'fauna' specifically refer to?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Rivers and mountain ranges"
+        },
+        {
+          "id": "B",
+          "text": "Plant life and animal life"
+        },
+        {
+          "id": "C",
+          "text": "Soil types and mineral rocks"
+        },
+        {
+          "id": "D",
+          "text": "Climates and weather patterns"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In biological and ecological contexts, 'flora' refers to all plant life in a region, and 'fauna' refers to all animal life.",
+      "sourceReference": "Section 1.3.1, Page 12"
+    },
+    {
+      "id": "ENG-G10-U01-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "The environmental expert with ______ I spoke emphasized the urgent need for community tree-planting.",
+      "options": [
+        {
+          "id": "A",
+          "text": "who"
+        },
+        {
+          "id": "B",
+          "text": "whom"
+        },
+        {
+          "id": "C",
+          "text": "whose"
+        },
+        {
+          "id": "D",
+          "text": "which"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "When a relative pronoun functions as the object of a preposition ('with'), standard English requires 'whom' for human antecedents.",
+      "sourceReference": "Section 1.4.3, Page 30"
+    },
+    {
+      "id": "ENG-G10-U01-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which pair of words contains the interdental voiceless consonant [θ] as in 'math' and the interdental voiced consonant [ð] as in 'soothe'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "think / this"
+        },
+        {
+          "id": "B",
+          "text": "cat / dog"
+        },
+        {
+          "id": "C",
+          "text": "ship / chip"
+        },
+        {
+          "id": "D",
+          "text": "bit / beat"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "'Think' contains the interdental voiceless fricative [θ], while 'this' contains the interdental voiced fricative [ð].",
+      "sourceReference": "Section 1.2.1, Page 5"
+    },
+    {
+      "id": "ENG-G10-U01-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Listen carefully! I ______ what the teacher is explaining now.",
+      "options": [
+        {
+          "id": "A",
+          "text": "am understanding"
+        },
+        {
+          "id": "B",
+          "text": "understand"
+        },
+        {
+          "id": "C",
+          "text": "was understanding"
+        },
+        {
+          "id": "D",
+          "text": "have been understanding"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Stative mental verbs like 'understand' are not used in continuous (-ing) forms, even when referring to immediate present perception.",
+      "sourceReference": "Section 1.4.2, Page 25"
+    },
+    {
+      "id": "ENG-G10-U01-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "The two business associates used to be close friends, but they fell ______ after a bitter disagreement over financial profits.",
+      "options": [
+        {
+          "id": "A",
+          "text": "for"
+        },
+        {
+          "id": "B",
+          "text": "out"
+        },
+        {
+          "id": "C",
+          "text": "off"
+        },
+        {
+          "id": "D",
+          "text": "through"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The phrasal verb 'fall out' means to quarrel, argue, or end a friendly relationship.",
+      "sourceReference": "Section 1.3.4, Page 16"
+    },
+    {
+      "id": "ENG-G10-U01-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Which sentence demonstrates CORRECT grammatical structure using the verb 'suggest'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "I suggest you to preplan your essay before writing."
+        },
+        {
+          "id": "B",
+          "text": "I suggest that you preplan your essay before writing."
+        },
+        {
+          "id": "C",
+          "text": "I suggest to preplan your essay before writing."
+        },
+        {
+          "id": "D",
+          "text": "I suggest you for preplanning your essay before writing."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The verb 'suggest' cannot take an indirect object + to-infinitive (*suggest you to do*); it requires either a gerund or a 'that'-clause with subjunctive or base verb.",
+      "sourceReference": "Section 1.4.4, Page 32"
+    },
+    {
+      "id": "ENG-G10-U01-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Ethiopia launched the Green Legacy initiative, ______ main purpose is to restore deforested landscapes and enhance agricultural productivity.",
+      "options": [
+        {
+          "id": "A",
+          "text": "whose"
+        },
+        {
+          "id": "B",
+          "text": "of which"
+        },
+        {
+          "id": "C",
+          "text": "which"
+        },
+        {
+          "id": "D",
+          "text": "that"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The possessive relative pronoun 'whose' can be used with non-human antecedents ('initiative') to indicate ownership or purpose in relative clauses.",
+      "sourceReference": "Section 1.4.3, Pages 28-29"
+    },
+    {
+      "id": "ENG-G10-U01-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Choose the sequence of connectors that BEST completes the paragraph: 'Rapid population growth causes severe environmental degradation; ______, it leads to widespread soil erosion. ______, citizens must apply family planning and environmental protection measures.'",
+      "options": [
+        {
+          "id": "A",
+          "text": "however / Furthermore"
+        },
+        {
+          "id": "B",
+          "text": "for example / Therefore"
+        },
+        {
+          "id": "C",
+          "text": "on the contrary / Besides"
+        },
+        {
+          "id": "D",
+          "text": "although / Otherwise"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The first gap introduces an illustrative example ('for example') of environmental degradation, while the second introduces a logical imperative conclusion ('Therefore').",
+      "sourceReference": "Section 1.5.1, Pages 33-34"
+    }
+  ]
 }

@@ -3,5 +3,411 @@
   "subject": "English",
   "unitNumber": 7,
   "unitTitle": "Community Services",
-  "questions": []
+  "questions": [
+    {
+      "id": "ENG-G09-U07-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "The young woman ______ volunteered at the local health clinic was awarded a certificate of appreciation.",
+      "options": [
+        {
+          "id": "A",
+          "text": "who"
+        },
+        {
+          "id": "B",
+          "text": "which"
+        },
+        {
+          "id": "C",
+          "text": "whose"
+        },
+        {
+          "id": "D",
+          "text": "where"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The relative pronoun 'who' is used to refer to a person functioning as the subject of the relative clause ('the young woman who volunteered').",
+      "sourceReference": "Section 7.4, Page 148"
+    },
+    {
+      "id": "ENG-G09-U07-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Many students feel fortunate to participate in community services that support underprivileged children. What is the closest contextual meaning of 'fortunate'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Unlucky or regretful"
+        },
+        {
+          "id": "B",
+          "text": "Lucky or blessed"
+        },
+        {
+          "id": "C",
+          "text": "Careless or thoughtless"
+        },
+        {
+          "id": "D",
+          "text": "Angry or frustrated"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In the Unit 7 reading text on community service, 'fortunate' contextually means being lucky, favored, or receiving a rewarding opportunity.",
+      "sourceReference": "Section 7.3, Page 146"
+    },
+    {
+      "id": "ENG-G09-U07-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "The book ______ describes the benefits of youth voluntary work is available in our school library.",
+      "options": [
+        {
+          "id": "A",
+          "text": "whom"
+        },
+        {
+          "id": "B",
+          "text": "which"
+        },
+        {
+          "id": "C",
+          "text": "whose"
+        },
+        {
+          "id": "D",
+          "text": "who"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The relative pronoun 'which' (or 'that') is used to refer to objects, things, or non-human subjects ('The book which describes...').",
+      "sourceReference": "Section 7.4, Page 148"
+    },
+    {
+      "id": "ENG-G09-U07-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Feel free to ______ at my office whenever you need guidance on your voluntary project.",
+      "options": [
+        {
+          "id": "A",
+          "text": "drop in"
+        },
+        {
+          "id": "B",
+          "text": "drop out"
+        },
+        {
+          "id": "C",
+          "text": "drop off"
+        },
+        {
+          "id": "D",
+          "text": "drop away"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The phrasal verb 'drop in' means to pay a brief, informal, or casual visit to a place or person.",
+      "sourceReference": "Section 7.3, Page 147"
+    },
+    {
+      "id": "ENG-G09-U07-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "What is the primary objective of engaging in community service programs?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To earn a high monthly salary from foreign donors"
+        },
+        {
+          "id": "B",
+          "text": "To help improve the community while gaining valuable life skills"
+        },
+        {
+          "id": "C",
+          "text": "To avoid attending regular school classes"
+        },
+        {
+          "id": "D",
+          "text": "To compete for political leadership roles"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "As emphasized in Unit 7, community service aims to assist individuals and local areas without financial payment while building personal empathy and civic responsibility.",
+      "sourceReference": "Section 7.1 & 7.2, Pages 142, 144"
+    },
+    {
+      "id": "ENG-G09-U07-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "We interviewed a doctor ______ dedicated efforts helped establish a free mobile clinic for elderly citizens.",
+      "options": [
+        {
+          "id": "A",
+          "text": "who"
+        },
+        {
+          "id": "B",
+          "text": "whom"
+        },
+        {
+          "id": "C",
+          "text": "whose"
+        },
+        {
+          "id": "D",
+          "text": "which"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The possessive relative pronoun 'whose' is used to show ownership or relationship ('a doctor whose dedicated efforts...').",
+      "sourceReference": "Section 7.4, Page 149"
+    },
+    {
+      "id": "ENG-G09-U07-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "The elderly woman ______ the student assisted every afternoon expressed her deep gratitude.",
+      "options": [
+        {
+          "id": "A",
+          "text": "whom"
+        },
+        {
+          "id": "B",
+          "text": "whose"
+        },
+        {
+          "id": "C",
+          "text": "where"
+        },
+        {
+          "id": "D",
+          "text": "which"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "'Whom' (or 'who') is used as the object relative pronoun referring to a person receiving the action in the relative clause ('the woman whom the student assisted').",
+      "sourceReference": "Section 7.4, Page 148"
+    },
+    {
+      "id": "ENG-G09-U07-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Although balancing schoolwork and voluntary activities is demanding, students should not ______ of their academic studies.",
+      "options": [
+        {
+          "id": "A",
+          "text": "drop in"
+        },
+        {
+          "id": "B",
+          "text": "drop out"
+        },
+        {
+          "id": "C",
+          "text": "drop off"
+        },
+        {
+          "id": "D",
+          "text": "drop by"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The phrasal verb 'drop out' means to withdraw, quit, or leave a school or educational program before completion.",
+      "sourceReference": "Section 7.3, Page 147"
+    },
+    {
+      "id": "ENG-G09-U07-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which of the following sentences correctly uses commas to set off a non-defining relative clause?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Gondar which is famous for its historical castles is located in northern Ethiopia."
+        },
+        {
+          "id": "B",
+          "text": "Gondar, which is famous for its historical castles, is located in northern Ethiopia."
+        },
+        {
+          "id": "C",
+          "text": "Gondar, that is famous for its historical castles, is located in northern Ethiopia."
+        },
+        {
+          "id": "D",
+          "text": "Gondar which, is famous for its historical castles is located in northern Ethiopia."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Non-defining relative clauses provide extra non-essential information about a specific noun and must be enclosed in commas. Additionally, 'that' cannot replace 'which' in non-defining clauses after a comma.",
+      "sourceReference": "Section 7.4.2, Page 152"
+    },
+    {
+      "id": "ENG-G09-U07-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "She has devoted her spare time to organizing tree-planting campaigns in her village. What is the synonym of 'devoted'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Wasted or lost"
+        },
+        {
+          "id": "B",
+          "text": "Dedicated or committed"
+        },
+        {
+          "id": "C",
+          "text": "Refused or rejected"
+        },
+        {
+          "id": "D",
+          "text": "Delayed or postponed"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In Unit 7 reading passages, 'devoted' means giving time, effort, or loyalty enthusiastically to a worthy cause or activity.",
+      "sourceReference": "Section 7.3, Page 146"
+    },
+    {
+      "id": "ENG-G09-U07-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Hawassa is the vibrant city ______ youth groups organized an environmental sanitation project last month.",
+      "options": [
+        {
+          "id": "A",
+          "text": "when"
+        },
+        {
+          "id": "B",
+          "text": "where"
+        },
+        {
+          "id": "C",
+          "text": "whose"
+        },
+        {
+          "id": "D",
+          "text": "which"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The relative adverb 'where' introduces a relative clause modifying a place noun ('city where youth groups organized...').",
+      "sourceReference": "Section 7.4.1, Page 150"
+    },
+    {
+      "id": "ENG-G09-U07-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Analyze the two sentences: (1) 'My sister who works in Hawassa was awarded for voluntary service.' (2) 'My father, who is over 60, still participates in community development.' Which statement accurately explains their grammatical difference?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Sentence (1) contains a non-defining clause indicating the speaker has only one sister, while (2) contains a defining clause."
+        },
+        {
+          "id": "B",
+          "text": "Sentence (1) contains a defining relative clause specifying which sister was awarded, whereas (2) contains a non-defining relative clause giving extra info about an already identified person."
+        },
+        {
+          "id": "C",
+          "text": "Both sentences contain non-defining relative clauses that require commas around the relative pronouns."
+        },
+        {
+          "id": "D",
+          "text": "Sentence (2) uses 'who' incorrectly because non-defining clauses must always use 'that'."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Defining relative clauses (without commas) specify which individual is being discussed out of several possibilities. Non-defining clauses (with commas) add extra non-essential facts about a unique, already identified entity.",
+      "sourceReference": "Section 7.4.1 & 7.4.2, Pages 151-152"
+    },
+    {
+      "id": "ENG-G09-U07-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "The community center ______ the volunteers collected donations was renovated last year.",
+      "options": [
+        {
+          "id": "A",
+          "text": "at which"
+        },
+        {
+          "id": "B",
+          "text": "to whom"
+        },
+        {
+          "id": "C",
+          "text": "of whose"
+        },
+        {
+          "id": "D",
+          "text": "for who"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "In formal relative constructions involving prepositions, 'preposition + which/whom' is used ('at which' or 'in which' modifying 'community center').",
+      "sourceReference": "Section 7.4.1, Page 152"
+    },
+    {
+      "id": "ENG-G09-U07-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "After the rain stopped, the volunteers set up tables outside and allowed the wet coats to ______ in the sun before packing them for delivery.",
+      "options": [
+        {
+          "id": "A",
+          "text": "dry out"
+        },
+        {
+          "id": "B",
+          "text": "drop in"
+        },
+        {
+          "id": "C",
+          "text": "clear off"
+        },
+        {
+          "id": "D",
+          "text": "eat up"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The phrasal verb 'dry out' means to make or become completely free of moisture or water through exposure to heat or air.",
+      "sourceReference": "Section 7.3 & 7.4, Page 148"
+    },
+    {
+      "id": "ENG-G09-U07-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Reorder the jumbled words into a syntactically correct sentence containing a defining relative clause: 'the / whom / saw / yesterday / nurse / is / hospital / at / the / you / voluntary / .'",
+      "options": [
+        {
+          "id": "A",
+          "text": "The nurse whom you saw at the hospital yesterday is voluntary."
+        },
+        {
+          "id": "B",
+          "text": "You saw the nurse whom yesterday is voluntary at the hospital."
+        },
+        {
+          "id": "C",
+          "text": "The nurse yesterday whom you saw is voluntary at the hospital."
+        },
+        {
+          "id": "D",
+          "text": "Whom you saw the nurse at the hospital yesterday is voluntary."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Standard English word order for a noun modified by a defining object relative clause is: Subject Noun ('The nurse') + Object Relative Clause ('whom you saw at the hospital yesterday') + Predicate ('is voluntary').",
+      "sourceReference": "Section 7.4.1, Pages 148-151"
+    }
+  ]
 }

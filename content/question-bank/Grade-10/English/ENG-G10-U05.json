@@ -3,5 +3,411 @@
   "subject": "English",
   "unitNumber": 5,
   "unitTitle": "Honey Processing",
-  "questions": []
+  "questions": [
+    {
+      "id": "ENG-G10-U05-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In describing the honey-making process in Simple Present passive voice: 'Pure honey ______ by worker bees from flower nectar.'",
+      "options": [
+        {
+          "id": "A",
+          "text": "is produced"
+        },
+        {
+          "id": "B",
+          "text": "produces"
+        },
+        {
+          "id": "C",
+          "text": "was produced"
+        },
+        {
+          "id": "D",
+          "text": "is producing"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "In Simple Present passive voice, the structure is 'is/are + past participle' ('is produced').",
+      "sourceReference": "Section 5.5.1, Page 131"
+    },
+    {
+      "id": "ENG-G10-U05-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which of the following nouns collocates with the verb 'do' rather than 'make'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "a decision"
+        },
+        {
+          "id": "B",
+          "text": "an effort"
+        },
+        {
+          "id": "C",
+          "text": "business"
+        },
+        {
+          "id": "D",
+          "text": "a mistake"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Standard English collocation requires 'do business' (as well as do cleaning, do homework, do gardening), whereas decision, effort, and mistake take 'make'.",
+      "sourceReference": "Section 5.5.3, Page 138"
+    },
+    {
+      "id": "ENG-G10-U05-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which option represents a clipped word formed by shortening a longer noun?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Smog"
+        },
+        {
+          "id": "B",
+          "text": "Brunch"
+        },
+        {
+          "id": "C",
+          "text": "Lab"
+        },
+        {
+          "id": "D",
+          "text": "Motel"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "'Lab' is a clipped word shortened from 'laboratory'. Smog, brunch, and motel are blended words.",
+      "sourceReference": "Section 5.4.1, Page 128"
+    },
+    {
+      "id": "ENG-G10-U05-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In the reading passage 'The Importance of Honey', what is the closest contextual meaning of 'therapeutic'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Causing severe pain or swelling"
+        },
+        {
+          "id": "B",
+          "text": "Having medical or healing value"
+        },
+        {
+          "id": "C",
+          "text": "Producing unpleasant odors"
+        },
+        {
+          "id": "D",
+          "text": "Requiring immediate refrigeration"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Contextually, 'therapeutic' refers to treatments or substances that have healing, curing, or medical benefits.",
+      "sourceReference": "Section 5.4, Page 127"
+    },
+    {
+      "id": "ENG-G10-U05-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Complete the sentence with the appropriate phrasal verb: 'If you want to excel academically, you must never ______ when faced with challenging tasks.'",
+      "options": [
+        {
+          "id": "A",
+          "text": "give up"
+        },
+        {
+          "id": "B",
+          "text": "give away"
+        },
+        {
+          "id": "C",
+          "text": "get up"
+        },
+        {
+          "id": "D",
+          "text": "get together"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The phrasal verb 'give up' means to stop trying, surrender, or abandon an effort.",
+      "sourceReference": "Section 5.4.2, Page 129"
+    },
+    {
+      "id": "ENG-G10-U05-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Choose the correct verb according to Subject-Verb Agreement rules: 'Neither the head beekeeper nor his assistants ______ present at the agricultural workshop yesterday.'",
+      "options": [
+        {
+          "id": "A",
+          "text": "was"
+        },
+        {
+          "id": "B",
+          "text": "were"
+        },
+        {
+          "id": "C",
+          "text": "is"
+        },
+        {
+          "id": "D",
+          "text": "are"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "When subjects are joined by 'neither...nor', the verb agrees with the subject closest to it ('assistants' -> plural past 'were').",
+      "sourceReference": "Section 5.5.2, Page 136"
+    },
+    {
+      "id": "ENG-G10-U05-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Convert the active modal sentence to passive: 'Farmers can store pure honey for years without refrigeration.' -> 'Pure honey ______ for years without refrigeration by farmers.'",
+      "options": [
+        {
+          "id": "A",
+          "text": "can store"
+        },
+        {
+          "id": "B",
+          "text": "can be stored"
+        },
+        {
+          "id": "C",
+          "text": "could store"
+        },
+        {
+          "id": "D",
+          "text": "is storing"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Passive sentences with modal verbs follow the structure: modal + 'be' + past participle ('can be stored').",
+      "sourceReference": "Section 5.5.1, Page 134"
+    },
+    {
+      "id": "ENG-G10-U05-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Identify the sentence that correctly uses the verb 'make' in a standard English collocation:",
+      "options": [
+        {
+          "id": "A",
+          "text": "He made his homework before going to bed."
+        },
+        {
+          "id": "B",
+          "text": "The extension officer made a valuable suggestion during the meeting."
+        },
+        {
+          "id": "C",
+          "text": "She made the cleaning of the kitchen quickly."
+        },
+        {
+          "id": "D",
+          "text": "They made a lot of business in the market today."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "'Suggestion' collocates with 'make' ('make a suggestion'). Homework, cleaning, and business take 'do'.",
+      "sourceReference": "Section 5.5.3, Page 138"
+    },
+    {
+      "id": "ENG-G10-U05-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "According to the reading passage 'The Importance of Honey', why does pure natural honey not require refrigeration?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because it contains high moisture and synthetic preservatives"
+        },
+        {
+          "id": "B",
+          "text": "Because its chemical composition and low water content prevent it from ever spoiling"
+        },
+        {
+          "id": "C",
+          "text": "Because bees inject modern chemical antibiotics into the cells"
+        },
+        {
+          "id": "D",
+          "text": "Because it must be kept frozen at sub-zero temperatures"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Section 5.3 explains that pure honey never spoils and does not need refrigeration due to its low water content and natural sugars (fructose and glucose).",
+      "sourceReference": "Section 5.3, Page 124"
+    },
+    {
+      "id": "ENG-G10-U05-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which of the following words is an example of a 'blended word' (a new word created by combining parts of two separate words)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Phone"
+        },
+        {
+          "id": "B",
+          "text": "Smog"
+        },
+        {
+          "id": "C",
+          "text": "Exam"
+        },
+        {
+          "id": "D",
+          "text": "Ad"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "'Smog' is a blended word formed from 'smoke' + 'fog'. Phone, exam, and ad are clipped words.",
+      "sourceReference": "Section 5.4.1, Page 128"
+    },
+    {
+      "id": "ENG-G10-U05-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Complete the sentence with the correct verb form: 'A ream of duplicating paper and a tube of ink ______ four hundred Ethiopian Birr.'",
+      "options": [
+        {
+          "id": "A",
+          "text": "cost"
+        },
+        {
+          "id": "B",
+          "text": "costs"
+        },
+        {
+          "id": "C",
+          "text": "costing"
+        },
+        {
+          "id": "D",
+          "text": "have cost"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Phrasal quantifier units specifying a single combined purchase price take a singular verb ('costs').",
+      "sourceReference": "Section 5.5.2, Page 137"
+    },
+    {
+      "id": "ENG-G10-U05-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Analyze the Subject-Verb Agreement in: 'One of the research experts who ______ studying apiculture in Ethiopia ______ that honey exports will increase.'",
+      "options": [
+        {
+          "id": "A",
+          "text": "is / believes"
+        },
+        {
+          "id": "B",
+          "text": "are / believes"
+        },
+        {
+          "id": "C",
+          "text": "are / believe"
+        },
+        {
+          "id": "D",
+          "text": "is / believe"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In 'one of the [plural noun] who [verb]', the relative pronoun 'who' refers to the plural antecedent ('experts' -> 'are studying'), while the main verb agrees with 'One' ('One ... believes').",
+      "sourceReference": "Section 5.5.2, Page 135"
+    },
+    {
+      "id": "ENG-G10-U05-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Select the sentence that demonstrates CORRECT passive voice structure when describing a multi-step traditional process:",
+      "options": [
+        {
+          "id": "A",
+          "text": "First the coffee beans are washed, then they are roasted on a flat iron plate until dark brown."
+        },
+        {
+          "id": "B",
+          "text": "First the coffee beans wash, then they roast on a flat iron plate until dark brown."
+        },
+        {
+          "id": "C",
+          "text": "First the coffee beans were washing, then they were roasting on a flat iron plate."
+        },
+        {
+          "id": "D",
+          "text": "First the coffee beans being washed, then they being roasted on a flat iron plate."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Describing process steps in passive voice requires Simple Present passive forms: 'are washed', 'are roasted'.",
+      "sourceReference": "Section 5.5.1, Page 133"
+    },
+    {
+      "id": "ENG-G10-U05-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "In Unit 5, medical terms associated with honey include 'laxative' and 'disinfectant'. What is the exact functional distinction between these two terms?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A laxative cleans skin wounds, while a disinfectant aids digestion."
+        },
+        {
+          "id": "B",
+          "text": "A laxative eases bowel movements, while a disinfectant destroys disease-causing bacteria."
+        },
+        {
+          "id": "C",
+          "text": "Both terms refer strictly to pain relief in cardiac muscles."
+        },
+        {
+          "id": "D",
+          "text": "A disinfectant is a dietary protein, while a laxative is a vitamin supplement."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Contextually in Section 5.4, 'laxative' refers to medicine/food that empties the bowels, whereas 'disinfectant' refers to agents that sterilize and kill bacteria.",
+      "sourceReference": "Section 5.4, Page 127"
+    },
+    {
+      "id": "ENG-G10-U05-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Select the row that accurately distinguishes clipped words from blended words:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Clipped: phone, lab, ad / Blended: smog, brunch, motel"
+        },
+        {
+          "id": "B",
+          "text": "Clipped: smog, brunch, motel / Blended: phone, lab, ad"
+        },
+        {
+          "id": "C",
+          "text": "Clipped: advertisement, laboratory, telephone / Blended: photo, math, gym"
+        },
+        {
+          "id": "D",
+          "text": "Clipped: fax, bus, cab / Blended: examination, professor, refrigerator"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Clipped words (phone, lab, ad) are shortened forms of single words; blended words (smog, brunch, motel) combine parts of two separate words.",
+      "sourceReference": "Section 5.4.1, Page 128"
+    }
+  ]
 }

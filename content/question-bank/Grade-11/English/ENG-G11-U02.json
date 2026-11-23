@@ -3,5 +3,411 @@
   "subject": "English",
   "unitNumber": 2,
   "unitTitle": "Civilization",
-  "questions": []
+  "questions": [
+    {
+      "id": "ENG-G11-U02-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "The archaeologist ______ discovered the ancient stelae at Axum presented his research findings at the international conference.",
+      "options": [
+        {
+          "id": "A",
+          "text": "who"
+        },
+        {
+          "id": "B",
+          "text": "which"
+        },
+        {
+          "id": "C",
+          "text": "whose"
+        },
+        {
+          "id": "D",
+          "text": "whom"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The relative pronoun 'who' refers to a human antecedent ('archaeologist') functioning as the subject of the relative clause.",
+      "sourceReference": "Section 2F.3, Page 57"
+    },
+    {
+      "id": "ENG-G11-U02-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Although defining civilization remains a contested topic among anthropologists, it provides a useful framework for study. What is the closest contextual meaning of 'contested'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Disputed or debated"
+        },
+        {
+          "id": "B",
+          "text": "Universally accepted"
+        },
+        {
+          "id": "C",
+          "text": "Officially forgotten"
+        },
+        {
+          "id": "D",
+          "text": "Completely illegal"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "In Section 2C.1, 'contested' contextually means disputed, debated, or argued about among scholars.",
+      "sourceReference": "Section 2C.1, Page 44"
+    },
+    {
+      "id": "ENG-G11-U02-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "During our long-distance telephone conversation, bad weather caused the line to suddenly ______ before we could finish talking.",
+      "options": [
+        {
+          "id": "A",
+          "text": "cut off"
+        },
+        {
+          "id": "B",
+          "text": "look after"
+        },
+        {
+          "id": "C",
+          "text": "take off"
+        },
+        {
+          "id": "D",
+          "text": "name after"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The phrasal verb 'cut off' means to interrupt or disconnect a telephone connection unexpectedly.",
+      "sourceReference": "Section 2D.2, Page 49"
+    },
+    {
+      "id": "ENG-G11-U02-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "I would rather visit historical heritage sites ______ spend my vacation shopping in crowded modern malls.",
+      "options": [
+        {
+          "id": "A",
+          "text": "than"
+        },
+        {
+          "id": "B",
+          "text": "to"
+        },
+        {
+          "id": "C",
+          "text": "from"
+        },
+        {
+          "id": "D",
+          "text": "instead"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The grammatical structure 'would rather + base verb... than + base verb' is used to express preference between two choices.",
+      "sourceReference": "Section 2B.3, Page 41"
+    },
+    {
+      "id": "ENG-G11-U02-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which of the following words contains the English diphthong sound /aɪ/ as in 'light'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "fight"
+        },
+        {
+          "id": "B",
+          "text": "make"
+        },
+        {
+          "id": "C",
+          "text": "town"
+        },
+        {
+          "id": "D",
+          "text": "pair"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "'Fight' [faɪt] contains the diphthong /aɪ/. 'Make' has /eɪ/, 'town' has /aʊ/, and 'pair' has /eə/.",
+      "sourceReference": "Section 2B.1, Pages 38-39"
+    },
+    {
+      "id": "ENG-G11-U02-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "By the time the museum guide arrived at the ancient rock-hewn church, the tour group ______ waiting for nearly an hour.",
+      "options": [
+        {
+          "id": "A",
+          "text": "had been"
+        },
+        {
+          "id": "B",
+          "text": "has been"
+        },
+        {
+          "id": "C",
+          "text": "is"
+        },
+        {
+          "id": "D",
+          "text": "will have been"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "When an ongoing duration occurred before a specified point in past time ('arrived'), the Past Perfect Continuous ('had been') is required.",
+      "sourceReference": "Section 2E.1, Pages 50-51"
+    },
+    {
+      "id": "ENG-G11-U02-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "The historian stated, 'The Incan Empire had a complex social hierarchy.' In reported speech: The historian stated that the Incan Empire ______ a complex social hierarchy.",
+      "options": [
+        {
+          "id": "A",
+          "text": "had had"
+        },
+        {
+          "id": "B",
+          "text": "has"
+        },
+        {
+          "id": "C",
+          "text": "is having"
+        },
+        {
+          "id": "D",
+          "text": "will have"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "When reporting direct speech with a past reporting verb ('stated'), Simple Past verbs ('had') backshift to Past Perfect ('had had').",
+      "sourceReference": "Section 2E.2, Pages 52-54"
+    },
+    {
+      "id": "ENG-G11-U02-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "The senior anthropologist with ______ I discussed the features of ancient Egyptian civilization published a new textbook.",
+      "options": [
+        {
+          "id": "A",
+          "text": "whom"
+        },
+        {
+          "id": "B",
+          "text": "who"
+        },
+        {
+          "id": "C",
+          "text": "whose"
+        },
+        {
+          "id": "D",
+          "text": "which"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "When a relative pronoun follows a preposition ('with'), formal standard English requires 'whom' for human antecedents.",
+      "sourceReference": "Section 2F.3, Page 57"
+    },
+    {
+      "id": "ENG-G11-U02-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "In early urban settlements, agricultural production yielded a surplus that allowed specialized artisans to thrive. What does 'surplus' mean in this context?",
+      "options": [
+        {
+          "id": "A",
+          "text": "An amount or quantity greater than what is needed"
+        },
+        {
+          "id": "B",
+          "text": "A severe food shortage or drought"
+        },
+        {
+          "id": "C",
+          "text": "A compulsory financial tax paid to rulers"
+        },
+        {
+          "id": "D",
+          "text": "A rapid loss of soil fertility"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Contextually in Unit 2, 'surplus' refers to an excess amount of food or goods produced beyond immediate subsistence consumption needs.",
+      "sourceReference": "Section 2C.1 & 2D.1, Pages 44, 46"
+    },
+    {
+      "id": "ENG-G11-U02-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "The museum curator shouted, 'Do not touch the ancient museum artifacts!' In reported speech: The curator told the visitors ______ the ancient museum artifacts.",
+      "options": [
+        {
+          "id": "A",
+          "text": "not to touch"
+        },
+        {
+          "id": "B",
+          "text": "to not touch"
+        },
+        {
+          "id": "C",
+          "text": "don't touch"
+        },
+        {
+          "id": "D",
+          "text": "no touching"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Negative orders in reported speech follow the pattern 'tell + object + not to + base verb' ('told the visitors not to touch').",
+      "sourceReference": "Section 2E.2, Page 54"
+    },
+    {
+      "id": "ENG-G11-U02-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Aster prefers studying ancient Ethiopian history ______ watching contemporary action movies.",
+      "options": [
+        {
+          "id": "A",
+          "text": "to"
+        },
+        {
+          "id": "B",
+          "text": "than"
+        },
+        {
+          "id": "C",
+          "text": "rather"
+        },
+        {
+          "id": "D",
+          "text": "from"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The verb 'prefer' takes the preposition 'to' when comparing two gerunds or nouns ('prefers studying... to watching...').",
+      "sourceReference": "Section 2B.3, Page 41"
+    },
+    {
+      "id": "ENG-G11-U02-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "The local stonecutters ______ on the monument for several months before the kingdom's treasury ran out of funds.",
+      "options": [
+        {
+          "id": "A",
+          "text": "had been working"
+        },
+        {
+          "id": "B",
+          "text": "have been working"
+        },
+        {
+          "id": "C",
+          "text": "were working"
+        },
+        {
+          "id": "D",
+          "text": "work"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "An action that was ongoing over a duration prior to a specific completed past event ('ran out') requires the Past Perfect Continuous ('had been working').",
+      "sourceReference": "Section 2E.1, Page 50"
+    },
+    {
+      "id": "ENG-G11-U02-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Worku said, 'I will present my report on ancient calendars tomorrow.' In reported speech: Worku said that he would present his report on ancient calendars ______.",
+      "options": [
+        {
+          "id": "A",
+          "text": "the following day"
+        },
+        {
+          "id": "B",
+          "text": "tomorrow"
+        },
+        {
+          "id": "C",
+          "text": "the previous day"
+        },
+        {
+          "id": "D",
+          "text": "yesterday"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "In reported speech with a past reporting verb ('said'), future time adverbs like 'tomorrow' shift to 'the following day' or 'the next day'.",
+      "sourceReference": "Section 2E.2, Page 53"
+    },
+    {
+      "id": "ENG-G11-U02-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "According to the reading passage 'Features of Contemporary Civilization', why is the Incan Empire cited as a unique historical case study?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It maintained a complex government, architecture, and art without possessing a written language system."
+        },
+        {
+          "id": "B",
+          "text": "It was the first civilization to invent the 365-day Gregorian solar calendar."
+        },
+        {
+          "id": "C",
+          "text": "It relied entirely on nomadism and rejected permanent urban settlements."
+        },
+        {
+          "id": "D",
+          "text": "It was ruled by foreign European invaders throughout its entire existence."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Section 2C.1 (Paragraph 4) notes that the Incan Empire was a large civilization with government, architecture, and art, but lacked a written language, illustrating why defining 'civilization' is challenging.",
+      "sourceReference": "Section 2C.1, Page 44"
+    },
+    {
+      "id": "ENG-G11-U02-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Select the sentence that demonstrates CORRECT punctuation and relative pronoun usage in a non-defining relative clause:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Lalibela, which is famous for its eleven monolithic rock-hewn churches, attracts thousands of pilgrims every year."
+        },
+        {
+          "id": "B",
+          "text": "Lalibela that is famous for its eleven monolithic rock-hewn churches attracts thousands of pilgrims every year."
+        },
+        {
+          "id": "C",
+          "text": "Lalibela, that is famous for its eleven monolithic rock-hewn churches, attracts thousands of pilgrims every year."
+        },
+        {
+          "id": "D",
+          "text": "Lalibela which is famous for its eleven monolithic rock-hewn churches, attracts thousands of pilgrims every year."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Non-defining relative clauses provide extra non-essential information about a proper noun ('Lalibela'), must be set off by commas, and use 'which' (never 'that') for non-human antecedents.",
+      "sourceReference": "Section 2F.3, Pages 57-58"
+    }
+  ]
 }

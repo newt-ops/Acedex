@@ -3,5 +3,411 @@
   "subject": "English",
   "unitNumber": 6,
   "unitTitle": "Green Economies",
-  "questions": []
+  "questions": [
+    {
+      "id": "ENG-G12-U06-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "The Ethiopian government initiated the Climate Resilient Green Economy (CRGE) strategy ______ protect the nation from the adverse impacts of climate change.",
+      "options": [
+        {
+          "id": "A",
+          "text": "in order to"
+        },
+        {
+          "id": "B",
+          "text": "so that"
+        },
+        {
+          "id": "C",
+          "text": "because"
+        },
+        {
+          "id": "D",
+          "text": "in order that"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "'In order to' is followed directly by a base verb ('protect') to express purpose. 'So that' and 'in order that' require a full subject-verb clause.",
+      "sourceReference": "Section 6B.2, Pages 136-138"
+    },
+    {
+      "id": "ENG-G12-U06-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In the reading text 'Towards a Green Growth', what is the contextual definition of a 'green economy'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "An economy that achieves sustainable growth while reducing negative impacts on the environment and carbon emissions"
+        },
+        {
+          "id": "B",
+          "text": "An economy based exclusively on printing paper currency in green color"
+        },
+        {
+          "id": "C",
+          "text": "An economy that relies entirely on imported fossil fuels and coal"
+        },
+        {
+          "id": "D",
+          "text": "An economy where industrial factories are banned from operating"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Section 6C.1 defines a 'green economy' as a sustainable economic model where growth and development continue while minimizing environmental damage and greenhouse gas emissions.",
+      "sourceReference": "Section 6C.1, Pages 140-142"
+    },
+    {
+      "id": "ENG-G12-U06-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Dr. Simon, ______ is an expert economist, provided valuable advice on inclusive green economy strategies for African nations.",
+      "options": [
+        {
+          "id": "A",
+          "text": "who"
+        },
+        {
+          "id": "B",
+          "text": "which"
+        },
+        {
+          "id": "C",
+          "text": "whose"
+        },
+        {
+          "id": "D",
+          "text": "whom"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The relative pronoun 'who' functions as the subject pronoun referring to a person ('Dr. Simon').",
+      "sourceReference": "Section 6E.1, Pages 149-150"
+    },
+    {
+      "id": "ENG-G12-U06-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "You should never allow anyone to ______ you just because you are less experienced in environmental policy.",
+      "options": [
+        {
+          "id": "A",
+          "text": "talk down to"
+        },
+        {
+          "id": "B",
+          "text": "talk out of"
+        },
+        {
+          "id": "C",
+          "text": "talk into"
+        },
+        {
+          "id": "D",
+          "text": "talk back for"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The three-word phrasal verb 'talk down to' means to speak to someone in a patronizing or condescending manner.",
+      "sourceReference": "Section 6D.3, Pages 147-148"
+    },
+    {
+      "id": "ENG-G12-U06-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Complete the analogy based on tool and function from Section 6D.2: CARPENTER is to HAMMER as DENTIST is to ______.",
+      "options": [
+        {
+          "id": "A",
+          "text": "drill"
+        },
+        {
+          "id": "B",
+          "text": "tooth"
+        },
+        {
+          "id": "C",
+          "text": "hospital"
+        },
+        {
+          "id": "D",
+          "text": "patient"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "In a worker-and-tool analogy relationship, a carpenter uses a hammer as a primary tool; similarly, a dentist uses a drill as a tool.",
+      "sourceReference": "Section 6D.2, Page 147"
+    },
+    {
+      "id": "ENG-G12-U06-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Environmentalists advocate for afforestation projects ______ urban communities can enjoy cleaner air and reduced temperatures.",
+      "options": [
+        {
+          "id": "A",
+          "text": "so that"
+        },
+        {
+          "id": "B",
+          "text": "in order to"
+        },
+        {
+          "id": "C",
+          "text": "so as to"
+        },
+        {
+          "id": "D",
+          "text": "for the reason"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "'So that' introduces an adverbial clause of purpose containing a complete subject ('urban communities') and a modal verb ('can enjoy').",
+      "sourceReference": "Section 6B.2, Pages 136-138"
+    },
+    {
+      "id": "ENG-G12-U06-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "The reading text notes that traditional growth policies are failing to 'mitigate' climate hazards. What is the closest contextual synonym for 'mitigate'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Alleviate, lessen, or reduce the severity of"
+        },
+        {
+          "id": "B",
+          "text": "Intensify, exacerbate, or aggravate"
+        },
+        {
+          "id": "C",
+          "text": "Ignore, overlook, or disregard"
+        },
+        {
+          "id": "D",
+          "text": "Celebrate, promote, or expand"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "'Mitigate' contextually means to make something less severe, serious, or painful; to alleviate or reduce.",
+      "sourceReference": "Section 6C.2, Pages 144-145"
+    },
+    {
+      "id": "ENG-G12-U06-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Ethiopia completed the National Adaptation Plan (NAP-ETH), ______ strategic priorities include agriculture, water resources, and climate resilient infrastructure.",
+      "options": [
+        {
+          "id": "A",
+          "text": "whose"
+        },
+        {
+          "id": "B",
+          "text": "which"
+        },
+        {
+          "id": "C",
+          "text": "where"
+        },
+        {
+          "id": "D",
+          "text": "whom"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "'Whose' is a possessive relative pronoun that can refer to non-human entities and organizations ('National Adaptation Plan... whose strategic priorities...').",
+      "sourceReference": "Section 6E.1, Pages 149-150"
+    },
+    {
+      "id": "ENG-G12-U06-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which sentence correctly uses a standard expression for giving formal advice to a municipality regarding waste management?",
+      "options": [
+        {
+          "id": "A",
+          "text": "I strongly advise you to implement municipal waste recycling programs to cut landfill emissions."
+        },
+        {
+          "id": "B",
+          "text": "You must apologize immediately for asking my opinion."
+        },
+        {
+          "id": "C",
+          "text": "Why didn't you clean the streets yesterday morning?"
+        },
+        {
+          "id": "D",
+          "text": "I disagree completely with everything you have ever said."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "'I strongly advise you to...' is a standard formal phrase used to express recommendations and advice.",
+      "sourceReference": "Section 6B.1, Pages 133-135"
+    },
+    {
+      "id": "ENG-G12-U06-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "What is the primary target set by Ethiopia's Climate Resilient Green Economy (CRGE) initiative regarding greenhouse gas emissions by the year 2030?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To cap greenhouse gas emissions at roughly the same level as 2011 while achieving middle-income economic status."
+        },
+        {
+          "id": "B",
+          "text": "To double industrial carbon emissions every five years."
+        },
+        {
+          "id": "C",
+          "text": "To replace all agricultural fields with solar power installations."
+        },
+        {
+          "id": "D",
+          "text": "To eliminate all motorized transport from urban centers immediately."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Section 6C.2 states that the CRGE strategy aims to reach middle-income status by 2025 while maintaining greenhouse gas emissions in 2030 at roughly the same level as 2011.",
+      "sourceReference": "Section 6C.2, Pages 144-146"
+    },
+    {
+      "id": "ENG-G12-U06-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Her friends managed to ______ her ______ making a risky financial investment in an unverified carbon-credit firm.",
+      "options": [
+        {
+          "id": "A",
+          "text": "talk / out of"
+        },
+        {
+          "id": "B",
+          "text": "talk / into"
+        },
+        {
+          "id": "C",
+          "text": "talk / down to"
+        },
+        {
+          "id": "D",
+          "text": "talk / back to"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "'Talk someone out of (something)' means to persuade or convince someone not to do something.",
+      "sourceReference": "Section 6D.3, Pages 147-148"
+    },
+    {
+      "id": "ENG-G12-U06-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Identify the sentence that demonstrates CORRECT PARALLEL STRUCTURE:",
+      "options": [
+        {
+          "id": "A",
+          "text": "To build a green economy, nations must invest in renewable energy, protect natural forests, and promote sustainable agriculture."
+        },
+        {
+          "id": "B",
+          "text": "To build a green economy, nations must invest in renewable energy, protecting natural forests, and to promote sustainable agriculture."
+        },
+        {
+          "id": "C",
+          "text": "To build a green economy, nations must invest in renewable energy, protect natural forests, and sustainable agriculture promotion."
+        },
+        {
+          "id": "D",
+          "text": "To build a green economy, nations must investing in renewable energy, protect natural forests, and promote sustainable agriculture."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Option A maintains parallel grammatical structure by using three parallel base verbs following 'must': 'invest...', 'protect...', and 'promote...'.",
+      "sourceReference": "Section 6F.1, Pages 151-153"
+    },
+    {
+      "id": "ENG-G12-U06-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Farmers across the arid rift valley adopt drought-resistant crop varieties ______ suffer catastrophic crop failures during unexpected dry spells.",
+      "options": [
+        {
+          "id": "A",
+          "text": "so as not to"
+        },
+        {
+          "id": "B",
+          "text": "so that not"
+        },
+        {
+          "id": "C",
+          "text": "in order to"
+        },
+        {
+          "id": "D",
+          "text": "for not"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Negative purpose infinitive structures require 'so as not to + base verb' or 'in order not to + base verb' ('so as not to suffer').",
+      "sourceReference": "Section 6B.2, Pages 136-138"
+    },
+    {
+      "id": "ENG-G12-U06-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Based on Section 6C.2, what fundamental structural difference separates a 'green economy' from a traditional 'black energy economy'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A green economy derives energy from naturally replenished renewable resources with zero carbon emissions, whereas a black energy economy relies on carbon-intensive fossil fuels like coal and oil."
+        },
+        {
+          "id": "B",
+          "text": "A green economy prohibits trade between nations, whereas a black economy relies exclusively on international commercial banks."
+        },
+        {
+          "id": "C",
+          "text": "A black energy economy uses solar panels, whereas a green economy burns petroleum fuel."
+        },
+        {
+          "id": "D",
+          "text": "Both economic models produce identical environmental outcomes according to UN studies."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Section 6C.2 explicitly contrasts the green economy (zero carbon emissions based on renewable energy) with the black energy economy (carbon-intensive fossil fuels such as coal and oil).",
+      "sourceReference": "Section 6C.2, Pages 144-145"
+    },
+    {
+      "id": "ENG-G12-U06-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "When writing an analytical comparison of two pie-charts illustrating sector contributions to Gross Domestic Product (GDP), which sentence structure best avoids wordiness while presenting accurate comparative trends?",
+      "options": [
+        {
+          "id": "A",
+          "text": "While Country A's agriculture sector accounts for the largest proportion of GDP at 32%, Country B's GDP is dominated by the service sector at 32%."
+        },
+        {
+          "id": "B",
+          "text": "Country A has agriculture which is 32% due to the fact that it is a big sector, and for Country B service is 32% for the reason that it is large."
+        },
+        {
+          "id": "C",
+          "text": "In Country A agriculture is 32% and in Country B service is 32% because both countries are identical in every single way."
+        },
+        {
+          "id": "D",
+          "text": "Agriculture contributes 32% in Country A, nevertheless, service contributes 32% in Country B because of missing data."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Option A uses a concise, balanced complex clause ('While Country A's... at 32%, Country B's...') to present a comparative analysis of data without wordiness or logical flaws.",
+      "sourceReference": "Section 6F.2, Pages 154-156"
+    }
+  ]
 }

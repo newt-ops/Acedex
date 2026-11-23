@@ -3,5 +3,411 @@
   "subject": "English",
   "unitNumber": 8,
   "unitTitle": "Efficiency of Health Services",
-  "questions": []
+  "questions": [
+    {
+      "id": "ENG-G11-U08-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "The medical director spoke with great authority ______ he were the chief healthcare officer of the entire regional administration.",
+      "options": [
+        {
+          "id": "A",
+          "text": "as if"
+        },
+        {
+          "id": "B",
+          "text": "because"
+        },
+        {
+          "id": "C",
+          "text": "so that"
+        },
+        {
+          "id": "D",
+          "text": "although"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "'As if' introduces an adverbial clause of manner expressing an hypothetical or unreal condition, followed by the subjunctive verb 'were'.",
+      "sourceReference": "Section 8E.1, Page 210"
+    },
+    {
+      "id": "ENG-G11-U08-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In the reading text 'Prevention of Chronic and Infectious Disease', what is the closest contextual meaning of 'demographic'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Relating to the structure, statistical characteristics, and changes of human populations"
+        },
+        {
+          "id": "B",
+          "text": "Relating to geographical landforms and soil qualities"
+        },
+        {
+          "id": "C",
+          "text": "Related to financial bank accounts and stock investments"
+        },
+        {
+          "id": "D",
+          "text": "Pertaining to meteorological weather forecasts"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "'Demographic' refers to the statistical structure and population characteristics (e.g. age distribution, birth rates, life expectancy).",
+      "sourceReference": "Section 8D.1, Page 209"
+    },
+    {
+      "id": "ENG-G11-U08-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "We must hurry to complete the hospital inventory because there is ______ time left before the evening shift starts.",
+      "options": [
+        {
+          "id": "A",
+          "text": "little"
+        },
+        {
+          "id": "B",
+          "text": "few"
+        },
+        {
+          "id": "C",
+          "text": "a few"
+        },
+        {
+          "id": "D",
+          "text": "many"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "'Time' is an uncountable noun in this context; 'little' modifies uncountable nouns to signify 'hardly any'.",
+      "sourceReference": "Section 8E.4, Pages 215-216"
+    },
+    {
+      "id": "ENG-G11-U08-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "When the chief medical examiner arrived at the rural health post, she immediately began to ______ the patient registers.",
+      "options": [
+        {
+          "id": "A",
+          "text": "look through"
+        },
+        {
+          "id": "B",
+          "text": "look down on"
+        },
+        {
+          "id": "C",
+          "text": "look up to"
+        },
+        {
+          "id": "D",
+          "text": "look away from"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The phrasal verb 'look through' means to examine, inspect, or read through documents or records carefully.",
+      "sourceReference": "Section 8D.2, Page 209"
+    },
+    {
+      "id": "ENG-G11-U08-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Complete the interview dialogue: Interviewer: '______ is responsible for maintaining sanitation in public hospitals?' Nurse: 'Both administrative staff and individual community members share this duty.'",
+      "options": [
+        {
+          "id": "A",
+          "text": "Who do you think"
+        },
+        {
+          "id": "B",
+          "text": "Why do you think"
+        },
+        {
+          "id": "C",
+          "text": "How often do you think"
+        },
+        {
+          "id": "D",
+          "text": "Where do you think"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "'Who do you think' is used in interview questions to inquire about the agent or person responsible for a specific duty.",
+      "sourceReference": "Section 8B.2, Page 206"
+    },
+    {
+      "id": "ENG-G11-U08-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "______ medical facilities are constructed in rural districts, ______ life expectancy increases among vulnerable populations.",
+      "options": [
+        {
+          "id": "A",
+          "text": "The more / the higher"
+        },
+        {
+          "id": "B",
+          "text": "More / higher"
+        },
+        {
+          "id": "C",
+          "text": "The most / the highest"
+        },
+        {
+          "id": "D",
+          "text": "As / as higher"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Adverb clauses of comparison expressing proportional increase use 'The + comparative..., the + comparative...' ('The more..., the higher...').",
+      "sourceReference": "Section 8E.2, Page 211"
+    },
+    {
+      "id": "ENG-G11-U08-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "By the end of this year, the new community health clinic ______ by the Ministry of Health.",
+      "options": [
+        {
+          "id": "A",
+          "text": "will have been constructed"
+        },
+        {
+          "id": "B",
+          "text": "will construct"
+        },
+        {
+          "id": "C",
+          "text": "has constructed"
+        },
+        {
+          "id": "D",
+          "text": "was constructing"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "An action that will be completed prior to a future point in time ('By the end of this year') in passive voice requires the Future Perfect Passive ('will have been + past participle').",
+      "sourceReference": "Section 8E.3, Pages 213-214"
+    },
+    {
+      "id": "ENG-G11-U08-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Medical researchers are investigating the complex ______ of chronic non-communicable diseases in aging urban populations.",
+      "options": [
+        {
+          "id": "A",
+          "text": "etiologies"
+        },
+        {
+          "id": "B",
+          "text": "demographics"
+        },
+        {
+          "id": "C",
+          "text": "vaccinations"
+        },
+        {
+          "id": "D",
+          "text": "prescriptions"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "In Section 8D.1 medical vocabulary, 'etiologies' refers to the causes, origins, or causal reasons behind medical conditions.",
+      "sourceReference": "Section 8D.1, Page 209"
+    },
+    {
+      "id": "ENG-G11-U08-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "______ the regional hospital was equipped with modern diagnostic tools, it faced severe staff shortages during peak outbreak periods.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Although"
+        },
+        {
+          "id": "B",
+          "text": "Consequently"
+        },
+        {
+          "id": "C",
+          "text": "Therefore"
+        },
+        {
+          "id": "D",
+          "text": "In addition"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "'Although' introduces an adverbial clause of concession that contrasts two opposing facts (modern tools vs. staff shortages).",
+      "sourceReference": "Section 8F.2, Pages 218-219"
+    },
+    {
+      "id": "ENG-G11-U08-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "According to the Grade 11 reading text 'Prevention of Chronic and Infectious Disease', why are chronic diseases expected to encompass developing regions over the next two decades?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because successful disease control efforts have increased life expectancy, resulting in demographic shifts toward aging populations."
+        },
+        {
+          "id": "B",
+          "text": "Because traditional medicine has been banned across all developing nations."
+        },
+        {
+          "id": "C",
+          "text": "Because infectious diseases have been completely eradicated worldwide."
+        },
+        {
+          "id": "D",
+          "text": "Because medical schools have stopped training specialized physicians."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Section 8C.1 explicitly states that successful control of infectious diseases increases life expectancy and alters population demographics toward older ages susceptible to chronic conditions.",
+      "sourceReference": "Section 8C.1, Pages 207-208"
+    },
+    {
+      "id": "ENG-G11-U08-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Although the clinic is located in a remote area, ______ dedicated volunteers arrived yesterday to assist with the vaccination drive.",
+      "options": [
+        {
+          "id": "A",
+          "text": "a few"
+        },
+        {
+          "id": "B",
+          "text": "little"
+        },
+        {
+          "id": "C",
+          "text": "a little"
+        },
+        {
+          "id": "D",
+          "text": "much"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "'A few' modifies plural countable nouns ('volunteers') and carries a positive sense meaning 'some/a small number'.",
+      "sourceReference": "Section 8E.4, Pages 215-216"
+    },
+    {
+      "id": "ENG-G11-U08-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "The trainee paramedic performed the CPR resuscitation procedure exactly ______ she had been taught during her clinical emergency training.",
+      "options": [
+        {
+          "id": "A",
+          "text": "the way"
+        },
+        {
+          "id": "B",
+          "text": "as if"
+        },
+        {
+          "id": "C",
+          "text": "like"
+        },
+        {
+          "id": "D",
+          "text": "as though"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "'The way' functions as a subordinating conjunction introducing an adverb clause of manner that expresses the precise manner in which an action was executed.",
+      "sourceReference": "Section 8E.1, Pages 210-211"
+    },
+    {
+      "id": "ENG-G11-U08-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Select the sentence that demonstrates CORRECT transformation into the Past Continuous Passive voice:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Intensive health education campaigns were being conducted across the district when the epidemic broke out."
+        },
+        {
+          "id": "B",
+          "text": "Intensive health education campaigns was conducted across the district when the epidemic broke out."
+        },
+        {
+          "id": "C",
+          "text": "Intensive health education campaigns had conducted across the district when the epidemic broke out."
+        },
+        {
+          "id": "D",
+          "text": "Intensive health education campaigns are conducting across the district when the epidemic broke out."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Past Continuous Passive syntax requires 'was/were + being + past participle' ('were being conducted').",
+      "sourceReference": "Section 8E.3, Pages 212-214"
+    },
+    {
+      "id": "ENG-G11-U08-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "According to Richard Guerrant's research cited in Unit 8, what is the primary long-term impact of repeated early childhood diarrheal illnesses?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It causes chronic impacts on growth, cognition, physical fitness, and school performance through reduced nutritional absorption."
+        },
+        {
+          "id": "B",
+          "text": "It leads exclusively to immediate adult cardiovascular failure."
+        },
+        {
+          "id": "C",
+          "text": "It completely eliminates the risk of developing diabetes in later life."
+        },
+        {
+          "id": "D",
+          "text": "It enhances natural immunity without affecting child development."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Section 8C.1 (Paragraph 3) notes that early diarrheal illnesses act as cofactors with malnutrition, reducing nutritional absorption and causing significant long-term impairment to physical growth, cognition, and academic performance.",
+      "sourceReference": "Section 8C.1, Page 208"
+    },
+    {
+      "id": "ENG-G11-U08-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Choose the sentence that is correctly punctuated and capitalized according to standard mechanics for academic health reports:",
+      "options": [
+        {
+          "id": "A",
+          "text": "\"Although preventive healthcare requires initial capital, it significantly reduces long-term hospitalization costs,\" stated Dr. Abera."
+        },
+        {
+          "id": "B",
+          "text": "\"Although preventive healthcare requires initial capital, it significantly reduces long-term hospitalization costs\" Stated Dr. Abera."
+        },
+        {
+          "id": "C",
+          "text": "\"Although preventive healthcare requires initial capital it significantly reduces long-term hospitalization costs,\" stated dr. Abera."
+        },
+        {
+          "id": "D",
+          "text": "\"Although, preventive healthcare requires initial capital, it significantly reduces long term hospitalization costs\" stated Dr Abera"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Direct quotations ending with a comma inside quotation marks followed by a lower-case reporting verb ('stated Dr. Abera') adhere to standard English writing mechanics.",
+      "sourceReference": "Section 8F.1, Pages 217, 222"
+    }
+  ]
 }

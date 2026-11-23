@@ -3,5 +3,411 @@
   "subject": "English",
   "unitNumber": 6,
   "unitTitle": "Poverty in Ethiopia",
-  "questions": []
+  "questions": [
+    {
+      "id": "ENG-G09-U06-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Students ______ use their mobile phones during national examinations because it is strictly prohibited.",
+      "options": [
+        {
+          "id": "A",
+          "text": "mustn't"
+        },
+        {
+          "id": "B",
+          "text": "don't have to"
+        },
+        {
+          "id": "C",
+          "text": "needn't"
+        },
+        {
+          "id": "D",
+          "text": "doesn't have to"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Mustn't (must not) is used to express strict prohibition, indicating that an action is forbidden by rules or laws.",
+      "sourceReference": "Section 6.4, Page 134"
+    },
+    {
+      "id": "ENG-G09-U06-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In the reading text 'The Impact of Poverty', what is the closest contextual meaning of the word 'wages'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Taxes paid to the government"
+        },
+        {
+          "id": "B",
+          "text": "Payments or earnings received for work performed"
+        },
+        {
+          "id": "C",
+          "text": "Loans borrowed from financial institutions"
+        },
+        {
+          "id": "D",
+          "text": "Fines imposed by court authorities"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In economic and employment contexts, 'wages' refers to regular payment or financial compensation earned for work or services.",
+      "sourceReference": "Section 6.3.1, Page 129"
+    },
+    {
+      "id": "ENG-G09-U06-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Today is a public holiday, so government employees ______ go to their offices.",
+      "options": [
+        {
+          "id": "A",
+          "text": "mustn't"
+        },
+        {
+          "id": "B",
+          "text": "don't have to"
+        },
+        {
+          "id": "C",
+          "text": "must"
+        },
+        {
+          "id": "D",
+          "text": "should not to"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "'Don't have to' indicates an absence of obligation, meaning the action is not necessary because it is a holiday.",
+      "sourceReference": "Section 6.4, Page 134"
+    },
+    {
+      "id": "ENG-G09-U06-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "While cleaning the school archives yesterday, the researcher ______ a rare historical manuscript.",
+      "options": [
+        {
+          "id": "A",
+          "text": "came across"
+        },
+        {
+          "id": "B",
+          "text": "came about"
+        },
+        {
+          "id": "C",
+          "text": "closed off"
+        },
+        {
+          "id": "D",
+          "text": "clogged up"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The phrasal verb 'come across' means to find or discover something unexpectedly or by chance.",
+      "sourceReference": "Section 6.3.2, Page 130"
+    },
+    {
+      "id": "ENG-G09-U06-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which suffix added to the verb 'punish' forms the noun meaning the penalty imposed for an offense?",
+      "options": [
+        {
+          "id": "A",
+          "text": "-tion"
+        },
+        {
+          "id": "B",
+          "text": "-ment"
+        },
+        {
+          "id": "C",
+          "text": "-ate"
+        },
+        {
+          "id": "D",
+          "text": "-ize"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Attaching the suffix '-ment' to the root verb 'punish' forms the noun 'punishment'.",
+      "sourceReference": "Section 6.3.2, Page 130"
+    },
+    {
+      "id": "ENG-G09-U06-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Choose the sentence that correctly uses 'have to' to express an external legal obligation rather than a speaker's personal preference.",
+      "options": [
+        {
+          "id": "A",
+          "text": "I must buy a nice gift for my friend's birthday tonight."
+        },
+        {
+          "id": "B",
+          "text": "All citizens have to pay income tax according to national revenue laws."
+        },
+        {
+          "id": "C",
+          "text": "I think I must take a short nap after lunch."
+        },
+        {
+          "id": "D",
+          "text": "You must try this delicious traditional coffee."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "'Have to' is used when obligation originates from external rules, laws, or regulations (like paying taxes), whereas 'must' often reflects internal personal speaker choice.",
+      "sourceReference": "Section 6.4, Page 134"
+    },
+    {
+      "id": "ENG-G09-U06-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "'Children born into severe economic hardship often face inadequate healthcare, perpetuating a cycle of disadvantage.' What does 'perpetuating' mean in this context?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Stopping or bringing to a sudden end"
+        },
+        {
+          "id": "B",
+          "text": "Continuing or causing to endure indefinitely"
+        },
+        {
+          "id": "C",
+          "text": "Reducing the intensity of a problem"
+        },
+        {
+          "id": "D",
+          "text": "Reversing a historical trend"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Contextually, 'perpetuating' means causing a process, situation, or cycle to continue or preserve itself over time.",
+      "sourceReference": "Section 6.2 & 6.3.1, Pages 127, 129"
+    },
+    {
+      "id": "ENG-G09-U06-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "How did such an unexpected misunderstanding ______ among the committee members during the meeting?",
+      "options": [
+        {
+          "id": "A",
+          "text": "come about"
+        },
+        {
+          "id": "B",
+          "text": "come across"
+        },
+        {
+          "id": "C",
+          "text": "come apart"
+        },
+        {
+          "id": "D",
+          "text": "close down"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The phrasal verb 'come about' means to happen, occur, or take place.",
+      "sourceReference": "Section 6.3.2, Page 130"
+    },
+    {
+      "id": "ENG-G09-U06-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "You ______ bring a heavy coat since the weather is warm, but you ______ touch the exposed electrical cables.",
+      "options": [
+        {
+          "id": "A",
+          "text": "mustn't / don't have to"
+        },
+        {
+          "id": "B",
+          "text": "don't have to / mustn't"
+        },
+        {
+          "id": "C",
+          "text": "must / needn't"
+        },
+        {
+          "id": "D",
+          "text": "don't need to / don't have to"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Bringing a heavy coat is unnecessary ('don't have to'), while touching exposed live wires is strictly forbidden ('mustn't').",
+      "sourceReference": "Section 6.4, Page 134"
+    },
+    {
+      "id": "ENG-G09-U06-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "To achieve long-term economic growth, the government needs to implement ______ policies that withstand financial shocks. What is the contextual meaning of 'robust'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Weak and vulnerable"
+        },
+        {
+          "id": "B",
+          "text": "Strong, healthy, and resilient"
+        },
+        {
+          "id": "C",
+          "text": "Temporary and short-lived"
+        },
+        {
+          "id": "D",
+          "text": "Expensive and wasteful"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "In economic contexts, 'robust' describes policies or systems that are strong, sturdy, and capable of enduring difficult conditions.",
+      "sourceReference": "Section 6.3.1, Page 129"
+    },
+    {
+      "id": "ENG-G09-U06-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which of the following verbs is formed by adding the suffix '-ize' (or '-ise') to the noun 'priority'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "prioritize"
+        },
+        {
+          "id": "B",
+          "text": "priorityment"
+        },
+        {
+          "id": "C",
+          "text": "prioritaten"
+        },
+        {
+          "id": "D",
+          "text": "prioritition"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Adding the suffix '-ize' / '-ise' to 'priority' forms the verb 'prioritize', meaning to assign order of importance.",
+      "sourceReference": "Section 6.3.2, Page 130"
+    },
+    {
+      "id": "ENG-G09-U06-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "In standard formal English, what is the precise distinction between 'need not' and 'must not'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "'Need not' expresses strict prohibition, while 'must not' expresses absence of obligation."
+        },
+        {
+          "id": "B",
+          "text": "'Need not' expresses that an action is unnecessary, while 'must not' expresses that an action is strictly forbidden."
+        },
+        {
+          "id": "C",
+          "text": "Both expressions convey identical legal obligations without any stylistic difference."
+        },
+        {
+          "id": "D",
+          "text": "'Must not' is used only for past actions, whereas 'need not' is used for future intentions."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "'Need not' (or don't have to) indicates that an action is not required/unnecessary, whereas 'must not' (mustn't) indicates prohibition where the action is forbidden.",
+      "sourceReference": "Section 6.4, Pages 134, 136"
+    },
+    {
+      "id": "ENG-G09-U06-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Complete the sentence: 'Community development workers ______ consult local residents before initiating projects, but they ______ force anyone to participate against their will.'",
+      "options": [
+        {
+          "id": "A",
+          "text": "mustn't / have to"
+        },
+        {
+          "id": "B",
+          "text": "have to / mustn't"
+        },
+        {
+          "id": "C",
+          "text": "don't have to / must"
+        },
+        {
+          "id": "D",
+          "text": "needn't / don't have to"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Consulting residents represents a required procedural obligation ('have to'), whereas forcing individuals is strictly prohibited ('mustn't').",
+      "sourceReference": "Section 6.4, Pages 133-134"
+    },
+    {
+      "id": "ENG-G09-U06-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "In the reading text 'The Impact of Poverty', how is 'debt bondage' defined as a form of labor exploitation?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Pledging oneself as a servant in exchange for basic necessities where wages never exceed charged living expenses"
+        },
+        {
+          "id": "B",
+          "text": "Working voluntarily for a charitable organization without financial expectations"
+        },
+        {
+          "id": "C",
+          "text": "Owning a person legally as property under chattel slavery laws"
+        },
+        {
+          "id": "D",
+          "text": "Migrating legally to foreign countries with government-subsidized employment contracts"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The text defines debt bondage as a situation where poor individuals pledge their labor for basic necessities, but are paid less than what they are charged for room and board, preventing them from ever working their way free.",
+      "sourceReference": "Section 6.2, Page 127"
+    },
+    {
+      "id": "ENG-G09-U06-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Reorder the jumbled words into a syntactically correct sentence: 'government / infrastructure / to / rural / the / invest / in / has / .'",
+      "options": [
+        {
+          "id": "A",
+          "text": "The government has to invest in rural infrastructure."
+        },
+        {
+          "id": "B",
+          "text": "In rural infrastructure has to invest the government."
+        },
+        {
+          "id": "C",
+          "text": "The government invest has to in rural infrastructure."
+        },
+        {
+          "id": "D",
+          "text": "Has to invest the government in rural infrastructure."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Standard English sentence structure requires: Subject ('The government') + Semi-modal verb ('has to') + Base verb ('invest') + Prepositional phrase ('in rural infrastructure').",
+      "sourceReference": "Section 6.4 & 6.6, Pages 134, 140"
+    }
+  ]
 }

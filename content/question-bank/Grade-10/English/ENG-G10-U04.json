@@ -3,5 +3,411 @@
   "subject": "English",
   "unitNumber": 4,
   "unitTitle": "Tourist Attractions",
-  "questions": []
+  "questions": [
+    {
+      "id": "ENG-G10-U04-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Look at those dark heavy clouds covering the sky! It ______ rain very soon.",
+      "options": [
+        {
+          "id": "A",
+          "text": "is going to"
+        },
+        {
+          "id": "B",
+          "text": "will"
+        },
+        {
+          "id": "C",
+          "text": "is raining"
+        },
+        {
+          "id": "D",
+          "text": "has rained"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "'be going to' is used to make predictions based on present, clear physical evidence (such as dark clouds in the sky).",
+      "sourceReference": "Section 4.5.1, Page 107"
+    },
+    {
+      "id": "ENG-G10-U04-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In the Unit 4 reading text on Tourism, what is the closest synonym of the word 'indispensable'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Unimportant or minor"
+        },
+        {
+          "id": "B",
+          "text": "Essential or absolutely necessary"
+        },
+        {
+          "id": "C",
+          "text": "Temporary and brief"
+        },
+        {
+          "id": "D",
+          "text": "Expensive and luxury"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "'Indispensable' means absolutely essential, vital, or necessary for a particular purpose.",
+      "sourceReference": "Section 4.4, Page 104"
+    },
+    {
+      "id": "ENG-G10-U04-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "The tourist guide gave us ______ useful information about the historical obelisks of Axum.",
+      "options": [
+        {
+          "id": "A",
+          "text": "any"
+        },
+        {
+          "id": "B",
+          "text": "some"
+        },
+        {
+          "id": "C",
+          "text": "many"
+        },
+        {
+          "id": "D",
+          "text": "an"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "'Some' is used in affirmative declarative statements with uncountable nouns like 'information'.",
+      "sourceReference": "Section 4.5.3, Page 110"
+    },
+    {
+      "id": "ENG-G10-U04-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which of the following compound nouns is formed by combining 'verb + noun'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Sunlight"
+        },
+        {
+          "id": "B",
+          "text": "Dining room"
+        },
+        {
+          "id": "C",
+          "text": "Waterfall"
+        },
+        {
+          "id": "D",
+          "text": "Airship"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "'Dining room' is formed by combining the verb participle 'dining' with the noun 'room' (Section 4.4.1).",
+      "sourceReference": "Section 4.4.1, Page 105"
+    },
+    {
+      "id": "ENG-G10-U04-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Ethiopia is ______ rich in natural and cultural heritages that millions of international tourists visit every year.",
+      "options": [
+        {
+          "id": "A",
+          "text": "such"
+        },
+        {
+          "id": "B",
+          "text": "so"
+        },
+        {
+          "id": "C",
+          "text": "too"
+        },
+        {
+          "id": "D",
+          "text": "very"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "'So + adjective + that clause' is used to express cause and result when modifying an adjective alone ('rich').",
+      "sourceReference": "Section 4.5.4, Page 112"
+    },
+    {
+      "id": "ENG-G10-U04-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Complete the dialogue: Habtamu: 'The reception phone is ringing loudly in the office.' Fikirte: 'Don't worry, I ______ answer it.'",
+      "options": [
+        {
+          "id": "A",
+          "text": "am going to"
+        },
+        {
+          "id": "B",
+          "text": "will"
+        },
+        {
+          "id": "C",
+          "text": "would"
+        },
+        {
+          "id": "D",
+          "text": "am answering"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "'Will' is used for spontaneous decisions made at the exact moment of speaking, whereas 'be going to' expresses prior plans.",
+      "sourceReference": "Section 4.5.1, Pages 107-108"
+    },
+    {
+      "id": "ENG-G10-U04-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Community-based tourism allows local residents to sell handmade products, thereby increasing regional revenue. What is the contextual meaning of 'revenue'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Total income or money generated by an state, business, or community"
+        },
+        {
+          "id": "B",
+          "text": "Total financial losses incurred during a trip"
+        },
+        {
+          "id": "C",
+          "text": "Fines paid to traffic law enforcement officers"
+        },
+        {
+          "id": "D",
+          "text": "Cost of imported heavy machinery"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Contextually, 'revenue' refers to the total income or yield of money received by a community or organization from sales and services.",
+      "sourceReference": "Section 4.4, Page 104"
+    },
+    {
+      "id": "ENG-G10-U04-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Simien Mountains National Park features ______ an evergreen scenery that the flow of tourists increases steadily.",
+      "options": [
+        {
+          "id": "A",
+          "text": "so"
+        },
+        {
+          "id": "B",
+          "text": "such"
+        },
+        {
+          "id": "C",
+          "text": "very"
+        },
+        {
+          "id": "D",
+          "text": "too"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "'Such + article + adjective + noun + that' ('such an evergreen scenery that') is used when modifying a noun phrase.",
+      "sourceReference": "Section 4.5.4, Pages 112-113"
+    },
+    {
+      "id": "ENG-G10-U04-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Did the tour operator find ______ available hotel rooms in Gondar? No, he couldn't find ______.",
+      "options": [
+        {
+          "id": "A",
+          "text": "some / any"
+        },
+        {
+          "id": "B",
+          "text": "any / any"
+        },
+        {
+          "id": "C",
+          "text": "any / some"
+        },
+        {
+          "id": "D",
+          "text": "some / some"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "'Any' is standardly used in general questions and in negative statements.",
+      "sourceReference": "Section 4.5.3, Page 110"
+    },
+    {
+      "id": "ENG-G10-U04-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Foreign tourists highly appreciate the genuine hospitality offered by Ethiopian host communities. What is the synonym of 'hospitality'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Hostility and aggression"
+        },
+        {
+          "id": "B",
+          "text": "Kindness and courtesy in welcoming strangers"
+        },
+        {
+          "id": "C",
+          "text": "Indifference to visitors"
+        },
+        {
+          "id": "D",
+          "text": "Strict commercial regulation"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "'Hospitality' is defined as kindness, warmth, and courtesy in welcoming and entertaining guests or strangers.",
+      "sourceReference": "Section 4.4, Page 104"
+    },
+    {
+      "id": "ENG-G10-U04-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "According to the reading passage on Tourism, what defines 'community-based tourism'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Tourism controlled exclusively by international luxury resort companies"
+        },
+        {
+          "id": "B",
+          "text": "Tourism where members of local communities produce crafts and services to directly earn additional income"
+        },
+        {
+          "id": "C",
+          "text": "Government programs that restrict local residents from entering tourist parks"
+        },
+        {
+          "id": "D",
+          "text": "Free accommodation sponsored by foreign embassies"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Community-based tourism involves local residents manufacturing and selling local products to tourists, earning income directly for community development.",
+      "sourceReference": "Section 4.3, Page 101"
+    },
+    {
+      "id": "ENG-G10-U04-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Select the sentence that uses result clause structures ('so... that' or 'such... that') INCORRECTLY:",
+      "options": [
+        {
+          "id": "A",
+          "text": "The waterfall created so beautiful a sound that everyone stopped to listen."
+        },
+        {
+          "id": "B",
+          "text": "It was such a rainy season that I bought a thick jacket."
+        },
+        {
+          "id": "C",
+          "text": "Girma is such a far-sighted person that he has never been exposed to serious problems."
+        },
+        {
+          "id": "D",
+          "text": "The film was such interesting that everyone was talking about it on their way home."
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "Option D is incorrect because 'interesting' is an adjective standing alone before 'that' without a noun; it requires 'so' ('so interesting that'), not 'such'.",
+      "sourceReference": "Section 4.5.4, Pages 112-114"
+    },
+    {
+      "id": "ENG-G10-U04-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Which sentence correctly uses apostrophes to demonstrate SEPARATE ownership of different books by Belete and Ayele?",
+      "options": [
+        {
+          "id": "A",
+          "text": "This is Belete and Ayele's book."
+        },
+        {
+          "id": "B",
+          "text": "These are Belete's and Ayele's books."
+        },
+        {
+          "id": "C",
+          "text": "These are Belete and Ayele's books."
+        },
+        {
+          "id": "D",
+          "text": "This is Beletes' and Ayeles' book."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "To indicate separate ownership by two individuals, the possessive apostrophe + 's' is added to each individual name ('Belete's and Ayele's books'). Joint ownership attaches apostrophe + 's' only to the last name.",
+      "sourceReference": "Section 4.6.2, Page 117"
+    },
+    {
+      "id": "ENG-G10-U04-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "'If there are pick-pockets, brigands, or bandits fighting in forests, no tourist will attempt to visit that area.' What is the contextual meaning of 'brigands'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Licensed wildlife protection rangers"
+        },
+        {
+          "id": "B",
+          "text": "Members of a gang of bandits or outlaws that attack and rob travelers"
+        },
+        {
+          "id": "C",
+          "text": "Professional hotel waiters and waitresses"
+        },
+        {
+          "id": "D",
+          "text": "Foreign travel journalists"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Contextually in security discussions within Unit 4, 'brigands' refers to violent outlaws or bandits who rob travelers.",
+      "sourceReference": "Section 4.3 & 4.4, Pages 102, 104"
+    },
+    {
+      "id": "ENG-G10-U04-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Reorder the jumbled clauses into a syntactically correct sentence expressing cause and result: 'so / that / the / waterfall / spectacular / twin / views / were / offered / visitors / unbelievable / satisfaction / .'",
+      "options": [
+        {
+          "id": "A",
+          "text": "The twin falls were so spectacular that the views offered visitors unbelievable satisfaction."
+        },
+        {
+          "id": "B",
+          "text": "The views were so spectacular that twin falls offered unbelievable satisfaction visitors."
+        },
+        {
+          "id": "C",
+          "text": "Unbelievable satisfaction was so spectacular that visitors offered the twin falls views."
+        },
+        {
+          "id": "D",
+          "text": "So spectacular were the views that twin falls offered visitors unbelievable satisfaction."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Standard sentence structure for 'so... that' result clauses follows: Subject ('The twin falls') + Verb ('were') + 'so' + Adjective ('spectacular') + 'that' + Result Clause ('the views offered visitors unbelievable satisfaction').",
+      "sourceReference": "Section 4.5.4 & 4.6, Pages 112, 116"
+    }
+  ]
 }

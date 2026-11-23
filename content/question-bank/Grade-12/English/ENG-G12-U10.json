@@ -3,5 +3,411 @@
   "subject": "English",
   "unitNumber": 10,
   "unitTitle": "Robotics",
-  "questions": []
+  "questions": [
+    {
+      "id": "ENG-G12-U10-Q001",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Autonomous robots navigate complex environments using sensors ______ they do not collide with unexpected obstacles.",
+      "options": [
+        {
+          "id": "A",
+          "text": "so that"
+        },
+        {
+          "id": "B",
+          "text": "despite"
+        },
+        {
+          "id": "C",
+          "text": "in spite of"
+        },
+        {
+          "id": "D",
+          "text": "because of"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "'So that' is a subordinating conjunction of purpose followed by a complete subject-verb clause ('they do not collide').",
+      "sourceReference": "Section 10F.1, Pages 259-260"
+    },
+    {
+      "id": "ENG-G12-U10-Q002",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "In the reading passage on 'Assistive Robots', what is the closest contextual meaning of the word 'autonomous'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Capable of functioning independently without direct human control"
+        },
+        {
+          "id": "B",
+          "text": "Heavily dependent on continuous manual steering"
+        },
+        {
+          "id": "C",
+          "text": "Exclusively powered by fossil fuels"
+        },
+        {
+          "id": "D",
+          "text": "Completely incapable of movement"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Contextually in Unit 10, 'autonomous' describes robotic systems that operate independently using automated sensors without direct human intervention.",
+      "sourceReference": "Section 10A.1 & 10D.1, Pages 244, 252"
+    },
+    {
+      "id": "ENG-G12-U10-Q003",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Identify the structural error in the following construction: 'Because software engineers designed wireless sensors for the brain-controlled robotic suit.'",
+      "options": [
+        {
+          "id": "A",
+          "text": "Sentence Fragment (a dependent clause left standing alone without an independent main clause)"
+        },
+        {
+          "id": "B",
+          "text": "Run-on Sentence"
+        },
+        {
+          "id": "C",
+          "text": "Comma Splice"
+        },
+        {
+          "id": "D",
+          "text": "Misplaced Modifier"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Subordinating conjunctions like 'Because' introduce dependent clauses; leaving a dependent clause standing alone without an independent main clause creates a sentence fragment.",
+      "sourceReference": "Section 10E.1, Pages 255-256"
+    },
+    {
+      "id": "ENG-G12-U10-Q004",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Before leaving the robotics laboratory, student researchers must ______ all electronic tools and clean their workstations.",
+      "options": [
+        {
+          "id": "A",
+          "text": "tidy up"
+        },
+        {
+          "id": "B",
+          "text": "tidy off"
+        },
+        {
+          "id": "C",
+          "text": "tidy down"
+        },
+        {
+          "id": "D",
+          "text": "tidy into"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The phrasal verb 'tidy up' means to clean, organize, or put items back into their proper places.",
+      "sourceReference": "Section 10D.3, Pages 254-255"
+    },
+    {
+      "id": "ENG-G12-U10-Q005",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Which section of a formal Curriculum Vitae (CV) provides a brief overview of an applicant's academic degrees, diplomas, and institutions attended?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Educational Background"
+        },
+        {
+          "id": "B",
+          "text": "Personal Hobbies"
+        },
+        {
+          "id": "C",
+          "text": "Referees"
+        },
+        {
+          "id": "D",
+          "text": "Salutation Line"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "In CV writing (Section 10F.2), 'Educational Background' details academic qualifications, degrees earned, and schooling history.",
+      "sourceReference": "Section 10F.2, Pages 259-260"
+    },
+    {
+      "id": "ENG-G12-U10-Q006",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Select the sentence that demonstrates CORRECT PARALLEL STRUCTURE:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Modern robotic manipulators are designed to grip fragile objects, lift heavy materials, and assemble complex components."
+        },
+        {
+          "id": "B",
+          "text": "Modern robotic manipulators are designed to grip fragile objects, lifting heavy materials, and assemble complex components."
+        },
+        {
+          "id": "C",
+          "text": "Modern robotic manipulators are designed to grip fragile objects, to lift heavy materials, and assembling complex components."
+        },
+        {
+          "id": "D",
+          "text": "Modern robotic manipulators are designed for gripping fragile objects, lift heavy materials, and assemble complex components."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Parallelism requires matching grammatical structures (three parallel bare infinitives following 'are designed to': 'grip...', 'lift...', and 'assemble...').",
+      "sourceReference": "Section 10E.1, Pages 256-257"
+    },
+    {
+      "id": "ENG-G12-U10-Q007",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "According to the reading passage 'Assistive Robots' (Section 10C.2), how does a brain-controlled exoskeleton suit enable paralyzed patients to walk?",
+      "options": [
+        {
+          "id": "A",
+          "text": "By picking up neural signals from the brain and transmitting wireless commands to the mechanical limbs."
+        },
+        {
+          "id": "B",
+          "text": "By using voice-activated smartphone commands exclusively."
+        },
+        {
+          "id": "C",
+          "text": "By manually pumping hydraulic fluid into the patient's knees."
+        },
+        {
+          "id": "D",
+          "text": "By sending electrical shocks directly to muscle tendons without sensors."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Section 10C.2 explains that wearable robotic exoskeletons pick up brain signals and convert them into wireless commands that move the mechanical arms and legs.",
+      "sourceReference": "Section 10C.2, Pages 250-251"
+    },
+    {
+      "id": "ENG-G12-U10-Q008",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "The research team decided to ______ the annual robotics exhibition until next semester because of unforeseen technical delays.",
+      "options": [
+        {
+          "id": "A",
+          "text": "put off"
+        },
+        {
+          "id": "B",
+          "text": "put out"
+        },
+        {
+          "id": "C",
+          "text": "put up with"
+        },
+        {
+          "id": "D",
+          "text": "put down"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "The phrasal verb 'put off' means to postpone or delay an event to a future date.",
+      "sourceReference": "Section 10D.3, Pages 254-255"
+    },
+    {
+      "id": "ENG-G12-U10-Q009",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Solve the domain analogy based on Unit 10 vocabulary: NEUROLOGIST is to BRAIN as OPHTHALMOLOGIST is to ______.",
+      "options": [
+        {
+          "id": "A",
+          "text": "eye"
+        },
+        {
+          "id": "B",
+          "text": "bone"
+        },
+        {
+          "id": "C",
+          "text": "heart"
+        },
+        {
+          "id": "D",
+          "text": "skin"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "A neurologist specializes in the brain and nervous system; similarly, an ophthalmologist specializes in the eye and visual health.",
+      "sourceReference": "Section 10D.2, Pages 252-253"
+    },
+    {
+      "id": "ENG-G12-U10-Q010",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Which option correctly revises the run-on sentence: 'Robots excel at performing repetitive assembly line tasks they lack human emotional intelligence.'",
+      "options": [
+        {
+          "id": "A",
+          "text": "Robots excel at performing repetitive assembly line tasks; however, they lack human emotional intelligence."
+        },
+        {
+          "id": "B",
+          "text": "Robots excel at performing repetitive assembly line tasks, they lack human emotional intelligence."
+        },
+        {
+          "id": "C",
+          "text": "Robots excel at performing repetitive assembly line tasks they lack human emotional intelligence however."
+        },
+        {
+          "id": "D",
+          "text": "Robots excel at performing repetitive assembly line tasks, so that they lack human emotional intelligence."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Joining two complete independent clauses with a semicolon and conjunctive adverb ('; however,') eliminates a run-on sentence error.",
+      "sourceReference": "Section 10E.1, Pages 255-256"
+    },
+    {
+      "id": "ENG-G12-U10-Q011",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "______ assistive robotic suits remain expensive to manufacture, recent clinical trials demonstrate their incredible potential for physical rehabilitation.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Although"
+        },
+        {
+          "id": "B",
+          "text": "Therefore"
+        },
+        {
+          "id": "C",
+          "text": "Consequently"
+        },
+        {
+          "id": "D",
+          "text": "Because of"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "'Although' introduces a concessive clause that contrasts high manufacturing costs with beneficial clinical outcomes.",
+      "sourceReference": "Section 10F.1, Pages 259-260"
+    },
+    {
+      "id": "ENG-G12-U10-Q012",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Identify the underlined part containing a grammatical subject-verb agreement error: 'Although many children (A) had swum often in the local swimming hole, the adults in the community (B) was very concerned about the imminent dangers (C) the location held for children who (D) ignored warnings.'",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A)"
+        },
+        {
+          "id": "B",
+          "text": "(B)"
+        },
+        {
+          "id": "C",
+          "text": "(C)"
+        },
+        {
+          "id": "D",
+          "text": "(D)"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "The plural noun subject 'the adults in the community' requires the plural verb 'were' instead of the singular verb 'was'.",
+      "sourceReference": "Section 10E.1, Page 258"
+    },
+    {
+      "id": "ENG-G12-U10-Q013",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Based on Section 10A.2 ('Robotics in Ethiopia'), what significant milestone was achieved by the Ethiopian software engineering firm iCog Labs regarding artificial intelligence?",
+      "options": [
+        {
+          "id": "A",
+          "text": "They co-developed cognitive software and Amharic language capabilities for Sophia, the world-famous humanoid robot."
+        },
+        {
+          "id": "B",
+          "text": "They manufactured the first automated agricultural tractor in East Africa."
+        },
+        {
+          "id": "C",
+          "text": "They established the first commercial satellite launch site in Addis Ababa."
+        },
+        {
+          "id": "D",
+          "text": "They wrote statutory laws regulating global artificial intelligence patents."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Section 10A.2 notes that iCog Labs in Addis Ababa was part of the international development team that programmed software and Amharic expressions for Sophia the robot.",
+      "sourceReference": "Section 10A.2, Page 245"
+    },
+    {
+      "id": "ENG-G12-U10-Q014",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "Read the sentence: 'Designed with wireless brain-computer interfaces, the doctor successfully tested the new robotic exoskeleton.' Which revision BEST eliminates the misplaced modifier?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The doctor successfully tested the new robotic exoskeleton, which was designed with wireless brain-computer interfaces."
+        },
+        {
+          "id": "B",
+          "text": "Designed with wireless brain-computer interfaces, the test was successfully conducted by the doctor on the robotic exoskeleton."
+        },
+        {
+          "id": "C",
+          "text": "Testing the new robotic exoskeleton successfully, the doctor was designed with wireless brain-computer interfaces."
+        },
+        {
+          "id": "D",
+          "text": "Designed with wireless brain-computer interfaces, the doctor's test of the new robotic exoskeleton succeeded."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Option A correctly places the modifying relative clause ('which was designed with wireless brain-computer interfaces') directly adjacent to the noun it modifies ('the new robotic exoskeleton') rather than the doctor.",
+      "sourceReference": "Section 10E.1, Pages 255-257"
+    },
+    {
+      "id": "ENG-G12-U10-Q015",
+      "type": "multiple_choice",
+      "difficulty": "challenging",
+      "question": "When preparing a professional Curriculum Vitae (CV) for a career in robotics engineering, how should an applicant format their professional work history and technical project accomplishments?",
+      "options": [
+        {
+          "id": "A",
+          "text": "In reverse chronological order, using active action verbs and bulleted technical achievement metrics."
+        },
+        {
+          "id": "B",
+          "text": "As an informal conversational narrative without dates or job titles."
+        },
+        {
+          "id": "C",
+          "text": "In alphabetical order by company name, omitting specific roles."
+        },
+        {
+          "id": "D",
+          "text": "As a list of personal hobbies written in the future tense."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Standard professional CV formatting (Section 10F.2) presents work experience in reverse chronological order using precise active action verbs and clear technical metrics.",
+      "sourceReference": "Section 10F.2, Pages 259-260"
+    }
+  ]
 }
