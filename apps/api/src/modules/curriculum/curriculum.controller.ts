@@ -35,7 +35,7 @@ export class CurriculumController {
     res: Response
   ): Promise<Response> {
     const gradeStr = req.query.grade as string;
-    const subjectCode = req.query.subject as string;
+    const subjectCode = (req.query.subject || req.query.subjectCode) as string;
 
     if (!gradeStr || !subjectCode) {
       throw new BadRequestError('Query parameters "grade" and "subject" are required');

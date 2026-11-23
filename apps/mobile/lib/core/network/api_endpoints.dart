@@ -12,7 +12,11 @@ class ApiEndpoints {
   // Curriculum & Live Metrics
   static const String examCountdown = '/api/v1/curriculum/exam-countdown';
   static const String curriculumPulse = '/api/v1/curriculum/pulse';
+  static String curriculumSubjects({int grade = 12}) => '/api/v1/curriculum/subjects?grade=$grade';
+  static String curriculumUnits({int grade = 12, required String subject}) =>
+      '/api/v1/curriculum/units?grade=$grade&subject=$subject';
   static String unitAssessment(String unitId) => '/api/v1/curriculum/units/$unitId/assessment';
+  static String unitQuestions(String unitId) => '/api/v1/curriculum/units/$unitId/questions';
   static String completeUnit(String unitId) => '/api/v1/study/units/$unitId/complete';
   static String updateUnitStatus(String unitId) => '/api/v1/study/units/$unitId/status';
 }

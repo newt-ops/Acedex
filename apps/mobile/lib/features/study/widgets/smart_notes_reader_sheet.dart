@@ -544,9 +544,22 @@ class _SmartNotesReaderSheetState extends State<SmartNotesReaderSheet> {
     required Color accentSoft,
     required bool isDark,
   }) {
+    final notes = widget.topic.notes;
+    if (notes == null) {
+      return Padding(
+        padding: const EdgeInsets.symmetric(vertical: 24),
+        child: Center(
+          child: Text(
+            'Smart notes for this unit topic are being prepared.',
+            style: TextStyle(fontSize: 12, color: subtextColor),
+          ),
+        ),
+      );
+    }
+
     if (_activeTabIndex == 1) {
       // Tab 1: Key Formulas
-      final formulas = widget.topic.notes.formulas;
+      final formulas = notes.formulas;
       if (formulas.isEmpty) {
         return Padding(
           padding: const EdgeInsets.symmetric(vertical: 24),
@@ -582,7 +595,7 @@ class _SmartNotesReaderSheetState extends State<SmartNotesReaderSheet> {
 
     if (_activeTabIndex == 2) {
       // Tab 2: EUEE Tips
-      final tips = widget.topic.notes.tips;
+      final tips = notes.tips;
       return Column(
         children: [
           for (int i = 0; i < tips.length; i++) ...[
@@ -648,7 +661,7 @@ class _SmartNotesReaderSheetState extends State<SmartNotesReaderSheet> {
           ),
           child: Column(
             children: [
-              for (final bullet in widget.topic.notes.summary)
+              for (final bullet in notes.summary)
                 Padding(
                   padding: const EdgeInsets.only(bottom: 10),
                   child: Row(
@@ -808,7 +821,8 @@ class _SmartNotesReaderSheetState extends State<SmartNotesReaderSheet> {
     required Color accentSoft,
     required bool isDark,
   }) {
-    final check = widget.topic.notes.conceptCheck;
+    final check = widget.topic.notes?.conceptCheck;
+    if (check == null) return const SizedBox.shrink();
     final letters = ['A', 'B', 'C', 'D'];
 
     return Container(

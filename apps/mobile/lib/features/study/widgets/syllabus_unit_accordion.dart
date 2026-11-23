@@ -14,7 +14,6 @@ class SyllabusUnitAccordion extends StatefulWidget {
   final ValueChanged<String>? onToggleUnitComplete;
   final ValueChanged<String> onToggleTopicComplete;
   final ValueChanged<String> onOpenNotes;
-  final ValueChanged<String> onOpenDrill;
   final ValueChanged<StudyUnit>? onTakeUnitAssessment;
   final VoidCallback onResetFilters;
   final bool showNotesButton;
@@ -28,7 +27,6 @@ class SyllabusUnitAccordion extends StatefulWidget {
     this.onToggleUnitComplete,
     required this.onToggleTopicComplete,
     required this.onOpenNotes,
-    required this.onOpenDrill,
     this.onTakeUnitAssessment,
     required this.onResetFilters,
     this.showNotesButton = true,
@@ -40,25 +38,25 @@ class SyllabusUnitAccordion extends StatefulWidget {
 
 class _SyllabusUnitAccordionState extends State<SyllabusUnitAccordion> {
   String? _loadingNotesTopicId;
-  String? _loadingDrillTopicId;
   String? _loadingUnitAssessmentId;
 
   bool _topicMatchesSearch(StudyUnit unit, StudyTopic topic, String query) {
     if (query.isEmpty) return true;
     final q = query.toLowerCase();
+    final notes = topic.notes;
     final haystack = [
       unit.code,
       unit.title,
       topic.code,
       topic.title,
-      ...topic.notes.summary,
-      ...topic.notes.formulas.map((f) => '${f.name} ${f.expr}'),
+      if (notes != null) ...notes.summary,
+      if (notes != null) ...notes.formulas.map((f) => '${f.name} ${f.expr}'),
     ].join(' ').toLowerCase();
     return haystack.contains(q);
   }
 
   void _handleNotesTap(String topicId) {
-    if (_loadingNotesTopicId != null || _loadingDrillTopicId != null || _loadingUnitAssessmentId != null) return;
+    if (_loadingNotesTopicId != null || _loadingUnitAssessmentId != null) return;
     setState(() => _loadingNotesTopicId = topicId);
 
     Future.delayed(const Duration(milliseconds: 540), () {
@@ -69,20 +67,8 @@ class _SyllabusUnitAccordionState extends State<SyllabusUnitAccordion> {
     });
   }
 
-  void _handleDrillTap(String topicId) {
-    if (_loadingNotesTopicId != null || _loadingDrillTopicId != null || _loadingUnitAssessmentId != null) return;
-    setState(() => _loadingDrillTopicId = topicId);
-
-    Future.delayed(const Duration(milliseconds: 580), () {
-      if (mounted) {
-        setState(() => _loadingDrillTopicId = null);
-        widget.onOpenDrill(topicId);
-      }
-    });
-  }
-
   void _handleUnitAssessmentTap(StudyUnit unit) {
-    if (_loadingNotesTopicId != null || _loadingDrillTopicId != null || _loadingUnitAssessmentId != null) return;
+    if (_loadingNotesTopicId != null || _loadingUnitAssessmentId != null) return;
     setState(() => _loadingUnitAssessmentId = unit.id);
 
     Future.delayed(const Duration(milliseconds: 400), () {
@@ -114,13 +100,30 @@ class _SyllabusUnitAccordionState extends State<SyllabusUnitAccordion> {
       // Filter out completed units if 'progress' filter is active
       if (widget.activeFilter == 'progress' && isUnitComplete) continue;
 
+      final unitMatchesSearch = widget.searchQuery.isEmpty ||
+          unit.code.toLowerCase().contains(widget.searchQuery.toLowerCase()) ||
+          unit.title.toLowerCase().contains(widget.searchQuery.toLowerCase());
+
+      if (unit.topics.isEmpty) {
+        if (unitMatchesSearch && widget.activeFilter != 'bookmarked') {
+          visibleUnits.add({
+            'unit': unit,
+            'matchingTopics': <StudyTopic>[],
+            'isUnitComplete': isUnitComplete,
+            'unitDoneCount': isUnitComplete ? 1 : 0,
+            'unitTotalCount': 1,
+          });
+        }
+        continue;
+      }
+
       final matchingTopics = unit.topics.where((t) {
         if (!_topicMatchesSearch(unit, t, widget.searchQuery)) return false;
         if (widget.activeFilter == 'bookmarked' && !t.bookmarked) return false;
         return true;
       }).toList();
 
-      if (matchingTopics.isNotEmpty) {
+      if (matchingTopics.isNotEmpty || unitMatchesSearch) {
         visibleUnits.add({
           'unit': unit,
           'matchingTopics': matchingTopics,
@@ -545,7 +548,6 @@ class _SyllabusUnitAccordionState extends State<SyllabusUnitAccordion> {
                                   ],
                                   ...matchingTopics.map((topic) {
                                   final isLoadingNotes = _loadingNotesTopicId == topic.id;
-                                  final isLoadingDrill = _loadingDrillTopicId == topic.id;
 
                                   return Container(
                                     padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
@@ -660,36 +662,6 @@ class _SyllabusUnitAccordionState extends State<SyllabusUnitAccordion> {
                                             ),
                                           ),
                                         ],
-
-                                        const SizedBox(width: 6),
-
-                                        // "Drill" Action Button
-                                        AcedexBounceable(
-                                          onTap: () => _handleDrillTap(topic.id),
-                                          child: Container(
-                                            height: 27,
-                                            padding: const EdgeInsets.symmetric(horizontal: 10),
-                                            decoration: BoxDecoration(
-                                              color: primaryColor.withValues(alpha: 0.14),
-                                              borderRadius: BorderRadius.circular(999),
-                                            ),
-                                            alignment: Alignment.center,
-                                            child: isLoadingDrill
-                                                ? AcedexDotsLoader(
-                                                    color: primaryColor,
-                                                    dotSize: 3.5,
-                                                    gap: 2.5,
-                                                  )
-                                                : Text(
-                                                    'Drill',
-                                                    style: TextStyle(
-                                                      fontSize: 10.5,
-                                                      fontWeight: FontWeight.w700,
-                                                      color: primaryColor,
-                                                    ),
-                                                  ),
-                                          ),
-                                        ),
                                       ],
                                     ),
                                   );
