@@ -304,6 +304,39 @@ final List<SubjectMasteryItem> defaultSubjectsData = [
       ),
     ],
   ),
+  const SubjectMasteryItem(
+    id: 'english',
+    name: 'English',
+    mastery: 85,
+    syllabusUnits: [
+      SyllabusUnit(unit: 'Unit 1: Sustainable Development', status: 'Mastered', pct: '92%'),
+      SyllabusUnit(unit: 'Unit 2: Time Management', status: 'In Progress', pct: '80%'),
+      SyllabusUnit(unit: 'Unit 3: Traffic Accidents Evidence', status: 'Up Next', pct: '70%'),
+    ],
+    questions: [
+      DrillQuestion(
+        topic: 'Contrast Connectors',
+        q: 'Economic growth focuses on quantitative output, ______ sustainable development emphasizes qualitative well-being.',
+        options: ['similarly', 'whereas', 'as well as', 'in the same way'],
+        correctIndex: 1,
+        explanation: "'Whereas' indicates direct contrast between economic output and sustainable well-being.",
+      ),
+      DrillQuestion(
+        topic: 'Conditionals',
+        q: 'If we had planned our study schedule earlier, we ______ the syllabus deadline.',
+        options: ['would meet', 'will meet', 'would have met', 'met'],
+        correctIndex: 2,
+        explanation: 'Third conditional requires "would have + past participle".',
+      ),
+      DrillQuestion(
+        topic: 'Cause and Effect',
+        q: 'The soil erosion worsened ______ heavy deforestation on the mountain ridge.',
+        options: ['due to', 'because', 'since', 'consequently'],
+        correctIndex: 0,
+        explanation: "'Due to' correctly precedes the noun phrase 'heavy deforestation'.",
+      ),
+    ],
+  ),
 ];
 
 /// Initial Flashcards matching the 3D Snap Carousel

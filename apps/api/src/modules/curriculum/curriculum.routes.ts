@@ -15,6 +15,11 @@ router.get(
   asyncHandler(CurriculumController.getQuestionsForUnit)
 );
 router.get(
+  '/units/:unitId/assessment',
+  optionalAuth,
+  asyncHandler(CurriculumController.getUnitAssessment)
+);
+router.get(
   '/units/:unitId/offline-pack',
   requireAuth,
   asyncHandler(CurriculumController.getOfflinePack)

@@ -11,9 +11,11 @@ class SyllabusUnitAccordion extends StatefulWidget {
   final String searchQuery;
   final String activeFilter; // 'all' | 'progress' | 'bookmarked'
   final ValueChanged<String> onToggleUnitExpand;
+  final ValueChanged<String>? onToggleUnitComplete;
   final ValueChanged<String> onToggleTopicComplete;
   final ValueChanged<String> onOpenNotes;
   final ValueChanged<String> onOpenDrill;
+  final ValueChanged<StudyUnit>? onTakeUnitAssessment;
   final VoidCallback onResetFilters;
   final bool showNotesButton;
 
@@ -23,9 +25,11 @@ class SyllabusUnitAccordion extends StatefulWidget {
     required this.searchQuery,
     required this.activeFilter,
     required this.onToggleUnitExpand,
+    this.onToggleUnitComplete,
     required this.onToggleTopicComplete,
     required this.onOpenNotes,
     required this.onOpenDrill,
+    this.onTakeUnitAssessment,
     required this.onResetFilters,
     this.showNotesButton = true,
   });
@@ -37,6 +41,7 @@ class SyllabusUnitAccordion extends StatefulWidget {
 class _SyllabusUnitAccordionState extends State<SyllabusUnitAccordion> {
   String? _loadingNotesTopicId;
   String? _loadingDrillTopicId;
+  String? _loadingUnitAssessmentId;
 
   bool _topicMatchesSearch(StudyUnit unit, StudyTopic topic, String query) {
     if (query.isEmpty) return true;
@@ -53,7 +58,7 @@ class _SyllabusUnitAccordionState extends State<SyllabusUnitAccordion> {
   }
 
   void _handleNotesTap(String topicId) {
-    if (_loadingNotesTopicId != null || _loadingDrillTopicId != null) return;
+    if (_loadingNotesTopicId != null || _loadingDrillTopicId != null || _loadingUnitAssessmentId != null) return;
     setState(() => _loadingNotesTopicId = topicId);
 
     Future.delayed(const Duration(milliseconds: 540), () {
@@ -65,13 +70,25 @@ class _SyllabusUnitAccordionState extends State<SyllabusUnitAccordion> {
   }
 
   void _handleDrillTap(String topicId) {
-    if (_loadingNotesTopicId != null || _loadingDrillTopicId != null) return;
+    if (_loadingNotesTopicId != null || _loadingDrillTopicId != null || _loadingUnitAssessmentId != null) return;
     setState(() => _loadingDrillTopicId = topicId);
 
     Future.delayed(const Duration(milliseconds: 580), () {
       if (mounted) {
         setState(() => _loadingDrillTopicId = null);
         widget.onOpenDrill(topicId);
+      }
+    });
+  }
+
+  void _handleUnitAssessmentTap(StudyUnit unit) {
+    if (_loadingNotesTopicId != null || _loadingDrillTopicId != null || _loadingUnitAssessmentId != null) return;
+    setState(() => _loadingUnitAssessmentId = unit.id);
+
+    Future.delayed(const Duration(milliseconds: 400), () {
+      if (mounted) {
+        setState(() => _loadingUnitAssessmentId = null);
+        widget.onTakeUnitAssessment?.call(unit);
       }
     });
   }
@@ -92,7 +109,7 @@ class _SyllabusUnitAccordionState extends State<SyllabusUnitAccordion> {
     for (final unit in widget.subject.units) {
       final unitDoneCount = unit.topics.where((t) => t.completed).length;
       final unitTotalCount = unit.topics.length;
-      final isUnitComplete = unitDoneCount == unitTotalCount && unitTotalCount > 0;
+      final isUnitComplete = unit.isCompleted || (unitDoneCount == unitTotalCount && unitTotalCount > 0);
 
       // Filter out completed units if 'progress' filter is active
       if (widget.activeFilter == 'progress' && isUnitComplete) continue;
@@ -317,6 +334,37 @@ class _SyllabusUnitAccordionState extends State<SyllabusUnitAccordion> {
 
                             const SizedBox(width: 8),
 
+                            // Unit Completion Check Circle
+                            AcedexBounceable(
+                              onTap: () => widget.onToggleUnitComplete?.call(unit.id),
+                              child: Container(
+                                width: 24,
+                                height: 24,
+                                decoration: BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  color: isUnitComplete
+                                      ? (isDark ? AppColors.darkSuccess : AppColors.success)
+                                      : surfaceColor,
+                                  border: Border.all(
+                                    color: isUnitComplete
+                                        ? (isDark ? AppColors.darkSuccess : AppColors.success)
+                                        : subtextColor,
+                                    width: 1.8,
+                                  ),
+                                ),
+                                alignment: Alignment.center,
+                                child: isUnitComplete
+                                    ? const Icon(
+                                        Icons.check_rounded,
+                                        size: 15,
+                                        color: Colors.white,
+                                      )
+                                    : null,
+                              ),
+                            ),
+
+                            const SizedBox(width: 6),
+
                             // Rotating Chevron Icon
                             AnimatedRotation(
                               turns: isExpanded ? 0.5 : 0.0,
@@ -344,7 +392,158 @@ class _SyllabusUnitAccordionState extends State<SyllabusUnitAccordion> {
                                 borderRadius: const BorderRadius.vertical(bottom: Radius.circular(19)),
                               ),
                               child: Column(
-                                children: matchingTopics.map((topic) {
+                                children: [
+                                  // Unit Assessment Card when completed
+                                  if (isUnitComplete) ...[
+                                    Container(
+                                      margin: const EdgeInsets.fromLTRB(12, 10, 12, 10),
+                                      padding: const EdgeInsets.all(12),
+                                      decoration: BoxDecoration(
+                                        color: isDark ? const Color(0xFF23232C) : const Color(0xFFF3F0FA),
+                                        borderRadius: BorderRadius.circular(15),
+                                        border: Border.all(
+                                          color: primaryColor.withValues(alpha: 0.35),
+                                          width: 1.2,
+                                        ),
+                                      ),
+                                      child: Row(
+                                        children: [
+                                          Container(
+                                            width: 36,
+                                            height: 36,
+                                            decoration: BoxDecoration(
+                                              color: primaryColor,
+                                              borderRadius: BorderRadius.circular(10),
+                                            ),
+                                            alignment: Alignment.center,
+                                            child: const HugeIcon(
+                                              icon: HugeIcons.strokeRoundedAward01,
+                                              color: Colors.white,
+                                              size: 18,
+                                            ),
+                                          ),
+                                          const SizedBox(width: 10),
+                                          Expanded(
+                                            child: Column(
+                                              crossAxisAlignment: CrossAxisAlignment.start,
+                                              children: [
+                                                Row(
+                                                  children: [
+                                                    Text(
+                                                      'Unit Assessment',
+                                                      style: TextStyle(
+                                                        fontSize: 12.5,
+                                                        fontWeight: FontWeight.w800,
+                                                        letterSpacing: -0.1,
+                                                        color: theme.colorScheme.onSurface,
+                                                      ),
+                                                    ),
+                                                    if (unit.assessmentScore != null) ...[
+                                                      const SizedBox(width: 6),
+                                                      Container(
+                                                        padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 1.5),
+                                                        decoration: BoxDecoration(
+                                                          color: (isDark ? AppColors.darkSuccess : AppColors.success)
+                                                              .withValues(alpha: 0.18),
+                                                          borderRadius: BorderRadius.circular(4),
+                                                        ),
+                                                        child: Text(
+                                                          '${unit.assessmentScore}/15',
+                                                          style: TextStyle(
+                                                            fontSize: 9.5,
+                                                            fontWeight: FontWeight.w800,
+                                                            color: isDark ? AppColors.darkSuccess : AppColors.success,
+                                                          ),
+                                                        ),
+                                                      ),
+                                                    ],
+                                                  ],
+                                                ),
+                                                const SizedBox(height: 2),
+                                                Text(
+                                                  '15 Questions • Ethiopian Curriculum Bank',
+                                                  style: TextStyle(
+                                                    fontSize: 10,
+                                                    color: subtextColor,
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+                                          const SizedBox(width: 8),
+                                          AcedexBounceable(
+                                            onTap: () => _handleUnitAssessmentTap(unit),
+                                            child: Container(
+                                              height: 30,
+                                              padding: const EdgeInsets.symmetric(horizontal: 12),
+                                              decoration: BoxDecoration(
+                                                color: primaryColor,
+                                                borderRadius: BorderRadius.circular(999),
+                                              ),
+                                              alignment: Alignment.center,
+                                              child: _loadingUnitAssessmentId == unit.id
+                                                  ? const AcedexDotsLoader(
+                                                      color: Colors.white,
+                                                      dotSize: 3.5,
+                                                      gap: 2.5,
+                                                    )
+                                                  : Text(
+                                                      unit.assessmentScore != null ? 'Retake' : 'Take Assessment',
+                                                      style: const TextStyle(
+                                                        fontSize: 11,
+                                                        fontWeight: FontWeight.w700,
+                                                        color: Colors.white,
+                                                      ),
+                                                    ),
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                  ] else ...[
+                                    Container(
+                                      margin: const EdgeInsets.fromLTRB(12, 10, 12, 8),
+                                      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 7),
+                                      decoration: BoxDecoration(
+                                        color: surfaceColor,
+                                        borderRadius: BorderRadius.circular(12),
+                                        border: Border.all(color: lineBorder),
+                                      ),
+                                      child: Row(
+                                        children: [
+                                          HugeIcon(
+                                            icon: HugeIcons.strokeRoundedLockKey,
+                                            color: subtextColor,
+                                            size: 14,
+                                          ),
+                                          const SizedBox(width: 8),
+                                          Expanded(
+                                            child: Text(
+                                              'Check mark this unit or finish all topics to unlock the 15-question assessment.',
+                                              style: TextStyle(
+                                                fontSize: 10,
+                                                fontWeight: FontWeight.w500,
+                                                color: subtextColor,
+                                              ),
+                                            ),
+                                          ),
+                                          const SizedBox(width: 6),
+                                          AcedexBounceable(
+                                            onTap: () => widget.onToggleUnitComplete?.call(unit.id),
+                                            child: Text(
+                                              'Complete Unit',
+                                              style: TextStyle(
+                                                fontSize: 10.5,
+                                                fontWeight: FontWeight.w700,
+                                                color: primaryColor,
+                                              ),
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                  ],
+                                  ...matchingTopics.map((topic) {
                                   final isLoadingNotes = _loadingNotesTopicId == topic.id;
                                   final isLoadingDrill = _loadingDrillTopicId == topic.id;
 
@@ -494,8 +693,9 @@ class _SyllabusUnitAccordionState extends State<SyllabusUnitAccordion> {
                                       ],
                                     ),
                                   );
-                                }).toList(),
-                              ),
+                                }),
+                              ],
+                            )
                             )
                           : const SizedBox.shrink(),
                     ),

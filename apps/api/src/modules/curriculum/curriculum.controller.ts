@@ -102,6 +102,20 @@ export class CurriculumController {
     );
   }
 
+  public static async getUnitAssessment(
+    req: AuthenticatedRequest,
+    res: Response
+  ): Promise<Response> {
+    const unitId = req.params.unitId as string;
+    const questions = await CurriculumService.getAssessmentQuestionsForUnit(unitId);
+    return sendSuccess(
+      res,
+      questions,
+      200,
+      { total: questions.length }
+    );
+  }
+
   public static async getOfflinePack(
     req: AuthenticatedRequest,
     res: Response

@@ -143,6 +143,9 @@ class StudyUnit {
   final String examWeight; // e.g., '28% EUEE'
   final bool expanded;
   final List<StudyTopic> topics;
+  final String? unitCode; // e.g., 'PHY-G12-U01', 'ENG-G12-U01'
+  final bool isCompleted;
+  final int? assessmentScore; // e.g., 14 (out of 15)
 
   const StudyUnit({
     required this.id,
@@ -151,6 +154,9 @@ class StudyUnit {
     required this.examWeight,
     required this.expanded,
     required this.topics,
+    this.unitCode,
+    this.isCompleted = false,
+    this.assessmentScore,
   });
 
   StudyUnit copyWith({
@@ -160,6 +166,9 @@ class StudyUnit {
     String? examWeight,
     bool? expanded,
     List<StudyTopic>? topics,
+    String? unitCode,
+    bool? isCompleted,
+    int? assessmentScore,
   }) {
     return StudyUnit(
       id: id ?? this.id,
@@ -168,7 +177,17 @@ class StudyUnit {
       examWeight: examWeight ?? this.examWeight,
       expanded: expanded ?? this.expanded,
       topics: topics ?? this.topics,
+      unitCode: unitCode ?? this.unitCode,
+      isCompleted: isCompleted ?? this.isCompleted,
+      assessmentScore: assessmentScore ?? this.assessmentScore,
     );
+  }
+
+  String resolvedUnitCode(String subjectCode) {
+    if (unitCode != null && unitCode!.isNotEmpty) return unitCode!;
+    final numDigits = code.replaceAll(RegExp(r'[^0-9]'), '');
+    final numStr = numDigits.isEmpty ? '01' : numDigits.padLeft(2, '0');
+    return '${subjectCode.toUpperCase()}-G12-U$numStr';
   }
 }
 
@@ -191,6 +210,36 @@ class SubjectCurriculum {
     required this.color,
     required this.units,
   });
+
+  String get subjectCode {
+    switch (id.toLowerCase()) {
+      case 'physics':
+        return 'PHY';
+      case 'mathematics':
+      case 'math':
+        return 'MAT';
+      case 'chemistry':
+      case 'chem':
+        return 'CHE';
+      case 'biology':
+      case 'bio':
+        return 'BIO';
+      case 'english':
+      case 'eng':
+        return 'ENG';
+      case 'economics':
+      case 'eco':
+        return 'ECO';
+      case 'geography':
+      case 'geo':
+        return 'GEO';
+      case 'history':
+      case 'his':
+        return 'HIS';
+      default:
+        return id.length >= 3 ? id.substring(0, 3).toUpperCase() : id.toUpperCase();
+    }
+  }
 
   SubjectCurriculum copyWith({
     String? id,
@@ -294,7 +343,7 @@ final Map<String, SubjectCurriculum> defaultCurriculumData = {
             title: 'Defense & Communication Systems',
             duration: '4 min',
             questionCount: 10,
-            completed: true,
+            completed: false,
             bookmarked: false,
             notes: TopicNotes(
               summary: [
@@ -1351,6 +1400,220 @@ final Map<String, SubjectCurriculum> defaultCurriculumData = {
               correctIndex: 2,
               explanation:
                   'AUG initiates translation and specifies Methionine; UAA, UAG, and UGA are stop codons.',
+            ),
+          ),
+        ],
+      ),
+    ],
+  ),
+  'english': const SubjectCurriculum(
+    id: 'english',
+    name: 'English',
+    mastery: 85,
+    lastTopicId: 'eng-1-1',
+    iconData: HugeIcons.strokeRoundedBook02,
+    color: AppColors.royalPurple,
+    units: [
+      StudyUnit(
+        id: 'eng-u1',
+        code: 'U1',
+        unitCode: 'ENG-G12-U01',
+        title: 'Sustainable Development',
+        examWeight: '12% EUEE',
+        expanded: false,
+        topics: [
+          StudyTopic(
+            id: 'eng-1-1',
+            code: '1.1',
+            title: 'Contrast Connectors & Reading Synthesis',
+            duration: '6 min',
+            questionCount: 15,
+            completed: false,
+            bookmarked: false,
+            notes: TopicNotes(
+              summary: [
+                'Sustainable development balances economic growth with environmental protection.',
+                'Contrast connectors: whereas, while, in contrast, on the other hand.',
+              ],
+              formulas: [],
+              tips: [
+                'Look for contrasting ideas separated by "whereas" or "while" in EUEE reading passages.',
+              ],
+              conceptCheck: ConceptCheck(
+                q: 'Which connector indicates contrast between economic growth and environmental care?',
+                options: ['whereas', 'similarly', 'furthermore', 'in addition'],
+                correctIdx: 0,
+                feedback: '"Whereas" highlights direct contrast between two distinct ideas.',
+              ),
+            ),
+            drillQuestion: DrillQuestionItem(
+              topicCode: 'ENG-G12-U01',
+              difficulty: 'Standard',
+              q: 'Economic growth focuses on quantitative output, ______ sustainable development emphasizes qualitative well-being.',
+              options: ['similarly', 'whereas', 'as well as', 'in the same way'],
+              correctIndex: 1,
+              explanation: "'Whereas' is a contrast connector used to contrast economic growth with sustainable development.",
+            ),
+          ),
+        ],
+      ),
+      StudyUnit(
+        id: 'eng-u2',
+        code: 'U2',
+        unitCode: 'ENG-G12-U02',
+        title: 'Time Management',
+        examWeight: '10% EUEE',
+        expanded: false,
+        topics: [
+          StudyTopic(
+            id: 'eng-2-1',
+            code: '2.1',
+            title: 'Conditional Sentences & Scheduling Idioms',
+            duration: '5 min',
+            questionCount: 15,
+            completed: false,
+            bookmarked: false,
+            notes: TopicNotes(
+              summary: [
+                'Zero, First, Second, and Third Conditionals in academic English.',
+                'Idioms related to time: against the clock, in the nick of time.',
+              ],
+              formulas: [],
+              tips: [
+                'In Third Conditional: If + had + V3, would have + V3.',
+              ],
+              conceptCheck: ConceptCheck(
+                q: 'If we had planned our schedule earlier, we ______ the deadline.',
+                options: ['would meet', 'will meet', 'would have met', 'met'],
+                correctIdx: 2,
+                feedback: 'Third conditional requires "would have + past participle".',
+              ),
+            ),
+            drillQuestion: DrillQuestionItem(
+              topicCode: 'ENG-G12-U02',
+              difficulty: 'Standard',
+              q: 'If the study schedule ______ adhered to strictly, the syllabus would be mastered ahead of time.',
+              options: ['is', 'were', 'had been', 'will be'],
+              correctIndex: 1,
+              explanation: "Second conditional uses 'were' with subjunctive force.",
+            ),
+          ),
+        ],
+      ),
+      StudyUnit(
+        id: 'eng-u3',
+        code: 'U3',
+        unitCode: 'ENG-G12-U03',
+        title: 'Evidence on Traffic Accident',
+        examWeight: '10% EUEE',
+        expanded: false,
+        topics: [
+          StudyTopic(
+            id: 'eng-3-1',
+            code: '3.1',
+            title: 'Passive Voice & Crime Scene Vocabulary',
+            duration: '6 min',
+            questionCount: 15,
+            completed: false,
+            bookmarked: false,
+            notes: TopicNotes(
+              summary: [
+                'Passive voice structures for objective reporting: was observed, is reported to be.',
+              ],
+              formulas: [],
+              tips: ['Passive voice emphasizes the action and receiver over the unknown agent.'],
+              conceptCheck: ConceptCheck(
+                q: 'The speed of the vehicle ______ by the radar before collision.',
+                options: ['was recorded', 'recorded', 'is recording', 'records'],
+                correctIdx: 0,
+                feedback: 'Past passive: was + past participle.',
+              ),
+            ),
+            drillQuestion: DrillQuestionItem(
+              topicCode: 'ENG-G12-U03',
+              difficulty: 'Standard',
+              q: 'The traffic report stated that the driver ______ to have exceeded the speed limit.',
+              options: ['was found', 'found', 'is finding', 'has found'],
+              correctIndex: 0,
+              explanation: "Objective accident reports use passive 'was found'.",
+            ),
+          ),
+        ],
+      ),
+      StudyUnit(
+        id: 'eng-u4',
+        code: 'U4',
+        unitCode: 'ENG-G12-U04',
+        title: 'Natural Resource Management',
+        examWeight: '11% EUEE',
+        expanded: false,
+        topics: [
+          StudyTopic(
+            id: 'eng-4-1',
+            code: '4.1',
+            title: 'Cause and Effect Transitions',
+            duration: '5 min',
+            questionCount: 15,
+            completed: false,
+            bookmarked: false,
+            notes: TopicNotes(
+              summary: [
+                'Cause-effect markers: consequently, as a result, owing to, due to.',
+              ],
+              formulas: [],
+              tips: ['"Due to" is followed by a noun phrase; "because" introduces a clause.'],
+              conceptCheck: ConceptCheck(
+                q: 'The soil erosion worsened ______ heavy deforestation on the ridge.',
+                options: ['due to', 'because', 'since', 'consequently'],
+                correctIdx: 0,
+                feedback: '"Due to" precedes the noun phrase "heavy deforestation".',
+              ),
+            ),
+            drillQuestion: DrillQuestionItem(
+              topicCode: 'ENG-G12-U04',
+              difficulty: 'Standard',
+              q: 'Deforestation rates increased; ______, downstream reservoirs experienced severe siltation.',
+              options: ['consequently', 'similarly', 'although', 'despite'],
+              correctIndex: 0,
+              explanation: "'Consequently' introduces the direct consequence of the first clause.",
+            ),
+          ),
+        ],
+      ),
+      StudyUnit(
+        id: 'eng-u5',
+        code: 'U5',
+        unitCode: 'ENG-G12-U05',
+        title: 'Mechanized Agriculture',
+        examWeight: '10% EUEE',
+        expanded: false,
+        topics: [
+          StudyTopic(
+            id: 'eng-5-1',
+            code: '5.1',
+            title: 'Technical Jargon & Process Description',
+            duration: '5 min',
+            questionCount: 15,
+            completed: false,
+            bookmarked: false,
+            notes: TopicNotes(
+              summary: ['Sequencing words for agricultural mechanization stages: initially, subsequently, finally.'],
+              formulas: [],
+              tips: ['Look for chronological order indicators in process passages.'],
+              conceptCheck: ConceptCheck(
+                q: 'The wheat was harvested; ______, it was transported to the regional granary.',
+                options: ['subsequently', 'nevertheless', 'otherwise', 'even though'],
+                correctIdx: 0,
+                feedback: '"Subsequently" indicates the next step in a sequence.',
+              ),
+            ),
+            drillQuestion: DrillQuestionItem(
+              topicCode: 'ENG-G12-U05',
+              difficulty: 'Standard',
+              q: 'Modern combine harvesters reap, thresh, and winnow grain in a single operation, ______ labor costs significantly.',
+              options: ['reducing', 'reduced', 'reduce', 'reduces'],
+              correctIndex: 0,
+              explanation: "Participle clause 'reducing' expresses the result of the main action.",
             ),
           ),
         ],

@@ -1,6 +1,9 @@
+import 'dart:async';
 import 'package:flutter/material.dart';
 import '../../../core/config/feature_flags.dart';
 import '../../../core/models/user_profile.dart';
+import '../../../core/network/api_client.dart';
+import '../../../core/network/api_endpoints.dart';
 import '../models/study_models.dart';
 import '../widgets/curriculum_hero_card.dart';
 import '../widgets/quick_drill_builder_card.dart';
@@ -111,6 +114,127 @@ class _StudyScreenState extends State<StudyScreen> {
       _curriculumMap[subj.id] = updatedSubj;
       _recalculateSubjectMastery(_curriculumMap[subj.id]!);
     });
+  }
+
+  void _toggleUnitCompletion(String unitId) {
+    final subj = _activeSubject;
+    final unit = subj.units.firstWhere(
+      (u) => u.id == unitId,
+      orElse: () => subj.units.first,
+    );
+    final targetState = !unit.isCompleted;
+
+    final updatedUnits = subj.units.map((u) {
+      if (u.id == unitId) {
+        final updatedTopics = u.topics
+            .map((t) => t.copyWith(completed: targetState))
+            .toList();
+        return u.copyWith(isCompleted: targetState, topics: updatedTopics);
+      }
+      return u;
+    }).toList();
+
+    final updatedSubj = subj.copyWith(units: updatedUnits);
+    setState(() {
+      _curriculumMap[subj.id] = updatedSubj;
+      _recalculateSubjectMastery(_curriculumMap[subj.id]!);
+    });
+
+    if (targetState) {
+      final unitCode = unit.resolvedUnitCode(subj.subjectCode);
+      unawaited(
+        ApiClient.instance
+            .post(ApiEndpoints.completeUnit(unitCode), requiresAuth: true)
+            .catchError((_) => <String, dynamic>{}),
+      );
+    }
+  }
+
+  Future<void> _handleTakeUnitAssessment(StudyUnit unit) async {
+    final subj = _activeSubject;
+    final unitCode = unit.resolvedUnitCode(subj.subjectCode);
+
+    List<DrillQuestionItem> assessmentQuestions = [];
+
+    try {
+      final res = await ApiClient.instance.get(
+        ApiEndpoints.unitAssessment(unitCode),
+        requiresAuth: false,
+      );
+      final data = res['data'] ?? res;
+      if (data is List && data.isNotEmpty) {
+        assessmentQuestions = data.map((raw) {
+          final optionsList = (raw['options'] as List? ?? []).map((o) {
+            return '${o['id']}. ${o['text']}';
+          }).toList();
+          final correctOpt = raw['correctOptionId'] as String? ?? 'A';
+          final correctIdx = correctOpt == 'B'
+              ? 1
+              : (correctOpt == 'C' ? 2 : (correctOpt == 'D' ? 3 : 0));
+          return DrillQuestionItem(
+            topicCode: raw['id'] ?? unitCode,
+            difficulty: (raw['difficulty'] as String? ?? 'Standard'),
+            q: raw['question'] as String? ?? '',
+            options: optionsList,
+            correctIndex: correctIdx,
+            explanation: raw['explanation'] as String? ?? '',
+            topicTitle: '${unit.code} • ${unit.title}',
+          );
+        }).toList();
+      }
+    } catch (_) {
+      // Offline fallback: will pool from local curriculum questions
+    }
+
+    if (assessmentQuestions.length < 15) {
+      final pool = _buildSubjectQuestionPool(subj, [unit], 'Standard');
+      while (assessmentQuestions.length < 15 && pool.isNotEmpty) {
+        final nextQ = pool[assessmentQuestions.length % pool.length];
+        assessmentQuestions.add(
+          nextQ.copyWith(
+            topicCode: '$unitCode-Q${assessmentQuestions.length + 1}',
+            topicTitle:
+                '${unit.code} • ${unit.title} (Q${assessmentQuestions.length + 1})',
+          ),
+        );
+      }
+    }
+
+    if (!mounted) return;
+
+    TopicDrillEngineSheet.show(
+      context,
+      questions: assessmentQuestions,
+      headerBadge: '${subj.name} • 15-Q Assessment',
+      headerTitle: '${unit.code}: ${unit.title}',
+      subject: subj,
+      onDrillCompleted: (score, total, boost) {
+        final updatedUnits = subj.units.map((u) {
+          if (u.id == unit.id) {
+            return u.copyWith(
+              isCompleted: true,
+              assessmentScore: score,
+            );
+          }
+          return u;
+        }).toList();
+
+        final updatedSubj = subj.copyWith(
+          mastery: (subj.mastery + boost).clamp(55, 99),
+          units: updatedUnits,
+        );
+
+        setState(() {
+          _curriculumMap[subj.id] = updatedSubj;
+        });
+
+        unawaited(
+          ApiClient.instance
+              .post(ApiEndpoints.completeUnit(unitCode), requiresAuth: true)
+              .catchError((_) => <String, dynamic>{}),
+        );
+      },
+    );
   }
 
   void _toggleTopicBookmark(String topicId) {
@@ -345,6 +469,7 @@ class _StudyScreenState extends State<StudyScreen> {
             activeFilter: _selectedFilter,
             showNotesButton: FeatureFlags.enableSmartNotes,
             onToggleUnitExpand: _toggleUnitExpand,
+            onToggleUnitComplete: _toggleUnitCompletion,
             onToggleTopicComplete: _toggleTopicCompletion,
             onOpenNotes: (topicId) {
               final topic = _findTopicById(topicId);
@@ -362,6 +487,7 @@ class _StudyScreenState extends State<StudyScreen> {
                 _launchTopicDrill(topic, 3, 'Standard');
               }
             },
+            onTakeUnitAssessment: _handleTakeUnitAssessment,
             onResetFilters: () {
               _searchController.clear();
               setState(() {

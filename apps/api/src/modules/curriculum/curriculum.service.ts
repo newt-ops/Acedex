@@ -97,19 +97,59 @@ export class CurriculumService {
   }
 
   /**
-   * Retrieves a single unit by ID
+   * Retrieves a single unit by ID or Unit Code
    */
   public static async getUnitById(unitId: string): Promise<IUnit> {
     const cacheKey = `unit_summary:${unitId}`;
     const cached = ContentCacheService.get<IUnit>(cacheKey);
     if (cached) return cached;
 
-    const unit = await UnitModel.findById(unitId).read('secondaryPreferred').lean();
+    let unit = null;
+    if (Types.ObjectId.isValid(unitId)) {
+      unit = await UnitModel.findById(unitId).read('secondaryPreferred').lean();
+    }
     if (!unit) {
-      throw new NotFoundError('Curriculum unit not found');
+      unit = await UnitModel.findOne({ code: unitId.toUpperCase() }).read('secondaryPreferred').lean();
+    }
+    if (!unit) {
+      throw new NotFoundError(`Curriculum unit '${unitId}' not found`);
     }
     ContentCacheService.set(cacheKey, unit as unknown as IUnit, 3600);
     return unit as unknown as IUnit;
+  }
+
+  /**
+   * Retrieves all 15 assessment questions for a unit with option details,
+   * correct answers, step-by-step explanations, and textbook source references.
+   */
+  public static async getAssessmentQuestionsForUnit(unitId: string): Promise<any[]> {
+    const unit = await this.getUnitById(unitId);
+
+    const questions = await QuestionModel.find({
+      unitId: unit._id,
+      isPublished: true,
+    })
+      .sort({ externalId: 1 })
+      .read('secondaryPreferred')
+      .lean();
+
+    const questionIds = questions.map((q) => q.externalId);
+    const keys = await AnswerKeyModel.find({ externalId: { $in: questionIds } }).lean();
+    const keyMap = new Map(keys.map((k) => [k.externalId, k]));
+
+    return questions.map((q) => {
+      const k = keyMap.get(q.externalId);
+      return {
+        id: q.externalId,
+        type: 'multiple_choice',
+        difficulty: q.difficulty,
+        question: q.question,
+        options: q.options,
+        correctOptionId: k?.correctOptionId || 'A',
+        explanation: k?.explanation || '',
+        sourceReference: q.sourceReference,
+      };
+    });
   }
 
   /**

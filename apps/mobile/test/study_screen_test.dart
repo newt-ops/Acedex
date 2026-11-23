@@ -247,5 +247,40 @@ void main() {
       expect(find.text('Notes'), findsNothing);
       expect(find.text('Drill'), findsWidgets);
     });
+
+    testWidgets('marking unit complete unlocks 15-question assessment and launches drill engine',
+        (tester) async {
+      configureViewport(tester);
+      await tester.pumpWidget(createStudyHarness());
+      await tester.pump();
+
+      // Expand U1 (Physics)
+      final u1Header = find.text('Application of Physics in Other Fields');
+      await tester.tap(u1Header);
+      await tester.pumpAndSettle();
+
+      // Since topic 1.2 is incomplete initially, prompt to complete unit is shown
+      expect(find.textContaining('Check mark this unit'), findsWidgets);
+      expect(find.text('Complete Unit'), findsWidgets);
+
+      // Tap "Complete Unit" to mark U1 done
+      await tester.tap(find.text('Complete Unit').first);
+      await tester.pumpAndSettle();
+
+      // Now "Unit Assessment" card is unlocked and visible
+      expect(find.text('Unit Assessment'), findsWidgets);
+      expect(find.text('15 Questions • Ethiopian Curriculum Bank'), findsWidgets);
+      expect(find.text('Take Assessment'), findsWidgets);
+
+      // Tap "Take Assessment"
+      await tester.tap(find.text('Take Assessment').first);
+      await tester.pump(const Duration(milliseconds: 500));
+      await tester.pumpAndSettle();
+
+      // Topic Drill Engine Sheet is open with 15 questions!
+      expect(find.byType(TopicDrillEngineSheet), findsOneWidget);
+      expect(find.text('1 of 15'), findsOneWidget);
+      expect(find.textContaining('15-Q Assessment'), findsOneWidget);
+    });
   });
 }

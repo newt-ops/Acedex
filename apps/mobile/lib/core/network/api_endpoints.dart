@@ -12,4 +12,7 @@ class ApiEndpoints {
   // Curriculum & Live Metrics
   static const String examCountdown = '/api/v1/curriculum/exam-countdown';
   static const String curriculumPulse = '/api/v1/curriculum/pulse';
+  static String unitAssessment(String unitId) => '/api/v1/curriculum/units/$unitId/assessment';
+  static String completeUnit(String unitId) => '/api/v1/study/units/$unitId/complete';
+  static String updateUnitStatus(String unitId) => '/api/v1/study/units/$unitId/status';
 }
