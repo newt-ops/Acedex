@@ -17,10 +17,11 @@ import '../widgets/topic_drill_engine_sheet.dart';
 
 /// Clean Apple-Style Study & Curriculum Inside Screen (Tab 1: Study)
 ///
-/// Fetches all subjects, units, and assessment questions 100% dynamically from MongoDB Atlas:
-/// - Real-time Subject & Unit loading (Grades 9-12)
+/// Supports EUEE Multi-Grade Access (Grades 9 to 12) with Stream Filtering:
+/// - Real-time Subject & Unit loading across Grades 9, 10, 11, and 12
+/// - Natural Science students access Natural + Common subjects across all grades
+/// - Social Science students access Social + Common subjects across all grades
 /// - 15-Question Unit Assessment Engine with authentic database questions
-/// - Zero hardcoded curriculum data
 /// - Bottom padding set to 130px to scroll clear of concave floating navigation bar.
 class StudyScreen extends StatefulWidget {
   final UserProfile? user;
@@ -40,6 +41,8 @@ class _StudyScreenState extends State<StudyScreen> {
   // In-memory mutable curriculum store populated dynamically via API
   Map<String, SubjectCurriculum> _curriculumMap = {};
   String _activeSubjectId = 'physics';
+  int _selectedGrade = 12;
+  late String _studentStream;
   final TextEditingController _searchController = TextEditingController();
   String _searchQuery = '';
   String _selectedFilter = 'all'; // 'all', 'progress', 'bookmarked'
@@ -49,6 +52,8 @@ class _StudyScreenState extends State<StudyScreen> {
   @override
   void initState() {
     super.initState();
+    _selectedGrade = widget.user?.grade ?? 12;
+    _studentStream = widget.user?.stream ?? 'natural';
     if (widget.initialCurriculum != null && widget.initialCurriculum!.isNotEmpty) {
       _curriculumMap = Map.from(widget.initialCurriculum!);
       _activeSubjectId = _curriculumMap.keys.first;
@@ -111,9 +116,21 @@ class _StudyScreenState extends State<StudyScreen> {
     _curriculumMap[subj.id] = subj.copyWith(mastery: newMastery);
   }
 
+  void _onSelectGrade(int grade) {
+    if (_selectedGrade == grade) return;
+    setState(() {
+      _selectedGrade = grade;
+      _curriculumMap.clear();
+      _isLoading = true;
+      _errorMessage = null;
+    });
+    _fetchLiveCurriculum();
+  }
+
   /// Synchronize curriculum subjects and units from backend API
   Future<void> _fetchLiveCurriculum() async {
-    final grade = widget.user?.grade ?? 12;
+    final grade = _selectedGrade;
+    final stream = _studentStream;
 
     if (_curriculumMap.isEmpty) {
       setState(() {
@@ -123,9 +140,9 @@ class _StudyScreenState extends State<StudyScreen> {
     }
 
     try {
-      // 1. Fetch Subjects for this grade from API
+      // 1. Fetch Subjects for this grade and stream from API
       final subjRes = await ApiClient.instance.get(
-        ApiEndpoints.curriculumSubjects(grade: grade),
+        ApiEndpoints.curriculumSubjects(grade: grade, stream: stream),
         requiresAuth: false,
       );
       final subjData = subjRes['data'] ?? subjRes;
@@ -177,7 +194,7 @@ class _StudyScreenState extends State<StudyScreen> {
   }
 
   Future<void> _fetchUnitsForSubject(SubjectCurriculum subj) async {
-    final grade = widget.user?.grade ?? 12;
+    final grade = _selectedGrade;
     try {
       final res = await ApiClient.instance.get(
         ApiEndpoints.curriculumUnits(grade: grade, subject: subj.subjectCode),
@@ -189,7 +206,7 @@ class _StudyScreenState extends State<StudyScreen> {
           final unitNum = raw['unitNumber'] as int? ?? 1;
           final code = 'U$unitNum';
           final unitCode = raw['code'] as String? ??
-              '${subj.subjectCode}-G$grade-U${unitNum.toString().padLeft(2, '0')}';
+              '${subj.subjectCode}-G${grade.toString().padLeft(2, '0')}-U${unitNum.toString().padLeft(2, '0')}';
           final title = raw['title'] as String? ?? 'Unit $unitNum';
           final qCount = raw['questionCount'] as int? ?? 15;
           final isDone = raw['isStudyCompleted'] == true || raw['passed'] == true;
@@ -200,7 +217,7 @@ class _StudyScreenState extends State<StudyScreen> {
             code: code,
             unitCode: unitCode,
             title: title,
-            examWeight: '$qCount Questions • Ethiopian Curriculum Bank',
+            examWeight: '$qCount Questions',
             expanded: false,
             topics: const [],
             isCompleted: isDone,
@@ -521,10 +538,158 @@ class _StudyScreenState extends State<StudyScreen> {
     );
   }
 
+  Widget _buildGradeSelector(ThemeData theme, bool isDark, Color primaryColor) {
+    final surfaceColor = isDark ? const Color(0xFF1E1E26) : const Color(0xFFF4F4F7);
+    final activeBg = isDark ? const Color(0xFF2C2C38) : Colors.white;
+    final subtextColor = isDark ? AppColors.darkSecondaryText : AppColors.lightSecondaryText;
+    final lineBorder = isDark ? const Color(0xFF33333F) : const Color(0xFFE5E5EA);
+
+    final isNatural = _studentStream == 'natural';
+    final streamLabel = isNatural ? 'Natural Science Track' : 'Social Science Track';
+    final streamBadgeBg = isNatural
+        ? (isDark ? const Color(0xFF1A2E22) : const Color(0xFFEAF8EF))
+        : (isDark ? const Color(0xFF2E2215) : const Color(0xFFFEF3E8));
+    final streamColor = isNatural
+        ? (isDark ? const Color(0xFF4ADE80) : const Color(0xFF15803D))
+        : (isDark ? const Color(0xFFFBBF24) : const Color(0xFFB45309));
+
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        // Track Header Row
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Row(
+              children: [
+                HugeIcon(
+                  icon: HugeIcons.strokeRoundedGraduationCap,
+                  color: subtextColor,
+                  size: 13,
+                ),
+                const SizedBox(width: 5),
+                Text(
+                  'EUEE CURRICULUM LEVEL',
+                  style: TextStyle(
+                    fontSize: 10,
+                    fontWeight: FontWeight.w800,
+                    letterSpacing: 0.8,
+                    color: subtextColor,
+                  ),
+                ),
+              ],
+            ),
+            Container(
+              padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 2.5),
+              decoration: BoxDecoration(
+                color: streamBadgeBg,
+                borderRadius: BorderRadius.circular(999),
+                border: Border.all(color: streamColor.withValues(alpha: 0.25)),
+              ),
+              child: Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Container(
+                    width: 5,
+                    height: 5,
+                    decoration: BoxDecoration(
+                      color: streamColor,
+                      shape: BoxShape.circle,
+                    ),
+                  ),
+                  const SizedBox(width: 5),
+                  Text(
+                    streamLabel,
+                    style: TextStyle(
+                      fontSize: 9.5,
+                      fontWeight: FontWeight.w700,
+                      color: streamColor,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+
+        const SizedBox(height: 8),
+
+        // 4-Segment Gliding Grade Switcher
+        Container(
+          padding: const EdgeInsets.all(3),
+          decoration: BoxDecoration(
+            color: surfaceColor,
+            borderRadius: BorderRadius.circular(14),
+            border: Border.all(color: lineBorder),
+          ),
+          child: Row(
+            children: [9, 10, 11, 12].map((g) {
+              final isSelected = _selectedGrade == g;
+              return Expanded(
+                child: AcedexBounceable(
+                  onTap: () => _onSelectGrade(g),
+                  child: AnimatedContainer(
+                    duration: const Duration(milliseconds: 200),
+                    curve: Curves.easeOutCubic,
+                    padding: const EdgeInsets.symmetric(vertical: 8),
+                    decoration: BoxDecoration(
+                      color: isSelected ? activeBg : Colors.transparent,
+                      borderRadius: BorderRadius.circular(11),
+                      boxShadow: isSelected
+                          ? [
+                              BoxShadow(
+                                color: Colors.black.withValues(alpha: isDark ? 0.35 : 0.08),
+                                blurRadius: 6,
+                                offset: const Offset(0, 2),
+                              ),
+                            ]
+                          : null,
+                    ),
+                    alignment: Alignment.center,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          'Grade $g',
+                          style: TextStyle(
+                            fontSize: 12,
+                            fontWeight: isSelected ? FontWeight.w800 : FontWeight.w600,
+                            letterSpacing: -0.2,
+                            color: isSelected
+                                ? (isDark ? Colors.white : AppColors.royalPurple)
+                                : subtextColor,
+                          ),
+                        ),
+                        if (widget.user?.grade == g) ...[
+                          const SizedBox(width: 3.5),
+                          Container(
+                            width: 4,
+                            height: 4,
+                            decoration: BoxDecoration(
+                              color: isSelected
+                                  ? (isDark ? AppColors.accentDark : AppColors.royalPurple)
+                                  : subtextColor.withValues(alpha: 0.5),
+                              shape: BoxShape.circle,
+                            ),
+                          ),
+                        ],
+                      ],
+                    ),
+                  ),
+                ),
+              );
+            }).toList(),
+          ),
+        ),
+      ],
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     final isDark = theme.brightness == Brightness.dark;
+    final primaryColor = theme.colorScheme.primary;
 
     // Loading State
     if (_isLoading && _curriculumMap.isEmpty) {
@@ -541,7 +706,7 @@ class _StudyScreenState extends State<StudyScreen> {
               ),
               const SizedBox(height: 14),
               Text(
-                'Loading Curriculum from Database...',
+                'Loading Grade $_selectedGrade Curriculum...',
                 style: TextStyle(
                   fontSize: 12,
                   fontWeight: FontWeight.w600,
@@ -636,6 +801,11 @@ class _StudyScreenState extends State<StudyScreen> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
+          // 0. Grade Selector (Grades 9-12) & Stream Track Badge
+          _buildGradeSelector(theme, isDark, primaryColor),
+
+          const SizedBox(height: 14),
+
           // 1. Subject Pill Rail & Search / Filter Bar
           SubjectPillRailAndSearch(
             subjects: subjectsList,
@@ -667,6 +837,7 @@ class _StudyScreenState extends State<StudyScreen> {
           // 2. Active Subject Curriculum Hero Card
           CurriculumHeroCard(
             subject: subj,
+            grade: _selectedGrade,
             lastTopicLabel: lastTopicLabel,
             ctaLabel: FeatureFlags.enableSmartNotes ? 'Resume Last Note' : 'Explore Units',
             onResumeNote: () {

@@ -45,15 +45,13 @@ export class CurriculumService {
 
     if (grade) {
       filter.grades = grade;
+    }
 
-      // Stream specialization applies only to Grades 11 & 12
-      if (grade === 11 || grade === 12) {
-        if (stream === 'natural') {
-          filter.streamCategory = { $in: ['natural', 'common'] };
-        } else if (stream === 'social') {
-          filter.streamCategory = { $in: ['social', 'common'] };
-        }
-      }
+    // For EUEE preparation, stream filtering applies across all grades (9-12)
+    if (stream === 'natural') {
+      filter.streamCategory = { $in: ['natural', 'common'] };
+    } else if (stream === 'social') {
+      filter.streamCategory = { $in: ['social', 'common'] };
     }
 
     const subjects = (await SubjectModel.find(filter)

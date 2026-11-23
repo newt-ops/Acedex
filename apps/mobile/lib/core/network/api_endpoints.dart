@@ -12,7 +12,13 @@ class ApiEndpoints {
   // Curriculum & Live Metrics
   static const String examCountdown = '/api/v1/curriculum/exam-countdown';
   static const String curriculumPulse = '/api/v1/curriculum/pulse';
-  static String curriculumSubjects({int grade = 12}) => '/api/v1/curriculum/subjects?grade=$grade';
+  static String curriculumSubjects({int? grade, String? stream}) {
+    final query = <String>[];
+    if (grade != null) query.add('grade=$grade');
+    if (stream != null && stream.isNotEmpty) query.add('stream=$stream');
+    final q = query.isNotEmpty ? '?${query.join('&')}' : '';
+    return '/api/v1/curriculum/subjects$q';
+  }
   static String curriculumUnits({int grade = 12, required String subject}) =>
       '/api/v1/curriculum/units?grade=$grade&subject=$subject';
   static String unitAssessment(String unitId) => '/api/v1/curriculum/units/$unitId/assessment';

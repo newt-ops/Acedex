@@ -301,34 +301,50 @@ class _SyllabusUnitAccordionState extends State<SyllabusUnitAccordion> {
                                   const SizedBox(height: 3),
                                   Row(
                                     children: [
-                                      Container(
-                                        padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 1.5),
-                                        decoration: BoxDecoration(
-                                          color: raisedBg,
-                                          borderRadius: BorderRadius.circular(6),
-                                          border: Border.all(color: lineBorder),
-                                        ),
-                                        child: Text(
-                                          unit.examWeight,
-                                          style: TextStyle(
-                                            fontSize: 9.5,
-                                            fontWeight: FontWeight.w800,
-                                            color: primaryColor,
+                                      Flexible(
+                                        child: Container(
+                                          padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 1.5),
+                                          decoration: BoxDecoration(
+                                            color: raisedBg,
+                                            borderRadius: BorderRadius.circular(6),
+                                            border: Border.all(color: lineBorder),
+                                          ),
+                                          child: Text(
+                                            unit.examWeight,
+                                            maxLines: 1,
+                                            overflow: TextOverflow.ellipsis,
+                                            style: TextStyle(
+                                              fontSize: 9.5,
+                                              fontWeight: FontWeight.w800,
+                                              color: primaryColor,
+                                            ),
                                           ),
                                         ),
                                       ),
-                                      const SizedBox(width: 6),
-                                      Text(
-                                        '$unitDoneCount/$unitTotalCount Topics',
-                                        style: TextStyle(
-                                          fontSize: 10.5,
-                                          fontWeight: FontWeight.w700,
-                                          color: isUnitComplete
-                                              ? (isDark ? AppColors.darkSuccess : AppColors.success)
-                                              : subtextColor,
-                                          fontFeatures: const [FontFeature.tabularFigures()],
+                                      if (unit.topics.isNotEmpty) ...[
+                                        const SizedBox(width: 6),
+                                        Text(
+                                          '$unitDoneCount/$unitTotalCount Topics',
+                                          style: TextStyle(
+                                            fontSize: 10.5,
+                                            fontWeight: FontWeight.w700,
+                                            color: isUnitComplete
+                                                ? (isDark ? AppColors.darkSuccess : AppColors.success)
+                                                : subtextColor,
+                                            fontFeatures: const [FontFeature.tabularFigures()],
+                                          ),
                                         ),
-                                      ),
+                                      ] else if (isUnitComplete) ...[
+                                        const SizedBox(width: 6),
+                                        Text(
+                                          'Completed',
+                                          style: TextStyle(
+                                            fontSize: 10,
+                                            fontWeight: FontWeight.w700,
+                                            color: isDark ? AppColors.darkSuccess : AppColors.success,
+                                          ),
+                                        ),
+                                      ],
                                     ],
                                   ),
                                 ],

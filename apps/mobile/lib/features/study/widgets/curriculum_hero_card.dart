@@ -18,6 +18,7 @@ class CurriculumHeroCard extends StatefulWidget {
   final String lastTopicLabel;
   final VoidCallback onResumeNote;
   final String? ctaLabel;
+  final int grade;
 
   const CurriculumHeroCard({
     super.key,
@@ -25,6 +26,7 @@ class CurriculumHeroCard extends StatefulWidget {
     required this.lastTopicLabel,
     required this.onResumeNote,
     this.ctaLabel,
+    this.grade = 12,
   });
 
   @override
@@ -130,7 +132,7 @@ class _CurriculumHeroCardState extends State<CurriculumHeroCard> {
                         ),
                         const SizedBox(width: 6),
                         Text(
-                          'G12 • NATIONAL CURRICULUM',
+                          'G${widget.grade} • NATIONAL CURRICULUM',
                           style: TextStyle(
                             fontSize: 9.5,
                             fontWeight: FontWeight.w800,
