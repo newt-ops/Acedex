@@ -1,132 +1,49 @@
+import 'dart:math' as math;
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:hugeicons/hugeicons.dart';
+
 import '../../../core/theme/app_colors.dart';
-import '../../../core/ui/animations/bounceable.dart';
-import '../../../core/ui/progress/acedex_dots_loader.dart';
 import '../models/dashboard_data.dart';
 
-/// Subject definition for Add Study Plan Modal
-class _PlanSubject {
-  final String id;
-  final String name;
-  final String meta;
-  final String placeholder;
-  final List<String> suggestions;
-  final List<List<dynamic>> iconData;
-
-  const _PlanSubject({
-    required this.id,
-    required this.name,
-    required this.meta,
-    required this.placeholder,
-    required this.suggestions,
-    required this.iconData,
-  });
-}
-
-const List<_PlanSubject> _planSubjects = [
-  _PlanSubject(
-    id: 'physics',
-    name: 'Physics',
-    meta: 'Natural Science • 100 pts',
-    placeholder: 'e.g. Electromagnetism • Unit 4',
-    suggestions: [
-      'Electromagnetism • Unit 4',
-      '2017 EUEE Past Paper',
-      'Optics Formulas',
-    ],
-    iconData: HugeIcons.strokeRoundedAtom01,
-  ),
-  _PlanSubject(
-    id: 'mathematics',
-    name: 'Mathematics',
-    meta: 'Core Quantitative • 100 pts',
-    placeholder: 'e.g. Definite Integrals • Unit 5',
-    suggestions: [
-      'Definite Integrals • Unit 5',
-      '2017 EUEE Calculus Drill',
-      'Vectors & Matrices',
-    ],
-    iconData: HugeIcons.strokeRoundedCalculate,
-  ),
-  _PlanSubject(
-    id: 'chemistry',
-    name: 'Chemistry',
-    meta: 'Natural Science • 100 pts',
-    placeholder: 'e.g. Electrochemistry • Nernst Eq',
-    suggestions: [
-      'Electrochemistry • Nernst Eq',
-      '2016 EUEE Equilibrium',
-      'Organic Pathways',
-    ],
-    iconData: HugeIcons.strokeRoundedChemistry01,
-  ),
-  _PlanSubject(
-    id: 'biology',
-    name: 'Biology',
-    meta: 'Natural Science • 100 pts',
-    placeholder: 'e.g. DNA Replication • Unit 4',
-    suggestions: [
-      'DNA Replication • Unit 4',
-      '2016 EUEE Genetics Quiz',
-      'Cellular Respiration',
-    ],
-    iconData: HugeIcons.strokeRoundedDna,
-  ),
-  _PlanSubject(
-    id: 'english',
-    name: 'English',
-    meta: 'All Streams • 100 pts',
-    placeholder: 'e.g. Inference & Comprehension',
-    suggestions: [
-      'Inference & Comprehension',
-      '2017 EUEE Grammar Drill',
-      'Sentence Completion',
-    ],
-    iconData: HugeIcons.strokeRoundedBook02,
-  ),
-  _PlanSubject(
-    id: 'aptitude',
-    name: 'Aptitude',
-    meta: 'Scholastic Reasoning • 100 pts',
-    placeholder: 'e.g. Analytical Pattern Set',
-    suggestions: [
-      'Analytical Pattern Set',
-      '2017 EUEE Logic Sprint',
-      'Quantitative Analogies',
-    ],
-    iconData: HugeIcons.strokeRoundedIdea01,
-  ),
-];
-
-/// Cupertino Bottom Sheet: Add Study Plan Modal Card
+/// Apple Cupertino-style Add Study Plan modal bottom sheet.
 ///
-/// Replicates the authentic Apple iOS Add Study Plan specification:
-/// - Pull-to-dismiss handle & close button
-/// - Gliding Subject Selector with spring animation
-/// - Session topic input with clear button & staggered suggestion chips
-/// - Flexible Custom Time range bar with +/-15m steppers, duration presets, and slider
-/// - Study Mode gliding pill (Deep Focus | Past Paper | Quick Review)
-/// - Sticky bottom primary CTA with horizontal 3-dots wave loader
+/// Features:
+/// - Spring-animated horizontal subject pill selector
+/// - Unified single-layer topic input field + single-row quick-fill chips
+/// - Interactive horizontal drag & swipe timeline (06:00 AM – 11:30 PM)
+/// - Tappable Cupertino time wheels + 15-min steppers + duration presets
+/// - Gliding Study Mode segmented pill & horizontal 3-dots wave loader
 class AddStudyPlanSheet extends StatefulWidget {
-  final ValueChanged<StudyTaskItem> onSave;
-
   const AddStudyPlanSheet({
     super.key,
-    required this.onSave,
+    this.initialSubject = 'Physics',
+    this.onSave,
   });
 
-  static Future<void> show(
+  final String initialSubject;
+  final ValueChanged<StudyTaskItem>? onSave;
+
+  /// Presents the Add Study Plan sheet and passes the created [StudyTaskItem]
+  /// to [onSave] when confirmed.
+  static Future<StudyTaskItem?> show(
     BuildContext context, {
-    required ValueChanged<StudyTaskItem> onSave,
+    String initialSubject = 'Physics',
+    ValueChanged<StudyTaskItem>? onSave,
   }) {
-    return showModalBottomSheet(
+    HapticFeedback.lightImpact();
+    return showModalBottomSheet<StudyTaskItem>(
       context: context,
       isScrollControlled: true,
+      useSafeArea: true,
       backgroundColor: Colors.transparent,
-      barrierColor: Colors.black.withValues(alpha: 0.54),
-      builder: (_) => AddStudyPlanSheet(onSave: onSave),
+      barrierColor: Colors.black.withValues(alpha: 0.42),
+      builder: (sheetContext) {
+        return AddStudyPlanSheet(
+          initialSubject: initialSubject,
+          onSave: onSave,
+        );
+      },
     );
   }
 
@@ -135,736 +52,849 @@ class AddStudyPlanSheet extends StatefulWidget {
 }
 
 class _AddStudyPlanSheetState extends State<AddStudyPlanSheet> {
-  // Timeline Range: 06:00 AM (360) to 11:30 PM (1410)
-  static const int minDayMinutes = 6 * 60;
-  static const int maxDayMinutes = 23 * 60 + 30;
+  static const int _minStudyMinute = 6 * 60; // 06:00 AM (360)
+  static const int _maxStudyMinute = 23 * 60 + 30; // 11:30 PM (1410)
+  static const int _minDuration = 15; // 15 min minimum block
+  static const int _stepMinutes = 15; // 15 min snap increment
 
-  String _selectedSubjectId = 'physics';
-  late final TextEditingController _topicController;
+  static const List<_SubjectOption> _subjects = [
+    _SubjectOption(
+      name: 'Physics',
+      icon: Icons.blur_circular_rounded,
+      topics: [
+        'Electromagnetism • Unit 4',
+        '2017 EUEE Past Paper',
+        'Optics & Wave Formulas',
+        'Rotational Dynamics',
+      ],
+    ),
+    _SubjectOption(
+      name: 'Mathematics',
+      icon: Icons.functions_rounded,
+      topics: [
+        'Integration Techniques',
+        'Limits & Continuity',
+        '2017 EUEE Math Drills',
+        'Vectors & 3D Geometry',
+      ],
+    ),
+    _SubjectOption(
+      name: 'Chemistry',
+      icon: Icons.science_outlined,
+      topics: [
+        'Electrochemistry • Unit 3',
+        'Chemical Equilibrium',
+        'Organic Functional Groups',
+        'Acid-Base Titrations',
+      ],
+    ),
+    _SubjectOption(
+      name: 'Biology',
+      icon: Icons.biotech_outlined,
+      topics: [
+        'Molecular Genetics • Unit 4',
+        'Cellular Respiration',
+        'Human Nervous System',
+        'Ecology & Evolution',
+      ],
+    ),
+    _SubjectOption(
+      name: 'English',
+      icon: Icons.menu_book_rounded,
+      topics: [
+        'Reading Comprehension',
+        'Grammar & Tense Review',
+        'Vocabulary in Context',
+        '2016 EUEE English Set',
+      ],
+    ),
+    _SubjectOption(
+      name: 'Aptitude',
+      icon: Icons.psychology_outlined,
+      topics: [
+        'Quantitative Reasoning',
+        'Analytical Logic Puzzles',
+        'Verbal Analogies',
+        'Timed Speed Drill',
+      ],
+    ),
+  ];
+
+  static const List<String> _studyModes = [
+    'Deep Focus',
+    'Past Paper',
+    'Quick Review',
+  ];
+
+  static const List<int> _durationPresets = [30, 45, 60, 90, 120];
+
+  late String _selectedSubject;
+  late TextEditingController _topicController;
   final FocusNode _topicFocusNode = FocusNode();
-  bool _isTopicFocused = false;
+
   int _startMinutes = 16 * 60 + 30; // 04:30 PM
   int _endMinutes = 18 * 60; // 06:00 PM
-  String _selectedFocusMode = 'Deep Focus';
+  int _selectedModeIndex = 0;
   bool _isSaving = false;
-
-  _PlanSubject get _currentSubject =>
-      _planSubjects.firstWhere((s) => s.id == _selectedSubjectId);
 
   @override
   void initState() {
     super.initState();
-    _topicController = TextEditingController(text: _currentSubject.suggestions.first);
+    final matched = _subjects.any((s) => s.name == widget.initialSubject);
+    _selectedSubject = matched ? widget.initialSubject : _subjects.first.name;
+    _topicController = TextEditingController(
+      text: _currentSubject.topics.first,
+    );
+    _topicController.addListener(() {
+      if (mounted) setState(() {});
+    });
     _topicFocusNode.addListener(() {
-      if (mounted) {
-        setState(() {
-          _isTopicFocused = _topicFocusNode.hasFocus;
-        });
-      }
+      if (mounted) setState(() {});
     });
   }
 
   @override
   void dispose() {
-    _topicFocusNode.dispose();
     _topicController.dispose();
+    _topicFocusNode.dispose();
     super.dispose();
   }
 
-  String _formatTime12h(int totalMins) {
-    final clamped = totalMins.clamp(0, 24 * 60 - 1);
-    final h24 = clamped ~/ 60;
-    final mins = clamped % 60;
-    final period = h24 >= 12 ? 'PM' : 'AM';
-    final h12 = h24 % 12 == 0 ? 12 : h24 % 12;
-    return '${h12.toString().padLeft(2, '0')}:${mins.toString().padLeft(2, '0')} $period';
-  }
+  _SubjectOption get _currentSubject =>
+      _subjects.firstWhere((s) => s.name == _selectedSubject);
 
-  String _formatDurationText(int durationMins) {
-    final hrs = durationMins ~/ 60;
-    final mins = durationMins % 60;
-    if (hrs > 0 && mins > 0) return '${hrs}h ${mins}m • $durationMins min';
-    if (hrs > 0) return '${hrs}h • $durationMins min';
-    return '$mins min';
-  }
+  int get _durationMinutes => _endMinutes - _startMinutes;
 
-  String _getTimeOfDayLabel(int startMin) {
-    if (startMin < 12 * 60) return 'Morning';
-    if (startMin < 17 * 60) return 'Afternoon';
-    if (startMin < 21 * 60) return 'Evening';
+  String get _timeOfDayLabel {
+    if (_startMinutes < 12 * 60) return 'Morning';
+    if (_startMinutes < 17 * 60) return 'Afternoon';
+    if (_startMinutes < 20 * 60 + 30) return 'Evening';
     return 'Night';
   }
 
-  void _onSelectSubject(String id) {
-    if (_selectedSubjectId == id) return;
-    final next = _planSubjects.firstWhere((s) => s.id == id);
-    setState(() {
-      _selectedSubjectId = id;
-      _topicController.text = next.suggestions.first;
-    });
+  String get _formattedDurationHeader {
+    final mins = _durationMinutes;
+    final hrs = mins ~/ 60;
+    final rem = mins % 60;
+    if (hrs == 0) return '${rem}m';
+    if (rem == 0) return '${hrs}h • $mins min';
+    return '${hrs}h ${rem}m • $mins min';
   }
 
-  void _nudgeStart(int delta) {
-    setState(() {
-      _startMinutes = (_startMinutes + delta).clamp(minDayMinutes, _endMinutes - 15);
-    });
+  String get _compactDurationBadge {
+    final mins = _durationMinutes;
+    final hrs = mins ~/ 60;
+    final rem = mins % 60;
+    if (hrs == 0) return '${rem}m';
+    if (rem == 0) return '${hrs}h';
+    return '${hrs}h ${rem}m';
   }
 
-  void _nudgeEnd(int delta) {
-    setState(() {
-      _endMinutes = (_endMinutes + delta).clamp(_startMinutes + 15, maxDayMinutes);
-    });
+  static String _formatMinutes(int totalMinutes) {
+    final clamped = totalMinutes.clamp(0, 1439);
+    final hour24 = clamped ~/ 60;
+    final minute = clamped % 60;
+    final period = hour24 >= 12 ? 'PM' : 'AM';
+    final hour12 = hour24 % 12 == 0 ? 12 : hour24 % 12;
+    return '${hour12.toString().padLeft(2, '0')}:${minute.toString().padLeft(2, '0')} $period';
   }
 
-  void _applyDurationPreset(int presetMins) {
+  void _selectSubject(String subjectName) {
+    if (_selectedSubject == subjectName) return;
+    HapticFeedback.selectionClick();
+    final previousDefault = _currentSubject.topics.first;
     setState(() {
-      if (_startMinutes + presetMins <= maxDayMinutes) {
-        _endMinutes = _startMinutes + presetMins;
-      } else {
-        _endMinutes = maxDayMinutes;
-        _startMinutes = (_endMinutes - presetMins).clamp(minDayMinutes, maxDayMinutes - 15);
+      _selectedSubject = subjectName;
+      if (_topicController.text.trim().isEmpty ||
+          _topicController.text.trim() == previousDefault) {
+        _topicController.text = _currentSubject.topics.first;
+        _topicController.selection = TextSelection.fromPosition(
+          TextPosition(offset: _topicController.text.length),
+        );
       }
     });
   }
 
-  void _handleSave() async {
-    final topic = _topicController.text.trim();
-    if (topic.isEmpty || _isSaving) return;
-
-    setState(() => _isSaving = true);
-    await Future.delayed(const Duration(milliseconds: 650));
-    if (!mounted) return;
-
-    final durationMins = (_endMinutes - _startMinutes).clamp(15, 600);
-    final durationStr = durationMins >= 60
-        ? '${durationMins ~/ 60}h${durationMins % 60 > 0 ? " ${durationMins % 60}m" : ""}'
-        : '${durationMins}m';
-
-    final timeSpan = '${_formatTime12h(_startMinutes)} – ${_formatTime12h(_endMinutes)}';
-
-    final newItem = StudyTaskItem(
-      id: 'task-${DateTime.now().millisecondsSinceEpoch}',
-      title: topic,
-      subject: _currentSubject.name,
-      duration: durationStr,
-      completed: false,
-      timeSpan: timeSpan,
-      focusMode: _selectedFocusMode,
+  void _stepStart(int delta) {
+    final nextStart = (_startMinutes + delta).clamp(
+      _minStudyMinute,
+      _endMinutes - _minDuration,
     );
-
-    widget.onSave(newItem);
-    Navigator.of(context).pop();
+    if (nextStart != _startMinutes) {
+      HapticFeedback.selectionClick();
+      setState(() => _startMinutes = nextStart);
+    }
   }
 
-  @override
-  Widget build(BuildContext context) {
-    final theme = Theme.of(context);
-    final isDark = theme.brightness == Brightness.dark;
-    final primaryColor = theme.colorScheme.primary;
-    final surfaceColor = isDark ? const Color(0xFF1B1B1F) : const Color(0xFFF4F4F6);
-    final raisedBg = isDark ? const Color(0xFF2B2B31) : Colors.white;
-    final lineBorder = isDark ? const Color(0xFF383842) : const Color(0xFFE4E4E8);
-    final subtextColor = isDark ? AppColors.darkSubtext : AppColors.lightSubtext;
-    final durationMins = (_endMinutes - _startMinutes).clamp(15, 600);
+  void _stepEnd(int delta) {
+    final nextEnd = (_endMinutes + delta).clamp(
+      _startMinutes + _minDuration,
+      _maxStudyMinute,
+    );
+    if (nextEnd != _endMinutes) {
+      HapticFeedback.selectionClick();
+      setState(() => _endMinutes = nextEnd);
+    }
+  }
 
-    return Container(
-      height: MediaQuery.of(context).size.height * 0.88,
-      decoration: BoxDecoration(
-        color: theme.scaffoldBackgroundColor,
-        borderRadius: const BorderRadius.vertical(top: Radius.circular(32)),
-        border: Border(top: BorderSide(color: lineBorder)),
-        boxShadow: [
-          BoxShadow(
-            color: Colors.black.withValues(alpha: isDark ? 0.6 : 0.2),
-            blurRadius: 28,
-            offset: const Offset(0, -6),
+  void _applyDurationPreset(int targetDuration) {
+    HapticFeedback.selectionClick();
+    setState(() {
+      final candidateEnd = _startMinutes + targetDuration;
+      if (candidateEnd <= _maxStudyMinute) {
+        _endMinutes = candidateEnd;
+      } else {
+        _endMinutes = _maxStudyMinute;
+        _startMinutes = (_maxStudyMinute - targetDuration).clamp(
+          _minStudyMinute,
+          _maxStudyMinute - _minDuration,
+        );
+      }
+    });
+  }
+
+  Future<void> _openCupertinoTimePicker({required bool isStart}) async {
+    HapticFeedback.selectionClick();
+    final isDark = Theme.of(context).brightness == Brightness.dark;
+    final sheetBg = isDark
+        ? AppColors.darkBackground
+        : AppColors.lightBackground;
+    final accent = isDark ? AppColors.accentDark : AppColors.accentLight;
+    final textColor = isDark ? AppColors.darkText : AppColors.lightText;
+
+    final initialMins = isStart ? _startMinutes : _endMinutes;
+    var tempDateTime = DateTime(
+      2026,
+      1,
+      1,
+      initialMins ~/ 60,
+      initialMins % 60,
+    );
+
+    await showCupertinoModalPopup<void>(
+      context: context,
+      builder: (pickerContext) {
+        return Container(
+          height: 290,
+          decoration: BoxDecoration(
+            color: sheetBg,
+            borderRadius: const BorderRadius.vertical(top: Radius.circular(24)),
           ),
-        ],
-      ),
-      child: Column(
-        children: [
-          // 1. Pull handle & Header
-          Padding(
-            padding: const EdgeInsets.fromLTRB(20, 10, 16, 12),
-            child: Column(
-              children: [
-                Center(
-                  child: Container(
-                    width: 36,
-                    height: 5,
-                    decoration: BoxDecoration(
-                      color: subtextColor.withValues(alpha: 0.35),
-                      borderRadius: BorderRadius.circular(999),
-                    ),
-                  ),
-                ),
-                const SizedBox(height: 12),
-                Row(
+          child: Column(
+            children: [
+              Padding(
+                padding: const EdgeInsets.fromLTRB(16, 10, 16, 4),
+                child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          'Add Study Plan',
-                          style: TextStyle(
-                            fontSize: 20,
-                            fontWeight: FontWeight.w800,
-                            letterSpacing: -0.3,
-                            color: theme.colorScheme.onSurface,
-                          ),
+                    CupertinoButton(
+                      padding: EdgeInsets.zero,
+                      onPressed: () => Navigator.of(pickerContext).pop(),
+                      child: Text(
+                        'Cancel',
+                        style: TextStyle(
+                          color: isDark
+                              ? AppColors.darkSecondaryText
+                              : AppColors.lightSecondaryText,
+                          fontSize: 15,
                         ),
-                        const SizedBox(height: 2),
-                        Text(
-                          'Customize your session & time block',
-                          style: TextStyle(
-                            fontSize: 12,
-                            fontWeight: FontWeight.w500,
-                            color: subtextColor,
-                          ),
-                        ),
-                      ],
+                      ),
                     ),
-                    AcedexBounceable(
-                      onTap: () => Navigator.of(context).pop(),
-                      child: Container(
-                        width: 32,
-                        height: 32,
-                        decoration: BoxDecoration(
-                          color: surfaceColor,
-                          shape: BoxShape.circle,
-                          border: Border.all(color: lineBorder),
-                        ),
-                        alignment: Alignment.center,
-                        child: Icon(
-                          Icons.close_rounded,
-                          size: 16,
-                          color: subtextColor,
+                    Text(
+                      isStart ? 'Start Time' : 'End Time',
+                      style: TextStyle(
+                        color: textColor,
+                        fontSize: 16,
+                        fontWeight: FontWeight.w600,
+                        decoration: TextDecoration.none,
+                      ),
+                    ),
+                    CupertinoButton(
+                      padding: EdgeInsets.zero,
+                      onPressed: () {
+                        final pickedMins =
+                            tempDateTime.hour * 60 + tempDateTime.minute;
+                        setState(() {
+                          if (isStart) {
+                            _startMinutes = pickedMins.clamp(
+                              _minStudyMinute,
+                              _endMinutes - _minDuration,
+                            );
+                          } else {
+                            _endMinutes = pickedMins.clamp(
+                              _startMinutes + _minDuration,
+                              _maxStudyMinute,
+                            );
+                          }
+                        });
+                        HapticFeedback.lightImpact();
+                        Navigator.of(pickerContext).pop();
+                      },
+                      child: Text(
+                        'Done',
+                        style: TextStyle(
+                          color: accent,
+                          fontSize: 15,
+                          fontWeight: FontWeight.w600,
                         ),
                       ),
                     ),
                   ],
                 ),
-              ],
-            ),
+              ),
+              Expanded(
+                child: CupertinoTheme(
+                  data: CupertinoThemeData(
+                    brightness: isDark ? Brightness.dark : Brightness.light,
+                  ),
+                  child: CupertinoDatePicker(
+                    mode: CupertinoDatePickerMode.time,
+                    minuteInterval: 5,
+                    initialDateTime: tempDateTime,
+                    minimumDate: DateTime(2026, 1, 1, 6, 0),
+                    maximumDate: DateTime(2026, 1, 1, 23, 30),
+                    onDateTimeChanged: (dt) => tempDateTime = dt,
+                  ),
+                ),
+              ),
+            ],
           ),
+        );
+      },
+    );
+  }
 
-          // Scrollable Body
-          Expanded(
-            child: SingleChildScrollView(
+  Future<void> _handleSave() async {
+    if (_isSaving) return;
+    final cleanTopic = _topicController.text.trim().isEmpty
+        ? _currentSubject.topics.first
+        : _topicController.text.trim();
+
+    HapticFeedback.lightImpact();
+    setState(() => _isSaving = true);
+
+    await Future<void>.delayed(const Duration(milliseconds: 600));
+    if (!mounted) return;
+
+    final task = StudyTaskItem(
+      id: 'task_${DateTime.now().millisecondsSinceEpoch}',
+      title: cleanTopic,
+      subject: _selectedSubject,
+      duration: _compactDurationBadge,
+      completed: false,
+      timeSpan:
+          '${_formatMinutes(_startMinutes)} – ${_formatMinutes(_endMinutes)}',
+      focusMode: _studyModes[_selectedModeIndex],
+    );
+
+    HapticFeedback.mediumImpact();
+    widget.onSave?.call(task);
+    Navigator.of(context).pop(task);
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final isDark = Theme.of(context).brightness == Brightness.dark;
+    final bg = isDark ? AppColors.darkBackground : AppColors.lightBackground;
+    final surface = isDark ? AppColors.darkSurface : AppColors.lightSurface;
+    final raised = isDark ? AppColors.darkRaised : AppColors.lightRaised;
+    final accent = isDark ? AppColors.accentDark : AppColors.accentLight;
+    final accentSoft = isDark
+        ? AppColors.accentSoftDark
+        : AppColors.accentSoftLight;
+    final onAccent = isDark ? AppColors.onAccentDark : AppColors.onAccentLight;
+    final text = isDark ? AppColors.darkText : AppColors.lightText;
+    final subtext = isDark
+        ? AppColors.darkSecondaryText
+        : AppColors.lightSecondaryText;
+    final line = isDark ? AppColors.darkLine : AppColors.lightLine;
+
+    final keyboardInset = MediaQuery.viewInsetsOf(context).bottom;
+    final bottomPadding = MediaQuery.paddingOf(context).bottom;
+    final screenHeight = MediaQuery.sizeOf(context).height;
+
+    return AnimatedPadding(
+      duration: const Duration(milliseconds: 220),
+      curve: Curves.easeOutCubic,
+      padding: EdgeInsets.only(bottom: keyboardInset),
+      child: Container(
+        constraints: BoxConstraints(
+          maxHeight: screenHeight * 0.88,
+        ),
+        decoration: BoxDecoration(
+          color: bg,
+          borderRadius: const BorderRadius.vertical(top: Radius.circular(32)),
+          border: Border(top: BorderSide(color: line, width: 0.7)),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.black.withValues(alpha: isDark ? 0.45 : 0.14),
+              blurRadius: 28,
+              offset: const Offset(0, -6),
+            ),
+          ],
+        ),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            // 1. iOS Grabber Pill
+            Center(
+              child: Container(
+                margin: const EdgeInsets.only(top: 10, bottom: 12),
+                width: 38,
+                height: 5,
+                decoration: BoxDecoration(
+                  color: subtext.withValues(alpha: 0.28),
+                  borderRadius: BorderRadius.circular(999),
+                ),
+              ),
+            ),
+
+            // 2. Header Row (Fixed at sheet top)
+            Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20),
-              physics: const BouncingScrollPhysics(),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.stretch,
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  // 2. Subject Selector
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        'SUBJECT',
-                        style: TextStyle(
-                          fontSize: 10.5,
-                          fontWeight: FontWeight.w800,
-                          letterSpacing: 0.7,
-                          color: subtextColor,
-                        ),
-                      ),
-                      Text(
-                        _currentSubject.meta,
-                        style: TextStyle(
-                          fontSize: 10.5,
-                          fontWeight: FontWeight.w800,
-                          color: primaryColor,
-                        ),
-                      ),
-                    ],
-                  ),
-                  const SizedBox(height: 8),
-
-                  // Horizontal Subject Rail
-                  SingleChildScrollView(
-                    scrollDirection: Axis.horizontal,
-                    physics: const BouncingScrollPhysics(),
-                    child: Container(
-                      padding: const EdgeInsets.all(3),
-                      decoration: BoxDecoration(
-                        color: surfaceColor,
-                        borderRadius: BorderRadius.circular(16),
-                        border: Border.all(color: lineBorder),
-                      ),
-                      child: Row(
-                        children: _planSubjects.map((subj) {
-                          final isSelected = subj.id == _selectedSubjectId;
-                          return Padding(
-                            padding: const EdgeInsets.only(right: 4),
-                            child: AcedexBounceable(
-                              onTap: () => _onSelectSubject(subj.id),
-                              child: Container(
-                                height: 34,
-                                padding: const EdgeInsets.symmetric(horizontal: 12),
-                                decoration: BoxDecoration(
-                                  color: isSelected ? primaryColor : Colors.transparent,
-                                  borderRadius: BorderRadius.circular(12),
-                                ),
-                                child: Row(
-                                  mainAxisSize: MainAxisSize.min,
-                                  children: [
-                                    HugeIcon(
-                                      icon: subj.iconData,
-                                      color: isSelected ? Colors.white : subtextColor,
-                                      size: 14,
-                                    ),
-                                    const SizedBox(width: 6),
-                                    Text(
-                                      subj.name,
-                                      style: TextStyle(
-                                        fontSize: 12,
-                                        fontWeight: FontWeight.w700,
-                                        color: isSelected ? Colors.white : subtextColor,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ),
-                          );
-                        }).toList(),
-                      ),
-                    ),
-                  ),
-
-                  const SizedBox(height: 18),
-
-                  // 3. Session Topic Input
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        'SESSION TOPIC',
-                        style: TextStyle(
-                          fontSize: 10.5,
-                          fontWeight: FontWeight.w800,
-                          letterSpacing: 0.7,
-                          color: subtextColor,
-                        ),
-                      ),
-                      Text(
-                        'Tap chip or type custom',
-                        style: TextStyle(
-                          fontSize: 10,
-                          fontWeight: FontWeight.w600,
-                          color: subtextColor,
-                        ),
-                      ),
-                    ],
-                  ),
-                  const SizedBox(height: 8),
-
-                  AnimatedContainer(
-                    duration: const Duration(milliseconds: 200),
-                    curve: Curves.easeOutCubic,
-                    height: 48,
-                    padding: const EdgeInsets.symmetric(horizontal: 12),
-                    decoration: BoxDecoration(
-                      color: _isTopicFocused ? raisedBg : surfaceColor,
-                      borderRadius: BorderRadius.circular(15),
-                      border: Border.all(
-                        color: _isTopicFocused ? primaryColor : lineBorder,
-                        width: _isTopicFocused ? 1.5 : 1.0,
-                      ),
-                      boxShadow: _isTopicFocused
-                          ? [
-                              BoxShadow(
-                                color: primaryColor.withValues(alpha: 0.12),
-                                blurRadius: 10,
-                                offset: const Offset(0, 2),
-                              ),
-                            ]
-                          : null,
-                    ),
-                    child: Row(
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        AnimatedScale(
-                          duration: const Duration(milliseconds: 200),
-                          scale: _isTopicFocused ? 1.08 : 1.0,
-                          child: HugeIcon(
-                            icon: HugeIcons.strokeRoundedEdit02,
-                            color: _isTopicFocused ? primaryColor : subtextColor,
-                            size: 16,
+                        Text(
+                          'Add Study Plan',
+                          style: TextStyle(
+                            color: text,
+                            fontSize: 22,
+                            fontWeight: FontWeight.w700,
+                            letterSpacing: -0.45,
                           ),
                         ),
-                        const SizedBox(width: 10),
-                        Expanded(
-                          child: TextField(
-                            focusNode: _topicFocusNode,
-                            controller: _topicController,
-                            textInputAction: TextInputAction.done,
-                            textCapitalization: TextCapitalization.sentences,
-                            cursorColor: primaryColor,
-                            style: TextStyle(
-                              fontSize: 13,
-                              fontWeight: FontWeight.w600,
-                              letterSpacing: -0.2,
-                              color: theme.colorScheme.onSurface,
-                            ),
-                            decoration: InputDecoration(
-                              hintText: _currentSubject.placeholder,
-                              hintStyle: TextStyle(
-                                fontSize: 13,
-                                fontWeight: FontWeight.normal,
-                                color: subtextColor.withValues(alpha: 0.7),
-                              ),
-                              border: InputBorder.none,
-                              isDense: true,
-                              contentPadding: const EdgeInsets.symmetric(vertical: 12),
-                            ),
-                            onChanged: (_) => setState(() {}),
+                        const SizedBox(height: 3),
+                        Text(
+                          'Customize your session & time block',
+                          style: TextStyle(
+                            color: subtext,
+                            fontSize: 13.5,
+                            fontWeight: FontWeight.w400,
                           ),
                         ),
-                        if (_topicController.text.isNotEmpty)
-                          AcedexBounceable(
-                            onTap: () {
-                              HapticFeedback.selectionClick();
-                              _topicController.clear();
-                              setState(() {});
-                            },
-                            child: Container(
-                              width: 22,
-                              height: 22,
-                              decoration: BoxDecoration(
-                                color: lineBorder,
-                                shape: BoxShape.circle,
-                              ),
-                              alignment: Alignment.center,
-                              child: Icon(Icons.close_rounded, size: 13, color: subtextColor),
-                            ),
-                          ),
                       ],
                     ),
                   ),
+                  GestureDetector(
+                    onTap: () {
+                      HapticFeedback.selectionClick();
+                      Navigator.of(context).pop();
+                    },
+                    child: Container(
+                      width: 34,
+                      height: 34,
+                      decoration: BoxDecoration(
+                        color: surface,
+                        shape: BoxShape.circle,
+                      ),
+                      child: Icon(
+                        Icons.close_rounded,
+                        size: 18,
+                        color: subtext,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            const SizedBox(height: 14),
 
-                  const SizedBox(height: 8),
+            // 3. Scrollable Content Body
+            Flexible(
+              child: SingleChildScrollView(
+                physics: const BouncingScrollPhysics(),
+                padding: const EdgeInsets.fromLTRB(20, 0, 20, 16),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    // 3. Spring-Animated Subject Rail
+              SizedBox(
+                height: 40,
+                child: ListView.separated(
+                  scrollDirection: Axis.horizontal,
+                  physics: const BouncingScrollPhysics(),
+                  itemCount: _subjects.length,
+                  separatorBuilder: (_, _) => const SizedBox(width: 8),
+                  itemBuilder: (context, index) {
+                    final item = _subjects[index];
+                    final isSelected = item.name == _selectedSubject;
+                    return GestureDetector(
+                      onTap: () => _selectSubject(item.name),
+                      child: AnimatedContainer(
+                        duration: const Duration(milliseconds: 260),
+                        curve: Curves.easeOutBack,
+                        padding: const EdgeInsets.symmetric(
+                          horizontal: 14,
+                          vertical: 8,
+                        ),
+                        decoration: BoxDecoration(
+                          color: isSelected ? accent : surface,
+                          borderRadius: BorderRadius.circular(999),
+                          boxShadow: isSelected
+                              ? [
+                                  BoxShadow(
+                                    color: accent.withValues(alpha: 0.28),
+                                    blurRadius: 10,
+                                    offset: const Offset(0, 3),
+                                  ),
+                                ]
+                              : null,
+                        ),
+                        child: Row(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            AnimatedScale(
+                              scale: isSelected ? 1.08 : 1.0,
+                              duration: const Duration(milliseconds: 220),
+                              child: Icon(
+                                item.icon,
+                                size: 16,
+                                color: isSelected ? onAccent : subtext,
+                              ),
+                            ),
+                            const SizedBox(width: 7),
+                            Text(
+                              item.name,
+                              style: TextStyle(
+                                color: isSelected ? onAccent : text,
+                                fontSize: 13.5,
+                                fontWeight: isSelected
+                                    ? FontWeight.w600
+                                    : FontWeight.w500,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    );
+                  },
+                ),
+              ),
+              const SizedBox(height: 20),
 
-                  // Staggered Suggestion Chips
-                  Wrap(
-                    spacing: 6,
-                    runSpacing: 6,
-                    children: _currentSubject.suggestions.map((suggestion) {
-                      final isMatched = _topicController.text.trim() == suggestion;
-                      return AcedexBounceable(
+              // 4. Unified Single-Layer Session Topic Input
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    'SESSION TOPIC',
+                    style: TextStyle(
+                      color: subtext,
+                      fontSize: 11.5,
+                      fontWeight: FontWeight.w700,
+                      letterSpacing: 0.8,
+                    ),
+                  ),
+                  Text(
+                    'Tap chip or type custom',
+                    style: TextStyle(
+                      color: subtext.withValues(alpha: 0.85),
+                      fontSize: 11.5,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(height: 8),
+              TextField(
+                controller: _topicController,
+                focusNode: _topicFocusNode,
+                textInputAction: TextInputAction.done,
+                style: TextStyle(
+                  color: text,
+                  fontSize: 15,
+                  fontWeight: FontWeight.w600,
+                ),
+                cursorColor: accent,
+                decoration: InputDecoration(
+                  hintText: 'e.g. ${_currentSubject.topics.first}',
+                  hintStyle: TextStyle(
+                    color: subtext.withValues(alpha: 0.65),
+                    fontSize: 14.5,
+                    fontWeight: FontWeight.w400,
+                  ),
+                  filled: true,
+                  fillColor: _topicFocusNode.hasFocus ? raised : surface,
+                  contentPadding: const EdgeInsets.symmetric(
+                    horizontal: 14,
+                    vertical: 14,
+                  ),
+                  prefixIcon: Icon(
+                    Icons.edit_outlined,
+                    size: 19,
+                    color: _topicFocusNode.hasFocus ? accent : subtext,
+                  ),
+                  suffixIcon: _topicController.text.isNotEmpty
+                      ? IconButton(
+                          key: const ValueKey('clear_topic'),
+                          tooltip: 'Clear topic',
+                          splashRadius: 18,
+                          onPressed: () {
+                            HapticFeedback.selectionClick();
+                            _topicController.clear();
+                          },
+                          icon: Container(
+                            width: 22,
+                            height: 22,
+                            decoration: BoxDecoration(
+                              color: subtext.withValues(alpha: 0.16),
+                              shape: BoxShape.circle,
+                            ),
+                            child: Icon(
+                              Icons.close_rounded,
+                              size: 14,
+                              color: text,
+                            ),
+                          ),
+                        )
+                      : null,
+                  enabledBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(18),
+                    borderSide: BorderSide(color: line, width: 1.0),
+                  ),
+                  focusedBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(18),
+                    borderSide: BorderSide(color: accent, width: 1.7),
+                  ),
+                ),
+              ),
+              const SizedBox(height: 10),
+
+              // Single-Row Horizontal Quick-Fill Topic Chips
+              SizedBox(
+                height: 34,
+                child: AnimatedSwitcher(
+                  duration: const Duration(milliseconds: 220),
+                  child: ListView.separated(
+                    key: ValueKey(_selectedSubject),
+                    scrollDirection: Axis.horizontal,
+                    physics: const BouncingScrollPhysics(),
+                    itemCount: _currentSubject.topics.length,
+                    separatorBuilder: (_, _) => const SizedBox(width: 8),
+                    itemBuilder: (context, index) {
+                      final chipTopic = _currentSubject.topics[index];
+                      final isSelected =
+                          _topicController.text.trim() == chipTopic;
+                      return GestureDetector(
                         onTap: () {
-                          setState(() {
-                            _topicController.text = suggestion;
-                          });
+                          HapticFeedback.selectionClick();
+                          _topicController.text = chipTopic;
+                          _topicController.selection =
+                              TextSelection.fromPosition(
+                                TextPosition(offset: chipTopic.length),
+                              );
                         },
-                        child: Container(
-                          padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                        child: AnimatedContainer(
+                          duration: const Duration(milliseconds: 200),
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 13,
+                            vertical: 7,
+                          ),
                           decoration: BoxDecoration(
-                            color: isMatched
-                                ? primaryColor.withValues(alpha: 0.14)
-                                : surfaceColor,
+                            color: isSelected ? accentSoft : surface,
                             borderRadius: BorderRadius.circular(999),
                             border: Border.all(
-                              color: isMatched ? primaryColor : lineBorder,
+                              color: isSelected ? accent : line,
+                              width: isSelected ? 1.3 : 0.8,
                             ),
                           ),
                           child: Text(
-                            suggestion,
+                            chipTopic,
                             style: TextStyle(
-                              fontSize: 10.5,
-                              fontWeight: FontWeight.w700,
-                              color: isMatched ? primaryColor : subtextColor,
+                              color: isSelected ? accent : subtext,
+                              fontSize: 12.5,
+                              fontWeight: isSelected
+                                  ? FontWeight.w600
+                                  : FontWeight.w500,
                             ),
                           ),
                         ),
                       );
-                    }).toList(),
+                    },
                   ),
+                ),
+              ),
+              const SizedBox(height: 18),
 
-                  const SizedBox(height: 18),
-
-                  // 4. Flexible Custom Time (Time Range Bar)
-                  Container(
-                    padding: const EdgeInsets.all(14),
-                    decoration: BoxDecoration(
-                      color: surfaceColor,
-                      borderRadius: BorderRadius.circular(22),
-                      border: Border.all(color: lineBorder),
-                    ),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.stretch,
+              // 5. Flexible Time Range Card with Draggable & Swipeable Timeline
+              Container(
+                padding: const EdgeInsets.all(15),
+                decoration: BoxDecoration(
+                  color: surface,
+                  borderRadius: BorderRadius.circular(24),
+                  border: Border.all(color: line, width: 0.8),
+                ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
                       children: [
-                        // Row 1: Header + Badges
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Text(
-                              'TIME RANGE',
-                              style: TextStyle(
-                                fontSize: 10.5,
-                                fontWeight: FontWeight.w800,
-                                letterSpacing: 0.7,
-                                color: subtextColor,
-                              ),
-                            ),
-                            Row(
-                              children: [
-                                Container(
-                                  padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
-                                  decoration: BoxDecoration(
-                                    color: raisedBg,
-                                    borderRadius: BorderRadius.circular(999),
-                                    border: Border.all(color: lineBorder),
-                                  ),
-                                  child: Text(
-                                    _getTimeOfDayLabel(_startMinutes),
-                                    style: TextStyle(
-                                      fontSize: 10,
-                                      fontWeight: FontWeight.w800,
-                                      color: theme.colorScheme.onSurface,
-                                    ),
-                                  ),
-                                ),
-                                const SizedBox(width: 6),
-                                Container(
-                                  padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
-                                  decoration: BoxDecoration(
-                                    color: primaryColor.withValues(alpha: 0.14),
-                                    borderRadius: BorderRadius.circular(999),
-                                  ),
-                                  child: Text(
-                                    _formatDurationText(durationMins),
-                                    style: TextStyle(
-                                      fontSize: 10,
-                                      fontWeight: FontWeight.w800,
-                                      color: primaryColor,
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ],
-                        ),
-
-                        const SizedBox(height: 12),
-
-                        // Start & End Readout Cards
-                        Row(
-                          children: [
-                            // START CARD
-                            Expanded(
-                              child: Container(
-                                padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 10),
-                                decoration: BoxDecoration(
-                                  color: raisedBg,
-                                  borderRadius: BorderRadius.circular(16),
-                                  border: Border.all(color: lineBorder),
-                                ),
-                                child: Column(
-                                  children: [
-                                    Text(
-                                      'START',
-                                      style: TextStyle(
-                                        fontSize: 9.5,
-                                        fontWeight: FontWeight.w800,
-                                        letterSpacing: 0.7,
-                                        color: subtextColor,
-                                      ),
-                                    ),
-                                    const SizedBox(height: 4),
-                                    Row(
-                                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                      children: [
-                                        _buildNudgeBtn('−', () => _nudgeStart(-15), lineBorder, subtextColor),
-                                        Text(
-                                          _formatTime12h(_startMinutes),
-                                          style: TextStyle(
-                                            fontSize: 14,
-                                            fontWeight: FontWeight.w800,
-                                            letterSpacing: -0.2,
-                                            color: theme.colorScheme.onSurface,
-                                          ),
-                                        ),
-                                        _buildNudgeBtn('+', () => _nudgeStart(15), lineBorder, subtextColor),
-                                      ],
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ),
-
-                            const SizedBox(width: 10),
-
-                            // END CARD
-                            Expanded(
-                              child: Container(
-                                padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 10),
-                                decoration: BoxDecoration(
-                                  color: raisedBg,
-                                  borderRadius: BorderRadius.circular(16),
-                                  border: Border.all(color: lineBorder),
-                                ),
-                                child: Column(
-                                  children: [
-                                    Text(
-                                      'END',
-                                      style: TextStyle(
-                                        fontSize: 9.5,
-                                        fontWeight: FontWeight.w800,
-                                        letterSpacing: 0.7,
-                                        color: subtextColor,
-                                      ),
-                                    ),
-                                    const SizedBox(height: 4),
-                                    Row(
-                                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                      children: [
-                                        _buildNudgeBtn('−', () => _nudgeEnd(-15), lineBorder, subtextColor),
-                                        Text(
-                                          _formatTime12h(_endMinutes),
-                                          style: TextStyle(
-                                            fontSize: 14,
-                                            fontWeight: FontWeight.w800,
-                                            letterSpacing: -0.2,
-                                            color: theme.colorScheme.onSurface,
-                                          ),
-                                        ),
-                                        _buildNudgeBtn('+', () => _nudgeEnd(15), lineBorder, subtextColor),
-                                      ],
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-
-                        const SizedBox(height: 14),
-
-                        // Interactive Range Slider
-                        SliderTheme(
-                          data: SliderTheme.of(context).copyWith(
-                            activeTrackColor: primaryColor,
-                            inactiveTrackColor: lineBorder,
-                            thumbColor: Colors.white,
-                            overlayColor: primaryColor.withValues(alpha: 0.16),
-                            rangeThumbShape: const RoundRangeSliderThumbShape(
-                              enabledThumbRadius: 9,
-                              elevation: 3,
-                            ),
-                            trackHeight: 6,
-                          ),
-                          child: RangeSlider(
-                            values: RangeValues(
-                              _startMinutes.toDouble(),
-                              _endMinutes.toDouble(),
-                            ),
-                            min: minDayMinutes.toDouble(),
-                            max: maxDayMinutes.toDouble(),
-                            divisions: (maxDayMinutes - minDayMinutes) ~/ 15,
-                            onChanged: (RangeValues values) {
-                              setState(() {
-                                _startMinutes = (values.start.round() ~/ 15) * 15;
-                                _endMinutes = (values.end.round() ~/ 15) * 15;
-                              });
-                            },
+                        Text(
+                          'TIME RANGE',
+                          style: TextStyle(
+                            color: subtext,
+                            fontSize: 11.5,
+                            fontWeight: FontWeight.w700,
+                            letterSpacing: 0.8,
                           ),
                         ),
-
-                        // Quick Duration Presets
-                        Row(
-                          children: [30, 45, 60, 90, 120].map((presetMins) {
-                            final isSelected = durationMins == presetMins;
-                            final label = presetMins >= 60
-                                ? (presetMins % 60 == 0 ? '${presetMins ~/ 60}h' : '${presetMins / 60}h')
-                                : '${presetMins}m';
-
-                            return Expanded(
-                              child: Padding(
-                                padding: const EdgeInsets.symmetric(horizontal: 2),
-                                child: AcedexBounceable(
-                                  onTap: () => _applyDurationPreset(presetMins),
-                                  child: Container(
-                                    height: 28,
-                                    decoration: BoxDecoration(
-                                      color: isSelected
-                                          ? primaryColor.withValues(alpha: 0.14)
-                                          : raisedBg,
-                                      borderRadius: BorderRadius.circular(999),
-                                      border: Border.all(
-                                        color: isSelected ? primaryColor : lineBorder,
-                                      ),
-                                    ),
-                                    alignment: Alignment.center,
-                                    child: Text(
-                                      label,
-                                      style: TextStyle(
-                                        fontSize: 11,
-                                        fontWeight: FontWeight.w700,
-                                        color: isSelected ? primaryColor : subtextColor,
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            );
-                          }).toList(),
+                        const Spacer(),
+                        Container(
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 10,
+                            vertical: 4,
+                          ),
+                          decoration: BoxDecoration(
+                            color: raised,
+                            borderRadius: BorderRadius.circular(999),
+                            border: Border.all(color: line, width: 0.7),
+                          ),
+                          child: Text(
+                            _timeOfDayLabel,
+                            style: TextStyle(
+                              color: text,
+                              fontSize: 11.5,
+                              fontWeight: FontWeight.w600,
+                            ),
+                          ),
+                        ),
+                        const SizedBox(width: 6),
+                        Container(
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 10,
+                            vertical: 4,
+                          ),
+                          decoration: BoxDecoration(
+                            color: accentSoft,
+                            borderRadius: BorderRadius.circular(999),
+                          ),
+                          child: Text(
+                            _formattedDurationHeader,
+                            style: TextStyle(
+                              color: accent,
+                              fontSize: 11.5,
+                              fontWeight: FontWeight.w700,
+                            ),
+                          ),
                         ),
                       ],
                     ),
-                  ),
+                    const SizedBox(height: 12),
 
-                  const SizedBox(height: 18),
-
-                  // 5. Study Mode Segmented Control
-                  Text(
-                    'STUDY MODE',
-                    style: TextStyle(
-                      fontSize: 10.5,
-                      fontWeight: FontWeight.w800,
-                      letterSpacing: 0.7,
-                      color: subtextColor,
+                    // Start & End Stepper + Tappable Cupertino Time Cards
+                    Row(
+                      children: [
+                        Expanded(
+                          child: _TimeEndpointCard(
+                            label: 'START',
+                            formattedTime: _formatMinutes(_startMinutes),
+                            canDecrement: _startMinutes > _minStudyMinute,
+                            canIncrement:
+                                _startMinutes + _stepMinutes <=
+                                _endMinutes - _minDuration,
+                            onDecrement: () => _stepStart(-_stepMinutes),
+                            onIncrement: () => _stepStart(_stepMinutes),
+                            onTapTime: () =>
+                                _openCupertinoTimePicker(isStart: true),
+                            raisedColor: raised,
+                            surfaceColor: surface,
+                            textColor: text,
+                            subtextColor: subtext,
+                            lineColor: line,
+                          ),
+                        ),
+                        const SizedBox(width: 10),
+                        Expanded(
+                          child: _TimeEndpointCard(
+                            label: 'END',
+                            formattedTime: _formatMinutes(_endMinutes),
+                            canDecrement:
+                                _endMinutes - _stepMinutes >=
+                                _startMinutes + _minDuration,
+                            canIncrement: _endMinutes < _maxStudyMinute,
+                            onDecrement: () => _stepEnd(-_stepMinutes),
+                            onIncrement: () => _stepEnd(_stepMinutes),
+                            onTapTime: () =>
+                                _openCupertinoTimePicker(isStart: false),
+                            raisedColor: raised,
+                            surfaceColor: surface,
+                            textColor: text,
+                            subtextColor: subtext,
+                            lineColor: line,
+                          ),
+                        ),
+                      ],
                     ),
-                  ),
-                  const SizedBox(height: 8),
+                    const SizedBox(height: 16),
 
-                  Container(
-                    height: 38,
-                    padding: const EdgeInsets.all(3),
-                    decoration: BoxDecoration(
-                      color: surfaceColor,
-                      borderRadius: BorderRadius.circular(14),
-                      border: Border.all(color: lineBorder),
+                    // Interactive Horizontal Drag & Swipe Range Bar
+                    _InteractiveTimeRangeBar(
+                      minMinute: _minStudyMinute,
+                      maxMinute: _maxStudyMinute,
+                      startMinute: _startMinutes,
+                      endMinute: _endMinutes,
+                      minDuration: _minDuration,
+                      stepMinutes: _stepMinutes,
+                      accentColor: accent,
+                      trackColor: line,
+                      thumbColor: raised,
+                      subtextColor: subtext,
+                      onChanged: (newStart, newEnd) {
+                        if (newStart != _startMinutes ||
+                            newEnd != _endMinutes) {
+                          HapticFeedback.selectionClick();
+                          setState(() {
+                            _startMinutes = newStart;
+                            _endMinutes = newEnd;
+                          });
+                        }
+                      },
                     ),
-                    child: Row(
-                      children: ['Deep Focus', 'Past Paper', 'Quick Review'].map((mode) {
-                        final isSelected = _selectedFocusMode == mode;
+                    const SizedBox(height: 12),
+
+                    // Quick Duration Presets
+                    Row(
+                      children: _durationPresets.map((preset) {
+                        final isActive = _durationMinutes == preset;
+                        final label = preset < 60
+                            ? '${preset}m'
+                            : preset % 60 == 0
+                            ? '${preset ~/ 60}h'
+                            : '${(preset / 60).toStringAsFixed(1)}h';
                         return Expanded(
-                          child: AcedexBounceable(
-                            onTap: () => setState(() => _selectedFocusMode = mode),
-                            child: Container(
-                              decoration: BoxDecoration(
-                                color: isSelected ? raisedBg : Colors.transparent,
-                                borderRadius: BorderRadius.circular(11),
-                                border: isSelected ? Border.all(color: lineBorder) : null,
-                                boxShadow: isSelected
-                                    ? [
-                                        BoxShadow(
-                                          color: Colors.black.withValues(alpha: 0.05),
-                                          blurRadius: 4,
-                                          offset: const Offset(0, 1),
-                                        ),
-                                      ]
-                                    : null,
-                              ),
-                              alignment: Alignment.center,
-                              child: Text(
-                                mode,
-                                style: TextStyle(
-                                  fontSize: 11.5,
-                                  fontWeight: FontWeight.w700,
-                                  color: isSelected ? primaryColor : subtextColor,
+                          child: Padding(
+                            padding: EdgeInsets.only(
+                              right: preset == _durationPresets.last ? 0 : 6,
+                            ),
+                            child: GestureDetector(
+                              onTap: () => _applyDurationPreset(preset),
+                              child: AnimatedContainer(
+                                duration: const Duration(milliseconds: 180),
+                                height: 34,
+                                alignment: Alignment.center,
+                                decoration: BoxDecoration(
+                                  color: isActive ? accentSoft : raised,
+                                  borderRadius: BorderRadius.circular(999),
+                                  border: Border.all(
+                                    color: isActive ? accent : line,
+                                    width: isActive ? 1.4 : 0.8,
+                                  ),
+                                ),
+                                child: Text(
+                                  label,
+                                  style: TextStyle(
+                                    color: isActive ? accent : subtext,
+                                    fontSize: 12.5,
+                                    fontWeight: isActive
+                                        ? FontWeight.w700
+                                        : FontWeight.w600,
+                                  ),
                                 ),
                               ),
                             ),
@@ -872,101 +902,701 @@ class _AddStudyPlanSheetState extends State<AddStudyPlanSheet> {
                         );
                       }).toList(),
                     ),
-                  ),
+                  ],
+                ),
+              ),
+              const SizedBox(height: 18),
 
-                  const SizedBox(height: 24),
-                ],
+              // 6. Gliding Cupertino Study Mode Segmented Control
+              Text(
+                'STUDY MODE',
+                style: TextStyle(
+                  color: subtext,
+                  fontSize: 11.5,
+                  fontWeight: FontWeight.w700,
+                  letterSpacing: 0.8,
+                ),
+              ),
+              const SizedBox(height: 8),
+              Container(
+                height: 44,
+                padding: const EdgeInsets.all(4),
+                decoration: BoxDecoration(
+                  color: surface,
+                  borderRadius: BorderRadius.circular(999),
+                  border: Border.all(color: line, width: 0.8),
+                ),
+                child: Stack(
+                  children: [
+                    AnimatedAlign(
+                      duration: const Duration(milliseconds: 240),
+                      curve: Curves.easeOutCubic,
+                      alignment: Alignment(
+                        -1.0 + (_selectedModeIndex * 1.0),
+                        0.0,
+                      ),
+                      child: FractionallySizedBox(
+                        widthFactor: 1 / _studyModes.length,
+                        heightFactor: 1.0,
+                        child: Container(
+                          decoration: BoxDecoration(
+                            color: raised,
+                            borderRadius: BorderRadius.circular(999),
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.black.withValues(
+                                  alpha: isDark ? 0.25 : 0.06,
+                                ),
+                                blurRadius: 6,
+                                offset: const Offset(0, 2),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                    Row(
+                      children: List.generate(_studyModes.length, (idx) {
+                        final selected = idx == _selectedModeIndex;
+                        return Expanded(
+                          child: GestureDetector(
+                            behavior: HitTestBehavior.opaque,
+                            onTap: () {
+                              if (_selectedModeIndex == idx) return;
+                              HapticFeedback.selectionClick();
+                              setState(() => _selectedModeIndex = idx);
+                            },
+                            child: Center(
+                              child: Text(
+                                _studyModes[idx],
+                                style: TextStyle(
+                                  color: selected ? accent : subtext,
+                                  fontSize: 13,
+                                  fontWeight: selected
+                                      ? FontWeight.w700
+                                      : FontWeight.w500,
+                                ),
+                              ),
+                            ),
+                          ),
+                        );
+                      }),
+                    ),
+                  ],
+                ),
+              ),
+                  ],
+                ),
               ),
             ),
-          ),
 
-          // Sticky Bottom CTA Button (Elevated above system gesture / navigation bar)
-          Builder(
-            builder: (context) {
-              final bottomInset = MediaQuery.paddingOf(context).bottom;
-              return Container(
-                padding: EdgeInsets.fromLTRB(20, 12, 20, 18 + bottomInset),
-                decoration: BoxDecoration(
-                  color: theme.scaffoldBackgroundColor,
-                  border: Border(top: BorderSide(color: lineBorder)),
-                ),
-                child: AcedexBounceable(
-                  onTap: _handleSave,
-                  child: Container(
-                    height: 48,
-                    decoration: BoxDecoration(
-                      color: primaryColor,
+            // 7. Sticky Bottom CTA (Elevated above system gesture / navigation bar)
+            Container(
+              padding: EdgeInsets.fromLTRB(20, 10, 20, 14 + bottomPadding),
+              decoration: BoxDecoration(
+                color: bg,
+                border: Border(top: BorderSide(color: line, width: 0.6)),
+              ),
+              child: SizedBox(
+                width: double.infinity,
+                height: 52,
+                child: ElevatedButton(
+                  onPressed: _isSaving ? null : _handleSave,
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: accent,
+                    disabledBackgroundColor: accent,
+                    foregroundColor: onAccent,
+                    elevation: 0,
+                    shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(999),
-                      boxShadow: [
-                        BoxShadow(
-                          color: primaryColor.withValues(alpha: 0.35),
-                          blurRadius: 14,
-                          offset: const Offset(0, 4),
-                        ),
-                      ],
                     ),
-                    alignment: Alignment.center,
+                  ),
+                  child: AnimatedSwitcher(
+                    duration: const Duration(milliseconds: 180),
                     child: _isSaving
-                        ? const AcedexDotsLoader(
-                            color: Colors.white,
-                            dotSize: 4.5,
-                            gap: 3.5,
+                        ? _HorizontalThreeDotsLoader(
+                            key: const ValueKey('dots_loader'),
+                            color: onAccent,
                           )
-                        : const Row(
-                            mainAxisSize: MainAxisSize.min,
+                        : Row(
+                            key: const ValueKey('cta_label'),
+                            mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Text(
                                 "Add to Today's Plan",
                                 style: TextStyle(
-                                  fontSize: 13.5,
+                                  color: onAccent,
+                                  fontSize: 16,
                                   fontWeight: FontWeight.w700,
-                                  color: Colors.white,
+                                  letterSpacing: -0.2,
                                 ),
                               ),
-                              SizedBox(width: 6),
+                              const SizedBox(width: 8),
                               Icon(
                                 Icons.arrow_forward_rounded,
-                                size: 16,
-                                color: Colors.white,
+                                size: 19,
+                                color: onAccent,
                               ),
                             ],
                           ),
                   ),
                 ),
-              );
-            },
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class _SubjectOption {
+  const _SubjectOption({
+    required this.name,
+    required this.icon,
+    required this.topics,
+  });
+
+  final String name;
+  final IconData icon;
+  final List<String> topics;
+}
+
+class _TimeEndpointCard extends StatelessWidget {
+  const _TimeEndpointCard({
+    required this.label,
+    required this.formattedTime,
+    required this.canDecrement,
+    required this.canIncrement,
+    required this.onDecrement,
+    required this.onIncrement,
+    required this.onTapTime,
+    required this.raisedColor,
+    required this.surfaceColor,
+    required this.textColor,
+    required this.subtextColor,
+    required this.lineColor,
+  });
+
+  final String label;
+  final String formattedTime;
+  final bool canDecrement;
+  final bool canIncrement;
+  final VoidCallback onDecrement;
+  final VoidCallback onIncrement;
+  final VoidCallback onTapTime;
+  final Color raisedColor;
+  final Color surfaceColor;
+  final Color textColor;
+  final Color subtextColor;
+  final Color lineColor;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+      decoration: BoxDecoration(
+        color: raisedColor,
+        borderRadius: BorderRadius.circular(18),
+        border: Border.all(color: lineColor, width: 0.8),
+      ),
+      child: Column(
+        children: [
+          Text(
+            label,
+            style: TextStyle(
+              color: subtextColor,
+              fontSize: 10.5,
+              fontWeight: FontWeight.w700,
+              letterSpacing: 0.7,
+            ),
+          ),
+          const SizedBox(height: 6),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              _MiniStepButton(
+                icon: Icons.remove_rounded,
+                enabled: canDecrement,
+                onTap: onDecrement,
+                surfaceColor: surfaceColor,
+                iconColor: textColor,
+                lineColor: lineColor,
+              ),
+              Flexible(
+                child: GestureDetector(
+                  onTap: onTapTime,
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 2),
+                    child: Text(
+                      formattedTime,
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        color: textColor,
+                        fontSize: 13.5,
+                        fontWeight: FontWeight.w700,
+                        fontFeatures: const [FontFeature.tabularFigures()],
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+              _MiniStepButton(
+                icon: Icons.add_rounded,
+                enabled: canIncrement,
+                onTap: onIncrement,
+                surfaceColor: surfaceColor,
+                iconColor: textColor,
+                lineColor: lineColor,
+              ),
+            ],
           ),
         ],
       ),
     );
   }
+}
 
-  Widget _buildNudgeBtn(
-    String label,
-    VoidCallback onTap,
-    Color lineBorder,
-    Color subtextColor,
+class _MiniStepButton extends StatelessWidget {
+  const _MiniStepButton({
+    required this.icon,
+    required this.enabled,
+    required this.onTap,
+    required this.surfaceColor,
+    required this.iconColor,
+    required this.lineColor,
+  });
+
+  final IconData icon;
+  final bool enabled;
+  final VoidCallback onTap;
+  final Color surfaceColor;
+  final Color iconColor;
+  final Color lineColor;
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: enabled ? onTap : null,
+      child: AnimatedOpacity(
+        duration: const Duration(milliseconds: 150),
+        opacity: enabled ? 1.0 : 0.35,
+        child: Container(
+          width: 26,
+          height: 26,
+          decoration: BoxDecoration(
+            color: surfaceColor,
+            shape: BoxShape.circle,
+            border: Border.all(color: lineColor, width: 0.8),
+          ),
+          child: Icon(icon, size: 15, color: iconColor),
+        ),
+      ),
+    );
+  }
+}
+
+enum _DragTargetMode { none, startThumb, endThumb, rangeBlock }
+
+/// Custom horizontal timeline supporting independent thumb dragging AND
+/// swiping the active Royal Purple range bar to shift the entire time slot.
+class _InteractiveTimeRangeBar extends StatefulWidget {
+  const _InteractiveTimeRangeBar({
+    required this.minMinute,
+    required this.maxMinute,
+    required this.startMinute,
+    required this.endMinute,
+    required this.minDuration,
+    required this.stepMinutes,
+    required this.accentColor,
+    required this.trackColor,
+    required this.thumbColor,
+    required this.subtextColor,
+    required this.onChanged,
+  });
+
+  final int minMinute;
+  final int maxMinute;
+  final int startMinute;
+  final int endMinute;
+  final int minDuration;
+  final int stepMinutes;
+  final Color accentColor;
+  final Color trackColor;
+  final Color thumbColor;
+  final Color subtextColor;
+  final void Function(int startMinute, int endMinute) onChanged;
+
+  @override
+  State<_InteractiveTimeRangeBar> createState() =>
+      _InteractiveTimeRangeBarState();
+}
+
+class _InteractiveTimeRangeBarState extends State<_InteractiveTimeRangeBar> {
+  _DragTargetMode _dragMode = _DragTargetMode.none;
+  double _dragStartX = 0;
+  int _initialStart = 0;
+  int _initialEnd = 0;
+
+  int get _totalSpan => widget.maxMinute - widget.minMinute;
+
+  int _snap(int rawMinute) {
+    final relative = rawMinute - widget.minMinute;
+    final snapped =
+        (relative / widget.stepMinutes).round() * widget.stepMinutes;
+    return (widget.minMinute + snapped).clamp(
+      widget.minMinute,
+      widget.maxMinute,
+    );
+  }
+
+  void _handlePanStart(
+    DragStartDetails details,
+    double usableWidth,
+    double thumbRadius,
   ) {
-    return AcedexBounceable(
-      onTap: onTap,
+    final localX = details.localPosition.dx - thumbRadius;
+    final startPx =
+        ((widget.startMinute - widget.minMinute) / _totalSpan) * usableWidth;
+    final endPx =
+        ((widget.endMinute - widget.minMinute) / _totalSpan) * usableWidth;
+
+    const hitSlop = 22.0;
+    final distStart = (localX - startPx).abs();
+    final distEnd = (localX - endPx).abs();
+
+    setState(() {
+      _dragStartX = localX;
+      _initialStart = widget.startMinute;
+      _initialEnd = widget.endMinute;
+
+      if (distStart <= hitSlop && distStart <= distEnd) {
+        _dragMode = _DragTargetMode.startThumb;
+      } else if (distEnd <= hitSlop) {
+        _dragMode = _DragTargetMode.endThumb;
+      } else if (localX > startPx && localX < endPx) {
+        _dragMode = _DragTargetMode.rangeBlock;
+      } else if (localX < startPx) {
+        _dragMode = _DragTargetMode.startThumb;
+      } else {
+        _dragMode = _DragTargetMode.endThumb;
+      }
+    });
+    HapticFeedback.selectionClick();
+  }
+
+  void _handlePanUpdate(
+    DragUpdateDetails details,
+    double usableWidth,
+    double thumbRadius,
+  ) {
+    if (_dragMode == _DragTargetMode.none || usableWidth <= 0) return;
+    final localX = details.localPosition.dx - thumbRadius;
+    final deltaMinutes = ((localX - _dragStartX) / usableWidth) * _totalSpan;
+
+    if (_dragMode == _DragTargetMode.startThumb) {
+      final raw = (_initialStart + deltaMinutes).round();
+      final nextStart = _snap(
+        raw,
+      ).clamp(widget.minMinute, widget.endMinute - widget.minDuration);
+      widget.onChanged(nextStart, widget.endMinute);
+    } else if (_dragMode == _DragTargetMode.endThumb) {
+      final raw = (_initialEnd + deltaMinutes).round();
+      final nextEnd = _snap(
+        raw,
+      ).clamp(widget.startMinute + widget.minDuration, widget.maxMinute);
+      widget.onChanged(widget.startMinute, nextEnd);
+    } else if (_dragMode == _DragTargetMode.rangeBlock) {
+      final duration = _initialEnd - _initialStart;
+      final rawStart = (_initialStart + deltaMinutes).round();
+      final clampedStart = _snap(
+        rawStart,
+      ).clamp(widget.minMinute, widget.maxMinute - duration);
+      widget.onChanged(clampedStart, clampedStart + duration);
+    }
+  }
+
+  void _handlePanEnd(DragEndDetails _) {
+    if (_dragMode != _DragTargetMode.none) {
+      setState(() => _dragMode = _DragTargetMode.none);
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    const thumbRadius = 12.0;
+    const trackHeight = 8.0;
+
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        final totalWidth = constraints.maxWidth;
+        final usableWidth = math.max(1.0, totalWidth - thumbRadius * 2);
+
+        final startFraction =
+            (widget.startMinute - widget.minMinute) / _totalSpan;
+        final endFraction = (widget.endMinute - widget.minMinute) / _totalSpan;
+
+        final startCenter = thumbRadius + startFraction * usableWidth;
+        final endCenter = thumbRadius + endFraction * usableWidth;
+        final activeWidth = math.max(12.0, endCenter - startCenter);
+
+        return Column(
+          children: [
+            GestureDetector(
+              behavior: HitTestBehavior.opaque,
+              onHorizontalDragStart: (d) =>
+                  _handlePanStart(d, usableWidth, thumbRadius),
+              onHorizontalDragUpdate: (d) =>
+                  _handlePanUpdate(d, usableWidth, thumbRadius),
+              onHorizontalDragEnd: _handlePanEnd,
+              child: SizedBox(
+                height: 44,
+                width: totalWidth,
+                child: Stack(
+                  clipBehavior: Clip.none,
+                  alignment: Alignment.centerLeft,
+                  children: [
+                    // Subtle hour tick marks along the track
+                    Positioned(
+                      left: thumbRadius,
+                      right: thumbRadius,
+                      top: 24,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: List.generate(18, (i) {
+                          final isMajor = i % 3 == 0;
+                          return Container(
+                            width: 1.2,
+                            height: isMajor ? 6 : 3.5,
+                            decoration: BoxDecoration(
+                              color: widget.subtextColor.withValues(
+                                alpha: isMajor ? 0.35 : 0.18,
+                              ),
+                              borderRadius: BorderRadius.circular(1),
+                            ),
+                          );
+                        }),
+                      ),
+                    ),
+
+                    // Background Track
+                    Positioned(
+                      left: thumbRadius,
+                      right: thumbRadius,
+                      top: 12,
+                      child: Container(
+                        height: trackHeight,
+                        decoration: BoxDecoration(
+                          color: widget.trackColor,
+                          borderRadius: BorderRadius.circular(999),
+                        ),
+                      ),
+                    ),
+
+                    // Swipeable Royal Purple Active Range Bar
+                    Positioned(
+                      left: startCenter,
+                      top: 10,
+                      child: Container(
+                        width: activeWidth,
+                        height: 12,
+                        decoration: BoxDecoration(
+                          color: widget.accentColor,
+                          borderRadius: BorderRadius.circular(999),
+                          boxShadow: [
+                            BoxShadow(
+                              color: widget.accentColor.withValues(alpha: 0.32),
+                              blurRadius: 8,
+                              offset: const Offset(0, 2),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+
+                    // Start Thumb
+                    Positioned(
+                      left: startCenter - thumbRadius,
+                      top: 4,
+                      child: _TimelineThumb(
+                        isActive:
+                            _dragMode == _DragTargetMode.startThumb ||
+                            _dragMode == _DragTargetMode.rangeBlock,
+                        accentColor: widget.accentColor,
+                        thumbColor: widget.thumbColor,
+                      ),
+                    ),
+
+                    // End Thumb
+                    Positioned(
+                      left: endCenter - thumbRadius,
+                      top: 4,
+                      child: _TimelineThumb(
+                        isActive:
+                            _dragMode == _DragTargetMode.endThumb ||
+                            _dragMode == _DragTargetMode.rangeBlock,
+                        accentColor: widget.accentColor,
+                        thumbColor: widget.thumbColor,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+
+            // Hour Anchor Labels
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 6),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    '6 AM',
+                    style: TextStyle(
+                      color: widget.subtextColor,
+                      fontSize: 10,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                  Text(
+                    '12 PM',
+                    style: TextStyle(
+                      color: widget.subtextColor,
+                      fontSize: 10,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                  Text(
+                    '6 PM',
+                    style: TextStyle(
+                      color: widget.subtextColor,
+                      fontSize: 10,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                  Text(
+                    '11:30 PM',
+                    style: TextStyle(
+                      color: widget.subtextColor,
+                      fontSize: 10,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        );
+      },
+    );
+  }
+}
+
+class _TimelineThumb extends StatelessWidget {
+  const _TimelineThumb({
+    required this.isActive,
+    required this.accentColor,
+    required this.thumbColor,
+  });
+
+  final bool isActive;
+  final Color accentColor;
+  final Color thumbColor;
+
+  @override
+  Widget build(BuildContext context) {
+    return AnimatedScale(
+      scale: isActive ? 1.16 : 1.0,
+      duration: const Duration(milliseconds: 140),
+      curve: Curves.easeOutBack,
       child: Container(
         width: 24,
         height: 24,
         decoration: BoxDecoration(
-          color: Colors.transparent,
-          borderRadius: BorderRadius.circular(999),
-          border: Border.all(color: lineBorder),
-        ),
-        alignment: Alignment.center,
-        child: Text(
-          label,
-          style: TextStyle(
-            fontSize: 13,
-            fontWeight: FontWeight.w800,
-            color: subtextColor,
-          ),
+          color: thumbColor,
+          shape: BoxShape.circle,
+          border: Border.all(color: accentColor, width: 2.5),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.black.withValues(alpha: 0.14),
+              blurRadius: 6,
+              offset: const Offset(0, 2),
+            ),
+          ],
         ),
       ),
+    );
+  }
+}
+
+/// Horizontal 3-dots wave loader (Apple-style alternative to circular spinners).
+class _HorizontalThreeDotsLoader extends StatefulWidget {
+  const _HorizontalThreeDotsLoader({super.key, required this.color});
+
+  final Color color;
+
+  @override
+  State<_HorizontalThreeDotsLoader> createState() =>
+      _HorizontalThreeDotsLoaderState();
+}
+
+class _HorizontalThreeDotsLoaderState extends State<_HorizontalThreeDotsLoader>
+    with SingleTickerProviderStateMixin {
+  late final AnimationController _controller;
+
+  @override
+  void initState() {
+    super.initState();
+    _controller = AnimationController(
+      vsync: this,
+      duration: const Duration(milliseconds: 900),
+    )..repeat();
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return AnimatedBuilder(
+      animation: _controller,
+      builder: (context, _) {
+        return Row(
+          mainAxisSize: MainAxisSize.min,
+          children: List.generate(3, (index) {
+            final phase = (_controller.value * 2 * math.pi) - (index * 0.85);
+            final wave = (math.sin(phase) + 1) / 2;
+            final scale = 0.72 + (wave * 0.38);
+            final opacity = 0.45 + (wave * 0.55);
+
+            return Padding(
+              padding: EdgeInsets.only(right: index == 2 ? 0 : 6),
+              child: Transform.translate(
+                offset: Offset(0, -wave * 3.2),
+                child: Transform.scale(
+                  scale: scale,
+                  child: Opacity(
+                    opacity: opacity,
+                    child: Container(
+                      width: 7,
+                      height: 7,
+                      decoration: BoxDecoration(
+                        color: widget.color,
+                        shape: BoxShape.circle,
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            );
+          }),
+        );
+      },
     );
   }
 }
