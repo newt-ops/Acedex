@@ -21,70 +21,70 @@ export function NoteAdminStatsHeader({ submissions }: NoteAdminStatsHeaderProps)
   const rejected = submissions.filter((s) => s.status === 'rejected').length;
 
   return (
-    <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
-      {/* Total Submissions */}
-      <div className="p-4 sm:p-5 rounded-2xl bg-acedex-card/90 border border-acedex-border/80 shadow-sm flex items-center justify-between">
-        <div className="space-y-1">
-          <span className="text-xs font-semibold text-acedex-muted uppercase tracking-wider block">
+    <section className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 sm:gap-5">
+      {/* Card 1: Total Submitted */}
+      <div className="admin-surface kpi-card p-5 sm:p-6 flex items-center justify-between gap-4">
+        <div>
+          <div className="text-[11px] font-bold tracking-[0.06em] uppercase text-slate-400">
             Total Submitted
-          </span>
-          <span className="text-2xl sm:text-3xl font-black text-acedex-text tracking-tight">
+          </div>
+          <div className="mt-2 font-display text-[28px] font-extrabold tabular-nums text-slate-900 leading-none">
             {total}
-          </span>
-          <span className="text-[11px] text-acedex-muted block">across curriculum</span>
+          </div>
+          <div className="mt-1.5 text-[12px] text-slate-400">across curriculum</div>
         </div>
-        <div className="w-10 h-10 rounded-xl bg-acedex-primary/10 text-acedex-primary border border-acedex-primary/20 flex items-center justify-center shrink-0">
-          <HugeiconsIcon icon={BookOpen01Icon} size={20} strokeWidth={2} />
+        <div className="w-11 h-11 rounded-[14px] bg-purple-50 border border-purple-200/70 flex items-center justify-center text-[#7E22CE] shrink-0">
+          <HugeiconsIcon icon={BookOpen01Icon} size={20} strokeWidth={1.9} />
         </div>
       </div>
 
-      {/* Pending Review */}
-      <div className="p-4 sm:p-5 rounded-2xl bg-acedex-card/90 border border-amber-500/30 shadow-sm flex items-center justify-between">
-        <div className="space-y-1">
-          <span className="text-xs font-semibold text-amber-400 uppercase tracking-wider block">
+      {/* Card 2: Pending Review */}
+      <div className="admin-surface kpi-card p-5 sm:p-6 flex items-center justify-between gap-4 border-amber-200/80">
+        <div>
+          <div className="text-[11px] font-bold tracking-[0.06em] uppercase text-amber-500">
             Pending Review
-          </span>
-          <span className="text-2xl sm:text-3xl font-black text-amber-300 tracking-tight">
+          </div>
+          <div className="mt-2 font-display text-[28px] font-extrabold tabular-nums text-amber-500 leading-none">
             {pending}
-          </span>
-          <span className="text-[11px] text-amber-400/80 block">awaiting verification</span>
+          </div>
+          <div className="mt-1.5 text-[12px] text-amber-500/80">awaiting verification</div>
         </div>
-        <div className="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-400 border border-amber-500/20 flex items-center justify-center shrink-0">
-          <HugeiconsIcon icon={Clock01Icon} size={20} strokeWidth={2} />
+        <div className="w-11 h-11 rounded-[14px] bg-amber-50 border border-amber-200/75 flex items-center justify-center text-amber-500 shrink-0">
+          <HugeiconsIcon icon={Clock01Icon} size={20} strokeWidth={1.9} />
         </div>
       </div>
 
-      {/* Approved */}
-      <div className="p-4 sm:p-5 rounded-2xl bg-acedex-card/90 border border-emerald-500/30 shadow-sm flex items-center justify-between">
-        <div className="space-y-1">
-          <span className="text-xs font-semibold text-emerald-400 uppercase tracking-wider block">
+      {/* Card 3: Approved Notes */}
+      <div className="admin-surface kpi-card p-5 sm:p-6 flex items-center justify-between gap-4 border-emerald-200/80">
+        <div>
+          <div className="text-[11px] font-bold tracking-[0.06em] uppercase text-emerald-500">
             Approved Notes
-          </span>
-          <span className="text-2xl sm:text-3xl font-black text-emerald-300 tracking-tight">
+          </div>
+          <div className="mt-2 font-display text-[28px] font-extrabold tabular-nums text-emerald-500 leading-none">
             {approved}
-          </span>
-          <span className="text-[11px] text-emerald-400/80 block">ready for study</span>
+          </div>
+          <div className="mt-1.5 text-[12px] text-emerald-500/80">ready for study</div>
         </div>
-        <div className="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 flex items-center justify-center shrink-0">
+        <div className="w-11 h-11 rounded-[14px] bg-emerald-50 border border-emerald-200/75 flex items-center justify-center text-emerald-500 shrink-0">
           <HugeiconsIcon icon={CheckmarkCircle02Icon} size={20} strokeWidth={2} />
         </div>
       </div>
 
-      {/* Revisions Needed */}
-      <div className="p-4 sm:p-5 rounded-2xl bg-acedex-card/90 border border-rose-500/30 shadow-sm flex items-center justify-between">
-        <div className="space-y-1">
-          <span className="text-xs font-semibold text-rose-400 uppercase tracking-wider block">
+      {/* Card 4: Revisions Needed */}
+      <div className="admin-surface kpi-card p-5 sm:p-6 flex items-center justify-between gap-4 border-rose-200/80">
+        <div>
+          <div className="text-[11px] font-bold tracking-[0.06em] uppercase text-rose-500">
             Revisions Needed
-          </span>
-          <span className="text-2xl sm:text-3xl font-black text-rose-300 tracking-tight">
+          </div>
+          <div className="mt-2 font-display text-[28px] font-extrabold tabular-nums text-rose-500 leading-none">
             {rejected}
-          </span>
-          <span className="text-[11px] text-rose-400/80 block">feedback sent back</span>
+          </div>
+          <div className="mt-1.5 text-[12px] text-rose-400">feedback sent back</div>
         </div>
-        <div className="w-10 h-10 rounded-xl bg-rose-500/10 text-rose-400 border border-rose-500/20 flex items-center justify-center shrink-0">
+        <div className="w-11 h-11 rounded-[14px] bg-rose-50 border border-rose-200/75 flex items-center justify-center text-rose-500 shrink-0">
           <HugeiconsIcon icon={AlertCircleIcon} size={20} strokeWidth={2} />
         </div>
       </div>
-    </div>
+    </section>
   );
 }

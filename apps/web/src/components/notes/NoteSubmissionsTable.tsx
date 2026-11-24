@@ -1,16 +1,15 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import { NoteSubmissionSummary } from '../../types/notes-collector';
-import { Button } from '../ui/Button';
-import { formatDate } from '../../lib/utils';
 import { HugeiconsIcon } from '@hugeicons/react';
 import {
   CheckmarkCircle02Icon,
   EyeIcon,
   Clock01Icon,
   AlertCircleIcon,
-  Loading01Icon,
+  Download01Icon,
+  Search01Icon,
 } from '@hugeicons/core-free-icons';
 
 interface NoteSubmissionsTableProps {
@@ -18,6 +17,9 @@ interface NoteSubmissionsTableProps {
   onInspect: (submission: NoteSubmissionSummary) => void;
   onApprove: (submission: NoteSubmissionSummary) => void;
   approvingId: string | null;
+  onResetFilters?: () => void;
+  onBulkApprove?: (subIds: string[]) => Promise<void>;
+  onBulkExport?: (unitCodes: string[]) => Promise<void>;
 }
 
 export function NoteSubmissionsTable({
@@ -25,125 +27,291 @@ export function NoteSubmissionsTable({
   onInspect,
   onApprove,
   approvingId,
+  onResetFilters,
+  onBulkApprove,
+  onBulkExport,
 }: NoteSubmissionsTableProps) {
-  if (submissions.length === 0) {
-    return (
-      <div className="hidden md:block p-12 text-center rounded-3xl bg-acedex-card/50 border border-acedex-border/60 text-acedex-muted">
-        No quick note submissions match the selected filters.
-      </div>
-    );
-  }
+  const [selectedIds, setSelectedIds] = useState<Set<string>>(new Set());
+  const [bulkLoading, setBulkLoading] = useState<boolean>(false);
+
+  const toggleSelectAll = (checked: boolean) => {
+    if (checked) {
+      setSelectedIds(new Set(submissions.map((s) => s._id)));
+    } else {
+      setSelectedIds(new Set());
+    }
+  };
+
+  const toggleSelectRow = (id: string) => {
+    setSelectedIds((prev) => {
+      const next = new Set(prev);
+      if (next.has(id)) {
+        next.delete(id);
+      } else {
+        next.add(id);
+      }
+      return next;
+    });
+  };
+
+  const clearSelection = () => {
+    setSelectedIds(new Set());
+  };
+
+  const handleBulkApprove = async () => {
+    if (selectedIds.size === 0) return;
+    setBulkLoading(true);
+    try {
+      const idsToApprove = submissions
+        .filter((s) => selectedIds.has(s._id) && s.status !== 'approved')
+        .map((s) => s._id);
+
+      if (onBulkApprove && idsToApprove.length > 0) {
+        await onBulkApprove(idsToApprove);
+      } else {
+        for (const sub of submissions.filter((s) => selectedIds.has(s._id) && s.status !== 'approved')) {
+          await onApprove(sub);
+        }
+      }
+      clearSelection();
+    } finally {
+      setBulkLoading(false);
+    }
+  };
+
+  const handleBulkExport = async () => {
+    if (selectedIds.size === 0) return;
+    const unitCodes = submissions
+      .filter((s) => selectedIds.has(s._id))
+      .map((s) => s.unitCode);
+
+    if (onBulkExport) {
+      await onBulkExport(unitCodes);
+    }
+    clearSelection();
+  };
+
+  const isAllSelected = submissions.length > 0 && selectedIds.size === submissions.length;
 
   return (
-    <div className="hidden md:block overflow-hidden rounded-3xl border border-acedex-border/80 bg-acedex-card/90 shadow-md">
-      <table className="w-full text-left text-xs">
-        <thead className="bg-acedex-bg/80 border-b border-acedex-border/70 text-acedex-muted font-bold uppercase tracking-wider">
-          <tr>
-            <th className="py-3.5 px-4">Unit Code</th>
-            <th className="py-3.5 px-4">Grade & Subject</th>
-            <th className="py-3.5 px-4">Title</th>
-            <th className="py-3.5 px-4 text-center">Note Summary</th>
-            <th className="py-3.5 px-4">Contributor</th>
-            <th className="py-3.5 px-4">Status</th>
-            <th className="py-3.5 px-4 text-right">Actions</th>
-          </tr>
-        </thead>
-        <tbody className="divide-y divide-acedex-border/60">
-          {submissions.map((sub) => {
-            const isApproving = approvingId === sub._id;
-            return (
-              <tr
-                key={sub._id}
-                className="hover:bg-acedex-card-hover/50 transition-colors cursor-pointer group"
-                onClick={() => onInspect(sub)}
+    <section className="admin-surface overflow-hidden">
+      {/* Contextual Bulk Action Bar */}
+      {selectedIds.size > 0 && (
+        <div className="px-6 py-3 bg-purple-50/95 border-b border-purple-200/80 flex flex-wrap items-center justify-between gap-3 animate-in fade-in duration-150">
+          <div className="flex items-center gap-2.5 text-[13px] font-semibold text-[#7E22CE]">
+            <span className="px-2.5 py-0.5 rounded-full bg-[#7E22CE] text-white text-[11.5px] font-bold tabular-nums">
+              {selectedIds.size}
+            </span>
+            <span>items selected in current view</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <button
+              type="button"
+              onClick={handleBulkApprove}
+              disabled={bulkLoading}
+              className="btn-emerald-solid px-3.5 py-1.5 rounded-[11px] text-white text-[12.5px] font-semibold inline-flex items-center gap-1.5 cursor-pointer disabled:opacity-50"
+            >
+              <HugeiconsIcon icon={CheckmarkCircle02Icon} size={14} strokeWidth={2.2} />
+              <span>{bulkLoading ? 'Approving...' : 'Approve Selected'}</span>
+            </button>
+            {onBulkExport && (
+              <button
+                type="button"
+                onClick={handleBulkExport}
+                className="px-3.5 py-1.5 rounded-[11px] bg-white hover:bg-slate-50 border border-slate-200/90 text-slate-700 text-[12.5px] font-semibold inline-flex items-center gap-1.5 cursor-pointer shadow-sm"
               >
-                {/* Unit Code */}
-                <td className="py-3.5 px-4 font-mono font-bold text-acedex-primary">
-                  {sub.unitCode}
-                </td>
+                <HugeiconsIcon icon={Download01Icon} size={14} strokeWidth={2} className="text-slate-500" />
+                <span>Export JSON</span>
+              </button>
+            )}
+            <button
+              type="button"
+              onClick={clearSelection}
+              className="px-2.5 py-1.5 rounded-[11px] text-[12.5px] font-medium text-slate-500 hover:text-slate-800 cursor-pointer"
+            >
+              Clear
+            </button>
+          </div>
+        </div>
+      )}
 
-                {/* Grade & Subject */}
-                <td className="py-3.5 px-4 text-acedex-text font-medium">
-                  Grade {sub.grade} • {sub.subjectCode}
-                </td>
+      {/* Responsive Wide Table Wrapper */}
+      <div className="overflow-x-auto">
+        <table className="w-full text-left border-collapse min-w-[960px]">
+          <thead className="bg-[#FBFBFD] border-b border-slate-200/75">
+            <tr className="text-[11px] font-bold uppercase tracking-[0.06em] text-slate-400">
+              <th className="py-3.5 pl-6 pr-3 w-10">
+                <input
+                  type="checkbox"
+                  checked={isAllSelected}
+                  onChange={(e) => toggleSelectAll(e.target.checked)}
+                  aria-label="Select all note submissions"
+                  className="w-4 h-4 rounded border-slate-300 text-[#7E22CE] focus:ring-[#7E22CE] cursor-pointer"
+                />
+              </th>
+              <th className="py-3.5 px-4">Unit Code</th>
+              <th className="py-3.5 px-4">Grade &amp; Subject</th>
+              <th className="py-3.5 px-4">Unit Title</th>
+              <th className="py-3.5 px-4 text-center">Note Summary</th>
+              <th className="py-3.5 px-4">Contributor</th>
+              <th className="py-3.5 px-4">Status</th>
+              <th className="py-3.5 pl-4 pr-6 text-right">Actions</th>
+            </tr>
+          </thead>
+          <tbody className="divide-y divide-slate-100/90 text-[13.5px]">
+            {submissions.map((sub, idx) => {
+              const isChecked = selectedIds.has(sub._id);
+              const isApproving = approvingId === sub._id;
+              const delay = (idx * 0.03).toFixed(2);
 
-                {/* Title */}
-                <td className="py-3.5 px-4 text-acedex-text font-semibold max-w-xs truncate">
-                  Unit {sub.unitNumber}: {sub.unitTitle}
-                </td>
+              return (
+                <tr
+                  key={sub._id}
+                  style={{ animationDelay: `${delay}s` }}
+                  className={`queue-row hover:bg-purple-50/30 transition-colors ${
+                    isChecked ? 'bg-purple-50/45' : ''
+                  }`}
+                >
+                  {/* Checkbox */}
+                  <td className="py-4 pl-6 pr-3">
+                    <input
+                      type="checkbox"
+                      checked={isChecked}
+                      onChange={() => toggleSelectRow(sub._id)}
+                      aria-label={`Select ${sub.unitCode}`}
+                      className="w-4 h-4 rounded border-slate-300 text-[#7E22CE] focus:ring-[#7E22CE] cursor-pointer"
+                    />
+                  </td>
 
-                {/* Note Summary */}
-                <td className="py-3.5 px-4 text-center">
-                  <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-xl bg-acedex-bg border border-acedex-border/60 text-[11px] font-mono">
-                    <span title="Summary points" className="text-acedex-text">
-                      {sub.summaryPointCount} pts
-                    </span>
-                    <span className="text-acedex-border">•</span>
-                    <span title="Formulas" className="text-acedex-accent">
-                      {sub.formulaCount} fx
-                    </span>
-                    <span className="text-acedex-border">•</span>
-                    <span title="Definitions" className="text-teal-400">
-                      {sub.definitionCount} defs
-                    </span>
-                  </div>
-                </td>
+                  {/* Unit Code */}
+                  <td className="py-4 px-4 font-mono text-[12.5px] font-bold text-[#7E22CE] whitespace-nowrap">
+                    {sub.unitCode}
+                  </td>
 
-                {/* Contributor */}
-                <td className="py-3.5 px-4 text-acedex-muted font-mono">
-                  {sub.contributorId}
-                </td>
+                  {/* Grade & Subject */}
+                  <td className="py-4 px-4 font-semibold text-slate-700 whitespace-nowrap">
+                    Grade {sub.grade} <span className="text-slate-300 mx-1">•</span> {sub.subjectCode}
+                  </td>
 
-                {/* Status */}
-                <td className="py-3.5 px-4">
-                  {sub.status === 'approved' && (
-                    <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-semibold bg-emerald-500/15 text-emerald-400 border border-emerald-500/30">
-                      <HugeiconsIcon icon={CheckmarkCircle02Icon} size={12} strokeWidth={2} />
-                      <span>Approved</span>
-                    </span>
-                  )}
-                  {sub.status === 'submitted' && (
-                    <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-semibold bg-amber-500/15 text-amber-400 border border-amber-500/30">
-                      <HugeiconsIcon icon={Clock01Icon} size={12} strokeWidth={2} />
-                      <span>Pending</span>
-                    </span>
-                  )}
-                  {sub.status === 'rejected' && (
-                    <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-semibold bg-rose-500/15 text-rose-400 border border-rose-500/30">
-                      <HugeiconsIcon icon={AlertCircleIcon} size={12} strokeWidth={2} />
-                      <span>Revision</span>
-                    </span>
-                  )}
-                </td>
+                  {/* Title */}
+                  <td className="py-4 px-4 font-semibold text-slate-900 max-w-sm truncate">
+                    Unit {sub.unitNumber}: {sub.unitTitle}
+                  </td>
 
-                {/* Actions */}
-                <td className="py-3.5 px-4 text-right" onClick={(e) => e.stopPropagation()}>
-                  <div className="flex items-center justify-end gap-2">
-                    <button
-                      onClick={() => onInspect(sub)}
-                      className="p-1.5 rounded-lg bg-acedex-bg hover:bg-acedex-card-hover text-acedex-muted hover:text-acedex-text border border-acedex-border transition-colors"
-                      title="Inspect Note"
-                    >
-                      <HugeiconsIcon icon={EyeIcon} size={14} strokeWidth={2} />
-                    </button>
-                    {sub.status !== 'approved' && (
-                      <Button
-                        size="sm"
-                        variant="primary"
-                        onClick={() => onApprove(sub)}
-                        loading={isApproving}
-                        className="bg-emerald-600 hover:bg-emerald-500 text-white h-7 text-xs px-2.5"
-                      >
-                        Approve
-                      </Button>
+                  {/* Note Summary Metrics */}
+                  <td className="py-4 px-4 whitespace-nowrap text-center">
+                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#FBFBFD] border border-slate-200/80 font-mono text-[11.5px] tabular-nums">
+                      <span className="font-bold text-slate-700" title="Summary points">
+                        {sub.summaryPointCount} pts
+                      </span>
+                      <span className="text-slate-300">•</span>
+                      <span className="font-semibold text-[#7E22CE]" title="Formulas">
+                        {sub.formulaCount} fx
+                      </span>
+                      <span className="text-slate-300">•</span>
+                      <span className="font-semibold text-sky-600" title="Definitions">
+                        {sub.definitionCount} defs
+                      </span>
+                    </div>
+                  </td>
+
+                  {/* Contributor */}
+                  <td className="py-4 px-4 font-mono text-[12px] text-slate-500 whitespace-nowrap">
+                    {sub.contributorId}
+                  </td>
+
+                  {/* Status Pill */}
+                  <td className="py-4 px-4 whitespace-nowrap">
+                    {sub.status === 'approved' && (
+                      <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[12px] font-semibold bg-emerald-50/90 text-emerald-700 border border-emerald-200/80">
+                        <HugeiconsIcon icon={CheckmarkCircle02Icon} size={14} className="text-emerald-500" strokeWidth={2.2} />
+                        <span>Approved</span>
+                      </span>
                     )}
-                  </div>
-                </td>
-              </tr>
-            );
-          })}
-        </tbody>
-      </table>
-    </div>
+                    {sub.status === 'submitted' && (
+                      <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[12px] font-semibold bg-amber-50/95 text-amber-600 border border-amber-200/85">
+                        <HugeiconsIcon icon={Clock01Icon} size={14} className="text-amber-500" strokeWidth={2.1} />
+                        <span>Pending</span>
+                      </span>
+                    )}
+                    {sub.status === 'rejected' && (
+                      <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[12px] font-semibold bg-rose-50/95 text-rose-600 border border-rose-200/85">
+                        <HugeiconsIcon icon={AlertCircleIcon} size={14} className="text-rose-500" strokeWidth={2.1} />
+                        <span>Rejected</span>
+                      </span>
+                    )}
+                  </td>
+
+                  {/* Actions */}
+                  <td className="py-4 pl-4 pr-6 text-right whitespace-nowrap">
+                    <div className="inline-flex items-center justify-end gap-2">
+                      <button
+                        type="button"
+                        onClick={() => onInspect(sub)}
+                        aria-label={`Inspect ${sub.unitCode}`}
+                        className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-[11px] bg-white hover:bg-slate-50 border border-slate-200/90 text-[12.5px] font-semibold text-slate-700 hover:text-slate-900 shadow-[0_1px_2px_rgba(15,23,42,0.03)] transition-all active:scale-95 cursor-pointer"
+                        title="Review quick note"
+                      >
+                        <HugeiconsIcon icon={EyeIcon} size={14} className="text-slate-500" strokeWidth={1.8} />
+                        <span>Review</span>
+                      </button>
+
+                      {sub.status === 'submitted' && (
+                        <button
+                          type="button"
+                          onClick={() => onApprove(sub)}
+                          disabled={isApproving}
+                          className="btn-emerald-solid px-3.5 py-1.5 rounded-[11px] text-white text-[12.5px] font-semibold inline-flex items-center gap-1.5 cursor-pointer disabled:opacity-50"
+                        >
+                          <HugeiconsIcon icon={CheckmarkCircle02Icon} size={14} strokeWidth={2.2} />
+                          <span>{isApproving ? 'Approving...' : 'Approve'}</span>
+                        </button>
+                      )}
+                    </div>
+                  </td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      </div>
+
+      {/* Empty State Box */}
+      {submissions.length === 0 && (
+        <div className="py-16 px-6 text-center">
+          <div className="w-12 h-12 rounded-2xl bg-slate-100 text-slate-400 flex items-center justify-center mx-auto mb-3">
+            <HugeiconsIcon icon={Search01Icon} size={24} strokeWidth={1.8} />
+          </div>
+          <h3 className="text-[15px] font-bold text-slate-800">No matching quick note submissions</h3>
+          <p className="mt-1 text-[13px] text-slate-500">
+            Try clearing your search query or switching grade/status filters.
+          </p>
+          {onResetFilters && (
+            <button
+              type="button"
+              onClick={onResetFilters}
+              className="mt-4 px-4 py-2 rounded-[12px] bg-purple-50 hover:bg-purple-100 text-[#7E22CE] text-[12.5px] font-semibold transition-colors cursor-pointer"
+            >
+              Reset All Filters
+            </button>
+          )}
+        </div>
+      )}
+
+      {/* Table Footer Summary */}
+      <div className="px-6 py-3.5 bg-[#FBFBFD] border-t border-slate-200/70 flex flex-wrap items-center justify-between gap-3 text-[12.5px] text-slate-500">
+        <div className="font-medium tabular-nums">
+          Showing {submissions.length} submitted note units
+        </div>
+        <div className="flex items-center gap-2 text-[12px]">
+          <span className="inline-flex items-center gap-1.5 text-emerald-600 font-semibold">
+            <span className="w-2 h-2 rounded-full bg-emerald-500" />
+            Curriculum Verified
+          </span>
+          <span className="text-slate-300">•</span>
+          <span>Study Disk Sync Ready</span>
+        </div>
+      </div>
+    </section>
   );
 }

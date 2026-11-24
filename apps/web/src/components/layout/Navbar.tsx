@@ -13,7 +13,7 @@ export function Navbar() {
 
   return (
     <header className="sticky top-0 z-30 bg-white/90 backdrop-blur-xl border-b border-slate-200/70">
-      <div className="max-w-[1380px] mx-auto px-4 sm:px-7 py-2.5 md:py-0 md:h-[68px] flex flex-wrap md:flex-nowrap items-center justify-between gap-y-2.5 gap-x-3">
+      <div className="max-w-[1640px] mx-auto px-4 sm:px-8 lg:px-10 py-2.5 md:py-0 md:h-[68px] flex flex-wrap md:flex-nowrap items-center justify-between gap-y-2.5 gap-x-3">
         {/* Left: ACEDEX Wordmark + Curriculum Portal Pill */}
         <div className="flex items-center gap-2 shrink-0 order-1">
           <Link
