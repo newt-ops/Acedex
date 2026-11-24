@@ -295,4 +295,30 @@ export const api = {
       { method: 'POST' }
     );
   },
+
+  async exportGradeNotes(
+    subjectCode: string,
+    grade: number,
+    status?: string
+  ): Promise<{
+    subjectCode: string;
+    subjectName: string;
+    grade: number;
+    totalUnits: number;
+    notes: QuickNoteData[];
+  }> {
+    const params = new URLSearchParams();
+    params.set('subjectCode', subjectCode);
+    params.set('grade', grade.toString());
+    if (status && status !== 'ALL' && status !== 'all') {
+      params.set('status', status);
+    }
+    return request<{
+      subjectCode: string;
+      subjectName: string;
+      grade: number;
+      totalUnits: number;
+      notes: QuickNoteData[];
+    }>(`/api/v1/notes-collector/admin/grade/export?${params.toString()}`);
+  },
 };

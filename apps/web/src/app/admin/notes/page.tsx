@@ -8,6 +8,7 @@ import { NoteAdminStatsHeader } from '../../../components/notes/NoteAdminStatsHe
 import { NoteSubmissionsTable } from '../../../components/notes/NoteSubmissionsTable';
 import { NoteSubmissionsMobileCards } from '../../../components/notes/NoteSubmissionsMobileCards';
 import { NoteReviewDrawer } from '../../../components/notes/NoteReviewDrawer';
+import { GradeNotesExportModal } from '../../../components/notes/GradeNotesExportModal';
 import { NoteSubmissionSummary } from '../../../types/notes-collector';
 import { SUBJECTS } from '../../../lib/constants';
 import { api } from '../../../lib/api';
@@ -22,6 +23,7 @@ import {
   Cancel01Icon,
   CheckmarkCircle02Icon,
   ArrowDown01Icon,
+  Download01Icon,
 } from '@hugeicons/core-free-icons';
 
 export default function AdminNotesPage() {
@@ -44,6 +46,9 @@ export default function AdminNotesPage() {
   const [selectedSubmission, setSelectedSubmission] = useState<NoteSubmissionSummary | null>(null);
   const [isDrawerOpen, setIsDrawerOpen] = useState<boolean>(false);
   const [approvingId, setApprovingId] = useState<string | null>(null);
+
+  // Grade Batch Download Modal
+  const [isGradeExportOpen, setIsGradeExportOpen] = useState<boolean>(false);
 
   const loadSubmissions = useCallback(async () => {
     setLoading(true);
@@ -215,8 +220,17 @@ export default function AdminNotesPage() {
             </p>
           </div>
 
-          {/* Right Contextual Action: Sync Button */}
+          {/* Right Contextual Action: Download by Grade & Sync Buttons */}
           <div className="flex flex-wrap items-center gap-3 shrink-0">
+            <button
+              type="button"
+              onClick={() => setIsGradeExportOpen(true)}
+              className="inline-flex items-center gap-2 px-4 py-2.5 rounded-[14px] bg-white dark:bg-slate-900 hover:bg-slate-50 dark:hover:bg-slate-800 border border-slate-200/90 dark:border-slate-800 text-[13px] font-semibold text-slate-700 dark:text-slate-200 hover:text-slate-900 shadow-sm transition-all active:scale-95 cursor-pointer"
+            >
+              <HugeiconsIcon icon={Download01Icon} size={15} strokeWidth={2} className="text-[#7E22CE] dark:text-purple-400" />
+              <span>Download by Grade</span>
+            </button>
+
             <button
               type="button"
               onClick={handleSyncToLocal}
@@ -348,6 +362,22 @@ export default function AdminNotesPage() {
               })}
             </div>
 
+            {/* Quick Grade Download shortcut if a grade is filtered */}
+            {gradeFilter !== 'ALL' && (
+              <button
+                type="button"
+                onClick={() => setIsGradeExportOpen(true)}
+                className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-[13px] bg-purple-50 dark:bg-purple-950/40 hover:bg-purple-100/80 dark:hover:bg-purple-900/50 border border-purple-200/80 dark:border-purple-800/60 text-[12.5px] font-semibold text-[#7E22CE] dark:text-purple-300 transition-all active:scale-95 cursor-pointer shadow-sm"
+                title={`Download Grade ${gradeFilter} Notes`}
+              >
+                <HugeiconsIcon icon={Download01Icon} size={14} strokeWidth={2} />
+                <span>
+                  Download G{gradeFilter}
+                  {subjectFilter !== 'ALL' ? ` ${subjectFilter}` : ''}
+                </span>
+              </button>
+            )}
+
             {/* Refresh Button */}
             <button
               type="button"
@@ -428,6 +458,14 @@ export default function AdminNotesPage() {
         onRejected={() => {
           loadSubmissions();
         }}
+      />
+
+      {/* 6. Grade-level Export Modal */}
+      <GradeNotesExportModal
+        isOpen={isGradeExportOpen}
+        onClose={() => setIsGradeExportOpen(false)}
+        initialSubject={subjectFilter !== 'ALL' ? subjectFilter : undefined}
+        initialGrade={gradeFilter !== 'ALL' ? Number(gradeFilter) : undefined}
       />
     </div>
   );

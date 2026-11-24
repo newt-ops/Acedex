@@ -59,6 +59,9 @@ router.post(
 // GET /api/v1/notes-collector/admin/submissions - list all submissions for review
 router.get('/admin/submissions', notesAdminGuard, NotesCollectorController.getAdminSubmissions);
 
+// GET /api/v1/notes-collector/admin/grade/export - export all units for a grade as JSON
+router.get('/admin/grade/export', notesAdminGuard, NotesCollectorController.exportGradeNotes);
+
 // POST /api/v1/notes-collector/admin/submissions/:id/review - approve or reject
 router.post(
   '/admin/submissions/:id/review',

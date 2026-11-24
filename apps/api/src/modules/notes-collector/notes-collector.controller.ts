@@ -157,4 +157,36 @@ export class NotesCollectorController {
       next(err);
     }
   }
+
+  public static async exportGradeNotes(req: Request, res: Response, next: NextFunction): Promise<void> {
+    try {
+      const { subjectCode, grade, status, download } = req.query;
+
+      if (!subjectCode || !grade) {
+        throw new BadRequestError('subjectCode and grade are required');
+      }
+
+      const result = await NotesCollectorService.getGradeNotesForExport(
+        String(subjectCode),
+        parseInt(String(grade), 10),
+        typeof status === 'string' ? status : undefined
+      );
+
+      if (download === 'true') {
+        const gStr = result.grade.toString().padStart(2, '0');
+        const filename = `${result.subjectName}-Grade-${gStr}-Notes.json`.replace(/\s+/g, '-');
+        res.setHeader('Content-Disposition', `attachment; filename="${filename}"`);
+        res.setHeader('Content-Type', 'application/json; charset=utf-8');
+        res.send(JSON.stringify(result.notes, null, 2));
+        return;
+      }
+
+      res.status(200).json({
+        success: true,
+        data: result,
+      });
+    } catch (err) {
+      next(err);
+    }
+  }
 }

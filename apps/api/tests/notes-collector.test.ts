@@ -27,6 +27,12 @@ describe('Dedicated Quick Notes Collection Backend & Database Tests', { timeout:
         } catch {}
       }
     }
+    // Clean up test documents in acedex_notes so production DB stays clean
+    try {
+      const notesDb = getNotesDb();
+      await notesDb.collection('note_submissions').deleteMany({});
+      await notesDb.collection('note_audits').deleteMany({});
+    } catch {}
     await disconnectDatabase();
   }, 60000);
 
@@ -297,5 +303,18 @@ describe('Dedicated Quick Notes Collection Backend & Database Tests', { timeout:
     expect(u2.status).toBe('submitted');
     expect(u3).toBeDefined();
     expect(u3.status).toBe('submitted');
+  });
+
+  it('9. GET /api/v1/notes-collector/admin/grade/export should export unified grade notes array', async () => {
+    const res = await request(app)
+      .get('/api/v1/notes-collector/admin/grade/export')
+      .query({ subjectCode: 'ENG', grade: 9 });
+
+    expect(res.status).toBe(200);
+    expect(res.body.success).toBe(true);
+    expect(res.body.data.subjectCode).toBe('ENG');
+    expect(res.body.data.grade).toBe(9);
+    expect(res.body.data.notes.length).toBeGreaterThanOrEqual(2);
+    expect(res.body.data.notes[0].unitNumber).toBeLessThanOrEqual(res.body.data.notes[1].unitNumber);
   });
 });

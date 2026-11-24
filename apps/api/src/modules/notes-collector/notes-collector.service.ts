@@ -518,4 +518,95 @@ export class NotesCollectorService {
 
     return { exportedCount, importedCount };
   }
+
+  /**
+   * Export all units for a specific grade and subject as a unified array
+   */
+  public static async getGradeNotesForExport(
+    subjectCode: string,
+    grade: number,
+    status?: string
+  ): Promise<{
+    subjectCode: string;
+    subjectName: string;
+    grade: number;
+    totalUnits: number;
+    notes: CollectorNoteItem[];
+  }> {
+    const cleanSubjCode = subjectCode.toUpperCase().trim();
+    const subjectName = SUBJECT_CODE_MAP[cleanSubjCode] || cleanSubjCode;
+
+    const NoteSubmission = getNoteSubmissionModel();
+    const query: any = {
+      subjectCode: cleanSubjCode,
+      grade: Number(grade),
+    };
+
+    if (status && status !== 'all') {
+      query.status = status;
+    }
+
+    const submissions = await NoteSubmission.find(query).sort({ unitNumber: 1 }).lean();
+
+    const notesMap = new Map<number, CollectorNoteItem>();
+    for (const sub of submissions) {
+      notesMap.set(sub.unitNumber, {
+        grade: sub.grade,
+        subject: sub.subject || subjectName,
+        subjectCode: sub.subjectCode,
+        unitNumber: sub.unitNumber,
+        unitCode: sub.unitCode,
+        unitTitle: sub.unitTitle,
+        examWeight: sub.examWeight || '',
+        summaryPoints: sub.summaryPoints || [],
+        formulas: sub.formulas || [],
+        examTip: sub.examTip || '',
+        keyDefinitions: sub.keyDefinitions || [],
+        eueeFocusTopics: sub.eueeFocusTopics || [],
+      });
+    }
+
+    // Also check local filesystem in content/quick-notes/Grade-XX/Subject
+    const notesBaseDir = this.getQuickNotesDir();
+    const gStr = `Grade-${grade.toString().padStart(2, '0')}`;
+    const localDir = path.join(notesBaseDir, gStr, subjectName);
+
+    if (fs.existsSync(localDir)) {
+      const files = fs.readdirSync(localDir).filter((f) => f.endsWith('.json'));
+      for (const f of files) {
+        try {
+          const fileContent = JSON.parse(fs.readFileSync(path.join(localDir, f), 'utf-8'));
+          const uNum = fileContent.unitNumber || parseInt(f.replace(/.*-U0?/, ''), 10) || 1;
+          if (!notesMap.has(uNum)) {
+            notesMap.set(uNum, {
+              grade: fileContent.grade || grade,
+              subject: fileContent.subject || subjectName,
+              subjectCode: fileContent.subjectCode || cleanSubjCode,
+              unitNumber: uNum,
+              unitCode: fileContent.unitCode || f.replace('.json', ''),
+              unitTitle: fileContent.unitTitle || 'Unit Title',
+              examWeight: fileContent.examWeight || '',
+              summaryPoints: fileContent.summaryPoints || [],
+              formulas: fileContent.formulas || [],
+              examTip: fileContent.examTip || '',
+              keyDefinitions: fileContent.keyDefinitions || [],
+              eueeFocusTopics: fileContent.eueeFocusTopics || [],
+            });
+          }
+        } catch {
+          // Ignore read error
+        }
+      }
+    }
+
+    const notes = Array.from(notesMap.values()).sort((a, b) => a.unitNumber - b.unitNumber);
+
+    return {
+      subjectCode: cleanSubjCode,
+      subjectName,
+      grade: Number(grade),
+      totalUnits: notes.length,
+      notes,
+    };
+  }
 }
