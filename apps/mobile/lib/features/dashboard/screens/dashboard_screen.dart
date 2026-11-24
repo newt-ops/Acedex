@@ -31,7 +31,7 @@ import '../widgets/study_plan_section.dart';
 class DashboardScreen extends StatefulWidget {
   final UserProfile? user;
   final VoidCallback? onNavigateToStudy;
-  final VoidCallback? onNavigateToPractice;
+  final VoidCallback? onNavigateToAiStudy;
   final List<StudyTaskItem>? initialTasks;
   final int? initialUnitsMastered;
   final int? initialTotalUnits;
@@ -42,7 +42,7 @@ class DashboardScreen extends StatefulWidget {
     super.key,
     this.user,
     this.onNavigateToStudy,
-    this.onNavigateToPractice,
+    this.onNavigateToAiStudy,
     this.initialTasks,
     this.initialUnitsMastered,
     this.initialTotalUnits,

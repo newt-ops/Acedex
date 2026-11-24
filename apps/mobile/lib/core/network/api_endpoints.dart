@@ -25,4 +25,15 @@ class ApiEndpoints {
   static String unitQuestions(String unitId) => '/api/v1/curriculum/units/$unitId/questions';
   static String completeUnit(String unitId) => '/api/v1/study/units/$unitId/complete';
   static String updateUnitStatus(String unitId) => '/api/v1/study/units/$unitId/status';
+
+  // Rewarded Ads & Monetization
+  static const String adsSessionStart = '/api/v1/ads/session/start';
+  static const String adsRewardClaim = '/api/v1/ads/reward/claim';
+
+  // AI Cross-Grade Topic Study & Gemini Planner
+  static const String topicProgram = '/api/v1/topics/program';
+  static String subjectTopicModules(String subjectCode) =>
+      '/api/v1/topics/subjects/${subjectCode.toUpperCase()}/modules';
+  static String topicModuleProgress(String moduleId) =>
+      '/api/v1/topics/modules/$moduleId/progress';
 }

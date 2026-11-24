@@ -7,7 +7,7 @@ void main() {
   group('AcedexBottomNavBar Widget Tests', () {
     testWidgets('renders all 5 canonical study navigation slots without labels',
         (WidgetTester tester) async {
-      int selectedIndex = 2; // Default Practice
+      int selectedIndex = 2; // Default AI Study
 
       await tester.pumpWidget(
         MaterialApp(
@@ -31,12 +31,12 @@ void main() {
       // Verify all 5 slots exist by keys
       expect(find.byKey(const Key('nav-slot-0')), findsOneWidget); // Home
       expect(find.byKey(const Key('nav-slot-1')), findsOneWidget); // Study
-      expect(find.byKey(const Key('nav-slot-2')), findsOneWidget); // Practice
+      expect(find.byKey(const Key('nav-slot-2')), findsOneWidget); // AI Study
       expect(find.byKey(const Key('nav-slot-3')), findsOneWidget); // Progress
       expect(find.byKey(const Key('nav-slot-4')), findsOneWidget); // Profile
 
       // Verify no floating text readout above the bar
-      expect(find.text('Practice'), findsNothing);
+      expect(find.text('AI Study'), findsNothing);
 
       // Tap 'Home' slot (Slot 0)
       final homeSlotFinder = find.byKey(const Key('nav-slot-0'));

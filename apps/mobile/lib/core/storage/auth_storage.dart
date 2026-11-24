@@ -13,6 +13,8 @@ class AuthStorage {
   static const String _keyAvatar = 'acedex_student_avatar';
   static const String _keyLastPhone = 'acedex_last_phone';
   static const String _keyHasSeenSplash = 'acedex_seen_splash';
+  static const String _keyAiTopicOverview = 'acedex_ai_topic_overview';
+  static const String _keyAiSubjectModulesPrefix = 'acedex_ai_modules_';
 
   static AuthStorage? _instance;
   static AuthStorage get instance => _instance ??= AuthStorage._();
@@ -154,6 +156,45 @@ class AuthStorage {
     await prefs.setBool(_keyHasSeenOnboarding, seen);
   }
 
+  Future<void> saveAiTopicOverview(Map<String, dynamic> overviewJson) async {
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setString(_keyAiTopicOverview, jsonEncode(overviewJson));
+  }
+
+  Future<Map<String, dynamic>?> getAiTopicOverview() async {
+    final prefs = await SharedPreferences.getInstance();
+    final raw = prefs.getString(_keyAiTopicOverview);
+    if (raw == null || raw.isEmpty) return null;
+    try {
+      return jsonDecode(raw) as Map<String, dynamic>;
+    } catch (_) {
+      return null;
+    }
+  }
+
+  Future<void> saveSubjectTopicModules(
+    String subjectCode,
+    List<Map<String, dynamic>> modulesJson,
+  ) async {
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setString(
+      '$_keyAiSubjectModulesPrefix${subjectCode.toUpperCase()}',
+      jsonEncode(modulesJson),
+    );
+  }
+
+  Future<List<Map<String, dynamic>>?> getSubjectTopicModules(String subjectCode) async {
+    final prefs = await SharedPreferences.getInstance();
+    final raw = prefs.getString('$_keyAiSubjectModulesPrefix${subjectCode.toUpperCase()}');
+    if (raw == null || raw.isEmpty) return null;
+    try {
+      final list = jsonDecode(raw) as List<dynamic>;
+      return list.whereType<Map<String, dynamic>>().toList();
+    } catch (_) {
+      return null;
+    }
+  }
+
   Future<void> clear() async {
     _cachedToken = null;
     _cachedProfile = null;
@@ -165,5 +206,9 @@ class AuthStorage {
     await prefs.remove(_keyRefreshToken);
     await prefs.remove(_keyProfile);
     await prefs.remove(_keyAvatar);
+    await prefs.remove(_keyAiTopicOverview);
+    for (final key in prefs.getKeys().where((k) => k.startsWith(_keyAiSubjectModulesPrefix)).toList()) {
+      await prefs.remove(key);
+    }
   }
 }

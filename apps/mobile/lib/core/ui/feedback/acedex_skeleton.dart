@@ -533,9 +533,9 @@ class AcedexStudySkeleton extends StatelessWidget {
   }
 }
 
-/// Practice Screen Skeleton
-class AcedexPracticeSkeleton extends StatelessWidget {
-  const AcedexPracticeSkeleton({super.key});
+/// AI Topic Study Screen Skeleton
+class AcedexAiStudySkeleton extends StatelessWidget {
+  const AcedexAiStudySkeleton({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -551,9 +551,9 @@ class AcedexPracticeSkeleton extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            // Practice Hero Banner
+            // AI Topic Program Summary Hero Banner
             Container(
-              height: 110,
+              height: 118,
               padding: const EdgeInsets.all(16),
               decoration: BoxDecoration(
                 color: cardBg,
@@ -565,21 +565,33 @@ class AcedexPracticeSkeleton extends StatelessWidget {
                 children: [
                   AcedexSkeletonBox(width: 140, height: 16, borderRadius: 6, color: boneBg),
                   const SizedBox(height: 8),
-                  AcedexSkeletonBox(width: 200, height: 11, borderRadius: 4, color: boneBg),
+                  AcedexSkeletonBox(width: 210, height: 11, borderRadius: 4, color: boneBg),
                   const Spacer(),
-                  AcedexSkeletonBox(width: 100, height: 26, borderRadius: 999, color: boneBg),
+                  AcedexSkeletonBox(width: 110, height: 26, borderRadius: 999, color: boneBg),
                 ],
               ),
             ),
-            const SizedBox(height: 18),
+            const SizedBox(height: 14),
 
-            // Practice Category Cards
+            // Priority Subject Pill Rail
+            Row(
+              children: List.generate(
+                3,
+                (_) => Padding(
+                  padding: const EdgeInsets.only(right: 8),
+                  child: AcedexSkeletonBox(width: 96, height: 34, borderRadius: 999, color: boneBg),
+                ),
+              ),
+            ),
+            const SizedBox(height: 16),
+
+            // Topic Module Cards
             ...List.generate(
               3,
               (index) => Padding(
                 padding: const EdgeInsets.only(bottom: 12),
                 child: Container(
-                  height: 76,
+                  height: 84,
                   padding: const EdgeInsets.all(14),
                   decoration: BoxDecoration(
                     color: cardBg,
@@ -595,13 +607,13 @@ class AcedexPracticeSkeleton extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            AcedexSkeletonBox(width: 130, height: 13, borderRadius: 4, color: boneBg),
+                            AcedexSkeletonBox(width: 150, height: 13, borderRadius: 4, color: boneBg),
                             const SizedBox(height: 6),
-                            AcedexSkeletonBox(width: 90, height: 10, borderRadius: 4, color: boneBg),
+                            AcedexSkeletonBox(width: 105, height: 10, borderRadius: 4, color: boneBg),
                           ],
                         ),
                       ),
-                      AcedexSkeletonBox(width: 28, height: 28, borderRadius: 999, color: boneBg),
+                      AcedexSkeletonBox(width: 34, height: 24, borderRadius: 999, color: boneBg),
                     ],
                   ),
                 ),

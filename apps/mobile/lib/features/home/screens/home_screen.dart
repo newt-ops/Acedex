@@ -3,7 +3,7 @@ import '../../../core/models/user_profile.dart';
 import '../../../core/storage/auth_storage.dart';
 import '../../../core/ui/ui.dart';
 import '../../dashboard/screens/dashboard_screen.dart';
-import '../../practice/screens/practice_screen.dart';
+import '../../ai_study/screens/ai_study_screen.dart';
 import '../../profile/screens/profile_screen.dart';
 import '../../progress/screens/progress_screen.dart';
 import '../../study/screens/study_screen.dart';
@@ -111,7 +111,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     key: ValueKey('screen_0_${_reloadKeys[0]}'),
                     user: widget.user,
                     onNavigateToStudy: () => _navigateToTab(1),
-                    onNavigateToPractice: () => _navigateToTab(2),
+                    onNavigateToAiStudy: () => _navigateToTab(2),
                   ),
           ),
           AnimatedSwitcher(
@@ -126,8 +126,8 @@ class _HomeScreenState extends State<HomeScreen> {
           AnimatedSwitcher(
             duration: const Duration(milliseconds: 240),
             child: _loadingTabs.contains(2)
-                ? const AcedexPracticeSkeleton(key: ValueKey('skeleton_2'))
-                : PracticeScreen(
+                ? const AcedexAiStudySkeleton(key: ValueKey('skeleton_2'))
+                : AiStudyScreen(
                     key: ValueKey('screen_2_${_reloadKeys[2]}'),
                     user: widget.user,
                   ),

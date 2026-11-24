@@ -50,7 +50,7 @@ class AcedexBottomNavBar extends StatefulWidget {
   /// Canonical 5 study navigation items for Acedex platform
   /// 0: Home (Dashboard & daily streak)
   /// 1: Study (Curriculum units & notes)
-  /// 2: Practice (Elevated center action: Unit assessments & national exams)
+  /// 2: AI Study (Elevated center action: AI cross-grade topic roadmap)
   /// 3: Progress (Performance analytics & mastery)
   /// 4: Profile (Verified Student ID pass & settings)
   static List<AcedexNavItem> get defaultItems => [
@@ -63,8 +63,8 @@ class AcedexBottomNavBar extends StatefulWidget {
           icon: HugeIcons.strokeRoundedBookOpen01,
         ),
         const AcedexNavItem(
-          label: 'Practice',
-          icon: HugeIcons.strokeRoundedPencilEdit02,
+          label: 'AI Study',
+          icon: HugeIcons.strokeRoundedAiSparkles,
         ),
         const AcedexNavItem(
           label: 'Progress',

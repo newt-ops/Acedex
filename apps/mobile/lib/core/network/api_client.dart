@@ -18,6 +18,7 @@ class ApiClient {
     String path, {
     Map<String, dynamic>? body,
     bool requiresAuth = false,
+    Duration timeout = const Duration(seconds: 15),
   }) async {
     final uri = Uri.parse('$baseUrl$path');
     final headers = <String, String>{
@@ -39,7 +40,7 @@ class ApiClient {
             headers: headers,
             body: body != null ? jsonEncode(body) : null,
           )
-          .timeout(const Duration(seconds: 15));
+          .timeout(timeout);
 
       return _handleResponse(response);
     } on ApiException {
@@ -55,6 +56,7 @@ class ApiClient {
   Future<Map<String, dynamic>> get(
     String path, {
     bool requiresAuth = true,
+    Duration timeout = const Duration(seconds: 15),
   }) async {
     final uri = Uri.parse('$baseUrl$path');
     final headers = <String, String>{'Accept': 'application/json'};
@@ -69,7 +71,7 @@ class ApiClient {
     try {
       final response = await _client
           .get(uri, headers: headers)
-          .timeout(const Duration(seconds: 15));
+          .timeout(timeout);
 
       return _handleResponse(response);
     } on ApiException {
