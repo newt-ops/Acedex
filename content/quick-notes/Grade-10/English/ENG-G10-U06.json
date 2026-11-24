@@ -1,0 +1,61 @@
+{
+  "grade": 10,
+  "subject": "English",
+  "subjectCode": "ENG",
+  "unitNumber": 6,
+  "unitCode": "ENG-G10-U06",
+  "unitTitle": "Migration",
+  "examWeight": "10% EUEE",
+  "summaryPoints": [
+    "Past perfect tense ('had + V3') serves as the 'before' past, expressing an action concluded prior to another definitive past event or baseline point in simple past.",
+    "Adverb clauses of purpose express intentionality using subordinating conjunctions: 'so that' and 'in order that' (followed by modal auxiliaries like can, could, will, would), 'in order to' and 'so as to' (followed by bare infinitives), and negative purpose markers 'lest' and 'for fear that' (which take 'should' or bare subjunctive, never additional negative words).",
+    "Cause-and-effect transitional devices connect arguments: 'because', 'since', and 'as' introduce subordinate clauses of cause, whereas 'due to', 'owing to', and 'because of' govern nominal phrases.",
+    "English orthography follows the traditional rule: 'i before e except after c' (e.g., believe, relief vs ceiling, receive), with notable exceptions (leisure, seize, foreign, height, weight, sovereign).",
+    "Morphological hyphenation occurs in compound nouns (commander-in-chief, check-in, up-to-date), where plurals inflect the primary base noun (e.g., commanders-in-chief, editors-in-chief).",
+    "Phrasal verbs based on 'go' convey distinct meanings: 'go around' (circulate), 'go back on' (break a promise), 'go through' (experience or inspect), and 'go ahead' (proceed)."
+  ],
+  "formulas": [
+    {
+      "label": "Past Perfect Time Relationship",
+      "expr": "Past Perfect (earlier action): had + V3  <---  Simple Past (subsequent action): V2"
+    },
+    {
+      "label": "Adverb Clause of Purpose Formula",
+      "expr": "Main Clause + so that / in order that + Subject + modal auxiliary (can/could/may/might) + V1(base)"
+    },
+    {
+      "label": "Negative Purpose Clause with 'Lest'",
+      "expr": "Main Clause + lest + Subject + (should) + V1(base)  [Note: 'not' is prohibited after lest]"
+    },
+    {
+      "label": "Hyphenated Compound Pluralization",
+      "expr": "Base Noun(+s) + Prepositional Phrase  (e.g., editor-in-chief -> editors-in-chief)"
+    }
+  ],
+  "examTip": "In EUEE purpose clauses, 'lest' and 'for fear that' are inherently negative and must never be followed by 'not' (e.g., 'He ran lest he should be late', NOT 'lest he should not be late'). Also watch out for compound plurals: pluralize the head noun, not the final prepositional element ('commanders-in-chief', NOT 'commander-in-chiefs').",
+  "keyDefinitions": [
+    {
+      "term": "Past Perfect Tense",
+      "definition": "A verbal aspect that denotes an event completed prior to a specified past point in time or before another past occurrence."
+    },
+    {
+      "term": "Clause of Purpose",
+      "definition": "A subordinate adverbial clause that explains the objective, intention, or intended result of the action in the main clause."
+    },
+    {
+      "term": "Compound Noun with Hyphen",
+      "definition": "A multi-word noun joined by hyphens whose grammatical plural is formed by inflecting the primary lexical noun stem."
+    },
+    {
+      "term": "Conjunctive Adverb of Cause and Effect",
+      "definition": "A transitional marker (e.g., consequently, therefore, thus, as a result) that signals a causal relationship between independent clauses."
+    }
+  ],
+  "eueeFocusTopics": [
+    "Tense sequencing: past perfect ('had + V3') preceding simple past ('V2')",
+    "Purpose clause structures with 'so that', 'in order that', and 'lest'",
+    "Compound noun pluralization (head noun inflection)",
+    "Spelling conventions: 'i before e except after c' and its high-frequency exceptions",
+    "Phrasal verbs based on 'go' ('go back on' a promise, 'go through' an ordeal)"
+  ]
+}

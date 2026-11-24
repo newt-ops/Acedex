@@ -1,0 +1,61 @@
+{
+  "grade": 10,
+  "subject": "English",
+  "subjectCode": "ENG",
+  "unitNumber": 2,
+  "unitCode": "ENG-G10-U02",
+  "unitTitle": "Travel Behaviors",
+  "examWeight": "10% EUEE",
+  "summaryPoints": [
+    "Sentences are classified structurally into four types: simple (one independent clause), compound (two coordinate independent clauses joined by FANBOYS or a semicolon), complex (one independent clause plus one or more dependent clauses), and compound-complex (at least two independent clauses and one or more dependent clauses).",
+    "Simple past tense expresses actions completed at a definite time in the past, taking inflectional '-ed/-d' for regular verbs or internal vowel changes for irregular verbs, accompanied by definitive past adverbials (yesterday, ago, last week, in 1995).",
+    "Modal verbs express degrees of advice and warning: 'must' and 'have to' convey strong necessity/obligation; 'should' and 'ought to' provide moderate advice; and 'had better' conveys advice carrying an implied warning of negative consequences.",
+    "Semicolons join related independent clauses without coordinating conjunctions, or link independent clauses when the second begins with a conjunctive adverb (however, therefore, nevertheless, furthermore).",
+    "Colons introduce formal lists, direct expansions, or explanatory paraphrases of preceding independent clauses, and separate hours from minutes.",
+    "Effective summary writing condenses an original text to approximately one-third of its length in the writer's own words, omitting personal interpretations, extraneous examples, and digressions while preserving core thesis points."
+  ],
+  "formulas": [
+    {
+      "label": "Compound Sentence with Coordinating Conjunction",
+      "expr": "Independent Clause + , + Coordinating Conjunction (for, and, nor, but, or, yet, so) + Independent Clause"
+    },
+    {
+      "label": "Semicolon with Conjunctive Adverb Formula",
+      "expr": "Independent Clause + ; + conjunctive adverb (however, therefore, nevertheless) + , + Independent Clause"
+    },
+    {
+      "label": "Complex Sentence Structure",
+      "expr": "Subordinating Conjunction + Dependent Clause + , + Independent Clause  OR  Independent Clause + Subordinating Conjunction + Dependent Clause"
+    },
+    {
+      "label": "Compound-Complex Sentence Formula",
+      "expr": "Independent Clause + Coordinating Conjunction + Independent Clause + Subordinating Conjunction + Dependent Clause"
+    }
+  ],
+  "examTip": "When punctuating compound sentences with conjunctive adverbs in EUEE items, verify the punctuation: use a semicolon before the conjunctive adverb and a comma after it (e.g., 'Clause 1; however, Clause 2'). Never join two independent clauses with only a comma (avoid comma splices).",
+  "keyDefinitions": [
+    {
+      "term": "Simple Sentence",
+      "definition": "A sentence containing a single independent clause that expresses a complete thought with a subject and a finite predicate."
+    },
+    {
+      "term": "Compound Sentence",
+      "definition": "A sentence consisting of two or more independent clauses joined by coordinating conjunctions, semicolons, or conjunctive adverbs."
+    },
+    {
+      "term": "Complex Sentence",
+      "definition": "A sentence composed of one main independent clause linked to one or more dependent subordinate clauses."
+    },
+    {
+      "term": "Summary",
+      "definition": "A concise, objective synthesis of a text's essential ideas written in the summarizer's own words, representing roughly one-third of the original text."
+    }
+  ],
+  "eueeFocusTopics": [
+    "Identification of sentence structures (simple, compound, complex, compound-complex)",
+    "Punctuation conventions: semicolons vs commas vs colons",
+    "Modal verbs for warnings and advice ('must', 'should', 'ought to', 'had better')",
+    "Phrasal verbs based on 'fill' ('fill in' for forms, 'fill up' for tanks, 'fill out')",
+    "Descriptive adjectives and collocations related to travel and personality"
+  ]
+}

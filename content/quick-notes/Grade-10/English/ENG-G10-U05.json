@@ -1,0 +1,61 @@
+{
+  "grade": 10,
+  "subject": "English",
+  "subjectCode": "ENG",
+  "unitNumber": 5,
+  "unitCode": "ENG-G10-U05",
+  "unitTitle": "Honey Processing",
+  "examWeight": "10% EUEE",
+  "summaryPoints": [
+    "Passive voice is formed with the appropriate tense form of the copula 'be' plus the past participle (V3) of the transitive main verb, shifting thematic focus from the agent to the patient or result.",
+    "Modal verbs in passive voice follow the invariant pattern: 'modal auxiliary + be + past participle (V3)'.",
+    "Subject-verb agreement requires singular verbs for subjects modified by 'one of', 'each of', 'either of', and 'neither of' when followed by plural nouns, unless an intervening relative clause modifies the plural antecedent.",
+    "When compound subjects are linked by correlatives ('either...or', 'neither...nor', 'not only...but also'), the finite verb agrees in number and person with the closest subject component.",
+    "When compound subjects are joined by parenthetical additives ('as well as', 'together with', 'along with', 'in addition to', 'including'), the verb agrees with the first initial subject.",
+    "Collocations with 'do' and 'make' are lexically fixed: 'do' applies to routine actions, work, duties, and open-ended obligations (do homework, do business, do best, do damage), while 'make' applies to producing, creating, deciding, and communicating (make an attempt, make an effort, make a change, make noise)."
+  ],
+  "formulas": [
+    {
+      "label": "Present Simple Passive Voice",
+      "expr": "Object + is/am/are + V3(past participle) + (by + Agent)"
+    },
+    {
+      "label": "Modal Passive Voice Formula",
+      "expr": "Object + modal auxiliary (can, should, must, ought to, may) + be + V3(past participle)"
+    },
+    {
+      "label": "Correlative Conjunction Agreement (Proximity Rule)",
+      "expr": "Either S1 or S2 + Verb(agrees with S2)  |  Neither S1 nor S2 + Verb(agrees with S2)"
+    },
+    {
+      "label": "Additive Conjunction Subject Agreement",
+      "expr": "S1 + together with / along with / as well as + S2 + Verb(agrees strictly with S1)"
+    }
+  ],
+  "examTip": "A frequent EUEE trap involves subject-verb agreement with additives: 'The teacher, together with his students, is (NOT are) coming.' The additive phrase is parenthetical and does not pluralize the singular subject. Additionally, remember that 'one of the + plural noun' takes a singular verb: 'One of the students is absent.'",
+  "keyDefinitions": [
+    {
+      "term": "Passive Voice",
+      "definition": "A grammatical voice in which the grammatical subject of the clause receives the action denoted by the transitive verb."
+    },
+    {
+      "term": "Proximity Rule",
+      "definition": "A subject-verb agreement principle specifying that when subjects are conjoined by correlatives (either...or, neither...nor), the verb matches the noun closest to it."
+    },
+    {
+      "term": "Blending",
+      "definition": "A morphological word-formation process in which parts of two or more words are fused together to produce a new lexical item (e.g., brunch = breakfast + lunch)."
+    },
+    {
+      "term": "Clipping",
+      "definition": "A morphological shortening process where a polysyllabic word is reduced to a shorter form without changing its word class or semantic core (e.g., advertisement -> ad, telephone -> phone)."
+    }
+  ],
+  "eueeFocusTopics": [
+    "Subject-verb agreement with additives ('as well as', 'along with') versus correlatives ('neither...nor')",
+    "Passive voice transformation with modal auxiliary verbs",
+    "Fixed lexical collocations: 'make' versus 'do'",
+    "Morphological word formation via clipping and blending",
+    "Process description connectors (first, next, having done this, then, finally)"
+  ]
+}

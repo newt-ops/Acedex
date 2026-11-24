@@ -1,0 +1,61 @@
+{
+  "grade": 10,
+  "subject": "English",
+  "subjectCode": "ENG",
+  "unitNumber": 10,
+  "unitCode": "ENG-G10-U10",
+  "unitTitle": "Digital Vs Satellite Television",
+  "examWeight": "10% EUEE",
+  "summaryPoints": [
+    "Discourse connectors of comparison highlight similarities (similarly, likewise, both, just as, in the same way), whereas connectors of contrast articulate differences (although, however, whereas, on the other hand, in contrast to, nevertheless).",
+    "Transitive verbs require one or more direct objects to complete their meaning (e.g., 'She read a novel'), whereas intransitive verbs express actions that do not take a direct object (e.g., 'Solomon runs fast', 'Her tooth ached').",
+    "Ditransitive verbs take two objects: a direct object (the patient or entity acted upon) and an indirect object (the animate beneficiary or recipient), arranged either as 'Verb + Indirect Object + Direct Object' or 'Verb + Direct Object + Preposition (to/for) + Indirect Object'.",
+    "Modal auxiliary verbs express distinct communicative functions: 'must' and 'have to' denote necessity and obligation; 'should' and 'ought to' express advice; 'can' and 'could' form polite requests and ability; and 'will' signals spontaneous decisions, future arrangements, and offers.",
+    "Easily confused words are distinguished through orthography, phonetics, and grammatical word classes (e.g., advice [noun] vs advise [verb], breath [noun] vs breathe [verb], farther [physical distance] vs further [metaphorical advancement], confidant [trusted person] vs confident [sure]).",
+    "Expository essays synthesize information through structured rhetorical modes (definition, comparison/contrast, cause-effect, classification), beginning with clear topic sentences and concluding with effective summary sentences that tie all supporting arguments together."
+  ],
+  "formulas": [
+    {
+      "label": "Ditransitive Verb Object Distribution Formulas",
+      "expr": "Pattern A: Subject + Verb + Indirect Object + Direct Object  |  Pattern B: Subject + Verb + Direct Object + to/for + Indirect Object"
+    },
+    {
+      "label": "Comparative vs Contrastive Connector Placement",
+      "expr": "Comparison: Independent Clause; similarly / likewise, + Independent Clause  |  Contrast: Although + Clause 1 + , + Clause 2  OR  Clause 1; however, + Clause 2"
+    },
+    {
+      "label": "Modal Obligation vs Advice Distinction",
+      "expr": "Obligation: Subject + must / have to + V1(base)  |  Advice: Subject + should / ought to + V1(base)"
+    },
+    {
+      "label": "Confusing Word Pairs Distinction Formula",
+      "expr": "advice (noun: uncount) vs advise (verb: /z/)  |  breath (noun: /θ/) vs breathe (verb: /ð/)  |  farther (distance) vs further (additional)"
+    }
+  ],
+  "examTip": "In EUEE items testing confusing lexical pairs, remember that words ending in '-ce' are typically nouns (advice, practice, device) while words ending in '-se' are verbs (advise, practise, devise). For distance, 'farther' refers to physical geographic distance, whereas 'further' denotes additional degree or time (e.g., 'further information', NOT 'farther information').",
+  "keyDefinitions": [
+    {
+      "term": "Transitive Verb",
+      "definition": "A verb that requires one or more nominal objects to complete its predication and transfer its grammatical action."
+    },
+    {
+      "term": "Intransitive Verb",
+      "definition": "A verb that denotes an action or state of being without requiring a direct object."
+    },
+    {
+      "term": "Indirect Object",
+      "definition": "A nominal grammatical constituent indicating the person or entity that receives or benefits from the direct object of a ditransitive verb."
+    },
+    {
+      "term": "Concluding Sentence",
+      "definition": "The terminal statement of a paragraph that binds together the supporting arguments and restates the main thesis in a fresh, insightful manner."
+    }
+  ],
+  "eueeFocusTopics": [
+    "Transitive versus intransitive verbs and dual-object (direct/indirect) patterning",
+    "Discourse markers of comparison versus contrast ('likewise' vs 'however' vs 'whereas')",
+    "Modal auxiliary functional selection (obligation, advice, polite requests, promises)",
+    "High-yield confusing word pairs (advice/advise, farther/further, later/latter, breath/breathe)",
+    "Expository essay rhetorical structure and cohesive paragraph transitions"
+  ]
+}
