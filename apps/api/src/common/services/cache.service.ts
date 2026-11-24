@@ -60,6 +60,13 @@ export class ContentCacheService {
   }
 
   /**
+   * Deletes a specific cache key (alias for del)
+   */
+  public static delete(key: string): void {
+    this.del(key);
+  }
+
+  /**
    * Deletes all keys matching a given prefix
    */
   public static delPrefix(prefix: string): void {

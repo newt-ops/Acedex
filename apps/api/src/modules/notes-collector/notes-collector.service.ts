@@ -502,7 +502,7 @@ export class NotesCollectorService {
 
     // 4. Invalidate cache
     try {
-      ContentCacheService.delete(`unit_summary:${cleanCode}`);
+      ContentCacheService.del(`unit_summary:${cleanCode}`);
     } catch {}
 
     // 5. Write local file backup in background
