@@ -17,8 +17,6 @@ interface GradeNoteCardProps {
   grade: number;
   subjectName: string;
   units: NoteUnitProgressItem[];
-  isSelected: boolean;
-  onSelectGrade: (grade: number) => void;
   onSubmitGradeClick: (grade: number) => void;
 }
 
@@ -26,8 +24,6 @@ export function GradeNoteCard({
   grade,
   subjectName,
   units,
-  isSelected,
-  onSelectGrade,
   onSubmitGradeClick,
 }: GradeNoteCardProps) {
   const totalUnits = units.length;
@@ -38,24 +34,14 @@ export function GradeNoteCard({
 
   return (
     <Card
-      onClick={() => onSelectGrade(grade)}
-      className={`group cursor-pointer transition-all duration-300 ease-out bg-acedex-card/90 backdrop-blur-sm border shadow-sm hover:shadow-lg flex flex-col justify-between hover:-translate-y-1 ${
-        isSelected
-          ? 'border-acedex-primary ring-2 ring-acedex-primary/20 shadow-acedex-primary/10'
-          : 'border-acedex-border/80 hover:border-acedex-primary/50'
-      }`}
+      onClick={() => onSubmitGradeClick(grade)}
+      className="group cursor-pointer transition-all duration-300 ease-out bg-acedex-card/90 backdrop-blur-sm border border-acedex-border/80 hover:border-acedex-primary hover:shadow-lg hover:shadow-purple-500/10 flex flex-col justify-between hover:-translate-y-1"
     >
       <CardContent className="p-5 sm:p-6 flex-1 flex flex-col justify-between space-y-4">
         <div>
           {/* Top Bar: Grade Badge & Coverage Tag */}
           <div className="flex items-center justify-between gap-2 mb-3">
-            <span
-              className={`px-3 py-1 rounded-xl text-xs font-bold font-mono transition-colors ${
-                isSelected
-                  ? 'bg-acedex-primary text-white shadow-sm'
-                  : 'bg-acedex-primary/10 text-acedex-primary border border-acedex-primary/20'
-              }`}
-            >
+            <span className="px-3 py-1 rounded-xl text-xs font-bold font-mono bg-acedex-primary/10 text-acedex-primary border border-acedex-primary/20 group-hover:bg-acedex-primary group-hover:text-white transition-colors">
               Grade {grade}
             </span>
 
