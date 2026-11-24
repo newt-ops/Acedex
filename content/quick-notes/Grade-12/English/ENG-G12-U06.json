@@ -1,0 +1,61 @@
+{
+  "grade": 12,
+  "subject": "English",
+  "subjectCode": "ENG",
+  "unitNumber": 6,
+  "unitCode": "ENG-G12-U06",
+  "unitTitle": "Green Economies",
+  "examWeight": "10% EUEE",
+  "summaryPoints": [
+    "Clauses and expressions of purpose are constructed across three distinct grammatical patterns: Category 1 uses 'for + noun/gerund'; Category 2 uses 'to', 'so as to', and 'in order to' (+ bare infinitive; negative: 'so as not to', 'in order not to'); and Category 3 uses 'so that' and 'in order that' (+ subject + modal auxiliary + base verb).",
+    "Faulty parallelism occurs when equivalent grammatical items linked in coordinate structures, compound series, or comparisons do not share identical syntactic forms (e.g., mixing infinitives with gerunds, or adjectives with nouns).",
+    "Parallel structure must be preserved across verb tenses, parts of speech, and list items joined by coordinating conjunctions (and, but, or) or correlatives (either...or, neither...nor, not only...but also).",
+    "Modal auxiliary verbs express degrees of advice: 'should' and 'ought to' offer recommendations, while 'had better' conveys advice carrying an implied warning of adverse consequences.",
+    "Relative pronouns connect adjective clauses: 'who' (subject for persons), 'whom' (object for persons or following prepositions), 'which' (animals/objects), 'that' (defining clauses for people/things), and 'whose' (possession).",
+    "Phrasal verbs based on 'talk' and 'tear' express precise idiomatic functions: 'talk down to' (speak patronizingly), 'talk into' (persuade), 'talk out of' (dissuade), 'tear down' (demolish), and 'tear off' (depart hastily)."
+  ],
+  "formulas": [
+    {
+      "label": "Purpose: Infinitive vs Clause Formulas",
+      "expr": "Category 2: Subject + Verb + in order to / so as to / to + V1(bare infinitive)  |  Category 3: Subject + Verb + so that / in order that + Subject + can / could / will / would + V1"
+    },
+    {
+      "label": "Negative Purpose Infinitive Formula",
+      "expr": "Subject + Verb + in order not to / so as not to + V1(bare infinitive)"
+    },
+    {
+      "label": "Parallel Structure Template",
+      "expr": "Correct: S + V + X(gerund), Y(gerund), and Z(gerund)  OR  to X(infinitive), (to) Y, and (to) Z  (Never mix forms)"
+    },
+    {
+      "label": "Advice with 'Had Better'",
+      "expr": "Subject + had better ('d better) + V1(bare infinitive)  |  Negative: Subject + had better not + V1"
+    }
+  ],
+  "examTip": "A frequent EUEE error identification trap is faulty parallelism in series: if a sentence begins a list with two gerunds, the third item cannot be an infinitive (e.g., 'She likes swimming, running, and to cycle' is incorrect; it must be 'and cycling'). In purpose clauses, verify that 'so that' is followed by a subject and a modal auxiliary (can/could/will/would), whereas 'in order to' is followed immediately by a bare verb.",
+  "keyDefinitions": [
+    {
+      "term": "Parallelism (Parallel Structure)",
+      "definition": "The syntactic alignment of two or more words, phrases, or clauses in a series using identical grammatical structures to maintain balance and rhythm."
+    },
+    {
+      "term": "Clause of Purpose",
+      "definition": "A subordinate adverbial clause introduced by 'so that' or 'in order that' detailing the intended goal, objective, or design of the action in the main clause."
+    },
+    {
+      "term": "Faulty Parallelism",
+      "definition": "A stylistic and structural error occurring when elements performing identical grammatical roles in a sentence are presented in dissimilar grammatical forms."
+    },
+    {
+      "term": "Green Economy",
+      "definition": "An economic model that results in improved human well-being and social equity while significantly reducing environmental risks, carbon emissions, and ecological scarcities."
+    }
+  ],
+  "eueeFocusTopics": [
+    "Purpose expressions: 'in order to' vs 'so that' (+ modal) vs 'for' (+ noun/gerund)",
+    "Negative purpose construction with 'so as not to' and 'in order not to'",
+    "Identification and correction of faulty parallelism in lists and comparisons",
+    "Formulas for advice: 'should', 'ought to', and 'had better' (+ bare infinitive)",
+    "Phrasal verbs based on 'talk' ('talk into', 'talk out of', 'talk down to')"
+  ]
+}

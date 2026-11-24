@@ -1,0 +1,61 @@
+{
+  "grade": 12,
+  "subject": "English",
+  "subjectCode": "ENG",
+  "unitNumber": 9,
+  "unitCode": "ENG-G12-U09",
+  "unitTitle": "Conflict Management",
+  "examWeight": "10% EUEE",
+  "summaryPoints": [
+    "Subject-verb agreement requires finite verbs to match their grammatical subjects in person and number; compound subjects joined by 'and' take plural verbs, but subjects linked by correlatives ('either...or', 'neither...nor') agree with the closer subject.",
+    "Parenthetical expressions introduced by 'as well as', 'together with', 'like', and 'in addition to' do not compound the grammatical subject; the verb agrees strictly with the original head noun.",
+    "Indefinite pronouns such as 'everybody', 'everyone', 'nobody', 'each', and 'either' take singular verbs in standard formal English.",
+    "Exceptions to tense backshifting in reported speech occur when: (1) reporting general scientific truths or permanent facts, (2) the reporting verb is in the present tense, (3) the statement contains modals like would/could/should/might, or (4) the statement follows 'wish', 'would rather', or 'had better'.",
+    "The subjunctive verb 'wish' expresses dissatisfaction or desire for change: wish + simple past denotes present unreality, wish + past perfect denotes past regret, and wish + would expresses dissatisfaction with another's behavior.",
+    "A formal job application letter comprises six standard components: applicant heading, date, employer inside address, salutation, body paragraphs (opening interest, qualifications/experience, personal traits, appreciation), complimentary close ('Sincerely'), and signature."
+  ],
+  "formulas": [
+    {
+      "label": "Correlative Conjunction Agreement (Proximity Rule)",
+      "expr": "Either S1 or S2 + Verb(agrees with S2)  |  Neither S1 nor S2 + Verb(agrees with S2)"
+    },
+    {
+      "label": "Intervening Parenthetical Subject Agreement",
+      "expr": "Head Noun(singular) + as well as / together with / like + Noun(plural) + Verb(singular)"
+    },
+    {
+      "label": "Subjunctive Wish + Would Formula",
+      "expr": "Subject + wish + Subject(different) + would + V1(bare infinitive)  [Expresses: complaint / demand to change]"
+    },
+    {
+      "label": "No-Backshift Reported Speech Condition",
+      "expr": "Reporting Verb (present/says) + that + Reported Clause (no tense backshift)  OR  Reporting permanent universal fact"
+    }
+  ],
+  "examTip": "A major EUEE subject-verb agreement trap is the phrase 'as well as' or 'along with': 'The manager, as well as the workers, is (NOT are) responsible.' The verb agrees strictly with 'manager'. Also, remember that in reported speech, universal truths do not backshift: 'The teacher said that water boils at 100°C' (NOT boiled).",
+  "keyDefinitions": [
+    {
+      "term": "Subject-Verb Agreement (Concord)",
+      "definition": "The grammatical rule stipulating that a finite verb must match its subject in both number (singular/plural) and person (first, second, third)."
+    },
+    {
+      "term": "Proximity Rule",
+      "definition": "The agreement principle dictating that when subjects are connected by 'either...or' or 'neither...nor', the finite verb agrees with the closer subject constituent."
+    },
+    {
+      "term": "Job Application Letter",
+      "definition": "A formal business document submitted to an employer highlighting an applicant's qualifications, professional experience, and motivation for a posted position."
+    },
+    {
+      "term": "Conflict Resolution Orientation",
+      "definition": "A behavioral approach adopted by parties in a dispute, categorized into avoidance (flight), competition/domination (fight), and collaborative win-win problem-solving."
+    }
+  ],
+  "eueeFocusTopics": [
+    "Subject-verb agreement: correlative conjunctions ('neither...nor') and parenthetical phrases ('as well as')",
+    "Agreement with indefinite pronouns ('everybody', 'each' take singular verbs)",
+    "Exceptions to tense backshifting in reported speech (scientific facts, present reporting verbs)",
+    "Subjunctive 'wish' patterns (wish + past simple vs past perfect vs would)",
+    "Standard conventions, layout, and salutations of formal job application letters"
+  ]
+}

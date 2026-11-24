@@ -1,0 +1,61 @@
+{
+  "grade": 12,
+  "subject": "English",
+  "subjectCode": "ENG",
+  "unitNumber": 2,
+  "unitCode": "ENG-G12-U02",
+  "unitTitle": "Time Management",
+  "examWeight": "10% EUEE",
+  "summaryPoints": [
+    "The subjunctive verb 'wish' expresses counterfactual or unfulfilled desires: wish + past simple/continuous indicates present unreality, wish + past perfect expresses retrospective past regret, and wish + would/could + bare infinitive denotes future desires or dissatisfaction with another's habit.",
+    "In formal English wish structures for the present, the subjunctive 'were' is used for all persons, including first and third-person singular (e.g., 'I wish I were taller').",
+    "Gerunds are verbal nouns ending in '-ing' that function syntactically in four core roles: as the subject of a verb, direct object of a transitive verb, object of a preposition, and subject complement following a linking verb.",
+    "Result clauses indicate consequences of actions or situations, introduced by coordinators and subordinators such as 'so', 'so...that', and 'such...that'.",
+    "Run-on sentences occur when two or more independent clauses are joined without appropriate punctuation or coordinating conjunctions, and can be repaired via: (1) a period separating two sentences, (2) a semicolon, or (3) a comma followed by a coordinating conjunction (FANBOYS).",
+    "Phrasal verbs are structurally classified into three grammatical types: separable transitive (verb + adverb + object), inseparable intransitive (verb + adverb, no object), and three-part inseparable transitive (verb + adverb + preposition + object)."
+  ],
+  "formulas": [
+    {
+      "label": "Wish for Present Unreality (Subjunctive)",
+      "expr": "Subject + wish + Subject + Simple Past (V2 / were)  [Expresses: action is currently not true]"
+    },
+    {
+      "label": "Wish for Past Regret (Counterfactual Past)",
+      "expr": "Subject + wish + Subject + had + V3(past participle)  [Expresses: sorrow over unalterable past event]"
+    },
+    {
+      "label": "Wish for Future / Complaint Formula",
+      "expr": "Subject + wish + Subject + would / could + V1(bare infinitive)  [Expresses: desire for change/cessation]"
+    },
+    {
+      "label": "Run-on Sentence Correction Formulas",
+      "expr": "Independent Clause . Independent Clause  OR  Independent Clause ; Independent Clause  OR  Independent Clause , + coordinating conjunction (FANBOYS) + Independent Clause"
+    }
+  ],
+  "examTip": "Never use 'will' or present tense verbs in a wish clause. A wish about the present requires the past tense (e.g., 'I wish I knew the answer', NOT 'know'). A wish expressing regret about the past requires the past perfect (e.g., 'I wish I had worked harder', NOT 'worked'). Also, avoid run-on comma splices: two complete independent clauses cannot be joined by a comma alone.",
+  "keyDefinitions": [
+    {
+      "term": "Subjunctive 'Wish'",
+      "definition": "A syntactic construction used with past tense forms to articulate counterfactual desires, hypothetical situations, or past regrets that are contrary to fact."
+    },
+    {
+      "term": "Gerund",
+      "definition": "A non-finite verb form ending in '-ing' that retains verb characteristics while functioning grammatically as a noun (subject, direct object, prepositional object, or complement)."
+    },
+    {
+      "term": "Run-on Sentence",
+      "definition": "A structural grammatical error occurring when two or more independent clauses are fused together without appropriate punctuation or coordinating conjunctions."
+    },
+    {
+      "term": "Result Clause",
+      "definition": "A subordinate adverbial clause introduced by conjunctions such as 'so', 'so...that', or 'such...that' that demonstrates the consequence or outcome of the matrix clause."
+    }
+  ],
+  "eueeFocusTopics": [
+    "Subjunctive 'wish' tense matching: present unreality (past simple/were) vs past regret (had + V3)",
+    "Wish + would/could for annoying habits and future expectations",
+    "Syntactic functions of gerunds (subject, object of verb, object of preposition, subject complement)",
+    "Detection and correction of run-on sentences (semicolons, periods, coordinating conjunctions)",
+    "Three structural categories of phrasal verbs (separable, inseparable, three-part prepositional)"
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "grade": 12,
+  "subject": "English",
+  "subjectCode": "ENG",
+  "unitNumber": 4,
+  "unitCode": "ENG-G12-U04",
+  "unitTitle": "Natural Resource Management",
+  "examWeight": "10% EUEE",
+  "summaryPoints": [
+    "Adverbial clauses of time establish temporal relationships: 'when' (specific point in time), 'before' (prior event), 'after' (subsequent event), 'while/as' (simultaneous continuous action), 'by the time' (event completed prior to another, governing past/future perfect in the main clause), 'until/till' (duration up to a boundary), and 'as soon as' (immediate succession).",
+    "Time clauses referring to the future never use future modals ('will'); they take the simple present (or present perfect) tense.",
+    "A dangling modifier occurs when an opening participial or modifying phrase is not immediately followed by its logical subject, resulting in an illogical meaning.",
+    "Dangling modifiers can be corrected by: (1) placing the logical subject immediately after the introductory phrase, or (2) expanding the introductory modifier into a complete dependent adverbial clause with its own subject and verb.",
+    "Word stress in English corresponds to syllable count and morphological structure: two-syllable nouns usually take first-syllable stress, while two-syllable verbs usually take second-syllable stress; in three- and four-syllable words, suffixes like '-ee', '-ese', and '-eer' attract primary stress.",
+    "Phrasal verbs based on 'stick' convey specialized meanings: 'stick around' (linger), 'stick at' (persevere with difficult tasks), 'stick to' (adhere to a rule or plan), 'stick up for' (defend), and 'stick out' (protrude or be conspicuous)."
+  ],
+  "formulas": [
+    {
+      "label": "Future Time Clause Rule",
+      "expr": "Main Clause (will + V1) + when / after / as soon as / before / until + Subject + Simple Present (V1/-s/-es)  (Never 'will' in time clause)"
+    },
+    {
+      "label": "'By the Time' Aspect Harmony Formulas",
+      "expr": "Past: By the time + Subject + Simple Past (V2) + , + Subject + had + V3(past perfect)  |  Future: By the time + Subject + Simple Present + , + Subject + will have + V3"
+    },
+    {
+      "label": "Dangling Modifier Correction Patterns",
+      "expr": "Method 1: Opening Modifier + , + Logical Subject + Main Predicate  |  Method 2: While / As + Subject + Verb + , + Main Clause"
+    },
+    {
+      "label": "Noun vs Verb Two-Syllable Stress Rule",
+      "expr": "Nouns/Adjectives: First Syllable Stressed ('PREsent, 'OBject)  |  Verbs: Second Syllable Stressed (pre'SENT, ob'JECT)"
+    }
+  ],
+  "examTip": "A frequent EUEE error identification trap is the future modal in time clauses: 'I will call you when I will arrive' is strictly ungrammatical; the time clause must use the simple present: 'when I arrive'. In dangling modifier questions, ensure the subject immediately after the comma is the entity actually performing the action of the opening verbal phrase.",
+  "keyDefinitions": [
+    {
+      "term": "Adverbial Clause of Time",
+      "definition": "A subordinate clause introduced by temporal conjunctions (when, while, after, before, as soon as, by the time) that indicates when an action occurs."
+    },
+    {
+      "term": "Dangling Modifier",
+      "definition": "An introductory modifying phrase that lacks a clear, syntactically correct grammatical subject to modify in the matrix clause, producing an illogical meaning."
+    },
+    {
+      "term": "Syllable",
+      "definition": "A phonological unit of speech containing a single vowel nucleus, produced with a distinct pulse of air and muscle movement."
+    },
+    {
+      "term": "Primary Stress",
+      "definition": "The prominent acoustic emphasis placed on a particular syllable in a multisyllabic word, spoken louder, longer, and with higher pitch."
+    }
+  ],
+  "eueeFocusTopics": [
+    "Tense sequencing in adverbial clauses of time (present in time clause, future in main clause)",
+    "'By the time' aspect harmony with past perfect and future perfect tenses",
+    "Identifying and correcting dangling modifiers in complex sentences",
+    "English word stress patterns (two-, three-, and four-syllable rules)",
+    "Phrasal verbs based on 'stick' ('stick to', 'stick up for', 'stick out')"
+  ]
+}

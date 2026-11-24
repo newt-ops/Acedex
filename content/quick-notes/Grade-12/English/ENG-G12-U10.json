@@ -1,0 +1,61 @@
+{
+  "grade": 12,
+  "subject": "English",
+  "subjectCode": "ENG",
+  "unitNumber": 10,
+  "unitCode": "ENG-G12-U10",
+  "unitTitle": "Robotics",
+  "examWeight": "10% EUEE",
+  "summaryPoints": [
+    "Comprehensive mastery of sentence boundary errors: sentence fragments (incomplete thoughts lacking subjects or finite verbs) and run-on sentences (fused independent clauses without punctuation) impair coherence.",
+    "Parallel structure requires that all items in coordinate series or comparisons share identical grammatical forms (e.g., maintaining parallel verb tenses, gerunds, infinitives, or prepositional phrases).",
+    "Subordinating conjunctions establish logical dependency: cause/reason (because, since, as), concession (although, though, even though), condition (if, unless, whether...or not), purpose (so that, in order that, lest), and time (whenever, once, as soon as).",
+    "Correlative conjunction pairs operate in fixed syntactic unions: 'either...or', 'neither...nor', 'not only...but also', 'both...and', and 'whether...or'.",
+    "Phrasal verbs based on 'work', 'wipe', and 'wrap' convey specialized meanings: 'work out' (exercise or solve), 'work up' (generate emotional excitement or anxiety), 'wrap up' (conclude or finish), 'wipe out' (destroy completely), and 'wear out' (exhaust or deteriorate through use).",
+    "A Curriculum Vitae (CV) is a formal career summary structured into four standard sections: Heading (contact information), Objective/Summary, Professional Experience (reverse chronological order), and Education/Skills."
+  ],
+  "formulas": [
+    {
+      "label": "Correlative Conjunction Parallelism Rule",
+      "expr": "Not only + [Grammatical Form A] + but also + [Identical Grammatical Form A]  (e.g., 'not only kind but also courageous')"
+    },
+    {
+      "label": "Negative Purpose Subordinator 'Lest' Formula",
+      "expr": "Main Clause + lest + Subject + (should) + V1(bare verb)  [Note: 'not' is prohibited after lest]"
+    },
+    {
+      "label": "Parallel Series Coordinate Template",
+      "expr": "Subject + Verb + Item 1(V-ing) + , + Item 2(V-ing) + , + and + Item 3(V-ing)"
+    },
+    {
+      "label": "Inversion with Correlative 'No Sooner...Than'",
+      "expr": "No sooner + had + Subject + V3(past participle) + than + Subject + V2(simple past)"
+    }
+  ],
+  "examTip": "In EUEE error identification questions, check for correlative conjunction balance: 'not only' must be paired with 'but also' (NOT 'but'), and the syntactic constituent following 'not only' must grammatically mirror the constituent following 'but also'. Also beware of negative words like 'hardly' paired with negative auxiliaries ('couldn't hardly' is an ungrammatical double negative; correct to 'could hardly').",
+  "keyDefinitions": [
+    {
+      "term": "Correlative Conjunctions",
+      "definition": "Paired conjunctions (e.g., neither...nor, not only...but also, both...and) that link grammatically equivalent words, phrases, or clauses."
+    },
+    {
+      "term": "Curriculum Vitae (CV)",
+      "definition": "A formal written document providing an overview of an individual's career objective, educational credentials, work experience, and technical competencies."
+    },
+    {
+      "term": "Robotic Manipulation",
+      "definition": "An autonomous or teleoperated agent's deliberate control and physical handling of environmental objects through selective mechanical contact using manipulators and end effectors."
+    },
+    {
+      "term": "Double Negative",
+      "definition": "A grammatical error occurring when two negative words are used in the same clause to express a single negative idea (e.g., 'couldn't hardly', 'didn't see no one')."
+    }
+  ],
+  "eueeFocusTopics": [
+    "Identifying and correcting grammatical errors: fragments, run-ons, and comma splices",
+    "Parallel structure in compound coordinate sentences and comparisons",
+    "Correlative conjunction pairing ('not only...but also', 'neither...nor', 'both...and')",
+    "Avoidance of double negative constructions ('could hardly' vs 'couldn't hardly')",
+    "Phrasal verbs based on 'work', 'wipe', and 'wear' ('work out', 'wipe out', 'wear out')"
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "grade": 12,
+  "subject": "English",
+  "subjectCode": "ENG",
+  "unitNumber": 5,
+  "unitCode": "ENG-G12-U05",
+  "unitTitle": "Mechanized Agriculture",
+  "examWeight": "10% EUEE",
+  "summaryPoints": [
+    "Non-finite verbals comprise three categories: gerunds (verbal nouns ending in -ing), participles (verbal adjectives functioning as modifiers), and infinitives (to-infinitives or bare infinitives).",
+    "Certain verbs take infinitives (e.g., attempt, decide, hope, manage, seem), others take gerunds (e.g., enjoy, finish, postpone, practice, avoid), and some take both with noticeable shifts in meaning.",
+    "Conditional sentences admit common variations: 'so' and 'but' can express equivalent factual realities to unreal Conditionals II and III (e.g., 'If I had known, I would have come' = 'I didn't know, so I didn't come').",
+    "Subordinating conjunction 'unless' functions as 'if...not'; conditional clauses introduced by 'unless' must not contain an additional negative word.",
+    "Editing for wordiness involves eliminating redundant expressions, trimming unnecessary qualifiers ('very', 'extremely'), replacing wordy passive clauses with active constructions, and converting wordy clauses into concise verbal phrases.",
+    "Descriptive essay writing relies on concrete sensory details (sight, sound, smell, taste, touch) organized via spatial order or order of importance to establish a dominant impression."
+  ],
+  "formulas": [
+    {
+      "label": "Conditional III Equivalence with 'So' / 'But'",
+      "expr": "Conditional: If S + had + V3, S + would have + V3  =  Factual: S + didn't + V1, so S + didn't + V1  OR  S + wanted to + V1, but S + didn't"
+    },
+    {
+      "label": "'Unless' Conditional Equivalence Formula",
+      "expr": "Unless + Subject + Affirmative Verb + , + Main Clause  =  If + Subject + Negative Verb + , + Main Clause"
+    },
+    {
+      "label": "Wordiness Reduction via Participle",
+      "expr": "Wordy: Because he was worried about the storm, Jemal cried.  ->  Concise: Worried about the storm, Jemal cried."
+    },
+    {
+      "label": "Verb + Object + Infinitive Construction",
+      "expr": "Subject + Verb(order, train, help, allow, force) + Object + to + V1(infinitive)"
+    }
+  ],
+  "examTip": "In EUEE sentence transformation items, converting an unreal conditional into a factual sentence reverses the polarity: an affirmative conditional (If he had studied, he would have passed) corresponds to two negative factual statements (He didn't study, so he didn't pass). When using 'unless', remember that the clause following 'unless' cannot be negative.",
+  "keyDefinitions": [
+    {
+      "term": "Verbal",
+      "definition": "A non-finite verb form (gerund, participle, or infinitive) derived from a verb that functions in a sentence as a noun, adjective, or adverb rather than as a finite predicate."
+    },
+    {
+      "term": "Wordiness (Redundancy)",
+      "definition": "A stylistic writing defect characterized by using excessive, repetitive, or superfluous words that add no additional meaning."
+    },
+    {
+      "term": "Descriptive Essay",
+      "definition": "An essay format that utilizes vivid sensory language, spatial transitions, and illustrative details to create an authentic mental image of a person, place, or object."
+    },
+    {
+      "term": "Infinitive Phrase",
+      "definition": "A syntactic unit consisting of the infinitive marker 'to' plus a base verb and its accompanying complements or modifiers, functioning as a noun, adjective, or adverb."
+    }
+  ],
+  "eueeFocusTopics": [
+    "Non-finite verbals classification: gerunds vs participles vs infinitives",
+    "Semantic and structural transformations between Conditionals II/III and 'so/but' sentences",
+    "Syntax of 'unless' versus 'if...not'",
+    "Techniques for identifying and eliminating wordiness and redundancy in writing",
+    "Sensory detail integration and spatial organization in descriptive essays"
+  ]
+}
