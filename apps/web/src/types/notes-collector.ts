@@ -59,6 +59,13 @@ export interface NoteSanitizeResult {
   fixesApplied?: string[];
   autoFixedIssues?: string[];
   note?: QuickNoteData;
+  notes?: QuickNoteData[];
+  unitCount?: number;
+}
+
+export interface SubmitGradeNotesResult {
+  submittedCount: number;
+  units: string[];
 }
 
 export interface NoteSubmissionSummary {

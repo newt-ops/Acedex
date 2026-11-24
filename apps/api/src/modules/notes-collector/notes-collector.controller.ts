@@ -80,6 +80,33 @@ export class NotesCollectorController {
     }
   }
 
+  public static async submitGradeNotes(req: Request, res: Response, next: NextFunction): Promise<void> {
+    try {
+      const { grade, subjectCode, contributorId, rawPastedText, notes } = req.body;
+      const rawEffectiveId = contributorId || req.headers['x-contributor-id'] || 'GUEST';
+      const effectiveContributorId = String(Array.isArray(rawEffectiveId) ? rawEffectiveId[0] : rawEffectiveId);
+
+      if (!grade || !subjectCode) {
+        throw new BadRequestError('Grade and subjectCode are required');
+      }
+
+      const result = await NotesCollectorService.submitGradeNotes(
+        Number(grade),
+        String(subjectCode),
+        effectiveContributorId,
+        rawPastedText,
+        notes
+      );
+
+      res.status(201).json({
+        success: true,
+        data: result,
+      });
+    } catch (err) {
+      next(err);
+    }
+  }
+
   public static async getAdminSubmissions(req: Request, res: Response, next: NextFunction): Promise<void> {
     try {
       const { status, subjectCode, grade } = req.query;

@@ -16,14 +16,16 @@ describe('Dedicated Quick Notes Collection Backend & Database Tests', { timeout:
 
   afterAll(async () => {
     // Clean up test file if created
-    const testFilePath = path.join(
-      process.cwd(),
-      '../../content/quick-notes/Grade-09/English/ENG-G09-U01.json'
-    );
-    if (fs.existsSync(testFilePath)) {
-      try {
-        fs.unlinkSync(testFilePath);
-      } catch {}
+    const candidates = [
+      path.resolve(process.cwd(), 'content/quick-notes/Grade-09/English/ENG-G09-U01.json'),
+      path.resolve(process.cwd(), '../../content/quick-notes/Grade-09/English/ENG-G09-U01.json'),
+    ];
+    for (const testFilePath of candidates) {
+      if (fs.existsSync(testFilePath)) {
+        try {
+          fs.unlinkSync(testFilePath);
+        } catch {}
+      }
     }
     await disconnectDatabase();
   }, 60000);
@@ -177,10 +179,9 @@ describe('Dedicated Quick Notes Collection Backend & Database Tests', { timeout:
     expect(reviewRes.body.data.status).toBe('approved');
 
     // Verify written to disk
-    const targetFile = path.resolve(
-      process.cwd(),
-      '../../content/quick-notes/Grade-09/English/ENG-G09-U01.json'
-    );
+    const targetFile = fs.existsSync(path.resolve(process.cwd(), 'content/quick-notes/Grade-09/English/ENG-G09-U01.json'))
+      ? path.resolve(process.cwd(), 'content/quick-notes/Grade-09/English/ENG-G09-U01.json')
+      : path.resolve(process.cwd(), '../../content/quick-notes/Grade-09/English/ENG-G09-U01.json');
     expect(fs.existsSync(targetFile)).toBe(true);
 
     const savedContent = JSON.parse(fs.readFileSync(targetFile, 'utf-8'));
@@ -189,5 +190,112 @@ describe('Dedicated Quick Notes Collection Backend & Database Tests', { timeout:
 
     // Clean up test file so repository stays clean
     fs.unlinkSync(targetFile);
+  });
+
+  it('7. POST /api/v1/notes-collector/sanitize should parse and auto-fix a multi-unit array', async () => {
+    const rawBatchMarkdown = `
+\`\`\`json
+[
+  {
+    "grade": 9,
+    "subject": "English",
+    "subjectCode": "ENG",
+    "unitNumber": 2,
+    "unitTitle": "Travel and Tourism",
+    "summaryPoints": [
+      "Future intentions are expressed with 'be going to + base verb'.",
+      "Immediate spontaneous decisions are expressed with 'will + base verb'."
+    ]
+  },
+  {
+    "grade": 9,
+    "subject": "English",
+    "subjectCode": "ENG",
+    "unitNumber": 3,
+    "unitTitle": "Technology",
+    "summaryPoints": [
+      "Zero conditional expresses universal truths: If + present, present.",
+      "First conditional expresses real possibilities: If + present, will + verb."
+    ]
+  }
+]
+\`\`\`
+`;
+
+    const res = await request(app)
+      .post('/api/v1/notes-collector/sanitize')
+      .send({ rawText: rawBatchMarkdown, grade: 9, subjectCode: 'ENG' });
+
+    expect(res.status).toBe(200);
+    expect(res.body.success).toBe(true);
+    expect(res.body.data.success).toBe(true);
+    expect(res.body.data.unitCount).toBe(2);
+    expect(res.body.data.notes).toHaveLength(2);
+    expect(res.body.data.notes[0].unitCode).toBe('ENG-G09-U02');
+    expect(res.body.data.notes[1].unitCode).toBe('ENG-G09-U03');
+  });
+
+  it('8. POST /api/v1/notes-collector/grade/submit should store multi-unit notes organized per-unit', async () => {
+    const batchUnits = [
+      {
+        grade: 9,
+        subject: 'English',
+        subjectCode: 'ENG',
+        unitNumber: 2,
+        unitCode: 'ENG-G09-U02',
+        unitTitle: 'Travel and Tourism',
+        summaryPoints: [
+          "Future intentions use 'be going to'.",
+          "Spontaneous decisions use 'will'."
+        ],
+        examTip: 'Focus on future time expressions and intentions.',
+        formulas: [],
+        keyDefinitions: [],
+        eueeFocusTopics: []
+      },
+      {
+        grade: 9,
+        subject: 'English',
+        subjectCode: 'ENG',
+        unitNumber: 3,
+        unitCode: 'ENG-G09-U03',
+        unitTitle: 'Technology',
+        summaryPoints: [
+          "Zero conditional expresses universal truths.",
+          "First conditional expresses real future possibilities."
+        ],
+        examTip: 'Distinguish clearly between zero and first conditionals.',
+        formulas: [],
+        keyDefinitions: [],
+        eueeFocusTopics: []
+      }
+    ];
+
+    const res = await request(app)
+      .post('/api/v1/notes-collector/grade/submit')
+      .send({
+        grade: 9,
+        subjectCode: 'ENG',
+        contributorId: 'ENG#101',
+        rawPastedText: JSON.stringify(batchUnits),
+        notes: batchUnits
+      });
+
+    expect(res.status).toBe(201);
+    expect(res.body.success).toBe(true);
+    expect(res.body.data.submittedCount).toBe(2);
+    expect(res.body.data.units).toHaveLength(2);
+
+    // Verify both are listed in submissions query per-unit
+    const listRes = await request(app)
+      .get('/api/v1/notes-collector/admin/submissions')
+      .query({ subjectCode: 'ENG' });
+
+    const u2 = listRes.body.data.find((s: any) => s.unitCode === 'ENG-G09-U02');
+    const u3 = listRes.body.data.find((s: any) => s.unitCode === 'ENG-G09-U03');
+    expect(u2).toBeDefined();
+    expect(u2.status).toBe('submitted');
+    expect(u3).toBeDefined();
+    expect(u3.status).toBe('submitted');
   });
 });

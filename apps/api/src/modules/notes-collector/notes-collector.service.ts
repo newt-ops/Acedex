@@ -25,11 +25,29 @@ const SUBJECT_CODE_MAP: Record<string, string> = {
 
 export class NotesCollectorService {
   private static getQuestionBankDir(): string {
-    return path.resolve(process.cwd(), '../../content/question-bank');
+    const candidates = [
+      path.resolve(process.cwd(), 'content/question-bank'),
+      path.resolve(process.cwd(), '../../content/question-bank'),
+      path.resolve(__dirname, '../../../../../content/question-bank'),
+      path.resolve(__dirname, '../../../../content/question-bank'),
+    ];
+    for (const cand of candidates) {
+      if (fs.existsSync(cand)) return cand;
+    }
+    return candidates[0];
   }
 
   private static getQuickNotesDir(): string {
-    return path.resolve(process.cwd(), '../../content/quick-notes');
+    const candidates = [
+      path.resolve(process.cwd(), 'content/quick-notes'),
+      path.resolve(process.cwd(), '../../content/quick-notes'),
+      path.resolve(__dirname, '../../../../../content/quick-notes'),
+      path.resolve(__dirname, '../../../../content/quick-notes'),
+    ];
+    for (const cand of candidates) {
+      if (fs.existsSync(cand)) return cand;
+    }
+    return candidates[0];
   }
 
   /**
@@ -258,6 +276,60 @@ export class NotesCollectorService {
     });
 
     return submission;
+  }
+
+  /**
+   * Submits or updates an entire grade's revision notes at once.
+   * Organizes each unit into acedex_notes individually!
+   */
+  public static async submitGradeNotes(
+    grade: number,
+    subjectCode: string,
+    contributorId: string,
+    rawPastedText?: string,
+    notesList?: CollectorNoteItem[]
+  ): Promise<{ submittedCount: number; units: string[] }> {
+    let finalUnits = notesList;
+
+    if (!finalUnits && rawPastedText) {
+      const sanitized = NoteSanitizerService.sanitize(rawPastedText);
+      if (!sanitized.success || !sanitized.notes || sanitized.notes.length === 0) {
+        throw new Error(sanitized.errors?.join('; ') || 'Failed to parse notes content for grade');
+      }
+      finalUnits = sanitized.notes;
+    }
+
+    if (!finalUnits || finalUnits.length === 0) {
+      throw new Error('No structured note data or raw text provided for grade submission');
+    }
+
+    const submittedUnitCodes: string[] = [];
+
+    for (const unit of finalUnits) {
+      const cleanSubj = (unit.subjectCode || subjectCode).toUpperCase().trim();
+      const unitGrade = unit.grade || grade;
+      const uNum = unit.unitNumber;
+      const cleanCode = unit.unitCode || `${cleanSubj}-G${unitGrade.toString().padStart(2, '0')}-U${uNum.toString().padStart(2, '0')}`;
+
+      await this.submitUnitNote(cleanCode, contributorId, undefined, {
+        ...unit,
+        unitCode: cleanCode,
+        grade: unitGrade,
+        subjectCode: cleanSubj,
+      });
+
+      submittedUnitCodes.push(cleanCode);
+    }
+
+    logger.info(
+      { grade, subjectCode, contributorId, count: submittedUnitCodes.length },
+      'Grade notes submitted and organized per unit'
+    );
+
+    return {
+      submittedCount: submittedUnitCodes.length,
+      units: submittedUnitCodes,
+    };
   }
 
   /**

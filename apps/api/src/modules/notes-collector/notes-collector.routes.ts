@@ -4,6 +4,7 @@ import { validate } from '../../middleware/validate';
 import {
   SanitizeNoteRequestSchema,
   SubmitUnitNoteRequestSchema,
+  SubmitGradeNotesRequestSchema,
   AdminReviewNoteRequestSchema,
 } from '@acedex/contracts';
 
@@ -42,6 +43,13 @@ router.post(
   '/units/:unitCode/submit',
   validate({ body: SubmitUnitNoteRequestSchema }),
   NotesCollectorController.submitUnit
+);
+
+// POST /api/v1/notes-collector/grade/submit - submit whole grade quick notes array
+router.post(
+  '/grade/submit',
+  validate({ body: SubmitGradeNotesRequestSchema }),
+  NotesCollectorController.submitGradeNotes
 );
 
 // ==========================================

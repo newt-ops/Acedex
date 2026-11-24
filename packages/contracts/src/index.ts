@@ -738,6 +738,15 @@ export const SubmitUnitNoteRequestSchema = z.object({
 });
 export type SubmitUnitNoteRequest = z.infer<typeof SubmitUnitNoteRequestSchema>;
 
+export const SubmitGradeNotesRequestSchema = z.object({
+  grade: z.number().int().min(9).max(12),
+  subjectCode: z.string().min(2).max(5),
+  contributorId: z.string().min(3, 'Contributor ID must be at least 3 characters'),
+  notes: z.array(CollectorNoteItemSchema).optional(),
+  rawPastedText: z.string().optional(),
+});
+export type SubmitGradeNotesRequest = z.infer<typeof SubmitGradeNotesRequestSchema>;
+
 export const SanitizeNoteRequestSchema = z.object({
   rawText: z.string().min(1, 'Raw text cannot be empty'),
   expectedUnitCode: z.string().optional(),
@@ -806,6 +815,8 @@ export interface NoteSanitizeResult {
   fixesApplied?: string[];
   autoFixedIssues?: string[];
   note?: CollectorNoteItem;
+  notes?: CollectorNoteItem[];
+  unitCount?: number;
 }
 
 

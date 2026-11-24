@@ -235,6 +235,28 @@ export const api = {
     });
   },
 
+  async submitGradeNotes(
+    grade: number,
+    subjectCode: string,
+    contributorId: string,
+    rawPastedText?: string,
+    notes?: QuickNoteData[]
+  ): Promise<{ submittedCount: number; units: string[] }> {
+    return request<{ submittedCount: number; units: string[] }>(
+      '/api/v1/notes-collector/grade/submit',
+      {
+        method: 'POST',
+        body: JSON.stringify({
+          grade,
+          subjectCode,
+          contributorId,
+          rawPastedText,
+          notes,
+        }),
+      }
+    );
+  },
+
   async getAdminNoteSubmissions(filters: {
     status?: string;
     subjectCode?: string;

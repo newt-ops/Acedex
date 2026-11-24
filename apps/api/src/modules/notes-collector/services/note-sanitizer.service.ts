@@ -4,6 +4,7 @@ import { logger } from '../../../common/utils/logger';
 export class NoteSanitizerService {
   /**
    * Resiliently cleans and sanitizes raw text from NotebookLM or LLM into standard Quick Note JSON.
+   * Supports both a single unit object or a full array of units for a grade.
    */
   public static sanitize(rawText: string, expectedUnitCode?: string): NoteSanitizeResult {
     const autoFixedIssues: string[] = [];
@@ -91,84 +92,177 @@ export class NoteSanitizerService {
       }
     }
 
-    // 6. Handle single unit object vs array of units
-    let targetNote: any = null;
-
+    // 6. Handle array of units vs single unit object
     if (Array.isArray(parsed)) {
       if (parsed.length === 0) {
         return { success: false, errors: ['JSON array is empty'] };
       }
 
-      if (expectedUnitCode) {
-        targetNote = parsed.find(
-          (u: any) =>
-            u.unitCode &&
-            u.unitCode.toString().toUpperCase().trim() === expectedUnitCode.toUpperCase().trim()
-        );
+      const validatedUnits: CollectorNoteItem[] = [];
+      const arrayErrors: string[] = [];
+
+      for (let i = 0; i < parsed.length; i++) {
+        const item = parsed[i];
+        const res = this.normalizeAndValidateUnit(item, expectedUnitCode && parsed.length === 1 ? expectedUnitCode : undefined);
+        if (res.success && res.note) {
+          validatedUnits.push(res.note);
+          res.issues.forEach((iss) => {
+            if (!autoFixedIssues.includes(iss)) autoFixedIssues.push(iss);
+          });
+          res.warnings.forEach((warn) => {
+            if (!warnings.includes(warn)) warnings.push(warn);
+          });
+        } else if (res.errors) {
+          arrayErrors.push(`Unit #${i + 1} (${item.unitCode || item.unitTitle || 'Unknown'}): ${res.errors.join(', ')}`);
+        }
       }
 
-      if (!targetNote) {
-        targetNote = parsed[0];
-        autoFixedIssues.push(
-          `Extracted unit ${targetNote.unitCode || 'U1'} from array of ${parsed.length} units`
-        );
+      if (validatedUnits.length === 0) {
+        return {
+          success: false,
+          errors: arrayErrors.length > 0 ? arrayErrors : ['Failed to validate any units in the array'],
+          autoFixedIssues,
+          warnings,
+        };
       }
+
+      // If some units had errors, report as warnings
+      if (arrayErrors.length > 0) {
+        warnings.push(`${arrayErrors.length} unit(s) had errors and were skipped: ${arrayErrors.join('; ')}`);
+      }
+
+      autoFixedIssues.push(`Validated ${validatedUnits.length} unit(s) in curriculum array`);
+
+      // Determine primary target note
+      let primaryNote = validatedUnits[0];
+      if (expectedUnitCode) {
+        const match = validatedUnits.find(
+          (u) => u.unitCode.toUpperCase() === expectedUnitCode.toUpperCase()
+        );
+        if (match) primaryNote = match;
+      }
+
+      return {
+        success: true,
+        note: primaryNote,
+        notes: validatedUnits,
+        unitCount: validatedUnits.length,
+        autoFixedIssues,
+        warnings,
+        fixesApplied: autoFixedIssues,
+      };
     } else if (typeof parsed === 'object' && parsed !== null) {
-      targetNote = parsed;
+      const res = this.normalizeAndValidateUnit(parsed, expectedUnitCode);
+      if (!res.success || !res.note) {
+        return {
+          success: false,
+          errors: res.errors || ['Validation failed'],
+          autoFixedIssues,
+          warnings,
+        };
+      }
+
+      res.issues.forEach((iss) => {
+        if (!autoFixedIssues.includes(iss)) autoFixedIssues.push(iss);
+      });
+      res.warnings.forEach((warn) => {
+        if (!warnings.includes(warn)) warnings.push(warn);
+      });
+
+      return {
+        success: true,
+        note: res.note,
+        notes: [res.note],
+        unitCount: 1,
+        autoFixedIssues,
+        warnings,
+        fixesApplied: autoFixedIssues,
+      };
     } else {
       return { success: false, errors: ['Parsed content is neither a JSON object nor an array'] };
     }
+  }
 
-    // 7. Auto-fix and normalize fields
-    if (expectedUnitCode && (!targetNote.unitCode || targetNote.unitCode.toUpperCase() !== expectedUnitCode.toUpperCase())) {
-      targetNote.unitCode = expectedUnitCode.toUpperCase();
-      autoFixedIssues.push(`Normalized unitCode to expected: ${expectedUnitCode}`);
+  /**
+   * Helper to normalize fields of a single note object and validate against Zod schema
+   */
+  private static normalizeAndValidateUnit(
+    raw: any,
+    expectedUnitCode?: string
+  ): {
+    success: boolean;
+    note?: CollectorNoteItem;
+    errors?: string[];
+    issues: string[];
+    warnings: string[];
+  } {
+    const issues: string[] = [];
+    const unitWarnings: string[] = [];
+    const note = { ...raw };
+
+    if (expectedUnitCode && (!note.unitCode || note.unitCode.toUpperCase() !== expectedUnitCode.toUpperCase())) {
+      note.unitCode = expectedUnitCode.toUpperCase();
+      issues.push(`Normalized unitCode to expected: ${expectedUnitCode}`);
     }
 
-    if (typeof targetNote.grade === 'string') {
-      const gNum = parseInt(targetNote.grade.replace(/[^0-9]/g, ''), 10);
+    if (typeof note.grade === 'string') {
+      const gNum = parseInt(note.grade.replace(/[^0-9]/g, ''), 10);
       if (!isNaN(gNum)) {
-        targetNote.grade = gNum;
-        autoFixedIssues.push(`Converted grade string to integer (${gNum})`);
+        note.grade = gNum;
+        issues.push(`Converted grade string to integer (${gNum})`);
       }
     }
 
-    if (typeof targetNote.unitNumber === 'string') {
-      const uNum = parseInt(targetNote.unitNumber.replace(/[^0-9]/g, ''), 10);
+    if (typeof note.unitNumber === 'string') {
+      const uNum = parseInt(note.unitNumber.replace(/[^0-9]/g, ''), 10);
       if (!isNaN(uNum)) {
-        targetNote.unitNumber = uNum;
-        autoFixedIssues.push(`Converted unitNumber to integer (${uNum})`);
+        note.unitNumber = uNum;
+        issues.push(`Converted unitNumber to integer (${uNum})`);
       }
+    }
+
+    // Default missing unitCode from grade and unitNumber if available
+    if (!note.unitCode && note.subjectCode && note.grade && note.unitNumber) {
+      const gStr = note.grade.toString().padStart(2, '0');
+      const uStr = note.unitNumber.toString().padStart(2, '0');
+      note.unitCode = `${note.subjectCode.toUpperCase()}-G${gStr}-U${uStr}`;
+      issues.push(`Auto-generated unitCode: ${note.unitCode}`);
     }
 
     // Ensure array fields exist
-    if (!Array.isArray(targetNote.summaryPoints)) {
-      targetNote.summaryPoints = [];
-      warnings.push('summaryPoints was missing; initialized to empty array');
+    if (!Array.isArray(note.summaryPoints)) {
+      note.summaryPoints = [];
+      unitWarnings.push('summaryPoints was missing; initialized to empty array');
     }
 
-    if (!Array.isArray(targetNote.formulas)) {
-      targetNote.formulas = [];
-      autoFixedIssues.push('formulas was missing; initialized to empty array');
+    if (!Array.isArray(note.formulas)) {
+      note.formulas = [];
+      issues.push('formulas was missing; initialized to empty array');
     }
 
-    if (!Array.isArray(targetNote.keyDefinitions)) {
-      targetNote.keyDefinitions = [];
-      autoFixedIssues.push('keyDefinitions was missing; initialized to empty array');
+    if (!Array.isArray(note.keyDefinitions)) {
+      note.keyDefinitions = [];
+      issues.push('keyDefinitions was missing; initialized to empty array');
     }
 
-    if (!Array.isArray(targetNote.eueeFocusTopics)) {
-      targetNote.eueeFocusTopics = [];
-      autoFixedIssues.push('eueeFocusTopics was missing; initialized to empty array');
+    if (!Array.isArray(note.eueeFocusTopics)) {
+      note.eueeFocusTopics = [];
+      issues.push('eueeFocusTopics was missing; initialized to empty array');
     }
 
-    if (!targetNote.examTip && targetNote.examTips) {
-      targetNote.examTip = Array.isArray(targetNote.examTips) ? targetNote.examTips.join(' ') : String(targetNote.examTips);
-      autoFixedIssues.push('Normalized plural "examTips" to "examTip"');
+    if (!note.examTip && note.examTips) {
+      note.examTip = Array.isArray(note.examTips)
+        ? note.examTips.join(' ')
+        : String(note.examTips);
+      issues.push('Normalized plural "examTips" to "examTip"');
     }
 
-    // 8. Validate against Zod schema
-    const validation = CollectorNoteItemSchema.safeParse(targetNote);
+    if (!note.examTip || typeof note.examTip !== 'string' || note.examTip.trim() === '') {
+      note.examTip = 'Review all core definitions and practice previous EUEE examination questions for this unit.';
+      issues.push('Added default exam tip');
+    }
+
+    const validation = CollectorNoteItemSchema.safeParse(note);
     if (!validation.success) {
       const fieldErrors = validation.error.errors.map(
         (e) => `${e.path.join('.')}: ${e.message}`
@@ -176,17 +270,16 @@ export class NoteSanitizerService {
       return {
         success: false,
         errors: fieldErrors,
-        autoFixedIssues,
-        warnings,
+        issues,
+        warnings: unitWarnings,
       };
     }
 
     return {
       success: true,
       note: validation.data as CollectorNoteItem,
-      autoFixedIssues,
-      warnings,
-      fixesApplied: autoFixedIssues,
+      issues,
+      warnings: unitWarnings,
     };
   }
 }
