@@ -17,9 +17,32 @@ import { EUEE_SUBJECTS } from '../curriculum/curriculum-seeder.service';
 import { UnitModel } from '../curriculum/models/unit.model';
 import { TopicModuleModel, ITopicModuleDocument } from './models/topic-module.model';
 import { GeminiPlannerService } from './gemini-planner.service';
-import { NotFoundError } from '../../common/errors/app-error';
+import { NotFoundError, TooManyRequestsError } from '../../common/errors/app-error';
 
 export class TopicsService {
+  /**
+   * Computes current Ethiopia (EAT, UTC+3) calendar day key and next midnight reset timestamp
+   */
+  private static getEatDayInfo(now = new Date()): {
+    todayKey: string;
+    nextResetAt: string;
+  } {
+    const eatOffsetMs = 3 * 60 * 60 * 1000;
+    const eatNow = new Date(now.getTime() + eatOffsetMs);
+    const todayKey = eatNow.toISOString().slice(0, 10);
+    const nextMidnightUtcMs =
+      Date.UTC(
+        eatNow.getUTCFullYear(),
+        eatNow.getUTCMonth(),
+        eatNow.getUTCDate() + 1
+      ) - eatOffsetMs;
+
+    return {
+      todayKey,
+      nextResetAt: new Date(nextMidnightUtcMs).toISOString(),
+    };
+  }
+
   /**
    * Computes real module progress percentage (0%..100%) from completed steps or full completion flag
    */
@@ -117,6 +140,14 @@ export class TopicsService {
     const savedProgram = (progress?.aiStudyProgram as AiStudyProgram | undefined) || null;
     const weakCodes = savedProgram?.calibration?.weakSubjectCodes || [];
 
+    const { todayKey, nextResetAt } = this.getEatDayInfo();
+    const existingGenDate =
+      savedProgram?.generatedDate ||
+      (savedProgram?.generatedAt
+        ? this.getEatDayInfo(new Date(savedProgram.generatedAt)).todayKey
+        : undefined);
+    const canGenerateToday = existingGenDate !== todayKey;
+
     const subjectSummaries = await this.buildSubjectSummaries(
       stream,
       allModules as unknown as ITopicModuleDocument[],
@@ -126,13 +157,16 @@ export class TopicsService {
 
     return {
       hasProgram: Boolean(savedProgram),
+      canGenerateToday,
+      nextGenerationAt: canGenerateToday ? null : nextResetAt,
       program: savedProgram,
       subjectSummaries,
     };
   }
 
   /**
-   * Calibrates and persists a personalized cross-grade AI study program using Gemini + Topic Bank
+   * Calibrates and persists a personalized cross-grade AI study program using Gemini + Topic Bank.
+   * Limited to once per calendar day per student to prevent token abuse.
    */
   public static async generateAndSaveProgram(
     userId: string,
@@ -155,6 +189,22 @@ export class TopicsService {
       });
     }
 
+    const { todayKey, nextResetAt } = this.getEatDayInfo();
+    const existingProgram = progress.aiStudyProgram as AiStudyProgram | undefined;
+    const existingGenDate =
+      existingProgram?.generatedDate ||
+      (existingProgram?.generatedAt
+        ? this.getEatDayInfo(new Date(existingProgram.generatedAt)).todayKey
+        : undefined);
+
+    if (existingProgram && existingGenDate === todayKey) {
+      throw new TooManyRequestsError(
+        'You can generate your AI study program once per day to prevent token abuse. Please try again tomorrow.',
+        'DAILY_PLAN_LIMIT_REACHED',
+        { nextGenerationAt: nextResetAt }
+      );
+    }
+
     const allModules = await TopicModuleModel.find({
       streamCategory: { $in: ['common', stream] },
     })
@@ -164,6 +214,15 @@ export class TopicsService {
     const completedUnitCodes = (progress.units || [])
       .filter((u) => u.isStudyCompleted || u.passed)
       .map((u) => u.unitCode);
+
+    const weakAssessmentUnits = (progress.units || [])
+      .filter((u) => u.attemptsCount > 0 && u.bestPercentage < 65)
+      .map((u) => ({ unitCode: u.unitCode, bestPercentage: u.bestPercentage }));
+
+    const unitsWithQuickNotes = await UnitModel.find({ hasQuickNotes: true })
+      .select('code')
+      .lean();
+    const quickNotesUnitCodes = unitsWithQuickNotes.map((u) => u.code);
 
     const completedModuleIds = (progress.topicModules || [])
       .filter((tm) => tm.isCompleted)
@@ -180,8 +239,11 @@ export class TopicsService {
       calibration: normalizedCalibration,
       modules: allModules as unknown as ITopicModuleDocument[],
       completedUnitCodes,
+      weakAssessmentUnits,
+      quickNotesUnitCodes,
       completedModuleIds,
     });
+    program.generatedDate = todayKey;
 
     progress.aiStudyProgram = program;
     progress.markModified('aiStudyProgram');
@@ -201,6 +263,8 @@ export class TopicsService {
 
     return {
       hasProgram: true,
+      canGenerateToday: false,
+      nextGenerationAt: nextResetAt,
       program,
       subjectSummaries,
     };

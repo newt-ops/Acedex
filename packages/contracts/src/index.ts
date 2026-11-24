@@ -927,11 +927,14 @@ export interface AiStudyProgram {
   dailyFocusTasks: AiDailyTaskItem[];
   modulePriorityBySubject: Record<string, string[]>;
   generatedBy: 'gemini' | 'deterministic';
+  generatedDate?: string;
   generatedAt: string;
 }
 
 export interface AiTopicProgramOverviewResponse {
   hasProgram: boolean;
+  canGenerateToday: boolean;
+  nextGenerationAt?: string | null;
   program: AiStudyProgram | null;
   subjectSummaries: AiTopicSubjectSummary[];
 }

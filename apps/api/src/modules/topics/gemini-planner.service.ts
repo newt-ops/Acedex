@@ -92,6 +92,8 @@ export class GeminiPlannerService {
     calibration: AiCalibrationInput;
     modules: ITopicModuleDocument[];
     completedUnitCodes: string[];
+    weakAssessmentUnits?: Array<{ unitCode: string; bestPercentage: number }>;
+    quickNotesUnitCodes?: string[];
     completedModuleIds: string[];
   }): Promise<AiStudyProgram> {
     const {
@@ -100,6 +102,8 @@ export class GeminiPlannerService {
       calibration,
       modules,
       completedUnitCodes,
+      weakAssessmentUnits = [],
+      quickNotesUnitCodes = [],
       completedModuleIds,
     } = params;
 
@@ -141,6 +145,8 @@ export class GeminiPlannerService {
         calibration,
         modules,
         completedUnitCodes,
+        weakAssessmentUnits,
+        quickNotesUnitCodes,
         completedModuleIds,
       });
 
@@ -225,12 +231,46 @@ export class GeminiPlannerService {
     }
   }
 
+  private static readonly ACEDEX_SYSTEM_INSTRUCTION = `
+You are ACEDEX AI — the official Ethiopian Ministry of Education (MoE) Grades 9–12 & EUEE Cross-Grade Study Advisor.
+
+CORE MISSION:
+Help Ethiopian high school students master subjects by thematic TOPIC MODULES spanning Grades 9–12 instead of fragmented grade-by-grade studying.
+
+CURRICULUM & EXAM DOMAIN KNOWLEDGE:
+- EUEE (Ethiopian University Entrance Examination) is scored out of 600 points (6 subjects x 100 pts):
+  - Natural Science: Physics (PHY), Chemistry (CHE), Biology (BIO), Mathematics (MAT), English (ENG), Aptitude (APT).
+  - Social Science: Economics (ECO), Geography (GEO), History (HIS), Mathematics (MAT), English (ENG), Aptitude (APT).
+- Score Tiers: 420+ Solid Pass | 480+ Competitive Track (Engineering/Pharmacy) | 540+ Top 2% Merit (Medicine/AAU Honors).
+- Preparation Stages:
+  - "starting": Student is building fundamentals. Start from early Module 1–3 prerequisites and emphasize textbook concept reading.
+  - "reviewing": Student knows basics and needs cross-grade consolidation. Bridge G9/G10 basics directly into G11/G12 modules (M03–M07).
+  - "sprint": High-yield EUEE exam sprint. Prioritize Grade 11–12 synthesis modules, problem-solving, and Mastery Checkpoints.
+
+HOW TO COLLABORATE WITH THE TOPIC BANK & STUDENT PROGRESS:
+1. Check the student's "weakSubjectCodes" (#1, #2, #3). Your 4 "recommendedModules" MUST prioritize those weak subjects first, while including 1 foundational/rotation module if helpful.
+2. Check "completedUnitCodes" (units already finished in Tab 1) and "completedModuleIds". Skip completed modules; if a student already finished an early unit inside a module (e.g., MAT-G09-U01), mention it in coachingNote and point them to the next unread Grade/Unit/Pages in that module!
+3. Check "weakAssessmentUnits" (units where student scored < 65%). If a unit appears there, prioritize the topic module containing that unit so they fix the underlying concept gap.
+4. Check "hasQuickNotes" on references. When a referenced unit has ACEDEX Quick Notes available, tell the student they can read the Quick Notes right inside ACEDEX alongside the MoE textbook pages.
+5. Respect "registeredGrade": For Grade 9–11 students, keep focus anchored to modules up to their grade before pushing Grade 12 modules unless prerequisites are satisfied. For Grade 12, span the full G9–G12 EUEE pipeline.
+6. STRICT GROUNDING: ONLY select moduleIds verbatim from "topicCatalog". Never invent module IDs, unit codes, or page numbers.
+
+OUTPUT STYLE & FEW-SHOT EXAMPLES:
+- diagnosticSummary (exactly 2 crisp, encouraging sentences):
+  Example: "Built for your Grade 12 Natural Science 480+ goal, putting priority hours on Physics and Chemistry while reinforcing Calculus prerequisites. Your 90 min Morning blocks pair concept notes with targeted cross-grade drills so every session closes real EUEE gaps."
+- coachingNote (1 actionable sentence per recommended module referencing where to start reading):
+  Example: "Bridge Grade 9 vectors into 3D dot/cross products using G11 U2 (pp. 17–46), fixing foundation gaps before Kinematics."
+  Example: "You finished G9 Unit 1 sets—continue straight to G9 U2 (pp. 27–104) to lock in exponent laws and radicals."
+`.trim();
+
   private static async callGeminiWithTopicCatalog(params: {
     stream: StudentStream;
     grade: number;
     calibration: AiCalibrationInput;
     modules: ITopicModuleDocument[];
     completedUnitCodes: string[];
+    weakAssessmentUnits: Array<{ unitCode: string; bestPercentage: number }>;
+    quickNotesUnitCodes: string[];
     completedModuleIds: string[];
   }): Promise<GeminiRawResponse | null> {
     const {
@@ -239,35 +279,43 @@ export class GeminiPlannerService {
       calibration,
       modules,
       completedUnitCodes,
+      weakAssessmentUnits,
+      quickNotesUnitCodes,
       completedModuleIds,
     } = params;
+
+    const quickNotesSet = new Set(quickNotesUnitCodes);
 
     const compactCatalog = modules.map((m) => ({
       moduleId: m.moduleId,
       subjectCode: m.subjectCode,
       moduleNumber: m.moduleNumber,
+      phase: m.phase,
       title: m.title,
+      rationale: m.rationale.slice(0, 160),
       prerequisites: m.prerequisites.slice(0, 3),
-      whereToRead: this.formatWhereToRead(m),
+      references: (m.references || []).map((r) => ({
+        grade: r.grade,
+        unitCode: r.unitCode,
+        pages: r.pages,
+        hasQuickNotes: quickNotesSet.has(r.unitCode),
+      })),
     }));
 
     const prompt = [
-      'You are the ACEDEX EUEE Curriculum AI Study Planner for Ethiopian high school students (Grades 9-12).',
-      'Collaborate directly with the verified cross-grade Topic Bank below to design a personalized topic-based study plan.',
-      'Rules:',
-      '- ONLY select moduleIds that appear verbatim in topicCatalog.',
-      '- Recommend 4 priority modules for immediate study (prioritizing the student weakSubjectCodes while respecting prerequisites and skipping completedModuleIds).',
-      '- Keep diagnosticSummary concise (2 sentences max), encouraging, and specific to their stream, target score, and peak focus window.',
+      'Generate the personalized ACEDEX AI Study Blueprint JSON for this student using the grounded topicCatalog below.',
       '',
-      `Student Profile: ${JSON.stringify({
+      `Student Profile & Live Progress: ${JSON.stringify({
         registeredGrade: grade,
         stream,
         targetScore: calibration.targetScore,
+        tierId: calibration.tierId,
         weakSubjectCodes: calibration.weakSubjectCodes,
         dailyMinutes: calibration.dailyMinutes,
         peakWindow: calibration.peakWindow,
         prepStageId: calibration.prepStageId,
-        completedUnitsCount: completedUnitCodes.length,
+        completedUnitCodes: completedUnitCodes.slice(0, 25),
+        weakAssessmentUnits,
         completedModuleIds,
       })}`,
       '',
@@ -275,55 +323,70 @@ export class GeminiPlannerService {
     ].join('\n');
 
     const controller = new AbortController();
-    const timeoutId = setTimeout(() => controller.abort(), 12000);
+    const timeoutId = setTimeout(() => controller.abort(), 18000);
 
     try {
       const endpoint = `https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(env.GEMINI_MODEL)}:generateContent?key=${encodeURIComponent(env.GEMINI_API_KEY!)}`;
+      const requestBody = JSON.stringify({
+        systemInstruction: {
+          parts: [{ text: this.ACEDEX_SYSTEM_INSTRUCTION }],
+        },
+        contents: [{ role: 'user', parts: [{ text: prompt }] }],
+        generationConfig: {
+          temperature: 0.35,
+          responseMimeType: 'application/json',
+          responseSchema: {
+            type: 'OBJECT',
+            properties: {
+              diagnosticSummary: { type: 'STRING' },
+              recommendedModules: {
+                type: 'ARRAY',
+                items: {
+                  type: 'OBJECT',
+                  properties: {
+                    moduleId: { type: 'STRING' },
+                    coachingNote: { type: 'STRING' },
+                  },
+                  required: ['moduleId', 'coachingNote'],
+                },
+              },
+              subjectModuleOrdering: {
+                type: 'ARRAY',
+                items: {
+                  type: 'OBJECT',
+                  properties: {
+                    subjectCode: { type: 'STRING' },
+                    orderedModuleIds: {
+                      type: 'ARRAY',
+                      items: { type: 'STRING' },
+                    },
+                  },
+                  required: ['subjectCode', 'orderedModuleIds'],
+                },
+              },
+            },
+            required: ['diagnosticSummary', 'recommendedModules'],
+          },
+        },
+      });
 
-      const response = await fetch(endpoint, {
+      let response = await fetch(endpoint, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         signal: controller.signal,
-        body: JSON.stringify({
-          contents: [{ role: 'user', parts: [{ text: prompt }] }],
-          generationConfig: {
-            temperature: 0.35,
-            responseMimeType: 'application/json',
-            responseSchema: {
-              type: 'OBJECT',
-              properties: {
-                diagnosticSummary: { type: 'STRING' },
-                recommendedModules: {
-                  type: 'ARRAY',
-                  items: {
-                    type: 'OBJECT',
-                    properties: {
-                      moduleId: { type: 'STRING' },
-                      coachingNote: { type: 'STRING' },
-                    },
-                    required: ['moduleId', 'coachingNote'],
-                  },
-                },
-                subjectModuleOrdering: {
-                  type: 'ARRAY',
-                  items: {
-                    type: 'OBJECT',
-                    properties: {
-                      subjectCode: { type: 'STRING' },
-                      orderedModuleIds: {
-                        type: 'ARRAY',
-                        items: { type: 'STRING' },
-                      },
-                    },
-                    required: ['subjectCode', 'orderedModuleIds'],
-                  },
-                },
-              },
-              required: ['diagnosticSummary', 'recommendedModules'],
-            },
-          },
-        }),
+        body: requestBody,
       });
+
+      // Retry once briefly on transient 503/429 load spikes
+      if (response.status === 503 || response.status === 429) {
+        await new Promise((resolve) => setTimeout(resolve, 900));
+        response = await fetch(endpoint, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          signal: controller.signal,
+          body: requestBody,
+        });
+      }
 
       if (!response.ok) {
         const errBody = await response.text();

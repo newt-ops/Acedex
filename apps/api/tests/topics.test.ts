@@ -84,6 +84,7 @@ describe('AI Cross-Grade Topic Study & Gemini Planner Backend Tests', { timeout:
     expect(res.status).toBe(200);
     expect(res.body.success).toBe(true);
     expect(res.body.data.hasProgram).toBe(false);
+    expect(res.body.data.canGenerateToday).toBe(true);
     expect(res.body.data.program).toBeNull();
 
     const summaries = res.body.data.subjectSummaries;
@@ -121,14 +122,33 @@ describe('AI Cross-Grade Topic Study & Gemini Planner Backend Tests', { timeout:
     expect(program.dailyFocusTasks.length).toBe(4);
     expect(program.dailyFocusTasks[0].whereToRead).toContain('pp.');
 
-    // Verify program persists on subsequent GET
+    // Verify program persists on subsequent GET and daily limit updates
     const getRes = await request(app)
       .get('/api/v1/topics/program')
       .set('Authorization', `Bearer ${studentToken}`);
 
     expect(getRes.status).toBe(200);
     expect(getRes.body.data.hasProgram).toBe(true);
+    expect(getRes.body.data.canGenerateToday).toBe(false);
+    expect(getRes.body.data.nextGenerationAt).toBeTruthy();
     expect(getRes.body.data.program.calibration.targetScore).toBe(495);
+
+    // Verify second generation attempt on the same day is blocked (429) without calling Gemini
+    const repeatRes = await request(app)
+      .post('/api/v1/topics/program')
+      .set('Authorization', `Bearer ${studentToken}`)
+      .send({
+        tierId: 'merit',
+        targetScore: 550,
+        weakSubjectCodes: ['MAT'],
+        dailyMinutes: 120,
+        peakWindow: 'Night',
+        prepStageId: 'sprint',
+      });
+
+    expect(repeatRes.status).toBe(429);
+    expect(repeatRes.body.success).toBe(false);
+    expect(repeatRes.body.error.code).toBe('DAILY_PLAN_LIMIT_REACHED');
   });
 
   it('4. GeminiPlannerService collaborates with mocked Gemini API and hydrates exact MongoDB page references', async () => {

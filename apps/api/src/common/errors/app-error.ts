@@ -58,6 +58,16 @@ export class ValidationError extends AppError {
   }
 }
 
+export class TooManyRequestsError extends AppError {
+  constructor(
+    message = 'Rate limit exceeded',
+    code = 'TOO_MANY_REQUESTS',
+    details?: unknown
+  ) {
+    super(message, 429, code, true, details);
+  }
+}
+
 export class InternalServerError extends AppError {
   constructor(message = 'Internal server error', details?: unknown) {
     super(message, 500, 'INTERNAL_SERVER_ERROR', false, details);
