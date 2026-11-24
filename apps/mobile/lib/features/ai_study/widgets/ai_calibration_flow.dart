@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:hugeicons/hugeicons.dart';
 import '../../../core/models/user_profile.dart';
 import '../../../core/network/api_exception.dart';
+import '../../../core/services/unity_ads_service.dart';
 import '../../../core/theme/app_colors.dart';
 import '../../../core/ui/ui.dart';
 import '../../splash/painters/acedex_logo_painter.dart';
@@ -135,7 +136,7 @@ class _AiCalibrationFlowState extends State<AiCalibrationFlow>
     if (widget.requiresAd) {
       final claimedId = await _RewardedAdUnlockSheet.show(
         context,
-        onClaimReward: widget.repository.startAndClaimRewardedAd,
+        repository: widget.repository,
       );
       if (claimedId == null || !mounted) return;
       adSessionId = claimedId;
@@ -342,11 +343,11 @@ class _AiCalibrationFlowState extends State<AiCalibrationFlow>
           ),
         ),
 
-        // 2. Scrollable Stage Content + Sticky Bottom CTA
+        // 2. Scrollable Stage Content + Bottom CTA (full-screen, no bottom nav inset)
         Expanded(
           child: SingleChildScrollView(
             physics: const BouncingScrollPhysics(),
-            padding: const EdgeInsets.only(left: 16, right: 16, top: 8, bottom: 132),
+            padding: const EdgeInsets.only(left: 16, right: 16, top: 8, bottom: 28),
             child: AnimatedSwitcher(
               duration: const Duration(milliseconds: 280),
               transitionBuilder: (child, animation) {
@@ -1929,21 +1930,27 @@ class _CheckCircle extends StatelessWidget {
 }
 
 /// Rewarded Ad Playback & Unlock Dialog gating AI Study Program Generation.
+///
+/// 1. Starts server ad session immediately so backend `startedAt` begins ticking.
+/// 2. Launches real Unity Ads rewarded video on Android/iOS (with clean sponsored
+///    countdown fallback on Web/Desktop/no-fill).
+/// 3. Enforces minimum required watch seconds before claiming so Render/Mongo
+///    verification succeeds reliably without 15s rejection errors.
 class _RewardedAdUnlockSheet extends StatefulWidget {
-  final Future<String> Function() onClaimReward;
+  final AiStudyRepository repository;
 
-  const _RewardedAdUnlockSheet({required this.onClaimReward});
+  const _RewardedAdUnlockSheet({required this.repository});
 
   static Future<String?> show(
     BuildContext context, {
-    required Future<String> Function() onClaimReward,
+    required AiStudyRepository repository,
   }) {
     return showModalBottomSheet<String>(
       context: context,
       isDismissible: false,
       enableDrag: false,
       backgroundColor: Colors.transparent,
-      builder: (_) => _RewardedAdUnlockSheet(onClaimReward: onClaimReward),
+      builder: (_) => _RewardedAdUnlockSheet(repository: repository),
     );
   }
 
@@ -1952,58 +1959,107 @@ class _RewardedAdUnlockSheet extends StatefulWidget {
 }
 
 class _RewardedAdUnlockSheetState extends State<_RewardedAdUnlockSheet> {
-  int _secondsRemaining = 3;
-  bool _claiming = false;
+  String _headline = 'Loading Rewarded Ad...';
+  String _subtext = 'Connecting to Unity Ads & preparing your session.';
+  int _secondsRemaining = 0;
+  bool _busy = true;
   String? _errorText;
   Timer? _countdownTimer;
 
   @override
   void initState() {
     super.initState();
-    _startCountdown();
+    _runAdFlow();
   }
 
-  void _startCountdown() {
+  Future<void> _runAdFlow() async {
     _countdownTimer?.cancel();
     setState(() {
-      _secondsRemaining = 3;
+      _busy = true;
       _errorText = null;
-    });
-
-    _countdownTimer = Timer.periodic(const Duration(seconds: 1), (timer) {
-      if (!mounted) {
-        timer.cancel();
-        return;
-      }
-      if (_secondsRemaining > 1) {
-        setState(() => _secondsRemaining--);
-      } else {
-        timer.cancel();
-        _claimNow();
-      }
-    });
-  }
-
-  Future<void> _claimNow() async {
-    setState(() {
       _secondsRemaining = 0;
-      _claiming = true;
+      _headline = 'Loading Rewarded Ad...';
+      _subtext = 'Starting your ad unlock session with ACEDEX.';
     });
+
     try {
-      final adSessionId = await widget.onClaimReward();
+      final session = await widget.repository.startRewardedAdSession();
       if (!mounted) return;
-      Navigator.of(context).pop(adSessionId);
+
+      setState(() {
+        _headline = 'Rewarded Ad Unlock';
+        _subtext = 'Launching rewarded video...';
+      });
+
+      final playedNativeAd = await widget.repository.playRewardedAd(session);
+      if (!mounted) return;
+
+      final elapsed = DateTime.now().difference(session.startedAtLocal).inSeconds;
+      final remaining = (widget.repository.minimumAdWatchSeconds - elapsed).clamp(0, 30);
+
+      if (remaining > 0) {
+        setState(() {
+          _secondsRemaining = remaining;
+          _headline = playedNativeAd
+              ? 'Verifying Ad Reward...'
+              : 'Sponsored Preview Unlock';
+          _subtext = playedNativeAd
+              ? 'Finalizing reward verification (${remaining}s remaining)...'
+              : 'Supporting free ACEDEX AI planning • Unlocking in ${remaining}s...';
+        });
+
+        final timerDone = Completer<void>();
+        _countdownTimer = Timer.periodic(const Duration(seconds: 1), (timer) {
+          if (!mounted) {
+            timer.cancel();
+            if (!timerDone.isCompleted) timerDone.complete();
+            return;
+          }
+          if (_secondsRemaining > 1) {
+            setState(() {
+              _secondsRemaining--;
+              _subtext = playedNativeAd
+                  ? 'Finalizing reward verification (${_secondsRemaining}s remaining)...'
+                  : 'Supporting free ACEDEX AI planning • Unlocking in ${_secondsRemaining}s...';
+            });
+          } else {
+            timer.cancel();
+            setState(() => _secondsRemaining = 0);
+            if (!timerDone.isCompleted) timerDone.complete();
+          }
+        });
+        await timerDone.future;
+      }
+
+      if (!mounted) return;
+      setState(() {
+        _headline = 'Unlocking Gemini AI...';
+        _subtext = 'Confirming ad reward before building your topic roadmap.';
+      });
+
+      await widget.repository.claimRewardedAd(session.adSessionId);
+      if (!mounted) return;
+      Navigator.of(context).pop(session.adSessionId);
+    } on RewardedAdSkippedException catch (e) {
+      if (!mounted) return;
+      setState(() {
+        _busy = false;
+        _headline = 'Ad Skipped Early';
+        _errorText = e.message;
+      });
     } on ApiException catch (e) {
       if (!mounted) return;
       setState(() {
-        _claiming = false;
+        _busy = false;
+        _headline = 'Ad Verification Issue';
         _errorText = e.message;
       });
     } catch (_) {
       if (!mounted) return;
       setState(() {
-        _claiming = false;
-        _errorText = 'Could not verify rewarded ad. Please retry.';
+        _busy = false;
+        _headline = 'Ad Unavailable';
+        _errorText = 'Could not verify rewarded ad. Please check internet and retry.';
       });
     }
   }
@@ -2021,7 +2077,7 @@ class _RewardedAdUnlockSheetState extends State<_RewardedAdUnlockSheet> {
     final accent = isDark ? AppColors.accentDark : AppColors.accentLight;
     final accentSoft = isDark ? AppColors.accentSoftDark : AppColors.accentSoftLight;
     final line = isDark ? AppColors.darkLine : AppColors.lightLine;
-    final subtext = isDark ? AppColors.darkSubtext : AppColors.lightSubtext;
+    final subtextColor = isDark ? AppColors.darkSubtext : AppColors.lightSubtext;
 
     return Container(
       padding: const EdgeInsets.fromLTRB(20, 14, 20, 28),
@@ -2060,7 +2116,7 @@ class _RewardedAdUnlockSheetState extends State<_RewardedAdUnlockSheet> {
             ),
             const SizedBox(height: 12),
             Text(
-              _claiming ? 'Unlocking Gemini AI...' : 'Rewarded Ad Unlock',
+              _headline,
               style: TextStyle(
                 fontSize: 18,
                 fontWeight: FontWeight.w800,
@@ -2069,12 +2125,9 @@ class _RewardedAdUnlockSheetState extends State<_RewardedAdUnlockSheet> {
             ),
             const SizedBox(height: 6),
             Text(
-              _errorText ??
-                  (_claiming
-                      ? 'Confirming ad reward before building your cross-grade topic roadmap.'
-                      : 'Supporting ACEDEX free AI planning • Unlocking in ${_secondsRemaining}s...'),
+              _errorText ?? _subtext,
               textAlign: TextAlign.center,
-              style: TextStyle(fontSize: 13, color: subtext, height: 1.4),
+              style: TextStyle(fontSize: 13, color: subtextColor, height: 1.4),
             ),
             const SizedBox(height: 18),
             AcedexDotsLoader(color: accent, dotSize: 7, gap: 6),
@@ -2093,7 +2146,7 @@ class _RewardedAdUnlockSheetState extends State<_RewardedAdUnlockSheet> {
                   Expanded(
                     child: AcedexButton(
                       label: 'Retry Ad',
-                      onPressed: _startCountdown,
+                      onPressed: _runAdFlow,
                     ),
                   ),
                 ],
@@ -2102,7 +2155,9 @@ class _RewardedAdUnlockSheetState extends State<_RewardedAdUnlockSheet> {
               AcedexButton(
                 label: 'Cancel',
                 variant: AcedexButtonVariant.ghost,
-                onPressed: _claiming ? null : () => Navigator.of(context).pop(null),
+                onPressed: _busy && _secondsRemaining == 0
+                    ? null
+                    : () => Navigator.of(context).pop(null),
               ),
           ],
         ),

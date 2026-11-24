@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:acedex/core/models/user_profile.dart';
 import 'package:acedex/core/theme/app_theme.dart';
+import 'package:acedex/core/ui/ui.dart';
 import 'package:acedex/features/ai_study/models/ai_study_models.dart';
+import 'package:acedex/features/ai_study/screens/ai_calibration_screen.dart';
 import 'package:acedex/features/ai_study/screens/ai_study_screen.dart';
 import 'package:acedex/features/ai_study/services/ai_study_service.dart';
 import 'package:acedex/features/ai_study/widgets/ai_module_detail_sheet.dart';
@@ -10,8 +12,13 @@ import 'package:acedex/features/ai_study/widgets/ai_topic_workspace_view.dart';
 import 'package:acedex/features/ai_study/widgets/ai_welcome_view.dart';
 
 class _FakeAiStudyRepository implements AiStudyRepository {
+  bool adStarted = false;
+  bool adPlayed = false;
   bool adClaimed = false;
   int generateCalls = 0;
+
+  @override
+  int get minimumAdWatchSeconds => 1;
 
   AiTopicProgramOverview overview = const AiTopicProgramOverview(
     hasProgram: false,
@@ -108,9 +115,25 @@ class _FakeAiStudyRepository implements AiStudyRepository {
   }
 
   @override
-  Future<String> startAndClaimRewardedAd() async {
-    adClaimed = true;
-    return 'adsess_test_unlocked';
+  Future<RewardedAdStartData> startRewardedAdSession() async {
+    adStarted = true;
+    return RewardedAdStartData(
+      adSessionId: 'adsess_test_unlocked',
+      gameId: '6220248',
+      placementId: 'Rewarded_Android',
+      startedAtLocal: DateTime.now(),
+    );
+  }
+
+  @override
+  Future<bool> playRewardedAd(RewardedAdStartData session) async {
+    adPlayed = true;
+    return true;
+  }
+
+  @override
+  Future<void> claimRewardedAd(String adSessionId) async {
+    adClaimed = adSessionId == 'adsess_test_unlocked';
   }
 
   @override
@@ -252,6 +275,11 @@ void main() {
       MaterialApp(
         theme: AppTheme.lightTheme,
         home: Scaffold(
+          appBar: AcedexHeaderBar(user: naturalUser),
+          bottomNavigationBar: AcedexBottomNavBar(
+            currentIndex: 2,
+            onTap: (_) {},
+          ),
           body: AiStudyScreen(
             user: naturalUser,
             repository: fakeRepo,
@@ -261,7 +289,9 @@ void main() {
     );
     await tester.pumpAndSettle();
 
-    // Phase 0: Welcome screen
+    // Phase 0: Welcome screen inside shell shows header & bottom nav
+    expect(find.byType(AcedexHeaderBar), findsOneWidget);
+    expect(find.byType(AcedexBottomNavBar), findsOneWidget);
     expect(find.byType(AiWelcomeView), findsOneWidget);
     expect(
       find.text('Master Ethiopian Subjects by Connected Topics'),
@@ -273,10 +303,14 @@ void main() {
       findsOneWidget,
     );
 
-    // Enter Calibration Step 1
+    // Enter full-screen Calibration route -> header & footer MUST disappear
     await tester.ensureVisible(find.text('Generate Study Program'));
     await tester.tap(find.text('Generate Study Program'));
     await tester.pumpAndSettle();
+
+    expect(find.byType(AiCalibrationScreen), findsOneWidget);
+    expect(find.byType(AcedexHeaderBar), findsNothing);
+    expect(find.byType(AcedexBottomNavBar), findsNothing);
 
     expect(find.text('STEP 1 OF 4 • GOAL CALIBRATION'), findsOneWidget);
     expect(find.text('Registered Academic Track'), findsOneWidget);
@@ -312,27 +346,29 @@ void main() {
     expect(find.text('STEP 4 OF 4 • BASELINE CHECK'), findsOneWidget);
     expect(find.text('Watch 1 Ad & Generate Plan'), findsOneWidget);
 
-    // Tap CTA -> Rewarded Ad Sheet countdown (3s) -> Gemini synthesis -> Blueprint
+    // Tap CTA -> Rewarded Ad Sheet countdown -> start/play/claim -> Gemini synthesis -> Blueprint
     await tester.ensureVisible(find.text('Watch 1 Ad & Generate Plan'));
     await tester.tap(find.text('Watch 1 Ad & Generate Plan'));
     await tester.pump();
-    expect(find.text('Rewarded Ad Unlock'), findsOneWidget);
 
-    // Advance past 3s ad countdown + synthesis timer
-    await tester.pump(const Duration(seconds: 4));
+    // Advance past 1s minimum test timer + synthesis timer
+    await tester.pump(const Duration(seconds: 2));
     await tester.pumpAndSettle();
 
+    expect(fakeRepo.adStarted, isTrue);
+    expect(fakeRepo.adPlayed, isTrue);
     expect(fakeRepo.adClaimed, isTrue);
     expect(fakeRepo.generateCalls, 1);
     expect(find.text('GEMINI AI BLUEPRINT'), findsOneWidget);
     expect(find.text('Start Topic Study Program'), findsOneWidget);
 
-    // Enter Phase 2 Topic Workspace
+    // Finish onboarding -> returns from full-screen route to Workspace with nav bar
     await tester.ensureVisible(find.text('Start Topic Study Program'));
     await tester.tap(find.text('Start Topic Study Program'));
     await tester.pumpAndSettle();
 
     expect(find.byType(AiTopicWorkspaceView), findsOneWidget);
+    expect(find.byType(AcedexBottomNavBar), findsOneWidget);
     expect(find.text('Physics Cross-Grade Map'), findsOneWidget);
     expect(find.text('0/10 modules mastered (0%)'), findsOneWidget);
     expect(

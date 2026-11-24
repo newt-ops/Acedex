@@ -1,16 +1,35 @@
 import 'package:flutter/foundation.dart';
 import '../../../core/network/api_client.dart';
 import '../../../core/network/api_endpoints.dart';
+import '../../../core/services/unity_ads_service.dart';
 import '../../../core/storage/auth_storage.dart';
 import '../models/ai_study_models.dart';
 
+@immutable
+class RewardedAdStartData {
+  final String adSessionId;
+  final String gameId;
+  final String placementId;
+  final DateTime startedAtLocal;
+
+  const RewardedAdStartData({
+    required this.adSessionId,
+    required this.gameId,
+    required this.placementId,
+    required this.startedAtLocal,
+  });
+}
+
 /// Repository/Service boundary for AI Cross-Grade Topic Study & Rewarded Ad Unlock.
 abstract class AiStudyRepository {
+  int get minimumAdWatchSeconds;
   Future<AiTopicProgramOverview?> getCachedOverview();
   Future<AiTopicProgramOverview> fetchProgramOverview();
   Future<List<TopicModuleItem>?> getCachedSubjectModules(String subjectCode);
   Future<List<TopicModuleItem>> fetchSubjectModules(String subjectCode);
-  Future<String> startAndClaimRewardedAd();
+  Future<RewardedAdStartData> startRewardedAdSession();
+  Future<bool> playRewardedAd(RewardedAdStartData session);
+  Future<void> claimRewardedAd(String adSessionId);
   Future<AiTopicProgramOverview> generateProgram(
     AiCalibrationInput input, {
     String? adSessionId,
@@ -28,12 +47,19 @@ class AiStudyService implements AiStudyRepository {
 
   final ApiClient _apiClient;
   final AuthStorage _storage;
+  final UnityAdsService _unityAds;
 
   AiStudyService({
     ApiClient? apiClient,
     AuthStorage? storage,
+    UnityAdsService? unityAds,
   })  : _apiClient = apiClient ?? ApiClient.instance,
-        _storage = storage ?? AuthStorage.instance;
+        _storage = storage ?? AuthStorage.instance,
+        _unityAds = unityAds ?? UnityAdsService.instance;
+
+  /// Production backend enforces >= 15s watch time when S2S hasn't fired; 16s avoids clock boundary 400s.
+  @override
+  int get minimumAdWatchSeconds => 16;
 
   @override
   Future<AiTopicProgramOverview?> getCachedOverview() async {
@@ -88,7 +114,7 @@ class AiStudyService implements AiStudyRepository {
   }
 
   @override
-  Future<String> startAndClaimRewardedAd() async {
+  Future<RewardedAdStartData> startRewardedAdSession() async {
     final platform = (!kIsWeb && defaultTargetPlatform == TargetPlatform.iOS)
         ? 'ios'
         : 'android';
@@ -102,8 +128,25 @@ class AiStudyService implements AiStudyRepository {
       },
     );
     final startData = (startRes['data'] as Map<String, dynamic>?) ?? startRes;
-    final adSessionId = startData['adSessionId'] as String? ?? '';
+    return RewardedAdStartData(
+      adSessionId: startData['adSessionId'] as String? ?? '',
+      gameId: startData['gameId'] as String? ?? '6220248',
+      placementId: startData['placementId'] as String? ?? 'Rewarded_Android',
+      startedAtLocal: DateTime.now(),
+    );
+  }
 
+  @override
+  Future<bool> playRewardedAd(RewardedAdStartData session) {
+    return _unityAds.playRewardedAd(
+      gameId: session.gameId,
+      placementId: session.placementId,
+      adSessionId: session.adSessionId,
+    );
+  }
+
+  @override
+  Future<void> claimRewardedAd(String adSessionId) async {
     await _apiClient.post(
       ApiEndpoints.adsRewardClaim,
       requiresAuth: true,
@@ -112,8 +155,6 @@ class AiStudyService implements AiStudyRepository {
         'rewardType': 'ai_study_plan',
       },
     );
-
-    return adSessionId;
   }
 
   @override

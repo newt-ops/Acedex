@@ -4,24 +4,19 @@ import '../../../core/models/user_profile.dart';
 import '../../../core/network/api_exception.dart';
 import '../../../core/ui/ui.dart';
 import '../models/ai_study_models.dart';
+import '../screens/ai_calibration_screen.dart';
 import '../services/ai_study_service.dart';
-import '../widgets/ai_calibration_flow.dart';
 import '../widgets/ai_module_detail_sheet.dart';
 import '../widgets/ai_topic_workspace_view.dart';
 import '../widgets/ai_welcome_view.dart';
 
-enum _AiStudyPhase {
-  welcome,
-  calibration,
-  workspace,
-}
+enum _AiStudyPhase { welcome, workspace }
 
 /// Tab 2: AI Cross-Grade Topic Study Program Screen.
 ///
-/// Orchestrates 3 phases backed live by `/api/v1/topics/*` and local cache:
-/// - Phase 0 ([AiWelcomeView]): Introduces cross-grade topic study & "Generate Study Program"
-/// - Phase 1 ([AiCalibrationFlow]): 5-stage calibration + 1 rewarded ad + Gemini synthesis
-/// - Phase 2 ([AiTopicWorkspaceView]): Priority subjects & sequential cross-grade modules
+/// Orchestrates Phase 0 ([AiWelcomeView]) and Phase 2 ([AiTopicWorkspaceView]),
+/// pushing [AiCalibrationScreen] as a full-screen route (no header/footer bar)
+/// when generating or recalibrating an AI study program.
 class AiStudyScreen extends StatefulWidget {
   final UserProfile? user;
   final AiStudyRepository? repository;
@@ -69,15 +64,15 @@ class _AiStudyScreenState extends State<AiStudyScreen> {
   }
 
   Future<void> _bootstrap() async {
-    // 1. Hydrate instantaneously from local cache if available
     final cachedOverview = await _repository.getCachedOverview();
     if (mounted && cachedOverview != null) {
       _applyOverview(cachedOverview);
       setState(() => _initialLoading = false);
 
       if (_selectedSubjectCode.isNotEmpty) {
-        final cachedMods =
-            await _repository.getCachedSubjectModules(_selectedSubjectCode);
+        final cachedMods = await _repository.getCachedSubjectModules(
+          _selectedSubjectCode,
+        );
         if (mounted && cachedMods != null && cachedMods.isNotEmpty) {
           setState(() {
             _modulesBySubject[_selectedSubjectCode] = cachedMods;
@@ -86,18 +81,17 @@ class _AiStudyScreenState extends State<AiStudyScreen> {
       }
     }
 
-    // 2. Sync live with MongoDB
     try {
       final liveOverview = await _repository.fetchProgramOverview();
       if (!mounted) return;
       _applyOverview(liveOverview);
       setState(() => _initialLoading = false);
-      if (_phase == _AiStudyPhase.workspace && _selectedSubjectCode.isNotEmpty) {
+      if (_phase == _AiStudyPhase.workspace &&
+          _selectedSubjectCode.isNotEmpty) {
         await _loadSubjectModules(_selectedSubjectCode);
       }
     } catch (_) {
       if (!mounted) return;
-      // Offline fresh fallback so Welcome remains crisp
       _overview ??= AiTopicProgramOverview(
         hasProgram: false,
         canGenerateToday: true,
@@ -125,15 +119,17 @@ class _AiStudyScreenState extends State<AiStudyScreen> {
       _phase = _AiStudyPhase.workspace;
       if (_selectedSubjectCode.isEmpty ||
           !overview.subjectSummaries.any(
-            (s) => s.subjectCode.toUpperCase() == _selectedSubjectCode.toUpperCase(),
+            (s) =>
+                s.subjectCode.toUpperCase() ==
+                _selectedSubjectCode.toUpperCase(),
           )) {
         _selectedSubjectCode = overview.subjectSummaries.isNotEmpty
             ? overview.subjectSummaries.first.subjectCode
             : (overview.program!.calibration.weakSubjectCodes.isNotEmpty
-                ? overview.program!.calibration.weakSubjectCodes.first
-                : 'PHY');
+                  ? overview.program!.calibration.weakSubjectCodes.first
+                  : 'PHY');
       }
-    } else if (_phase != _AiStudyPhase.calibration) {
+    } else {
       _phase = _AiStudyPhase.welcome;
     }
   }
@@ -188,7 +184,6 @@ class _AiStudyScreenState extends State<AiStudyScreen> {
           _modulesBySubject[code] = list;
         }
 
-        // Update summary percentages cleanly without a second blocking reload
         if (_overview != null) {
           final updatedSummaries = _overview!.subjectSummaries.map((s) {
             if (s.subjectCode.toUpperCase() != code) return s;
@@ -196,8 +191,8 @@ class _AiStudyScreenState extends State<AiStudyScreen> {
             final avgPct = list.isEmpty
                 ? s.masteryPercentage
                 : (list.fold<int>(0, (acc, m) => acc + m.progressPercentage) /
-                        list.length)
-                    .round();
+                          list.length)
+                      .round();
             return AiTopicSubjectSummary(
               subjectCode: s.subjectCode,
               subjectName: s.subjectName,
@@ -223,7 +218,11 @@ class _AiStudyScreenState extends State<AiStudyScreen> {
       return updated;
     } on ApiException catch (e) {
       if (mounted) {
-        AcedexToast.show(context, message: e.message, type: AcedexToastType.error);
+        AcedexToast.show(
+          context,
+          message: e.message,
+          type: AcedexToastType.error,
+        );
       }
       return null;
     } catch (_) {
@@ -247,24 +246,47 @@ class _AiStudyScreenState extends State<AiStudyScreen> {
         stepNumber: stepNum,
         stepCompleted: completed,
       ),
-      onToggleMastered: (completed) => _updateModuleProgress(
-        module,
-        isCompleted: completed,
-      ),
+      onToggleMastered: (completed) =>
+          _updateModuleProgress(module, isCompleted: completed),
     );
   }
 
-  void _handleRecalibrate() {
-    final canGen = _overview?.canGenerateToday ?? true;
+  /// Pushes the full-screen calibration route without app header or bottom nav bar.
+  Future<void> _openFullScreenCalibration() async {
+    final overview = _overview;
+    final canGen = overview?.canGenerateToday ?? true;
     if (!canGen) {
       AcedexToast.show(
         context,
-        message: 'You can generate a new AI plan once per day. Resets tomorrow.',
+        message:
+            'You can generate a new AI plan once per day. Resets tomorrow.',
         type: AcedexToastType.info,
       );
       return;
     }
-    setState(() => _phase = _AiStudyPhase.calibration);
+
+    final generatedOverview = await Navigator.of(context, rootNavigator: true)
+        .push<AiTopicProgramOverview>(
+          MaterialPageRoute<AiTopicProgramOverview>(
+            fullscreenDialog: true,
+            builder: (_) => AiCalibrationScreen(
+              user: widget.user,
+              repository: _repository,
+              canGenerateToday: canGen,
+              requiresAd: overview?.requiresAd ?? true,
+              initialCalibration: overview?.program?.calibration,
+            ),
+          ),
+        );
+
+    if (!mounted || generatedOverview == null) return;
+    setState(() {
+      _applyOverview(generatedOverview);
+      _phase = _AiStudyPhase.workspace;
+    });
+    if (_selectedSubjectCode.isNotEmpty) {
+      unawaited(_loadSubjectModules(_selectedSubjectCode));
+    }
   }
 
   @override
@@ -273,7 +295,8 @@ class _AiStudyScreenState extends State<AiStudyScreen> {
       return const AcedexAiStudySkeleton();
     }
 
-    final overview = _overview ??
+    final overview =
+        _overview ??
         const AiTopicProgramOverview(
           hasProgram: false,
           canGenerateToday: true,
@@ -287,42 +310,7 @@ class _AiStudyScreenState extends State<AiStudyScreen> {
           user: widget.user,
           canGenerateToday: overview.canGenerateToday,
           requiresAd: overview.requiresAd,
-          onStartCalibration: () {
-            if (!overview.canGenerateToday) {
-              AcedexToast.show(
-                context,
-                message: 'You already generated an AI plan today. Resets tomorrow.',
-                type: AcedexToastType.info,
-              );
-              return;
-            }
-            setState(() => _phase = _AiStudyPhase.calibration);
-          },
-        );
-
-      case _AiStudyPhase.calibration:
-        return AiCalibrationFlow(
-          user: widget.user,
-          repository: _repository,
-          canGenerateToday: overview.canGenerateToday,
-          requiresAd: overview.requiresAd,
-          initialCalibration: overview.program?.calibration,
-          onCancel: () {
-            setState(() {
-              _phase = overview.hasProgram
-                  ? _AiStudyPhase.workspace
-                  : _AiStudyPhase.welcome;
-            });
-          },
-          onProgramReady: (generatedOverview) {
-            setState(() {
-              _applyOverview(generatedOverview);
-              _phase = _AiStudyPhase.workspace;
-            });
-            if (_selectedSubjectCode.isNotEmpty) {
-              unawaited(_loadSubjectModules(_selectedSubjectCode));
-            }
-          },
+          onStartCalibration: _openFullScreenCalibration,
         );
 
       case _AiStudyPhase.workspace:
@@ -335,7 +323,7 @@ class _AiStudyScreenState extends State<AiStudyScreen> {
           isLoadingModules: _loadingModules,
           onSelectSubject: _loadSubjectModules,
           onOpenModule: _openModuleDetail,
-          onRecalibrate: _handleRecalibrate,
+          onRecalibrate: _openFullScreenCalibration,
         );
     }
   }
