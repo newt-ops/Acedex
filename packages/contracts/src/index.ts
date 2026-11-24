@@ -412,7 +412,12 @@ export interface AuditLogEntry {
 // 7. Rewarded Ads & Monetization Contracts
 // ==========================================
 
-export const RewardTypeSchema = z.enum(['streak_repair', 'exam_access', 'offline_pack']);
+export const RewardTypeSchema = z.enum([
+  'streak_repair',
+  'exam_access',
+  'offline_pack',
+  'ai_study_plan',
+]);
 export type RewardType = z.infer<typeof RewardTypeSchema>;
 
 export const AdPlatformSchema = z.enum(['android', 'ios']);
@@ -470,6 +475,8 @@ export interface ClaimRewardResponseData {
   unlockedUnitId?: string;
   unlockedUnitCode?: string;
   offlineAccessExpiresAt?: string;
+  aiStudyPlanUnlocked?: boolean;
+  aiPlanAdSessionId?: string;
 }
 
 export interface StudentAdStatusData {
@@ -842,6 +849,7 @@ export const AiCalibrationInputSchema = z.object({
   dailyMinutes: z.number().int().min(15).max(600),
   peakWindow: AiPeakWindowSchema.default('Morning'),
   prepStageId: AiPrepStageSchema.default('reviewing'),
+  adSessionId: z.string().min(1).optional(),
 });
 export type AiCalibrationInput = z.infer<typeof AiCalibrationInputSchema>;
 
@@ -934,6 +942,7 @@ export interface AiStudyProgram {
 export interface AiTopicProgramOverviewResponse {
   hasProgram: boolean;
   canGenerateToday: boolean;
+  requiresAd: boolean;
   nextGenerationAt?: string | null;
   program: AiStudyProgram | null;
   subjectSummaries: AiTopicSubjectSummary[];

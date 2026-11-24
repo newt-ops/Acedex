@@ -16,8 +16,14 @@ import {
 import { EUEE_SUBJECTS } from '../curriculum/curriculum-seeder.service';
 import { UnitModel } from '../curriculum/models/unit.model';
 import { TopicModuleModel, ITopicModuleDocument } from './models/topic-module.model';
+import { AdConfigModel } from '../ads/models/ad-config.model';
+import { AdSessionModel, IAdSessionDocument } from '../ads/models/ad-session.model';
 import { GeminiPlannerService } from './gemini-planner.service';
-import { NotFoundError, TooManyRequestsError } from '../../common/errors/app-error';
+import {
+  ForbiddenError,
+  NotFoundError,
+  TooManyRequestsError,
+} from '../../common/errors/app-error';
 
 export class TopicsService {
   /**
@@ -148,6 +154,9 @@ export class TopicsService {
         : undefined);
     const canGenerateToday = existingGenDate !== todayKey;
 
+    const adConfig = await AdConfigModel.findOne({ singletonId: 'global_ad_config' }).lean();
+    const requiresAd = adConfig ? adConfig.isAdsEnabled : true;
+
     const subjectSummaries = await this.buildSubjectSummaries(
       stream,
       allModules as unknown as ITopicModuleDocument[],
@@ -158,6 +167,7 @@ export class TopicsService {
     return {
       hasProgram: Boolean(savedProgram),
       canGenerateToday,
+      requiresAd,
       nextGenerationAt: canGenerateToday ? null : nextResetAt,
       program: savedProgram,
       subjectSummaries,
@@ -166,7 +176,7 @@ export class TopicsService {
 
   /**
    * Calibrates and persists a personalized cross-grade AI study program using Gemini + Topic Bank.
-   * Limited to once per calendar day per student to prevent token abuse.
+   * Requires 1 claimed rewarded ad (when ads enabled) and is limited to once per calendar day.
    */
   public static async generateAndSaveProgram(
     userId: string,
@@ -205,6 +215,32 @@ export class TopicsService {
       );
     }
 
+    const adConfig = await AdConfigModel.findOne({ singletonId: 'global_ad_config' }).lean();
+    const requiresAd = adConfig ? adConfig.isAdsEnabled : true;
+    let verifiedAdSession: IAdSessionDocument | null = null;
+
+    if (requiresAd) {
+      if (!calibration.adSessionId) {
+        throw new ForbiddenError(
+          'Please watch 1 rewarded ad to unlock AI study program generation.',
+          'AD_REQUIRED_FOR_AI_PLAN'
+        );
+      }
+      verifiedAdSession = await AdSessionModel.findOne({
+        adSessionId: calibration.adSessionId,
+        userId: userObjectId,
+        rewardType: 'ai_study_plan',
+        status: 'claimed',
+        usedForAiPlan: { $ne: true },
+      });
+      if (!verifiedAdSession) {
+        throw new ForbiddenError(
+          'Valid completed rewarded ad required to generate your AI study program.',
+          'AD_REQUIRED_FOR_AI_PLAN'
+        );
+      }
+    }
+
     const allModules = await TopicModuleModel.find({
       streamCategory: { $in: ['common', stream] },
     })
@@ -228,9 +264,10 @@ export class TopicsService {
       .filter((tm) => tm.isCompleted)
       .map((tm) => tm.moduleId);
 
+    const { adSessionId: _discardAdId, ...cleanCalibration } = calibration;
     const normalizedCalibration: AiCalibrationInput = {
-      ...calibration,
-      weakSubjectCodes: calibration.weakSubjectCodes.map((c) => c.toUpperCase().trim()),
+      ...cleanCalibration,
+      weakSubjectCodes: cleanCalibration.weakSubjectCodes.map((c) => c.toUpperCase().trim()),
     };
 
     const program = await GeminiPlannerService.generateStudyProgram({
@@ -249,6 +286,11 @@ export class TopicsService {
     progress.markModified('aiStudyProgram');
     await progress.save();
 
+    if (verifiedAdSession) {
+      verifiedAdSession.usedForAiPlan = true;
+      await verifiedAdSession.save();
+    }
+
     const topicProgressMap = new Map<string, ITopicModuleProgressSubdoc>();
     for (const tm of progress.topicModules || []) {
       topicProgressMap.set(tm.moduleId, tm);
@@ -264,6 +306,7 @@ export class TopicsService {
     return {
       hasProgram: true,
       canGenerateToday: false,
+      requiresAd,
       nextGenerationAt: nextResetAt,
       program,
       subjectSummaries,

@@ -252,6 +252,9 @@ export class AdsService {
       responseData.unlockedUnitId = pack.unitId;
       responseData.unlockedUnitCode = pack.unitCode;
       responseData.offlineAccessExpiresAt = pack.expiresAt.toISOString();
+    } else if (session.rewardType === 'ai_study_plan') {
+      responseData.aiStudyPlanUnlocked = true;
+      responseData.aiPlanAdSessionId = session.adSessionId;
     }
 
     session.status = 'claimed';

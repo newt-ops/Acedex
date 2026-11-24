@@ -16,6 +16,7 @@ export interface IAdSessionDocument extends Document {
   expiresAt: Date;
   claimedAt?: Date;
   durationSeconds?: number;
+  usedForAiPlan?: boolean;
   createdAt: Date;
   updatedAt: Date;
 }
@@ -26,7 +27,7 @@ const AdSessionSchema = new Schema<IAdSessionDocument>(
     adSessionId: { type: String, required: true, unique: true, index: true },
     rewardType: {
       type: String,
-      enum: ['streak_repair', 'exam_access', 'offline_pack'],
+      enum: ['streak_repair', 'exam_access', 'offline_pack', 'ai_study_plan'],
       required: true,
       index: true,
     },
@@ -44,6 +45,7 @@ const AdSessionSchema = new Schema<IAdSessionDocument>(
     expiresAt: { type: Date, required: true },
     claimedAt: { type: Date },
     durationSeconds: { type: Number, default: 0 },
+    usedForAiPlan: { type: Boolean, default: false },
   },
   {
     timestamps: true,

@@ -10,6 +10,7 @@ import { TopicModuleModel } from '../src/modules/topics/models/topic-module.mode
 import { GeminiPlannerService } from '../src/modules/topics/gemini-planner.service';
 import { UserModel } from '../src/modules/users/user.model';
 import { StudentProgressModel } from '../src/modules/progress/models/student-progress.model';
+import { AdSessionModel } from '../src/modules/ads/models/ad-session.model';
 import { env } from '../src/config/env';
 
 describe('AI Cross-Grade Topic Study & Gemini Planner Backend Tests', { timeout: 60000 }, () => {
@@ -50,6 +51,7 @@ describe('AI Cross-Grade Topic Study & Gemini Planner Backend Tests', { timeout:
   }, 60000);
 
   afterAll(async () => {
+    await AdSessionModel.deleteMany({ userId: studentId });
     await StudentProgressModel.deleteMany({ userId: studentId });
     await UserModel.deleteMany({ displayName: 'Topic Study Test Student' });
     await disconnectDatabase();
@@ -96,18 +98,47 @@ describe('AI Cross-Grade Topic Study & Gemini Planner Backend Tests', { timeout:
     }
   });
 
-  it('3. POST /api/v1/topics/program generates, hydrates verified textbook pages, and persists AI program', async () => {
+  it('3. POST /api/v1/topics/program requires 1 rewarded ad, enforces 1-per-day limit, and persists AI program', async () => {
+    const calibrationPayload = {
+      tierId: 'competitive',
+      targetScore: 495,
+      weakSubjectCodes: ['PHY', 'MAT'],
+      dailyMinutes: 90,
+      peakWindow: 'Morning',
+      prepStageId: 'reviewing',
+    };
+
+    // 3a. Direct generation without watching rewarded ad must fail with 403 AD_REQUIRED_FOR_AI_PLAN
+    const noAdRes = await request(app)
+      .post('/api/v1/topics/program')
+      .set('Authorization', `Bearer ${studentToken}`)
+      .send(calibrationPayload);
+
+    expect(noAdRes.status).toBe(403);
+    expect(noAdRes.body.error.code).toBe('AD_REQUIRED_FOR_AI_PLAN');
+
+    // 3b. Watch & claim 1 rewarded ad for ai_study_plan
+    const startAdRes = await request(app)
+      .post('/api/v1/ads/session/start')
+      .set('Authorization', `Bearer ${studentToken}`)
+      .send({ rewardType: 'ai_study_plan', platform: 'android' });
+
+    expect(startAdRes.status).toBe(201);
+    const adSessionId = startAdRes.body.data.adSessionId;
+
+    const claimAdRes = await request(app)
+      .post('/api/v1/ads/reward/claim')
+      .set('Authorization', `Bearer ${studentToken}`)
+      .send({ adSessionId, rewardType: 'ai_study_plan' });
+
+    expect(claimAdRes.status).toBe(200);
+    expect(claimAdRes.body.data.aiStudyPlanUnlocked).toBe(true);
+
+    // 3c. Now POST /api/v1/topics/program succeeds using the verified adSessionId
     const res = await request(app)
       .post('/api/v1/topics/program')
       .set('Authorization', `Bearer ${studentToken}`)
-      .send({
-        tierId: 'competitive',
-        targetScore: 495,
-        weakSubjectCodes: ['PHY', 'MAT'],
-        dailyMinutes: 90,
-        peakWindow: 'Morning',
-        prepStageId: 'reviewing',
-      });
+      .send({ ...calibrationPayload, adSessionId });
 
     expect(res.status).toBe(200);
     expect(res.body.success).toBe(true);
