@@ -22,7 +22,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="light">
-      <body className="bg-acedex-bg text-acedex-text min-h-screen antialiased flex flex-col">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@700;800&display=swap"
+          rel="stylesheet"
+        />
+      </head>
+      <body className="bg-[#FBFBFD] text-[#0F172A] min-h-screen antialiased flex flex-col font-sans selection:bg-purple-500/15 selection:text-purple-700">
         <AuthProvider>
           <div className="flex-1 flex flex-col">{children}</div>
         </AuthProvider>

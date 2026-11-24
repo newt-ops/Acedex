@@ -2,16 +2,6 @@
 
 import React from 'react';
 import { NoteUnitProgressItem } from '../../types/notes-collector';
-import { Card, CardContent } from '../ui/Card';
-import { Button } from '../ui/Button';
-import { HugeiconsIcon } from '@hugeicons/react';
-import {
-  BookOpen01Icon,
-  CheckmarkCircle02Icon,
-  ArrowRight01Icon,
-  Upload01Icon,
-  Clock01Icon,
-} from '@hugeicons/core-free-icons';
 
 interface GradeNoteCardProps {
   grade: number;
@@ -26,107 +16,88 @@ export function GradeNoteCard({
   units,
   onSubmitGradeClick,
 }: GradeNoteCardProps) {
-  const totalUnits = units.length;
+  const totalUnits = units.length || 8;
   const approvedUnits = units.filter((u) => u.status === 'approved').length;
-  const submittedUnits = units.filter((u) => u.status === 'submitted').length;
+  const inReviewUnits = units.filter((u) => u.status === 'submitted').length;
   const percent = totalUnits > 0 ? Math.round((approvedUnits / totalUnits) * 100) : 0;
-  const isAllApproved = totalUnits > 0 && approvedUnits === totalUnits;
+  const barWidth = totalUnits > 0 ? ((approvedUnits + inReviewUnits * 0.5) / totalUnits) * 100 : 0;
 
   return (
-    <Card
+    <article
       onClick={() => onSubmitGradeClick(grade)}
-      className="group cursor-pointer transition-all duration-300 ease-out bg-acedex-card/90 backdrop-blur-sm border border-acedex-border/80 hover:border-acedex-primary hover:shadow-lg hover:shadow-purple-500/10 flex flex-col justify-between hover:-translate-y-1"
+      className="stagger-card apple-card apple-card-hover p-5 sm:p-6 flex flex-col justify-between cursor-pointer group"
     >
-      <CardContent className="p-5 sm:p-6 flex-1 flex flex-col justify-between space-y-4">
-        <div>
-          {/* Top Bar: Grade Badge & Coverage Tag */}
-          <div className="flex items-center justify-between gap-2 mb-3">
-            <span className="px-3 py-1 rounded-xl text-xs font-bold font-mono bg-acedex-primary/10 text-acedex-primary border border-acedex-primary/20 group-hover:bg-acedex-primary group-hover:text-white transition-colors">
-              Grade {grade}
-            </span>
-
-            {isAllApproved ? (
-              <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-semibold bg-emerald-500/15 text-emerald-400 border border-emerald-500/30">
-                <HugeiconsIcon icon={CheckmarkCircle02Icon} size={12} strokeWidth={2} />
-                <span>All Complete</span>
-              </span>
-            ) : submittedUnits > 0 ? (
-              <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-semibold bg-amber-500/15 text-amber-400 border border-amber-500/30">
-                <HugeiconsIcon icon={Clock01Icon} size={12} strokeWidth={2} />
-                <span>In Review</span>
-              </span>
-            ) : (
-              <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-semibold bg-acedex-bg border border-acedex-border text-acedex-muted">
-                <span>{percent}% Covered</span>
-              </span>
-            )}
-          </div>
-
-          {/* Title */}
-          <h3 className="text-base sm:text-lg font-bold text-acedex-text group-hover:text-acedex-primary transition-colors">
-            Grade {grade} {subjectName}
-          </h3>
-          <p className="text-xs text-acedex-muted mt-1">
-            {totalUnits} Curriculum Units • Full Textbook Notes
-          </p>
+      <div>
+        {/* Top Badges Row */}
+        <div className="flex items-center justify-between gap-2 mb-5">
+          <span className="px-3 py-1 rounded-full bg-purple-50/90 border border-purple-200/70 font-mono text-[11.5px] font-bold text-[#7E22CE]">
+            Grade {grade}
+          </span>
+          <span className="px-3 py-1 rounded-full bg-slate-100/90 border border-slate-200/70 text-[11.5px] font-semibold tabular-nums text-slate-500">
+            {percent}% Covered
+          </span>
         </div>
 
-        {/* Progress & Metrics */}
-        <div className="space-y-2.5 pt-2 border-t border-acedex-border/60">
-          <div className="flex items-center justify-between text-xs">
-            <span className="text-acedex-muted">Coverage</span>
-            <span className="font-bold text-acedex-text font-mono">
+        {/* Title & Subtitle */}
+        <h3 className="font-display text-[17.5px] font-extrabold tracking-[-0.02em] text-slate-900 group-hover:text-[#7E22CE] transition-colors">
+          Grade {grade} {subjectName}
+        </h3>
+        <p className="mt-1 text-[12.5px] text-slate-500">
+          {totalUnits} Curriculum Units &bull; Full Textbook Notes
+        </p>
+
+        {/* Coverage Progress Bar */}
+        <div className="mt-5 mb-5">
+          <div className="flex items-center justify-between text-[12px] mb-2">
+            <span className="text-slate-500 font-medium">Coverage</span>
+            <span className="font-mono font-bold tabular-nums text-slate-800">
               {approvedUnits}/{totalUnits} Units ({percent}%)
             </span>
           </div>
-
-          {/* Progress track */}
-          <div className="w-full h-2 rounded-full bg-acedex-bg border border-acedex-border/60 overflow-hidden">
+          <div className="w-full h-2 rounded-full bg-slate-100 overflow-hidden">
             <div
-              className="h-full bg-acedex-primary rounded-full transition-all duration-500"
-              style={{ width: `${percent}%` }}
+              style={{ width: `${barWidth}%` }}
+              className="h-full rounded-full bg-gradient-to-r from-[#7E22CE] to-[#10B981] transition-all duration-700 ease-spring"
             />
-          </div>
-
-          <div className="grid grid-cols-3 gap-2 text-center pt-1">
-            <div className="p-2 rounded-xl bg-acedex-bg/70 border border-acedex-border/50">
-              <span className="block text-xs font-bold text-acedex-text font-mono">
-                {totalUnits}
-              </span>
-              <span className="text-[10px] text-acedex-muted uppercase">Units</span>
-            </div>
-            <div className="p-2 rounded-xl bg-acedex-bg/70 border border-acedex-border/50">
-              <span className="block text-xs font-bold text-emerald-400 font-mono">
-                {approvedUnits}
-              </span>
-              <span className="text-[10px] text-acedex-muted uppercase">Approved</span>
-            </div>
-            <div className="p-2 rounded-xl bg-acedex-bg/70 border border-acedex-border/50">
-              <span className="block text-xs font-bold text-amber-400 font-mono">
-                {submittedUnits}
-              </span>
-              <span className="text-[10px] text-acedex-muted uppercase">In Review</span>
-            </div>
           </div>
         </div>
 
-        {/* Action Button: Submit Whole Grade Notes */}
-        <Button
-          onClick={(e) => {
-            e.stopPropagation();
-            onSubmitGradeClick(grade);
-          }}
-          variant="primary"
-          size="sm"
-          className="w-full justify-between bg-acedex-primary hover:bg-acedex-primary-hover text-white shadow-sm shadow-purple-500/20"
-        >
-          <span className="flex items-center gap-1.5">
-            <HugeiconsIcon icon={Upload01Icon} size={14} strokeWidth={2} />
-            <span>Submit Grade {grade} Notes</span>
-          </span>
-          <HugeiconsIcon icon={ArrowRight01Icon} size={15} />
-        </Button>
-      </CardContent>
-    </Card>
+        {/* 3 Stat Mini-Boxes */}
+        <div className="grid grid-cols-3 gap-2.5 mb-5">
+          <div className="rounded-[14px] bg-[#FBFBFD] border border-slate-200/70 py-3 px-2 text-center">
+            <div className="text-[15px] font-extrabold tabular-nums text-slate-900">{totalUnits}</div>
+            <div className="mt-0.5 text-[9.5px] font-bold tracking-[0.06em] uppercase text-slate-400">UNITS</div>
+          </div>
+          <div className="rounded-[14px] bg-[#FBFBFD] border border-slate-200/70 py-3 px-2 text-center">
+            <div className="text-[15px] font-extrabold tabular-nums text-emerald-500">{approvedUnits}</div>
+            <div className="mt-0.5 text-[9.5px] font-bold tracking-[0.06em] uppercase text-slate-400">APPROVED</div>
+          </div>
+          <div className="rounded-[14px] bg-[#FBFBFD] border border-slate-200/70 py-3 px-2 text-center">
+            <div className="text-[15px] font-extrabold tabular-nums text-amber-500">{inReviewUnits}</div>
+            <div className="mt-0.5 text-[9.5px] font-bold tracking-[0.06em] uppercase text-slate-400">IN REVIEW</div>
+          </div>
+        </div>
+      </div>
+
+      {/* Submit Grade Notes CTA */}
+      <button
+        type="button"
+        onClick={(e) => {
+          e.stopPropagation();
+          onSubmitGradeClick(grade);
+        }}
+        className="btn-acedex-primary group w-full min-h-[44px] rounded-[13px] text-white font-semibold text-[13px] inline-flex items-center justify-center gap-2 cursor-pointer"
+      >
+        <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M21 15V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V15" />
+          <path d="M17 8L12 3L7 8" />
+          <path d="M12 3V15" />
+        </svg>
+        <span>Submit Grade {grade} Notes</span>
+        <svg className="w-3.5 h-3.5 transition-transform duration-250 ease-spring group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M9 6L15 12L9 18" />
+        </svg>
+      </button>
+    </article>
   );
 }

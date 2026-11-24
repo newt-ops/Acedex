@@ -8,6 +8,15 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'SF Pro Display', 'sans-serif'],
+        display: ['Plus Jakarta Sans', 'Inter', 'sans-serif'],
+        mono: ['JetBrains Mono', 'monospace'],
+      },
+      transitionTimingFunction: {
+        'spring': 'cubic-bezier(0.22, 1, 0.36, 1)',
+        'spring-bounce': 'cubic-bezier(0.34, 1.56, 0.64, 1)',
+      },
       colors: {
         background: 'var(--background)',
         foreground: 'var(--foreground)',

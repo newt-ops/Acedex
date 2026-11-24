@@ -4,20 +4,13 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
 import { useAuth } from '../../context/AuthContext';
 import { Navbar } from '../../components/layout/Navbar';
-import { Container } from '../../components/layout/Container';
 import { GradeTabBar } from '../../components/student/GradeTabBar';
 import { UnitCard } from '../../components/student/UnitCard';
 import { QuestionSubmitModal } from '../../components/student/QuestionSubmitModal';
-import { ProgressBar } from '../../components/ui/ProgressBar';
 import { SubjectUnitsResponse, UnitProgressItem } from '../../types/collector';
 import { api } from '../../lib/api';
 import { HugeiconsIcon } from '@hugeicons/react';
-import {
-  Loading01Icon,
-  BookOpen01Icon,
-  AlertCircleIcon,
-  Refresh01Icon,
-} from '@hugeicons/core-free-icons';
+import { Loading01Icon, AlertCircleIcon, Refresh01Icon } from '@hugeicons/core-free-icons';
 import { Button } from '../../components/ui/Button';
 
 export default function StudentPortalPage() {
@@ -61,8 +54,8 @@ export default function StudentPortalPage() {
 
   if (authLoading || !profile) {
     return (
-      <div className="flex-1 flex items-center justify-center p-4">
-        <HugeiconsIcon icon={Loading01Icon} size={32} className="animate-spin text-acedex-primary" strokeWidth={2} />
+      <div className="flex-1 flex items-center justify-center p-4 min-h-[60vh]">
+        <HugeiconsIcon icon={Loading01Icon} size={32} className="animate-spin text-[#7E22CE]" strokeWidth={2} />
       </div>
     );
   }
@@ -80,99 +73,129 @@ export default function StudentPortalPage() {
   const currentGradeData = unitTree?.grades.find((g) => g.grade === activeGrade);
   const currentUnits = currentGradeData?.units || [];
 
+  const approvedUnits = unitTree?.approvedUnits || 0;
+  const totalUnits = unitTree?.totalUnits || 32;
+  const coveragePct = totalUnits > 0 ? Math.round((approvedUnits / totalUnits) * 100) : 0;
+
   return (
-    <div className="flex-1 flex flex-col pb-12">
+    <div className="flex-1 flex flex-col pb-16">
       <Navbar />
 
-      <main className="flex-1">
-        <Container className="py-6 space-y-6">
-          {/* Subject Overview Banner */}
-          <div className="bg-acedex-card border border-acedex-border/80 rounded-2xl p-5 sm:p-6 shadow-md relative overflow-hidden">
-            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-              <div>
-                <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-semibold bg-acedex-primary/15 text-acedex-primary border border-acedex-primary/30 mb-2">
-                  <HugeiconsIcon icon={BookOpen01Icon} size={15} strokeWidth={1.5} />
-                  <span>Subject Workspace</span>
-                </div>
-                <h1 className="text-xl sm:text-2xl font-bold text-acedex-text tracking-tight">
-                  {profile.subjectName} ({profile.subjectCode})
-                </h1>
-                <p className="text-xs sm:text-sm text-acedex-muted mt-1">
-                  Responsible Contributor:{' '}
-                  <span className="font-semibold text-acedex-text">{profile.name}</span> ({profile.contributorId})
-                </p>
-              </div>
-
-              {/* Progress Summary Card */}
-              {unitTree && (
-                <div className="sm:w-72 bg-acedex-bg/80 border border-acedex-border/60 p-4 rounded-xl shrink-0">
-                  <ProgressBar
-                    current={unitTree.approvedUnits}
-                    total={unitTree.totalUnits}
-                    label="Approved Coverage"
-                  />
-                </div>
-              )}
+      <main className="flex-1 w-full max-w-[1380px] mx-auto px-4 sm:px-7 py-5 sm:py-8">
+        {/* Subject Workspace Hero Banner */}
+        <section className="apple-card apple-card-hover p-5 sm:p-7 mb-6 sm:mb-7 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4 sm:gap-5">
+          {/* Left: Subject Identity */}
+          <div>
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-purple-50/90 border border-purple-200/70 text-[#7E22CE] text-[11px] sm:text-[11.5px] font-semibold mb-2.5 sm:mb-3">
+              <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M2 6C2 4.89543 2.89543 4 4 4H9C10.6569 4 12 5.34315 12 7V20C12 18.8954 11.1046 18 10 18H4C2.89543 18 2 17.1046 2 16V6Z" />
+                <path d="M22 6C22 4.89543 21.1046 4 20 4H15C13.3431 4 12 5.34315 12 7V20C12 18.8954 12.8954 18 14 18H20C21.1046 18 22 17.1046 22 16V6Z" />
+              </svg>
+              <span>Subject Workspace</span>
             </div>
+
+            <h1 className="font-display text-2xl sm:text-3xl font-extrabold tracking-[-0.025em] text-slate-900 leading-tight">
+              {profile.subjectName} ({profile.subjectCode})
+            </h1>
+
+            <p className="mt-1 sm:mt-1.5 text-[13px] sm:text-[13.5px] text-slate-500">
+              Responsible Contributor:{' '}
+              <strong className="font-semibold text-slate-800">{profile.name}</strong>{' '}
+              <span className="font-mono text-slate-500">({profile.contributorId})</span>
+            </p>
           </div>
 
-          {/* Grade Selector Strip */}
-          <GradeTabBar
-            activeGrade={activeGrade}
-            onSelectGrade={setActiveGrade}
-            gradeStats={gradeStats}
-          />
-
-          {/* Error display */}
-          {error && (
-            <div className="p-4 bg-rose-500/15 border border-rose-500/30 rounded-xl text-xs sm:text-sm text-rose-400 flex items-center justify-between">
-              <div className="flex items-center gap-2">
-                <HugeiconsIcon icon={AlertCircleIcon} size={20} className="shrink-0 text-rose-500" strokeWidth={1.5} />
-                <span>{error}</span>
+          {/* Right: Approved Coverage Sub-Card */}
+          <div className="w-full lg:w-[325px] rounded-[16px] sm:rounded-[18px] bg-[#FBFBFD] border border-slate-200/75 px-4 sm:px-5 py-3.5 sm:py-4 shadow-[inset_0_1px_2px_rgba(15,23,42,0.02)]">
+            <div className="flex items-center justify-between gap-3 mb-2.5">
+              <span className="text-[12px] sm:text-[12.5px] font-medium text-slate-500">Approved Coverage</span>
+              <div className="text-[12.5px] sm:text-[13px] font-bold tabular-nums text-slate-900">
+                {approvedUnits} / {totalUnits} Units
+                <span className="ml-1 text-[#7E22CE] font-semibold">({coveragePct}%)</span>
               </div>
-              <Button
-                size="sm"
-                variant="outline"
-                onClick={loadUnits}
-                icon={<HugeiconsIcon icon={Refresh01Icon} size={14} className="shrink-0" strokeWidth={1.5} />}
+            </div>
+
+            {/* Animated Progress Track */}
+            <div className="w-full h-2.5 rounded-full bg-slate-200/75 overflow-hidden p-[1px]">
+              <div
+                style={{ width: `${coveragePct}%` }}
+                className="h-full rounded-full bg-gradient-to-r from-[#7E22CE] via-[#9333EA] to-[#10B981] transition-all duration-700 ease-spring"
+              />
+            </div>
+          </div>
+        </section>
+
+        {/* Grade Filter Segmented Bar */}
+        <GradeTabBar
+          activeGrade={activeGrade}
+          onSelectGrade={setActiveGrade}
+          gradeStats={gradeStats}
+        />
+
+        {/* Subheader Meta Row */}
+        <div className="flex flex-wrap items-center justify-between gap-2 mb-4 px-0.5">
+          <p className="text-[12.5px] sm:text-[13px] font-medium text-slate-500">
+            Showing {currentUnits.length} units for Grade {activeGrade}
+          </p>
+          <p className="text-[12.5px] sm:text-[13px] font-semibold text-slate-700">
+            Target: 15 questions per unit
+          </p>
+        </div>
+
+        {/* Error display */}
+        {error && (
+          <div className="p-4 mb-4 bg-rose-500/15 border border-rose-500/30 rounded-2xl text-xs sm:text-sm text-rose-600 flex items-center justify-between">
+            <div className="flex items-center gap-2">
+              <HugeiconsIcon icon={AlertCircleIcon} size={20} className="shrink-0 text-rose-500" strokeWidth={1.5} />
+              <span>{error}</span>
+            </div>
+            <Button
+              size="sm"
+              variant="outline"
+              onClick={loadUnits}
+              icon={<HugeiconsIcon icon={Refresh01Icon} size={14} className="shrink-0" strokeWidth={1.5} />}
+            >
+              Retry
+            </Button>
+          </div>
+        )}
+
+        {/* Units Grid */}
+        {loading ? (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 animate-pulse">
+            {[1, 2, 3, 4, 5, 6].map((i) => (
+              <div
+                key={i}
+                className="apple-card p-5 sm:p-6 h-[230px] flex flex-col justify-between"
               >
-                Retry
-              </Button>
-            </div>
-          )}
-
-          {/* Units Grid */}
-          {loading ? (
-            <div className="py-16 flex flex-col items-center justify-center text-acedex-muted gap-2">
-              <HugeiconsIcon icon={Loading01Icon} size={32} className="animate-spin text-acedex-primary" strokeWidth={2} />
-              <span className="text-sm">Loading Grade {activeGrade} curriculum units...</span>
-            </div>
-          ) : (
-            <div className="space-y-4">
-              <div className="flex items-center justify-between text-xs text-acedex-muted">
-                <span>
-                  Showing {currentUnits.length} units for Grade {activeGrade}
-                </span>
-                <span className="font-medium text-acedex-text">
-                  Target: 15 questions per unit
-                </span>
+                <div className="space-y-3">
+                  <div className="flex justify-between">
+                    <div className="h-5 w-24 bg-slate-100 rounded-lg" />
+                    <div className="h-5 w-20 bg-slate-100 rounded-full" />
+                  </div>
+                  <div className="h-6 w-3/4 bg-slate-100 rounded-md" />
+                </div>
+                <div className="space-y-3">
+                  <div className="h-4 w-1/2 bg-slate-100 rounded" />
+                  <div className="h-11 w-full bg-slate-100 rounded-[13px]" />
+                </div>
               </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                {currentUnits.map((unit) => (
-                  <UnitCard
-                    key={unit.unitCode}
-                    unit={unit}
-                    onOpenSubmit={(target) => {
-                      setSelectedUnit(target);
-                      setIsSubmitModalOpen(true);
-                    }}
-                  />
-                ))}
-              </div>
-            </div>
-          )}
-        </Container>
+            ))}
+          </div>
+        ) : (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
+            {currentUnits.map((unit) => (
+              <UnitCard
+                key={unit.unitCode}
+                unit={unit}
+                onOpenSubmit={(target) => {
+                  setSelectedUnit(target);
+                  setIsSubmitModalOpen(true);
+                }}
+              />
+            ))}
+          </div>
+        )}
       </main>
 
       {/* Question Submit Modal with Auto-Fixer */}
