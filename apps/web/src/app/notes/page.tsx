@@ -10,7 +10,13 @@ import { NoteSubjectUnitsResponse, NoteUnitProgressItem } from '../../types/note
 import { SUBJECTS, GRADES } from '../../lib/constants';
 import { api } from '../../lib/api';
 import { HugeiconsIcon } from '@hugeicons/react';
-import { Loading01Icon, AlertCircleIcon, Refresh01Icon } from '@hugeicons/core-free-icons';
+import {
+  Loading01Icon,
+  AlertCircleIcon,
+  Refresh01Icon,
+  BookOpen01Icon,
+  Upload01Icon,
+} from '@hugeicons/core-free-icons';
 import { Button } from '../../components/ui/Button';
 
 export default function NotesContributorPage() {
@@ -95,10 +101,7 @@ export default function NotesContributorPage() {
           {/* Left: Subject Identity */}
           <div>
             <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-purple-50/90 border border-purple-200/70 text-[#7E22CE] text-[11px] sm:text-[11.5px] font-semibold mb-2.5 sm:mb-3">
-              <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M2 6C2 4.89543 2.89543 4 4 4H9C10.6569 4 12 5.34315 12 7V20C12 18.8954 11.1046 18 10 18H4C2.89543 18 2 17.1046 2 16V6Z" />
-                <path d="M22 6C22 4.89543 21.1046 4 20 4H15C13.3431 4 12 5.34315 12 7V20C12 18.8954 12.8954 18 14 18H20C21.1046 18 22 17.1046 22 16V6Z" />
-              </svg>
+              <HugeiconsIcon icon={BookOpen01Icon} size={14} strokeWidth={2} className="shrink-0" />
               <span>Subject Workspace</span>
             </div>
 
@@ -137,11 +140,7 @@ export default function NotesContributorPage() {
         <div className="mb-6">
           <div className="flex items-center gap-2.5">
             <div className="w-7 h-7 rounded-lg bg-purple-50 border border-purple-200/70 flex items-center justify-center text-[#7E22CE]">
-              <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M21 15V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V15" />
-                <path d="M17 8L12 3L7 8" />
-                <path d="M12 3V15" />
-              </svg>
+              <HugeiconsIcon icon={Upload01Icon} size={16} strokeWidth={2} className="shrink-0" />
             </div>
             <h2 className="font-display text-[19px] font-extrabold tracking-[-0.02em] text-slate-900">
               Submit Notes by Grade

@@ -2,6 +2,8 @@
 
 import React from 'react';
 import { NoteUnitProgressItem } from '../../types/notes-collector';
+import { HugeiconsIcon } from '@hugeicons/react';
+import { Upload01Icon, ArrowRight01Icon } from '@hugeicons/core-free-icons';
 
 interface GradeNoteCardProps {
   grade: number;
@@ -88,15 +90,14 @@ export function GradeNoteCard({
         }}
         className="btn-acedex-primary group w-full min-h-[44px] rounded-[13px] text-white font-semibold text-[13px] inline-flex items-center justify-center gap-2 cursor-pointer"
       >
-        <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M21 15V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V15" />
-          <path d="M17 8L12 3L7 8" />
-          <path d="M12 3V15" />
-        </svg>
+        <HugeiconsIcon icon={Upload01Icon} size={16} strokeWidth={2} className="shrink-0" />
         <span>Submit Grade {grade} Notes</span>
-        <svg className="w-3.5 h-3.5 transition-transform duration-250 ease-spring group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M9 6L15 12L9 18" />
-        </svg>
+        <HugeiconsIcon
+          icon={ArrowRight01Icon}
+          size={14}
+          strokeWidth={2.2}
+          className="transition-transform duration-250 ease-spring group-hover:translate-x-1 shrink-0"
+        />
       </button>
     </article>
   );

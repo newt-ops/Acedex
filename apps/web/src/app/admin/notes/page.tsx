@@ -21,6 +21,7 @@ import {
   Search01Icon,
   Cancel01Icon,
   CheckmarkCircle02Icon,
+  ArrowDown01Icon,
 } from '@hugeicons/core-free-icons';
 
 export default function AdminNotesPage() {
@@ -299,17 +300,7 @@ export default function AdminNotesPage() {
                 ))}
               </select>
               <div className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-slate-400">
-                <svg
-                  className="w-3.5 h-3.5"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2.2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <path d="M6 9L12 15L18 9" />
-                </svg>
+                <HugeiconsIcon icon={ArrowDown01Icon} size={14} strokeWidth={2} />
               </div>
             </div>
 

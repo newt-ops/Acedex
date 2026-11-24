@@ -10,7 +10,7 @@ import { QuestionSubmitModal } from '../../components/student/QuestionSubmitModa
 import { SubjectUnitsResponse, UnitProgressItem } from '../../types/collector';
 import { api } from '../../lib/api';
 import { HugeiconsIcon } from '@hugeicons/react';
-import { Loading01Icon, AlertCircleIcon, Refresh01Icon } from '@hugeicons/core-free-icons';
+import { Loading01Icon, AlertCircleIcon, Refresh01Icon, BookOpen01Icon } from '@hugeicons/core-free-icons';
 import { Button } from '../../components/ui/Button';
 
 export default function StudentPortalPage() {
@@ -87,10 +87,7 @@ export default function StudentPortalPage() {
           {/* Left: Subject Identity */}
           <div>
             <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-purple-50/90 border border-purple-200/70 text-[#7E22CE] text-[11px] sm:text-[11.5px] font-semibold mb-2.5 sm:mb-3">
-              <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M2 6C2 4.89543 2.89543 4 4 4H9C10.6569 4 12 5.34315 12 7V20C12 18.8954 11.1046 18 10 18H4C2.89543 18 2 17.1046 2 16V6Z" />
-                <path d="M22 6C22 4.89543 21.1046 4 20 4H15C13.3431 4 12 5.34315 12 7V20C12 18.8954 12.8954 18 14 18H20C21.1046 18 22 17.1046 22 16V6Z" />
-              </svg>
+              <HugeiconsIcon icon={BookOpen01Icon} size={14} strokeWidth={2} className="shrink-0" />
               <span>Subject Workspace</span>
             </div>
 

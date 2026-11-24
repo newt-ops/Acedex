@@ -18,6 +18,7 @@ import {
   Idea01Icon,
   CheckmarkCircle02Icon,
   AlertCircleIcon,
+  Upload01Icon,
 } from '@hugeicons/core-free-icons';
 
 interface GradeNoteSubmitModalProps {
@@ -221,11 +222,7 @@ Exact JSON Schema:
       title={
         <div className="flex items-center gap-2.5">
           <div className="w-7 h-7 rounded-lg bg-purple-50 border border-purple-200/70 flex items-center justify-center text-[#7E22CE] shrink-0">
-            <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M21 15V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V15" />
-              <path d="M17 8L12 3L7 8" />
-              <path d="M12 3V15" />
-            </svg>
+            <HugeiconsIcon icon={Upload01Icon} size={16} strokeWidth={2} />
           </div>
           <span className="font-display text-[18px] sm:text-[19px] font-extrabold tracking-[-0.02em] text-slate-900 truncate">
             Submit Grade {grade} Notes

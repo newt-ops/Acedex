@@ -3,6 +3,16 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
 import { useAuth } from '../context/AuthContext';
+import { ThemeToggle } from '../components/ui/ThemeToggle';
+import { HugeiconsIcon } from '@hugeicons/react';
+import {
+  Key01Icon,
+  ViewIcon,
+  ViewOffSlashIcon,
+  ArrowRight01Icon,
+  CheckmarkCircle02Icon,
+  ShieldCheckIcon,
+} from '@hugeicons/core-free-icons';
 
 export default function LoginPage() {
   const { login, isAuthenticated, isAdmin, loading: authLoading } = useAuth();
@@ -13,7 +23,6 @@ export default function LoginPage() {
   const [submitting, setSubmitting] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
   const [verifiedProfile, setVerifiedProfile] = useState<{ id: string; role: string } | null>(null);
-  const [isDarkMode, setIsDarkMode] = useState<boolean>(false);
 
   // 3D Card & Parallax Refs
   const cardRef = useRef<HTMLDivElement>(null);
@@ -21,22 +30,6 @@ export default function LoginPage() {
   const keyIconRef = useRef<HTMLDivElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const isHoveringCard = useRef<boolean>(false);
-
-  // Sync theme on mount
-  useEffect(() => {
-    const isDark = document.documentElement.classList.contains('dark');
-    setIsDarkMode(isDark);
-  }, []);
-
-  const toggleTheme = () => {
-    const nextDark = !document.documentElement.classList.contains('dark');
-    if (nextDark) {
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-    }
-    setIsDarkMode(nextDark);
-  };
 
   // Redirect if already authenticated
   useEffect(() => {
@@ -282,38 +275,7 @@ export default function LoginPage() {
 
       {/* Minimal Top Utility Corner (Light / Dark Mode Toggle) */}
       <header className="relative z-20 w-full max-w-6xl mx-auto px-5 pt-5 flex items-center justify-end">
-        <button
-          onClick={toggleTheme}
-          aria-label="Toggle Light or Dark Theme"
-          className="group p-2.5 rounded-full bg-white/90 dark:bg-white/[0.05] hover:bg-slate-50 dark:hover:bg-white/[0.1] border border-slate-200/80 dark:border-white/[0.09] text-slate-600 dark:text-slate-300 backdrop-blur-md shadow-sm transition-all duration-300 active:scale-90"
-        >
-          {isDarkMode ? (
-            <svg
-              className="w-4 h-4 text-amber-400 transition-transform duration-500 group-hover:rotate-45"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1.8"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <circle cx="12" cy="12" r="4" />
-              <path d="M12 2V4M12 20V22M4.93 4.93L6.34 6.34M17.66 17.66L19.07 19.07M2 12H4M20 12H22M6.34 17.66L4.93 19.07M19.07 4.93L17.66 6.34" />
-            </svg>
-          ) : (
-            <svg
-              className="w-4 h-4 text-slate-700 transition-transform duration-500 group-hover:-rotate-12"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1.8"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
-            </svg>
-          )}
-        </button>
+        <ThemeToggle />
       </header>
 
       {/* =============================================================== */}
@@ -383,19 +345,7 @@ export default function LoginPage() {
                     ref={keyIconRef}
                     className="pl-3.5 pr-2.5 text-[#7E22CE] dark:text-[#A855F7] flex items-center pointer-events-none transition-transform duration-300 ease-out"
                   >
-                    <svg
-                      className="w-[18px] h-[18px]"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="1.8"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    >
-                      <path d="M15.5 7.5L19 4M21 2L19 4M19 4L21 6" />
-                      <circle cx="9.5" cy="14.5" r="4.5" />
-                      <path d="M12.7 11.3L16 8" />
-                    </svg>
+                    <HugeiconsIcon icon={Key01Icon} size={18} strokeWidth={2} />
                   </div>
 
                   {/* Single Credential Input */}
@@ -420,33 +370,9 @@ export default function LoginPage() {
                     className="absolute right-2.5 p-1.5 rounded-lg text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 hover:bg-slate-100/80 dark:hover:bg-white/[0.06] transition-colors"
                   >
                     {showPassword ? (
-                      <svg
-                        className="w-4 h-4"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="1.8"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      >
-                        <path d="M3 3L21 21" />
-                        <path d="M10.584 10.587C10.2087 10.962 9.99775 11.4708 9.99756 12.0013C9.99737 12.5318 10.2079 13.0407 10.583 13.416C10.958 13.7913 11.4668 14.0022 11.9973 14.0024C12.5278 14.0026 13.0367 13.7921 13.412 13.417" />
-                        <path d="M9.363 5.365C10.2204 5.11972 11.1082 4.99684 12 5C18.364 5 22 12 22 12C21.393 13.135 20.669 14.204 19.84 15.19" />
-                        <path d="M6.61 6.61C4.62125 7.96462 3.02987 9.82524 2 12C2 12 5.636 19 12 19C13.9159 19.0051 15.7908 18.4451 17.39 17.39" />
-                      </svg>
+                      <HugeiconsIcon icon={ViewOffSlashIcon} size={16} strokeWidth={1.8} />
                     ) : (
-                      <svg
-                        className="w-4 h-4"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="1.8"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      >
-                        <path d="M2 12C2 12 5.63636 5 12 5C18.3636 5 22 12 22 12C22 12 18.3636 19 12 19C5.63636 19 2 12 2 12Z" />
-                        <circle cx="12" cy="12" r="3" />
-                      </svg>
+                      <HugeiconsIcon icon={ViewIcon} size={16} strokeWidth={1.8} />
                     )}
                   </button>
                 </div>
@@ -469,17 +395,12 @@ export default function LoginPage() {
                   {!submitting ? (
                     <span className="inline-flex items-center gap-2">
                       <span>Enter Workspace</span>
-                      <svg
-                        className="w-4 h-4 transition-transform duration-300 ease-out group-hover:translate-x-1"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2.2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      >
-                        <path d="M9 6L15 12L9 18" />
-                      </svg>
+                      <HugeiconsIcon
+                        icon={ArrowRight01Icon}
+                        size={16}
+                        strokeWidth={2.2}
+                        className="transition-transform duration-300 ease-out group-hover:translate-x-1"
+                      />
                     </span>
                   ) : (
                     <span className="inline-flex items-center gap-1.5">
@@ -495,17 +416,7 @@ export default function LoginPage() {
               <div className="relative text-center py-3" style={{ transformStyle: 'preserve-3d' }}>
                 {/* 3D Flipping Checkmark Badge */}
                 <div className="layer-z-30 mx-auto w-14 h-14 rounded-2xl bg-emerald-500/10 dark:bg-emerald-500/15 border border-emerald-500/30 flex items-center justify-center text-emerald-600 dark:text-emerald-400 animate-flip-check shadow-sm">
-                  <svg
-                    className="w-7 h-7"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2.4"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <path d="M20 6L9 17L4 12" />
-                  </svg>
+                  <HugeiconsIcon icon={CheckmarkCircle02Icon} size={28} strokeWidth={2.4} />
                 </div>
 
                 <h2 className="layer-z-20 mt-4 text-[16px] font-bold tracking-tight text-slate-900 dark:text-white">
@@ -530,18 +441,7 @@ export default function LoginPage() {
 
         {/* Bottom Security & Sync Badge */}
         <div className="mt-7 flex items-center justify-center gap-2 text-[12.5px] font-medium text-slate-600 dark:text-slate-400 animate-3d-in delay-3 select-none">
-          <svg
-            className="w-[17px] h-[17px] text-[#10B981] shrink-0"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <path d="M12 22C12 22 20 18 20 12V5L12 2L4 5V12C4 18 12 22 12 22Z" />
-            <path d="M9 12L11 14L15 10" />
-          </svg>
+          <HugeiconsIcon icon={ShieldCheckIcon} size={17} className="text-[#10B981] shrink-0" strokeWidth={2} />
           <span>Role-Gated Access &bull; Direct Question Bank Sync</span>
         </div>
       </main>

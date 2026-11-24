@@ -15,6 +15,7 @@ import {
   Idea01Icon,
   Copy01Icon,
   Tick02Icon,
+  FileCodeIcon,
 } from '@hugeicons/core-free-icons';
 
 interface QuestionSubmitModalProps {
@@ -174,12 +175,7 @@ Output Requirements:
       title={
         <div className="flex items-center gap-2.5">
           <div className="w-7 h-7 rounded-lg bg-purple-50 border border-purple-200/70 flex items-center justify-center text-[#7E22CE] shrink-0">
-            <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M14 2H7C5.89543 2 5 2.89543 5 4V20C5 21.1046 5.89543 22 7 22H17C18.1046 22 19 21.1046 19 20V7L14 2Z" />
-              <path d="M14 2V7H19" />
-              <path d="M9 13H15" />
-              <path d="M9 17H13" />
-            </svg>
+            <HugeiconsIcon icon={FileCodeIcon} size={16} strokeWidth={2} />
           </div>
           <span className="font-display text-[18px] sm:text-[19px] font-extrabold tracking-[-0.02em] text-slate-900 truncate">
             {unit.status === 'approved' ? 'View / Replace Questions' : 'Submit Questions'}
