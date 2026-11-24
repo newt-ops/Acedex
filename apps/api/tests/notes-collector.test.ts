@@ -27,7 +27,7 @@ describe('Dedicated Quick Notes Collection Backend & Database Tests', { timeout:
         } catch {}
       }
     }
-    // Clean up ONLY test-specific documents in acedex_notes so contributor submissions are NEVER touched
+    // Clean up test documents in acedex_notes strictly targeting test-specific contributor and units
     try {
       const notesDb = getNotesDb();
       await notesDb.collection('note_submissions').deleteMany({
@@ -38,9 +38,14 @@ describe('Dedicated Quick Notes Collection Backend & Database Tests', { timeout:
       });
       await notesDb.collection('note_audits').deleteMany({
         $or: [
-          { actorId: 'ENG#101' },
+          { contributorId: 'ENG#101' },
           { unitCode: { $in: ['ENG-G09-U01', 'ENG-G09-U02', 'ENG-G09-U03'] } },
         ],
+      });
+      // Also clean up any test records in main db quick_notes
+      const mainDb = mongoose.connection.useDb('acedex');
+      await mainDb.collection('quick_notes').deleteMany({
+        unitCode: { $in: ['ENG-G09-U01', 'ENG-G09-U02', 'ENG-G09-U03'] },
       });
     } catch {}
     await disconnectDatabase();
@@ -326,5 +331,32 @@ describe('Dedicated Quick Notes Collection Backend & Database Tests', { timeout:
     expect(res.body.data.grade).toBe(9);
     expect(res.body.data.notes.length).toBeGreaterThanOrEqual(2);
     expect(res.body.data.notes[0].unitNumber).toBeLessThanOrEqual(res.body.data.notes[1].unitNumber);
+  });
+
+  it('10. POST /api/v1/notes-collector/admin/seed-main should directly seed approved notes into the main database', async () => {
+    const res = await request(app)
+      .post('/api/v1/notes-collector/admin/seed-main')
+      .send({ subjectCode: 'ENG', grade: 9 });
+
+    expect(res.status).toBe(200);
+    expect(res.body.success).toBe(true);
+    expect(res.body.data.seededCount).toBeGreaterThanOrEqual(1);
+
+    // Verify main DB quick_notes collection contains the seeded note
+    const mainDb = mongoose.connection.useDb('acedex');
+    const seededNote = await mainDb.collection('quick_notes').findOne({ unitCode: 'ENG-G09-U01' });
+    expect(seededNote).toBeDefined();
+    expect(seededNote?.unitCode).toBe('ENG-G09-U01');
+    expect(seededNote?.summaryPoints).toHaveLength(4);
+  });
+
+  it('11. GET /api/v1/curriculum/units/:unitId/notes should serve seeded notes from main database for mobile/web', async () => {
+    const res = await request(app)
+      .get('/api/v1/curriculum/units/ENG-G09-U01/notes');
+
+    expect(res.status).toBe(200);
+    expect(res.body.success).toBe(true);
+    expect(res.body.data.unitCode).toBe('ENG-G09-U01');
+    expect(res.body.data.summaryPoints).toHaveLength(4);
   });
 });

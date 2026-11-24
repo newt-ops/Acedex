@@ -24,6 +24,7 @@ import {
   CheckmarkCircle02Icon,
   ArrowDown01Icon,
   Download01Icon,
+  DatabaseSync01Icon,
 } from '@hugeicons/core-free-icons';
 
 export default function AdminNotesPage() {
@@ -96,6 +97,7 @@ export default function AdminNotesPage() {
     setApprovingId(sub._id);
     try {
       await api.reviewNoteSubmission(sub._id, 'approve');
+      setSyncMessage(`✓ Note ${sub.unitCode} approved and directly seeded into main database.`);
       await loadSubmissions();
     } catch (err: any) {
       alert(`Approval error: ${err.message || 'Failed to approve note'}`);
@@ -110,6 +112,7 @@ export default function AdminNotesPage() {
       for (const id of subIds) {
         await api.reviewNoteSubmission(id, 'approve');
       }
+      setSyncMessage(`✓ ${subIds.length} notes approved and directly seeded into main database.`);
       await loadSubmissions();
     } catch (err: any) {
       alert(`Bulk approval error: ${err.message || 'Failed to approve all selected'}`);
@@ -145,19 +148,22 @@ export default function AdminNotesPage() {
     }
   };
 
-  // Sync approved notes from database to local storage
-  const handleSyncToLocal = async () => {
+  // Seed approved notes from notes collector directly into the main ACEDEX database
+  const handleSeedToMainDb = async () => {
     setSyncing(true);
     setSyncMessage(null);
     setError(null);
     try {
-      const result = await api.syncLocalNotes();
+      const result = await api.seedApprovedNotesToMain({
+        subjectCode: subjectFilter !== 'ALL' ? subjectFilter : undefined,
+        grade: gradeFilter !== 'ALL' ? Number(gradeFilter) : undefined,
+      });
       setSyncMessage(
-        `✓ Sync Complete: ${result.exportedCount} approved notes synchronized.`
+        `✓ Main Database Seeded: ${result.seededCount} approved notes directly injected into production (units & quick_notes).`
       );
       await loadSubmissions();
     } catch (err: any) {
-      setError(err.message || 'Sync operation failed');
+      setError(err.message || 'Seeding to main database failed');
     } finally {
       setSyncing(false);
     }
@@ -233,17 +239,17 @@ export default function AdminNotesPage() {
 
             <button
               type="button"
-              onClick={handleSyncToLocal}
+              onClick={handleSeedToMainDb}
               disabled={syncing}
               className="btn-acedex-primary px-5 py-2.5 rounded-[14px] text-white text-[13px] font-semibold inline-flex items-center gap-2 cursor-pointer disabled:opacity-60"
             >
               <HugeiconsIcon
-                icon={Refresh01Icon}
+                icon={syncing ? Refresh01Icon : DatabaseSync01Icon}
                 size={16}
                 className={syncing ? 'animate-spin' : ''}
                 strokeWidth={2.1}
               />
-              <span>{syncing ? 'Syncing...' : 'Sync Approved Notes'}</span>
+              <span>{syncing ? 'Seeding Main DB...' : 'Seed to Main Database'}</span>
             </button>
           </div>
         </section>

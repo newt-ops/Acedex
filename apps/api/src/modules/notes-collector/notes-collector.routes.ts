@@ -73,4 +73,7 @@ router.post(
 // POST /api/v1/notes-collector/admin/sync-local - sync with local filesystem
 router.post('/admin/sync-local', notesAdminGuard, NotesCollectorController.syncLocalFiles);
 
+// POST /api/v1/notes-collector/admin/seed-main - seed approved notes directly into main acedex database
+router.post('/admin/seed-main', notesAdminGuard, NotesCollectorController.seedMainDatabase);
+
 export default router;

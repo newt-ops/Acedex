@@ -1,4 +1,4 @@
-import { Types } from 'mongoose';
+import mongoose, { Types } from 'mongoose';
 import {
   PublicQuestionItem,
   StudentStream,
@@ -114,6 +114,47 @@ export class CurriculumService {
     }
     ContentCacheService.set(cacheKey, unit as unknown as IUnit, 3600);
     return unit as unknown as IUnit;
+  }
+
+  /**
+   * Retrieves quick revision notes for a unit directly from the main acedex database
+   */
+  public static async getUnitNotes(unitId: string): Promise<any> {
+    const unit = await this.getUnitById(unitId);
+
+    // 1. Prefer dedicated quick_notes collection document
+    const mainDb = mongoose.connection.useDb('acedex');
+    const note = await mainDb.collection('quick_notes').findOne({
+      $or: [
+        { unitCode: unit.code },
+        { grade: unit.grade, subjectCode: unit.subjectCode, unitNumber: unit.unitNumber },
+      ],
+    });
+
+    if (note) {
+      return note;
+    }
+
+    // 2. Fall back to embedded unit.quickNotes with metadata merged
+    if (unit.quickNotes) {
+      const qn = unit.quickNotes as any;
+      return {
+        unitCode: unit.code,
+        unitTitle: unit.title,
+        unitNumber: unit.unitNumber,
+        grade: unit.grade,
+        subjectCode: unit.subjectCode,
+        examWeight: qn.examWeight || '',
+        summaryPoints: qn.summaryPoints || [],
+        formulas: qn.formulas || [],
+        examTip: qn.examTip || '',
+        keyDefinitions: qn.keyDefinitions || [],
+        eueeFocusTopics: qn.eueeFocusTopics || [],
+        updatedAt: qn.updatedAt || unit.updatedAt,
+      };
+    }
+
+    return null;
   }
 
   /**

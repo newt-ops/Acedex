@@ -9,6 +9,7 @@ router.get('/grades', CurriculumController.getGrades);
 router.get('/subjects', optionalAuth, asyncHandler(CurriculumController.getSubjects));
 router.get('/units', optionalAuth, asyncHandler(CurriculumController.getUnits));
 router.get('/units/:unitId', asyncHandler(CurriculumController.getUnitById));
+router.get('/units/:unitId/notes', optionalAuth, asyncHandler(CurriculumController.getUnitNotes));
 router.get(
   '/units/:unitId/questions',
   optionalAuth,

@@ -296,6 +296,19 @@ export const api = {
     );
   },
 
+  async seedApprovedNotesToMain(filters?: {
+    subjectCode?: string;
+    grade?: number;
+  }): Promise<{ seededCount: number; units: string[] }> {
+    return request<{ seededCount: number; units: string[] }>(
+      '/api/v1/notes-collector/admin/seed-main',
+      {
+        method: 'POST',
+        body: JSON.stringify(filters || {}),
+      }
+    );
+  },
+
   async exportGradeNotes(
     subjectCode: string,
     grade: number,

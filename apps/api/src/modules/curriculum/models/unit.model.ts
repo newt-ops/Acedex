@@ -1,6 +1,16 @@
 import mongoose, { Document, Model, Schema, Types } from 'mongoose';
 import { PublicationStatus } from '@acedex/contracts';
 
+export interface IUnitQuickNotes {
+  examWeight?: string;
+  summaryPoints: string[];
+  formulas: Array<{ label: string; expr: string }>;
+  examTip?: string;
+  keyDefinitions: Array<{ term: string; definition: string }>;
+  eueeFocusTopics: string[];
+  updatedAt?: Date;
+}
+
 export interface IUnit extends Document {
   grade: number;
   subjectId: Types.ObjectId;
@@ -11,6 +21,8 @@ export interface IUnit extends Document {
   status: PublicationStatus;
   isPublished: boolean;
   questionCount: number;
+  hasQuickNotes?: boolean;
+  quickNotes?: IUnitQuickNotes | null;
   createdAt: Date;
   updatedAt: Date;
 }
@@ -68,6 +80,15 @@ const UnitSchema = new Schema<IUnit>(
     questionCount: {
       type: Number,
       default: 0,
+    },
+    hasQuickNotes: {
+      type: Boolean,
+      default: false,
+      index: true,
+    },
+    quickNotes: {
+      type: Schema.Types.Mixed,
+      default: null,
     },
   },
   {

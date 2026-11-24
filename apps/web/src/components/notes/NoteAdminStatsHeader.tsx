@@ -63,7 +63,7 @@ export function NoteAdminStatsHeader({ submissions }: NoteAdminStatsHeaderProps)
           <div className="mt-2 font-display text-[28px] font-extrabold tabular-nums text-emerald-500 leading-none">
             {approved}
           </div>
-          <div className="mt-1.5 text-[12px] text-emerald-500/80">ready for study</div>
+          <div className="mt-1.5 text-[12px] text-emerald-500/80">seeded to main database</div>
         </div>
         <div className="w-11 h-11 rounded-[14px] bg-emerald-50 border border-emerald-200/75 flex items-center justify-center text-emerald-500 shrink-0">
           <HugeiconsIcon icon={CheckmarkCircle02Icon} size={20} strokeWidth={2} />

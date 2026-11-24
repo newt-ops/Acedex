@@ -158,6 +158,23 @@ export class NotesCollectorController {
     }
   }
 
+  public static async seedMainDatabase(req: Request, res: Response, next: NextFunction): Promise<void> {
+    try {
+      const { subjectCode, grade } = req.body || {};
+      const result = await NotesCollectorService.seedAllApprovedToMainDb({
+        subjectCode: typeof subjectCode === 'string' ? subjectCode : undefined,
+        grade: grade ? Number(grade) : undefined,
+      });
+
+      res.status(200).json({
+        success: true,
+        data: result,
+      });
+    } catch (err) {
+      next(err);
+    }
+  }
+
   public static async exportGradeNotes(req: Request, res: Response, next: NextFunction): Promise<void> {
     try {
       const { subjectCode, grade, status, download } = req.query;

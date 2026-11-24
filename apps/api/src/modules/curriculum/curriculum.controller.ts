@@ -86,6 +86,15 @@ export class CurriculumController {
     return sendSuccess(res, unit, 200);
   }
 
+  public static async getUnitNotes(
+    req: AuthenticatedRequest,
+    res: Response
+  ): Promise<Response> {
+    const unitId = req.params.unitId as string;
+    const notes = await CurriculumService.getUnitNotes(unitId);
+    return sendSuccess(res, notes, 200);
+  }
+
   public static async getQuestionsForUnit(
     req: AuthenticatedRequest,
     res: Response

@@ -1,5 +1,6 @@
 import fs from 'fs';
 import path from 'path';
+import mongoose from 'mongoose';
 import {
   CollectorNoteSubjectUnitsResponse,
   CollectorNoteUnitProgressItem,
@@ -10,6 +11,7 @@ import {
 import { getNoteSubmissionModel, INoteSubmission } from './models/note-submission.model';
 import { getNoteAuditModel } from './models/note-audit.model';
 import { NoteSanitizerService } from './services/note-sanitizer.service';
+import { ContentCacheService } from '../../common/services/cache.service';
 import { logger } from '../../common/utils/logger';
 
 const SUBJECT_CODE_MAP: Record<string, string> = {
@@ -401,9 +403,9 @@ export class NotesCollectorService {
 
     await submission.save();
 
-    // If approved, automatically sync and write to local filesystem file
+    // If approved, directly seed into main production 'acedex' database (units & quick_notes)
     if (action === 'approve') {
-      await this.writeSubmissionToFile(submission);
+      await this.seedApprovedNoteToMainDb(submission, adminUserId);
     }
 
     // Audit log
@@ -416,6 +418,146 @@ export class NotesCollectorService {
     });
 
     return submission;
+  }
+
+  /**
+   * Directly seeds an approved quick note into the main production 'acedex' database:
+   * 1. Injects/upserts into 'quick_notes' collection in acedex database
+   * 2. Injects/updates 'units' collection in acedex database with hasQuickNotes: true and quickNotes
+   * 3. Invalidates unit summary in ContentCacheService
+   * 4. Writes local file backup to content/quick-notes/
+   */
+  public static async seedApprovedNoteToMainDb(
+    sub: INoteSubmission,
+    adminUserId: string = 'ADMIN'
+  ): Promise<{ success: boolean; unitCode: string; mainDbTarget: string }> {
+    const cleanSubj = sub.subjectCode.toUpperCase().trim();
+    const cleanCode = sub.unitCode.toUpperCase().trim();
+
+    // 1. Get handle to MAIN production acedex database
+    const mainDb = mongoose.connection.useDb('acedex');
+
+    const notePayload = {
+      grade: sub.grade,
+      subject: sub.subject,
+      subjectCode: cleanSubj,
+      unitNumber: sub.unitNumber,
+      unitCode: cleanCode,
+      unitTitle: sub.unitTitle,
+      examWeight: sub.examWeight || '',
+      summaryPoints: sub.summaryPoints || [],
+      formulas: sub.formulas || [],
+      examTip: sub.examTip || '',
+      keyDefinitions: sub.keyDefinitions || [],
+      eueeFocusTopics: sub.eueeFocusTopics || [],
+      status: 'published',
+      isPublished: true,
+      approvedAt: sub.reviewedAt || new Date(),
+      approvedBy: adminUserId,
+      contributorId: sub.contributorId,
+      updatedAt: new Date(),
+    };
+
+    // 2. Upsert into 'quick_notes' collection in acedex
+    await mainDb.collection('quick_notes').updateOne(
+      { unitCode: cleanCode },
+      {
+        $set: notePayload,
+        $setOnInsert: {
+          createdAt: new Date(),
+        },
+      },
+      { upsert: true }
+    );
+
+    // 3. Inject into 'units' collection in acedex
+    await mainDb.collection('units').updateOne(
+      {
+        $or: [
+          { code: cleanCode },
+          { grade: sub.grade, subjectCode: cleanSubj, unitNumber: sub.unitNumber },
+        ],
+      },
+      {
+        $set: {
+          hasQuickNotes: true,
+          quickNotes: {
+            unitCode: cleanCode,
+            unitTitle: sub.unitTitle,
+            unitNumber: sub.unitNumber,
+            grade: sub.grade,
+            subjectCode: cleanSubj,
+            examWeight: sub.examWeight || '',
+            summaryPoints: sub.summaryPoints || [],
+            formulas: sub.formulas || [],
+            examTip: sub.examTip || '',
+            keyDefinitions: sub.keyDefinitions || [],
+            eueeFocusTopics: sub.eueeFocusTopics || [],
+            updatedAt: new Date(),
+          },
+          updatedAt: new Date(),
+        },
+      }
+    );
+
+    // 4. Invalidate cache
+    try {
+      ContentCacheService.delete(`unit_summary:${cleanCode}`);
+    } catch {}
+
+    // 5. Write local file backup in background
+    try {
+      await this.writeSubmissionToFile(sub);
+    } catch (writeErr: any) {
+      logger.warn({ unitCode: cleanCode, err: writeErr.message }, 'Local file backup skipped');
+    }
+
+    logger.info(
+      { unitCode: cleanCode, subjectCode: cleanSubj, grade: sub.grade },
+      'Directly seeded approved note into main acedex database (quick_notes & units)'
+    );
+
+    return {
+      success: true,
+      unitCode: cleanCode,
+      mainDbTarget: 'acedex.units & acedex.quick_notes',
+    };
+  }
+
+  /**
+   * Seeds all approved notes (optionally filtered by subject/grade) into the main acedex database
+   */
+  public static async seedAllApprovedToMainDb(filters?: {
+    subjectCode?: string;
+    grade?: number;
+  }): Promise<{ seededCount: number; units: string[] }> {
+    const NoteSubmission = getNoteSubmissionModel();
+    const query: any = { status: 'approved' };
+
+    if (filters?.subjectCode && filters.subjectCode !== 'ALL' && filters.subjectCode !== 'all') {
+      query.subjectCode = filters.subjectCode.toUpperCase().trim();
+    }
+    if (filters?.grade) {
+      query.grade = Number(filters.grade);
+    }
+
+    const approvedSubmissions = await NoteSubmission.find(query).lean();
+    const seededUnits: string[] = [];
+
+    for (const sub of approvedSubmissions) {
+      await this.seedApprovedNoteToMainDb(sub as unknown as INoteSubmission);
+      seededUnits.push(sub.unitCode);
+    }
+
+    logger.info(
+      { count: seededUnits.length, filters },
+      'Bulk seeded approved notes into main acedex database'
+    );
+
+    return {
+      seededCount: seededUnits.length,
+      units: seededUnits,
+    };
   }
 
   /**
