@@ -132,15 +132,16 @@ class _StudyScreenState extends State<StudyScreen> {
     _fetchLiveCurriculum();
   }
 
-  void _onSelectStream(String stream) {
-    if (_studentStream == stream) return;
-    setState(() {
-      _studentStream = stream;
+  @override
+  void didUpdateWidget(StudyScreen oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    if (widget.user?.stream != oldWidget.user?.stream) {
+      _studentStream = widget.user?.stream ?? 'natural';
       _curriculumMap.clear();
       _isLoading = true;
       _errorMessage = null;
-    });
-    _fetchLiveCurriculum();
+      _fetchLiveCurriculum();
+    }
   }
 
   void _handleOpenUnitQuickNotes(StudyUnit unit) {
@@ -660,7 +661,6 @@ class _StudyScreenState extends State<StudyScreen> {
               stream: _studentStream,
               registeredGrade: widget.user?.grade,
               onSelectGrade: _onSelectGrade,
-              onSelectStream: _onSelectStream,
             );
           },
           child: Container(
