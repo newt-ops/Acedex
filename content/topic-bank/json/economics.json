@@ -1,0 +1,742 @@
+{
+  "schemaVersion": 1,
+  "subjectCode": "ECO",
+  "subjectName": "Economics",
+  "streamCategory": "social",
+  "compiledAt": "2026-11-24T20:15:53.071Z",
+  "sourceFile": "economics.md",
+  "modules": [
+    {
+      "moduleId": "ECO-M01",
+      "subjectCode": "ECO",
+      "subjectName": "Economics",
+      "streamCategory": "social",
+      "moduleNumber": 1,
+      "phase": "Phase I: Foundational Core",
+      "title": "Foundations of Economics, Scarcity & Economic Systems",
+      "rationale": "Unifies foundational economic definitions, methods of inquiry, the central scarcity problem, the Production Possibilities Frontier (PPF), and institutional resource allocation systems into a cohesive entry point.",
+      "references": [
+        {
+          "grade": 9,
+          "unitNumber": 1,
+          "unitCode": "ECO-G09-U01",
+          "unitTitle": "Introducing Economics",
+          "pages": "pp. 1–12"
+        },
+        {
+          "grade": 9,
+          "unitNumber": 2,
+          "unitCode": "ECO-G09-U02",
+          "unitTitle": "The Basic Economic Problems and Economic Systems",
+          "pages": "pp. 13–28"
+        },
+        {
+          "grade": 9,
+          "unitNumber": 3,
+          "unitCode": "ECO-G09-U03",
+          "unitTitle": "Economic Resources and Markets",
+          "pages": "pp. 29–42"
+        },
+        {
+          "grade": 12,
+          "unitNumber": 1,
+          "unitCode": "ECO-G12-U01",
+          "unitTitle": "The Fundamental Concepts of Macroeconomics",
+          "pages": "pp. 1–5"
+        }
+      ],
+      "sequence": [
+        {
+          "stepNumber": 1,
+          "text": "Define economics, its Greek etymology (oikonomia), and the distinction between microeconomics (resource allocation) and macroeconomics (full employment)."
+        },
+        {
+          "stepNumber": 2,
+          "text": "Examine deductive reasoning (general to specific) vs. inductive reasoning (specific to general), and positive economics (what is) vs. normative economics (what ought to be)."
+        },
+        {
+          "stepNumber": 3,
+          "text": "Analyze the fundamental economic problem: universal Scarcity vs. temporary Shortage; how scarcity requires Choice, creating an Opportunity Cost."
+        },
+        {
+          "stepNumber": 4,
+          "text": "Construct and interpret the Production Possibilities Frontier (PPF): assumptions, calculating opportunity costs (|(Δ Y)/(Δ X)|), the Law of Increasing Opportunity Cost (concavity), and causes of outward/asymmetric shifts."
+        },
+        {
+          "stepNumber": 5,
+          "text": "Evaluate the three central economic questions (What, How, For whom?) and contrast the four economic systems (Traditional, Capitalist, Command, Mixed) based on property ownership, planning, and resource allocation mechanisms."
+        },
+        {
+          "stepNumber": 6,
+          "text": "Diagram the Circular Flow of Economic Activities: two-sector model (households and firms) and three-sector model (incorporating government taxes, purchases, and transfers)."
+        }
+      ],
+      "prerequisites": [
+        "Basic arithmetic and coordinate graphing"
+      ],
+      "masteryCheckpoint": "Calculate the opportunity cost of increasing computer production from 500 to 1,000 units on a given PPF schedule; classify whether \"The government should subsidize fertilizer for smallholders\" is positive or normative; and identify whether resources are allocated via the price mechanism, central planning, or both in a mixed economy.",
+      "sourceFile": "economics.md"
+    },
+    {
+      "moduleId": "ECO-M02",
+      "subjectCode": "ECO",
+      "subjectName": "Economics",
+      "streamCategory": "social",
+      "moduleNumber": 2,
+      "phase": "Phase I: Foundational Core",
+      "title": "Consumer Behaviour, Utility Theory & Demand Derivation",
+      "rationale": "Connects the two foundational theories of consumer choice—Cardinal Utility and Ordinal Utility—demonstrating how individual optimization leads directly to downward-sloping demand curves.",
+      "references": [
+        {
+          "grade": 10,
+          "unitNumber": 1,
+          "unitCode": "ECO-G10-U01",
+          "unitTitle": "Theory of Consumer Behaviour",
+          "pages": "pp. 1–16"
+        },
+        {
+          "grade": 11,
+          "unitNumber": 1,
+          "unitCode": "ECO-G11-U01",
+          "unitTitle": "Theory of Consumer Behavior and Demand",
+          "pages": "pp. 1–33"
+        }
+      ],
+      "sequence": [
+        {
+          "stepNumber": 1,
+          "text": "Define utility, subjective satisfaction, and the Cardinal Utility school (utils, monetary valuation)."
+        },
+        {
+          "stepNumber": 2,
+          "text": "Model Total Utility (TU) and Marginal Utility (MU = (Δ TU)/(Δ Q)); analyze the Law of Diminishing Marginal Utility (LDMU) and the saturation point where MU = 0."
+        },
+        {
+          "stepNumber": 3,
+          "text": "Solve the Cardinal consumer optimization problem: single-commodity equilibrium (MU_x = P_x) and multi-commodity equi-marginal allocation ((MU_A)/(P_A) = (MU_B)/(P_B) =... = MU_m) under budget constraints."
+        },
+        {
+          "stepNumber": 4,
+          "text": "Transition to Ordinal Utility theory: assumptions of rationality, consistency, transitivity, and non-satiation."
+        },
+        {
+          "stepNumber": 5,
+          "text": "Construct Indifference Curves (ICs), state their four essential properties, and compute the Marginal Rate of Substitution (MRS_x,y = -(Δ Y)/(Δ X) = (MU_x)/(MU_y))."
+        },
+        {
+          "stepNumber": 6,
+          "text": "Analyze special indifference curves: linear curves for perfect substitutes and L-shaped curves for perfect complements."
+        },
+        {
+          "stepNumber": 7,
+          "text": "Formulate the Budget Line equation (M = P_x X + P_y Y), identify its intercepts and slope (-(P_x)/(P_y)), and analyze parallel shifts (income changes) and rotations (price changes)."
+        },
+        {
+          "stepNumber": 8,
+          "text": "Determine Ordinal consumer optimum at the tangency condition (MRS_x,y = (P_x)/(P_y)); construct the Income-Consumption Curve (ICC) and Price-Consumption Curve (PCC), deriving the downward-sloping individual demand curve."
+        }
+      ],
+      "prerequisites": [
+        "Module 1 (scarcity, choice, and linear graphing)"
+      ],
+      "masteryCheckpoint": "Given income M = 22 Birr, P_x = 2, and P_y = 4 with a utility schedule, determine the optimal quantities of goods X and Y that satisfy equi-marginal optimization; state why two indifference curves cannot intersect; and draw the budget line rotation when the price of good X falls while income and P_y remain constant.",
+      "sourceFile": "economics.md"
+    },
+    {
+      "moduleId": "ECO-M03",
+      "subjectCode": "ECO",
+      "subjectName": "Economics",
+      "streamCategory": "social",
+      "moduleNumber": 3,
+      "phase": "Phase I: Foundational Core",
+      "title": "Competitive Market Mechanics, Elasticities & Price Controls",
+      "rationale": "Unifies demand and supply market mechanics, price elasticity calculations, equilibrium adjustments, and government price interventions.",
+      "references": [
+        {
+          "grade": 9,
+          "unitNumber": 4,
+          "unitCode": "ECO-G09-U04",
+          "unitTitle": "Introduction to Demand and Supply",
+          "pages": "pp. 43–54"
+        },
+        {
+          "grade": 10,
+          "unitNumber": 2,
+          "unitCode": "ECO-G10-U02",
+          "unitTitle": "Theories of Demand and Supply",
+          "pages": "pp. 17–48"
+        },
+        {
+          "grade": 12,
+          "unitNumber": 4,
+          "unitCode": "ECO-G12-U04",
+          "unitTitle": "Poverty and Inequality",
+          "pages": "pp. 84–89"
+        }
+      ],
+      "sequence": [
+        {
+          "stepNumber": 1,
+          "text": "Formulate the Law of Demand (P ↑ → Q_d ↓) and the Law of Supply (P ↑ → Q_s ↑); construct demand/supply schedules, curves, and mathematical functions."
+        },
+        {
+          "stepNumber": 2,
+          "text": "Distinguish between Movements along curves (changes in quantity demanded/supplied caused solely by own-price changes) and Shifts of curves (changes in demand/supply driven by non-price determinants)."
+        },
+        {
+          "stepNumber": 3,
+          "text": "Calculate Market Equilibrium (Q_d = Q_s); model shortages (excess demand) and surpluses (excess supply), explaining price adjustment mechanisms toward equilibrium."
+        },
+        {
+          "stepNumber": 4,
+          "text": "Compute and interpret the Price Elasticity of Demand (E_p^D) using point and midpoint/arc formulas; classify elasticity degrees (elastic, inelastic, unitary, perfectly elastic/inelastic) and evaluate its relationship with total revenue."
+        },
+        {
+          "stepNumber": 5,
+          "text": "Compute and interpret Income Elasticity of Demand (E_I^D: normal necessities, luxuries, inferior goods) and Cross-Price Elasticity (E_xy: substitutes, complements, independent goods)."
+        },
+        {
+          "stepNumber": 6,
+          "text": "Compute Price Elasticity of Supply (E_p^S) and identify its determinants (time horizon, factor mobility)."
+        },
+        {
+          "stepNumber": 7,
+          "text": "Evaluate government price interventions: Price Ceilings (statutory maximums below equilibrium causing shortages, e.g., urban rent control) vs. Price Floors (statutory minimums above equilibrium causing surpluses, e.g., minimum wages, grain price supports)."
+        }
+      ],
+      "prerequisites": [
+        "Module 2 (demand foundations and slopes)"
+      ],
+      "masteryCheckpoint": "Given Q_d = 250 - 3P and Q_s = 2P - 50, solve for equilibrium price and quantity; determine if there is a shortage or surplus if the government imposes a price ceiling of P = 50; and calculate the cross-price elasticity between tea and coffee if a 10% rise in coffee prices increases tea demand by 15%.",
+      "sourceFile": "economics.md"
+    },
+    {
+      "moduleId": "ECO-M04",
+      "subjectCode": "ECO",
+      "subjectName": "Economics",
+      "streamCategory": "social",
+      "moduleNumber": 4,
+      "phase": "Phase II: Core Systems",
+      "title": "Theory of Production, Cost Duality & Firm Supply",
+      "rationale": "Connects short-run and long-run production functions with cost functions, highlighting the mirror-image duality that determines a firm's short-run supply curve.",
+      "references": [
+        {
+          "grade": 9,
+          "unitNumber": 5,
+          "unitCode": "ECO-G09-U05",
+          "unitTitle": "Introduction to Production and Cost",
+          "pages": "pp. 55–66"
+        },
+        {
+          "grade": 10,
+          "unitNumber": 3,
+          "unitCode": "ECO-G10-U03",
+          "unitTitle": "Theories of Production and Cost",
+          "pages": "pp. 49–67"
+        },
+        {
+          "grade": 11,
+          "unitNumber": 2,
+          "unitCode": "ECO-G11-U02",
+          "unitTitle": "Market Structure and the Decision of Firms",
+          "pages": "pp. 36–46"
+        }
+      ],
+      "sequence": [
+        {
+          "stepNumber": 1,
+          "text": "Define production, inputs (fixed vs. variable), and time horizons (short-run vs. long-run)."
+        },
+        {
+          "stepNumber": 2,
+          "text": "Compute Short-Run product curves: Total Product (TP), Average Product (AP_L = (TP)/(L)), and Marginal Product (MP_L = (Δ TP)/(Δ L))."
+        },
+        {
+          "stepNumber": 3,
+          "text": "Analyze the Law of Diminishing Marginal Returns and demarcate the Three Stages of Production; explain why Stage II is the only rational operating zone."
+        },
+        {
+          "stepNumber": 4,
+          "text": "Model long-run production: Isoquants, isoquant maps, and Returns to Scale (Increasing, Constant, Decreasing Returns to Scale)."
+        },
+        {
+          "stepNumber": 5,
+          "text": "Distinguish Explicit costs (accounting out-of-pocket expenses) from Implicit costs (imputed self-owned factor values) to calculate Economic Cost (Explicit + Implicit)."
+        },
+        {
+          "stepNumber": 6,
+          "text": "Compute and graph short-run cost curves: TFC, TVC, TC, AFC, AVC, ATC, and MC; verify that MC intersects AVC and ATC at their respective minimums."
+        },
+        {
+          "stepNumber": 7,
+          "text": "Prove production-cost duality: AVC = (W)/(AP_L) and MC = (W)/(MP_L), showing that cost curves are exact mirror reflections of product curves."
+        },
+        {
+          "stepNumber": 8,
+          "text": "Formulate profit maximization rules (MR = MC); establish the shutdown rule (P < AVC) and derive the firm's short-run supply curve (MC curve above minimum AVC)."
+        }
+      ],
+      "prerequisites": [
+        "Module 1 (economic resources) and Module 3 (firm revenue and price)"
+      ],
+      "masteryCheckpoint": "Complete a table calculating ATC, AVC, AFC, and MC from given TFC and TVC series; identify the level of labor where Stage II of production begins and ends given a TP schedule; and explain why a competitive firm will continue operating at a loss in the short run as long as P ≥ AVC.",
+      "sourceFile": "economics.md"
+    },
+    {
+      "moduleId": "ECO-M05",
+      "subjectCode": "ECO",
+      "subjectName": "Economics",
+      "streamCategory": "social",
+      "moduleNumber": 5,
+      "phase": "Phase II: Core Systems",
+      "title": "Market Structures, Pricing Power & Market Failure",
+      "rationale": "Compares the pricing and output decisions of competitive and non-competitive firms, examining why imperfect competition and public externalities lead to market failures that require government intervention.",
+      "references": [
+        {
+          "grade": 10,
+          "unitNumber": 4,
+          "unitCode": "ECO-G10-U04",
+          "unitTitle": "Market Structure",
+          "pages": "pp. 68–87"
+        },
+        {
+          "grade": 11,
+          "unitNumber": 2,
+          "unitCode": "ECO-G11-U02",
+          "unitTitle": "Market Structure and the Decision of Firms",
+          "pages": "pp. 34–67"
+        },
+        {
+          "grade": 12,
+          "unitNumber": 3,
+          "unitCode": "ECO-G12-U03",
+          "unitTitle": "Macroeconomic Policy",
+          "pages": "pp. 48–70"
+        }
+      ],
+      "sequence": [
+        {
+          "stepNumber": 1,
+          "text": "Classify market structures using the four criteria: number of sellers/buyers, product differentiation, entry/exit barriers, and pricing power."
+        },
+        {
+          "stepNumber": 2,
+          "text": "Analyze Perfect Competition: price-taker assumption, horizontal firm demand (P = AR = MR), short-run profit/loss determination, and long-run zero-economic-profit equilibrium at P = min LAC."
+        },
+        {
+          "stepNumber": 3,
+          "text": "Analyze Pure Monopoly: single seller, barriers to entry, downward-sloping demand (P = a - bQ) and steeper marginal revenue (MR = a - 2bQ); solve profit maximization where MR = MC; evaluate first-, second-, and third-degree price discrimination."
+        },
+        {
+          "stepNumber": 4,
+          "text": "Analyze Monopolistic Competition: product differentiation, branding, downward-sloping but elastic demand, and long-run excess capacity."
+        },
+        {
+          "stepNumber": 5,
+          "text": "Analyze Oligopoly: mutual interdependence, collusive cartels vs. non-collusive price wars, and game theory foundations."
+        },
+        {
+          "stepNumber": 6,
+          "text": "Examine Market Failure: allocative inefficiency of monopoly (P > MC creating deadweight welfare loss)."
+        },
+        {
+          "stepNumber": 7,
+          "text": "Analyze Public Goods: non-excludability and non-rivalry causing the Free-Rider problem; contrast with private and common-property resources."
+        },
+        {
+          "stepNumber": 8,
+          "text": "Model Externalities: Negative externalities in production (MSC > MPC) causing overproduction, and Positive externalities in consumption (MSB > MPB) causing underproduction; evaluate corrective Pigouvian taxes, subsidies, and property rights."
+        },
+        {
+          "stepNumber": 9,
+          "text": "Examine Asymmetric Information (Adverse Selection and Moral Hazard) and consumer protection principles under Ethiopian law."
+        }
+      ],
+      "prerequisites": [
+        "Module 3 (supply and demand) and Module 4 (cost curves and MR=MC)"
+      ],
+      "masteryCheckpoint": "Given a monopolist with cost function TC = 0.5Q^2 and demand P = 12 - Q, calculate the profit-maximizing output and price; explain the two defining characteristics of a public good; and show graphically how a negative production externality drives marginal social cost above marginal private cost.",
+      "sourceFile": "economics.md"
+    },
+    {
+      "moduleId": "ECO-M06",
+      "subjectCode": "ECO",
+      "subjectName": "Economics",
+      "streamCategory": "social",
+      "moduleNumber": 6,
+      "phase": "Phase II: Core Systems",
+      "title": "National Income Accounting, Aggregate Consumption & Investment",
+      "rationale": "Bridges micro-foundations with macroeconomic accounting, connecting GDP measurement methods with Keynesian aggregate consumption and investment functions.",
+      "references": [
+        {
+          "grade": 9,
+          "unitNumber": 7,
+          "unitCode": "ECO-G09-U07",
+          "unitTitle": "Introduction to Macroeconomics",
+          "pages": "pp. 82–84"
+        },
+        {
+          "grade": 10,
+          "unitNumber": 7,
+          "unitCode": "ECO-G10-U07",
+          "unitTitle": "The Ethiopian Economy",
+          "pages": "pp. 134–142"
+        },
+        {
+          "grade": 11,
+          "unitNumber": 3,
+          "unitCode": "ECO-G11-U03",
+          "unitTitle": "National Income Accounting",
+          "pages": "pp. 69–89"
+        },
+        {
+          "grade": 11,
+          "unitNumber": 4,
+          "unitCode": "ECO-G11-U04",
+          "unitTitle": "Consumption, Saving and Investment",
+          "pages": "pp. 90–113"
+        }
+      ],
+      "sequence": [
+        {
+          "stepNumber": 1,
+          "text": "Define GDP (GDP = Σ P_i Q_i) and GNP (GNP = GDP + NFI); explain why GDP = GNP in a closed economy."
+        },
+        {
+          "stepNumber": 2,
+          "text": "Compute GDP using the Three Approaches: Expenditure Approach (C + I + G + NX), Income Approach (factor payments + indirect taxes + depreciation), and Value-Added Approach (gross output minus intermediate purchases)."
+        },
+        {
+          "stepNumber": 3,
+          "text": "Derive related national income measures: NDP, NI, PI, and Personal Disposable Income (DI = C + S)."
+        },
+        {
+          "stepNumber": 4,
+          "text": "Compute Nominal GDP, Real GDP, the GDP Price Deflator, and the Consumer Price Index (CPI), calculating inflation rates and noting GDP's welfare measurement limitations."
+        },
+        {
+          "stepNumber": 5,
+          "text": "Formulate the Keynesian Consumption Function: C = C_0 + c Y_d; calculate Average Propensity to Consume (APC = (C)/(Y_d)) and Marginal Propensity to Consume (MPC = (Δ C)/(Δ Y_d))."
+        },
+        {
+          "stepNumber": 6,
+          "text": "Formulate the Saving Function: S = -C_0 + (1-c) Y_d; prove that APC + APS = 1 and MPC + MPS = 1; interpret the 45-degree reference line (Y_d = C + S) and the break-even level of income."
+        },
+        {
+          "stepNumber": 7,
+          "text": "Evaluate Investment: Autonomous vs. Induced; Private vs. Public; Gross vs. Net (I_net = I_gross - Depreciation); analyze interest rate sensitivity and the Accelerator Theory (I_t = α(Y_t - Y_t-1))."
+        }
+      ],
+      "prerequisites": [
+        "Module 1 (circular flows) and Module 2 (linear equation modeling)"
+      ],
+      "masteryCheckpoint": "Given base-year and current-year prices and quantities for a two-good economy, compute Nominal GDP, Real GDP, and the GDP Deflator; given C = 80 + 0.75Y_d, derive the saving function and calculate consumption and saving when disposable income is 1,000 Birr; and prove why MPC + MPS must equal 1.",
+      "sourceFile": "economics.md"
+    },
+    {
+      "moduleId": "ECO-M07",
+      "subjectCode": "ECO",
+      "subjectName": "Economics",
+      "streamCategory": "social",
+      "moduleNumber": 7,
+      "phase": "Phase II: Core Systems",
+      "title": "Macroeconomic Challenges: Growth, Unemployment, Inflation & Schools of Thought",
+      "rationale": "Synthesizes the core challenges of macroeconomics—measuring growth, tracking business cycles, managing inflation, and addressing unemployment—framed within the historical debates between Classical, Keynesian, and Monetarist schools.",
+      "references": [
+        {
+          "grade": 9,
+          "unitNumber": 7,
+          "unitCode": "ECO-G09-U07",
+          "unitTitle": "Introduction to Macroeconomics",
+          "pages": "pp. 85–93"
+        },
+        {
+          "grade": 10,
+          "unitNumber": 6,
+          "unitCode": "ECO-G10-U06",
+          "unitTitle": "Economic Growth",
+          "pages": "pp. 114–133"
+        },
+        {
+          "grade": 12,
+          "unitNumber": 1,
+          "unitCode": "ECO-G12-U01",
+          "unitTitle": "The Fundamental Concepts of Macroeconomics",
+          "pages": "pp. 6–24"
+        }
+      ],
+      "sequence": [
+        {
+          "stepNumber": 1,
+          "text": "Define and calculate economic growth using annual real GDP changes and Real GDP Per Capita (PCI = (RGDP)/(Population)); identify the four sources of growth (physical capital, human capital, natural resources, technology)."
+        },
+        {
+          "stepNumber": 2,
+          "text": "Model the Business Cycle: characterize the four phases (Boom/Peak, Recession, Depression/Trough, Recovery/Expansion) around the long-term trend line."
+        },
+        {
+          "stepNumber": 3,
+          "text": "Measure the labour force and unemployment: compute Unemployment Rate (UR) and Labour Force Participation Rate (LFPR); analyze the three main types of unemployment (Frictional, Structural, Cyclical)."
+        },
+        {
+          "stepNumber": 4,
+          "text": "Analyze Inflation: classify by severity (creeping, galloping, hyperinflation) and by underlying causes (demand-pull vs. cost-push; wage-push, imported, and monetary expansion)."
+        },
+        {
+          "stepNumber": 5,
+          "text": "Compare Macroeconomic Schools of Thought: • Classical/Neoclassical: Say's Law (\"supply creates its own demand\"), fully flexible wages and prices, self-correcting full employment, long-run money neutrality, laissez-faire. • Keynesian: Wage and price stickiness, underemployment equilibrium driven by deficient aggregate demand, advocacy for active discretionary fiscal policy. • Monetarist: Money supply growth as the primary driver of inflation; emphasis on predictable monetary rules over fiscal management. • New Classical & New Keynesian: Rational expectations vs. micro-foundations of market rigidities."
+        }
+      ],
+      "prerequisites": [
+        "Module 6 (GDP, national income, and price deflators)"
+      ],
+      "masteryCheckpoint": "Given working-age population, employed count, and actively searching unemployed count, calculate the unemployment rate and labor force participation rate; contrast how a Classical economist and a Keynesian economist view government intervention during a deep economic depression; and differentiate demand-pull inflation from cost-push stagflation.",
+      "sourceFile": "economics.md"
+    },
+    {
+      "moduleId": "ECO-M08",
+      "subjectCode": "ECO",
+      "subjectName": "Economics",
+      "streamCategory": "social",
+      "moduleNumber": 8,
+      "phase": "Phase III: Advanced Synthesis",
+      "title": "Aggregate Demand, Aggregate Supply & Stabilization Policy",
+      "rationale": "Unifies macroeconomic equilibrium through the complete AD-AS model and evaluates how governments apply fiscal and monetary stabilization policies to manage economic fluctuations.",
+      "references": [
+        {
+          "grade": 12,
+          "unitNumber": 2,
+          "unitCode": "ECO-G12-U02",
+          "unitTitle": "Aggregate Demand and Aggregate Supply Analysis",
+          "pages": "pp. 25–47"
+        },
+        {
+          "grade": 12,
+          "unitNumber": 4,
+          "unitCode": "ECO-G12-U04",
+          "unitTitle": "Poverty and Inequality",
+          "pages": "pp. 71–84"
+        }
+      ],
+      "sequence": [
+        {
+          "stepNumber": 1,
+          "text": "Construct the Aggregate Demand (AD) curve: explain its downward slope via the Real Wealth Effect, Interest Rate Effect, and Net Export/Exchange Rate Effect."
+        },
+        {
+          "stepNumber": 2,
+          "text": "Identify shift factors of AD: changes in consumer confidence, investment expectations, government purchases, net exports, business taxes, and money supply."
+        },
+        {
+          "stepNumber": 3,
+          "text": "Construct the Aggregate Supply curves: Short-Run Aggregate Supply (SRAS: upward sloping due to sticky wages and producer misperceptions) vs. Long-Run Aggregate Supply (LRAS: vertical at potential output Y_f)."
+        },
+        {
+          "stepNumber": 4,
+          "text": "Determine Macroeconomic Equilibrium (AD = SRAS); analyze the impacts of AD shocks (demand expansions causing inflation) and AS shocks (supply-side cost increases causing stagflation)."
+        },
+        {
+          "stepNumber": 5,
+          "text": "Evaluate Fiscal Policy: expansionary fiscal policy (increasing government expenditure G, cutting taxes T, and raising transfers to close recessionary gaps) vs. contractionary fiscal policy (cutting G, raising T to curb inflationary gaps)."
+        },
+        {
+          "stepNumber": 6,
+          "text": "Evaluate Monetary Policy: roles of the National Bank of Ethiopia; tools: Discount Rate, Reserve Requirement Ratio (RRR), and Open Market Operations (OMO)."
+        },
+        {
+          "stepNumber": 7,
+          "text": "Trace monetary transmission pathways: Expansionary monetary policy (lowering discount rates, cutting RRR, buying Treasury bills → money supply ↑ → interest rates ↓ → investment and consumption ↑ → AD shifts right) vs. Contractionary policy."
+        }
+      ],
+      "prerequisites": [
+        "Module 3 (supply/demand curves) and Module 7 (macro challenges and schools of thought)"
+      ],
+      "masteryCheckpoint": "Use an AD-AS diagram to show the effect of a sudden increase in world oil prices on domestic real GDP and the price level; identify which monetary policy tools the central bank should apply to cool down an overheated economy; and explain why LRAS is vertical at potential GDP while SRAS slopes upward.",
+      "sourceFile": "economics.md"
+    },
+    {
+      "moduleId": "ECO-M09",
+      "subjectCode": "ECO",
+      "subjectName": "Economics",
+      "streamCategory": "social",
+      "moduleNumber": 9,
+      "phase": "Phase III: Advanced Synthesis",
+      "title": "Money, Financial Intermediation & Public Finance / Taxation",
+      "rationale": "Connects the institutional structure of money, banking, and financial markets with public finance, tax theory, and the legal tax schedules of Ethiopia.",
+      "references": [
+        {
+          "grade": 9,
+          "unitNumber": 6,
+          "unitCode": "ECO-G09-U06",
+          "unitTitle": "Introduction to Money",
+          "pages": "pp. 67–81"
+        },
+        {
+          "grade": 10,
+          "unitNumber": 5,
+          "unitCode": "ECO-G10-U05",
+          "unitTitle": "Banking and Finance",
+          "pages": "pp. 88–113"
+        },
+        {
+          "grade": 12,
+          "unitNumber": 5,
+          "unitCode": "ECO-G12-U05",
+          "unitTitle": "Tax Theory and Practice",
+          "pages": "pp. 101–120"
+        }
+      ],
+      "sequence": [
+        {
+          "stepNumber": 1,
+          "text": "Review the functions of money (medium of exchange, unit of account, store of value, standard of deferred payment) and Keynes' three liquidity motives."
+        },
+        {
+          "stepNumber": 2,
+          "text": "Examine financial intermediation: how banks decouple saving from investment, reduce search costs, and diversify credit risks."
+        },
+        {
+          "stepNumber": 3,
+          "text": "Classify financial markets: Money Markets (< 1 year debt instruments: Treasury bills) vs. Capital Markets (> 1 year: bonds, corporate equity)."
+        },
+        {
+          "stepNumber": 4,
+          "text": "Trace the historical evolution of banking in Ethiopia: Bank of Abyssinia (1905), National Bank of Ethiopia (central monetary authority), Commercial Bank of Ethiopia (CBE), Development Bank of Ethiopia (DBE), and post-1991 private commercial banks and microfinance institutions (MFIs)."
+        },
+        {
+          "stepNumber": 5,
+          "text": "Evaluate Indigenous Financial Institutions in Ethiopia: Iqqub (rotating savings and credit associations) and Iddir (informal mutual assistance and funeral assurance societies); SACCOs."
+        },
+        {
+          "stepNumber": 6,
+          "text": "Examine Tax Theory: definition of tax (compulsory, unrequited payment without quid pro quo), objectives of taxation, and Adam Smith's Canons of Taxation (Equity, Certainty, Convenience, Economy)."
+        },
+        {
+          "stepNumber": 7,
+          "text": "Classify taxes: Direct taxes (impact and incidence on same entity: personal income, business profit) vs. Indirect taxes (impact and incidence separated through shifting: VAT, excise, customs duties)."
+        },
+        {
+          "stepNumber": 8,
+          "text": "Analyze Tax Equity: Benefits-Received Principle vs. Ability-to-Pay Principle; rate structures (Progressive, Proportional, Regressive)."
+        },
+        {
+          "stepNumber": 9,
+          "text": "Detail Ethiopian Tax Schedules under Proclamation No. 286/2002: Schedule A (employment income), Schedule B (rental income), Schedule C (business profit), Schedule D (other income: royalties, dividends); contrast Tax Evasion (illegal fraud) with Tax Avoidance (legal loopholes)."
+        }
+      ],
+      "prerequisites": [
+        "Module 1 (government role) and Module 8 (fiscal policy)"
+      ],
+      "masteryCheckpoint": "Differentiate the economic roles of the National Bank of Ethiopia from the Commercial Bank of Ethiopia; explain how an Iqqub operates as an informal credit market; calculate the tax liability of an employee under a progressive tax schedule; and distinguish tax impact from tax incidence.",
+      "sourceFile": "economics.md"
+    },
+    {
+      "moduleId": "ECO-M10",
+      "subjectCode": "ECO",
+      "subjectName": "Economics",
+      "streamCategory": "social",
+      "moduleNumber": 10,
+      "phase": "Phase III: Advanced Synthesis",
+      "title": "Trade, Globalization, Development Economics & the Ethiopian Economy",
+      "rationale": "Integrates international trade theories, balance of payments accounting, development economics paradigms, and environmental constraints with the historical and contemporary reform path of the Ethiopian economy.",
+      "references": [
+        {
+          "grade": 10,
+          "unitNumber": 7,
+          "unitCode": "ECO-G10-U07",
+          "unitTitle": "The Ethiopian Economy",
+          "pages": "pp. 143–160"
+        },
+        {
+          "grade": 11,
+          "unitNumber": 5,
+          "unitCode": "ECO-G11-U05",
+          "unitTitle": "Trade and Finance",
+          "pages": "pp. 114–144"
+        },
+        {
+          "grade": 11,
+          "unitNumber": 6,
+          "unitCode": "ECO-G11-U06",
+          "unitTitle": "Economic Development",
+          "pages": "pp. 145–166"
+        },
+        {
+          "grade": 11,
+          "unitNumber": 7,
+          "unitCode": "ECO-G11-U07",
+          "unitTitle": "Main Sectors, Sectorial Policies and Strategies of Ethiopia",
+          "pages": "pp. 167–192"
+        },
+        {
+          "grade": 12,
+          "unitNumber": 6,
+          "unitCode": "ECO-G12-U06",
+          "unitTitle": "International Trade and Finance",
+          "pages": "pp. 122–147"
+        },
+        {
+          "grade": 12,
+          "unitNumber": 7,
+          "unitCode": "ECO-G12-U07",
+          "unitTitle": "Macroeconomic Reforms in Ethiopia",
+          "pages": "pp. 148–181"
+        },
+        {
+          "grade": 12,
+          "unitNumber": 8,
+          "unitCode": "ECO-G12-U08",
+          "unitTitle": "Economy, Environment and Climate Change",
+          "pages": "pp. 182–204"
+        }
+      ],
+      "sequence": [
+        {
+          "stepNumber": 1,
+          "text": "Contrast Mercantilist trade philosophy with Classical Trade Theories: Adam Smith's Absolute Advantage and David Ricardo's Law of Comparative Advantage based on opportunity cost differences."
+        },
+        {
+          "stepNumber": 2,
+          "text": "Analyze the Balance of Payments (BOP): Current Account (visible goods, services, transfers) vs. Capital Account; evaluate protectionist trade policy instruments (tariffs vs. quotas) and industrialization strategies (Import Substitution vs. Export Promotion)."
+        },
+        {
+          "stepNumber": 3,
+          "text": "Analyze Foreign Exchange Regimes: Fixed vs. Floating exchange rates; evaluate the impact of currency devaluation on trade deficits and imported inflation in Ethiopia."
+        },
+        {
+          "stepNumber": 4,
+          "text": "Review stages of Regional Economic Integration (Free Trade Area → Customs Union → Common Market → Economic Union) and globalization."
+        },
+        {
+          "stepNumber": 5,
+          "text": "Distinguish Economic Growth (unidimensional real GDP expansion) from Economic Development (multidimensional structural transformation); evaluate the Human Development Index (HDI: health, education, income)."
+        },
+        {
+          "stepNumber": 6,
+          "text": "Apply Amartya Sen's Capability Approach: commodities as means, functioning vs. capability, conversion factors, and development as freedom."
+        },
+        {
+          "stepNumber": 7,
+          "text": "Measure Poverty and Inequality: Absolute vs. Relative poverty; Headcount Index; Lorenz Curve and Gini Coefficient (G = (A)/(A+B))."
+        },
+        {
+          "stepNumber": 8,
+          "text": "Review Ethiopian Agricultural and Industrial Policies across regimes: Imperial Five-Year Plans, Derg command collectivization, post-1991 Agricultural Development-Led Industrialization (ADLI), and successive plans (SDPRP, PASDEP, GTP I, GTP II, 10-Year Prosperity Plan)."
+        },
+        {
+          "stepNumber": 9,
+          "text": "Analyze the Home-Grown Economic Reform (HGER): macroeconomic, structural, and sectoral pillars addressing debt vulnerabilities, foreign exchange shortages, and private sector expansion; fiscal decentralization."
+        },
+        {
+          "stepNumber": 10,
+          "text": "Integrate Environmental Economics: market failure from pollution externalities, climate change vulnerability, and Ethiopia's Climate Resilient Green Economy (CRGE) strategy."
+        }
+      ],
+      "prerequisites": [
+        "Modules 3, 5, 6, 8, and 9"
+      ],
+      "masteryCheckpoint": "Given a two-country, two-good labor-productivity table, identify which country holds comparative advantage in each good and calculate the gains from trade; interpret a Gini coefficient of 0.45 versus 0.25 using a Lorenz curve diagram; list the three core dimensions of the Human Development Index; and name the four strategic pillars of Ethiopia's CRGE strategy.",
+      "sourceFile": "economics.md"
+    }
+  ]
+}

@@ -1,0 +1,744 @@
+{
+  "schemaVersion": 1,
+  "subjectCode": "PHY",
+  "subjectName": "Physics",
+  "streamCategory": "natural",
+  "compiledAt": "2026-11-24T20:15:53.084Z",
+  "sourceFile": "physics.md",
+  "modules": [
+    {
+      "moduleId": "PHY-M01",
+      "subjectCode": "PHY",
+      "subjectName": "Physics",
+      "streamCategory": "natural",
+      "moduleNumber": 1,
+      "phase": "Phase I: Foundational Core",
+      "title": "Measurement Standards, Precision & Comprehensive Vector Analysis",
+      "rationale": "Establishes standard scientific measurement units, uncertainty, and vector mathematics, providing the mathematical tools required for all subsequent mechanics modules.",
+      "references": [
+        {
+          "grade": 9,
+          "unitNumber": 1,
+          "unitCode": "PHY-G09-U01",
+          "unitTitle": "Physics and Human Society",
+          "pages": "pp. 1–10"
+        },
+        {
+          "grade": 9,
+          "unitNumber": 2,
+          "unitCode": "PHY-G09-U02",
+          "unitTitle": "Physical Quantities",
+          "pages": "pp. 11–38"
+        },
+        {
+          "grade": 10,
+          "unitNumber": 1,
+          "unitCode": "PHY-G10-U01",
+          "unitTitle": "Vector Quantities",
+          "pages": "pp. 5–26"
+        },
+        {
+          "grade": 11,
+          "unitNumber": 2,
+          "unitCode": "PHY-G11-U02",
+          "unitTitle": "Vectors",
+          "pages": "pp. 17–46"
+        }
+      ],
+      "sequence": [
+        {
+          "stepNumber": 1,
+          "text": "SI base units (m, kg, s, K, A, mol, cd) and prefix orders (10^(12) to 10^(-12))."
+        },
+        {
+          "stepNumber": 2,
+          "text": "Derived units, dimensional analysis, scientific notation, and significant figures."
+        },
+        {
+          "stepNumber": 3,
+          "text": "Scalar vs. vector quantities; Graphical vector addition (triangle, parallelogram, polygon laws)."
+        },
+        {
+          "stepNumber": 4,
+          "text": "2D analytical vector resolution into rectangular components (A_x = Acosθ, A_y = Asinθ)."
+        },
+        {
+          "stepNumber": 5,
+          "text": "Unit vectors (hat{i}, hat{j}, hat{k}) and vector addition via components."
+        },
+        {
+          "stepNumber": 6,
+          "text": "Scalar (dot) product (vec{A}·vec{B} = ABcosθ) and vector (cross) product (vec{A}×vec{B})."
+        }
+      ],
+      "prerequisites": [
+        "High school algebra and basic trigonometry (sin, cos, tan)"
+      ],
+      "masteryCheckpoint": "Given vec{A} = 3hat{i} - 4hat{j} and vec{B} = -2hat{i} + 5hat{j}, calculate the magnitude of the resultant vec{R} = 2vec{A} - vec{B}, find the unit vector pointing in the direction of vec{A}, and calculate the angle between vec{A} and vec{B} using the dot product.",
+      "sourceFile": "physics.md"
+    },
+    {
+      "moduleId": "PHY-M02",
+      "subjectCode": "PHY",
+      "subjectName": "Physics",
+      "streamCategory": "natural",
+      "moduleNumber": 2,
+      "phase": "Phase I: Foundational Core",
+      "title": "Unified Kinematics in One and Two Dimensions",
+      "rationale": "Merges 1D linear motion with 2D projectile trajectories and rotational kinematics, showing how multi-dimensional paths can be decomposed into simpler 1D components.",
+      "references": [
+        {
+          "grade": 9,
+          "unitNumber": 3,
+          "unitCode": "PHY-G09-U03",
+          "unitTitle": "Motion in a Straight Line",
+          "pages": "pp. 39–62"
+        },
+        {
+          "grade": 10,
+          "unitNumber": 2,
+          "unitCode": "PHY-G10-U02",
+          "unitTitle": "Motion in Two Dimensions",
+          "pages": "pp. 27–58"
+        },
+        {
+          "grade": 11,
+          "unitNumber": 3,
+          "unitCode": "PHY-G11-U03",
+          "unitTitle": "Motion in One and Two Dimensions",
+          "pages": "pp. 47–94"
+        },
+        {
+          "grade": 12,
+          "unitNumber": 2,
+          "unitCode": "PHY-G12-U02",
+          "unitTitle": "Two-dimensional Motion",
+          "pages": "pp. 24–38, 39–50"
+        }
+      ],
+      "sequence": [
+        {
+          "stepNumber": 1,
+          "text": "Position, displacement, average/instantaneous speed, and velocity."
+        },
+        {
+          "stepNumber": 2,
+          "text": "Graphical analysis of motion: slope of s-t gives velocity, slope of v-t gives acceleration, area under v-t gives displacement."
+        },
+        {
+          "stepNumber": 3,
+          "text": "The five kinematic equations for constant acceleration in 1D."
+        },
+        {
+          "stepNumber": 4,
+          "text": "Vertical free fall under gravity (a = -g) and 1D relative velocity (v_AB = v_A ± v_B)."
+        },
+        {
+          "stepNumber": 5,
+          "text": "2D projectile motion: independent horizontal velocity (a_x = 0) and vertical acceleration (a_y = -g)."
+        },
+        {
+          "stepNumber": 6,
+          "text": "Derivation of projectile time of flight (T = (2usinθ)/(g)), maximum height (H = (u^2sin^2θ)/(2g)), and range (R = (u^2sin 2θ)/(g))."
+        },
+        {
+          "stepNumber": 7,
+          "text": "Uniform circular motion: angular velocity (omega), tangential velocity (v_t = omega r), and centripetal acceleration (a_c = (v^2)/(r) = omega^2 r)."
+        },
+        {
+          "stepNumber": 8,
+          "text": "Rotational kinematics equations with constant angular acceleration (θ, omega, α)."
+        }
+      ],
+      "prerequisites": [
+        "Module 1 (trigonometric component resolution)"
+      ],
+      "masteryCheckpoint": "A football is kicked at 20\\,m/s at an angle of 30° above the horizontal. Calculate its total time of flight, its maximum elevation, its horizontal range, and its velocity vector at t = 1.5\\,s.",
+      "sourceFile": "physics.md"
+    },
+    {
+      "moduleId": "PHY-M03",
+      "subjectCode": "PHY",
+      "subjectName": "Physics",
+      "streamCategory": "natural",
+      "moduleNumber": 3,
+      "phase": "Phase I: Foundational Core",
+      "title": "Complete Dynamics, Work-Energy & Momentum Systems",
+      "rationale": "Unifies the causes of translational and rotational motion with the fundamental conservation laws of physical mechanics (Mechanical Energy and Linear/Angular Momentum).",
+      "references": [
+        {
+          "grade": 9,
+          "unitNumber": 4,
+          "unitCode": "PHY-G09-U04",
+          "unitTitle": "Force, Work, Energy and Power",
+          "pages": "pp. 63–84"
+        },
+        {
+          "grade": 11,
+          "unitNumber": 4,
+          "unitCode": "PHY-G11-U04",
+          "unitTitle": "Dynamics",
+          "pages": "pp. 95–174"
+        },
+        {
+          "grade": 12,
+          "unitNumber": 2,
+          "unitCode": "PHY-G12-U02",
+          "unitTitle": "Two-dimensional Motion",
+          "pages": "pp. 50–68"
+        }
+      ],
+      "sequence": [
+        {
+          "stepNumber": 1,
+          "text": "Newton's Three Laws of Motion, inertia, mass vs. weight (W = mg)."
+        },
+        {
+          "stepNumber": 2,
+          "text": "Static and kinetic friction: F_s ≤ μ_s F_N and F_k = μ_k F_N; inclined plane dynamics and critical angle of repose (θ_c = tan^(-1)μ_s)."
+        },
+        {
+          "stepNumber": 3,
+          "text": "Free-body diagrams, connected bodies over pulleys, and apparent weight in accelerating elevators (T = m(g ± a))."
+        },
+        {
+          "stepNumber": 4,
+          "text": "Work done by constant and varying forces (W = int F\\,dx); spring elasticity (Hooke's Law: F = -kx, PE = (1)/(2)kx^2)."
+        },
+        {
+          "stepNumber": 5,
+          "text": "Work-Energy Theorem (W_net = Δ KE) and conservation of mechanical energy (KE_i + PE_i = KE_f + PE_f + W_friction)."
+        },
+        {
+          "stepNumber": 6,
+          "text": "Power: average and instantaneous rate of work (P = (W)/(t) = vec{F}·vec{v})."
+        },
+        {
+          "stepNumber": 7,
+          "text": "Impulse-Momentum Theorem (vec{J} = vec{F}_netΔ t = Δvec{P}) and isolated momentum conservation (Σvec{P}_i = Σvec{P}_f)."
+        },
+        {
+          "stepNumber": 8,
+          "text": "Collisions in 1D: elastic (e = 1), inelastic, and perfectly inelastic (v_f = (m_1 u_1 + m_2 u_2)/(m_1 + m_2)); ballistic pendulum."
+        },
+        {
+          "stepNumber": 9,
+          "text": "Center of mass calculation and variable mass systems (rocket propulsion: F_thrust = v_rel(Δ m)/(Δ t))."
+        },
+        {
+          "stepNumber": 10,
+          "text": "Rotational dynamics: torque (tau = r Fsinθ = Iα), moment of inertia (I = Σ m_i r_i^2), rotational kinetic energy, and angular momentum conservation (L = Iomega)."
+        },
+        {
+          "stepNumber": 11,
+          "text": "Newton's Law of Universal Gravitation (F_g = G(m_1 m_2)/(r^2)), orbital speeds, and Kepler's three laws of planetary motion."
+        }
+      ],
+      "prerequisites": [
+        "Modules 1 and 2 (vectors and kinematics)"
+      ],
+      "masteryCheckpoint": "A 2\\,kg block released from rest at the top of a 5\\,m high, 30° incline slides down with coefficient of kinetic friction μ_k = 0.2. Use the Work-Energy Theorem to find its velocity at the bottom. Then, calculate the rebound height if it collides elastically with a stationary 3\\,kg block.",
+      "sourceFile": "physics.md"
+    },
+    {
+      "moduleId": "PHY-M04",
+      "subjectCode": "PHY",
+      "subjectName": "Physics",
+      "streamCategory": "natural",
+      "moduleNumber": 4,
+      "phase": "Phase II: Core Systems",
+      "title": "Statics, Solid Elasticity, Simple Machines & Fluid Mechanics",
+      "rationale": "Examines static equilibrium across mechanical systems, solid materials under load, simple machines, and pressurized fluids.",
+      "references": [
+        {
+          "grade": 9,
+          "unitNumber": 5,
+          "unitCode": "PHY-G09-U05",
+          "unitTitle": "Simple Machines",
+          "pages": "pp. 85–118"
+        },
+        {
+          "grade": 10,
+          "unitNumber": 3,
+          "unitCode": "PHY-G10-U03",
+          "unitTitle": "Elasticity and Static Equilibrium of Rigid Bodies",
+          "pages": "pp. 59–80"
+        },
+        {
+          "grade": 11,
+          "unitNumber": 4,
+          "unitCode": "PHY-G11-U04",
+          "unitTitle": "Dynamics",
+          "pages": "pp. 95–125, 148–174"
+        },
+        {
+          "grade": 12,
+          "unitNumber": 3,
+          "unitCode": "PHY-G12-U03",
+          "unitTitle": "Fluid Mechanics",
+          "pages": "pp. 69–116"
+        }
+      ],
+      "sequence": [
+        {
+          "stepNumber": 1,
+          "text": "First and Second conditions of static equilibrium (Σvec{F} = 0, Σvec{tau} = 0)."
+        },
+        {
+          "stepNumber": 2,
+          "text": "Elasticity, plasticity, tensile stress (σ = (F)/(A)), tensile strain (epsilon = (Δ L)/(L_0)), Young's Modulus (Y = (σ)/(epsilon)), and elastic limits."
+        },
+        {
+          "stepNumber": 3,
+          "text": "Metrics of simple machines: AMA = (Load)/(Effort), VR = (d_E)/(d_L), eta = (AMA)/(VR)× 100\\%."
+        },
+        {
+          "stepNumber": 4,
+          "text": "Principles of levers (classes 1, 2, 3), inclined planes, wedges, screws, wheel and axle, and pulley systems (VR = n)."
+        },
+        {
+          "stepNumber": 5,
+          "text": "Fluid statics: density, specific gravity, pressure definition, atmospheric pressure, and gauge vs. absolute pressure (P_abs = P_atm + rho gh)."
+        },
+        {
+          "stepNumber": 6,
+          "text": "Pascal's Principle and hydraulic lift calculations ((F_1)/(A_1) = (F_2)/(A_2))."
+        },
+        {
+          "stepNumber": 7,
+          "text": "Archimedes' Principle: buoyant force (F_B = rho_fluidV_dispg) and the law of flotation."
+        },
+        {
+          "stepNumber": 8,
+          "text": "Fluid dynamics: Equation of Continuity (A_1 v_1 = A_2 v_2) for steady laminar flow."
+        }
+      ],
+      "prerequisites": [
+        "Module 3 (forces and torque equilibrium)"
+      ],
+      "masteryCheckpoint": "A uniform 10\\,m ladder of mass 20\\,kg leans against a smooth vertical wall at an angle of 60° to the horizontal. Calculate the minimum coefficient of static friction between the ladder and the ground needed to prevent slipping. Then, find the apparent weight of a 500\\,cm^3 iron block submerged in water.",
+      "sourceFile": "physics.md"
+    },
+    {
+      "moduleId": "PHY-M05",
+      "subjectCode": "PHY",
+      "subjectName": "Physics",
+      "streamCategory": "natural",
+      "moduleNumber": 5,
+      "phase": "Phase II: Core Systems",
+      "title": "Oscillations, Mechanical Waves, Sound & Geometrical Optics",
+      "rationale": "Unifies wave motion across mechanical oscillations, acoustic compression waves, electromagnetic radiation, and ray optics.",
+      "references": [
+        {
+          "grade": 9,
+          "unitNumber": 6,
+          "unitCode": "PHY-G09-U06",
+          "unitTitle": "Mechanical Oscillation and Sound Wave",
+          "pages": "pp. 119–144"
+        },
+        {
+          "grade": 10,
+          "unitNumber": 6,
+          "unitCode": "PHY-G10-U06",
+          "unitTitle": "Electromagnetic Waves and Geometrical Optics",
+          "pages": "pp. 155–203"
+        },
+        {
+          "grade": 12,
+          "unitNumber": 1,
+          "unitCode": "PHY-G12-U01",
+          "unitTitle": "Application of Physics in Other Fields",
+          "pages": "pp. 1–23"
+        }
+      ],
+      "sequence": [
+        {
+          "stepNumber": 1,
+          "text": "Periodic oscillation parameters: period (T), frequency (f = (1)/(T)), amplitude (A), wavelength (λ), and speed (v = fλ)."
+        },
+        {
+          "stepNumber": 2,
+          "text": "Simple Harmonic Motion: simple pendulum (T = 2πsqrt{(L)/(g)}) and mass-spring systems (T = 2πsqrt{(m)/(k)})."
+        },
+        {
+          "stepNumber": 3,
+          "text": "Transverse vs. longitudinal waves; sound waves, speed of sound in media, and temperature variations (v ≈ 331 + 0.6\\,T)."
+        },
+        {
+          "stepNumber": 4,
+          "text": "Wave phenomena: reflection (echoes), refraction in atmospheric temperature gradients, diffraction, and interference."
+        },
+        {
+          "stepNumber": 5,
+          "text": "The Electromagnetic Spectrum: radio to gamma rays in order of frequency and energy (E = hf)."
+        },
+        {
+          "stepNumber": 6,
+          "text": "Laws of reflection and refraction; Snell's Law (n_1sinθ_1 = n_2sinθ_2); total internal reflection and critical angle (sinθ_c = (n_2)/(n_1))."
+        },
+        {
+          "stepNumber": 7,
+          "text": "Image formation in plane mirrors, spherical mirrors (concave/convex), and thin lenses (converging/diverging)."
+        },
+        {
+          "stepNumber": 8,
+          "text": "The Mirror and Thin Lens equations ((1)/(f) = (1)/(u) + (1)/(v)) and magnification (m = -(v)/(u) or (v)/(u))."
+        },
+        {
+          "stepNumber": 9,
+          "text": "Optical instruments (microscopes, telescopes) and human eye defect corrections (myopia and hypermetropia)."
+        },
+        {
+          "stepNumber": 10,
+          "text": "Color addition of light (Red, Green, Blue) and subtractive filters."
+        }
+      ],
+      "prerequisites": [
+        "Module 1 (geometry and trigonometry) and Module 2 (kinematic variables)"
+      ],
+      "masteryCheckpoint": "An object is placed 15\\,cm in front of a concave mirror with a focal length of 10\\,cm. Calculate the image distance, magnification, and state whether the image is real or virtual. Next, determine the critical angle for light passing from water (n = 1.33) into air (n = 1.00).",
+      "sourceFile": "physics.md"
+    },
+    {
+      "moduleId": "PHY-M06",
+      "subjectCode": "PHY",
+      "subjectName": "Physics",
+      "streamCategory": "natural",
+      "moduleNumber": 6,
+      "phase": "Phase II: Core Systems",
+      "title": "Thermal Physics, Calorimetry & Phase Transitions",
+      "rationale": "Unifies microscopic molecular kinetic theory with macroscopic temperature scales, thermal expansion, heat transfer mechanisms, and phase change calorimetry.",
+      "references": [
+        {
+          "grade": 9,
+          "unitNumber": 7,
+          "unitCode": "PHY-G09-U07",
+          "unitTitle": "Temperature and Thermometry",
+          "pages": "pp. 145–174"
+        },
+        {
+          "grade": 11,
+          "unitNumber": 5,
+          "unitCode": "PHY-G11-U05",
+          "unitTitle": "Heat Conduction and Calorimetry",
+          "pages": "pp. 175–216"
+        }
+      ],
+      "sequence": [
+        {
+          "stepNumber": 1,
+          "text": "Concept of temperature as average molecular kinetic energy; Zeroth Law of Thermodynamics and thermal equilibrium."
+        },
+        {
+          "stepNumber": 2,
+          "text": "Thermometric properties, fixed points, and scale conversions between Celsius, Kelvin, and Fahrenheit."
+        },
+        {
+          "stepNumber": 3,
+          "text": "Thermal expansion in solids: linear (Δ L = α L_0Δ T), superficial (Δ A = 2α A_0Δ T), and cubical/volume (Δ V = 3α V_0Δ T); apparent liquid expansion."
+        },
+        {
+          "stepNumber": 4,
+          "text": "Heat as energy in transit; mechanisms of heat transfer: Conduction (H = kA(Δ T)/(L)), Convection, and Radiation (Stefan-Boltzmann)."
+        },
+        {
+          "stepNumber": 5,
+          "text": "Specific heat capacity (Q = mcΔ T) and molar heat capacity."
+        },
+        {
+          "stepNumber": 6,
+          "text": "Latent heat of fusion (L_f) and vaporization (L_v); heating/cooling curves and phase change thermodynamics."
+        },
+        {
+          "stepNumber": 7,
+          "text": "Phase diagrams: equilibrium lines, triple point, and critical point."
+        },
+        {
+          "stepNumber": 8,
+          "text": "Quantitative calorimetry: heat lost by hot bodies equals heat gained by cold bodies (Q_lost = Q_gained)."
+        }
+      ],
+      "prerequisites": [
+        "Module 1 (measurement units) and Module 3 (work and conservation of energy)"
+      ],
+      "masteryCheckpoint": "A 0.5\\,kg block of aluminum at 100°C is dropped into an insulated calorimeter containing 1.0\\,kg of water and a 0.2\\,kg copper stirrer at 20°C. Calculate the final equilibrium temperature of the mixture given the specific heat capacities of aluminum, copper, and water.",
+      "sourceFile": "physics.md"
+    },
+    {
+      "moduleId": "PHY-M07",
+      "subjectCode": "PHY",
+      "subjectName": "Physics",
+      "streamCategory": "natural",
+      "moduleNumber": 7,
+      "phase": "Phase II: Core Systems",
+      "title": "Electrostatics, Electric Fields & Capacitance",
+      "rationale": "Develops electrostatic theory from point charges and Coulomb forces to electric fields, potentials, and energy storage in capacitors.",
+      "references": [
+        {
+          "grade": 10,
+          "unitNumber": 4,
+          "unitCode": "PHY-G10-U04",
+          "unitTitle": "Static and Current Electricity",
+          "pages": "pp. 81–96"
+        },
+        {
+          "grade": 11,
+          "unitNumber": 6,
+          "unitCode": "PHY-G11-U06",
+          "unitTitle": "Electrostatics and Electric Circuit",
+          "pages": "pp. 217–239, 270–280"
+        }
+      ],
+      "sequence": [
+        {
+          "stepNumber": 1,
+          "text": "Properties of electric charges, law of conservation of charge, and charge quantization (q = ne)."
+        },
+        {
+          "stepNumber": 2,
+          "text": "Methods of charging: friction, conduction, and induction; electroscopes and lightning."
+        },
+        {
+          "stepNumber": 3,
+          "text": "Coulomb's Law for point charges: F = k(|q_1 q_2|)/(r^2) and vector superposition for multiple charges."
+        },
+        {
+          "stepNumber": 4,
+          "text": "Electric field strength vec{E} = frac{vec{F}}{q_0} = k(q)/(r^2)hat{r}; electric field lines and electric flux (Phi_E = vec{E}·vec{A})."
+        },
+        {
+          "stepNumber": 5,
+          "text": "Electric potential energy (U = k(q Q)/(r)) and electric potential (V = (U)/(q) = k(Q)/(r))."
+        },
+        {
+          "stepNumber": 6,
+          "text": "Relation between uniform electric field and potential difference: E = -(Δ V)/(d); equipotential surfaces."
+        },
+        {
+          "stepNumber": 7,
+          "text": "Capacitance fundamentals (C = (Q)/(V)); parallel-plate capacitance (C = (kappaepsilon_0 A)/(d)) and dielectric constant (kappa)."
+        },
+        {
+          "stepNumber": 8,
+          "text": "Capacitor combinations: Series (frac{1}{C_eq} = Σ(1)/(C_i)) and Parallel (C_eq = Σ C_i); energy stored in capacitors (U = (1)/(2)CV^2)."
+        }
+      ],
+      "prerequisites": [
+        "Module 1 (vector components) and Module 3 (work and potential energy)"
+      ],
+      "masteryCheckpoint": "Point charges q_1 = +4\\,μ C and q_2 = -2\\,μ C are separated by 10\\,cm. Find the net electric field at the midpoint between them. Then, calculate the equivalent capacitance and total energy stored when three 6\\,μ F capacitors are connected in series across a 12\\,V battery.",
+      "sourceFile": "physics.md"
+    },
+    {
+      "moduleId": "PHY-M08",
+      "subjectCode": "PHY",
+      "subjectName": "Physics",
+      "streamCategory": "natural",
+      "moduleNumber": 8,
+      "phase": "Phase III: Advanced Synthesis",
+      "title": "Direct Current Electricity, Circuit Networks & Measuring Devices",
+      "rationale": "Unifies electric current, resistance, network analysis, precision electrical measurements, and domestic electrical safety.",
+      "references": [
+        {
+          "grade": 10,
+          "unitNumber": 4,
+          "unitCode": "PHY-G10-U04",
+          "unitTitle": "Static and Current Electricity",
+          "pages": "pp. 96–130"
+        },
+        {
+          "grade": 11,
+          "unitNumber": 6,
+          "unitCode": "PHY-G11-U06",
+          "unitTitle": "Electrostatics and Electric Circuit",
+          "pages": "pp. 240–270, 280–286"
+        }
+      ],
+      "sequence": [
+        {
+          "stepNumber": 1,
+          "text": "Electric current definition (I = (Δ q)/(Δ t)); microscopic drift velocity (I = n q v_d A) and current density (J = (I)/(A) = σ E)."
+        },
+        {
+          "stepNumber": 2,
+          "text": "Ohm's Law (V = IR), electrical resistance, and resistivity (R = rho(L)/(A))."
+        },
+        {
+          "stepNumber": 3,
+          "text": "Series and parallel resistor combinations and equivalent resistance."
+        },
+        {
+          "stepNumber": 4,
+          "text": "Electromotive force (EMF) and terminal potential difference: V_terminal = mathcal{E} - Ir."
+        },
+        {
+          "stepNumber": 5,
+          "text": "Kirchhoff's Circuit Rules: Junction Rule (Σ I_in = Σ I_out) and Loop Rule (Σ mathcal{E} - Σ IR = 0)."
+        },
+        {
+          "stepNumber": 6,
+          "text": "Precision measuring circuits: Wheatstone Bridge for unknown resistance ((R_1)/(R_2) = (R_3)/(R_x)) and the Potentiometer."
+        },
+        {
+          "stepNumber": 7,
+          "text": "Conversion of a galvanometer into an ammeter (using parallel shunt R_s) and a voltmeter (using series multiplier R_m)."
+        },
+        {
+          "stepNumber": 8,
+          "text": "Electric power dissipation (P = VI = I^2 R = (V^2)/(R)), domestic 220V installation in Ethiopia, grounding, and fuses."
+        }
+      ],
+      "prerequisites": [
+        "Module 7 (charges, potentials, and energy conservation)"
+      ],
+      "masteryCheckpoint": "Use Kirchhoff's rules to calculate the branch currents in a two-loop circuit powered by two opposing EMF sources (12\\,V and 6\\,V) with internal resistances. Then, calculate the shunt resistance needed to convert a 50\\,Ω galvanometer with a 1\\,mA full-scale deflection into a 5\\,A ammeter.",
+      "sourceFile": "physics.md"
+    },
+    {
+      "moduleId": "PHY-M09",
+      "subjectCode": "PHY",
+      "subjectName": "Physics",
+      "streamCategory": "natural",
+      "moduleNumber": 9,
+      "phase": "Phase III: Advanced Synthesis",
+      "title": "Magnetism, Electromagnetism & Electromagnetic Induction",
+      "rationale": "Traces the relationship between electricity and magnetism, from magnetic forces on moving charges to magnetic flux and electromagnetic induction in transformers.",
+      "references": [
+        {
+          "grade": 10,
+          "unitNumber": 5,
+          "unitCode": "PHY-G10-U05",
+          "unitTitle": "Magnetism",
+          "pages": "pp. 131–154"
+        },
+        {
+          "grade": 12,
+          "unitNumber": 4,
+          "unitCode": "PHY-G12-U04",
+          "unitTitle": "Electromagnetism",
+          "pages": "pp. 117–141"
+        }
+      ],
+      "sequence": [
+        {
+          "stepNumber": 1,
+          "text": "Magnetic poles, magnetic dipole properties, and field line mapping."
+        },
+        {
+          "stepNumber": 2,
+          "text": "Earth's magnetic field and navigation compasses."
+        },
+        {
+          "stepNumber": 3,
+          "text": "Magnetic field generated by current-carrying conductors (Biot-Savart and Ampère principles)."
+        },
+        {
+          "stepNumber": 4,
+          "text": "Magnetic force on moving charged particles: vec{F}_B = q(vec{v}×vec{B}) → F = q v Bsinθ and circular particle trajectories."
+        },
+        {
+          "stepNumber": 5,
+          "text": "Magnetic force on a current-carrying wire in a magnetic field: F = I l Bsinθ."
+        },
+        {
+          "stepNumber": 6,
+          "text": "Mutual force between parallel current-carrying conductors: currents in same direction attract; currents in opposite directions repel."
+        },
+        {
+          "stepNumber": 7,
+          "text": "Magnetic flux: Phi_B = vec{B}·vec{A} = B Acosθ (Wb = T· m^2)."
+        },
+        {
+          "stepNumber": 8,
+          "text": "Faraday's Law of Electromagnetic Induction: mathcal{E} = -N(ΔPhi_B)/(Δ t)."
+        },
+        {
+          "stepNumber": 9,
+          "text": "Lenz's Law: direction of induced current opposes the change in magnetic flux (conservation of energy)."
+        },
+        {
+          "stepNumber": 10,
+          "text": "Electric transformers: mutual induction, step-up vs. step-down, and turns ratio ((V_s)/(V_p) = (N_s)/(N_p) = (I_p)/(I_s))."
+        }
+      ],
+      "prerequisites": [
+        "Module 1 (cross products) and Module 8 (currents and voltages)"
+      ],
+      "masteryCheckpoint": "An electron enters a uniform 0.4\\,T magnetic field at 5.0× 10^6\\,m/s perpendicular to the field lines. Calculate the magnetic force acting on the electron and the radius of its circular path. Next, calculate the average EMF induced in a 500-turn coil of area 0.02\\,m^2 when the perpendicular magnetic field drops from 0.8\\,T to zero in 0.05\\,s.",
+      "sourceFile": "physics.md"
+    },
+    {
+      "moduleId": "PHY-M10",
+      "subjectCode": "PHY",
+      "subjectName": "Physics",
+      "streamCategory": "natural",
+      "moduleNumber": 10,
+      "phase": "Phase III: Advanced Synthesis",
+      "title": "Modern Physics, Nuclear Reactions & Semiconductor Electronics",
+      "rationale": "Covers 20th-century physics: subatomic nuclear structure, radioactive decay, nuclear energy, and solid-state semiconductor electronics.",
+      "references": [
+        {
+          "grade": 11,
+          "unitNumber": 7,
+          "unitCode": "PHY-G11-U07",
+          "unitTitle": "Nuclear Physics",
+          "pages": "pp. 287–328"
+        },
+        {
+          "grade": 12,
+          "unitNumber": 5,
+          "unitCode": "PHY-G12-U05",
+          "unitTitle": "Basics of Electronics",
+          "pages": "pp. 142–177"
+        }
+      ],
+      "sequence": [
+        {
+          "stepNumber": 1,
+          "text": "Nuclear composition: protons, neutrons, isotopes, and nuclear radius (R = R_0 A^(1/3))."
+        },
+        {
+          "stepNumber": 2,
+          "text": "Mass defect (Δ m) and nuclear binding energy: BE = Δ m· c^2 = Δ m(amu)× 931.5\\,MeV; binding energy per nucleon curve."
+        },
+        {
+          "stepNumber": 3,
+          "text": "Natural radioactivity: alpha (α), beta (β^- and β^+), and gamma (γ) decay processes and balancing nuclear equations."
+        },
+        {
+          "stepNumber": 4,
+          "text": "Radioactive decay law: N(t) = N_0 e^(-λ t); decay constant (λ) and half-life relationship (T_1/2 = (ln 2)/(λ))."
+        },
+        {
+          "stepNumber": 5,
+          "text": "Nuclear applications: radiocarbon dating, nuclear medicine, radiotherapy (e.g., Black Lion Hospital), and radiation safety."
+        },
+        {
+          "stepNumber": 6,
+          "text": "Nuclear fission vs. nuclear fusion reactions and chain reactions."
+        },
+        {
+          "stepNumber": 7,
+          "text": "Energy band theory: conductors, insulators, and intrinsic vs. extrinsic semiconductors (P-type and N-type doping)."
+        },
+        {
+          "stepNumber": 8,
+          "text": "P-N junction diode: depletion region, forward/reverse bias, and half-wave/full-wave rectification circuits."
+        },
+        {
+          "stepNumber": 9,
+          "text": "Bipolar Junction Transistors (BJT): operating characteristics, emitter-base-collector currents (I_E = I_B + I_C), and switching/amplification."
+        },
+        {
+          "stepNumber": 10,
+          "text": "Digital logic gates: truth tables, Boolean operations (AND, OR, NOT, NAND, NOR, XOR), and combinational logic circuits."
+        }
+      ],
+      "prerequisites": [
+        "Module 1 (atomic fundamentals) and Module 8 (DC circuits)"
+      ],
+      "masteryCheckpoint": "Calculate the binding energy per nucleon of Helium-4 ({}_2^4He) given the masses of a proton, neutron, and alpha particle. If a radioactive sample has a half-life of 8 days, calculate the fraction remaining after 32 days. Finally, draw the truth table for a 2-input NAND gate and show how it can be wired to function as an inverter (NOT gate).",
+      "sourceFile": "physics.md"
+    }
+  ]
+}

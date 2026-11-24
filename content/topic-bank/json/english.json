@@ -1,0 +1,784 @@
+{
+  "schemaVersion": 1,
+  "subjectCode": "ENG",
+  "subjectName": "English",
+  "streamCategory": "common",
+  "compiledAt": "2026-11-24T20:12:00.000Z",
+  "sourceFile": "english.json",
+  "modules": [
+    {
+      "moduleId": "ENG-M01",
+      "subjectCode": "ENG",
+      "subjectName": "English",
+      "streamCategory": "common",
+      "moduleNumber": 1,
+      "phase": "Phase I: Foundations & Academic Literacy",
+      "title": "Academic Habits, Study Literacy & Word-Formation Strategies",
+      "rationale": "Builds foundational reading efficiency, note-taking vocabulary, dictionary skills, and tense accuracy across study-focused units in Grades 9, 10, and 12.",
+      "references": [
+        {
+          "grade": 9,
+          "unitNumber": 2,
+          "unitCode": "ENG-G09-U02",
+          "unitTitle": "Study Skills",
+          "pages": "Full Unit"
+        },
+        {
+          "grade": 10,
+          "unitNumber": 3,
+          "unitCode": "ENG-G10-U03",
+          "unitTitle": "Punctuality",
+          "pages": "Full Unit"
+        },
+        {
+          "grade": 10,
+          "unitNumber": 9,
+          "unitCode": "ENG-G10-U09",
+          "unitTitle": "Multilingualism",
+          "pages": "Full Unit"
+        },
+        {
+          "grade": 12,
+          "unitNumber": 2,
+          "unitCode": "ENG-G12-U02",
+          "unitTitle": "Time Management",
+          "pages": "Full Unit"
+        }
+      ],
+      "sequence": [
+        {
+          "stepNumber": 1,
+          "text": "Skimming vs. scanning reading techniques, topic sentences, and context clues for guessing unfamiliar words (Grade 9 Unit 2: Study Skills).",
+          "grade": 9,
+          "unitNumber": 2,
+          "unitCode": "ENG-G09-U02"
+        },
+        {
+          "stepNumber": 2,
+          "text": "Habitual and present tense forms: Simple Present, Present Continuous, and adverbs of frequency in academic routines (Grade 10 Unit 3: Punctuality).",
+          "grade": 10,
+          "unitNumber": 3,
+          "unitCode": "ENG-G10-U03"
+        },
+        {
+          "stepNumber": 3,
+          "text": "Morphology and word building: common English prefixes, suffixes, root words, and collocations across bilingual contexts (Grade 10 Unit 9: Multilingualism).",
+          "grade": 10,
+          "unitNumber": 9,
+          "unitCode": "ENG-G10-U09"
+        },
+        {
+          "stepNumber": 4,
+          "text": "Time-clause connectors (while, until, as soon as, prior to) and modal verbs of obligation/scheduling (must, have to, ought to, should) (Grade 12 Unit 2: Time Management).",
+          "grade": 12,
+          "unitNumber": 2,
+          "unitCode": "ENG-G12-U02"
+        },
+        {
+          "stepNumber": 5,
+          "text": "EUEE Sentence Completion & Vocabulary Drill: identify synonyms, antonyms, and contextual academic idioms from passage excerpts."
+        }
+      ],
+      "prerequisites": [
+        "Basic sentence structure (subject-verb-object) and dictionary lookup familiarity"
+      ],
+      "masteryCheckpoint": "Summarize a 3-paragraph passage on study habits by identifying its main idea, infer the meaning of 5 underlined words from context clues alone, and correct tense/time-clause agreement errors.",
+      "sourceFile": "english.json"
+    },
+    {
+      "moduleId": "ENG-M02",
+      "subjectCode": "ENG",
+      "subjectName": "English",
+      "streamCategory": "common",
+      "moduleNumber": 2,
+      "phase": "Phase I: Foundations & Academic Literacy",
+      "title": "Urbanization, Population Dynamics & Descriptive Comparison",
+      "rationale": "Unifies reading passages on city life, demographic change, travel, and migration while mastering comparative/superlative structures and past/present-perfect tenses.",
+      "references": [
+        {
+          "grade": 9,
+          "unitNumber": 1,
+          "unitCode": "ENG-G09-U01",
+          "unitTitle": "Living in Urban Areas",
+          "pages": "Full Unit"
+        },
+        {
+          "grade": 10,
+          "unitNumber": 1,
+          "unitCode": "ENG-G10-U01",
+          "unitTitle": "Population Growth",
+          "pages": "Full Unit"
+        },
+        {
+          "grade": 10,
+          "unitNumber": 2,
+          "unitCode": "ENG-G10-U02",
+          "unitTitle": "Travel Behaviors",
+          "pages": "Full Unit"
+        },
+        {
+          "grade": 10,
+          "unitNumber": 6,
+          "unitCode": "ENG-G10-U06",
+          "unitTitle": "Migration",
+          "pages": "Full Unit"
+        }
+      ],
+      "sequence": [
+        {
+          "stepNumber": 1,
+          "text": "Comparative, superlative, and correlative structures (the more... the more, as... as) contrasting urban and rural lifestyles (Grade 9 Unit 1: Living in Urban Areas).",
+          "grade": 9,
+          "unitNumber": 1,
+          "unitCode": "ENG-G09-U01"
+        },
+        {
+          "stepNumber": 2,
+          "text": "Interpreting demographic statistics in expository prose: quantifiers, fractions, percentages, and degree modifiers (too/enough, so/such) (Grade 10 Unit 1: Population Growth).",
+          "grade": 10,
+          "unitNumber": 1,
+          "unitCode": "ENG-G10-U01"
+        },
+        {
+          "stepNumber": 3,
+          "text": "Distinguishing Simple Past vs. Present Perfect vs. Present Perfect Continuous in travel narratives and mobility reports (Grade 10 Unit 2: Travel Behaviors).",
+          "grade": 10,
+          "unitNumber": 2,
+          "unitCode": "ENG-G10-U02"
+        },
+        {
+          "stepNumber": 4,
+          "text": "Cause-and-effect transition markers (consequently, therefore, owing to, due to) in migration push-pull texts (Grade 10 Unit 6: Migration).",
+          "grade": 10,
+          "unitNumber": 6,
+          "unitCode": "ENG-G10-U06"
+        },
+        {
+          "stepNumber": 5,
+          "text": "Paragraph Coherence Practice: reorder scrambled sentences into a unified descriptive/expository paragraph."
+        }
+      ],
+      "prerequisites": [
+        "Module 1 (skimming, context clues, basic tense forms)"
+      ],
+      "masteryCheckpoint": "Transform 4 demographic trend sentences using 'as...as', 'the more...the less', and 'due to / because'; distinguish Present Perfect from Simple Past in a 10-question cloze passage on migration.",
+      "sourceFile": "english.json"
+    },
+    {
+      "moduleId": "ENG-M03",
+      "subjectCode": "ENG",
+      "subjectName": "English",
+      "streamCategory": "common",
+      "moduleNumber": 3,
+      "phase": "Phase I: Foundations & Academic Literacy",
+      "title": "Passive Voice, Reported Speech & Evidence-Based Incident Analysis",
+      "rationale": "Connects Ethiopia's Grade 9, 11, and 12 units on traffic safety and factual reporting to master Passive Voice, Direct/Indirect Speech, and Relative Clauses tested heavily on the EUEE.",
+      "references": [
+        {
+          "grade": 9,
+          "unitNumber": 3,
+          "unitCode": "ENG-G09-U03",
+          "unitTitle": "Traffic Accident",
+          "pages": "Full Unit"
+        },
+        {
+          "grade": 11,
+          "unitNumber": 3,
+          "unitCode": "ENG-G11-U03",
+          "unitTitle": "Causes of Road Traffic Accidents",
+          "pages": "Full Unit"
+        },
+        {
+          "grade": 12,
+          "unitNumber": 3,
+          "unitCode": "ENG-G12-U03",
+          "unitTitle": "Evidence on Traffic Accident",
+          "pages": "Full Unit"
+        }
+      ],
+      "sequence": [
+        {
+          "stepNumber": 1,
+          "text": "Active-to-Passive voice transformations across simple, continuous, perfect, and modal verb forms for formal safety reporting (Grade 9 Unit 3: Traffic Accident).",
+          "grade": 9,
+          "unitNumber": 3,
+          "unitCode": "ENG-G09-U03"
+        },
+        {
+          "stepNumber": 2,
+          "text": "Defining vs. non-defining relative clauses (who, whom, whose, which, that) and causal conjunctions explaining root factors (Grade 11 Unit 3: Causes of Road Traffic Accidents).",
+          "grade": 11,
+          "unitNumber": 3,
+          "unitCode": "ENG-G11-U03"
+        },
+        {
+          "stepNumber": 3,
+          "text": "Direct and Indirect (Reported) Speech: tense backshifting, pronoun shifts, reporting verbs (warned, advised, confirmed), and eyewitness testimony (Grade 12 Unit 3: Evidence on Traffic Accident).",
+          "grade": 12,
+          "unitNumber": 3,
+          "unitCode": "ENG-G12-U03"
+        },
+        {
+          "stepNumber": 4,
+          "text": "EUEE Formal Report & Punctuation Check: apostrophes, quotation marks, semicolons, and passive agent omissions."
+        }
+      ],
+      "prerequisites": [
+        "Modules 1–2 (present and past tense mastery)"
+      ],
+      "masteryCheckpoint": "Convert 5 eyewitness statements from Direct to Reported Speech with accurate backshifting and time-expression changes; rewrite an active-voice traffic incident paragraph into objective formal Passive Voice.",
+      "sourceFile": "english.json"
+    },
+    {
+      "moduleId": "ENG-M04",
+      "subjectCode": "ENG",
+      "subjectName": "English",
+      "streamCategory": "common",
+      "moduleNumber": 4,
+      "phase": "Phase II: Analytical Reading & Discourse",
+      "title": "Environmental Heritage, Eco-Tourism & Conditionals (Types I–III)",
+      "rationale": "Integrates conservation and tourism themes from Grades 9–12 to teach conditional reasoning (Zero, 1st, 2nd, 3rd, and Mixed Conditionals) plus 'wish / if only' structures.",
+      "references": [
+        {
+          "grade": 9,
+          "unitNumber": 4,
+          "unitCode": "ENG-G09-U04",
+          "unitTitle": "National Parks",
+          "pages": "Full Unit"
+        },
+        {
+          "grade": 10,
+          "unitNumber": 4,
+          "unitCode": "ENG-G10-U04",
+          "unitTitle": "Tourist Attractions",
+          "pages": "Full Unit"
+        },
+        {
+          "grade": 11,
+          "unitNumber": 4,
+          "unitCode": "ENG-G11-U04",
+          "unitTitle": "People and Natural Resources",
+          "pages": "Full Unit"
+        },
+        {
+          "grade": 12,
+          "unitNumber": 4,
+          "unitCode": "ENG-G12-U04",
+          "unitTitle": "Natural Resource Management",
+          "pages": "Full Unit"
+        }
+      ],
+      "sequence": [
+        {
+          "stepNumber": 1,
+          "text": "Prepositions of place, direction, and descriptive adjectives/participle modifiers describing wildlife habitats (Grade 9 Unit 4: National Parks).",
+          "grade": 9,
+          "unitNumber": 4,
+          "unitCode": "ENG-G09-U04"
+        },
+        {
+          "stepNumber": 2,
+          "text": "Conditional Sentences Types I and II (real future conservation outcomes vs. hypothetical scenarios) plus polite inquiry dialogues (Grade 10 Unit 4: Tourist Attractions).",
+          "grade": 10,
+          "unitNumber": 4,
+          "unitCode": "ENG-G10-U04"
+        },
+        {
+          "stepNumber": 3,
+          "text": "Conditional Type III, Mixed Conditionals, inversion ('Had we protected...', 'Were resources managed...'), and 'unless / provided that' (Grade 11 Unit 4: People and Natural Resources).",
+          "grade": 11,
+          "unitNumber": 4,
+          "unitCode": "ENG-G11-U04"
+        },
+        {
+          "stepNumber": 4,
+          "text": "Expressing regret and hypothetical policy outcomes with 'wish', 'if only', and perfect modals ('should have', 'could have') (Grade 12 Unit 4: Natural Resource Management).",
+          "grade": 12,
+          "unitNumber": 4,
+          "unitCode": "ENG-G12-U04"
+        },
+        {
+          "stepNumber": 5,
+          "text": "Inference & Tone Comprehension Drill: identify author attitude, implied main ideas, and pronoun reference (it, they, this, such)."
+        }
+      ],
+      "prerequisites": [
+        "Module 2 (tense contrasts) and Module 3 (relative clauses)"
+      ],
+      "masteryCheckpoint": "Write and classify Type I, II, III, and inverted conditional sentences for environmental policy scenarios, and answer 6 inference/reference comprehension questions accurately.",
+      "sourceFile": "english.json"
+    },
+    {
+      "moduleId": "ENG-M05",
+      "subjectCode": "ENG",
+      "subjectName": "English",
+      "streamCategory": "common",
+      "moduleNumber": 5,
+      "phase": "Phase II: Analytical Reading & Discourse",
+      "title": "Agricultural Transformation & Process-Sequence Discourse",
+      "rationale": "Tracks the Ethiopian agricultural progression from Grade 9 Horticulture to Grade 12 Mechanized Agriculture while mastering Gerunds vs. Infinitives, Participles, and Sequential Connectors.",
+      "references": [
+        {
+          "grade": 9,
+          "unitNumber": 5,
+          "unitCode": "ENG-G09-U05",
+          "unitTitle": "Horticulture",
+          "pages": "Full Unit"
+        },
+        {
+          "grade": 10,
+          "unitNumber": 5,
+          "unitCode": "ENG-G10-U05",
+          "unitTitle": "Honey Processing",
+          "pages": "Full Unit"
+        },
+        {
+          "grade": 11,
+          "unitNumber": 5,
+          "unitCode": "ENG-G11-U05",
+          "unitTitle": "Irrigation",
+          "pages": "Full Unit"
+        },
+        {
+          "grade": 12,
+          "unitNumber": 5,
+          "unitCode": "ENG-G12-U05",
+          "unitTitle": "Mechanized Agriculture",
+          "pages": "Full Unit"
+        }
+      ],
+      "sequence": [
+        {
+          "stepNumber": 1,
+          "text": "Countable vs. uncountable nouns, collective nouns, and subject-verb agreement with compound or intervening phrases (Grade 9 Unit 5: Horticulture).",
+          "grade": 9,
+          "unitNumber": 5,
+          "unitCode": "ENG-G09-U05"
+        },
+        {
+          "stepNumber": 2,
+          "text": "Process-description paragraphs using chronological transitions (initially, subsequently, prior to, finally) and passive imperatives (Grade 10 Unit 5: Honey Processing).",
+          "grade": 10,
+          "unitNumber": 5,
+          "unitCode": "ENG-G10-U05"
+        },
+        {
+          "stepNumber": 3,
+          "text": "Verb complementation patterns: Gerunds (-ing) vs. Full Infinitives (to + V1) vs. Bare Infinitives (make/let/help) (Grade 11 Unit 5: Irrigation).",
+          "grade": 11,
+          "unitNumber": 5,
+          "unitCode": "ENG-G11-U05"
+        },
+        {
+          "stepNumber": 4,
+          "text": "Participial phrases (-ing / -ed clause reduction), parallel grammatical structure, and agricultural technical vocabulary (Grade 12 Unit 5: Mechanized Agriculture).",
+          "grade": 12,
+          "unitNumber": 5,
+          "unitCode": "ENG-G12-U05"
+        }
+      ],
+      "prerequisites": [
+        "Module 3 (passive voice) and basic noun/verb agreement"
+      ],
+      "masteryCheckpoint": "Choose correctly between gerunds and infinitives after verbs like 'suggest', 'avoid', 'stop', 'remember', and 'persuade'; edit a 150-word process paragraph for subject-verb agreement and parallelism.",
+      "sourceFile": "english.json"
+    },
+    {
+      "moduleId": "ENG-M06",
+      "subjectCode": "ENG",
+      "subjectName": "English",
+      "streamCategory": "common",
+      "moduleNumber": 6,
+      "phase": "Phase II: Analytical Reading & Discourse",
+      "title": "Climate Systems, Sustainability & Concession/Contrast Structures",
+      "rationale": "Combines all climate, poverty, sustainable development, and green economy units across Grades 9, 11, and 12 to master EUEE Concession Clauses, Future Tenses, and Argumentative Paragraphs.",
+      "references": [
+        {
+          "grade": 9,
+          "unitNumber": 6,
+          "unitCode": "ENG-G09-U06",
+          "unitTitle": "Poverty in Ethiopia",
+          "pages": "Full Unit"
+        },
+        {
+          "grade": 11,
+          "unitNumber": 1,
+          "unitCode": "ENG-G11-U01",
+          "unitTitle": "Environmental Hazards",
+          "pages": "Full Unit"
+        },
+        {
+          "grade": 11,
+          "unitNumber": 6,
+          "unitCode": "ENG-G11-U06",
+          "unitTitle": "Global Warming",
+          "pages": "Full Unit"
+        },
+        {
+          "grade": 12,
+          "unitNumber": 1,
+          "unitCode": "ENG-G12-U01",
+          "unitTitle": "Sustainable Development",
+          "pages": "Full Unit"
+        },
+        {
+          "grade": 12,
+          "unitNumber": 6,
+          "unitCode": "ENG-G12-U06",
+          "unitTitle": "Green Economies",
+          "pages": "Full Unit"
+        }
+      ],
+      "sequence": [
+        {
+          "stepNumber": 1,
+          "text": "Contrast and concession clauses: distinguishing conjunctions ('although/even though') from prepositions ('despite/in spite of') and adverbs ('however/nevertheless') (Grade 9 Unit 6: Poverty in Ethiopia).",
+          "grade": 9,
+          "unitNumber": 6,
+          "unitCode": "ENG-G09-U06"
+        },
+        {
+          "stepNumber": 2,
+          "text": "Modal verbs of probability and deduction (must be, might have caused, cannot be) when interpreting environmental risks (Grade 11 Unit 1: Environmental Hazards).",
+          "grade": 11,
+          "unitNumber": 1,
+          "unitCode": "ENG-G11-U01"
+        },
+        {
+          "stepNumber": 3,
+          "text": "Future projections: 'will' vs. 'going to', Future Continuous, and Future Perfect ('By 2030, emissions will have declined...') (Grade 11 Unit 6: Global Warming).",
+          "grade": 11,
+          "unitNumber": 6,
+          "unitCode": "ENG-G11-U06"
+        },
+        {
+          "stepNumber": 4,
+          "text": "Academic phrasal verbs, multi-word prepositional idioms, and distinguishing fact vs. opinion in long reading passages (Grade 12 Unit 1: Sustainable Development).",
+          "grade": 12,
+          "unitNumber": 1,
+          "unitCode": "ENG-G12-U01"
+        },
+        {
+          "stepNumber": 5,
+          "text": "Argumentative writing architecture: claim, counter-argument, refutation, and cohesive economic/policy diction (Grade 12 Unit 6: Green Economies).",
+          "grade": 12,
+          "unitNumber": 6,
+          "unitCode": "ENG-G12-U06"
+        }
+      ],
+      "prerequisites": [
+        "Modules 4–5 (conditionals and cause-effect transitions)"
+      ],
+      "masteryCheckpoint": "Convert 4 concession sentences back and forth between 'Although + clause' and 'Despite + noun phrase/-ing'; distinguish Future Perfect from Future Continuous; evaluate evidence vs. claim in a climate passage.",
+      "sourceFile": "english.json"
+    },
+    {
+      "moduleId": "ENG-M07",
+      "subjectCode": "ENG",
+      "subjectName": "English",
+      "streamCategory": "common",
+      "moduleNumber": 7,
+      "phase": "Phase II: Analytical Reading & Discourse",
+      "title": "Public Health, Scientific Exposition & Advisory/Conditional Discourse",
+      "rationale": "Unifies health, medicinal plants, hospital efficiency, and telemedicine readings across Grades 9–12 alongside EUEE Scientific Reading, Question Tags, and Advisability Structures.",
+      "references": [
+        {
+          "grade": 9,
+          "unitNumber": 8,
+          "unitCode": "ENG-G09-U08",
+          "unitTitle": "Communicable Diseases",
+          "pages": "Full Unit"
+        },
+        {
+          "grade": 10,
+          "unitNumber": 8,
+          "unitCode": "ENG-G10-U08",
+          "unitTitle": "The Healing Power of Plants",
+          "pages": "Full Unit"
+        },
+        {
+          "grade": 11,
+          "unitNumber": 8,
+          "unitCode": "ENG-G11-U08",
+          "unitTitle": "Efficiency of Health Services",
+          "pages": "Full Unit"
+        },
+        {
+          "grade": 12,
+          "unitNumber": 8,
+          "unitCode": "ENG-G12-U08",
+          "unitTitle": "Telemedicine",
+          "pages": "Full Unit"
+        }
+      ],
+      "sequence": [
+        {
+          "stepNumber": 1,
+          "text": "Health prevention terminology, imperative safety guidelines, and advising structures ('had better', 'ought to', 'it is advisable to') (Grade 9 Unit 8: Communicable Diseases).",
+          "grade": 9,
+          "unitNumber": 8,
+          "unitCode": "ENG-G09-U08"
+        },
+        {
+          "stepNumber": 2,
+          "text": "Scientific classification & definition writing: 'used for / made from / known as', Latin/Greek roots, and botanical exposition (Grade 10 Unit 8: The Healing Power of Plants).",
+          "grade": 10,
+          "unitNumber": 8,
+          "unitCode": "ENG-G10-U08"
+        },
+        {
+          "stepNumber": 3,
+          "text": "Question tags, negative/emphatic inversion ('Seldom have health clinics...', 'Not only did...'), and service-evaluation reporting (Grade 11 Unit 8: Efficiency of Health Services).",
+          "grade": 11,
+          "unitNumber": 8,
+          "unitCode": "ENG-G11-U08"
+        },
+        {
+          "stepNumber": 4,
+          "text": "Synthesizing modern digital healthcare texts: technical vocabulary, purpose clauses ('in order that', 'so as to'), and main-idea synthesis (Grade 12 Unit 8: Telemedicine).",
+          "grade": 12,
+          "unitNumber": 8,
+          "unitCode": "ENG-G12-U08"
+        }
+      ],
+      "prerequisites": [
+        "Modules 3 & 6 (passive voice, modals of probability, academic vocabulary)"
+      ],
+      "masteryCheckpoint": "Supply accurate question tags and inverted emphatic openings for 6 sentences; contrast 'so that' vs. 'in order to'; answer scientific reading comprehension questions on telemedicine accurately.",
+      "sourceFile": "english.json"
+    },
+    {
+      "moduleId": "ENG-M08",
+      "subjectCode": "ENG",
+      "subjectName": "English",
+      "streamCategory": "common",
+      "moduleNumber": 8,
+      "phase": "Phase III: EUEE Discourse, Communication & Writing Mastery",
+      "title": "Civic Responsibility, Heritage & Formal Communication Functions",
+      "rationale": "Brings together Ethiopian identity, community service, civilization, patriotism, and national pride units to master spoken EUEE Communicative Activities, Registers, and Formal Letters/Essays.",
+      "references": [
+        {
+          "grade": 9,
+          "unitNumber": 7,
+          "unitCode": "ENG-G09-U07",
+          "unitTitle": "Community Services",
+          "pages": "Full Unit"
+        },
+        {
+          "grade": 10,
+          "unitNumber": 7,
+          "unitCode": "ENG-G10-U07",
+          "unitTitle": "Branding Ethiopia and National Identity",
+          "pages": "Full Unit"
+        },
+        {
+          "grade": 11,
+          "unitNumber": 2,
+          "unitCode": "ENG-G11-U02",
+          "unitTitle": "Civilization",
+          "pages": "Full Unit"
+        },
+        {
+          "grade": 11,
+          "unitNumber": 7,
+          "unitCode": "ENG-G11-U07",
+          "unitTitle": "Patriotism",
+          "pages": "Full Unit"
+        },
+        {
+          "grade": 12,
+          "unitNumber": 7,
+          "unitCode": "ENG-G12-U07",
+          "unitTitle": "National Pride",
+          "pages": "Full Unit"
+        }
+      ],
+      "sequence": [
+        {
+          "stepNumber": 1,
+          "text": "Spoken dialogue pragmatics: making/accepting/declining offers, requests, apologies, and suggestions appropriately by register (Grade 9 Unit 7: Community Services).",
+          "grade": 9,
+          "unitNumber": 7,
+          "unitCode": "ENG-G09-U07"
+        },
+        {
+          "stepNumber": 2,
+          "text": "Descriptive and promotional tone, abstract nouns, and positive/evaluative idioms in cultural identity essays (Grade 10 Unit 7: Branding Ethiopia and National Identity).",
+          "grade": 10,
+          "unitNumber": 7,
+          "unitCode": "ENG-G10-U07"
+        },
+        {
+          "stepNumber": 3,
+          "text": "Past Perfect and Past Continuous sequencing in historical/civilization narratives (Grade 11 Unit 2: Civilization).",
+          "grade": 11,
+          "unitNumber": 2,
+          "unitCode": "ENG-G11-U02"
+        },
+        {
+          "stepNumber": 4,
+          "text": "Cleft sentences ('It is civic duty that...', 'What unites citizens is...') and rhetorical emphasis (Grade 11 Unit 7: Patriotism).",
+          "grade": 11,
+          "unitNumber": 7,
+          "unitCode": "ENG-G11-U07"
+        },
+        {
+          "stepNumber": 5,
+          "text": "Formal vs. informal register discrimination: business letters, applications, memos, and persuasive thesis-driven essays (Grade 12 Unit 7: National Pride).",
+          "grade": 12,
+          "unitNumber": 7,
+          "unitCode": "ENG-G12-U07"
+        }
+      ],
+      "prerequisites": [
+        "Modules 1–6 (tense sequencing, clause combining, paragraph coherence)"
+      ],
+      "masteryCheckpoint": "Select the pragmatically appropriate response in 8 EUEE-style communicative dialogues; distinguish formal letter salutations/closings from informal ones; write a 3-sentence emphatic cleft paraphrase.",
+      "sourceFile": "english.json"
+    },
+    {
+      "moduleId": "ENG-M09",
+      "subjectCode": "ENG",
+      "subjectName": "English",
+      "streamCategory": "common",
+      "moduleNumber": 9,
+      "phase": "Phase III: EUEE Discourse, Communication & Writing Mastery",
+      "title": "Ethics, Conflict Resolution & Persuasive Dialogue Synthesis",
+      "rationale": "Connects Grades 9, 11, and 12 units on equity and Ethiopian indigenous conflict resolution to master Negotiation Language, Expressing Agreement/Disagreement, and Persuasive Writing Mechanics.",
+      "references": [
+        {
+          "grade": 9,
+          "unitNumber": 9,
+          "unitCode": "ENG-G09-U09",
+          "unitTitle": "Fairness and Equity",
+          "pages": "Full Unit"
+        },
+        {
+          "grade": 11,
+          "unitNumber": 9,
+          "unitCode": "ENG-G11-U09",
+          "unitTitle": "Indigenous Conflict Resolution",
+          "pages": "Full Unit"
+        },
+        {
+          "grade": 12,
+          "unitNumber": 9,
+          "unitCode": "ENG-G12-U09",
+          "unitTitle": "Conflict Management",
+          "pages": "Full Unit"
+        }
+      ],
+      "sequence": [
+        {
+          "stepNumber": 1,
+          "text": "Indefinite pronouns, distributive determiners (each, every, either, neither, both), and fairness/ethics vocabulary (Grade 9 Unit 9: Fairness and Equity).",
+          "grade": 9,
+          "unitNumber": 9,
+          "unitCode": "ENG-G09-U09"
+        },
+        {
+          "stepNumber": 2,
+          "text": "Polite disagreement, mediation language, hedging expressions ('to some extent', 'it appears that'), and agreement idioms (Grade 11 Unit 9: Indigenous Conflict Resolution).",
+          "grade": 11,
+          "unitNumber": 9,
+          "unitCode": "ENG-G11-U09"
+        },
+        {
+          "stepNumber": 3,
+          "text": "Synthesizing opposing viewpoints: correlative conjunctions (neither...nor, not only...but also), subjunctive recommendations, and essay paragraphing (Grade 12 Unit 9: Conflict Management).",
+          "grade": 12,
+          "unitNumber": 9,
+          "unitCode": "ENG-G12-U09"
+        },
+        {
+          "stepNumber": 4,
+          "text": "EUEE Writing Mechanics Drill: spelling rules, capitalization, comma splices, run-on sentences, and dangling modifiers."
+        }
+      ],
+      "prerequisites": [
+        "Module 8 (dialogue pragmatics and register awareness)"
+      ],
+      "masteryCheckpoint": "Correct 5 dangling modifiers and run-on sentence errors; complete 5 mediation/disagreement dialogues using polite hedging and correlative agreement ('Neither the elders nor the mediator was...').",
+      "sourceFile": "english.json"
+    },
+    {
+      "moduleId": "ENG-M10",
+      "subjectCode": "ENG",
+      "subjectName": "English",
+      "streamCategory": "common",
+      "moduleNumber": 10,
+      "phase": "Phase III: EUEE Discourse, Communication & Writing Mastery",
+      "title": "Digital Literacy, AI & Integrated EUEE Exam Mastery",
+      "rationale": "Unifies the Grade 9–12 technology and media track (The Internet, Digital TV, Artificial Intelligence, Robotics) as a final capstone integrating reading, grammar, vocabulary, dialogue, and writing for the 120-item EUEE.",
+      "references": [
+        {
+          "grade": 9,
+          "unitNumber": 10,
+          "unitCode": "ENG-G09-U10",
+          "unitTitle": "The Internet",
+          "pages": "Full Unit"
+        },
+        {
+          "grade": 10,
+          "unitNumber": 10,
+          "unitCode": "ENG-G10-U10",
+          "unitTitle": "Digital Vs Satellite Television",
+          "pages": "Full Unit"
+        },
+        {
+          "grade": 11,
+          "unitNumber": 10,
+          "unitCode": "ENG-G11-U10",
+          "unitTitle": "Artificial Intelligence",
+          "pages": "Full Unit"
+        },
+        {
+          "grade": 12,
+          "unitNumber": 10,
+          "unitCode": "ENG-G12-U10",
+          "unitTitle": "Robotics",
+          "pages": "Full Unit"
+        }
+      ],
+      "sequence": [
+        {
+          "stepNumber": 1,
+          "text": "Digital-era idioms, phrasal verbs (log in, back up, filter out, rely on), and cyber-safety comprehension strategies (Grade 9 Unit 10: The Internet).",
+          "grade": 9,
+          "unitNumber": 10,
+          "unitCode": "ENG-G09-U10"
+        },
+        {
+          "stepNumber": 2,
+          "text": "Compare-and-contrast essay frameworks (block vs. point-by-point) using transitional pairs ('whereas', 'on the contrary', 'similarly') (Grade 10 Unit 10: Digital Vs Satellite Television).",
+          "grade": 10,
+          "unitNumber": 10,
+          "unitCode": "ENG-G10-U10"
+        },
+        {
+          "stepNumber": 3,
+          "text": "Complex noun phrases, nominalization, and evaluating author bias/purpose in emerging-tech texts (Grade 11 Unit 10: Artificial Intelligence).",
+          "grade": 11,
+          "unitNumber": 10,
+          "unitCode": "ENG-G11-U10"
+        },
+        {
+          "stepNumber": 4,
+          "text": "Full EUEE Grammar & Usage Capstone across technical exposition: clauses, articles, prepositions, tense shifts, and error identification (Grade 12 Unit 10: Robotics).",
+          "grade": 12,
+          "unitNumber": 10,
+          "unitCode": "ENG-G12-U10"
+        },
+        {
+          "stepNumber": 5,
+          "text": "Timed EUEE Integration Strategy: pacing Reading Comprehension, Vocabulary, Grammar, Communicative Activities, and Writing sections."
+        }
+      ],
+      "prerequisites": [
+        "Modules 1–9 (full Grade 9–12 English grammar, vocabulary, and discourse foundation)"
+      ],
+      "masteryCheckpoint": "Analyze an unseen expository passage on AI & Robotics: identify main claim, tone, 4 contextual vocabulary meanings, 3 pronoun referents, and complete a full mixed grammar & communicative error-correction check.",
+      "sourceFile": "english.json"
+    }
+  ]
+}

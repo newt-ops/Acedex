@@ -1,0 +1,983 @@
+{
+  "schemaVersion": 1,
+  "subjectCode": "BIO",
+  "subjectName": "Biology",
+  "streamCategory": "natural",
+  "compiledAt": "2026-11-24T20:15:53.060Z",
+  "sourceFile": "biology.md",
+  "modules": [
+    {
+      "moduleId": "BIO-M01",
+      "subjectCode": "BIO",
+      "subjectName": "Biology",
+      "streamCategory": "natural",
+      "moduleNumber": 1,
+      "phase": "Phase I: Foundational Core",
+      "title": "Scientific Foundations, Tools, Microscopy & Bioethics",
+      "rationale": "Establishes the epistemology of biological science, safety rules, compound optical instrumentation, historical milestones, Ethiopian contributions, biomimetic engineering, and bioethical frameworks before experimental study.",
+      "references": [
+        {
+          "grade": 9,
+          "unitNumber": 1,
+          "unitCode": "BIO-G09-U01",
+          "unitTitle": "Introduction to Biology",
+          "pages": "pp. 1–18"
+        },
+        {
+          "grade": 10,
+          "unitNumber": 1,
+          "unitCode": "BIO-G10-U01",
+          "unitTitle": "Sub-fields of Biology",
+          "pages": "pp. 1–16"
+        },
+        {
+          "grade": 11,
+          "unitNumber": 1,
+          "unitCode": "BIO-G11-U01",
+          "unitTitle": "Biology and Technology",
+          "pages": "pp. 7–25"
+        }
+      ],
+      "sequence": [
+        {
+          "stepNumber": 1,
+          "text": "The Scientific Method and laboratory safety symbols (Grade 9 Unit 1, pp. 2–5, 14–16).",
+          "grade": 9,
+          "unitNumber": 1,
+          "unitCode": "BIO-G09-U01",
+          "pages": "pp. 2–5, 14–16"
+        },
+        {
+          "stepNumber": 2,
+          "text": "Optical mechanics of microscopy: Magnification, resolution, focusing techniques (Grade 9 Unit 1, pp. 10–14).",
+          "grade": 9,
+          "unitNumber": 1,
+          "unitCode": "BIO-G09-U01",
+          "pages": "pp. 10–14"
+        },
+        {
+          "stepNumber": 3,
+          "text": "Branches of biological inquiry and historical milestones from Aristotle to Watson and Crick (Grade 10 Unit 1, pp. 1–11).",
+          "grade": 10,
+          "unitNumber": 1,
+          "unitCode": "BIO-G10-U01",
+          "pages": "pp. 1–11"
+        },
+        {
+          "stepNumber": 4,
+          "text": "Discoveries of prominent Ethiopian scientists: Dr. Aklilu Lemma (Endod), Prof. Gebisa Ejeta, Prof. Yalemtsehay Mekonnen (Grade 10 Unit 1, pp. 12–14).",
+          "grade": 10,
+          "unitNumber": 1,
+          "unitCode": "BIO-G10-U01",
+          "pages": "pp. 12–14"
+        },
+        {
+          "stepNumber": 5,
+          "text": "Biomimicry principles and the 3Rs of ethical animal experimentation (Grade 11 Unit 1, pp. 8–22).",
+          "grade": 11,
+          "unitNumber": 1,
+          "unitCode": "BIO-G11-U01",
+          "pages": "pp. 8–22"
+        }
+      ],
+      "prerequisites": [],
+      "masteryCheckpoint": "Explain how resolution differs from magnification, describe how Dr. Aklilu Lemma applied the scientific method to control schistosomiasis using Phytolacca dodecandra (Endod), and identify three architectural technologies modeled on biological systems.",
+      "sourceFile": "biology.md"
+    },
+    {
+      "moduleId": "BIO-M02",
+      "subjectCode": "BIO",
+      "subjectName": "Biology",
+      "streamCategory": "natural",
+      "moduleNumber": 2,
+      "phase": "Phase I: Foundational Core",
+      "title": "Cell Architecture, Membranes & Transport Dynamics",
+      "rationale": "The cell is the fundamental unit of structure and function in all living things. Understanding organelle compartmentalization and selective membrane permeability is required before examining biochemistry, physiology, or genetics.",
+      "references": [
+        {
+          "grade": 9,
+          "unitNumber": 3,
+          "unitCode": "BIO-G09-U03",
+          "unitTitle": "Cells",
+          "pages": "pp. 44–73"
+        }
+      ],
+      "sequence": [
+        {
+          "stepNumber": 1,
+          "text": "Historical formulation of the Cell Theory: Hooke, Schleiden, Schwann, Virchow (Grade 9 Unit 3, pp. 45–46).",
+          "grade": 9,
+          "unitNumber": 3,
+          "unitCode": "BIO-G09-U03",
+          "pages": "pp. 45–46"
+        },
+        {
+          "stepNumber": 2,
+          "text": "Prokaryotic vs. eukaryotic ultrastructure and plant vs. animal cell organization (Grade 9 Unit 3, pp. 53–56).",
+          "grade": 9,
+          "unitNumber": 3,
+          "unitCode": "BIO-G09-U03",
+          "pages": "pp. 53–56"
+        },
+        {
+          "stepNumber": 3,
+          "text": "Organelle functions: Nucleus, ribosomes, rough/smooth ER, Golgi, lysosomes, mitochondria, chloroplasts (Grade 9 Unit 3, pp. 46–52).",
+          "grade": 9,
+          "unitNumber": 3,
+          "unitCode": "BIO-G09-U03",
+          "pages": "pp. 46–52"
+        },
+        {
+          "stepNumber": 4,
+          "text": "Membrane transport mechanisms: Passive diffusion, facilitated transport, and osmosis across tonicity gradients (Grade 9 Unit 3, pp. 59–67).",
+          "grade": 9,
+          "unitNumber": 3,
+          "unitCode": "BIO-G09-U03",
+          "pages": "pp. 59–67"
+        },
+        {
+          "stepNumber": 5,
+          "text": "Active transport mechanisms: The Na^+/K^+ pump and ATP consumption (Grade 9 Unit 3, p. 68).",
+          "grade": 9,
+          "unitNumber": 3,
+          "unitCode": "BIO-G09-U03",
+          "pages": "p. 68"
+        },
+        {
+          "stepNumber": 6,
+          "text": "Hierarchical organization: Cells → Tissues → Organs → Organ Systems (Grade 9 Unit 3, pp. 68–70).",
+          "grade": 9,
+          "unitNumber": 3,
+          "unitCode": "BIO-G09-U03",
+          "pages": "pp. 68–70"
+        }
+      ],
+      "prerequisites": [],
+      "masteryCheckpoint": "Predict the behavioral response of plant and animal cells immersed in hypertonic, hypotonic, and isotonic media, and describe the organelle pathway involved in synthesizing, modifying, and packaging an exported protein.",
+      "sourceFile": "biology.md"
+    },
+    {
+      "moduleId": "BIO-M03",
+      "subjectCode": "BIO",
+      "subjectName": "Biology",
+      "streamCategory": "natural",
+      "moduleNumber": 3,
+      "phase": "Phase I: Foundational Core",
+      "title": "Biological Chemistry, Enzymes & Bioenergetics",
+      "rationale": "Connects chemical macromolecules to enzymatic catalysis and metabolic energy transformations (photosynthesis and cellular respiration).",
+      "references": [
+        {
+          "grade": 10,
+          "unitNumber": 3,
+          "unitCode": "BIO-G10-U03",
+          "unitTitle": "Biochemical Molecules",
+          "pages": "pp. 50–80"
+        },
+        {
+          "grade": 11,
+          "unitNumber": 3,
+          "unitCode": "BIO-G11-U03",
+          "unitTitle": "Enzymes",
+          "pages": "pp. 79–112"
+        },
+        {
+          "grade": 12,
+          "unitNumber": 3,
+          "unitCode": "BIO-G12-U03",
+          "unitTitle": "Energy Transformation",
+          "pages": "pp. 114–160"
+        }
+      ],
+      "sequence": [
+        {
+          "stepNumber": 1,
+          "text": "Physical/chemical properties of water and physiological roles of essential inorganic ions (Grade 10 Unit 3, pp. 51–58).",
+          "grade": 10,
+          "unitNumber": 3,
+          "unitCode": "BIO-G10-U03",
+          "pages": "pp. 51–58"
+        },
+        {
+          "stepNumber": 2,
+          "text": "Structure and synthesis of organic macromolecules: Carbohydrates, lipids, proteins, and nucleotides (Grade 10 Unit 3, pp. 59–76).",
+          "grade": 10,
+          "unitNumber": 3,
+          "unitCode": "BIO-G10-U03",
+          "pages": "pp. 59–76"
+        },
+        {
+          "stepNumber": 3,
+          "text": "Protein structure hierarchy (primary, secondary, tertiary, quaternary) (Grade 11 Unit 3, pp. 88–92).",
+          "grade": 11,
+          "unitNumber": 3,
+          "unitCode": "BIO-G11-U03",
+          "pages": "pp. 88–92"
+        },
+        {
+          "stepNumber": 4,
+          "text": "Enzyme catalysis: Activation energy, active sites, induced-fit model, and classification (Grade 11 Unit 3, pp. 80–87, 97–100).",
+          "grade": 11,
+          "unitNumber": 3,
+          "unitCode": "BIO-G11-U03",
+          "pages": "pp. 80–87, 97–100"
+        },
+        {
+          "stepNumber": 5,
+          "text": "Enzyme regulation, kinetic factors, and competitive vs. noncompetitive inhibition (Grade 11 Unit 3, pp. 92–97, 100–104).",
+          "grade": 11,
+          "unitNumber": 3,
+          "unitCode": "BIO-G11-U03",
+          "pages": "pp. 92–97, 100–104"
+        },
+        {
+          "stepNumber": 6,
+          "text": "Principles of cellular metabolism: Anabolism vs. catabolism and the ATP/ADP cycle (Grade 12 Unit 3, pp. 115–117).",
+          "grade": 12,
+          "unitNumber": 3,
+          "unitCode": "BIO-G12-U03",
+          "pages": "pp. 115–117"
+        },
+        {
+          "stepNumber": 7,
+          "text": "Photosynthetic energy capture: Thylakoid light reactions, photolysis, Calvin cycle, and C3/C4/CAM adaptations (Grade 12 Unit 3, pp. 117–135).",
+          "grade": 12,
+          "unitNumber": 3,
+          "unitCode": "BIO-G12-U03",
+          "pages": "pp. 117–135"
+        },
+        {
+          "stepNumber": 8,
+          "text": "Cellular respiration pathways: Cytosolic glycolysis, mitochondrial Krebs cycle, and electron transport chain chemiosmosis (Grade 12 Unit 3, pp. 136–151).",
+          "grade": 12,
+          "unitNumber": 3,
+          "unitCode": "BIO-G12-U03",
+          "pages": "pp. 136–151"
+        },
+        {
+          "stepNumber": 9,
+          "text": "Anaerobic fermentation pathways in yeast and animal muscles (Grade 12 Unit 3, pp. 151–156).",
+          "grade": 12,
+          "unitNumber": 3,
+          "unitCode": "BIO-G12-U03",
+          "pages": "pp. 151–156"
+        }
+      ],
+      "prerequisites": [],
+      "masteryCheckpoint": "Write the balanced equations for photosynthesis and aerobic respiration, outline the chemiosmotic generation of ATP along mitochondrial cristae, and contrast competitive and noncompetitive enzyme inhibition using reaction velocity models.",
+      "sourceFile": "biology.md"
+    },
+    {
+      "moduleId": "BIO-M04",
+      "subjectCode": "BIO",
+      "subjectName": "Biology",
+      "streamCategory": "natural",
+      "moduleNumber": 4,
+      "phase": "Phase II: Core Systems",
+      "title": "Molecular Genetics, Heredity, Cellular Reproduction & Biotechnology",
+      "rationale": "Unifies the physical behavior of chromosomes during cell division with molecular DNA replication, protein synthesis, Mendelian heredity, mutation, and modern recombinant DNA technology.",
+      "references": [
+        {
+          "grade": 10,
+          "unitNumber": 4,
+          "unitCode": "BIO-G10-U04",
+          "unitTitle": "Cell Reproduction",
+          "pages": "pp. 81–93"
+        },
+        {
+          "grade": 11,
+          "unitNumber": 4,
+          "unitCode": "BIO-G11-U04",
+          "unitTitle": "Genetics",
+          "pages": "pp. 113–179"
+        },
+        {
+          "grade": 12,
+          "unitNumber": 1,
+          "unitCode": "BIO-G12-U01",
+          "unitTitle": "Application of Biology",
+          "pages": "pp. 15–38"
+        },
+        {
+          "grade": 12,
+          "unitNumber": 2,
+          "unitCode": "BIO-G12-U02",
+          "unitTitle": "Microorganisms",
+          "pages": "pp. 78–89"
+        }
+      ],
+      "sequence": [
+        {
+          "stepNumber": 1,
+          "text": "The eukaryotic cell cycle: Interphase (G_1, S, G_2) and the stages of Mitosis (Grade 10 Unit 4, pp. 81–88).",
+          "grade": 10,
+          "unitNumber": 4,
+          "unitCode": "BIO-G10-U04",
+          "pages": "pp. 81–88"
+        },
+        {
+          "stepNumber": 2,
+          "text": "Meiosis I and II: Homologous pairing, synapsis, crossing over, and gametic reduction (Grade 10 Unit 4, pp. 89–91).",
+          "grade": 10,
+          "unitNumber": 4,
+          "unitCode": "BIO-G10-U04",
+          "pages": "pp. 89–91"
+        },
+        {
+          "stepNumber": 3,
+          "text": "DNA double-helix architecture and semi-conservative replication (Grade 11 Unit 4, pp. 114–123).",
+          "grade": 11,
+          "unitNumber": 4,
+          "unitCode": "BIO-G11-U04",
+          "pages": "pp. 114–123"
+        },
+        {
+          "stepNumber": 4,
+          "text": "The Central Dogma: Transcription of mRNA, tRNA translation, and the universal genetic code (Grade 11 Unit 4, pp. 133–137).",
+          "grade": 11,
+          "unitNumber": 4,
+          "unitCode": "BIO-G11-U04",
+          "pages": "pp. 133–137"
+        },
+        {
+          "stepNumber": 5,
+          "text": "Mendelian genetics: Monohybrid, dihybrid, and testcross inheritance patterns (Grade 11 Unit 4, pp. 137–146).",
+          "grade": 11,
+          "unitNumber": 4,
+          "unitCode": "BIO-G11-U04",
+          "pages": "pp. 137–146"
+        },
+        {
+          "stepNumber": 6,
+          "text": "Non-Mendelian patterns: Incomplete dominance, codominance (ABO blood groups), and sex-linked traits (Grade 11 Unit 4, pp. 148–154).",
+          "grade": 11,
+          "unitNumber": 4,
+          "unitCode": "BIO-G11-U04",
+          "pages": "pp. 148–154"
+        },
+        {
+          "stepNumber": 7,
+          "text": "Pedigree analysis, chromosomal aberrations, and single-gene genetic disorders (Grade 11 Unit 4, pp. 155–163).",
+          "grade": 11,
+          "unitNumber": 4,
+          "unitCode": "BIO-G11-U04",
+          "pages": "pp. 155–163"
+        },
+        {
+          "stepNumber": 8,
+          "text": "Gene therapy vectors, agricultural breeding, and bioinformatics (Grade 11 Unit 4, pp. 164–172).",
+          "grade": 11,
+          "unitNumber": 4,
+          "unitCode": "BIO-G11-U04",
+          "pages": "pp. 164–172"
+        },
+        {
+          "stepNumber": 9,
+          "text": "Modern biotechnology applications: Recombinant human insulin, tissue culture micropropagation, and single-cell proteins (Grade 12 Unit 1, pp. 15–25).",
+          "grade": 12,
+          "unitNumber": 1,
+          "unitCode": "BIO-G12-U01",
+          "pages": "pp. 15–25"
+        }
+      ],
+      "prerequisites": [],
+      "masteryCheckpoint": "Solve a dihybrid genetic cross to calculate genotypic/phenotypic ratios, trace an X-linked recessive trait through a three-generation pedigree, and outline how a human gene is cloned into a bacterial plasmid to synthesize recombinant insulin.",
+      "sourceFile": "biology.md"
+    },
+    {
+      "moduleId": "BIO-M05",
+      "subjectCode": "BIO",
+      "subjectName": "Biology",
+      "streamCategory": "natural",
+      "moduleNumber": 5,
+      "phase": "Phase II: Core Systems",
+      "title": "Microbiology, Virology & Immunology",
+      "rationale": "Examines the microbial world across all three domains of life (Bacteria, Archaea, Eukarya) and acellular viruses, connecting structural microbiology to infectious disease mechanisms and host immune defenses.",
+      "references": [
+        {
+          "grade": 9,
+          "unitNumber": 5,
+          "unitCode": "BIO-G09-U05",
+          "unitTitle": "Human Health, Nutrition, and Disease",
+          "pages": "pp. 127–135"
+        },
+        {
+          "grade": 10,
+          "unitNumber": 5,
+          "unitCode": "BIO-G10-U05",
+          "unitTitle": "Human Biology",
+          "pages": "pp. 142–145"
+        },
+        {
+          "grade": 12,
+          "unitNumber": 2,
+          "unitCode": "BIO-G12-U02",
+          "unitTitle": "Microorganisms",
+          "pages": "pp. 40–113"
+        }
+      ],
+      "sequence": [
+        {
+          "stepNumber": 1,
+          "text": "Historical foundations: Germ Theory of Disease and Koch’s Postulates (Grade 12 Unit 2, pp. 89–93).",
+          "grade": 12,
+          "unitNumber": 2,
+          "unitCode": "BIO-G12-U02",
+          "pages": "pp. 89–93"
+        },
+        {
+          "stepNumber": 2,
+          "text": "Eubacteria: Morphology, Gram-staining, binary fission, and parasexual conjugation (Grade 12 Unit 2, pp. 43–56).",
+          "grade": 12,
+          "unitNumber": 2,
+          "unitCode": "BIO-G12-U02",
+          "pages": "pp. 43–56"
+        },
+        {
+          "stepNumber": 3,
+          "text": "Archaea: Extremophile physiology and biochemical differences from bacteria (Grade 12 Unit 2, pp. 57–61).",
+          "grade": 12,
+          "unitNumber": 2,
+          "unitCode": "BIO-G12-U02",
+          "pages": "pp. 57–61"
+        },
+        {
+          "stepNumber": 4,
+          "text": "Eukaryotic microbes: Fungal hyphae/spores and parasitic protozoa (Plasmodium, Trypanosoma, Leishmania) (Grade 12 Unit 2, pp. 62–77).",
+          "grade": 12,
+          "unitNumber": 2,
+          "unitCode": "BIO-G12-U02",
+          "pages": "pp. 62–77"
+        },
+        {
+          "stepNumber": 5,
+          "text": "Virology: Viral capsids, lytic vs. lysogenic lifecycles, retroviral replication of HIV (Grade 12 Unit 2, pp. 78–89).",
+          "grade": 12,
+          "unitNumber": 2,
+          "unitCode": "BIO-G12-U02",
+          "pages": "pp. 78–89"
+        },
+        {
+          "stepNumber": 6,
+          "text": "Major epidemic and pandemic infectious diseases: Tuberculosis, Malaria, and COVID-19 (Grade 9 Unit 5, pp. 127–135).",
+          "grade": 9,
+          "unitNumber": 5,
+          "unitCode": "BIO-G09-U05",
+          "pages": "pp. 127–135"
+        },
+        {
+          "stepNumber": 7,
+          "text": "Host immune defenses: Innate physical/chemical barriers vs. adaptive humoral B-cells and cytotoxic T-cells (Grade 10 Unit 5, pp. 142–145).",
+          "grade": 10,
+          "unitNumber": 5,
+          "unitCode": "BIO-G10-U05",
+          "pages": "pp. 142–145"
+        },
+        {
+          "stepNumber": 8,
+          "text": "Methods of microbial control: Autoclaving, pasteurization, disinfectants, and antiseptics (Grade 12 Unit 2, pp. 106–109).",
+          "grade": 12,
+          "unitNumber": 2,
+          "unitCode": "BIO-G12-U02",
+          "pages": "pp. 106–109"
+        }
+      ],
+      "prerequisites": [],
+      "masteryCheckpoint": "State Koch’s Postulates in order, distinguish the cell wall structure and Gram-staining behavior of Gram-positive vs. Gram-negative bacteria, and describe the stages of the Plasmodium life cycle across its human and mosquito hosts.",
+      "sourceFile": "biology.md"
+    },
+    {
+      "moduleId": "BIO-M06",
+      "subjectCode": "BIO",
+      "subjectName": "Biology",
+      "streamCategory": "natural",
+      "moduleNumber": 6,
+      "phase": "Phase II: Core Systems",
+      "title": "Evolutionary Biology, Speciation & Human Origins",
+      "rationale": "Evolution provides the central explanatory framework for all of biology. Understanding the mechanisms of natural selection, population genetics, and speciation explains the diversity of life on Earth.",
+      "references": [
+        {
+          "grade": 10,
+          "unitNumber": 1,
+          "unitCode": "BIO-G10-U01",
+          "unitTitle": "Sub-fields of Biology",
+          "pages": "pp. 6–8"
+        },
+        {
+          "grade": 12,
+          "unitNumber": 4,
+          "unitCode": "BIO-G12-U04",
+          "unitTitle": "Evolution",
+          "pages": "pp. 161–235"
+        }
+      ],
+      "sequence": [
+        {
+          "stepNumber": 1,
+          "text": "Historical theories on the origin of life: Special creation, spontaneous generation (Pasteur's swan-neck flask experiments), and biochemical abiogenesis (Oparin-Haldane hypothesis) (Grade 12 Unit 4, pp. 162–170).",
+          "grade": 12,
+          "unitNumber": 4,
+          "unitCode": "BIO-G12-U04",
+          "pages": "pp. 162–170"
+        },
+        {
+          "stepNumber": 2,
+          "text": "Evolutionary theories: Lamarck’s acquired characteristics vs. Darwinian descent with modification (Grade 12 Unit 4, pp. 171–176).",
+          "grade": 12,
+          "unitNumber": 4,
+          "unitCode": "BIO-G12-U04",
+          "pages": "pp. 171–176"
+        },
+        {
+          "stepNumber": 3,
+          "text": "Neo-Darwinism and lines of scientific evidence: Fossil stratigraphy, radiometric dating, homologous vs. analogous structures, and molecular sequence homologies (Grade 12 Unit 4, pp. 176–187).",
+          "grade": 12,
+          "unitNumber": 4,
+          "unitCode": "BIO-G12-U04",
+          "pages": "pp. 176–187"
+        },
+        {
+          "stepNumber": 4,
+          "text": "Population genetics mechanisms: Stabilizing, directional, and disruptive natural selection; genetic drift (bottleneck and founder effects); gene flow (Grade 12 Unit 4, pp. 188–192, 215–224).",
+          "grade": 12,
+          "unitNumber": 4,
+          "unitCode": "BIO-G12-U04",
+          "pages": "pp. 188–192, 215–224"
+        },
+        {
+          "stepNumber": 5,
+          "text": "Speciation pathways: Geographic allopatric speciation vs. sympatric speciation (Grade 12 Unit 4, pp. 193–198).",
+          "grade": 12,
+          "unitNumber": 4,
+          "unitCode": "BIO-G12-U04",
+          "pages": "pp. 193–198"
+        },
+        {
+          "stepNumber": 6,
+          "text": "Paleoanthropology and human origins: Primate evolutionary trees, bipedalism before brain expansion, and landmark Ethiopian hominid discoveries (Ardipithecus ramidus, Australopithecus afarensis / Lucy, Selam) (Grade 12 Unit 4, pp. 200–207).",
+          "grade": 12,
+          "unitNumber": 4,
+          "unitCode": "BIO-G12-U04",
+          "pages": "pp. 200–207"
+        }
+      ],
+      "prerequisites": [],
+      "masteryCheckpoint": "Contrast homologous and analogous structures with examples, explain how genetic drift alters allele frequencies in small populations, and describe the evolutionary significance of the Ethiopian fossil hominid \"Lucy\" (Australopithecus afarensis).",
+      "sourceFile": "biology.md"
+    },
+    {
+      "moduleId": "BIO-M07",
+      "subjectCode": "BIO",
+      "subjectName": "Biology",
+      "streamCategory": "natural",
+      "moduleNumber": 7,
+      "phase": "Phase II: Core Systems",
+      "title": "Plant Biology, Botanical Anatomy & Physiology",
+      "rationale": "Plants are the primary autotrophic producers of terrestrial ecosystems. This module unifies plant evolutionary taxonomy, tissue anatomy, reproduction, fluid transport, and physiological responses.",
+      "references": [
+        {
+          "grade": 9,
+          "unitNumber": 2,
+          "unitCode": "BIO-G09-U02",
+          "unitTitle": "Characteristics and Classification of Organisms",
+          "pages": "pp. 35–36"
+        },
+        {
+          "grade": 10,
+          "unitNumber": 2,
+          "unitCode": "BIO-G10-U02",
+          "unitTitle": "Plants",
+          "pages": "pp. 17–49"
+        }
+      ],
+      "sequence": [
+        {
+          "stepNumber": 1,
+          "text": "Evolutionary survey of Kingdom Plantae: Bryophytes, Pteridophytes, Gymnosperms, and Angiosperms (Grade 9 Unit 2, pp. 35–36; Grade 10 Unit 2, pp. 18–20).",
+          "grade": 9,
+          "unitNumber": 2,
+          "unitCode": "BIO-G09-U02",
+          "pages": "pp. 35–36"
+        },
+        {
+          "stepNumber": 2,
+          "text": "Microscopic tissue anatomy: Leaf layers (stomata, mesophyll), stem vascular bundles, and root layers (epidermis, cortex, endodermis with Casparian strip, xylem, phloem) (Grade 10 Unit 2, pp. 20–25).",
+          "grade": 10,
+          "unitNumber": 2,
+          "unitCode": "BIO-G10-U02",
+          "pages": "pp. 20–25"
+        },
+        {
+          "stepNumber": 3,
+          "text": "Angiosperm floral anatomy, pollination syndromes, double fertilization, and seed germination (Grade 10 Unit 2, pp. 26–33).",
+          "grade": 10,
+          "unitNumber": 2,
+          "unitCode": "BIO-G10-U02",
+          "pages": "pp. 26–33"
+        },
+        {
+          "stepNumber": 4,
+          "text": "Water and mineral transport: Root pressure, capillary action, and the transpiration-cohesion-pull mechanism through xylem vessels (Grade 10 Unit 2, pp. 37–39).",
+          "grade": 10,
+          "unitNumber": 2,
+          "unitCode": "BIO-G10-U02",
+          "pages": "pp. 37–39"
+        },
+        {
+          "stepNumber": 5,
+          "text": "Translocation of organic solutes: Phloem sieve-tube source-to-sink mass flow, verified by girdling/ringing experiments (Grade 10 Unit 2, pp. 40–41).",
+          "grade": 10,
+          "unitNumber": 2,
+          "unitCode": "BIO-G10-U02",
+          "pages": "pp. 40–41"
+        },
+        {
+          "stepNumber": 6,
+          "text": "Plant growth responses: Auxin-mediated phototropism, gravitropism, and hydrotropism (Grade 10 Unit 2, pp. 41–44).",
+          "grade": 10,
+          "unitNumber": 2,
+          "unitCode": "BIO-G10-U02",
+          "pages": "pp. 41–44"
+        },
+        {
+          "stepNumber": 7,
+          "text": "Economic and medicinal botany in Ethiopia (Grade 10 Unit 2, pp. 45–46).",
+          "grade": 10,
+          "unitNumber": 2,
+          "unitCode": "BIO-G10-U02",
+          "pages": "pp. 45–46"
+        }
+      ],
+      "prerequisites": [],
+      "masteryCheckpoint": "Trace a water molecule from the soil solution through root tissues to atmospheric release via a leaf stoma, and explain why girdling a tree trunk's outer bark leads to root death.",
+      "sourceFile": "biology.md"
+    },
+    {
+      "moduleId": "BIO-M08",
+      "subjectCode": "BIO",
+      "subjectName": "Biology",
+      "streamCategory": "natural",
+      "moduleNumber": 8,
+      "phase": "Phase III: Advanced Synthesis",
+      "title": "Animal Diversity, Comparative Zoology & Ethology",
+      "rationale": "Surveys the structural and functional adaptations of the animal kingdom, contrasting invertebrate body plans with vertebrate reproduction, behavior, and thermal adaptations.",
+      "references": [
+        {
+          "grade": 9,
+          "unitNumber": 2,
+          "unitCode": "BIO-G09-U02",
+          "unitTitle": "Characteristics and Classification of Organisms",
+          "pages": "pp. 36–38"
+        },
+        {
+          "grade": 11,
+          "unitNumber": 2,
+          "unitCode": "BIO-G11-U02",
+          "unitTitle": "Animals",
+          "pages": "pp. 26–78"
+        }
+      ],
+      "sequence": [
+        {
+          "stepNumber": 1,
+          "text": "Animal characteristics: Multicellularity, heterotrophy, symmetry (asymmetry, radial, bilateral), and coelom types (Grade 9 Unit 2, pp. 36–38; Grade 11 Unit 2, pp. 27–29).",
+          "grade": 9,
+          "unitNumber": 2,
+          "unitCode": "BIO-G09-U02",
+          "pages": "pp. 36–38"
+        },
+        {
+          "stepNumber": 2,
+          "text": "Major invertebrate phyla: Porifera, Cnidaria, Platyhelminthes, Annelida, Mollusca, Arthropoda, Echinodermata (Grade 11 Unit 2, pp. 29–30).",
+          "grade": 11,
+          "unitNumber": 2,
+          "unitCode": "BIO-G11-U02",
+          "pages": "pp. 29–30"
+        },
+        {
+          "stepNumber": 3,
+          "text": "Economic entomology: Ecological pollinators, silk/honey/pigment production, biological pest control, and disease vectors (Grade 11 Unit 2, pp. 48–53).",
+          "grade": 11,
+          "unitNumber": 2,
+          "unitCode": "BIO-G11-U02",
+          "pages": "pp. 48–53"
+        },
+        {
+          "stepNumber": 4,
+          "text": "Comparative vertebrate reproduction: Insect metamorphosis (complete vs. incomplete), amphibian aquatic oviposition, reptilian/avian amniotic cleidoic eggs, and mammalian viviparous gestation (Grade 11 Unit 2, pp. 31–47).",
+          "grade": 11,
+          "unitNumber": 2,
+          "unitCode": "BIO-G11-U02",
+          "pages": "pp. 31–47"
+        },
+        {
+          "stepNumber": 5,
+          "text": "Ethology (Animal Behavior): Innate responses (reflexes, taxes, fixed action patterns) vs. learned behaviors (habituation, classical conditioning, imprinting, operant trial-and-error, insight) (Grade 11 Unit 2, pp. 54–61).",
+          "grade": 11,
+          "unitNumber": 2,
+          "unitCode": "BIO-G11-U02",
+          "pages": "pp. 54–61"
+        },
+        {
+          "stepNumber": 6,
+          "text": "Comparative homeostasis: Ectothermic poikilotherms vs. endothermic homeotherms and surface area-to-volume ratio scaling (Grade 11 Unit 2, pp. 61–71).",
+          "grade": 11,
+          "unitNumber": 2,
+          "unitCode": "BIO-G11-U02",
+          "pages": "pp. 61–71"
+        }
+      ],
+      "prerequisites": [],
+      "masteryCheckpoint": "Contrast complete and incomplete insect metamorphosis with examples, compare the embryonic adaptations of an avian cleidoic egg with a mammalian uterus, and explain why small endotherms consume more oxygen per unit of body mass than large endotherms.",
+      "sourceFile": "biology.md"
+    },
+    {
+      "moduleId": "BIO-M09",
+      "subjectCode": "BIO",
+      "subjectName": "Biology",
+      "streamCategory": "natural",
+      "moduleNumber": 9,
+      "phase": "Phase III: Advanced Synthesis",
+      "title": "Human Anatomy, Physiology, Health & Homeostatic Regulation",
+      "rationale": "Integrates all human bodily structures into an interconnected physiological system, exploring how individual organ systems collaborate to maintain internal homeostatic equilibrium.",
+      "references": [
+        {
+          "grade": 9,
+          "unitNumber": 4,
+          "unitCode": "BIO-G09-U04",
+          "unitTitle": "Reproduction",
+          "pages": "pp. 81–102"
+        },
+        {
+          "grade": 9,
+          "unitNumber": 5,
+          "unitCode": "BIO-G09-U05",
+          "unitTitle": "Human Health, Nutrition, and Disease",
+          "pages": "pp. 105–126"
+        },
+        {
+          "grade": 10,
+          "unitNumber": 5,
+          "unitCode": "BIO-G10-U05",
+          "unitTitle": "Human Biology",
+          "pages": "pp. 94–152"
+        },
+        {
+          "grade": 11,
+          "unitNumber": 5,
+          "unitCode": "BIO-G11-U05",
+          "unitTitle": "The Human Body Systems",
+          "pages": "pp. 180–235"
+        },
+        {
+          "grade": 12,
+          "unitNumber": 5,
+          "unitCode": "BIO-G12-U05",
+          "unitTitle": "Human Body System",
+          "pages": "pp. 236–332"
+        }
+      ],
+      "sequence": [
+        {
+          "stepNumber": 1,
+          "text": "Nutrition and energetics: Balanced diets, mineral/vitamin requirements, and deficiency pathologies (Grade 9 Unit 5, pp. 105–116).",
+          "grade": 9,
+          "unitNumber": 5,
+          "unitCode": "BIO-G09-U05",
+          "pages": "pp. 105–116"
+        },
+        {
+          "stepNumber": 2,
+          "text": "Digestive processing and absorption: Mechanical digestion, enzyme cascades (pepsin, trypsin, amylase, lipase), villi absorption, and hepatic assimilation (Grade 10 Unit 5, pp. 95–106).",
+          "grade": 10,
+          "unitNumber": 5,
+          "unitCode": "BIO-G10-U05",
+          "pages": "pp. 95–106"
+        },
+        {
+          "stepNumber": 3,
+          "text": "Cardiovascular transport: Double circulation, cardiac muscle contraction, the cardiac cycle (Lub-Dup), blood vessels, and ABO/Rh transfusion rules (Grade 10 Unit 5, pp. 107–120).",
+          "grade": 10,
+          "unitNumber": 5,
+          "unitCode": "BIO-G10-U05",
+          "pages": "pp. 107–120"
+        },
+        {
+          "stepNumber": 4,
+          "text": "Respiratory gas exchange: Pulmonary ventilation mechanics and alveolar diffusion (Grade 10 Unit 5, pp. 128–136).",
+          "grade": 10,
+          "unitNumber": 5,
+          "unitCode": "BIO-G10-U05",
+          "pages": "pp. 128–136"
+        },
+        {
+          "stepNumber": 5,
+          "text": "Musculoskeletal mechanics: Axial vs. appendicular skeleton, joint types, and sliding filament theory of sarcomere contraction (Grade 11 Unit 5, pp. 181–191).",
+          "grade": 11,
+          "unitNumber": 5,
+          "unitCode": "BIO-G11-U05",
+          "pages": "pp. 181–191"
+        },
+        {
+          "stepNumber": 6,
+          "text": "Human reproduction and sexuality: Gametogenesis, the 28-day menstrual cycle, contraception mechanisms, and STI pathology (Grade 9 Unit 4, pp. 81–102; Grade 11 Unit 5, pp. 192–221).",
+          "grade": 9,
+          "unitNumber": 4,
+          "unitCode": "BIO-G09-U04",
+          "pages": "pp. 81–102"
+        },
+        {
+          "stepNumber": 7,
+          "text": "Neurophysiology: Resting potential, action potential propagation, synaptic neurotransmitters, and central/peripheral reflex arcs (Grade 12 Unit 5, pp. 238–267).",
+          "grade": 12,
+          "unitNumber": 5,
+          "unitCode": "BIO-G12-U05",
+          "pages": "pp. 238–267"
+        },
+        {
+          "stepNumber": 8,
+          "text": "Sensory physiology: Receptor structures and processing mechanisms of the eye, ear, tongue, nose, and skin (Grade 12 Unit 5, pp. 273–294).",
+          "grade": 12,
+          "unitNumber": 5,
+          "unitCode": "BIO-G12-U05",
+          "pages": "pp. 273–294"
+        },
+        {
+          "stepNumber": 9,
+          "text": "Endocrine coordination: Pituitary, thyroid, adrenal, and pancreatic islet hormone feedback loops (Grade 12 Unit 5, pp. 295–316).",
+          "grade": 12,
+          "unitNumber": 5,
+          "unitCode": "BIO-G12-U05",
+          "pages": "pp. 295–316"
+        },
+        {
+          "stepNumber": 10,
+          "text": "Renal and hepatic homeostasis: Nephron ultrafiltration, loop of Henle counter-current multiplier, ADH-mediated osmoregulation, and liver detoxification (Grade 10 Unit 5, pp. 137–141; Grade 12 Unit 5, pp. 317–326).",
+          "grade": 10,
+          "unitNumber": 5,
+          "unitCode": "BIO-G10-U05",
+          "pages": "pp. 137–141"
+        }
+      ],
+      "prerequisites": [],
+      "masteryCheckpoint": "Describe how the nervous, circulatory, and endocrine systems coordinate the body's response to an acute drop in core body temperature, and outline the physiological cascade that restores normal blood glucose levels after a carbohydrate-rich meal.",
+      "sourceFile": "biology.md"
+    },
+    {
+      "moduleId": "BIO-M10",
+      "subjectCode": "BIO",
+      "subjectName": "Biology",
+      "streamCategory": "natural",
+      "moduleNumber": 10,
+      "phase": "Phase III: Advanced Synthesis",
+      "title": "Ecology, Population Dynamics & Planetary Climate Disruption",
+      "rationale": "Unifies the living world at the ecosystem, population, and global planetary levels, connecting ecological principles with mathematical demography and global climate governance.",
+      "references": [
+        {
+          "grade": 9,
+          "unitNumber": 6,
+          "unitCode": "BIO-G09-U06",
+          "unitTitle": "Ecology",
+          "pages": "pp. 139–164"
+        },
+        {
+          "grade": 10,
+          "unitNumber": 6,
+          "unitCode": "BIO-G10-U06",
+          "unitTitle": "Ecological Interaction",
+          "pages": "pp. 153–174"
+        },
+        {
+          "grade": 11,
+          "unitNumber": 6,
+          "unitCode": "BIO-G11-U06",
+          "unitTitle": "Population and Natural Resources",
+          "pages": "pp. 236–284"
+        },
+        {
+          "grade": 12,
+          "unitNumber": 6,
+          "unitCode": "BIO-G12-U06",
+          "unitTitle": "Climate Change",
+          "pages": "pp. 333–355"
+        }
+      ],
+      "sequence": [
+        {
+          "stepNumber": 1,
+          "text": "Ecosystem foundations: Abiotic vs. biotic components, ecological levels, terrestrial/aquatic biomes, and ecological succession (Grade 9 Unit 6, pp. 139–156).",
+          "grade": 9,
+          "unitNumber": 6,
+          "unitCode": "BIO-G09-U06",
+          "pages": "pp. 139–156"
+        },
+        {
+          "stepNumber": 2,
+          "text": "Interspecific relationships: Predation, parasitism, mutualism, commensalism, and competition (Grade 9 Unit 6, pp. 157–160).",
+          "grade": 9,
+          "unitNumber": 6,
+          "unitCode": "BIO-G09-U06",
+          "pages": "pp. 157–160"
+        },
+        {
+          "stepNumber": 3,
+          "text": "Trophic dynamics: Food chains/webs, ecological pyramids (numbers, biomass, energy), and the 10% trophic transfer efficiency rule (Grade 10 Unit 6, pp. 153–158).",
+          "grade": 10,
+          "unitNumber": 6,
+          "unitCode": "BIO-G10-U06",
+          "pages": "pp. 153–158"
+        },
+        {
+          "stepNumber": 4,
+          "text": "Biogeochemical nutrient cycling: The hydrological, carbon, nitrogen, and phosphorus cycles (Grade 10 Unit 6, pp. 159–171).",
+          "grade": 10,
+          "unitNumber": 6,
+          "unitCode": "BIO-G10-U06",
+          "pages": "pp. 159–171"
+        },
+        {
+          "stepNumber": 5,
+          "text": "Population ecology: Quadrat/mark-recapture sampling, exponential vs. logistic growth curves, carrying capacity (K), and density-dependent regulation (Grade 11 Unit 6, pp. 238–246).",
+          "grade": 11,
+          "unitNumber": 6,
+          "unitCode": "BIO-G11-U06",
+          "pages": "pp. 238–246"
+        },
+        {
+          "stepNumber": 6,
+          "text": "Human demography: Age-sex pyramids, demographic transitions, and resource consumption patterns (Grade 11 Unit 6, pp. 247–253).",
+          "grade": 11,
+          "unitNumber": 6,
+          "unitCode": "BIO-G11-U06",
+          "pages": "pp. 247–253"
+        },
+        {
+          "stepNumber": 7,
+          "text": "Environmental degradation: Air/water pollution, acid rain, stratospheric ozone depletion, and biomagnification of persistent toxins (Grade 11 Unit 6, pp. 258–278).",
+          "grade": 11,
+          "unitNumber": 6,
+          "unitCode": "BIO-G11-U06",
+          "pages": "pp. 258–278"
+        },
+        {
+          "stepNumber": 8,
+          "text": "Biodiversity conservation: Protected areas, national parks, wildlife sanctuaries, and community-managed conservation in Ethiopia (Grade 11 Unit 6, pp. 254–257, 279–280).",
+          "grade": 11,
+          "unitNumber": 6,
+          "unitCode": "BIO-G11-U06",
+          "pages": "pp. 254–257, 279–280"
+        },
+        {
+          "stepNumber": 9,
+          "text": "Global climate change: Greenhouse gas physics, global warming mechanisms, agricultural/ecological disruptions, and international treaties (UNFCCC, Kyoto Protocol, Paris Agreement) (Grade 12 Unit 6, pp. 333–352).",
+          "grade": 12,
+          "unitNumber": 6,
+          "unitCode": "BIO-G12-U06",
+          "pages": "pp. 333–352"
+        }
+      ],
+      "prerequisites": [],
+      "masteryCheckpoint": "Calculate population size from mark-recapture data, explain why top carnivores are most vulnerable to toxic chemical biomagnification, and detail how deforestation alters both the global carbon cycle and local hydrological patterns.",
+      "sourceFile": "biology.md"
+    }
+  ]
+}

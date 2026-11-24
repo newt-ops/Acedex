@@ -16,7 +16,7 @@ async function main() {
   console.log('✅ TOPIC BANK SEEDING COMPLETED');
   console.log('=========================================');
   console.log(`⏱️ Duration: ${durationSec}s`);
-  console.log(`📁 Markdown Files Scanned: ${report.filesScanned}`);
+  console.log(`📁 Topic Sources Scanned: ${report.filesScanned} (${report.sourceMode})`);
   console.log(`📚 Subjects Seeded: ${report.subjectsSeeded.join(', ') || 'None'}`);
   console.log(`🧩 Cross-Grade Topic Modules Upserted: ${report.modulesUpserted}`);
   console.log('=========================================\n');

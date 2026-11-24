@@ -51,19 +51,24 @@ describe('AI Cross-Grade Topic Study & Gemini Planner Backend Tests', { timeout:
   }, 60000);
 
   afterAll(async () => {
-    await AdSessionModel.deleteMany({ userId: studentId });
-    await StudentProgressModel.deleteMany({ userId: studentId });
+    if (studentId) {
+      await AdSessionModel.deleteMany({ userId: studentId });
+      await StudentProgressModel.deleteMany({ userId: studentId });
+    }
     await UserModel.deleteMany({ displayName: 'Topic Study Test Student' });
     await disconnectDatabase();
   }, 60000);
 
-  it('1. TopicBankParserService parses mathematics, physics, biology, and chemistry markdown files with textbook pages', () => {
+  it('1. TopicBankParserService parses all 7 markdown files cleanly (including History) and seeds all 8 JSON subjects (80 modules)', async () => {
     const dir = TopicBankParserService.resolveTopicBankDir();
     const expectedFiles = [
       { file: 'mathematics.md', code: 'MAT' },
       { file: 'physics.md', code: 'PHY' },
       { file: 'biology.md', code: 'BIO' },
       { file: 'chemistry.md', code: 'CHE' },
+      { file: 'economics.md', code: 'ECO' },
+      { file: 'geography.md', code: 'GEO' },
+      { file: 'history.md', code: 'HIS' },
     ];
 
     for (const item of expectedFiles) {
@@ -75,7 +80,26 @@ describe('AI Cross-Grade Topic Study & Gemini Planner Backend Tests', { timeout:
       expect(parsed[0].references[0].pages).toMatch(/pp\./i);
       expect(parsed[0].sequence.length).toBeGreaterThanOrEqual(2);
       expect(parsed[0].masteryCheckpoint.length).toBeGreaterThan(10);
+      // Confirm clean plain/Unicode formatting (no raw citation brackets or dollar LaTeX markers)
+      expect(parsed[0].masteryCheckpoint).not.toMatch(/\[\d+/);
+      expect(parsed[0].masteryCheckpoint).not.toContain('$');
     }
+
+    // Verify History multi-unit & Textbook References parsing (HIS-M08 previously had 0 refs)
+    const hisRaw = fs.readFileSync(path.join(dir, 'history.md'), 'utf-8');
+    const hisParsed = TopicBankParserService.parseSubjectMarkdown(hisRaw, 'history.md');
+    expect(hisParsed[7].moduleId).toBe('HIS-M08');
+    expect(hisParsed[7].references.length).toBe(2);
+    expect(hisParsed[9].moduleId).toBe('HIS-M10');
+    expect(hisParsed[9].references.length).toBe(8);
+
+    // Verify seeded MongoDB modules include all 8 subjects (including ENG curated JSON)
+    const seededCount = await TopicModuleModel.countDocuments();
+    expect(seededCount).toBe(80);
+    const hisM08Db = await TopicModuleModel.findOne({ moduleId: 'HIS-M08' }).lean();
+    expect(hisM08Db?.references[0]?.unitTitle).not.toMatch(/^Unit\s+\d+$/i);
+    const engM01Db = await TopicModuleModel.findOne({ moduleId: 'ENG-M01' }).lean();
+    expect(engM01Db?.references.length).toBe(4);
   });
 
   it('2. GET /api/v1/topics/program returns hasProgram: false and 0% baseline mastery for fresh student', async () => {

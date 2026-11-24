@@ -11,6 +11,7 @@
     "cleanup:legacy-collector": "tsx src/scripts/drop-legacy-collector-collections.ts",
     "cleanup:sample-questions": "tsx src/scripts/clear-sample-questions.ts",
     "seed:curriculum": "tsx src/scripts/seed-curriculum.ts",
+    "compile:topics": "tsx src/scripts/compile-topics.ts",
     "seed:topics": "tsx src/scripts/seed-topics.ts",
     "test": "vitest run",
     "test:watch": "vitest",

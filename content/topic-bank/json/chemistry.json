@@ -1,0 +1,679 @@
+{
+  "schemaVersion": 1,
+  "subjectCode": "CHE",
+  "subjectName": "Chemistry",
+  "streamCategory": "natural",
+  "compiledAt": "2026-11-24T20:15:53.068Z",
+  "sourceFile": "chemistry.md",
+  "modules": [
+    {
+      "moduleId": "CHE-M01",
+      "subjectCode": "CHE",
+      "subjectName": "Chemistry",
+      "streamCategory": "natural",
+      "moduleNumber": 1,
+      "phase": "Phase I: Foundational Core",
+      "title": "Scientific Foundations, Measurement & Laboratory Protocols",
+      "rationale": "Unifies scientific inquiry, SI base and derived units, conversion methods, significant figures, experimental error calculations, and laboratory safety protocols before undertaking quantitative chemistry.",
+      "references": [
+        {
+          "grade": 9,
+          "unitNumber": 1,
+          "unitCode": "CHE-G09-U01",
+          "unitTitle": "Chemistry and Its Importance",
+          "pages": "pp. 1–17"
+        },
+        {
+          "grade": 9,
+          "unitNumber": 2,
+          "unitCode": "CHE-G09-U02",
+          "unitTitle": "Measurements and Scientific Methods",
+          "pages": "pp. 18–49"
+        }
+      ],
+      "sequence": [
+        {
+          "stepNumber": 1,
+          "text": "Scope of chemistry and branches."
+        },
+        {
+          "stepNumber": 2,
+          "text": "SI Base Units and prefix scales."
+        },
+        {
+          "stepNumber": 3,
+          "text": "Derived quantities: Density and Temperature conversions (K, °C, °F)."
+        },
+        {
+          "stepNumber": 4,
+          "text": "Measurement uncertainty, significant figure arithmetic, and percent error calculations."
+        },
+        {
+          "stepNumber": 5,
+          "text": "The scientific method and laboratory apparatus operation."
+        }
+      ],
+      "prerequisites": [
+        "Basic arithmetic and metric measurement"
+      ],
+      "masteryCheckpoint": "Convert 400 K to Fahrenheit, calculate the density of an irregularly shaped sample with proper significant figures, compute percent error from experimental data, and identify chemical safety hazards.",
+      "sourceFile": "chemistry.md"
+    },
+    {
+      "moduleId": "CHE-M02",
+      "subjectCode": "CHE",
+      "subjectName": "Chemistry",
+      "streamCategory": "natural",
+      "moduleNumber": 2,
+      "phase": "Phase I: Foundational Core",
+      "title": "Atomic Architecture, Quantum Mechanics & Periodicity",
+      "rationale": "Merges the historical and empirical discoveries of the atom with modern quantum mechanics and the structural organization of the periodic table.",
+      "references": [
+        {
+          "grade": 9,
+          "unitNumber": 3,
+          "unitCode": "CHE-G09-U03",
+          "unitTitle": "Structure of the Atom",
+          "pages": "pp. 50–108"
+        },
+        {
+          "grade": 9,
+          "unitNumber": 4,
+          "unitCode": "CHE-G09-U04",
+          "unitTitle": "Periodic Classification of Elements",
+          "pages": "pp. 109–139"
+        },
+        {
+          "grade": 11,
+          "unitNumber": 1,
+          "unitCode": "CHE-G11-U01",
+          "unitTitle": "Atomic Structure and Periodic Properties of the Elements",
+          "pages": "pp. 1–66"
+        }
+      ],
+      "sequence": [
+        {
+          "stepNumber": 1,
+          "text": "Classical laws of combination (Conservation of Mass, Definite and Multiple Proportions)."
+        },
+        {
+          "stepNumber": 2,
+          "text": "Subatomic particle discoveries (Thomson cathode-ray tube, Millikan oil-drop, Rutherford α-scattering)."
+        },
+        {
+          "stepNumber": 3,
+          "text": "Atomic numbers, isotopes, and weighted average atomic mass calculations."
+        },
+        {
+          "stepNumber": 4,
+          "text": "Electromagnetic radiation, wave mechanics (c = λ nu), photon energy (E = hnu), and atomic line spectra."
+        },
+        {
+          "stepNumber": 5,
+          "text": "Bohr model calculations (radius, velocity, energy levels, Rydberg transitions)."
+        },
+        {
+          "stepNumber": 6,
+          "text": "Quantum mechanical model: de Broglie wavelength, Heisenberg Uncertainty Principle, and 4 Quantum Numbers (n, l, m_l, m_s)."
+        },
+        {
+          "stepNumber": 7,
+          "text": "Orbital shapes (s, p, d) and electronic configurations (Aufbau, Hund, Pauli rules, anomalous Cr/Cu)."
+        },
+        {
+          "stepNumber": 8,
+          "text": "Modern Periodic Law, block classifications (s, p, d, f), and periodic trends explained via effective nuclear charge (Z\\_eff)."
+        }
+      ],
+      "prerequisites": [
+        "Module 1 (units, prefixes, and scientific notation)"
+      ],
+      "masteryCheckpoint": "Calculate the wavelength of a photon emitted during a Balmer series transition (n=3 → n=2), write the full set of quantum numbers for the 24th electron of chromium, and explain why the first ionization energy of oxygen is lower than that of nitrogen.",
+      "sourceFile": "chemistry.md"
+    },
+    {
+      "moduleId": "CHE-M03",
+      "subjectCode": "CHE",
+      "subjectName": "Chemistry",
+      "streamCategory": "natural",
+      "moduleNumber": 3,
+      "phase": "Phase I: Foundational Core",
+      "title": "Chemical Bonding, Molecular Geometry & States of Matter",
+      "rationale": "Links electronic configurations to intra- and intermolecular forces, explaining 3D molecular shapes and the physical states of matter.",
+      "references": [
+        {
+          "grade": 9,
+          "unitNumber": 5,
+          "unitCode": "CHE-G09-U05",
+          "unitTitle": "Chemical Bonding",
+          "pages": "pp. 140–174"
+        },
+        {
+          "grade": 11,
+          "unitNumber": 2,
+          "unitCode": "CHE-G11-U02",
+          "unitTitle": "Chemical Bonding",
+          "pages": "pp. 67–144"
+        },
+        {
+          "grade": 11,
+          "unitNumber": 3,
+          "unitCode": "CHE-G11-U03",
+          "unitTitle": "Physical States of Matter",
+          "pages": "pp. 145–192"
+        }
+      ],
+      "sequence": [
+        {
+          "stepNumber": 1,
+          "text": "Octet Rule drivers and Lewis dot structures for main-group elements."
+        },
+        {
+          "stepNumber": 2,
+          "text": "Ionic bonding, energetics, and Born-Haber cycle calculation of lattice energy (U)."
+        },
+        {
+          "stepNumber": 3,
+          "text": "Covalent bonding, resonance hybrids, and octet exceptions (odd-electron, electron-deficient, expanded octets)."
+        },
+        {
+          "stepNumber": 4,
+          "text": "Polar vs. nonpolar covalent bonds and molecular dipole moments."
+        },
+        {
+          "stepNumber": 5,
+          "text": "VSEPR theory for predicting electron domain arrangements and molecular geometries."
+        },
+        {
+          "stepNumber": 6,
+          "text": "Valence Bond Theory, orbital overlap (σ vs. π), and hybridization (sp, sp^2, sp^3, sp^3d, sp^3d^2)."
+        },
+        {
+          "stepNumber": 7,
+          "text": "Molecular Orbital Theory (MOT): LCAO, bonding/antibonding diagrams, bond order, and magnetic properties."
+        },
+        {
+          "stepNumber": 8,
+          "text": "Intermolecular forces (London dispersion, dipole-dipole, hydrogen bonding) and crystal network classifications."
+        },
+        {
+          "stepNumber": 9,
+          "text": "Kinetic Molecular Theory of gases, gas laws (Boyle, Charles, Combined, Ideal: PV = nRT), and Graham's diffusion law."
+        },
+        {
+          "stepNumber": 10,
+          "text": "Liquid-vapor equilibria, dynamic vapor pressure, boiling point, and phase transition heating curves."
+        }
+      ],
+      "prerequisites": [
+        "Module 2 (atomic configurations and electronegativity)"
+      ],
+      "masteryCheckpoint": "Construct a Born-Haber cycle to calculate the lattice energy of NaCl, predict the VSEPR shape and hybridization of SF\\_4 and XeF\\_4, calculate the molecular orbital bond order of O\\_2^+, and apply Graham's Law to compare the diffusion rates of NH\\_3 and HCl.",
+      "sourceFile": "chemistry.md"
+    },
+    {
+      "moduleId": "CHE-M04",
+      "subjectCode": "CHE",
+      "subjectName": "Chemistry",
+      "streamCategory": "natural",
+      "moduleNumber": 4,
+      "phase": "Phase II: Core Systems",
+      "title": "Quantitative Chemical Stoichiometry & Solution Chemistry",
+      "rationale": "Unifies quantitative mass, volume, and solution concentration calculations into a single stoichiometric problem-solving framework.",
+      "references": [
+        {
+          "grade": 10,
+          "unitNumber": 1,
+          "unitCode": "CHE-G10-U01",
+          "unitTitle": "Chemical Reactions and Stoichiometry",
+          "pages": "pp. 1–50"
+        },
+        {
+          "grade": 10,
+          "unitNumber": 2,
+          "unitCode": "CHE-G10-U02",
+          "unitTitle": "Solutions",
+          "pages": "pp. 51–108"
+        },
+        {
+          "grade": 11,
+          "unitNumber": 3,
+          "unitCode": "CHE-G11-U03",
+          "unitTitle": "Physical States of Matter",
+          "pages": "pp. 145–192"
+        }
+      ],
+      "sequence": [
+        {
+          "stepNumber": 1,
+          "text": "Chemical equations and balancing (inspection, LCM, algebraic methods)."
+        },
+        {
+          "stepNumber": 2,
+          "text": "Mole concept, Avogadro's number, molar mass, and molar gas volume at STP (22.4 L)."
+        },
+        {
+          "stepNumber": 3,
+          "text": "Percent composition, empirical formula, and molecular formula determinations."
+        },
+        {
+          "stepNumber": 4,
+          "text": "Reaction stoichiometry: mass-mass, mass-volume, limiting/excess reactants, theoretical yield, and percent yield."
+        },
+        {
+          "stepNumber": 5,
+          "text": "Types of mixtures (suspensions, colloids, true solutions) and solution formation energetics (\"like dissolves like\")."
+        },
+        {
+          "stepNumber": 6,
+          "text": "Solution concentration units: Molarity, Molality, Normality, Mole fraction, ppm, ppb."
+        },
+        {
+          "stepNumber": 7,
+          "text": "Solution preparation, dilution calculations (M_1V_1 = M_2V_2), and aqueous solution stoichiometry."
+        },
+        {
+          "stepNumber": 8,
+          "text": "Reactions in aqueous solution, solubility rules, and net ionic equations."
+        }
+      ],
+      "prerequisites": [
+        "Modules 1 and 2 (unit factor-label conversions and formula masses)"
+      ],
+      "masteryCheckpoint": "Determine the empirical and molecular formula of a hydrocarbon containing 92.3% C (molar mass = 78 g/mol), identify the limiting reactant when 50 g CaCO\\_3 reacts with 15.2 g HCl, and calculate the molarity and molality of a 30% by mass H\\_2O\\_2 aqueous solution.",
+      "sourceFile": "chemistry.md"
+    },
+    {
+      "moduleId": "CHE-M05",
+      "subjectCode": "CHE",
+      "subjectName": "Chemistry",
+      "streamCategory": "natural",
+      "moduleNumber": 5,
+      "phase": "Phase II: Core Systems",
+      "title": "Chemical Kinetics, Dynamic Equilibrium & Industrial Processes",
+      "rationale": "Connects the rate of a chemical reaction with its thermodynamic equilibrium state, demonstrating how these two principles are balanced in industrial manufacturing.",
+      "references": [
+        {
+          "grade": 11,
+          "unitNumber": 4,
+          "unitCode": "CHE-G11-U04",
+          "unitTitle": "Chemical Kinetics",
+          "pages": "pp. 193–221"
+        },
+        {
+          "grade": 11,
+          "unitNumber": 5,
+          "unitCode": "CHE-G11-U05",
+          "unitTitle": "Chemical Equilibrium",
+          "pages": "pp. 222–263"
+        },
+        {
+          "grade": 12,
+          "unitNumber": 3,
+          "unitCode": "CHE-G12-U03",
+          "unitTitle": "Industrial Chemistry",
+          "pages": "pp. 136–212"
+        }
+      ],
+      "sequence": [
+        {
+          "stepNumber": 1,
+          "text": "Reaction rate expressions, average rates, and instantaneous rates."
+        },
+        {
+          "stepNumber": 2,
+          "text": "Collision Theory, activation energy (E_a), and the transition state complex."
+        },
+        {
+          "stepNumber": 3,
+          "text": "Factors modulating reaction rates (nature of reactants, surface area, concentration, temperature, catalysts)."
+        },
+        {
+          "stepNumber": 4,
+          "text": "Reversible reactions and dynamic chemical equilibrium."
+        },
+        {
+          "stepNumber": 5,
+          "text": "Law of Mass Action, equilibrium expressions (K_c, K_p), and the relation K_p = K_c(RT)^(Δ n)."
+        },
+        {
+          "stepNumber": 6,
+          "text": "Reaction Quotient (Q) and predicting the direction of shift."
+        },
+        {
+          "stepNumber": 7,
+          "text": "Le Chatelier's Principle (effects of concentration, temperature, pressure/volume, catalysts)."
+        },
+        {
+          "stepNumber": 8,
+          "text": "Industrial applications: Optimizing the Haber-Bosch process for NH\\_3 and the Contact process for H\\_2SO\\_4."
+        }
+      ],
+      "prerequisites": [
+        "Modules 3 and 4 (gas pressure concepts and molar concentrations)"
+      ],
+      "masteryCheckpoint": "Calculate K_p from K_c for N\\_2(g) + 3H\\_2(g) leftharpoons 2NH\\_3(g) at 500 K, predict the directional shift of an endothermic equilibrium when temperature rises and volume decreases, and explain why the Contact process uses 450°C rather than room temperature.",
+      "sourceFile": "chemistry.md"
+    },
+    {
+      "moduleId": "CHE-M06",
+      "subjectCode": "CHE",
+      "subjectName": "Chemistry",
+      "streamCategory": "natural",
+      "moduleNumber": 6,
+      "phase": "Phase II: Core Systems",
+      "title": "Inorganic Oxide Classifications, Acid-Base Systems & Ionic Equilibria",
+      "rationale": "Unifies qualitative descriptive inorganic chemistry (oxides and indicators) with quantitative acid-base equilibrium calculations.",
+      "references": [
+        {
+          "grade": 10,
+          "unitNumber": 3,
+          "unitCode": "CHE-G10-U03",
+          "unitTitle": "Important Inorganic Compounds",
+          "pages": "pp. 109–165"
+        },
+        {
+          "grade": 12,
+          "unitNumber": 1,
+          "unitCode": "CHE-G12-U01",
+          "unitTitle": "Acid-Base Equilibria",
+          "pages": "pp. 1–55"
+        }
+      ],
+      "sequence": [
+        {
+          "stepNumber": 1,
+          "text": "Classification of inorganic oxides (acidic, basic, amphoteric, neutral, peroxides)."
+        },
+        {
+          "stepNumber": 2,
+          "text": "Evolution of acid-base theories: Arrhenius, Brønsted-Lowry (conjugate pairs, amphiprotic species), and Lewis (coordinate adducts)."
+        },
+        {
+          "stepNumber": 3,
+          "text": "Auto-ionization of water, K_w, and the quantitative pH/pOH scale."
+        },
+        {
+          "stepNumber": 4,
+          "text": "Weak acid and weak base ionization equilibria (K_a, K_b, percent dissociation)."
+        },
+        {
+          "stepNumber": 5,
+          "text": "Common Ion Effect and buffer solutions (mechanism and Henderson-Hasselbalch equation)."
+        },
+        {
+          "stepNumber": 6,
+          "text": "Salt hydrolysis (predicting pH based on parent acid/base strength and K_a/K_b ratios)."
+        },
+        {
+          "stepNumber": 7,
+          "text": "Acid-base indicators, titration curves, equivalence point stoichiometry, and indicator selection."
+        }
+      ],
+      "prerequisites": [
+        "Modules 4 and 5 (molarity, ionic equations, and equilibrium constants)"
+      ],
+      "masteryCheckpoint": "Classify Al\\_2O\\_3, CO, Na\\_2O\\_2, and SO\\_3 by oxide type; calculate the pH of a buffer containing 0.1 M CH\\_3COOH and 0.15 M CH\\_3COONa (K_a = 1.8 × 10^(-5)); and identify a suitable indicator for titrating a weak base with a strong acid.",
+      "sourceFile": "chemistry.md"
+    },
+    {
+      "moduleId": "CHE-M07",
+      "subjectCode": "CHE",
+      "subjectName": "Chemistry",
+      "streamCategory": "natural",
+      "moduleNumber": 7,
+      "phase": "Phase II: Core Systems",
+      "title": "Thermochemistry, Redox Balancing & Electrochemistry",
+      "rationale": "Connects chemical thermodynamic energy changes with electron transfer, spanning spontaneous battery EMF and non-spontaneous electrolytic decomposition.",
+      "references": [
+        {
+          "grade": 10,
+          "unitNumber": 1,
+          "unitCode": "CHE-G10-U01",
+          "unitTitle": "Chemical Reactions and Stoichiometry",
+          "pages": "pp. 1–50"
+        },
+        {
+          "grade": 10,
+          "unitNumber": 4,
+          "unitCode": "CHE-G10-U04",
+          "unitTitle": "Energy Changes and Electrochemistry",
+          "pages": "pp. 166–197"
+        },
+        {
+          "grade": 12,
+          "unitNumber": 2,
+          "unitCode": "CHE-G12-U02",
+          "unitTitle": "Electrochemistry",
+          "pages": "pp. 56–135"
+        }
+      ],
+      "sequence": [
+        {
+          "stepNumber": 1,
+          "text": "Thermochemistry basics: Exothermic vs. endothermic reactions, enthalpy profile diagrams, and internal energy (Δ E = q + w)."
+        },
+        {
+          "stepNumber": 2,
+          "text": "Oxidation numbers and redox definitions (electron transfer)."
+        },
+        {
+          "stepNumber": 3,
+          "text": "Advanced redox balancing: Oxidation-number-change and ion-electron methods in acidic/basic media."
+        },
+        {
+          "stepNumber": 4,
+          "text": "Conduction mechanisms: Metallic vs. Electrolytic conductors; Strong, weak, nonelectrolytes."
+        },
+        {
+          "stepNumber": 5,
+          "text": "Electrolytic cells and aqueous electrolysis: Preferential discharge rules, electrode overvoltages, and inert vs. active electrodes."
+        },
+        {
+          "stepNumber": 6,
+          "text": "Quantitative electrolysis: Faraday's First and Second Laws (m = (MIt)/(nF))."
+        },
+        {
+          "stepNumber": 7,
+          "text": "Voltaic / Galvanic cells: Anode, cathode, salt bridge, and cell notation."
+        },
+        {
+          "stepNumber": 8,
+          "text": "Standard electrode potentials (E°), Standard Hydrogen Electrode (SHE), and standard cell EMF calculation (E°*{cell} = E°*{cathode} - E°\\_anode)."
+        },
+        {
+          "stepNumber": 9,
+          "text": "Concentration effects: Nernst equation (E*{cell} = E°*{cell} - (0.0592)/(n)log Q) and concentration cells."
+        },
+        {
+          "stepNumber": 10,
+          "text": "Commercial batteries (dry cell, lead storage, alkaline), fuel cells (H\\_2-O\\_2), and electrochemical corrosion/protection."
+        }
+      ],
+      "prerequisites": [
+        "Modules 2, 4, and 5 (redox oxidation states, stoichiometry, and equilibrium quotient)"
+      ],
+      "masteryCheckpoint": "Balance MnO\\_4^- + Fe^(2+) → Mn^(2+) + Fe^(3+) in acidic solution, calculate the mass of copper deposited by a 2.5 A current in 40 minutes, and calculate the cell potential of a Zn-Cu galvanic cell when [Cu^(2+)] = 0.01 M and [Zn^(2+)] = 1.0 M.",
+      "sourceFile": "chemistry.md"
+    },
+    {
+      "moduleId": "CHE-M08",
+      "subjectCode": "CHE",
+      "subjectName": "Chemistry",
+      "streamCategory": "natural",
+      "moduleNumber": 8,
+      "phase": "Phase III: Advanced Synthesis",
+      "title": "Inorganic Chemistry of Elements, Metallurgy & Industrial Manufacturing",
+      "rationale": "Examines the natural occurrence of elements, their extractive metallurgy, and their large-scale industrial manufacturing within Ethiopia.",
+      "references": [
+        {
+          "grade": 10,
+          "unitNumber": 5,
+          "unitCode": "CHE-G10-U05",
+          "unitTitle": "Metals and Nonmetals",
+          "pages": "pp. 198–233"
+        },
+        {
+          "grade": 12,
+          "unitNumber": 3,
+          "unitCode": "CHE-G12-U03",
+          "unitTitle": "Industrial Chemistry",
+          "pages": "pp. 136–212"
+        }
+      ],
+      "sequence": [
+        {
+          "stepNumber": 1,
+          "text": "Natural resources: Renewable vs. non-renewable, ores vs. minerals."
+        },
+        {
+          "stepNumber": 2,
+          "text": "General metallurgy steps: Beneficiation/flotation, roasting, smelting, refining."
+        },
+        {
+          "stepNumber": 3,
+          "text": "Extractive metallurgy of key metals: • Aluminum: Hall-Héroult electrolytic reduction of bauxite in molten cryolite. • Iron: Blast furnace operations, coke reduction, slag formation. • Copper: Chalcopyrite smelting, converter blowing, and electrolytic refining."
+        },
+        {
+          "stepNumber": 4,
+          "text": "Industrial production and properties of key nonmetals: Nitrogen, Phosphorus (allotropes), Oxygen, Ozone, Sulfur (Frasch process), Chlorine (Chlor-alkali process)."
+        },
+        {
+          "stepNumber": 5,
+          "text": "Large-scale chemical syntheses: NH\\_3 (Haber), HNO\\_3 (Ostwald), H\\_2SO\\_4 (Contact), Na\\_2CO\\_3 (Solvay)."
+        },
+        {
+          "stepNumber": 6,
+          "text": "Manufacturing industries in Ethiopia: Glass, ceramics, Portland cement (setting retarders like gypsum), sugar processing, leather tanning, soaps (saponification), and detergents."
+        }
+      ],
+      "prerequisites": [
+        "Modules 4, 5, 6, and 7 (stoichiometry, equilibria, redox, and electrochemistry)"
+      ],
+      "masteryCheckpoint": "Write the balanced equations for blast furnace slag formation, describe the reactions in the three-step Ostwald process, and explain why detergents are more effective than ordinary soaps in hard water containing Ca^(2+) or Mg^(2+).",
+      "sourceFile": "chemistry.md"
+    },
+    {
+      "moduleId": "CHE-M09",
+      "subjectCode": "CHE",
+      "subjectName": "Chemistry",
+      "streamCategory": "natural",
+      "moduleNumber": 9,
+      "phase": "Phase III: Advanced Synthesis",
+      "title": "Systematic Organic Chemistry & Functional Group Transformations",
+      "rationale": "Unifies organic chemistry from simple hydrocarbons to complex oxygenated derivatives, focusing on systematic IUPAC nomenclature, reaction mechanisms, and multi-step synthesis pathways.",
+      "references": [
+        {
+          "grade": 10,
+          "unitNumber": 6,
+          "unitCode": "CHE-G10-U06",
+          "unitTitle": "Hydrocarbons and Their Natural Sources",
+          "pages": "pp. 234–298"
+        },
+        {
+          "grade": 11,
+          "unitNumber": 6,
+          "unitCode": "CHE-G11-U06",
+          "unitTitle": "Some Important Oxygen-Containing Organic Compounds",
+          "pages": "pp. 264–330"
+        }
+      ],
+      "sequence": [
+        {
+          "stepNumber": 1,
+          "text": "Historical foundations: Demise of Vitalism (Wöhler's urea synthesis) and carbon hybridization review."
+        },
+        {
+          "stepNumber": 2,
+          "text": "Saturated hydrocarbons (Alkanes and Cycloalkanes): Nomenclature, conformational/chain isomerism, free-radical halogenation."
+        },
+        {
+          "stepNumber": 3,
+          "text": "Unsaturated hydrocarbons (Alkenes and Alkynes): • Positional and geometric (cis-trans) isomerism. • Laboratory preparation via alcohol dehydration. • Electrophilic addition reactions: Hydrogenation, halogenation, Markovnikov addition of hydrogen halides, hydration. • Unsaturation tests (Br\\_2/CCl\\_4 and Baeyer's alkaline KMnO\\_4)."
+        },
+        {
+          "stepNumber": 4,
+          "text": "Aromatic Hydrocarbons (Benzene): Delocalization, resonance stability, and electrophilic aromatic substitution (halogenation, nitration, sulfonation)."
+        },
+        {
+          "stepNumber": 5,
+          "text": "Oxygenated Derivatives: • Alcohols: Classifications (1°, 2°, 3°, polyhydric), hydrogen bonding, oxidation reactions. • Ethers: Williamson ether synthesis and chemical properties. • Aldehydes and Ketones: Carbonyl polarity, nucleophilic addition, differentiation using Tollens' and Fehling's reagents. • Carboxylic Acids: Acid strength, synthesis via oxidation, reactions with bases. • Esters, Fats, and Oils: Fischer esterification, saponification, triglyceride structures, and catalytic hydrogenation (\"hardening of oils\")."
+        }
+      ],
+      "prerequisites": [
+        "Modules 3 and 4 (covalent bonding, hybridization, polarity, and intermolecular forces)"
+      ],
+      "masteryCheckpoint": "Name complex branched alkenes and alcohols using IUPAC rules, predict the major Markovnikov product of propene reacting with HBr, outline a reaction sequence to synthesize ethanoic acid from ethene, and describe a chemical test to differentiate 2-pentanone from pentanal.",
+      "sourceFile": "chemistry.md"
+    },
+    {
+      "moduleId": "CHE-M10",
+      "subjectCode": "CHE",
+      "subjectName": "Chemistry",
+      "streamCategory": "natural",
+      "moduleNumber": 10,
+      "phase": "Phase III: Advanced Synthesis",
+      "title": "Polymers, Macromolecules, Environmental Chemistry & Green Chemistry",
+      "rationale": "Connects organic synthesis to industrial macromolecular materials, environmental pollution, atmospheric chemistry, and sustainable green manufacturing.",
+      "references": [
+        {
+          "grade": 12,
+          "unitNumber": 4,
+          "unitCode": "CHE-G12-U04",
+          "unitTitle": "Polymers",
+          "pages": "pp. 213–239"
+        },
+        {
+          "grade": 12,
+          "unitNumber": 5,
+          "unitCode": "CHE-G12-U05",
+          "unitTitle": "Introduction to Environmental Chemistry",
+          "pages": "pp. 240–286"
+        }
+      ],
+      "sequence": [
+        {
+          "stepNumber": 1,
+          "text": "Polymer concepts: Monomers, repeating units, and degree of polymerization."
+        },
+        {
+          "stepNumber": 2,
+          "text": "Addition polymerization: Mechanism across double bonds (polyethylene, polypropylene, PVC, Teflon, natural rubber / polyisoprene)."
+        },
+        {
+          "stepNumber": 3,
+          "text": "Condensation polymerization: Elimination of small molecules (Nylon 6,6, Dacron polyester, Bakelite)."
+        },
+        {
+          "stepNumber": 4,
+          "text": "Structural and thermal classifications: Thermoplastics vs. Thermosetting resins."
+        },
+        {
+          "stepNumber": 5,
+          "text": "Natural biopolymers: Carbohydrates (starch vs. cellulose glycosidic linkages), Proteins (peptide bonds), DNA structure."
+        },
+        {
+          "stepNumber": 6,
+          "text": "Environmental compartments and biogeochemical cycles (Hydrological, Carbon, Nitrogen, Phosphorus, Sulfur)."
+        },
+        {
+          "stepNumber": 7,
+          "text": "Environmental pollution: Acid rain formation reactions, photochemical smog, stratospheric ozone depletion cycles, and aquatic eutrophication / BOD."
+        },
+        {
+          "stepNumber": 8,
+          "text": "Greenhouse effect and global warming chemistry: Infrared absorption mechanics and greenhouse gases (CO\\_2, CH\\_4, N\\_2O, CFCs)."
+        },
+        {
+          "stepNumber": 9,
+          "text": "Green Chemistry: The 12 principles, cleaner production, and atom economy calculations."
+        }
+      ],
+      "prerequisites": [
+        "Modules 8 and 9 (industrial processes, functional groups, and organic reaction equations)"
+      ],
+      "masteryCheckpoint": "Draw the monomer units of Dacron and Nylon 6,6, write the chemical reactions responsible for sulfuric acid formation in acid rain, contrast the biological functions of starch and cellulose based on their glycosidic bonds, and calculate the atom economy of synthesizing ethanol via ethene hydration versus glucose fermentation.",
+      "sourceFile": "chemistry.md"
+    }
+  ]
+}

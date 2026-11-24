@@ -860,23 +860,53 @@ export const UpdateTopicProgressSchema = z.object({
 });
 export type UpdateTopicProgressRequest = z.infer<typeof UpdateTopicProgressSchema>;
 
-export interface TopicReadingReference {
-  grade: number;
-  unitNumber: number;
-  unitCode: string;
-  unitTitle: string;
-  pages: string;
-  hasQuickNotes?: boolean;
-}
+export const TopicReadingReferenceSchema = z.object({
+  grade: z.number().int().min(9).max(12),
+  unitNumber: z.number().int().min(1),
+  unitCode: z.string().min(5),
+  unitTitle: z.string().min(1),
+  pages: z.string().min(1),
+  hasQuickNotes: z.boolean().optional(),
+});
+export type TopicReadingReference = z.infer<typeof TopicReadingReferenceSchema>;
 
-export interface TopicLearningStep {
-  stepNumber: number;
-  text: string;
-  grade?: number;
-  unitNumber?: number;
-  unitCode?: string;
-  pages?: string;
-}
+export const TopicLearningStepSchema = z.object({
+  stepNumber: z.number().int().min(1),
+  text: z.string().min(1),
+  grade: z.number().int().min(9).max(12).optional(),
+  unitNumber: z.number().int().min(1).optional(),
+  unitCode: z.string().min(5).optional(),
+  pages: z.string().optional(),
+});
+export type TopicLearningStep = z.infer<typeof TopicLearningStepSchema>;
+
+export const TopicModuleSeedSchema = z.object({
+  moduleId: z.string().min(4),
+  subjectCode: z.string().min(2).max(5),
+  subjectName: z.string().min(2),
+  streamCategory: SubjectStreamCategorySchema,
+  moduleNumber: z.number().int().min(1),
+  phase: z.string().min(1),
+  title: z.string().min(1),
+  rationale: z.string(),
+  references: z.array(TopicReadingReferenceSchema),
+  sequence: z.array(TopicLearningStepSchema),
+  prerequisites: z.array(z.string()),
+  masteryCheckpoint: z.string(),
+  sourceFile: z.string(),
+});
+export type TopicModuleSeed = z.infer<typeof TopicModuleSeedSchema>;
+
+export const SubjectTopicBankJsonSchema = z.object({
+  schemaVersion: z.literal(1),
+  subjectCode: z.string().min(2).max(5),
+  subjectName: z.string().min(2),
+  streamCategory: SubjectStreamCategorySchema,
+  compiledAt: z.string().min(1),
+  sourceFile: z.string().min(1),
+  modules: z.array(TopicModuleSeedSchema).min(1),
+});
+export type SubjectTopicBankJson = z.infer<typeof SubjectTopicBankJsonSchema>;
 
 export interface TopicModuleItem {
   moduleId: string;

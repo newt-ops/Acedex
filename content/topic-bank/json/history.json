@@ -1,0 +1,720 @@
+{
+  "schemaVersion": 1,
+  "subjectCode": "HIS",
+  "subjectName": "History",
+  "streamCategory": "social",
+  "compiledAt": "2026-11-24T20:15:53.078Z",
+  "sourceFile": "history.md",
+  "modules": [
+    {
+      "moduleId": "HIS-M01",
+      "subjectCode": "HIS",
+      "subjectName": "History",
+      "streamCategory": "social",
+      "moduleNumber": 1,
+      "phase": "Phase I: Foundational Core",
+      "title": "Historical Method, Human Origins & Early State Formation",
+      "rationale": "Connects the foundational methodology of history (source evaluation, historiographical traditions) with scientific knowledge regarding human physical/cultural evolution and the emergence of early state structures.",
+      "references": [
+        {
+          "grade": 9,
+          "unitNumber": 1,
+          "unitCode": "HIS-G09-U01",
+          "unitTitle": "The Discipline of History and Human Evolution",
+          "pages": "pp. 1–21"
+        },
+        {
+          "grade": 11,
+          "unitNumber": 1,
+          "unitCode": "HIS-G11-U01",
+          "unitTitle": "History, Historiography, and Human Evolution",
+          "pages": "pp. 1–21"
+        }
+      ],
+      "sequence": [
+        {
+          "stepNumber": 1,
+          "text": "Nature and uses of history; primary vs. secondary sources; internal and external source criticism."
+        },
+        {
+          "stepNumber": 2,
+          "text": "Historiographical evolution: Herodotus, Thucydides, Leopold von Ranke, Ibn Khaldun, and the Ethiopian chronicle tradition."
+        },
+        {
+          "stepNumber": 3,
+          "text": "Hominid evolution in the East African Rift Valley: Australopithecus afarensis (\"Lucy/Dinkinesh\"), Homo habilis, Homo erectus, and Homo sapiens."
+        },
+        {
+          "stepNumber": 4,
+          "text": "Paleolithic tool technology (Oldowan, Acheulean) and the Neolithic Agricultural Revolution."
+        },
+        {
+          "stepNumber": 5,
+          "text": "Theories of early state emergence: religious/theocratic, agricultural surplus, trade route control, and military conquest."
+        }
+      ],
+      "prerequisites": [
+        "Basic understanding of chronological concepts (B.C., A.D., B.P., centuries, millennia)"
+      ],
+      "masteryCheckpoint": "Distinguish between primary and secondary historical sources with concrete examples; explain why East Africa is designated the \"cradle of humankind\"; describe the socio-economic impacts of the Neolithic Revolution; and contrast the theocratic theory with the trade-control theory of state emergence.",
+      "sourceFile": "history.md"
+    },
+    {
+      "moduleId": "HIS-M02",
+      "subjectCode": "HIS",
+      "subjectName": "History",
+      "streamCategory": "social",
+      "moduleNumber": 2,
+      "phase": "Phase I: Foundational Core",
+      "title": "Ancient Civilizations, Classical Empires & Early Monotheism",
+      "rationale": "Unifies ancient African, Asian, Mesoamerican, and European riverine and Mediterranean civilizations, tracing state development, social hierarchies, and the institutional rise of Christianity.",
+      "references": [
+        {
+          "grade": 9,
+          "unitNumber": 2,
+          "unitCode": "HIS-G09-U02",
+          "unitTitle": "Ancient World Civilizations up to c. 500 AD",
+          "pages": "pp. 22–38"
+        },
+        {
+          "grade": 11,
+          "unitNumber": 2,
+          "unitCode": "HIS-G11-U02",
+          "unitTitle": "Major Spots of Ancient World Civilizations up to c.500 A.D",
+          "pages": "pp. 22–50"
+        }
+      ],
+      "sequence": [
+        {
+          "stepNumber": 1,
+          "text": "Ancient African river civilizations: Egypt (Old, Middle, New Kingdoms; Pharaohs, Hieroglyphics, pyramids) and Kush-Meroe (iron technology)."
+        },
+        {
+          "stepNumber": 2,
+          "text": "Fertile Crescent and Asian civilizations: Mesopotamia (cuneiform, Hammurabi's Code), Indus Valley (Harappa, Mohenjo-Daro), and Imperial China (Shang, Zhou, Confucianism)."
+        },
+        {
+          "stepNumber": 3,
+          "text": "Classical Greece: Polis structure, Spartan militarism, Athenian direct democracy and its socio-political exclusions (women, metics, enslaved people)."
+        },
+        {
+          "stepNumber": 4,
+          "text": "Ancient Rome: From Republic (Senate, Consuls, Plebeian struggles, Twelve Tables) to Empire (Augustus, Pax Romana, Roman law, slave revolts like Spartacus)."
+        },
+        {
+          "stepNumber": 5,
+          "text": "The rise and expansion of Christianity: Jesus of Nazareth, persecution under Nero, Edict of Milan (313 AD), Council of Nicaea (325 AD), and official state adoption under Theodosius."
+        }
+      ],
+      "prerequisites": [
+        "Module 1 (Neolithic revolution and state formation theories)"
+      ],
+      "masteryCheckpoint": "Explain the historical significance of the Code of Hammurabi; identify the structural limitations of Athenian democracy; trace how Rome transitioned from a Republic to an Empire; and state the primary doctrinal decision reached at the Council of Nicaea.",
+      "sourceFile": "history.md"
+    },
+    {
+      "moduleId": "HIS-M03",
+      "subjectCode": "HIS",
+      "subjectName": "History",
+      "streamCategory": "social",
+      "moduleNumber": 3,
+      "phase": "Phase I: Foundational Core",
+      "title": "Ancient & Medieval Ethiopia and the Horn (to 1550s)",
+      "rationale": "Connects the ancient pre-Aksumite, Aksumite, and Zagwe polities with the restored Solomonic Dynasty, tracking trade route competition, monastic expansion, and the 16th-century Christian-Muslim conflicts.",
+      "references": [
+        {
+          "grade": 9,
+          "unitNumber": 3,
+          "unitCode": "HIS-G09-U03",
+          "unitTitle": "Peoples and States in Ethiopia and the Horn to the end of 13th C.",
+          "pages": "pp. 39–63"
+        },
+        {
+          "grade": 9,
+          "unitNumber": 7,
+          "unitCode": "HIS-G09-U07",
+          "unitTitle": "States, Principalities, Population Movements and Interactions in Ethiopia, 13th - Mid-16th C.",
+          "pages": "pp. 119–133"
+        },
+        {
+          "grade": 11,
+          "unitNumber": 3,
+          "unitCode": "HIS-G11-U03",
+          "unitTitle": "Peoples, States and Historical Processes in Ethiopia and the Horn to the End of the 13th Century",
+          "pages": "pp. 51–73"
+        },
+        {
+          "grade": 11,
+          "unitNumber": 7,
+          "unitCode": "HIS-G11-U07",
+          "unitTitle": "States, Principalities, Population Movements and Interactions in Ethiopia (13th – Mid-16th Century)",
+          "pages": "pp. 170–193"
+        }
+      ],
+      "sequence": [
+        {
+          "stepNumber": 1,
+          "text": "Pre-Aksumite polities: Land of Punt and the kingdom of Damat (Yeha, Mukarrib title)."
+        },
+        {
+          "stepNumber": 2,
+          "text": "The Aksumite Kingdom: Red Sea trade via Adulis, King Ezana's conversion to Christianity (c. 330 AD), coin minting, King Kaleb's expedition, and factors for Aksum's decline."
+        },
+        {
+          "stepNumber": 3,
+          "text": "The Zagwe Dynasty: Agaw lineage, capital at Roha/Adafa, King Lalibela's monolithic rock-hewn churches, and legitimacy disputes."
+        },
+        {
+          "stepNumber": 4,
+          "text": "The Restored \"Solomonic\" Dynasty (1270): Yekuno-Amlak, the Kibre Negest legitimacy narrative, mobile royal tent-courts, and territorial expansion under Amde-Tsiyon."
+        },
+        {
+          "stepNumber": 5,
+          "text": "Medieval socio-economic mechanisms: Gult and Rist land tenure, monastic expansion (Ewostatewos vs. Tekle-Haymanot orders), and the royal prison of Amba Gishen."
+        },
+        {
+          "stepNumber": 6,
+          "text": "Commercial rivalry and conflict: Muslim sultanates (Shewa, Ifat, Adal) along the Zeila trade route; war with Imam Ahmad ibn Ibrahim al-Ghazi (Ahmad Gragn, 1529–1543), Ottoman and Portuguese military interventions, and the Battle of Woina Dega."
+        }
+      ],
+      "prerequisites": [
+        "Module 2 (ancient Mediterranean trade and the introduction of Christianity)"
+      ],
+      "masteryCheckpoint": "Describe the economic role played by the port of Adulis in the Aksumite Empire; explain the political ideology behind the restoration of the \"Solomonic\" Dynasty in 1270; and analyze the underlying economic and religious causes of the war between the Christian kingdom and the Sultanate of Adal.",
+      "sourceFile": "history.md"
+    },
+    {
+      "moduleId": "HIS-M04",
+      "subjectCode": "HIS",
+      "subjectName": "History",
+      "streamCategory": "social",
+      "moduleNumber": 4,
+      "phase": "Phase II: Core Systems",
+      "title": "Demographic Transformations, Regional States & Internal Rivalries (1550s–1855)",
+      "rationale": "Traces the major population movements, the development of independent regional kingdoms across southern, western, and eastern Ethiopia, the Gondarine urban period, and the decentralized Zemene Mesafint.",
+      "references": [
+        {
+          "grade": 9,
+          "unitNumber": 7,
+          "unitCode": "HIS-G09-U07",
+          "unitTitle": "States, Principalities, Population Movements and Interactions in Ethiopia, 13th - Mid-16th C.",
+          "pages": "pp. 133–187"
+        },
+        {
+          "grade": 9,
+          "unitNumber": 8,
+          "unitCode": "HIS-G09-U08",
+          "unitTitle": "Political, Social and Economic Processes in Ethiopia Mid-16th to Mid-19th C.",
+          "pages": "pp. 133–187"
+        },
+        {
+          "grade": 11,
+          "unitNumber": 7,
+          "unitCode": "HIS-G11-U07",
+          "unitTitle": "States, Principalities, Population Movements and Interactions in Ethiopia (13th – Mid-16th Century)",
+          "pages": "pp. 193–237"
+        },
+        {
+          "grade": 11,
+          "unitNumber": 8,
+          "unitCode": "HIS-G11-U08",
+          "unitTitle": "Political, Social and Economic Processes in Ethiopia, Mid 16th to Mid-19th Century",
+          "pages": "pp. 193–237"
+        },
+        {
+          "grade": 12,
+          "unitNumber": 3,
+          "unitCode": "HIS-G12-U03",
+          "unitTitle": "Social, Economic and Political Developments in Ethiopia, Mid 19th C. to 1941",
+          "pages": "pp. 51–56"
+        }
+      ],
+      "sequence": [
+        {
+          "stepNumber": 1,
+          "text": "The Oromo population movement (16th c.): Push and pull factors, Borana and Barentu movements, integration mechanisms (Moggasa and Guddifacha)."
+        },
+        {
+          "stepNumber": 2,
+          "text": "The Gadaa System: Social organization, cyclical 8-year age sets, the Abba Gadaa leadership, and the Chaffe legislative assembly."
+        },
+        {
+          "stepNumber": 3,
+          "text": "Southern and western regional states: Omotic states under the Tato system (Kafa, Shekka, Yem); Cushitic and Omotic defensive earthworks (Halala Keela in Dawuro); transition from Gadaa to monarchies (Moti) in the Gibe basin (Jimma Abba Jifar, Limmu-Ennarya); traditional governance systems (Luwa, Seera, Guurti)."
+        },
+        {
+          "stepNumber": 4,
+          "text": "The Christian Kingdom in transition: Susenyos's conversion to Catholicism (1622), civil war, and Emperor Fasiladas's expulsion of the Jesuits (1632)."
+        },
+        {
+          "stepNumber": 5,
+          "text": "The Gondarine Period (1636–1769): Castle architecture, religious art, urban quarters, Empress Mentewab's regency, and doctrinal controversies."
+        },
+        {
+          "stepNumber": 6,
+          "text": "The Zemene Mesafint (1769–1855): Assassination of Iyoas by Ras Mikael Sehul, Battle of Sarba-Kussa, hegemony of the Yejju Oromo dynasty (Warra Sheh), political fragmentation, and the rise of the Kingdom of Shewa."
+        }
+      ],
+      "prerequisites": [
+        "Module 3 (aftermath of the 16th-century wars in the Horn of Africa)"
+      ],
+      "masteryCheckpoint": "Explain the socio-political function of the Gadaa system; describe how the Gibe Oromo states transitioned from an egalitarian system to monarchical rule; identify the event that marked the beginning of the Zemene Mesafint; and summarize the socio-economic impacts of the warlord era on the Ethiopian peasantry.",
+      "sourceFile": "history.md"
+    },
+    {
+      "moduleId": "HIS-M05",
+      "subjectCode": "HIS",
+      "subjectName": "History",
+      "streamCategory": "social",
+      "moduleNumber": 5,
+      "phase": "Phase II: Core Systems",
+      "title": "Pre-Colonial African States, Commercial Networks & Slave Trades",
+      "rationale": "Unifies African political, cultural, and commercial development prior to European colonial partition, linking trans-Saharan trade, coastal civilizations, the Trans-Atlantic Slave Trade, and legitimate commerce.",
+      "references": [
+        {
+          "grade": 9,
+          "unitNumber": 5,
+          "unitCode": "HIS-G09-U05",
+          "unitTitle": "Peoples and States of Africa to 1500",
+          "pages": "pp. 83–118"
+        },
+        {
+          "grade": 9,
+          "unitNumber": 6,
+          "unitCode": "HIS-G09-U06",
+          "unitTitle": "Africa and the Outside World 1500-1880s",
+          "pages": "pp. 83–118"
+        },
+        {
+          "grade": 11,
+          "unitNumber": 5,
+          "unitCode": "HIS-G11-U05",
+          "unitTitle": "Peoples and States of Africa to 1500",
+          "pages": "pp. 119–169"
+        },
+        {
+          "grade": 11,
+          "unitNumber": 6,
+          "unitCode": "HIS-G11-U06",
+          "unitTitle": "Africa and the Outside World: 1500-1880s",
+          "pages": "pp. 119–169"
+        },
+        {
+          "grade": 12,
+          "unitNumber": 2,
+          "unitCode": "HIS-G12-U02",
+          "unitTitle": "Africa and the Colonial Experience (1880s – 1960s)",
+          "pages": "pp. 27–33"
+        }
+      ],
+      "sequence": [
+        {
+          "stepNumber": 1,
+          "text": "Linguistic classifications of African peoples: Niger-Congo, Afro-Asiatic, Nilo-Saharan, and Khoisan superfamilies."
+        },
+        {
+          "stepNumber": 2,
+          "text": "Medieval states of North and West Africa: Mamluks, Funj, Ghana (Soninke, gold trade), Mali (Sundiata, Mansa Musa, Timbuktu), and Songhai (Sunni Ali, Askia Muhammad, Battle of Tondibi)."
+        },
+        {
+          "stepNumber": 3,
+          "text": "Eastern and Southern African kingdoms: Swahili coastal city-states (Kilwa, Sofala, maritime Indian Ocean commerce), Great Zimbabwe, and the Mutapa Empire."
+        },
+        {
+          "stepNumber": 4,
+          "text": "Trans-Saharan caravan trade routes (gold-salt exchange) and the introduction of Islam."
+        },
+        {
+          "stepNumber": 5,
+          "text": "The Trans-Atlantic Slave Trade: Origins following 1492, the Triangular Trade system, the Middle Passage, economic devastation of West Africa, and domestic slavery continuities."
+        },
+        {
+          "stepNumber": 6,
+          "text": "Transition to \"Legitimate Trade\" in the 19th century (palm oil, groundnuts) and early European settler expansion in South Africa (Boers, Great Trek, Mfecane, Shaka Zulu)."
+        }
+      ],
+      "prerequisites": [
+        "Module 1 (Neolithic transitions and African linguistic distributions)"
+      ],
+      "masteryCheckpoint": "Compare the economic foundations of ancient Ghana with those of the Swahili city-states; diagram the three legs of the Triangular Trade network; define the term \"Middle Passage\"; and explain how the transition to \"legitimate trade\" prepared the groundwork for the European Scramble for Africa.",
+      "sourceFile": "history.md"
+    },
+    {
+      "moduleId": "HIS-M06",
+      "subjectCode": "HIS",
+      "subjectName": "History",
+      "streamCategory": "social",
+      "moduleNumber": 6,
+      "phase": "Phase II: Core Systems",
+      "title": "European Transformations, Capitalism & the Age of Revolutions",
+      "rationale": "Synthesizes the transition of Europe from feudalism to industrial capitalism, tracking intellectual breakthroughs (Renaissance, Enlightenment) to political upheavals (American and French Revolutions) and 19th-century nation-state unifications.",
+      "references": [
+        {
+          "grade": 9,
+          "unitNumber": 4,
+          "unitCode": "HIS-G09-U04",
+          "unitTitle": "The Middle Ages and Early Modern World, C. 500 to 1750s",
+          "pages": "pp. 64–82"
+        },
+        {
+          "grade": 9,
+          "unitNumber": 9,
+          "unitCode": "HIS-G09-U09",
+          "unitTitle": "The Age of Revolutions 1750s to 1815",
+          "pages": "pp. 188–208"
+        },
+        {
+          "grade": 10,
+          "unitNumber": 1,
+          "unitCode": "HIS-G10-U01",
+          "unitTitle": "Development of Capitalism and Nationalism 1815 to 1914",
+          "pages": "pp. 1–23"
+        },
+        {
+          "grade": 11,
+          "unitNumber": 4,
+          "unitCode": "HIS-G11-U04",
+          "unitTitle": "The Middle Ages and Early Modern World, c. 500 AD-1789",
+          "pages": "pp. 74–118"
+        },
+        {
+          "grade": 11,
+          "unitNumber": 9,
+          "unitCode": "HIS-G11-U09",
+          "unitTitle": "The Age of Revolutions, 1789 to 1815",
+          "pages": "pp. 238–262"
+        },
+        {
+          "grade": 12,
+          "unitNumber": 1,
+          "unitCode": "HIS-G12-U01",
+          "unitTitle": "Development of Capitalism and Nationalism from 1815 to 1914",
+          "pages": "pp. 1–26"
+        }
+      ],
+      "sequence": [
+        {
+          "stepNumber": 1,
+          "text": "European feudalism: Manorial economy, feudal hierarchy, the Roman Catholic Church, and the Crusades."
+        },
+        {
+          "stepNumber": 2,
+          "text": "Cultural and religious shifts: The Renaissance (humanism, arts, science) and the Protestant Reformation (Martin Luther, John Calvin, Counter-Reformation, Peace of Westphalia)."
+        },
+        {
+          "stepNumber": 3,
+          "text": "The Scientific Revolution and Enlightenment philosophy: Locke, Montesquieu, Voltaire, and Rousseau."
+        },
+        {
+          "stepNumber": 4,
+          "text": "The Industrial Revolution (began in Britain c. 1750/1780): Steam power, textile mechanization, factory system, urbanization, and the rise of the bourgeoisie and proletariat."
+        },
+        {
+          "stepNumber": 5,
+          "text": "Political revolutions: American War of Independence (1776: Declaration of Independence, Constitutional balance of power) and French Revolution (1789: Old Regime estates, storming of the Bastille, Declaration of the Rights of Man, Reign of Terror, Robespierre)."
+        },
+        {
+          "stepNumber": 6,
+          "text": "The Napoleonic Era (1799–1815): Napoleonic Code, continental empire, Russian campaign, defeat at Waterloo (1815), and the conservative settlements at the Congress of Vienna."
+        },
+        {
+          "stepNumber": 7,
+          "text": "19th-Century European nationalism and unifications: Unification of Italy (Cavour, Garibaldi, Victor Emmanuel II) and Unification of Germany (Bismarck, \"Blood and Iron\", Franco-Prussian War 1870/71); the Eastern Question and Balkan nationalism."
+        }
+      ],
+      "prerequisites": [
+        "Module 2 (classical Roman and Greek governmental traditions)"
+      ],
+      "masteryCheckpoint": "Explain why the Industrial Revolution began first in Great Britain; list the core social and political grievances of the Third Estate in 1789 France; describe Otto von Bismarck's policy of Realpolitik; and state the primary principle of the 1815 Congress of Vienna.",
+      "sourceFile": "history.md"
+    },
+    {
+      "moduleId": "HIS-M07",
+      "subjectCode": "HIS",
+      "subjectName": "History",
+      "streamCategory": "social",
+      "moduleNumber": 7,
+      "phase": "Phase II: Core Systems",
+      "title": "The Scramble for Africa, Colonial Subjugation & Resistance",
+      "rationale": "Focuses on the partition and colonization of Africa between 1880 and 1960, examining the economic and ideological drivers of imperialism, European administrative systems, and early African resistance movements.",
+      "references": [
+        {
+          "grade": 10,
+          "unitNumber": 2,
+          "unitCode": "HIS-G10-U02",
+          "unitTitle": "Africa & the Colonial Experience (1880s -1960s)",
+          "pages": "pp. 24–43"
+        },
+        {
+          "grade": 12,
+          "unitNumber": 2,
+          "unitCode": "HIS-G12-U02",
+          "unitTitle": "Africa and the Colonial Experience (1880s – 1960s)",
+          "pages": "pp. 27–45"
+        }
+      ],
+      "sequence": [
+        {
+          "stepNumber": 1,
+          "text": "Foundations of New Imperialism: Industrial capitalism's demand for raw materials and captive markets; ideological rationalizations (\"White Man's Burden\", Social Darwinism)."
+        },
+        {
+          "stepNumber": 2,
+          "text": "The Scramble for Africa & the Berlin Conference (1884–1885): Otto von Bismarck, the doctrine of effective occupation, the recognition of Leopold II's Congo Free State, and the partition of the continent into colonies."
+        },
+        {
+          "stepNumber": 3,
+          "text": "Colonial Administrative Policies: • Direct Rule and Assimilation (France, Portugal, Belgium). • Indirect Rule (Great Britain, Lord Lugard). • Settler Rule (Algeria, Kenya, Southern Rhodesia, South Africa)."
+        },
+        {
+          "stepNumber": 4,
+          "text": "Early African Armed Resistances: Samori Toure of the Mandinka, Asante resistance under Prempeh, Urabi Pasha in Egypt, and the Maji-Maji rebellion in German East Africa."
+        },
+        {
+          "stepNumber": 5,
+          "text": "The Political Economy of Colonialism: Exploitation of minerals (Katanga, Northern Rhodesia Copperbelt), mono-crop agriculture, forced labor, tax laws, and the creation of artificial borders."
+        }
+      ],
+      "prerequisites": [
+        "Module 5 (pre-colonial African economies) and Module 6 (industrial capitalism and European nation-states)"
+      ],
+      "masteryCheckpoint": "State the ground rules established by the 1884–1885 Berlin Conference for the colonization of Africa; contrast the British policy of Indirect Rule with French Assimilation; explain the causes and outcomes of the Maji-Maji uprising in German East Africa; and identify three structural economic impacts of colonial rule on Africa.",
+      "sourceFile": "history.md"
+    },
+    {
+      "moduleId": "HIS-M08",
+      "subjectCode": "HIS",
+      "subjectName": "History",
+      "streamCategory": "social",
+      "moduleNumber": 8,
+      "phase": "Phase III: Advanced Synthesis",
+      "title": "Modern Ethiopian State Building, External Invasions & Sovereignty (1855–1941)",
+      "rationale": "Synthesizes the central theme of modern Ethiopian history: the rebuilding of a centralized empire, the southern territorial expansions, the heroic defense of national independence at Adwa, and the patriotic resistance against Fascist Italy.",
+      "references": [
+        {
+          "grade": 10,
+          "unitNumber": 3,
+          "unitCode": "HIS-G10-U03",
+          "unitTitle": "Social, Economic and Political Developments in Ethiopia from mid-19th c. to 1941",
+          "pages": "pp. 44–80"
+        },
+        {
+          "grade": 12,
+          "unitNumber": 3,
+          "unitCode": "HIS-G12-U03",
+          "unitTitle": "Social, Economic and Political Developments in Ethiopia, Mid 19th C. to 1941",
+          "pages": "pp. 46–91"
+        }
+      ],
+      "sequence": [
+        {
+          "stepNumber": 1,
+          "text": "19th-Century socio-economic context: Long-distance caravan trade routes (Bonga to Massawa/Zeila), trade items, Maria Theresa Thalers, and cottage industries."
+        },
+        {
+          "stepNumber": 2,
+          "text": "The early unifiers: Emperor Tewodros II (unification campaigns, military reforms, Gafat cannon manufacturing, Meqdela suicide 1868) and Emperor Yohannes IV (decentralized unity, Liche Agreement 1878, Council of Boru Meda, defensive victories against Egypt at Gundet and Gura, death at Metemma 1889)."
+        },
+        {
+          "stepNumber": 3,
+          "text": "Emperor Menilek II and Territorial Expansion: Three phases of incorporation (Shewa, Arsi, Harar 1887, Wolaita resistance under Kawo Tona 1894, Kafa under Gaki Sherocho 1897); land measurement (qalad) and the neftegna-gabbar system."
+        },
+        {
+          "stepNumber": 4,
+          "text": "Foreign aggression and the Battle of Adwa (1896): The Treaty of Wuchale (1889) and the deceptive Article XVII; abrogation of the treaty; Italian invasion; Siege of Mekelle; decisive victory at Adwa on 1 March 1896; national and international implications."
+        },
+        {
+          "stepNumber": 5,
+          "text": "Power struggles and early modernization (1906–1935): Tripartite Treaty (1906), ministerial system (1907), reign and deposition of Lij Iyasu (1913–1916), Battle of Segele, the Diarchy, coronation of Haile Selassie I (1930), and the 1931 First Written Constitution."
+        },
+        {
+          "stepNumber": 6,
+          "text": "Fascist Italian Aggression and Patriotic Resistance (1935–1941): Walwal incident, Italian invasion (October 1935), mustard gas, Emperor's appeal to the League of Nations, Italian occupation (Africa Orientale Italiana), Graziani Massacre (1937), Black Lion movement, patriotic guerrilla warfare, and liberation in 1941."
+        }
+      ],
+      "prerequisites": [
+        "Module 4 (the Zemene Mesafint) and Module 7 (the European Scramble for Africa)"
+      ],
+      "masteryCheckpoint": "Compare the approaches of Tewodros II and Yohannes IV toward administrative centralization; explain how the linguistic discrepancy in Article XVII of the Wuchale Treaty led to the Battle of Adwa; list three modernizing reforms introduced by Emperor Menilek II; and describe the role of Ethiopian internal resistance (Yewust Arbegnoch) during the Fascist Italian occupation.",
+      "sourceFile": "history.md"
+    },
+    {
+      "moduleId": "HIS-M09",
+      "subjectCode": "HIS",
+      "subjectName": "History",
+      "streamCategory": "social",
+      "moduleNumber": 9,
+      "phase": "Phase III: Advanced Synthesis",
+      "title": "The World Wars, Interwar Totalitarianism & the Cold War Era",
+      "rationale": "Integrates the major 20th-century global conflicts, ideological confrontations, international institutional architectures (League of Nations, United Nations), and the rise and fall of the Communist bloc.",
+      "references": [
+        {
+          "grade": 10,
+          "unitNumber": 4,
+          "unitCode": "HIS-G10-U04",
+          "unitTitle": "Society and Politics in the Age of World Wars 1914-1945",
+          "pages": "pp. 81–143"
+        },
+        {
+          "grade": 10,
+          "unitNumber": 5,
+          "unitCode": "HIS-G10-U05",
+          "unitTitle": "Global and Regional Developments Since 1945",
+          "pages": "pp. 81–143"
+        },
+        {
+          "grade": 12,
+          "unitNumber": 4,
+          "unitCode": "HIS-G12-U04",
+          "unitTitle": "Society and Politics in the Age of World Wars, 1914 - 1945",
+          "pages": "pp. 92–156"
+        },
+        {
+          "grade": 12,
+          "unitNumber": 5,
+          "unitCode": "HIS-G12-U05",
+          "unitTitle": "Global and Regional Developments Since 1945",
+          "pages": "pp. 92–156"
+        }
+      ],
+      "sequence": [
+        {
+          "stepNumber": 1,
+          "text": "World War I (1914–1918): Causes (Militarism, Alliances, Imperialism, Nationalism), Sarajevo assassination, Schlieffen Plan, trench warfare, US entry, Russian collapse, Treaty of Versailles, and League of Nations."
+        },
+        {
+          "stepNumber": 2,
+          "text": "Russian Revolution (1917): Fall of the Romanovs, Lenin and the Bolsheviks, October Revolution, Civil War, and USSR founding."
+        },
+        {
+          "stepNumber": 3,
+          "text": "Interwar Crisis: The Great Depression (1929), rise of Italian Fascism (Mussolini) and German Nazism (Hitler, anti-Semitism, rearmament), failure of the League of Nations, and Western Appeasement."
+        },
+        {
+          "stepNumber": 4,
+          "text": "World War II (1939–1945): German invasion of Poland, Blitzkrieg, Battle of Britain, Operation Barbarossa, Pearl Harbor, Stalingrad, the Holocaust, Normandy landings, atomic bombings of Hiroshima/Nagasaki, and the Nuremberg trials."
+        },
+        {
+          "stepNumber": 5,
+          "text": "The United Nations Organization (1945): Principles, six core organs (General Assembly, Security Council with 5 permanent veto powers, Secretariat, ICJ), and peacekeeping roles."
+        },
+        {
+          "stepNumber": 6,
+          "text": "The Cold War (1947–1991): Truman Doctrine, Marshall Plan, Berlin Blockade, NATO vs. Warsaw Pact, arms race, Korean War, Vietnam War, Cuban Missile Crisis, and the Non-Aligned Movement (NAM)."
+        },
+        {
+          "stepNumber": 7,
+          "text": "Middle East Conflicts: Balfour Declaration, partition of Palestine, Arab-Israeli Wars (1948, 1956, 1967 Six-Day War, 1973 Yom Kippur War, Camp David Accords)."
+        },
+        {
+          "stepNumber": 8,
+          "text": "Collapse of the Soviet Bloc (1989–1991): Gorbachev's Glasnost and Perestroika, the fall of the Berlin Wall (1989), and the dissolution of the USSR."
+        }
+      ],
+      "prerequisites": [
+        "Module 6 (rise of industrial capitalism and European nation-states)"
+      ],
+      "masteryCheckpoint": "List the four fundamental long-term causes of World War I; explain how the 1929 Great Depression facilitated the rise of Adolf Hitler in Germany; identify the five permanent members of the UN Security Council and define their veto power; and contrast the Truman Doctrine with the Warsaw Pact.",
+      "sourceFile": "history.md"
+    },
+    {
+      "moduleId": "HIS-M10",
+      "subjectCode": "HIS",
+      "subjectName": "History",
+      "streamCategory": "social",
+      "moduleNumber": 10,
+      "phase": "Phase III: Advanced Synthesis",
+      "title": "Contemporary Africa, Modern Ethiopia & Indigenous Heritage",
+      "rationale": "Unifies the post-World War II history of Africa and Ethiopia: the anti-colonial independence wave, Pan-Africanism, the Ethiopian 1974 revolution, the Derg regime, post-1991 federalism, and the preservation of indigenous knowledge and heritage.",
+      "references": [
+        {
+          "grade": 10,
+          "unitNumber": 6,
+          "unitCode": "HIS-G10-U06",
+          "unitTitle": "Ethiopia: Internal Developments and External Influences from 1941 to 1991",
+          "pages": "pp. 144–230"
+        },
+        {
+          "grade": 10,
+          "unitNumber": 7,
+          "unitCode": "HIS-G10-U07",
+          "unitTitle": "Africa Since 1960",
+          "pages": "pp. 144–230"
+        },
+        {
+          "grade": 10,
+          "unitNumber": 8,
+          "unitCode": "HIS-G10-U08",
+          "unitTitle": "Post-1991 Developments in Ethiopia",
+          "pages": "pp. 144–230"
+        },
+        {
+          "grade": 10,
+          "unitNumber": 9,
+          "unitCode": "HIS-G10-U09",
+          "unitTitle": "Indigenous Knowledge and Heritages of Ethiopia",
+          "pages": "pp. 144–230"
+        },
+        {
+          "grade": 12,
+          "unitNumber": 6,
+          "unitCode": "HIS-G12-U06",
+          "unitTitle": "Ethiopia: Internal Developments and External Influences from 1941 to 1991",
+          "pages": "pp. 157–282"
+        },
+        {
+          "grade": 12,
+          "unitNumber": 7,
+          "unitCode": "HIS-G12-U07",
+          "unitTitle": "Africa since the 1960s",
+          "pages": "pp. 157–282"
+        },
+        {
+          "grade": 12,
+          "unitNumber": 8,
+          "unitCode": "HIS-G12-U08",
+          "unitTitle": "Post 1991 Developments in Ethiopia",
+          "pages": "pp. 157–282"
+        },
+        {
+          "grade": 12,
+          "unitNumber": 9,
+          "unitCode": "HIS-G12-U09",
+          "unitTitle": "Indigenous Knowledge Systems and Heritages of Ethiopia",
+          "pages": "pp. 157–282"
+        }
+      ],
+      "sequence": [
+        {
+          "stepNumber": 1,
+          "text": "African Decolonization: Independence struggles in Ghana, Nigeria, Algeria (guerrilla war), and Kenya (Mau Mau); the struggle against Apartheid in South Africa (ANC, Sharpeville Massacre 1960, Nelson Mandela, 1994 democratic election)."
+        },
+        {
+          "stepNumber": 2,
+          "text": "Pan-Africanism: 5th Manchester Congress (1945), Casablanca vs. Monrovia groups, founding of the OAU (1963) in Addis Ababa, and the transition to the African Union (AU, 2002)."
+        },
+        {
+          "stepNumber": 3,
+          "text": "Post-Liberation Imperial Ethiopia (1941–1974): British and American influences, federation and annexation of Eritrea, 1955 Revised Constitution, land tenure inequities, peasant rebellions (Tigray 1943, Bale 1963, Gojjam 1968), the 1960 abortive coup, and the Ethiopian Student Movement (\"Land to the Tiller!\")."
+        },
+        {
+          "stepNumber": 4,
+          "text": "The 1974 Ethiopian Revolution and the Derg Regime: Wollo famine, mutinies, deposition of Haile Selassie, radical land nationalization (Proclamation 31/1975), Red Terror, Ethio-Somali War (1977/78), civil wars in the north, and the collapse of the military regime in May 1991."
+        },
+        {
+          "stepNumber": 5,
+          "text": "Post-1991 Ethiopia: The Transitional Government of Ethiopia (TGE), Eritrean independence (1993), the 1995 FDRE Constitution (Article 39, ethnic federalism), the Nile hydropolitics, and the Grand Ethiopian Renaissance Dam (GERD)."
+        },
+        {
+          "stepNumber": 6,
+          "text": "Indigenous Knowledge Systems & Heritage of Ethiopia: Customary dispute mechanisms (Mada'a, Dagu, Jaarsummaa, Siinqee, Gumaa, Shimgelina); UNESCO tangible sites (Lalibela, Aksum, Gondar, Tiya, Konso, Awash, Omo) and intangible heritages (Meskel, Gadaa, Fichee-Chambalaalla, Timket, Irreecha)."
+        }
+      ],
+      "prerequisites": [
+        "Modules 7, 8, and 9"
+      ],
+      "masteryCheckpoint": "State the slogan of the Ethiopian Student Movement and explain why the imperial land tenure system was its target; explain the radical socio-economic measures taken by the Derg in 1975; identify the key differences between the Casablanca and Monrovia groups on the eve of the OAU's founding; and name three Ethiopian intangible cultural heritages registered by UNESCO.",
+      "sourceFile": "history.md"
+    }
+  ]
+}

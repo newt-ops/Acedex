@@ -1,0 +1,767 @@
+{
+  "schemaVersion": 1,
+  "subjectCode": "GEO",
+  "subjectName": "Geography",
+  "streamCategory": "social",
+  "compiledAt": "2026-11-24T20:15:53.074Z",
+  "sourceFile": "geography.md",
+  "modules": [
+    {
+      "moduleId": "GEO-M01",
+      "subjectCode": "GEO",
+      "subjectName": "Geography",
+      "streamCategory": "social",
+      "moduleNumber": 1,
+      "phase": "Phase I: Foundational Core",
+      "title": "Cartography, Topographic Analysis & GIS Science",
+      "rationale": "Unifies traditional cartography, topographic relief interpretation, and modern GIS data models into a single map skills framework.",
+      "references": [
+        {
+          "grade": 9,
+          "unitNumber": 8,
+          "unitCode": "GEO-G09-U08",
+          "unitTitle": "Geographic Enquiry, Skills and Techniques",
+          "pages": "pp. 195–228"
+        },
+        {
+          "grade": 10,
+          "unitNumber": 8,
+          "unitCode": "GEO-G10-U08",
+          "unitTitle": "Geospatial Information and Data Processing",
+          "pages": "pp. 175–205"
+        },
+        {
+          "grade": 11,
+          "unitNumber": 8,
+          "unitCode": "GEO-G11-U08",
+          "unitTitle": "Geo-spatial Information and Data Processing",
+          "pages": "pp. 216–245"
+        },
+        {
+          "grade": 12,
+          "unitNumber": 8,
+          "unitCode": "GEO-G12-U08",
+          "unitTitle": "Geographical Enquiry and Map Making",
+          "pages": "pp. 231–245"
+        }
+      ],
+      "sequence": [
+        {
+          "stepNumber": 1,
+          "text": "Marginal map essentials, scale types (RF, statement, linear), and scale conversions."
+        },
+        {
+          "stepNumber": 2,
+          "text": "Coordinate systems: Parallels/Meridians vs. the Ethiopian National Grid reference system (origin in SW Kenya at 34° 30'E, 0°; Eastings and Northings; 4- and 6-digit references)."
+        },
+        {
+          "stepNumber": 3,
+          "text": "Topographic contour analysis: contour intervals, slope determination (steep, gentle, uniform, concave, convex), and landform identification (spurs, valleys, saddles, cliffs)."
+        },
+        {
+          "stepNumber": 4,
+          "text": "Statistical chart construction: Line graphs, bar charts, and pie charts (1\\% = 3.6°)."
+        },
+        {
+          "stepNumber": 5,
+          "text": "GIS fundamentals: Hardware, software, vector data (points, lines, polygons) vs. raster grid cells."
+        },
+        {
+          "stepNumber": 6,
+          "text": "ArcMap workflow: Adding shapefiles, symbology, querying attribute tables, and formatting layout views."
+        },
+        {
+          "stepNumber": 7,
+          "text": "Choropleth classification: Equal Interval vs. Quantile mapping methods."
+        }
+      ],
+      "prerequisites": [
+        "Basic arithmetic and plane geometry (ratio, percentages, angles)"
+      ],
+      "masteryCheckpoint": "Convert RF 1:50,000 to a statement scale; identify a spur vs. a valley on a contour map by checking the direction of the \"V\" shape; explain the difference between vector coordinate vertices and raster pixels; and calculate the angle of a sector in a pie chart representing a 32.7% agricultural GDP share.",
+      "sourceFile": "geography.md"
+    },
+    {
+      "moduleId": "GEO-M02",
+      "subjectCode": "GEO",
+      "subjectName": "Geography",
+      "streamCategory": "social",
+      "moduleNumber": 2,
+      "phase": "Phase I: Foundational Core",
+      "title": "Geodynamics, Earth History & Structural Relief",
+      "rationale": "Connects deep geological time, continental evolution, and plate tectonic mechanics with the actual landforms of Ethiopia and Africa.",
+      "references": [
+        {
+          "grade": 9,
+          "unitNumber": 1,
+          "unitCode": "GEO-G09-U01",
+          "unitTitle": "Geological History and Topography of Ethiopia",
+          "pages": "pp. 15–33"
+        },
+        {
+          "grade": 10,
+          "unitNumber": 1,
+          "unitCode": "GEO-G10-U01",
+          "unitTitle": "Landforms of Africa",
+          "pages": "pp. 1–24"
+        },
+        {
+          "grade": 11,
+          "unitNumber": 1,
+          "unitCode": "GEO-G11-U01",
+          "unitTitle": "Formation of the Continents",
+          "pages": "pp. 1–26"
+        },
+        {
+          "grade": 12,
+          "unitNumber": 1,
+          "unitCode": "GEO-G12-U01",
+          "unitTitle": "Major Geological Processes Associated with Plate Tectonics",
+          "pages": "pp. 1–33"
+        }
+      ],
+      "sequence": [
+        {
+          "stepNumber": 1,
+          "text": "Geological timescale, relative dating principles (superposition, cross-cutting), and absolute radiometric dating."
+        },
+        {
+          "stepNumber": 2,
+          "text": "Planetary history: Big Bang, Rodinia, Pangaea breakup, Laurasia, and Gondwanaland."
+        },
+        {
+          "stepNumber": 3,
+          "text": "Continental drift theory (Alfred Wegener's evidence: jigsaw fit, paleontology, stratigraphy, paleoclimatology)."
+        },
+        {
+          "stepNumber": 4,
+          "text": "Plate tectonics theory: Lithosphere, asthenosphere, and boundary types (divergent, convergent, transform) driven by mantle convection, slab pull, and ridge push."
+        },
+        {
+          "stepNumber": 5,
+          "text": "Endogenic structural processes: Folding mechanics (anticlines, synclines) and Faulting mechanics (normal, reverse; horsts and grabens)."
+        },
+        {
+          "stepNumber": 6,
+          "text": "Chronological geomorphology of Ethiopia: Precambrian basement complex → Mesozoic marine transgressions/regressions (Adigrat Sandstone, Hintalo Limestone, Upper Sandstone) → Cenozoic Trappean volcanism and Rift Valley faulting → Quaternary volcanic activity (Erta Ale, Fentale)."
+        },
+        {
+          "stepNumber": 7,
+          "text": "Major landform regions of Africa (Alpine Atlas Mountains, African Massif, East African Rift, Southern African Platform) and Ethiopia (Western Highlands/Lowlands, Southeastern Highlands/Lowlands, Rift Valley)."
+        },
+        {
+          "stepNumber": 8,
+          "text": "Exogenic landform evolution: River stages (youth gorges, mature meanders, old-age deltas) and desert wind action (barchans, seifs, loess)."
+        }
+      ],
+      "prerequisites": [
+        "Module 1 (reading contour elevations and topographic maps)"
+      ],
+      "masteryCheckpoint": "Explain why the Mesozoic Hintalo Limestone is thicker in southeastern Ethiopia than in the northwest; sketch a diagram of a normal fault creating a graben rift valley; identify the three types of plate boundaries; and locate the Afar Horst on a structural map of the Horn of Africa.",
+      "sourceFile": "geography.md"
+    },
+    {
+      "moduleId": "GEO-M03",
+      "subjectCode": "GEO",
+      "subjectName": "Geography",
+      "streamCategory": "social",
+      "moduleNumber": 3,
+      "phase": "Phase I: Foundational Core",
+      "title": "Climatology, Atmospheric Physics & Climatic Systems",
+      "rationale": "Unifies atmospheric physics, solar radiation, global pressure belts, wind oscillations, and classification schemes from global to local scales.",
+      "references": [
+        {
+          "grade": 9,
+          "unitNumber": 2,
+          "unitCode": "GEO-G09-U02",
+          "unitTitle": "Weather and Climate of Ethiopia",
+          "pages": "pp. 37–58"
+        },
+        {
+          "grade": 10,
+          "unitNumber": 2,
+          "unitCode": "GEO-G10-U02",
+          "unitTitle": "Climate of Africa",
+          "pages": "pp. 25–50"
+        },
+        {
+          "grade": 11,
+          "unitNumber": 2,
+          "unitCode": "GEO-G11-U02",
+          "unitTitle": "Climate Classification and Climate Regions of Our World",
+          "pages": "pp. 27–57"
+        }
+      ],
+      "sequence": [
+        {
+          "stepNumber": 1,
+          "text": "Planetary controls of weather and climate: Latitude and sun angle, Earth's axial tilt (23.5°), rotation, and revolution."
+        },
+        {
+          "stepNumber": 2,
+          "text": "Atmospheric circulation: Pressure systems, Coriolis effect, planetary wind belts, and ITCZ oscillations."
+        },
+        {
+          "stepNumber": 3,
+          "text": "Auxiliary climatic controls: Altitude (normal lapse rate 6.4°C/1,000 m), mountain barriers (windward relief rain vs. leeward rain shadow), continentality, and ocean currents (cold Benguela vs. warm Mozambique/Guinea)."
+        },
+        {
+          "stepNumber": 4,
+          "text": "Africa's climatic zones: Symmetrical duplication north and south of the Equator (Equatorial, Savanna, Sahelian Steppe, Hot Desert, Mediterranean)."
+        },
+        {
+          "stepNumber": 5,
+          "text": "The Köppen-Geiger global classification system: Empirical criteria, five major groups (A, B, C, D, E, H), and second/third-order letter designations."
+        },
+        {
+          "stepNumber": 6,
+          "text": "Ethiopia's climatic systems: Five traditional agro-climatic zones (Bereha, Kolla, Woina Dega, Dega, Wurch) and their Köppen equivalents."
+        },
+        {
+          "stepNumber": 7,
+          "text": "Spatial and temporal rainfall distribution in Ethiopia: Five rainfall regions and seasonal mechanics (Kiremt, Belg, Meher, Bega) driven by equatorial Westerlies and Easterlies."
+        }
+      ],
+      "prerequisites": [
+        "Module 1 (graphing temperature/rainfall) and Module 2 (mountain barrier topography)"
+      ],
+      "masteryCheckpoint": "Calculate temperature at 3,400 m elevation given sea level temperature of 28°C using the standard lapse rate; explain why the Mediterranean climate zone in both the Maghreb and Cape regions receives winter rain; and distinguish between the moisture-bearing winds of the Kiremt and Belg seasons in Ethiopia.",
+      "sourceFile": "geography.md"
+    },
+    {
+      "moduleId": "GEO-M04",
+      "subjectCode": "GEO",
+      "subjectName": "Geography",
+      "streamCategory": "social",
+      "moduleNumber": 4,
+      "phase": "Phase II: Core Systems",
+      "title": "Hydrology, Drainage Basins & Transboundary Watercourses",
+      "rationale": "Connects physical hydrology (catchment dynamics, river profiles, lake morphology) with political geography and transboundary water diplomacy.",
+      "references": [
+        {
+          "grade": 9,
+          "unitNumber": 3,
+          "unitCode": "GEO-G09-U03",
+          "unitTitle": "Natural Resource Base of Ethiopia",
+          "pages": "pp. 61–68"
+        },
+        {
+          "grade": 10,
+          "unitNumber": 3,
+          "unitCode": "GEO-G10-U03",
+          "unitTitle": "Natural Resource Base of Africa",
+          "pages": "pp. 58–66"
+        },
+        {
+          "grade": 11,
+          "unitNumber": 3,
+          "unitCode": "GEO-G11-U03",
+          "unitTitle": "Natural Resources and Conflicts Over Resources",
+          "pages": "pp. 74–85"
+        },
+        {
+          "grade": 12,
+          "unitNumber": 3,
+          "unitCode": "GEO-G12-U03",
+          "unitTitle": "Management of Conflict Over Resources",
+          "pages": "pp. 69–80"
+        }
+      ],
+      "sequence": [
+        {
+          "stepNumber": 1,
+          "text": "Drainage basin morphology: Catchments, watersheds, divides, tributaries, confluences, and outlets."
+        },
+        {
+          "stepNumber": 2,
+          "text": "Drainage systems of Ethiopia: Western/Mediterranean, Southeastern/Indian Ocean, and Inland Rift Valley systems."
+        },
+        {
+          "stepNumber": 3,
+          "text": "Characteristics of Ethiopian rivers: Steep profiles, seasonal volume fluctuations, rapids/waterfalls, deep gorges, and limited navigability."
+        },
+        {
+          "stepNumber": 4,
+          "text": "Limnology of Ethiopia: Highland crater/watershed lakes (Tana, Wonchi, Haik) vs. tectonic Rift Valley lakes (Shalla, Abbaya, Chamo, Ziway, Langano)."
+        },
+        {
+          "stepNumber": 5,
+          "text": "Continental African river basins: The Nile, Congo, Niger, Zambezi, Orange, and Lake Chad basins."
+        },
+        {
+          "stepNumber": 6,
+          "text": "Global transboundary watercourses: Shared river basins and international water law."
+        },
+        {
+          "stepNumber": 7,
+          "text": "Nile Basin hydropolitics: 1929 Anglo-Egyptian agreement, 1959 bilateral treaty, the establishment of the Nile Basin Initiative (NBI, 1999), the Cooperative Framework Agreement (CFA, 2010), and the Grand Ethiopian Renaissance Dam (GERD) Declaration of Principles (2015)."
+        }
+      ],
+      "prerequisites": [
+        "Module 2 (geological faulting/rift lake formation) and Module 3 (rainfall source regimes)"
+      ],
+      "masteryCheckpoint": "Identify which Ethiopian river basin possesses the largest catchment area vs. the longest channel length; name the four main tributaries of the Abbay; and explain the legal and geopolitical significance of the 2010 Entebbe Cooperative Framework Agreement (CFA).",
+      "sourceFile": "geography.md"
+    },
+    {
+      "moduleId": "GEO-M05",
+      "subjectCode": "GEO",
+      "subjectName": "Geography",
+      "streamCategory": "social",
+      "moduleNumber": 5,
+      "phase": "Phase II: Core Systems",
+      "title": "Pedology, Biomes & Wildlife Resources",
+      "rationale": "Unifies soil formation, pedological classifications, altitudinal vegetation belts, and wildlife distributions across Ethiopia and Africa.",
+      "references": [
+        {
+          "grade": 9,
+          "unitNumber": 3,
+          "unitCode": "GEO-G09-U03",
+          "unitTitle": "Natural Resource Base of Ethiopia",
+          "pages": "pp. 69–84"
+        },
+        {
+          "grade": 10,
+          "unitNumber": 3,
+          "unitCode": "GEO-G10-U03",
+          "unitTitle": "Natural Resource Base of Africa",
+          "pages": "pp. 66–70, 73–84"
+        }
+      ],
+      "sequence": [
+        {
+          "stepNumber": 1,
+          "text": "Pedogenesis: Factors of soil formation (parent rock, climate, topography, biological organisms, time)."
+        },
+        {
+          "stepNumber": 2,
+          "text": "Major soil types of Ethiopia: Nitosols (fertile red clays), Vertisols (swelling black clays), Cambisols, Regosols, Xerosols, Luvisols, Lithosols, and Fluvisols."
+        },
+        {
+          "stepNumber": 3,
+          "text": "Major soil types of Africa: Ferralsols, Arenosols, Calcisols, and Leptosols."
+        },
+        {
+          "stepNumber": 4,
+          "text": "Altitudinal zonation of natural vegetation in Ethiopia: Afroalpine/Sub-afroalpine (Lobelia, Erica), Highland Montane forests (Juniperus, Podocarpus, Hagenia), Savanna woodlands, and Lowland semi-desert scrub."
+        },
+        {
+          "stepNumber": 5,
+          "text": "Continental biomes of Africa: Tropical rainforests, tropical deciduous forests, savanna grasslands, Sahelian shrublands, Mediterranean sclerophyllous vegetation."
+        },
+        {
+          "stepNumber": 6,
+          "text": "Wildlife ecology and zoogeography: Endemic, game, arboreal, and aquatic fauna; Ethiopian endemic species (Walia ibex, Mountain nyala, Ethiopian wolf, Gelada baboon)."
+        },
+        {
+          "stepNumber": 7,
+          "text": "Conservation of biotic resources: National parks, sanctuaries, and game reserves."
+        }
+      ],
+      "prerequisites": [
+        "Module 2 (parent rock geology) and Module 3 (climatic zones and rainfall gradients)"
+      ],
+      "masteryCheckpoint": "Compare the physical properties and agricultural workability of Nitosols versus Vertisols; describe the vegetation adaptations found in the Afroalpine zone; and name three endemic mammals of Ethiopia and identify their primary habitats.",
+      "sourceFile": "geography.md"
+    },
+    {
+      "moduleId": "GEO-M06",
+      "subjectCode": "GEO",
+      "subjectName": "Geography",
+      "streamCategory": "social",
+      "moduleNumber": 6,
+      "phase": "Phase II: Core Systems",
+      "title": "Demography, Population Structure & Dynamics",
+      "rationale": "Connects demographic formulas, population pyramid structures, and fertility/mortality trends with theoretical demographic models.",
+      "references": [
+        {
+          "grade": 9,
+          "unitNumber": 4,
+          "unitCode": "GEO-G09-U04",
+          "unitTitle": "Population of Ethiopia",
+          "pages": "pp. 85–103"
+        },
+        {
+          "grade": 10,
+          "unitNumber": 4,
+          "unitCode": "GEO-G10-U04",
+          "unitTitle": "Population of Africa",
+          "pages": "pp. 87–113"
+        },
+        {
+          "grade": 11,
+          "unitNumber": 4,
+          "unitCode": "GEO-G11-U04",
+          "unitTitle": "Global Population Dynamics and Challenges",
+          "pages": "pp. 96–112"
+        },
+        {
+          "grade": 12,
+          "unitNumber": 4,
+          "unitCode": "GEO-G12-U04",
+          "unitTitle": "Population and Socio-Economic Development",
+          "pages": "pp. 92–100, 107–114"
+        }
+      ],
+      "sequence": [
+        {
+          "stepNumber": 1,
+          "text": "Demographic data sources, censuses, and vital registration indices: Crude Birth Rate (CBR), Crude Death Rate (CDR), Total Fertility Rate (TFR), Infant Mortality Rate (IMR), Maternal Mortality Rate (MMR), Life Expectancy."
+        },
+        {
+          "stepNumber": 2,
+          "text": "Demographic calculation formulas: Rate of Natural Increase (RNI = CBR - CDR), Population Doubling Time (dt = (70)/(r)), Crude Density (CD = (TP)/(TA)), Sex Ratio (SR = (Males)/(Females) × 100), and Age Dependency Ratio (ADR = frac{P_0-14 + P_65+}{P_15-64} × 100)."
+        },
+        {
+          "stepNumber": 3,
+          "text": "Population pyramid morphology: Expansive (broad base, high fertility), Stationary (columnar, zero growth), and Constrictive (narrow base, aging) pyramids."
+        },
+        {
+          "stepNumber": 4,
+          "text": "Determinants of population distribution in Ethiopia: Physical factors (altitude, climate, disease vectors) and human factors (cereal farming vs. perennial enset/coffee cultivation)."
+        },
+        {
+          "stepNumber": 5,
+          "text": "The Demographic Transition Model (DTM): Characteristics of Stages 1 through 5, comparing LDCs (Stage 2/3) with MDCs (Stage 4/5)."
+        },
+        {
+          "stepNumber": 6,
+          "text": "Population growth theories: Thomas Malthus (geometric population vs. arithmetic food, positive/preventative checks), Ester Boserup (agricultural intensification), and Marxist distribution theory."
+        },
+        {
+          "stepNumber": 7,
+          "text": "Population policy frameworks: Pro-natalist vs. anti-natalist interventions."
+        }
+      ],
+      "prerequisites": [
+        "Module 1 (statistical graph construction) and Module 3 (agro-climatic zones)"
+      ],
+      "masteryCheckpoint": "Given a population with an annual growth rate of 2.5%, calculate its doubling time using the Rule of 70; explain why Gedeo Zone maintains a high population density while Gambella maintains a low density; and contrast the Malthusian and Boserupian perspectives on population growth.",
+      "sourceFile": "geography.md"
+    },
+    {
+      "moduleId": "GEO-M07",
+      "subjectCode": "GEO",
+      "subjectName": "Geography",
+      "streamCategory": "social",
+      "moduleNumber": 7,
+      "phase": "Phase II: Core Systems",
+      "title": "Settlement Geography, Urbanization & Migration Dynamics",
+      "rationale": "Connects rural settlement morphology, push-pull migration factors, and the challenges of rapid urbanization.",
+      "references": [
+        {
+          "grade": 9,
+          "unitNumber": 4,
+          "unitCode": "GEO-G09-U04",
+          "unitTitle": "Population of Ethiopia",
+          "pages": "pp. 103–108"
+        },
+        {
+          "grade": 10,
+          "unitNumber": 4,
+          "unitCode": "GEO-G10-U04",
+          "unitTitle": "Population of Africa",
+          "pages": "pp. 113–115"
+        },
+        {
+          "grade": 10,
+          "unitNumber": 7,
+          "unitCode": "GEO-G10-U07",
+          "unitTitle": "Geographic Issues and Public Concerns in Africa",
+          "pages": "pp. 159–168"
+        },
+        {
+          "grade": 11,
+          "unitNumber": 4,
+          "unitCode": "GEO-G11-U04",
+          "unitTitle": "Global Population Dynamics and Challenges",
+          "pages": "pp. 112–119"
+        }
+      ],
+      "sequence": [
+        {
+          "stepNumber": 1,
+          "text": "Rural settlement patterns: Dispersed/isolated homesteads vs. nucleated/grouped villages; Permanent settlements (highland farming) vs. temporary/mobile encampments (lowland pastoralism)."
+        },
+        {
+          "stepNumber": 2,
+          "text": "Spatial hierarchy of settlements: Isolated farmstead → hamlet → village → town → city → metropolis → conurbation → megalopolis."
+        },
+        {
+          "stepNumber": 3,
+          "text": "Urban definitions and criteria in Ethiopia (minimum 2,000 residents, municipal charter, non-agricultural employment)."
+        },
+        {
+          "stepNumber": 4,
+          "text": "Continental urbanization patterns: Stark contrasts (Gabon 90% urban vs. Burundi 12%, Ethiopia 21–22%)."
+        },
+        {
+          "stepNumber": 5,
+          "text": "Challenges of African urbanization: Unplanned horizontal sprawl, infrastructure deficits, water shortages, traffic congestion, and informal squatter settlements/slums in Addis Ababa."
+        },
+        {
+          "stepNumber": 6,
+          "text": "Migration geography: Internal (rural-urban, rural-rural) vs. International migration; Push factors vs. pull factors; Forced displacement vs. voluntary economic migration."
+        }
+      ],
+      "prerequisites": [
+        "Module 6 (demographic indicators and population density)"
+      ],
+      "masteryCheckpoint": "Differentiate between dispersed and nucleated rural settlements in Ethiopia; identify three push factors and three pull factors driving rural-to-urban migration toward Addis Ababa; and list two criteria used to classify an urban center in Ethiopia.",
+      "sourceFile": "geography.md"
+    },
+    {
+      "moduleId": "GEO-M08",
+      "subjectCode": "GEO",
+      "subjectName": "Geography",
+      "streamCategory": "social",
+      "moduleNumber": 8,
+      "phase": "Phase III: Advanced Synthesis",
+      "title": "Spatial Location Models, Economic Sectors & Development",
+      "rationale": "Synthesizes economic geography sectors, classical spatial location theories, and macro-development strategies.",
+      "references": [
+        {
+          "grade": 9,
+          "unitNumber": 5,
+          "unitCode": "GEO-G09-U05",
+          "unitTitle": "Major Economic Activities in Ethiopia",
+          "pages": "pp. 121–141"
+        },
+        {
+          "grade": 10,
+          "unitNumber": 5,
+          "unitCode": "GEO-G10-U05",
+          "unitTitle": "Major Economic and Cultural Activities of Africa",
+          "pages": "pp. 119–138"
+        },
+        {
+          "grade": 11,
+          "unitNumber": 5,
+          "unitCode": "GEO-G11-U05",
+          "unitTitle": "Geography and Economic Development",
+          "pages": "pp. 123–158"
+        },
+        {
+          "grade": 12,
+          "unitNumber": 5,
+          "unitCode": "GEO-G12-U05",
+          "unitTitle": "Challenges of Economic Development",
+          "pages": "pp. 123–144"
+        }
+      ],
+      "sequence": [
+        {
+          "stepNumber": 1,
+          "text": "Sectors of economic activity: Primary (agriculture, forestry, fishing, mining), Secondary (manufacturing, construction), Tertiary (services, transport, tourism), Quaternary (research, IT), and Quinary (policy leadership)."
+        },
+        {
+          "stepNumber": 2,
+          "text": "Structure of the Ethiopian economy: Heavy reliance on smallholder rain-fed subsistence agriculture; Export dependence on coffee, cut flowers, and oilseeds; Chronic trade deficit."
+        },
+        {
+          "stepNumber": 3,
+          "text": "African economic challenges: The Poverty Trap model (low income → low savings → low investment → low productivity); Dependence on raw commodity exports."
+        },
+        {
+          "stepNumber": 4,
+          "text": "Classical spatial location theories: • Johann Heinrich von Thünen's Agricultural Land Use Model (concentric rings, economic rent, transport costs). • Alfred Weber's Theory of Industrial Location (least-cost triangular model, Material Index, weight-losing vs. weight-gaining industries). • Walter Christaller's Central Place Theory (hexagonal networks, range, threshold, k-values)."
+        },
+        {
+          "stepNumber": 5,
+          "text": "Geography of Landlocked Developing Countries (LLDCs): Economic penalties, transit costs, and infrastructure challenges across Africa's 16 landlocked states."
+        },
+        {
+          "stepNumber": 6,
+          "text": "Regional economic integration: Intra-African trade dynamics, regional economic communities (COMESA, SADC, ECOWAS, EAC), and the African Continental Free Trade Area (AfCFTA)."
+        },
+        {
+          "stepNumber": 7,
+          "text": "Multidimensional development: GDP vs. Human Development Index (HDI); Obstacles to development (unequal trade terms, corruption measured by the CPI, global health burdens)."
+        }
+      ],
+      "prerequisites": [
+        "Module 1 (statistical graphs) and Module 7 (urban hierarchies)"
+      ],
+      "masteryCheckpoint": "State where a sugar-refining plant should locate according to Weber's Material Index (raw material site or market); explain why landlocked states face higher trade transaction costs; and describe how the Poverty Trap model limits African capital accumulation.",
+      "sourceFile": "geography.md"
+    },
+    {
+      "moduleId": "GEO-M09",
+      "subjectCode": "GEO",
+      "subjectName": "Geography",
+      "streamCategory": "social",
+      "moduleNumber": 9,
+      "phase": "Phase III: Advanced Synthesis",
+      "title": "Environmental Degradation, Climate Change & Sustainable Green Growth",
+      "rationale": "Integrates the biophysical science of environmental degradation, desertification, and atmospheric warming with national and global mitigation frameworks.",
+      "references": [
+        {
+          "grade": 9,
+          "unitNumber": 6,
+          "unitCode": "GEO-G09-U06",
+          "unitTitle": "Human - Environment Interaction in Ethiopia",
+          "pages": "pp. 153–178"
+        },
+        {
+          "grade": 9,
+          "unitNumber": 7,
+          "unitCode": "GEO-G09-U07",
+          "unitTitle": "Contemporary Geographic Issues and Public Concerns in Ethiopia",
+          "pages": "pp. 179–194"
+        },
+        {
+          "grade": 10,
+          "unitNumber": 2,
+          "unitCode": "GEO-G10-U02",
+          "unitTitle": "Climate of Africa",
+          "pages": "pp. 44–46"
+        },
+        {
+          "grade": 11,
+          "unitNumber": 6,
+          "unitCode": "GEO-G11-U06",
+          "unitTitle": "Major Global Environmental Changes",
+          "pages": "pp. 159–183"
+        },
+        {
+          "grade": 11,
+          "unitNumber": 7,
+          "unitCode": "GEO-G11-U07",
+          "unitTitle": "Geographic Issues and Public Concerns",
+          "pages": "pp. 184–215"
+        },
+        {
+          "grade": 12,
+          "unitNumber": 2,
+          "unitCode": "GEO-G12-U02",
+          "unitTitle": "Climate Change",
+          "pages": "pp. 34–61"
+        },
+        {
+          "grade": 12,
+          "unitNumber": 7,
+          "unitCode": "GEO-G12-U07",
+          "unitTitle": "Contemporary Global Geographic Issues and Public Concerns",
+          "pages": "pp. 186–215"
+        }
+      ],
+      "sequence": [
+        {
+          "stepNumber": 1,
+          "text": "Soil degradation: Natural and human-induced factors; Soil erosion by water and wind; Physical and chemical degradation."
+        },
+        {
+          "stepNumber": 2,
+          "text": "Soil conservation practices: Terracing, afforestation, reforestation, contour plowing, strip cropping, intercropping, check dams, and gully rehabilitation."
+        },
+        {
+          "stepNumber": 3,
+          "text": "Deforestation dynamics: Biomass energy reliance (accounting for 99% of Ethiopian domestic energy consumption); Rapid forest loss (historical 16% → <2.7%)."
+        },
+        {
+          "stepNumber": 4,
+          "text": "Dryland degradation and desertification: Aridity Index (AI) zones; Desertification drivers across the Sahel and East Africa."
+        },
+        {
+          "stepNumber": 5,
+          "text": "Drought classifications: Meteorological (precipitation deficit), Agricultural (soil moisture deficit), and Hydrological (water storage deficit); Famine dynamics and Amartya Sen's Food Entitlement Theory."
+        },
+        {
+          "stepNumber": 6,
+          "text": "The science of climate change: Natural vs. anthropogenic greenhouse gas emissions (CO_2, CH_4, N_2O); Global empirical indicators (glacier retreat, sea level rise, phenological shifts)."
+        },
+        {
+          "stepNumber": 7,
+          "text": "International climate agreements: UNFCCC (Rio 1992), Kyoto Protocol (1997), and the Paris Agreement (2015)."
+        },
+        {
+          "stepNumber": 8,
+          "text": "Ethiopia's green development initiatives: • The Green Legacy Initiative (launched 2019, 20 billion seedlings target). • The Climate Resilient Green Economy (CRGE) strategy: Zero net emissions growth by 2025 across four sectoral pillars (agriculture, forestry, renewable power, and energy-efficient transport/industry)."
+        }
+      ],
+      "prerequisites": [
+        "Module 3 (climatology) and Module 5 (soils and vegetation)"
+      ],
+      "masteryCheckpoint": "Differentiate between afforestation and reforestation; list the three distinct types of drought; name the four core pillars of Ethiopia's CRGE strategy; and explain the difference between climate change adaptation and mitigation.",
+      "sourceFile": "geography.md"
+    },
+    {
+      "moduleId": "GEO-M10",
+      "subjectCode": "GEO",
+      "subjectName": "Geography",
+      "streamCategory": "social",
+      "moduleNumber": 10,
+      "phase": "Phase III: Advanced Synthesis",
+      "title": "Resource Governance, Indigenous Institutions & Research Inquiry",
+      "rationale": "Bridges traditional community resource governance systems with formal scientific research methodology in geography.",
+      "references": [
+        {
+          "grade": 10,
+          "unitNumber": 6,
+          "unitCode": "GEO-G10-U06",
+          "unitTitle": "Human - Natural Environment Interactions",
+          "pages": "pp. 154–156"
+        },
+        {
+          "grade": 11,
+          "unitNumber": 3,
+          "unitCode": "GEO-G11-U03",
+          "unitTitle": "Natural Resources and Conflicts Over Resources",
+          "pages": "pp. 86–92"
+        },
+        {
+          "grade": 12,
+          "unitNumber": 3,
+          "unitCode": "GEO-G12-U03",
+          "unitTitle": "Management of Conflict Over Resources",
+          "pages": "pp. 62–91"
+        },
+        {
+          "grade": 12,
+          "unitNumber": 6,
+          "unitCode": "GEO-G12-U06",
+          "unitTitle": "Solutions to Environmental and Sustainability Problems",
+          "pages": "pp. 178–183"
+        },
+        {
+          "grade": 12,
+          "unitNumber": 8,
+          "unitCode": "GEO-G12-U08",
+          "unitTitle": "Geographical Enquiry and Map Making",
+          "pages": "pp. 216–230"
+        }
+      ],
+      "sequence": [
+        {
+          "stepNumber": 1,
+          "text": "Sustainable development concepts: Economic, social, and environmental dimensions."
+        },
+        {
+          "stepNumber": 2,
+          "text": "Drivers of natural resource conflict: Resource scarcity, weak governance, and transboundary pressures."
+        },
+        {
+          "stepNumber": 3,
+          "text": "Indigenous environmental conservation systems in Ethiopia: Konso stone terracing (UNESCO World Heritage), Gedeo multi-storey agroforestry, and Illubabor sustainable wetland management."
+        },
+        {
+          "stepNumber": 4,
+          "text": "Indigenous dispute settlement institutions: The Gadaa system of the Oromo (Abbaa Gadaa), Shimagle councils of elders, Mada'a customary law among the Afar, and T'eer among the Somali."
+        },
+        {
+          "stepNumber": 5,
+          "text": "Scientific geographic inquiry: Motivations of research (Exploration, Explanation, Description, Understanding)."
+        },
+        {
+          "stepNumber": 6,
+          "text": "Research process steps: Problem identification, hypothesis formulation, primary fieldwork surveys, sampling design, and analytical report writing."
+        }
+      ],
+      "prerequisites": [
+        "Module 1 (cartographic representations) and Module 4 (resource conflict dynamics)"
+      ],
+      "masteryCheckpoint": "Describe how the Konso terracing system conserves soil and water in rugged terrain; explain the role of an Abbaa Gadaa in traditional resource reconciliation; and list the four primary motivations that guide geographic research.",
+      "sourceFile": "geography.md"
+    }
+  ]
+}

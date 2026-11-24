@@ -1,0 +1,565 @@
+{
+  "schemaVersion": 1,
+  "subjectCode": "MAT",
+  "subjectName": "Mathematics",
+  "streamCategory": "common",
+  "compiledAt": "2026-11-24T20:15:53.081Z",
+  "sourceFile": "mathematics.md",
+  "modules": [
+    {
+      "moduleId": "MAT-M01",
+      "subjectCode": "MAT",
+      "subjectName": "Mathematics",
+      "streamCategory": "common",
+      "moduleNumber": 1,
+      "phase": "Phase I: Foundational Core",
+      "title": "Mathematical Foundations, Number Systems & Set Theory",
+      "rationale": "Set builder notation, Venn diagrams, set operations, and interval notation form the primary language used to define function domains, matrix sets, and sample spaces throughout Grades 10–12. Rational and irrational numbers, laws of exponents, and radical simplifications are direct prerequisites for power, exponential, and polynomial expressions.",
+      "references": [
+        {
+          "grade": 9,
+          "unitNumber": 1,
+          "unitCode": "MAT-G09-U01",
+          "unitTitle": "Further on Sets",
+          "pages": "pp. 1–26"
+        },
+        {
+          "grade": 9,
+          "unitNumber": 2,
+          "unitCode": "MAT-G09-U02",
+          "unitTitle": "The Number System",
+          "pages": "pp. 27–104"
+        }
+      ],
+      "sequence": [
+        {
+          "stepNumber": 1,
+          "text": "Study Grade 9 Unit 1: Further on Sets (pp. 1–26)",
+          "grade": 9,
+          "unitNumber": 1,
+          "unitCode": "MAT-G09-U01"
+        },
+        {
+          "stepNumber": 2,
+          "text": "Study Grade 9 Unit 2: The Number System (pp. 27–104)",
+          "grade": 9,
+          "unitNumber": 2,
+          "unitCode": "MAT-G09-U02"
+        }
+      ],
+      "prerequisites": [],
+      "masteryCheckpoint": "Can you use Euclid's division lemma, perform operations on radicals, manipulate fractional exponents (a^(m/n)), and express solution intervals using rigorous set notation?",
+      "sourceFile": "mathematics.md"
+    },
+    {
+      "moduleId": "MAT-M02",
+      "subjectCode": "MAT",
+      "subjectName": "Mathematics",
+      "streamCategory": "common",
+      "moduleNumber": 2,
+      "phase": "Phase I: Foundational Core",
+      "title": "Core Algebra, Equations & Inequalities",
+      "rationale": "Equations and inequalities are parallel mathematical structures. Mastering linear systems, absolute value equations/inequalities, quadratic factoring, completing the square, the quadratic formula, and sign chart techniques provides the algebraic machinery required for analyzing curve behavior and coordinate regions.",
+      "references": [
+        {
+          "grade": 9,
+          "unitNumber": 3,
+          "unitCode": "MAT-G09-U03",
+          "unitTitle": "Solving Equations",
+          "pages": "pp. 105–150"
+        },
+        {
+          "grade": 9,
+          "unitNumber": 4,
+          "unitCode": "MAT-G09-U04",
+          "unitTitle": "Solving Inequalities",
+          "pages": "pp. 151–184"
+        }
+      ],
+      "sequence": [
+        {
+          "stepNumber": 1,
+          "text": "Study Grade 9 Unit 3: Solving Equations (pp. 105–150)",
+          "grade": 9,
+          "unitNumber": 3,
+          "unitCode": "MAT-G09-U03"
+        },
+        {
+          "stepNumber": 2,
+          "text": "Study Grade 9 Unit 4: Solving Inequalities (pp. 151–184)",
+          "grade": 9,
+          "unitNumber": 4,
+          "unitCode": "MAT-G09-U04"
+        }
+      ],
+      "prerequisites": [],
+      "masteryCheckpoint": "Can you solve absolute value inequalities (|ax+b| < c), factor non-monic quadratic expressions, and construct 1D sign charts for quadratic inequalities (ax^2 + bx + c ≥ 0)?",
+      "sourceFile": "mathematics.md"
+    },
+    {
+      "moduleId": "MAT-M03",
+      "subjectCode": "MAT",
+      "subjectName": "Mathematics",
+      "streamCategory": "common",
+      "moduleNumber": 3,
+      "phase": "Phase II: Structural Branches",
+      "title": "Linear Systems, Coordinate Geometry, Matrices & Linear Programming",
+      "rationale": "This module traces linear relationships from single lines to multi-variable optimization. Grade 10 provides line equations and slopes; Grade 11 shows how to represent and solve 2- and 3-variable linear systems using augmented matrices, row echelon reductions, matrix inverses, and Cramer's rule; Grade 12 takes those same linear systems and half-planes to optimize objective functions over convex polygonal feasible regions.",
+      "references": [
+        {
+          "grade": 10,
+          "unitNumber": 7,
+          "unitCode": "MAT-G10-U07",
+          "unitTitle": "Coordinate Geometry",
+          "pages": "pp. 345–380"
+        },
+        {
+          "grade": 11,
+          "unitNumber": 3,
+          "unitCode": "MAT-G11-U03",
+          "unitTitle": "Matrices",
+          "pages": "pp. 131–206"
+        },
+        {
+          "grade": 11,
+          "unitNumber": 4,
+          "unitCode": "MAT-G11-U04",
+          "unitTitle": "Determinants and Their Properties",
+          "pages": "pp. 207–250"
+        },
+        {
+          "grade": 12,
+          "unitNumber": 4,
+          "unitCode": "MAT-G12-U04",
+          "unitTitle": "Introduction to Linear Programming",
+          "pages": "pp. 237–302"
+        }
+      ],
+      "sequence": [
+        {
+          "stepNumber": 1,
+          "text": "Study Grade 10 Unit 7: Coordinate Geometry (pp. 345–380)",
+          "grade": 10,
+          "unitNumber": 7,
+          "unitCode": "MAT-G10-U07"
+        },
+        {
+          "stepNumber": 2,
+          "text": "Study Grade 11 Unit 3: Matrices (pp. 131–206)",
+          "grade": 11,
+          "unitNumber": 3,
+          "unitCode": "MAT-G11-U03"
+        },
+        {
+          "stepNumber": 3,
+          "text": "Study Grade 11 Unit 4: Determinants and Their Properties (pp. 207–250)",
+          "grade": 11,
+          "unitNumber": 4,
+          "unitCode": "MAT-G11-U04"
+        },
+        {
+          "stepNumber": 4,
+          "text": "Study Grade 12 Unit 4: Introduction to Linear Programming (pp. 237–302)",
+          "grade": 12,
+          "unitNumber": 4,
+          "unitCode": "MAT-G12-U04"
+        }
+      ],
+      "prerequisites": [],
+      "masteryCheckpoint": "Can you reduce a 3 × 4 augmented matrix to solve a system, evaluate a 3 × 3 determinant via cofactors, and locate the optimal corner point of a linear programming polytope?",
+      "sourceFile": "mathematics.md"
+    },
+    {
+      "moduleId": "MAT-M04",
+      "subjectCode": "MAT",
+      "subjectName": "Mathematics",
+      "streamCategory": "common",
+      "moduleNumber": 4,
+      "phase": "Phase II: Structural Branches",
+      "title": "The Comprehensive Function Hierarchy",
+      "rationale": "This is the central conceptual engine of high school mathematics. Combining these units allows you to study functions as a unified taxonomy:",
+      "references": [
+        {
+          "grade": 10,
+          "unitNumber": 1,
+          "unitCode": "MAT-G10-U01",
+          "unitTitle": "Relations and Functions",
+          "pages": "pp. 1–66"
+        },
+        {
+          "grade": 10,
+          "unitNumber": 2,
+          "unitCode": "MAT-G10-U02",
+          "unitTitle": "Polynomial Functions",
+          "pages": "pp. 67–120"
+        },
+        {
+          "grade": 10,
+          "unitNumber": 3,
+          "unitCode": "MAT-G10-U03",
+          "unitTitle": "Exponential and Logarithmic Functions",
+          "pages": "pp. 121–198"
+        },
+        {
+          "grade": 11,
+          "unitNumber": 1,
+          "unitCode": "MAT-G11-U01",
+          "unitTitle": "Relations and Functions",
+          "pages": "pp. 1–82"
+        },
+        {
+          "grade": 11,
+          "unitNumber": 2,
+          "unitCode": "MAT-G11-U02",
+          "unitTitle": "Rational Expressions and Rational Functions",
+          "pages": "pp. 83–130"
+        }
+      ],
+      "sequence": [
+        {
+          "stepNumber": 1,
+          "text": "Foundations (domain, range, vertical line test, injective/bijective classifications)."
+        },
+        {
+          "stepNumber": 2,
+          "text": "Algebraic families (linear, quadratic, higher-degree polynomials via division/remainder/factor theorems and rational zero tests)."
+        },
+        {
+          "stepNumber": 3,
+          "text": "Transcendental families (exponential and logarithmic functions as mutual reflections across y = x)."
+        },
+        {
+          "stepNumber": 4,
+          "text": "Structural operations (inverses f^(-1), composition g ∘ f)."
+        },
+        {
+          "stepNumber": 5,
+          "text": "Special real functions (power functions x^r, modulus |x|, signum sgn(x), floor ⌊ x ⌋)."
+        },
+        {
+          "stepNumber": 6,
+          "text": "Rational functions (asymptotes, holes, and partial fraction decomposition)."
+        }
+      ],
+      "prerequisites": [],
+      "masteryCheckpoint": "Can you derive f^(-1)(x), compute the domain of (g ∘ f)(x), factor a quartic polynomial using the Rational Zero Test, and find all vertical, horizontal, and oblique asymptotes of a rational function?",
+      "sourceFile": "mathematics.md"
+    },
+    {
+      "moduleId": "MAT-M05",
+      "subjectCode": "MAT",
+      "subjectName": "Mathematics",
+      "streamCategory": "common",
+      "moduleNumber": 5,
+      "phase": "Phase II: Structural Branches",
+      "title": "Euclidean, Solid & Metric Geometry",
+      "rationale": "Unifies plane and spatial geometry. Similarity criteria and perimeter/area ratios (k, k^2) directly support circle sector and segment calculations. Solid geometry then builds on these 2D foundations to calculate surface areas and volumes of prisms, pyramids, cylinders, cones, spheres, frustums, and composite solids.",
+      "references": [
+        {
+          "grade": 9,
+          "unitNumber": 6,
+          "unitCode": "MAT-G09-U06",
+          "unitTitle": "Regular Polygons",
+          "pages": "pp. 207–238"
+        },
+        {
+          "grade": 9,
+          "unitNumber": 7,
+          "unitCode": "MAT-G09-U07",
+          "unitTitle": "Congruency and Similarity",
+          "pages": "pp. 239–276"
+        },
+        {
+          "grade": 10,
+          "unitNumber": 5,
+          "unitCode": "MAT-G10-U05",
+          "unitTitle": "Circles",
+          "pages": "pp. 251–286"
+        },
+        {
+          "grade": 10,
+          "unitNumber": 6,
+          "unitCode": "MAT-G10-U06",
+          "unitTitle": "Solid Figures",
+          "pages": "pp. 287–344"
+        }
+      ],
+      "sequence": [
+        {
+          "stepNumber": 1,
+          "text": "Study Grade 9 Unit 6: Regular Polygons (pp. 207–238)",
+          "grade": 9,
+          "unitNumber": 6,
+          "unitCode": "MAT-G09-U06"
+        },
+        {
+          "stepNumber": 2,
+          "text": "Study Grade 9 Unit 7: Congruency and Similarity (pp. 239–276)",
+          "grade": 9,
+          "unitNumber": 7,
+          "unitCode": "MAT-G09-U07"
+        },
+        {
+          "stepNumber": 3,
+          "text": "Study Grade 10 Unit 5: Circles (pp. 251–286)",
+          "grade": 10,
+          "unitNumber": 5,
+          "unitCode": "MAT-G10-U05"
+        },
+        {
+          "stepNumber": 4,
+          "text": "Study Grade 10 Unit 6: Solid Figures (pp. 287–344)",
+          "grade": 10,
+          "unitNumber": 6,
+          "unitCode": "MAT-G10-U06"
+        }
+      ],
+      "prerequisites": [],
+      "masteryCheckpoint": "Can you apply intersecting chord/secant theorems, calculate the area of a circle segment, determine frustum volume, and set up geometric similarity proofs?",
+      "sourceFile": "mathematics.md"
+    },
+    {
+      "moduleId": "MAT-M06",
+      "subjectCode": "MAT",
+      "subjectName": "Mathematics",
+      "streamCategory": "common",
+      "moduleNumber": 6,
+      "phase": "Phase III: Advanced Analytical Branches",
+      "title": "The Complete Trigonometry Pipeline",
+      "rationale": "Studying these two units back-to-back bridges the geometric and functional views of trigonometry. You progress seamlessly from right-triangle side ratios for acute angles to circular functions on the unit circle across all real angles, radian conversions (s = rθ), wave graphing (amplitude, period, phase), and fundamental Pythagorean identities.",
+      "references": [
+        {
+          "grade": 9,
+          "unitNumber": 5,
+          "unitCode": "MAT-G09-U05",
+          "unitTitle": "Introduction to Trigonometry",
+          "pages": "pp. 185–206"
+        },
+        {
+          "grade": 10,
+          "unitNumber": 4,
+          "unitCode": "MAT-G10-U04",
+          "unitTitle": "Trigonometric Functions",
+          "pages": "pp. 199–250"
+        }
+      ],
+      "sequence": [
+        {
+          "stepNumber": 1,
+          "text": "Study Grade 9 Unit 5: Introduction to Trigonometry (pp. 185–206)",
+          "grade": 9,
+          "unitNumber": 5,
+          "unitCode": "MAT-G09-U05"
+        },
+        {
+          "stepNumber": 2,
+          "text": "Study Grade 10 Unit 4: Trigonometric Functions (pp. 199–250)",
+          "grade": 10,
+          "unitNumber": 4,
+          "unitCode": "MAT-G10-U04"
+        }
+      ],
+      "prerequisites": [],
+      "masteryCheckpoint": "Can you convert between degrees and radians, find reference angles in any quadrant, prove identities using sin^2 x + cos^2 x = 1, and sketch transformed sine and cosine graphs?",
+      "sourceFile": "mathematics.md"
+    },
+    {
+      "moduleId": "MAT-M07",
+      "subjectCode": "MAT",
+      "subjectName": "Mathematics",
+      "streamCategory": "common",
+      "moduleNumber": 7,
+      "phase": "Phase III: Advanced Analytical Branches",
+      "title": "Vectors, Analytic Geometry & Transformations",
+      "rationale": "Connects vector algebra with coordinate geometry. Beginning with 2D geometric vectors and components, you advance to 3D space vectors (i, j, k), calculate dot products for work and orthogonality, evaluate cross products for torque and area, write vector line equations, and apply vectors as transformation operators (translations, reflections, rotations).",
+      "references": [
+        {
+          "grade": 9,
+          "unitNumber": 8,
+          "unitCode": "MAT-G09-U08",
+          "unitTitle": "Vectors in Two Dimensions",
+          "pages": "pp. 277–310"
+        },
+        {
+          "grade": 11,
+          "unitNumber": 5,
+          "unitCode": "MAT-G11-U05",
+          "unitTitle": "Vectors",
+          "pages": "pp. 251–312"
+        },
+        {
+          "grade": 11,
+          "unitNumber": 6,
+          "unitCode": "MAT-G11-U06",
+          "unitTitle": "Transformations of the Plane",
+          "pages": "pp. 313–354"
+        }
+      ],
+      "sequence": [
+        {
+          "stepNumber": 1,
+          "text": "Study Grade 9 Unit 8: Vectors in Two Dimensions (pp. 277–310)",
+          "grade": 9,
+          "unitNumber": 8,
+          "unitCode": "MAT-G09-U08"
+        },
+        {
+          "stepNumber": 2,
+          "text": "Study Grade 11 Unit 5: Vectors (pp. 251–312)",
+          "grade": 11,
+          "unitNumber": 5,
+          "unitCode": "MAT-G11-U05"
+        },
+        {
+          "stepNumber": 3,
+          "text": "Study Grade 11 Unit 6: Transformations of the Plane (pp. 313–354)",
+          "grade": 11,
+          "unitNumber": 6,
+          "unitCode": "MAT-G11-U06"
+        }
+      ],
+      "prerequisites": [],
+      "masteryCheckpoint": "Can you compute u · v and u × v, find the angle between two 3D vectors, write parametric equations of lines, and find the image of a line or circle under plane reflection or rotation?",
+      "sourceFile": "mathematics.md"
+    },
+    {
+      "moduleId": "MAT-M08",
+      "subjectCode": "MAT",
+      "subjectName": "Mathematics",
+      "streamCategory": "common",
+      "moduleNumber": 8,
+      "phase": "Phase III: Advanced Analytical Branches",
+      "title": "Differential & Integral Calculus",
+      "rationale": "Calculus is the culmination of high school function analysis. Having mastered polynomials, rational functions, power functions, absolute values, and trigonometry in Modules 4 and 6, you can investigate their dynamic behavior: secant-to-tangent limits, derivative rules (power, product, quotient, chain), curve monotonicity, critical numbers, and optimization via the First Derivative Test. You then invert the process through anti-differentiation, compute Riemann sums, and evaluate definite integrals to find areas bounded under curves.",
+      "references": [
+        {
+          "grade": 12,
+          "unitNumber": 2,
+          "unitCode": "MAT-G12-U02",
+          "unitTitle": "Introductions to Calculus",
+          "pages": "pp. 61–158"
+        }
+      ],
+      "sequence": [
+        {
+          "stepNumber": 1,
+          "text": "Study Grade 12 Unit 2: Introduction to Calculus (pp. 61–158)",
+          "grade": 12,
+          "unitNumber": 2,
+          "unitCode": "MAT-G12-U02"
+        }
+      ],
+      "prerequisites": [
+        "Modules 1, 2, 4, and 6"
+      ],
+      "masteryCheckpoint": "Can you find the tangent and normal line equations to a curve, identify local extrema using the First Derivative Test, and calculate the exact area under a curve using the Fundamental Theorem of Calculus?",
+      "sourceFile": "mathematics.md"
+    },
+    {
+      "moduleId": "MAT-M09",
+      "subjectCode": "MAT",
+      "subjectName": "Mathematics",
+      "streamCategory": "common",
+      "moduleNumber": 9,
+      "phase": "Phase IV: Discrete, Financial & Stochastic Systems",
+      "title": "Discrete Mathematics, Sequences & Financial Modeling",
+      "rationale": "Sequences and series represent discrete functions defined over mathbb{Z}^+. Arithmetic and geometric sequences, partial sums, sigma notation, and infinite geometric series provide the direct mathematical foundation for financial mathematics, including compound interest, continuous compounding (e^(rt)), annuities, loan amortizations, and asset depreciation.",
+      "references": [
+        {
+          "grade": 12,
+          "unitNumber": 1,
+          "unitCode": "MAT-G12-U01",
+          "unitTitle": "Sequences and Series",
+          "pages": "pp. 1–60"
+        },
+        {
+          "grade": 12,
+          "unitNumber": 5,
+          "unitCode": "MAT-G12-U05",
+          "unitTitle": "Mathematical Applications in Business",
+          "pages": "pp. 303–416"
+        }
+      ],
+      "sequence": [
+        {
+          "stepNumber": 1,
+          "text": "Study Grade 12 Unit 1: Sequences and Series (pp. 1–60)",
+          "grade": 12,
+          "unitNumber": 1,
+          "unitCode": "MAT-G12-U01"
+        },
+        {
+          "stepNumber": 2,
+          "text": "Study Grade 12 Unit 5: Mathematical Applications in Business (pp. 303–416)",
+          "grade": 12,
+          "unitNumber": 5,
+          "unitCode": "MAT-G12-U05"
+        }
+      ],
+      "prerequisites": [],
+      "masteryCheckpoint": "Can you determine the convergence of an infinite geometric series, convert mixed recurring decimals to fractions, compute future/present value annuities, and construct loan amortization schedules?",
+      "sourceFile": "mathematics.md"
+    },
+    {
+      "moduleId": "MAT-M10",
+      "subjectCode": "MAT",
+      "subjectName": "Mathematics",
+      "streamCategory": "common",
+      "moduleNumber": 10,
+      "phase": "Phase IV: Discrete, Financial & Stochastic Systems",
+      "title": "Complete Statistics, Counting & Probability Theory",
+      "rationale": "Grouping these four units creates an unbroken learning path from basic descriptive statistics and empirical experiments to advanced statistical analysis and combinatorial probability:",
+      "references": [
+        {
+          "grade": 9,
+          "unitNumber": 9,
+          "unitCode": "MAT-G09-U09",
+          "unitTitle": "Statistics and Probability",
+          "pages": "pp. 311–360"
+        },
+        {
+          "grade": 11,
+          "unitNumber": 7,
+          "unitCode": "MAT-G11-U07",
+          "unitTitle": "Statistics",
+          "pages": "pp. 355–412"
+        },
+        {
+          "grade": 11,
+          "unitNumber": 8,
+          "unitCode": "MAT-G11-U08",
+          "unitTitle": "Probability",
+          "pages": "pp. 413–480"
+        },
+        {
+          "grade": 12,
+          "unitNumber": 3,
+          "unitCode": "MAT-G12-U03",
+          "unitTitle": "Statistics",
+          "pages": "pp. 159–236"
+        }
+      ],
+      "sequence": [
+        {
+          "stepNumber": 1,
+          "text": "Data collection, organization, histograms, and basic central tendency/dispersion (Grade 9)."
+        },
+        {
+          "stepNumber": 2,
+          "text": "Grouped continuous data, frequency polygons, ogives, and positional measures (Q_k, D_k, P_k) (Grade 11)."
+        },
+        {
+          "stepNumber": 3,
+          "text": "Rigorous probability theory via Fundamental Counting Principles, permutations, combinations, and the Binomial Theorem (Grade 11)."
+        },
+        {
+          "stepNumber": 4,
+          "text": "Advanced absolute and relative dispersion (Mean Deviation, Quartile Deviation, Coefficient of Variation), distribution skewness, and scientific sampling methodology (Grade 12)."
+        }
+      ],
+      "prerequisites": [],
+      "masteryCheckpoint": "Can you calculate quartiles and percentiles from a grouped frequency table, compute probabilities using permutations/combinations, determine the Coefficient of Variation to compare dataset stability, and identify skewness from frequency curves?",
+      "sourceFile": "mathematics.md"
+    }
+  ]
+}
