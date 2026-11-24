@@ -819,5 +819,122 @@ export interface NoteSanitizeResult {
   unitCount?: number;
 }
 
+// ==========================================
+// 11. AI Cross-Grade Topic Study & Calibration Contracts
+// ==========================================
+
+export const AiTargetTierSchema = z.enum(['solid', 'competitive', 'merit']);
+export type AiTargetTier = z.infer<typeof AiTargetTierSchema>;
+
+export const AiPeakWindowSchema = z.enum(['Morning', 'Afternoon', 'Night']);
+export type AiPeakWindow = z.infer<typeof AiPeakWindowSchema>;
+
+export const AiPrepStageSchema = z.enum(['starting', 'reviewing', 'sprint']);
+export type AiPrepStage = z.infer<typeof AiPrepStageSchema>;
+
+export const AiCalibrationInputSchema = z.object({
+  tierId: AiTargetTierSchema.default('competitive'),
+  targetScore: z.number().int().min(400).max(600),
+  weakSubjectCodes: z
+    .array(z.string().min(2).max(5))
+    .min(1, 'Select at least 1 priority subject')
+    .max(3, 'Select at most 3 priority subjects'),
+  dailyMinutes: z.number().int().min(15).max(600),
+  peakWindow: AiPeakWindowSchema.default('Morning'),
+  prepStageId: AiPrepStageSchema.default('reviewing'),
+});
+export type AiCalibrationInput = z.infer<typeof AiCalibrationInputSchema>;
+
+export const UpdateTopicProgressSchema = z.object({
+  stepNumber: z.number().int().min(1).optional(),
+  stepCompleted: z.boolean().optional(),
+  isCompleted: z.boolean().optional(),
+});
+export type UpdateTopicProgressRequest = z.infer<typeof UpdateTopicProgressSchema>;
+
+export interface TopicReadingReference {
+  grade: number;
+  unitNumber: number;
+  unitCode: string;
+  unitTitle: string;
+  pages: string;
+  hasQuickNotes?: boolean;
+}
+
+export interface TopicLearningStep {
+  stepNumber: number;
+  text: string;
+  grade?: number;
+  unitNumber?: number;
+  unitCode?: string;
+  pages?: string;
+}
+
+export interface TopicModuleItem {
+  moduleId: string;
+  subjectCode: string;
+  subjectName: string;
+  streamCategory: SubjectStreamCategory;
+  moduleNumber: number;
+  phase: string;
+  title: string;
+  rationale: string;
+  references: TopicReadingReference[];
+  sequence: TopicLearningStep[];
+  prerequisites: string[];
+  masteryCheckpoint: string;
+  completedSteps: number[];
+  isCompleted: boolean;
+  progressPercentage: number;
+}
+
+export interface AiSubjectAllocation {
+  subjectCode: string;
+  subjectName: string;
+  priorityRank: number | null;
+  weeklyMinutes: number;
+  sharePercentage: number;
+}
+
+export interface AiDailyTaskItem {
+  id: string;
+  moduleId: string;
+  subjectCode: string;
+  subjectName: string;
+  title: string;
+  durationMinutes: number;
+  priorityTag: string;
+  whereToRead: string;
+  coachingNote?: string;
+}
+
+export interface AiTopicSubjectSummary {
+  subjectCode: string;
+  subjectName: string;
+  totalModules: number;
+  completedModules: number;
+  masteryPercentage: number;
+  priorityRank: number | null;
+  hasTopicBank: boolean;
+}
+
+export interface AiStudyProgram {
+  calibration: AiCalibrationInput;
+  stream: StudentStream;
+  projectedScore: number;
+  diagnosticSummary: string;
+  subjectAllocations: AiSubjectAllocation[];
+  dailyFocusTasks: AiDailyTaskItem[];
+  modulePriorityBySubject: Record<string, string[]>;
+  generatedBy: 'gemini' | 'deterministic';
+  generatedAt: string;
+}
+
+export interface AiTopicProgramOverviewResponse {
+  hasProgram: boolean;
+  program: AiStudyProgram | null;
+  subjectSummaries: AiTopicSubjectSummary[];
+}
+
 
 

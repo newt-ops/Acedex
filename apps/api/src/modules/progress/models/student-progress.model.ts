@@ -1,5 +1,14 @@
 import mongoose, { Schema, Document, Types } from 'mongoose';
-import { StudyStatus } from '@acedex/contracts';
+import { StudyStatus, AiStudyProgram } from '@acedex/contracts';
+
+export interface ITopicModuleProgressSubdoc {
+  moduleId: string;
+  subjectCode: string;
+  moduleNumber: number;
+  completedSteps: number[];
+  isCompleted: boolean;
+  completedAt?: Date;
+}
 
 export interface IProgressUnitSubdoc {
   unitId: Types.ObjectId;
@@ -55,6 +64,8 @@ export interface IStudentProgressDocument extends Document {
   };
   units: IProgressUnitSubdoc[];
   subjectMastery: ISubjectMasterySubdoc[];
+  aiStudyProgram?: AiStudyProgram;
+  topicModules: ITopicModuleProgressSubdoc[];
   createdAt: Date;
   updatedAt: Date;
 }
@@ -101,6 +112,18 @@ const UnlockedUnitSchema = new Schema<IUnlockedUnitSubdoc>(
   { _id: false }
 );
 
+const TopicModuleProgressSchema = new Schema<ITopicModuleProgressSubdoc>(
+  {
+    moduleId: { type: String, required: true },
+    subjectCode: { type: String, required: true },
+    moduleNumber: { type: Number, required: true },
+    completedSteps: { type: [Number], default: [] },
+    isCompleted: { type: Boolean, default: false },
+    completedAt: { type: Date },
+  },
+  { _id: false }
+);
+
 const StudentProgressSchema = new Schema<IStudentProgressDocument>(
   {
     userId: { type: Schema.Types.ObjectId, ref: 'User', required: true, unique: true, index: true },
@@ -127,6 +150,8 @@ const StudentProgressSchema = new Schema<IStudentProgressDocument>(
     },
     units: { type: [ProgressUnitSchema], default: [] },
     subjectMastery: { type: [SubjectMasterySchema], default: [] },
+    aiStudyProgram: { type: Schema.Types.Mixed, default: undefined },
+    topicModules: { type: [TopicModuleProgressSchema], default: [] },
   },
   {
     timestamps: true,

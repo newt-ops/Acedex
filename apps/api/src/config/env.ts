@@ -29,6 +29,8 @@ const envSchema = z.object({
   UNITY_ADS_SECRET_KEY: z.string().optional(),
   UNITY_ADS_S2S_REQUIRED: z.preprocess((val) => val === 'true' || val === true, z.boolean()).default(false),
   REQUIRE_EXAM_TICKET: z.preprocess((val) => val === 'true' || val === true, z.boolean()).default(false),
+  GEMINI_API_KEY: z.string().optional(),
+  GEMINI_MODEL: z.string().default('gemini-2.5-flash'),
 });
 
 const parsed = envSchema.safeParse(process.env);

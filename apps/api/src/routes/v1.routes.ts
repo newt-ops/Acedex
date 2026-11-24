@@ -5,6 +5,7 @@ import { curriculumRoutes } from '../modules/curriculum/curriculum.routes';
 import assessmentRoutes from '../modules/assessments/assessment.routes';
 import progressRoutes from '../modules/progress/progress.routes';
 import { studyRoutes } from '../modules/study/study.routes';
+import topicsRoutes from '../modules/topics/topics.routes';
 import { adsRoutes } from '../modules/ads/ads.routes';
 import adminRoutes from '../modules/admin/admin.routes';
 import { collectorRoutes } from '../modules/collector/collector.routes';
@@ -26,6 +27,9 @@ router.use('/assessments', assessmentRoutes);
 
 // Study Management & Unit Tracking
 router.use('/study', studyRoutes);
+
+// AI Cross-Grade Topic Study & Gemini Planner
+router.use('/topics', topicsRoutes);
 
 // Student Progress & Analytics
 router.use('/progress', progressRoutes);
