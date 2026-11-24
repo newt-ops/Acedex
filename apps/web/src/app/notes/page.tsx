@@ -19,14 +19,12 @@ import {
   AlertCircleIcon,
   Refresh01Icon,
   Search01Icon,
-  FilterIcon,
 } from '@hugeicons/core-free-icons';
 
 export default function NotesContributorPage() {
   const { profile, isAuthenticated, loading: authLoading } = useAuth();
   const router = useRouter();
 
-  const [selectedSubject, setSelectedSubject] = useState<string>('ENG');
   const [activeGrade, setActiveGrade] = useState<number>(9);
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [unitTree, setUnitTree] = useState<NoteSubjectUnitsResponse | null>(null);
@@ -37,26 +35,19 @@ export default function NotesContributorPage() {
   const [selectedUnit, setSelectedUnit] = useState<NoteUnitProgressItem | null>(null);
   const [isSubmitModalOpen, setIsSubmitModalOpen] = useState<boolean>(false);
 
-  // Set default subject on profile load
-  useEffect(() => {
-    if (profile?.subjectCode) {
-      setSelectedSubject(profile.subjectCode);
-    }
-  }, [profile]);
-
   const loadUnits = useCallback(async () => {
     if (!profile) return;
     setLoading(true);
     setError(null);
     try {
-      const data = await api.getNoteUnits(selectedSubject, profile.contributorId);
+      const data = await api.getNoteUnits(profile.subjectCode, profile.contributorId);
       setUnitTree(data);
     } catch (err: any) {
       setError(err.message || 'Unable to load curriculum revision notes');
     } finally {
       setLoading(false);
     }
-  }, [profile, selectedSubject]);
+  }, [profile]);
 
   useEffect(() => {
     if (!authLoading) {
@@ -121,49 +112,32 @@ export default function NotesContributorPage() {
 
       <main className="flex-1">
         <Container className="py-6 space-y-6">
-          {/* Top Banner: Subject Selector & Curriculum Progress */}
+          {/* Top Banner: Subject Info & Progress */}
           <div className="bg-acedex-card/90 border border-acedex-border/80 rounded-3xl p-5 sm:p-7 shadow-lg relative overflow-hidden backdrop-blur-xl">
-            <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-6">
               <div className="space-y-2">
                 <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-acedex-primary/15 text-acedex-primary border border-acedex-primary/30">
                   <HugeiconsIcon icon={BookOpen01Icon} size={14} strokeWidth={2} />
-                  <span>Revision Notes Curriculum</span>
+                  <span>Subject Workspace</span>
                 </div>
                 <h1 className="text-2xl sm:text-3xl font-black text-acedex-text tracking-tight">
-                  {SUBJECTS[selectedSubject] || selectedSubject} Revision Notes
+                  {profile.subjectName || SUBJECTS[profile.subjectCode] || profile.subjectCode} ({profile.subjectCode})
                 </h1>
                 <p className="text-xs sm:text-sm text-acedex-muted flex items-center gap-2">
-                  <span>Contributor: <strong className="text-acedex-text">{profile.name}</strong> ({profile.contributorId})</span>
+                  <span>Assigned Contributor: <strong className="text-acedex-text">{profile.name}</strong> ({profile.contributorId})</span>
                 </p>
               </div>
 
-              {/* Subject Selector & Progress Box */}
-              <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
-                <div className="flex items-center gap-2 bg-acedex-bg/80 border border-acedex-border/70 px-3 py-2 rounded-2xl transition-colors hover:border-acedex-primary/40">
-                  <HugeiconsIcon icon={FilterIcon} size={15} className="text-acedex-muted" strokeWidth={2} />
-                  <select
-                    value={selectedSubject}
-                    onChange={(e) => setSelectedSubject(e.target.value)}
-                    className="bg-transparent text-xs sm:text-sm font-semibold text-acedex-text focus:outline-none cursor-pointer"
-                  >
-                    {Object.entries(SUBJECTS).map(([code, name]) => (
-                      <option key={code} value={code} className="bg-acedex-card text-acedex-text">
-                        {name} ({code})
-                      </option>
-                    ))}
-                  </select>
+              {/* Progress Summary Card */}
+              {unitTree && (
+                <div className="w-full sm:w-72 bg-acedex-bg/80 border border-acedex-border/70 p-4 rounded-2xl shrink-0">
+                  <ProgressBar
+                    current={unitTree.approvedUnits}
+                    total={unitTree.totalUnits}
+                    label="Approved Coverage"
+                  />
                 </div>
-
-                {unitTree && (
-                  <div className="w-full sm:w-64 bg-acedex-bg/80 border border-acedex-border/70 p-3.5 rounded-2xl shrink-0">
-                    <ProgressBar
-                      current={unitTree.approvedUnits}
-                      total={unitTree.totalUnits}
-                      label="Approved Coverage"
-                    />
-                  </div>
-                )}
-              </div>
+              )}
             </div>
           </div>
 
