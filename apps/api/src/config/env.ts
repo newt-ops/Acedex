@@ -13,6 +13,8 @@ const envSchema = z.object({
   MONGODB_URI: z.string().optional().default(''),
   COLLECTOR_DB_NAME: z.string().default('acedex_collector'),
   COLLECTOR_MONGODB_URI: z.string().optional(),
+  NOTES_DB_NAME: z.string().default('acedex_notes'),
+  NOTES_MONGODB_URI: z.string().optional(),
   CORS_ORIGIN: z.string().default('http://localhost:3000,http://localhost:5173'),
   LOG_LEVEL: z.enum(['fatal', 'error', 'warn', 'info', 'debug', 'trace', 'silent']).default('info'),
   JWT_ACCESS_SECRET: z.string().default('development-jwt-access-secret-change-in-prod'),

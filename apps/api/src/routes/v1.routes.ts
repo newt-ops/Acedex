@@ -8,6 +8,7 @@ import { studyRoutes } from '../modules/study/study.routes';
 import { adsRoutes } from '../modules/ads/ads.routes';
 import adminRoutes from '../modules/admin/admin.routes';
 import { collectorRoutes } from '../modules/collector/collector.routes';
+import notesCollectorRoutes from '../modules/notes-collector/notes-collector.routes';
 
 const router = Router();
 
@@ -37,5 +38,8 @@ router.use('/admin', adminRoutes);
 
 // Temporary Subject Question Collector & Exporter
 router.use('/collector', collectorRoutes);
+
+// Quick Notes Collector & Ingestion Portal
+router.use('/notes-collector', notesCollectorRoutes);
 
 export const v1Routes = router;

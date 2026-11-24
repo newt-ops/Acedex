@@ -6,6 +6,13 @@ import {
   SanitizeResult,
   QuestionItem,
 } from '../types/collector';
+import {
+  NoteSubjectUnitsResponse,
+  NoteSubmissionSummary,
+  NoteSubmissionDetail,
+  NoteSanitizeResult,
+  QuickNoteData,
+} from '../types/notes-collector';
 import { DEFAULT_API_URL } from './constants';
 
 const STORAGE_API_KEY = 'acedex_api_url';
@@ -177,6 +184,93 @@ export const api = {
   async exportUnitJson(unitCode: string): Promise<any> {
     return request(
       `/api/v1/collector/admin/submissions/${unitCode}/export`
+    );
+  },
+
+  // ==========================================
+  // Quick Notes Collector API
+  // ==========================================
+
+  async getNoteUnits(
+    subjectCode: string,
+    contributorId?: string
+  ): Promise<NoteSubjectUnitsResponse> {
+    const params = new URLSearchParams({ subjectCode });
+    if (contributorId) params.append('contributorId', contributorId);
+    return request<NoteSubjectUnitsResponse>(
+      `/api/v1/notes-collector/units?${params.toString()}`
+    );
+  },
+
+  async getNoteUnitDetail(unitCode: string): Promise<NoteSubmissionDetail> {
+    return request<NoteSubmissionDetail>(
+      `/api/v1/notes-collector/units/${unitCode}`
+    );
+  },
+
+  async sanitizeNote(
+    rawText: string,
+    expectedUnitCode?: string
+  ): Promise<NoteSanitizeResult> {
+    return request<NoteSanitizeResult>('/api/v1/notes-collector/sanitize', {
+      method: 'POST',
+      body: JSON.stringify({ rawText, expectedUnitCode }),
+    });
+  },
+
+  async submitUnitNote(
+    unitCode: string,
+    contributorId: string,
+    rawPastedText?: string,
+    notes?: QuickNoteData
+  ): Promise<any> {
+    return request(`/api/v1/notes-collector/units/${unitCode}/submit`, {
+      method: 'POST',
+      body: JSON.stringify({
+        unitCode,
+        contributorId,
+        rawPastedText,
+        notes,
+      }),
+    });
+  },
+
+  async getAdminNoteSubmissions(filters: {
+    status?: string;
+    subjectCode?: string;
+    grade?: number;
+  }): Promise<NoteSubmissionSummary[]> {
+    const params = new URLSearchParams();
+    if (filters.subjectCode && filters.subjectCode !== 'ALL') {
+      params.append('subjectCode', filters.subjectCode);
+    }
+    if (filters.grade) {
+      params.append('grade', filters.grade.toString());
+    }
+    if (filters.status && filters.status !== 'ALL') {
+      params.append('status', filters.status);
+    }
+    const query = params.toString() ? `?${params.toString()}` : '';
+    return request<NoteSubmissionSummary[]>(
+      `/api/v1/notes-collector/admin/submissions${query}`
+    );
+  },
+
+  async reviewNoteSubmission(
+    id: string,
+    action: 'approve' | 'reject',
+    notes?: string
+  ): Promise<any> {
+    return request(`/api/v1/notes-collector/admin/submissions/${id}/review`, {
+      method: 'POST',
+      body: JSON.stringify({ action, notes }),
+    });
+  },
+
+  async syncLocalNotes(): Promise<{ exportedCount: number; importedCount: number }> {
+    return request<{ exportedCount: number; importedCount: number }>(
+      '/api/v1/notes-collector/admin/sync-local',
+      { method: 'POST' }
     );
   },
 };
