@@ -170,16 +170,16 @@ List<List<dynamic>> getSubjectIconData(String subject) {
 /// Initial Study Tasks (starts empty by default as requested; populated when student adds tasks)
 final List<StudyTaskItem> defaultStudyTasks = [];
 
-/// Initial Subject Mastery data with 3-question EUEE drill questions & syllabus
+/// Initial Subject Mastery data with 3-question EUEE drill questions & syllabus (starts from 0% real baseline)
 final List<SubjectMasteryItem> defaultSubjectsData = [
   const SubjectMasteryItem(
     id: 'physics',
     name: 'Physics',
-    mastery: 82,
+    mastery: 0,
     syllabusUnits: [
-      SyllabusUnit(unit: 'Unit 3: Fluid Mechanics', status: 'Mastered', pct: '100%'),
-      SyllabusUnit(unit: 'Unit 4: Electromagnetism', status: 'In Progress', pct: '80%'),
-      SyllabusUnit(unit: 'Unit 5: AC Circuits & Electronics', status: 'Up Next', pct: '65%'),
+      SyllabusUnit(unit: 'Unit 3: Fluid Mechanics', status: 'Not Started', pct: '0%'),
+      SyllabusUnit(unit: 'Unit 4: Electromagnetism', status: 'Not Started', pct: '0%'),
+      SyllabusUnit(unit: 'Unit 5: AC Circuits & Electronics', status: 'Not Started', pct: '0%'),
     ],
     questions: [
       DrillQuestion(
@@ -208,11 +208,11 @@ final List<SubjectMasteryItem> defaultSubjectsData = [
   const SubjectMasteryItem(
     id: 'mathematics',
     name: 'Mathematics',
-    mastery: 88,
+    mastery: 0,
     syllabusUnits: [
-      SyllabusUnit(unit: 'Unit 4: Differential Calculus', status: 'Mastered', pct: '96%'),
-      SyllabusUnit(unit: 'Unit 5: Integral Calculus', status: 'Mastered', pct: '88%'),
-      SyllabusUnit(unit: 'Unit 6: 3D Vectors & Planes', status: 'In Progress', pct: '80%'),
+      SyllabusUnit(unit: 'Unit 4: Differential Calculus', status: 'Not Started', pct: '0%'),
+      SyllabusUnit(unit: 'Unit 5: Integral Calculus', status: 'Not Started', pct: '0%'),
+      SyllabusUnit(unit: 'Unit 6: 3D Vectors & Planes', status: 'Not Started', pct: '0%'),
     ],
     questions: [
       DrillQuestion(
@@ -241,11 +241,11 @@ final List<SubjectMasteryItem> defaultSubjectsData = [
   const SubjectMasteryItem(
     id: 'chemistry',
     name: 'Chemistry',
-    mastery: 71,
+    mastery: 0,
     syllabusUnits: [
-      SyllabusUnit(unit: 'Unit 3: Chemical Equilibrium', status: 'Mastered', pct: '84%'),
-      SyllabusUnit(unit: 'Unit 4: Electrochemistry', status: 'Needs Focus', pct: '62%'),
-      SyllabusUnit(unit: 'Unit 5: Organic Polymers', status: 'In Progress', pct: '67%'),
+      SyllabusUnit(unit: 'Unit 3: Chemical Equilibrium', status: 'Not Started', pct: '0%'),
+      SyllabusUnit(unit: 'Unit 4: Electrochemistry', status: 'Not Started', pct: '0%'),
+      SyllabusUnit(unit: 'Unit 5: Organic Polymers', status: 'Not Started', pct: '0%'),
     ],
     questions: [
       DrillQuestion(
@@ -274,11 +274,11 @@ final List<SubjectMasteryItem> defaultSubjectsData = [
   const SubjectMasteryItem(
     id: 'biology',
     name: 'Biology',
-    mastery: 79,
+    mastery: 0,
     syllabusUnits: [
-      SyllabusUnit(unit: 'Unit 3: Cellular Respiration', status: 'Mastered', pct: '86%'),
-      SyllabusUnit(unit: 'Unit 4: Molecular Genetics', status: 'Needs Focus', pct: '73%'),
-      SyllabusUnit(unit: 'Unit 5: Ecology & Conservation', status: 'In Progress', pct: '78%'),
+      SyllabusUnit(unit: 'Unit 3: Cellular Respiration', status: 'Not Started', pct: '0%'),
+      SyllabusUnit(unit: 'Unit 4: Molecular Genetics', status: 'Not Started', pct: '0%'),
+      SyllabusUnit(unit: 'Unit 5: Ecology & Conservation', status: 'Not Started', pct: '0%'),
     ],
     questions: [
       DrillQuestion(
@@ -307,11 +307,11 @@ final List<SubjectMasteryItem> defaultSubjectsData = [
   const SubjectMasteryItem(
     id: 'english',
     name: 'English',
-    mastery: 85,
+    mastery: 0,
     syllabusUnits: [
-      SyllabusUnit(unit: 'Unit 1: Sustainable Development', status: 'Mastered', pct: '92%'),
-      SyllabusUnit(unit: 'Unit 2: Time Management', status: 'In Progress', pct: '80%'),
-      SyllabusUnit(unit: 'Unit 3: Traffic Accidents Evidence', status: 'Up Next', pct: '70%'),
+      SyllabusUnit(unit: 'Unit 1: Sustainable Development', status: 'Not Started', pct: '0%'),
+      SyllabusUnit(unit: 'Unit 2: Time Management', status: 'Not Started', pct: '0%'),
+      SyllabusUnit(unit: 'Unit 3: Traffic Accidents Evidence', status: 'Not Started', pct: '0%'),
     ],
     questions: [
       DrillQuestion(

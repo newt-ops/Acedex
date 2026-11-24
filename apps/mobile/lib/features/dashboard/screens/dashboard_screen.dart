@@ -55,7 +55,16 @@ class DashboardScreen extends StatefulWidget {
 }
 
 class _DashboardScreenState extends State<DashboardScreen> {
-  int _readinessScore = 76;
+  int get _readinessScore {
+    final completedCount =
+        AuthStorage.instance.completedUnitsNotifier.value.length;
+    final effectiveMastered =
+        completedCount > _unitsMastered ? completedCount : _unitsMastered;
+    final total = _totalUnits > 0 ? _totalUnits : 237;
+    if (effectiveMastered == 0) return 0;
+    return ((effectiveMastered / total) * 100).round().clamp(0, 100);
+  }
+
   final int _focusMinutes = 45;
   final int _focusGoalMinutes = 60;
   int _extraFocusMinutes = 0;
@@ -109,6 +118,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
   @override
   void initState() {
     super.initState();
+    AuthStorage.instance.completedUnitsNotifier.addListener(_onCompletedUnitsChanged);
     _tasks = widget.initialTasks != null
         ? List.from(widget.initialTasks!)
         : List.from(defaultStudyTasks);
@@ -128,11 +138,21 @@ class _DashboardScreenState extends State<DashboardScreen> {
     unawaited(AuthStorage.instance.getCompletedUnits());
   }
 
+  @override
+  void dispose() {
+    AuthStorage.instance.completedUnitsNotifier.removeListener(_onCompletedUnitsChanged);
+    super.dispose();
+  }
+
+  void _onCompletedUnitsChanged() {
+    if (mounted) setState(() {});
+  }
+
   Future<void> _fetchLiveDashboardData() async {
     try {
       final pulseRes = await ApiClient.instance.get(
         ApiEndpoints.curriculumPulse,
-        requiresAuth: false,
+        requiresAuth: true,
       );
       final data = pulseRes['data'] ?? pulseRes;
       if (mounted) {
@@ -200,9 +220,6 @@ class _DashboardScreenState extends State<DashboardScreen> {
       if (index != -1) {
         final current = _tasks[index];
         _tasks[index] = current.copyWith(completed: !current.completed);
-
-        final completedCount = _tasks.where((t) => t.completed).length;
-        _readinessScore = (74 + completedCount).clamp(0, 99);
       }
     });
   }
@@ -230,8 +247,6 @@ class _DashboardScreenState extends State<DashboardScreen> {
   void _onDeleteTask(String id) {
     setState(() {
       _tasks.removeWhere((t) => t.id == id);
-      final completedCount = _tasks.where((t) => t.completed).length;
-      _readinessScore = (74 + completedCount).clamp(0, 99);
     });
   }
 

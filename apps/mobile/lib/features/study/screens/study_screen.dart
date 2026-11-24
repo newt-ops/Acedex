@@ -79,7 +79,7 @@ class _StudyScreenState extends State<StudyScreen> {
           : const SubjectCurriculum(
               id: 'physics',
               name: 'Physics',
-              mastery: 75,
+              mastery: 0,
               lastTopicId: 'phy-u1',
               iconData: HugeIcons.strokeRoundedAtom01,
               color: AppColors.royalPurple,
@@ -115,9 +115,8 @@ class _StudyScreenState extends State<StudyScreen> {
   void _recalculateSubjectMastery(SubjectCurriculum subj) {
     final total = subj.units.length;
     final done = subj.units.where((u) => u.isCompleted).length;
-    final ratioPct = total > 0 ? ((done / total) * 100).round() : 75;
     final newMastery =
-        (subj.mastery * 0.65 + ratioPct * 0.35).round().clamp(55, 99);
+        total > 0 ? ((done / total) * 100).round().clamp(0, 100) : 0;
     _curriculumMap[subj.id] = subj.copyWith(mastery: newMastery);
   }
 
@@ -193,7 +192,7 @@ class _StudyScreenState extends State<StudyScreen> {
           newMap[slug] = SubjectCurriculum(
             id: slug,
             name: name,
-            mastery: existing?.mastery ?? 75,
+            mastery: existing?.mastery ?? 0,
             lastTopicId: existing?.lastTopicId ?? '$slug-u1',
             iconData: existing?.iconData ?? _resolveSubjectIcon(code),
             color: existing?.color ?? _resolveSubjectColor(code),
@@ -237,7 +236,7 @@ class _StudyScreenState extends State<StudyScreen> {
     try {
       final res = await ApiClient.instance.get(
         ApiEndpoints.curriculumUnits(grade: grade, subject: subj.subjectCode),
-        requiresAuth: false,
+        requiresAuth: true,
       );
       final unitsData = res['data'] ?? res;
       if (unitsData is List && unitsData.isNotEmpty) {
@@ -251,7 +250,12 @@ class _StudyScreenState extends State<StudyScreen> {
           final unitId = raw['_id'] as String? ?? unitCode;
           final isDone = raw['isStudyCompleted'] == true ||
               raw['passed'] == true ||
-              AuthStorage.instance.completedUnitsNotifier.value.contains(unitId);
+              AuthStorage.instance.completedUnitsNotifier.value.contains(unitId) ||
+              AuthStorage.instance.completedUnitsNotifier.value.contains(unitCode);
+          if (raw['isStudyCompleted'] == true || raw['passed'] == true) {
+            unawaited(AuthStorage.instance.setUnitCompletion(unitId, true));
+            unawaited(AuthStorage.instance.setUnitCompletion(unitCode, true));
+          }
           final bestScore = raw['bestScore'] as int?;
 
           return StudyUnit(
@@ -267,23 +271,45 @@ class _StudyScreenState extends State<StudyScreen> {
           );
         }).toList();
 
+        final doneCount = liveUnits.where((u) => u.isCompleted).length;
+        final masteryPct = liveUnits.isNotEmpty
+            ? ((doneCount / liveUnits.length) * 100).round().clamp(0, 100)
+            : 0;
+
         if (mounted) {
           setState(() {
-            _curriculumMap[subj.id] = subj.copyWith(units: liveUnits);
+            _curriculumMap[subj.id] = subj.copyWith(
+              units: liveUnits,
+              mastery: masteryPct,
+            );
           });
         }
       } else if (subj.units.isEmpty && mounted) {
         final fallbackUnits = _resolveFallbackUnits(subj.subjectCode, grade);
+        final doneCount = fallbackUnits.where((u) => u.isCompleted).length;
+        final masteryPct = fallbackUnits.isNotEmpty
+            ? ((doneCount / fallbackUnits.length) * 100).round().clamp(0, 100)
+            : 0;
         setState(() {
-          _curriculumMap[subj.id] = subj.copyWith(units: fallbackUnits);
+          _curriculumMap[subj.id] = subj.copyWith(
+            units: fallbackUnits,
+            mastery: masteryPct,
+          );
         });
       }
     } catch (e) {
       debugPrint('[StudyScreen] Error fetching units for ${subj.name}: $e');
       if (subj.units.isEmpty && mounted) {
         final fallbackUnits = _resolveFallbackUnits(subj.subjectCode, grade);
+        final doneCount = fallbackUnits.where((u) => u.isCompleted).length;
+        final masteryPct = fallbackUnits.isNotEmpty
+            ? ((doneCount / fallbackUnits.length) * 100).round().clamp(0, 100)
+            : 0;
         setState(() {
-          _curriculumMap[subj.id] = subj.copyWith(units: fallbackUnits);
+          _curriculumMap[subj.id] = subj.copyWith(
+            units: fallbackUnits,
+            mastery: masteryPct,
+          );
         });
       }
     }
@@ -378,16 +404,20 @@ class _StudyScreenState extends State<StudyScreen> {
       _recalculateSubjectMastery(_curriculumMap[subj.id]!);
     });
 
+    final unitCode = unit.resolvedUnitCode(subj.subjectCode);
     unawaited(AuthStorage.instance.setUnitCompletion(unitId, targetState));
+    unawaited(AuthStorage.instance.setUnitCompletion(unitCode, targetState));
 
-    if (targetState) {
-      final unitCode = unit.resolvedUnitCode(subj.subjectCode);
-      unawaited(
-        ApiClient.instance
-            .post(ApiEndpoints.completeUnit(unitCode), requiresAuth: true)
-            .catchError((_) => <String, dynamic>{}),
-      );
-    }
+    // Persist real user status directly in database
+    unawaited(
+      ApiClient.instance
+          .post(
+            ApiEndpoints.updateUnitStatus(unitCode),
+            body: {'status': targetState ? 'completed' : 'not_started'},
+            requiresAuth: true,
+          )
+          .catchError((_) => <String, dynamic>{}),
+    );
   }
 
   List<DrillQuestionItem> _parseQuestionsFromApi(
@@ -510,18 +540,23 @@ class _StudyScreenState extends State<StudyScreen> {
         }).toList();
 
         final updatedSubj = subj.copyWith(
-          mastery: (subj.mastery + boost).clamp(55, 99),
           units: updatedUnits,
         );
 
         setState(() {
           _curriculumMap[subj.id] = updatedSubj;
+          _recalculateSubjectMastery(_curriculumMap[subj.id]!);
         });
         unawaited(AuthStorage.instance.setUnitCompletion(unit.id, true));
+        unawaited(AuthStorage.instance.setUnitCompletion(unitCode, true));
 
         unawaited(
           ApiClient.instance
-              .post(ApiEndpoints.completeUnit(unitCode), requiresAuth: true)
+              .post(
+                ApiEndpoints.updateUnitStatus(unitCode),
+                body: {'status': 'completed'},
+                requiresAuth: true,
+              )
               .catchError((_) => <String, dynamic>{}),
         );
       },

@@ -56,9 +56,15 @@ class _GradeTrackSheetState extends State<GradeTrackSheet> {
     final theme = Theme.of(context);
     final isDark = theme.brightness == Brightness.dark;
     final primaryColor = theme.colorScheme.primary;
-    final surfaceColor = isDark ? const Color(0xFF1B1B1F) : const Color(0xFFF4F4F6);
-    final lineBorder = isDark ? const Color(0xFF33333E) : const Color(0xFFE4E4E8);
-    final subtextColor = isDark ? AppColors.darkSubtext : AppColors.lightSubtext;
+    final surfaceColor = isDark
+        ? const Color(0xFF1B1B1F)
+        : const Color(0xFFF4F4F6);
+    final lineBorder = isDark
+        ? const Color(0xFF33333E)
+        : const Color(0xFFE4E4E8);
+    final subtextColor = isDark
+        ? AppColors.darkSubtext
+        : AppColors.lightSubtext;
 
     final streamLabel = widget.stream.toLowerCase() == 'social'
         ? 'Social Science'
@@ -68,7 +74,11 @@ class _GradeTrackSheetState extends State<GradeTrackSheet> {
       {'grade': 9, 'desc': 'Foundation Ethiopian Curriculum', 'badge': ''},
       {'grade': 10, 'desc': 'Secondary Core Concepts', 'badge': ''},
       {'grade': 11, 'desc': 'Pre-Entrance Advanced Units', 'badge': ''},
-      {'grade': 12, 'desc': 'National University Entrance Exam', 'badge': 'EUEE FOCUS'},
+      {
+        'grade': 12,
+        'desc': 'National University Entrance Exam',
+        'badge': 'EUEE FOCUS',
+      },
     ];
 
     return Container(
@@ -147,7 +157,11 @@ class _GradeTrackSheetState extends State<GradeTrackSheet> {
                         border: Border.all(color: lineBorder),
                       ),
                       alignment: Alignment.center,
-                      child: Icon(Icons.close_rounded, size: 16, color: subtextColor),
+                      child: Icon(
+                        Icons.close_rounded,
+                        size: 16,
+                        color: subtextColor,
+                      ),
                     ),
                   ),
                 ],
@@ -160,7 +174,10 @@ class _GradeTrackSheetState extends State<GradeTrackSheet> {
             Flexible(
               child: SingleChildScrollView(
                 physics: const BouncingScrollPhysics(),
-                padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 20,
+                  vertical: 10,
+                ),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
@@ -190,16 +207,26 @@ class _GradeTrackSheetState extends State<GradeTrackSheet> {
                             HapticFeedback.selectionClick();
                             setState(() => _currentGrade = grade);
                             widget.onSelectGrade(grade);
-                            Future.delayed(const Duration(milliseconds: 140), () {
-                              if (context.mounted) Navigator.of(context).pop();
-                            });
+                            Future.delayed(
+                              const Duration(milliseconds: 140),
+                              () {
+                                if (context.mounted) {
+                                  Navigator.of(context).pop();
+                                }
+                              },
+                            );
                           },
                           child: AnimatedContainer(
                             duration: const Duration(milliseconds: 200),
-                            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 13),
+                            padding: const EdgeInsets.symmetric(
+                              horizontal: 16,
+                              vertical: 13,
+                            ),
                             decoration: BoxDecoration(
                               color: isSelected
-                                  ? primaryColor.withValues(alpha: isDark ? 0.20 : 0.10)
+                                  ? primaryColor.withValues(
+                                      alpha: isDark ? 0.20 : 0.10,
+                                    )
                                   : surfaceColor,
                               borderRadius: BorderRadius.circular(18),
                               border: Border.all(
@@ -211,7 +238,8 @@ class _GradeTrackSheetState extends State<GradeTrackSheet> {
                               children: [
                                 Expanded(
                                   child: Column(
-                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
                                     children: [
                                       Row(
                                         children: [
@@ -221,16 +249,23 @@ class _GradeTrackSheetState extends State<GradeTrackSheet> {
                                               fontSize: 14.5,
                                               fontWeight: FontWeight.w800,
                                               letterSpacing: -0.2,
-                                              color: isSelected ? primaryColor : theme.colorScheme.onSurface,
+                                              color: isSelected
+                                                  ? primaryColor
+                                                  : theme.colorScheme.onSurface,
                                             ),
                                           ),
                                           if (badge.isNotEmpty) ...[
                                             const SizedBox(width: 8),
                                             Container(
-                                              padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 2),
+                                              padding:
+                                                  const EdgeInsets.symmetric(
+                                                    horizontal: 7,
+                                                    vertical: 2,
+                                                  ),
                                               decoration: BoxDecoration(
                                                 color: primaryColor,
-                                                borderRadius: BorderRadius.circular(999),
+                                                borderRadius:
+                                                    BorderRadius.circular(999),
                                               ),
                                               child: Text(
                                                 badge,
@@ -246,10 +281,17 @@ class _GradeTrackSheetState extends State<GradeTrackSheet> {
                                           if (isUserGrade && badge.isEmpty) ...[
                                             const SizedBox(width: 8),
                                             Container(
-                                              padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 2),
+                                              padding:
+                                                  const EdgeInsets.symmetric(
+                                                    horizontal: 7,
+                                                    vertical: 2,
+                                                  ),
                                               decoration: BoxDecoration(
-                                                color: primaryColor.withValues(alpha: 0.15),
-                                                borderRadius: BorderRadius.circular(999),
+                                                color: primaryColor.withValues(
+                                                  alpha: 0.15,
+                                                ),
+                                                borderRadius:
+                                                    BorderRadius.circular(999),
                                               ),
                                               child: Text(
                                                 'REGISTERED',
