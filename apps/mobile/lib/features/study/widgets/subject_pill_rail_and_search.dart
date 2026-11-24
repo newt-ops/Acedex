@@ -5,7 +5,7 @@ import '../../../core/ui/animations/bounceable.dart';
 import '../models/study_models.dart';
 
 /// Subject Pill Rail, Instant Search, and Cupertino Segmented Filter Bar
-class SubjectPillRailAndSearch extends StatelessWidget {
+class SubjectPillRailAndSearch extends StatefulWidget {
   final List<SubjectCurriculum> subjects;
   final String activeSubjectId;
   final ValueChanged<String> onSelectSubject;
@@ -34,6 +34,33 @@ class SubjectPillRailAndSearch extends StatelessWidget {
   });
 
   @override
+  State<SubjectPillRailAndSearch> createState() => _SubjectPillRailAndSearchState();
+}
+
+class _SubjectPillRailAndSearchState extends State<SubjectPillRailAndSearch> {
+  late final FocusNode _searchFocusNode;
+
+  @override
+  void initState() {
+    super.initState();
+    _searchFocusNode = FocusNode();
+    _searchFocusNode.addListener(_handleFocusChanged);
+  }
+
+  void _handleFocusChanged() {
+    if (mounted) {
+      setState(() {});
+    }
+  }
+
+  @override
+  void dispose() {
+    _searchFocusNode.removeListener(_handleFocusChanged);
+    _searchFocusNode.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     final isDark = theme.brightness == Brightness.dark;
@@ -42,6 +69,8 @@ class SubjectPillRailAndSearch extends StatelessWidget {
     final raisedBg = isDark ? const Color(0xFF2B2B31) : Colors.white;
     final lineBorder = isDark ? const Color(0xFF2B2B31) : const Color(0xFFE4E4E8);
     final subtextColor = isDark ? AppColors.darkSubtext : AppColors.lightSubtext;
+
+    final isSearchFocused = _searchFocusNode.hasFocus;
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -54,14 +83,14 @@ class SubjectPillRailAndSearch extends StatelessWidget {
           child: ListView.separated(
             scrollDirection: Axis.horizontal,
             physics: const BouncingScrollPhysics(),
-            itemCount: subjects.length,
+            itemCount: widget.subjects.length,
             separatorBuilder: (_, i) => const SizedBox(width: 8),
             itemBuilder: (context, index) {
-              final subject = subjects[index];
-              final isActive = subject.id == activeSubjectId;
+              final subject = widget.subjects[index];
+              final isActive = subject.id == widget.activeSubjectId;
 
               return AcedexBounceable(
-                onTap: () => onSelectSubject(subject.id),
+                onTap: () => widget.onSelectSubject(subject.id),
                 child: AnimatedContainer(
                   duration: const Duration(milliseconds: 250),
                   curve: Curves.easeOutCubic,
@@ -133,25 +162,40 @@ class SubjectPillRailAndSearch extends StatelessWidget {
         // =====================================================================
         // 2. INSTANT SEARCH INPUT BAR
         // =====================================================================
-        Container(
+        AnimatedContainer(
+          duration: const Duration(milliseconds: 180),
           height: 38,
           padding: const EdgeInsets.symmetric(horizontal: 11),
           decoration: BoxDecoration(
-            color: surfaceColor,
+            color: isSearchFocused ? raisedBg : surfaceColor,
             borderRadius: BorderRadius.circular(13),
-            border: Border.all(color: lineBorder),
+            border: Border.all(
+              color: isSearchFocused ? primaryColor : lineBorder,
+              width: isSearchFocused ? 1.4 : 1.0,
+            ),
+            boxShadow: isSearchFocused
+                ? [
+                    BoxShadow(
+                      color: primaryColor.withValues(alpha: 0.10),
+                      blurRadius: 8,
+                      offset: const Offset(0, 2),
+                    ),
+                  ]
+                : null,
           ),
           child: Row(
             children: [
               HugeIcon(
                 icon: HugeIcons.strokeRoundedSearch01,
-                color: subtextColor,
+                color: isSearchFocused ? primaryColor : subtextColor,
                 size: 15,
               ),
               const SizedBox(width: 8),
               Expanded(
                 child: TextField(
-                  controller: searchController,
+                  focusNode: _searchFocusNode,
+                  controller: widget.searchController,
+                  cursorColor: primaryColor,
                   style: TextStyle(
                     fontSize: 12.5,
                     fontWeight: FontWeight.w500,
@@ -159,6 +203,14 @@ class SubjectPillRailAndSearch extends StatelessWidget {
                   ),
                   decoration: InputDecoration(
                     isDense: true,
+                    filled: false,
+                    fillColor: Colors.transparent,
+                    border: InputBorder.none,
+                    enabledBorder: InputBorder.none,
+                    focusedBorder: InputBorder.none,
+                    disabledBorder: InputBorder.none,
+                    errorBorder: InputBorder.none,
+                    focusedErrorBorder: InputBorder.none,
                     contentPadding: EdgeInsets.zero,
                     hintText: 'Search units, topics, formulas...',
                     hintStyle: TextStyle(
@@ -166,14 +218,13 @@ class SubjectPillRailAndSearch extends StatelessWidget {
                       fontWeight: FontWeight.w500,
                       color: subtextColor,
                     ),
-                    border: InputBorder.none,
                   ),
-                  onChanged: onSearchChanged,
+                  onChanged: widget.onSearchChanged,
                 ),
               ),
-              if (searchQuery.isNotEmpty)
+              if (widget.searchQuery.isNotEmpty)
                 GestureDetector(
-                  onTap: onClearSearch,
+                  onTap: widget.onClearSearch,
                   behavior: HitTestBehavior.opaque,
                   child: Container(
                     width: 18,
@@ -212,9 +263,9 @@ class SubjectPillRailAndSearch extends StatelessWidget {
               AnimatedAlign(
                 duration: const Duration(milliseconds: 320),
                 curve: Curves.easeOutCubic,
-                alignment: activeFilter == 'all'
+                alignment: widget.activeFilter == 'all'
                     ? Alignment.centerLeft
-                    : (activeFilter == 'progress'
+                    : (widget.activeFilter == 'progress'
                         ? Alignment.center
                         : Alignment.centerRight),
                 child: FractionallySizedBox(
@@ -241,7 +292,7 @@ class SubjectPillRailAndSearch extends StatelessWidget {
                     child: _buildFilterTab(
                       label: 'All Units',
                       filterKey: 'all',
-                      isActive: activeFilter == 'all',
+                      isActive: widget.activeFilter == 'all',
                       primaryColor: primaryColor,
                       subtextColor: subtextColor,
                     ),
@@ -250,7 +301,7 @@ class SubjectPillRailAndSearch extends StatelessWidget {
                     child: _buildFilterTab(
                       label: 'In Progress',
                       filterKey: 'progress',
-                      isActive: activeFilter == 'progress',
+                      isActive: widget.activeFilter == 'progress',
                       primaryColor: primaryColor,
                       subtextColor: subtextColor,
                     ),
@@ -259,10 +310,10 @@ class SubjectPillRailAndSearch extends StatelessWidget {
                     child: _buildFilterTab(
                       label: 'Bookmarked',
                       filterKey: 'bookmarked',
-                      isActive: activeFilter == 'bookmarked',
+                      isActive: widget.activeFilter == 'bookmarked',
                       primaryColor: primaryColor,
                       subtextColor: subtextColor,
-                      badgeCount: bookmarkedCount,
+                      badgeCount: widget.bookmarkedCount,
                     ),
                   ),
                 ],
@@ -283,7 +334,7 @@ class SubjectPillRailAndSearch extends StatelessWidget {
     int? badgeCount,
   }) {
     return GestureDetector(
-      onTap: () => onFilterChanged(filterKey),
+      onTap: () => widget.onFilterChanged(filterKey),
       behavior: HitTestBehavior.opaque,
       child: Center(
         child: Row(
