@@ -27,11 +27,21 @@ describe('Dedicated Quick Notes Collection Backend & Database Tests', { timeout:
         } catch {}
       }
     }
-    // Clean up test documents in acedex_notes so production DB stays clean
+    // Clean up ONLY test-specific documents in acedex_notes so contributor submissions are NEVER touched
     try {
       const notesDb = getNotesDb();
-      await notesDb.collection('note_submissions').deleteMany({});
-      await notesDb.collection('note_audits').deleteMany({});
+      await notesDb.collection('note_submissions').deleteMany({
+        $or: [
+          { contributorId: 'ENG#101' },
+          { unitCode: { $in: ['ENG-G09-U01', 'ENG-G09-U02', 'ENG-G09-U03'] } },
+        ],
+      });
+      await notesDb.collection('note_audits').deleteMany({
+        $or: [
+          { actorId: 'ENG#101' },
+          { unitCode: { $in: ['ENG-G09-U01', 'ENG-G09-U02', 'ENG-G09-U03'] } },
+        ],
+      });
     } catch {}
     await disconnectDatabase();
   }, 60000);
