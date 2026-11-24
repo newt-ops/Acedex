@@ -5,8 +5,9 @@ import '../../../core/ui/animations/bounceable.dart';
 import '../../../core/ui/feedback/acedex_skeleton.dart';
 import '../../../core/ui/progress/acedex_dots_loader.dart';
 import '../models/study_models.dart';
+import 'unit_quick_notes_sheet.dart';
 
-/// Interactive Syllabus Unit Viewer with Expandable Accordions & Sub-Topic Tree (Component 3)
+/// Interactive Syllabus Unit Viewer with Soft-Surface Cupertino Accordions (Component 3)
 class SyllabusUnitAccordion extends StatefulWidget {
   final SubjectCurriculum subject;
   final String searchQuery;
@@ -15,6 +16,7 @@ class SyllabusUnitAccordion extends StatefulWidget {
   final ValueChanged<String>? onToggleUnitComplete;
   final ValueChanged<String> onToggleTopicComplete;
   final ValueChanged<String> onOpenNotes;
+  final ValueChanged<StudyUnit>? onOpenUnitQuickNotes;
   final ValueChanged<StudyUnit>? onTakeUnitAssessment;
   final VoidCallback onResetFilters;
   final bool showNotesButton;
@@ -29,6 +31,7 @@ class SyllabusUnitAccordion extends StatefulWidget {
     this.onToggleUnitComplete,
     required this.onToggleTopicComplete,
     required this.onOpenNotes,
+    this.onOpenUnitQuickNotes,
     this.onTakeUnitAssessment,
     required this.onResetFilters,
     this.showNotesButton = true,
@@ -62,7 +65,7 @@ class _SyllabusUnitAccordionState extends State<SyllabusUnitAccordion> {
     if (_loadingNotesTopicId != null || _loadingUnitAssessmentId != null) return;
     setState(() => _loadingNotesTopicId = topicId);
 
-    Future.delayed(const Duration(milliseconds: 540), () {
+    Future.delayed(const Duration(milliseconds: 500), () {
       if (mounted) {
         setState(() => _loadingNotesTopicId = null);
         widget.onOpenNotes(topicId);
@@ -82,14 +85,30 @@ class _SyllabusUnitAccordionState extends State<SyllabusUnitAccordion> {
     });
   }
 
+  void _openQuickNotesForUnit(StudyUnit unit) {
+    if (widget.onOpenUnitQuickNotes != null) {
+      widget.onOpenUnitQuickNotes!(unit);
+    } else {
+      UnitQuickNotesSheet.show(
+        context,
+        unit: unit,
+        subject: widget.subject,
+        onCompleteAndUnlockAssessment: () {
+          widget.onToggleUnitComplete?.call(unit.id);
+          widget.onTakeUnitAssessment?.call(unit);
+        },
+      );
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     final isDark = theme.brightness == Brightness.dark;
     final primaryColor = theme.colorScheme.primary;
     final surfaceColor = isDark ? const Color(0xFF1B1B1F) : const Color(0xFFF4F4F6);
-    final raisedBg = isDark ? const Color(0xFF2B2B31) : Colors.white;
-    final lineBorder = isDark ? const Color(0xFF2B2B31) : const Color(0xFFE4E4E8);
+    final raisedBg = isDark ? const Color(0xFF25252B) : Colors.white;
+    final lineBorder = isDark ? const Color(0xFF33333E) : const Color(0xFFE4E4E8);
     final subtextColor = isDark ? AppColors.darkSubtext : AppColors.lightSubtext;
 
     // Filter units & topics
@@ -121,12 +140,12 @@ class _SyllabusUnitAccordionState extends State<SyllabusUnitAccordion> {
       }
 
       final matchingTopics = unit.topics.where((t) {
-        if (!_topicMatchesSearch(unit, t, widget.searchQuery)) return false;
         if (widget.activeFilter == 'bookmarked' && !t.bookmarked) return false;
-        return true;
+        if (widget.activeFilter == 'progress' && t.completed) return false;
+        return _topicMatchesSearch(unit, t, widget.searchQuery);
       }).toList();
 
-      if (matchingTopics.isNotEmpty || unitMatchesSearch) {
+      if (matchingTopics.isNotEmpty || (unitMatchesSearch && widget.activeFilter != 'bookmarked')) {
         visibleUnits.add({
           'unit': unit,
           'matchingTopics': matchingTopics,
@@ -137,31 +156,32 @@ class _SyllabusUnitAccordionState extends State<SyllabusUnitAccordion> {
       }
     }
 
-    final hasZeroMatches = visibleUnits.isEmpty;
-    final unitCountLabel = widget.isLoading
-        ? 'Loading units...'
-        : '${visibleUnits.length} ${visibleUnits.length == 1 ? "Unit" : "Units"} • Tap to expand';
-
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
-        // Section Header
+        // =====================================================================
+        // Section Header Row: "Syllabus Units" + Count / Hint
+        // =====================================================================
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          crossAxisAlignment: CrossAxisAlignment.baseline,
+          textBaseline: TextBaseline.alphabetic,
           children: [
             Text(
               'Syllabus Units',
               style: TextStyle(
-                fontSize: 15,
-                fontWeight: FontWeight.w700,
-                letterSpacing: -0.3,
+                fontSize: 17,
+                fontWeight: FontWeight.w800,
+                letterSpacing: -0.35,
                 color: theme.colorScheme.onSurface,
               ),
             ),
             Text(
-              unitCountLabel,
+              visibleUnits.isNotEmpty
+                  ? '${visibleUnits.length} of ${widget.subject.units.length} Units • Tap to expand'
+                  : '0 Units Found',
               style: TextStyle(
-                fontSize: 11,
+                fontSize: 11.5,
                 fontWeight: FontWeight.w600,
                 color: subtextColor,
               ),
@@ -172,51 +192,73 @@ class _SyllabusUnitAccordionState extends State<SyllabusUnitAccordion> {
         const SizedBox(height: 10),
 
         if (widget.isLoading)
-          const AcedexSkeletonList(
-            itemCount: 4,
-            spacing: 10,
+          Column(
+            children: List.generate(
+              3,
+              (_) => const Padding(
+                padding: EdgeInsets.only(bottom: 10),
+                child: AcedexSkeleton(
+                  child: AcedexSkeletonBox(
+                    height: 64,
+                    borderRadius: 20,
+                  ),
+                ),
+              ),
+            ),
           )
-        else if (hasZeroMatches)
-          // Empty State Container
+        else if (visibleUnits.isEmpty)
           Container(
-            padding: const EdgeInsets.all(22),
+            padding: const EdgeInsets.symmetric(vertical: 36, horizontal: 20),
             decoration: BoxDecoration(
               color: surfaceColor,
-              borderRadius: BorderRadius.circular(20),
+              borderRadius: BorderRadius.circular(22),
               border: Border.all(color: lineBorder),
             ),
             child: Column(
               children: [
+                Container(
+                  width: 44,
+                  height: 44,
+                  decoration: BoxDecoration(
+                    color: primaryColor.withValues(alpha: 0.12),
+                    shape: BoxShape.circle,
+                  ),
+                  child: Center(
+                    child: HugeIcon(
+                      icon: HugeIcons.strokeRoundedSearch01,
+                      color: primaryColor,
+                      size: 20,
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 12),
                 Text(
-                  'No matching units or topics',
+                  'No units match your filter',
                   style: TextStyle(
-                    fontSize: 13,
+                    fontSize: 13.5,
                     fontWeight: FontWeight.w700,
                     color: theme.colorScheme.onSurface,
                   ),
                 ),
                 const SizedBox(height: 4),
                 Text(
-                  'Try clearing your search or switching to All Units.',
-                  style: TextStyle(
-                    fontSize: 11.5,
-                    color: subtextColor,
-                  ),
+                  widget.searchQuery.isNotEmpty
+                      ? 'No syllabus units matched "${widget.searchQuery}".'
+                      : 'No units in this filter view.',
                   textAlign: TextAlign.center,
+                  style: TextStyle(fontSize: 11.5, color: subtextColor),
                 ),
                 const SizedBox(height: 12),
                 AcedexBounceable(
                   onTap: widget.onResetFilters,
                   child: Container(
-                    height: 32,
-                    padding: const EdgeInsets.symmetric(horizontal: 16),
+                    padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 7),
                     decoration: BoxDecoration(
                       color: primaryColor,
                       borderRadius: BorderRadius.circular(999),
                     ),
-                    alignment: Alignment.center,
                     child: const Text(
-                      'Reset Filters',
+                      'Clear Filter',
                       style: TextStyle(
                         fontSize: 11.5,
                         fontWeight: FontWeight.w700,
@@ -229,7 +271,7 @@ class _SyllabusUnitAccordionState extends State<SyllabusUnitAccordion> {
             ),
           )
         else
-          // List of Unit Cards
+          // List of Soft-Surface Unit Cards
           ListView.separated(
             shrinkWrap: true,
             physics: const NeverScrollableScrollPhysics(),
@@ -243,19 +285,31 @@ class _SyllabusUnitAccordionState extends State<SyllabusUnitAccordion> {
               final unitDoneCount = item['unitDoneCount'] as int;
               final unitTotalCount = item['unitTotalCount'] as int;
 
-              // Force expand if searching or bookmarked filter
               final isExpanded = widget.searchQuery.isNotEmpty || widget.activeFilter == 'bookmarked'
                   ? true
                   : unit.expanded;
 
               return Container(
                 decoration: BoxDecoration(
-                  color: surfaceColor,
-                  borderRadius: BorderRadius.circular(20),
+                  color: isExpanded
+                      ? (isDark ? const Color(0xFF231927) : const Color(0xFFF7EFF9))
+                      : surfaceColor,
+                  borderRadius: BorderRadius.circular(22),
                   border: Border.all(
-                    color: isExpanded ? primaryColor : lineBorder,
-                    width: 1.0,
+                    color: isExpanded
+                        ? primaryColor.withValues(alpha: 0.28)
+                        : lineBorder,
+                    width: isExpanded ? 1.2 : 0.8,
                   ),
+                  boxShadow: isExpanded
+                      ? [
+                          BoxShadow(
+                            color: primaryColor.withValues(alpha: isDark ? 0.22 : 0.08),
+                            blurRadius: 16,
+                            offset: const Offset(0, 4),
+                          ),
+                        ]
+                      : null,
                 ),
                 child: Column(
                   children: [
@@ -266,95 +320,104 @@ class _SyllabusUnitAccordionState extends State<SyllabusUnitAccordion> {
                         padding: const EdgeInsets.all(12),
                         child: Row(
                           children: [
-                            // Unit Code Badge (Green if complete, Purple otherwise)
+                            // 42x42 Rounded-Square Unit Code Badge
                             Container(
-                              width: 36,
-                              height: 36,
+                              width: 42,
+                              height: 42,
                               decoration: BoxDecoration(
                                 color: isUnitComplete
-                                    ? (isDark ? AppColors.darkSuccess : AppColors.success)
-                                        .withValues(alpha: 0.16)
-                                    : primaryColor.withValues(alpha: 0.14),
-                                borderRadius: BorderRadius.circular(12),
+                                    ? (isDark
+                                        ? const Color(0xFF16291C)
+                                        : const Color(0xFFEAF8EF))
+                                    : primaryColor.withValues(alpha: 0.12),
+                                borderRadius: BorderRadius.circular(14),
                               ),
                               alignment: Alignment.center,
                               child: Text(
                                 unit.code,
                                 style: TextStyle(
-                                  fontSize: 12,
+                                  fontSize: 13,
                                   fontWeight: FontWeight.w800,
+                                  letterSpacing: -0.2,
                                   color: isUnitComplete
-                                      ? (isDark ? AppColors.darkSuccess : AppColors.success)
+                                      ? (isDark
+                                          ? const Color(0xFF4ADE80)
+                                          : const Color(0xFF16A34A))
                                       : primaryColor,
                                 ),
                               ),
                             ),
 
-                            const SizedBox(width: 10),
+                            const SizedBox(width: 11),
 
-                            // Unit Title, Weight & Progress Count
+                            // Unit Title, Weight & Progress Chips
                             Expanded(
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Text(
                                     unit.title,
-                                    maxLines: 1,
+                                    maxLines: 2,
                                     overflow: TextOverflow.ellipsis,
                                     style: TextStyle(
-                                      fontSize: 13,
+                                      fontSize: 13.5,
                                       fontWeight: FontWeight.w700,
                                       letterSpacing: -0.2,
+                                      height: 1.25,
                                       color: theme.colorScheme.onSurface,
                                     ),
                                   ),
-                                  const SizedBox(height: 3),
-                                  Row(
+                                  const SizedBox(height: 4),
+                                  Wrap(
+                                    spacing: 5,
+                                    runSpacing: 3,
+                                    crossAxisAlignment: WrapCrossAlignment.center,
                                     children: [
-                                      Flexible(
-                                        child: Container(
-                                          padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 1.5),
-                                          decoration: BoxDecoration(
-                                            color: raisedBg,
-                                            borderRadius: BorderRadius.circular(6),
-                                            border: Border.all(color: lineBorder),
-                                          ),
-                                          child: Text(
-                                            unit.examWeight,
-                                            maxLines: 1,
-                                            overflow: TextOverflow.ellipsis,
-                                            style: TextStyle(
-                                              fontSize: 9.5,
-                                              fontWeight: FontWeight.w800,
-                                              color: primaryColor,
-                                            ),
+                                      Container(
+                                        padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 1.5),
+                                        decoration: BoxDecoration(
+                                          color: raisedBg,
+                                          borderRadius: BorderRadius.circular(999),
+                                          border: Border.all(color: lineBorder),
+                                        ),
+                                        child: Text(
+                                          unit.examWeight,
+                                          style: TextStyle(
+                                            fontSize: 9.5,
+                                            fontWeight: FontWeight.w700,
+                                            color: primaryColor,
                                           ),
                                         ),
                                       ),
-                                      if (unit.topics.isNotEmpty) ...[
-                                        const SizedBox(width: 6),
-                                        Text(
-                                          '$unitDoneCount/$unitTotalCount Topics',
-                                          style: TextStyle(
-                                            fontSize: 10.5,
-                                            fontWeight: FontWeight.w700,
-                                            color: isUnitComplete
-                                                ? (isDark ? AppColors.darkSuccess : AppColors.success)
-                                                : subtextColor,
-                                            fontFeatures: const [FontFeature.tabularFigures()],
+                                      if (unit.topics.isNotEmpty)
+                                        Container(
+                                          padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 1.5),
+                                          decoration: BoxDecoration(
+                                            color: raisedBg,
+                                            borderRadius: BorderRadius.circular(999),
+                                            border: Border.all(color: lineBorder),
+                                          ),
+                                          child: Text(
+                                            '$unitDoneCount/$unitTotalCount Topics',
+                                            style: TextStyle(
+                                              fontSize: 9.5,
+                                              fontWeight: FontWeight.w700,
+                                              color: isUnitComplete
+                                                  ? (isDark ? AppColors.darkSuccess : AppColors.success)
+                                                  : subtextColor,
+                                              fontFeatures: const [FontFeature.tabularFigures()],
+                                            ),
                                           ),
                                         ),
-                                      ] else if (isUnitComplete) ...[
-                                        const SizedBox(width: 6),
+                                      if (isUnitComplete)
                                         Text(
-                                          'Completed',
+                                          '• Completed',
                                           style: TextStyle(
                                             fontSize: 10,
-                                            fontWeight: FontWeight.w700,
-                                            color: isDark ? AppColors.darkSuccess : AppColors.success,
+                                            fontWeight: FontWeight.w800,
+                                            color: isDark ? const Color(0xFF4ADE80) : const Color(0xFF16A34A),
                                           ),
                                         ),
-                                      ],
                                     ],
                                   ),
                                 ],
@@ -363,20 +426,42 @@ class _SyllabusUnitAccordionState extends State<SyllabusUnitAccordion> {
 
                             const SizedBox(width: 8),
 
-                            // Unit Completion Check Circle
+                            // Right Controls: Quick Notes Action Icon
+                            AcedexBounceable(
+                              onTap: () => _openQuickNotesForUnit(unit),
+                              child: Container(
+                                width: 28,
+                                height: 28,
+                                decoration: BoxDecoration(
+                                  color: surfaceColor,
+                                  shape: BoxShape.circle,
+                                  border: Border.all(color: lineBorder),
+                                ),
+                                alignment: Alignment.center,
+                                child: HugeIcon(
+                                  icon: HugeIcons.strokeRoundedBookOpen01,
+                                  color: subtextColor,
+                                  size: 13,
+                                ),
+                              ),
+                            ),
+
+                            const SizedBox(width: 6),
+
+                            // Unit Completion Spring Check Circle
                             AcedexBounceable(
                               onTap: () => widget.onToggleUnitComplete?.call(unit.id),
                               child: Container(
-                                width: 24,
-                                height: 24,
+                                width: 26,
+                                height: 26,
                                 decoration: BoxDecoration(
                                   shape: BoxShape.circle,
                                   color: isUnitComplete
-                                      ? (isDark ? AppColors.darkSuccess : AppColors.success)
-                                      : surfaceColor,
+                                      ? (isDark ? const Color(0xFF4ADE80) : const Color(0xFF16A34A))
+                                      : raisedBg,
                                   border: Border.all(
                                     color: isUnitComplete
-                                        ? (isDark ? AppColors.darkSuccess : AppColors.success)
+                                        ? (isDark ? const Color(0xFF4ADE80) : const Color(0xFF16A34A))
                                         : subtextColor,
                                     width: 1.8,
                                   ),
@@ -385,7 +470,7 @@ class _SyllabusUnitAccordionState extends State<SyllabusUnitAccordion> {
                                 child: isUnitComplete
                                     ? const Icon(
                                         Icons.check_rounded,
-                                        size: 15,
+                                        size: 16,
                                         color: Colors.white,
                                       )
                                     : null,
@@ -401,7 +486,7 @@ class _SyllabusUnitAccordionState extends State<SyllabusUnitAccordion> {
                               curve: Curves.easeOutCubic,
                               child: Icon(
                                 Icons.keyboard_arrow_down_rounded,
-                                size: 18,
+                                size: 19,
                                 color: subtextColor,
                               ),
                             ),
@@ -410,7 +495,7 @@ class _SyllabusUnitAccordionState extends State<SyllabusUnitAccordion> {
                       ),
                     ),
 
-                    // Expandable Sub-Topic Rows Accordion
+                    // Expandable Accordion Content
                     AnimatedSize(
                       duration: const Duration(milliseconds: 280),
                       curve: Curves.easeOutCubic,
@@ -418,37 +503,37 @@ class _SyllabusUnitAccordionState extends State<SyllabusUnitAccordion> {
                           ? Container(
                               decoration: BoxDecoration(
                                 color: raisedBg,
-                                borderRadius: const BorderRadius.vertical(bottom: Radius.circular(19)),
+                                borderRadius: const BorderRadius.vertical(bottom: Radius.circular(21)),
                               ),
                               child: Column(
                                 children: [
-                                  // Unit Assessment Card when completed
+                                  // 1. UNLOCKED ASSESSMENT CARD WHEN COMPLETED
                                   if (isUnitComplete) ...[
                                     Container(
                                       margin: const EdgeInsets.fromLTRB(12, 10, 12, 10),
                                       padding: const EdgeInsets.all(12),
                                       decoration: BoxDecoration(
-                                        color: isDark ? const Color(0xFF23232C) : const Color(0xFFF3F0FA),
-                                        borderRadius: BorderRadius.circular(15),
+                                        color: surfaceColor,
+                                        borderRadius: BorderRadius.circular(16),
                                         border: Border.all(
-                                          color: primaryColor.withValues(alpha: 0.35),
-                                          width: 1.2,
+                                          color: primaryColor.withValues(alpha: 0.28),
+                                          width: 1.0,
                                         ),
                                       ),
                                       child: Row(
                                         children: [
                                           Container(
-                                            width: 36,
-                                            height: 36,
+                                            width: 38,
+                                            height: 38,
                                             decoration: BoxDecoration(
                                               color: primaryColor,
-                                              borderRadius: BorderRadius.circular(10),
+                                              borderRadius: BorderRadius.circular(12),
                                             ),
                                             alignment: Alignment.center,
                                             child: const HugeIcon(
                                               icon: HugeIcons.strokeRoundedAward01,
                                               color: Colors.white,
-                                              size: 18,
+                                              size: 19,
                                             ),
                                           ),
                                           const SizedBox(width: 10),
@@ -461,7 +546,7 @@ class _SyllabusUnitAccordionState extends State<SyllabusUnitAccordion> {
                                                     Text(
                                                       'Unit Assessment',
                                                       style: TextStyle(
-                                                        fontSize: 12.5,
+                                                        fontSize: 13,
                                                         fontWeight: FontWeight.w800,
                                                         letterSpacing: -0.1,
                                                         color: theme.colorScheme.onSurface,
@@ -470,7 +555,7 @@ class _SyllabusUnitAccordionState extends State<SyllabusUnitAccordion> {
                                                     if (unit.assessmentScore != null) ...[
                                                       const SizedBox(width: 6),
                                                       Container(
-                                                        padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 1.5),
+                                                        padding: const EdgeInsets.symmetric(horizontal: 5.5, vertical: 1.5),
                                                         decoration: BoxDecoration(
                                                           color: (isDark ? AppColors.darkSuccess : AppColors.success)
                                                               .withValues(alpha: 0.18),
@@ -492,7 +577,7 @@ class _SyllabusUnitAccordionState extends State<SyllabusUnitAccordion> {
                                                 Text(
                                                   '15 Questions • Ethiopian Curriculum Bank',
                                                   style: TextStyle(
-                                                    fontSize: 10,
+                                                    fontSize: 10.5,
                                                     color: subtextColor,
                                                   ),
                                                 ),
@@ -500,10 +585,33 @@ class _SyllabusUnitAccordionState extends State<SyllabusUnitAccordion> {
                                             ),
                                           ),
                                           const SizedBox(width: 8),
+
+                                          // Quick Notes button inside assessment card
+                                          AcedexBounceable(
+                                            onTap: () => _openQuickNotesForUnit(unit),
+                                            child: Container(
+                                              width: 32,
+                                              height: 32,
+                                              decoration: BoxDecoration(
+                                                color: surfaceColor,
+                                                borderRadius: BorderRadius.circular(999),
+                                                border: Border.all(color: lineBorder),
+                                              ),
+                                              alignment: Alignment.center,
+                                              child: HugeIcon(
+                                                icon: HugeIcons.strokeRoundedNote01,
+                                                color: subtextColor,
+                                                size: 14,
+                                              ),
+                                            ),
+                                          ),
+
+                                          const SizedBox(width: 6),
+
                                           AcedexBounceable(
                                             onTap: () => _handleUnitAssessmentTap(unit),
                                             child: Container(
-                                              height: 30,
+                                              height: 32,
                                               padding: const EdgeInsets.symmetric(horizontal: 12),
                                               decoration: BoxDecoration(
                                                 color: primaryColor,
@@ -530,170 +638,211 @@ class _SyllabusUnitAccordionState extends State<SyllabusUnitAccordion> {
                                       ),
                                     ),
                                   ] else ...[
+                                    // 2. UNLOCK PROMPT WHEN INCOMPLETE
                                     Container(
                                       margin: const EdgeInsets.fromLTRB(12, 10, 12, 8),
-                                      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 7),
+                                      padding: const EdgeInsets.all(12),
                                       decoration: BoxDecoration(
                                         color: surfaceColor,
-                                        borderRadius: BorderRadius.circular(12),
+                                        borderRadius: BorderRadius.circular(16),
                                         border: Border.all(color: lineBorder),
                                       ),
-                                      child: Row(
+                                      child: Column(
+                                        crossAxisAlignment: CrossAxisAlignment.stretch,
                                         children: [
-                                          HugeIcon(
-                                            icon: HugeIcons.strokeRoundedLockKey,
-                                            color: subtextColor,
-                                            size: 14,
-                                          ),
-                                          const SizedBox(width: 8),
-                                          Expanded(
-                                            child: Text(
-                                              'Check mark this unit or finish all topics to unlock the 15-question assessment.',
-                                              style: TextStyle(
-                                                fontSize: 10,
-                                                fontWeight: FontWeight.w500,
-                                                color: subtextColor,
-                                              ),
-                                            ),
-                                          ),
-                                          const SizedBox(width: 6),
-                                          AcedexBounceable(
-                                            onTap: () => widget.onToggleUnitComplete?.call(unit.id),
-                                            child: Text(
-                                              'Complete Unit',
-                                              style: TextStyle(
-                                                fontSize: 10.5,
-                                                fontWeight: FontWeight.w700,
+                                          Row(
+                                            children: [
+                                              HugeIcon(
+                                                icon: HugeIcons.strokeRoundedLockKey,
                                                 color: primaryColor,
+                                                size: 15,
                                               ),
-                                            ),
+                                              const SizedBox(width: 8),
+                                              Expanded(
+                                                child: Text(
+                                                  'Check mark this unit as complete to unlock your 15-question EUEE Unit Assessment.',
+                                                  style: TextStyle(
+                                                    fontSize: 11,
+                                                    height: 1.35,
+                                                    fontWeight: FontWeight.w500,
+                                                    color: subtextColor,
+                                                  ),
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                          const SizedBox(height: 10),
+                                          Row(
+                                            children: [
+                                              Expanded(
+                                                child: AcedexBounceable(
+                                                  onTap: () => _openQuickNotesForUnit(unit),
+                                                  child: Container(
+                                                    height: 34,
+                                                    decoration: BoxDecoration(
+                                                      color: raisedBg,
+                                                      borderRadius: BorderRadius.circular(999),
+                                                      border: Border.all(color: lineBorder),
+                                                    ),
+                                                    alignment: Alignment.center,
+                                                    child: Row(
+                                                      mainAxisAlignment: MainAxisAlignment.center,
+                                                      children: [
+                                                        HugeIcon(
+                                                          icon: HugeIcons.strokeRoundedBookOpen01,
+                                                          color: primaryColor,
+                                                          size: 13,
+                                                        ),
+                                                        const SizedBox(width: 5),
+                                                        Text(
+                                                          'Quick Notes',
+                                                          style: TextStyle(
+                                                            fontSize: 11.5,
+                                                            fontWeight: FontWeight.w700,
+                                                            color: theme.colorScheme.onSurface,
+                                                          ),
+                                                        ),
+                                                      ],
+                                                    ),
+                                                  ),
+                                                ),
+                                              ),
+                                              const SizedBox(width: 8),
+                                              Expanded(
+                                                child: AcedexBounceable(
+                                                  onTap: () => widget.onToggleUnitComplete?.call(unit.id),
+                                                  child: Container(
+                                                    height: 34,
+                                                    decoration: BoxDecoration(
+                                                      color: primaryColor.withValues(alpha: 0.14),
+                                                      borderRadius: BorderRadius.circular(999),
+                                                      border: Border.all(
+                                                        color: primaryColor.withValues(alpha: 0.25),
+                                                      ),
+                                                    ),
+                                                    alignment: Alignment.center,
+                                                    child: Row(
+                                                      mainAxisAlignment: MainAxisAlignment.center,
+                                                      children: [
+                                                        Icon(
+                                                          Icons.check_rounded,
+                                                          color: primaryColor,
+                                                          size: 15,
+                                                        ),
+                                                        const SizedBox(width: 5),
+                                                        Text(
+                                                          'Complete Unit',
+                                                          style: TextStyle(
+                                                            fontSize: 11.5,
+                                                            fontWeight: FontWeight.w700,
+                                                            color: primaryColor,
+                                                          ),
+                                                        ),
+                                                      ],
+                                                    ),
+                                                  ),
+                                                ),
+                                              ),
+                                            ],
                                           ),
                                         ],
                                       ),
                                     ),
                                   ],
-                                  ...matchingTopics.map((topic) {
-                                  final isLoadingNotes = _loadingNotesTopicId == topic.id;
 
-                                  return Container(
-                                    padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
-                                    decoration: BoxDecoration(
-                                      border: Border(top: BorderSide(color: lineBorder)),
-                                    ),
-                                    child: Row(
-                                      children: [
-                                        // Spring Completion Check Circle
-                                        AcedexBounceable(
-                                          onTap: () => widget.onToggleTopicComplete(topic.id),
-                                          child: Container(
-                                            width: 22,
-                                            height: 22,
-                                            decoration: BoxDecoration(
-                                              shape: BoxShape.circle,
-                                              color: topic.completed
-                                                  ? (isDark ? AppColors.darkSuccess : AppColors.success)
-                                                  : surfaceColor,
-                                              border: Border.all(
+                                  // Sub-Topic items if present
+                                  ...matchingTopics.map((topic) {
+                                    final isLoadingNotes = _loadingNotesTopicId == topic.id;
+
+                                    return Container(
+                                      padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
+                                      decoration: BoxDecoration(
+                                        border: Border(top: BorderSide(color: lineBorder)),
+                                      ),
+                                      child: Row(
+                                        children: [
+                                          AcedexBounceable(
+                                            onTap: () => widget.onToggleTopicComplete(topic.id),
+                                            child: Container(
+                                              width: 22,
+                                              height: 22,
+                                              decoration: BoxDecoration(
+                                                shape: BoxShape.circle,
                                                 color: topic.completed
                                                     ? (isDark ? AppColors.darkSuccess : AppColors.success)
-                                                    : subtextColor,
-                                                width: 1.8,
-                                              ),
-                                            ),
-                                            alignment: Alignment.center,
-                                            child: topic.completed
-                                                ? const Icon(
-                                                    Icons.check_rounded,
-                                                    size: 14,
-                                                    color: Colors.white,
-                                                  )
-                                                : null,
-                                          ),
-                                        ),
-
-                                        const SizedBox(width: 10),
-
-                                        // Topic Code, Title & Bookmark
-                                        Expanded(
-                                          child: Column(
-                                            crossAxisAlignment: CrossAxisAlignment.start,
-                                            children: [
-                                              Row(
-                                                children: [
-                                                  Expanded(
-                                                    child: Text(
-                                                      '${topic.code} ${topic.title}',
-                                                      maxLines: 1,
-                                                      overflow: TextOverflow.ellipsis,
-                                                      style: TextStyle(
-                                                        fontSize: 12,
-                                                        fontWeight: FontWeight.w700,
-                                                        letterSpacing: -0.1,
-                                                        color: theme.colorScheme.onSurface,
-                                                      ),
-                                                    ),
-                                                  ),
-                                                  if (topic.bookmarked) ...[
-                                                    const SizedBox(width: 4),
-                                                    HugeIcon(
-                                                      icon: HugeIcons.strokeRoundedBookmark01,
-                                                      color: primaryColor,
-                                                      size: 12,
-                                                    ),
-                                                  ],
-                                                ],
-                                              ),
-                                              const SizedBox(height: 2),
-                                              Text(
-                                                '${topic.duration} • ${topic.questionCount} Qs',
-                                                style: TextStyle(
-                                                  fontSize: 10.5,
-                                                  fontWeight: FontWeight.w500,
-                                                  color: subtextColor,
+                                                    : raisedBg,
+                                                border: Border.all(
+                                                  color: topic.completed
+                                                      ? (isDark ? AppColors.darkSuccess : AppColors.success)
+                                                      : subtextColor,
+                                                  width: 1.5,
                                                 ),
                                               ),
-                                            ],
-                                          ),
-                                        ),
-
-                                        if (widget.showNotesButton) ...[
-                                          const SizedBox(width: 8),
-
-                                          // "Notes" Action Button
-                                          AcedexBounceable(
-                                            onTap: () => _handleNotesTap(topic.id),
-                                            child: Container(
-                                              height: 27,
-                                              padding: const EdgeInsets.symmetric(horizontal: 10),
-                                              decoration: BoxDecoration(
-                                                color: surfaceColor,
-                                                borderRadius: BorderRadius.circular(999),
-                                                border: Border.all(color: lineBorder),
-                                              ),
                                               alignment: Alignment.center,
-                                              child: isLoadingNotes
-                                                  ? AcedexDotsLoader(
-                                                      color: theme.colorScheme.onSurface,
-                                                      dotSize: 3.5,
-                                                      gap: 2.5,
-                                                    )
-                                                  : Text(
-                                                      'Notes',
-                                                      style: TextStyle(
-                                                        fontSize: 10.5,
-                                                        fontWeight: FontWeight.w700,
-                                                        color: theme.colorScheme.onSurface,
-                                                      ),
-                                                    ),
+                                              child: topic.completed
+                                                  ? const Icon(Icons.check_rounded, size: 14, color: Colors.white)
+                                                  : null,
                                             ),
                                           ),
+                                          const SizedBox(width: 10),
+                                          Expanded(
+                                            child: Column(
+                                              crossAxisAlignment: CrossAxisAlignment.start,
+                                              children: [
+                                                Text(
+                                                  '${topic.code} • ${topic.title}',
+                                                  maxLines: 1,
+                                                  overflow: TextOverflow.ellipsis,
+                                                  style: TextStyle(
+                                                    fontSize: 12,
+                                                    fontWeight: FontWeight.w600,
+                                                    color: topic.completed
+                                                        ? subtextColor
+                                                        : theme.colorScheme.onSurface,
+                                                    decoration: topic.completed
+                                                        ? TextDecoration.lineThrough
+                                                        : null,
+                                                  ),
+                                                ),
+                                                Text(
+                                                  '${topic.duration} • ${topic.questionCount} Questions',
+                                                  style: TextStyle(fontSize: 10, color: subtextColor),
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+                                          if (widget.showNotesButton)
+                                            AcedexBounceable(
+                                              onTap: () => _handleNotesTap(topic.id),
+                                              child: Container(
+                                                padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                                                decoration: BoxDecoration(
+                                                  color: surfaceColor,
+                                                  borderRadius: BorderRadius.circular(6),
+                                                  border: Border.all(color: lineBorder),
+                                                ),
+                                                child: isLoadingNotes
+                                                    ? AcedexDotsLoader(
+                                                        color: primaryColor,
+                                                        dotSize: 3,
+                                                        gap: 2,
+                                                      )
+                                                    : Text(
+                                                        'Notes',
+                                                        style: TextStyle(
+                                                          fontSize: 10,
+                                                          fontWeight: FontWeight.w700,
+                                                          color: primaryColor,
+                                                        ),
+                                                      ),
+                                              ),
+                                            ),
                                         ],
-                                      ],
-                                    ),
-                                  );
-                                }),
-                              ],
-                            )
+                                      ),
+                                    );
+                                  }),
+                                ],
+                              ),
                             )
                           : const SizedBox.shrink(),
                     ),

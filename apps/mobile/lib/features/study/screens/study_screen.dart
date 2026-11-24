@@ -11,10 +11,12 @@ import '../../../core/ui/animations/bounceable.dart';
 import '../../../core/ui/progress/acedex_dots_loader.dart';
 import '../models/study_models.dart';
 import '../widgets/curriculum_hero_card.dart';
+import '../widgets/grade_track_sheet.dart';
 import '../widgets/smart_notes_reader_sheet.dart';
 import '../widgets/subject_pill_rail_and_search.dart';
 import '../widgets/syllabus_unit_accordion.dart';
 import '../widgets/topic_drill_engine_sheet.dart';
+import '../widgets/unit_quick_notes_sheet.dart';
 
 /// Clean Apple-Style Study & Curriculum Inside Screen (Tab 1: Study)
 ///
@@ -128,6 +130,29 @@ class _StudyScreenState extends State<StudyScreen> {
       _errorMessage = null;
     });
     _fetchLiveCurriculum();
+  }
+
+  void _onSelectStream(String stream) {
+    if (_studentStream == stream) return;
+    setState(() {
+      _studentStream = stream;
+      _curriculumMap.clear();
+      _isLoading = true;
+      _errorMessage = null;
+    });
+    _fetchLiveCurriculum();
+  }
+
+  void _handleOpenUnitQuickNotes(StudyUnit unit) {
+    UnitQuickNotesSheet.show(
+      context,
+      unit: unit,
+      subject: _activeSubject,
+      onCompleteAndUnlockAssessment: () {
+        _toggleUnitCompletion(unit.id);
+        _handleTakeUnitAssessment(unit);
+      },
+    );
   }
 
   /// Synchronize curriculum subjects and units from backend API
@@ -246,9 +271,20 @@ class _StudyScreenState extends State<StudyScreen> {
             _curriculumMap[subj.id] = subj.copyWith(units: liveUnits);
           });
         }
+      } else if (subj.units.isEmpty && mounted) {
+        final fallbackUnits = _resolveFallbackUnits(subj.subjectCode, grade);
+        setState(() {
+          _curriculumMap[subj.id] = subj.copyWith(units: fallbackUnits);
+        });
       }
     } catch (e) {
       debugPrint('[StudyScreen] Error fetching units for ${subj.name}: $e');
+      if (subj.units.isEmpty && mounted) {
+        final fallbackUnits = _resolveFallbackUnits(subj.subjectCode, grade);
+        setState(() {
+          _curriculumMap[subj.id] = subj.copyWith(units: fallbackUnits);
+        });
+      }
     }
   }
 
@@ -557,151 +593,188 @@ class _StudyScreenState extends State<StudyScreen> {
     );
   }
 
-  Widget _buildGradeSelector(ThemeData theme, bool isDark, Color primaryColor) {
-    final surfaceColor = isDark ? const Color(0xFF1E1E26) : const Color(0xFFF4F4F7);
-    final activeBg = isDark ? const Color(0xFF2C2C38) : Colors.white;
-    final subtextColor = isDark ? AppColors.darkSecondaryText : AppColors.lightSecondaryText;
-    final lineBorder = isDark ? const Color(0xFF33333F) : const Color(0xFFE5E5EA);
-
+  Widget _buildEditorialHeader(ThemeData theme, bool isDark, Color primaryColor) {
+    final subtextColor = isDark ? AppColors.darkSubtext : AppColors.lightSubtext;
     final isNatural = _studentStream == 'natural';
     final streamLabel = isNatural ? 'Natural Science Track' : 'Social Science Track';
-    final streamBadgeBg = isNatural
-        ? (isDark ? const Color(0xFF1A2E22) : const Color(0xFFEAF8EF))
-        : (isDark ? const Color(0xFF2E2215) : const Color(0xFFFEF3E8));
-    final streamColor = isNatural
-        ? (isDark ? const Color(0xFF4ADE80) : const Color(0xFF15803D))
-        : (isDark ? const Color(0xFFFBBF24) : const Color(0xFFB45309));
+    final liveDotColor = isDark ? const Color(0xFF4ADE80) : const Color(0xFF16A34A);
 
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.stretch,
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        // Track Header Row
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Row(
-              children: [
-                HugeIcon(
-                  icon: HugeIcons.strokeRoundedGraduationCap,
-                  color: subtextColor,
-                  size: 13,
+        // Left: Editorial Title + Live Track Subtitle
+        Expanded(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                'Study',
+                style: TextStyle(
+                  fontSize: 28,
+                  fontWeight: FontWeight.w800,
+                  letterSpacing: -0.7,
+                  height: 1.1,
+                  color: theme.colorScheme.onSurface,
                 ),
-                const SizedBox(width: 5),
-                Text(
-                  'EUEE CURRICULUM LEVEL',
-                  style: TextStyle(
-                    fontSize: 10,
-                    fontWeight: FontWeight.w800,
-                    letterSpacing: 0.8,
-                    color: subtextColor,
-                  ),
-                ),
-              ],
-            ),
-            Container(
-              padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 2.5),
-              decoration: BoxDecoration(
-                color: streamBadgeBg,
-                borderRadius: BorderRadius.circular(999),
-                border: Border.all(color: streamColor.withValues(alpha: 0.25)),
               ),
-              child: Row(
-                mainAxisSize: MainAxisSize.min,
+              const SizedBox(height: 3),
+              Row(
                 children: [
                   Container(
-                    width: 5,
-                    height: 5,
+                    width: 7,
+                    height: 7,
                     decoration: BoxDecoration(
-                      color: streamColor,
+                      color: liveDotColor,
                       shape: BoxShape.circle,
+                      boxShadow: [
+                        BoxShadow(
+                          color: liveDotColor.withValues(alpha: 0.45),
+                          blurRadius: 4,
+                          spreadRadius: 1,
+                        ),
+                      ],
                     ),
                   ),
-                  const SizedBox(width: 5),
+                  const SizedBox(width: 6),
                   Text(
                     streamLabel,
                     style: TextStyle(
-                      fontSize: 9.5,
-                      fontWeight: FontWeight.w700,
-                      color: streamColor,
+                      fontSize: 12,
+                      fontWeight: FontWeight.w600,
+                      color: subtextColor,
                     ),
                   ),
                 ],
               ),
-            ),
-          ],
+            ],
+          ),
         ),
 
-        const SizedBox(height: 8),
-
-        // 4-Segment Gliding Grade Switcher
-        Container(
-          padding: const EdgeInsets.all(3),
-          decoration: BoxDecoration(
-            color: surfaceColor,
-            borderRadius: BorderRadius.circular(14),
-            border: Border.all(color: lineBorder),
-          ),
-          child: Row(
-            children: [9, 10, 11, 12].map((g) {
-              final isSelected = _selectedGrade == g;
-              return Expanded(
-                child: AcedexBounceable(
-                  onTap: () => _onSelectGrade(g),
-                  child: AnimatedContainer(
-                    duration: const Duration(milliseconds: 200),
-                    curve: Curves.easeOutCubic,
-                    padding: const EdgeInsets.symmetric(vertical: 8),
-                    decoration: BoxDecoration(
-                      color: isSelected ? activeBg : Colors.transparent,
-                      borderRadius: BorderRadius.circular(11),
-                      boxShadow: isSelected
-                          ? [
-                              BoxShadow(
-                                color: Colors.black.withValues(alpha: isDark ? 0.35 : 0.08),
-                                blurRadius: 6,
-                                offset: const Offset(0, 2),
-                              ),
-                            ]
-                          : null,
-                    ),
-                    alignment: Alignment.center,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text(
-                          'Grade $g',
-                          style: TextStyle(
-                            fontSize: 12,
-                            fontWeight: isSelected ? FontWeight.w800 : FontWeight.w600,
-                            letterSpacing: -0.2,
-                            color: isSelected
-                                ? (isDark ? Colors.white : AppColors.royalPurple)
-                                : subtextColor,
-                          ),
-                        ),
-                        if (widget.user?.grade == g) ...[
-                          const SizedBox(width: 3.5),
-                          Container(
-                            width: 4,
-                            height: 4,
-                            decoration: BoxDecoration(
-                              color: isSelected
-                                  ? (isDark ? AppColors.accentDark : AppColors.royalPurple)
-                                  : subtextColor.withValues(alpha: 0.5),
-                              shape: BoxShape.circle,
-                            ),
-                          ),
-                        ],
-                      ],
-                    ),
+        // Right: Grade Pull-Down Pill
+        AcedexBounceable(
+          onTap: () {
+            GradeTrackSheet.show(
+              context,
+              selectedGrade: _selectedGrade,
+              stream: _studentStream,
+              registeredGrade: widget.user?.grade,
+              onSelectGrade: _onSelectGrade,
+              onSelectStream: _onSelectStream,
+            );
+          },
+          child: Container(
+            height: 38,
+            padding: const EdgeInsets.symmetric(horizontal: 13),
+            decoration: BoxDecoration(
+              color: primaryColor.withValues(alpha: isDark ? 0.20 : 0.12),
+              borderRadius: BorderRadius.circular(999),
+              border: Border.all(
+                color: primaryColor.withValues(alpha: 0.25),
+              ),
+            ),
+            child: Row(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                HugeIcon(
+                  icon: HugeIcons.strokeRoundedGraduationCap,
+                  color: primaryColor,
+                  size: 15,
+                ),
+                const SizedBox(width: 6),
+                Text(
+                  'Grade $_selectedGrade',
+                  style: TextStyle(
+                    fontSize: 12.5,
+                    fontWeight: FontWeight.w700,
+                    color: primaryColor,
                   ),
                 ),
-              );
-            }).toList(),
+                const SizedBox(width: 4),
+                Icon(
+                  Icons.keyboard_arrow_down_rounded,
+                  size: 17,
+                  color: primaryColor,
+                ),
+              ],
+            ),
           ),
         ),
       ],
     );
+  }
+
+  List<StudyUnit> _resolveFallbackUnits(String subjectCode, int grade) {
+    final Map<String, List<Map<String, String>>> defaults = {
+      'PHY': [
+        {'code': 'U1', 'title': 'Application of Physics in Other Fields', 'weight': '14% EUEE'},
+        {'code': 'U2', 'title': 'Two-dimensional Motion', 'weight': '22% EUEE'},
+        {'code': 'U3', 'title': 'Fluid Mechanics', 'weight': '18% EUEE'},
+        {'code': 'U4', 'title': 'Electromagnetism', 'weight': '28% EUEE'},
+        {'code': 'U5', 'title': 'Basics of Electronics', 'weight': '18% EUEE'},
+      ],
+      'MAT': [
+        {'code': 'U1', 'title': 'Sequences and Series', 'weight': '20% EUEE'},
+        {'code': 'U2', 'title': 'Introductions to Calculus', 'weight': '32% EUEE'},
+        {'code': 'U3', 'title': 'Statistics', 'weight': '22% EUEE'},
+        {'code': 'U4', 'title': 'Introduction to Linear Programming', 'weight': '12% EUEE'},
+        {'code': 'U5', 'title': 'Mathematical Applications in Business', 'weight': '14% EUEE'},
+      ],
+      'CHE': [
+        {'code': 'U1', 'title': 'Acid-Base Equilibria', 'weight': '26% EUEE'},
+        {'code': 'U2', 'title': 'Electrochemistry', 'weight': '28% EUEE'},
+        {'code': 'U3', 'title': 'Industrial Chemistry', 'weight': '18% EUEE'},
+        {'code': 'U4', 'title': 'Polymers & Macromolecules', 'weight': '16% EUEE'},
+        {'code': 'U5', 'title': 'Environmental Chemistry', 'weight': '12% EUEE'},
+      ],
+      'BIO': [
+        {'code': 'U1', 'title': 'Application of Biology', 'weight': '18% EUEE'},
+        {'code': 'U2', 'title': 'Microorganisms & Disease', 'weight': '22% EUEE'},
+        {'code': 'U3', 'title': 'Energy Transformation', 'weight': '28% EUEE'},
+        {'code': 'U4', 'title': 'Evolution & Genetics', 'weight': '20% EUEE'},
+        {'code': 'U5', 'title': 'Human Nervous & Endocrine Systems', 'weight': '12% EUEE'},
+      ],
+      'ECO': [
+        {'code': 'U1', 'title': 'Macroeconomic Indicators & GDP', 'weight': '25% EUEE'},
+        {'code': 'U2', 'title': 'Aggregate Demand & Supply', 'weight': '22% EUEE'},
+        {'code': 'U3', 'title': 'Fiscal & Monetary Policy', 'weight': '20% EUEE'},
+        {'code': 'U4', 'title': 'International Trade & Payments', 'weight': '18% EUEE'},
+        {'code': 'U5', 'title': 'Ethiopian Economic Reforms', 'weight': '15% EUEE'},
+      ],
+      'GEO': [
+        {'code': 'U1', 'title': 'Major Geological Processes', 'weight': '24% EUEE'},
+        {'code': 'U2', 'title': 'Climate Change & Agro-Ecological Zones', 'weight': '26% EUEE'},
+        {'code': 'U3', 'title': 'Sustainable Resource Management', 'weight': '18% EUEE'},
+        {'code': 'U4', 'title': 'Population Policies & Urbanization', 'weight': '18% EUEE'},
+        {'code': 'U5', 'title': 'GIS & Remote Sensing Applications', 'weight': '14% EUEE'},
+      ],
+      'HIS': [
+        {'code': 'U1', 'title': 'Development of Capitalism & Nationalism', 'weight': '20% EUEE'},
+        {'code': 'U2', 'title': 'Africa & the Colonial Experience', 'weight': '24% EUEE'},
+        {'code': 'U3', 'title': 'Social & Political Developments in Ethiopia', 'weight': '26% EUEE'},
+        {'code': 'U4', 'title': 'World Wars & Cold War Era', 'weight': '16% EUEE'},
+        {'code': 'U5', 'title': 'Post-1991 Ethiopia & Regional Integration', 'weight': '14% EUEE'},
+      ],
+    };
+
+    final list = defaults[subjectCode] ?? defaults['PHY']!;
+    return list.map((item) {
+      final code = item['code']!;
+      final title = item['title']!;
+      final weight = item['weight']!;
+      final unitCode = '$subjectCode-G${grade.toString().padLeft(2, '0')}-$code';
+      final isDone = AuthStorage.instance.completedUnitsNotifier.value.contains(unitCode);
+      return StudyUnit(
+        id: unitCode,
+        code: code,
+        unitCode: unitCode,
+        title: title,
+        examWeight: '$weight • 15 Questions',
+        expanded: false,
+        topics: const [],
+        isCompleted: isDone,
+      );
+    }).toList();
   }
 
   @override
@@ -820,8 +893,8 @@ class _StudyScreenState extends State<StudyScreen> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          // 0. Grade Selector (Grades 9-12) & Stream Track Badge
-          _buildGradeSelector(theme, isDark, primaryColor),
+          // 0. Editorial Header (Study Title + Live Track Subtitle + Cupertino Grade Pill)
+          _buildEditorialHeader(theme, isDark, primaryColor),
 
           const SizedBox(height: 14),
 
@@ -892,6 +965,7 @@ class _StudyScreenState extends State<StudyScreen> {
                 _launchNotesSheet(topic);
               }
             },
+            onOpenUnitQuickNotes: _handleOpenUnitQuickNotes,
             onTakeUnitAssessment: _handleTakeUnitAssessment,
             onResetFilters: () {
               _searchController.clear();

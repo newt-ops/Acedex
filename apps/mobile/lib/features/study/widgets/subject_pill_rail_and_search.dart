@@ -4,7 +4,7 @@ import '../../../core/theme/app_colors.dart';
 import '../../../core/ui/animations/bounceable.dart';
 import '../models/study_models.dart';
 
-/// Subject Pill Rail, Instant Search, and Cupertino Segmented Filter Bar
+/// Spacious Apple Bento Subject Switcher Rail, Instant Search, and Cupertino Segmented Filter Bar
 class SubjectPillRailAndSearch extends StatefulWidget {
   final List<SubjectCurriculum> subjects;
   final String activeSubjectId;
@@ -66,8 +66,8 @@ class _SubjectPillRailAndSearchState extends State<SubjectPillRailAndSearch> {
     final isDark = theme.brightness == Brightness.dark;
     final primaryColor = theme.colorScheme.primary;
     final surfaceColor = isDark ? const Color(0xFF1B1B1F) : const Color(0xFFF4F4F6);
-    final raisedBg = isDark ? const Color(0xFF2B2B31) : Colors.white;
-    final lineBorder = isDark ? const Color(0xFF2B2B31) : const Color(0xFFE4E4E8);
+    final raisedBg = isDark ? const Color(0xFF25252B) : Colors.white;
+    final lineBorder = isDark ? const Color(0xFF33333E) : const Color(0xFFE4E4E8);
     final subtextColor = isDark ? AppColors.darkSubtext : AppColors.lightSubtext;
 
     final isSearchFocused = _searchFocusNode.hasFocus;
@@ -76,28 +76,32 @@ class _SubjectPillRailAndSearchState extends State<SubjectPillRailAndSearch> {
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
         // =====================================================================
-        // 1. HORIZONTAL SCROLLABLE SUBJECT PILL RAIL
+        // 1. SPACIOUS APPLE BENTO SUBJECT SWITCHER RAIL (144px Cards, 22px Radius)
         // =====================================================================
         SizedBox(
-          height: 38,
+          height: 122,
           child: ListView.separated(
             scrollDirection: Axis.horizontal,
             physics: const BouncingScrollPhysics(),
             itemCount: widget.subjects.length,
-            separatorBuilder: (_, i) => const SizedBox(width: 8),
+            separatorBuilder: (_, i) => const SizedBox(width: 10),
             itemBuilder: (context, index) {
               final subject = widget.subjects[index];
               final isActive = subject.id == widget.activeSubjectId;
+
+              final totalUnits = subject.units.length;
+              final doneUnits = subject.units.where((u) => u.isCompleted).length;
 
               return AcedexBounceable(
                 onTap: () => widget.onSelectSubject(subject.id),
                 child: AnimatedContainer(
                   duration: const Duration(milliseconds: 250),
                   curve: Curves.easeOutCubic,
-                  padding: const EdgeInsets.symmetric(horizontal: 12),
+                  width: 144,
+                  padding: const EdgeInsets.symmetric(horizontal: 11, vertical: 10),
                   decoration: BoxDecoration(
                     color: isActive ? primaryColor : surfaceColor,
-                    borderRadius: BorderRadius.circular(999),
+                    borderRadius: BorderRadius.circular(22),
                     border: Border.all(
                       color: isActive ? primaryColor : lineBorder,
                       width: 1.2,
@@ -105,49 +109,108 @@ class _SubjectPillRailAndSearchState extends State<SubjectPillRailAndSearch> {
                     boxShadow: isActive
                         ? [
                             BoxShadow(
-                              color: primaryColor.withValues(alpha: 0.35),
-                              blurRadius: 12,
-                              offset: const Offset(0, 4),
+                              color: primaryColor.withValues(alpha: isDark ? 0.42 : 0.28),
+                              blurRadius: 16,
+                              offset: const Offset(0, 6),
                             ),
                           ]
                         : null,
                   ),
-                  child: Row(
-                    mainAxisSize: MainAxisSize.min,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      HugeIcon(
-                        icon: subject.iconData,
-                        color: isActive ? Colors.white : theme.colorScheme.onSurface,
-                        size: 14,
-                      ),
-                      const SizedBox(width: 6),
-                      Text(
-                        subject.name,
-                        style: TextStyle(
-                          fontSize: 12,
-                          fontWeight: FontWeight.w700,
-                          letterSpacing: -0.2,
-                          color: isActive ? Colors.white : theme.colorScheme.onSurface,
-                        ),
-                      ),
-                      const SizedBox(width: 6),
-                      Container(
-                        padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 1.5),
-                        decoration: BoxDecoration(
-                          color: isActive
-                              ? Colors.white.withValues(alpha: 0.22)
-                              : raisedBg,
-                          borderRadius: BorderRadius.circular(999),
-                        ),
-                        child: Text(
-                          '${subject.mastery}%',
-                          style: TextStyle(
-                            fontSize: 10,
-                            fontWeight: FontWeight.w800,
-                            color: isActive ? Colors.white : primaryColor,
-                            fontFeatures: const [FontFeature.tabularFigures()],
+                      // Top Row: Icon Squircle + Mastery Percentage
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Container(
+                            width: 32,
+                            height: 32,
+                            decoration: BoxDecoration(
+                              color: isActive
+                                  ? Colors.white.withValues(alpha: 0.22)
+                                  : raisedBg,
+                              borderRadius: BorderRadius.circular(10),
+                              border: Border.all(
+                                color: isActive
+                                    ? Colors.white.withValues(alpha: 0.25)
+                                    : lineBorder,
+                              ),
+                            ),
+                            alignment: Alignment.center,
+                            child: HugeIcon(
+                              icon: subject.iconData,
+                              color: isActive ? Colors.white : primaryColor,
+                              size: 16,
+                            ),
                           ),
-                        ),
+                          Text(
+                            '${subject.mastery}%',
+                            style: TextStyle(
+                              fontSize: 12,
+                              fontWeight: FontWeight.w800,
+                              letterSpacing: -0.2,
+                              color: isActive ? Colors.white : primaryColor,
+                              fontFeatures: const [FontFeature.tabularFigures()],
+                            ),
+                          ),
+                        ],
+                      ),
+
+                      // Bottom Group: Subject Name + Mini Progress Bar + Subtitle
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Text(
+                            subject.name,
+                            maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
+                            style: TextStyle(
+                              fontSize: 13,
+                              fontWeight: FontWeight.w800,
+                              letterSpacing: -0.2,
+                              color: isActive ? Colors.white : theme.colorScheme.onSurface,
+                            ),
+                          ),
+                          const SizedBox(height: 4),
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(999),
+                            child: Container(
+                              height: 4,
+                              width: double.infinity,
+                              color: isActive
+                                  ? Colors.white.withValues(alpha: 0.25)
+                                  : primaryColor.withValues(alpha: 0.12),
+                              child: Align(
+                                alignment: Alignment.centerLeft,
+                                child: FractionallySizedBox(
+                                  widthFactor: (subject.mastery / 100).clamp(0.0, 1.0),
+                                  child: Container(
+                                    decoration: BoxDecoration(
+                                      color: isActive ? Colors.white : primaryColor,
+                                      borderRadius: BorderRadius.circular(999),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                          const SizedBox(height: 3.5),
+                          Text(
+                            totalUnits > 0
+                                ? '$doneUnits/$totalUnits Units Done'
+                                : '${subject.mastery}% Mastered',
+                            style: TextStyle(
+                              fontSize: 9.5,
+                              fontWeight: FontWeight.w600,
+                              color: isActive
+                                  ? Colors.white.withValues(alpha: 0.85)
+                                  : subtextColor,
+                            ),
+                          ),
+                        ],
                       ),
                     ],
                   ),
@@ -157,18 +220,18 @@ class _SubjectPillRailAndSearchState extends State<SubjectPillRailAndSearch> {
           ),
         ),
 
-        const SizedBox(height: 10),
+        const SizedBox(height: 12),
 
         // =====================================================================
-        // 2. INSTANT SEARCH INPUT BAR
+        // 2. INSTANT APPLE SEARCH BAR (Single-Layer Squircle, Zero Double-Borders)
         // =====================================================================
         AnimatedContainer(
           duration: const Duration(milliseconds: 180),
-          height: 38,
-          padding: const EdgeInsets.symmetric(horizontal: 11),
+          height: 40,
+          padding: const EdgeInsets.symmetric(horizontal: 12),
           decoration: BoxDecoration(
             color: isSearchFocused ? raisedBg : surfaceColor,
-            borderRadius: BorderRadius.circular(13),
+            borderRadius: BorderRadius.circular(14),
             border: Border.all(
               color: isSearchFocused ? primaryColor : lineBorder,
               width: isSearchFocused ? 1.4 : 1.0,
@@ -176,8 +239,8 @@ class _SubjectPillRailAndSearchState extends State<SubjectPillRailAndSearch> {
             boxShadow: isSearchFocused
                 ? [
                     BoxShadow(
-                      color: primaryColor.withValues(alpha: 0.10),
-                      blurRadius: 8,
+                      color: primaryColor.withValues(alpha: 0.12),
+                      blurRadius: 10,
                       offset: const Offset(0, 2),
                     ),
                   ]
@@ -188,16 +251,16 @@ class _SubjectPillRailAndSearchState extends State<SubjectPillRailAndSearch> {
               HugeIcon(
                 icon: HugeIcons.strokeRoundedSearch01,
                 color: isSearchFocused ? primaryColor : subtextColor,
-                size: 15,
+                size: 16,
               ),
-              const SizedBox(width: 8),
+              const SizedBox(width: 9),
               Expanded(
                 child: TextField(
                   focusNode: _searchFocusNode,
                   controller: widget.searchController,
                   cursorColor: primaryColor,
                   style: TextStyle(
-                    fontSize: 12.5,
+                    fontSize: 13,
                     fontWeight: FontWeight.w500,
                     color: theme.colorScheme.onSurface,
                   ),
@@ -227,8 +290,8 @@ class _SubjectPillRailAndSearchState extends State<SubjectPillRailAndSearch> {
                   onTap: widget.onClearSearch,
                   behavior: HitTestBehavior.opaque,
                   child: Container(
-                    width: 18,
-                    height: 18,
+                    width: 20,
+                    height: 20,
                     decoration: BoxDecoration(
                       color: lineBorder,
                       shape: BoxShape.circle,
@@ -237,7 +300,7 @@ class _SubjectPillRailAndSearchState extends State<SubjectPillRailAndSearch> {
                     child: HugeIcon(
                       icon: HugeIcons.strokeRoundedCancel01,
                       color: theme.colorScheme.onSurface,
-                      size: 10,
+                      size: 11,
                     ),
                   ),
                 ),
@@ -251,17 +314,17 @@ class _SubjectPillRailAndSearchState extends State<SubjectPillRailAndSearch> {
         // 3. GLIDING CUPERTINO 3-OPTION SEGMENTED FILTER BAR
         // =====================================================================
         Container(
-          height: 32,
-          padding: const EdgeInsets.all(2),
+          height: 34,
+          padding: const EdgeInsets.all(2.5),
           decoration: BoxDecoration(
             color: surfaceColor,
-            borderRadius: BorderRadius.circular(11),
+            borderRadius: BorderRadius.circular(12),
             border: Border.all(color: lineBorder),
           ),
           child: Stack(
             children: [
               AnimatedAlign(
-                duration: const Duration(milliseconds: 320),
+                duration: const Duration(milliseconds: 300),
                 curve: Curves.easeOutCubic,
                 alignment: widget.activeFilter == 'all'
                     ? Alignment.centerLeft
@@ -273,11 +336,11 @@ class _SubjectPillRailAndSearchState extends State<SubjectPillRailAndSearch> {
                   child: Container(
                     decoration: BoxDecoration(
                       color: raisedBg,
-                      borderRadius: BorderRadius.circular(8.5),
+                      borderRadius: BorderRadius.circular(9.5),
                       border: Border.all(color: lineBorder),
                       boxShadow: [
                         BoxShadow(
-                          color: Colors.black.withValues(alpha: 0.06),
+                          color: Colors.black.withValues(alpha: isDark ? 0.35 : 0.08),
                           blurRadius: 6,
                           offset: const Offset(0, 2),
                         ),
@@ -343,23 +406,23 @@ class _SubjectPillRailAndSearchState extends State<SubjectPillRailAndSearch> {
             Text(
               label,
               style: TextStyle(
-                fontSize: 11,
-                fontWeight: FontWeight.w700,
+                fontSize: 11.5,
+                fontWeight: isActive ? FontWeight.w800 : FontWeight.w600,
                 color: isActive ? primaryColor : subtextColor,
               ),
             ),
-            if (badgeCount != null) ...[
-              const SizedBox(width: 4),
+            if (badgeCount != null && badgeCount > 0) ...[
+              const SizedBox(width: 4.5),
               Container(
-                padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 1),
+                padding: const EdgeInsets.symmetric(horizontal: 5.5, vertical: 1),
                 decoration: BoxDecoration(
-                  color: primaryColor.withValues(alpha: 0.14),
+                  color: primaryColor.withValues(alpha: 0.16),
                   borderRadius: BorderRadius.circular(999),
                 ),
                 child: Text(
                   '$badgeCount',
                   style: TextStyle(
-                    fontSize: 9,
+                    fontSize: 9.5,
                     fontWeight: FontWeight.w800,
                     color: primaryColor,
                   ),
