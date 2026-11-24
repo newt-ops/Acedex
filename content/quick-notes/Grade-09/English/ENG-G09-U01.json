@@ -1,0 +1,61 @@
+{
+  "grade": 9,
+  "subject": "English",
+  "subjectCode": "ENG",
+  "unitNumber": 1,
+  "unitCode": "ENG-G09-U01",
+  "unitTitle": "Living in Urban Areas",
+  "examWeight": "10% EUEE",
+  "summaryPoints": [
+    "Tag questions consist of an auxiliary/modal verb and a subject pronoun, formed inversely: affirmative statements take negative tags, and negative statements take affirmative tags.",
+    "The first-person singular affirmative copula 'I am' takes the irregular tag question 'aren't I?', whereas negative 'I am not' takes the regular tag 'am I?'.",
+    "Simple present tense indicates habitual actions and general truths, using base verb forms for plural subjects/I/you and '-s/-es' inflections for third-person singular subjects (he, she, it).",
+    "Present continuous tense expresses actions occurring at the moment of speaking or planned future arrangements using 'is/am/are + V-ing'.",
+    "Information questions (Wh-questions) employ falling intonation, whereas Yes/No questions and uncertain question tags employ rising intonation.",
+    "Key unit phrasal verbs include 'act out' (perform), 'act on' (take action on information), 'act up' (misbehave), 'back away' (retreat), 'back down' (withdraw an argument), and 'back up' (duplicate data or support)."
+  ],
+  "formulas": [
+    {
+      "label": "Question Tag Rule (General)",
+      "expr": "Positive Statement + , + Auxiliary/Do-verb (negative contracted) + Pronoun? / Negative Statement + , + Auxiliary/Do-verb (positive) + Pronoun?"
+    },
+    {
+      "label": "Special Question Tag for 'I am'",
+      "expr": "I am + complement, aren't I?  |  I am not + complement, am I?"
+    },
+    {
+      "label": "Simple Present Habitual Form",
+      "expr": "Affirmative: S(singular) + V1(-s/-es) + O  |  Negative: S(singular) + does not + V1(base) + O  |  Plural: S(plural/I/we/you/they) + V1(base)"
+    },
+    {
+      "label": "Present Continuous Sentence Structure",
+      "expr": "S + is/am/are + V-ing + O"
+    }
+  ],
+  "examTip": "Watch for statements containing negative words like 'never', 'hardly', 'rarely', or 'seldom'; these statements are semantically negative and therefore require a positive tag question (e.g., 'He rarely speaks, does he?'). Also, remember that the affirmative 'I am' always takes 'aren't I?'.",
+  "keyDefinitions": [
+    {
+      "term": "Tag Question",
+      "definition": "A mini-question added to the end of a statement asking for confirmation or agreement, consisting of an auxiliary/modal verb and a corresponding subject pronoun."
+    },
+    {
+      "term": "Phrasal Verb",
+      "definition": "A multi-word verb formed by combining a base verb with a preposition or adverb particle, creating an idiomatic meaning distinct from the independent base verb."
+    },
+    {
+      "term": "Falling Intonation",
+      "definition": "A pitch pattern where the voice drops at the end of an utterance, typically used for Wh-questions, statements, and confirmatory question tags."
+    },
+    {
+      "term": "Rising Intonation",
+      "definition": "A pitch pattern where the voice rises at the end of an utterance, characteristic of Yes/No questions and question tags expressing genuine doubt."
+    }
+  ],
+  "eueeFocusTopics": [
+    "Inversion and polarity in question tags (affirmative vs negative)",
+    "Irregular tag questions ('I am late, aren't I?')",
+    "Subject-verb agreement in the simple present tense (third-person singular -s/-es)",
+    "Present continuous for definite future arrangements",
+    "Phrasal verbs based on 'act' and 'back'"
+  ]
+}

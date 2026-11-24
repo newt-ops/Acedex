@@ -1,0 +1,61 @@
+{
+  "grade": 9,
+  "subject": "English",
+  "subjectCode": "ENG",
+  "unitNumber": 2,
+  "unitCode": "ENG-G09-U02",
+  "unitTitle": "Study Skills",
+  "examWeight": "10% EUEE",
+  "summaryPoints": [
+    "Connectors of addition (and, also, besides, furthermore, moreover, in addition) link supporting ideas, whereas sequence connectors (first, next, then, meanwhile, eventually, finally) establish chronological cohesion.",
+    "Adverbs of frequency (always, usually, often, sometimes, rarely, seldom, never) specify habitual frequency; they precede main verbs but follow copular 'be' and auxiliary/modal verbs.",
+    "Simple past tense denotes events completed at a definite time in the past using regular (-d/-ed) and irregular verb changes.",
+    "Past continuous denotes an ongoing past activity, frequently forming interrupted action sentences when combined with simple past using 'when' and 'while'.",
+    "Compound sentences connect two independent clauses via coordinating conjunctions (and, but, or), while complex sentences combine an independent clause with one or more dependent clauses.",
+    "Collocations form natural combinations: adjective + noun ('heavy traffic', 'rich culture', 'strong wind') and verb + preposition ('break down', 'boil down to', 'blow up')."
+  ],
+  "formulas": [
+    {
+      "label": "Interrupted Past Action Formula",
+      "expr": "While + S + was/were + V-ing, S + V2(past simple)  OR  S + was/were + V-ing + when + S + V2(past simple)"
+    },
+    {
+      "label": "Adverb of Frequency Word Order",
+      "expr": "S + Adverb of Frequency + Main Verb  OR  S + be/modal + Adverb of Frequency"
+    },
+    {
+      "label": "Compound Sentence Structure",
+      "expr": "Independent Clause + , + Coordinating Conjunction (and, but, or) + Independent Clause"
+    },
+    {
+      "label": "Complex Sentence Structure",
+      "expr": "Subordinating Conjunction + Dependent Clause + , + Independent Clause  OR  Independent Clause + Subordinating Conjunction + Dependent Clause"
+    }
+  ],
+  "examTip": "In EUEE sentence combination items, pay close attention to conjunction choices: 'While' is followed by the continuous aspect ('While she was driving...'), whereas 'When' commonly introduces the simple past punctive event that interrupts it ('...when the tire burst').",
+  "keyDefinitions": [
+    {
+      "term": "Collocation",
+      "definition": "A habitual and predictable pairing or grouping of two or more words that naturally co-occur in standard English usage."
+    },
+    {
+      "term": "Addition Connector",
+      "definition": "A transitional word or phrase (e.g., moreover, furthermore, in addition) used to introduce supplementary corroborating information."
+    },
+    {
+      "term": "Sequence Connector",
+      "definition": "A transitional cohesive device (e.g., first, subsequently, meanwhile, finally) that orders actions or events chronologically."
+    },
+    {
+      "term": "Compound Sentence",
+      "definition": "A sentence composed of two or more coordinate independent clauses joined by a coordinating conjunction or semicolon."
+    }
+  ],
+  "eueeFocusTopics": [
+    "Conjunctions of addition vs contrast (furthermore vs however)",
+    "Past continuous and past simple clause blending with 'when' and 'while'",
+    "Syntactic position of frequency adverbs relative to auxiliary and main verbs",
+    "Fixed adjective-noun collocations (heavy rain, strong smell, big mistake)",
+    "Phrasal verbs based on 'blow' and 'break' (break down, break out, blow up)"
+  ]
+}

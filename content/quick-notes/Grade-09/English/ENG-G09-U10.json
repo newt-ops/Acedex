@@ -1,0 +1,57 @@
+{
+  "grade": 9,
+  "subject": "English",
+  "subjectCode": "ENG",
+  "unitNumber": 10,
+  "unitCode": "ENG-G09-U10",
+  "unitTitle": "The Internet",
+  "examWeight": "10% EUEE",
+  "summaryPoints": [
+    "Comprehensive synthesis of tenses: Simple Past (discrete finished actions), Past Continuous (past action in progress), Present Perfect (past action with present impact), and Present Perfect Continuous (action ongoing from past to present).",
+    "Past continuous narrative framing uses time clauses to set background scenes before main events occur in the simple past.",
+    "Present perfect continuous emphasizes the sustained effort or repetitive duration leading directly up to the current moment.",
+    "Phrasal verbs centered on 'cut' and 'do' include 'cut down on' (reduce intake), 'cut into' (slice or interrupt), 'cut off' (sever or disconnect), 'do away with' (abolish/eliminate), 'do over' (repeat/redo), 'do without' (manage in the absence of), and 'doze off' (fall asleep inadvertently).",
+    "Communicative discourse formulas express degrees of opinion ('In my opinion', 'I believe'), agreement ('I couldn't agree more', 'Definitely'), and polite disagreement ('I'm afraid I disagree', 'I'm not sure I agree').",
+    "Technological literacy texts examine the dual nature of computer technology and the internet: expanding global information and connectivity versus diminishing interpersonal skills and physical activity."
+  ],
+  "formulas": [
+    {
+      "label": "Tense Aspect Contrast Summary",
+      "expr": "Simple Past: S + V2  |  Past Continuous: S + was/were + V-ing  |  Present Perfect: S + has/have + V3  |  Present Perfect Continuous: S + has/have + been + V-ing"
+    },
+    {
+      "label": "Opinion Stating Expression Pattern",
+      "expr": "In my opinion, / From my perspective, + [Complete Clause]  |  I think/believe that + [Complete Clause]"
+    },
+    {
+      "label": "Polite Disagreement Formula",
+      "expr": "I see your point, but...  |  I'm afraid I have to disagree with...  |  I am not sure that is entirely correct"
+    }
+  ],
+  "examTip": "In EUEE reading and narrative passages testing mixed tenses, identify the precise temporal relationship of events: use simple past for completed sequential actions, past continuous for background ongoing actions, and present perfect if the narrative transitions to impact the speaker in the present.",
+  "keyDefinitions": [
+    {
+      "term": "Aspect",
+      "definition": "A grammatical category that reflects how an action, event, or state, as denoted by a verb, extends or unfolds over time (simple, progressive, or perfect)."
+    },
+    {
+      "term": "Communicative Functions",
+      "definition": "The functional purposes for which language is deployed in social discourse, such as stating opinions, agreeing, disagreeing, or asking clarification."
+    },
+    {
+      "term": "The Internet",
+      "definition": "A global computer network facilitating vast data transmission, multimedia communication, online interaction, and shared information services."
+    },
+    {
+      "term": "Dexterity",
+      "definition": "Mental agility or physical readiness and skill in performing tasks, particularly with the hands."
+    }
+  ],
+  "eueeFocusTopics": [
+    "Mixed tense differentiation and chronological sequence of actions",
+    "Phrasal verbs with 'cut' and 'do' ('do away with', 'cut down on', 'do without')",
+    "Functional English: formulas for polite agreement and disagreement",
+    "Argumentative and opinion essay discourse structure",
+    "Reading comprehension on cyber technology, digital communication, and internet impacts"
+  ]
+}

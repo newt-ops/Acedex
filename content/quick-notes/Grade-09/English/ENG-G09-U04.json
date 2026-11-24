@@ -1,0 +1,57 @@
+{
+  "grade": 9,
+  "subject": "English",
+  "subjectCode": "ENG",
+  "unitNumber": 4,
+  "unitCode": "ENG-G09-U04",
+  "unitTitle": "National Parks",
+  "examWeight": "10% EUEE",
+  "summaryPoints": [
+    "Zero conditional sentences express universal truths, scientific facts, and automatic general causes and effects using simple present tense in both clauses.",
+    "First conditional sentences express realistic, possible conditions in the present/future and their probable results using the simple present in the if-clause and 'will/can/may + V1' in the main clause.",
+    "The order of clauses in conditional sentences is reversible; when the if-clause begins the sentence, a comma is mandatory, but no comma is needed when the main clause comes first.",
+    "Prefixes are morphological bound morphemes affixed before base words that change meaning: 'ante-' (before), 'anti-' (opposing/against), 'en-' (cause to be/put into), 'dis-' (negation/removal), and 'un-' (not).",
+    "Phrasal verbs based on 'call' convey distinct idioms: 'call for' (demand/require), 'call off' (cancel), 'call up' (recollect/summon), and 'call back' (return a telephone call).",
+    "Informative report writing requires an objective account answering who, when, where, and what occurred based on factual evidence."
+  ],
+  "formulas": [
+    {
+      "label": "Zero Conditional Formula (Factual/Universal Truth)",
+      "expr": "If + Subject + V1(-s/-es) [Simple Present] + , + Subject + V1(-s/-es) [Simple Present]"
+    },
+    {
+      "label": "First Conditional Formula (Probable Future Result)",
+      "expr": "If + Subject + V1(-s/-es) [Simple Present] + , + Subject + will/can/may/shall + V1(base)"
+    },
+    {
+      "label": "Negative First Conditional (Unless Structure)",
+      "expr": "Unless + Subject + V1(-s/-es) [Simple Present] + , + Subject + will/can + V1(base)  [Unless = If not]"
+    }
+  ],
+  "examTip": "Never use future modal auxiliaries ('will', 'shall', 'would') inside the conditional 'if-clause' in First Conditional questions. Incorrect: 'If it will rain tomorrow...'; Correct: 'If it rains tomorrow, we will stay inside.'",
+  "keyDefinitions": [
+    {
+      "term": "Zero Conditional",
+      "definition": "A conditional structure used to articulate general truths, scientific facts, or habitual causal relationships where the result is guaranteed."
+    },
+    {
+      "term": "First Conditional",
+      "definition": "A conditional structure used to describe realistic, attainable present or future conditions and their probable outcomes."
+    },
+    {
+      "term": "Prefix",
+      "definition": "An affix added to the beginning of a root or base word to modify its semantic meaning."
+    },
+    {
+      "term": "Endemic Species",
+      "definition": "An organism or animal that is native to and exclusively found in a specific geographic habitat or region (e.g., Walia Ibex, Ethiopian Wolf)."
+    }
+  ],
+  "eueeFocusTopics": [
+    "Zero conditional vs First conditional tense matching",
+    "Prohibition of 'will' in conditional 'if'-clauses",
+    "Prefix meanings and morphological shifts ('anti-', 'dis-', 'un-', 'en-')",
+    "Phrasal verbs with 'call' ('call off' = cancel, 'call for' = demand)",
+    "Factual reading comprehension based on Ethiopian wildlife heritages"
+  ]
+}

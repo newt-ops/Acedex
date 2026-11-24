@@ -1,0 +1,61 @@
+{
+  "grade": 9,
+  "subject": "English",
+  "subjectCode": "ENG",
+  "unitNumber": 6,
+  "unitCode": "ENG-G09-U06",
+  "unitTitle": "Poverty in Ethiopia",
+  "examWeight": "10% EUEE",
+  "summaryPoints": [
+    "Modal verbs of obligation and necessity differentiate the source of requirement: 'must' signals subjective obligation from the speaker, while 'have to' indicates external laws, guidelines, or conditions.",
+    "'Mustn't' (must not) is an explicit marker of prohibition stating that an action is forbidden; it cannot be replaced by 'don't have to'.",
+    "'Don't have to' and 'need not' (needn't) express absence of obligation, stating that a task is optional and non-compulsory.",
+    "Suffixes '-ate' and '-ise/-ize' are derivational affixes that convert nouns and adjectives into verbs (e.g., 'capacitate', 'prioritize', 'generalize').",
+    "Suffixes '-ment' and '-tion' are nominalizing morphemes that convert verbs into nouns denoting states, actions, or results (e.g., 'amazement', 'punishment', 'action', 'dissatisfaction').",
+    "High-yield phrasal verbs formed with 'come' and 'close' include 'come about' (happen/occur), 'come across' (find by chance), 'come apart' (break into pieces), 'close down' (permanently cease operations), and 'close off' (barricade/block)."
+  ],
+  "formulas": [
+    {
+      "label": "Absence of Obligation Formula",
+      "expr": "Subject + don't/doesn't + have to + V1(base)  OR  Subject + need not + V1(base)"
+    },
+    {
+      "label": "Prohibition Formula",
+      "expr": "Subject + must not (mustn't) + V1(base)  [Cannot / Prohibited]"
+    },
+    {
+      "label": "Verb-Forming Suffix Patterns",
+      "expr": "Noun/Adjective + -ize/-ise  ->  Verb (e.g., priority -> prioritize)  |  Noun/Adj + -ate  ->  Verb (e.g., active -> activate)"
+    },
+    {
+      "label": "Noun-Forming Suffix Patterns",
+      "expr": "Verb + -ment  ->  Noun (e.g., measure -> measurement)  |  Verb + -tion/-ation  ->  Noun (e.g., satisfy -> satisfaction)"
+    }
+  ],
+  "examTip": "Note the syntax of 'need': when used as a modal verb of absence of obligation, 'need not' takes a bare infinitive without 'to' (e.g., 'You need not come'). When used as an ordinary lexical verb, it requires 'to' (e.g., 'You do not need to come').",
+  "keyDefinitions": [
+    {
+      "term": "Absence of Obligation",
+      "definition": "A modality expressing that a person is under no compulsion, necessity, or requirement to perform an act."
+    },
+    {
+      "term": "Prohibition",
+      "definition": "An authoritative ban or legal bar that renders an activity impermissible."
+    },
+    {
+      "term": "Derivational Suffix",
+      "definition": "An affix attached to the end of a word stem that creates a new lexical item, commonly modifying its grammatical word class."
+    },
+    {
+      "term": "Chattel Slavery",
+      "definition": "A historical form of complete ownership where an individual is treated as legal property, bought, sold, and coerced to labor without pay."
+    }
+  ],
+  "eueeFocusTopics": [
+    "Modal verb contrast: 'mustn't' vs 'don't have to' vs 'need not'",
+    "Lexical need ('don't need to') versus modal need ('needn't')",
+    "Morphological word formation via suffixes (-ate, -ize, -ment, -tion)",
+    "Phrasal verbs of 'come' ('come about' vs 'come across')",
+    "Cause-and-effect essay connectors regarding economic development"
+  ]
+}

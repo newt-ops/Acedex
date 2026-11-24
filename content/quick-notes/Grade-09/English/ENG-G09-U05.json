@@ -1,0 +1,57 @@
+{
+  "grade": 9,
+  "subject": "English",
+  "subjectCode": "ENG",
+  "unitNumber": 5,
+  "unitCode": "ENG-G09-U05",
+  "unitTitle": "Horticulture",
+  "examWeight": "10% EUEE",
+  "summaryPoints": [
+    "Second conditional sentences describe hypothetical, unreal, or highly improbable conditions in the present or future, using the simple past in the if-clause and 'would/could/might + V1' in the main clause.",
+    "In standard formal grammar and the second conditional, the subjunctive form 'were' is preferred for all persons (including I, he, she, it), notably in the advice formula 'If I were you, I would...'.",
+    "Third conditional sentences describe impossible conditions referring to the unfulfilled past with imagined past consequences, using the past perfect in the if-clause and 'would/could/might + have + V3' in the main clause.",
+    "Third conditional structures often convey retrospective regret, criticism, or counterfactual past speculation.",
+    "Derivational prefixes expand academic vocabulary: 'ex-' (out/former), 'mis-' (wrongly/badly), 'pre-' (before), 're-' (again), and 'sub-' (under/below).",
+    "Horticulture discourse integrates specialized terminology regarding vegetative cultivation, organic nutrition, and dietary wellbeing."
+  ],
+  "formulas": [
+    {
+      "label": "Second Conditional Formula (Hypothetical/Unreal Present)",
+      "expr": "If + Subject + Simple Past (V2 / were) + , + Subject + would/could/might + V1(base)"
+    },
+    {
+      "label": "Second Conditional Subjunctive Advice",
+      "expr": "If I were you + , + I would + V1(base)"
+    },
+    {
+      "label": "Third Conditional Formula (Counterfactual Past)",
+      "expr": "If + Subject + had + V3(past participle) + , + Subject + would/could/might + have + V3(past participle)"
+    }
+  ],
+  "examTip": "In EUEE questions assessing conditional type 2, the exam often tests the subjunctive 'were' instead of 'was' with singular subjects (e.g., 'If he were honest, he would admit it'). For conditional type 3, verify that the main clause contains 'would have + past participle', not just 'would + base verb'.",
+  "keyDefinitions": [
+    {
+      "term": "Second Conditional",
+      "definition": "A conditional pattern utilized to discuss imaginary, counterfactual, or improbable situations in the present or future."
+    },
+    {
+      "term": "Third Conditional",
+      "definition": "A conditional structure used to analyze hypothetical situations in the past that did not occur, articulating impossible conditions."
+    },
+    {
+      "term": "Subjunctive 'Were'",
+      "definition": "A grammatical mood employed in unreal conditional clauses to express counterfactual or hypothetical statements regardless of grammatical person."
+    },
+    {
+      "term": "Horticulture",
+      "definition": "The branch of plant agriculture dealing with garden crops, encompassing fruits, vegetables, flowers, and ornamental plants."
+    }
+  ],
+  "eueeFocusTopics": [
+    "Second conditional sentence structure (past simple paired with would + V1)",
+    "Subjunctive 'If I were you / If she were'",
+    "Third conditional construction (had + V3 paired with would have + V3)",
+    "Modal shifts in conditionals (could/might indicating capability or lower certainty)",
+    "Prefix semantics: 'mis-' (misunderstand), 're-' (renew), 'sub-' (subdivide)"
+  ]
+}
