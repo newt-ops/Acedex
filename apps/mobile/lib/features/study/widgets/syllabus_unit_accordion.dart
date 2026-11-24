@@ -176,14 +176,20 @@ class _SyllabusUnitAccordionState extends State<SyllabusUnitAccordion> {
                 color: theme.colorScheme.onSurface,
               ),
             ),
-            Text(
-              visibleUnits.isNotEmpty
-                  ? '${visibleUnits.length} of ${widget.subject.units.length} Units • Tap to expand'
-                  : '0 Units Found',
-              style: TextStyle(
-                fontSize: 11.5,
-                fontWeight: FontWeight.w600,
-                color: subtextColor,
+            const SizedBox(width: 8),
+            Flexible(
+              child: Text(
+                visibleUnits.isNotEmpty
+                    ? '${visibleUnits.length} of ${widget.subject.units.length} Units • Tap to expand'
+                    : '0 Units Found',
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
+                textAlign: TextAlign.right,
+                style: TextStyle(
+                  fontSize: 11.5,
+                  fontWeight: FontWeight.w600,
+                  color: subtextColor,
+                ),
               ),
             ),
           ],
@@ -523,8 +529,8 @@ class _SyllabusUnitAccordionState extends State<SyllabusUnitAccordion> {
                                       child: Row(
                                         children: [
                                           Container(
-                                            width: 38,
-                                            height: 38,
+                                            width: 36,
+                                            height: 36,
                                             decoration: BoxDecoration(
                                               color: primaryColor,
                                               borderRadius: BorderRadius.circular(12),
@@ -533,29 +539,33 @@ class _SyllabusUnitAccordionState extends State<SyllabusUnitAccordion> {
                                             child: const HugeIcon(
                                               icon: HugeIcons.strokeRoundedAward01,
                                               color: Colors.white,
-                                              size: 19,
+                                              size: 18,
                                             ),
                                           ),
-                                          const SizedBox(width: 10),
+                                          const SizedBox(width: 8),
                                           Expanded(
                                             child: Column(
                                               crossAxisAlignment: CrossAxisAlignment.start,
                                               children: [
                                                 Row(
                                                   children: [
-                                                    Text(
-                                                      'Unit Assessment',
-                                                      style: TextStyle(
-                                                        fontSize: 13,
-                                                        fontWeight: FontWeight.w800,
-                                                        letterSpacing: -0.1,
-                                                        color: theme.colorScheme.onSurface,
+                                                    Flexible(
+                                                      child: Text(
+                                                        'Unit Assessment',
+                                                        maxLines: 1,
+                                                        overflow: TextOverflow.ellipsis,
+                                                        style: TextStyle(
+                                                          fontSize: 12.5,
+                                                          fontWeight: FontWeight.w800,
+                                                          letterSpacing: -0.1,
+                                                          color: theme.colorScheme.onSurface,
+                                                        ),
                                                       ),
                                                     ),
                                                     if (unit.assessmentScore != null) ...[
-                                                      const SizedBox(width: 6),
+                                                      const SizedBox(width: 5),
                                                       Container(
-                                                        padding: const EdgeInsets.symmetric(horizontal: 5.5, vertical: 1.5),
+                                                        padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 1.5),
                                                         decoration: BoxDecoration(
                                                           color: (isDark ? AppColors.darkSuccess : AppColors.success)
                                                               .withValues(alpha: 0.18),
@@ -576,22 +586,24 @@ class _SyllabusUnitAccordionState extends State<SyllabusUnitAccordion> {
                                                 const SizedBox(height: 2),
                                                 Text(
                                                   '15 Questions • Ethiopian Curriculum Bank',
+                                                  maxLines: 1,
+                                                  overflow: TextOverflow.ellipsis,
                                                   style: TextStyle(
-                                                    fontSize: 10.5,
+                                                    fontSize: 10,
                                                     color: subtextColor,
                                                   ),
                                                 ),
                                               ],
                                             ),
                                           ),
-                                          const SizedBox(width: 8),
+                                          const SizedBox(width: 6),
 
                                           // Quick Notes button inside assessment card
                                           AcedexBounceable(
                                             onTap: () => _openQuickNotesForUnit(unit),
                                             child: Container(
-                                              width: 32,
-                                              height: 32,
+                                              width: 30,
+                                              height: 30,
                                               decoration: BoxDecoration(
                                                 color: surfaceColor,
                                                 borderRadius: BorderRadius.circular(999),
@@ -601,7 +613,7 @@ class _SyllabusUnitAccordionState extends State<SyllabusUnitAccordion> {
                                               child: HugeIcon(
                                                 icon: HugeIcons.strokeRoundedNote01,
                                                 color: subtextColor,
-                                                size: 14,
+                                                size: 13,
                                               ),
                                             ),
                                           ),
@@ -612,7 +624,7 @@ class _SyllabusUnitAccordionState extends State<SyllabusUnitAccordion> {
                                             onTap: () => _handleUnitAssessmentTap(unit),
                                             child: Container(
                                               height: 32,
-                                              padding: const EdgeInsets.symmetric(horizontal: 12),
+                                              padding: const EdgeInsets.symmetric(horizontal: 10),
                                               decoration: BoxDecoration(
                                                 color: primaryColor,
                                                 borderRadius: BorderRadius.circular(999),
@@ -694,12 +706,16 @@ class _SyllabusUnitAccordionState extends State<SyllabusUnitAccordion> {
                                                           size: 13,
                                                         ),
                                                         const SizedBox(width: 5),
-                                                        Text(
-                                                          'Quick Notes',
-                                                          style: TextStyle(
-                                                            fontSize: 11.5,
-                                                            fontWeight: FontWeight.w700,
-                                                            color: theme.colorScheme.onSurface,
+                                                        Flexible(
+                                                          child: Text(
+                                                            'Quick Notes',
+                                                            maxLines: 1,
+                                                            overflow: TextOverflow.ellipsis,
+                                                            style: TextStyle(
+                                                              fontSize: 11.5,
+                                                              fontWeight: FontWeight.w700,
+                                                              color: theme.colorScheme.onSurface,
+                                                            ),
                                                           ),
                                                         ),
                                                       ],
@@ -730,12 +746,16 @@ class _SyllabusUnitAccordionState extends State<SyllabusUnitAccordion> {
                                                           size: 15,
                                                         ),
                                                         const SizedBox(width: 5),
-                                                        Text(
-                                                          'Complete Unit',
-                                                          style: TextStyle(
-                                                            fontSize: 11.5,
-                                                            fontWeight: FontWeight.w700,
-                                                            color: primaryColor,
+                                                        Flexible(
+                                                          child: Text(
+                                                            'Complete Unit',
+                                                            maxLines: 1,
+                                                            overflow: TextOverflow.ellipsis,
+                                                            style: TextStyle(
+                                                              fontSize: 11.5,
+                                                              fontWeight: FontWeight.w700,
+                                                              color: primaryColor,
+                                                            ),
                                                           ),
                                                         ),
                                                       ],
