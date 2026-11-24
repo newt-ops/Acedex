@@ -1,0 +1,61 @@
+{
+  "grade": 11,
+  "subject": "English",
+  "subjectCode": "ENG",
+  "unitNumber": 9,
+  "unitCode": "ENG-G11-U09",
+  "unitTitle": "Indigenous Conflict Resolution",
+  "examWeight": "10% EUEE",
+  "summaryPoints": [
+    "Case defines the grammatical relationship of nouns and pronouns to other sentence constituents: the nominative (subjective) case fills subject positions and subject complements following linking verbs ('It was he'), whereas the accusative (objective) case serves as direct objects, indirect objects, and objects of prepositions ('between you and me').",
+    "In formal comparisons introduced by 'than' or 'as', pronouns take the nominative case when an auxiliary or verb is implied (e.g., 'Tom is taller than I [am]', NOT 'than me').",
+    "The past continuous tense ('was/were + V-ing') represents an ongoing, uninterrupted background action in the past, frequently interrupted by a simple past punctive event.",
+    "The past perfect continuous tense ('had been + V-ing') shows that an action began in the past and continued uninterrupted up to another specific past moment or until an event concluded it.",
+    "Idiomatic expressions are non-compositional figures of speech whose overarching figurative meanings cannot be deduced from the literal definitions of their individual constituent words (e.g., 'let the cat out of the bag', 'kill two birds with one stone', 'under the weather').",
+    "In formal spoken discourse, apologizing and clarifying follow distinct social routines: asking for clarification ('Could you rephrase that?'), making apologies ('I do apologize for...'), and accepting apologies ('Never mind', 'That's all right')."
+  ],
+  "formulas": [
+    {
+      "label": "Formal Pronoun Case in Comparison Formula",
+      "expr": "Subject1 + Verb + comparative + than + Subject Pronoun(nominative) + (Auxiliary Verb)  (e.g., 'She is taller than I [am]')"
+    },
+    {
+      "label": "Predicate Nominative Case Formula",
+      "expr": "It + is / was + Pronoun (nominative: he, she, they, I) + Relative Clause  (e.g., 'It was he who called')"
+    },
+    {
+      "label": "Past Perfect Continuous Sentence Structure",
+      "expr": "Subject + had been + V-ing(present participle) + for / since + Duration + before / when + Subject + V2(past simple)"
+    },
+    {
+      "label": "Interrupted Past Narrative Formula",
+      "expr": "Subject + was / were + V-ing + when + Subject + V2  OR  While + Subject + was / were + V-ing + , + Subject + V2"
+    }
+  ],
+  "examTip": "In EUEE pronoun case items, prepositions always govern the accusative (objective) case: expressions like 'between you and I' are grammatically incorrect; the correct form is 'between you and me'. In formal grammar, linking verbs take the nominative case: 'It was he (NOT him) who spoke.'",
+  "keyDefinitions": [
+    {
+      "term": "Nominative (Subjective) Case",
+      "definition": "The grammatical case form assumed by a noun or pronoun when it functions as the grammatical subject of a finite verb or as a predicate nominative."
+    },
+    {
+      "term": "Accusative (Objective) Case",
+      "definition": "The grammatical case form assumed by a noun or pronoun when it functions as a direct object, indirect object, or object of a preposition."
+    },
+    {
+      "term": "Past Perfect Continuous",
+      "definition": "A verb form constructed with 'had been' plus a present participle, expressing the continuous duration of an activity preceding another past event."
+    },
+    {
+      "term": "Idiom (Idiomatic Expression)",
+      "definition": "A fixed phrasal expression whose semantic meaning is metaphorical and cannot be derived literally from its constituent individual words."
+    }
+  ],
+  "eueeFocusTopics": [
+    "Nominative versus accusative pronoun case following prepositions ('between you and me')",
+    "Case following linking verbs and comparative conjunctions ('than I / than he')",
+    "Past continuous versus past perfect continuous aspect in narrative sequencing",
+    "High-frequency English idiomatic expressions and figurative interpretations",
+    "Phrasal verbs based on 'put' ('put across', 'put aside', 'put together', 'put away')"
+  ]
+}

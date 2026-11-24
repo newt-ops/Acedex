@@ -1,0 +1,61 @@
+{
+  "grade": 11,
+  "subject": "English",
+  "subjectCode": "ENG",
+  "unitNumber": 8,
+  "unitCode": "ENG-G11-U08",
+  "unitTitle": "Efficiency of Health Services",
+  "examWeight": "10% EUEE",
+  "summaryPoints": [
+    "Adverbial clauses of manner express how an action is performed, comparing behavior using subordinating conjunctions such as 'as', 'like', 'the way', 'as if', and 'as though'.",
+    "When 'as if' or 'as though' introduces an unreal, counterfactual, or hypothetical manner, the clause requires a past tense verb or subjunctive 'were' (e.g., 'He talks as if he were the boss').",
+    "Passive voice across complex aspects consistently conjugates the auxiliary 'be' into the aspect of the active verb plus past participle (V3): present/past continuous passives use 'being + V3' (e.g., 'is being repaired'), while present/past perfect passives use 'been + V3' (e.g., 'has been repaired').",
+    "Quantifiers modify nouns based on countability: 'much', 'little', 'a little', 'a bit of', and 'a great deal of' modify uncountable nouns; 'many', 'few', 'a few', 'several', and 'a number of' modify plural countable nouns; and 'some', 'any', 'a lot of', and 'plenty of' modify both.",
+    "'Few' and 'little' without an indefinite article express negative evaluation, indicating scarcity or inadequacy (almost none); conversely, 'a few' and 'a little' express positive evaluation, denoting a modest but sufficient quantity.",
+    "Cohesive transitional devices govern paragraph logic: addition (furthermore, moreover), contrast (nevertheless, on the other hand), exemplification (for instance, specifically), result (consequently, therefore, hence), and conclusion (in short, in summary)."
+  ],
+  "formulas": [
+    {
+      "label": "Hypothetical Manner Clause with 'As if / As though'",
+      "expr": "Subject + Verb(present) + as if / as though + Subject + Simple Past (were)  [Expresses unreality]"
+    },
+    {
+      "label": "Continuous Passive Voice Formula",
+      "expr": "Object + is / am / are / was / were + being + V3(past participle) + (by + Agent)"
+    },
+    {
+      "label": "Perfect Passive Voice Formula",
+      "expr": "Object + has / have / had + been + V3(past participle) + (by + Agent)"
+    },
+    {
+      "label": "Quantifier Meaning Distinction Formula",
+      "expr": "few / little = negative (insufficient, nearly none)  |  a few / a little = positive (modest, but sufficient)"
+    }
+  ],
+  "examTip": "In EUEE quantifier questions, remember that 'knowledge', 'information', 'advice', 'furniture', and 'equipment' are non-count nouns and must take 'little/much', never 'few/many'. Also, distinguish 'few' from 'a few': 'I have few friends' means I am isolated and have almost no friends (negative); 'I have a few friends' means I have several friends (positive).",
+  "keyDefinitions": [
+    {
+      "term": "Adverbial Clause of Manner",
+      "definition": "A dependent adverbial clause describing how or in what manner an action is executed, or comparing it hypothetically using 'as if' or 'as though'."
+    },
+    {
+      "term": "Continuous Passive",
+      "definition": "A passive construction incorporating the auxiliary 'being' alongside a past participle, denoting an ongoing, uninterrupted passive action."
+    },
+    {
+      "term": "Quantifier",
+      "definition": "A determiner indicating the numerical or proportional quantity of a noun, subject to strict countable versus uncountable syntactic constraints."
+    },
+    {
+      "term": "Cohesive Device",
+      "definition": "A transitional lexical linker or conjunction that establishes logical semantic relations between successive sentences and paragraphs."
+    }
+  ],
+  "eueeFocusTopics": [
+    "Subjunctive and hypothetical manner clauses with 'as if' and 'as though'",
+    "Continuous and perfect passive voice transformations across all tenses",
+    "Quantifiers for count versus non-count nouns ('few' vs 'little', 'many' vs 'much')",
+    "Positive versus negative connotations of '(a) few' and '(a) little'",
+    "Phrasal verbs based on 'put' and 'pull' ('put off', 'put away', 'pull through', 'put down')"
+  ]
+}

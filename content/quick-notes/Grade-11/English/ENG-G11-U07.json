@@ -1,0 +1,61 @@
+{
+  "grade": 11,
+  "subject": "English",
+  "subjectCode": "ENG",
+  "unitNumber": 7,
+  "unitCode": "ENG-G11-U07",
+  "unitTitle": "Patriotism",
+  "examWeight": "10% EUEE",
+  "summaryPoints": [
+    "Adverbs are categorized into five functional classes: manner (how an action is executed: beautifully, fluently), degree/intensity (extent or strength: almost, quite, very, extremely), frequency (how often: always, seldom, rarely), place (spatial location: here, everywhere), and time (temporal occurrence: yesterday, soon).",
+    "Adverbial clauses of time detail when an action happens, introduced by: 'when', 'before', 'after', 'while', 'as', 'by the time', 'as soon as', 'until', 'since', and 'whenever'.",
+    "Multiple adjectives modifying a single noun adhere to a fixed cumulative sequence: Determiner -> Quantity -> Quality/Opinion -> Size -> Age -> Shape -> Color -> Proper Origin -> Purpose/Qualifier.",
+    "Adjectives function either attributively (standing immediately before the noun they modify) or predicatively (standing in the predicate after linking verbs like be, look, seem, feel, become); certain 'a-' adjectives (alive, asleep, awake, afraid, ashamed, alert) function exclusively as predicative adjectives.",
+    "Tag questions confirm statements: affirmative statements take negative tags; negative statements take affirmative tags; 'I am' takes the irregular tag 'aren't I?'; imperative requests/commands take 'will you / would you / won't you'; 'Let's' takes 'shall we?'; and statements with negative adverbs (hardly, scarcely, seldom, rarely, never) or negative subjects take affirmative tags.",
+    "Indefinite pronouns designating persons (everybody, someone, nobody, no one) take singular verbs in statements but convert to plural pronoun 'they' in question tags."
+  ],
+  "formulas": [
+    {
+      "label": "Cumulative Order of Adjectives Formula",
+      "expr": "Determiner + Quantity + Quality/Opinion + Size + Age + Shape + Color + Origin + Purpose/Qualifier + Head Noun"
+    },
+    {
+      "label": "Irregular Question Tag: First Person Singular",
+      "expr": "I am + complement + , + aren't I?  |  I am not + complement + , + am I?"
+    },
+    {
+      "label": "Question Tag with Inherently Negative Adverbs",
+      "expr": "Subject + hardly / rarely / seldom / never + Verb + , + Positive Auxiliary + Pronoun?  (e.g., 'She rarely speaks, does she?')"
+    },
+    {
+      "label": "Question Tag with Indefinite Impersonal Pronouns",
+      "expr": "Everybody / Nobody + Verb(singular) + , + Auxiliary(plural) + they?  (e.g., 'Nobody called, did they?')"
+    }
+  ],
+  "examTip": "In EUEE question tag items, check for hidden negative words (barely, hardly, rarely, scarcely, seldom, never, neither): they make the statement negative, requiring a POSITIVE tag (e.g., 'He hardly studied, did he?'). Also remember that words like 'someone', 'everybody', and 'nobody' require the pronoun 'they' in the tag question, which will force the auxiliary to be plural ('Everybody knows him, don't they?').",
+  "keyDefinitions": [
+    {
+      "term": "Attributive Adjective",
+      "definition": "An adjective that directly precedes the noun it modifies within a noun phrase (e.g., 'the red box')."
+    },
+    {
+      "term": "Predicative Adjective",
+      "definition": "An adjective that appears in the predicate following a copular or linking verb, functioning as a subject complement (e.g., 'the girl is asleep')."
+    },
+    {
+      "term": "Tag Question",
+      "definition": "A truncated interrogative clause appended to a declarative statement consisting of an auxiliary verb and a pronoun, used to seek confirmation or invite agreement."
+    },
+    {
+      "term": "Cumulative Adjectives",
+      "definition": "Adjectives that build upon each other in a specific hierarchical order to modify a noun, without requiring commas between them."
+    }
+  ],
+  "eueeFocusTopics": [
+    "Rigid cumulative order of adjectives modifying a single noun",
+    "Attributive-only versus predicative-only adjectives (e.g., 'alive', 'asleep', 'afraid')",
+    "Question tag polarity reversals, negative adverb traps, and 'aren't I?'",
+    "Question tags for indefinite pronouns ('everybody / nobody' -> 'they')",
+    "Phrasal verbs based on 'pull' and 'point' ('pull through', 'pull out', 'point out')"
+  ]
+}

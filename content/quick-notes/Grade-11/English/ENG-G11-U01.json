@@ -1,0 +1,61 @@
+{
+  "grade": 11,
+  "subject": "English",
+  "subjectCode": "ENG",
+  "unitNumber": 1,
+  "unitCode": "ENG-G11-U01",
+  "unitTitle": "Environmental Hazards",
+  "examWeight": "10% EUEE",
+  "summaryPoints": [
+    "The simple present tense expresses regular habits, repeated actions, scientific facts, and universal truths using base verbs (V1) or third-person singular inflections (-s/-es).",
+    "The present simple passive shifts communicative focus from the agent to the process or entity undergoing the action; it is formed with 'is/am/are + V3' and is standard for technical descriptions, industrial procedures, and scientific processes.",
+    "Adverbial clauses of concession introduce unexpected contrasts to the main clause using subordinating conjunctions: 'although', 'even though', and 'though'; 'though' can appear sentence-initially, medially, or finally, whereas 'although' cannot stand at the end of a clause.",
+    "Sentences are structurally classified as simple (one independent clause), compound (independent clauses joined by coordinating conjunctions, semicolons, or conjunctive adverbs), complex (one independent clause plus dependent clauses), and compound-complex.",
+    "Core sentence structure errors frequently assessed include sentence fragments (lacking a finite predicate or complete thought), run-ons (fused independent clauses without punctuation), and comma splices (independent clauses improperly joined solely by a comma).",
+    "English pure vowels (monophthongs) are articulated with a fixed tongue position and height, contrasting short and long vowel phonemes (such as /i:/ vs /ɪ/, /u:/ vs /ʊ/, and /æ/ vs /ʌ/) which distinguish minimal pairs."
+  ],
+  "formulas": [
+    {
+      "label": "Present Simple Passive Voice (Process Description)",
+      "expr": "Patient/Object + is / am / are + V3(past participle) + (by + Agent)"
+    },
+    {
+      "label": "Adverbial Clause of Concession Structure",
+      "expr": "Although / Even though / Though + Subject + Verb + , + Main Clause  OR  Main Clause + although / even though / though + Dependent Clause"
+    },
+    {
+      "label": "Compound Sentence Punctuation Formula",
+      "expr": "Independent Clause + , + Coordinating Conjunction (FANBOYS) + Independent Clause  OR  Independent Clause + ; + Independent Clause"
+    },
+    {
+      "label": "Comma Splice Correction Formula",
+      "expr": "Incorrect: Clause 1, Clause 2  ->  Correct: Clause 1. Clause 2  OR  Clause 1; Clause 2  OR  Clause 1, and Clause 2"
+    }
+  ],
+  "examTip": "In EUEE error identification and sentence structure questions, watch for comma splices: two complete independent clauses separated only by a comma without a coordinating conjunction (e.g., 'The doctor performed the operation, the patient died' is incorrect; it must use a period, semicolon, or coordinating conjunction). Also remember that 'although' cannot be placed at the very end of a sentence, while 'though' can.",
+  "keyDefinitions": [
+    {
+      "term": "Adverbial Clause of Concession",
+      "definition": "A subordinate clause introduced by conjunctions like 'although', 'even though', or 'though' that expresses an idea in contrast to or unexpected in relation to the main clause."
+    },
+    {
+      "term": "Present Simple Passive",
+      "definition": "A verbal construction consisting of the present copula (is/am/are) followed by a past participle, highlighting the recipient or result of a routine action or multi-step process."
+    },
+    {
+      "term": "Comma Splice",
+      "definition": "A structural grammatical error occurring when two independent clauses are joined solely with a comma without an accompanying coordinating conjunction."
+    },
+    {
+      "term": "Monophthong (Pure Vowel)",
+      "definition": "A single vowel sound produced with the tongue, lips, and vocal tract held in a single stable position without gliding throughout its articulation."
+    }
+  ],
+  "eueeFocusTopics": [
+    "Present simple passive voice in describing industrial and natural processes",
+    "Adverbial clauses of concession ('although' vs 'though' syntactic constraints)",
+    "Sentence structural classification (simple, compound, complex, compound-complex)",
+    "Correction of sentence fragments, run-ons, and comma splices",
+    "Phrasal verbs based on environmental actions ('step in', 'call for', 'result in', 'turn into')"
+  ]
+}
