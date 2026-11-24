@@ -31,9 +31,9 @@ export default function NotesContributorPage() {
   const [gradeModalTarget, setGradeModalTarget] = useState<number | null>(null);
   const [isGradeModalOpen, setIsGradeModalOpen] = useState<boolean>(false);
 
-  const loadUnits = useCallback(async () => {
+  const loadUnits = useCallback(async (silent = false) => {
     if (!profile) return;
-    setLoading(true);
+    if (!silent) setLoading(true);
     setError(null);
     try {
       const data = await api.getNoteUnits(profile.subjectCode, profile.contributorId);
@@ -80,8 +80,11 @@ export default function NotesContributorPage() {
   const subjectName = profile?.subjectName || SUBJECTS[subjectCode] || subjectCode;
 
   const approvedUnits = unitTree?.approvedUnits || 0;
+  const submittedUnits = unitTree?.submittedUnits || 0;
   const totalUnits = unitTree?.totalUnits || 32;
   const coveragePct = totalUnits > 0 ? Math.round((approvedUnits / totalUnits) * 100) : 0;
+  const totalSubmittedPct =
+    totalUnits > 0 ? Math.round(((approvedUnits + submittedUnits) / totalUnits) * 100) : 0;
 
   if (authLoading || !profile) {
     return (
@@ -116,22 +119,36 @@ export default function NotesContributorPage() {
             </p>
           </div>
 
-          {/* Right: Approved Coverage Sub-Card */}
-          <div className="w-full lg:w-[325px] rounded-[16px] sm:rounded-[18px] bg-[#FBFBFD] border border-slate-200/75 px-4 sm:px-5 py-3.5 sm:py-4 shadow-[inset_0_1px_2px_rgba(15,23,42,0.02)]">
+          {/* Right: Approved & Review Coverage Sub-Card */}
+          <div className="w-full lg:w-[350px] rounded-[16px] sm:rounded-[18px] bg-[#FBFBFD] dark:bg-slate-900/60 border border-slate-200/75 dark:border-slate-800 px-4 sm:px-5 py-3.5 sm:py-4 shadow-[inset_0_1px_2px_rgba(15,23,42,0.02)]">
             <div className="flex items-center justify-between gap-3 mb-2.5">
-              <span className="text-[12px] sm:text-[12.5px] font-medium text-slate-500">Approved Coverage</span>
-              <div className="text-[12.5px] sm:text-[13px] font-bold tabular-nums text-slate-900">
-                {approvedUnits} / {totalUnits} Units
-                <span className="ml-1 text-[#7E22CE] font-semibold">({coveragePct}%)</span>
+              <span className="text-[12px] sm:text-[12.5px] font-medium text-slate-500 dark:text-slate-400">
+                Curriculum Review
+              </span>
+              <div className="text-[12.5px] sm:text-[13px] font-bold tabular-nums text-slate-900 dark:text-white">
+                {approvedUnits} Approved
+                {submittedUnits > 0 && (
+                  <span className="ml-1.5 text-amber-600 dark:text-amber-400 font-semibold">
+                    &bull; {submittedUnits} In Review
+                  </span>
+                )}
               </div>
             </div>
 
             {/* Animated Progress Track */}
-            <div className="w-full h-2.5 rounded-full bg-slate-200/75 overflow-hidden p-[1px]">
+            <div className="w-full h-2.5 rounded-full bg-slate-200/75 dark:bg-slate-800 overflow-hidden p-[1px]">
               <div
-                style={{ width: `${coveragePct}%` }}
+                style={{ width: `${Math.max(coveragePct, totalSubmittedPct)}%` }}
                 className="h-full rounded-full bg-gradient-to-r from-[#7E22CE] via-[#9333EA] to-[#10B981] transition-all duration-700 ease-spring"
               />
+            </div>
+
+            <div className="mt-2 flex items-center justify-between text-[11px] text-slate-400 dark:text-slate-500 font-mono">
+              <span>{totalUnits} Units Total</span>
+              <span>
+                {coveragePct}% Approved
+                {submittedUnits > 0 ? ` (${totalSubmittedPct}% Submitted)` : ''}
+              </span>
             </div>
           </div>
         </section>
@@ -161,7 +178,7 @@ export default function NotesContributorPage() {
             <Button
               size="sm"
               variant="outline"
-              onClick={loadUnits}
+              onClick={() => loadUnits()}
               icon={<HugeiconsIcon icon={Refresh01Icon} size={14} strokeWidth={1.5} />}
             >
               Retry
@@ -230,7 +247,7 @@ export default function NotesContributorPage() {
             setGradeModalTarget(null);
           }}
           onSuccess={() => {
-            loadUnits();
+            loadUnits(true);
           }}
         />
       )}

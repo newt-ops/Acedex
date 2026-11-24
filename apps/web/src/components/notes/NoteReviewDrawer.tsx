@@ -257,7 +257,7 @@ export function NoteReviewDrawer({
               type="button"
               onClick={handleApprove}
               disabled={actionLoading}
-              className="btn-emerald-solid px-4 py-2 rounded-[12px] text-white text-[13px] font-semibold inline-flex items-center gap-1.5 cursor-pointer disabled:opacity-50"
+              className="btn-emerald-solid bg-emerald-600 hover:bg-emerald-700 px-4 py-2 rounded-[12px] text-white text-[13px] font-semibold inline-flex items-center gap-1.5 cursor-pointer disabled:opacity-50 shadow-sm"
             >
               <HugeiconsIcon icon={CheckmarkCircle02Icon} size={15} strokeWidth={2.2} />
               <span>{actionLoading ? 'Approving...' : 'Approve Note'}</span>

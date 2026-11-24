@@ -109,7 +109,7 @@ export function NoteSubmissionsTable({
               type="button"
               onClick={handleBulkApprove}
               disabled={bulkLoading}
-              className="btn-emerald-solid px-3.5 py-1.5 rounded-[11px] text-white text-[12.5px] font-semibold inline-flex items-center gap-1.5 cursor-pointer disabled:opacity-50"
+              className="btn-emerald-solid bg-emerald-600 hover:bg-emerald-700 px-3.5 py-1.5 rounded-[11px] text-white text-[12.5px] font-semibold inline-flex items-center gap-1.5 cursor-pointer disabled:opacity-50 shadow-sm"
             >
               <HugeiconsIcon icon={CheckmarkCircle02Icon} size={14} strokeWidth={2.2} />
               <span>{bulkLoading ? 'Approving...' : 'Approve Selected'}</span>
@@ -256,16 +256,22 @@ export function NoteSubmissionsTable({
                         <span>Review</span>
                       </button>
 
-                      {sub.status === 'submitted' && (
+                      {sub.status !== 'approved' ? (
                         <button
                           type="button"
                           onClick={() => onApprove(sub)}
                           disabled={isApproving}
-                          className="btn-emerald-solid px-3.5 py-1.5 rounded-[11px] text-white text-[12.5px] font-semibold inline-flex items-center gap-1.5 cursor-pointer disabled:opacity-50"
+                          className="btn-emerald-solid bg-emerald-600 hover:bg-emerald-700 px-3.5 py-1.5 rounded-[11px] text-white text-[12.5px] font-semibold inline-flex items-center gap-1.5 cursor-pointer disabled:opacity-50 shadow-sm"
+                          title="Approve quick note"
                         >
                           <HugeiconsIcon icon={CheckmarkCircle02Icon} size={14} strokeWidth={2.2} />
                           <span>{isApproving ? 'Approving...' : 'Approve'}</span>
                         </button>
+                      ) : (
+                        <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-[10px] bg-emerald-50 text-[11.5px] font-semibold text-emerald-700 border border-emerald-200/80">
+                          <HugeiconsIcon icon={CheckmarkCircle02Icon} size={13} strokeWidth={2.2} className="text-emerald-500" />
+                          <span>Approved</span>
+                        </span>
                       )}
                     </div>
                   </td>

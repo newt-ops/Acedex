@@ -116,7 +116,7 @@ export function SubmissionsTable({
               type="button"
               onClick={handleBulkApprove}
               disabled={bulkLoading}
-              className="btn-emerald-solid px-3.5 py-1.5 rounded-[11px] text-white text-[12.5px] font-semibold inline-flex items-center gap-1.5 cursor-pointer disabled:opacity-50"
+              className="btn-emerald-solid bg-emerald-600 hover:bg-emerald-700 px-3.5 py-1.5 rounded-[11px] text-white text-[12.5px] font-semibold inline-flex items-center gap-1.5 cursor-pointer disabled:opacity-50 shadow-sm"
             >
               <HugeiconsIcon icon={CheckmarkCircle02Icon} size={14} strokeWidth={2.2} />
               <span>{bulkLoading ? 'Approving...' : 'Approve Selected'}</span>
@@ -257,7 +257,7 @@ export function SubmissionsTable({
                           type="button"
                           onClick={() => onApprove(sub)}
                           disabled={isApproving}
-                          className="btn-emerald-solid px-3.5 py-1.5 rounded-[11px] text-white text-[12.5px] font-semibold inline-flex items-center gap-1.5 cursor-pointer disabled:opacity-50"
+                          className="btn-emerald-solid bg-emerald-600 hover:bg-emerald-700 px-3.5 py-1.5 rounded-[11px] text-white text-[12.5px] font-semibold inline-flex items-center gap-1.5 cursor-pointer disabled:opacity-50 shadow-sm"
                           title="Approve unit"
                         >
                           <HugeiconsIcon icon={CheckmarkCircle02Icon} size={14} strokeWidth={2.2} />

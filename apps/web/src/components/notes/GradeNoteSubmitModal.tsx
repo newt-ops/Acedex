@@ -19,6 +19,8 @@ import {
   CheckmarkCircle02Icon,
   AlertCircleIcon,
   Upload01Icon,
+  Refresh01Icon,
+  Clock01Icon,
 } from '@hugeicons/core-free-icons';
 
 interface GradeNoteSubmitModalProps {
@@ -214,6 +216,16 @@ Exact JSON Schema:
 
   const currentPreviewNote = parsedNotes[selectedPreviewUnitIdx] || parsedNotes[0];
 
+  const inReviewUnitsCount = useMemo(() => {
+    return units.filter((u) => u.status === 'submitted').length;
+  }, [units]);
+
+  const approvedUnitsCount = useMemo(() => {
+    return units.filter((u) => u.status === 'approved').length;
+  }, [units]);
+
+  const isResubmission = inReviewUnitsCount > 0 || approvedUnitsCount > 0;
+
   return (
     <Modal
       isOpen={isOpen}
@@ -221,19 +233,19 @@ Exact JSON Schema:
       maxWidth="4xl"
       title={
         <div className="flex items-center gap-2.5">
-          <div className="w-7 h-7 rounded-lg bg-purple-50 border border-purple-200/70 flex items-center justify-center text-[#7E22CE] shrink-0">
-            <HugeiconsIcon icon={Upload01Icon} size={16} strokeWidth={2} />
+          <div className="w-7 h-7 rounded-lg bg-purple-50 dark:bg-purple-950/40 border border-purple-200/70 dark:border-purple-800/60 flex items-center justify-center text-[#7E22CE] dark:text-purple-300 shrink-0">
+            <HugeiconsIcon icon={isResubmission ? Refresh01Icon : Upload01Icon} size={16} strokeWidth={2} />
           </div>
-          <span className="font-display text-[18px] sm:text-[19px] font-extrabold tracking-[-0.02em] text-slate-900 truncate">
-            Submit Grade {grade} Notes
+          <span className="font-display text-[18px] sm:text-[19px] font-extrabold tracking-[-0.02em] text-slate-900 dark:text-white truncate">
+            {isResubmission ? `Resubmit Grade ${grade} Notes` : `Submit Grade ${grade} Notes`}
           </span>
         </div>
       }
       description={
-        <span className="text-[12.5px] sm:text-[13px] text-slate-500">
+        <span className="text-[12.5px] sm:text-[13px] text-slate-500 dark:text-slate-400">
           Target:{' '}
-          <span className="font-mono font-bold text-[#7E22CE]">Grade {grade} {subjectName}</span>
-          <span className="text-slate-600"> — Full Textbook Notes ({units.length} Units)</span>
+          <span className="font-mono font-bold text-[#7E22CE] dark:text-purple-400">Grade {grade} {subjectName}</span>
+          <span className="text-slate-600 dark:text-slate-400"> — Full Textbook Notes ({units.length} Units)</span>
         </span>
       }
       footer={
@@ -242,7 +254,7 @@ Exact JSON Schema:
             type="button"
             onClick={handleReset}
             disabled={submitting}
-            className="w-full sm:w-auto min-h-[44px] sm:min-h-0 px-4 py-2.5 rounded-[12px] text-[13px] font-semibold text-slate-500 hover:text-slate-800 hover:bg-slate-100/80 transition-colors cursor-pointer"
+            className="w-full sm:w-auto min-h-[44px] sm:min-h-0 px-4 py-2.5 rounded-[12px] text-[13px] font-semibold text-slate-500 hover:text-slate-800 hover:bg-slate-100/80 dark:hover:bg-slate-800 transition-colors cursor-pointer"
           >
             Cancel
           </button>
@@ -252,7 +264,7 @@ Exact JSON Schema:
               type="button"
               onClick={handleTestAutoFix}
               disabled={!rawText.trim() || sanitizing || submitting || submitSuccess}
-              className="inline-flex items-center justify-center gap-1.5 sm:gap-2 min-h-[44px] sm:min-h-0 px-3.5 sm:px-4 py-2.5 rounded-[13px] bg-white hover:bg-purple-50/60 border border-slate-200/90 hover:border-purple-300 text-[12.5px] sm:text-[13px] font-semibold text-slate-700 hover:text-[#7E22CE] shadow-[0_1px_2px_rgba(15,23,42,0.03)] transition-all duration-200 active:scale-95 disabled:opacity-50 cursor-pointer"
+              className="inline-flex items-center justify-center gap-1.5 sm:gap-2 min-h-[44px] sm:min-h-0 px-3.5 sm:px-4 py-2.5 rounded-[13px] bg-white dark:bg-slate-900 hover:bg-purple-50/60 dark:hover:bg-slate-800 border border-slate-200/90 dark:border-slate-800 hover:border-purple-300 text-[12.5px] sm:text-[13px] font-semibold text-slate-700 dark:text-slate-300 hover:text-[#7E22CE] dark:hover:text-purple-400 shadow-[0_1px_2px_rgba(15,23,42,0.03)] transition-all duration-200 active:scale-95 disabled:opacity-50 cursor-pointer"
             >
               <HugeiconsIcon icon={SparklesIcon} size={15} className="text-[#7E22CE] shrink-0" strokeWidth={1.5} />
               <span>{sanitizing ? 'Verifying...' : 'Verify & Preview'}</span>
@@ -277,9 +289,11 @@ Exact JSON Schema:
                 </span>
               ) : (
                 <span className="inline-flex items-center gap-1.5 sm:gap-2">
-                  <HugeiconsIcon icon={SentIcon} size={15} className="text-white shrink-0" strokeWidth={1.8} />
+                  <HugeiconsIcon icon={isResubmission ? Refresh01Icon : SentIcon} size={15} className="text-white shrink-0" strokeWidth={1.8} />
                   <span>
-                    {parsedNotes.length > 0 ? `Submit All ${parsedNotes.length} Units` : `Submit Grade ${grade} Notes`}
+                    {parsedNotes.length > 0
+                      ? `${isResubmission ? 'Resubmit' : 'Submit'} All ${parsedNotes.length} Units`
+                      : `${isResubmission ? 'Resubmit' : 'Submit'} Grade ${grade} Notes`}
                   </span>
                 </span>
               )}
@@ -289,6 +303,16 @@ Exact JSON Schema:
       }
     >
       <div className="space-y-4">
+        {/* Re-submission Pending Notice Banner */}
+        {inReviewUnitsCount > 0 && (
+          <div className="rounded-[14px] bg-amber-50/90 dark:bg-amber-950/30 border border-amber-200/80 dark:border-amber-800/60 p-3 sm:px-4 sm:py-3 flex items-center gap-2.5 text-[12.5px] text-amber-800 dark:text-amber-300">
+            <HugeiconsIcon icon={Clock01Icon} size={16} strokeWidth={2} className="shrink-0 text-amber-600 dark:text-amber-400" />
+            <span>
+              Grade {grade} currently has <strong>{inReviewUnitsCount} unit{inReviewUnitsCount > 1 ? 's' : ''}</strong> pending review. Submitting new notes will update and replace the pending submission.
+            </span>
+          </div>
+        )}
+
         {/* Textbook Assistant Prompt Banner Card */}
         <div className="rounded-[18px] bg-[#F8FAFC] border border-slate-200/80 p-4 sm:px-5 sm:py-3.5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 transition-colors hover:border-purple-200/80">
           <div className="flex items-start sm:items-center gap-3">

@@ -221,8 +221,19 @@ export class NoteSanitizerService {
       }
     }
 
-    // Default missing unitCode from grade and unitNumber if available
-    if (!note.unitCode && note.subjectCode && note.grade && note.unitNumber) {
+    // Ensure canonical unitCode format if grade and unitNumber exist
+    if (note.grade && note.unitNumber) {
+      const gNum = typeof note.grade === 'number' ? note.grade : parseInt(String(note.grade).replace(/[^0-9]/g, ''), 10);
+      const uNum = typeof note.unitNumber === 'number' ? note.unitNumber : parseInt(String(note.unitNumber).replace(/[^0-9]/g, ''), 10);
+      const subj = (note.subjectCode || expectedUnitCode?.split('-')[0] || '').toUpperCase();
+      if (!isNaN(gNum) && !isNaN(uNum) && subj) {
+        const canonicalCode = `${subj}-G${gNum.toString().padStart(2, '0')}-U${uNum.toString().padStart(2, '0')}`;
+        if (!note.unitCode || note.unitCode.toUpperCase() !== canonicalCode) {
+          note.unitCode = canonicalCode;
+          issues.push(`Normalized unitCode to canonical: ${canonicalCode}`);
+        }
+      }
+    } else if (!note.unitCode && note.subjectCode && note.grade && note.unitNumber) {
       const gStr = note.grade.toString().padStart(2, '0');
       const uStr = note.unitNumber.toString().padStart(2, '0');
       note.unitCode = `${note.subjectCode.toUpperCase()}-G${gStr}-U${uStr}`;

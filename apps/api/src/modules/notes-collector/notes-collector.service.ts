@@ -108,8 +108,12 @@ export class NotesCollectorService {
     }).lean();
 
     const submissionMap = new Map<string, any>();
+    const gradeUnitMap = new Map<string, any>();
     for (const sub of existingSubmissions) {
       submissionMap.set(sub.unitCode.toUpperCase(), sub);
+      if (sub.grade && sub.unitNumber) {
+        gradeUnitMap.set(`${sub.grade}-${sub.unitNumber}`, sub);
+      }
     }
 
     let totalUnits = 0;
@@ -123,7 +127,9 @@ export class NotesCollectorService {
 
       for (const item of gradeUnitsMap[g]) {
         totalUnits++;
-        const sub = submissionMap.get(item.unitCode.toUpperCase());
+        const sub =
+          submissionMap.get(item.unitCode.toUpperCase()) ||
+          gradeUnitMap.get(`${item.grade}-${item.unitNumber}`);
 
         if (sub) {
           item.status = sub.status;
@@ -309,7 +315,7 @@ export class NotesCollectorService {
       const cleanSubj = (unit.subjectCode || subjectCode).toUpperCase().trim();
       const unitGrade = unit.grade || grade;
       const uNum = unit.unitNumber;
-      const cleanCode = unit.unitCode || `${cleanSubj}-G${unitGrade.toString().padStart(2, '0')}-U${uNum.toString().padStart(2, '0')}`;
+      const cleanCode = `${cleanSubj}-G${unitGrade.toString().padStart(2, '0')}-U${uNum.toString().padStart(2, '0')}`;
 
       await this.submitUnitNote(cleanCode, contributorId, undefined, {
         ...unit,
