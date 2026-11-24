@@ -30,7 +30,7 @@ export function NotePreviewContent({ note }: NotePreviewContentProps) {
   return (
     <div className="space-y-6">
       {/* Top Unit Banner */}
-      <div className="p-4 sm:p-5 rounded-2xl bg-gradient-to-br from-violet-500/10 via-acedex-card to-indigo-500/10 border border-violet-500/20 shadow-md">
+      <div className="p-4 sm:p-5 rounded-2xl bg-gradient-to-br from-acedex-primary/10 via-acedex-card to-acedex-primary/5 border border-acedex-primary/20 shadow-md">
         <div className="flex flex-wrap items-center justify-between gap-2.5 mb-2">
           <div className="flex items-center gap-2">
             <span className="px-2.5 py-1 rounded-lg text-xs font-mono font-bold bg-acedex-bg border border-acedex-border text-acedex-primary">
@@ -41,7 +41,7 @@ export function NotePreviewContent({ note }: NotePreviewContentProps) {
             </span>
           </div>
           {note.examWeight && (
-            <span className="px-2.5 py-1 rounded-full text-xs font-semibold bg-violet-500/15 text-violet-300 border border-violet-500/30 flex items-center gap-1.5 shadow-sm">
+            <span className="px-2.5 py-1 rounded-full text-xs font-semibold bg-acedex-primary/15 text-acedex-primary border border-acedex-primary/30 flex items-center gap-1.5 shadow-sm">
               <HugeiconsIcon icon={SparklesIcon} size={13} strokeWidth={2} />
               <span>{note.examWeight}</span>
             </span>
@@ -55,16 +55,16 @@ export function NotePreviewContent({ note }: NotePreviewContentProps) {
       {/* Summary Points */}
       <div className="space-y-3">
         <div className="flex items-center gap-2 text-sm font-bold text-acedex-text">
-          <span className="w-2 h-2 rounded-full bg-violet-500 shadow-sm shadow-violet-500/50" />
+          <span className="w-2 h-2 rounded-full bg-acedex-primary shadow-sm shadow-purple-500/50" />
           <span>Core Summary Points ({note.summaryPoints.length})</span>
         </div>
         <div className="grid grid-cols-1 gap-2.5">
           {note.summaryPoints.map((point, idx) => (
             <div
               key={idx}
-              className="p-3.5 rounded-xl bg-acedex-card/90 border border-acedex-border/70 hover:border-violet-500/30 transition-colors flex items-start gap-3"
+              className="p-3.5 rounded-xl bg-acedex-card/90 border border-acedex-border/70 hover:border-acedex-primary/30 transition-colors flex items-start gap-3"
             >
-              <span className="w-5 h-5 rounded-full bg-violet-500/15 text-violet-400 border border-violet-500/30 text-xs font-bold flex items-center justify-center shrink-0 mt-0.5">
+              <span className="w-5 h-5 rounded-full bg-acedex-primary/15 text-acedex-primary border border-acedex-primary/30 text-xs font-bold flex items-center justify-center shrink-0 mt-0.5">
                 {idx + 1}
               </span>
               <p className="text-xs sm:text-sm text-acedex-text/90 leading-relaxed">
@@ -79,8 +79,8 @@ export function NotePreviewContent({ note }: NotePreviewContentProps) {
       {note.formulas && note.formulas.length > 0 && (
         <div className="space-y-3">
           <div className="flex items-center gap-2 text-sm font-bold text-acedex-text">
-            <span className="w-2 h-2 rounded-full bg-indigo-500 shadow-sm shadow-indigo-500/50" />
-            <span>Key Formulas & Syntactic Rules ({note.formulas.length})</span>
+            <span className="w-2 h-2 rounded-full bg-acedex-accent shadow-sm shadow-purple-500/50" />
+            <span>Key Formulas & Rules ({note.formulas.length})</span>
           </div>
           <div className="grid grid-cols-1 gap-3">
             {note.formulas.map((f, idx) => {
@@ -88,19 +88,19 @@ export function NotePreviewContent({ note }: NotePreviewContentProps) {
               return (
                 <div
                   key={idx}
-                  className="p-4 rounded-xl bg-acedex-bg border border-acedex-border/80 hover:border-indigo-500/40 transition-all flex flex-col sm:flex-row sm:items-center justify-between gap-3 group"
+                  className="p-4 rounded-xl bg-acedex-bg border border-acedex-border/80 hover:border-acedex-primary/40 transition-all flex flex-col sm:flex-row sm:items-center justify-between gap-3 group"
                 >
                   <div className="space-y-1.5 flex-1 min-w-0">
                     <span className="text-xs font-semibold text-acedex-muted block">
                       {f.label}
                     </span>
-                    <code className="text-xs sm:text-sm font-mono text-indigo-300 bg-indigo-950/40 px-2.5 py-1.5 rounded-lg border border-indigo-800/40 block break-words">
+                    <code className="text-xs sm:text-sm font-mono text-acedex-primary bg-acedex-accent-soft/30 px-2.5 py-1.5 rounded-lg border border-acedex-primary/20 block break-words">
                       {f.expr}
                     </code>
                   </div>
                   <button
                     onClick={() => handleCopyFormula(f.expr, idx)}
-                    className={`inline-flex items-center justify-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold shrink-0 transition-all ${
+                    className={`inline-flex items-center justify-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold shrink-0 transition-all duration-200 active:scale-95 ${
                       isCopied
                         ? 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/40'
                         : 'bg-acedex-card text-acedex-muted hover:text-acedex-text hover:bg-acedex-card-hover border border-acedex-border'
@@ -177,7 +177,7 @@ export function NotePreviewContent({ note }: NotePreviewContentProps) {
                 key={idx}
                 className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium bg-acedex-card border border-acedex-border text-acedex-text"
               >
-                <span className="w-1.5 h-1.5 rounded-full bg-violet-400" />
+                <span className="w-1.5 h-1.5 rounded-full bg-acedex-primary" />
                 <span>{topic}</span>
               </span>
             ))}

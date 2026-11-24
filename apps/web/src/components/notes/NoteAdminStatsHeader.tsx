@@ -26,14 +26,14 @@ export function NoteAdminStatsHeader({ submissions }: NoteAdminStatsHeaderProps)
       <div className="p-4 sm:p-5 rounded-2xl bg-acedex-card/90 border border-acedex-border/80 shadow-sm flex items-center justify-between">
         <div className="space-y-1">
           <span className="text-xs font-semibold text-acedex-muted uppercase tracking-wider block">
-            Total Ingested
+            Total Submitted
           </span>
           <span className="text-2xl sm:text-3xl font-black text-acedex-text tracking-tight">
             {total}
           </span>
-          <span className="text-[11px] text-acedex-muted block">across all 8 subjects</span>
+          <span className="text-[11px] text-acedex-muted block">across curriculum</span>
         </div>
-        <div className="w-10 h-10 rounded-xl bg-violet-500/10 text-violet-400 border border-violet-500/20 flex items-center justify-center shrink-0">
+        <div className="w-10 h-10 rounded-xl bg-acedex-primary/10 text-acedex-primary border border-acedex-primary/20 flex items-center justify-center shrink-0">
           <HugeiconsIcon icon={BookOpen01Icon} size={20} strokeWidth={2} />
         </div>
       </div>
@@ -54,16 +54,16 @@ export function NoteAdminStatsHeader({ submissions }: NoteAdminStatsHeaderProps)
         </div>
       </div>
 
-      {/* Approved & Synced */}
+      {/* Approved */}
       <div className="p-4 sm:p-5 rounded-2xl bg-acedex-card/90 border border-emerald-500/30 shadow-sm flex items-center justify-between">
         <div className="space-y-1">
           <span className="text-xs font-semibold text-emerald-400 uppercase tracking-wider block">
-            Approved & Synced
+            Approved Notes
           </span>
           <span className="text-2xl sm:text-3xl font-black text-emerald-300 tracking-tight">
             {approved}
           </span>
-          <span className="text-[11px] text-emerald-400/80 block">in content/quick-notes</span>
+          <span className="text-[11px] text-emerald-400/80 block">ready for study</span>
         </div>
         <div className="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 flex items-center justify-center shrink-0">
           <HugeiconsIcon icon={CheckmarkCircle02Icon} size={20} strokeWidth={2} />

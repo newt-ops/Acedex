@@ -19,12 +19,11 @@ import {
   AlertCircleIcon,
   Refresh01Icon,
   Search01Icon,
-  SparklesIcon,
   FilterIcon,
 } from '@hugeicons/core-free-icons';
 
 export default function NotesContributorPage() {
-  const { profile, isAuthenticated, isAdmin, loading: authLoading } = useAuth();
+  const { profile, isAuthenticated, loading: authLoading } = useAuth();
   const router = useRouter();
 
   const [selectedSubject, setSelectedSubject] = useState<string>('ENG');
@@ -53,7 +52,7 @@ export default function NotesContributorPage() {
       const data = await api.getNoteUnits(selectedSubject, profile.contributorId);
       setUnitTree(data);
     } catch (err: any) {
-      setError(err.message || 'Failed to load subject quick notes curriculum');
+      setError(err.message || 'Unable to load curriculum revision notes');
     } finally {
       setLoading(false);
     }
@@ -126,23 +125,21 @@ export default function NotesContributorPage() {
           <div className="bg-acedex-card/90 border border-acedex-border/80 rounded-3xl p-5 sm:p-7 shadow-lg relative overflow-hidden backdrop-blur-xl">
             <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
               <div className="space-y-2">
-                <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-gradient-to-r from-violet-500/15 to-indigo-500/15 text-violet-400 border border-violet-500/30">
+                <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-acedex-primary/15 text-acedex-primary border border-acedex-primary/30">
                   <HugeiconsIcon icon={BookOpen01Icon} size={14} strokeWidth={2} />
-                  <span>237-Unit Quick Revision Portal</span>
+                  <span>Revision Notes Curriculum</span>
                 </div>
                 <h1 className="text-2xl sm:text-3xl font-black text-acedex-text tracking-tight">
                   {SUBJECTS[selectedSubject] || selectedSubject} Revision Notes
                 </h1>
                 <p className="text-xs sm:text-sm text-acedex-muted flex items-center gap-2">
                   <span>Contributor: <strong className="text-acedex-text">{profile.name}</strong> ({profile.contributorId})</span>
-                  <span className="text-acedex-border">•</span>
-                  <span>Database: <code className="text-violet-400 text-xs font-mono">acedex_notes</code></span>
                 </p>
               </div>
 
               {/* Subject Selector & Progress Box */}
               <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
-                <div className="flex items-center gap-2 bg-acedex-bg/80 border border-acedex-border/70 px-3 py-2 rounded-2xl">
+                <div className="flex items-center gap-2 bg-acedex-bg/80 border border-acedex-border/70 px-3 py-2 rounded-2xl transition-colors hover:border-acedex-primary/40">
                   <HugeiconsIcon icon={FilterIcon} size={15} className="text-acedex-muted" strokeWidth={2} />
                   <select
                     value={selectedSubject}
@@ -181,15 +178,15 @@ export default function NotesContributorPage() {
                   <button
                     key={grade}
                     onClick={() => setActiveGrade(grade)}
-                    className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all shrink-0 ${
+                    className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all duration-200 shrink-0 ${
                       isActive
-                        ? 'bg-gradient-to-r from-violet-600 to-indigo-600 text-white shadow-md shadow-violet-500/20'
+                        ? 'bg-acedex-primary text-white shadow-md shadow-purple-500/20 scale-[1.02]'
                         : 'text-acedex-muted hover:text-acedex-text hover:bg-acedex-card-hover'
                     }`}
                   >
                     <span>Grade {grade}</span>
                     <span
-                      className={`px-1.5 py-0.5 rounded-md text-[10px] font-mono font-bold ${
+                      className={`px-1.5 py-0.5 rounded-md text-[10px] font-mono font-bold transition-colors ${
                         isActive
                           ? 'bg-white/20 text-white'
                           : 'bg-acedex-bg text-acedex-muted'
@@ -215,14 +212,14 @@ export default function NotesContributorPage() {
                 placeholder="Search unit title or code..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-9 pr-4 py-2.5 rounded-2xl bg-acedex-card/90 border border-acedex-border/80 text-xs sm:text-sm text-acedex-text placeholder:text-acedex-muted focus:outline-none focus:ring-2 focus:ring-violet-500/50"
+                className="w-full pl-9 pr-4 py-2.5 rounded-2xl bg-acedex-card/90 border border-acedex-border/80 text-xs sm:text-sm text-acedex-text placeholder:text-acedex-muted focus:outline-none focus:ring-2 focus:ring-acedex-primary/50 transition-all"
               />
             </div>
           </div>
 
           {/* Error Alert */}
           {error && (
-            <div className="p-4 bg-rose-500/15 border border-rose-500/30 rounded-2xl text-xs sm:text-sm text-rose-300 flex items-center justify-between">
+            <div className="p-4 bg-rose-500/15 border border-rose-500/30 rounded-2xl text-xs sm:text-sm text-rose-300 flex items-center justify-between animate-in fade-in duration-200">
               <div className="flex items-center gap-2">
                 <HugeiconsIcon icon={AlertCircleIcon} size={18} className="text-rose-400 shrink-0" strokeWidth={2} />
                 <span>{error}</span>
@@ -238,27 +235,44 @@ export default function NotesContributorPage() {
             </div>
           )}
 
-          {/* Unit Grid */}
+          {/* Unit Grid with Smooth Skeleton Loading */}
           {loading ? (
-            <div className="py-20 flex flex-col items-center justify-center text-acedex-muted gap-3">
-              <HugeiconsIcon
-                icon={Loading01Icon}
-                size={36}
-                className="animate-spin text-violet-400"
-                strokeWidth={2}
-              />
-              <span className="text-sm font-medium">
-                Loading Grade {activeGrade} {SUBJECTS[selectedSubject]} revision curriculum...
-              </span>
+            <div className="space-y-4 animate-pulse">
+              <div className="flex items-center justify-between text-xs text-acedex-muted">
+                <div className="h-4 w-44 bg-acedex-card/70 rounded-md" />
+                <div className="h-4 w-60 bg-acedex-card/70 rounded-md hidden sm:block" />
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                {[1, 2, 3, 4, 5, 6].map((i) => (
+                  <div
+                    key={i}
+                    className="p-5 rounded-2xl bg-acedex-card/70 border border-acedex-border/60 h-48 flex flex-col justify-between space-y-4"
+                  >
+                    <div className="space-y-2.5">
+                      <div className="flex justify-between">
+                        <div className="h-5 w-20 bg-acedex-bg/80 rounded-lg" />
+                        <div className="h-5 w-20 bg-acedex-bg/80 rounded-full" />
+                      </div>
+                      <div className="h-5 w-3/4 bg-acedex-bg/80 rounded-md" />
+                    </div>
+                    <div className="grid grid-cols-3 gap-2">
+                      <div className="h-10 bg-acedex-bg/80 rounded-xl" />
+                      <div className="h-10 bg-acedex-bg/80 rounded-xl" />
+                      <div className="h-10 bg-acedex-bg/80 rounded-xl" />
+                    </div>
+                    <div className="h-9 bg-acedex-bg/80 rounded-xl" />
+                  </div>
+                ))}
+              </div>
             </div>
           ) : (
-            <div className="space-y-4">
+            <div className="space-y-4 animate-in fade-in duration-200">
               <div className="flex items-center justify-between text-xs text-acedex-muted">
                 <span>
                   Showing {filteredUnits.length} units for Grade {activeGrade}
                 </span>
                 <span className="font-semibold text-acedex-text">
-                  Target: 1 High-Yield Note per Unit (237 total across all grades)
+                  Ethiopian National Curriculum (Grades 9–12)
                 </span>
               </div>
 
@@ -267,7 +281,7 @@ export default function NotesContributorPage() {
                   <p className="font-medium text-sm">No curriculum units match &ldquo;{searchQuery}&rdquo;</p>
                   <button
                     onClick={() => setSearchQuery('')}
-                    className="text-xs text-violet-400 hover:underline font-semibold"
+                    className="text-xs text-acedex-primary hover:underline font-semibold"
                   >
                     Clear search filter
                   </button>

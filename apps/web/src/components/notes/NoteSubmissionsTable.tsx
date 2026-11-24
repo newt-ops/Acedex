@@ -42,7 +42,7 @@ export function NoteSubmissionsTable({
             <th className="py-3.5 px-4">Unit Code</th>
             <th className="py-3.5 px-4">Grade & Subject</th>
             <th className="py-3.5 px-4">Title</th>
-            <th className="py-3.5 px-4 text-center">Payload Breakdown</th>
+            <th className="py-3.5 px-4 text-center">Note Summary</th>
             <th className="py-3.5 px-4">Contributor</th>
             <th className="py-3.5 px-4">Status</th>
             <th className="py-3.5 px-4 text-right">Actions</th>
@@ -58,7 +58,7 @@ export function NoteSubmissionsTable({
                 onClick={() => onInspect(sub)}
               >
                 {/* Unit Code */}
-                <td className="py-3.5 px-4 font-mono font-bold text-violet-400">
+                <td className="py-3.5 px-4 font-mono font-bold text-acedex-primary">
                   {sub.unitCode}
                 </td>
 
@@ -72,14 +72,14 @@ export function NoteSubmissionsTable({
                   Unit {sub.unitNumber}: {sub.unitTitle}
                 </td>
 
-                {/* Payload Breakdown */}
+                {/* Note Summary */}
                 <td className="py-3.5 px-4 text-center">
                   <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-xl bg-acedex-bg border border-acedex-border/60 text-[11px] font-mono">
                     <span title="Summary points" className="text-acedex-text">
                       {sub.summaryPointCount} pts
                     </span>
                     <span className="text-acedex-border">•</span>
-                    <span title="Formulas" className="text-indigo-400">
+                    <span title="Formulas" className="text-acedex-accent">
                       {sub.formulaCount} fx
                     </span>
                     <span className="text-acedex-border">•</span>

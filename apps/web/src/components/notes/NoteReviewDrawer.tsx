@@ -104,7 +104,7 @@ export function NoteReviewDrawer({
       onClose={onClose}
       title={
         <div className="flex items-center gap-2">
-          <HugeiconsIcon icon={BookOpen01Icon} size={20} className="text-violet-400" strokeWidth={2} />
+          <HugeiconsIcon icon={BookOpen01Icon} size={20} className="text-acedex-primary" strokeWidth={2} />
           <span>Review Quick Note: {submission.unitCode}</span>
         </div>
       }
@@ -122,7 +122,7 @@ export function NoteReviewDrawer({
               className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold bg-acedex-bg border border-acedex-border text-acedex-muted hover:text-acedex-text"
             >
               <HugeiconsIcon icon={FileCodeIcon} size={14} strokeWidth={2} />
-              <span>{showRawJson ? 'View Rendered Preview' : 'View Raw JSON'}</span>
+              <span>{showRawJson ? 'View Rendered Preview' : 'View Raw Format'}</span>
             </button>
           </div>
 
@@ -146,7 +146,7 @@ export function NoteReviewDrawer({
                   className="bg-emerald-600 hover:bg-emerald-500 text-white shadow-md shadow-emerald-600/20"
                   icon={<HugeiconsIcon icon={CheckmarkCircle02Icon} size={15} strokeWidth={2} />}
                 >
-                  Approve & Sync Local
+                  Approve Note
                 </Button>
               </>
             ) : (
@@ -237,8 +237,8 @@ export function NoteReviewDrawer({
         {/* Loading state */}
         {loading ? (
           <div className="py-16 flex flex-col items-center justify-center text-acedex-muted gap-2">
-            <HugeiconsIcon icon={Loading01Icon} size={28} className="animate-spin text-violet-400" strokeWidth={2} />
-            <span className="text-xs">Loading quick note payload...</span>
+            <HugeiconsIcon icon={Loading01Icon} size={28} className="animate-spin text-acedex-primary" strokeWidth={2} />
+            <span className="text-xs">Loading revision note...</span>
           </div>
         ) : detail?.note ? (
           showRawJson ? (
@@ -250,7 +250,7 @@ export function NoteReviewDrawer({
           )
         ) : (
           <div className="py-12 text-center text-acedex-muted text-xs">
-            No note content payload available for this submission.
+            No note content available for this submission.
           </div>
         )}
       </div>

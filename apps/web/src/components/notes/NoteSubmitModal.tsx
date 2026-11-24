@@ -165,7 +165,7 @@ Exact JSON Schema:
           <HugeiconsIcon
             icon={BookOpen01Icon}
             size={20}
-            className="text-violet-400 shrink-0"
+            className="text-acedex-primary shrink-0"
             strokeWidth={2}
           />
           <span>Submit Quick Revision Note</span>
@@ -173,7 +173,7 @@ Exact JSON Schema:
       }
       description={
         <span>
-          Target: <strong className="text-violet-400 font-mono">{unit.unitCode}</strong> — Unit {unit.unitNumber}: {unit.unitTitle}
+          Target: <strong className="text-acedex-primary font-mono">{unit.unitCode}</strong> — Unit {unit.unitNumber}: {unit.unitTitle}
         </span>
       }
       maxWidth="4xl"
@@ -199,12 +199,12 @@ Exact JSON Schema:
                 <HugeiconsIcon
                   icon={SparklesIcon}
                   size={15}
-                  className="text-violet-400 shrink-0"
+                  className="text-acedex-primary shrink-0"
                   strokeWidth={2}
                 />
               }
             >
-              Auto-Fix & Preview
+              Verify & Preview
             </Button>
 
             <Button
@@ -213,7 +213,7 @@ Exact JSON Schema:
               onClick={handleSubmit}
               loading={submitting}
               disabled={!rawText.trim() || submitting || submitSuccess}
-              className="bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-500 hover:to-indigo-500 text-white shadow-md shadow-indigo-500/20"
+              className="bg-acedex-primary hover:bg-acedex-primary-hover text-white shadow-md shadow-purple-500/20"
               icon={
                 <HugeiconsIcon
                   icon={SentIcon}
@@ -230,18 +230,18 @@ Exact JSON Schema:
       }
     >
       <div className="space-y-4">
-        {/* NotebookLM Assistant Prompt Pill */}
-        <div className="p-3.5 rounded-2xl bg-gradient-to-r from-violet-500/10 via-acedex-card to-indigo-500/10 border border-violet-500/20 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+        {/* Study Assistant Prompt Pill */}
+        <div className="p-3.5 rounded-2xl bg-gradient-to-r from-acedex-primary/10 via-acedex-card to-acedex-primary/5 border border-acedex-primary/20 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
           <div className="flex items-center gap-2.5">
-            <div className="w-7 h-7 rounded-lg bg-violet-500/20 text-violet-300 flex items-center justify-center shrink-0">
+            <div className="w-7 h-7 rounded-lg bg-acedex-primary/20 text-acedex-primary flex items-center justify-center shrink-0">
               <HugeiconsIcon icon={SparklesIcon} size={15} strokeWidth={2} />
             </div>
             <div className="text-xs">
               <span className="font-bold text-acedex-text block">
-                Using Google NotebookLM?
+                Using NotebookLM or AI Assistant?
               </span>
               <span className="text-acedex-muted">
-                One-click copy the optimal prompt tuned for this unit.
+                Copy the prompt tailored for this unit.
               </span>
             </div>
           </div>
@@ -250,7 +250,7 @@ Exact JSON Schema:
             className={`inline-flex items-center justify-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold shrink-0 transition-all ${
               promptCopied
                 ? 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/40'
-                : 'bg-violet-600/20 text-violet-300 hover:bg-violet-600/30 border border-violet-500/30'
+                : 'bg-acedex-primary/15 text-acedex-primary hover:bg-acedex-primary/25 border border-acedex-primary/30'
             }`}
           >
             <HugeiconsIcon
@@ -258,7 +258,7 @@ Exact JSON Schema:
               size={13}
               strokeWidth={2}
             />
-            <span>{promptCopied ? 'Prompt Copied ✓' : 'Copy NotebookLM Prompt'}</span>
+            <span>{promptCopied ? 'Prompt Copied ✓' : 'Copy Unit Prompt'}</span>
           </button>
         </div>
 
@@ -274,14 +274,14 @@ Exact JSON Schema:
               }`}
             >
               <HugeiconsIcon icon={FileCodeIcon} size={14} strokeWidth={2} />
-              <span>Paste Raw Output</span>
+              <span>Paste Note Content</span>
             </button>
             <button
               onClick={() => setActiveTab('preview')}
               disabled={!report?.note}
               className={`px-3 py-1.5 rounded-xl text-xs font-semibold transition-all flex items-center gap-1.5 ${
                 activeTab === 'preview'
-                  ? 'bg-violet-600 text-white shadow-md shadow-violet-500/20'
+                  ? 'bg-acedex-primary text-white shadow-md shadow-purple-500/20'
                   : report?.note
                   ? 'text-acedex-muted hover:text-acedex-text'
                   : 'opacity-40 cursor-not-allowed text-acedex-muted'
@@ -309,9 +309,9 @@ Exact JSON Schema:
               <textarea
                 value={rawText}
                 onChange={(e) => setRawText(e.target.value)}
-                placeholder="Paste the NotebookLM JSON output here (raw JSON or ```json markdown code block)..."
+                placeholder="Paste your generated revision note content here..."
                 rows={12}
-                className="w-full p-4 rounded-2xl bg-acedex-bg border border-acedex-border/80 text-acedex-text font-mono text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-violet-500/50 resize-y leading-relaxed"
+                className="w-full p-4 rounded-2xl bg-acedex-bg border border-acedex-border/80 text-acedex-text font-mono text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-acedex-primary/50 resize-y leading-relaxed"
               />
               {rawText && (
                 <button

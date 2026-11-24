@@ -59,7 +59,7 @@ export function NoteUnitCard({ unit, onSubmitClick }: NoteUnitCardProps) {
   };
 
   return (
-    <Card className="group hover:border-acedex-primary/50 transition-all duration-200 bg-acedex-card/90 backdrop-blur-sm border-acedex-border/80 shadow-md hover:shadow-xl hover:shadow-indigo-500/5 flex flex-col justify-between">
+    <Card className="group hover:border-acedex-primary/50 transition-all duration-300 ease-out bg-acedex-card/90 backdrop-blur-sm border-acedex-border/80 shadow-sm hover:shadow-lg hover:shadow-acedex-primary/10 flex flex-col justify-between hover:-translate-y-0.5">
       <CardContent className="p-5 flex-1 flex flex-col justify-between space-y-4">
         <div>
           {/* Top Bar: Unit Code Badge & Status */}

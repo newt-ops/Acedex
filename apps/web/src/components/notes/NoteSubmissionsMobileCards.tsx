@@ -41,11 +41,11 @@ export function NoteSubmissionsMobileCards({
           <div
             key={sub._id}
             onClick={() => onInspect(sub)}
-            className="p-4 rounded-2xl bg-acedex-card/90 border border-acedex-border/80 shadow-sm space-y-3 cursor-pointer hover:border-violet-500/40 transition-all"
+            className="p-4 rounded-2xl bg-acedex-card/90 border border-acedex-border/80 shadow-sm space-y-3 cursor-pointer hover:border-acedex-primary/40 transition-all"
           >
             {/* Top Bar: Code & Status */}
             <div className="flex items-center justify-between gap-2">
-              <span className="px-2.5 py-0.5 rounded-lg text-xs font-mono font-bold bg-acedex-bg border border-acedex-border text-violet-400">
+              <span className="px-2.5 py-0.5 rounded-lg text-xs font-mono font-bold bg-acedex-bg border border-acedex-border text-acedex-primary">
                 {sub.unitCode}
               </span>
               <div>
@@ -85,7 +85,7 @@ export function NoteSubmissionsMobileCards({
               <span className="px-2 py-1 rounded-lg bg-acedex-bg border border-acedex-border text-acedex-text">
                 {sub.summaryPointCount} points
               </span>
-              <span className="px-2 py-1 rounded-lg bg-acedex-bg border border-acedex-border text-indigo-400">
+              <span className="px-2 py-1 rounded-lg bg-acedex-bg border border-acedex-border text-acedex-accent">
                 {sub.formulaCount} formulas
               </span>
               <span className="px-2 py-1 rounded-lg bg-acedex-bg border border-acedex-border text-teal-400">

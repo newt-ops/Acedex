@@ -48,13 +48,13 @@ export function NoteAutoFixSummary({ report }: NoteAutoFixSummaryProps) {
         <div className="text-xs sm:text-sm">
           <div className="font-bold">
             {report.success
-              ? 'Valid Quick Note Schema Verified'
-              : 'Syntax Issues Found in Note Content'}
+              ? 'Note Content Verified & Ready'
+              : 'Formatting Issues Found in Note Content'}
           </div>
           <div className="text-xs opacity-90 mt-0.5">
             {report.success
               ? `Ready for submission: ${note?.summaryPoints.length || 0} summary points, ${note?.formulas.length || 0} formulas, and ${note?.keyDefinitions.length || 0} definitions detected.`
-              : 'Please check the formatting errors below or copy the entire JSON object from NotebookLM.'}
+              : 'Please check the notes below or re-copy the generated note from your assistant.'}
           </div>
         </div>
       </div>
@@ -62,9 +62,9 @@ export function NoteAutoFixSummary({ report }: NoteAutoFixSummaryProps) {
       {/* Auto-fixes applied banner */}
       {fixes.length > 0 && (
         <div className="p-3.5 bg-acedex-card border border-acedex-border/80 rounded-2xl text-xs space-y-2 shadow-sm">
-          <div className="font-bold text-violet-400 flex items-center gap-1.5">
+          <div className="font-bold text-acedex-primary flex items-center gap-1.5">
             <HugeiconsIcon icon={SparklesIcon} size={15} strokeWidth={2} />
-            <span>Smart Auto-Fixes Applied:</span>
+            <span>Format Improvements Applied:</span>
           </div>
           <ul className="list-disc list-inside space-y-1 text-acedex-muted pl-1">
             {fixes.map((fix, idx) => (

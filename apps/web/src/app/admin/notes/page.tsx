@@ -19,8 +19,6 @@ import {
   ShieldCheckIcon,
   AlertCircleIcon,
   Refresh01Icon,
-  SparklesIcon,
-  FolderSyncIcon,
   FilterIcon,
 } from '@hugeicons/core-free-icons';
 
@@ -86,7 +84,7 @@ export default function AdminNotesPage() {
     }
   };
 
-  // Sync approved notes from MongoDB to local disk files
+  // Sync approved notes from database to local storage
   const handleSyncToLocal = async () => {
     setSyncing(true);
     setSyncMessage(null);
@@ -94,11 +92,11 @@ export default function AdminNotesPage() {
     try {
       const result = await api.syncLocalNotes();
       setSyncMessage(
-        `✓ Sync Complete: ${result.exportedCount} approved notes exported to content/quick-notes/ (${result.importedCount} imported from disk).`
+        `✓ Sync Complete: ${result.exportedCount} approved notes synchronized.`
       );
       await loadSubmissions();
     } catch (err: any) {
-      setError(err.message || 'Local sync operation failed');
+      setError(err.message || 'Sync operation failed');
     } finally {
       setSyncing(false);
     }
@@ -127,15 +125,15 @@ export default function AdminNotesPage() {
           <div className="bg-acedex-card/90 border border-acedex-border/80 rounded-3xl p-5 sm:p-7 shadow-lg relative overflow-hidden backdrop-blur-xl">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
               <div>
-                <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-violet-500/15 text-violet-400 border border-violet-500/30 mb-2">
+                <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-acedex-primary/15 text-acedex-primary border border-acedex-primary/30 mb-2">
                   <HugeiconsIcon icon={ShieldCheckIcon} size={15} strokeWidth={2} />
-                  <span>Curriculum Administrator Hub</span>
+                  <span>Curriculum Verification Hub</span>
                 </div>
                 <h1 className="text-2xl sm:text-3xl font-black text-acedex-text tracking-tight">
                   Quick Notes Review & Sync
                 </h1>
                 <p className="text-xs sm:text-sm text-acedex-muted mt-1">
-                  Verify EUEE revision notes across 237 units and synchronize approved notes directly to local disk.
+                  Review and verify high-yield revision notes across all subjects.
                 </p>
               </div>
 
@@ -145,7 +143,7 @@ export default function AdminNotesPage() {
                   onClick={handleSyncToLocal}
                   loading={syncing}
                   variant="primary"
-                  className="bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-500 hover:to-indigo-500 text-white shadow-md shadow-violet-500/20 w-full sm:w-auto"
+                  className="bg-acedex-primary hover:bg-acedex-primary-hover text-white shadow-md shadow-purple-500/20 w-full sm:w-auto"
                   icon={
                     <HugeiconsIcon
                       icon={Refresh01Icon}
@@ -155,14 +153,14 @@ export default function AdminNotesPage() {
                     />
                   }
                 >
-                  Sync Approved Notes to Local Files
+                  Sync Approved Notes
                 </Button>
               </div>
             </div>
 
             {/* Sync feedback banner */}
             {syncMessage && (
-              <div className="mt-4 p-3 rounded-2xl bg-emerald-500/15 border border-emerald-500/30 text-xs font-semibold text-emerald-300 flex items-center justify-between">
+              <div className="mt-4 p-3 rounded-2xl bg-emerald-500/15 border border-emerald-500/30 text-xs font-semibold text-emerald-300 flex items-center justify-between animate-in fade-in duration-200">
                 <span>{syncMessage}</span>
                 <button
                   onClick={() => setSyncMessage(null)}
@@ -181,7 +179,7 @@ export default function AdminNotesPage() {
           <div className="p-4 rounded-2xl bg-acedex-card/90 border border-acedex-border/80 shadow-sm flex flex-wrap items-center justify-between gap-3">
             <div className="flex flex-wrap items-center gap-2.5">
               {/* Subject Dropdown */}
-              <div className="flex items-center gap-1.5 bg-acedex-bg border border-acedex-border px-3 py-1.5 rounded-xl text-xs">
+              <div className="flex items-center gap-1.5 bg-acedex-bg border border-acedex-border px-3 py-1.5 rounded-xl text-xs transition-colors hover:border-acedex-primary/40">
                 <HugeiconsIcon icon={FilterIcon} size={13} className="text-acedex-muted" strokeWidth={2} />
                 <select
                   value={subjectFilter}
@@ -201,9 +199,9 @@ export default function AdminNotesPage() {
               <div className="flex items-center p-1 rounded-xl bg-acedex-bg border border-acedex-border text-xs">
                 <button
                   onClick={() => setGradeFilter('ALL')}
-                  className={`px-2.5 py-1 rounded-lg font-bold transition-all ${
+                  className={`px-2.5 py-1 rounded-lg font-bold transition-all duration-150 ${
                     gradeFilter === 'ALL'
-                      ? 'bg-violet-600 text-white'
+                      ? 'bg-acedex-primary text-white shadow-sm'
                       : 'text-acedex-muted hover:text-acedex-text'
                   }`}
                 >
@@ -213,9 +211,9 @@ export default function AdminNotesPage() {
                   <button
                     key={g}
                     onClick={() => setGradeFilter(g)}
-                    className={`px-2.5 py-1 rounded-lg font-bold transition-all ${
+                    className={`px-2.5 py-1 rounded-lg font-bold transition-all duration-150 ${
                       gradeFilter === g
-                        ? 'bg-violet-600 text-white'
+                        ? 'bg-acedex-primary text-white shadow-sm'
                         : 'text-acedex-muted hover:text-acedex-text'
                     }`}
                   >
@@ -230,7 +228,7 @@ export default function AdminNotesPage() {
                   <button
                     key={st}
                     onClick={() => setStatusFilter(st)}
-                    className={`px-2.5 py-1 rounded-lg font-bold capitalize transition-all ${
+                    className={`px-2.5 py-1 rounded-lg font-bold capitalize transition-all duration-150 ${
                       statusFilter === st
                         ? 'bg-acedex-card text-acedex-text border border-acedex-border shadow-sm'
                         : 'text-acedex-muted hover:text-acedex-text'
@@ -256,20 +254,24 @@ export default function AdminNotesPage() {
 
           {/* Error Message */}
           {error && (
-            <div className="p-4 bg-rose-500/15 border border-rose-500/30 rounded-2xl text-xs sm:text-sm text-rose-300 flex items-center gap-2">
+            <div className="p-4 bg-rose-500/15 border border-rose-500/30 rounded-2xl text-xs sm:text-sm text-rose-300 flex items-center gap-2 animate-in fade-in duration-200">
               <HugeiconsIcon icon={AlertCircleIcon} size={18} className="text-rose-400 shrink-0" strokeWidth={2} />
               <span>{error}</span>
             </div>
           )}
 
-          {/* Table / Cards content */}
+          {/* Table / Cards content with Skeleton Loading */}
           {loading ? (
-            <div className="py-20 flex flex-col items-center justify-center text-acedex-muted gap-2">
-              <HugeiconsIcon icon={Loading01Icon} size={32} className="animate-spin text-violet-400" strokeWidth={2} />
-              <span className="text-xs">Loading quick note submission queue...</span>
+            <div className="p-6 rounded-3xl border border-acedex-border/80 bg-acedex-card/90 space-y-4 animate-pulse">
+              <div className="h-4 w-36 bg-acedex-bg rounded" />
+              <div className="space-y-3">
+                {[1, 2, 3, 4, 5].map((i) => (
+                  <div key={i} className="h-12 bg-acedex-bg/80 rounded-xl" />
+                ))}
+              </div>
             </div>
           ) : (
-            <div>
+            <div className="animate-in fade-in duration-200">
               <NoteSubmissionsTable
                 submissions={submissions}
                 onInspect={(sub) => {
