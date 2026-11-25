@@ -288,11 +288,7 @@ class _ReadinessHeroCardState extends State<ReadinessHeroCard>
                   child: Text(
                     ProgressData.getPillarExplanation(
                       widget.activePillar,
-                      widget.activePillar == ReadinessPillarType.coverage
-                          ? widget.data.coveragePct
-                          : widget.activePillar == ReadinessPillarType.accuracy
-                              ? widget.data.accuracyPct
-                              : widget.data.consistencyPct,
+                      widget.data,
                     ),
                     style: TextStyle(
                       fontSize: 11,

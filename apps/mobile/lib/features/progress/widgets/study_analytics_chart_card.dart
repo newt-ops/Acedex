@@ -59,7 +59,13 @@ class _StudyAnalyticsChartCardState extends State<StudyAnalyticsChartCard> {
     final cardBg = isDark ? AppColors.darkRaised : AppColors.lightRaised;
 
     final points = widget.data.points;
-    final activePt = points[_activeIdx.clamp(0, points.length - 1)];
+    final activePt = points.isEmpty
+        ? const TimeframePoint(short: '-', label: 'No Activity', hours: 0, qs: 0, acc: 0)
+        : points[_activeIdx.clamp(0, points.length - 1)];
+    final dailyTargetHours = (widget.data.dailyGoalMinutes / 60).clamp(0.5, 8.0);
+    final goalLabel = dailyTargetHours == dailyTargetHours.roundToDouble()
+        ? '${dailyTargetHours.toInt()}h'
+        : '${dailyTargetHours.toStringAsFixed(1)}h';
 
     return Container(
       decoration: BoxDecoration(
@@ -91,7 +97,7 @@ class _StudyAnalyticsChartCardState extends State<StudyAnalyticsChartCard> {
                     const SizedBox(height: 1),
                     Text(
                       _metric == ChartMetricType.hours
-                          ? 'Dashed line: 2.5h daily target'
+                          ? 'Dashed line: $goalLabel daily target'
                           : 'Dashed line: 80% EUEE accuracy goal',
                       style: TextStyle(
                         fontSize: 10.5,
@@ -238,6 +244,7 @@ class _StudyAnalyticsChartCardState extends State<StudyAnalyticsChartCard> {
                       points: points,
                       activeIdx: _activeIdx,
                       metric: _metric,
+                      dailyTargetHours: dailyTargetHours,
                       accentColor: accentColor,
                       accentSoftColor: accentSoftColor,
                       lineColor: lineColor,
@@ -391,6 +398,7 @@ class _StudyAnalyticsChartPainter extends CustomPainter {
   final List<TimeframePoint> points;
   final int activeIdx;
   final ChartMetricType metric;
+  final double dailyTargetHours;
   final Color accentColor;
   final Color accentSoftColor;
   final Color lineColor;
@@ -402,6 +410,7 @@ class _StudyAnalyticsChartPainter extends CustomPainter {
     required this.points,
     required this.activeIdx,
     required this.metric,
+    required this.dailyTargetHours,
     required this.accentColor,
     required this.accentSoftColor,
     required this.lineColor,
@@ -422,9 +431,15 @@ class _StudyAnalyticsChartPainter extends CustomPainter {
     const barW = 20.0;
 
     final isHours = metric == ChartMetricType.hours;
-    final maxVal = isHours ? 3.8 : 100.0;
-    final minVal = isHours ? 0.0 : 50.0;
-    final targetVal = isHours ? 2.5 : 80.0;
+    double highestHour = dailyTargetHours;
+    if (isHours) {
+      for (final p in points) {
+        if (p.hours > highestHour) highestHour = p.hours;
+      }
+    }
+    final maxVal = isHours ? (highestHour * 1.25).clamp(2.0, 12.0) : 100.0;
+    final minVal = 0.0;
+    final targetVal = isHours ? dailyTargetHours : 80.0;
 
     double getY(double val) {
       final norm = ((val - minVal) / (maxVal - minVal)).clamp(0.0, 1.0);
@@ -471,8 +486,9 @@ class _StudyAnalyticsChartPainter extends CustomPainter {
     // 4. Draw Bars & Labels
     for (int i = 0; i < count; i++) {
       final c = coords[i];
+      final val = isHours ? points[i].hours : points[i].acc.toDouble();
       final isSelected = i == activeIdx;
-      final barH = (chartBottom - c.dy).clamp(10.0, chartH + 10);
+      final barH = val <= 0 ? 3.0 : (chartBottom - c.dy).clamp(6.0, chartH);
 
       final barRect = Rect.fromCenter(
         center: Offset(c.dx, chartBottom - barH / 2),
@@ -559,6 +575,7 @@ class _StudyAnalyticsChartPainter extends CustomPainter {
     return oldDelegate.points != points ||
         oldDelegate.activeIdx != activeIdx ||
         oldDelegate.metric != metric ||
+        oldDelegate.dailyTargetHours != dailyTargetHours ||
         oldDelegate.accentColor != accentColor ||
         oldDelegate.lineColor != lineColor;
   }

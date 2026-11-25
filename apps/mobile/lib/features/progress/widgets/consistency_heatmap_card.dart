@@ -6,10 +6,14 @@ import '../models/progress_models.dart';
 /// Card 3: 28-Day Study Consistency Heatmap (4×7 Royal Purple Intensity Grid)
 class ConsistencyHeatmapCard extends StatefulWidget {
   final List<HeatmapDay> days;
+  final int currentStreak;
+  final int longestStreak;
 
   const ConsistencyHeatmapCard({
     super.key,
     required this.days,
+    this.currentStreak = 0,
+    this.longestStreak = 0,
   });
 
   @override
@@ -22,7 +26,15 @@ class _ConsistencyHeatmapCardState extends State<ConsistencyHeatmapCard> {
   @override
   void initState() {
     super.initState();
-    _selectedIdx = (widget.days.length - 1).clamp(0, 27);
+    _selectedIdx = widget.days.isEmpty ? 0 : widget.days.length - 1;
+  }
+
+  @override
+  void didUpdateWidget(covariant ConsistencyHeatmapCard oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    if (oldWidget.days.length != widget.days.length) {
+      _selectedIdx = widget.days.isEmpty ? 0 : widget.days.length - 1;
+    }
   }
 
   Color _getHeatColor(int level, bool isDark) {
@@ -68,12 +80,25 @@ class _ConsistencyHeatmapCardState extends State<ConsistencyHeatmapCard> {
     final surfaceColor = isDark ? AppColors.darkSurface : AppColors.lightSurface;
     final cardBg = isDark ? AppColors.darkRaised : AppColors.lightRaised;
 
-    final selectedDay = widget.days[_selectedIdx.clamp(0, widget.days.length - 1)];
-    final selectedInfoText = selectedDay.hours > 0
-        ? '${selectedDay.date}: ${selectedDay.hours.toStringAsFixed(1)}h • ${selectedDay.acc}% acc'
-        : '${selectedDay.date}: Rest & Recovery Day';
+    final selectedDay = widget.days.isEmpty
+        ? const HeatmapDay(date: 'Today', hours: 0, acc: 0, level: 0)
+        : widget.days[_selectedIdx.clamp(0, widget.days.length - 1)];
 
-    const weekdays = ['M', 'T', 'W', 'T', 'F', 'S', 'S'];
+    final String selectedInfoText;
+    if (selectedDay.minutes > 0 || selectedDay.hours > 0) {
+      final durationText = selectedDay.hours >= 0.1
+          ? '${selectedDay.hours.toStringAsFixed(1)}h'
+          : '${selectedDay.minutes}m';
+      selectedInfoText = selectedDay.qs > 0
+          ? '${selectedDay.date}: $durationText • ${selectedDay.acc}% acc'
+          : '${selectedDay.date}: $durationText studied';
+    } else {
+      selectedInfoText = '${selectedDay.date}: No study logged';
+    }
+
+    final weekdays = widget.days.length >= 7
+        ? widget.days.take(7).map((d) => d.weekdayShort).toList()
+        : const ['M', 'T', 'W', 'T', 'F', 'S', 'S'];
 
     return Container(
       decoration: BoxDecoration(
@@ -124,7 +149,7 @@ class _ConsistencyHeatmapCardState extends State<ConsistencyHeatmapCard> {
                       borderRadius: BorderRadius.circular(999),
                     ),
                     child: Text(
-                      '12d Streak',
+                      '${widget.currentStreak}d Streak',
                       style: TextStyle(
                         fontSize: 10,
                         fontWeight: FontWeight.w800,
@@ -141,7 +166,7 @@ class _ConsistencyHeatmapCardState extends State<ConsistencyHeatmapCard> {
                       border: Border.all(color: lineColor),
                     ),
                     child: Text(
-                      'Best 19d',
+                      'Best ${widget.longestStreak}d',
                       style: TextStyle(
                         fontSize: 10,
                         fontWeight: FontWeight.w800,

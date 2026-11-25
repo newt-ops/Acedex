@@ -275,6 +275,7 @@ class AuthStorage {
     await prefs.remove(_keyDailyFocusGoalMinutes);
     await prefs.remove(_keyDailyFocusCompletedDate);
     await prefs.remove(_keyDailyFocusCompletedMinutes);
+    await prefs.remove('acedex_progress_analytics');
     for (final key in prefs.getKeys().where((k) => k.startsWith(_keyAiSubjectModulesPrefix)).toList()) {
       await prefs.remove(key);
     }

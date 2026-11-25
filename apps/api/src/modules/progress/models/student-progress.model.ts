@@ -39,6 +39,13 @@ export interface IUnlockedUnitSubdoc {
   expiresAt: Date;
 }
 
+export interface IDailyActivitySubdoc {
+  date: string; // YYYY-MM-DD (EAT)
+  minutes: number;
+  questionsAnswered: number;
+  correctAnswers: number;
+}
+
 export interface IStudentWalletSubdoc {
   balance: number;
   lifetimeEarned: number;
@@ -78,6 +85,7 @@ export interface IStudentProgressDocument extends Document {
   subjectMastery: ISubjectMasterySubdoc[];
   aiStudyProgram?: AiStudyProgram;
   topicModules: ITopicModuleProgressSubdoc[];
+  dailyActivity: IDailyActivitySubdoc[];
   wallet: IStudentWalletSubdoc;
   createdAt: Date;
   updatedAt: Date;
@@ -137,6 +145,16 @@ const TopicModuleProgressSchema = new Schema<ITopicModuleProgressSubdoc>(
   { _id: false }
 );
 
+const DailyActivitySchema = new Schema<IDailyActivitySubdoc>(
+  {
+    date: { type: String, required: true },
+    minutes: { type: Number, default: 0, min: 0 },
+    questionsAnswered: { type: Number, default: 0, min: 0 },
+    correctAnswers: { type: Number, default: 0, min: 0 },
+  },
+  { _id: false }
+);
+
 const StudentProgressSchema = new Schema<IStudentProgressDocument>(
   {
     userId: { type: Schema.Types.ObjectId, ref: 'User', required: true, unique: true, index: true },
@@ -165,6 +183,7 @@ const StudentProgressSchema = new Schema<IStudentProgressDocument>(
     subjectMastery: { type: [SubjectMasterySchema], default: [] },
     aiStudyProgram: { type: Schema.Types.Mixed, default: undefined },
     topicModules: { type: [TopicModuleProgressSchema], default: [] },
+    dailyActivity: { type: [DailyActivitySchema], default: [] },
     wallet: {
       balance: { type: Number, default: 25, min: 0 },
       lifetimeEarned: { type: Number, default: 25, min: 0 },

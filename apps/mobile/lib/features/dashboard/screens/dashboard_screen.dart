@@ -226,11 +226,6 @@ class _DashboardScreenState extends State<DashboardScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final streamLabel = widget.user?.stream?.toLowerCase() == 'natural'
-        ? 'NATURAL SCIENCE'
-        : widget.user?.stream?.toUpperCase() ?? 'NATURAL SCIENCE';
-    final gradeLabel = 'G${widget.user?.grade ?? 12} • $streamLabel';
-
     return Stack(
       children: [
         if (widget.user?.displayName.isNotEmpty == true)
@@ -251,7 +246,6 @@ class _DashboardScreenState extends State<DashboardScreen> {
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               HeroCountdownCard(
-                gradeLabel: gradeLabel,
                 readinessScore: _readinessScore,
                 targetDate: _examDate,
               ),

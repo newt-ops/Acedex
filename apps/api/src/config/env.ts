@@ -30,7 +30,11 @@ const envSchema = z.object({
   UNITY_ADS_S2S_REQUIRED: z.preprocess((val) => val === 'true' || val === true, z.boolean()).default(false),
   REQUIRE_EXAM_TICKET: z.preprocess((val) => val === 'true' || val === true, z.boolean()).default(false),
   GEMINI_API_KEY: z.string().optional(),
-  GEMINI_MODEL: z.string().default('gemini-2.5-flash'),
+  GEMINI_MODEL: z.string().default('gemini-2.0-flash'),
+  GEMINI_FALLBACK_MODELS: z
+    .string()
+    .default('gemini-1.5-flash,gemini-2.0-flash-lite,gemini-2.5-flash'),
+  GEMINI_THINKING_BUDGET: z.coerce.number().int().min(0).default(0),
 });
 
 const parsed = envSchema.safeParse(process.env);

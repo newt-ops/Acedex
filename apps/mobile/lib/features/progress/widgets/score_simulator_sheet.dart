@@ -4,9 +4,9 @@ import '../../../../core/theme/app_colors.dart';
 import '../../../../core/ui/ui.dart';
 import '../models/progress_models.dart';
 
-/// Cupertino Bottom Sheet: What-If EUEE Score Simulator
+/// Cupertino Bottom Sheet: What-If EUEE Score Simulator (All 6 Exam Subjects including English & SAT)
 class ScoreSimulatorSheet extends StatefulWidget {
-  final List<SubjectMastery> subjects;
+  final List<SimulatorSubjectScore> subjects;
   final void Function(int newTotalScore, String newPercentile, int newPct) onApplyTarget;
 
   const ScoreSimulatorSheet({
@@ -17,7 +17,7 @@ class ScoreSimulatorSheet extends StatefulWidget {
 
   static Future<void> show(
     BuildContext context, {
-    required List<SubjectMastery> subjects,
+    required List<SimulatorSubjectScore> subjects,
     required void Function(int newTotalScore, String newPercentile, int newPct) onApplyTarget,
   }) {
     return showModalBottomSheet(
@@ -38,7 +38,6 @@ class ScoreSimulatorSheet extends StatefulWidget {
 
 class _ScoreSimulatorSheetState extends State<ScoreSimulatorSheet> {
   late Map<String, int> _scores;
-  static const int _englishAptBaseline = 148; // out of 200
 
   @override
   void initState() {
@@ -48,26 +47,29 @@ class _ScoreSimulatorSheetState extends State<ScoreSimulatorSheet> {
 
   void _resetToCurrent() {
     _scores = {
-      for (final s in widget.subjects) s.id: s.mastery,
+      for (final s in widget.subjects) s.id: s.score.clamp(0, 100),
     };
   }
 
-  int get _coreSum => _scores.values.fold(0, (sum, val) => sum + val);
-  int get _totalScore => _coreSum + _englishAptBaseline;
-  double get _avgPct => (_totalScore / 600) * 100;
+  int get _totalScore => _scores.values.fold(0, (sum, val) => sum + val);
+  int get _maxTotalScore => widget.subjects.isEmpty ? 600 : widget.subjects.length * 100;
+  double get _avgPct => _maxTotalScore > 0 ? (_totalScore / _maxTotalScore) * 100 : 0;
 
   String get _percentileLabel {
+    if (_totalScore <= 0) return 'Baseline';
     if (_totalScore >= 510) return 'Top 1%';
     if (_totalScore >= 460) return 'Top 5%';
     if (_totalScore >= 400) return 'Top 12%';
-    return 'Top 15%';
+    if (_totalScore >= 300) return 'Top 25%';
+    return 'Building';
   }
 
   String get _eligibilityNote {
     if (_totalScore >= 510) return 'Competitive for AAU Medicine & Honors Engineering';
     if (_totalScore >= 460) return 'Qualifies for Top-Tier Public University Placement';
-    if (_totalScore >= 400) return 'Strong Standing • Boost Chemistry to reach Top 5%';
-    return 'Meets National University Admission Threshold';
+    if (_totalScore >= 400) return 'Strong Standing • Push weaker subjects to reach Top 5%';
+    if (_totalScore > 0) return 'Keep building mastery across all 6 EUEE subjects';
+    return 'Slide subject targets to preview your EUEE projection';
   }
 
   Color _eligibilityColor(bool isDark) {
@@ -224,7 +226,7 @@ class _ScoreSimulatorSheetState extends State<ScoreSimulatorSheet> {
                                     ),
                                     const SizedBox(width: 4),
                                     Text(
-                                      '/ 600',
+                                      '/ $_maxTotalScore',
                                       style: TextStyle(
                                         fontSize: 13,
                                         fontWeight: FontWeight.w700,
@@ -280,7 +282,7 @@ class _ScoreSimulatorSheetState extends State<ScoreSimulatorSheet> {
 
                     const SizedBox(height: 14),
 
-                    // 4 Sliders for Core Subjects
+                    // 6 Sliders for all EUEE Exam Subjects (including English & SAT)
                     for (final subj in widget.subjects) ...[
                       Container(
                         margin: const EdgeInsets.only(bottom: 10),
@@ -304,7 +306,7 @@ class _ScoreSimulatorSheetState extends State<ScoreSimulatorSheet> {
                                   ),
                                 ),
                                 Text(
-                                  '${_scores[subj.id]} / 100',
+                                  '${_scores[subj.id] ?? subj.score} / 100',
                                   style: TextStyle(
                                     fontSize: 12.5,
                                     fontWeight: FontWeight.w800,
@@ -326,9 +328,9 @@ class _ScoreSimulatorSheetState extends State<ScoreSimulatorSheet> {
                                 ),
                               ),
                               child: Slider(
-                                min: 40,
+                                min: 0,
                                 max: 100,
-                                value: (_scores[subj.id] ?? subj.mastery).toDouble(),
+                                value: (_scores[subj.id] ?? subj.score).toDouble().clamp(0, 100),
                                 onChanged: (val) {
                                   setState(() {
                                     _scores[subj.id] = val.round();
@@ -341,38 +343,7 @@ class _ScoreSimulatorSheetState extends State<ScoreSimulatorSheet> {
                       ),
                     ],
 
-                    // English & Scholastic Aptitude Baseline
-                    Container(
-                      padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
-                      decoration: BoxDecoration(
-                        color: surfaceColor,
-                        borderRadius: BorderRadius.circular(14),
-                        border: Border.all(color: lineColor),
-                      ),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Text(
-                            'English + Aptitude Baseline',
-                            style: TextStyle(
-                              fontSize: 11.5,
-                              fontWeight: FontWeight.w700,
-                              color: subtextColor,
-                            ),
-                          ),
-                          Text(
-                            '$_englishAptBaseline / 200',
-                            style: TextStyle(
-                              fontSize: 12,
-                              fontWeight: FontWeight.w800,
-                              color: theme.colorScheme.onSurface,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-
-                    const SizedBox(height: 16),
+                    const SizedBox(height: 8),
 
                     // Action Buttons (Reset Current | Apply Target)
                     Row(

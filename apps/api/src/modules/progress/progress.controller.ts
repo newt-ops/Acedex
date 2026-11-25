@@ -21,6 +21,23 @@ export class ProgressController {
     }
   }
 
+  public static async getAnalytics(req: Request, res: Response, next: NextFunction): Promise<void> {
+    try {
+      const authReq = req as AuthenticatedRequest;
+      if (!authReq.user) {
+        throw new UnauthorizedError('Authentication required');
+      }
+      const analytics = await ProgressService.getAnalytics(authReq.user.id);
+
+      res.status(200).json({
+        success: true,
+        data: analytics,
+      });
+    } catch (err) {
+      next(err);
+    }
+  }
+
   public static async getSubjectProgress(
     req: Request,
     res: Response,

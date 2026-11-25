@@ -89,3 +89,70 @@ export interface StudentProgressOverview {
     completedAt: string;
   }>;
 }
+
+export type ProgressAnalyticsTimeframe = '7d' | '30d' | 'term';
+
+export interface AnalyticsTrendPoint {
+  dateKey: string;
+  short: string;
+  label: string;
+  hours: number;
+  minutes: number;
+  qs: number;
+  acc: number;
+}
+
+export interface AnalyticsTimeframeDataset {
+  readinessPct: number;
+  projectedScore: number;
+  percentile: string;
+  delta: string;
+  subcopy: string;
+  coveragePct: number;
+  accuracyPct: number;
+  consistencyPct: number;
+  completedUnits: number;
+  totalUnits: number;
+  assessmentsCount: number;
+  dailyGoalMinutes: number;
+  activeDays: number;
+  windowDays: number;
+  footerHours: string;
+  footerAcc: string;
+  footerQs: string;
+  points: AnalyticsTrendPoint[];
+}
+
+export interface HeatmapDayAnalytics {
+  dateKey: string;
+  date: string;
+  weekdayShort: string;
+  hours: number;
+  minutes: number;
+  qs: number;
+  acc: number;
+  level: number;
+}
+
+export interface SimulatorSubjectBaseline {
+  id: string;
+  code: string;
+  name: string;
+  score: number;
+}
+
+export interface StudentProgressAnalytics {
+  stream: 'natural' | 'social';
+  dailyGoalMinutes: number;
+  streak: {
+    currentStreak: number;
+    longestStreak: number;
+  };
+  timeframes: {
+    '7d': AnalyticsTimeframeDataset;
+    '30d': AnalyticsTimeframeDataset;
+    term: AnalyticsTimeframeDataset;
+  };
+  heatmapDays: HeatmapDayAnalytics[];
+  simulatorSubjects: SimulatorSubjectBaseline[];
+}

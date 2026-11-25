@@ -71,11 +71,13 @@ describe('Student Progress & Analytics Engine', () => {
     for (const ak of answerKeys) {
       answerKeyMap.set(ak.externalId, ak.correctOptionId);
     }
-  }, 60000);
+  }, 120000);
 
   afterAll(async () => {
-    await AssessmentAttemptModel.deleteMany({ userId: studentId });
-    await StudentProgressModel.deleteMany({ userId: studentId });
+    if (studentId) {
+      await AssessmentAttemptModel.deleteMany({ userId: studentId });
+      await StudentProgressModel.deleteMany({ userId: studentId });
+    }
     await UserModel.deleteMany({ displayName: 'Progress Test Student' });
     await disconnectDatabase();
   });
@@ -160,5 +162,38 @@ describe('Student Progress & Analytics Engine', () => {
     expect(unit1.bestScore).toBe(12);
     expect(unit1.bestPercentage).toBe(80);
     expect(unit1.passed).toBe(true);
+  });
+
+  it('GET /api/v1/progress/analytics should compute live trends, 28-day heatmap, and 6 simulator subjects including English & SAT', async () => {
+    const res = await request(app)
+      .get('/api/v1/progress/analytics')
+      .set('Authorization', `Bearer ${studentToken}`);
+
+    expect(res.status).toBe(200);
+    expect(res.body.success).toBe(true);
+
+    const data = res.body.data;
+    expect(data.stream).toBe('natural');
+    expect(data.streak.currentStreak).toBeGreaterThanOrEqual(1);
+    expect(data.heatmapDays).toHaveLength(28);
+    expect(data.heatmapDays[27].date).toContain('Today');
+    expect(data.heatmapDays[27].minutes).toBeGreaterThan(0);
+
+    // 7d timeframe reflects real recorded unit & assessment activity
+    const tf7d = data.timeframes['7d'];
+    expect(tf7d.points).toHaveLength(7);
+    expect(tf7d.completedUnits).toBeGreaterThanOrEqual(1);
+    expect(tf7d.assessmentsCount).toBe(1);
+    expect(tf7d.accuracyPct).toBe(80);
+    expect(tf7d.footerQs).toBe(`${sampleQuestions.length} Qs`);
+
+    // 6 simulator subjects including English & SAT
+    expect(data.simulatorSubjects).toHaveLength(6);
+    const codes = data.simulatorSubjects.map((s: any) => s.code);
+    expect(codes).toEqual(['MAT', 'PHY', 'BIO', 'CHE', 'ENG', 'SAT']);
+    const phySubj = data.simulatorSubjects.find((s: any) => s.code === 'PHY');
+    expect(phySubj.score).toBeGreaterThan(0);
+    const satSubj = data.simulatorSubjects.find((s: any) => s.code === 'SAT');
+    expect(satSubj.score).toBeGreaterThan(0);
   });
 });

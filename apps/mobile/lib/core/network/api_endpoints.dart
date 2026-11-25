@@ -38,6 +38,9 @@ class ApiEndpoints {
   static const String economyWallet = '/api/v1/economy/wallet';
   static const String economySpend = '/api/v1/economy/spend';
 
+  // Live Progress & Performance Analytics
+  static const String progressAnalytics = '/api/v1/progress/analytics';
+
   // AI Cross-Grade Topic Study & Gemini Planner
   static const String topicProgram = '/api/v1/topics/program';
   static String subjectTopicModules(String subjectCode) =>

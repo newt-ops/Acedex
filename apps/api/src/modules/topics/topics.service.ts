@@ -513,6 +513,8 @@ export class TopicsService {
     }
 
     const allStepNumbers = (mod.sequence || []).map((s) => s.stepNumber);
+    const prevStepsCount = entry.completedSteps.length;
+    const prevIsCompleted = entry.isCompleted;
 
     if (typeof payload.isCompleted === 'boolean') {
       entry.isCompleted = payload.isCompleted;
@@ -522,6 +524,11 @@ export class TopicsService {
       } else {
         entry.completedAt = undefined;
         entry.completedSteps = [];
+      }
+      if (entry.isCompleted && !prevIsCompleted) {
+        ProgressService.logDailyActivity(progress, { minutesDelta: 15 });
+      } else if (!entry.isCompleted && prevIsCompleted) {
+        ProgressService.logDailyActivity(progress, { minutesDelta: -15 });
       }
     } else if (typeof payload.stepNumber === 'number') {
       const stepNum = payload.stepNumber;
@@ -544,6 +551,11 @@ export class TopicsService {
       } else if (!shouldComplete && entry.isCompleted) {
         entry.isCompleted = false;
         entry.completedAt = undefined;
+      }
+
+      const stepDiff = entry.completedSteps.length - prevStepsCount;
+      if (stepDiff !== 0) {
+        ProgressService.logDailyActivity(progress, { minutesDelta: stepDiff * 10 });
       }
     }
 
@@ -647,6 +659,7 @@ export class TopicsService {
       let unitEntry = progressDoc.units.find(
         (u) => u.unitCode.toUpperCase().trim() === cleanUnitCode
       );
+      const wasDone = unitEntry?.isStudyCompleted === true;
       if (!unitEntry) {
         unitEntry = {
           unitId: new Types.ObjectId(),
@@ -670,6 +683,12 @@ export class TopicsService {
         unitEntry.studyCompletedAt = payload.completed
           ? unitEntry.studyCompletedAt || new Date()
           : undefined;
+      }
+
+      if (payload.completed && !wasDone) {
+        ProgressService.logDailyActivity(progressDoc, { minutesDelta: 15 });
+      } else if (!payload.completed && wasDone) {
+        ProgressService.logDailyActivity(progressDoc, { minutesDelta: -15 });
       }
 
       progressDoc.markModified('units');

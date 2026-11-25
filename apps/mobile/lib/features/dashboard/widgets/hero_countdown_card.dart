@@ -5,18 +5,16 @@ import '../../../core/theme/app_colors.dart';
 /// EUEE 2026 Countdown & Readiness Hero Card (Section 1)
 ///
 /// Features:
-/// - Top Row: Grade badge + Gliding segmented toggle ("Countdown" / "Readiness")
+/// - Top Row: Gliding segmented toggle ("Countdown" / "Readiness")
 /// - View A: Live ticking Days / Hours / Mins readout with pulsing indicator dot
 /// - View B: Radial Exam Readiness meter (score + "+4.2% wk" badge + 545+ target score)
 /// - Bottom Row: Full-width linear progress meter
 class HeroCountdownCard extends StatefulWidget {
-  final String gradeLabel;
   final int readinessScore;
   final DateTime? targetDate;
 
   const HeroCountdownCard({
     super.key,
-    required this.gradeLabel,
     required this.readinessScore,
     this.targetDate,
   });
@@ -126,44 +124,11 @@ class _HeroCountdownCardState extends State<HeroCountdownCard> {
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           // ===================================================================
-          // TOP ROW: Grade Badge + Gliding "Countdown" / "Readiness" Toggle
+          // TOP ROW: Gliding "Countdown" / "Readiness" Toggle
           // ===================================================================
           Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            mainAxisAlignment: MainAxisAlignment.end,
             children: [
-              // Grade & Stream Badge Pill
-              Container(
-                padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
-                decoration: BoxDecoration(
-                  color: raisedBg,
-                  borderRadius: BorderRadius.circular(999),
-                  border: Border.all(color: lineBorder),
-                ),
-                child: Row(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    Container(
-                      width: 6,
-                      height: 6,
-                      decoration: BoxDecoration(
-                        color: primaryColor,
-                        shape: BoxShape.circle,
-                      ),
-                    ),
-                    const SizedBox(width: 6),
-                    Text(
-                      widget.gradeLabel.toUpperCase(),
-                      style: TextStyle(
-                        fontSize: 9.5,
-                        fontWeight: FontWeight.w800,
-                        letterSpacing: 0.5,
-                        color: primaryColor,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-
               // Gliding Segmented Pill Switcher
               Container(
                 height: 28,

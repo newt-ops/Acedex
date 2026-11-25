@@ -214,6 +214,7 @@ describe('AI Cross-Grade Topic Study & Gemini Planner Backend Tests', { timeout:
 
     const prevKey = env.GEMINI_API_KEY;
     env.GEMINI_API_KEY = 'test-mock-gemini-key';
+    GeminiPlannerService.resetRuntimeState();
     const fetchSpy = vi.spyOn(globalThis, 'fetch').mockResolvedValueOnce({
       ok: true,
       json: async () => ({
@@ -269,6 +270,7 @@ describe('AI Cross-Grade Topic Study & Gemini Planner Backend Tests', { timeout:
       expect(fetchSpy).toHaveBeenCalledTimes(1);
     } finally {
       fetchSpy.mockRestore();
+      GeminiPlannerService.resetRuntimeState();
       env.GEMINI_API_KEY = prevKey;
     }
   });
@@ -408,5 +410,161 @@ describe('AI Cross-Grade Topic Study & Gemini Planner Backend Tests', { timeout:
       .set('Authorization', `Bearer ${studentToken}`)
       .send({ completed: true });
     expect(unknownRes.status).toBe(404);
+  });
+
+  it('8. GeminiPlannerService falls back on 429, cools down exhausted models, compresses prompts, and caches identical plans', async () => {
+    const allNaturalModules = await TopicModuleModel.find({
+      streamCategory: { $in: ['common', 'natural'] },
+    })
+      .sort({ subjectCode: 1, moduleNumber: 1 })
+      .lean();
+    expect(allNaturalModules.length).toBeGreaterThanOrEqual(40);
+
+    const prevKey = env.GEMINI_API_KEY;
+    const prevModel = env.GEMINI_MODEL;
+    const prevFallback = env.GEMINI_FALLBACK_MODELS;
+
+    env.GEMINI_API_KEY = 'test-mock-gemini-key';
+    env.GEMINI_MODEL = 'gemini-2.5-flash';
+    env.GEMINI_FALLBACK_MODELS = 'gemini-2.5-flash-lite,gemini-2.0-flash';
+    GeminiPlannerService.resetRuntimeState();
+
+    const fetchSpy = vi
+      .spyOn(globalThis, 'fetch')
+      // Call 1 attempt 1: primary gemini-2.5-flash returns 429 daily quota exceeded
+      .mockResolvedValueOnce({
+        ok: false,
+        status: 429,
+        text: async () => 'Quota exceeded for metric: generate_content_free_tier_requests PerDay',
+      } as any)
+      // Call 1 attempt 2: fallback gemini-2.5-flash-lite succeeds
+      .mockResolvedValueOnce({
+        ok: true,
+        json: async () => ({
+          candidates: [
+            {
+              content: {
+                parts: [
+                  {
+                    text: JSON.stringify({
+                      diagnosticSummary:
+                        'Compact fallback plan generated on gemini-2.5-flash-lite for Physics and Chemistry.',
+                      recommendedModules: [
+                        {
+                          moduleId: 'PHY-M01',
+                          coachingNote: 'Start with PHY G9 U1–U2 foundations.',
+                        },
+                      ],
+                    }),
+                  },
+                ],
+              },
+            },
+          ],
+        }),
+      } as any)
+      // Call 2 (different profile): primary should be skipped via cooldown, hitting fallback directly (only 1 fetch call!)
+      .mockResolvedValueOnce({
+        ok: true,
+        json: async () => ({
+          candidates: [
+            {
+              content: {
+                parts: [
+                  {
+                    text: JSON.stringify({
+                      diagnosticSummary:
+                        'Second profile skipped cooled-down 2.5-flash and ran directly on flash-lite.',
+                      recommendedModules: [
+                        {
+                          moduleId: 'BIO-M01',
+                          coachingNote: 'Begin Biology cell foundations.',
+                        },
+                      ],
+                    }),
+                  },
+                ],
+              },
+            },
+          ],
+        }),
+      } as any);
+
+    try {
+      const baseCalibration = {
+        tierId: 'competitive' as const,
+        targetScore: 495,
+        weakSubjectCodes: ['PHY', 'CHE'],
+        dailyMinutes: 90,
+        peakWindow: 'Morning' as const,
+        prepStageId: 'reviewing' as const,
+      };
+
+      // 8a. First call: primary 429s, fallback succeeds
+      const firstPlan = await GeminiPlannerService.generateStudyProgram({
+        stream: 'natural',
+        grade: 12,
+        calibration: baseCalibration,
+        modules: allNaturalModules as any,
+        completedUnitCodes: [],
+        completedModuleIds: [],
+      });
+
+      expect(firstPlan.generatedBy).toBe('gemini');
+      expect(firstPlan.dailyFocusTasks[0].moduleId).toBe('PHY-M01');
+      expect(fetchSpy).toHaveBeenCalledTimes(2);
+
+      // Verify compact request body (thinkingBudget=0 on 2.5 models, lean schema, filtered <= 22 modules)
+      const secondUrl = String(fetchSpy.mock.calls[1][0]);
+      expect(secondUrl).toContain('gemini-2.5-flash-lite:generateContent');
+      const sentBody = JSON.parse(String((fetchSpy.mock.calls[1][1] as any).body));
+      expect(sentBody.generationConfig.thinkingConfig).toEqual({ thinkingBudget: 0 });
+      expect(sentBody.generationConfig.responseSchema.properties.subjectModuleOrdering).toBeUndefined();
+      const promptText: string = sentBody.contents[0].parts[0].text;
+      const catalogRowCount = promptText
+        .split('\n')
+        .filter((line) => /^[A-Z]{3}-M\d+\|/.test(line)).length;
+      expect(catalogRowCount).toBeLessThanOrEqual(22);
+
+      // 8b. Identical calibration with slight targetScore change inside same tier uses cache -> 0 new fetch calls!
+      const cachedPlan = await GeminiPlannerService.generateStudyProgram({
+        stream: 'natural',
+        grade: 12,
+        calibration: { ...baseCalibration, targetScore: 500 },
+        modules: allNaturalModules as any,
+        completedUnitCodes: [],
+        completedModuleIds: [],
+      });
+
+      expect(cachedPlan.generatedBy).toBe('gemini');
+      expect(cachedPlan.projectedScore).toBe(510);
+      expect(cachedPlan.dailyFocusTasks[0].moduleId).toBe('PHY-M01');
+      expect(fetchSpy).toHaveBeenCalledTimes(2);
+
+      // 8c. Distinct profile should skip cooled-down gemini-2.5-flash and hit gemini-2.5-flash-lite directly
+      const nextProfilePlan = await GeminiPlannerService.generateStudyProgram({
+        stream: 'natural',
+        grade: 12,
+        calibration: {
+          ...baseCalibration,
+          weakSubjectCodes: ['BIO', 'MAT'],
+          prepStageId: 'sprint',
+        },
+        modules: allNaturalModules as any,
+        completedUnitCodes: [],
+        completedModuleIds: [],
+      });
+
+      expect(nextProfilePlan.generatedBy).toBe('gemini');
+      expect(nextProfilePlan.dailyFocusTasks[0].moduleId).toBe('BIO-M01');
+      expect(fetchSpy).toHaveBeenCalledTimes(3);
+      expect(String(fetchSpy.mock.calls[2][0])).toContain('gemini-2.5-flash-lite:generateContent');
+    } finally {
+      fetchSpy.mockRestore();
+      GeminiPlannerService.resetRuntimeState();
+      env.GEMINI_API_KEY = prevKey;
+      env.GEMINI_MODEL = prevModel;
+      env.GEMINI_FALLBACK_MODELS = prevFallback;
+    }
   });
 });

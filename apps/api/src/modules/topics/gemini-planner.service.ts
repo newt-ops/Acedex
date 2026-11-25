@@ -1,3 +1,4 @@
+import crypto from 'crypto';
 import {
   AiCalibrationInput,
   AiDailyTaskItem,
@@ -9,6 +10,7 @@ import { EUEE_SUBJECTS } from '../curriculum/curriculum-seeder.service';
 import { ITopicModuleDocument } from './models/topic-module.model';
 import { env } from '../../config/env';
 import { logger } from '../../common/utils/logger';
+import { ContentCacheService } from '../../common/services/cache.service';
 
 interface GeminiRawResponse {
   diagnosticSummary?: string;
@@ -22,7 +24,47 @@ interface GeminiRawResponse {
   }>;
 }
 
+const AI_PLAN_CACHE_PREFIX = 'ai_plan_blueprint:';
+const AI_PLAN_CACHE_TTL_SECONDS = 12 * 60 * 60; // 12 hours
+const DAILY_QUOTA_COOLDOWN_MS = 6 * 60 * 60 * 1000; // 6 hours
+const BURST_LIMIT_COOLDOWN_MS = 2 * 60 * 1000; // 2 minutes
+const UNSUPPORTED_MODEL_COOLDOWN_MS = 60 * 60 * 1000; // 1 hour
+
 export class GeminiPlannerService {
+  /** Tracks per-model cooldown timestamps after 429 / unsupported responses to avoid wasted requests. */
+  private static modelCooldownUntil = new Map<string, number>();
+
+  /** Deduplicates concurrent identical Gemini calls so parallel bursts only consume 1 quota request. */
+  private static inFlightCalls = new Map<string, Promise<GeminiRawResponse | null>>();
+
+  /**
+   * Clears in-memory model cooldowns and cached AI blueprints (primarily for tests).
+   */
+  public static resetRuntimeState(): void {
+    this.modelCooldownUntil.clear();
+    this.inFlightCalls.clear();
+    ContentCacheService.delPrefix(AI_PLAN_CACHE_PREFIX);
+  }
+
+  /**
+   * Resolves ordered, deduplicated Gemini models starting with `env.GEMINI_MODEL`
+   * followed by `env.GEMINI_FALLBACK_MODELS`.
+   */
+  public static getCandidateModels(): string[] {
+    const raw = [
+      env.GEMINI_MODEL,
+      ...(env.GEMINI_FALLBACK_MODELS || '').split(','),
+    ];
+    const seen = new Set<string>();
+    const models: string[] = [];
+    for (const item of raw) {
+      const clean = item.trim();
+      if (!clean || seen.has(clean)) continue;
+      seen.add(clean);
+      models.push(clean);
+    }
+    return models;
+  }
   /**
    * Formats exact reading locations (Grade, Unit & Textbook Pages) for a module
    */
@@ -127,10 +169,12 @@ export class GeminiPlannerService {
     // Build deterministic baseline first (also serves as safe fallback & structural validation)
     const deterministic = this.buildDeterministicOutput({
       stream,
+      grade,
       calibration,
       allocations,
       modulesBySubject,
       completedModuleIds,
+      weakAssessmentUnits,
       projectedScore,
     });
 
@@ -148,6 +192,7 @@ export class GeminiPlannerService {
         weakAssessmentUnits,
         quickNotesUnitCodes,
         completedModuleIds,
+        allocations,
       });
 
       if (!geminiResult) {
@@ -193,7 +238,7 @@ export class GeminiPlannerService {
         }
       }
 
-      // Validate per-subject module ordering against existing moduleIds
+      // Prioritize recommended modules at the front of each subject's deterministic ordering
       const priorityBySubject: Record<string, string[]> = {
         ...deterministic.modulePriorityBySubject,
       };
@@ -208,6 +253,14 @@ export class GeminiPlannerService {
           if (!ordered.includes(m.moduleId)) ordered.push(m.moduleId);
         }
         priorityBySubject[code] = ordered;
+      }
+      for (const task of [...focusTasks].reverse()) {
+        const list = priorityBySubject[task.subjectCode];
+        if (!list) continue;
+        priorityBySubject[task.subjectCode] = [
+          task.moduleId,
+          ...list.filter((id) => id !== task.moduleId),
+        ];
       }
 
       return {
@@ -231,37 +284,150 @@ export class GeminiPlannerService {
     }
   }
 
-  private static readonly ACEDEX_SYSTEM_INSTRUCTION = `
-You are ACEDEX AI — the official Ethiopian Ministry of Education (MoE) Grades 9–12 & EUEE Cross-Grade Study Advisor.
+  /**
+   * Compact system instruction (<220 tokens) to minimize TPM usage on every request.
+   */
+  private static buildCompactSystemInstruction(stream: StudentStream): string {
+    const streamInfo =
+      stream === 'social'
+        ? 'Social Science EUEE/600: ECO,GEO,HIS,MAT,ENG,APT'
+        : 'Natural Science EUEE/600: PHY,CHE,BIO,MAT,ENG,APT';
 
-CORE MISSION:
-Help Ethiopian high school students master subjects by thematic TOPIC MODULES spanning Grades 9–12 instead of fragmented grade-by-grade studying.
+    return [
+      `You are ACEDEX AI, Ethiopian MoE G9-12 & ${streamInfo} Study Advisor.`,
+      'Pick 4 recommendedModules STRICTLY from the provided catalog (moduleId verbatim):',
+      '1. Prioritize weakSubjects first (at most 1 non-weak rotation module).',
+      '2. Prioritize modules matching weakAssessmentUnits (<65%) and skip completed modules.',
+      '3. Stage: starting=early M01-M03 foundations; reviewing=G9/10->G11/12 bridge; sprint=G11/12 mastery.',
+      '4. For G9-11 students avoid G12-only modules unless prerequisites done.',
+      'Output JSON:',
+      '- diagnosticSummary: 2 crisp encouraging sentences citing stream, goal, weak subjects & routine.',
+      '- recommendedModules: 4 items {moduleId, coachingNote (1 actionable sentence citing unit/pages; mention Quick Notes if ref has *)}.',
+    ].join('\n');
+  }
 
-CURRICULUM & EXAM DOMAIN KNOWLEDGE:
-- EUEE (Ethiopian University Entrance Examination) is scored out of 600 points (6 subjects x 100 pts):
-  - Natural Science: Physics (PHY), Chemistry (CHE), Biology (BIO), Mathematics (MAT), English (ENG), Aptitude (APT).
-  - Social Science: Economics (ECO), Geography (GEO), History (HIS), Mathematics (MAT), English (ENG), Aptitude (APT).
-- Score Tiers: 420+ Solid Pass | 480+ Competitive Track (Engineering/Pharmacy) | 540+ Top 2% Merit (Medicine/AAU Honors).
-- Preparation Stages:
-  - "starting": Student is building fundamentals. Start from early Module 1–3 prerequisites and emphasize textbook concept reading.
-  - "reviewing": Student knows basics and needs cross-grade consolidation. Bridge G9/G10 basics directly into G11/G12 modules (M03–M07).
-  - "sprint": High-yield EUEE exam sprint. Prioritize Grade 11–12 synthesis modules, problem-solving, and Mastery Checkpoints.
+  /**
+   * Selects a focused shortlist of up to 22 unfinished/relevant candidate modules
+   * instead of sending all 50-60 stream modules, cutting input prompt tokens by ~75%.
+   */
+  private static selectCandidateModulesForPrompt(params: {
+    modules: ITopicModuleDocument[];
+    allocations: AiSubjectAllocation[];
+    completedModuleIds: string[];
+    weakAssessmentUnits: Array<{ unitCode: string; bestPercentage: number }>;
+  }): ITopicModuleDocument[] {
+    const { modules, allocations, completedModuleIds, weakAssessmentUnits } = params;
+    const completedSet = new Set(completedModuleIds);
+    const weakUnitSet = new Set(
+      weakAssessmentUnits.map((w) => w.unitCode.toUpperCase().trim())
+    );
 
-HOW TO COLLABORATE WITH THE TOPIC BANK & STUDENT PROGRESS:
-1. Check the student's "weakSubjectCodes" (#1, #2, #3). Your 4 "recommendedModules" MUST prioritize those weak subjects first, while including 1 foundational/rotation module if helpful.
-2. Check "completedUnitCodes" (units already finished in Tab 1) and "completedModuleIds". Skip completed modules; if a student already finished an early unit inside a module (e.g., MAT-G09-U01), mention it in coachingNote and point them to the next unread Grade/Unit/Pages in that module!
-3. Check "weakAssessmentUnits" (units where student scored < 65%). If a unit appears there, prioritize the topic module containing that unit so they fix the underlying concept gap.
-4. Check "hasQuickNotes" on references. When a referenced unit has ACEDEX Quick Notes available, tell the student they can read the Quick Notes right inside ACEDEX alongside the MoE textbook pages.
-5. Respect "registeredGrade": For Grade 9–11 students, keep focus anchored to modules up to their grade before pushing Grade 12 modules unless prerequisites are satisfied. For Grade 12, span the full G9–G12 EUEE pipeline.
-6. STRICT GROUNDING: ONLY select moduleIds verbatim from "topicCatalog". Never invent module IDs, unit codes, or page numbers.
+    const bySubject = new Map<string, ITopicModuleDocument[]>();
+    for (const mod of modules) {
+      const list = bySubject.get(mod.subjectCode) || [];
+      list.push(mod);
+      bySubject.set(mod.subjectCode, list);
+    }
 
-OUTPUT STYLE & FEW-SHOT EXAMPLES:
-- diagnosticSummary (exactly 2 crisp, encouraging sentences):
-  Example: "Built for your Grade 12 Natural Science 480+ goal, putting priority hours on Physics and Chemistry while reinforcing Calculus prerequisites. Your 90 min Morning blocks pair concept notes with targeted cross-grade drills so every session closes real EUEE gaps."
-- coachingNote (1 actionable sentence per recommended module referencing where to start reading):
-  Example: "Bridge Grade 9 vectors into 3D dot/cross products using G11 U2 (pp. 17–46), fixing foundation gaps before Kinematics."
-  Example: "You finished G9 Unit 1 sets—continue straight to G9 U2 (pp. 27–104) to lock in exponent laws and radicals."
-`.trim();
+    const picked: ITopicModuleDocument[] = [];
+    const seen = new Set<string>();
+
+    for (const alloc of allocations) {
+      const subjectMods = (bySubject.get(alloc.subjectCode) || [])
+        .slice()
+        .sort((a, b) => a.moduleNumber - b.moduleNumber);
+      if (subjectMods.length === 0) continue;
+
+      const limit = alloc.priorityRank !== null ? 4 : 2;
+      const incomplete = subjectMods.filter((m) => !completedSet.has(m.moduleId));
+      const pool = incomplete.length > 0 ? incomplete : subjectMods.slice(-1);
+
+      // Float modules containing weak assessment units to the top of this subject's pool
+      const ordered = pool.slice().sort((a, b) => {
+        const aWeak = (a.references || []).some((r) =>
+          weakUnitSet.has((r.unitCode || '').toUpperCase().trim())
+        );
+        const bWeak = (b.references || []).some((r) =>
+          weakUnitSet.has((r.unitCode || '').toUpperCase().trim())
+        );
+        if (aWeak !== bWeak) return aWeak ? -1 : 1;
+        return a.moduleNumber - b.moduleNumber;
+      });
+
+      for (const mod of ordered.slice(0, limit)) {
+        if (seen.has(mod.moduleId)) continue;
+        seen.add(mod.moduleId);
+        picked.push(mod);
+        if (picked.length >= 22) return picked;
+      }
+    }
+
+    return picked;
+  }
+
+  /**
+   * Builds a deterministic fingerprint for the blueprint cache so equivalent profiles
+   * reuse existing Gemini plans without consuming extra RPD/TPM quota.
+   */
+  private static buildPlanCacheKey(params: {
+    stream: StudentStream;
+    grade: number;
+    calibration: AiCalibrationInput;
+    candidateModules: ITopicModuleDocument[];
+    completedUnitCodes: string[];
+    weakAssessmentUnits: Array<{ unitCode: string; bestPercentage: number }>;
+    quickNotesUnitCodes: string[];
+  }): string {
+    const gradeBucket = params.grade <= 10 ? 'g9_10' : params.grade === 11 ? 'g11' : 'g12';
+    const completedUnitSet = new Set(
+      params.completedUnitCodes.map((c) => c.toUpperCase().trim())
+    );
+    const quickNotesSet = new Set(
+      params.quickNotesUnitCodes.map((c) => c.toUpperCase().trim())
+    );
+
+    const payload = {
+      stream: params.stream,
+      gradeBucket,
+      tierId: params.calibration.tierId,
+      weakSubjectCodes: params.calibration.weakSubjectCodes.map((c) =>
+        c.toUpperCase().trim()
+      ),
+      dailyMinutes: params.calibration.dailyMinutes,
+      peakWindow: params.calibration.peakWindow,
+      prepStageId: params.calibration.prepStageId,
+      weakUnits: params.weakAssessmentUnits
+        .map((w) => w.unitCode.toUpperCase().trim())
+        .sort(),
+      candidates: params.candidateModules.map((m) => ({
+        id: m.moduleId,
+        refs: (m.references || []).map((r) => {
+          const code = (r.unitCode || '').toUpperCase().trim();
+          return `${code}:${completedUnitSet.has(code) ? 1 : 0}:${quickNotesSet.has(code) ? 1 : 0}`;
+        }),
+      })),
+    };
+
+    const hash = crypto
+      .createHash('sha256')
+      .update(JSON.stringify(payload))
+      .digest('hex')
+      .slice(0, 24);
+    return `${AI_PLAN_CACHE_PREFIX}${hash}`;
+  }
+
+  private static cloneGeminiResponse(res: GeminiRawResponse): GeminiRawResponse {
+    return {
+      diagnosticSummary: res.diagnosticSummary,
+      recommendedModules: (res.recommendedModules || []).map((item) => ({ ...item })),
+      subjectModuleOrdering: res.subjectModuleOrdering
+        ? res.subjectModuleOrdering.map((item) => ({
+            subjectCode: item.subjectCode,
+            orderedModuleIds: [...item.orderedModuleIds],
+          }))
+        : undefined,
+    };
+  }
 
   private static async callGeminiWithTopicCatalog(params: {
     stream: StudentStream;
@@ -272,6 +438,7 @@ OUTPUT STYLE & FEW-SHOT EXAMPLES:
     weakAssessmentUnits: Array<{ unitCode: string; bestPercentage: number }>;
     quickNotesUnitCodes: string[];
     completedModuleIds: string[];
+    allocations: AiSubjectAllocation[];
   }): Promise<GeminiRawResponse | null> {
     const {
       stream,
@@ -282,58 +449,133 @@ OUTPUT STYLE & FEW-SHOT EXAMPLES:
       weakAssessmentUnits,
       quickNotesUnitCodes,
       completedModuleIds,
+      allocations,
     } = params;
 
-    const quickNotesSet = new Set(quickNotesUnitCodes);
+    const candidateModules = this.selectCandidateModulesForPrompt({
+      modules,
+      allocations,
+      completedModuleIds,
+      weakAssessmentUnits,
+    });
+    if (candidateModules.length === 0) return null;
 
-    const compactCatalog = modules.map((m) => ({
-      moduleId: m.moduleId,
-      subjectCode: m.subjectCode,
-      moduleNumber: m.moduleNumber,
-      phase: m.phase,
-      title: m.title,
-      rationale: m.rationale.slice(0, 160),
-      prerequisites: m.prerequisites.slice(0, 3),
-      references: (m.references || []).map((r) => ({
-        grade: r.grade,
-        unitCode: r.unitCode,
-        pages: r.pages,
-        hasQuickNotes: quickNotesSet.has(r.unitCode),
-      })),
-    }));
+    const cacheKey = this.buildPlanCacheKey({
+      stream,
+      grade,
+      calibration,
+      candidateModules,
+      completedUnitCodes,
+      weakAssessmentUnits,
+      quickNotesUnitCodes,
+    });
+
+    const cached = ContentCacheService.get<GeminiRawResponse>(cacheKey);
+    if (cached) {
+      logger.info({ cacheKey }, 'AI blueprint cache hit — 0 Gemini quota consumed');
+      return this.cloneGeminiResponse(cached);
+    }
+
+    const existingFlight = this.inFlightCalls.get(cacheKey);
+    if (existingFlight) {
+      const shared = await existingFlight;
+      return shared ? this.cloneGeminiResponse(shared) : null;
+    }
+
+    const requestPromise = this.executeGeminiWithFallback({
+      stream,
+      grade,
+      calibration,
+      candidateModules,
+      completedUnitCodes,
+      weakAssessmentUnits,
+      quickNotesUnitCodes,
+      cacheKey,
+    }).finally(() => {
+      this.inFlightCalls.delete(cacheKey);
+    });
+
+    this.inFlightCalls.set(cacheKey, requestPromise);
+    const result = await requestPromise;
+    return result ? this.cloneGeminiResponse(result) : null;
+  }
+
+  private static async executeGeminiWithFallback(params: {
+    stream: StudentStream;
+    grade: number;
+    calibration: AiCalibrationInput;
+    candidateModules: ITopicModuleDocument[];
+    completedUnitCodes: string[];
+    weakAssessmentUnits: Array<{ unitCode: string; bestPercentage: number }>;
+    quickNotesUnitCodes: string[];
+    cacheKey: string;
+  }): Promise<GeminiRawResponse | null> {
+    const {
+      stream,
+      grade,
+      calibration,
+      candidateModules,
+      completedUnitCodes,
+      weakAssessmentUnits,
+      quickNotesUnitCodes,
+      cacheKey,
+    } = params;
+
+    const quickNotesSet = new Set(
+      quickNotesUnitCodes.map((c) => c.toUpperCase().trim())
+    );
+    const completedUnitSet = new Set(
+      completedUnitCodes.map((c) => c.toUpperCase().trim())
+    );
+
+    // Super-compact pipe-delimited catalog (omits repetitive JSON keys & rationales)
+    const catalogLines = candidateModules.map((m) => {
+      const refs = (m.references || [])
+        .slice(0, 3)
+        .map((r) => {
+          const code = (r.unitCode || '').toUpperCase().trim();
+          const doneTag = completedUnitSet.has(code) ? '!' : '';
+          const notesTag = quickNotesSet.has(code) ? '*' : '';
+          return `G${r.grade}U${r.unitNumber}${doneTag}${notesTag}`;
+        })
+        .join(',');
+      return `${m.moduleId}|${m.phase}|${m.title}|${refs}`;
+    });
+
+    const weakUnitsCompact = weakAssessmentUnits
+      .slice(0, 6)
+      .map((w) => `${w.unitCode}:${w.bestPercentage}%`)
+      .join(',');
 
     const prompt = [
-      'Generate the personalized ACEDEX AI Study Blueprint JSON for this student using the grounded topicCatalog below.',
-      '',
-      `Student Profile & Live Progress: ${JSON.stringify({
-        registeredGrade: grade,
-        stream,
-        targetScore: calibration.targetScore,
-        tierId: calibration.tierId,
-        weakSubjectCodes: calibration.weakSubjectCodes,
-        dailyMinutes: calibration.dailyMinutes,
-        peakWindow: calibration.peakWindow,
-        prepStageId: calibration.prepStageId,
-        completedUnitCodes: completedUnitCodes.slice(0, 25),
-        weakAssessmentUnits,
-        completedModuleIds,
-      })}`,
-      '',
-      `topicCatalog: ${JSON.stringify(compactCatalog)}`,
+      `Student: G${grade} ${stream}, tier=${calibration.tierId}, target=${calibration.targetScore}, weak=${calibration.weakSubjectCodes.join(',')}, ${calibration.dailyMinutes}m ${calibration.peakWindow}, stage=${calibration.prepStageId}${weakUnitsCompact ? `, lowScores=[${weakUnitsCompact}]` : ''}`,
+      'Catalog (id|phase|title|refs; !=done *=QuickNotes):',
+      ...catalogLines,
     ].join('\n');
 
-    const controller = new AbortController();
-    const timeoutId = setTimeout(() => controller.abort(), 18000);
+    const systemInstruction = this.buildCompactSystemInstruction(stream);
+    const models = this.getCandidateModels();
+    const now = Date.now();
 
-    try {
-      const endpoint = `https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(env.GEMINI_MODEL)}:generateContent?key=${encodeURIComponent(env.GEMINI_API_KEY!)}`;
-      const requestBody = JSON.stringify({
-        systemInstruction: {
-          parts: [{ text: this.ACEDEX_SYSTEM_INSTRUCTION }],
-        },
-        contents: [{ role: 'user', parts: [{ text: prompt }] }],
-        generationConfig: {
-          temperature: 0.35,
+    for (const model of models) {
+      const cooldownUntil = this.modelCooldownUntil.get(model) ?? 0;
+      if (now < cooldownUntil) {
+        logger.debug(
+          { model, remainingSec: Math.ceil((cooldownUntil - now) / 1000) },
+          'Skipping Gemini model in rate-limit cooldown'
+        );
+        continue;
+      }
+
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 16000);
+
+      try {
+        const endpoint = `https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(model)}:generateContent?key=${encodeURIComponent(env.GEMINI_API_KEY!)}`;
+
+        const generationConfig: Record<string, unknown> = {
+          temperature: 0.3,
+          maxOutputTokens: 380,
           responseMimeType: 'application/json',
           responseSchema: {
             type: 'OBJECT',
@@ -350,81 +592,105 @@ OUTPUT STYLE & FEW-SHOT EXAMPLES:
                   required: ['moduleId', 'coachingNote'],
                 },
               },
-              subjectModuleOrdering: {
-                type: 'ARRAY',
-                items: {
-                  type: 'OBJECT',
-                  properties: {
-                    subjectCode: { type: 'STRING' },
-                    orderedModuleIds: {
-                      type: 'ARRAY',
-                      items: { type: 'STRING' },
-                    },
-                  },
-                  required: ['subjectCode', 'orderedModuleIds'],
-                },
-              },
             },
             required: ['diagnosticSummary', 'recommendedModules'],
           },
-        },
-      });
+        };
 
-      let response = await fetch(endpoint, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        signal: controller.signal,
-        body: requestBody,
-      });
+        // Disable thinking tokens on Gemini 2.5 Flash/Lite models to avoid wasting TPM quota
+        if (model.toLowerCase().startsWith('gemini-2.5')) {
+          generationConfig.thinkingConfig = {
+            thinkingBudget: env.GEMINI_THINKING_BUDGET,
+          };
+        }
 
-      // Retry once briefly on transient 503/429 load spikes
-      if (response.status === 503 || response.status === 429) {
-        await new Promise((resolve) => setTimeout(resolve, 900));
-        response = await fetch(endpoint, {
+        const response = await fetch(endpoint, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           signal: controller.signal,
-          body: requestBody,
+          body: JSON.stringify({
+            systemInstruction: {
+              parts: [{ text: systemInstruction }],
+            },
+            contents: [{ role: 'user', parts: [{ text: prompt }] }],
+            generationConfig,
+          }),
         });
-      }
 
-      if (!response.ok) {
-        const errBody = await response.text();
+        if (!response.ok) {
+          const errBody = await response.text();
+          if (response.status === 429) {
+            const isDailyQuota = /per\s*day|PerDay|daily|RPD/i.test(errBody);
+            const cooldownMs = isDailyQuota
+              ? DAILY_QUOTA_COOLDOWN_MS
+              : BURST_LIMIT_COOLDOWN_MS;
+            this.modelCooldownUntil.set(model, Date.now() + cooldownMs);
+            logger.warn(
+              { model, status: 429, isDailyQuota, cooldownMs },
+              'Gemini model rate-limited; switching to fallback model'
+            );
+            continue;
+          }
+
+          if (response.status === 404 || response.status === 400) {
+            this.modelCooldownUntil.set(model, Date.now() + UNSUPPORTED_MODEL_COOLDOWN_MS);
+          }
+
+          logger.warn(
+            { model, status: response.status, errBody: errBody.slice(0, 250) },
+            'Gemini model failed; trying next fallback'
+          );
+          continue;
+        }
+
+        const json = (await response.json()) as any;
+        const text = json?.candidates?.[0]?.content?.parts?.[0]?.text;
+        if (!text) {
+          logger.warn({ model }, 'Gemini returned empty candidate text; trying next fallback');
+          continue;
+        }
+
+        const parsed = JSON.parse(text) as GeminiRawResponse;
+        ContentCacheService.set(cacheKey, parsed, AI_PLAN_CACHE_TTL_SECONDS);
+        return parsed;
+      } catch (err: any) {
         logger.warn(
-          { status: response.status, errBody: errBody.slice(0, 300) },
-          'Gemini API returned non-OK status'
+          { model, err: err?.message },
+          'Gemini request error; trying next fallback model'
         );
-        return null;
+      } finally {
+        clearTimeout(timeoutId);
       }
-
-      const json = (await response.json()) as any;
-      const text = json?.candidates?.[0]?.content?.parts?.[0]?.text;
-      if (!text) return null;
-
-      return JSON.parse(text) as GeminiRawResponse;
-    } finally {
-      clearTimeout(timeoutId);
     }
+
+    return null;
   }
 
   private static buildDeterministicOutput(params: {
     stream: StudentStream;
+    grade?: number;
     calibration: AiCalibrationInput;
     allocations: AiSubjectAllocation[];
     modulesBySubject: Map<string, ITopicModuleDocument[]>;
     completedModuleIds: string[];
+    weakAssessmentUnits?: Array<{ unitCode: string; bestPercentage: number }>;
     projectedScore: number;
   }): AiStudyProgram {
     const {
       stream,
+      grade = 12,
       calibration,
       allocations,
       modulesBySubject,
       completedModuleIds,
+      weakAssessmentUnits = [],
       projectedScore,
     } = params;
 
     const completedSet = new Set(completedModuleIds);
+    const weakUnitSet = new Set(
+      weakAssessmentUnits.map((w) => w.unitCode.toUpperCase().trim())
+    );
     const streamLabel = stream === 'social' ? 'Social Science' : 'Natural Science';
     const weakNames = allocations
       .filter((a) => a.priorityRank !== null)
@@ -447,25 +713,45 @@ OUTPUT STYLE & FEW-SHOT EXAMPLES:
           : 'balanced cross-grade review';
 
     const diagnosticSummary =
-      `Tailored for your Grade 12 ${streamLabel} track with priority cross-grade blocks on ${weakText}. ` +
+      `Tailored for your Grade ${grade} ${streamLabel} track with priority cross-grade blocks on ${weakText}. ` +
       `Your ${calibration.dailyMinutes} min ${calibration.peakWindow.toLowerCase()} routine follows a ${prepLabel} sequence from Grades 9–12.`;
 
     const modulePriorityBySubject: Record<string, string[]> = {};
     for (const [code, mods] of modulesBySubject.entries()) {
-      modulePriorityBySubject[code] = mods.map((m) => m.moduleId);
+      // Deterministically order: weak-assessment incomplete -> other incomplete -> completed
+      const prioritized = mods.slice().sort((a, b) => {
+        const aDone = completedSet.has(a.moduleId);
+        const bDone = completedSet.has(b.moduleId);
+        if (aDone !== bDone) return aDone ? 1 : -1;
+
+        const aWeak = (a.references || []).some((r) =>
+          weakUnitSet.has((r.unitCode || '').toUpperCase().trim())
+        );
+        const bWeak = (b.references || []).some((r) =>
+          weakUnitSet.has((r.unitCode || '').toUpperCase().trim())
+        );
+        if (aWeak !== bWeak) return aWeak ? -1 : 1;
+
+        return a.moduleNumber - b.moduleNumber;
+      });
+      modulePriorityBySubject[code] = prioritized.map((m) => m.moduleId);
     }
 
     const dailyFocusTasks: AiDailyTaskItem[] = [];
     const blockMinutes = Math.max(20, Math.round(calibration.dailyMinutes / 4));
 
-    // Pick next incomplete module from each priority subject first, then remaining subjects
+    // Pick top prioritized incomplete module from each priority subject first, then remaining subjects
     for (const alloc of allocations) {
       if (dailyFocusTasks.length >= 4) break;
       const subjectMods = modulesBySubject.get(alloc.subjectCode) || [];
       if (subjectMods.length === 0) continue;
 
+      const prioritizedIds = modulePriorityBySubject[alloc.subjectCode] || [];
+      const topId = prioritizedIds[0];
       const nextMod =
-        subjectMods.find((m) => !completedSet.has(m.moduleId)) || subjectMods[0];
+        subjectMods.find((m) => m.moduleId === topId) ||
+        subjectMods.find((m) => !completedSet.has(m.moduleId)) ||
+        subjectMods[0];
 
       dailyFocusTasks.push({
         id: `ai-task-${nextMod.moduleId}`,

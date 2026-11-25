@@ -12,7 +12,6 @@ import 'package:acedex/features/dashboard/widgets/curriculum_bento_grid.dart';
 import 'package:acedex/features/dashboard/widgets/formula_flashcards_carousel.dart';
 import 'package:acedex/features/dashboard/widgets/hero_countdown_card.dart';
 import 'package:acedex/features/dashboard/widgets/study_plan_section.dart';
-import 'package:acedex/features/dashboard/widgets/subject_mastery_section.dart';
 
 void main() {
   const testUser = UserProfile(
@@ -94,9 +93,9 @@ void main() {
       await tester.pumpWidget(createDashboardHarness());
       await tester.pump();
 
-      // Section 1: Hero Countdown & Readiness Card (No Continue button)
+      // Section 1: Hero Countdown & Readiness Card (No Continue button, no grade badge)
       expect(find.byType(HeroCountdownCard), findsOneWidget);
-      expect(find.text('G12 • NATURAL SCIENCE'), findsOneWidget);
+      expect(find.text('G12 • NATURAL SCIENCE'), findsNothing);
       expect(find.text('Countdown'), findsOneWidget);
       expect(find.text('Readiness'), findsOneWidget);
       expect(find.text('Continue Unit 4'), findsNothing);
@@ -116,9 +115,6 @@ void main() {
       expect(find.text('0 planned'), findsOneWidget);
       expect(find.text('No Tasks Planned Yet'), findsOneWidget);
       expect(find.text('Add'), findsOneWidget);
-
-      // Section 4: Subject Mastery moved to Study/Progress screen (not on Dashboard)
-      expect(find.byType(SubjectMasterySection), findsNothing);
 
       // Section 5: Formula Flashcards (When enabled)
       expect(find.byType(FormulaFlashcardsCarousel), findsOneWidget);

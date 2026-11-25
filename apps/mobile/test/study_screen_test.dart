@@ -166,9 +166,9 @@ void main() {
       expect(find.text('All Units'), findsOneWidget);
       expect(find.text('In Progress'), findsOneWidget);
 
-      // Component 2: Curriculum Hero Card
+      // Component 2: Curriculum Hero Card (no grade badge pill)
       expect(find.byType(CurriculumHeroCard), findsOneWidget);
-      expect(find.text('G12 • NATIONAL CURRICULUM'), findsOneWidget);
+      expect(find.text('G12 • NATIONAL CURRICULUM'), findsNothing);
 
       // Component 3: Syllabus Unit Accordion
       expect(find.byType(SyllabusUnitAccordion), findsOneWidget);

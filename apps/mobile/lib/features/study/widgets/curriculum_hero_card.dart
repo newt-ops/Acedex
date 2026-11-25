@@ -54,7 +54,6 @@ class _CurriculumHeroCardState extends State<CurriculumHeroCard> {
     final theme = Theme.of(context);
     final isDark = theme.brightness == Brightness.dark;
     final primaryColor = theme.colorScheme.primary;
-    final raisedBg = isDark ? const Color(0xFF2B2B31) : Colors.white;
     final lineBorder = isDark ? const Color(0xFF383842) : const Color(0xFFE4E4E8);
     final subtextColor = isDark ? AppColors.darkSubtext : AppColors.lightSubtext;
 
@@ -118,7 +117,7 @@ class _CurriculumHeroCardState extends State<CurriculumHeroCard> {
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           // ===================================================================
-          // TOP ROW: Grade Badge + Subject Name + Circular Mastery Ring
+          // TOP ROW: Subject Name + Circular Mastery Ring
           // ===================================================================
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -128,40 +127,6 @@ class _CurriculumHeroCardState extends State<CurriculumHeroCard> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Container(
-                      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
-                      decoration: BoxDecoration(
-                        color: raisedBg,
-                        borderRadius: BorderRadius.circular(999),
-                        border: Border.all(
-                          color: primaryColor.withValues(alpha: 0.20),
-                        ),
-                      ),
-                      child: Row(
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          Container(
-                            width: 6,
-                            height: 6,
-                            decoration: BoxDecoration(
-                              color: primaryColor,
-                              shape: BoxShape.circle,
-                            ),
-                          ),
-                          const SizedBox(width: 6),
-                          Text(
-                            'G${widget.grade} • NATIONAL CURRICULUM',
-                            style: TextStyle(
-                              fontSize: 9.5,
-                              fontWeight: FontWeight.w800,
-                              letterSpacing: 0.5,
-                              color: primaryColor,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                    const SizedBox(height: 7),
                     Text(
                       widget.subject.name,
                       style: TextStyle(

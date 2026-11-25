@@ -75,7 +75,7 @@ const BASE_STORE_CATALOG: EconomyStoreItem[] = [
   {
     itemKey: 'ai_plan_pass',
     title: 'AI Study Program Pass',
-    description: 'Generate or recalibrate your Gemini Topic Study Plan without waiting for an ad.',
+    description: 'Generate or recalibrate your ACEDEX AI Topic Study Plan without waiting for an ad.',
     cost: 100,
     category: 'boost',
     canWatchAdInstead: true,
