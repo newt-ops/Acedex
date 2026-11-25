@@ -75,6 +75,7 @@ class _FakeAdsRepo implements AcedexAdsRepository {
 class _FakeAiStudyRepository implements AiStudyRepository {
   int generateCalls = 0;
   bool failMatFetch = false;
+  Duration unitMasteryDelay = Duration.zero;
 
   AiTopicProgramOverview overview = const AiTopicProgramOverview(
     hasProgram: false,
@@ -338,6 +339,9 @@ class _FakeAiStudyRepository implements AiStudyRepository {
     required bool completed,
     String? moduleId,
   }) async {
+    if (unitMasteryDelay > Duration.zero) {
+      await Future<void>.delayed(unitMasteryDelay);
+    }
     final code = unitCode.toUpperCase().trim();
     final target = phyModules.first;
     final updatedRefs = target.references
@@ -896,7 +900,11 @@ void main() {
 
     expect(find.text('0/2 units mastered'), findsOneWidget);
 
+    fakeRepo.unitMasteryDelay = const Duration(milliseconds: 50);
     await tester.tap(find.bySemanticsLabel('Mark PHY-G09-U01 mastered'));
+    // Pump intermediate frame while _savingUnitCode is active to verify AcedexDotsLoader fits cleanly without overflow
+    await tester.pump();
+    expect(find.byType(AcedexDotsLoader), findsOneWidget);
     await tester.pumpAndSettle();
 
     // Detail sheet reflects unit mastery + synced step

@@ -526,9 +526,8 @@ class _AiModuleDetailSheetState extends State<AiModuleDetailSheet> {
                                             ),
                                             alignment: Alignment.center,
                                             child: isUnitSaving
-                                                ? SizedBox(
-                                                    width: 12,
-                                                    height: 12,
+                                                ? FittedBox(
+                                                    fit: BoxFit.scaleDown,
                                                     child: AcedexDotsLoader(
                                                       color: isUnitDone
                                                           ? onAccent
