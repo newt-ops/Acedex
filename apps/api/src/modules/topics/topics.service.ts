@@ -1,4 +1,4 @@
-import { Types } from 'mongoose';
+import mongoose, { Types } from 'mongoose';
 import {
   AiCalibrationInput,
   AiStudyProgram,
@@ -47,6 +47,44 @@ export class TopicsService {
       todayKey,
       nextResetAt: new Date(nextMidnightUtcMs).toISOString(),
     };
+  }
+
+  /**
+   * Resolves the set of curriculum unitCodes that currently have Quick Notes
+   * (either in UnitModel.hasQuickNotes / UnitModel.quickNotes or acedex.quick_notes).
+   */
+  private static async getQuickNotesUnitCodeSet(
+    candidateUnitCodes?: string[]
+  ): Promise<Set<string>> {
+    const unitFilter: Record<string, any> = {
+      $or: [{ hasQuickNotes: true }, { quickNotes: { $ne: null } }],
+    };
+    const quickNotesFilter: Record<string, any> = {};
+
+    if (candidateUnitCodes && candidateUnitCodes.length > 0) {
+      unitFilter.code = { $in: candidateUnitCodes };
+      quickNotesFilter.unitCode = { $in: candidateUnitCodes };
+    } else if (candidateUnitCodes && candidateUnitCodes.length === 0) {
+      return new Set<string>();
+    }
+
+    const [unitsWithNotes, quickNoteDocs] = await Promise.all([
+      UnitModel.find(unitFilter).select('code').lean(),
+      mongoose.connection
+        .useDb('acedex')
+        .collection('quick_notes')
+        .find(quickNotesFilter, { projection: { unitCode: 1 } })
+        .toArray(),
+    ]);
+
+    const codes = new Set<string>();
+    for (const u of unitsWithNotes) {
+      if (u.code) codes.add(String(u.code).toUpperCase().trim());
+    }
+    for (const doc of quickNoteDocs) {
+      if (doc.unitCode) codes.add(String(doc.unitCode).toUpperCase().trim());
+    }
+    return codes;
   }
 
   /**
@@ -255,10 +293,8 @@ export class TopicsService {
       .filter((u) => u.attemptsCount > 0 && u.bestPercentage < 65)
       .map((u) => ({ unitCode: u.unitCode, bestPercentage: u.bestPercentage }));
 
-    const unitsWithQuickNotes = await UnitModel.find({ hasQuickNotes: true })
-      .select('code')
-      .lean();
-    const quickNotesUnitCodes = unitsWithQuickNotes.map((u) => u.code);
+    const quickNotesUnitSet = await this.getQuickNotesUnitCodeSet();
+    const quickNotesUnitCodes = Array.from(quickNotesUnitSet);
 
     const completedModuleIds = (progress.topicModules || [])
       .filter((tm) => tm.isCompleted)
@@ -321,7 +357,16 @@ export class TopicsService {
     userId: string,
     subjectCode: string
   ): Promise<TopicModuleItem[]> {
-    const cleanCode = subjectCode.toUpperCase().trim();
+    const normalizedInput = subjectCode.trim();
+    const matchedSubject = EUEE_SUBJECTS.find(
+      (s) =>
+        s.code === normalizedInput.toUpperCase() ||
+        s.slug === normalizedInput.toLowerCase() ||
+        s.name.toLowerCase() === normalizedInput.toLowerCase()
+    );
+    const cleanCode = matchedSubject
+      ? matchedSubject.code
+      : normalizedInput.toUpperCase();
     const userObjectId = new Types.ObjectId(userId);
 
     const modules = await TopicModuleModel.find({ subjectCode: cleanCode })
@@ -342,16 +387,9 @@ export class TopicsService {
       }
     }
 
-    const unitsWithNotes =
-      allRefUnitCodes.size > 0
-        ? await UnitModel.find({
-            code: { $in: Array.from(allRefUnitCodes) },
-            hasQuickNotes: true,
-          })
-            .select('code')
-            .lean()
-        : [];
-    const quickNotesUnitSet = new Set(unitsWithNotes.map((u) => u.code));
+    const quickNotesUnitSet = await this.getQuickNotesUnitCodeSet(
+      Array.from(allRefUnitCodes)
+    );
 
     return modules.map((mod) => {
       const rec = progressMap.get(mod.moduleId);
@@ -377,7 +415,7 @@ export class TopicsService {
           unitCode: r.unitCode,
           unitTitle: r.unitTitle,
           pages: r.pages,
-          hasQuickNotes: quickNotesUnitSet.has(r.unitCode),
+          hasQuickNotes: quickNotesUnitSet.has(r.unitCode.toUpperCase().trim()),
         })),
         sequence: mod.sequence || [],
         prerequisites: mod.prerequisites || [],

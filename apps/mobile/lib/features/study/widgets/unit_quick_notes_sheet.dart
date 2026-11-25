@@ -1,6 +1,9 @@
+import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:hugeicons/hugeicons.dart';
+import '../../../core/network/api_client.dart';
+import '../../../core/network/api_endpoints.dart';
 import '../../../core/theme/app_colors.dart';
 import '../../../core/ui/animations/bounceable.dart';
 import '../models/study_curriculum_data.dart';
@@ -11,12 +14,14 @@ class UnitQuickNotesSheet extends StatefulWidget {
   final StudyUnit unit;
   final SubjectCurriculum subject;
   final VoidCallback onCompleteAndUnlockAssessment;
+  final String? primaryActionLabel;
 
   const UnitQuickNotesSheet({
     super.key,
     required this.unit,
     required this.subject,
     required this.onCompleteAndUnlockAssessment,
+    this.primaryActionLabel,
   });
 
   static Future<void> show(
@@ -24,6 +29,7 @@ class UnitQuickNotesSheet extends StatefulWidget {
     required StudyUnit unit,
     required SubjectCurriculum subject,
     required VoidCallback onCompleteAndUnlockAssessment,
+    String? primaryActionLabel,
   }) {
     return showModalBottomSheet(
       context: context,
@@ -33,6 +39,7 @@ class UnitQuickNotesSheet extends StatefulWidget {
         unit: unit,
         subject: subject,
         onCompleteAndUnlockAssessment: onCompleteAndUnlockAssessment,
+        primaryActionLabel: primaryActionLabel,
       ),
     );
   }
@@ -43,6 +50,68 @@ class UnitQuickNotesSheet extends StatefulWidget {
 
 class _UnitQuickNotesSheetState extends State<UnitQuickNotesSheet> {
   int? _copiedIndex;
+  late UnitNotesData _notes;
+
+  @override
+  void initState() {
+    super.initState();
+    _notes = StudyCurriculumData.getNotesForUnit(
+      unitCode: widget.unit.code,
+      unitTitle: widget.unit.title,
+      subjectName: widget.subject.name,
+      examWeight: widget.unit.examWeight,
+    );
+    unawaited(_loadLiveNotes());
+  }
+
+  Future<void> _loadLiveNotes() async {
+    final remoteCode = widget.unit.unitCode?.trim();
+    if (remoteCode == null || remoteCode.isEmpty) return;
+
+    try {
+      final res = await ApiClient.instance.get(
+        ApiEndpoints.unitNotes(remoteCode),
+        requiresAuth: false,
+      );
+      final data = res['data'];
+      if (data is! Map<String, dynamic>) return;
+
+      final rawPoints = (data['summaryPoints'] as List<dynamic>? ?? [])
+          .map((e) => e.toString().trim())
+          .where((s) => s.isNotEmpty)
+          .toList();
+      final rawFormulas = (data['formulas'] as List<dynamic>? ?? [])
+          .whereType<Map<String, dynamic>>()
+          .map(
+            (f) => UnitFormulaData(
+              label: f['label'] as String? ?? 'Key Formula',
+              expr: f['expr'] as String? ?? '',
+            ),
+          )
+          .where((f) => f.expr.isNotEmpty)
+          .toList();
+      final tip = (data['examTip'] as String? ?? '').trim();
+
+      if (rawPoints.isEmpty && rawFormulas.isEmpty && tip.isEmpty) return;
+      if (!mounted) return;
+
+      setState(() {
+        _notes = UnitNotesData(
+          unitCode: data['unitCode'] as String? ?? _notes.unitCode,
+          unitTitle: data['unitTitle'] as String? ?? _notes.unitTitle,
+          subjectName: widget.subject.name,
+          examWeight: (data['examWeight'] as String?)?.isNotEmpty == true
+              ? data['examWeight'] as String
+              : _notes.examWeight,
+          summaryPoints: rawPoints.isNotEmpty ? rawPoints : _notes.summaryPoints,
+          formulas: rawFormulas.isNotEmpty ? rawFormulas : _notes.formulas,
+          examTip: tip.isNotEmpty ? tip : _notes.examTip,
+        );
+      });
+    } catch (_) {
+      // Fall back cleanly to StudyCurriculumData notes when offline or in tests.
+    }
+  }
 
   void _handleCopyFormula(int index, String formulaText) {
     Clipboard.setData(ClipboardData(text: formulaText));
@@ -63,12 +132,7 @@ class _UnitQuickNotesSheetState extends State<UnitQuickNotesSheet> {
     final lineBorder = isDark ? const Color(0xFF33333E) : const Color(0xFFE4E4E8);
     final subtextColor = isDark ? AppColors.darkSubtext : AppColors.lightSubtext;
 
-    final notes = StudyCurriculumData.getNotesForUnit(
-      unitCode: widget.unit.code,
-      unitTitle: widget.unit.title,
-      subjectName: widget.subject.name,
-      examWeight: widget.unit.examWeight,
-    );
+    final notes = _notes;
 
     return Container(
       constraints: BoxConstraints(
@@ -412,9 +476,10 @@ class _UnitQuickNotesSheetState extends State<UnitQuickNotesSheet> {
                       const Icon(Icons.check_rounded, color: Colors.white, size: 18),
                       const SizedBox(width: 8),
                       Text(
-                        widget.unit.isCompleted
-                            ? 'Unit Completed • Launch Assessment'
-                            : 'Mark Unit Complete & Unlock Assessment',
+                        widget.primaryActionLabel ??
+                            (widget.unit.isCompleted
+                                ? 'Unit Completed • Launch Assessment'
+                                : 'Mark Unit Complete & Unlock Assessment'),
                         style: const TextStyle(
                           fontSize: 13.5,
                           fontWeight: FontWeight.w700,

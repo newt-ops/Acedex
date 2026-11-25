@@ -44,6 +44,7 @@ class _AiStudyScreenState extends State<AiStudyScreen> {
   _AiStudyPhase _phase = _AiStudyPhase.welcome;
   bool _initialLoading = true;
   bool _loadingModules = false;
+  String? _modulesError;
 
   AiTopicProgramOverview? _overview;
   String _selectedSubjectCode = '';
@@ -138,28 +139,88 @@ class _AiStudyScreenState extends State<AiStudyScreen> {
   }
 
   Future<void> _loadSubjectModules(String subjectCode) async {
-    final normalized = subjectCode.toUpperCase();
+    final normalized = subjectCode.toUpperCase().trim();
+    if (normalized.isEmpty) return;
+
     setState(() {
       _selectedSubjectCode = normalized;
+      _modulesError = null;
       _loadingModules = true;
     });
+
+    if (!_modulesBySubject.containsKey(normalized)) {
+      final cachedFirst = await _repository.getCachedSubjectModules(normalized);
+      if (!mounted || _selectedSubjectCode != normalized) return;
+      if (cachedFirst != null && cachedFirst.isNotEmpty) {
+        setState(() {
+          _modulesBySubject[normalized] = cachedFirst;
+        });
+      }
+    }
 
     try {
       final modules = await _repository.fetchSubjectModules(normalized);
       if (!mounted) return;
       setState(() {
         _modulesBySubject[normalized] = modules;
-        _loadingModules = false;
+        if (_selectedSubjectCode == normalized) {
+          _modulesError = null;
+          _loadingModules = false;
+        }
+      });
+    } on ApiException catch (e) {
+      if (!mounted) return;
+      final cached = await _repository.getCachedSubjectModules(normalized);
+      if (!mounted) return;
+      setState(() {
+        if (cached != null && cached.isNotEmpty) {
+          _modulesBySubject[normalized] = cached;
+        }
+        if (_selectedSubjectCode == normalized) {
+          final hasAny =
+              (_modulesBySubject[normalized] ?? const []).isNotEmpty;
+          _modulesError = hasAny ? null : e.message;
+          _loadingModules = false;
+        }
       });
     } catch (_) {
       if (!mounted) return;
       final cached = await _repository.getCachedSubjectModules(normalized);
       if (!mounted) return;
       setState(() {
-        if (cached != null) _modulesBySubject[normalized] = cached;
-        _loadingModules = false;
+        if (cached != null && cached.isNotEmpty) {
+          _modulesBySubject[normalized] = cached;
+        }
+        if (_selectedSubjectCode == normalized) {
+          final hasAny =
+              (_modulesBySubject[normalized] ?? const []).isNotEmpty;
+          _modulesError = hasAny
+              ? null
+              : 'Unable to load topic modules for $normalized right now.';
+          _loadingModules = false;
+        }
       });
     }
+  }
+
+  Future<void> _openDailyTask(AiDailyTaskItem task) async {
+    final code = task.subjectCode.toUpperCase().trim();
+    if (code.isEmpty) return;
+
+    if (code != _selectedSubjectCode.toUpperCase() ||
+        (_modulesBySubject[code] ?? const []).isEmpty) {
+      await _loadSubjectModules(code);
+    }
+
+    if (!mounted) return;
+    final list = _modulesBySubject[code] ?? const [];
+    if (list.isEmpty) return;
+
+    final match = list.firstWhere(
+      (m) => m.moduleId.toUpperCase() == task.moduleId.toUpperCase(),
+      orElse: () => list.first,
+    );
+    _openModuleDetail(match);
   }
 
   Future<TopicModuleItem?> _updateModuleProgress(
@@ -171,6 +232,7 @@ class _AiStudyScreenState extends State<AiStudyScreen> {
     try {
       final updated = await _repository.updateModuleProgress(
         moduleId: target.moduleId,
+        existingModule: target,
         stepNumber: stepNumber,
         stepCompleted: stepCompleted,
         isCompleted: isCompleted,
@@ -178,14 +240,16 @@ class _AiStudyScreenState extends State<AiStudyScreen> {
 
       if (!mounted) return updated;
 
+      final code = updated.subjectCode.toUpperCase();
+      final list = List<TopicModuleItem>.from(_modulesBySubject[code] ?? []);
       setState(() {
-        final code = updated.subjectCode.toUpperCase();
-        final list = List<TopicModuleItem>.from(_modulesBySubject[code] ?? []);
         final idx = list.indexWhere((m) => m.moduleId == updated.moduleId);
         if (idx != -1) {
           list[idx] = updated;
-          _modulesBySubject[code] = list;
+        } else {
+          list.add(updated);
         }
+        _modulesBySubject[code] = list;
 
         if (_overview != null) {
           final updatedSummaries = _overview!.subjectSummaries.map((s) {
@@ -217,6 +281,11 @@ class _AiStudyScreenState extends State<AiStudyScreen> {
           );
         }
       });
+
+      unawaited(_repository.saveCachedSubjectModules(code, list));
+      if (_overview != null) {
+        unawaited(_repository.saveCachedOverview(_overview!));
+      }
 
       return updated;
     } on ApiException catch (e) {
@@ -325,7 +394,10 @@ class _AiStudyScreenState extends State<AiStudyScreen> {
           selectedSubjectCode: _selectedSubjectCode,
           modules: currentModules,
           isLoadingModules: _loadingModules,
+          modulesError: _modulesError,
           onSelectSubject: _loadSubjectModules,
+          onRetryLoadModules: () => _loadSubjectModules(_selectedSubjectCode),
+          onOpenDailyTask: _openDailyTask,
           onOpenModule: _openModuleDetail,
           onRecalibrate: _openFullScreenCalibration,
         );

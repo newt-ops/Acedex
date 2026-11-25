@@ -16,7 +16,10 @@ class AiTopicWorkspaceView extends StatelessWidget {
   final String selectedSubjectCode;
   final List<TopicModuleItem> modules;
   final bool isLoadingModules;
+  final String? modulesError;
   final ValueChanged<String> onSelectSubject;
+  final VoidCallback? onRetryLoadModules;
+  final ValueChanged<AiDailyTaskItem>? onOpenDailyTask;
   final ValueChanged<TopicModuleItem> onOpenModule;
   final VoidCallback onRecalibrate;
 
@@ -26,7 +29,10 @@ class AiTopicWorkspaceView extends StatelessWidget {
     required this.selectedSubjectCode,
     required this.modules,
     required this.isLoadingModules,
+    this.modulesError,
     required this.onSelectSubject,
+    this.onRetryLoadModules,
+    this.onOpenDailyTask,
     required this.onOpenModule,
     required this.onRecalibrate,
   });
@@ -79,6 +85,16 @@ class AiTopicWorkspaceView extends StatelessWidget {
             orElse: () => program.dailyFocusTasks.first,
           )
         : null;
+
+    final recommendedModuleIds = <String>{
+      if (program != null)
+        ...program.dailyFocusTasks.map((t) => t.moduleId.toUpperCase()),
+      if (program != null)
+        ...(program.modulePriorityBySubject[selectedSubjectCode.toUpperCase()] ??
+                const <String>[])
+            .take(1)
+            .map((id) => id.toUpperCase()),
+    };
 
     return SingleChildScrollView(
       physics: const BouncingScrollPhysics(),
@@ -182,34 +198,47 @@ class AiTopicWorkspaceView extends StatelessWidget {
                   ),
                   if (nextSuggestedTask != null) ...[
                     const SizedBox(height: 10),
-                    Container(
-                      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
-                      decoration: BoxDecoration(
-                        color: raised,
-                        borderRadius: BorderRadius.circular(12),
-                        border: Border.all(color: line),
-                      ),
-                      child: Row(
-                        children: [
-                          HugeIcon(
-                            icon: HugeIcons.strokeRoundedTarget01,
-                            color: accent,
-                            size: 14,
-                          ),
-                          const SizedBox(width: 7),
-                          Expanded(
-                            child: Text(
-                              'Today: ${nextSuggestedTask.title} (${nextSuggestedTask.durationMinutes}m)',
-                              maxLines: 1,
-                              overflow: TextOverflow.ellipsis,
-                              style: TextStyle(
-                                fontSize: 11.5,
-                                fontWeight: FontWeight.w700,
-                                color: theme.colorScheme.onSurface,
+                    AcedexBounceable(
+                      onTap: onOpenDailyTask != null
+                          ? () => onOpenDailyTask!(nextSuggestedTask)
+                          : null,
+                      child: Container(
+                        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
+                        decoration: BoxDecoration(
+                          color: raised,
+                          borderRadius: BorderRadius.circular(12),
+                          border: Border.all(color: line),
+                        ),
+                        child: Row(
+                          children: [
+                            HugeIcon(
+                              icon: HugeIcons.strokeRoundedTarget01,
+                              color: accent,
+                              size: 14,
+                            ),
+                            const SizedBox(width: 7),
+                            Expanded(
+                              child: Text(
+                                'Today: ${nextSuggestedTask.title} (${nextSuggestedTask.durationMinutes}m)',
+                                maxLines: 1,
+                                overflow: TextOverflow.ellipsis,
+                                style: TextStyle(
+                                  fontSize: 11.5,
+                                  fontWeight: FontWeight.w700,
+                                  color: theme.colorScheme.onSurface,
+                                ),
                               ),
                             ),
-                          ),
-                        ],
+                            if (onOpenDailyTask != null) ...[
+                              const SizedBox(width: 6),
+                              HugeIcon(
+                                icon: HugeIcons.strokeRoundedArrowRight01,
+                                color: accent,
+                                size: 14,
+                              ),
+                            ],
+                          ],
+                        ),
                       ),
                     ),
                   ],
@@ -344,6 +373,48 @@ class AiTopicWorkspaceView extends StatelessWidget {
               padding: EdgeInsets.symmetric(vertical: 28),
               child: AcedexSkeletonList(itemCount: 4),
             )
+          else if (modulesError != null && sortedModules.isEmpty)
+            Container(
+              padding: const EdgeInsets.all(20),
+              decoration: BoxDecoration(
+                color: surface,
+                borderRadius: BorderRadius.circular(18),
+                border: Border.all(color: line),
+              ),
+              child: Column(
+                children: [
+                  HugeIcon(
+                    icon: HugeIcons.strokeRoundedWifiDisconnected01,
+                    color: AppColors.error,
+                    size: 28,
+                  ),
+                  const SizedBox(height: 10),
+                  Text(
+                    modulesError!,
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontSize: 13,
+                      fontWeight: FontWeight.w600,
+                      color: theme.colorScheme.onSurface,
+                    ),
+                  ),
+                  if (onRetryLoadModules != null) ...[
+                    const SizedBox(height: 12),
+                    AcedexButton(
+                      label: 'Retry Loading Topics',
+                      variant: AcedexButtonVariant.soft,
+                      size: AcedexButtonSize.sm,
+                      leadingIcon: HugeIcon(
+                        icon: HugeIcons.strokeRoundedRefresh,
+                        color: accent,
+                        size: 14,
+                      ),
+                      onPressed: onRetryLoadModules,
+                    ),
+                  ],
+                ],
+              ),
+            )
           else if (sortedModules.isEmpty)
             Container(
               padding: const EdgeInsets.all(20),
@@ -389,6 +460,8 @@ class AiTopicWorkspaceView extends StatelessWidget {
                   ...phaseModules.map((mod) {
                     return _TopicModuleCard(
                       module: mod,
+                      isAiFocus:
+                          recommendedModuleIds.contains(mod.moduleId.toUpperCase()),
                       accent: accent,
                       accentSoft: accentSoft,
                       onAccent: onAccent,
@@ -410,6 +483,7 @@ class AiTopicWorkspaceView extends StatelessWidget {
 
 class _TopicModuleCard extends StatelessWidget {
   final TopicModuleItem module;
+  final bool isAiFocus;
   final Color accent;
   final Color accentSoft;
   final Color onAccent;
@@ -421,6 +495,7 @@ class _TopicModuleCard extends StatelessWidget {
 
   const _TopicModuleCard({
     required this.module,
+    this.isAiFocus = false,
     required this.accent,
     required this.accentSoft,
     required this.onAccent,
@@ -508,6 +583,41 @@ class _TopicModuleCard extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(width: 8),
+                  if (isAiFocus) ...[
+                    Container(
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 7,
+                        vertical: 3,
+                      ),
+                      decoration: BoxDecoration(
+                        color: accentSoft,
+                        borderRadius: BorderRadius.circular(999),
+                        border: Border.all(
+                          color: accent.withValues(alpha: 0.25),
+                        ),
+                      ),
+                      child: Row(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          HugeIcon(
+                            icon: HugeIcons.strokeRoundedAiSparkles,
+                            color: accent,
+                            size: 10,
+                          ),
+                          const SizedBox(width: 3),
+                          Text(
+                            'AI Focus',
+                            style: TextStyle(
+                              fontSize: 9.5,
+                              fontWeight: FontWeight.w800,
+                              color: accent,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    const SizedBox(width: 6),
+                  ],
                   HugeIcon(
                     icon: HugeIcons.strokeRoundedArrowRight01,
                     color: subtext,

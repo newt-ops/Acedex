@@ -17,7 +17,7 @@ import '../models/ai_study_models.dart';
 class AiModuleDetailSheet extends StatefulWidget {
   final TopicModuleItem module;
   final Future<TopicModuleItem?> Function(int stepNumber, bool completed)
-      onToggleStep;
+  onToggleStep;
   final Future<TopicModuleItem?> Function(bool completed) onToggleMastered;
 
   const AiModuleDetailSheet({
@@ -31,7 +31,7 @@ class AiModuleDetailSheet extends StatefulWidget {
     BuildContext context, {
     required TopicModuleItem module,
     required Future<TopicModuleItem?> Function(int stepNumber, bool completed)
-        onToggleStep,
+    onToggleStep,
     required Future<TopicModuleItem?> Function(bool completed) onToggleMastered,
   }) {
     return showModalBottomSheet<void>(
@@ -111,9 +111,8 @@ class _AiModuleDetailSheetState extends State<AiModuleDetailSheet> {
       context,
       unit: unit,
       subject: subject,
-      onCompleteAndUnlockAssessment: () {
-        Navigator.of(context).pop();
-      },
+      primaryActionLabel: 'Done Reading Notes',
+      onCompleteAndUnlockAssessment: () {},
     );
   }
 
@@ -122,7 +121,9 @@ class _AiModuleDetailSheetState extends State<AiModuleDetailSheet> {
     final theme = Theme.of(context);
     final isDark = theme.brightness == Brightness.dark;
     final accent = isDark ? AppColors.accentDark : AppColors.accentLight;
-    final accentSoft = isDark ? AppColors.accentSoftDark : AppColors.accentSoftLight;
+    final accentSoft = isDark
+        ? AppColors.accentSoftDark
+        : AppColors.accentSoftLight;
     final onAccent = isDark ? AppColors.onAccentDark : AppColors.onAccentLight;
     final surface = isDark ? AppColors.darkSurface : AppColors.lightSurface;
     final raised = isDark ? AppColors.darkRaised : AppColors.lightRaised;
@@ -369,7 +370,8 @@ class _AiModuleDetailSheetState extends State<AiModuleDetailSheet> {
                                       mainAxisSize: MainAxisSize.min,
                                       children: [
                                         HugeIcon(
-                                          icon: HugeIcons.strokeRoundedBookOpen01,
+                                          icon:
+                                              HugeIcons.strokeRoundedBookOpen01,
                                           color: accent,
                                           size: 13,
                                         ),
@@ -419,7 +421,9 @@ class _AiModuleDetailSheetState extends State<AiModuleDetailSheet> {
                     ),
                     const SizedBox(height: 8),
                     ..._module.sequence.map((step) {
-                      final done = _module.completedSteps.contains(step.stepNumber);
+                      final done = _module.completedSteps.contains(
+                        step.stepNumber,
+                      );
                       return Padding(
                         padding: const EdgeInsets.only(bottom: 8),
                         child: AcedexBounceable(
@@ -429,9 +433,7 @@ class _AiModuleDetailSheetState extends State<AiModuleDetailSheet> {
                             decoration: BoxDecoration(
                               color: done ? accentSoft : raised,
                               borderRadius: BorderRadius.circular(15),
-                              border: Border.all(
-                                color: done ? accent : line,
-                              ),
+                              border: Border.all(color: done ? accent : line),
                             ),
                             child: Row(
                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -467,7 +469,8 @@ class _AiModuleDetailSheetState extends State<AiModuleDetailSheet> {
                                 const SizedBox(width: 10),
                                 Expanded(
                                   child: Column(
-                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
                                     children: [
                                       Text(
                                         step.text,
@@ -479,7 +482,9 @@ class _AiModuleDetailSheetState extends State<AiModuleDetailSheet> {
                                               ? TextDecoration.lineThrough
                                               : null,
                                           color: theme.colorScheme.onSurface
-                                              .withValues(alpha: done ? 0.7 : 1.0),
+                                              .withValues(
+                                                alpha: done ? 0.7 : 1.0,
+                                              ),
                                         ),
                                       ),
                                       if (step.grade != null &&
@@ -512,7 +517,9 @@ class _AiModuleDetailSheetState extends State<AiModuleDetailSheet> {
                         decoration: BoxDecoration(
                           color: accentSoft,
                           borderRadius: BorderRadius.circular(18),
-                          border: Border.all(color: accent.withValues(alpha: 0.3)),
+                          border: Border.all(
+                            color: accent.withValues(alpha: 0.3),
+                          ),
                         ),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,

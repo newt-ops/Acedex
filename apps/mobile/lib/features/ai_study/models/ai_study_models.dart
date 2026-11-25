@@ -464,7 +464,8 @@ class AiTopicProgramOverview {
     return AiTopicProgramOverview(
       hasProgram: json['hasProgram'] as bool? ?? false,
       canGenerateToday: json['canGenerateToday'] as bool? ?? true,
-      nextAllowedAt: json['nextAllowedAt'] as String?,
+      nextAllowedAt:
+          json['nextGenerationAt'] as String? ?? json['nextAllowedAt'] as String?,
       requiresAd: json['requiresAd'] as bool? ?? true,
       program: json['program'] is Map<String, dynamic>
           ? AiStudyProgram.fromJson(json['program'] as Map<String, dynamic>)

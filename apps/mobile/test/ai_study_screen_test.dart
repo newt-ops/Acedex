@@ -1,7 +1,12 @@
+import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:http/http.dart' as http;
+import 'package:http/testing.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:acedex/core/ads/ads.dart';
 import 'package:acedex/core/models/user_profile.dart';
+import 'package:acedex/core/network/api_client.dart';
 import 'package:acedex/core/theme/app_theme.dart';
 import 'package:acedex/core/ui/ui.dart';
 import 'package:acedex/features/ai_study/models/ai_study_models.dart';
@@ -65,6 +70,7 @@ class _FakeAdsRepo implements AcedexAdsRepository {
 
 class _FakeAiStudyRepository implements AiStudyRepository {
   int generateCalls = 0;
+  bool failMatFetch = false;
 
   AiTopicProgramOverview overview = const AiTopicProgramOverview(
     hasProgram: false,
@@ -145,18 +151,75 @@ class _FakeAiStudyRepository implements AiStudyRepository {
     ),
   ];
 
+  List<TopicModuleItem> matModules = [
+    const TopicModuleItem(
+      moduleId: 'MAT-M01',
+      subjectCode: 'MAT',
+      subjectName: 'Mathematics',
+      streamCategory: 'common',
+      moduleNumber: 1,
+      phase: 'Phase I: Foundational Algebra',
+      title: 'Number Systems, Sets & Logic Foundations',
+      rationale:
+          'Connects Grade 9 set operations directly to Grade 11 logical proofs.',
+      references: [
+        TopicReadingReference(
+          grade: 9,
+          unitNumber: 1,
+          unitCode: 'MAT-G09-U01',
+          unitTitle: 'Further on Sets',
+          pages: 'pp. 1–26',
+          hasQuickNotes: false,
+        ),
+      ],
+      sequence: [
+        TopicLearningStep(
+          stepNumber: 1,
+          text: 'Review Venn diagrams, De Morgan laws, and symmetric difference.',
+          grade: 9,
+          unitNumber: 1,
+          unitCode: 'MAT-G09-U01',
+          pages: 'pp. 1–26',
+        ),
+      ],
+      prerequisites: ['Basic arithmetic'],
+      masteryCheckpoint: 'Solve multi-set cardinality problems accurately.',
+      completedSteps: [],
+      isCompleted: false,
+      progressPercentage: 0,
+    ),
+  ];
+
   @override
   Future<AiTopicProgramOverview?> getCachedOverview() async => null;
 
   @override
+  Future<void> saveCachedOverview(AiTopicProgramOverview overview) async {
+    this.overview = overview;
+  }
+
+  @override
   Future<List<TopicModuleItem>?> getCachedSubjectModules(String subjectCode) async => null;
+
+  @override
+  Future<void> saveCachedSubjectModules(
+    String subjectCode,
+    List<TopicModuleItem> modules,
+  ) async {}
 
   @override
   Future<AiTopicProgramOverview> fetchProgramOverview() async => overview;
 
   @override
   Future<List<TopicModuleItem>> fetchSubjectModules(String subjectCode) async {
-    if (subjectCode.toUpperCase() == 'PHY') return phyModules;
+    final code = subjectCode.toUpperCase();
+    if (code == 'PHY') return phyModules;
+    if (code == 'MAT') {
+      if (failMatFetch) {
+        throw Exception('Network timeout');
+      }
+      return matModules;
+    }
     return const [];
   }
 
@@ -237,11 +300,12 @@ class _FakeAiStudyRepository implements AiStudyRepository {
   @override
   Future<TopicModuleItem> updateModuleProgress({
     required String moduleId,
+    TopicModuleItem? existingModule,
     int? stepNumber,
     bool? stepCompleted,
     bool? isCompleted,
   }) async {
-    final target = phyModules.first;
+    final target = existingModule ?? phyModules.first;
     final steps = List<int>.from(target.completedSteps);
     if (stepNumber != null) {
       if (stepCompleted == true && !steps.contains(stepNumber)) {
@@ -502,5 +566,160 @@ void main() {
     await tester.pumpAndSettle();
     expect(find.text('100% Mastered'), findsOneWidget);
     expect(find.text('Module Mastered • Tap to Reopen'), findsOneWidget);
+  });
+
+  testWidgets(
+      'Switching subject rail serves subject topics cleanly and supports Retry on error',
+      (tester) async {
+    tester.view.physicalSize = const Size(412, 915);
+    tester.view.devicePixelRatio = 1.0;
+    addTearDown(tester.view.resetPhysicalSize);
+
+    final fakeRepo = _FakeAiStudyRepository()..failMatFetch = true;
+    final seededOverview = await fakeRepo.generateProgram(
+      const AiCalibrationInput(
+        tierId: 'competitive',
+        targetScore: 495,
+        weakSubjectCodes: ['PHY', 'MAT'],
+        dailyMinutes: 90,
+        peakWindow: 'Morning',
+        prepStageId: 'reviewing',
+      ),
+    );
+
+    await tester.pumpWidget(
+      MaterialApp(
+        theme: AppTheme.lightTheme,
+        home: Scaffold(
+          body: AiStudyScreen(
+            user: naturalUser,
+            repository: fakeRepo,
+            initialOverview: seededOverview,
+            initialModulesBySubject: {'PHY': fakeRepo.phyModules},
+          ),
+        ),
+      ),
+    );
+    await tester.pumpAndSettle();
+
+    // Recommended Physics module displays AI Focus badge
+    expect(find.text('AI Focus'), findsOneWidget);
+
+    // Switch to Mathematics while fetch fails -> shows Retry CTA
+    await tester.tap(find.text('Mathematics'));
+    await tester.pumpAndSettle();
+
+    expect(find.text('Mathematics Cross-Grade Map'), findsOneWidget);
+    expect(find.text('Retry Loading Topics'), findsOneWidget);
+
+    // Recover and retry -> serves Mathematics modules
+    fakeRepo.failMatFetch = false;
+    await tester.tap(find.text('Retry Loading Topics'));
+    await tester.pumpAndSettle();
+
+    expect(find.text('Number Systems, Sets & Logic Foundations'), findsOneWidget);
+    expect(find.text('G9 U1 • pp. 1–26'), findsOneWidget);
+  });
+
+  test(
+      'AiStudyService unwraps list data from backend and preserves module metadata on progress update',
+      () async {
+    SharedPreferences.setMockInitialValues({});
+
+    final mockHttp = MockClient((request) async {
+      if (request.url.path == '/api/v1/topics/subjects/MAT/modules') {
+        return http.Response.bytes(
+          utf8.encode(
+            jsonEncode({
+              'success': true,
+              'data': [
+                {
+                  'moduleId': 'MAT-M01',
+                  'subjectCode': 'MAT',
+                  'subjectName': 'Mathematics',
+                  'streamCategory': 'common',
+                  'moduleNumber': 1,
+                  'phase': 'Phase I: Foundational Algebra',
+                  'title': 'Number Systems, Sets & Logic Foundations',
+                  'rationale': 'Cross-grade set theory bridge.',
+                  'references': [
+                    {
+                      'grade': 9,
+                      'unitNumber': 1,
+                      'unitCode': 'MAT-G09-U01',
+                      'unitTitle': 'Further on Sets',
+                      'pages': 'pp. 1–26',
+                      'hasQuickNotes': true,
+                    },
+                  ],
+                  'sequence': [
+                    {
+                      'stepNumber': 1,
+                      'text': 'Study Venn diagrams.',
+                      'grade': 9,
+                      'unitNumber': 1,
+                      'unitCode': 'MAT-G09-U01',
+                      'pages': 'pp. 1–26',
+                    },
+                  ],
+                  'prerequisites': ['Basic arithmetic'],
+                  'masteryCheckpoint': 'Complete 10 set cardinality drills.',
+                  'completedSteps': [],
+                  'isCompleted': false,
+                  'progressPercentage': 0,
+                },
+              ],
+            }),
+          ),
+          200,
+          headers: {'content-type': 'application/json; charset=utf-8'},
+        );
+      }
+
+      if (request.url.path == '/api/v1/topics/modules/MAT-M01/progress') {
+        return http.Response.bytes(
+          utf8.encode(
+            jsonEncode({
+              'success': true,
+              'data': {
+                'moduleId': 'MAT-M01',
+                'subjectCode': 'MAT',
+                'completedSteps': [1],
+                'isCompleted': true,
+                'progressPercentage': 100,
+                'subjectMasteryPercentage': 10,
+              },
+            }),
+          ),
+          200,
+          headers: {'content-type': 'application/json; charset=utf-8'},
+        );
+      }
+
+      return http.Response(jsonEncode({'success': false}), 404);
+    });
+
+    final service = AiStudyService(
+      apiClient: ApiClient(client: mockHttp, baseUrl: 'https://api.test'),
+    );
+
+    final modules = await service.fetchSubjectModules('MAT');
+    expect(modules, hasLength(1));
+    expect(modules.first.moduleId, 'MAT-M01');
+    expect(modules.first.title, 'Number Systems, Sets & Logic Foundations');
+    expect(modules.first.references.first.hasQuickNotes, isTrue);
+
+    final updated = await service.updateModuleProgress(
+      moduleId: 'MAT-M01',
+      existingModule: modules.first,
+      stepNumber: 1,
+      stepCompleted: true,
+    );
+    expect(updated.title, 'Number Systems, Sets & Logic Foundations');
+    expect(updated.references, hasLength(1));
+    expect(updated.sequence, hasLength(1));
+    expect(updated.completedSteps, [1]);
+    expect(updated.isCompleted, isTrue);
+    expect(updated.progressPercentage, 100);
   });
 }

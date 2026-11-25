@@ -288,6 +288,15 @@ describe('AI Cross-Grade Topic Study & Gemini Planner Backend Tests', { timeout:
     expect(mod1.isCompleted).toBe(false);
     expect(mod1.references[0].unitCode).toBe('MAT-G09-U01');
     expect(mod1.references[0].pages).toContain('1–26');
+
+    // Slug form ('mathematics') also resolves cleanly to MAT modules
+    const slugRes = await request(app)
+      .get('/api/v1/topics/subjects/mathematics/modules')
+      .set('Authorization', `Bearer ${studentToken}`);
+
+    expect(slugRes.status).toBe(200);
+    expect(slugRes.body.data).toHaveLength(10);
+    expect(slugRes.body.data[0].moduleId).toBe('MAT-M01');
   });
 
   it('6. POST /api/v1/topics/modules/:moduleId/progress persists step & module completion from 0% to 100%', async () => {

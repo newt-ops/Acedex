@@ -21,6 +21,7 @@ class ApiEndpoints {
   }
   static String curriculumUnits({int grade = 12, required String subject}) =>
       '/api/v1/curriculum/units?grade=$grade&subject=$subject';
+  static String unitNotes(String unitId) => '/api/v1/curriculum/units/$unitId/notes';
   static String unitAssessment(String unitId) => '/api/v1/curriculum/units/$unitId/assessment';
   static String unitQuestions(String unitId) => '/api/v1/curriculum/units/$unitId/questions';
   static String completeUnit(String unitId) => '/api/v1/study/units/$unitId/complete';
