@@ -6,6 +6,7 @@ enum AcedexRewardType {
   offlinePack,
   streakRepair,
   aiStudyPlan,
+  bonusCoins,
 }
 
 extension AcedexRewardTypeX on AcedexRewardType {
@@ -19,6 +20,8 @@ extension AcedexRewardTypeX on AcedexRewardType {
         return 'streak_repair';
       case AcedexRewardType.aiStudyPlan:
         return 'ai_study_plan';
+      case AcedexRewardType.bonusCoins:
+        return 'bonus_coins';
     }
   }
 
@@ -32,6 +35,8 @@ extension AcedexRewardTypeX on AcedexRewardType {
         return 'Restore Study Streak';
       case AcedexRewardType.aiStudyPlan:
         return 'Unlock Gemini AI Plan';
+      case AcedexRewardType.bonusCoins:
+        return 'Earn +40 Ace Coins';
     }
   }
 
@@ -45,6 +50,8 @@ extension AcedexRewardTypeX on AcedexRewardType {
         return 'Watch 1 short rewarded ad to repair your broken study streak (+1 day).';
       case AcedexRewardType.aiStudyPlan:
         return 'Watch 1 short rewarded ad to generate your personalized Gemini topic roadmap.';
+      case AcedexRewardType.bonusCoins:
+        return 'Watch 1 short rewarded ad to add +40 Ace Coins to your study wallet.';
     }
   }
 
@@ -56,6 +63,8 @@ extension AcedexRewardTypeX on AcedexRewardType {
         return AcedexRewardType.offlinePack;
       case 'streak_repair':
         return AcedexRewardType.streakRepair;
+      case 'bonus_coins':
+        return AcedexRewardType.bonusCoins;
       case 'ai_study_plan':
       default:
         return AcedexRewardType.aiStudyPlan;
@@ -158,6 +167,9 @@ class AcedexClaimRewardResult {
   final String? offlineAccessExpiresAt;
   final bool? aiStudyPlanUnlocked;
   final String? aiPlanAdSessionId;
+  final int? coinsAwarded;
+  final int? newCoinBalance;
+  final int? dailyCoinAdsRemaining;
 
   const AcedexClaimRewardResult({
     required this.rewardType,
@@ -169,6 +181,9 @@ class AcedexClaimRewardResult {
     this.offlineAccessExpiresAt,
     this.aiStudyPlanUnlocked,
     this.aiPlanAdSessionId,
+    this.coinsAwarded,
+    this.newCoinBalance,
+    this.dailyCoinAdsRemaining,
   });
 
   factory AcedexClaimRewardResult.fromJson(
@@ -185,6 +200,9 @@ class AcedexClaimRewardResult {
       offlineAccessExpiresAt: json['offlineAccessExpiresAt'] as String?,
       aiStudyPlanUnlocked: json['aiStudyPlanUnlocked'] as bool?,
       aiPlanAdSessionId: json['aiPlanAdSessionId'] as String? ?? adSessionId,
+      coinsAwarded: (json['coinsAwarded'] as num?)?.toInt(),
+      newCoinBalance: (json['newCoinBalance'] as num?)?.toInt(),
+      dailyCoinAdsRemaining: (json['dailyCoinAdsRemaining'] as num?)?.toInt(),
     );
   }
 }

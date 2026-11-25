@@ -71,6 +71,8 @@ class TopicUnitMasteryResult {
   final List<int>? updatedCompletedSteps;
   final bool? updatedModuleCompleted;
   final int? updatedProgressPercentage;
+  final int? coinsAwarded;
+  final int? newCoinBalance;
 
   const TopicUnitMasteryResult({
     required this.unitCode,
@@ -79,6 +81,8 @@ class TopicUnitMasteryResult {
     this.updatedCompletedSteps,
     this.updatedModuleCompleted,
     this.updatedProgressPercentage,
+    this.coinsAwarded,
+    this.newCoinBalance,
   });
 
   factory TopicUnitMasteryResult.fromJson(Map<String, dynamic> json) {
@@ -96,6 +100,8 @@ class TopicUnitMasteryResult {
       updatedModuleCompleted: modJson?['isCompleted'] as bool?,
       updatedProgressPercentage:
           (modJson?['progressPercentage'] as num?)?.toInt(),
+      coinsAwarded: (json['coinsAwarded'] as num?)?.toInt(),
+      newCoinBalance: (json['newCoinBalance'] as num?)?.toInt(),
     );
   }
 }

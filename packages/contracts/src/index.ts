@@ -351,6 +351,9 @@ export interface AssessmentResultData {
   durationSeconds: number;
   answers: GradedAnswerItem[];
   completedAt: string;
+  coinsSpent?: number;
+  coinsAwarded?: number;
+  newCoinBalance?: number;
 }
 
 export interface StudentStreakData {
@@ -417,6 +420,7 @@ export const RewardTypeSchema = z.enum([
   'exam_access',
   'offline_pack',
   'ai_study_plan',
+  'bonus_coins',
 ]);
 export type RewardType = z.infer<typeof RewardTypeSchema>;
 
@@ -442,6 +446,8 @@ export interface AdPolicyConfig {
   ticketsPerAd?: number;
   starterTickets?: number;
   durationHours?: number;
+  coinsPerAd?: number;
+  dailyLimit?: number;
 }
 
 export interface AdConfigData {
@@ -456,6 +462,7 @@ export interface AdConfigData {
     streakRepair: AdPolicyConfig;
     examAccess: AdPolicyConfig;
     offlinePack: AdPolicyConfig;
+    bonusCoins?: AdPolicyConfig;
   };
 }
 
@@ -477,6 +484,9 @@ export interface ClaimRewardResponseData {
   offlineAccessExpiresAt?: string;
   aiStudyPlanUnlocked?: boolean;
   aiPlanAdSessionId?: string;
+  coinsAwarded?: number;
+  newCoinBalance?: number;
+  dailyCoinAdsRemaining?: number;
 }
 
 export interface StudentAdStatusData {
@@ -570,6 +580,8 @@ export interface UnitStudyProgressItem {
   bestPercentage?: number;
   passed?: boolean;
   attemptsCount?: number;
+  coinsAwarded?: number;
+  newCoinBalance?: number;
 }
 
 export interface SubjectStudyProgressResponse {
@@ -850,6 +862,7 @@ export const AiCalibrationInputSchema = z.object({
   peakWindow: AiPeakWindowSchema.default('Morning'),
   prepStageId: AiPrepStageSchema.default('reviewing'),
   adSessionId: z.string().min(1).optional(),
+  useCoinPass: z.boolean().optional(),
 });
 export type AiCalibrationInput = z.infer<typeof AiCalibrationInputSchema>;
 
@@ -871,6 +884,8 @@ export interface TopicUnitMasteryResponse {
   isStudyCompleted: boolean;
   studyStatus: StudyStatus;
   syncedStepNumbers: number[];
+  coinsAwarded?: number;
+  newCoinBalance?: number;
   updatedModule?: {
     moduleId: string;
     subjectCode: string;
@@ -999,6 +1014,88 @@ export interface AiTopicProgramOverviewResponse {
   program: AiStudyProgram | null;
   subjectSummaries: AiTopicSubjectSummary[];
 }
+
+// ==========================================
+// 12. Ace Coins Economy & Store Contracts
+// ==========================================
+
+export const EconomyStoreItemKeySchema = z.enum([
+  'unit_assessment',
+  'exam_ticket',
+  'offline_pack',
+  'streak_repair',
+  'ai_plan_pass',
+  'badge_euee_gold',
+  'badge_stem_master',
+  'badge_midnight_scholar',
+]);
+export type EconomyStoreItemKey = z.infer<typeof EconomyStoreItemKeySchema>;
+
+export const SpendCoinsRequestSchema = z.object({
+  itemKey: EconomyStoreItemKeySchema,
+  targetUnitId: z.string().min(1).optional(),
+});
+export type SpendCoinsRequest = z.infer<typeof SpendCoinsRequestSchema>;
+
+export type CoinTransactionType =
+  | 'earn_welcome'
+  | 'earn_milestone'
+  | 'earn_ad'
+  | 'spend';
+
+export interface CoinTransactionItem {
+  id: string;
+  type: CoinTransactionType;
+  amount: number; // positive for earn, negative for spend
+  balanceAfter: number;
+  reason: string;
+  itemKey?: EconomyStoreItemKey;
+  milestoneKey?: string;
+  createdAt: string;
+}
+
+export interface EconomyStoreItem {
+  itemKey: EconomyStoreItemKey;
+  title: string;
+  description: string;
+  cost: number;
+  category: 'access' | 'boost' | 'badge';
+  canWatchAdInstead: boolean;
+  adRewardType?: RewardType;
+  owned?: boolean;
+}
+
+export interface WalletOverviewResponse {
+  currencyName: 'Ace Coins';
+  currencyCode: 'AC';
+  balance: number;
+  lifetimeEarned: number;
+  lifetimeSpent: number;
+  dailyCoinAdsRemaining: number;
+  dailyCoinAdsLimit: number;
+  coinsPerAd: number;
+  assessmentCost: number;
+  aiPlanPasses: number;
+  assessmentPasses: number;
+  unlockedBadges: string[];
+  storeCatalog: EconomyStoreItem[];
+  recentTransactions: CoinTransactionItem[];
+}
+
+export interface SpendCoinsResponse {
+  itemKey: EconomyStoreItemKey;
+  coinsSpent: number;
+  newBalance: number;
+  message: string;
+  assessmentPasses?: number;
+  examTicketsAvailable?: number;
+  aiPlanPasses?: number;
+  repairedStreak?: number;
+  unlockedUnitCode?: string;
+  offlineAccessExpiresAt?: string;
+  unlockedBadge?: string;
+}
+
 
 
 

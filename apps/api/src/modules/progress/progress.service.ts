@@ -18,6 +18,7 @@ import {
 } from '@acedex/contracts';
 import { NotFoundError } from '../../common/errors/app-error';
 import { logger } from '../../common/utils/logger';
+import { ACE_COINS_CONFIG, EconomyService } from '../economy/economy.service';
 
 export interface RecordAttemptInput {
   userId: string | Types.ObjectId;
@@ -667,8 +668,44 @@ export class ProgressService {
 
     await progress.save();
 
+    let totalCoinsAwarded = 0;
+    let latestBalance: number | undefined;
+    if (isCompleted) {
+      const unitAward = await EconomyService.awardMilestone({
+        userId: userObjectId,
+        milestoneKey: `UNIT:${unit.code}`,
+        amount: ACE_COINS_CONFIG.UNIT_COMPLETE_REWARD,
+        reason: `Completed Unit (${unit.code})`,
+        metadata: { unitCode: unit.code },
+      });
+      totalCoinsAwarded += unitAward.coinsAwarded;
+      latestBalance = unitAward.newCoinBalance;
+
+      const todayStr = EconomyService.getEatTodayKey();
+      const streakAward = await EconomyService.awardMilestone({
+        userId: userObjectId,
+        milestoneKey: `STREAK:${todayStr}`,
+        amount: ACE_COINS_CONFIG.DAILY_STREAK_REWARD,
+        reason: `Daily Study Streak (${todayStr})`,
+      });
+      totalCoinsAwarded += streakAward.coinsAwarded;
+      if (streakAward.awarded) latestBalance = streakAward.newCoinBalance;
+
+      const curStreak = progress.streak?.currentStreak || 0;
+      if (curStreak >= 7 && curStreak % 7 === 0) {
+        const sevenAward = await EconomyService.awardMilestone({
+          userId: userObjectId,
+          milestoneKey: `STREAK_7:${curStreak}`,
+          amount: ACE_COINS_CONFIG.SEVEN_DAY_STREAK_BONUS,
+          reason: `${curStreak}-Day Streak Milestone!`,
+        });
+        totalCoinsAwarded += sevenAward.coinsAwarded;
+        if (sevenAward.awarded) latestBalance = sevenAward.newCoinBalance;
+      }
+    }
+
     logger.info(
-      { userId: userId.toString(), unitCode: unit.code, status, isCompleted },
+      { userId: userId.toString(), unitCode: unit.code, status, isCompleted, totalCoinsAwarded },
       'Unit study status updated'
     );
 
@@ -687,6 +724,8 @@ export class ProgressService {
       bestPercentage: unitEntry.bestPercentage,
       passed: unitEntry.passed,
       attemptsCount: unitEntry.attemptsCount,
+      ...(totalCoinsAwarded > 0 ? { coinsAwarded: totalCoinsAwarded } : {}),
+      ...(latestBalance !== undefined ? { newCoinBalance: latestBalance } : {}),
     };
   }
 

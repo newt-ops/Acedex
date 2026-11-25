@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../../core/economy/economy.dart';
 import '../../../core/models/user_profile.dart';
 import '../../../core/storage/auth_storage.dart';
 import '../../../core/ui/ui.dart';
@@ -41,6 +42,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   Future<void> _signOut(BuildContext context) async {
     await AuthStorage.instance.clear();
+    EconomyService.instance.reset();
     if (!context.mounted) return;
     Navigator.of(context).pushReplacementNamed('/auth');
   }

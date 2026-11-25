@@ -4,6 +4,7 @@ import 'package:flutter/services.dart';
 import 'package:hugeicons/hugeicons.dart';
 import '../../models/student_avatar.dart';
 import '../../models/user_profile.dart';
+import '../../economy/economy.dart';
 import '../../storage/auth_storage.dart';
 import '../../theme/app_colors.dart';
 import '../animations/bounceable.dart';
@@ -58,8 +59,9 @@ class _AcedexHeaderBarState extends State<AcedexHeaderBar>
     super.initState();
     _hasUnread = widget.initialHasUnread;
 
-    // Initialize avatar from AuthStorage if not already loaded
+    // Initialize avatar from AuthStorage and sync live Ace Coins balance silently
     AuthStorage.instance.getAvatar();
+    EconomyService.instance.syncWalletSilent();
 
     // Bell pendulum ring animation
     _bellRingController = AnimationController(
@@ -541,11 +543,61 @@ class _AcedexHeaderBarState extends State<AcedexHeaderBar>
               const SizedBox(width: 8),
 
               // ===============================================================
-              // RIGHT GROUP: Tactile Streak Pill + Notification Bell
+              // RIGHT GROUP: Ace Coin Pill + Theme Toggle + Notification Bell
               // ===============================================================
               Row(
                 mainAxisSize: MainAxisSize.min,
                 children: [
+                  ValueListenableBuilder<int>(
+                    valueListenable: EconomyService.instance.coinBalanceNotifier,
+                    builder: (context, balance, _) {
+                      const coinGold = Color(0xFFF59E0B);
+                      return Tooltip(
+                        message: 'Ace Coins Wallet ($balance AC)',
+                        child: AcedexBounceable(
+                          key: const Key('header_coin_wallet_button'),
+                          scaleFactor: 0.90,
+                          onTap: () => AcedexWalletSheet.show(context),
+                          child: Container(
+                            height: 36,
+                            padding: const EdgeInsets.symmetric(horizontal: 10),
+                            decoration: BoxDecoration(
+                              color: surfaceColor,
+                              borderRadius: BorderRadius.circular(999),
+                              border: Border.all(
+                                color: coinGold.withValues(alpha: 0.35),
+                              ),
+                            ),
+                            child: Row(
+                              mainAxisSize: MainAxisSize.min,
+                              children: [
+                                const HugeIcon(
+                                  icon: HugeIcons.strokeRoundedCoins01,
+                                  color: coinGold,
+                                  size: 15,
+                                ),
+                                const SizedBox(width: 4),
+                                Text(
+                                  '$balance',
+                                  style: TextStyle(
+                                    fontSize: 12.5,
+                                    fontWeight: FontWeight.w800,
+                                    fontFeatures: const [
+                                      FontFeature.tabularFigures(),
+                                    ],
+                                    color: theme.colorScheme.onSurface,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      );
+                    },
+                  ),
+
+                  const SizedBox(width: 7),
+
                   // 3-Mode Appearance / Theme Toggle Button (System, Light, Dark)
                   ValueListenableBuilder<ThemeMode>(
                     valueListenable: AcedexApp.themeModeNotifier,

@@ -7,6 +7,7 @@ import progressRoutes from '../modules/progress/progress.routes';
 import { studyRoutes } from '../modules/study/study.routes';
 import topicsRoutes from '../modules/topics/topics.routes';
 import { adsRoutes } from '../modules/ads/ads.routes';
+import { economyRoutes } from '../modules/economy/economy.routes';
 import adminRoutes from '../modules/admin/admin.routes';
 import { collectorRoutes } from '../modules/collector/collector.routes';
 import notesCollectorRoutes from '../modules/notes-collector/notes-collector.routes';
@@ -36,6 +37,9 @@ router.use('/progress', progressRoutes);
 
 // Rewarded Ads & Monetization
 router.use('/ads', adsRoutes);
+
+// Ace Coins Economy & Rewards Store
+router.use('/economy', economyRoutes);
 
 // Administration & Management (Protected with RBAC)
 router.use('/admin', adminRoutes);

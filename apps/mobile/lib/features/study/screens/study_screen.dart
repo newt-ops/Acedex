@@ -1,14 +1,15 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:hugeicons/hugeicons.dart';
+import '../../../core/ads/ads.dart';
 import '../../../core/config/feature_flags.dart';
+import '../../../core/economy/economy.dart';
 import '../../../core/models/user_profile.dart';
 import '../../../core/network/api_client.dart';
 import '../../../core/network/api_endpoints.dart';
 import '../../../core/storage/auth_storage.dart';
 import '../../../core/theme/app_colors.dart';
-import '../../../core/ui/animations/bounceable.dart';
-import '../../../core/ui/progress/acedex_dots_loader.dart';
+import '../../../core/ui/ui.dart';
 import '../models/study_models.dart';
 import '../widgets/curriculum_hero_card.dart';
 import '../widgets/grade_track_sheet.dart';
@@ -473,7 +474,7 @@ class _StudyScreenState extends State<StudyScreen> {
     unawaited(AuthStorage.instance.setUnitCompletion(unitId, targetState));
     unawaited(AuthStorage.instance.setUnitCompletion(unitCode, targetState));
 
-    // Persist real user status directly in database
+    // Persist real user status directly in database and credit Ace Coins milestone
     unawaited(
       ApiClient.instance
           .post(
@@ -481,7 +482,25 @@ class _StudyScreenState extends State<StudyScreen> {
             body: {'status': targetState ? 'completed' : 'not_started'},
             requiresAuth: true,
           )
-          .catchError((_) => <String, dynamic>{}),
+          .then((res) {
+            final data = (res['data'] as Map<String, dynamic>?) ?? res;
+            final coinsAwarded = (data['coinsAwarded'] as num?)?.toInt();
+            final newBalance = (data['newCoinBalance'] as num?)?.toInt();
+            if (coinsAwarded != null || newBalance != null) {
+              EconomyService.instance.applyServerBalanceUpdate(
+                coinsAwarded: coinsAwarded,
+                newCoinBalance: newBalance,
+              );
+              if (mounted && coinsAwarded != null && coinsAwarded > 0) {
+                AcedexToast.show(
+                  context,
+                  message: '+$coinsAwarded Ace Coins earned!',
+                  type: AcedexToastType.success,
+                );
+              }
+            }
+          })
+          .catchError((_) {}),
     );
   }
 
@@ -587,6 +606,19 @@ class _StudyScreenState extends State<StudyScreen> {
       return;
     }
 
+    // Enforce 10 AC unit assessment entry fee (or Watch 1 Rewarded Ad for +40 AC)
+    final unlocked = await AcedexUnlockChoiceSheet.show(
+      context,
+      title: 'Start ${unit.code} Assessment',
+      subtitle:
+          'Each 15-question unit assessment costs 10 Ace Coins (AC). Pass with 70%+ to earn +25 AC back!',
+      itemKey: 'unit_assessment',
+      coinCost: 10,
+      targetUnitId: unitCode,
+      adRewardType: AcedexRewardType.bonusCoins,
+    );
+    if (!mounted || !unlocked) return;
+
     TopicDrillEngineSheet.show(
       context,
       questions: assessmentQuestions,
@@ -622,7 +654,14 @@ class _StudyScreenState extends State<StudyScreen> {
                 body: {'status': 'completed'},
                 requiresAuth: true,
               )
-              .catchError((_) => <String, dynamic>{}),
+              .then((res) {
+                final data = (res['data'] as Map<String, dynamic>?) ?? res;
+                EconomyService.instance.applyServerBalanceUpdate(
+                  coinsAwarded: (data['coinsAwarded'] as num?)?.toInt(),
+                  newCoinBalance: (data['newCoinBalance'] as num?)?.toInt(),
+                );
+              })
+              .catchError((_) {}),
         );
       },
     );

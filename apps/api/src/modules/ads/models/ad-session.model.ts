@@ -27,7 +27,7 @@ const AdSessionSchema = new Schema<IAdSessionDocument>(
     adSessionId: { type: String, required: true, unique: true, index: true },
     rewardType: {
       type: String,
-      enum: ['streak_repair', 'exam_access', 'offline_pack', 'ai_study_plan'],
+      enum: ['streak_repair', 'exam_access', 'offline_pack', 'ai_study_plan', 'bonus_coins'],
       required: true,
       index: true,
     },

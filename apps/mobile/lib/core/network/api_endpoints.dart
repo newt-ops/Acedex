@@ -33,6 +33,10 @@ class ApiEndpoints {
   static const String adsSessionStart = '/api/v1/ads/session/start';
   static const String adsRewardClaim = '/api/v1/ads/reward/claim';
 
+  // Ace Coins Economy & Rewards Store
+  static const String economyWallet = '/api/v1/economy/wallet';
+  static const String economySpend = '/api/v1/economy/spend';
+
   // AI Cross-Grade Topic Study & Gemini Planner
   static const String topicProgram = '/api/v1/topics/program';
   static String subjectTopicModules(String subjectCode) =>

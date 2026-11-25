@@ -562,6 +562,22 @@ class _SyllabusUnitAccordionState extends State<SyllabusUnitAccordion> {
                                                         ),
                                                       ),
                                                     ),
+                                                    const SizedBox(width: 5),
+                                                    Container(
+                                                      padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 1.5),
+                                                      decoration: BoxDecoration(
+                                                        color: const Color(0xFFF59E0B).withValues(alpha: 0.16),
+                                                        borderRadius: BorderRadius.circular(4),
+                                                      ),
+                                                      child: const Text(
+                                                        '10 AC',
+                                                        style: TextStyle(
+                                                          fontSize: 9.5,
+                                                          fontWeight: FontWeight.w800,
+                                                          color: Color(0xFFD97706),
+                                                        ),
+                                                      ),
+                                                    ),
                                                     if (unit.assessmentScore != null) ...[
                                                       const SizedBox(width: 5),
                                                       Container(

@@ -1,3 +1,4 @@
+import '../../../core/economy/economy.dart';
 import '../../../core/network/api_client.dart';
 import '../../../core/network/api_endpoints.dart';
 import '../../../core/storage/auth_storage.dart';
@@ -183,6 +184,15 @@ class AiStudyService implements AiStudyRepository {
     final data = (res['data'] as Map<String, dynamic>?) ?? res;
     final moduleJson = (data['module'] as Map<String, dynamic>?) ?? data;
 
+    final coinsAwarded = (data['coinsAwarded'] as num?)?.toInt();
+    final newCoinBalance = (data['newCoinBalance'] as num?)?.toInt();
+    if (coinsAwarded != null || newCoinBalance != null) {
+      EconomyService.instance.applyServerBalanceUpdate(
+        coinsAwarded: coinsAwarded,
+        newCoinBalance: newCoinBalance,
+      );
+    }
+
     // When backend returns the full module object, parse directly;
     // when it returns the lightweight progress patch ({ completedSteps, isCompleted,
     // progressPercentage }), merge cleanly onto existingModule so metadata isn't wiped.
@@ -225,6 +235,12 @@ class AiStudyService implements AiStudyRepository {
     );
     final data = (res['data'] as Map<String, dynamic>?) ?? res;
     final result = TopicUnitMasteryResult.fromJson(data);
+    if (result.coinsAwarded != null || result.newCoinBalance != null) {
+      EconomyService.instance.applyServerBalanceUpdate(
+        coinsAwarded: result.coinsAwarded,
+        newCoinBalance: result.newCoinBalance,
+      );
+    }
     await _storage.setUnitCompletion(
       result.unitCode.isNotEmpty ? result.unitCode : cleanCode,
       result.isStudyCompleted,

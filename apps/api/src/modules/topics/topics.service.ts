@@ -21,6 +21,7 @@ import { EUEE_SUBJECTS } from '../curriculum/curriculum-seeder.service';
 import { UnitModel } from '../curriculum/models/unit.model';
 import { TopicModuleModel, ITopicModuleDocument } from './models/topic-module.model';
 import { ProgressService } from '../progress/progress.service';
+import { ACE_COINS_CONFIG, EconomyService } from '../economy/economy.service';
 import { AdConfigModel } from '../ads/models/ad-config.model';
 import { AdSessionModel, IAdSessionDocument } from '../ads/models/ad-session.model';
 import { GeminiPlannerService } from './gemini-planner.service';
@@ -250,9 +251,20 @@ export class TopicsService {
         ? this.getEatDayInfo(new Date(existingProgram.generatedAt)).todayKey
         : undefined);
 
-    if (existingProgram && existingGenDate === todayKey) {
+    const usedCoinPass =
+      calibration.useCoinPass === true &&
+      (await EconomyService.consumeAiPlanPass(userObjectId));
+
+    if (calibration.useCoinPass === true && !usedCoinPass) {
+      throw new ForbiddenError(
+        'No AI Study Program Pass available. Unlock one for 100 Ace Coins in your Wallet or watch 1 rewarded ad.',
+        'AI_PLAN_PASS_REQUIRED'
+      );
+    }
+
+    if (existingProgram && existingGenDate === todayKey && !usedCoinPass) {
       throw new TooManyRequestsError(
-        'You can generate your AI study program once per day to prevent token abuse. Please try again tomorrow.',
+        'You can generate your AI study program once per day to prevent token abuse. Please try again tomorrow or use an AI Study Pass (100 AC).',
         'DAILY_PLAN_LIMIT_REACHED',
         { nextGenerationAt: nextResetAt }
       );
@@ -262,10 +274,10 @@ export class TopicsService {
     const requiresAd = adConfig ? adConfig.isAdsEnabled : true;
     let verifiedAdSession: IAdSessionDocument | null = null;
 
-    if (requiresAd) {
+    if (requiresAd && !usedCoinPass) {
       if (!calibration.adSessionId) {
         throw new ForbiddenError(
-          'Please watch 1 rewarded ad to unlock AI study program generation.',
+          'Please watch 1 rewarded ad (or spend a 100 AC AI Study Pass) to unlock AI study program generation.',
           'AD_REQUIRED_FOR_AI_PLAN'
         );
       }
@@ -282,6 +294,11 @@ export class TopicsService {
           'AD_REQUIRED_FOR_AI_PLAN'
         );
       }
+    }
+
+    // Re-read fresh progress if a coin pass was atomically decremented
+    if (usedCoinPass) {
+      progress = (await StudentProgressModel.findOne({ userId: userObjectId })) || progress;
     }
 
     const allModules = await TopicModuleModel.find({
@@ -305,7 +322,8 @@ export class TopicsService {
       .filter((tm) => tm.isCompleted)
       .map((tm) => tm.moduleId);
 
-    const { adSessionId: _discardAdId, ...cleanCalibration } = calibration;
+    const { adSessionId: _discardAdId, useCoinPass: _discardCoinPass, ...cleanCalibration } =
+      calibration;
     const normalizedCalibration: AiCalibrationInput = {
       ...cleanCalibration,
       weakSubjectCodes: cleanCalibration.weakSubjectCodes.map((c) => c.toUpperCase().trim()),
@@ -553,6 +571,20 @@ export class TopicsService {
     const subjectMasteryPercentage =
       subjectModules.length > 0 ? Math.round(totalPctSum / subjectModules.length) : 0;
 
+    let coinsAwarded = 0;
+    let newCoinBalance: number | undefined;
+    if (entry.isCompleted) {
+      const modAward = await EconomyService.awardMilestone({
+        userId: userObjectId,
+        milestoneKey: `MODULE:${entry.moduleId}`,
+        amount: ACE_COINS_CONFIG.MODULE_COMPLETE_REWARD,
+        reason: `Mastered Topic Module (${entry.moduleId})`,
+        metadata: { moduleId: entry.moduleId, subjectCode: entry.subjectCode },
+      });
+      coinsAwarded = modAward.coinsAwarded;
+      newCoinBalance = modAward.newCoinBalance;
+    }
+
     return {
       moduleId: entry.moduleId,
       subjectCode: entry.subjectCode,
@@ -563,6 +595,8 @@ export class TopicsService {
         entry
       ),
       subjectMasteryPercentage,
+      ...(coinsAwarded > 0 ? { coinsAwarded } : {}),
+      ...(newCoinBalance !== undefined ? { newCoinBalance } : {}),
     };
   }
 
@@ -578,9 +612,14 @@ export class TopicsService {
     const cleanUnitCode = unitCode.toUpperCase().trim();
     const status: StudyStatus = payload.completed ? 'completed' : 'not_started';
 
+    let coinsAwarded = 0;
+    let newCoinBalance: number | undefined;
+
     const dbUnit = await UnitModel.findOne({ code: cleanUnitCode });
     if (dbUnit) {
-      await ProgressService.updateUnitStudyStatus(userId, dbUnit.code, status);
+      const unitRes = await ProgressService.updateUnitStudyStatus(userId, dbUnit.code, status);
+      coinsAwarded += unitRes.coinsAwarded ?? 0;
+      if (unitRes.newCoinBalance !== undefined) newCoinBalance = unitRes.newCoinBalance;
     } else {
       // Fallback for textbook unit references without a seeded row in `acedex.units` (e.g. PHY-G09-U06/U07)
       const existsInTopicBank = await TopicModuleModel.exists({
@@ -635,6 +674,18 @@ export class TopicsService {
 
       progressDoc.markModified('units');
       await progressDoc.save();
+
+      if (payload.completed) {
+        const unitAward = await EconomyService.awardMilestone({
+          userId: userObjectId,
+          milestoneKey: `UNIT:${cleanUnitCode}`,
+          amount: ACE_COINS_CONFIG.UNIT_COMPLETE_REWARD,
+          reason: `Completed Unit (${cleanUnitCode})`,
+          metadata: { unitCode: cleanUnitCode },
+        });
+        coinsAwarded += unitAward.coinsAwarded;
+        newCoinBalance = unitAward.newCoinBalance;
+      }
     }
 
     // Sync any learning steps tagged with `unitCode` inside the active module
@@ -705,6 +756,17 @@ export class TopicsService {
                   modEntry
                 ),
               };
+
+              if (modEntry.isCompleted) {
+                const modAward = await EconomyService.awardMilestone({
+                  userId: userObjectId,
+                  milestoneKey: `MODULE:${modEntry.moduleId}`,
+                  amount: ACE_COINS_CONFIG.MODULE_COMPLETE_REWARD,
+                  reason: `Mastered Topic Module (${modEntry.moduleId})`,
+                });
+                coinsAwarded += modAward.coinsAwarded;
+                if (modAward.awarded) newCoinBalance = modAward.newCoinBalance;
+              }
             }
           }
         }
@@ -716,6 +778,8 @@ export class TopicsService {
       isStudyCompleted: payload.completed,
       studyStatus: status,
       syncedStepNumbers,
+      ...(coinsAwarded > 0 ? { coinsAwarded } : {}),
+      ...(newCoinBalance !== undefined ? { newCoinBalance } : {}),
       ...(updatedModule ? { updatedModule } : {}),
     };
   }

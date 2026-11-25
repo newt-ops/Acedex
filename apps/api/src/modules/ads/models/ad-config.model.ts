@@ -21,6 +21,11 @@ export interface IAdConfigDocument extends Document {
       enabled: boolean;
       durationHours: number; // 24 hours per user specification
     };
+    bonusCoins?: {
+      enabled: boolean;
+      coinsPerAd: number;
+      dailyLimit: number;
+    };
   };
   updatedAt: Date;
   createdAt: Date;
@@ -47,6 +52,11 @@ const AdConfigSchema = new Schema<IAdConfigDocument>(
       offlinePack: {
         enabled: { type: Boolean, default: true },
         durationHours: { type: Number, default: 24 }, // exactly 24 hours
+      },
+      bonusCoins: {
+        enabled: { type: Boolean, default: true },
+        coinsPerAd: { type: Number, default: 40 },
+        dailyLimit: { type: Number, default: 5 },
       },
     },
   },

@@ -12,6 +12,7 @@ import { AdConfigModel, IAdConfigDocument } from './models/ad-config.model';
 import { AdSessionModel, IAdSessionDocument } from './models/ad-session.model';
 import { UnitModel } from '../curriculum/models/unit.model';
 import { ProgressService } from '../progress/progress.service';
+import { EconomyService } from '../economy/economy.service';
 import { BadRequestError, ForbiddenError, NotFoundError } from '../../common/errors/app-error';
 import { env } from '../../config/env';
 import { logger } from '../../common/utils/logger';
@@ -34,6 +35,7 @@ export class AdsService {
           streakRepair: { enabled: true, cooldownHours: 24 },
           examAccess: { enabled: true, ticketsPerAd: 1, starterTickets: 1 },
           offlinePack: { enabled: true, durationHours: 24 },
+          bonusCoins: { enabled: true, coinsPerAd: 40, dailyLimit: 5 },
         },
       });
     }
@@ -60,6 +62,11 @@ export class AdsService {
           enabled: config.policies.offlinePack.enabled,
           durationHours: config.policies.offlinePack.durationHours,
         },
+        bonusCoins: {
+          enabled: config.policies.bonusCoins?.enabled ?? true,
+          coinsPerAd: config.policies.bonusCoins?.coinsPerAd ?? 40,
+          dailyLimit: config.policies.bonusCoins?.dailyLimit ?? 5,
+        },
       },
     };
   }
@@ -85,6 +92,9 @@ export class AdsService {
     }
     if (input.rewardType === 'offline_pack' && !config.policies.offlinePack.enabled) {
       throw new BadRequestError('Offline pack rewards are currently disabled');
+    }
+    if (input.rewardType === 'bonus_coins') {
+      await EconomyService.assertCanEarnAdCoins(userId);
     }
 
     let targetUnitId: Types.ObjectId | undefined;
@@ -255,6 +265,11 @@ export class AdsService {
     } else if (session.rewardType === 'ai_study_plan') {
       responseData.aiStudyPlanUnlocked = true;
       responseData.aiPlanAdSessionId = session.adSessionId;
+    } else if (session.rewardType === 'bonus_coins') {
+      const adCoins = await EconomyService.awardAdCoins(userId);
+      responseData.coinsAwarded = adCoins.coinsAwarded;
+      responseData.newCoinBalance = adCoins.newCoinBalance;
+      responseData.dailyCoinAdsRemaining = adCoins.dailyCoinAdsRemaining;
     }
 
     session.status = 'claimed';

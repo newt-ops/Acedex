@@ -39,6 +39,18 @@ export interface IUnlockedUnitSubdoc {
   expiresAt: Date;
 }
 
+export interface IStudentWalletSubdoc {
+  balance: number;
+  lifetimeEarned: number;
+  lifetimeSpent: number;
+  rewardedMilestoneKeys: string[];
+  dailyCoinAdsDate?: string;
+  dailyCoinAdsCount: number;
+  aiPlanPasses: number;
+  assessmentPasses: number;
+  unlockedBadges: string[];
+}
+
 export interface IStudentProgressDocument extends Document {
   userId: Types.ObjectId;
   overallStats: {
@@ -66,6 +78,7 @@ export interface IStudentProgressDocument extends Document {
   subjectMastery: ISubjectMasterySubdoc[];
   aiStudyProgram?: AiStudyProgram;
   topicModules: ITopicModuleProgressSubdoc[];
+  wallet: IStudentWalletSubdoc;
   createdAt: Date;
   updatedAt: Date;
 }
@@ -152,6 +165,17 @@ const StudentProgressSchema = new Schema<IStudentProgressDocument>(
     subjectMastery: { type: [SubjectMasterySchema], default: [] },
     aiStudyProgram: { type: Schema.Types.Mixed, default: undefined },
     topicModules: { type: [TopicModuleProgressSchema], default: [] },
+    wallet: {
+      balance: { type: Number, default: 25, min: 0 },
+      lifetimeEarned: { type: Number, default: 25, min: 0 },
+      lifetimeSpent: { type: Number, default: 0, min: 0 },
+      rewardedMilestoneKeys: { type: [String], default: ['WELCOME_BONUS'] },
+      dailyCoinAdsDate: { type: String, default: '' },
+      dailyCoinAdsCount: { type: Number, default: 0 },
+      aiPlanPasses: { type: Number, default: 0 },
+      assessmentPasses: { type: Number, default: 0 },
+      unlockedBadges: { type: [String], default: [] },
+    },
   },
   {
     timestamps: true,

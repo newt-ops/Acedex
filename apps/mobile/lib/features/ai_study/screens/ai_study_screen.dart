@@ -462,6 +462,16 @@ class _AiStudyScreenState extends State<AiStudyScreen> {
         unawaited(_repository.saveCachedOverview(_overview!));
       }
 
+      if (mounted &&
+          result.coinsAwarded != null &&
+          result.coinsAwarded! > 0) {
+        AcedexToast.show(
+          context,
+          message: '+${result.coinsAwarded} Ace Coins earned!',
+          type: AcedexToastType.success,
+        );
+      }
+
       return refreshedTarget;
     } on ApiException catch (e) {
       await AuthStorage.instance.setUnitCompletion(unitCode, !completed);

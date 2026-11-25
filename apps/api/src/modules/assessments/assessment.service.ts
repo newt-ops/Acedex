@@ -11,6 +11,7 @@ import { AnswerKeyModel } from '../curriculum/models/answer-key.model';
 import { UserModel } from '../users/user.model';
 import { AssessmentAttemptModel } from './models/assessment-attempt.model';
 import { ProgressService } from '../progress/progress.service';
+import { ACE_COINS_CONFIG, EconomyService } from '../economy/economy.service';
 import { ContentCacheService } from '../../common/services/cache.service';
 import { NotFoundError, BadRequestError, ForbiddenError } from '../../common/errors/app-error';
 import { AuditService } from '../audit/audit.service';
@@ -51,7 +52,9 @@ export class AssessmentService {
       throw new NotFoundError(`Unit '${submission.unitId}' not found`);
     }
 
-    // 1.5 Enforce Unit Study Completion (Exam Gating)
+    // 1.5 Enforce Unit Study Completion (Exam Gating) & 10 AC Entry Fee
+    let coinsSpent = 0;
+    let latestBalance: number | undefined;
     const user = await UserModel.findById(userObjectId);
     if (user && user.role === 'student') {
       const isUnlocked = await ProgressService.isExamUnlocked(userObjectId, unit._id);
@@ -61,6 +64,13 @@ export class AssessmentService {
           'EXAM_LOCKED_STUDY_REQUIRED'
         );
       }
+
+      const entryResult = await EconomyService.consumeUnitAssessmentEntry(
+        userObjectId,
+        unit.code
+      );
+      coinsSpent = entryResult.coinsSpent;
+      latestBalance = entryResult.newCoinBalance;
     }
 
     // 2. Resolve cached questions & answer keys or load with .lean() projection from read replicas
@@ -197,6 +207,32 @@ export class AssessmentService {
       durationSeconds,
     });
 
+    // 6.5 Award Ace Coins milestones for passing (>=70%) & 100% perfection
+    let totalCoinsAwarded = 0;
+    if (user && user.role === 'student' && passed) {
+      const passAward = await EconomyService.awardMilestone({
+        userId: userObjectId,
+        milestoneKey: `ASSESS:${unit.code}`,
+        amount: ACE_COINS_CONFIG.ASSESSMENT_PASS_REWARD,
+        reason: `Passed Unit Assessment (${unit.code})`,
+        metadata: { unitCode: unit.code, percentage },
+      });
+      totalCoinsAwarded += passAward.coinsAwarded;
+      latestBalance = passAward.newCoinBalance;
+
+      if (percentage === 100) {
+        const perfectAward = await EconomyService.awardMilestone({
+          userId: userObjectId,
+          milestoneKey: `PERFECT:${unit.code}`,
+          amount: ACE_COINS_CONFIG.ASSESSMENT_PERFECT_BONUS,
+          reason: `100% Score Bonus (${unit.code})`,
+          metadata: { unitCode: unit.code },
+        });
+        totalCoinsAwarded += perfectAward.coinsAwarded;
+        if (perfectAward.awarded) latestBalance = perfectAward.newCoinBalance;
+      }
+    }
+
     // 7. Audit log
     AuditService.record({
       action: 'ASSESSMENT_SUBMITTED',
@@ -209,6 +245,8 @@ export class AssessmentService {
         totalQuestions,
         percentage,
         passed,
+        coinsSpent,
+        coinsAwarded: totalCoinsAwarded,
       },
     });
 
@@ -223,6 +261,9 @@ export class AssessmentService {
       durationSeconds,
       answers: gradedAnswers,
       completedAt: attemptDoc.completedAt.toISOString(),
+      ...(user && user.role === 'student' ? { coinsSpent } : {}),
+      ...(totalCoinsAwarded > 0 ? { coinsAwarded: totalCoinsAwarded } : {}),
+      ...(latestBalance !== undefined ? { newCoinBalance: latestBalance } : {}),
     };
   }
 
