@@ -1,11 +1,11 @@
 {
   "name": "@acedex/contracts",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "description": "Shared data contracts, DTOs, and schemas for Acedex",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "build": "tsc",
+    "build": "node -e \"try{require('fs').rmSync('dist',{recursive:true,force:true})}catch(e){}\" && tsc",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
