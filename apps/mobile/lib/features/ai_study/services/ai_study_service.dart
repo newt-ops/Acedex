@@ -25,6 +25,11 @@ abstract class AiStudyRepository {
     bool? stepCompleted,
     bool? isCompleted,
   });
+  Future<TopicUnitMasteryResult> toggleUnitMastery({
+    required String unitCode,
+    required bool completed,
+    String? moduleId,
+  });
 }
 
 class AiStudyService implements AiStudyRepository {
@@ -114,6 +119,27 @@ class AiStudyService implements AiStudyRepository {
         .toList()
       ..sort((a, b) => a.moduleNumber.compareTo(b.moduleNumber));
 
+    // Synchronize backend Study-unit completion state into shared AuthStorage notifier
+    final completedUnitCodes = <String>[];
+    final uncompletedUnitCodes = <String>[];
+    for (final mod in modules) {
+      for (final r in mod.references) {
+        final code = r.unitCode.toUpperCase().trim();
+        if (code.isEmpty) continue;
+        if (r.isUnitCompleted) {
+          completedUnitCodes.add(code);
+        } else {
+          uncompletedUnitCodes.add(code);
+        }
+      }
+    }
+    if (completedUnitCodes.isNotEmpty) {
+      await _storage.setUnitCompletions(completedUnitCodes, true);
+    }
+    if (uncompletedUnitCodes.isNotEmpty) {
+      await _storage.setUnitCompletions(uncompletedUnitCodes, false);
+    }
+
     await saveCachedSubjectModules(subjectCode, modules);
     return modules;
   }
@@ -180,5 +206,29 @@ class AiStudyService implements AiStudyRepository {
     }
 
     return TopicModuleItem.fromJson(moduleJson);
+  }
+
+  @override
+  Future<TopicUnitMasteryResult> toggleUnitMastery({
+    required String unitCode,
+    required bool completed,
+    String? moduleId,
+  }) async {
+    final cleanCode = unitCode.toUpperCase().trim();
+    final res = await _apiClient.post(
+      ApiEndpoints.topicUnitMastery(cleanCode),
+      requiresAuth: true,
+      body: {
+        'completed': completed,
+        if (moduleId != null && moduleId.isNotEmpty) 'moduleId': moduleId,
+      },
+    );
+    final data = (res['data'] as Map<String, dynamic>?) ?? res;
+    final result = TopicUnitMasteryResult.fromJson(data);
+    await _storage.setUnitCompletion(
+      result.unitCode.isNotEmpty ? result.unitCode : cleanCode,
+      result.isStudyCompleted,
+    );
+    return result;
   }
 }

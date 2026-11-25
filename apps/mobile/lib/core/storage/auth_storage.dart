@@ -42,12 +42,21 @@ class AuthStorage {
   }
 
   Future<void> setUnitCompletion(String unitId, bool completed) async {
+    await setUnitCompletions([unitId], completed);
+  }
+
+  Future<void> setUnitCompletions(Iterable<String> unitIds, bool completed) async {
     final current = Set<String>.from(completedUnitsNotifier.value);
-    if (completed) {
-      current.add(unitId);
-    } else {
-      current.remove(unitId);
+    var changed = false;
+    for (final unitId in unitIds) {
+      if (unitId.isEmpty) continue;
+      if (completed) {
+        if (current.add(unitId)) changed = true;
+      } else {
+        if (current.remove(unitId)) changed = true;
+      }
     }
+    if (!changed) return;
     completedUnitsNotifier.value = current;
     final prefs = await SharedPreferences.getInstance();
     await prefs.setStringList(_keyCompletedUnits, current.toList());

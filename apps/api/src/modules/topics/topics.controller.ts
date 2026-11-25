@@ -1,6 +1,7 @@
 import { Response } from 'express';
 import {
   AiCalibrationInput,
+  ToggleTopicUnitMasteryRequest,
   UpdateTopicProgressRequest,
 } from '@acedex/contracts';
 import { AuthenticatedRequest } from '../../middleware/auth.middleware';
@@ -59,6 +60,24 @@ export class TopicsController {
     const result = await TopicsService.updateModuleProgress(
       req.user!.id,
       moduleId,
+      payload
+    );
+    return sendSuccess(res, result, 200);
+  }
+
+  /**
+   * POST /api/v1/topics/units/:unitCode/mastery
+   * Marks/unmarks a textbook unit mastered inside AI Topic Modules, syncing Study Screen progress
+   */
+  public static async setTopicUnitMastery(
+    req: AuthenticatedRequest,
+    res: Response
+  ): Promise<Response> {
+    const unitCode = req.params.unitCode as string;
+    const payload = req.body as ToggleTopicUnitMasteryRequest;
+    const result = await TopicsService.setTopicUnitMastery(
+      req.user!.id,
+      unitCode,
       payload
     );
     return sendSuccess(res, result, 200);

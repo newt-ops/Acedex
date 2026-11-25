@@ -1,12 +1,14 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:hugeicons/hugeicons.dart';
 import 'package:http/http.dart' as http;
 import 'package:http/testing.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:acedex/core/ads/ads.dart';
 import 'package:acedex/core/models/user_profile.dart';
 import 'package:acedex/core/network/api_client.dart';
+import 'package:acedex/core/storage/auth_storage.dart';
 import 'package:acedex/core/theme/app_theme.dart';
 import 'package:acedex/core/ui/ui.dart';
 import 'package:acedex/features/ai_study/models/ai_study_models.dart';
@@ -16,6 +18,8 @@ import 'package:acedex/features/ai_study/services/ai_study_service.dart';
 import 'package:acedex/features/ai_study/widgets/ai_module_detail_sheet.dart';
 import 'package:acedex/features/ai_study/widgets/ai_topic_workspace_view.dart';
 import 'package:acedex/features/ai_study/widgets/ai_welcome_view.dart';
+import 'package:acedex/features/study/models/study_models.dart';
+import 'package:acedex/features/study/screens/study_screen.dart';
 
 class _FakeAdsRepo implements AcedexAdsRepository {
   bool adStarted = false;
@@ -327,6 +331,60 @@ class _FakeAiStudyRepository implements AiStudyRepository {
     phyModules = [updated];
     return updated;
   }
+
+  @override
+  Future<TopicUnitMasteryResult> toggleUnitMastery({
+    required String unitCode,
+    required bool completed,
+    String? moduleId,
+  }) async {
+    final code = unitCode.toUpperCase().trim();
+    final target = phyModules.first;
+    final updatedRefs = target.references
+        .map(
+          (r) => r.unitCode.toUpperCase().trim() == code
+              ? r.copyWith(isUnitCompleted: completed)
+              : r,
+        )
+        .toList();
+
+    final matchingSteps = target.sequence
+        .where((s) => (s.unitCode ?? '').toUpperCase().trim() == code)
+        .map((s) => s.stepNumber)
+        .toList();
+    final stepSet = Set<int>.from(target.completedSteps);
+    for (final s in matchingSteps) {
+      if (completed) {
+        stepSet.add(s);
+      } else {
+        stepSet.remove(s);
+      }
+    }
+    final nextSteps = stepSet.toList()..sort();
+    final allDone =
+        target.sequence.isNotEmpty && nextSteps.length >= target.sequence.length;
+    final nextPct = target.sequence.isEmpty
+        ? 0
+        : ((nextSteps.length / target.sequence.length) * 100).round();
+
+    phyModules = [
+      target.copyWith(
+        references: updatedRefs,
+        completedSteps: nextSteps,
+        isCompleted: allDone,
+        progressPercentage: nextPct,
+      ),
+    ];
+
+    return TopicUnitMasteryResult(
+      unitCode: code,
+      isStudyCompleted: completed,
+      syncedStepNumbers: matchingSteps,
+      updatedCompletedSteps: nextSteps,
+      updatedModuleCompleted: allDone,
+      updatedProgressPercentage: nextPct,
+    );
+  }
 }
 
 void main() {
@@ -353,7 +411,7 @@ void main() {
   testWidgets(
       'AiStudyScreen renders Phase 0 Welcome and runs locked-stream 4-step calibration + rewarded ad',
       (tester) async {
-    tester.view.physicalSize = const Size(412, 915);
+    tester.view.physicalSize = const Size(480, 915);
     tester.view.devicePixelRatio = 1.0;
     addTearDown(tester.view.resetPhysicalSize);
 
@@ -471,7 +529,7 @@ void main() {
   testWidgets(
       'Social Science student sees Social Science subjects strictly locked in calibration',
       (tester) async {
-    tester.view.physicalSize = const Size(412, 915);
+    tester.view.physicalSize = const Size(480, 915);
     tester.view.devicePixelRatio = 1.0;
     addTearDown(tester.view.resetPhysicalSize);
 
@@ -510,7 +568,7 @@ void main() {
   testWidgets(
       'AiTopicWorkspaceView opens AiModuleDetailSheet and persists 0% -> 50% -> 100% progress',
       (tester) async {
-    tester.view.physicalSize = const Size(412, 915);
+    tester.view.physicalSize = const Size(480, 915);
     tester.view.devicePixelRatio = 1.0;
     addTearDown(tester.view.resetPhysicalSize);
 
@@ -571,7 +629,7 @@ void main() {
   testWidgets(
       'Switching subject rail serves subject topics cleanly and supports Retry on error',
       (tester) async {
-    tester.view.physicalSize = const Size(412, 915);
+    tester.view.physicalSize = const Size(480, 915);
     tester.view.devicePixelRatio = 1.0;
     addTearDown(tester.view.resetPhysicalSize);
 
@@ -721,5 +779,142 @@ void main() {
     expect(updated.completedSteps, [1]);
     expect(updated.isCompleted, isTrue);
     expect(updated.progressPercentage, 100);
+  });
+
+  testWidgets(
+      'Marking a unit mastered in AiModuleDetailSheet checkmarks StudyScreen unit and syncs progress',
+      (tester) async {
+    SharedPreferences.setMockInitialValues({});
+    await AuthStorage.instance.setUnitCompletions(['PHY-G09-U01', 'PHY-G11-U02'], false);
+
+    tester.view.physicalSize = const Size(480, 915);
+    tester.view.devicePixelRatio = 1.0;
+    addTearDown(tester.view.resetPhysicalSize);
+
+    final fakeRepo = _FakeAiStudyRepository();
+    final seededOverview = await fakeRepo.generateProgram(
+      const AiCalibrationInput(
+        tierId: 'competitive',
+        targetScore: 495,
+        weakSubjectCodes: ['PHY', 'MAT'],
+        dailyMinutes: 90,
+        peakWindow: 'Morning',
+        prepStageId: 'reviewing',
+      ),
+    );
+
+    final studyCurriculum = {
+      'physics': const SubjectCurriculum(
+        id: 'physics',
+        name: 'Physics',
+        mastery: 0,
+        lastTopicId: 'PHY-G09-U01',
+        iconData: HugeIcons.strokeRoundedAtom01,
+        color: Color(0xFF7B3FE4),
+        units: [
+          StudyUnit(
+            id: 'PHY-G09-U01',
+            code: 'U1',
+            unitCode: 'PHY-G09-U01',
+            title: 'Physics and Human Society',
+            examWeight: '15 Questions',
+            expanded: false,
+            topics: [],
+            isCompleted: false,
+          ),
+        ],
+      ),
+    };
+
+    int activeTab = 0;
+
+    await tester.pumpWidget(
+      MaterialApp(
+        theme: AppTheme.lightTheme,
+        home: StatefulBuilder(
+          builder: (context, setTabState) {
+            return Scaffold(
+              bottomNavigationBar: Row(
+                children: [
+                  Expanded(
+                    child: TextButton(
+                      onPressed: () => setTabState(() => activeTab = 0),
+                      child: const Text('Switch To AI'),
+                    ),
+                  ),
+                  Expanded(
+                    child: TextButton(
+                      onPressed: () => setTabState(() => activeTab = 1),
+                      child: const Text('Switch To Study'),
+                    ),
+                  ),
+                ],
+              ),
+              body: IndexedStack(
+                index: activeTab,
+                children: [
+                  AiStudyScreen(
+                    user: naturalUser,
+                    repository: fakeRepo,
+                    initialOverview: seededOverview,
+                    initialModulesBySubject: {'PHY': fakeRepo.phyModules},
+                  ),
+                  StudyScreen(
+                    user: const UserProfile(
+                      id: 'usr_nat_01',
+                      acedexId: 'ACEDEX-NAT-01',
+                      displayName: 'Abebe Kebede',
+                      grade: 9,
+                      stream: 'natural',
+                      role: 'student',
+                      status: 'active',
+                    ),
+                    initialCurriculum: studyCurriculum,
+                  ),
+                ],
+              ),
+            );
+          },
+        ),
+      ),
+    );
+    await tester.pumpAndSettle();
+
+    // Verify StudyScreen initially has 0/1 completed
+    await tester.tap(find.text('Switch To Study'));
+    await tester.pumpAndSettle();
+    expect(find.text('• Completed'), findsNothing);
+
+    // Switch back to AI Study tab, open PHY-M01, and mark referenced unit PHY-G09-U01 mastered
+    await tester.tap(find.text('Switch To AI'));
+    await tester.pumpAndSettle();
+
+    await tester.tap(
+      find.text('Measurement Standards, Precision & Vector Analysis'),
+    );
+    await tester.pumpAndSettle();
+
+    expect(find.text('0/2 units mastered'), findsOneWidget);
+
+    await tester.tap(find.bySemanticsLabel('Mark PHY-G09-U01 mastered'));
+    await tester.pumpAndSettle();
+
+    // Detail sheet reflects unit mastery + synced step
+    expect(find.text('1/2 units mastered'), findsOneWidget);
+    expect(find.text('PHY-G09-U01 • pp. 1–10 • Mastered'), findsOneWidget);
+    expect(find.text('50% Mastered'), findsOneWidget);
+
+    // Dismiss sheet & switch to StudyScreen in IndexedStack -> unit already checkmarked!
+    await tester.tapAt(const Offset(10, 10));
+    await tester.pumpAndSettle();
+
+    await tester.tap(find.text('Switch To Study'));
+    await tester.pumpAndSettle();
+
+    expect(
+      AuthStorage.instance.completedUnitsNotifier.value.contains('PHY-G09-U01'),
+      isTrue,
+    );
+    expect(find.text('• Completed'), findsOneWidget);
   });
 }

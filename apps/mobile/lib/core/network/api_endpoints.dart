@@ -39,4 +39,6 @@ class ApiEndpoints {
       '/api/v1/topics/subjects/${subjectCode.toUpperCase()}/modules';
   static String topicModuleProgress(String moduleId) =>
       '/api/v1/topics/modules/$moduleId/progress';
+  static String topicUnitMastery(String unitCode) =>
+      '/api/v1/topics/units/${unitCode.toUpperCase()}/mastery';
 }

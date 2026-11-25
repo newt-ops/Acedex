@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hugeicons/hugeicons.dart';
+import '../../../core/storage/auth_storage.dart';
 import '../../../core/theme/app_colors.dart';
 import '../../../core/ui/ui.dart';
 import '../../study/models/study_models.dart';
@@ -11,7 +12,7 @@ import '../models/ai_study_models.dart';
 /// Displays:
 /// - "Why Study Together" cross-grade rationale
 /// - "Where to Read" textbook citations (Grade / Official Unit Title / Page Range)
-///   with direct [UnitQuickNotesSheet] launch when `hasQuickNotes == true`
+///   with shared Study-unit mastery checkmarks and direct [UnitQuickNotesSheet] launch
 /// - Checkable Learning Sequence steps persisted via callback
 /// - Mastery Checkpoint & "Mark Module Mastered" action
 class AiModuleDetailSheet extends StatefulWidget {
@@ -19,12 +20,18 @@ class AiModuleDetailSheet extends StatefulWidget {
   final Future<TopicModuleItem?> Function(int stepNumber, bool completed)
   onToggleStep;
   final Future<TopicModuleItem?> Function(bool completed) onToggleMastered;
+  final Future<TopicModuleItem?> Function(
+    TopicReadingReference ref,
+    bool completed,
+  )?
+  onToggleUnitMastery;
 
   const AiModuleDetailSheet({
     super.key,
     required this.module,
     required this.onToggleStep,
     required this.onToggleMastered,
+    this.onToggleUnitMastery,
   });
 
   static Future<void> show(
@@ -33,6 +40,11 @@ class AiModuleDetailSheet extends StatefulWidget {
     required Future<TopicModuleItem?> Function(int stepNumber, bool completed)
     onToggleStep,
     required Future<TopicModuleItem?> Function(bool completed) onToggleMastered,
+    Future<TopicModuleItem?> Function(
+      TopicReadingReference ref,
+      bool completed,
+    )?
+    onToggleUnitMastery,
   }) {
     return showModalBottomSheet<void>(
       context: context,
@@ -42,6 +54,7 @@ class AiModuleDetailSheet extends StatefulWidget {
         module: module,
         onToggleStep: onToggleStep,
         onToggleMastered: onToggleMastered,
+        onToggleUnitMastery: onToggleUnitMastery,
       ),
     );
   }
@@ -53,6 +66,7 @@ class AiModuleDetailSheet extends StatefulWidget {
 class _AiModuleDetailSheetState extends State<AiModuleDetailSheet> {
   late TopicModuleItem _module;
   bool _saving = false;
+  String? _savingUnitCode;
 
   @override
   void initState() {
@@ -83,6 +97,34 @@ class _AiModuleDetailSheetState extends State<AiModuleDetailSheet> {
       _saving = false;
       if (updated != null) {
         _module = updated;
+      }
+    });
+  }
+
+  Future<void> _handleUnitMasteryTap(TopicReadingReference ref) async {
+    final handler = widget.onToggleUnitMastery;
+    if (handler == null || _saving || _savingUnitCode != null) return;
+    final code = ref.unitCode.toUpperCase().trim();
+    final isCurrentlyDone = ref.isUnitCompleted ||
+        AuthStorage.instance.completedUnitsNotifier.value.contains(code);
+
+    setState(() => _savingUnitCode = code);
+    final updated = await handler(ref, !isCurrentlyDone);
+    if (!mounted) return;
+    setState(() {
+      _savingUnitCode = null;
+      if (updated != null) {
+        _module = updated;
+      } else {
+        // Fallback local update in case callback didn't return full module
+        final nextRefs = _module.references
+            .map(
+              (r) => r.unitCode.toUpperCase().trim() == code
+                  ? r.copyWith(isUnitCompleted: !isCurrentlyDone)
+                  : r,
+            )
+            .toList();
+        _module = _module.copyWith(references: nextRefs);
       }
     });
   }
@@ -273,14 +315,48 @@ class _AiModuleDetailSheetState extends State<AiModuleDetailSheet> {
                     ],
 
                     // 2. Where to Read (Textbooks & Quick Notes)
-                    Text(
-                      'WHERE TO READ (ETHIOPIAN TEXTBOOKS)',
-                      style: TextStyle(
-                        fontSize: 10.5,
-                        fontWeight: FontWeight.w800,
-                        letterSpacing: 0.7,
-                        color: accent,
-                      ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Expanded(
+                          child: Text(
+                            'WHERE TO READ (TEXTBOOKS)',
+                            maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
+                            style: TextStyle(
+                              fontSize: 10.5,
+                              fontWeight: FontWeight.w800,
+                              letterSpacing: 0.7,
+                              color: accent,
+                            ),
+                          ),
+                        ),
+                        if (_module.references.isNotEmpty) ...[
+                          const SizedBox(width: 8),
+                          ValueListenableBuilder<Set<String>>(
+                            valueListenable:
+                                AuthStorage.instance.completedUnitsNotifier,
+                            builder: (_, completedSet, _) {
+                              final masteredCount = _module.references.where((r) {
+                                final code = r.unitCode.toUpperCase().trim();
+                                return r.isUnitCompleted ||
+                                    completedSet.contains(code);
+                              }).length;
+                              return Text(
+                                '$masteredCount/${_module.references.length} units mastered',
+                                style: TextStyle(
+                                  fontSize: 10.5,
+                                  fontWeight: FontWeight.w700,
+                                  color: masteredCount ==
+                                          _module.references.length
+                                      ? AppColors.success
+                                      : subtext,
+                                ),
+                              );
+                            },
+                          ),
+                        ],
+                      ],
                     ),
                     const SizedBox(height: 8),
                     if (_module.references.isEmpty)
@@ -297,102 +373,188 @@ class _AiModuleDetailSheetState extends State<AiModuleDetailSheet> {
                         ),
                       )
                     else
-                      ..._module.references.map((ref) {
-                        return Container(
-                          margin: const EdgeInsets.only(bottom: 8),
-                          padding: const EdgeInsets.all(12),
-                          decoration: BoxDecoration(
-                            color: surface,
-                            borderRadius: BorderRadius.circular(15),
-                            border: Border.all(color: line),
-                          ),
-                          child: Row(
-                            children: [
-                              Container(
-                                width: 36,
-                                height: 36,
+                      ValueListenableBuilder<Set<String>>(
+                        valueListenable:
+                            AuthStorage.instance.completedUnitsNotifier,
+                        builder: (context, completedSet, _) {
+                          final successColor = isDark
+                              ? AppColors.darkSuccess
+                              : AppColors.success;
+
+                          return Column(
+                            children: _module.references.map((ref) {
+                              final normalizedCode =
+                                  ref.unitCode.toUpperCase().trim();
+                              final isUnitDone = ref.isUnitCompleted ||
+                                  completedSet.contains(normalizedCode);
+                              final isUnitSaving =
+                                  _savingUnitCode == normalizedCode;
+
+                              return Container(
+                                margin: const EdgeInsets.only(bottom: 8),
+                                padding: const EdgeInsets.all(12),
                                 decoration: BoxDecoration(
-                                  color: accentSoft,
-                                  borderRadius: BorderRadius.circular(10),
-                                ),
-                                alignment: Alignment.center,
-                                child: Text(
-                                  'G${ref.grade}',
-                                  style: TextStyle(
-                                    fontSize: 12,
-                                    fontWeight: FontWeight.w800,
-                                    color: accent,
+                                  color: surface,
+                                  borderRadius: BorderRadius.circular(15),
+                                  border: Border.all(
+                                    color: isUnitDone
+                                        ? successColor.withValues(alpha: 0.45)
+                                        : line,
                                   ),
                                 ),
-                              ),
-                              const SizedBox(width: 10),
-                              Expanded(
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                child: Row(
                                   children: [
-                                    Text(
-                                      'Unit ${ref.unitNumber}: ${ref.unitTitle}',
-                                      style: TextStyle(
-                                        fontSize: 12.5,
-                                        fontWeight: FontWeight.w800,
-                                        color: theme.colorScheme.onSurface,
+                                    Container(
+                                      width: 36,
+                                      height: 36,
+                                      decoration: BoxDecoration(
+                                        color: isUnitDone
+                                            ? successColor.withValues(alpha: 0.14)
+                                            : accentSoft,
+                                        borderRadius: BorderRadius.circular(10),
                                       ),
-                                    ),
-                                    const SizedBox(height: 2),
-                                    Text(
-                                      '${ref.unitCode} • ${ref.pages}',
-                                      style: TextStyle(
-                                        fontSize: 11.5,
-                                        fontWeight: FontWeight.w600,
-                                        color: subtext,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                              if (ref.hasQuickNotes) ...[
-                                const SizedBox(width: 8),
-                                AcedexBounceable(
-                                  onTap: () => _openQuickNotes(ref, accent),
-                                  child: Container(
-                                    padding: const EdgeInsets.symmetric(
-                                      horizontal: 10,
-                                      vertical: 6,
-                                    ),
-                                    decoration: BoxDecoration(
-                                      color: accentSoft,
-                                      borderRadius: BorderRadius.circular(999),
-                                      border: Border.all(
-                                        color: accent.withValues(alpha: 0.3),
-                                      ),
-                                    ),
-                                    child: Row(
-                                      mainAxisSize: MainAxisSize.min,
-                                      children: [
-                                        HugeIcon(
-                                          icon:
-                                              HugeIcons.strokeRoundedBookOpen01,
-                                          color: accent,
-                                          size: 13,
+                                      alignment: Alignment.center,
+                                      child: Text(
+                                        'G${ref.grade}',
+                                        style: TextStyle(
+                                          fontSize: 12,
+                                          fontWeight: FontWeight.w800,
+                                          color: isUnitDone
+                                              ? successColor
+                                              : accent,
                                         ),
-                                        const SizedBox(width: 4),
-                                        Text(
-                                          'Quick Notes',
-                                          style: TextStyle(
-                                            fontSize: 10.5,
-                                            fontWeight: FontWeight.w800,
-                                            color: accent,
+                                      ),
+                                    ),
+                                    const SizedBox(width: 10),
+                                    Expanded(
+                                      child: Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: [
+                                          Text(
+                                            'Unit ${ref.unitNumber}: ${ref.unitTitle}',
+                                            style: TextStyle(
+                                              fontSize: 12.5,
+                                              fontWeight: FontWeight.w800,
+                                              color:
+                                                  theme.colorScheme.onSurface,
+                                            ),
+                                          ),
+                                          const SizedBox(height: 2),
+                                          Text(
+                                            isUnitDone
+                                                ? '${ref.unitCode} • ${ref.pages} • Mastered'
+                                                : '${ref.unitCode} • ${ref.pages}',
+                                            style: TextStyle(
+                                              fontSize: 11.5,
+                                              fontWeight: FontWeight.w600,
+                                              color: isUnitDone
+                                                  ? successColor
+                                                  : subtext,
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                    if (ref.hasQuickNotes) ...[
+                                      const SizedBox(width: 8),
+                                      AcedexBounceable(
+                                        onTap: () =>
+                                            _openQuickNotes(ref, accent),
+                                        child: Container(
+                                          padding: const EdgeInsets.symmetric(
+                                            horizontal: 10,
+                                            vertical: 6,
+                                          ),
+                                          decoration: BoxDecoration(
+                                            color: accentSoft,
+                                            borderRadius:
+                                                BorderRadius.circular(999),
+                                            border: Border.all(
+                                              color: accent.withValues(
+                                                alpha: 0.3,
+                                              ),
+                                            ),
+                                          ),
+                                          child: Row(
+                                            mainAxisSize: MainAxisSize.min,
+                                            children: [
+                                              HugeIcon(
+                                                icon: HugeIcons
+                                                    .strokeRoundedBookOpen01,
+                                                color: accent,
+                                                size: 13,
+                                              ),
+                                              const SizedBox(width: 4),
+                                              Text(
+                                                'Quick Notes',
+                                                style: TextStyle(
+                                                  fontSize: 10.5,
+                                                  fontWeight: FontWeight.w800,
+                                                  color: accent,
+                                                ),
+                                              ),
+                                            ],
                                           ),
                                         ),
-                                      ],
-                                    ),
-                                  ),
+                                      ),
+                                    ],
+                                    if (widget.onToggleUnitMastery != null) ...[
+                                      const SizedBox(width: 8),
+                                      Semantics(
+                                        button: true,
+                                        label: isUnitDone
+                                            ? 'Unmark ${ref.unitCode} mastered'
+                                            : 'Mark ${ref.unitCode} mastered',
+                                        child: AcedexBounceable(
+                                          onTap: () =>
+                                              _handleUnitMasteryTap(ref),
+                                          child: Container(
+                                            width: 28,
+                                            height: 28,
+                                            decoration: BoxDecoration(
+                                              shape: BoxShape.circle,
+                                              color: isUnitDone
+                                                  ? successColor
+                                                  : raised,
+                                              border: Border.all(
+                                                color: isUnitDone
+                                                    ? successColor
+                                                    : subtext,
+                                                width: 1.8,
+                                              ),
+                                            ),
+                                            alignment: Alignment.center,
+                                            child: isUnitSaving
+                                                ? SizedBox(
+                                                    width: 12,
+                                                    height: 12,
+                                                    child: AcedexDotsLoader(
+                                                      color: isUnitDone
+                                                          ? onAccent
+                                                          : accent,
+                                                      dotSize: 3,
+                                                      gap: 1.5,
+                                                    ),
+                                                  )
+                                                : (isUnitDone
+                                                    ? const Icon(
+                                                        Icons.check_rounded,
+                                                        size: 16,
+                                                        color: Colors.white,
+                                                      )
+                                                    : null),
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ],
                                 ),
-                              ],
-                            ],
-                          ),
-                        );
-                      }),
+                              );
+                            }).toList(),
+                          );
+                        },
+                      ),
 
                     const SizedBox(height: 12),
 

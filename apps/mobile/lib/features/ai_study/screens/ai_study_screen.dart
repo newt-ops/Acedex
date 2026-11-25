@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../../../core/ads/ads.dart';
 import '../../../core/models/user_profile.dart';
 import '../../../core/network/api_exception.dart';
+import '../../../core/storage/auth_storage.dart';
 import '../../../core/ui/ui.dart';
 import '../models/ai_study_models.dart';
 import '../screens/ai_calibration_screen.dart';
@@ -54,6 +55,9 @@ class _AiStudyScreenState extends State<AiStudyScreen> {
   void initState() {
     super.initState();
     _repository = widget.repository ?? AiStudyService.instance;
+    AuthStorage.instance.completedUnitsNotifier.addListener(
+      _onExternalUnitCompletionsChanged,
+    );
 
     if (widget.initialModulesBySubject != null) {
       _modulesBySubject.addAll(widget.initialModulesBySubject!);
@@ -64,6 +68,50 @@ class _AiStudyScreenState extends State<AiStudyScreen> {
       _initialLoading = false;
     } else {
       unawaited(_bootstrap());
+    }
+  }
+
+  @override
+  void dispose() {
+    AuthStorage.instance.completedUnitsNotifier.removeListener(
+      _onExternalUnitCompletionsChanged,
+    );
+    super.dispose();
+  }
+
+  void _onExternalUnitCompletionsChanged() {
+    if (!mounted || _modulesBySubject.isEmpty) return;
+    final completedSet = AuthStorage.instance.completedUnitsNotifier.value;
+    var anyChanged = false;
+
+    final updatedBySubject = <String, List<TopicModuleItem>>{};
+    for (final entry in _modulesBySubject.entries) {
+      var listChanged = false;
+      final updatedList = entry.value.map((mod) {
+        var modChanged = false;
+        final updatedRefs = mod.references.map((r) {
+          final code = r.unitCode.toUpperCase().trim();
+          final shouldDone = completedSet.contains(code);
+          if (r.isUnitCompleted != shouldDone) {
+            modChanged = true;
+            listChanged = true;
+            anyChanged = true;
+            return r.copyWith(isUnitCompleted: shouldDone);
+          }
+          return r;
+        }).toList();
+        return modChanged ? mod.copyWith(references: updatedRefs) : mod;
+      }).toList();
+
+      updatedBySubject[entry.key] = listChanged ? updatedList : entry.value;
+    }
+
+    if (anyChanged) {
+      setState(() {
+        _modulesBySubject
+          ..clear()
+          ..addAll(updatedBySubject);
+      });
     }
   }
 
@@ -309,6 +357,135 @@ class _AiStudyScreenState extends State<AiStudyScreen> {
     }
   }
 
+  Future<TopicModuleItem?> _toggleReferencedUnitMastery(
+    TopicModuleItem target,
+    TopicReadingReference ref,
+    bool completed,
+  ) async {
+    final unitCode = ref.unitCode.toUpperCase().trim();
+    try {
+      await AuthStorage.instance.setUnitCompletion(unitCode, completed);
+
+      final result = await _repository.toggleUnitMastery(
+        unitCode: unitCode,
+        completed: completed,
+        moduleId: target.moduleId,
+      );
+
+      if (!mounted) return null;
+
+      TopicModuleItem? refreshedTarget;
+      final touchedSubjects = <String>{};
+
+      setState(() {
+        for (final entry in _modulesBySubject.entries) {
+          var listChanged = false;
+          final updatedList = entry.value.map((mod) {
+            var modChanged = false;
+            final updatedRefs = mod.references.map((r) {
+              if (r.unitCode.toUpperCase().trim() == unitCode) {
+                modChanged = true;
+                return r.copyWith(isUnitCompleted: result.isStudyCompleted);
+              }
+              return r;
+            }).toList();
+
+            var nextMod = modChanged ? mod.copyWith(references: updatedRefs) : mod;
+
+            if (mod.moduleId == target.moduleId &&
+                result.updatedCompletedSteps != null) {
+              modChanged = true;
+              nextMod = nextMod.copyWith(
+                completedSteps: result.updatedCompletedSteps,
+                isCompleted: result.updatedModuleCompleted ?? nextMod.isCompleted,
+                progressPercentage:
+                    result.updatedProgressPercentage ?? nextMod.progressPercentage,
+              );
+            }
+
+            if (modChanged) {
+              listChanged = true;
+            }
+            if (nextMod.moduleId == target.moduleId) {
+              refreshedTarget = nextMod;
+            }
+            return nextMod;
+          }).toList();
+
+          if (listChanged) {
+            _modulesBySubject[entry.key] = updatedList;
+            touchedSubjects.add(entry.key);
+          }
+        }
+
+        if (_overview != null) {
+          final targetCode = target.subjectCode.toUpperCase();
+          final targetList = _modulesBySubject[targetCode] ?? const [];
+          if (targetList.isNotEmpty) {
+            final updatedSummaries = _overview!.subjectSummaries.map((s) {
+              if (s.subjectCode.toUpperCase() != targetCode) return s;
+              final completedCount = targetList.where((m) => m.isCompleted).length;
+              final avgPct =
+                  (targetList.fold<int>(0, (acc, m) => acc + m.progressPercentage) /
+                          targetList.length)
+                      .round();
+              return AiTopicSubjectSummary(
+                subjectCode: s.subjectCode,
+                subjectName: s.subjectName,
+                totalModules: targetList.length,
+                completedModules: completedCount,
+                masteryPercentage: avgPct,
+                priorityRank: s.priorityRank,
+                hasTopicBank: s.hasTopicBank,
+              );
+            }).toList();
+
+            _overview = AiTopicProgramOverview(
+              hasProgram: _overview!.hasProgram,
+              canGenerateToday: _overview!.canGenerateToday,
+              nextAllowedAt: _overview!.nextAllowedAt,
+              requiresAd: _overview!.requiresAd,
+              program: _overview!.program,
+              subjectSummaries: updatedSummaries,
+            );
+          }
+        }
+      });
+
+      for (final subjCode in touchedSubjects) {
+        final list = _modulesBySubject[subjCode];
+        if (list != null) {
+          unawaited(_repository.saveCachedSubjectModules(subjCode, list));
+        }
+      }
+      if (_overview != null) {
+        unawaited(_repository.saveCachedOverview(_overview!));
+      }
+
+      return refreshedTarget;
+    } on ApiException catch (e) {
+      await AuthStorage.instance.setUnitCompletion(unitCode, !completed);
+      if (mounted) {
+        AcedexToast.show(
+          context,
+          message: e.message,
+          type: AcedexToastType.error,
+        );
+      }
+      return null;
+    } catch (_) {
+      await AuthStorage.instance.setUnitCompletion(unitCode, !completed);
+      if (mounted) {
+        AcedexToast.show(
+          context,
+          message: 'Unable to sync unit mastery right now.',
+          type: AcedexToastType.error,
+        );
+      }
+      return null;
+    }
+  }
+
   void _openModuleDetail(TopicModuleItem module) {
     AiModuleDetailSheet.show(
       context,
@@ -320,6 +497,8 @@ class _AiStudyScreenState extends State<AiStudyScreen> {
       ),
       onToggleMastered: (completed) =>
           _updateModuleProgress(module, isCompleted: completed),
+      onToggleUnitMastery: (ref, completed) =>
+          _toggleReferencedUnitMastery(module, ref, completed),
     );
   }
 

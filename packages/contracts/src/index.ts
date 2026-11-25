@@ -860,6 +860,26 @@ export const UpdateTopicProgressSchema = z.object({
 });
 export type UpdateTopicProgressRequest = z.infer<typeof UpdateTopicProgressSchema>;
 
+export const ToggleTopicUnitMasterySchema = z.object({
+  completed: z.boolean(),
+  moduleId: z.string().min(4).optional(),
+});
+export type ToggleTopicUnitMasteryRequest = z.infer<typeof ToggleTopicUnitMasterySchema>;
+
+export interface TopicUnitMasteryResponse {
+  unitCode: string;
+  isStudyCompleted: boolean;
+  studyStatus: StudyStatus;
+  syncedStepNumbers: number[];
+  updatedModule?: {
+    moduleId: string;
+    subjectCode: string;
+    completedSteps: number[];
+    isCompleted: boolean;
+    progressPercentage: number;
+  };
+}
+
 export const TopicReadingReferenceSchema = z.object({
   grade: z.number().int().min(9).max(12),
   unitNumber: z.number().int().min(1),
@@ -867,6 +887,8 @@ export const TopicReadingReferenceSchema = z.object({
   unitTitle: z.string().min(1),
   pages: z.string().min(1),
   hasQuickNotes: z.boolean().optional(),
+  isUnitCompleted: z.boolean().optional(),
+  studyStatus: StudyStatusSchema.optional(),
 });
 export type TopicReadingReference = z.infer<typeof TopicReadingReferenceSchema>;
 

@@ -656,14 +656,27 @@ class _TopicModuleCard extends StatelessWidget {
                         vertical: 4,
                       ),
                       decoration: BoxDecoration(
-                        color: raised,
+                        color: ref.isUnitCompleted
+                            ? AppColors.success.withValues(alpha: 0.12)
+                            : raised,
                         borderRadius: BorderRadius.circular(8),
-                        border: Border.all(color: line),
+                        border: Border.all(
+                          color: ref.isUnitCompleted
+                              ? AppColors.success.withValues(alpha: 0.4)
+                              : line,
+                        ),
                       ),
                       child: Row(
                         mainAxisSize: MainAxisSize.min,
                         children: [
-                          if (ref.hasQuickNotes) ...[
+                          if (ref.isUnitCompleted) ...[
+                            HugeIcon(
+                              icon: HugeIcons.strokeRoundedTick02,
+                              color: AppColors.success,
+                              size: 11,
+                            ),
+                            const SizedBox(width: 4),
+                          ] else if (ref.hasQuickNotes) ...[
                             Container(
                               width: 6,
                               height: 6,
@@ -679,7 +692,9 @@ class _TopicModuleCard extends StatelessWidget {
                             style: TextStyle(
                               fontSize: 10.5,
                               fontWeight: FontWeight.w700,
-                              color: theme.colorScheme.onSurface,
+                              color: ref.isUnitCompleted
+                                  ? AppColors.success
+                                  : theme.colorScheme.onSurface,
                             ),
                           ),
                         ],

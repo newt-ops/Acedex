@@ -1,6 +1,7 @@
 import { Router } from 'express';
 import {
   AiCalibrationInputSchema,
+  ToggleTopicUnitMasterySchema,
   UpdateTopicProgressSchema,
 } from '@acedex/contracts';
 import { requireAuth } from '../../middleware/auth.middleware';
@@ -34,6 +35,13 @@ router.post(
   '/modules/:moduleId/progress',
   validate({ body: UpdateTopicProgressSchema }),
   asyncHandler(TopicsController.updateModuleProgress)
+);
+
+// POST /api/v1/topics/units/:unitCode/mastery - Toggle unit mastery synced with Study screen
+router.post(
+  '/units/:unitCode/mastery',
+  validate({ body: ToggleTopicUnitMasterySchema }),
+  asyncHandler(TopicsController.setTopicUnitMastery)
 );
 
 export const topicsRoutes = router;

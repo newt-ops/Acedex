@@ -344,4 +344,69 @@ describe('AI Cross-Grade Topic Study & Gemini Planner Backend Tests', { timeout:
     expect(unmarkRes.body.data.progressPercentage).toBe(0);
     expect(unmarkRes.body.data.subjectMasteryPercentage).toBe(0);
   });
+
+  it('7. Unified unit mastery syncs bidirectionally between Topic Modules and Study Screen units', async () => {
+    // 7a. Mark MAT-G09-U01 mastered from inside module MAT-M01
+    const masteryRes = await request(app)
+      .post('/api/v1/topics/units/MAT-G09-U01/mastery')
+      .set('Authorization', `Bearer ${studentToken}`)
+      .send({ completed: true, moduleId: 'MAT-M01' });
+
+    expect(masteryRes.status).toBe(200);
+    expect(masteryRes.body.data.unitCode).toBe('MAT-G09-U01');
+    expect(masteryRes.body.data.isStudyCompleted).toBe(true);
+    expect(masteryRes.body.data.syncedStepNumbers.length).toBeGreaterThanOrEqual(1);
+    expect(masteryRes.body.data.updatedModule?.progressPercentage).toBeGreaterThan(0);
+
+    // 7b. Study Screen curriculum endpoint immediately reflects MAT-G09-U01 completed & exam unlocked
+    const studyUnitsRes = await request(app)
+      .get('/api/v1/curriculum/units?grade=9&subject=MAT')
+      .set('Authorization', `Bearer ${studentToken}`);
+
+    expect(studyUnitsRes.status).toBe(200);
+    const matU1 = studyUnitsRes.body.data.find((u: any) => u.code === 'MAT-G09-U01');
+    expect(matU1).toBeDefined();
+    expect(matU1.isStudyCompleted).toBe(true);
+    expect(matU1.isExamUnlocked).toBe(true);
+
+    // 7c. Topic Modules endpoint immediately reflects MAT-G09-U01 isUnitCompleted: true
+    const matModsRes = await request(app)
+      .get('/api/v1/topics/subjects/MAT/modules')
+      .set('Authorization', `Bearer ${studentToken}`);
+    expect(matModsRes.status).toBe(200);
+    const m1Ref1 = matModsRes.body.data[0].references.find(
+      (r: any) => r.unitCode === 'MAT-G09-U01'
+    );
+    expect(m1Ref1?.isUnitCompleted).toBe(true);
+
+    // 7d. Reverse check: completing PHY-G09-U01 on Study Screen reflects in PHY topic modules
+    const studyCompleteRes = await request(app)
+      .post('/api/v1/study/units/PHY-G09-U01/complete')
+      .set('Authorization', `Bearer ${studentToken}`);
+    expect(studyCompleteRes.status).toBe(200);
+
+    const phyModsRes = await request(app)
+      .get('/api/v1/topics/subjects/PHY/modules')
+      .set('Authorization', `Bearer ${studentToken}`);
+    expect(phyModsRes.status).toBe(200);
+    const phyRef = phyModsRes.body.data[0].references.find(
+      (r: any) => r.unitCode === 'PHY-G09-U01'
+    );
+    expect(phyRef?.isUnitCompleted).toBe(true);
+
+    // 7e. Legacy Grade 9 Physics topic-bank reference (PHY-G09-U06) also saves cleanly without 404
+    const g9U6Res = await request(app)
+      .post('/api/v1/topics/units/PHY-G09-U06/mastery')
+      .set('Authorization', `Bearer ${studentToken}`)
+      .send({ completed: true });
+    expect(g9U6Res.status).toBe(200);
+    expect(g9U6Res.body.data.isStudyCompleted).toBe(true);
+
+    // 7f. Unknown non-existent unit code rejects cleanly with 404
+    const unknownRes = await request(app)
+      .post('/api/v1/topics/units/FAKE-G99-U99/mastery')
+      .set('Authorization', `Bearer ${studentToken}`)
+      .send({ completed: true });
+    expect(unknownRes.status).toBe(404);
+  });
 });

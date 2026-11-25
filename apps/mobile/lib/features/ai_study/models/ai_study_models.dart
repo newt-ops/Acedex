@@ -10,6 +10,7 @@ class TopicReadingReference {
   final String unitTitle;
   final String pages;
   final bool hasQuickNotes;
+  final bool isUnitCompleted;
 
   const TopicReadingReference({
     required this.grade,
@@ -18,6 +19,7 @@ class TopicReadingReference {
     required this.unitTitle,
     required this.pages,
     this.hasQuickNotes = false,
+    this.isUnitCompleted = false,
   });
 
   factory TopicReadingReference.fromJson(Map<String, dynamic> json) {
@@ -28,6 +30,7 @@ class TopicReadingReference {
       unitTitle: json['unitTitle'] as String? ?? 'Unit',
       pages: json['pages'] as String? ?? 'Full Unit',
       hasQuickNotes: json['hasQuickNotes'] as bool? ?? false,
+      isUnitCompleted: json['isUnitCompleted'] as bool? ?? false,
     );
   }
 
@@ -38,9 +41,63 @@ class TopicReadingReference {
         'unitTitle': unitTitle,
         'pages': pages,
         'hasQuickNotes': hasQuickNotes,
+        'isUnitCompleted': isUnitCompleted,
       };
 
+  TopicReadingReference copyWith({
+    bool? hasQuickNotes,
+    bool? isUnitCompleted,
+  }) {
+    return TopicReadingReference(
+      grade: grade,
+      unitNumber: unitNumber,
+      unitCode: unitCode,
+      unitTitle: unitTitle,
+      pages: pages,
+      hasQuickNotes: hasQuickNotes ?? this.hasQuickNotes,
+      isUnitCompleted: isUnitCompleted ?? this.isUnitCompleted,
+    );
+  }
+
   String get shortChipLabel => 'G$grade U$unitNumber • $pages';
+}
+
+/// Response returned after marking/unmarking a curriculum unit from within AI Topic Modules.
+@immutable
+class TopicUnitMasteryResult {
+  final String unitCode;
+  final bool isStudyCompleted;
+  final List<int> syncedStepNumbers;
+  final List<int>? updatedCompletedSteps;
+  final bool? updatedModuleCompleted;
+  final int? updatedProgressPercentage;
+
+  const TopicUnitMasteryResult({
+    required this.unitCode,
+    required this.isStudyCompleted,
+    this.syncedStepNumbers = const [],
+    this.updatedCompletedSteps,
+    this.updatedModuleCompleted,
+    this.updatedProgressPercentage,
+  });
+
+  factory TopicUnitMasteryResult.fromJson(Map<String, dynamic> json) {
+    final modJson = json['updatedModule'] as Map<String, dynamic>?;
+    return TopicUnitMasteryResult(
+      unitCode: (json['unitCode'] as String? ?? '').toUpperCase().trim(),
+      isStudyCompleted: json['isStudyCompleted'] as bool? ?? false,
+      syncedStepNumbers: (json['syncedStepNumbers'] as List<dynamic>? ?? [])
+          .map((e) => (e as num).toInt())
+          .toList(),
+      updatedCompletedSteps:
+          (modJson?['completedSteps'] as List<dynamic>?)
+              ?.map((e) => (e as num).toInt())
+              .toList(),
+      updatedModuleCompleted: modJson?['isCompleted'] as bool?,
+      updatedProgressPercentage:
+          (modJson?['progressPercentage'] as num?)?.toInt(),
+    );
+  }
 }
 
 /// Interactive step inside a cross-grade topic module sequence.
@@ -169,6 +226,7 @@ class TopicModuleItem {
       };
 
   TopicModuleItem copyWith({
+    List<TopicReadingReference>? references,
     List<int>? completedSteps,
     bool? isCompleted,
     int? progressPercentage,
@@ -182,7 +240,7 @@ class TopicModuleItem {
       phase: phase,
       title: title,
       rationale: rationale,
-      references: references,
+      references: references ?? this.references,
       sequence: sequence,
       prerequisites: prerequisites,
       masteryCheckpoint: masteryCheckpoint,

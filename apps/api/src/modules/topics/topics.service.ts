@@ -5,17 +5,22 @@ import {
   AiTopicProgramOverviewResponse,
   AiTopicSubjectSummary,
   StudentStream,
+  StudyStatus,
+  ToggleTopicUnitMasteryRequest,
   TopicModuleItem,
+  TopicUnitMasteryResponse,
   UpdateTopicProgressRequest,
 } from '@acedex/contracts';
 import { UserModel } from '../users/user.model';
 import {
+  IProgressUnitSubdoc,
   ITopicModuleProgressSubdoc,
   StudentProgressModel,
 } from '../progress/models/student-progress.model';
 import { EUEE_SUBJECTS } from '../curriculum/curriculum-seeder.service';
 import { UnitModel } from '../curriculum/models/unit.model';
 import { TopicModuleModel, ITopicModuleDocument } from './models/topic-module.model';
+import { ProgressService } from '../progress/progress.service';
 import { AdConfigModel } from '../ads/models/ad-config.model';
 import { AdSessionModel, IAdSessionDocument } from '../ads/models/ad-session.model';
 import { GeminiPlannerService } from './gemini-planner.service';
@@ -379,6 +384,13 @@ export class TopicsService {
       progressMap.set(tm.moduleId, tm);
     }
 
+    const unitProgressMap = new Map<string, IProgressUnitSubdoc>();
+    for (const u of progress?.units || []) {
+      if (u.unitCode) {
+        unitProgressMap.set(u.unitCode.toUpperCase().trim(), u);
+      }
+    }
+
     // Check which referenced curriculum units already have Quick Notes seeded in acedex.units
     const allRefUnitCodes = new Set<string>();
     for (const mod of modules) {
@@ -409,14 +421,24 @@ export class TopicsService {
         phase: mod.phase,
         title: mod.title,
         rationale: mod.rationale,
-        references: (mod.references || []).map((r) => ({
-          grade: r.grade,
-          unitNumber: r.unitNumber,
-          unitCode: r.unitCode,
-          unitTitle: r.unitTitle,
-          pages: r.pages,
-          hasQuickNotes: quickNotesUnitSet.has(r.unitCode.toUpperCase().trim()),
-        })),
+        references: (mod.references || []).map((r) => {
+          const normalizedRefCode = r.unitCode.toUpperCase().trim();
+          const unitRec = unitProgressMap.get(normalizedRefCode);
+          const isUnitCompleted = unitRec?.isStudyCompleted === true;
+          const studyStatus: StudyStatus =
+            unitRec?.studyStatus || (isUnitCompleted ? 'completed' : 'not_started');
+
+          return {
+            grade: r.grade,
+            unitNumber: r.unitNumber,
+            unitCode: r.unitCode,
+            unitTitle: r.unitTitle,
+            pages: r.pages,
+            hasQuickNotes: quickNotesUnitSet.has(normalizedRefCode),
+            isUnitCompleted,
+            studyStatus,
+          };
+        }),
         sequence: mod.sequence || [],
         prerequisites: mod.prerequisites || [],
         masteryCheckpoint: mod.masteryCheckpoint,
@@ -541,6 +563,160 @@ export class TopicsService {
         entry
       ),
       subjectMasteryPercentage,
+    };
+  }
+
+  /**
+   * Marks or unmarks a curriculum unit mastered from within AI Topic Modules,
+   * keeping Study Screen's `progress.units` and module sequence steps unified.
+   */
+  public static async setTopicUnitMastery(
+    userId: string,
+    unitCode: string,
+    payload: ToggleTopicUnitMasteryRequest
+  ): Promise<TopicUnitMasteryResponse> {
+    const cleanUnitCode = unitCode.toUpperCase().trim();
+    const status: StudyStatus = payload.completed ? 'completed' : 'not_started';
+
+    const dbUnit = await UnitModel.findOne({ code: cleanUnitCode });
+    if (dbUnit) {
+      await ProgressService.updateUnitStudyStatus(userId, dbUnit.code, status);
+    } else {
+      // Fallback for textbook unit references without a seeded row in `acedex.units` (e.g. PHY-G09-U06/U07)
+      const existsInTopicBank = await TopicModuleModel.exists({
+        'references.unitCode': cleanUnitCode,
+      });
+      if (!existsInTopicBank) {
+        throw new NotFoundError(`Unit '${cleanUnitCode}' not found`);
+      }
+
+      const codeMatch = cleanUnitCode.match(/^([A-Z]{2,5})-G(\d{2})-/);
+      const parsedSubject = codeMatch ? codeMatch[1] : cleanUnitCode.slice(0, 3);
+      const parsedGrade = codeMatch ? parseInt(codeMatch[2], 10) : 9;
+
+      const userObjectId = new Types.ObjectId(userId);
+      let progressDoc = await StudentProgressModel.findOne({ userId: userObjectId });
+      if (!progressDoc) {
+        progressDoc = new StudentProgressModel({
+          userId: userObjectId,
+          units: [],
+          subjectMastery: [],
+          topicModules: [],
+        });
+      }
+
+      let unitEntry = progressDoc.units.find(
+        (u) => u.unitCode.toUpperCase().trim() === cleanUnitCode
+      );
+      if (!unitEntry) {
+        unitEntry = {
+          unitId: new Types.ObjectId(),
+          unitCode: cleanUnitCode,
+          subjectCode: parsedSubject,
+          grade: parsedGrade,
+          studyStatus: status,
+          isStudyCompleted: payload.completed,
+          studyCompletedAt: payload.completed ? new Date() : undefined,
+          bestScore: 0,
+          bestPercentage: 0,
+          totalQuestions: 15,
+          passed: false,
+          attemptsCount: 0,
+          lastAttemptAt: new Date(),
+        } as IProgressUnitSubdoc;
+        progressDoc.units.push(unitEntry);
+      } else {
+        unitEntry.studyStatus = status;
+        unitEntry.isStudyCompleted = payload.completed;
+        unitEntry.studyCompletedAt = payload.completed
+          ? unitEntry.studyCompletedAt || new Date()
+          : undefined;
+      }
+
+      progressDoc.markModified('units');
+      await progressDoc.save();
+    }
+
+    // Sync any learning steps tagged with `unitCode` inside the active module
+    const syncedStepNumbers: number[] = [];
+    let updatedModule: TopicUnitMasteryResponse['updatedModule'];
+
+    if (payload.moduleId) {
+      const cleanModuleId = payload.moduleId.toUpperCase().trim();
+      const mod = await TopicModuleModel.findOne({ moduleId: cleanModuleId }).lean();
+      if (mod) {
+        const userObjectId = new Types.ObjectId(userId);
+        const progress = await StudentProgressModel.findOne({ userId: userObjectId });
+        if (progress) {
+          const matchingSteps = (mod.sequence || [])
+            .filter((s) => (s.unitCode || '').toUpperCase().trim() === cleanUnitCode)
+            .map((s) => s.stepNumber);
+
+          if (matchingSteps.length > 0) {
+            let modEntry = progress.topicModules.find(
+              (tm) => tm.moduleId === cleanModuleId
+            );
+            if (!modEntry && payload.completed) {
+              progress.topicModules.push({
+                moduleId: cleanModuleId,
+                subjectCode: mod.subjectCode,
+                moduleNumber: mod.moduleNumber,
+                completedSteps: [],
+                isCompleted: false,
+              });
+              modEntry = progress.topicModules[progress.topicModules.length - 1];
+            }
+
+            if (modEntry) {
+              const stepSet = new Set(modEntry.completedSteps);
+              for (const stepNum of matchingSteps) {
+                if (payload.completed) {
+                  stepSet.add(stepNum);
+                } else {
+                  stepSet.delete(stepNum);
+                }
+                syncedStepNumbers.push(stepNum);
+              }
+
+              modEntry.completedSteps = Array.from(stepSet).sort((a, b) => a - b);
+              const totalSteps = (mod.sequence || []).length;
+              if (
+                payload.completed &&
+                totalSteps > 0 &&
+                modEntry.completedSteps.length >= totalSteps
+              ) {
+                modEntry.isCompleted = true;
+                modEntry.completedAt = modEntry.completedAt || new Date();
+              } else if (!payload.completed && modEntry.isCompleted) {
+                modEntry.isCompleted = false;
+                modEntry.completedAt = undefined;
+              }
+
+              progress.markModified('topicModules');
+              await progress.save();
+
+              updatedModule = {
+                moduleId: modEntry.moduleId,
+                subjectCode: modEntry.subjectCode,
+                completedSteps: modEntry.completedSteps,
+                isCompleted: modEntry.isCompleted,
+                progressPercentage: this.calculateModuleProgressPct(
+                  mod as unknown as ITopicModuleDocument,
+                  modEntry
+                ),
+              };
+            }
+          }
+        }
+      }
+    }
+
+    return {
+      unitCode: cleanUnitCode,
+      isStudyCompleted: payload.completed,
+      studyStatus: status,
+      syncedStepNumbers,
+      ...(updatedModule ? { updatedModule } : {}),
     };
   }
 }

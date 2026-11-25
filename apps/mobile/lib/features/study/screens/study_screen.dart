@@ -58,6 +58,9 @@ class _StudyScreenState extends State<StudyScreen> {
     super.initState();
     _selectedGrade = widget.user?.grade ?? 12;
     _studentStream = widget.user?.stream ?? 'natural';
+    AuthStorage.instance.completedUnitsNotifier.addListener(
+      _onExternalUnitCompletionsChanged,
+    );
     unawaited(AuthStorage.instance.getCompletedUnits());
     if (widget.initialCurriculum != null && widget.initialCurriculum!.isNotEmpty) {
       _curriculumMap = Map.from(widget.initialCurriculum!);
@@ -68,8 +71,55 @@ class _StudyScreenState extends State<StudyScreen> {
 
   @override
   void dispose() {
+    AuthStorage.instance.completedUnitsNotifier.removeListener(
+      _onExternalUnitCompletionsChanged,
+    );
     _searchController.dispose();
     super.dispose();
+  }
+
+  /// Keeps Tab 1 (StudyScreen) units synchronized in real time when units are
+  /// mastered or unmarked inside Tab 2 (AI Topic Modules).
+  void _onExternalUnitCompletionsChanged() {
+    if (!mounted || _curriculumMap.isEmpty) return;
+    final completedSet = AuthStorage.instance.completedUnitsNotifier.value;
+    var anyChanged = false;
+
+    final updatedMap = <String, SubjectCurriculum>{};
+    for (final entry in _curriculumMap.entries) {
+      final subj = entry.value;
+      var subjChanged = false;
+      final updatedUnits = subj.units.map((u) {
+        final unitCode = u.resolvedUnitCode(subj.subjectCode);
+        final shouldComplete =
+            completedSet.contains(u.id) || completedSet.contains(unitCode);
+        if (u.isCompleted != shouldComplete) {
+          subjChanged = true;
+          anyChanged = true;
+          return u.copyWith(isCompleted: shouldComplete);
+        }
+        return u;
+      }).toList();
+
+      if (subjChanged) {
+        final total = updatedUnits.length;
+        final done = updatedUnits.where((u) => u.isCompleted).length;
+        final newMastery =
+            total > 0 ? ((done / total) * 100).round().clamp(0, 100) : 0;
+        updatedMap[entry.key] = subj.copyWith(
+          units: updatedUnits,
+          mastery: newMastery,
+        );
+      } else {
+        updatedMap[entry.key] = subj;
+      }
+    }
+
+    if (anyChanged) {
+      setState(() {
+        _curriculumMap = updatedMap;
+      });
+    }
   }
 
   SubjectCurriculum get _activeSubject =>
@@ -240,6 +290,8 @@ class _StudyScreenState extends State<StudyScreen> {
       );
       final unitsData = res['data'] ?? res;
       if (unitsData is List && unitsData.isNotEmpty) {
+        final serverCompletedIds = <String>[];
+        final serverUncompletedIds = <String>[];
         final List<StudyUnit> liveUnits = unitsData.map((raw) {
           final unitNum = raw['unitNumber'] as int? ?? 1;
           final code = 'U$unitNum';
@@ -248,13 +300,20 @@ class _StudyScreenState extends State<StudyScreen> {
           final title = raw['title'] as String? ?? 'Unit $unitNum';
           final qCount = raw['questionCount'] as int? ?? 15;
           final unitId = raw['_id'] as String? ?? unitCode;
-          final isDone = raw['isStudyCompleted'] == true ||
-              raw['passed'] == true ||
-              AuthStorage.instance.completedUnitsNotifier.value.contains(unitId) ||
-              AuthStorage.instance.completedUnitsNotifier.value.contains(unitCode);
-          if (raw['isStudyCompleted'] == true || raw['passed'] == true) {
-            unawaited(AuthStorage.instance.setUnitCompletion(unitId, true));
-            unawaited(AuthStorage.instance.setUnitCompletion(unitCode, true));
+          final hasServerStatus =
+              raw.containsKey('isStudyCompleted') || raw.containsKey('passed');
+          final serverDone =
+              raw['isStudyCompleted'] == true || raw['passed'] == true;
+          final isDone = hasServerStatus
+              ? serverDone
+              : (AuthStorage.instance.completedUnitsNotifier.value.contains(unitId) ||
+                    AuthStorage.instance.completedUnitsNotifier.value.contains(unitCode));
+          if (hasServerStatus) {
+            if (serverDone) {
+              serverCompletedIds..add(unitId)..add(unitCode);
+            } else {
+              serverUncompletedIds..add(unitId)..add(unitCode);
+            }
           }
           final bestScore = raw['bestScore'] as int?;
 
@@ -270,6 +329,12 @@ class _StudyScreenState extends State<StudyScreen> {
             assessmentScore: bestScore != null && bestScore > 0 ? bestScore : null,
           );
         }).toList();
+        if (serverCompletedIds.isNotEmpty) {
+          unawaited(AuthStorage.instance.setUnitCompletions(serverCompletedIds, true));
+        }
+        if (serverUncompletedIds.isNotEmpty) {
+          unawaited(AuthStorage.instance.setUnitCompletions(serverUncompletedIds, false));
+        }
 
         final doneCount = liveUnits.where((u) => u.isCompleted).length;
         final masteryPct = liveUnits.isNotEmpty
@@ -673,12 +738,16 @@ class _StudyScreenState extends State<StudyScreen> {
                     ),
                   ),
                   const SizedBox(width: 6),
-                  Text(
-                    streamLabel,
-                    style: TextStyle(
-                      fontSize: 12,
-                      fontWeight: FontWeight.w600,
-                      color: subtextColor,
+                  Expanded(
+                    child: Text(
+                      streamLabel,
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                      style: TextStyle(
+                        fontSize: 12,
+                        fontWeight: FontWeight.w600,
+                        color: subtextColor,
+                      ),
                     ),
                   ),
                 ],
