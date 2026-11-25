@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:acedex/core/ads/ads.dart';
 import 'package:acedex/core/models/user_profile.dart';
 import 'package:acedex/core/theme/app_theme.dart';
 import 'package:acedex/core/ui/ui.dart';
@@ -11,14 +12,59 @@ import 'package:acedex/features/ai_study/widgets/ai_module_detail_sheet.dart';
 import 'package:acedex/features/ai_study/widgets/ai_topic_workspace_view.dart';
 import 'package:acedex/features/ai_study/widgets/ai_welcome_view.dart';
 
-class _FakeAiStudyRepository implements AiStudyRepository {
+class _FakeAdsRepo implements AcedexAdsRepository {
   bool adStarted = false;
   bool adPlayed = false;
   bool adClaimed = false;
-  int generateCalls = 0;
 
   @override
-  int get minimumAdWatchSeconds => 1;
+  int get minimumWatchSeconds => 1;
+
+  @override
+  Future<AcedexAdConfig> fetchConfig() async => const AcedexAdConfig();
+
+  @override
+  Future<AcedexStudentAdStatus> fetchStudentStatus() async =>
+      const AcedexStudentAdStatus();
+
+  @override
+  Future<AcedexAdSession> startRewardedSession({
+    required AcedexRewardType rewardType,
+    String? targetUnitId,
+  }) async {
+    adStarted = true;
+    return AcedexAdSession(
+      adSessionId: 'adsess_test_unlocked',
+      rewardType: rewardType,
+      gameId: '6220248',
+      placementId: 'Rewarded_Android',
+      startedAtLocal: DateTime.now(),
+    );
+  }
+
+  @override
+  Future<bool> showUnityRewardedAd(AcedexAdSession session) async {
+    adPlayed = true;
+    return true;
+  }
+
+  @override
+  Future<AcedexClaimRewardResult> claimReward({
+    required String adSessionId,
+    required AcedexRewardType rewardType,
+  }) async {
+    adClaimed = adSessionId == 'adsess_test_unlocked';
+    return AcedexClaimRewardResult(
+      rewardType: rewardType,
+      adSessionId: adSessionId,
+      aiStudyPlanUnlocked: true,
+      aiPlanAdSessionId: adSessionId,
+    );
+  }
+}
+
+class _FakeAiStudyRepository implements AiStudyRepository {
+  int generateCalls = 0;
 
   AiTopicProgramOverview overview = const AiTopicProgramOverview(
     hasProgram: false,
@@ -112,28 +158,6 @@ class _FakeAiStudyRepository implements AiStudyRepository {
   Future<List<TopicModuleItem>> fetchSubjectModules(String subjectCode) async {
     if (subjectCode.toUpperCase() == 'PHY') return phyModules;
     return const [];
-  }
-
-  @override
-  Future<RewardedAdStartData> startRewardedAdSession() async {
-    adStarted = true;
-    return RewardedAdStartData(
-      adSessionId: 'adsess_test_unlocked',
-      gameId: '6220248',
-      placementId: 'Rewarded_Android',
-      startedAtLocal: DateTime.now(),
-    );
-  }
-
-  @override
-  Future<bool> playRewardedAd(RewardedAdStartData session) async {
-    adPlayed = true;
-    return true;
-  }
-
-  @override
-  Future<void> claimRewardedAd(String adSessionId) async {
-    adClaimed = adSessionId == 'adsess_test_unlocked';
   }
 
   @override
@@ -270,6 +294,7 @@ void main() {
     addTearDown(tester.view.resetPhysicalSize);
 
     final fakeRepo = _FakeAiStudyRepository();
+    final fakeAds = _FakeAdsRepo();
 
     await tester.pumpWidget(
       MaterialApp(
@@ -283,6 +308,7 @@ void main() {
           body: AiStudyScreen(
             user: naturalUser,
             repository: fakeRepo,
+            adsRepository: fakeAds,
           ),
         ),
       ),
@@ -355,9 +381,9 @@ void main() {
     await tester.pump(const Duration(seconds: 2));
     await tester.pumpAndSettle();
 
-    expect(fakeRepo.adStarted, isTrue);
-    expect(fakeRepo.adPlayed, isTrue);
-    expect(fakeRepo.adClaimed, isTrue);
+    expect(fakeAds.adStarted, isTrue);
+    expect(fakeAds.adPlayed, isTrue);
+    expect(fakeAds.adClaimed, isTrue);
     expect(fakeRepo.generateCalls, 1);
     expect(find.text('GEMINI AI BLUEPRINT'), findsOneWidget);
     expect(find.text('Start Topic Study Program'), findsOneWidget);

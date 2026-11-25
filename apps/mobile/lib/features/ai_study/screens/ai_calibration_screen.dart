@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../../core/ads/ads.dart';
 import '../../../core/models/user_profile.dart';
 import '../models/ai_study_models.dart';
 import '../services/ai_study_service.dart';
@@ -12,6 +13,7 @@ import '../widgets/ai_calibration_flow.dart';
 class AiCalibrationScreen extends StatelessWidget {
   final UserProfile? user;
   final AiStudyRepository repository;
+  final AcedexAdsRepository? adsRepository;
   final bool canGenerateToday;
   final bool requiresAd;
   final AiCalibrationInput? initialCalibration;
@@ -20,6 +22,7 @@ class AiCalibrationScreen extends StatelessWidget {
     super.key,
     required this.user,
     required this.repository,
+    this.adsRepository,
     required this.canGenerateToday,
     required this.requiresAd,
     this.initialCalibration,
@@ -33,6 +36,7 @@ class AiCalibrationScreen extends StatelessWidget {
         child: AiCalibrationFlow(
           user: user,
           repository: repository,
+          adsRepository: adsRepository,
           canGenerateToday: canGenerateToday,
           requiresAd: requiresAd,
           initialCalibration: initialCalibration,

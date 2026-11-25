@@ -27,6 +27,8 @@ class ApiEndpoints {
   static String updateUnitStatus(String unitId) => '/api/v1/study/units/$unitId/status';
 
   // Rewarded Ads & Monetization
+  static const String adsConfig = '/api/v1/ads/config';
+  static const String adsStatus = '/api/v1/ads/status';
   static const String adsSessionStart = '/api/v1/ads/session/start';
   static const String adsRewardClaim = '/api/v1/ads/reward/claim';
 

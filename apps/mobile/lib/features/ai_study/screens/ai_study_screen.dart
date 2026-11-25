@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
+import '../../../core/ads/ads.dart';
 import '../../../core/models/user_profile.dart';
 import '../../../core/network/api_exception.dart';
 import '../../../core/ui/ui.dart';
@@ -20,6 +21,7 @@ enum _AiStudyPhase { welcome, workspace }
 class AiStudyScreen extends StatefulWidget {
   final UserProfile? user;
   final AiStudyRepository? repository;
+  final AcedexAdsRepository? adsRepository;
   final AiTopicProgramOverview? initialOverview;
   final Map<String, List<TopicModuleItem>>? initialModulesBySubject;
 
@@ -27,6 +29,7 @@ class AiStudyScreen extends StatefulWidget {
     super.key,
     this.user,
     this.repository,
+    this.adsRepository,
     this.initialOverview,
     this.initialModulesBySubject,
   });
@@ -272,6 +275,7 @@ class _AiStudyScreenState extends State<AiStudyScreen> {
             builder: (_) => AiCalibrationScreen(
               user: widget.user,
               repository: _repository,
+              adsRepository: widget.adsRepository,
               canGenerateToday: canGen,
               requiresAd: overview?.requiresAd ?? true,
               initialCalibration: overview?.program?.calibration,

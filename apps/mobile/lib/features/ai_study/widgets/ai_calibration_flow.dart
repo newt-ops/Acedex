@@ -1,9 +1,9 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:hugeicons/hugeicons.dart';
+import '../../../core/ads/ads.dart';
 import '../../../core/models/user_profile.dart';
 import '../../../core/network/api_exception.dart';
-import '../../../core/services/unity_ads_service.dart';
 import '../../../core/theme/app_colors.dart';
 import '../../../core/ui/ui.dart';
 import '../../splash/painters/acedex_logo_painter.dart';
@@ -20,6 +20,7 @@ import '../services/ai_study_service.dart';
 class AiCalibrationFlow extends StatefulWidget {
   final UserProfile? user;
   final AiStudyRepository repository;
+  final AcedexAdsRepository? adsRepository;
   final bool canGenerateToday;
   final bool requiresAd;
   final AiCalibrationInput? initialCalibration;
@@ -30,6 +31,7 @@ class AiCalibrationFlow extends StatefulWidget {
     super.key,
     required this.user,
     required this.repository,
+    this.adsRepository,
     required this.canGenerateToday,
     required this.requiresAd,
     this.initialCalibration,
@@ -134,12 +136,13 @@ class _AiCalibrationFlowState extends State<AiCalibrationFlow>
 
     String? adSessionId;
     if (widget.requiresAd) {
-      final claimedId = await _RewardedAdUnlockSheet.show(
+      final claimResult = await AcedexRewardedAdSheet.show(
         context,
-        repository: widget.repository,
+        rewardType: AcedexRewardType.aiStudyPlan,
+        adsRepository: widget.adsRepository,
       );
-      if (claimedId == null || !mounted) return;
-      adSessionId = claimedId;
+      if (claimResult == null || !mounted) return;
+      adSessionId = claimResult.aiPlanAdSessionId ?? claimResult.adSessionId;
     }
 
     _startSynthesis(adSessionId: adSessionId);
@@ -1925,243 +1928,6 @@ class _CheckCircle extends StatelessWidget {
               size: size * 0.56,
             )
           : null,
-    );
-  }
-}
-
-/// Rewarded Ad Playback & Unlock Dialog gating AI Study Program Generation.
-///
-/// 1. Starts server ad session immediately so backend `startedAt` begins ticking.
-/// 2. Launches real Unity Ads rewarded video on Android/iOS (with clean sponsored
-///    countdown fallback on Web/Desktop/no-fill).
-/// 3. Enforces minimum required watch seconds before claiming so Render/Mongo
-///    verification succeeds reliably without 15s rejection errors.
-class _RewardedAdUnlockSheet extends StatefulWidget {
-  final AiStudyRepository repository;
-
-  const _RewardedAdUnlockSheet({required this.repository});
-
-  static Future<String?> show(
-    BuildContext context, {
-    required AiStudyRepository repository,
-  }) {
-    return showModalBottomSheet<String>(
-      context: context,
-      isDismissible: false,
-      enableDrag: false,
-      backgroundColor: Colors.transparent,
-      builder: (_) => _RewardedAdUnlockSheet(repository: repository),
-    );
-  }
-
-  @override
-  State<_RewardedAdUnlockSheet> createState() => _RewardedAdUnlockSheetState();
-}
-
-class _RewardedAdUnlockSheetState extends State<_RewardedAdUnlockSheet> {
-  String _headline = 'Loading Rewarded Ad...';
-  String _subtext = 'Connecting to Unity Ads & preparing your session.';
-  int _secondsRemaining = 0;
-  bool _busy = true;
-  String? _errorText;
-  Timer? _countdownTimer;
-
-  @override
-  void initState() {
-    super.initState();
-    _runAdFlow();
-  }
-
-  Future<void> _runAdFlow() async {
-    _countdownTimer?.cancel();
-    setState(() {
-      _busy = true;
-      _errorText = null;
-      _secondsRemaining = 0;
-      _headline = 'Loading Rewarded Ad...';
-      _subtext = 'Starting your ad unlock session with ACEDEX.';
-    });
-
-    try {
-      final session = await widget.repository.startRewardedAdSession();
-      if (!mounted) return;
-
-      setState(() {
-        _headline = 'Rewarded Ad Unlock';
-        _subtext = 'Launching rewarded video...';
-      });
-
-      final playedNativeAd = await widget.repository.playRewardedAd(session);
-      if (!mounted) return;
-
-      final elapsed = DateTime.now().difference(session.startedAtLocal).inSeconds;
-      final remaining = (widget.repository.minimumAdWatchSeconds - elapsed).clamp(0, 30);
-
-      if (remaining > 0) {
-        setState(() {
-          _secondsRemaining = remaining;
-          _headline = playedNativeAd
-              ? 'Verifying Ad Reward...'
-              : 'Sponsored Preview Unlock';
-          _subtext = playedNativeAd
-              ? 'Finalizing reward verification (${remaining}s remaining)...'
-              : 'Supporting free ACEDEX AI planning • Unlocking in ${remaining}s...';
-        });
-
-        final timerDone = Completer<void>();
-        _countdownTimer = Timer.periodic(const Duration(seconds: 1), (timer) {
-          if (!mounted) {
-            timer.cancel();
-            if (!timerDone.isCompleted) timerDone.complete();
-            return;
-          }
-          if (_secondsRemaining > 1) {
-            setState(() {
-              _secondsRemaining--;
-              _subtext = playedNativeAd
-                  ? 'Finalizing reward verification (${_secondsRemaining}s remaining)...'
-                  : 'Supporting free ACEDEX AI planning • Unlocking in ${_secondsRemaining}s...';
-            });
-          } else {
-            timer.cancel();
-            setState(() => _secondsRemaining = 0);
-            if (!timerDone.isCompleted) timerDone.complete();
-          }
-        });
-        await timerDone.future;
-      }
-
-      if (!mounted) return;
-      setState(() {
-        _headline = 'Unlocking Gemini AI...';
-        _subtext = 'Confirming ad reward before building your topic roadmap.';
-      });
-
-      await widget.repository.claimRewardedAd(session.adSessionId);
-      if (!mounted) return;
-      Navigator.of(context).pop(session.adSessionId);
-    } on RewardedAdSkippedException catch (e) {
-      if (!mounted) return;
-      setState(() {
-        _busy = false;
-        _headline = 'Ad Skipped Early';
-        _errorText = e.message;
-      });
-    } on ApiException catch (e) {
-      if (!mounted) return;
-      setState(() {
-        _busy = false;
-        _headline = 'Ad Verification Issue';
-        _errorText = e.message;
-      });
-    } catch (_) {
-      if (!mounted) return;
-      setState(() {
-        _busy = false;
-        _headline = 'Ad Unavailable';
-        _errorText = 'Could not verify rewarded ad. Please check internet and retry.';
-      });
-    }
-  }
-
-  @override
-  void dispose() {
-    _countdownTimer?.cancel();
-    super.dispose();
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    final theme = Theme.of(context);
-    final isDark = theme.brightness == Brightness.dark;
-    final accent = isDark ? AppColors.accentDark : AppColors.accentLight;
-    final accentSoft = isDark ? AppColors.accentSoftDark : AppColors.accentSoftLight;
-    final line = isDark ? AppColors.darkLine : AppColors.lightLine;
-    final subtextColor = isDark ? AppColors.darkSubtext : AppColors.lightSubtext;
-
-    return Container(
-      padding: const EdgeInsets.fromLTRB(20, 14, 20, 28),
-      decoration: BoxDecoration(
-        color: theme.scaffoldBackgroundColor,
-        borderRadius: const BorderRadius.vertical(top: Radius.circular(28)),
-        border: Border(top: BorderSide(color: line)),
-      ),
-      child: SafeArea(
-        top: false,
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Container(
-              width: 36,
-              height: 4,
-              decoration: BoxDecoration(
-                color: line,
-                borderRadius: BorderRadius.circular(999),
-              ),
-            ),
-            const SizedBox(height: 16),
-            Container(
-              width: 56,
-              height: 56,
-              decoration: BoxDecoration(
-                color: accentSoft,
-                shape: BoxShape.circle,
-              ),
-              alignment: Alignment.center,
-              child: HugeIcon(
-                icon: HugeIcons.strokeRoundedPlay,
-                color: accent,
-                size: 26,
-              ),
-            ),
-            const SizedBox(height: 12),
-            Text(
-              _headline,
-              style: TextStyle(
-                fontSize: 18,
-                fontWeight: FontWeight.w800,
-                color: theme.colorScheme.onSurface,
-              ),
-            ),
-            const SizedBox(height: 6),
-            Text(
-              _errorText ?? _subtext,
-              textAlign: TextAlign.center,
-              style: TextStyle(fontSize: 13, color: subtextColor, height: 1.4),
-            ),
-            const SizedBox(height: 18),
-            AcedexDotsLoader(color: accent, dotSize: 7, gap: 6),
-            const SizedBox(height: 16),
-            if (_errorText != null)
-              Row(
-                children: [
-                  Expanded(
-                    child: AcedexButton(
-                      label: 'Cancel',
-                      variant: AcedexButtonVariant.outline,
-                      onPressed: () => Navigator.of(context).pop(null),
-                    ),
-                  ),
-                  const SizedBox(width: 10),
-                  Expanded(
-                    child: AcedexButton(
-                      label: 'Retry Ad',
-                      onPressed: _runAdFlow,
-                    ),
-                  ),
-                ],
-              )
-            else
-              AcedexButton(
-                label: 'Cancel',
-                variant: AcedexButtonVariant.ghost,
-                onPressed: _busy && _secondsRemaining == 0
-                    ? null
-                    : () => Navigator.of(context).pop(null),
-              ),
-          ],
-        ),
-      ),
     );
   }
 }
