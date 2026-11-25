@@ -2,12 +2,11 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import '../../../core/theme/app_colors.dart';
 
-/// EUEE 2026 Countdown & Readiness Hero Card (Section 1)
+/// EUEE 2026 Remaining Study Time Countdown Hero Card (Section 1)
 ///
 /// Features:
-/// - Top Row: Gliding segmented toggle ("Countdown" / "Readiness")
-/// - View A: Live ticking Days / Hours / Mins readout with pulsing indicator dot
-/// - View B: Radial Exam Readiness meter (score + "+4.2% wk" badge + 545+ target score)
+/// - Top Row: "STUDY TIME REMAINING" status header with pulsing indicator dot
+/// - Middle Row: Live ticking Days / Hours / Mins readout
 /// - Bottom Row: Full-width linear progress meter
 class HeroCountdownCard extends StatefulWidget {
   final int readinessScore;
@@ -24,8 +23,6 @@ class HeroCountdownCard extends StatefulWidget {
 }
 
 class _HeroCountdownCardState extends State<HeroCountdownCard> {
-  String _heroMode = 'countdown'; // 'countdown' | 'readiness'
-
   // Study deadline: June 8, 2026 EUEE Examination
   late int _countdownMinutes;
   bool _pulseOn = true;
@@ -124,54 +121,40 @@ class _HeroCountdownCardState extends State<HeroCountdownCard> {
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           // ===================================================================
-          // TOP ROW: Gliding "Countdown" / "Readiness" Toggle
+          // TOP ROW: Study Time Remaining Label
           // ===================================================================
           Row(
-            mainAxisAlignment: MainAxisAlignment.end,
             children: [
-              // Gliding Segmented Pill Switcher
-              Container(
-                height: 28,
-                padding: const EdgeInsets.all(2),
-                decoration: BoxDecoration(
-                  color: raisedBg,
-                  borderRadius: BorderRadius.circular(999),
-                  border: Border.all(color: lineBorder),
+              AnimatedOpacity(
+                duration: const Duration(milliseconds: 300),
+                opacity: _pulseOn ? 1.0 : 0.35,
+                child: Container(
+                  width: 7,
+                  height: 7,
+                  decoration: BoxDecoration(
+                    color: primaryColor,
+                    shape: BoxShape.circle,
+                  ),
                 ),
-                child: Stack(
-                  children: [
-                    // Animated Glider
-                    AnimatedAlign(
-                      duration: const Duration(milliseconds: 320),
-                      curve: Curves.easeOutCubic,
-                      alignment: _heroMode == 'countdown'
-                          ? Alignment.centerLeft
-                          : Alignment.centerRight,
-                      child: Container(
-                        width: 74,
-                        height: 22,
-                        decoration: BoxDecoration(
-                          color: primaryColor,
-                          borderRadius: BorderRadius.circular(999),
-                        ),
-                      ),
-                    ),
-                    Row(
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        _buildModeButton(
-                          label: 'Countdown',
-                          isActive: _heroMode == 'countdown',
-                          onTap: () => setState(() => _heroMode = 'countdown'),
-                        ),
-                        _buildModeButton(
-                          label: 'Readiness',
-                          isActive: _heroMode == 'readiness',
-                          onTap: () => setState(() => _heroMode = 'readiness'),
-                        ),
-                      ],
-                    ),
-                  ],
+              ),
+              const SizedBox(width: 8),
+              Expanded(
+                child: Text(
+                  'STUDY TIME REMAINING',
+                  style: TextStyle(
+                    fontSize: 10.5,
+                    fontWeight: FontWeight.w800,
+                    letterSpacing: 0.7,
+                    color: primaryColor,
+                  ),
+                ),
+              ),
+              Text(
+                'Until EUEE Exam',
+                style: TextStyle(
+                  fontSize: 11,
+                  fontWeight: FontWeight.w600,
+                  color: subtextColor,
                 ),
               ),
             ],
@@ -180,29 +163,16 @@ class _HeroCountdownCardState extends State<HeroCountdownCard> {
           const SizedBox(height: 14),
 
           // ===================================================================
-          // MIDDLE VIEW: Animated Switcher between Countdown and Readiness
+          // MIDDLE VIEW: Live Remaining Study Time Countdown
           // ===================================================================
-          AnimatedCrossFade(
-            duration: const Duration(milliseconds: 300),
-            crossFadeState: _heroMode == 'countdown'
-                ? CrossFadeState.showFirst
-                : CrossFadeState.showSecond,
-            firstChild: _buildCountdownView(
-              days: days,
-              hours: hours,
-              mins: mins,
-              raisedBg: raisedBg,
-              lineBorder: lineBorder,
-              subtextColor: subtextColor,
-              primaryColor: primaryColor,
-            ),
-            secondChild: _buildReadinessView(
-              raisedBg: raisedBg,
-              lineBorder: lineBorder,
-              subtextColor: subtextColor,
-              primaryColor: primaryColor,
-              isDark: isDark,
-            ),
+          _buildCountdownView(
+            days: days,
+            hours: hours,
+            mins: mins,
+            raisedBg: raisedBg,
+            lineBorder: lineBorder,
+            subtextColor: subtextColor,
+            primaryColor: primaryColor,
           ),
 
           const SizedBox(height: 14),
@@ -266,30 +236,6 @@ class _HeroCountdownCardState extends State<HeroCountdownCard> {
             ),
           ),
         ],
-      ),
-    );
-  }
-
-  Widget _buildModeButton({
-    required String label,
-    required bool isActive,
-    required VoidCallback onTap,
-  }) {
-    return GestureDetector(
-      onTap: onTap,
-      behavior: HitTestBehavior.opaque,
-      child: Container(
-        width: 74,
-        height: 22,
-        alignment: Alignment.center,
-        child: Text(
-          label,
-          style: TextStyle(
-            fontSize: 10,
-            fontWeight: FontWeight.w700,
-            color: isActive ? Colors.white : AppColors.lightSecondaryText,
-          ),
-        ),
       ),
     );
   }
@@ -405,118 +351,6 @@ class _HeroCountdownCardState extends State<HeroCountdownCard> {
               fontWeight: FontWeight.w700,
               letterSpacing: 0.6,
               color: subtextColor,
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-
-  Widget _buildReadinessView({
-    required Color raisedBg,
-    required Color lineBorder,
-    required Color subtextColor,
-    required Color primaryColor,
-    required bool isDark,
-  }) {
-    final theme = Theme.of(context);
-    final score = widget.readinessScore;
-
-    return Container(
-      padding: const EdgeInsets.all(12),
-      decoration: BoxDecoration(
-        color: raisedBg,
-        borderRadius: BorderRadius.circular(16),
-        border: Border.all(color: lineBorder),
-      ),
-      child: Row(
-        children: [
-          // Radial Circular Progress
-          SizedBox(
-            width: 56,
-            height: 56,
-            child: Stack(
-              alignment: Alignment.center,
-              children: [
-                CircularProgressIndicator(
-                  value: (score / 100).clamp(0.0, 1.0),
-                  strokeWidth: 5.5,
-                  strokeCap: StrokeCap.round,
-                  backgroundColor: lineBorder,
-                  valueColor: AlwaysStoppedAnimation<Color>(primaryColor),
-                ),
-                Text(
-                  '$score%',
-                  style: TextStyle(
-                    fontSize: 13,
-                    fontWeight: FontWeight.w800,
-                    letterSpacing: -0.3,
-                    color: theme.colorScheme.onSurface,
-                  ),
-                ),
-              ],
-            ),
-          ),
-
-          const SizedBox(width: 14),
-
-          // Readiness Readout & Target Score
-          Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Row(
-                  children: [
-                    Text(
-                      'Exam Readiness',
-                      style: TextStyle(
-                        fontSize: 13,
-                        fontWeight: FontWeight.w800,
-                        letterSpacing: -0.2,
-                        color: theme.colorScheme.onSurface,
-                      ),
-                    ),
-                    const SizedBox(width: 6),
-                    Container(
-                      padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 2),
-                      decoration: BoxDecoration(
-                        color: (isDark ? AppColors.darkSuccess : AppColors.success)
-                            .withValues(alpha: 0.16),
-                        borderRadius: BorderRadius.circular(5),
-                      ),
-                      child: Text(
-                        '+4.2% wk',
-                        style: TextStyle(
-                          fontSize: 9.5,
-                          fontWeight: FontWeight.w800,
-                          color: isDark ? AppColors.darkSuccess : AppColors.success,
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-                const SizedBox(height: 3),
-                Text.rich(
-                  TextSpan(
-                    style: TextStyle(
-                      fontSize: 11,
-                      height: 1.3,
-                      color: subtextColor,
-                    ),
-                    children: [
-                      const TextSpan(text: 'On track for '),
-                      TextSpan(
-                        text: '545+ EUEE',
-                        style: TextStyle(
-                          fontWeight: FontWeight.w700,
-                          color: theme.colorScheme.onSurface,
-                        ),
-                      ),
-                      const TextSpan(text: ' score • 48d 14h remaining'),
-                    ],
-                  ),
-                ),
-              ],
             ),
           ),
         ],

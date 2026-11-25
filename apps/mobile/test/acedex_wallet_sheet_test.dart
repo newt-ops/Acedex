@@ -174,6 +174,14 @@ void main() {
 
     expect(find.byKey(const Key('header_coin_wallet_button')), findsOneWidget);
     expect(find.text('25'), findsOneWidget);
+    // Green status dot is removed from header profile avatar
+    final greenDotFinder = find.byWidgetPredicate(
+      (w) =>
+          w is Container &&
+          w.decoration is BoxDecoration &&
+          (w.decoration as BoxDecoration).color == const Color(0xFF16A34A),
+    );
+    expect(greenDotFinder, findsNothing);
 
     EconomyService.instance.coinBalanceNotifier.value = 65;
     await tester.pumpAndSettle();
@@ -181,7 +189,7 @@ void main() {
   });
 
   testWidgets(
-      'AcedexWalletSheet shows bank-style earn & spend ledger, awards +10 AC per ad, and disables at daily limit',
+      'AcedexWalletSheet shows bank-style earn & spend ledger, awards +10 AC per ad, and keeps Watch Ad enabled with no daily limit',
       (tester) async {
     final fakeEconomy = _FakeEconomyRepo();
     final fakeAds = _FakeBonusCoinsAdsRepo(fakeEconomy);
@@ -250,10 +258,10 @@ void main() {
     expect(find.text('Watched Rewarded Ad (+10 AC)'), findsOneWidget);
     expect(find.text('+10 AC'), findsOneWidget);
 
-    // Daily limit reached (remaining = 0): button still has no "left" text and is disabled
+    // Watch Ad stays enabled with no daily limit even when remaining counter hits 0
     expect(find.text('Watch 1 Ad (+10 AC)'), findsOneWidget);
     final adButton = tester.widget<AcedexButton>(find.byType(AcedexButton));
-    expect(adButton.onPressed, isNull);
+    expect(adButton.onPressed, isNotNull);
 
     // Let AcedexToast auto-dismiss timer complete cleanly before test teardown
     await tester.pump(const Duration(seconds: 4));

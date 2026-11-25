@@ -31,7 +31,7 @@ export const ACE_COINS_CONFIG = {
   DAILY_STREAK_REWARD: 10,
   SEVEN_DAY_STREAK_BONUS: 50,
   DEFAULT_COINS_PER_AD: 10,
-  DEFAULT_DAILY_COIN_ADS_LIMIT: 5,
+  DEFAULT_DAILY_COIN_ADS_LIMIT: 0,
   UNIT_ASSESSMENT_COST: 10,
 } as const;
 
@@ -268,13 +268,13 @@ export class EconomyService {
       return {
         enabled: policy.enabled ?? true,
         coinsPerAd: ACE_COINS_CONFIG.DEFAULT_COINS_PER_AD,
-        dailyLimit: policy.dailyLimit ?? ACE_COINS_CONFIG.DEFAULT_DAILY_COIN_ADS_LIMIT,
+        dailyLimit: 0,
       };
     }
     return {
       enabled: policy?.enabled ?? true,
       coinsPerAd: policy?.coinsPerAd ?? ACE_COINS_CONFIG.DEFAULT_COINS_PER_AD,
-      dailyLimit: policy?.dailyLimit ?? ACE_COINS_CONFIG.DEFAULT_DAILY_COIN_ADS_LIMIT,
+      dailyLimit: 0,
     };
   }
 
@@ -343,7 +343,7 @@ export class EconomyService {
   }
 
   /**
-   * Validates daily rewarded-ad coin cap before starting an ad session.
+   * Validates bonus_coins ad availability before starting an ad session (unlimited daily ads).
    */
   public static async assertCanEarnAdCoins(
     userId: string | Types.ObjectId
@@ -353,25 +353,12 @@ export class EconomyService {
       throw new BadRequestError('Bonus coin ads are currently disabled');
     }
 
-    const progress = await this.ensureWalletInitialized(userId);
-    const todayKey = this.getEatTodayKey();
-    const countToday =
-      progress.wallet?.dailyCoinAdsDate === todayKey
-        ? progress.wallet.dailyCoinAdsCount || 0
-        : 0;
-    const remaining = Math.max(0, policy.dailyLimit - countToday);
-
-    if (remaining <= 0) {
-      throw new TooManyRequestsError(
-        `Daily bonus coin ad limit reached (${policy.dailyLimit}/${policy.dailyLimit}). Earn more coins by completing units & exams!`,
-        'DAILY_COIN_ADS_LIMIT_REACHED'
-      );
-    }
+    await this.ensureWalletInitialized(userId);
 
     return {
       coinsPerAd: policy.coinsPerAd,
-      dailyLimit: policy.dailyLimit,
-      remaining,
+      dailyLimit: 0,
+      remaining: 999999,
     };
   }
 
@@ -404,10 +391,7 @@ export class EconomyService {
     );
 
     const updated = await StudentProgressModel.findOneAndUpdate(
-      {
-        userId: userObjectId,
-        'wallet.dailyCoinAdsCount': { $lt: policy.dailyLimit },
-      },
+      { userId: userObjectId },
       {
         $set: { 'wallet.dailyCoinAdsDate': todayKey },
         $inc: {
@@ -420,10 +404,7 @@ export class EconomyService {
     );
 
     if (!updated) {
-      throw new TooManyRequestsError(
-        `Daily bonus coin ad limit reached (${policy.dailyLimit}/${policy.dailyLimit}).`,
-        'DAILY_COIN_ADS_LIMIT_REACHED'
-      );
+      throw new NotFoundError('Student progress record not found');
     }
 
     await this.recordTransactionSafe({
@@ -434,11 +415,10 @@ export class EconomyService {
       reason: `Watched Rewarded Ad (+${policy.coinsPerAd} AC)`,
     });
 
-    const remaining = Math.max(0, policy.dailyLimit - updated.wallet.dailyCoinAdsCount);
     return {
       coinsAwarded: policy.coinsPerAd,
       newCoinBalance: updated.wallet.balance,
-      dailyCoinAdsRemaining: remaining,
+      dailyCoinAdsRemaining: 999999,
     };
   }
 
@@ -527,13 +507,6 @@ export class EconomyService {
   ): Promise<WalletOverviewResponse> {
     const progress = await this.ensureWalletInitialized(userId);
     const policy = await this.getBonusCoinsAdPolicy();
-    const todayKey = this.getEatTodayKey();
-
-    const adsUsedToday =
-      progress.wallet?.dailyCoinAdsDate === todayKey
-        ? progress.wallet.dailyCoinAdsCount || 0
-        : 0;
-    const dailyCoinAdsRemaining = Math.max(0, policy.dailyLimit - adsUsedToday);
 
     const unlockedBadges = progress.wallet?.unlockedBadges || [];
     const catalog: EconomyStoreItem[] = BASE_STORE_CATALOG.map((item) => ({
@@ -554,8 +527,8 @@ export class EconomyService {
       balance: progress.wallet?.balance ?? ACE_COINS_CONFIG.WELCOME_BONUS,
       lifetimeEarned: progress.wallet?.lifetimeEarned ?? ACE_COINS_CONFIG.WELCOME_BONUS,
       lifetimeSpent: progress.wallet?.lifetimeSpent ?? 0,
-      dailyCoinAdsRemaining,
-      dailyCoinAdsLimit: policy.dailyLimit,
+      dailyCoinAdsRemaining: 999999,
+      dailyCoinAdsLimit: 0,
       coinsPerAd: policy.coinsPerAd,
       assessmentCost: ACE_COINS_CONFIG.UNIT_ASSESSMENT_COST,
       aiPlanPasses: progress.wallet?.aiPlanPasses ?? 0,

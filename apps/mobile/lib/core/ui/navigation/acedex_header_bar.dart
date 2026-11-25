@@ -388,24 +388,6 @@ class _AcedexHeaderBarState extends State<AcedexHeaderBar> {
                             ),
                           ),
 
-                          // Live Green Online Status Dot (Top-Left)
-                          Positioned(
-                            top: 0,
-                            left: 0,
-                            child: Container(
-                              width: 11,
-                              height: 11,
-                              decoration: BoxDecoration(
-                                shape: BoxShape.circle,
-                                color: const Color(0xFF16A34A),
-                                border: Border.all(
-                                  color: isDark ? const Color(0xFF0E0E11) : Colors.white,
-                                  width: 2,
-                                ),
-                              ),
-                            ),
-                          ),
-
                           // Camera Edit Micro-Badge (Bottom-Right)
                           Positioned(
                             bottom: -1,

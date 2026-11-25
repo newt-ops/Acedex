@@ -22,7 +22,19 @@ class ApiException implements Exception {
 
   static String _friendlyMessage(String original, int statusCode) {
     if (statusCode == 401) {
-      return 'Incorrect phone number or PIN. Please try again.';
+      final lower = original.toLowerCase();
+      if (lower.contains('invalid credentials') ||
+          lower.contains('invalid phone number or pin')) {
+        return 'Incorrect phone number or PIN. Please try again.';
+      }
+      if (lower.contains('expired') ||
+          lower.contains('refresh') ||
+          lower.contains('authorization') ||
+          lower.contains('access token') ||
+          lower.contains('session')) {
+        return 'Your session has expired. Please sign in again.';
+      }
+      return original;
     }
     if (statusCode == 409) {
       return 'An account with this phone number already exists.';

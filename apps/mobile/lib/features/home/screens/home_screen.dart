@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'package:flutter/material.dart';
 import '../../../core/economy/economy.dart';
 import '../../../core/models/user_profile.dart';
@@ -19,16 +20,21 @@ class HomeScreen extends StatefulWidget {
   State<HomeScreen> createState() => _HomeScreenState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
   final GlobalKey<AcedexBottomNavBarState> _navBarKey =
       GlobalKey<AcedexBottomNavBarState>();
   int _currentIndex = 0;
   final Set<int> _loadingTabs = {};
   final List<int> _reloadKeys = [0, 0, 0, 0, 0];
 
+  bool _handlingSessionExpiry = false;
+
   @override
   void initState() {
     super.initState();
+    WidgetsBinding.instance.addObserver(this);
+    AuthStorage.instance.sessionExpiredNotifier
+        .addListener(_onSessionExpired);
     // Brief graceful initial skeleton on Home launch
     _loadingTabs.add(0);
     Future.delayed(const Duration(milliseconds: 320), () {
@@ -38,6 +44,52 @@ class _HomeScreenState extends State<HomeScreen> {
         });
       }
     });
+  }
+
+  @override
+  void dispose() {
+    WidgetsBinding.instance.removeObserver(this);
+    AuthStorage.instance.sessionExpiredNotifier
+        .removeListener(_onSessionExpired);
+    super.dispose();
+  }
+
+  @override
+  void didChangeAppLifecycleState(AppLifecycleState state) {
+    if (state == AppLifecycleState.resumed) {
+      // Proactively re-validate & silently refresh session tokens while app remains open
+      unawaited(EconomyService.instance.syncWalletSilent());
+    }
+  }
+
+  Future<void> _onSessionExpired() async {
+    if (!AuthStorage.instance.sessionExpiredNotifier.value ||
+        _handlingSessionExpiry ||
+        !mounted) {
+      return;
+    }
+    _handlingSessionExpiry = true;
+    AuthStorage.instance.sessionExpiredNotifier.value = false;
+    final phone =
+        widget.user?.phone ?? await AuthStorage.instance.getLastPhone();
+    if (!mounted) return;
+    AcedexToast.show(
+      context,
+      message: 'Your session expired. Please enter your PIN to continue.',
+      type: AcedexToastType.warning,
+    );
+    if (phone != null && phone.trim().isNotEmpty) {
+      Navigator.of(context).pushNamedAndRemoveUntil(
+        '/auth/pin',
+        (route) => false,
+        arguments: {'phone': phone.trim()},
+      );
+    } else {
+      Navigator.of(context).pushNamedAndRemoveUntil(
+        '/auth',
+        (route) => false,
+      );
+    }
   }
 
   Future<void> _signOut(BuildContext context) async {

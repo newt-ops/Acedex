@@ -19,7 +19,7 @@ const envSchema = z.object({
   LOG_LEVEL: z.enum(['fatal', 'error', 'warn', 'info', 'debug', 'trace', 'silent']).default('info'),
   JWT_ACCESS_SECRET: z.string().default('development-jwt-access-secret-change-in-prod'),
   JWT_REFRESH_SECRET: z.string().default('development-jwt-refresh-secret-change-in-prod'),
-  JWT_ACCESS_EXPIRES_IN: z.string().default('15m'),
+  JWT_ACCESS_EXPIRES_IN: z.string().default('2h'),
   JWT_REFRESH_EXPIRES_IN: z.string().default('7d'),
   ADMIN_EMAILS: z.string().optional().default('aymenmubarek10@gmail.com'),
   UNITY_ADS_ANDROID_GAME_ID: z.string().default('6220248'),

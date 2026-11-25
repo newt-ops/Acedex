@@ -56,7 +56,7 @@ const AdConfigSchema = new Schema<IAdConfigDocument>(
       bonusCoins: {
         enabled: { type: Boolean, default: true },
         coinsPerAd: { type: Number, default: 10 },
-        dailyLimit: { type: Number, default: 5 },
+        dailyLimit: { type: Number, default: 0 },
       },
     },
   },

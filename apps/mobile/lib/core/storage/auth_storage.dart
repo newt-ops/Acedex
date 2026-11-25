@@ -25,11 +25,14 @@ class AuthStorage {
   AuthStorage._();
 
   String? _cachedToken;
+  String? _cachedRefreshToken;
   UserProfile? _cachedProfile;
   StudentAvatar? _cachedAvatar;
   String? _cachedLastPhone;
 
   static const String _keyCompletedUnits = 'acedex_completed_units';
+
+  final ValueNotifier<bool> sessionExpiredNotifier = ValueNotifier<bool>(false);
 
   final ValueNotifier<StudentAvatar> avatarNotifier =
       ValueNotifier<StudentAvatar>(StudentAvatar.defaultSilhouette);
@@ -118,9 +121,11 @@ class AuthStorage {
 
   Future<void> saveTokens(AuthTokens tokens) async {
     _cachedToken = tokens.accessToken;
+    sessionExpiredNotifier.value = false;
     final prefs = await SharedPreferences.getInstance();
     await prefs.setString(_keyToken, tokens.accessToken);
     if (tokens.refreshToken != null) {
+      _cachedRefreshToken = tokens.refreshToken;
       await prefs.setString(_keyRefreshToken, tokens.refreshToken!);
     }
   }
@@ -165,6 +170,22 @@ class AuthStorage {
     final prefs = await SharedPreferences.getInstance();
     _cachedToken = prefs.getString(_keyToken);
     return _cachedToken;
+  }
+
+  Future<String?> getRefreshToken() async {
+    if (_cachedRefreshToken != null) return _cachedRefreshToken;
+    final prefs = await SharedPreferences.getInstance();
+    _cachedRefreshToken = prefs.getString(_keyRefreshToken);
+    return _cachedRefreshToken;
+  }
+
+  Future<void> expireSession() async {
+    _cachedToken = null;
+    _cachedRefreshToken = null;
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.remove(_keyToken);
+    await prefs.remove(_keyRefreshToken);
+    sessionExpiredNotifier.value = true;
   }
 
   Future<UserProfile?> getProfile() async {
@@ -260,9 +281,11 @@ class AuthStorage {
 
   Future<void> clear() async {
     _cachedToken = null;
+    _cachedRefreshToken = null;
     _cachedProfile = null;
     _cachedAvatar = StudentAvatar.defaultSilhouette;
     _cachedLastPhone = null;
+    sessionExpiredNotifier.value = false;
     avatarNotifier.value = StudentAvatar.defaultSilhouette;
     dailyFocusGoalMinutesNotifier.value = 0;
     dailyFocusCompletedMinutesNotifier.value = 0;

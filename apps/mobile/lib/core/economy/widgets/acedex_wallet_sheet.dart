@@ -168,7 +168,6 @@ class _AcedexWalletSheetState extends State<AcedexWalletSheet> {
     const coinGold = Color(0xFFF59E0B);
 
     final wallet = _overview ?? const WalletOverview();
-    final canWatchCoinAd = wallet.dailyCoinAdsRemaining > 0;
     final filteredTransactions = wallet.recentTransactions.where((tx) {
       switch (_filter) {
         case _LedgerFilter.earn:
@@ -355,11 +354,10 @@ class _AcedexWalletSheetState extends State<AcedexWalletSheet> {
                                   size: AcedexButtonSize.md,
                                   leadingIcon: HugeIcon(
                                     icon: HugeIcons.strokeRoundedPlayCircle,
-                                    color: canWatchCoinAd ? onAccent : subtext,
+                                    color: onAccent,
                                     size: 18,
                                   ),
-                                  onPressed:
-                                      canWatchCoinAd ? _watchAdForCoins : null,
+                                  onPressed: _watchAdForCoins,
                                 ),
                               ],
                             ),

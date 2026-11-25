@@ -12,7 +12,7 @@ class AuthService {
   AuthService({
     ApiClient? client,
     AuthStorage? storage,
-  })  : _client = client ?? ApiClient(),
+  })  : _client = client ?? ApiClient.instance,
         _storage = storage ?? AuthStorage.instance;
 
   static final RegExp ethiopianPhoneRegex = RegExp(r'^\+251[79]\d{8}$');

@@ -93,11 +93,13 @@ void main() {
       await tester.pumpWidget(createDashboardHarness());
       await tester.pump();
 
-      // Section 1: Hero Countdown & Readiness Card (No Continue button, no grade badge)
+      // Section 1: Hero Remaining Study Time Countdown Card (No Continue button, no Readiness button, no grade badge)
       expect(find.byType(HeroCountdownCard), findsOneWidget);
       expect(find.text('G12 • NATURAL SCIENCE'), findsNothing);
-      expect(find.text('Countdown'), findsOneWidget);
-      expect(find.text('Readiness'), findsOneWidget);
+      expect(find.text('STUDY TIME REMAINING'), findsOneWidget);
+      expect(find.text('Until EUEE Exam'), findsOneWidget);
+      expect(find.text('Countdown'), findsNothing);
+      expect(find.text('Readiness'), findsNothing);
       expect(find.text('Continue Unit 4'), findsNothing);
 
       // Section 2: Live Curriculum Bento Grid starts at 0 / 0m
@@ -121,26 +123,17 @@ void main() {
       expect(find.text('Formula Flashcards'), findsOneWidget);
     });
 
-    testWidgets('Hero card toggles between Countdown and Readiness views', (tester) async {
+    testWidgets('Hero card renders study time remaining countdown tiles without Readiness toggle', (tester) async {
       configureViewport(tester);
       await tester.pumpWidget(createDashboardHarness());
       await tester.pump();
 
+      expect(find.text('STUDY TIME REMAINING'), findsOneWidget);
       expect(find.text('DAYS'), findsOneWidget);
       expect(find.text('HOURS'), findsOneWidget);
       expect(find.text('MINS'), findsOneWidget);
-
-      await tester.tap(find.text('Readiness'));
-      await tester.pumpAndSettle();
-
-      expect(find.text('Exam Readiness'), findsOneWidget);
-      expect(find.text('+4.2% wk'), findsOneWidget);
-      expect(find.textContaining('545+ EUEE'), findsOneWidget);
-
-      await tester.tap(find.text('Countdown'));
-      await tester.pumpAndSettle();
-
-      expect(find.text('DAYS'), findsOneWidget);
+      expect(find.text('Readiness'), findsNothing);
+      expect(find.text('Exam Readiness'), findsNothing);
     });
 
     testWidgets('Bento grid: Daily Focus uses calibrated onboarding goal and updates when tasks complete',

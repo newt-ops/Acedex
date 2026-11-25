@@ -22,7 +22,10 @@ describe('Unity Ads Rewarded Engine & Monetization APIs', () => {
 
   beforeAll(async () => {
     await connectDatabase();
-    await CurriculumSeederService.seedCurriculum();
+    const existingUnit = await UnitModel.findOne({ grade: 9, subjectCode: 'PHY', unitNumber: 1 });
+    if (!existingUnit) {
+      await CurriculumSeederService.seedCurriculum();
+    }
 
     // 1. Create primary student
     const studentUser = await UserModel.create({
@@ -74,11 +77,13 @@ describe('Unity Ads Rewarded Engine & Monetization APIs', () => {
     // 3. Resolve published units for offline pack testing
     sampleUnit = await UnitModel.findOne({ grade: 9, subjectCode: 'PHY', unitNumber: 1 });
     otherUnit = await UnitModel.findOne({ grade: 9, subjectCode: 'CHE', unitNumber: 1 });
-  }, 60000);
+  }, 180000);
 
   afterAll(async () => {
-    await AdSessionModel.deleteMany({ userId: studentId });
-    await StudentProgressModel.deleteMany({ userId: studentId });
+    if (studentId) {
+      await AdSessionModel.deleteMany({ userId: studentId });
+      await StudentProgressModel.deleteMany({ userId: studentId });
+    }
     await UserModel.deleteMany({ displayName: /Ad Test Student|Other Test Student/ });
     await disconnectDatabase();
   });
