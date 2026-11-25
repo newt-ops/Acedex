@@ -94,13 +94,6 @@ class _HomeScreenState extends State<HomeScreen> {
         onProfileTap: () {
           ProfilePhotoModal.show(context, user: widget.user);
         },
-        onNotificationTap: () {
-          AcedexToast.show(
-            context,
-            message: 'Notification preferences synced',
-            type: AcedexToastType.info,
-          );
-        },
       ),
       body: IndexedStack(
         index: _currentIndex,

@@ -335,6 +335,26 @@ class _AiStudyScreenState extends State<AiStudyScreen> {
         unawaited(_repository.saveCachedOverview(_overview!));
       }
 
+      if (stepCompleted != null) {
+        unawaited(
+          AuthStorage.instance.addDailyFocusMinutes(stepCompleted ? 10 : -10),
+        );
+      } else if (isCompleted != null) {
+        unawaited(
+          AuthStorage.instance.addDailyFocusMinutes(isCompleted ? 15 : -15),
+        );
+      }
+
+      if (mounted &&
+          updated.coinsAwarded != null &&
+          updated.coinsAwarded! > 0) {
+        AcedexToast.show(
+          context,
+          message: '+${updated.coinsAwarded} Ace Coins earned!',
+          type: AcedexToastType.success,
+        );
+      }
+
       return updated;
     } on ApiException catch (e) {
       if (mounted) {
@@ -461,6 +481,10 @@ class _AiStudyScreenState extends State<AiStudyScreen> {
       if (_overview != null) {
         unawaited(_repository.saveCachedOverview(_overview!));
       }
+
+      unawaited(
+        AuthStorage.instance.addDailyFocusMinutes(completed ? 15 : -15),
+      );
 
       if (mounted &&
           result.coinsAwarded != null &&

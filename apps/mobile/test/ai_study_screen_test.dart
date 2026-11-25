@@ -511,7 +511,7 @@ void main() {
     expect(fakeAds.adPlayed, isTrue);
     expect(fakeAds.adClaimed, isTrue);
     expect(fakeRepo.generateCalls, 1);
-    expect(find.text('GEMINI AI BLUEPRINT'), findsOneWidget);
+    expect(find.text('ACEDEX AI BLUEPRINT'), findsOneWidget);
     expect(find.text('Start Topic Study Program'), findsOneWidget);
 
     // Finish onboarding -> returns from full-screen route to Workspace with nav bar

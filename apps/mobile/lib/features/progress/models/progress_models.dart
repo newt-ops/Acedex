@@ -118,21 +118,6 @@ class SubjectUnitProgress {
   });
 }
 
-/// Booster drill multiple-choice question
-class BoosterQuestion {
-  final String stem;
-  final List<String> options;
-  final int correctIndex;
-  final String explanation;
-
-  const BoosterQuestion({
-    required this.stem,
-    required this.options,
-    required this.correctIndex,
-    required this.explanation,
-  });
-}
-
 /// Subject Mastery state model
 class SubjectMastery {
   final String id;
@@ -143,7 +128,6 @@ class SubjectMastery {
   final String weakestTopic;
   final dynamic icon;
   final List<SubjectUnitProgress> units;
-  final List<BoosterQuestion> boosterQuestions;
 
   SubjectMastery({
     required this.id,
@@ -154,7 +138,6 @@ class SubjectMastery {
     required this.weakestTopic,
     required this.icon,
     required this.units,
-    required this.boosterQuestions,
   });
 }
 
@@ -293,20 +276,6 @@ abstract class ProgressData {
           SubjectUnitProgress(name: 'Unit 3: Differential Calculus', pct: 89),
           SubjectUnitProgress(name: 'Unit 4: Integral Calculus', pct: 79, isWeakest: true),
         ],
-        boosterQuestions: const [
-          BoosterQuestion(
-            stem: 'Evaluate ∫ x · eˣ dx using integration by parts (∫ u dv = uv − ∫ v du).',
-            options: ['x·eˣ + eˣ + C', 'x·eˣ − eˣ + C', 'eˣ − x·eˣ + C', '½x²·eˣ + C'],
-            correctIndex: 1,
-            explanation: 'Choose u = x (du = dx) and dv = eˣ dx (v = eˣ). Then ∫ x·eˣ dx = x·eˣ − ∫ eˣ dx = x·eˣ − eˣ + C.',
-          ),
-          BoosterQuestion(
-            stem: 'What is the definite integral ∫₀^π sin(x) dx?',
-            options: ['0', '1', '2', 'π'],
-            correctIndex: 2,
-            explanation: '∫₀^π sin(x) dx = [−cos(x)]₀^π = −cos(π) − (−cos(0)) = −(−1) + 1 = 2.',
-          ),
-        ],
       ),
       SubjectMastery(
         id: 'physics',
@@ -321,25 +290,6 @@ abstract class ProgressData {
           SubjectUnitProgress(name: 'Unit 2: 2D Projectile Motion', pct: 86),
           SubjectUnitProgress(name: 'Unit 3: Fluid Mechanics', pct: 81),
           SubjectUnitProgress(name: 'Unit 4: Electromagnetism', pct: 73, isWeakest: true),
-        ],
-        boosterQuestions: const [
-          BoosterQuestion(
-            stem: 'According to Lenz’s Law, the direction of an induced current always opposes:',
-            options: [
-              'The resistance of the conducting loop',
-              'The change in magnetic flux that produced it',
-              'The gravitational force on the coil',
-              'The steady DC supply voltage',
-            ],
-            correctIndex: 1,
-            explanation: 'Lenz’s Law (the minus sign in ε = −N ΔΦB/Δt) ensures induced current opposes the flux change, conserving energy.',
-          ),
-          BoosterQuestion(
-            stem: 'A 40-turn coil experiences a flux change of 0.05 Wb in 0.10 s. Find the induced EMF magnitude.',
-            options: ['2 V', '10 V', '20 V', '40 V'],
-            correctIndex: 2,
-            explanation: '|ε| = N · |ΔΦB / Δt| = 40 × (0.05 / 0.10) = 40 × 0.5 = 20 V.',
-          ),
         ],
       ),
       SubjectMastery(
@@ -356,25 +306,6 @@ abstract class ProgressData {
           SubjectUnitProgress(name: 'Unit 3: Cellular Respiration', pct: 81),
           SubjectUnitProgress(name: 'Unit 4: Molecular Genetics', pct: 79),
         ],
-        boosterQuestions: const [
-          BoosterQuestion(
-            stem: 'How does a non-competitive (allosteric) inhibitor alter enzyme kinetics?',
-            options: [
-              'Increases Km without changing Vmax',
-              'Decreases Vmax without changing Km',
-              'Binds directly to the substrate molecule',
-              'Increases both Km and Vmax',
-            ],
-            correctIndex: 1,
-            explanation: 'Non-competitive inhibitors bind an allosteric site, reducing active enzyme concentration so Vmax decreases while Km stays constant.',
-          ),
-          BoosterQuestion(
-            stem: 'Which cofactor class consists of organic non-protein molecules such as NAD⁺ and FAD?',
-            options: ['Prosthetic metal ions', 'Coenzymes', 'Zymogens', 'Isozymes'],
-            correctIndex: 1,
-            explanation: 'Coenzymes (like NAD⁺, FAD, and CoA) are organic vitamin-derived carriers required for enzyme catalysis.',
-          ),
-        ],
       ),
       SubjectMastery(
         id: 'chemistry',
@@ -389,20 +320,6 @@ abstract class ProgressData {
           SubjectUnitProgress(name: 'Unit 2: Acid-Base Equilibria', pct: 74),
           SubjectUnitProgress(name: 'Unit 3: Industrial Chemistry', pct: 72),
           SubjectUnitProgress(name: 'Unit 4: Electrochemistry', pct: 62, isWeakest: true),
-        ],
-        boosterQuestions: const [
-          BoosterQuestion(
-            stem: 'Given Ag⁺/Ag (E° = +0.80 V) and Fe²⁺/Fe (E° = −0.44 V), compute E°cell for a spontaneous galvanic cell.',
-            options: ['+0.36 V', '−1.24 V', '+1.24 V', '−0.36 V'],
-            correctIndex: 2,
-            explanation: 'E°cell = E°cathode − E°anode = +0.80 V − (−0.44 V) = +1.24 V (spontaneous since E°cell > 0).',
-          ),
-          BoosterQuestion(
-            stem: 'At which electrode does oxidation always occur in both galvanic and electrolytic cells?',
-            options: ['Cathode', 'Anode', 'Salt bridge', 'Reference electrode'],
-            correctIndex: 1,
-            explanation: 'Oxidation (loss of electrons) always takes place at the Anode, while reduction occurs at the Cathode.',
-          ),
         ],
       ),
     ];

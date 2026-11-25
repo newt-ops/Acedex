@@ -108,6 +108,31 @@ const BASE_STORE_CATALOG: EconomyStoreItem[] = [
 ];
 
 export class EconomyService {
+  private static _indexesVerified = false;
+
+  /**
+   * Drops legacy compound sparse index on `{ userId, milestoneKey }` if present and
+   * ensures the partial unique index (indexing only string milestoneKey values) is active.
+   */
+  public static async ensureTransactionIndexes(): Promise<void> {
+    if (this._indexesVerified) return;
+    try {
+      const existing = await CoinTransactionModel.collection.indexes();
+      const legacy = existing.find(
+        (idx) =>
+          idx.name === 'userId_1_milestoneKey_1' && !idx.partialFilterExpression
+      );
+      if (legacy) {
+        await CoinTransactionModel.collection.dropIndex('userId_1_milestoneKey_1');
+        logger.info('Dropped legacy sparse userId_1_milestoneKey_1 index');
+      }
+      await CoinTransactionModel.syncIndexes();
+      this._indexesVerified = true;
+    } catch (err: any) {
+      logger.warn({ err: err?.message }, 'Could not verify coin transaction indexes');
+    }
+  }
+
   /**
    * Current Ethiopia (EAT, UTC+3) calendar day key (YYYY-MM-DD).
    */
@@ -123,6 +148,7 @@ export class EconomyService {
   public static async ensureWalletInitialized(
     userId: string | Types.ObjectId
   ): Promise<IStudentProgressDocument> {
+    await this.ensureTransactionIndexes();
     const userObjectId = new Types.ObjectId(userId);
     let progress = await StudentProgressModel.findOne({ userId: userObjectId });
 
@@ -217,9 +243,9 @@ export class EconomyService {
     try {
       await CoinTransactionModel.create(params);
     } catch (err: any) {
-      // Ignore duplicate unique milestoneKey race errors (idempotent)
-      if (err?.code !== 11000) {
-        logger.warn({ err: err?.message }, 'Failed to write coin transaction audit record');
+      // Ignore duplicate unique milestoneKey race errors only when milestoneKey is set
+      if (!(err?.code === 11000 && params.milestoneKey)) {
+        logger.warn({ err: err?.message, type: params.type }, 'Failed to write coin transaction audit record');
       }
     }
   }

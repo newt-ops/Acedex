@@ -17,7 +17,7 @@ class CurriculumBentoGrid extends StatefulWidget {
   final double accuracyPercentage;
   final int focusMinutes;
   final int focusGoalMinutes;
-  final VoidCallback onQuickLogFocus;
+  final VoidCallback? onQuickLogFocus;
   final bool standingIsAllTime;
   final VoidCallback onToggleStanding;
   final int standingXp;
@@ -28,8 +28,8 @@ class CurriculumBentoGrid extends StatefulWidget {
     this.totalUnits = 237,
     this.accuracyPercentage = 0.0,
     required this.focusMinutes,
-    this.focusGoalMinutes = 60,
-    required this.onQuickLogFocus,
+    this.focusGoalMinutes = 0,
+    this.onQuickLogFocus,
     required this.standingIsAllTime,
     required this.onToggleStanding,
     this.standingXp = 2480,
@@ -82,11 +82,6 @@ class _CurriculumBentoGridState extends State<CurriculumBentoGrid>
     _focusBounceController.dispose();
     _standingBounceController.dispose();
     super.dispose();
-  }
-
-  void _triggerFocusBounce() {
-    widget.onQuickLogFocus();
-    _focusBounceController.forward(from: 0.0);
   }
 
   void _triggerStandingToggle() {
@@ -329,30 +324,20 @@ class _CurriculumBentoGridState extends State<CurriculumBentoGrid>
                               color: subtextColor,
                             ),
                           ),
-                          AcedexBounceable(
-                            onTap: _triggerFocusBounce,
-                            child: Container(
-                              height: 22,
-                              padding: const EdgeInsets.symmetric(horizontal: 8),
-                              decoration: BoxDecoration(
+                          Container(
+                            height: 22,
+                            padding: const EdgeInsets.symmetric(horizontal: 8),
+                            decoration: BoxDecoration(
+                              color: primaryColor.withValues(alpha: 0.14),
+                              borderRadius: BorderRadius.circular(999),
+                            ),
+                            alignment: Alignment.center,
+                            child: Text(
+                              'Today',
+                              style: TextStyle(
+                                fontSize: 10,
+                                fontWeight: FontWeight.w800,
                                 color: primaryColor,
-                                borderRadius: BorderRadius.circular(999),
-                                boxShadow: [
-                                  BoxShadow(
-                                    color: primaryColor.withValues(alpha: 0.35),
-                                    blurRadius: 8,
-                                    offset: const Offset(0, 2),
-                                  ),
-                                ],
-                              ),
-                              alignment: Alignment.center,
-                              child: const Text(
-                                '+15m',
-                                style: TextStyle(
-                                  fontSize: 10.5,
-                                  fontWeight: FontWeight.w800,
-                                  color: Colors.white,
-                                ),
                               ),
                             ),
                           ),
@@ -378,11 +363,14 @@ class _CurriculumBentoGridState extends State<CurriculumBentoGrid>
                           child: Align(
                             alignment: Alignment.centerLeft,
                             child: FractionallySizedBox(
-                              widthFactor: (widget.focusMinutes / widget.focusGoalMinutes)
-                                  .clamp(0.0, 1.0),
+                              widthFactor: widget.focusGoalMinutes > 0
+                                  ? (widget.focusMinutes / widget.focusGoalMinutes)
+                                      .clamp(0.0, 1.0)
+                                  : 0.0,
                               child: Container(
                                 decoration: BoxDecoration(
-                                  color: widget.focusMinutes >= widget.focusGoalMinutes
+                                  color: widget.focusGoalMinutes > 0 &&
+                                          widget.focusMinutes >= widget.focusGoalMinutes
                                       ? (isDark ? AppColors.darkSuccess : AppColors.success)
                                       : primaryColor,
                                   borderRadius: BorderRadius.circular(999),

@@ -129,7 +129,7 @@ class AiWelcomeView extends StatelessWidget {
                             fit: BoxFit.scaleDown,
                             alignment: Alignment.centerLeft,
                             child: AcedexBadge(
-                              label: 'GEMINI AI TOPICS',
+                              label: 'ACEDEX AI TOPICS',
                               variant: AcedexBadgeVariant.primary,
                             ),
                           ),
@@ -312,7 +312,7 @@ class AiWelcomeView extends StatelessWidget {
           const SizedBox(height: 10),
           _BenefitTile(
             icon: HugeIcons.strokeRoundedTarget01,
-            title: 'Gemini Prioritizes Weak Subjects',
+            title: 'Acedex AI Prioritizes Weak Subjects',
             subtitle:
                 'Calibrate your target EUEE score (400–600), weakest subjects, and daily study time in 4 quick steps.',
             accent: accent,

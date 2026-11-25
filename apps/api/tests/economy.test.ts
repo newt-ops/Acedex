@@ -172,13 +172,17 @@ describe('Ace Coins Economy, Milestones, Ad Top-Ups & Assessment Fee', { timeout
       expect(claimRes.body.data.dailyCoinAdsRemaining).toBe(4 - i);
     }
 
-    // Balance should now be 105 + 5*10 = 155 AC
+    // Balance should now be 105 + 5*10 = 155 AC, and ALL 5 earn_ad logs must exist
     const walletRes = await request(app)
       .get('/api/v1/economy/wallet')
       .set('Authorization', `Bearer ${studentToken}`);
     expect(walletRes.body.data.balance).toBe(155);
     expect(walletRes.body.data.coinsPerAd).toBe(10);
     expect(walletRes.body.data.dailyCoinAdsRemaining).toBe(0);
+    const adLogs = walletRes.body.data.recentTransactions.filter(
+      (t: any) => t.type === 'earn_ad'
+    );
+    expect(adLogs).toHaveLength(5);
 
     // 6th ad attempt on same day blocked
     const blockedStart = await request(app)
@@ -225,7 +229,7 @@ describe('Ace Coins Economy, Milestones, Ad Top-Ups & Assessment Fee', { timeout
       expect(mRes.body.data.coinsAwarded).toBe(30);
     }
 
-    // Buy Gold Scholar Badge (120 AC -> 25 AC left)
+    // Buy Gold Scholar Badge (120 AC -> 25 AC left), and confirm BOTH spend logs exist
     const badgeRes = await request(app)
       .post('/api/v1/economy/spend')
       .set('Authorization', `Bearer ${studentToken}`)
@@ -233,6 +237,14 @@ describe('Ace Coins Economy, Milestones, Ad Top-Ups & Assessment Fee', { timeout
     expect(badgeRes.status).toBe(200);
     expect(badgeRes.body.data.newBalance).toBe(25);
     expect(badgeRes.body.data.unlockedBadge).toBe('badge_euee_gold');
+
+    const walletAfterSpend = await request(app)
+      .get('/api/v1/economy/wallet')
+      .set('Authorization', `Bearer ${studentToken}`);
+    const spendLogs = walletAfterSpend.body.data.recentTransactions.filter(
+      (t: any) => t.type === 'spend'
+    );
+    expect(spendLogs.length).toBeGreaterThanOrEqual(3); // 10 AC assessment + 100 AC pass + 120 AC badge
 
     // Insufficient balance check for 180 AC STEM Master badge
     const failBadge = await request(app)

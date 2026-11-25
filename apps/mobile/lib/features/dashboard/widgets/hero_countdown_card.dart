@@ -1,29 +1,23 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:hugeicons/hugeicons.dart';
 import '../../../core/theme/app_colors.dart';
-import '../../../core/ui/animations/bounceable.dart';
-import '../../../core/ui/progress/acedex_dots_loader.dart';
 
 /// EUEE 2026 Countdown & Readiness Hero Card (Section 1)
 ///
 /// Features:
 /// - Top Row: Grade badge + Gliding segmented toggle ("Countdown" / "Readiness")
 /// - View A: Live ticking Days / Hours / Mins readout with pulsing indicator dot
-/// - View B: Radial Exam Readiness meter (76% score + "+4.2% wk" badge + 545+ target score)
-/// - Bottom Row: Linear progress meter + Primary "Continue Unit 4 >" CTA pill
-/// - Loading State: Zero circular spinners! Displays horizontal `AcedexDotsLoader`
+/// - View B: Radial Exam Readiness meter (score + "+4.2% wk" badge + 545+ target score)
+/// - Bottom Row: Full-width linear progress meter
 class HeroCountdownCard extends StatefulWidget {
   final String gradeLabel;
   final int readinessScore;
-  final VoidCallback onContinueUnit4;
   final DateTime? targetDate;
 
   const HeroCountdownCard({
     super.key,
     required this.gradeLabel,
     required this.readinessScore,
-    required this.onContinueUnit4,
     this.targetDate,
   });
 
@@ -33,7 +27,6 @@ class HeroCountdownCard extends StatefulWidget {
 
 class _HeroCountdownCardState extends State<HeroCountdownCard> {
   String _heroMode = 'countdown'; // 'countdown' | 'readiness'
-  bool _isLoadingUnit4 = false;
 
   // Study deadline: June 8, 2026 EUEE Examination
   late int _countdownMinutes;
@@ -85,18 +78,6 @@ class _HeroCountdownCardState extends State<HeroCountdownCard> {
     _pulseTimer?.cancel();
     _minuteTimer?.cancel();
     super.dispose();
-  }
-
-  void _handleContinueTap() {
-    if (_isLoadingUnit4) return;
-    setState(() => _isLoadingUnit4 = true);
-
-    Future.delayed(const Duration(milliseconds: 650), () {
-      if (mounted) {
-        setState(() => _isLoadingUnit4 = false);
-        widget.onContinueUnit4();
-      }
-    });
   }
 
   @override
@@ -262,7 +243,7 @@ class _HeroCountdownCardState extends State<HeroCountdownCard> {
           const SizedBox(height: 14),
 
           // ===================================================================
-          // BOTTOM ROW: Linear Progress Bar + "Continue Unit 4 >" CTA Pill
+          // BOTTOM ROW: Full-Width Linear Progress Bar
           // ===================================================================
           Container(
             padding: const EdgeInsets.only(top: 12),
@@ -271,105 +252,48 @@ class _HeroCountdownCardState extends State<HeroCountdownCard> {
                 top: BorderSide(color: lineBorder),
               ),
             ),
-            child: Row(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                // Linear Progress Fill + Labels
-                Expanded(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Text(
-                            '${widget.readinessScore}% Ready',
-                            style: TextStyle(
-                              fontSize: 12,
-                              fontWeight: FontWeight.w700,
-                              letterSpacing: -0.2,
-                              color: theme.colorScheme.onSurface,
-                            ),
-                          ),
-                          Text(
-                            '+4.2% this week',
-                            style: TextStyle(
-                              fontSize: 10,
-                              fontWeight: FontWeight.w800,
-                              color: isDark ? AppColors.darkSuccess : AppColors.success,
-                            ),
-                          ),
-                        ],
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      '${widget.readinessScore}% Ready',
+                      style: TextStyle(
+                        fontSize: 12,
+                        fontWeight: FontWeight.w700,
+                        letterSpacing: -0.2,
+                        color: theme.colorScheme.onSurface,
                       ),
-                      const SizedBox(height: 6),
-                      ClipRRect(
-                        borderRadius: BorderRadius.circular(999),
-                        child: Container(
-                          height: 7,
-                          color: raisedBg,
-                          child: Align(
-                            alignment: Alignment.centerLeft,
-                            child: FractionallySizedBox(
-                              widthFactor: (widget.readinessScore / 100).clamp(0.0, 1.0),
-                              child: Container(
-                                decoration: BoxDecoration(
-                                  color: primaryColor,
-                                  borderRadius: BorderRadius.circular(999),
-                                ),
-                              ),
-                            ),
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-
-                const SizedBox(width: 14),
-
-                // Primary Pill CTA with 3-Dots Wave Loader
-                AcedexBounceable(
-                  onTap: _handleContinueTap,
-                  child: Container(
-                    height: 38,
-                    padding: const EdgeInsets.symmetric(horizontal: 14),
-                    decoration: BoxDecoration(
-                      color: primaryColor,
-                      borderRadius: BorderRadius.circular(999),
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.black.withValues(alpha: 0.12),
-                          blurRadius: 6,
-                          offset: const Offset(0, 2),
-                        ),
-                      ],
                     ),
-                    child: Center(
-                      child: _isLoadingUnit4
-                          ? const AcedexDotsLoader(
-                              color: Colors.white,
-                              dotSize: 4.5,
-                              gap: 3.5,
-                            )
-                          : const Row(
-                              mainAxisSize: MainAxisSize.min,
-                              children: [
-                                Text(
-                                  'Continue Unit 4',
-                                  style: TextStyle(
-                                    fontSize: 12,
-                                    fontWeight: FontWeight.w700,
-                                    color: Colors.white,
-                                    letterSpacing: -0.1,
-                                  ),
-                                ),
-                                SizedBox(width: 4),
-                                HugeIcon(
-                                  icon: HugeIcons.strokeRoundedArrowRight01,
-                                  color: Colors.white,
-                                  size: 13,
-                                ),
-                              ],
-                            ),
+                    Text(
+                      '+4.2% this week',
+                      style: TextStyle(
+                        fontSize: 10,
+                        fontWeight: FontWeight.w800,
+                        color: isDark ? AppColors.darkSuccess : AppColors.success,
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 6),
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(999),
+                  child: Container(
+                    height: 7,
+                    color: raisedBg,
+                    child: Align(
+                      alignment: Alignment.centerLeft,
+                      child: FractionallySizedBox(
+                        widthFactor: (widget.readinessScore / 100).clamp(0.0, 1.0),
+                        child: Container(
+                          decoration: BoxDecoration(
+                            color: primaryColor,
+                            borderRadius: BorderRadius.circular(999),
+                          ),
+                        ),
+                      ),
                     ),
                   ),
                 ),

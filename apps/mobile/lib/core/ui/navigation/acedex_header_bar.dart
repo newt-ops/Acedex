@@ -24,19 +24,15 @@ import '../../../main.dart';
 class AcedexHeaderBar extends StatefulWidget implements PreferredSizeWidget {
   final UserProfile? user;
   final int initialStreak;
-  final bool initialHasUnread;
   final VoidCallback? onProfileTap;
   final VoidCallback? onStreakTap;
-  final VoidCallback? onNotificationTap;
 
   const AcedexHeaderBar({
     super.key,
     this.user,
     this.initialStreak = 12,
-    this.initialHasUnread = true,
     this.onProfileTap,
     this.onStreakTap,
-    this.onNotificationTap,
   });
 
   @override
@@ -46,61 +42,13 @@ class AcedexHeaderBar extends StatefulWidget implements PreferredSizeWidget {
   State<AcedexHeaderBar> createState() => _AcedexHeaderBarState();
 }
 
-class _AcedexHeaderBarState extends State<AcedexHeaderBar>
-    with TickerProviderStateMixin {
-  late bool _hasUnread;
-
-  // Notification bell pendulum ring animation controller
-  late final AnimationController _bellRingController;
-  late final Animation<double> _bellAngleAnimation;
-
+class _AcedexHeaderBarState extends State<AcedexHeaderBar> {
   @override
   void initState() {
     super.initState();
-    _hasUnread = widget.initialHasUnread;
-
     // Initialize avatar from AuthStorage and sync live Ace Coins balance silently
     AuthStorage.instance.getAvatar();
     EconomyService.instance.syncWalletSilent();
-
-    // Bell pendulum ring animation
-    _bellRingController = AnimationController(
-      vsync: this,
-      duration: const Duration(milliseconds: 620),
-    );
-    _bellAngleAnimation = TweenSequence<double>([
-      TweenSequenceItem(
-        tween: Tween<double>(begin: 0.0, end: -0.28)
-            .chain(CurveTween(curve: Curves.easeOut)),
-        weight: 18,
-      ),
-      TweenSequenceItem(
-        tween: Tween<double>(begin: -0.28, end: 0.24)
-            .chain(CurveTween(curve: Curves.easeInOut)),
-        weight: 20,
-      ),
-      TweenSequenceItem(
-        tween: Tween<double>(begin: 0.24, end: -0.15)
-            .chain(CurveTween(curve: Curves.easeInOut)),
-        weight: 18,
-      ),
-      TweenSequenceItem(
-        tween: Tween<double>(begin: -0.15, end: 0.08)
-            .chain(CurveTween(curve: Curves.easeInOut)),
-        weight: 18,
-      ),
-      TweenSequenceItem(
-        tween: Tween<double>(begin: 0.08, end: 0.0)
-            .chain(CurveTween(curve: Curves.easeIn)),
-        weight: 26,
-      ),
-    ]).animate(_bellRingController);
-  }
-
-  @override
-  void dispose() {
-    _bellRingController.dispose();
-    super.dispose();
   }
 
   String _getTimeGreeting() {
@@ -341,16 +289,6 @@ class _AcedexHeaderBarState extends State<AcedexHeaderBar>
         );
       },
     );
-  }
-
-  void _onBellTapped() {
-    HapticFeedback.lightImpact();
-    setState(() {
-      _hasUnread = !_hasUnread;
-    });
-
-    _bellRingController.forward(from: 0.0);
-    widget.onNotificationTap?.call();
   }
 
   void _openProfileModal() {
@@ -666,62 +604,6 @@ class _AcedexHeaderBarState extends State<AcedexHeaderBar>
                         ),
                       );
                     },
-                  ),
-
-                  const SizedBox(width: 8),
-
-                  // Circular 38x38 Notification Bell Button
-                  AcedexBounceable(
-                    onTap: _onBellTapped,
-                    child: Stack(
-                      clipBehavior: Clip.none,
-                      children: [
-                        Container(
-                          width: 38,
-                          height: 38,
-                          decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                            color: surfaceColor,
-                            border: Border.all(color: lineColor),
-                          ),
-                          alignment: Alignment.center,
-                          child: AnimatedBuilder(
-                            animation: _bellRingController,
-                            builder: (context, child) {
-                              return Transform.rotate(
-                                angle: _bellAngleAnimation.value,
-                                alignment: const Alignment(0, -0.6),
-                                child: child,
-                              );
-                            },
-                            child: HugeIcon(
-                              icon: HugeIcons.strokeRoundedNotification01,
-                              color: theme.colorScheme.onSurface,
-                              size: 18,
-                            ),
-                          ),
-                        ),
-
-                        // Unread Royal Purple Dot
-                        if (_hasUnread)
-                          Positioned(
-                            top: 8,
-                            right: 9,
-                            child: Container(
-                              width: 7.5,
-                              height: 7.5,
-                              decoration: BoxDecoration(
-                                shape: BoxShape.circle,
-                                color: AppColors.royalPurple,
-                                border: Border.all(
-                                  color: surfaceColor,
-                                  width: 1.5,
-                                ),
-                              ),
-                            ),
-                          ),
-                      ],
-                    ),
                   ),
                 ],
               ),

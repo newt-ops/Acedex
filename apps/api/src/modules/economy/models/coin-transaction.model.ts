@@ -35,10 +35,13 @@ const CoinTransactionSchema = new Schema<ICoinTransactionDocument>(
 );
 
 CoinTransactionSchema.index({ userId: 1, createdAt: -1 });
-// Guarantee idempotent one-time milestone awards per student at the database level
+// Guarantee idempotent one-time milestone awards per student without blocking non-milestone earn_ad/spend logs
 CoinTransactionSchema.index(
   { userId: 1, milestoneKey: 1 },
-  { unique: true, sparse: true }
+  {
+    unique: true,
+    partialFilterExpression: { milestoneKey: { $type: 'string' } },
+  }
 );
 
 export const CoinTransactionModel = mongoose.model<ICoinTransactionDocument>(

@@ -44,7 +44,7 @@ void main() {
   }
 
   group('AcedexHeaderBar Widget Tests', () {
-    testWidgets('renders Apple iOS 68px header bar with avatar, greeting stack, theme toggle, and bell', (tester) async {
+    testWidgets('renders Apple iOS 68px header bar with avatar, greeting stack, and theme toggle without notification bell', (tester) async {
       await tester.pumpWidget(
         buildTestableWidget(
           const AcedexHeaderBar(user: testUser),
@@ -65,11 +65,9 @@ void main() {
         findsOneWidget,
       );
 
-      // Verify Theme Toggle Button is rendered
+      // Verify Theme Toggle Button is rendered and Notification Bell is absent
       expect(find.byKey(const Key('header_theme_toggle_button')), findsOneWidget);
-
-      // Verify Circular Notification Bell
-      expect(findHugeIcon(HugeIcons.strokeRoundedNotification01), findsOneWidget);
+      expect(findHugeIcon(HugeIcons.strokeRoundedNotification01), findsNothing);
 
       // Verify Avatar Camera Badge
       expect(findHugeIcon(HugeIcons.strokeRoundedCamera01), findsOneWidget);
@@ -112,22 +110,6 @@ void main() {
 
       // Verify theme switched to dark
       expect(AcedexApp.themeModeNotifier.value, ThemeMode.dark);
-    });
-
-    testWidgets('tapping notification bell triggers ring and toggles unread state', (tester) async {
-      await tester.pumpWidget(
-        buildTestableWidget(
-          const AcedexHeaderBar(user: testUser, initialHasUnread: true),
-        ),
-      );
-      await tester.pumpAndSettle();
-
-      final bellFinder = findHugeIcon(HugeIcons.strokeRoundedNotification01);
-      expect(bellFinder, findsOneWidget);
-
-      // Tap bell button
-      await tester.tap(bellFinder);
-      await tester.pumpAndSettle();
     });
 
     testWidgets('tapping avatar button triggers profile photo callback or modal', (tester) async {

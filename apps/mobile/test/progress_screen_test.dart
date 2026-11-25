@@ -185,67 +185,19 @@ void main() {
     expect(find.text('Est. 468 / 600 • Top 5%'), findsOneWidget);
   });
 
-  testWidgets('subject card opens breakdown sheet and runs 2-question booster drill', (tester) async {
+  testWidgets('subject card opens breakdown sheet cleanly without booster drill', (tester) async {
     await pumpScreen(tester);
 
     // Tap Chemistry card
     await tester.tap(find.text('Chemistry'));
     await tester.pumpAndSettle();
 
-    // Mode A: Breakdown View
+    // Unit Breakdown View renders without legacy booster drills
     expect(find.text('Chemistry Mastery'), findsOneWidget);
     expect(find.text('CURRENT MASTERY'), findsOneWidget);
     expect(find.text('AVG PACING / Q'), findsOneWidget);
     expect(find.text('Unit-by-Unit Progress'), findsOneWidget);
-    expect(find.text('Boost Galvanic Cell Potential'), findsOneWidget);
-
-    // Tap Boost button
-    await tester.tap(find.text('Boost Galvanic Cell Potential'));
-    await tester.pump(const Duration(milliseconds: 700));
-    await tester.pumpAndSettle();
-
-    // Mode B: Booster Question 1 of 2
-    expect(find.text('Booster Question 1 of 2'), findsOneWidget);
-    expect(find.textContaining('Given Ag⁺/Ag'), findsOneWidget);
-
-    // Next button disabled before answering
-    expect(find.text('Select an Answer'), findsOneWidget);
-
-    // Tap Option C (+1.24 V - index 2)
-    await tester.tap(find.text('+1.24 V'));
-    await tester.pumpAndSettle();
-
-    // EUEE solution displayed and button becomes Next Question
-    expect(find.textContaining('EUEE Solution:'), findsOneWidget);
-    expect(find.text('Next Question'), findsOneWidget);
-
-    // Tap Next Question -> Question 2
-    await tester.tap(find.text('Next Question'));
-    await tester.pumpAndSettle();
-
-    expect(find.text('Booster Question 2 of 2'), findsOneWidget);
-    expect(find.textContaining('At which electrode does oxidation always occur'), findsOneWidget);
-
-    // Tap Option B (Anode - index 1)
-    await tester.tap(find.text('Anode'));
-    await tester.pumpAndSettle();
-
-    expect(find.text('Complete Booster'), findsOneWidget);
-
-    // Tap Complete Booster -> Celebratory Summary
-    await tester.tap(find.text('Complete Booster'));
-    await tester.pumpAndSettle();
-
-    expect(find.text('MASTERY BOOSTED'), findsOneWidget);
-    expect(find.text('Chemistry +4% Mastery!'), findsOneWidget);
-    expect(find.text('Done'), findsOneWidget);
-
-    // Tap Done -> dismisses sheet
-    await tester.tap(find.text('Done'));
-    await tester.pumpAndSettle();
-
-    expect(find.text('Chemistry Mastery'), findsNothing);
-    // Chemistry mastery was 71%, boosted by 4% to 75%
-    expect(find.text('75%'), findsOneWidget);
+    expect(find.text('Boost Galvanic Cell Potential'), findsNothing);
+    expect(find.text('Booster Question 1 of 2'), findsNothing);
   });
 }

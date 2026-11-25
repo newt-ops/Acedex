@@ -16,6 +16,8 @@ class TopicDrillEngineSheet extends StatefulWidget {
   final String headerTitle;
   final SubjectCurriculum subject;
   final Function(int score, int total, int boost) onDrillCompleted;
+  final void Function(List<Map<String, dynamic>> answers, int durationSeconds)?
+      onAssessmentCompletedWithAnswers;
 
   const TopicDrillEngineSheet({
     super.key,
@@ -24,6 +26,7 @@ class TopicDrillEngineSheet extends StatefulWidget {
     required this.headerTitle,
     required this.subject,
     required this.onDrillCompleted,
+    this.onAssessmentCompletedWithAnswers,
   });
 
   static Future<void> show(
@@ -33,6 +36,8 @@ class TopicDrillEngineSheet extends StatefulWidget {
     required String headerTitle,
     required SubjectCurriculum subject,
     required Function(int score, int total, int boost) onDrillCompleted,
+    void Function(List<Map<String, dynamic>> answers, int durationSeconds)?
+        onAssessmentCompletedWithAnswers,
   }) {
     return showModalBottomSheet(
       context: context,
@@ -45,6 +50,7 @@ class TopicDrillEngineSheet extends StatefulWidget {
         headerTitle: headerTitle,
         subject: subject,
         onDrillCompleted: onDrillCompleted,
+        onAssessmentCompletedWithAnswers: onAssessmentCompletedWithAnswers,
       ),
     );
   }
@@ -54,6 +60,9 @@ class TopicDrillEngineSheet extends StatefulWidget {
 }
 
 class _TopicDrillEngineSheetState extends State<TopicDrillEngineSheet> {
+  static const List<String> _optionLetters = ['A', 'B', 'C', 'D'];
+  final DateTime _startedAt = DateTime.now();
+  final Map<int, String> _selectedOptionByIndex = {};
   int _currentIndex = 0;
   int? _selectedOptionIndex;
   int _score = 0;
@@ -65,6 +74,9 @@ class _TopicDrillEngineSheetState extends State<TopicDrillEngineSheet> {
 
     final currentQ = widget.questions[_currentIndex];
     final isRight = index == currentQ.correctIndex;
+    if (index >= 0 && index < _optionLetters.length) {
+      _selectedOptionByIndex[_currentIndex] = _optionLetters[index];
+    }
 
     setState(() {
       _selectedOptionIndex = index;
@@ -84,11 +96,22 @@ class _TopicDrillEngineSheetState extends State<TopicDrillEngineSheet> {
     } else {
       // Calculate mastery boost
       final boost = math.max(1, ((_score / total) * 3).round());
+      final elapsedSec = DateTime.now().difference(_startedAt).inSeconds;
+      final answers = List.generate(total, (i) {
+        return <String, dynamic>{
+          'questionId': widget.questions[i].topicCode,
+          'selectedOptionId': _selectedOptionByIndex[i],
+        };
+      });
       setState(() {
         _boost = boost;
         _isCompleted = true;
       });
       widget.onDrillCompleted(_score, total, boost);
+      widget.onAssessmentCompletedWithAnswers?.call(
+        answers,
+        elapsedSec < 1 ? 1 : elapsedSec,
+      );
     }
   }
 
@@ -412,7 +435,7 @@ class _TopicDrillEngineSheetState extends State<TopicDrillEngineSheet> {
                     Text(
                       _currentIndex < total - 1
                           ? 'Next Question'
-                          : 'Complete Drill',
+                          : 'Complete Assessment',
                       style: const TextStyle(
                         fontSize: 12,
                         fontWeight: FontWeight.w700,

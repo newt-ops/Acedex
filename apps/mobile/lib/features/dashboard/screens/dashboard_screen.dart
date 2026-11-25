@@ -9,25 +9,9 @@ import '../models/dashboard_data.dart';
 import '../widgets/curriculum_bento_grid.dart';
 import '../widgets/formula_flashcards_carousel.dart';
 import '../widgets/hero_countdown_card.dart';
-import '../widgets/mini_drill_sheet.dart';
-import '../widgets/quick_study_sheet.dart';
 import '../widgets/study_plan_section.dart';
 
 /// Clean Apple-Style Inside Dashboard Screen (Tab 0: Home)
-///
-/// Features:
-/// 1. EUEE 2026 Countdown & Readiness Hero Card ("Countdown" / "Readiness" toggle,
-///    server-backed target date June 8 2026, zero atmospheric glow)
-/// 2. Live Curriculum Bento Grid (2x2: Live Units Mastered across G9-12 from DB,
-///    EUEE Accuracy, Daily Focus "+15m", Stream Standing)
-/// 3. Today's Study Plan (Empty initially, Cupertino Add Study Plan modal, deletable tasks)
-/// 4. Quick Formula & Concept Flashcards (Gated via FeatureFlags)
-///
-/// Design Rules:
-/// - Pure inside screen: header and footer bars are delegated to the outer `HomeScreen` shell
-/// - Zero emojis: strictly uses `HugeIcons`
-/// - Zero circular spinners: uses `AcedexDotsLoader`
-/// - Smooth BouncingScrollPhysics with 130px bottom padding to clear the floating bottom navigation bar
 class DashboardScreen extends StatefulWidget {
   final UserProfile? user;
   final VoidCallback? onNavigateToStudy;
@@ -65,44 +49,46 @@ class _DashboardScreenState extends State<DashboardScreen> {
     return ((effectiveMastered / total) * 100).round().clamp(0, 100);
   }
 
-  final int _focusMinutes = 45;
-  final int _focusGoalMinutes = 60;
-  int _extraFocusMinutes = 0;
   bool _standingIsAllTime = false;
 
   static int _parseDurationMinutes(String duration) {
     int total = 0;
-    final hourMatch = RegExp(r'(\d+)\s*h', caseSensitive: false).firstMatch(duration);
+    final hourMatch =
+        RegExp(r'(\d+)\s*h', caseSensitive: false).firstMatch(duration);
     if (hourMatch != null) {
       total += (int.tryParse(hourMatch.group(1)!) ?? 0) * 60;
     }
-    final minMatch = RegExp(r'(\d+)\s*(?:m|min)', caseSensitive: false).firstMatch(duration);
+    final minMatch =
+        RegExp(r'(\d+)\s*(?:m|min)', caseSensitive: false).firstMatch(duration);
     if (minMatch != null) {
       total += int.tryParse(minMatch.group(1)!) ?? 0;
     }
     if (total == 0) {
-      total = int.tryParse(RegExp(r'\d+').firstMatch(duration)?.group(0) ?? '') ?? 0;
+      total =
+          int.tryParse(RegExp(r'\d+').firstMatch(duration)?.group(0) ?? '') ??
+              0;
     }
     return total;
   }
 
   int get _calculatedFocusMinutes {
-    if (_tasks.isEmpty) {
-      return _focusMinutes + _extraFocusMinutes;
-    }
-    final completedMins = _tasks
+    final planCompletedMins = _tasks
         .where((t) => t.completed)
         .fold<int>(0, (sum, t) => sum + _parseDurationMinutes(t.duration));
-    return completedMins + _extraFocusMinutes;
+    final storedTaskMins =
+        AuthStorage.instance.dailyFocusCompletedMinutesNotifier.value;
+    return planCompletedMins + storedTaskMins;
   }
 
   int get _calculatedFocusGoalMinutes {
-    if (_tasks.isEmpty) {
-      return _focusGoalMinutes;
-    }
-    final totalTaskMins = _tasks
-        .fold<int>(0, (sum, t) => sum + _parseDurationMinutes(t.duration));
-    return totalTaskMins > 0 ? (totalTaskMins > 60 ? totalTaskMins : 60) : _focusGoalMinutes;
+    final calibratedGoal =
+        AuthStorage.instance.dailyFocusGoalMinutesNotifier.value;
+    if (calibratedGoal > 0) return calibratedGoal;
+    final totalPlanMins = _tasks.fold<int>(
+      0,
+      (sum, t) => sum + _parseDurationMinutes(t.duration),
+    );
+    return totalPlanMins;
   }
 
   // Live Curriculum Pulse Metrics (Database: 237 units across G9-12)
@@ -112,17 +98,20 @@ class _DashboardScreenState extends State<DashboardScreen> {
   late DateTime _examDate;
 
   late List<StudyTaskItem> _tasks;
-  late List<SubjectMasteryItem> _subjects;
   late final List<FlashcardItem> _flashcards;
 
   @override
   void initState() {
     super.initState();
-    AuthStorage.instance.completedUnitsNotifier.addListener(_onCompletedUnitsChanged);
+    AuthStorage.instance.completedUnitsNotifier
+        .addListener(_onExternalMetricsChanged);
+    AuthStorage.instance.dailyFocusGoalMinutesNotifier
+        .addListener(_onExternalMetricsChanged);
+    AuthStorage.instance.dailyFocusCompletedMinutesNotifier
+        .addListener(_onExternalMetricsChanged);
     _tasks = widget.initialTasks != null
         ? List.from(widget.initialTasks!)
         : List.from(defaultStudyTasks);
-    _subjects = List.from(defaultSubjectsData);
     _flashcards = defaultFlashcardsData;
 
     _unitsMastered = widget.initialUnitsMastered ?? 0;
@@ -136,15 +125,21 @@ class _DashboardScreenState extends State<DashboardScreen> {
 
     unawaited(_fetchLiveDashboardData());
     unawaited(AuthStorage.instance.getCompletedUnits());
+    unawaited(AuthStorage.instance.loadDailyFocus());
   }
 
   @override
   void dispose() {
-    AuthStorage.instance.completedUnitsNotifier.removeListener(_onCompletedUnitsChanged);
+    AuthStorage.instance.completedUnitsNotifier
+        .removeListener(_onExternalMetricsChanged);
+    AuthStorage.instance.dailyFocusGoalMinutesNotifier
+        .removeListener(_onExternalMetricsChanged);
+    AuthStorage.instance.dailyFocusCompletedMinutesNotifier
+        .removeListener(_onExternalMetricsChanged);
     super.dispose();
   }
 
-  void _onCompletedUnitsChanged() {
+  void _onExternalMetricsChanged() {
     if (mounted) setState(() {});
   }
 
@@ -158,7 +153,8 @@ class _DashboardScreenState extends State<DashboardScreen> {
       if (mounted) {
         setState(() {
           _totalUnits = (data['totalUnits'] as num?)?.toInt() ?? _totalUnits;
-          _unitsMastered = (data['unitsMastered'] as num?)?.toInt() ?? _unitsMastered;
+          _unitsMastered =
+              (data['unitsMastered'] as num?)?.toInt() ?? _unitsMastered;
           _accuracyPct = (data['accuracy'] as num?)?.toDouble() ?? _accuracyPct;
         });
       }
@@ -184,28 +180,6 @@ class _DashboardScreenState extends State<DashboardScreen> {
     } catch (_) {
       // Offline fallback: June 8, 2026
     }
-  }
-
-  void _onContinueUnit4() {
-    if (FeatureFlags.enableSmartNotes) {
-      QuickStudySheet.show(context);
-    } else {
-      final physicsSubj = _subjects.firstWhere(
-        (s) => s.id == 'physics',
-        orElse: () => _subjects.first,
-      );
-      MiniDrillSheet.show(
-        context,
-        subject: physicsSubj,
-        onMasteryUpdated: _onMasteryUpdated,
-      );
-    }
-  }
-
-  void _onQuickLogFocus() {
-    setState(() {
-      _extraFocusMinutes += 15;
-    });
   }
 
   void _onToggleStanding() {
@@ -250,15 +224,6 @@ class _DashboardScreenState extends State<DashboardScreen> {
     });
   }
 
-  void _onMasteryUpdated(String subjectId, int newMastery) {
-    setState(() {
-      final index = _subjects.indexWhere((s) => s.id == subjectId);
-      if (index != -1) {
-        _subjects[index] = _subjects[index].copyWith(mastery: newMastery);
-      }
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     final streamLabel = widget.user?.stream?.toLowerCase() == 'natural'
@@ -268,7 +233,6 @@ class _DashboardScreenState extends State<DashboardScreen> {
 
     return Stack(
       children: [
-        // Hidden element to satisfy widget tests matching user's full displayName
         if (widget.user?.displayName.isNotEmpty == true)
           ExcludeSemantics(
             excluding: true,
@@ -279,28 +243,19 @@ class _DashboardScreenState extends State<DashboardScreen> {
               ),
             ),
           ),
-
         SingleChildScrollView(
           physics: const BouncingScrollPhysics(),
-          padding: const EdgeInsets.only(left: 16, right: 16, top: 16, bottom: 130),
+          padding:
+              const EdgeInsets.only(left: 16, right: 16, top: 16, bottom: 130),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              // ===============================================================
-              // SECTION 1: EUEE 2026 Countdown & Readiness Hero Card (No glow)
-              // ===============================================================
               HeroCountdownCard(
                 gradeLabel: gradeLabel,
                 readinessScore: _readinessScore,
-                onContinueUnit4: _onContinueUnit4,
                 targetDate: _examDate,
               ),
-
               const SizedBox(height: 20),
-
-              // ===============================================================
-              // SECTION 2: Live Curriculum Bento Grid (2x2: Real database units)
-              // ===============================================================
               ValueListenableBuilder<Set<String>>(
                 valueListenable: AuthStorage.instance.completedUnitsNotifier,
                 builder: (context, completedUnits, _) {
@@ -314,18 +269,12 @@ class _DashboardScreenState extends State<DashboardScreen> {
                     accuracyPercentage: _accuracyPct,
                     focusMinutes: _calculatedFocusMinutes,
                     focusGoalMinutes: _calculatedFocusGoalMinutes,
-                    onQuickLogFocus: _onQuickLogFocus,
                     standingIsAllTime: _standingIsAllTime,
                     onToggleStanding: _onToggleStanding,
                   );
                 },
               ),
-
               const SizedBox(height: 20),
-
-              // ===============================================================
-              // SECTION 3: Today's Study Plan (Empty by default & deletable)
-              // ===============================================================
               StudyPlanSection(
                 tasks: _tasks,
                 onToggleTask: _onToggleTask,
@@ -333,8 +282,6 @@ class _DashboardScreenState extends State<DashboardScreen> {
                 onAddStudyPlan: _onAddStudyPlan,
                 onDeleteTask: _onDeleteTask,
               ),
-
-              // SECTION 4: Quick Formula & Concept Flashcards (Gated)
               if (FeatureFlags.enableFlashcards) ...[
                 const SizedBox(height: 20),
                 FormulaFlashcardsCarousel(

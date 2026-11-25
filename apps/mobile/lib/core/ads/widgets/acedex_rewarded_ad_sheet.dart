@@ -82,7 +82,8 @@ class _AcedexRewardedAdSheetState extends State<AcedexRewardedAdSheet> {
       _errorText = null;
       _secondsRemaining = 0;
       _headline = widget.title ?? widget.rewardType.defaultHeadline;
-      _subtext = widget.subtitle ?? 'Connecting to ACEDEX rewarded ad service...';
+      _subtext =
+          widget.subtitle ?? 'Connecting to ACEDEX rewarded ad service...';
     });
 
     try {
@@ -97,14 +98,16 @@ class _AcedexRewardedAdSheetState extends State<AcedexRewardedAdSheet> {
         _subtext = 'Launching rewarded video...';
       });
 
-      final playedNativeAd =
-          await widget.adsRepository.showUnityRewardedAd(session);
+      final playedNativeAd = await widget.adsRepository.showUnityRewardedAd(
+        session,
+      );
       if (!mounted) return;
 
-      final elapsed =
-          DateTime.now().difference(session.startedAtLocal).inSeconds;
-      final remaining =
-          (widget.adsRepository.minimumWatchSeconds - elapsed).clamp(0, 30);
+      final elapsed = DateTime.now()
+          .difference(session.startedAtLocal)
+          .inSeconds;
+      final remaining = (widget.adsRepository.minimumWatchSeconds - elapsed)
+          .clamp(0, 30);
 
       if (remaining > 0) {
         setState(() {
@@ -188,9 +191,13 @@ class _AcedexRewardedAdSheetState extends State<AcedexRewardedAdSheet> {
     final theme = Theme.of(context);
     final isDark = theme.brightness == Brightness.dark;
     final accent = isDark ? AppColors.accentDark : AppColors.accentLight;
-    final accentSoft = isDark ? AppColors.accentSoftDark : AppColors.accentSoftLight;
+    final accentSoft = isDark
+        ? AppColors.accentSoftDark
+        : AppColors.accentSoftLight;
     final line = isDark ? AppColors.darkLine : AppColors.lightLine;
-    final subtextColor = isDark ? AppColors.darkSubtext : AppColors.lightSubtext;
+    final subtextColor = isDark
+        ? AppColors.darkSubtext
+        : AppColors.lightSubtext;
 
     return Container(
       padding: const EdgeInsets.fromLTRB(20, 14, 20, 28),
@@ -267,11 +274,11 @@ class _AcedexRewardedAdSheetState extends State<AcedexRewardedAdSheet> {
               )
             else
               AcedexButton(
-                label: 'Cancel',
+                label: _secondsRemaining > 0
+                    ? 'Verifying Reward...'
+                    : 'Please Wait...',
                 variant: AcedexButtonVariant.ghost,
-                onPressed: _busy && _secondsRemaining == 0
-                    ? null
-                    : () => Navigator.of(context).pop(null),
+                onPressed: _busy ? null : () => Navigator.of(context).pop(null),
               ),
           ],
         ),

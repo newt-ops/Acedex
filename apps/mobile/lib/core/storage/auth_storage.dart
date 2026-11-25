@@ -15,6 +15,9 @@ class AuthStorage {
   static const String _keyHasSeenSplash = 'acedex_seen_splash';
   static const String _keyAiTopicOverview = 'acedex_ai_topic_overview';
   static const String _keyAiSubjectModulesPrefix = 'acedex_ai_modules_';
+  static const String _keyDailyFocusGoalMinutes = 'acedex_daily_focus_goal_minutes';
+  static const String _keyDailyFocusCompletedDate = 'acedex_daily_focus_date';
+  static const String _keyDailyFocusCompletedMinutes = 'acedex_daily_focus_completed_minutes';
 
   static AuthStorage? _instance;
   static AuthStorage get instance => _instance ??= AuthStorage._();
@@ -33,6 +36,57 @@ class AuthStorage {
 
   final ValueNotifier<Set<String>> completedUnitsNotifier =
       ValueNotifier<Set<String>>({});
+
+  final ValueNotifier<int> dailyFocusGoalMinutesNotifier = ValueNotifier<int>(0);
+
+  final ValueNotifier<int> dailyFocusCompletedMinutesNotifier =
+      ValueNotifier<int>(0);
+
+  static String _todayDateKey() {
+    final now = DateTime.now();
+    return '${now.year.toString().padLeft(4, '0')}-'
+        '${now.month.toString().padLeft(2, '0')}-'
+        '${now.day.toString().padLeft(2, '0')}';
+  }
+
+  Future<void> loadDailyFocus() async {
+    final prefs = await SharedPreferences.getInstance();
+    final goal = prefs.getInt(_keyDailyFocusGoalMinutes) ?? 0;
+    dailyFocusGoalMinutesNotifier.value = goal < 0 ? 0 : goal;
+
+    final today = _todayDateKey();
+    final savedDate = prefs.getString(_keyDailyFocusCompletedDate);
+    if (savedDate != today) {
+      dailyFocusCompletedMinutesNotifier.value = 0;
+      await prefs.setString(_keyDailyFocusCompletedDate, today);
+      await prefs.setInt(_keyDailyFocusCompletedMinutes, 0);
+    } else {
+      final done = prefs.getInt(_keyDailyFocusCompletedMinutes) ?? 0;
+      dailyFocusCompletedMinutesNotifier.value = done < 0 ? 0 : done;
+    }
+  }
+
+  Future<void> setDailyFocusGoalMinutes(int minutes) async {
+    final clamped = minutes < 0 ? 0 : minutes;
+    dailyFocusGoalMinutesNotifier.value = clamped;
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setInt(_keyDailyFocusGoalMinutes, clamped);
+  }
+
+  Future<void> addDailyFocusMinutes(int deltaMinutes) async {
+    if (deltaMinutes == 0) return;
+    final prefs = await SharedPreferences.getInstance();
+    final today = _todayDateKey();
+    final savedDate = prefs.getString(_keyDailyFocusCompletedDate);
+    final current = savedDate == today
+        ? (prefs.getInt(_keyDailyFocusCompletedMinutes) ??
+            dailyFocusCompletedMinutesNotifier.value)
+        : 0;
+    final next = (current + deltaMinutes).clamp(0, 1440);
+    dailyFocusCompletedMinutesNotifier.value = next;
+    await prefs.setString(_keyDailyFocusCompletedDate, today);
+    await prefs.setInt(_keyDailyFocusCompletedMinutes, next);
+  }
 
   Future<Set<String>> getCompletedUnits() async {
     final prefs = await SharedPreferences.getInstance();
@@ -210,12 +264,17 @@ class AuthStorage {
     _cachedAvatar = StudentAvatar.defaultSilhouette;
     _cachedLastPhone = null;
     avatarNotifier.value = StudentAvatar.defaultSilhouette;
+    dailyFocusGoalMinutesNotifier.value = 0;
+    dailyFocusCompletedMinutesNotifier.value = 0;
     final prefs = await SharedPreferences.getInstance();
     await prefs.remove(_keyToken);
     await prefs.remove(_keyRefreshToken);
     await prefs.remove(_keyProfile);
     await prefs.remove(_keyAvatar);
     await prefs.remove(_keyAiTopicOverview);
+    await prefs.remove(_keyDailyFocusGoalMinutes);
+    await prefs.remove(_keyDailyFocusCompletedDate);
+    await prefs.remove(_keyDailyFocusCompletedMinutes);
     for (final key in prefs.getKeys().where((k) => k.startsWith(_keyAiSubjectModulesPrefix)).toList()) {
       await prefs.remove(key);
     }

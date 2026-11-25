@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:math' as math;
 import 'package:flutter/material.dart';
 import 'package:hugeicons/hugeicons.dart';
 import '../../../core/ads/ads.dart';
@@ -473,6 +474,7 @@ class _StudyScreenState extends State<StudyScreen> {
     final unitCode = unit.resolvedUnitCode(subj.subjectCode);
     unawaited(AuthStorage.instance.setUnitCompletion(unitId, targetState));
     unawaited(AuthStorage.instance.setUnitCompletion(unitCode, targetState));
+    unawaited(AuthStorage.instance.addDailyFocusMinutes(targetState ? 15 : -15));
 
     // Persist real user status directly in database and credit Ace Coins milestone
     unawaited(
@@ -646,22 +648,73 @@ class _StudyScreenState extends State<StudyScreen> {
         });
         unawaited(AuthStorage.instance.setUnitCompletion(unit.id, true));
         unawaited(AuthStorage.instance.setUnitCompletion(unitCode, true));
+      },
+      onAssessmentCompletedWithAnswers: (answers, durationSeconds) {
+        final focusMins = math.max(1, (durationSeconds / 60).round());
+        unawaited(AuthStorage.instance.addDailyFocusMinutes(focusMins));
 
         unawaited(
           ApiClient.instance
               .post(
-                ApiEndpoints.updateUnitStatus(unitCode),
-                body: {'status': 'completed'},
+                ApiEndpoints.assessmentsSubmit,
+                body: {
+                  'unitId': unitCode,
+                  'answers': answers,
+                  'durationSeconds': durationSeconds,
+                },
                 requiresAuth: true,
               )
               .then((res) {
                 final data = (res['data'] as Map<String, dynamic>?) ?? res;
-                EconomyService.instance.applyServerBalanceUpdate(
-                  coinsAwarded: (data['coinsAwarded'] as num?)?.toInt(),
-                  newCoinBalance: (data['newCoinBalance'] as num?)?.toInt(),
-                );
+                final coinsAwarded = (data['coinsAwarded'] as num?)?.toInt();
+                final coinsSpent = (data['coinsSpent'] as num?)?.toInt();
+                final newBalance = (data['newCoinBalance'] as num?)?.toInt();
+                if (coinsAwarded != null || newBalance != null) {
+                  EconomyService.instance.applyServerBalanceUpdate(
+                    coinsAwarded: coinsAwarded,
+                    newCoinBalance: newBalance,
+                  );
+                }
+                if (!mounted) return;
+                if (coinsAwarded != null && coinsAwarded > 0) {
+                  AcedexToast.show(
+                    context,
+                    message: '+$coinsAwarded Ace Coins earned!',
+                    type: AcedexToastType.success,
+                  );
+                } else if (coinsSpent != null && coinsSpent > 0) {
+                  AcedexToast.show(
+                    context,
+                    message: '-$coinsSpent AC • Unit assessment entry',
+                    type: AcedexToastType.info,
+                  );
+                }
               })
-              .catchError((_) {}),
+              .catchError((_) async {
+                try {
+                  final res = await ApiClient.instance.post(
+                    ApiEndpoints.updateUnitStatus(unitCode),
+                    body: {'status': 'completed'},
+                    requiresAuth: true,
+                  );
+                  final data = (res['data'] as Map<String, dynamic>?) ?? res;
+                  final coinsAwarded = (data['coinsAwarded'] as num?)?.toInt();
+                  final newBalance = (data['newCoinBalance'] as num?)?.toInt();
+                  if (coinsAwarded != null || newBalance != null) {
+                    EconomyService.instance.applyServerBalanceUpdate(
+                      coinsAwarded: coinsAwarded,
+                      newCoinBalance: newBalance,
+                    );
+                    if (mounted && coinsAwarded != null && coinsAwarded > 0) {
+                      AcedexToast.show(
+                        context,
+                        message: '+$coinsAwarded Ace Coins earned!',
+                        type: AcedexToastType.success,
+                      );
+                    }
+                  }
+                } catch (_) {}
+              }),
         );
       },
     );

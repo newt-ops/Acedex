@@ -1,3 +1,4 @@
+import 'dart:async';
 import '../../../core/economy/economy.dart';
 import '../../../core/network/api_client.dart';
 import '../../../core/network/api_endpoints.dart';
@@ -50,7 +51,12 @@ class AiStudyService implements AiStudyRepository {
     final json = await _storage.getAiTopicOverview();
     if (json == null) return null;
     try {
-      return AiTopicProgramOverview.fromJson(json);
+      final overview = AiTopicProgramOverview.fromJson(json);
+      final daily = overview.program?.calibration.dailyMinutes;
+      if (daily != null && daily > 0) {
+        unawaited(_storage.setDailyFocusGoalMinutes(daily));
+      }
+      return overview;
     } catch (_) {
       return null;
     }
@@ -59,6 +65,10 @@ class AiStudyService implements AiStudyRepository {
   @override
   Future<void> saveCachedOverview(AiTopicProgramOverview overview) async {
     await _storage.saveAiTopicOverview(overview.toJson());
+    final daily = overview.program?.calibration.dailyMinutes;
+    if (daily != null && daily > 0) {
+      await _storage.setDailyFocusGoalMinutes(daily);
+    }
   }
 
   @override
@@ -212,10 +222,16 @@ class AiStudyService implements AiStudyRepository {
         completedSteps: updatedSteps,
         isCompleted: updatedDone,
         progressPercentage: updatedPct,
+        coinsAwarded: coinsAwarded,
+        newCoinBalance: newCoinBalance,
       );
     }
 
-    return TopicModuleItem.fromJson(moduleJson);
+    return TopicModuleItem.fromJson({
+      ...moduleJson,
+      'coinsAwarded': ?coinsAwarded,
+      'newCoinBalance': ?newCoinBalance,
+    });
   }
 
   @override

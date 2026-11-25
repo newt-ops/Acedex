@@ -24,6 +24,7 @@ class ApiEndpoints {
   static String unitNotes(String unitId) => '/api/v1/curriculum/units/$unitId/notes';
   static String unitAssessment(String unitId) => '/api/v1/curriculum/units/$unitId/assessment';
   static String unitQuestions(String unitId) => '/api/v1/curriculum/units/$unitId/questions';
+  static const String assessmentsSubmit = '/api/v1/assessments/submit';
   static String completeUnit(String unitId) => '/api/v1/study/units/$unitId/complete';
   static String updateUnitStatus(String unitId) => '/api/v1/study/units/$unitId/status';
 

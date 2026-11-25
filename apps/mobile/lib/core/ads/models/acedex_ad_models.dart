@@ -34,7 +34,7 @@ extension AcedexRewardTypeX on AcedexRewardType {
       case AcedexRewardType.streakRepair:
         return 'Restore Study Streak';
       case AcedexRewardType.aiStudyPlan:
-        return 'Unlock Gemini AI Plan';
+        return 'Unlock Acedex AI Plan';
       case AcedexRewardType.bonusCoins:
         return 'Earn +10 Ace Coins';
     }
@@ -49,7 +49,7 @@ extension AcedexRewardTypeX on AcedexRewardType {
       case AcedexRewardType.streakRepair:
         return 'Watch 1 short rewarded ad to repair your broken study streak (+1 day).';
       case AcedexRewardType.aiStudyPlan:
-        return 'Watch 1 short rewarded ad to generate your personalized Gemini topic roadmap.';
+        return 'Watch 1 short rewarded ad to generate your personalized Acedex AI topic roadmap.';
       case AcedexRewardType.bonusCoins:
         return 'Watch 1 short rewarded ad to add +10 Ace Coins to your study wallet.';
     }

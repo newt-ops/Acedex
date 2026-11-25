@@ -207,7 +207,7 @@ class _AiCalibrationFlowState extends State<AiCalibrationFlow>
       _pulseController.stop();
       setState(() {
         _isSynthesizing = false;
-        _synthesisError = 'Unable to reach Gemini planner. Please try again.';
+        _synthesisError = 'Unable to reach Acedex AI planner. Please try again.';
       });
     }
   }
@@ -304,7 +304,7 @@ class _AiCalibrationFlowState extends State<AiCalibrationFlow>
                         ),
                         const SizedBox(width: 5),
                         Text(
-                          'Gemini AI',
+                          'Acedex AI',
                           style: TextStyle(
                             fontSize: 11,
                             fontWeight: FontWeight.w800,
@@ -740,7 +740,7 @@ class _AiCalibrationFlowState extends State<AiCalibrationFlow>
         ),
         const SizedBox(height: 4),
         Text(
-          'Pick 1 to 3 subjects. Gemini assigns Priority #1–#3 topic modules here.',
+          'Pick 1 to 3 subjects. Acedex AI assigns Priority #1–#3 topic modules here.',
           style: TextStyle(fontSize: 12.5, color: subtext),
         ),
         const SizedBox(height: 14),
@@ -922,7 +922,7 @@ class _AiCalibrationFlowState extends State<AiCalibrationFlow>
         ),
         const SizedBox(height: 4),
         Text(
-          'Gemini paces your daily topic blocks to prevent burnout.',
+          'Acedex AI paces your daily topic blocks to prevent burnout.',
           style: TextStyle(fontSize: 12.5, color: subtext),
         ),
         const SizedBox(height: 14),
@@ -1295,8 +1295,8 @@ class _AiCalibrationFlowState extends State<AiCalibrationFlow>
                 child: Text(
                   widget.canGenerateToday
                       ? (widget.requiresAd
-                          ? 'Watch 1 short rewarded ad to generate your personalized Gemini study program (1 generation per day).'
-                          : 'Ready to generate your personalized Gemini study program (1 generation per day).')
+                          ? 'Watch 1 short rewarded ad to generate your personalized Acedex AI study program (1 generation per day).'
+                          : 'Ready to generate your personalized Acedex AI study program (1 generation per day).')
                       : 'You already generated an AI plan today. You can regenerate again tomorrow.',
                   style: TextStyle(
                     fontSize: 11.5,
@@ -1421,7 +1421,7 @@ class _AiCalibrationFlowState extends State<AiCalibrationFlow>
             ),
             const SizedBox(height: 16),
             Text(
-              'GEMINI AI SYNTHESIS',
+              'ACEDEX AI SYNTHESIS',
               style: TextStyle(
                 fontSize: 10.5,
                 fontWeight: FontWeight.w800,
@@ -1590,7 +1590,7 @@ class _AiCalibrationFlowState extends State<AiCalibrationFlow>
                           Flexible(
                             child: Text(
                               program.generatedBy == 'gemini'
-                                  ? 'GEMINI AI BLUEPRINT'
+                                  ? 'ACEDEX AI BLUEPRINT'
                                   : 'SMART TOPIC BLUEPRINT',
                               maxLines: 1,
                               overflow: TextOverflow.ellipsis,

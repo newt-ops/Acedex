@@ -74,7 +74,7 @@ class _AcedexUnlockChoiceSheetState extends State<AcedexUnlockChoiceSheet> {
     _economyRepo = widget.economyRepository ?? EconomyService.instance;
   }
 
-  Future<void> _handleSpendCoins() async {
+  Future<void> _handleSpendCoins({int? earnedFromAd}) async {
     if (_spending) return;
     setState(() {
       _spending = true;
@@ -89,6 +89,17 @@ class _AcedexUnlockChoiceSheetState extends State<AcedexUnlockChoiceSheet> {
       if (!mounted) return;
       EconomyService.instance.applyServerBalanceUpdate(
         newCoinBalance: res.newBalance,
+      );
+      final spendAmount = res.coinsSpent > 0 ? res.coinsSpent : widget.coinCost;
+      final toastMsg = earnedFromAd != null && earnedFromAd > 0
+          ? '+$earnedFromAd AC earned • -$spendAmount AC spent to unlock!'
+          : '-$spendAmount AC • ${res.message}';
+      AcedexToast.show(
+        context,
+        message: toastMsg,
+        type: earnedFromAd != null && earnedFromAd > 0
+            ? AcedexToastType.success
+            : AcedexToastType.info,
       );
       Navigator.of(context).pop(true);
     } on ApiException catch (e) {
@@ -117,12 +128,13 @@ class _AcedexUnlockChoiceSheetState extends State<AcedexUnlockChoiceSheet> {
     if (!mounted || claim == null) return;
 
     if (widget.adRewardType == AcedexRewardType.bonusCoins) {
+      final awarded = claim.coinsAwarded ?? 10;
       EconomyService.instance.applyServerBalanceUpdate(
-        coinsAwarded: claim.coinsAwarded ?? 10,
+        coinsAwarded: awarded,
         newCoinBalance: claim.newCoinBalance,
       );
       // Automatically spend the coin cost now that the user earned +10 AC from the ad!
-      await _handleSpendCoins();
+      await _handleSpendCoins(earnedFromAd: awarded);
       return;
     }
 

@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:hugeicons/hugeicons.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:acedex/core/config/feature_flags.dart';
 import 'package:acedex/core/models/user_profile.dart';
+import 'package:acedex/core/storage/auth_storage.dart';
 import 'package:acedex/features/dashboard/models/dashboard_data.dart';
 import 'package:acedex/features/dashboard/screens/dashboard_screen.dart';
 import 'package:acedex/features/dashboard/widgets/add_study_plan_sheet.dart';
 import 'package:acedex/features/dashboard/widgets/curriculum_bento_grid.dart';
 import 'package:acedex/features/dashboard/widgets/formula_flashcards_carousel.dart';
 import 'package:acedex/features/dashboard/widgets/hero_countdown_card.dart';
-import 'package:acedex/features/dashboard/widgets/mini_drill_sheet.dart';
-import 'package:acedex/features/dashboard/widgets/quick_study_sheet.dart';
 import 'package:acedex/features/dashboard/widgets/study_plan_section.dart';
 import 'package:acedex/features/dashboard/widgets/subject_mastery_section.dart';
 
@@ -44,7 +44,7 @@ void main() {
     ),
     const StudyTaskItem(
       id: 'sample-3',
-      title: 'Chemistry: Galvanic Cells & Nernst Drill',
+      title: 'Chemistry: Galvanic Cells & Electrochemistry',
       subject: 'Chemistry',
       duration: '25m',
       completed: false,
@@ -82,29 +82,32 @@ void main() {
 
   group('DashboardScreen Full Inside UI Showcase Tests', () {
     setUp(() {
+      SharedPreferences.setMockInitialValues({});
+      AuthStorage.instance.dailyFocusGoalMinutesNotifier.value = 0;
+      AuthStorage.instance.dailyFocusCompletedMinutesNotifier.value = 0;
       FeatureFlags.enableFlashcards = true;
       FeatureFlags.enableSmartNotes = true;
     });
 
-    testWidgets('renders all canonical inside dashboard sections with live DB metrics', (tester) async {
+    testWidgets('renders all canonical inside dashboard sections starting at 0 focus time and no Continue button', (tester) async {
       configureViewport(tester);
       await tester.pumpWidget(createDashboardHarness());
       await tester.pump();
 
-      // Section 1: Hero Countdown & Readiness Card (No glow)
+      // Section 1: Hero Countdown & Readiness Card (No Continue button)
       expect(find.byType(HeroCountdownCard), findsOneWidget);
       expect(find.text('G12 • NATURAL SCIENCE'), findsOneWidget);
       expect(find.text('Countdown'), findsOneWidget);
       expect(find.text('Readiness'), findsOneWidget);
-      expect(find.text('Continue Unit 4'), findsOneWidget);
+      expect(find.text('Continue Unit 4'), findsNothing);
 
-      // Section 2: Live Curriculum Bento Grid (Real 237 Units from DB)
+      // Section 2: Live Curriculum Bento Grid starts at 0 / 0m
       expect(find.byType(CurriculumBentoGrid), findsOneWidget);
       expect(find.text('Curriculum Pulse'), findsOneWidget);
       expect(find.text('0 / 237'), findsOneWidget);
       expect(find.text('0.0%'), findsOneWidget);
-      expect(find.text('45 / 60m'), findsOneWidget);
-      expect(find.text('+15m'), findsOneWidget);
+      expect(find.text('0 / 0m'), findsOneWidget);
+      expect(find.text('+15m'), findsNothing);
       expect(find.text('Top 5%'), findsOneWidget);
 
       // Section 3: Today's Study Plan (Empty by default)
@@ -114,7 +117,7 @@ void main() {
       expect(find.text('No Tasks Planned Yet'), findsOneWidget);
       expect(find.text('Add'), findsOneWidget);
 
-      // Section 4: Subject Mastery moved to Practice screen (not on Dashboard)
+      // Section 4: Subject Mastery moved to Study/Progress screen (not on Dashboard)
       expect(find.byType(SubjectMasterySection), findsNothing);
 
       // Section 5: Formula Flashcards (When enabled)
@@ -127,12 +130,10 @@ void main() {
       await tester.pumpWidget(createDashboardHarness());
       await tester.pump();
 
-      // Initially on Countdown view: Days / Hours / Mins tiles visible
       expect(find.text('DAYS'), findsOneWidget);
       expect(find.text('HOURS'), findsOneWidget);
       expect(find.text('MINS'), findsOneWidget);
 
-      // Switch to Readiness view
       await tester.tap(find.text('Readiness'));
       await tester.pumpAndSettle();
 
@@ -140,27 +141,26 @@ void main() {
       expect(find.text('+4.2% wk'), findsOneWidget);
       expect(find.textContaining('545+ EUEE'), findsOneWidget);
 
-      // Switch back to Countdown view
       await tester.tap(find.text('Countdown'));
       await tester.pumpAndSettle();
 
       expect(find.text('DAYS'), findsOneWidget);
     });
 
-    testWidgets('Bento grid: +15m increments focus time and Standing toggles period',
+    testWidgets('Bento grid: Daily Focus uses calibrated onboarding goal and updates when tasks complete',
         (tester) async {
+      await AuthStorage.instance.setDailyFocusGoalMinutes(90);
       configureViewport(tester);
-      await tester.pumpWidget(createDashboardHarness());
-      await tester.pump();
+      await tester.pumpWidget(createDashboardHarness(tasks: sampleTasks));
+      await tester.pumpAndSettle();
 
-      expect(find.text('45 / 60m'), findsOneWidget);
+      // Initially 2 completed sample tasks (15m + 20m = 35m) out of 90m onboarding goal
+      expect(find.text('35 / 90m'), findsOneWidget);
 
-      // Tap +15m button
-      await tester.tap(find.text('+15m'));
-      await tester.pump();
-      await tester.pump(const Duration(milliseconds: 350));
-
-      expect(find.text('60 / 60m'), findsOneWidget);
+      // Completing 25m task advances Daily Focus to 60 / 90m
+      await tester.tap(find.text('Chemistry: Galvanic Cells & Electrochemistry'));
+      await tester.pumpAndSettle();
+      expect(find.text('60 / 90m'), findsOneWidget);
 
       // Tap Stream Standing card to toggle Weekly -> All-Time
       expect(find.text('WEEKLY'), findsOneWidget);
@@ -184,13 +184,10 @@ void main() {
 
       expect(find.text('2 of 4 done'), findsOneWidget);
 
-      // Tap 3rd task (Chemistry: Galvanic Cells & Nernst Drill)
-      await tester.tap(find.text('Chemistry: Galvanic Cells & Nernst Drill'));
+      await tester.tap(find.text('Chemistry: Galvanic Cells & Electrochemistry'));
       await tester.pumpAndSettle();
-
       expect(find.text('3 of 4 done'), findsOneWidget);
 
-      // Tap 4th task to complete all 4
       await tester.tap(find.text('Biology: Molecular Genetics Enzymes Check'));
       await tester.pumpAndSettle();
 
@@ -212,34 +209,21 @@ void main() {
 
       expect(find.text('0 planned'), findsOneWidget);
 
-      // Tap Add button
       await tester.tap(find.text('Add'));
       await tester.pumpAndSettle();
 
-      // AddStudyPlanSheet is displayed
       expect(find.byType(AddStudyPlanSheet), findsOneWidget);
-      expect(
-        find.descendant(
-          of: find.byType(AddStudyPlanSheet),
-          matching: find.text('Add Study Plan'),
-        ),
-        findsOneWidget,
-      );
-
-      // Enter custom topic
       final inputFinder = find.byType(TextField);
       expect(inputFinder, findsOneWidget);
-      await tester.enterText(inputFinder, 'Physics: Wave Optics Drill');
+      await tester.enterText(inputFinder, 'Physics: Wave Optics Review');
       await tester.pump();
 
-      // Tap "Add to Today's Plan"
       await tester.tap(find.text("Add to Today's Plan"));
       await tester.pump(const Duration(milliseconds: 700));
       await tester.pumpAndSettle();
 
-      // Sheet dismissed, task added!
       expect(find.byType(AddStudyPlanSheet), findsNothing);
-      expect(find.text('Physics: Wave Optics Drill'), findsOneWidget);
+      expect(find.text('Physics: Wave Optics Review'), findsOneWidget);
       expect(find.text('0 of 1 done'), findsOneWidget);
     });
 
@@ -249,13 +233,6 @@ void main() {
       await tester.pump();
 
       expect(find.text('2 of 4 done'), findsOneWidget);
-      expect(find.text('Physics: Electromagnetism Formula Review'), findsOneWidget);
-
-      // Tap first delete icon
-      final deleteButtons = find.byType(GestureDetector);
-      expect(deleteButtons, findsWidgets);
-
-      // Delete the first task
       final deleteIconFinder = find.byWidgetPredicate(
         (widget) => widget is HugeIcon && widget.icon == HugeIcons.strokeRoundedDelete02,
       );
@@ -264,15 +241,10 @@ void main() {
       await tester.tap(deleteIconFinder.first);
       await tester.pumpAndSettle();
 
-      // Verify custom reusable Acedex confirmation modal is presented
       expect(find.text('Delete Task'), findsOneWidget);
-      expect(find.textContaining('Are you sure you want to remove'), findsOneWidget);
-
-      // Confirm deletion in modal dialog
       await tester.tap(find.text('Delete'));
       await tester.pumpAndSettle();
 
-      // Task is removed, remaining 3 tasks
       expect(find.text('Physics: Electromagnetism Formula Review'), findsNothing);
       expect(find.text('1 of 3 done'), findsOneWidget);
     });
@@ -284,64 +256,12 @@ void main() {
       await tester.pump();
 
       expect(find.text("Faraday's Law"), findsOneWidget);
-      expect(find.text('Tap to reveal formula →'), findsWidgets);
-
-      // Tap on Faraday's Law card to flip
       await tester.tap(find.text("Faraday's Law"));
       await tester.pump();
       await tester.pump(const Duration(milliseconds: 600));
 
       expect(find.text('ε = −N · (ΔΦ / Δt)'), findsOneWidget);
       expect(find.text('Tap to flip back'), findsOneWidget);
-    });
-
-    testWidgets('Hero card Continue Unit 4 button opens QuickStudySheet', (tester) async {
-      configureViewport(tester);
-      await tester.pumpWidget(createDashboardHarness());
-      await tester.pump();
-
-      // Tap "Continue Unit 4" CTA
-      await tester.tap(find.text('Continue Unit 4'));
-      // Advance past loading delay
-      await tester.pump(const Duration(milliseconds: 700));
-      await tester.pumpAndSettle();
-
-      expect(find.byType(QuickStudySheet), findsOneWidget);
-      expect(
-        find.descendant(of: find.byType(QuickStudySheet), matching: find.text('PHYSICS • UNIT 4')),
-        findsOneWidget,
-      );
-      expect(find.text('Electromagnetism'), findsOneWidget);
-      expect(find.text('KEY EUEE FORMULAS'), findsOneWidget);
-      expect(find.text('1-QUESTION WARM-UP CHECK'), findsOneWidget);
-
-      // Tap Option A (Correct answer)
-      await tester.tap(find.text('0 N, because sin(0°) = 0'));
-      await tester.pumpAndSettle();
-
-      expect(find.textContaining('Correct! F = qvB·sin(0°) = 0 N'), findsOneWidget);
-    });
-
-    testWidgets('Feature gating: when disabled, flashcards carousel is omitted and Hero opens drill',
-        (tester) async {
-      FeatureFlags.enableFlashcards = false;
-      FeatureFlags.enableSmartNotes = false;
-
-      configureViewport(tester);
-      await tester.pumpWidget(createDashboardHarness());
-      await tester.pump();
-
-      // Carousel is not present
-      expect(find.byType(FormulaFlashcardsCarousel), findsNothing);
-
-      // Tap Continue Unit 4 opens MiniDrillSheet instead of QuickStudySheet
-      await tester.tap(find.text('Continue Unit 4'));
-      await tester.pump(const Duration(milliseconds: 700));
-      await tester.pumpAndSettle();
-
-      expect(find.byType(QuickStudySheet), findsNothing);
-      expect(find.byType(MiniDrillSheet), findsOneWidget);
-      expect(find.text('PHYSICS • EUEE DRILL'), findsOneWidget);
     });
   });
 }

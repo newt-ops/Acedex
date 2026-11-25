@@ -164,6 +164,8 @@ class TopicModuleItem {
   final List<int> completedSteps;
   final bool isCompleted;
   final int progressPercentage;
+  final int? coinsAwarded;
+  final int? newCoinBalance;
 
   const TopicModuleItem({
     required this.moduleId,
@@ -181,6 +183,8 @@ class TopicModuleItem {
     required this.completedSteps,
     required this.isCompleted,
     required this.progressPercentage,
+    this.coinsAwarded,
+    this.newCoinBalance,
   });
 
   factory TopicModuleItem.fromJson(Map<String, dynamic> json) {
@@ -210,6 +214,8 @@ class TopicModuleItem {
           .toList(),
       isCompleted: json['isCompleted'] as bool? ?? false,
       progressPercentage: (json['progressPercentage'] as num?)?.toInt() ?? 0,
+      coinsAwarded: (json['coinsAwarded'] as num?)?.toInt(),
+      newCoinBalance: (json['newCoinBalance'] as num?)?.toInt(),
     );
   }
 
@@ -236,6 +242,8 @@ class TopicModuleItem {
     List<int>? completedSteps,
     bool? isCompleted,
     int? progressPercentage,
+    int? coinsAwarded,
+    int? newCoinBalance,
   }) {
     return TopicModuleItem(
       moduleId: moduleId,
@@ -253,6 +261,8 @@ class TopicModuleItem {
       completedSteps: completedSteps ?? this.completedSteps,
       isCompleted: isCompleted ?? this.isCompleted,
       progressPercentage: progressPercentage ?? this.progressPercentage,
+      coinsAwarded: coinsAwarded ?? this.coinsAwarded,
+      newCoinBalance: newCoinBalance ?? this.newCoinBalance,
     );
   }
 }

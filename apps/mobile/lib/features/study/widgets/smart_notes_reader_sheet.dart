@@ -458,7 +458,7 @@ class _SmartNotesReaderSheetState extends State<SmartNotesReaderSheet> {
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: const [
                                   Text(
-                                    'Drill This Topic',
+                                    'Unit Assessment',
                                     style: TextStyle(
                                       fontSize: 12,
                                       fontWeight: FontWeight.w700,

@@ -306,5 +306,9 @@ void main() {
 
     expect(unlocked, isTrue);
     expect(EconomyService.instance.coinBalanceNotifier.value, 15);
+    expect(find.textContaining('-10 AC'), findsOneWidget);
+
+    await tester.pump(const Duration(seconds: 4));
+    await tester.pumpAndSettle();
   });
 }
