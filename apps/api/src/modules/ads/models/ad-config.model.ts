@@ -37,7 +37,7 @@ const AdConfigSchema = new Schema<IAdConfigDocument>(
     isAdsEnabled: { type: Boolean, default: true },
     androidGameId: { type: String, default: '6220248' },
     iosGameId: { type: String, default: '6220249' },
-    androidPlacement: { type: String, default: 'Rewarded_Android' },
+    androidPlacement: { type: String, default: 'Reward_Android_Acedex' },
     iosPlacement: { type: String, default: 'Rewarded_iOS' },
     policies: {
       streakRepair: {
@@ -55,7 +55,7 @@ const AdConfigSchema = new Schema<IAdConfigDocument>(
       },
       bonusCoins: {
         enabled: { type: Boolean, default: true },
-        coinsPerAd: { type: Number, default: 40 },
+        coinsPerAd: { type: Number, default: 10 },
         dailyLimit: { type: Number, default: 5 },
       },
     },

@@ -8,7 +8,9 @@ import '../../ui/ui.dart';
 import '../models/economy_models.dart';
 import '../services/economy_service.dart';
 
-/// Apple-style Ace Coins Wallet, Rewarded Ad Top-Up, and Perks Store Sheet.
+enum _LedgerFilter { all, earn, spend }
+
+/// Bank-statement style Ace Coins Wallet with Rewarded Ad top-ups and live transaction ledger.
 class AcedexWalletSheet extends StatefulWidget {
   final EconomyRepository? economyRepository;
   final AcedexAdsRepository? adsRepository;
@@ -47,8 +49,8 @@ class _AcedexWalletSheetState extends State<AcedexWalletSheet> {
   late final EconomyRepository _economyRepo;
   WalletOverview? _overview;
   bool _loading = true;
-  String? _buyingItemKey;
   String? _error;
+  _LedgerFilter _filter = _LedgerFilter.all;
 
   @override
   void initState() {
@@ -83,17 +85,18 @@ class _AcedexWalletSheetState extends State<AcedexWalletSheet> {
   }
 
   Future<void> _watchAdForCoins() async {
+    final coinsPerAd = _overview?.coinsPerAd ?? 10;
     final result = await AcedexRewardedAdSheet.show(
       context,
       rewardType: AcedexRewardType.bonusCoins,
       adsRepository: widget.adsRepository,
-      title: 'Earn +${_overview?.coinsPerAd ?? 40} Ace Coins',
-      subtitle: 'Watch 1 short rewarded ad to boost your study wallet.',
+      title: 'Earn +$coinsPerAd Ace Coins',
+      subtitle: 'Watch 1 short rewarded ad to add +$coinsPerAd AC to your wallet.',
     );
 
     if (!mounted || result == null) return;
 
-    final awarded = result.coinsAwarded ?? 40;
+    final awarded = result.coinsAwarded ?? coinsPerAd;
     EconomyService.instance.applyServerBalanceUpdate(
       coinsAwarded: awarded,
       newCoinBalance: result.newCoinBalance,
@@ -107,39 +110,48 @@ class _AcedexWalletSheetState extends State<AcedexWalletSheet> {
     await _loadWallet();
   }
 
-  Future<void> _buyItem(EconomyStoreItem item) async {
-    if (_buyingItemKey != null) return;
-    setState(() => _buyingItemKey = item.itemKey);
-
-    try {
-      final res = await _economyRepo.spendCoins(itemKey: item.itemKey);
-      if (!mounted) return;
-      EconomyService.instance.applyServerBalanceUpdate(
-        newCoinBalance: res.newBalance,
-      );
-      AcedexToast.show(
-        context,
-        message: res.message,
-        type: AcedexToastType.success,
-      );
-      await _loadWallet();
-    } on ApiException catch (e) {
-      if (!mounted) return;
-      AcedexToast.show(
-        context,
-        message: e.message,
-        type: AcedexToastType.error,
-      );
-    } catch (_) {
-      if (!mounted) return;
-      AcedexToast.show(
-        context,
-        message: 'Could not complete purchase right now.',
-        type: AcedexToastType.error,
-      );
-    } finally {
-      if (mounted) setState(() => _buyingItemKey = null);
+  String _txCategoryLabel(CoinTransactionItem tx) {
+    if (!tx.isEarn) {
+      if (tx.itemKey == 'unit_assessment') return 'Debit • Assessment';
+      return 'Debit • Purchase';
     }
+    switch (tx.type) {
+      case 'earn_welcome':
+        return 'Credit • Welcome';
+      case 'earn_ad':
+        return 'Credit • Ad Reward';
+      case 'earn_milestone':
+      default:
+        return 'Credit • Study';
+    }
+  }
+
+  String _formatTxTimestamp(String iso) {
+    final parsed = DateTime.tryParse(iso);
+    if (parsed == null) return 'Posted';
+    final local = parsed.toLocal();
+    final now = DateTime.now();
+    final isToday =
+        local.year == now.year && local.month == now.month && local.day == now.day;
+
+    const months = [
+      'Jan',
+      'Feb',
+      'Mar',
+      'Apr',
+      'May',
+      'Jun',
+      'Jul',
+      'Aug',
+      'Sep',
+      'Oct',
+      'Nov',
+      'Dec',
+    ];
+    final hh = local.hour.toString().padLeft(2, '0');
+    final mm = local.minute.toString().padLeft(2, '0');
+    final datePart = isToday ? 'Today' : '${months[local.month - 1]} ${local.day}';
+    return '$datePart, $hh:$mm';
   }
 
   @override
@@ -156,9 +168,17 @@ class _AcedexWalletSheetState extends State<AcedexWalletSheet> {
     const coinGold = Color(0xFFF59E0B);
 
     final wallet = _overview ?? const WalletOverview();
-    final purchasableItems = wallet.storeCatalog
-        .where((i) => i.itemKey != 'offline_pack') // offline_pack needs targetUnitId
-        .toList();
+    final canWatchCoinAd = wallet.dailyCoinAdsRemaining > 0;
+    final filteredTransactions = wallet.recentTransactions.where((tx) {
+      switch (_filter) {
+        case _LedgerFilter.earn:
+          return tx.isEarn;
+        case _LedgerFilter.spend:
+          return !tx.isEarn;
+        case _LedgerFilter.all:
+          return true;
+      }
+    }).toList();
 
     return Container(
       constraints: BoxConstraints(
@@ -201,7 +221,7 @@ class _AcedexWalletSheetState extends State<AcedexWalletSheet> {
                         ),
                         const SizedBox(height: 6),
                         Text(
-                          'Earn & Spend Coins',
+                          'Wallet Statement',
                           style: TextStyle(
                             fontSize: 19,
                             fontWeight: FontWeight.w800,
@@ -248,7 +268,7 @@ class _AcedexWalletSheetState extends State<AcedexWalletSheet> {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.stretch,
                         children: [
-                          // 1. Balance Hero Card
+                          // 1. Account Balance Hero Card
                           Container(
                             padding: const EdgeInsets.all(16),
                             decoration: BoxDecoration(
@@ -284,19 +304,36 @@ class _AcedexWalletSheetState extends State<AcedexWalletSheet> {
                                             CrossAxisAlignment.start,
                                         children: [
                                           Text(
+                                            'AVAILABLE BALANCE',
+                                            style: TextStyle(
+                                              fontSize: 10,
+                                              fontWeight: FontWeight.w800,
+                                              letterSpacing: 0.7,
+                                              color: subtext,
+                                            ),
+                                          ),
+                                          const SizedBox(height: 2),
+                                          Text(
                                             '${wallet.balance} AC',
                                             style: TextStyle(
-                                              fontSize: 26,
+                                              fontSize: 27,
                                               fontWeight: FontWeight.w800,
                                               letterSpacing: -0.6,
+                                              fontFeatures: const [
+                                                FontFeature.tabularFigures(),
+                                              ],
                                               color: theme.colorScheme.onSurface,
                                             ),
                                           ),
+                                          const SizedBox(height: 2),
                                           Text(
-                                            'Earned ${wallet.lifetimeEarned} AC • Spent ${wallet.lifetimeSpent} AC',
+                                            'In +${wallet.lifetimeEarned} AC • Out -${wallet.lifetimeSpent} AC',
                                             style: TextStyle(
                                               fontSize: 11.5,
                                               fontWeight: FontWeight.w600,
+                                              fontFeatures: const [
+                                                FontFeature.tabularFigures(),
+                                              ],
                                               color: subtext,
                                             ),
                                           ),
@@ -305,38 +342,24 @@ class _AcedexWalletSheetState extends State<AcedexWalletSheet> {
                                     ),
                                   ],
                                 ),
-                                const SizedBox(height: 12),
-                                Wrap(
-                                  spacing: 8,
-                                  runSpacing: 6,
-                                  children: [
-                                    AcedexBadge(
-                                      label:
-                                          'Unit Assessment: ${wallet.assessmentCost} AC',
-                                      variant: AcedexBadgeVariant.neutral,
-                                    ),
-                                    if (wallet.aiPlanPasses > 0)
-                                      AcedexBadge(
-                                        label:
-                                            'AI Passes: ${wallet.aiPlanPasses}',
-                                        variant: AcedexBadgeVariant.success,
-                                      ),
-                                  ],
-                                ),
-                                const SizedBox(height: 12),
+                                if (wallet.aiPlanPasses > 0) ...[
+                                  const SizedBox(height: 10),
+                                  AcedexBadge(
+                                    label: 'AI Passes: ${wallet.aiPlanPasses}',
+                                    variant: AcedexBadgeVariant.success,
+                                  ),
+                                ],
+                                const SizedBox(height: 14),
                                 AcedexButton(
-                                  label: wallet.dailyCoinAdsRemaining > 0
-                                      ? 'Watch 1 Ad (+${wallet.coinsPerAd} AC • ${wallet.dailyCoinAdsRemaining}/${wallet.dailyCoinAdsLimit} left)'
-                                      : 'Daily Coin Ads Used (${wallet.dailyCoinAdsLimit}/${wallet.dailyCoinAdsLimit})',
+                                  label: 'Watch 1 Ad (+${wallet.coinsPerAd} AC)',
                                   size: AcedexButtonSize.md,
                                   leadingIcon: HugeIcon(
                                     icon: HugeIcons.strokeRoundedPlayCircle,
-                                    color: onAccent,
+                                    color: canWatchCoinAd ? onAccent : subtext,
                                     size: 18,
                                   ),
-                                  onPressed: wallet.dailyCoinAdsRemaining > 0
-                                      ? _watchAdForCoins
-                                      : null,
+                                  onPressed:
+                                      canWatchCoinAd ? _watchAdForCoins : null,
                                 ),
                               ],
                             ),
@@ -352,190 +375,295 @@ class _AcedexWalletSheetState extends State<AcedexWalletSheet> {
 
                           const SizedBox(height: 18),
 
-                          // 2. How to Earn Study Guide
-                          Text(
-                            'HOW TO EARN ACE COINS',
-                            style: TextStyle(
-                              fontSize: 10.5,
-                              fontWeight: FontWeight.w800,
-                              letterSpacing: 0.7,
-                              color: accent,
-                            ),
-                          ),
-                          const SizedBox(height: 8),
-                          Container(
-                            padding: const EdgeInsets.all(13),
-                            decoration: BoxDecoration(
-                              color: surface,
-                              borderRadius: BorderRadius.circular(16),
-                              border: Border.all(color: line),
-                            ),
-                            child: Text(
-                              'Complete Units (+15 AC) • Pass Unit Exams (+25 AC, +10 AC 100%) • Master AI Modules (+30 AC) • Daily Streak (+10 AC)',
-                              style: TextStyle(
-                                fontSize: 12,
-                                fontWeight: FontWeight.w600,
-                                height: 1.45,
-                                color: theme.colorScheme.onSurface,
+                          // 2. Bank-Statement Transaction Logs Header + Filters
+                          Row(
+                            children: [
+                              HugeIcon(
+                                icon: HugeIcons.strokeRoundedExchange01,
+                                color: accent,
+                                size: 15,
                               ),
-                            ),
+                              const SizedBox(width: 6),
+                              Expanded(
+                                child: Text(
+                                  'TRANSACTION LOGS',
+                                  style: TextStyle(
+                                    fontSize: 10.5,
+                                    fontWeight: FontWeight.w800,
+                                    letterSpacing: 0.7,
+                                    color: accent,
+                                  ),
+                                ),
+                              ),
+                              _FilterChip(
+                                label: 'All',
+                                selected: _filter == _LedgerFilter.all,
+                                accent: accent,
+                                onAccent: onAccent,
+                                raised: raised,
+                                line: line,
+                                subtext: subtext,
+                                onTap: () =>
+                                    setState(() => _filter = _LedgerFilter.all),
+                              ),
+                              const SizedBox(width: 6),
+                              _FilterChip(
+                                label: 'Earn',
+                                selected: _filter == _LedgerFilter.earn,
+                                accent: accent,
+                                onAccent: onAccent,
+                                raised: raised,
+                                line: line,
+                                subtext: subtext,
+                                onTap: () =>
+                                    setState(() => _filter = _LedgerFilter.earn),
+                              ),
+                              const SizedBox(width: 6),
+                              _FilterChip(
+                                label: 'Spend',
+                                selected: _filter == _LedgerFilter.spend,
+                                accent: accent,
+                                onAccent: onAccent,
+                                raised: raised,
+                                line: line,
+                                subtext: subtext,
+                                onTap: () => setState(
+                                    () => _filter = _LedgerFilter.spend),
+                              ),
+                            ],
                           ),
+                          const SizedBox(height: 10),
 
-                          const SizedBox(height: 18),
-
-                          // 3. Store Catalog
-                          Text(
-                            'SPEND ACE COINS',
-                            style: TextStyle(
-                              fontSize: 10.5,
-                              fontWeight: FontWeight.w800,
-                              letterSpacing: 0.7,
-                              color: accent,
-                            ),
-                          ),
-                          const SizedBox(height: 8),
-                          ...purchasableItems.map((item) {
-                            final canAfford = wallet.balance >= item.cost;
-                            final isBusy = _buyingItemKey == item.itemKey;
-                            return Container(
-                              margin: const EdgeInsets.only(bottom: 8),
-                              padding: const EdgeInsets.all(13),
+                          if (filteredTransactions.isEmpty)
+                            Container(
+                              padding: const EdgeInsets.symmetric(
+                                horizontal: 16,
+                                vertical: 24,
+                              ),
                               decoration: BoxDecoration(
                                 color: surface,
-                                borderRadius: BorderRadius.circular(16),
+                                borderRadius: BorderRadius.circular(18),
                                 border: Border.all(color: line),
                               ),
-                              child: Row(
+                              child: Column(
                                 children: [
-                                  Expanded(
-                                    child: Column(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: [
-                                        Text(
-                                          item.title,
-                                          style: TextStyle(
-                                            fontSize: 13,
-                                            fontWeight: FontWeight.w800,
-                                            color: theme.colorScheme.onSurface,
-                                          ),
-                                        ),
-                                        const SizedBox(height: 2),
-                                        Text(
-                                          item.description,
-                                          style: TextStyle(
-                                            fontSize: 11.5,
-                                            color: subtext,
-                                          ),
-                                        ),
-                                      ],
+                                  HugeIcon(
+                                    icon: HugeIcons.strokeRoundedExchange01,
+                                    color: subtext,
+                                    size: 26,
+                                  ),
+                                  const SizedBox(height: 8),
+                                  Text(
+                                    _filter == _LedgerFilter.spend
+                                        ? 'No spend transactions yet'
+                                        : _filter == _LedgerFilter.earn
+                                            ? 'No earn transactions yet'
+                                            : 'No transactions yet',
+                                    style: TextStyle(
+                                      fontSize: 13,
+                                      fontWeight: FontWeight.w700,
+                                      color: theme.colorScheme.onSurface,
                                     ),
                                   ),
-                                  const SizedBox(width: 10),
-                                  if (item.owned)
-                                    const AcedexBadge(
-                                      label: 'Owned',
-                                      variant: AcedexBadgeVariant.success,
-                                    )
-                                  else
-                                    AcedexBounceable(
-                                      onTap: canAfford && !isBusy
-                                          ? () => _buyItem(item)
-                                          : null,
-                                      child: Container(
-                                        padding: const EdgeInsets.symmetric(
-                                          horizontal: 12,
-                                          vertical: 7,
-                                        ),
-                                        decoration: BoxDecoration(
-                                          color: canAfford ? accent : raised,
-                                          borderRadius:
-                                              BorderRadius.circular(999),
-                                          border: Border.all(
-                                            color: canAfford ? accent : line,
-                                          ),
-                                        ),
-                                        child: isBusy
-                                            ? AcedexDotsLoader(
-                                                color: onAccent,
-                                                dotSize: 3,
-                                                gap: 1.5,
-                                              )
-                                            : Text(
-                                                '${item.cost} AC',
-                                                style: TextStyle(
-                                                  fontSize: 11.5,
-                                                  fontWeight: FontWeight.w800,
-                                                  color: canAfford
-                                                      ? onAccent
-                                                      : subtext,
-                                                ),
-                                              ),
-                                      ),
+                                  const SizedBox(height: 3),
+                                  Text(
+                                    'All Ace Coins earned and spent appear in this statement.',
+                                    textAlign: TextAlign.center,
+                                    style: TextStyle(
+                                      fontSize: 11.5,
+                                      color: subtext,
                                     ),
+                                  ),
                                 ],
                               ),
-                            );
-                          }),
+                            )
+                          else
+                            Container(
+                              decoration: BoxDecoration(
+                                color: surface,
+                                borderRadius: BorderRadius.circular(18),
+                                border: Border.all(color: line),
+                              ),
+                              child: Column(
+                                children: List.generate(
+                                  filteredTransactions.length,
+                                  (index) {
+                                    final tx = filteredTransactions[index];
+                                    final isEarn = tx.isEarn;
+                                    final statusColor = isEarn
+                                        ? AppColors.success
+                                        : AppColors.error;
+                                    final txIcon = isEarn
+                                        ? HugeIcons.strokeRoundedArrowDownLeft01
+                                        : HugeIcons.strokeRoundedArrowUpRight01;
 
-                          if (wallet.recentTransactions.isNotEmpty) ...[
-                            const SizedBox(height: 16),
-                            Text(
-                              'RECENT ACTIVITY',
-                              style: TextStyle(
-                                fontSize: 10.5,
-                                fontWeight: FontWeight.w800,
-                                letterSpacing: 0.7,
-                                color: accent,
+                                    return Column(
+                                      mainAxisSize: MainAxisSize.min,
+                                      children: [
+                                        Padding(
+                                          padding: const EdgeInsets.symmetric(
+                                            horizontal: 14,
+                                            vertical: 12,
+                                          ),
+                                          child: Row(
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.center,
+                                            children: [
+                                              Container(
+                                                width: 38,
+                                                height: 38,
+                                                decoration: BoxDecoration(
+                                                  color: statusColor.withValues(
+                                                    alpha: 0.13,
+                                                  ),
+                                                  shape: BoxShape.circle,
+                                                ),
+                                                alignment: Alignment.center,
+                                                child: HugeIcon(
+                                                  icon: txIcon,
+                                                  color: statusColor,
+                                                  size: 18,
+                                                ),
+                                              ),
+                                              const SizedBox(width: 12),
+                                              Expanded(
+                                                child: Column(
+                                                  crossAxisAlignment:
+                                                      CrossAxisAlignment.start,
+                                                  children: [
+                                                    Text(
+                                                      tx.reason,
+                                                      maxLines: 2,
+                                                      overflow:
+                                                          TextOverflow.ellipsis,
+                                                      style: TextStyle(
+                                                        fontSize: 12.5,
+                                                        fontWeight:
+                                                            FontWeight.w700,
+                                                        color: theme.colorScheme
+                                                            .onSurface,
+                                                      ),
+                                                    ),
+                                                    const SizedBox(height: 3),
+                                                    Text(
+                                                      '${_txCategoryLabel(tx)} • ${_formatTxTimestamp(tx.createdAt)}',
+                                                      maxLines: 1,
+                                                      overflow:
+                                                          TextOverflow.ellipsis,
+                                                      style: TextStyle(
+                                                        fontSize: 10.5,
+                                                        fontWeight:
+                                                            FontWeight.w600,
+                                                        color: subtext,
+                                                      ),
+                                                    ),
+                                                  ],
+                                                ),
+                                              ),
+                                              const SizedBox(width: 10),
+                                              Column(
+                                                crossAxisAlignment:
+                                                    CrossAxisAlignment.end,
+                                                children: [
+                                                  Text(
+                                                    isEarn
+                                                        ? '+${tx.amount} AC'
+                                                        : '-${tx.amount.abs()} AC',
+                                                    style: TextStyle(
+                                                      fontSize: 13,
+                                                      fontWeight:
+                                                          FontWeight.w800,
+                                                      fontFeatures: const [
+                                                        FontFeature
+                                                            .tabularFigures(),
+                                                      ],
+                                                      color: statusColor,
+                                                    ),
+                                                  ),
+                                                  const SizedBox(height: 2),
+                                                  Text(
+                                                    'Bal: ${tx.balanceAfter} AC',
+                                                    style: TextStyle(
+                                                      fontSize: 10.5,
+                                                      fontWeight:
+                                                          FontWeight.w600,
+                                                      fontFeatures: const [
+                                                        FontFeature
+                                                            .tabularFigures(),
+                                                      ],
+                                                      color: subtext,
+                                                    ),
+                                                  ),
+                                                ],
+                                              ),
+                                            ],
+                                          ),
+                                        ),
+                                        if (index <
+                                            filteredTransactions.length - 1)
+                                          Divider(
+                                            height: 1,
+                                            thickness: 0.7,
+                                            indent: 64,
+                                            endIndent: 14,
+                                            color: line,
+                                          ),
+                                      ],
+                                    );
+                                  },
+                                ),
                               ),
                             ),
-                            const SizedBox(height: 8),
-                            ...wallet.recentTransactions.take(6).map((tx) {
-                              return Container(
-                                margin: const EdgeInsets.only(bottom: 6),
-                                padding: const EdgeInsets.symmetric(
-                                  horizontal: 12,
-                                  vertical: 10,
-                                ),
-                                decoration: BoxDecoration(
-                                  color: raised,
-                                  borderRadius: BorderRadius.circular(13),
-                                  border: Border.all(color: line),
-                                ),
-                                child: Row(
-                                  children: [
-                                    Expanded(
-                                      child: Text(
-                                        tx.reason,
-                                        style: TextStyle(
-                                          fontSize: 12,
-                                          fontWeight: FontWeight.w600,
-                                          color: theme.colorScheme.onSurface,
-                                        ),
-                                      ),
-                                    ),
-                                    Text(
-                                      tx.isEarn
-                                          ? '+${tx.amount} AC'
-                                          : '${tx.amount} AC',
-                                      style: TextStyle(
-                                        fontSize: 12,
-                                        fontWeight: FontWeight.w800,
-                                        color: tx.isEarn
-                                            ? AppColors.success
-                                            : AppColors.error,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              );
-                            }),
-                          ],
                         ],
                       ),
                     ),
             ),
           ],
+        ),
+      ),
+    );
+  }
+}
+
+class _FilterChip extends StatelessWidget {
+  final String label;
+  final bool selected;
+  final Color accent;
+  final Color onAccent;
+  final Color raised;
+  final Color line;
+  final Color subtext;
+  final VoidCallback onTap;
+
+  const _FilterChip({
+    required this.label,
+    required this.selected,
+    required this.accent,
+    required this.onAccent,
+    required this.raised,
+    required this.line,
+    required this.subtext,
+    required this.onTap,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return AcedexBounceable(
+      onTap: onTap,
+      child: Container(
+        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+        decoration: BoxDecoration(
+          color: selected ? accent : raised,
+          borderRadius: BorderRadius.circular(999),
+          border: Border.all(color: selected ? accent : line),
+        ),
+        child: Text(
+          label,
+          style: TextStyle(
+            fontSize: 11,
+            fontWeight: FontWeight.w700,
+            color: selected ? onAccent : subtext,
+          ),
         ),
       ),
     );

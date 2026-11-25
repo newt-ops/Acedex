@@ -606,7 +606,7 @@ class _StudyScreenState extends State<StudyScreen> {
       return;
     }
 
-    // Enforce 10 AC unit assessment entry fee (or Watch 1 Rewarded Ad for +40 AC)
+    // Enforce 10 AC unit assessment entry fee (or Watch 1 Rewarded Ad for +10 AC)
     final unlocked = await AcedexUnlockChoiceSheet.show(
       context,
       title: 'Start ${unit.code} Assessment',

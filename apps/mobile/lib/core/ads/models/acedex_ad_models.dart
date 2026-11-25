@@ -36,7 +36,7 @@ extension AcedexRewardTypeX on AcedexRewardType {
       case AcedexRewardType.aiStudyPlan:
         return 'Unlock Gemini AI Plan';
       case AcedexRewardType.bonusCoins:
-        return 'Earn +40 Ace Coins';
+        return 'Earn +10 Ace Coins';
     }
   }
 
@@ -51,7 +51,7 @@ extension AcedexRewardTypeX on AcedexRewardType {
       case AcedexRewardType.aiStudyPlan:
         return 'Watch 1 short rewarded ad to generate your personalized Gemini topic roadmap.';
       case AcedexRewardType.bonusCoins:
-        return 'Watch 1 short rewarded ad to add +40 Ace Coins to your study wallet.';
+        return 'Watch 1 short rewarded ad to add +10 Ace Coins to your study wallet.';
     }
   }
 
@@ -91,7 +91,7 @@ class AcedexAdConfig {
     this.enabled = true,
     this.androidGameId = '6220248',
     this.iosGameId = '6220249',
-    this.androidPlacement = 'Rewarded_Android',
+    this.androidPlacement = 'Reward_Android_Acedex',
     this.iosPlacement = 'Rewarded_iOS',
     this.streakRepairEnabled = true,
     this.streakCooldownHours = 24,
@@ -112,7 +112,8 @@ class AcedexAdConfig {
       enabled: json['enabled'] as bool? ?? true,
       androidGameId: unity['androidGameId'] as String? ?? '6220248',
       iosGameId: unity['iosGameId'] as String? ?? '6220249',
-      androidPlacement: unity['androidPlacement'] as String? ?? 'Rewarded_Android',
+      androidPlacement:
+          unity['androidPlacement'] as String? ?? 'Reward_Android_Acedex',
       iosPlacement: unity['iosPlacement'] as String? ?? 'Rewarded_iOS',
       streakRepairEnabled: streak['enabled'] as bool? ?? true,
       streakCooldownHours: (streak['cooldownHours'] as num?)?.toInt() ?? 24,
@@ -148,7 +149,7 @@ class AcedexAdSession {
       adSessionId: json['adSessionId'] as String? ?? '',
       rewardType: AcedexRewardTypeX.fromApi(json['rewardType'] as String?),
       gameId: json['gameId'] as String? ?? '6220248',
-      placementId: json['placementId'] as String? ?? 'Rewarded_Android',
+      placementId: json['placementId'] as String? ?? 'Reward_Android_Acedex',
       startedAtLocal: DateTime.now(),
       expiresAt: json['expiresAt'] as String? ?? '',
     );

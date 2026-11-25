@@ -10,30 +10,23 @@ import 'package:acedex/core/ui/ui.dart';
 
 class _FakeEconomyRepo implements EconomyRepository {
   WalletOverview overview = const WalletOverview(
-    balance: 25,
+    balance: 15,
     lifetimeEarned: 25,
-    lifetimeSpent: 0,
-    dailyCoinAdsRemaining: 5,
+    lifetimeSpent: 10,
+    dailyCoinAdsRemaining: 1,
     dailyCoinAdsLimit: 5,
-    coinsPerAd: 40,
+    coinsPerAd: 10,
     assessmentCost: 10,
-    storeCatalog: [
-      EconomyStoreItem(
-        itemKey: 'unit_assessment',
-        title: 'Unit 15-Q Assessment Entry',
-        description: 'Unlock 1 unit exam attempt.',
-        cost: 10,
-        category: 'access',
-      ),
-      EconomyStoreItem(
-        itemKey: 'ai_plan_pass',
-        title: 'AI Study Program Pass',
-        description: 'Recalibrate without waiting for an ad.',
-        cost: 100,
-        category: 'boost',
-      ),
-    ],
     recentTransactions: [
+      CoinTransactionItem(
+        id: 'tx2',
+        type: 'spend',
+        amount: -10,
+        balanceAfter: 15,
+        reason: 'Unit Assessment Entry (PHY-G09-U01)',
+        itemKey: 'unit_assessment',
+        createdAt: '2026-11-25T05:10:00.000Z',
+      ),
       CoinTransactionItem(
         id: 'tx1',
         type: 'earn_welcome',
@@ -59,8 +52,19 @@ class _FakeEconomyRepo implements EconomyRepository {
       lifetimeEarned: overview.lifetimeEarned,
       lifetimeSpent: overview.lifetimeSpent + 10,
       dailyCoinAdsRemaining: overview.dailyCoinAdsRemaining,
-      storeCatalog: overview.storeCatalog,
-      recentTransactions: overview.recentTransactions,
+      coinsPerAd: overview.coinsPerAd,
+      recentTransactions: [
+        CoinTransactionItem(
+          id: 'tx_spend_${DateTime.now().millisecondsSinceEpoch}',
+          type: 'spend',
+          amount: -10,
+          balanceAfter: nextBal,
+          reason: 'Unit Assessment Entry (${targetUnitId ?? 'UNIT'})',
+          itemKey: itemKey,
+          createdAt: DateTime.now().toUtc().toIso8601String(),
+        ),
+        ...overview.recentTransactions,
+      ],
     );
     return SpendCoinsResult(
       itemKey: itemKey,
@@ -96,7 +100,7 @@ class _FakeBonusCoinsAdsRepo implements AcedexAdsRepository {
       adSessionId: 'adsess_coins_01',
       rewardType: rewardType,
       gameId: '6220248',
-      placementId: 'Rewarded_Android',
+      placementId: 'Reward_Android_Acedex',
       startedAtLocal: DateTime.now(),
     );
   }
@@ -109,21 +113,32 @@ class _FakeBonusCoinsAdsRepo implements AcedexAdsRepository {
     required String adSessionId,
     required AcedexRewardType rewardType,
   }) async {
-    final newBal = economyRepo.overview.balance + 40;
+    final newBal = economyRepo.overview.balance + 10;
+    final remaining = (economyRepo.overview.dailyCoinAdsRemaining - 1).clamp(0, 5);
     economyRepo.overview = WalletOverview(
       balance: newBal,
-      lifetimeEarned: economyRepo.overview.lifetimeEarned + 40,
+      lifetimeEarned: economyRepo.overview.lifetimeEarned + 10,
       lifetimeSpent: economyRepo.overview.lifetimeSpent,
-      dailyCoinAdsRemaining: economyRepo.overview.dailyCoinAdsRemaining - 1,
-      storeCatalog: economyRepo.overview.storeCatalog,
-      recentTransactions: economyRepo.overview.recentTransactions,
+      dailyCoinAdsRemaining: remaining,
+      coinsPerAd: 10,
+      recentTransactions: [
+        CoinTransactionItem(
+          id: 'tx_ad_1',
+          type: 'earn_ad',
+          amount: 10,
+          balanceAfter: newBal,
+          reason: 'Watched Rewarded Ad (+10 AC)',
+          createdAt: DateTime.now().toUtc().toIso8601String(),
+        ),
+        ...economyRepo.overview.recentTransactions,
+      ],
     );
     return AcedexClaimRewardResult(
       rewardType: rewardType,
       adSessionId: adSessionId,
-      coinsAwarded: 40,
+      coinsAwarded: 10,
       newCoinBalance: newBal,
-      dailyCoinAdsRemaining: economyRepo.overview.dailyCoinAdsRemaining,
+      dailyCoinAdsRemaining: remaining,
     );
   }
 }
@@ -165,7 +180,8 @@ void main() {
     expect(find.text('65'), findsOneWidget);
   });
 
-  testWidgets('AcedexWalletSheet watches Rewarded Ad (+40 AC) and spends 10 AC cleanly',
+  testWidgets(
+      'AcedexWalletSheet shows bank-style earn & spend ledger, awards +10 AC per ad, and disables at daily limit',
       (tester) async {
     final fakeEconomy = _FakeEconomyRepo();
     final fakeAds = _FakeBonusCoinsAdsRepo(fakeEconomy);
@@ -197,24 +213,47 @@ void main() {
     await tester.tap(find.text('Open Wallet'));
     await tester.pumpAndSettle();
 
-    expect(find.text('25 AC'), findsOneWidget);
-    expect(find.text('Watch 1 Ad (+40 AC • 5/5 left)'), findsOneWidget);
+    // Balance & clean statement structure (removed sections & labels stay absent)
+    expect(find.text('15 AC'), findsOneWidget);
+    expect(find.text('HOW TO EARN ACE COINS'), findsNothing);
+    expect(find.text('SPEND ACE COINS'), findsNothing);
+    expect(find.textContaining('Unit Assessment:'), findsNothing);
+    expect(find.textContaining('left'), findsNothing);
 
-    // Watch Rewarded Ad -> +40 AC (25 -> 65 AC)
-    await tester.tap(find.text('Watch 1 Ad (+40 AC • 5/5 left)'));
+    // Bank-style statement shows BOTH earn & spend rows with running balances
+    expect(find.text('TRANSACTION LOGS'), findsOneWidget);
+    expect(find.text('Unit Assessment Entry (PHY-G09-U01)'), findsOneWidget);
+    expect(find.text('-10 AC'), findsOneWidget);
+    expect(find.text('Bal: 15 AC'), findsOneWidget);
+    expect(find.text('Welcome Bonus — First Study Steps'), findsOneWidget);
+    expect(find.text('+25 AC'), findsOneWidget);
+    expect(find.text('Bal: 25 AC'), findsOneWidget);
+
+    // Filter tabs toggle between Spend, Earn, and All cleanly
+    await tester.tap(find.text('Spend'));
+    await tester.pumpAndSettle();
+    expect(find.text('Unit Assessment Entry (PHY-G09-U01)'), findsOneWidget);
+    expect(find.text('Welcome Bonus — First Study Steps'), findsNothing);
+
+    await tester.tap(find.text('All'));
+    await tester.pumpAndSettle();
+
+    // Watch final daily Rewarded Ad -> +10 AC (15 -> 25 AC), button becomes disabled
+    expect(find.text('Watch 1 Ad (+10 AC)'), findsOneWidget);
+    await tester.tap(find.text('Watch 1 Ad (+10 AC)'));
     await tester.pump();
     await tester.pump(const Duration(seconds: 2));
     await tester.pumpAndSettle();
 
-    expect(find.text('65 AC'), findsOneWidget);
-    expect(EconomyService.instance.coinBalanceNotifier.value, 65);
+    expect(find.text('25 AC'), findsOneWidget);
+    expect(EconomyService.instance.coinBalanceNotifier.value, 25);
+    expect(find.text('Watched Rewarded Ad (+10 AC)'), findsOneWidget);
+    expect(find.text('+10 AC'), findsOneWidget);
 
-    // Spend 10 AC on Unit 15-Q Assessment Entry (65 -> 55 AC)
-    await tester.tap(find.text('10 AC'));
-    await tester.pumpAndSettle();
-
-    expect(find.text('55 AC'), findsOneWidget);
-    expect(EconomyService.instance.coinBalanceNotifier.value, 55);
+    // Daily limit reached (remaining = 0): button still has no "left" text and is disabled
+    expect(find.text('Watch 1 Ad (+10 AC)'), findsOneWidget);
+    final adButton = tester.widget<AcedexButton>(find.byType(AcedexButton));
+    expect(adButton.onPressed, isNull);
 
     // Let AcedexToast auto-dismiss timer complete cleanly before test teardown
     await tester.pump(const Duration(seconds: 4));
@@ -247,6 +286,15 @@ void main() {
           ),
         ),
       ),
+    );
+
+    fakeEconomy.overview = WalletOverview(
+      balance: 25,
+      lifetimeEarned: 25,
+      lifetimeSpent: 0,
+      coinsPerAd: 10,
+      assessmentCost: 10,
+      recentTransactions: fakeEconomy.overview.recentTransactions,
     );
 
     await tester.tap(find.text('Unlock'));

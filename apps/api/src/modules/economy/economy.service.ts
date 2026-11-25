@@ -30,7 +30,7 @@ export const ACE_COINS_CONFIG = {
   MODULE_COMPLETE_REWARD: 30,
   DAILY_STREAK_REWARD: 10,
   SEVEN_DAY_STREAK_BONUS: 50,
-  DEFAULT_COINS_PER_AD: 40,
+  DEFAULT_COINS_PER_AD: 10,
   DEFAULT_DAILY_COIN_ADS_LIMIT: 5,
   UNIT_ASSESSMENT_COST: 10,
 } as const;
@@ -234,6 +234,17 @@ export class EconomyService {
   }> {
     const config = await AdConfigModel.findOne({ singletonId: 'global_ad_config' }).lean();
     const policy = config?.policies?.bonusCoins;
+    if (policy?.coinsPerAd === 40) {
+      await AdConfigModel.updateOne(
+        { singletonId: 'global_ad_config', 'policies.bonusCoins.coinsPerAd': 40 },
+        { $set: { 'policies.bonusCoins.coinsPerAd': ACE_COINS_CONFIG.DEFAULT_COINS_PER_AD } }
+      );
+      return {
+        enabled: policy.enabled ?? true,
+        coinsPerAd: ACE_COINS_CONFIG.DEFAULT_COINS_PER_AD,
+        dailyLimit: policy.dailyLimit ?? ACE_COINS_CONFIG.DEFAULT_DAILY_COIN_ADS_LIMIT,
+      };
+    }
     return {
       enabled: policy?.enabled ?? true,
       coinsPerAd: policy?.coinsPerAd ?? ACE_COINS_CONFIG.DEFAULT_COINS_PER_AD,
@@ -394,7 +405,7 @@ export class EconomyService {
       type: 'earn_ad',
       amount: policy.coinsPerAd,
       balanceAfter: updated.wallet.balance,
-      reason: 'Watched Rewarded Ad (+40 AC)',
+      reason: `Watched Rewarded Ad (+${policy.coinsPerAd} AC)`,
     });
 
     const remaining = Math.max(0, policy.dailyLimit - updated.wallet.dailyCoinAdsCount);
@@ -445,7 +456,7 @@ export class EconomyService {
     if (!charged) {
       const currentBal = progress.wallet?.balance ?? 0;
       throw new ForbiddenError(
-        `Unit assessment costs ${cost} Ace Coins (current balance: ${currentBal} AC). Watch 1 rewarded ad (+40 AC) or master units (+15 AC) to continue.`,
+        `Unit assessment costs ${cost} Ace Coins (current balance: ${currentBal} AC). Watch 1 rewarded ad (+${ACE_COINS_CONFIG.DEFAULT_COINS_PER_AD} AC) or master units (+15 AC) to continue.`,
         'INSUFFICIENT_COINS',
         { requiredCoins: cost, currentBalance: currentBal }
       );
@@ -508,7 +519,7 @@ export class EconomyService {
       userId: new Types.ObjectId(userId),
     })
       .sort({ createdAt: -1 })
-      .limit(20)
+      .limit(30)
       .lean();
 
     return {

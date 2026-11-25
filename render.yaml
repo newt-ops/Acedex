@@ -29,18 +29,18 @@ services:
         value: 15m
       - key: JWT_REFRESH_EXPIRES_IN
         value: 7d
-      - key: GOOGLE_CLIENT_ID
-        sync: false
-      - key: GOOGLE_CLIENT_SECRET
-        sync: false
-      - key: GOOGLE_ANDROID_CLIENT_ID
-        sync: false
+      - key: ADMIN_EMAILS
+        value: "aymenmubarek10@gmail.com"
+      - key: COLLECTOR_DB_NAME
+        value: acedex_collector
+      - key: NOTES_DB_NAME
+        value: acedex_notes
       - key: UNITY_ADS_ANDROID_GAME_ID
         value: "6220248"
       - key: UNITY_ADS_IOS_GAME_ID
         value: "6220249"
       - key: UNITY_ADS_ANDROID_PLACEMENT
-        value: "Rewarded_Android"
+        value: "Reward_Android_Acedex"
       - key: UNITY_ADS_IOS_PLACEMENT
         value: "Rewarded_iOS"
       - key: UNITY_ADS_SECRET_KEY
@@ -49,3 +49,7 @@ services:
         value: "false"
       - key: REQUIRE_EXAM_TICKET
         value: "false"
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: GEMINI_MODEL
+        value: "gemini-2.5-flash"

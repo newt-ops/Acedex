@@ -35,9 +35,26 @@ export class AdsService {
           streakRepair: { enabled: true, cooldownHours: 24 },
           examAccess: { enabled: true, ticketsPerAd: 1, starterTickets: 1 },
           offlinePack: { enabled: true, durationHours: 24 },
-          bonusCoins: { enabled: true, coinsPerAd: 40, dailyLimit: 5 },
+          bonusCoins: { enabled: true, coinsPerAd: 10, dailyLimit: 5 },
         },
       });
+    } else {
+      let needsSave = false;
+      if (
+        config.androidPlacement === 'Rewarded_Android' &&
+        env.UNITY_ADS_ANDROID_PLACEMENT !== 'Rewarded_Android'
+      ) {
+        config.androidPlacement = env.UNITY_ADS_ANDROID_PLACEMENT;
+        needsSave = true;
+      }
+      if (config.policies?.bonusCoins?.coinsPerAd === 40) {
+        config.policies.bonusCoins.coinsPerAd = 10;
+        config.markModified('policies');
+        needsSave = true;
+      }
+      if (needsSave) {
+        await config.save();
+      }
     }
 
     return {
@@ -64,7 +81,7 @@ export class AdsService {
         },
         bonusCoins: {
           enabled: config.policies.bonusCoins?.enabled ?? true,
-          coinsPerAd: config.policies.bonusCoins?.coinsPerAd ?? 40,
+          coinsPerAd: config.policies.bonusCoins?.coinsPerAd ?? 10,
           dailyLimit: config.policies.bonusCoins?.dailyLimit ?? 5,
         },
       },

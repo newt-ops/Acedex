@@ -46,7 +46,7 @@ class _FakeAdsRepo implements AcedexAdsRepository {
       adSessionId: 'adsess_test_unlocked',
       rewardType: rewardType,
       gameId: '6220248',
-      placementId: 'Rewarded_Android',
+      placementId: 'Reward_Android_Acedex',
       startedAtLocal: DateTime.now(),
     );
   }

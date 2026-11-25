@@ -152,7 +152,7 @@ describe('Ace Coins Economy, Milestones, Ad Top-Ups & Assessment Fee', { timeout
     expect(modRes.body.data.newCoinBalance).toBe(105); // 75 + 30
   });
 
-  it('5. Rewarded Ad (bonus_coins) grants +40 AC up to daily limit (5/day)', async () => {
+  it('5. Rewarded Ad (bonus_coins) grants +10 AC up to daily limit (5/day)', async () => {
     for (let i = 0; i < 5; i++) {
       const startRes = await request(app)
         .post('/api/v1/ads/session/start')
@@ -168,15 +168,16 @@ describe('Ace Coins Economy, Milestones, Ad Top-Ups & Assessment Fee', { timeout
           rewardType: 'bonus_coins',
         });
       expect(claimRes.status).toBe(200);
-      expect(claimRes.body.data.coinsAwarded).toBe(40);
+      expect(claimRes.body.data.coinsAwarded).toBe(10);
       expect(claimRes.body.data.dailyCoinAdsRemaining).toBe(4 - i);
     }
 
-    // Balance should now be 105 + 5*40 = 305 AC
+    // Balance should now be 105 + 5*10 = 155 AC
     const walletRes = await request(app)
       .get('/api/v1/economy/wallet')
       .set('Authorization', `Bearer ${studentToken}`);
-    expect(walletRes.body.data.balance).toBe(305);
+    expect(walletRes.body.data.balance).toBe(155);
+    expect(walletRes.body.data.coinsPerAd).toBe(10);
     expect(walletRes.body.data.dailyCoinAdsRemaining).toBe(0);
 
     // 6th ad attempt on same day blocked
@@ -189,13 +190,13 @@ describe('Ace Coins Economy, Milestones, Ad Top-Ups & Assessment Fee', { timeout
   });
 
   it('6. Spending 100 AC unlocks AI Study Plan Pass & 120 AC unlocks Gold Scholar Badge', async () => {
-    // Buy AI Plan Pass (100 AC -> 205 AC left)
+    // Buy AI Plan Pass (100 AC -> 55 AC left)
     const passRes = await request(app)
       .post('/api/v1/economy/spend')
       .set('Authorization', `Bearer ${studentToken}`)
       .send({ itemKey: 'ai_plan_pass' });
     expect(passRes.status).toBe(200);
-    expect(passRes.body.data.newBalance).toBe(205);
+    expect(passRes.body.data.newBalance).toBe(55);
     expect(passRes.body.data.aiPlanPasses).toBe(1);
 
     // Generate AI Study Program using coin pass without adSessionId
@@ -214,13 +215,23 @@ describe('Ace Coins Economy, Milestones, Ad Top-Ups & Assessment Fee', { timeout
     expect(planRes.status).toBe(200);
     expect(planRes.body.data.hasProgram).toBe(true);
 
-    // Buy Gold Scholar Badge (120 AC -> 85 AC left)
+    // Earn +90 AC from 3 more topic modules (BIO-M01, CHE-M01, PHY-M01 -> 55 + 90 = 145 AC)
+    for (const moduleId of ['BIO-M01', 'CHE-M01', 'PHY-M01']) {
+      const mRes = await request(app)
+        .post(`/api/v1/topics/modules/${moduleId}/progress`)
+        .set('Authorization', `Bearer ${studentToken}`)
+        .send({ isCompleted: true });
+      expect(mRes.status).toBe(200);
+      expect(mRes.body.data.coinsAwarded).toBe(30);
+    }
+
+    // Buy Gold Scholar Badge (120 AC -> 25 AC left)
     const badgeRes = await request(app)
       .post('/api/v1/economy/spend')
       .set('Authorization', `Bearer ${studentToken}`)
       .send({ itemKey: 'badge_euee_gold' });
     expect(badgeRes.status).toBe(200);
-    expect(badgeRes.body.data.newBalance).toBe(85);
+    expect(badgeRes.body.data.newBalance).toBe(25);
     expect(badgeRes.body.data.unlockedBadge).toBe('badge_euee_gold');
 
     // Insufficient balance check for 180 AC STEM Master badge

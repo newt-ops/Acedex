@@ -6,7 +6,7 @@ import '../../theme/app_colors.dart';
 import '../../ui/ui.dart';
 import '../services/economy_service.dart';
 
-/// Shared dual-option unlock prompt: spend earned Ace Coins OR watch 1 Rewarded Ad (+40 AC).
+/// Shared dual-option unlock prompt: spend earned Ace Coins OR watch 1 Rewarded Ad (+10 AC).
 class AcedexUnlockChoiceSheet extends StatefulWidget {
   final String title;
   final String subtitle;
@@ -118,10 +118,10 @@ class _AcedexUnlockChoiceSheetState extends State<AcedexUnlockChoiceSheet> {
 
     if (widget.adRewardType == AcedexRewardType.bonusCoins) {
       EconomyService.instance.applyServerBalanceUpdate(
-        coinsAwarded: claim.coinsAwarded ?? 40,
+        coinsAwarded: claim.coinsAwarded ?? 10,
         newCoinBalance: claim.newCoinBalance,
       );
-      // Automatically spend the coin cost now that the user earned +40 AC from the ad!
+      // Automatically spend the coin cost now that the user earned +10 AC from the ad!
       await _handleSpendCoins();
       return;
     }
@@ -247,7 +247,7 @@ class _AcedexUnlockChoiceSheetState extends State<AcedexUnlockChoiceSheet> {
                 const SizedBox(height: 10),
                 AcedexButton(
                   label: widget.adRewardType == AcedexRewardType.bonusCoins
-                      ? 'Watch 1 Ad (+40 AC & Unlock)'
+                      ? 'Watch 1 Ad (+10 AC & Unlock)'
                       : 'Or Watch 1 Rewarded Ad',
                   variant: AcedexButtonVariant.soft,
                   size: AcedexButtonSize.lg,

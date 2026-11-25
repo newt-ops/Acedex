@@ -93,7 +93,7 @@ describe('Unity Ads Rewarded Engine & Monetization APIs', () => {
     const unity = res.body.data.unityAds;
     expect(unity.androidGameId).toBe('6220248');
     expect(unity.iosGameId).toBe('6220249');
-    expect(unity.androidPlacement).toBe('Rewarded_Android');
+    expect(unity.androidPlacement).toBe('Reward_Android_Acedex');
     expect(unity.iosPlacement).toBe('Rewarded_iOS');
 
     const policies = res.body.data.policies;
@@ -130,7 +130,7 @@ describe('Unity Ads Rewarded Engine & Monetization APIs', () => {
     expect(res.body.data.adSessionId).toMatch(/^adsess_/);
     expect(res.body.data.rewardType).toBe('exam_access');
     expect(res.body.data.gameId).toBe('6220248');
-    expect(res.body.data.placementId).toBe('Rewarded_Android');
+    expect(res.body.data.placementId).toBe('Reward_Android_Acedex');
     expect(res.body.data.expiresAt).toBeDefined();
   });
 

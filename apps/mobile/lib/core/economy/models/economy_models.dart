@@ -102,7 +102,7 @@ class WalletOverview {
     this.lifetimeSpent = 0,
     this.dailyCoinAdsRemaining = 5,
     this.dailyCoinAdsLimit = 5,
-    this.coinsPerAd = 40,
+    this.coinsPerAd = 10,
     this.assessmentCost = 10,
     this.aiPlanPasses = 0,
     this.assessmentPasses = 0,
@@ -121,7 +121,7 @@ class WalletOverview {
       dailyCoinAdsRemaining:
           (json['dailyCoinAdsRemaining'] as num?)?.toInt() ?? 5,
       dailyCoinAdsLimit: (json['dailyCoinAdsLimit'] as num?)?.toInt() ?? 5,
-      coinsPerAd: (json['coinsPerAd'] as num?)?.toInt() ?? 40,
+      coinsPerAd: (json['coinsPerAd'] as num?)?.toInt() ?? 10,
       assessmentCost: (json['assessmentCost'] as num?)?.toInt() ?? 10,
       aiPlanPasses: (json['aiPlanPasses'] as num?)?.toInt() ?? 0,
       assessmentPasses: (json['assessmentPasses'] as num?)?.toInt() ?? 0,

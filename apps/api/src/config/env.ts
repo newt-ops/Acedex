@@ -24,7 +24,7 @@ const envSchema = z.object({
   ADMIN_EMAILS: z.string().optional().default('aymenmubarek10@gmail.com'),
   UNITY_ADS_ANDROID_GAME_ID: z.string().default('6220248'),
   UNITY_ADS_IOS_GAME_ID: z.string().default('6220249'),
-  UNITY_ADS_ANDROID_PLACEMENT: z.string().default('Rewarded_Android'),
+  UNITY_ADS_ANDROID_PLACEMENT: z.string().default('Reward_Android_Acedex'),
   UNITY_ADS_IOS_PLACEMENT: z.string().default('Rewarded_iOS'),
   UNITY_ADS_SECRET_KEY: z.string().optional(),
   UNITY_ADS_S2S_REQUIRED: z.preprocess((val) => val === 'true' || val === true, z.boolean()).default(false),
