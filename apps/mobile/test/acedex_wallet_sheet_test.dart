@@ -16,7 +16,7 @@ class _FakeEconomyRepo implements EconomyRepository {
     dailyCoinAdsRemaining: 1,
     dailyCoinAdsLimit: 5,
     coinsPerAd: 10,
-    assessmentCost: 10,
+    assessmentCost: 15,
     recentTransactions: [
       CoinTransactionItem(
         id: 'tx2',
@@ -46,18 +46,20 @@ class _FakeEconomyRepo implements EconomyRepository {
     required String itemKey,
     String? targetUnitId,
   }) async {
-    final nextBal = (overview.balance - 10).clamp(0, 9999);
+    final cost = itemKey == 'unit_assessment' ? 15 : 10;
+    final nextBal = (overview.balance - cost).clamp(0, 9999);
     overview = WalletOverview(
       balance: nextBal,
       lifetimeEarned: overview.lifetimeEarned,
-      lifetimeSpent: overview.lifetimeSpent + 10,
+      lifetimeSpent: overview.lifetimeSpent + cost,
       dailyCoinAdsRemaining: overview.dailyCoinAdsRemaining,
       coinsPerAd: overview.coinsPerAd,
+      assessmentCost: 15,
       recentTransactions: [
         CoinTransactionItem(
           id: 'tx_spend_${DateTime.now().millisecondsSinceEpoch}',
           type: 'spend',
-          amount: -10,
+          amount: -cost,
           balanceAfter: nextBal,
           reason: 'Unit Assessment Entry (${targetUnitId ?? 'UNIT'})',
           itemKey: itemKey,
@@ -68,9 +70,9 @@ class _FakeEconomyRepo implements EconomyRepository {
     );
     return SpendCoinsResult(
       itemKey: itemKey,
-      coinsSpent: 10,
+      coinsSpent: cost,
       newBalance: nextBal,
-      message: 'Unit assessment entry unlocked (-10 AC).',
+      message: 'Unit assessment entry unlocked (-$cost AC).',
       assessmentPasses: 1,
     );
   }
@@ -268,7 +270,7 @@ void main() {
     await tester.pumpAndSettle();
   });
 
-  testWidgets('AcedexUnlockChoiceSheet allows unlocking assessment for 10 AC',
+  testWidgets('AcedexUnlockChoiceSheet allows unlocking assessment for 15 AC',
       (tester) async {
     final fakeEconomy = _FakeEconomyRepo();
     bool? unlocked;
@@ -283,9 +285,9 @@ void main() {
                 unlocked = await AcedexUnlockChoiceSheet.show(
                   context,
                   title: 'Start U1 Assessment',
-                  subtitle: 'Spend 10 AC or watch 1 ad.',
+                  subtitle: 'Spend 15 AC or watch 1 ad.',
                   itemKey: 'unit_assessment',
-                  coinCost: 10,
+                  coinCost: 15,
                   economyRepository: fakeEconomy,
                 );
               },
@@ -301,7 +303,7 @@ void main() {
       lifetimeEarned: 25,
       lifetimeSpent: 0,
       coinsPerAd: 10,
-      assessmentCost: 10,
+      assessmentCost: 15,
       recentTransactions: fakeEconomy.overview.recentTransactions,
     );
 
@@ -309,12 +311,12 @@ void main() {
     await tester.pumpAndSettle();
 
     expect(find.text('Your Balance: 25 AC'), findsOneWidget);
-    await tester.tap(find.text('Unlock with 10 AC'));
+    await tester.tap(find.text('Unlock with 15 AC'));
     await tester.pumpAndSettle();
 
     expect(unlocked, isTrue);
-    expect(EconomyService.instance.coinBalanceNotifier.value, 15);
-    expect(find.textContaining('-10 AC'), findsOneWidget);
+    expect(EconomyService.instance.coinBalanceNotifier.value, 10);
+    expect(find.textContaining('-15 AC'), findsOneWidget);
 
     await tester.pump(const Duration(seconds: 4));
     await tester.pumpAndSettle();

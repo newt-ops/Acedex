@@ -617,14 +617,14 @@ class _StudyScreenState extends State<StudyScreen> {
     if (!mounted) return;
 
     if (!EconomyService.instance.isAssessmentUnlocked(unitCode)) {
-      // Enforce one-time 10 AC unlock fee for this unit (or Watch 1 Rewarded Ad for +10 AC)
+      // Enforce one-time 15 AC unlock fee for this unit (or Watch 1 Rewarded Ad for +10 AC)
       final unlocked = await AcedexUnlockChoiceSheet.show(
         context,
         title: 'Unlock ${unit.code} Assessment',
         subtitle:
-            'Pay 10 Ace Coins (AC) once to permanently unlock ${unit.code} Assessment (or watch 1 rewarded ad). Earn +5 AC when completed!',
+            'Pay 15 Ace Coins (AC) once to permanently unlock ${unit.code} Assessment (or watch 1 rewarded ad). Earn +5 AC when completed!',
         itemKey: 'unit_assessment',
-        coinCost: 10,
+        coinCost: 15,
         targetUnitId: unitCode,
         adRewardType: AcedexRewardType.bonusCoins,
       );

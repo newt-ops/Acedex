@@ -24,23 +24,23 @@ import { logger } from '../../common/utils/logger';
 
 export const ACE_COINS_CONFIG = {
   WELCOME_BONUS: 25,
-  UNIT_COMPLETE_REWARD: 15,
+  UNIT_COMPLETE_REWARD: 10,
   ASSESSMENT_PASS_REWARD: 5,
   ASSESSMENT_PERFECT_BONUS: 0,
   MODULE_COMPLETE_REWARD: 30,
-  DAILY_STREAK_REWARD: 10,
+  DAILY_STREAK_REWARD: 5,
   SEVEN_DAY_STREAK_BONUS: 50,
   DEFAULT_COINS_PER_AD: 10,
   DEFAULT_DAILY_COIN_ADS_LIMIT: 0,
-  UNIT_ASSESSMENT_COST: 10,
+  UNIT_ASSESSMENT_COST: 15,
 } as const;
 
 const BASE_STORE_CATALOG: EconomyStoreItem[] = [
   {
     itemKey: 'unit_assessment',
     title: 'Unit 15-Q Assessment Unlock',
-    description: 'Pay 10 AC once to permanently unlock this unit assessment and earn +5 AC on completion.',
-    cost: 10,
+    description: 'Pay 15 AC once to permanently unlock this unit assessment and earn +5 AC on completion.',
+    cost: 15,
     category: 'access',
     canWatchAdInstead: true,
     adRewardType: 'bonus_coins',
@@ -489,7 +489,7 @@ export class EconomyService {
     if (!charged) {
       const currentBal = progress.wallet?.balance ?? 0;
       throw new ForbiddenError(
-        `Unlocking ${normalizedCode} assessment costs ${cost} Ace Coins once (current balance: ${currentBal} AC). Watch 1 rewarded ad (+${ACE_COINS_CONFIG.DEFAULT_COINS_PER_AD} AC) or master units (+15 AC) to continue.`,
+        `Unlocking ${normalizedCode} assessment costs ${cost} Ace Coins once (current balance: ${currentBal} AC). Watch 1 rewarded ad (+${ACE_COINS_CONFIG.DEFAULT_COINS_PER_AD} AC) or master units (+${ACE_COINS_CONFIG.UNIT_COMPLETE_REWARD} AC) to continue.`,
         'INSUFFICIENT_COINS',
         { requiredCoins: cost, currentBalance: currentBal }
       );

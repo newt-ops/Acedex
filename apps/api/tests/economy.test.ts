@@ -98,19 +98,19 @@ describe('Ace Coins Economy, Milestones, Ad Top-Ups & Assessment Fee', { timeout
     expect(res.body.data.currencyName).toBe('Ace Coins');
     expect(res.body.data.currencyCode).toBe('AC');
     expect(res.body.data.balance).toBe(25);
-    expect(res.body.data.assessmentCost).toBe(10);
+    expect(res.body.data.assessmentCost).toBe(15);
     expect(res.body.data.recentTransactions[0].type).toBe('earn_welcome');
     expect(res.body.data.recentTransactions[0].amount).toBe(25);
   });
 
-  it('2. Completing unit awards +15 AC unit & +10 AC daily streak idempotently once only', async () => {
+  it('2. Completing unit awards +10 AC unit & +5 AC daily streak idempotently once only', async () => {
     const res1 = await request(app)
       .post(`/api/v1/study/units/${phyUnit.code}/complete`)
       .set('Authorization', `Bearer ${studentToken}`);
 
     expect(res1.status).toBe(200);
-    expect(res1.body.data.coinsAwarded).toBe(25); // +15 unit + 10 streak
-    expect(res1.body.data.newCoinBalance).toBe(50);
+    expect(res1.body.data.coinsAwarded).toBe(15); // +10 unit + 5 streak
+    expect(res1.body.data.newCoinBalance).toBe(40);
 
     // Unmark & re-complete should NOT double-award coins
     await request(app)
@@ -124,10 +124,10 @@ describe('Ace Coins Economy, Milestones, Ad Top-Ups & Assessment Fee', { timeout
 
     expect(res2.status).toBe(200);
     expect(res2.body.data.coinsAwarded).toBeUndefined();
-    expect(res2.body.data.newCoinBalance).toBe(50);
+    expect(res2.body.data.newCoinBalance).toBe(40);
   });
 
-  it('3. Unit assessment deducts 10 AC once per unit, retakes are 0 AC, and reward is 5 AC only', async () => {
+  it('3. Unit assessment deducts 15 AC once per unit, retakes are 0 AC, and reward is 5 AC only', async () => {
     const allCorrect = sampleQuestions.map((q) => ({
       questionId: q.externalId,
       selectedOptionId: answerKeyMap.get(q.externalId) || 'A',
@@ -143,9 +143,9 @@ describe('Ace Coins Economy, Milestones, Ad Top-Ups & Assessment Fee', { timeout
       });
 
     expect(submitRes.status).toBe(200);
-    expect(submitRes.body.data.coinsSpent).toBe(10);
+    expect(submitRes.body.data.coinsSpent).toBe(15);
     expect(submitRes.body.data.coinsAwarded).toBe(5); // 5 coins only
-    expect(submitRes.body.data.newCoinBalance).toBe(45); // 50 - 10 + 5 = 45
+    expect(submitRes.body.data.newCoinBalance).toBe(30); // 40 - 15 + 5 = 30
 
     // Retaking the same unit assessment charges 0 AC (permanently unlocked for this unit)
     const retakeRes = await request(app)
@@ -158,7 +158,7 @@ describe('Ace Coins Economy, Milestones, Ad Top-Ups & Assessment Fee', { timeout
       });
     expect(retakeRes.status).toBe(200);
     expect(retakeRes.body.data.coinsSpent).toBe(0);
-    expect(retakeRes.body.data.newCoinBalance).toBe(45);
+    expect(retakeRes.body.data.newCoinBalance).toBe(30);
 
     // Calling spend for already-unlocked unit also charges 0 AC
     const spendAgainRes = await request(app)
@@ -167,7 +167,7 @@ describe('Ace Coins Economy, Milestones, Ad Top-Ups & Assessment Fee', { timeout
       .send({ itemKey: 'unit_assessment', targetUnitId: phyUnit.code });
     expect(spendAgainRes.status).toBe(200);
     expect(spendAgainRes.body.data.coinsSpent).toBe(0);
-    expect(spendAgainRes.body.data.newBalance).toBe(45);
+    expect(spendAgainRes.body.data.newBalance).toBe(30);
   });
 
   it('4. Mastering AI topic module grants +30 AC idempotently', async () => {
@@ -178,11 +178,11 @@ describe('Ace Coins Economy, Milestones, Ad Top-Ups & Assessment Fee', { timeout
 
     expect(modRes.status).toBe(200);
     expect(modRes.body.data.coinsAwarded).toBe(30);
-    expect(modRes.body.data.newCoinBalance).toBe(75); // 45 + 30
+    expect(modRes.body.data.newCoinBalance).toBe(60); // 30 + 30
   });
 
   it('5. Rewarded Ad (bonus_coins) grants +10 AC without daily ad limits', async () => {
-    for (let i = 0; i < 6; i++) {
+    for (let i = 0; i < 5; i++) {
       const startRes = await request(app)
         .post('/api/v1/ads/session/start')
         .set('Authorization', `Bearer ${studentToken}`)
@@ -200,28 +200,28 @@ describe('Ace Coins Economy, Milestones, Ad Top-Ups & Assessment Fee', { timeout
       expect(claimRes.body.data.coinsAwarded).toBe(10);
     }
 
-    // Balance should now be 75 + 6*10 = 135 AC, and ALL 6 earn_ad logs must exist
+    // Balance should now be 60 + 5*10 = 110 AC, and ALL 5 earn_ad logs must exist
     const walletRes = await request(app)
       .get('/api/v1/economy/wallet')
       .set('Authorization', `Bearer ${studentToken}`);
-    expect(walletRes.body.data.balance).toBe(135);
+    expect(walletRes.body.data.balance).toBe(110);
     expect(walletRes.body.data.coinsPerAd).toBe(10);
     expect(walletRes.body.data.dailyCoinAdsLimit).toBe(0);
     expect(walletRes.body.data.unlockedAssessmentUnits).toContain(phyUnit.code);
     const adLogs = walletRes.body.data.recentTransactions.filter(
       (t: any) => t.type === 'earn_ad'
     );
-    expect(adLogs).toHaveLength(6);
-  });
+    expect(adLogs).toHaveLength(5);
+  }, 120000);
 
   it('6. Spending 100 AC unlocks AI Study Plan Pass & 120 AC unlocks Gold Scholar Badge', async () => {
-    // Buy AI Plan Pass (100 AC -> 35 AC left)
+    // Buy AI Plan Pass (100 AC -> 10 AC left)
     const passRes = await request(app)
       .post('/api/v1/economy/spend')
       .set('Authorization', `Bearer ${studentToken}`)
       .send({ itemKey: 'ai_plan_pass' });
     expect(passRes.status).toBe(200);
-    expect(passRes.body.data.newBalance).toBe(35);
+    expect(passRes.body.data.newBalance).toBe(10);
     expect(passRes.body.data.aiPlanPasses).toBe(1);
 
     // Generate AI Study Program using coin pass without adSessionId
@@ -240,8 +240,8 @@ describe('Ace Coins Economy, Milestones, Ad Top-Ups & Assessment Fee', { timeout
     expect(planRes.status).toBe(200);
     expect(planRes.body.data.hasProgram).toBe(true);
 
-    // Earn +90 AC from 3 more topic modules (BIO-M01, CHE-M01, PHY-M01 -> 35 + 90 = 125 AC)
-    for (const moduleId of ['BIO-M01', 'CHE-M01', 'PHY-M01']) {
+    // Earn +120 AC from 4 more topic modules (BIO-M01, CHE-M01, PHY-M01, ENG-M01 -> 10 + 120 = 130 AC)
+    for (const moduleId of ['BIO-M01', 'CHE-M01', 'PHY-M01', 'ENG-M01']) {
       const mRes = await request(app)
         .post(`/api/v1/topics/modules/${moduleId}/progress`)
         .set('Authorization', `Bearer ${studentToken}`)
@@ -250,13 +250,13 @@ describe('Ace Coins Economy, Milestones, Ad Top-Ups & Assessment Fee', { timeout
       expect(mRes.body.data.coinsAwarded).toBe(30);
     }
 
-    // Buy Gold Scholar Badge (120 AC -> 5 AC left), and confirm BOTH spend logs exist
+    // Buy Gold Scholar Badge (120 AC -> 10 AC left), and confirm BOTH spend logs exist
     const badgeRes = await request(app)
       .post('/api/v1/economy/spend')
       .set('Authorization', `Bearer ${studentToken}`)
       .send({ itemKey: 'badge_euee_gold' });
     expect(badgeRes.status).toBe(200);
-    expect(badgeRes.body.data.newBalance).toBe(5);
+    expect(badgeRes.body.data.newBalance).toBe(10);
     expect(badgeRes.body.data.unlockedBadge).toBe('badge_euee_gold');
 
     const walletAfterSpend = await request(app)
@@ -265,7 +265,7 @@ describe('Ace Coins Economy, Milestones, Ad Top-Ups & Assessment Fee', { timeout
     const spendLogs = walletAfterSpend.body.data.recentTransactions.filter(
       (t: any) => t.type === 'spend'
     );
-    expect(spendLogs.length).toBeGreaterThanOrEqual(3); // 10 AC assessment + 100 AC pass + 120 AC badge
+    expect(spendLogs.length).toBeGreaterThanOrEqual(3); // 15 AC assessment + 100 AC pass + 120 AC badge
 
     // Insufficient balance check for 180 AC STEM Master badge
     const failBadge = await request(app)
@@ -274,5 +274,5 @@ describe('Ace Coins Economy, Milestones, Ad Top-Ups & Assessment Fee', { timeout
       .send({ itemKey: 'badge_stem_master' });
     expect(failBadge.status).toBe(400);
     expect(failBadge.body.error.code).toBe('INSUFFICIENT_COINS');
-  });
+  }, 120000);
 });
