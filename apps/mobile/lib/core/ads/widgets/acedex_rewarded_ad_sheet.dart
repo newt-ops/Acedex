@@ -103,6 +103,10 @@ class _AcedexRewardedAdSheetState extends State<AcedexRewardedAdSheet> {
       );
       if (!mounted) return;
 
+      if (!playedNativeAd) {
+        throw const RewardedAdUnavailableException();
+      }
+
       final elapsed = DateTime.now()
           .difference(session.startedAtLocal)
           .inSeconds;
@@ -112,12 +116,9 @@ class _AcedexRewardedAdSheetState extends State<AcedexRewardedAdSheet> {
       if (remaining > 0) {
         setState(() {
           _secondsRemaining = remaining;
-          _headline = playedNativeAd
-              ? 'Verifying Ad Reward...'
-              : (widget.title ?? widget.rewardType.defaultHeadline);
-          _subtext = playedNativeAd
-              ? 'Finalizing reward verification (${remaining}s remaining)...'
-              : '${widget.subtitle ?? widget.rewardType.defaultSubtitle} (${remaining}s)';
+          _headline = 'Verifying Ad Reward...';
+          _subtext =
+              'Finalizing reward verification (${remaining}s remaining)...';
         });
 
         final timerDone = Completer<void>();
@@ -130,9 +131,8 @@ class _AcedexRewardedAdSheetState extends State<AcedexRewardedAdSheet> {
           if (_secondsRemaining > 1) {
             setState(() {
               _secondsRemaining--;
-              _subtext = playedNativeAd
-                  ? 'Finalizing reward verification (${_secondsRemaining}s remaining)...'
-                  : '${widget.subtitle ?? widget.rewardType.defaultSubtitle} (${_secondsRemaining}s)';
+              _subtext =
+                  'Finalizing reward verification (${_secondsRemaining}s remaining)...';
             });
           } else {
             timer.cancel();
@@ -160,6 +160,13 @@ class _AcedexRewardedAdSheetState extends State<AcedexRewardedAdSheet> {
       setState(() {
         _busy = false;
         _headline = 'Ad Skipped Early';
+        _errorText = e.message;
+      });
+    } on RewardedAdUnavailableException catch (e) {
+      if (!mounted) return;
+      setState(() {
+        _busy = false;
+        _headline = 'Ad Not Ready';
         _errorText = e.message;
       });
     } on ApiException catch (e) {

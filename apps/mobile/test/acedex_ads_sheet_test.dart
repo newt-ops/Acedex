@@ -5,6 +5,7 @@ import 'package:acedex/core/theme/app_theme.dart';
 
 class _FakeCommonAdsRepository implements AcedexAdsRepository {
   bool simulateSkipOnce = false;
+  bool simulateUnavailableOnce = false;
   int startCalls = 0;
   int showCalls = 0;
   int claimCalls = 0;
@@ -44,6 +45,10 @@ class _FakeCommonAdsRepository implements AcedexAdsRepository {
     if (simulateSkipOnce) {
       simulateSkipOnce = false;
       throw const RewardedAdSkippedException();
+    }
+    if (simulateUnavailableOnce) {
+      simulateUnavailableOnce = false;
+      return false;
     }
     return true;
   }
@@ -153,5 +158,46 @@ void main() {
 
     expect(claimed?.rewardType, AcedexRewardType.streakRepair);
     expect(claimed?.repairedStreak, 7);
+  });
+
+  testWidgets(
+      'AcedexRewardedAdSheet does NOT claim reward when no ad was loaded/shown',
+      (tester) async {
+    final fakeAds = _FakeCommonAdsRepository()..simulateUnavailableOnce = true;
+    AcedexClaimRewardResult? claimed;
+
+    await tester.pumpWidget(
+      MaterialApp(
+        theme: AppTheme.lightTheme,
+        home: Builder(
+          builder: (context) => Scaffold(
+            body: Center(
+              child: ElevatedButton(
+                onPressed: () async {
+                  claimed = await AcedexRewardedAdSheet.show(
+                    context,
+                    rewardType: AcedexRewardType.bonusCoins,
+                    adsRepository: fakeAds,
+                  );
+                },
+                child: const Text('Watch Ad'),
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
+
+    await tester.tap(find.text('Watch Ad'));
+    await tester.pump();
+    await tester.pump(const Duration(milliseconds: 350));
+
+    expect(find.text('Ad Not Ready'), findsOneWidget);
+    expect(find.text('Retry Ad'), findsOneWidget);
+    expect(fakeAds.claimCalls, 0);
+    expect(claimed, isNull);
+
+    await tester.tap(find.text('Cancel'));
+    await tester.pumpAndSettle();
   });
 }

@@ -608,18 +608,29 @@ class _StudyScreenState extends State<StudyScreen> {
       return;
     }
 
-    // Enforce 10 AC unit assessment entry fee (or Watch 1 Rewarded Ad for +10 AC)
-    final unlocked = await AcedexUnlockChoiceSheet.show(
-      context,
-      title: 'Start ${unit.code} Assessment',
-      subtitle:
-          'Each 15-question unit assessment costs 10 Ace Coins (AC). Pass with 70%+ to earn +25 AC back!',
-      itemKey: 'unit_assessment',
-      coinCost: 10,
-      targetUnitId: unitCode,
-      adRewardType: AcedexRewardType.bonusCoins,
-    );
-    if (!mounted || !unlocked) return;
+    // Check if this specific unit's assessment is already permanently unlocked (pay 10 AC once per unit)
+    await EconomyService.instance.loadCachedUnlockedAssessments();
+    if (!EconomyService.instance.isAssessmentUnlocked(unitCode) &&
+        EconomyService.instance.walletNotifier.value == null) {
+      await EconomyService.instance.syncWalletSilent();
+    }
+    if (!mounted) return;
+
+    if (!EconomyService.instance.isAssessmentUnlocked(unitCode)) {
+      // Enforce one-time 10 AC unlock fee for this unit (or Watch 1 Rewarded Ad for +10 AC)
+      final unlocked = await AcedexUnlockChoiceSheet.show(
+        context,
+        title: 'Unlock ${unit.code} Assessment',
+        subtitle:
+            'Pay 10 Ace Coins (AC) once to permanently unlock ${unit.code} Assessment (or watch 1 rewarded ad). Earn +5 AC when completed!',
+        itemKey: 'unit_assessment',
+        coinCost: 10,
+        targetUnitId: unitCode,
+        adRewardType: AcedexRewardType.bonusCoins,
+      );
+      if (!mounted || !unlocked) return;
+      EconomyService.instance.markAssessmentUnlocked(unitCode);
+    }
 
     TopicDrillEngineSheet.show(
       context,
@@ -665,6 +676,7 @@ class _StudyScreenState extends State<StudyScreen> {
                 requiresAuth: true,
               )
               .then((res) {
+                EconomyService.instance.markAssessmentUnlocked(unitCode);
                 final data = (res['data'] as Map<String, dynamic>?) ?? res;
                 final coinsAwarded = (data['coinsAwarded'] as num?)?.toInt();
                 final coinsSpent = (data['coinsSpent'] as num?)?.toInt();

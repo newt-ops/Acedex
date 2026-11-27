@@ -2,6 +2,7 @@ import 'dart:async';
 import 'package:flutter/foundation.dart';
 import '../../network/api_client.dart';
 import '../../network/api_endpoints.dart';
+import '../../storage/auth_storage.dart';
 import '../models/economy_models.dart';
 
 /// Repository boundary for Ace Coins economy APIs (`/api/v1/economy/*`).
@@ -24,6 +25,10 @@ class EconomyService implements EconomyRepository {
   /// Live student Ace Coins balance synchronized across Header Bar, Wallet, and study flows.
   final ValueNotifier<int> coinBalanceNotifier = ValueNotifier<int>(25);
 
+  /// Permanently unlocked unit assessment codes for the current student.
+  final ValueNotifier<Set<String>> unlockedAssessmentUnitsNotifier =
+      ValueNotifier<Set<String>>({});
+
   /// Cached latest full wallet snapshot.
   final ValueNotifier<WalletOverview?> walletNotifier =
       ValueNotifier<WalletOverview?>(null);
@@ -31,6 +36,35 @@ class EconomyService implements EconomyRepository {
   void reset() {
     coinBalanceNotifier.value = 25;
     walletNotifier.value = null;
+    unlockedAssessmentUnitsNotifier.value = {};
+  }
+
+  bool isAssessmentUnlocked(String unitCode) {
+    final normalized = unitCode.toUpperCase().trim();
+    if (normalized.isEmpty) return false;
+    return unlockedAssessmentUnitsNotifier.value.contains(normalized);
+  }
+
+  Future<void> loadCachedUnlockedAssessments() async {
+    final cached = await AuthStorage.instance.getUnlockedAssessmentUnits();
+    if (cached.isNotEmpty) {
+      unlockedAssessmentUnitsNotifier.value = {
+        ...unlockedAssessmentUnitsNotifier.value,
+        ...cached,
+      };
+    }
+  }
+
+  void markAssessmentUnlocked(String unitCode) {
+    final normalized = unitCode.toUpperCase().trim();
+    if (normalized.isEmpty) return;
+    if (!unlockedAssessmentUnitsNotifier.value.contains(normalized)) {
+      unlockedAssessmentUnitsNotifier.value = {
+        ...unlockedAssessmentUnitsNotifier.value,
+        normalized,
+      };
+    }
+    unawaited(AuthStorage.instance.addUnlockedAssessmentUnits([normalized]));
   }
 
   void applyServerBalanceUpdate({
@@ -64,6 +98,15 @@ class EconomyService implements EconomyRepository {
     final overview = WalletOverview.fromJson(data);
     coinBalanceNotifier.value = overview.balance;
     walletNotifier.value = overview;
+    if (overview.unlockedAssessmentUnits.isNotEmpty) {
+      final merged = await AuthStorage.instance.addUnlockedAssessmentUnits(
+        overview.unlockedAssessmentUnits,
+      );
+      unlockedAssessmentUnitsNotifier.value = {
+        ...unlockedAssessmentUnitsNotifier.value,
+        ...merged,
+      };
+    }
     return overview;
   }
 
@@ -84,6 +127,12 @@ class EconomyService implements EconomyRepository {
     final data = (res['data'] as Map<String, dynamic>?) ?? res;
     final result = SpendCoinsResult.fromJson(data);
     coinBalanceNotifier.value = result.newBalance;
+    if (itemKey == 'unit_assessment') {
+      final code = result.unlockedUnitCode ?? targetUnitId;
+      if (code != null && code.isNotEmpty) {
+        markAssessmentUnlocked(code);
+      }
+    }
     unawaited(syncWalletSilent());
     return result;
   }

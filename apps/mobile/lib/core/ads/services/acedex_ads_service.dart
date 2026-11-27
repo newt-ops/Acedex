@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'package:flutter/foundation.dart';
+import 'package:flutter/widgets.dart';
 import 'package:unity_ads_plugin/unity_ads_plugin.dart';
 import '../../network/api_client.dart';
 import '../../network/api_endpoints.dart';
@@ -10,6 +11,43 @@ class RewardedAdSkippedException implements Exception {
   const RewardedAdSkippedException([
     this.message = 'Please finish watching the rewarded ad to claim your reward.',
   ]);
+}
+
+class RewardedAdUnavailableException implements Exception {
+  final String message;
+  const RewardedAdUnavailableException([
+    this.message = 'Rewarded ad could not be loaded right now. Please check your connection and try again.',
+  ]);
+}
+
+/// Observes Flutter app lifecycle transitions while a fullscreen Unity Ad Activity is active
+/// so rewards are never processed until the student has closed the ad and returned to the app.
+class _AdForegroundResumeObserver with WidgetsBindingObserver {
+  bool leftForeground = false;
+  Completer<void>? _resumeCompleter;
+
+  @override
+  void didChangeAppLifecycleState(AppLifecycleState state) {
+    if (state != AppLifecycleState.resumed) {
+      leftForeground = true;
+    } else if (_resumeCompleter != null && !_resumeCompleter!.isCompleted) {
+      _resumeCompleter!.complete();
+    }
+  }
+
+  Future<void> waitUntilAppResumed() async {
+    final currentState = WidgetsBinding.instance.lifecycleState;
+    if (leftForeground &&
+        currentState != null &&
+        currentState != AppLifecycleState.resumed) {
+      _resumeCompleter ??= Completer<void>();
+      await _resumeCompleter!.future.timeout(
+        const Duration(seconds: 15),
+        onTimeout: () {},
+      );
+      await Future<void>.delayed(const Duration(milliseconds: 200));
+    }
+  }
 }
 
 /// Shared repository interface for all rewarded ad features across ACEDEX
@@ -153,7 +191,7 @@ class AcedexAdsService implements AcedexAdsRepository {
       );
 
       final loaded = await loadCompleter.future.timeout(
-        const Duration(seconds: 12),
+        const Duration(seconds: 15),
         onTimeout: () => false,
       );
       if (!loaded) return false;
@@ -164,26 +202,32 @@ class AcedexAdsService implements AcedexAdsRepository {
 
     // 2. Play fullscreen rewarded video passing serverId = adSessionId for Unity S2S
     final showCompleter = Completer<bool>();
+    final lifecycleObserver = _AdForegroundResumeObserver();
+    WidgetsBinding.instance.addObserver(lifecycleObserver);
+
     try {
       await UnityAds.showVideoAd(
         placementId: session.placementId,
         serverId: session.adSessionId,
-        onComplete: (_) {
+        onComplete: (_) async {
+          await lifecycleObserver.waitUntilAppResumed();
           if (!showCompleter.isCompleted) showCompleter.complete(true);
         },
-        onSkipped: (_) {
+        onSkipped: (_) async {
+          await lifecycleObserver.waitUntilAppResumed();
           if (!showCompleter.isCompleted) {
             showCompleter.completeError(const RewardedAdSkippedException());
           }
         },
-        onFailed: (id, error, message) {
+        onFailed: (id, error, message) async {
           debugPrint('[UnityAds show failed] $id ($error): $message');
+          await lifecycleObserver.waitUntilAppResumed();
           if (!showCompleter.isCompleted) showCompleter.complete(false);
         },
       );
 
       return await showCompleter.future.timeout(
-        const Duration(seconds: 75),
+        const Duration(seconds: 120),
         onTimeout: () => false,
       );
     } on RewardedAdSkippedException {
@@ -191,6 +235,8 @@ class AcedexAdsService implements AcedexAdsRepository {
     } catch (e) {
       debugPrint('[UnityAds show exception] $e');
       return false;
+    } finally {
+      WidgetsBinding.instance.removeObserver(lifecycleObserver);
     }
   }
 

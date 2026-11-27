@@ -90,10 +90,20 @@ class _AcedexUnlockChoiceSheetState extends State<AcedexUnlockChoiceSheet> {
       EconomyService.instance.applyServerBalanceUpdate(
         newCoinBalance: res.newBalance,
       );
-      final spendAmount = res.coinsSpent > 0 ? res.coinsSpent : widget.coinCost;
+      if (widget.itemKey == 'unit_assessment') {
+        final code = res.unlockedUnitCode ?? widget.targetUnitId;
+        if (code != null && code.isNotEmpty) {
+          EconomyService.instance.markAssessmentUnlocked(code);
+        }
+      }
+      final spendAmount = res.coinsSpent;
       final toastMsg = earnedFromAd != null && earnedFromAd > 0
-          ? '+$earnedFromAd AC earned • -$spendAmount AC spent to unlock!'
-          : '-$spendAmount AC • ${res.message}';
+          ? (spendAmount > 0
+              ? '+$earnedFromAd AC earned • -$spendAmount AC spent to unlock!'
+              : '+$earnedFromAd AC earned • ${res.message}')
+          : (spendAmount > 0
+              ? '-$spendAmount AC • ${res.message}'
+              : res.message);
       AcedexToast.show(
         context,
         message: toastMsg,

@@ -207,30 +207,18 @@ export class AssessmentService {
       durationSeconds,
     });
 
-    // 6.5 Award Ace Coins milestones for passing (>=70%) & 100% perfection
+    // 6.5 Award 5 Ace Coins once per unit assessment taken
     let totalCoinsAwarded = 0;
-    if (user && user.role === 'student' && passed) {
-      const passAward = await EconomyService.awardMilestone({
+    if (user && user.role === 'student') {
+      const assessAward = await EconomyService.awardMilestone({
         userId: userObjectId,
         milestoneKey: `ASSESS:${unit.code}`,
         amount: ACE_COINS_CONFIG.ASSESSMENT_PASS_REWARD,
-        reason: `Passed Unit Assessment (${unit.code})`,
-        metadata: { unitCode: unit.code, percentage },
+        reason: `Completed Unit Assessment (${unit.code})`,
+        metadata: { unitCode: unit.code, percentage, passed },
       });
-      totalCoinsAwarded += passAward.coinsAwarded;
-      latestBalance = passAward.newCoinBalance;
-
-      if (percentage === 100) {
-        const perfectAward = await EconomyService.awardMilestone({
-          userId: userObjectId,
-          milestoneKey: `PERFECT:${unit.code}`,
-          amount: ACE_COINS_CONFIG.ASSESSMENT_PERFECT_BONUS,
-          reason: `100% Score Bonus (${unit.code})`,
-          metadata: { unitCode: unit.code },
-        });
-        totalCoinsAwarded += perfectAward.coinsAwarded;
-        if (perfectAward.awarded) latestBalance = perfectAward.newCoinBalance;
-      }
+      totalCoinsAwarded += assessAward.coinsAwarded;
+      latestBalance = assessAward.newCoinBalance;
     }
 
     // 7. Audit log

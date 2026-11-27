@@ -90,6 +90,7 @@ class WalletOverview {
   final int assessmentCost;
   final int aiPlanPasses;
   final int assessmentPasses;
+  final List<String> unlockedAssessmentUnits;
   final List<String> unlockedBadges;
   final List<EconomyStoreItem> storeCatalog;
   final List<CoinTransactionItem> recentTransactions;
@@ -106,6 +107,7 @@ class WalletOverview {
     this.assessmentCost = 10,
     this.aiPlanPasses = 0,
     this.assessmentPasses = 0,
+    this.unlockedAssessmentUnits = const [],
     this.unlockedBadges = const [],
     this.storeCatalog = const [],
     this.recentTransactions = const [],
@@ -125,6 +127,10 @@ class WalletOverview {
       assessmentCost: (json['assessmentCost'] as num?)?.toInt() ?? 10,
       aiPlanPasses: (json['aiPlanPasses'] as num?)?.toInt() ?? 0,
       assessmentPasses: (json['assessmentPasses'] as num?)?.toInt() ?? 0,
+      unlockedAssessmentUnits:
+          (json['unlockedAssessmentUnits'] as List<dynamic>? ?? [])
+              .map((e) => e.toString().toUpperCase())
+              .toList(),
       unlockedBadges: (json['unlockedBadges'] as List<dynamic>? ?? [])
           .map((e) => e.toString())
           .toList(),

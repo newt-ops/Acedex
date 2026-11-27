@@ -63,6 +63,7 @@ export interface WalletOverviewResponse {
   assessmentCost: number;
   aiPlanPasses: number;
   assessmentPasses: number;
+  unlockedAssessmentUnits?: string[];
   unlockedBadges: string[];
   storeCatalog: EconomyStoreItem[];
   recentTransactions: CoinTransactionItem[];

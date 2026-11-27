@@ -31,6 +31,8 @@ class AuthStorage {
   String? _cachedLastPhone;
 
   static const String _keyCompletedUnits = 'acedex_completed_units';
+  static const String _keyUnlockedAssessmentUnits =
+      'acedex_unlocked_assessment_units';
 
   final ValueNotifier<bool> sessionExpiredNotifier = ValueNotifier<bool>(false);
 
@@ -279,6 +281,28 @@ class AuthStorage {
     }
   }
 
+  Future<Set<String>> getUnlockedAssessmentUnits() async {
+    final prefs = await SharedPreferences.getInstance();
+    final list = prefs.getStringList(_keyUnlockedAssessmentUnits) ?? [];
+    return list.map((e) => e.toUpperCase().trim()).where((e) => e.isNotEmpty).toSet();
+  }
+
+  Future<Set<String>> addUnlockedAssessmentUnits(Iterable<String> unitCodes) async {
+    final existing = await getUnlockedAssessmentUnits();
+    var changed = false;
+    for (final raw in unitCodes) {
+      final clean = raw.toUpperCase().trim();
+      if (clean.isNotEmpty && existing.add(clean)) {
+        changed = true;
+      }
+    }
+    if (changed) {
+      final prefs = await SharedPreferences.getInstance();
+      await prefs.setStringList(_keyUnlockedAssessmentUnits, existing.toList());
+    }
+    return existing;
+  }
+
   Future<void> clear() async {
     _cachedToken = null;
     _cachedRefreshToken = null;
@@ -298,6 +322,7 @@ class AuthStorage {
     await prefs.remove(_keyDailyFocusGoalMinutes);
     await prefs.remove(_keyDailyFocusCompletedDate);
     await prefs.remove(_keyDailyFocusCompletedMinutes);
+    await prefs.remove(_keyUnlockedAssessmentUnits);
     await prefs.remove('acedex_progress_analytics');
     for (final key in prefs.getKeys().where((k) => k.startsWith(_keyAiSubjectModulesPrefix)).toList()) {
       await prefs.remove(key);

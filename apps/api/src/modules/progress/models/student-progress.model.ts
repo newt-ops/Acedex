@@ -55,6 +55,7 @@ export interface IStudentWalletSubdoc {
   dailyCoinAdsCount: number;
   aiPlanPasses: number;
   assessmentPasses: number;
+  unlockedAssessmentUnitCodes?: string[];
   unlockedBadges: string[];
 }
 
@@ -193,6 +194,7 @@ const StudentProgressSchema = new Schema<IStudentProgressDocument>(
       dailyCoinAdsCount: { type: Number, default: 0 },
       aiPlanPasses: { type: Number, default: 0 },
       assessmentPasses: { type: Number, default: 0 },
+      unlockedAssessmentUnitCodes: { type: [String], default: [] },
       unlockedBadges: { type: [String], default: [] },
     },
   },
